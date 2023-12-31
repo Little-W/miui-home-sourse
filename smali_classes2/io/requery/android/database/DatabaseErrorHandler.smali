@@ -1,5 +1,6 @@
 .class public interface abstract Lio/requery/android/database/DatabaseErrorHandler;
 .super Ljava/lang/Object;
+.source "DatabaseErrorHandler.java"
 
 
 # virtual methods

@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage$Builder;
 .super Ljava/lang/Object;
+.source "CrashlyticsReport.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 865
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +44,7 @@
 .method public setUuidFromUtf8Bytes([B)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage$Builder;
     .locals 2
 
+    .line 881
     new-instance v0, Ljava/lang/String;
 
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;->access$000()Ljava/nio/charset/Charset;

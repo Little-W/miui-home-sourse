@@ -1,5 +1,6 @@
 .class public final Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 .super Ljava/lang/Object;
+.source "DeviceSummary.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -29,6 +30,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 60
     new-instance v0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary$1;
 
     invoke-direct {v0}, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary$1;-><init>()V
@@ -41,8 +43,10 @@
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 25
     invoke-virtual {p0, p1}, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->readFromParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -51,6 +55,7 @@
 .method synthetic constructor <init>(Landroid/os/Parcel;Lcom/xiaomi/dist/handoff/parcel/DeviceSummary$1;)V
     .locals 0
 
+    .line 10
     invoke-direct {p0, p1}, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -59,12 +64,16 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 19
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceId:Ljava/lang/String;
 
+    .line 20
     iput p2, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceType:I
 
+    .line 21
     iput-object p3, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceName:Ljava/lang/String;
 
     return-void
@@ -94,6 +103,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 85
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -106,9 +116,11 @@
 
     goto :goto_1
 
+    .line 88
     :cond_1
     check-cast p1, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 
+    .line 89
     iget v2, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceType:I
 
     iget v3, p1, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceType:I
@@ -129,6 +141,7 @@
 
     iget-object p1, p1, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceName:Ljava/lang/String;
 
+    .line 90
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -151,6 +164,7 @@
 .method public getDeviceId()Ljava/lang/String;
     .locals 0
 
+    .line 30
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceId:Ljava/lang/String;
 
     return-object p0
@@ -159,6 +173,7 @@
 .method public getDeviceName()Ljava/lang/String;
     .locals 0
 
+    .line 39
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceName:Ljava/lang/String;
 
     return-object p0
@@ -167,6 +182,7 @@
 .method public getDeviceType()I
     .locals 0
 
+    .line 34
     iget p0, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceType:I
 
     return p0
@@ -179,6 +195,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 95
     iget-object v1, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceId:Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -211,18 +228,21 @@
 .method public readFromParcel(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceId:Ljava/lang/String;
 
+    .line 44
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceType:I
 
+    .line 45
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -235,6 +255,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -285,14 +306,17 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 50
     iget-object p2, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceId:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 51
     iget p2, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceType:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 52
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;->mDeviceName:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V

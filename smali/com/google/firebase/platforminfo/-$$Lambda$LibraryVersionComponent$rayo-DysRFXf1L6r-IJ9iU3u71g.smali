@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/platforminfo/-$$Lambda$LibraryVersionComponent$rayo-DysRFXf1L6r-IJ9iU3u71g;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/components/ComponentFactory;

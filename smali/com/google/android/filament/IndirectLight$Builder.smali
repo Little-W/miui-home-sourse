@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/IndirectLight$Builder;
 .super Ljava/lang/Object;
+.source "IndirectLight.java"
 
 
 # annotations
@@ -29,14 +30,17 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 109
     invoke-static {}, Lcom/google/android/filament/IndirectLight;->access$000()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
+    .line 110
     new-instance v0, Lcom/google/android/filament/IndirectLight$Builder$BuilderFinalizer;
 
     iget-wide v1, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
@@ -53,6 +57,7 @@
 .method public build(Lcom/google/android/filament/Engine;)Lcom/google/android/filament/IndirectLight;
     .locals 2
 
+    .line 328
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
@@ -69,12 +74,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 330
     new-instance v0, Lcom/google/android/filament/IndirectLight;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/filament/IndirectLight;-><init>(J)V
 
     return-object v0
 
+    .line 329
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -88,6 +95,7 @@
 .method public intensity(F)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 2
 
+    .line 297
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/IndirectLight;->access$500(JF)V
@@ -110,6 +118,7 @@
 
     if-ne p1, v1, :cond_1
 
+    .line 197
     array-length v0, p2
 
     const/16 v1, 0x1b
@@ -118,6 +127,7 @@
 
     goto :goto_0
 
+    .line 198
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -127,6 +137,7 @@
 
     throw p0
 
+    .line 200
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -136,6 +147,7 @@
 
     throw p0
 
+    .line 194
     :cond_2
     array-length v0, p2
 
@@ -145,6 +157,7 @@
 
     goto :goto_0
 
+    .line 195
     :cond_3
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -154,11 +167,13 @@
 
     throw p0
 
+    .line 191
     :cond_4
     array-length v0, p2
 
     if-lt v0, v1, :cond_5
 
+    .line 202
     :goto_0
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
@@ -166,6 +181,7 @@
 
     return-object p0
 
+    .line 192
     :cond_5
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -179,6 +195,7 @@
 .method public irradiance(Lcom/google/android/filament/Texture;)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 4
 
+    .line 280
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Texture;->getNativeObject()J
@@ -205,6 +222,7 @@
 
     if-ne p1, v1, :cond_1
 
+    .line 253
     array-length v0, p2
 
     const/16 v1, 0x1b
@@ -213,6 +231,7 @@
 
     goto :goto_0
 
+    .line 254
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -222,6 +241,7 @@
 
     throw p0
 
+    .line 256
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -231,6 +251,7 @@
 
     throw p0
 
+    .line 250
     :cond_2
     array-length v0, p2
 
@@ -240,6 +261,7 @@
 
     goto :goto_0
 
+    .line 251
     :cond_3
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -249,11 +271,13 @@
 
     throw p0
 
+    .line 247
     :cond_4
     array-length v0, p2
 
     if-lt v0, v1, :cond_5
 
+    .line 258
     :goto_0
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
@@ -261,6 +285,7 @@
 
     return-object p0
 
+    .line 248
     :cond_5
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -274,6 +299,7 @@
 .method public reflections(Lcom/google/android/filament/Texture;)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 4
 
+    .line 124
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Texture;->getNativeObject()J
@@ -288,6 +314,7 @@
 .method public rotation([F)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 11
 
+    .line 310
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     const/4 v2, 0x0

@@ -1,5 +1,6 @@
 .class public final Lkotlin/sequences/TransformingSequence$iterator$1;
 .super Ljava/lang/Object;
+.source "Sequences.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -46,10 +47,12 @@
         }
     .end annotation
 
+    .line 207
     iput-object p1, p0, Lkotlin/sequences/TransformingSequence$iterator$1;->this$0:Lkotlin/sequences/TransformingSequence;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 208
     invoke-static {p1}, Lkotlin/sequences/TransformingSequence;->access$getSequence$p(Lkotlin/sequences/TransformingSequence;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
@@ -68,6 +71,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 214
     iget-object p0, p0, Lkotlin/sequences/TransformingSequence$iterator$1;->iterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -85,6 +89,7 @@
         }
     .end annotation
 
+    .line 210
     iget-object v0, p0, Lkotlin/sequences/TransformingSequence$iterator$1;->this$0:Lkotlin/sequences/TransformingSequence;
 
     invoke-static {v0}, Lkotlin/sequences/TransformingSequence;->access$getTransformer$p(Lkotlin/sequences/TransformingSequence;)Lkotlin/jvm/functions/Function1;

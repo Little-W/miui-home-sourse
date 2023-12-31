@@ -1,5 +1,6 @@
 .class final Lokhttp3/CertificatePinner$Pin;
 .super Ljava/lang/Object;
+.source "CertificatePinner.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 300
     instance-of v0, p1, Lokhttp3/CertificatePinner$Pin;
 
     if-eqz v0, :cond_0
@@ -37,6 +39,7 @@
 
     iget-object v1, p1, Lokhttp3/CertificatePinner$Pin;->pattern:Ljava/lang/String;
 
+    .line 301
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -47,6 +50,7 @@
 
     iget-object v1, p1, Lokhttp3/CertificatePinner$Pin;->hashAlgorithm:Ljava/lang/String;
 
+    .line 302
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -57,6 +61,7 @@
 
     iget-object p1, p1, Lokhttp3/CertificatePinner$Pin;->hash:Lokio/ByteString;
 
+    .line 303
     invoke-virtual {p0, p1}, Lokio/ByteString;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -77,6 +82,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 308
     iget-object v0, p0, Lokhttp3/CertificatePinner$Pin;->pattern:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -89,6 +95,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 309
     iget-object v0, p0, Lokhttp3/CertificatePinner$Pin;->hashAlgorithm:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -99,6 +106,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 310
     iget-object p0, p0, Lokhttp3/CertificatePinner$Pin;->hash:Lokio/ByteString;
 
     invoke-virtual {p0}, Lokio/ByteString;->hashCode()I
@@ -113,6 +121,7 @@
 .method matches(Ljava/lang/String;)Z
     .locals 10
 
+    .line 289
     iget-object v0, p0, Lokhttp3/CertificatePinner$Pin;->pattern:Ljava/lang/String;
 
     const-string v1, "*."
@@ -125,10 +134,12 @@
 
     const/16 v0, 0x2e
 
+    .line 290
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
 
+    .line 291
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -155,12 +166,14 @@
 
     const/4 v8, 0x0
 
+    .line 293
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v9
 
     move-object v4, p1
 
+    .line 292
     invoke-virtual/range {v4 .. v9}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
 
     move-result p0
@@ -175,6 +188,7 @@
     :goto_0
     return v2
 
+    .line 296
     :cond_1
     iget-object p0, p0, Lokhttp3/CertificatePinner$Pin;->canonicalHostname:Ljava/lang/String;
 
@@ -188,6 +202,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 315
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

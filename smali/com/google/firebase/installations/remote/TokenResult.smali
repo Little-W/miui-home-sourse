@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/firebase/installations/remote/TokenResult;
 .super Ljava/lang/Object;
+.source "TokenResult.java"
 
 
 # annotations
@@ -15,6 +16,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +25,7 @@
 .method public static builder()Lcom/google/firebase/installations/remote/TokenResult$Builder;
     .locals 3
 
+    .line 56
     new-instance v0, Lcom/google/firebase/installations/remote/AutoValue_TokenResult$Builder;
 
     invoke-direct {v0}, Lcom/google/firebase/installations/remote/AutoValue_TokenResult$Builder;-><init>()V

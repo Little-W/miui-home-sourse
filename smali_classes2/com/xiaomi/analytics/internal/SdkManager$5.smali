@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/internal/SdkManager$5;
 .super Ljava/lang/Object;
+.source "SdkManager.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/xiaomi/analytics/internal/SdkManager;)V
     .locals 0
 
+    .line 413
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/SdkManager$5;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 3
 
+    .line 417
     :try_start_0
     invoke-static {}, Lcom/xiaomi/analytics/internal/SdkManager;->access$2200()Lcom/xiaomi/analytics/internal/SdkManager;
 
@@ -45,6 +48,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 418
     :try_start_1
     iget-object v1, p0, Lcom/xiaomi/analytics/internal/SdkManager$5;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
@@ -62,6 +66,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 419
     iget-object v1, p0, Lcom/xiaomi/analytics/internal/SdkManager$5;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     invoke-static {v1}, Lcom/xiaomi/analytics/internal/SdkManager;->access$1300(Lcom/xiaomi/analytics/internal/SdkManager;)Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;
@@ -70,12 +75,14 @@
 
     invoke-interface {v1}, Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;->init()V
 
+    .line 420
     iget-object v1, p0, Lcom/xiaomi/analytics/internal/SdkManager$5;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lcom/xiaomi/analytics/internal/SdkManager;->access$1302(Lcom/xiaomi/analytics/internal/SdkManager;Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;)Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;
 
+    .line 421
     iget-object v1, p0, Lcom/xiaomi/analytics/internal/SdkManager$5;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     invoke-static {v1}, Lcom/xiaomi/analytics/internal/SdkManager;->access$100(Lcom/xiaomi/analytics/internal/SdkManager;)Landroid/content/Context;
@@ -94,6 +101,7 @@
 
     const-string v1, "pending dex init executed, unregister and clear pending"
 
+    .line 422
     invoke-static {p0, v1}, Lcom/xiaomi/analytics/internal/util/ALog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -103,8 +111,10 @@
 
     const-string v1, "skip init dex"
 
+    .line 424
     invoke-static {p0, v1}, Lcom/xiaomi/analytics/internal/util/ALog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 426
     :goto_0
     monitor-exit v0
 
@@ -129,6 +139,7 @@
 
     const-string v1, "dexInitTask"
 
+    .line 428
     invoke-static {v0, v1, p0}, Lcom/xiaomi/analytics/internal/util/ALog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1

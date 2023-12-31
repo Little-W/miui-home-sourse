@@ -18,12 +18,14 @@
 
     new-array v1, v0, [C
 
+    .line 18
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/xiaomi/onetrack/d/d;->b:[C
 
     new-array v0, v0, [C
 
+    .line 19
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/xiaomi/onetrack/d/d;->c:[C
@@ -76,6 +78,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -84,6 +87,7 @@
 .method public static a([BZ)Ljava/lang/String;
     .locals 1
 
+    .line 82
     new-instance v0, Ljava/lang/String;
 
     if-eqz p1, :cond_0
@@ -110,6 +114,7 @@
 
     const-string v0, "MD5"
 
+    .line 30
     invoke-static {v0}, Lcom/xiaomi/onetrack/d/d;->a(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -120,6 +125,7 @@
 .method static a(Ljava/lang/String;)Ljava/security/MessageDigest;
     .locals 1
 
+    .line 23
     :try_start_0
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
@@ -132,6 +138,7 @@
     :catch_0
     move-exception p0
 
+    .line 25
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-virtual {p0}, Ljava/security/NoSuchAlgorithmException;->getMessage()Ljava/lang/String;
@@ -152,6 +159,7 @@
 
     return-object v0
 
+    .line 101
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -169,6 +177,7 @@
 .method public static a([B)[B
     .locals 1
 
+    .line 34
     invoke-static {}, Lcom/xiaomi/onetrack/d/d;->a()Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -183,10 +192,12 @@
 .method private static a([B[C)[C
     .locals 6
 
+    .line 86
     array-length v0, p0
 
     shl-int/lit8 v1, v0, 0x1
 
+    .line 87
     new-array v1, v1, [C
 
     const/4 v2, 0x0
@@ -198,6 +209,7 @@
 
     add-int/lit8 v4, v3, 0x1
 
+    .line 90
     aget-byte v5, p0, v2
 
     and-int/lit16 v5, v5, 0xf0
@@ -210,6 +222,7 @@
 
     add-int/lit8 v3, v4, 0x1
 
+    .line 91
     aget-byte v5, p0, v2
 
     and-int/lit8 v5, v5, 0xf
@@ -229,6 +242,7 @@
 .method public static b([B)Ljava/lang/String;
     .locals 1
 
+    .line 42
     invoke-static {p0}, Lcom/xiaomi/onetrack/d/d;->a([B)[B
 
     move-result-object p0
@@ -247,6 +261,7 @@
 
     const-string v0, "SHA-256"
 
+    .line 50
     invoke-static {v0}, Lcom/xiaomi/onetrack/d/d;->a(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -259,6 +274,7 @@
 
     const-string v0, "UTF-8"
 
+    .line 38
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/d/d;->a(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object p0
@@ -273,6 +289,7 @@
 .method public static c(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 46
     invoke-static {p0}, Lcom/xiaomi/onetrack/d/d;->b(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -291,6 +308,7 @@
 
     const-string v0, "SHA1"
 
+    .line 54
     invoke-static {v0}, Lcom/xiaomi/onetrack/d/d;->a(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -301,6 +319,7 @@
 .method public static c([B)[B
     .locals 1
 
+    .line 70
     invoke-static {}, Lcom/xiaomi/onetrack/d/d;->b()Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -315,6 +334,7 @@
 .method public static d(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 58
     invoke-static {p0}, Lcom/xiaomi/onetrack/d/d;->g(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -331,6 +351,7 @@
 .method public static d([B)Ljava/lang/String;
     .locals 1
 
+    .line 78
     invoke-static {p0}, Lcom/xiaomi/onetrack/d/d;->c([B)[B
 
     move-result-object p0
@@ -347,6 +368,7 @@
 .method public static e(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 62
     invoke-static {p0}, Lcom/xiaomi/onetrack/d/d;->f(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -368,12 +390,15 @@
     :try_start_0
     const-string v0, "MD5"
 
+    .line 111
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
+    .line 112
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
 
+    .line 113
     new-instance p0, Ljava/math/BigInteger;
 
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
@@ -392,6 +417,7 @@
 
     aput-object p0, v1, v2
 
+    .line 114
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -403,6 +429,7 @@
     :catch_0
     move-exception p0
 
+    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -424,6 +451,7 @@
     :cond_0
     const-string p0, ""
 
+    .line 119
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -437,6 +465,7 @@
 
     const-string v0, "UTF-8"
 
+    .line 66
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/d/d;->a(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object p0
@@ -451,6 +480,7 @@
 .method public static g(Ljava/lang/String;)[B
     .locals 2
 
+    .line 74
     invoke-static {}, Lcom/xiaomi/onetrack/d/d;->c()Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -471,6 +501,7 @@
 .method public static h(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 123
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -481,6 +512,7 @@
 
     return-object p0
 
+    .line 126
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 

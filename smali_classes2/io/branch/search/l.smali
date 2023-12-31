@@ -1,5 +1,6 @@
 .class public Lio/branch/search/l;
 .super Lio/branch/search/BranchSearch;
+.source "SourceFile"
 
 # interfaces
 .implements Lio/branch/search/b;

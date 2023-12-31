@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/FirebaseCrashlytics$2;
 .super Ljava/lang/Object;
+.source "FirebaseCrashlytics.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -37,6 +38,7 @@
 .method constructor <init>(ZLcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;Lcom/google/firebase/crashlytics/internal/settings/SettingsController;)V
     .locals 0
 
+    .line 153
     iput-boolean p1, p0, Lcom/google/firebase/crashlytics/FirebaseCrashlytics$2;->val$finishCoreInBackground:Z
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/FirebaseCrashlytics$2;->val$core:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 153
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics$2;->call()Ljava/lang/Void;
 
     move-result-object p0
@@ -73,10 +76,12 @@
         }
     .end annotation
 
+    .line 156
     iget-boolean v0, p0, Lcom/google/firebase/crashlytics/FirebaseCrashlytics$2;->val$finishCoreInBackground:Z
 
     if-eqz v0, :cond_0
 
+    .line 157
     iget-object v0, p0, Lcom/google/firebase/crashlytics/FirebaseCrashlytics$2;->val$core:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/FirebaseCrashlytics$2;->val$settingsController:Lcom/google/firebase/crashlytics/internal/settings/SettingsController;

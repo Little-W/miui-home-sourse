@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;
 .super Ljava/util/AbstractSet;
+.source "LinkedHashTreeMap.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lcom/squareup/moshi/LinkedHashTreeMap;)V
     .locals 0
 
+    .line 791
     iput-object p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;->this$0:Lcom/squareup/moshi/LinkedHashTreeMap;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -41,6 +43,7 @@
 .method public clear()V
     .locals 0
 
+    .line 822
     iget-object p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;->this$0:Lcom/squareup/moshi/LinkedHashTreeMap;
 
     invoke-virtual {p0}, Lcom/squareup/moshi/LinkedHashTreeMap;->clear()V
@@ -51,6 +54,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 805
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     if-eqz v0, :cond_0
@@ -87,6 +91,7 @@
         }
     .end annotation
 
+    .line 797
     new-instance v0, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet$1;
 
     invoke-direct {v0, p0}, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet$1;-><init>(Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;)V
@@ -97,6 +102,7 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 809
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
@@ -105,6 +111,7 @@
 
     return v1
 
+    .line 813
     :cond_0
     iget-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;->this$0:Lcom/squareup/moshi/LinkedHashTreeMap;
 
@@ -118,6 +125,7 @@
 
     return v1
 
+    .line 817
     :cond_1
     iget-object p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;->this$0:Lcom/squareup/moshi/LinkedHashTreeMap;
 
@@ -131,6 +139,7 @@
 .method public size()I
     .locals 0
 
+    .line 793
     iget-object p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;->this$0:Lcom/squareup/moshi/LinkedHashTreeMap;
 
     iget p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->size:I

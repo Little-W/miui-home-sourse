@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/StandardJsonAdapters;
 .super Ljava/lang/Object;
+.source "StandardJsonAdapters.java"
 
 
 # annotations
@@ -109,60 +110,70 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 30
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$1;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$1;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->FACTORY:Lcom/squareup/moshi/JsonAdapter$Factory;
 
+    .line 74
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$2;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$2;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->BOOLEAN_JSON_ADAPTER:Lcom/squareup/moshi/JsonAdapter;
 
+    .line 88
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$3;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$3;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->BYTE_JSON_ADAPTER:Lcom/squareup/moshi/JsonAdapter;
 
+    .line 102
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$4;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$4;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->CHARACTER_JSON_ADAPTER:Lcom/squareup/moshi/JsonAdapter;
 
+    .line 121
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$5;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$5;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->DOUBLE_JSON_ADAPTER:Lcom/squareup/moshi/JsonAdapter;
 
+    .line 135
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$6;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$6;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->FLOAT_JSON_ADAPTER:Lcom/squareup/moshi/JsonAdapter;
 
+    .line 160
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$7;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$7;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->INTEGER_JSON_ADAPTER:Lcom/squareup/moshi/JsonAdapter;
 
+    .line 174
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$8;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$8;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->LONG_JSON_ADAPTER:Lcom/squareup/moshi/JsonAdapter;
 
+    .line 188
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$9;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$9;-><init>()V
 
     sput-object v0, Lcom/squareup/moshi/StandardJsonAdapters;->SHORT_JSON_ADAPTER:Lcom/squareup/moshi/JsonAdapter;
 
+    .line 202
     new-instance v0, Lcom/squareup/moshi/StandardJsonAdapters$10;
 
     invoke-direct {v0}, Lcom/squareup/moshi/StandardJsonAdapters$10;-><init>()V
@@ -180,6 +191,7 @@
         }
     .end annotation
 
+    .line 66
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->nextInt()I
 
     move-result v0
@@ -190,6 +202,7 @@
 
     return v0
 
+    .line 68
     :cond_0
     new-instance p2, Lcom/squareup/moshi/JsonDataException;
 
@@ -203,6 +216,7 @@
 
     const/4 p1, 0x1
 
+    .line 69
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0

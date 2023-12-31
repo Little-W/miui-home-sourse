@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 .super Ljava/lang/Enum;
+.source "LogEventDropped.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/proto/ProtoEnum;
@@ -51,6 +52,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
+    .line 67
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const/4 v1, 0x0
@@ -61,6 +63,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->REASON_UNKNOWN:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 69
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const/4 v2, 0x1
@@ -71,6 +74,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->MESSAGE_TOO_OLD:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 71
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const/4 v3, 0x2
@@ -81,6 +85,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->CACHE_FULL:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 73
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const/4 v4, 0x3
@@ -91,6 +96,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->PAYLOAD_TOO_BIG:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 75
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const/4 v5, 0x4
@@ -101,6 +107,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->MAX_RETRIES_REACHED:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 77
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const/4 v6, 0x5
@@ -111,6 +118,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->INVALID_PAYLOD:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 79
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const/4 v7, 0x6
@@ -125,6 +133,7 @@
 
     new-array v0, v0, [Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 66
     sget-object v8, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->REASON_UNKNOWN:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     aput-object v8, v0, v1
@@ -166,8 +175,10 @@
         }
     .end annotation
 
+    .line 83
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 84
     iput p3, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->number_:I
 
     return-void
@@ -176,6 +187,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
     .locals 1
 
+    .line 66
     const-class v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -190,6 +202,7 @@
 .method public static values()[Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
     .locals 1
 
+    .line 66
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->$VALUES:[Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     invoke-virtual {v0}, [Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->clone()Ljava/lang/Object;
@@ -206,6 +219,7 @@
 .method public getNumber()I
     .locals 0
 
+    .line 89
     iget p0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->number_:I
 
     return p0

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$ResetElevationAnimation;
 .super Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$ShadowAnimatorImpl;
+.source "FloatingActionButtonImpl.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;)V
     .locals 1
 
+    .line 866
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$ResetElevationAnimation;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
     const/4 v0, 0x0
@@ -35,6 +37,7 @@
 .method protected getTargetShadowSize()F
     .locals 0
 
+    .line 870
     iget-object p0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$ResetElevationAnimation;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
     iget p0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->elevation:F

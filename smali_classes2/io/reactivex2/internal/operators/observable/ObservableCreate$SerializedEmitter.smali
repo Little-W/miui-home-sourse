@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;
 .super Ljava/util/concurrent/atomic/AtomicInteger;
+.source "ObservableCreate.java"
 
 # interfaces
 .implements Lio/reactivex2/ObservableEmitter;
@@ -66,16 +67,20 @@
         }
     .end annotation
 
+    .line 154
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
+    .line 155
     iput-object p1, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
+    .line 156
     new-instance p1, Lio/reactivex2/internal/util/AtomicThrowable;
 
     invoke-direct {p1}, Lio/reactivex2/internal/util/AtomicThrowable;-><init>()V
 
     iput-object p1, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->error:Lio/reactivex2/internal/util/AtomicThrowable;
 
+    .line 157
     new-instance p1, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;
 
     const/16 v0, 0x10
@@ -92,12 +97,14 @@
 .method drain()V
     .locals 1
 
+    .line 219
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->getAndIncrement()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 220
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->drainLoop()V
 
     :cond_0
@@ -107,16 +114,20 @@
 .method drainLoop()V
     .locals 8
 
+    .line 225
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
+    .line 226
     iget-object v1, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->queue:Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;
 
+    .line 227
     iget-object v2, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->error:Lio/reactivex2/internal/util/AtomicThrowable;
 
     const/4 v3, 0x1
 
     move v4, v3
 
+    .line 232
     :cond_0
     :goto_0
     invoke-interface {v0}, Lio/reactivex2/ObservableEmitter;->isDisposed()Z
@@ -125,10 +136,12 @@
 
     if-eqz v5, :cond_1
 
+    .line 233
     invoke-virtual {v1}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->clear()V
 
     return-void
 
+    .line 237
     :cond_1
     invoke-virtual {v2}, Lio/reactivex2/internal/util/AtomicThrowable;->get()Ljava/lang/Object;
 
@@ -136,8 +149,10 @@
 
     if-eqz v5, :cond_2
 
+    .line 238
     invoke-virtual {v1}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->clear()V
 
+    .line 239
     invoke-virtual {v2}, Lio/reactivex2/internal/util/AtomicThrowable;->terminate()Ljava/lang/Throwable;
 
     move-result-object p0
@@ -146,9 +161,11 @@
 
     return-void
 
+    .line 243
     :cond_2
     iget-boolean v5, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->done:Z
 
+    .line 244
     invoke-virtual {v1}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->poll()Ljava/lang/Object;
 
     move-result-object v6
@@ -167,6 +184,7 @@
 
     if-eqz v7, :cond_4
 
+    .line 249
     invoke-interface {v0}, Lio/reactivex2/ObservableEmitter;->onComplete()V
 
     return-void
@@ -176,6 +194,7 @@
 
     neg-int v4, v4
 
+    .line 260
     invoke-virtual {p0, v4}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->addAndGet(I)I
 
     move-result v4
@@ -184,6 +203,7 @@
 
     return-void
 
+    .line 257
     :cond_5
     invoke-interface {v0, v6}, Lio/reactivex2/ObservableEmitter;->onNext(Ljava/lang/Object;)V
 
@@ -193,6 +213,7 @@
 .method public isDisposed()Z
     .locals 0
 
+    .line 279
     iget-object p0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
     invoke-interface {p0}, Lio/reactivex2/ObservableEmitter;->isDisposed()Z
@@ -205,6 +226,7 @@
 .method public onComplete()V
     .locals 1
 
+    .line 211
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
     invoke-interface {v0}, Lio/reactivex2/ObservableEmitter;->isDisposed()Z
@@ -222,8 +244,10 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 214
     iput-boolean v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->done:Z
 
+    .line 215
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->drain()V
 
     :cond_1
@@ -234,12 +258,14 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 188
     invoke-virtual {p0, p1}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->tryOnError(Ljava/lang/Throwable;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
+    .line 189
     invoke-static {p1}, Lio/reactivex2/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
     :cond_0
@@ -254,6 +280,7 @@
         }
     .end annotation
 
+    .line 162
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
     invoke-interface {v0}, Lio/reactivex2/ObservableEmitter;->isDisposed()Z
@@ -271,6 +298,7 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 166
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "onNext called with null. Null values are generally not allowed in 2.x operators and sources."
@@ -281,6 +309,7 @@
 
     return-void
 
+    .line 169
     :cond_1
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->get()I
 
@@ -298,10 +327,12 @@
 
     if-eqz v0, :cond_2
 
+    .line 170
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
     invoke-interface {v0, p1}, Lio/reactivex2/ObservableEmitter;->onNext(Ljava/lang/Object;)V
 
+    .line 171
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->decrementAndGet()I
 
     move-result p1
@@ -310,18 +341,23 @@
 
     return-void
 
+    .line 175
     :cond_2
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->queue:Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;
 
+    .line 176
     monitor-enter v0
 
+    .line 177
     :try_start_0
     invoke-interface {v0, p1}, Lio/reactivex2/internal/fuseable/SimpleQueue;->offer(Ljava/lang/Object;)Z
 
+    .line 178
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 179
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->getAndIncrement()I
 
     move-result p1
@@ -330,6 +366,7 @@
 
     return-void
 
+    .line 183
     :cond_3
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->drainLoop()V
 
@@ -338,6 +375,7 @@
     :catchall_0
     move-exception p0
 
+    .line 178
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -366,6 +404,7 @@
 .method public setCancellable(Lio/reactivex2/functions/Cancellable;)V
     .locals 0
 
+    .line 274
     iget-object p0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
     invoke-interface {p0, p1}, Lio/reactivex2/ObservableEmitter;->setCancellable(Lio/reactivex2/functions/Cancellable;)V
@@ -376,6 +415,7 @@
 .method public setDisposable(Lio/reactivex2/disposables/Disposable;)V
     .locals 0
 
+    .line 269
     iget-object p0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
     invoke-interface {p0, p1}, Lio/reactivex2/ObservableEmitter;->setDisposable(Lio/reactivex2/disposables/Disposable;)V
@@ -386,6 +426,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 289
     iget-object p0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -398,6 +439,7 @@
 .method public tryOnError(Ljava/lang/Throwable;)Z
     .locals 2
 
+    .line 195
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->emitter:Lio/reactivex2/ObservableEmitter;
 
     invoke-interface {v0}, Lio/reactivex2/ObservableEmitter;->isDisposed()Z
@@ -417,12 +459,14 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 199
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
 
     invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
+    .line 201
     :cond_1
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->error:Lio/reactivex2/internal/util/AtomicThrowable;
 
@@ -434,8 +478,10 @@
 
     const/4 p1, 0x1
 
+    .line 202
     iput-boolean p1, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->done:Z
 
+    .line 203
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;->drain()V
 
     return p1

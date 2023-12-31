@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/JobSupport$ChildCompletion;
 .super Lkotlinx/coroutines/JobNode;
+.source "JobSupport.kt"
 
 
 # annotations
@@ -35,6 +36,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/JobSupport;Lkotlinx/coroutines/JobSupport$Finishing;Lkotlinx/coroutines/ChildHandleNode;Ljava/lang/Object;)V
     .locals 1
 
+    .line 1150
     iget-object v0, p3, Lkotlinx/coroutines/ChildHandleNode;->childJob:Lkotlinx/coroutines/ChildJob;
 
     check-cast v0, Lkotlinx/coroutines/Job;
@@ -57,6 +59,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1145
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/JobSupport$ChildCompletion;->invoke(Ljava/lang/Throwable;)V
@@ -69,6 +72,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 1152
     iget-object p1, p0, Lkotlinx/coroutines/JobSupport$ChildCompletion;->parent:Lkotlinx/coroutines/JobSupport;
 
     iget-object v0, p0, Lkotlinx/coroutines/JobSupport$ChildCompletion;->state:Lkotlinx/coroutines/JobSupport$Finishing;
@@ -85,6 +89,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1155
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

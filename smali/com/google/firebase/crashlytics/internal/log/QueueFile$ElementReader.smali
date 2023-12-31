@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/crashlytics/internal/log/QueueFile$ElementReader;
 .super Ljava/lang/Object;
+.source "QueueFile.java"
 
 
 # annotations

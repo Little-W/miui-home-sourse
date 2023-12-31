@@ -1,5 +1,6 @@
 .class final Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel$1;
 .super Ljava/lang/Object;
+.source "LoaderManagerImpl.java"
 
 # interfaces
 .implements Landroidx/lifecycle/ViewModelProvider$Factory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 281
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
         }
     .end annotation
 
+    .line 286
     new-instance p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-direct {p0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;-><init>()V

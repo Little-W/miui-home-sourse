@@ -1,5 +1,6 @@
 .class interface abstract Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;
 .super Ljava/lang/Object;
+.source "ResourceManagerInternal.java"
 
 
 # annotations

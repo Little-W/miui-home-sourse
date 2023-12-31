@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;
+.source "AutoValue_CrashlyticsReport_Session_Event_Device.java"
 
 
 # annotations
@@ -28,18 +29,25 @@
 .method private constructor <init>(Ljava/lang/Double;IZIJJ)V
     .locals 0
 
+    .line 28
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;-><init>()V
 
+    .line 29
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->batteryLevel:Ljava/lang/Double;
 
+    .line 30
     iput p2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->batteryVelocity:I
 
+    .line 31
     iput-boolean p3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->proximityOn:Z
 
+    .line 32
     iput p4, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->orientation:I
 
+    .line 33
     iput-wide p5, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->ramUsed:J
 
+    .line 34
     iput-wide p7, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->diskUsed:J
 
     return-void
@@ -48,6 +56,7 @@
 .method synthetic constructor <init>(Ljava/lang/Double;IZIJJLcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$1;)V
     .locals 0
 
+    .line 8
     invoke-direct/range {p0 .. p8}, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;-><init>(Ljava/lang/Double;IZIJJ)V
 
     return-void
@@ -64,6 +73,7 @@
 
     return v0
 
+    .line 85
     :cond_0
     instance-of v1, p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;
 
@@ -71,8 +81,10 @@
 
     if-eqz v1, :cond_3
 
+    .line 86
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;
 
+    .line 87
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->batteryLevel:Ljava/lang/Double;
 
     if-nez v1, :cond_1
@@ -99,6 +111,7 @@
     :goto_0
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->batteryVelocity:I
 
+    .line 88
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;->getBatteryVelocity()I
 
     move-result v3
@@ -107,6 +120,7 @@
 
     iget-boolean v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->proximityOn:Z
 
+    .line 89
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;->isProximityOn()Z
 
     move-result v3
@@ -115,6 +129,7 @@
 
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->orientation:I
 
+    .line 90
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;->getOrientation()I
 
     move-result v3
@@ -123,6 +138,7 @@
 
     iget-wide v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->ramUsed:J
 
+    .line 91
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;->getRamUsed()J
 
     move-result-wide v5
@@ -133,6 +149,7 @@
 
     iget-wide v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->diskUsed:J
 
+    .line 92
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;->getDiskUsed()J
 
     move-result-wide p0
@@ -156,6 +173,7 @@
 .method public getBatteryLevel()Ljava/lang/Double;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->batteryLevel:Ljava/lang/Double;
 
     return-object p0
@@ -164,6 +182,7 @@
 .method public getBatteryVelocity()I
     .locals 0
 
+    .line 45
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->batteryVelocity:I
 
     return p0
@@ -172,6 +191,7 @@
 .method public getDiskUsed()J
     .locals 2
 
+    .line 65
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->diskUsed:J
 
     return-wide v0
@@ -180,6 +200,7 @@
 .method public getOrientation()I
     .locals 0
 
+    .line 55
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->orientation:I
 
     return p0
@@ -188,6 +209,7 @@
 .method public getRamUsed()J
     .locals 2
 
+    .line 60
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->ramUsed:J
 
     return-wide v0
@@ -196,6 +218,7 @@
 .method public hashCode()I
     .locals 7
 
+    .line 101
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->batteryLevel:Ljava/lang/Double;
 
     if-nez v0, :cond_0
@@ -216,12 +239,14 @@
 
     mul-int/2addr v0, v1
 
+    .line 103
     iget v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->batteryVelocity:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 105
     iget-boolean v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->proximityOn:Z
 
     if-eqz v2, :cond_1
@@ -238,12 +263,14 @@
 
     mul-int/2addr v0, v1
 
+    .line 107
     iget v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->orientation:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 109
     iget-wide v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->ramUsed:J
 
     const/16 v4, 0x20
@@ -258,6 +285,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 111
     iget-wide v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->diskUsed:J
 
     ushr-long v3, v1, v4
@@ -274,6 +302,7 @@
 .method public isProximityOn()Z
     .locals 0
 
+    .line 50
     iget-boolean p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;->proximityOn:Z
 
     return p0
@@ -282,6 +311,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 70
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

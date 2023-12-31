@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/firebase/installations/StateListener;
 .super Ljava/lang/Object;
+.source "StateListener.java"
 
 
 # virtual methods

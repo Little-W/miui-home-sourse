@@ -1,5 +1,6 @@
 .class public Lorg/ahocorasick/interval/IntervalTree;
 .super Ljava/lang/Object;
+.source "IntervalTree.java"
 
 
 # instance fields
@@ -18,12 +19,15 @@
         }
     .end annotation
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 10
     iput-object v0, p0, Lorg/ahocorasick/interval/IntervalTree;->rootNode:Lorg/ahocorasick/interval/IntervalNode;
 
+    .line 13
     new-instance v0, Lorg/ahocorasick/interval/IntervalNode;
 
     invoke-direct {v0, p1}, Lorg/ahocorasick/interval/IntervalNode;-><init>(Ljava/util/List;)V
@@ -48,6 +52,7 @@
         }
     .end annotation
 
+    .line 45
     iget-object p0, p0, Lorg/ahocorasick/interval/IntervalTree;->rootNode:Lorg/ahocorasick/interval/IntervalNode;
 
     invoke-virtual {p0, p1}, Lorg/ahocorasick/interval/IntervalNode;->findOverlaps(Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;
@@ -71,16 +76,19 @@
         }
     .end annotation
 
+    .line 19
     new-instance v0, Lorg/ahocorasick/interval/IntervalableComparatorBySize;
 
     invoke-direct {v0}, Lorg/ahocorasick/interval/IntervalableComparatorBySize;-><init>()V
 
     invoke-static {p1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 21
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
 
+    .line 23
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -98,6 +106,7 @@
 
     check-cast v2, Lorg/ahocorasick/interval/Intervalable;
 
+    .line 25
     invoke-interface {v0, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -106,6 +115,7 @@
 
     goto :goto_0
 
+    .line 30
     :cond_0
     invoke-virtual {p0, v2}, Lorg/ahocorasick/interval/IntervalTree;->findOverlaps(Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;
 
@@ -115,6 +125,7 @@
 
     goto :goto_0
 
+    .line 34
     :cond_1
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -133,10 +144,12 @@
 
     check-cast v0, Lorg/ahocorasick/interval/Intervalable;
 
+    .line 35
     invoke-interface {p1, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 39
     :cond_2
     new-instance p0, Lorg/ahocorasick/interval/IntervalableComparatorByPosition;
 

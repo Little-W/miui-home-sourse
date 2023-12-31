@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;
+.source "AutoValue_CrashlyticsReport_Session_Device.java"
 
 
 # annotations
@@ -34,24 +35,34 @@
 .method private constructor <init>(ILjava/lang/String;IJJZILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 37
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;-><init>()V
 
+    .line 38
     iput p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->arch:I
 
+    .line 39
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->model:Ljava/lang/String;
 
+    .line 40
     iput p3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->cores:I
 
+    .line 41
     iput-wide p4, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->ram:J
 
+    .line 42
     iput-wide p6, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->diskSpace:J
 
+    .line 43
     iput-boolean p8, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->simulator:Z
 
+    .line 44
     iput p9, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->state:I
 
+    .line 45
     iput-object p10, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->manufacturer:Ljava/lang/String;
 
+    .line 46
     iput-object p11, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->modelClass:Ljava/lang/String;
 
     return-void
@@ -60,6 +71,7 @@
 .method synthetic constructor <init>(ILjava/lang/String;IJJZILjava/lang/String;Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device$1;)V
     .locals 0
 
+    .line 8
     invoke-direct/range {p0 .. p11}, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;-><init>(ILjava/lang/String;IJJZILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -76,6 +88,7 @@
 
     return v0
 
+    .line 119
     :cond_0
     instance-of v1, p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;
 
@@ -83,8 +96,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 120
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;
 
+    .line 121
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->arch:I
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->getArch()I
@@ -95,6 +110,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->model:Ljava/lang/String;
 
+    .line 122
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->getModel()Ljava/lang/String;
 
     move-result-object v3
@@ -107,6 +123,7 @@
 
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->cores:I
 
+    .line 123
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->getCores()I
 
     move-result v3
@@ -115,6 +132,7 @@
 
     iget-wide v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->ram:J
 
+    .line 124
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->getRam()J
 
     move-result-wide v5
@@ -125,6 +143,7 @@
 
     iget-wide v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->diskSpace:J
 
+    .line 125
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->getDiskSpace()J
 
     move-result-wide v5
@@ -135,6 +154,7 @@
 
     iget-boolean v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->simulator:Z
 
+    .line 126
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->isSimulator()Z
 
     move-result v3
@@ -143,6 +163,7 @@
 
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->state:I
 
+    .line 127
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->getState()I
 
     move-result v3
@@ -151,6 +172,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->manufacturer:Ljava/lang/String;
 
+    .line 128
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->getManufacturer()Ljava/lang/String;
 
     move-result-object v3
@@ -163,6 +185,7 @@
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->modelClass:Ljava/lang/String;
 
+    .line 129
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->getModelClass()Ljava/lang/String;
 
     move-result-object p1
@@ -188,6 +211,7 @@
 .method public getArch()I
     .locals 0
 
+    .line 53
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->arch:I
 
     return p0
@@ -196,6 +220,7 @@
 .method public getCores()I
     .locals 0
 
+    .line 64
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->cores:I
 
     return p0
@@ -204,6 +229,7 @@
 .method public getDiskSpace()J
     .locals 2
 
+    .line 74
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->diskSpace:J
 
     return-wide v0
@@ -212,6 +238,7 @@
 .method public getManufacturer()Ljava/lang/String;
     .locals 0
 
+    .line 90
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->manufacturer:Ljava/lang/String;
 
     return-object p0
@@ -220,6 +247,7 @@
 .method public getModel()Ljava/lang/String;
     .locals 0
 
+    .line 59
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->model:Ljava/lang/String;
 
     return-object p0
@@ -228,6 +256,7 @@
 .method public getModelClass()Ljava/lang/String;
     .locals 0
 
+    .line 96
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->modelClass:Ljava/lang/String;
 
     return-object p0
@@ -236,6 +265,7 @@
 .method public getRam()J
     .locals 2
 
+    .line 69
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->ram:J
 
     return-wide v0
@@ -244,6 +274,7 @@
 .method public getState()I
     .locals 0
 
+    .line 84
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->state:I
 
     return p0
@@ -252,6 +283,7 @@
 .method public hashCode()I
     .locals 7
 
+    .line 138
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->arch:I
 
     const v1, 0xf4243
@@ -260,6 +292,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 140
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->model:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -270,12 +303,14 @@
 
     mul-int/2addr v0, v1
 
+    .line 142
     iget v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->cores:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 144
     iget-wide v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->ram:J
 
     const/16 v4, 0x20
@@ -290,6 +325,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 146
     iget-wide v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->diskSpace:J
 
     ushr-long v4, v2, v4
@@ -302,6 +338,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 148
     iget-boolean v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->simulator:Z
 
     if-eqz v2, :cond_0
@@ -318,12 +355,14 @@
 
     mul-int/2addr v0, v1
 
+    .line 150
     iget v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->state:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 152
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->manufacturer:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -334,6 +373,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 154
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->modelClass:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -348,6 +388,7 @@
 .method public isSimulator()Z
     .locals 0
 
+    .line 79
     iget-boolean p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Device;->simulator:Z
 
     return p0
@@ -356,6 +397,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 101
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

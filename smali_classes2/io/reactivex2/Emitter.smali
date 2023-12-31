@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/Emitter;
 .super Ljava/lang/Object;
+.source "Emitter.java"
 
 
 # annotations

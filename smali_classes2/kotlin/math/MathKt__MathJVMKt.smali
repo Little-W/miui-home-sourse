@@ -1,11 +1,13 @@
 .class Lkotlin/math/MathKt__MathJVMKt;
 .super Lkotlin/math/MathKt__MathHKt;
+.source "MathJVM.kt"
 
 
 # direct methods
 .method public static final roundToInt(F)I
     .locals 1
 
+    .line 1132
     invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v0

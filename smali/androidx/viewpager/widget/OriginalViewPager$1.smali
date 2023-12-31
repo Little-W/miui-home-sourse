@@ -1,5 +1,6 @@
 .class Landroidx/viewpager/widget/OriginalViewPager$1;
 .super Ljava/lang/Object;
+.source "OriginalViewPager.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 139
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public compare(Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;)I
     .locals 0
 
+    .line 142
     iget p0, p1, Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;->position:I
 
     iget p1, p2, Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;->position:I
@@ -51,6 +54,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 139
     check-cast p1, Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;
 
     check-cast p2, Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;

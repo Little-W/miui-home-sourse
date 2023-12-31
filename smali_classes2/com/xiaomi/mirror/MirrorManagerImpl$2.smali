@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/MirrorManagerImpl$2;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;

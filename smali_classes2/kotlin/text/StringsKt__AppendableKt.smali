@@ -1,5 +1,6 @@
 .class Lkotlin/text/StringsKt__AppendableKt;
 .super Ljava/lang/Object;
+.source "Appendable.kt"
 
 
 # direct methods
@@ -25,6 +26,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 85
     invoke-interface {p2, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -38,6 +40,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 86
     instance-of p2, p1, Ljava/lang/CharSequence;
 
     goto :goto_0
@@ -54,6 +57,7 @@
 
     goto :goto_1
 
+    .line 87
     :cond_2
     instance-of p2, p1, Ljava/lang/Character;
 
@@ -69,6 +73,7 @@
 
     goto :goto_1
 
+    .line 88
     :cond_3
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 

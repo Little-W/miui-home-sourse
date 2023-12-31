@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/engine/bitmap_recycle/LruBitmapPool$NullBitmapTracker;
 .super Ljava/lang/Object;
+.source "LruBitmapPool.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/bitmap_recycle/LruBitmapPool$BitmapTracker;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 320
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$10;
 .super Ljava/lang/Object;
+.source "CrashlyticsController.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -35,6 +36,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;J)V
     .locals 0
 
+    .line 773
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$10;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
     iput-wide p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$10;->val$timestamp:J
@@ -54,6 +56,7 @@
         }
     .end annotation
 
+    .line 773
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$10;->call()Ljava/lang/Void;
 
     move-result-object p0
@@ -69,6 +72,7 @@
         }
     .end annotation
 
+    .line 776
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -77,14 +81,17 @@
 
     const/4 v2, 0x1
 
+    .line 777
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 778
     iget-wide v1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$10;->val$timestamp:J
 
     const-string/jumbo v3, "timestamp"
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
+    .line 780
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$10;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;->access$1200(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;)Lcom/google/firebase/crashlytics/internal/analytics/AnalyticsEventLogger;

@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/data/HttpUrlFetcher$DefaultHttpUrlConnectionFactory;
 .super Ljava/lang/Object;
+.source "HttpUrlFetcher.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/HttpUrlFetcher$HttpUrlConnectionFactory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 195
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
         }
     .end annotation
 
+    .line 199
     invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object p0

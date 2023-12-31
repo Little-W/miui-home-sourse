@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzgb$zza;
 .super Lcom/google/android/gms/internal/measurement/zzga;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzga;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;
 .super Lkotlinx/coroutines/internal/AtomicOp;
+.source "Select.kt"
 
 
 # annotations
@@ -53,12 +54,14 @@
         }
     .end annotation
 
+    .line 568
     invoke-direct {p0}, Lkotlinx/coroutines/internal/AtomicOp;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->impl:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
     iput-object p2, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->desc:Lkotlinx/coroutines/internal/AtomicDesc;
 
+    .line 570
     invoke-static {}, Lkotlinx/coroutines/selects/SelectKt;->access$getSelectOpSequenceNumber$p()Lkotlinx/coroutines/selects/SeqNumber;
 
     move-result-object p1
@@ -69,6 +72,7 @@
 
     iput-wide p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->opSequence:J
 
+    .line 573
     iget-object p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->desc:Lkotlinx/coroutines/internal/AtomicDesc;
 
     check-cast p0, Lkotlinx/coroutines/internal/AtomicOp;
@@ -97,11 +101,13 @@
 
     goto :goto_1
 
+    .line 618
     :cond_1
     invoke-static {}, Lkotlinx/coroutines/selects/SelectKt;->getNOT_SELECTED()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 619
     :goto_1
     iget-object v1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->impl:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
@@ -115,6 +121,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 621
     iget-object p0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->impl:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
     invoke-static {p0}, Lkotlinx/coroutines/selects/SelectBuilderImpl;->access$doAfterSelect(Lkotlinx/coroutines/selects/SelectBuilderImpl;)V
@@ -126,12 +133,15 @@
 .method private final prepareSelectOp()Ljava/lang/Object;
     .locals 5
 
+    .line 598
     iget-object v0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->impl:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
+    .line 662
     :cond_0
     :goto_0
     iget-object v1, v0, Lkotlinx/coroutines/selects/SelectBuilderImpl;->_state:Ljava/lang/Object;
 
+    .line 600
     move-object v2, p0
 
     check-cast v2, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;
@@ -142,6 +152,7 @@
 
     return-object v3
 
+    .line 601
     :cond_1
     instance-of v2, v1, Lkotlinx/coroutines/internal/OpDescriptor;
 
@@ -155,6 +166,7 @@
 
     goto :goto_0
 
+    .line 602
     :cond_2
     invoke-static {}, Lkotlinx/coroutines/selects/SelectKt;->getNOT_SELECTED()Ljava/lang/Object;
 
@@ -162,6 +174,7 @@
 
     if-ne v1, v2, :cond_3
 
+    .line 603
     iget-object v1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->impl:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
     sget-object v2, Lkotlinx/coroutines/selects/SelectBuilderImpl;->_state$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
@@ -178,6 +191,7 @@
 
     return-object v3
 
+    .line 606
     :cond_3
     invoke-static {}, Lkotlinx/coroutines/selects/SelectKt;->getALREADY_SELECTED()Ljava/lang/Object;
 
@@ -189,6 +203,7 @@
 .method private final undoPrepare()V
     .locals 3
 
+    .line 613
     iget-object v0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->impl:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
     sget-object v1, Lkotlinx/coroutines/selects/SelectBuilderImpl;->_state$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
@@ -207,8 +222,10 @@
 .method public complete(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 593
     invoke-direct {p0, p2}, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->completeSelect(Ljava/lang/Object;)V
 
+    .line 594
     iget-object p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->desc:Lkotlinx/coroutines/internal/AtomicDesc;
 
     check-cast p0, Lkotlinx/coroutines/internal/AtomicOp;
@@ -221,6 +238,7 @@
 .method public getOpSequence()J
     .locals 2
 
+    .line 570
     iget-wide v0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->opSequence:J
 
     return-wide v0
@@ -231,6 +249,7 @@
 
     if-nez p1, :cond_0
 
+    .line 581
     invoke-direct {p0}, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->prepareSelectOp()Ljava/lang/Object;
 
     move-result-object v0
@@ -239,6 +258,7 @@
 
     return-object v0
 
+    .line 584
     :cond_0
     :try_start_0
     iget-object v0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->desc:Lkotlinx/coroutines/internal/AtomicDesc;
@@ -260,8 +280,10 @@
 
     if-nez p1, :cond_1
 
+    .line 587
     invoke-direct {p0}, Lkotlinx/coroutines/selects/SelectBuilderImpl$AtomicSelectOp;->undoPrepare()V
 
+    .line 588
     :cond_1
     throw v0
 .end method
@@ -269,6 +291,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 625
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

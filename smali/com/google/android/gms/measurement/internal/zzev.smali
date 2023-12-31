@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzev;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzev;->zza:Ljava/lang/String;
 
     return-void
@@ -20,6 +23,7 @@
 .method static synthetic zza(Lcom/google/android/gms/measurement/internal/zzev;)Ljava/lang/String;
     .locals 0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzev;->zza:Ljava/lang/String;
 
     return-object p0

@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/messages/BranchSwitchChangeMessage;
 .super Ljava/lang/Object;
+.source "BranchSwitchChangeMessage.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method public constructor <init>(Z)V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 10
     iput-boolean p1, p0, Lcom/mi/globallauncher/messages/BranchSwitchChangeMessage;->branchSearchHint:Z
 
     return-void
@@ -22,6 +25,7 @@
 .method public isBranchSearchHint()Z
     .locals 0
 
+    .line 14
     iget-boolean p0, p0, Lcom/mi/globallauncher/messages/BranchSwitchChangeMessage;->branchSearchHint:Z
 
     return p0

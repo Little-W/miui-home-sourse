@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;
 .super Ljava/lang/Object;
+.source "AppSettingsData.java"
 
 
 # instance fields
@@ -26,24 +27,34 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZII)V
     .locals 0
 
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->status:Ljava/lang/String;
 
+    .line 44
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->url:Ljava/lang/String;
 
+    .line 45
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->reportsUrl:Ljava/lang/String;
 
+    .line 46
     iput-object p4, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->ndkReportsUrl:Ljava/lang/String;
 
+    .line 47
     iput-object p5, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->bundleId:Ljava/lang/String;
 
+    .line 48
     iput-object p6, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->organizationId:Ljava/lang/String;
 
+    .line 49
     iput-boolean p7, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->updateRequired:Z
 
+    .line 50
     iput p8, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->reportUploadVariant:I
 
+    .line 51
     iput p9, p0, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;->nativeReportUploadVariant:I
 
     return-void
@@ -72,6 +83,7 @@
 
     move v7, p5
 
+    .line 56
     invoke-direct/range {v0 .. v9}, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZII)V
 
     return-void

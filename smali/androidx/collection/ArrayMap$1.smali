@@ -1,5 +1,6 @@
 .class Landroidx/collection/ArrayMap$1;
 .super Landroidx/collection/MapCollections;
+.source "ArrayMap.java"
 
 
 # annotations
@@ -28,6 +29,7 @@
 .method constructor <init>(Landroidx/collection/ArrayMap;)V
     .locals 0
 
+    .line 76
     iput-object p1, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     invoke-direct {p0}, Landroidx/collection/MapCollections;-><init>()V
@@ -40,6 +42,7 @@
 .method protected colClear()V
     .locals 0
 
+    .line 119
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     invoke-virtual {p0}, Landroidx/collection/ArrayMap;->clear()V
@@ -50,6 +53,7 @@
 .method protected colGetEntry(II)Ljava/lang/Object;
     .locals 0
 
+    .line 84
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     iget-object p0, p0, Landroidx/collection/ArrayMap;->mArray:[Ljava/lang/Object;
@@ -73,6 +77,7 @@
         }
     .end annotation
 
+    .line 99
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     return-object p0
@@ -81,6 +86,7 @@
 .method protected colGetSize()I
     .locals 0
 
+    .line 79
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     iget p0, p0, Landroidx/collection/ArrayMap;->mSize:I
@@ -91,6 +97,7 @@
 .method protected colIndexOfKey(Ljava/lang/Object;)I
     .locals 0
 
+    .line 89
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroidx/collection/ArrayMap;->indexOfKey(Ljava/lang/Object;)I
@@ -103,6 +110,7 @@
 .method protected colIndexOfValue(Ljava/lang/Object;)I
     .locals 0
 
+    .line 94
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroidx/collection/ArrayMap;->indexOfValue(Ljava/lang/Object;)I
@@ -120,6 +128,7 @@
         }
     .end annotation
 
+    .line 104
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -130,6 +139,7 @@
 .method protected colRemoveAt(I)V
     .locals 0
 
+    .line 114
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroidx/collection/ArrayMap;->removeAt(I)Ljava/lang/Object;
@@ -145,6 +155,7 @@
         }
     .end annotation
 
+    .line 109
     iget-object p0, p0, Landroidx/collection/ArrayMap$1;->this$0:Landroidx/collection/ArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroidx/collection/ArrayMap;->setValueAt(ILjava/lang/Object;)Ljava/lang/Object;

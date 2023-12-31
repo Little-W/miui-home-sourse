@@ -1,5 +1,6 @@
 .class public final Lio/requery/android/database/sqlite/SQLiteGlobal;
 .super Ljava/lang/Object;
+.source "SQLiteGlobal.java"
 
 
 # static fields
@@ -12,6 +13,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 41
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -32,15 +34,18 @@
 .method public static getDefaultPageSize()I
     .locals 3
 
+    .line 67
     sget-object v0, Lio/requery/android/database/sqlite/SQLiteGlobal;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 68
     :try_start_0
     sget v1, Lio/requery/android/database/sqlite/SQLiteGlobal;->sDefaultPageSize:I
 
     if-nez v1, :cond_0
 
+    .line 69
     new-instance v1, Landroid/os/StatFs;
 
     const-string v2, "/data"
@@ -56,6 +61,7 @@
     :cond_0
     const/16 v1, 0x400
 
+    .line 71
     monitor-exit v0
 
     return v1
@@ -63,6 +69,7 @@
     :catchall_0
     move-exception v1
 
+    .line 72
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -116,6 +123,7 @@
 .method public static releaseMemory()I
     .locals 1
 
+    .line 56
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteGlobal;->nativeReleaseMemory()I
 
     move-result v0

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/InlineList;
 .super Ljava/lang/Object;
+.source "InlineList.kt"
 
 
 # annotations
@@ -33,6 +34,7 @@
 
     const/4 p0, 0x0
 
+    .line 16
     :cond_0
     invoke-static {p0}, Lkotlinx/coroutines/internal/InlineList;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -99,6 +101,7 @@
         }
     .end annotation
 
+    .line 18
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result v0
@@ -126,12 +129,14 @@
     :goto_0
     if-nez p0, :cond_2
 
+    .line 20
     invoke-static {p1}, Lkotlinx/coroutines/internal/InlineList;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     goto :goto_1
 
+    .line 21
     :cond_2
     instance-of v0, p0, Ljava/util/ArrayList;
 
@@ -139,18 +144,21 @@
 
     if-eqz p0, :cond_3
 
+    .line 22
     move-object v0, p0
 
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 23
     invoke-static {p0}, Lkotlinx/coroutines/internal/InlineList;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     goto :goto_1
 
+    .line 22
     :cond_3
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -160,6 +168,7 @@
 
     throw p0
 
+    .line 26
     :cond_4
     new-instance v0, Ljava/util/ArrayList;
 
@@ -167,10 +176,13 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 27
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 28
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 29
     invoke-static {v0}, Lkotlinx/coroutines/internal/InlineList;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -208,6 +220,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
 
     invoke-static {p0, p1}, Lkotlinx/coroutines/internal/InlineList;->equals-impl(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -220,6 +233,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
 
     invoke-static {p0}, Lkotlinx/coroutines/internal/InlineList;->hashCode-impl(Ljava/lang/Object;)I
@@ -232,6 +246,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlinx/coroutines/internal/InlineList;->holder:Ljava/lang/Object;
 
     invoke-static {p0}, Lkotlinx/coroutines/internal/InlineList;->toString-impl(Ljava/lang/Object;)Ljava/lang/String;

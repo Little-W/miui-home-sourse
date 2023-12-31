@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;
+.source "AutoValue_CrashlyticsReport_Session_Event_Device.java"
 
 
 # annotations
@@ -31,6 +32,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 122
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;-><init>()V
 
     return-void
@@ -41,12 +43,14 @@
 .method public build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;
     .locals 12
 
+    .line 157
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->batteryVelocity:Ljava/lang/Integer;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 158
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,11 +65,13 @@
 
     move-result-object v1
 
+    .line 160
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->proximityOn:Ljava/lang/Boolean;
 
     if-nez v0, :cond_1
 
+    .line 161
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,11 +86,13 @@
 
     move-result-object v1
 
+    .line 163
     :cond_1
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->orientation:Ljava/lang/Integer;
 
     if-nez v0, :cond_2
 
+    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,11 +107,13 @@
 
     move-result-object v1
 
+    .line 166
     :cond_2
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->ramUsed:Ljava/lang/Long;
 
     if-nez v0, :cond_3
 
+    .line 167
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,11 +128,13 @@
 
     move-result-object v1
 
+    .line 169
     :cond_3
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->diskUsed:Ljava/lang/Long;
 
     if-nez v0, :cond_4
 
+    .line 170
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,6 +149,7 @@
 
     move-result-object v1
 
+    .line 172
     :cond_4
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -144,36 +157,42 @@
 
     if-eqz v0, :cond_5
 
+    .line 175
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device;
 
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->batteryLevel:Ljava/lang/Double;
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->batteryVelocity:Ljava/lang/Integer;
 
+    .line 177
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->proximityOn:Ljava/lang/Boolean;
 
+    .line 178
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v5
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->orientation:Ljava/lang/Integer;
 
+    .line 179
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->ramUsed:Ljava/lang/Long;
 
+    .line 180
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v7
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->diskUsed:Ljava/lang/Long;
 
+    .line 181
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v9
@@ -186,6 +205,7 @@
 
     return-object v0
 
+    .line 173
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -211,6 +231,7 @@
 .method public setBatteryLevel(Ljava/lang/Double;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;
     .locals 0
 
+    .line 126
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Device$Builder;->batteryLevel:Ljava/lang/Double;
 
     return-object p0
@@ -219,6 +240,7 @@
 .method public setBatteryVelocity(I)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;
     .locals 0
 
+    .line 131
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -231,6 +253,7 @@
 .method public setDiskUsed(J)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;
     .locals 0
 
+    .line 151
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -243,6 +266,7 @@
 .method public setOrientation(I)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;
     .locals 0
 
+    .line 141
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -255,6 +279,7 @@
 .method public setProximityOn(Z)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;
     .locals 0
 
+    .line 136
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -267,6 +292,7 @@
 .method public setRamUsed(J)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;
     .locals 0
 
+    .line 146
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1

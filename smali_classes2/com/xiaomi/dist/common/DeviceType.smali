@@ -1,5 +1,6 @@
 .class public final enum Lcom/xiaomi/dist/common/DeviceType;
 .super Ljava/lang/Enum;
+.source "DeviceType.java"
 
 
 # annotations
@@ -34,6 +35,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
+    .line 6
     new-instance v0, Lcom/xiaomi/dist/common/DeviceType;
 
     const/4 v1, 0x0
@@ -44,6 +46,7 @@
 
     sput-object v0, Lcom/xiaomi/dist/common/DeviceType;->NONE:Lcom/xiaomi/dist/common/DeviceType;
 
+    .line 7
     new-instance v0, Lcom/xiaomi/dist/common/DeviceType;
 
     const/4 v2, 0x1
@@ -54,6 +57,7 @@
 
     sput-object v0, Lcom/xiaomi/dist/common/DeviceType;->PHONE:Lcom/xiaomi/dist/common/DeviceType;
 
+    .line 8
     new-instance v0, Lcom/xiaomi/dist/common/DeviceType;
 
     const/4 v3, 0x2
@@ -64,6 +68,7 @@
 
     sput-object v0, Lcom/xiaomi/dist/common/DeviceType;->PAD:Lcom/xiaomi/dist/common/DeviceType;
 
+    .line 9
     new-instance v0, Lcom/xiaomi/dist/common/DeviceType;
 
     const/4 v4, 0x3
@@ -76,6 +81,7 @@
 
     sput-object v0, Lcom/xiaomi/dist/common/DeviceType;->TV:Lcom/xiaomi/dist/common/DeviceType;
 
+    .line 10
     new-instance v0, Lcom/xiaomi/dist/common/DeviceType;
 
     const-string v6, "PC"
@@ -90,6 +96,7 @@
 
     new-array v0, v0, [Lcom/xiaomi/dist/common/DeviceType;
 
+    .line 5
     sget-object v6, Lcom/xiaomi/dist/common/DeviceType;->NONE:Lcom/xiaomi/dist/common/DeviceType;
 
     aput-object v6, v0, v1
@@ -123,8 +130,10 @@
         }
     .end annotation
 
+    .line 14
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 15
     iput p3, p0, Lcom/xiaomi/dist/common/DeviceType;->type:I
 
     return-void
@@ -133,6 +142,7 @@
 .method static synthetic lambda$valueOf$0(ILcom/xiaomi/dist/common/DeviceType;)Z
     .locals 0
 
+    .line 20
     iget p1, p1, Lcom/xiaomi/dist/common/DeviceType;->type:I
 
     if-ne p1, p0, :cond_0
@@ -151,6 +161,7 @@
 .method public static valueOf(I)Lcom/xiaomi/dist/common/DeviceType;
     .locals 2
 
+    .line 19
     invoke-static {}, Lcom/xiaomi/dist/common/DeviceType;->values()[Lcom/xiaomi/dist/common/DeviceType;
 
     move-result-object v0
@@ -163,16 +174,19 @@
 
     invoke-direct {v1, p0}, Lcom/xiaomi/dist/common/-$$Lambda$DeviceType$M8QrIuPwgp9TDI0Fr2EFI4O2qqM;-><init>(I)V
 
+    .line 20
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
+    .line 21
     invoke-interface {p0}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object p0
 
     sget-object v0, Lcom/xiaomi/dist/common/DeviceType;->NONE:Lcom/xiaomi/dist/common/DeviceType;
 
+    .line 22
     invoke-virtual {p0, v0}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -185,6 +199,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/dist/common/DeviceType;
     .locals 1
 
+    .line 5
     const-class v0, Lcom/xiaomi/dist/common/DeviceType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -199,6 +214,7 @@
 .method public static values()[Lcom/xiaomi/dist/common/DeviceType;
     .locals 1
 
+    .line 5
     sget-object v0, Lcom/xiaomi/dist/common/DeviceType;->$VALUES:[Lcom/xiaomi/dist/common/DeviceType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/dist/common/DeviceType;->clone()Ljava/lang/Object;
@@ -215,6 +231,7 @@
 .method public asIntType()I
     .locals 0
 
+    .line 26
     iget p0, p0, Lcom/xiaomi/dist/common/DeviceType;->type:I
 
     return p0

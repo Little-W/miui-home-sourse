@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/LockFreeTaskQueueCore$Companion;
 .super Ljava/lang/Object;
+.source "LockFreeTaskQueue.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 271
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 271
     invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore$Companion;-><init>()V
 
     return-void
@@ -59,6 +62,7 @@
 .method public final updateHead(JI)J
     .locals 2
 
+    .line 295
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore$Companion;
 
     const-wide/32 v0, 0x3fffffff
@@ -81,6 +85,7 @@
 .method public final updateTail(JI)J
     .locals 2
 
+    .line 296
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore$Companion;
 
     const-wide v0, 0xfffffffc0000000L

@@ -1,5 +1,6 @@
 .class final Landroidx/recyclerview/widget/ItemTouchHelper$Callback$1;
 .super Ljava/lang/Object;
+.source "ItemTouchHelper.java"
 
 # interfaces
 .implements Landroid/view/animation/Interpolator;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1401
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

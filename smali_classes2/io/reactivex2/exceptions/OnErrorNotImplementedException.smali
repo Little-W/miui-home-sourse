@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/exceptions/OnErrorNotImplementedException;
 .super Ljava/lang/RuntimeException;
+.source "OnErrorNotImplementedException.java"
 
 
 # static fields
@@ -14,6 +15,7 @@
 
     goto :goto_0
 
+    .line 39
     :cond_0
     new-instance p2, Ljava/lang/NullPointerException;
 
@@ -28,6 +30,7 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

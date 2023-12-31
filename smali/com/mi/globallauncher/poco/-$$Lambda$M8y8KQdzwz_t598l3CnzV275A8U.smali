@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/poco/-$$Lambda$M8y8KQdzwz_t598l3CnzV275A8U;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/mi/globallauncher/view/GeneralDialog$GeneralDialogCallBack;

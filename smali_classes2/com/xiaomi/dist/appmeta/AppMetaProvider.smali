@@ -1,11 +1,13 @@
 .class public final Lcom/xiaomi/dist/appmeta/AppMetaProvider;
 .super Ljava/lang/Object;
+.source "AppMetaProvider.java"
 
 
 # direct methods
 .method private static getAppIcon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 191
     invoke-static {p0, p1}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->getIconByPm(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -16,18 +18,21 @@
 
     const-string p1, "http"
 
+    .line 193
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 194
     invoke-static {p0, p2}, Lcom/xiaomi/dist/appmeta/ImageUtils;->getDrawableFromUrl(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 196
     :cond_0
     invoke-static {p0, p2}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->getIconByUri(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -41,6 +46,7 @@
 .method private static getAppName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 173
     invoke-static {p0}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->getPackageManager(Landroid/content/Context;)Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -56,19 +62,23 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 179
     :try_start_0
     invoke-virtual {p0, p1, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p1
 
+    .line 180
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object p0
 
+    .line 181
     instance-of p1, p0, Ljava/lang/String;
 
     if-eqz p1, :cond_1
 
+    .line 182
     check-cast p0, Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -80,6 +90,7 @@
     :catch_0
     move-exception p0
 
+    .line 185
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     :cond_1
@@ -90,6 +101,7 @@
 .method private static getIconByPm(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    .line 203
     invoke-static {p0}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->getPackageManager(Landroid/content/Context;)Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -102,6 +114,7 @@
 
     goto :goto_0
 
+    .line 209
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -115,6 +128,7 @@
     :catch_0
     move-exception p0
 
+    .line 211
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     :cond_1
@@ -127,11 +141,13 @@
 
     const/4 v0, 0x0
 
+    .line 220
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
+    .line 221
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -145,6 +161,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 222
     :try_start_1
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->createInputStream()Ljava/io/FileInputStream;
 
@@ -154,6 +171,7 @@
 
     move-result-object v1
 
+    .line 223
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -167,6 +185,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 229
     :try_start_2
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->close()V
     :try_end_2
@@ -177,6 +196,7 @@
     :catch_0
     move-exception p0
 
+    .line 231
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_0
@@ -202,6 +222,7 @@
 
     move-object p1, v0
 
+    .line 225
     :goto_1
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -210,6 +231,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 229
     :try_start_4
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->close()V
     :try_end_4
@@ -220,6 +242,7 @@
     :catch_3
     move-exception p0
 
+    .line 231
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_1
@@ -232,6 +255,7 @@
     :goto_3
     if-eqz p1, :cond_2
 
+    .line 229
     :try_start_5
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->close()V
     :try_end_5
@@ -242,8 +266,10 @@
     :catch_4
     move-exception p1
 
+    .line 231
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
+    .line 234
     :cond_2
     :goto_4
     throw p0
@@ -258,6 +284,7 @@
 
     return-object p0
 
+    .line 242
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -277,6 +304,7 @@
 
     const-string v3, "getAppInfo"
 
+    .line 111
     invoke-static {v0, v3, v1}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->queryProvider(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v3
@@ -293,6 +321,7 @@
 
     const-string v2, "extMetaPad"
 
+    .line 124
     invoke-virtual {v3, v2}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v2
@@ -301,6 +330,7 @@
 
     goto :goto_0
 
+    .line 130
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -313,6 +343,7 @@
     :cond_1
     const-string v2, "extMetaPhone"
 
+    .line 118
     invoke-virtual {v3, v2}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v2
@@ -326,18 +357,21 @@
     :cond_3
     const-string v3, "androidPackageName"
 
+    .line 132
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v2, :cond_6
 
+    .line 134
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
+    .line 135
     invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
@@ -345,10 +379,12 @@
     :cond_4
     move-object v12, v8
 
+    .line 137
     invoke-static {v0, v12}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->getAppName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 138
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -357,6 +393,7 @@
 
     const-string v1, "name"
 
+    .line 139
     invoke-virtual {v2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -366,20 +403,24 @@
 
     const-string v1, "iconUri"
 
+    .line 141
     invoke-virtual {v2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
+    .line 142
     invoke-static {v0, v12, v14}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->getAppIcon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v15
 
     const-string v0, "supportHandoff"
 
+    .line 143
     invoke-virtual {v2, v0, v4}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v16
 
+    .line 144
     new-instance v0, Lcom/xiaomi/dist/handoff/AppMeta;
 
     const-string v1, "appId"
@@ -390,6 +431,7 @@
 
     const-string v1, "winPackageName"
 
+    .line 145
     invoke-virtual {v2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
@@ -400,6 +442,7 @@
 
     return-object v0
 
+    .line 149
     :cond_6
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -409,14 +452,17 @@
 
     if-nez v1, :cond_7
 
+    .line 150
     invoke-static {v0, v8}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->getAppName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
+    .line 151
     invoke-static {v0, v8, v2}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->getAppIcon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v11
 
+    .line 152
     new-instance v0, Lcom/xiaomi/dist/handoff/AppMeta;
 
     const/4 v6, 0x0
@@ -452,6 +498,7 @@
 
     const/4 v0, 0x0
 
+    .line 47
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->query(Landroid/content/Context;II)Ljava/util/concurrent/Future;
 
     move-result-object p0
@@ -472,14 +519,17 @@
         }
     .end annotation
 
+    .line 71
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "appId"
 
+    .line 72
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 73
     invoke-static {p0, v0, p2}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->query(Landroid/content/Context;Landroid/os/Bundle;I)Ljava/util/concurrent/Future;
 
     move-result-object p0
@@ -501,6 +551,7 @@
         }
     .end annotation
 
+    .line 110
     new-instance v0, Lcom/xiaomi/dist/appmeta/-$$Lambda$AppMetaProvider$sWxRvmWOKvT3dIW8t4FKtb3DaQI;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/xiaomi/dist/appmeta/-$$Lambda$AppMetaProvider$sWxRvmWOKvT3dIW8t4FKtb3DaQI;-><init>(Landroid/content/Context;Landroid/os/Bundle;I)V
@@ -528,6 +579,7 @@
 
     const/4 v0, 0x0
 
+    .line 58
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->query(Landroid/content/Context;Ljava/lang/String;I)Ljava/util/concurrent/Future;
 
     move-result-object p0
@@ -549,14 +601,17 @@
         }
     .end annotation
 
+    .line 85
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "androidPackageName"
 
+    .line 86
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 87
     invoke-static {p0, v0, p2}, Lcom/xiaomi/dist/appmeta/AppMetaProvider;->query(Landroid/content/Context;Landroid/os/Bundle;I)Ljava/util/concurrent/Future;
 
     move-result-object p0
@@ -573,6 +628,7 @@
 
     return-object v0
 
+    .line 169
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 

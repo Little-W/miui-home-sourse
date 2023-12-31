@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;
 .super Ljava/lang/Object;
+.source "DefaultImageHeaderParser.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;
@@ -24,8 +25,10 @@
 .method constructor <init>(Ljava/io/InputStream;)V
     .locals 0
 
+    .line 437
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 438
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     return-void
@@ -41,6 +44,7 @@
         }
     .end annotation
 
+    .line 490
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
@@ -58,6 +62,7 @@
         }
     .end annotation
 
+    .line 443
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -91,6 +96,7 @@
         }
     .end annotation
 
+    .line 448
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
@@ -117,6 +123,7 @@
     :goto_0
     if-lez v0, :cond_0
 
+    .line 482
     iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     sub-int v2, p2, v0
@@ -163,6 +170,7 @@
 
     if-lez v4, :cond_3
 
+    .line 459
     iget-object v4, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     invoke-virtual {v4, v2, v3}, Ljava/io/InputStream;->skip(J)J
@@ -178,6 +186,7 @@
 
     goto :goto_0
 
+    .line 467
     :cond_1
     iget-object v4, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 

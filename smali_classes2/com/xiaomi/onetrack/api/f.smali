@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
 
     return v0
 
+    .line 21
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/Configuration;->isGAIDEnable()Z
 
@@ -41,6 +43,7 @@
 
     const/4 v0, 0x1
 
+    .line 24
     :cond_1
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/Configuration;->isIMSIEnable()Z
 
@@ -50,6 +53,7 @@
 
     or-int/lit8 v0, v0, 0x2
 
+    .line 28
     :cond_2
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/Configuration;->isIMEIEnable()Z
 
@@ -59,6 +63,7 @@
 
     or-int/lit8 v0, v0, 0x4
 
+    .line 31
     :cond_3
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/Configuration;->isExceptionCatcherEnable()Z
 
@@ -68,6 +73,7 @@
 
     or-int/lit8 v0, v0, 0x8
 
+    .line 34
     :cond_4
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/Configuration;->isOverrideMiuiRegionSetting()Z
 

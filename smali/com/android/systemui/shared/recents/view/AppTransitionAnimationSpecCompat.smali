@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;
 .super Ljava/lang/Object;
+.source "AppTransitionAnimationSpecCompat.java"
 
 
 # instance fields
@@ -14,12 +15,16 @@
 .method public constructor <init>(ILandroid/graphics/Bitmap;Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 39
     iput p1, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->mTaskId:I
 
+    .line 40
     iput-object p2, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->mBuffer:Landroid/graphics/Bitmap;
 
+    .line 41
     iput-object p3, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->mRect:Landroid/graphics/Rect;
 
     return-void
@@ -28,10 +33,12 @@
 .method private toAppTransitionAnimationSpecForQ()Landroid/view/AppTransitionAnimationSpec;
     .locals 3
 
+    .line 53
     new-instance v0, Landroid/view/AppTransitionAnimationSpec;
 
     iget v1, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->mTaskId:I
 
+    .line 54
     iget-object v2, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->mBuffer:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_0
@@ -56,6 +63,7 @@
 .method private toAppTransitionAnimationSpecForS()Landroid/view/AppTransitionAnimationSpec;
     .locals 8
 
+    .line 58
     const-class v0, Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->mBuffer:Landroid/graphics/Bitmap;
@@ -74,6 +82,7 @@
 
     move-result-object v0
 
+    .line 62
     :try_start_0
     const-class v1, Landroid/view/AppTransitionAnimationSpec;
 
@@ -103,6 +112,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 64
     iget v3, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->mTaskId:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -133,8 +143,10 @@
     :catch_0
     move-exception v0
 
+    .line 66
     invoke-virtual {v0}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 
+    .line 68
     new-instance v0, Landroid/view/AppTransitionAnimationSpec;
 
     iget v1, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->mTaskId:I
@@ -153,18 +165,21 @@
 .method public toAppTransitionAnimationSpec()Landroid/view/AppTransitionAnimationSpec;
     .locals 1
 
+    .line 45
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 46
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->toAppTransitionAnimationSpecForS()Landroid/view/AppTransitionAnimationSpec;
 
     move-result-object p0
 
     return-object p0
 
+    .line 48
     :cond_0
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;->toAppTransitionAnimationSpecForQ()Landroid/view/AppTransitionAnimationSpec;
 

@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchSearchError;
 .super Lorg/json/JSONObject;
+.source "SourceFile"
 
 
 # annotations

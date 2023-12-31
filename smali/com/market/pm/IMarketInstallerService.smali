@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/pm/IMarketInstallerService;
 .super Ljava/lang/Object;
+.source "IMarketInstallerService.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

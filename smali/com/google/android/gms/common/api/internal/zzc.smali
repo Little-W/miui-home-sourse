@@ -40,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 87
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
@@ -52,8 +53,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/Fragment;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/collection/ArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
@@ -62,6 +65,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbg:I
 
     return-void
@@ -72,8 +76,10 @@
 .method public final dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 1
 
+    .line 77
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/fragment/app/Fragment;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
+    .line 78
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbf:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -97,6 +103,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 79
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_0
@@ -108,8 +115,10 @@
 .method public final onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
+    .line 51
     invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
+    .line 52
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbf:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -133,6 +142,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 53
     invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
@@ -144,14 +154,18 @@
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 2
 
+    .line 29
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     const/4 v0, 0x1
 
+    .line 30
     iput v0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbg:I
 
+    .line 31
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbh:Landroid/os/Bundle;
 
+    .line 32
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbf:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -175,6 +189,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 34
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -183,6 +198,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 35
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -198,6 +214,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 36
     :goto_1
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onCreate(Landroid/os/Bundle;)V
 
@@ -210,12 +227,15 @@
 .method public final onDestroy()V
     .locals 1
 
+    .line 71
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
     const/4 v0, 0x5
 
+    .line 72
     iput v0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbg:I
 
+    .line 73
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbf:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -239,6 +259,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 74
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onDestroy()V
 
     goto :goto_0
@@ -250,12 +271,15 @@
 .method public final onResume()V
     .locals 1
 
+    .line 45
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
 
     const/4 v0, 0x3
 
+    .line 46
     iput v0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbg:I
 
+    .line 47
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbf:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -279,6 +303,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 48
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onResume()V
 
     goto :goto_0
@@ -290,12 +315,14 @@
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
 
+    .line 56
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     if-nez p1, :cond_0
 
     return-void
 
+    .line 59
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbf:Ljava/util/Map;
 
@@ -320,10 +347,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 60
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
+    .line 61
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -332,6 +361,7 @@
 
     invoke-virtual {v2, v1}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onSaveInstanceState(Landroid/os/Bundle;)V
 
+    .line 62
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -349,12 +379,15 @@
 .method public final onStart()V
     .locals 1
 
+    .line 39
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onStart()V
 
     const/4 v0, 0x2
 
+    .line 40
     iput v0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbg:I
 
+    .line 41
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbf:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -378,6 +411,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 42
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onStart()V
 
     goto :goto_0
@@ -389,12 +423,15 @@
 .method public final onStop()V
     .locals 1
 
+    .line 65
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onStop()V
 
     const/4 v0, 0x4
 
+    .line 66
     iput v0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbg:I
 
+    .line 67
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zzc;->zzbf:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -418,6 +455,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 68
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onStop()V
 
     goto :goto_0

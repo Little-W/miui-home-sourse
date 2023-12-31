@@ -1,5 +1,6 @@
 .class public final Lcom/squareup/picasso/RequestHandler$Result;
 .super Ljava/lang/Object;
+.source "RequestHandler.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 
     const-string v0, "bitmap == null"
 
+    .line 60
     invoke-static {p1, v0}, Lcom/squareup/picasso/Utils;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -47,6 +49,7 @@
 .method constructor <init>(Landroid/graphics/Bitmap;Lokio/Source;Lcom/squareup/picasso/Picasso$LoadedFrom;I)V
     .locals 3
 
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
@@ -73,12 +76,15 @@
     :goto_1
     if-eq v2, v0, :cond_2
 
+    .line 75
     iput-object p1, p0, Lcom/squareup/picasso/RequestHandler$Result;->bitmap:Landroid/graphics/Bitmap;
 
+    .line 76
     iput-object p2, p0, Lcom/squareup/picasso/RequestHandler$Result;->source:Lokio/Source;
 
     const-string p1, "loadedFrom == null"
 
+    .line 77
     invoke-static {p3, p1}, Lcom/squareup/picasso/Utils;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -87,10 +93,12 @@
 
     iput-object p1, p0, Lcom/squareup/picasso/RequestHandler$Result;->loadedFrom:Lcom/squareup/picasso/Picasso$LoadedFrom;
 
+    .line 78
     iput p4, p0, Lcom/squareup/picasso/RequestHandler$Result;->exifOrientation:I
 
     return-void
 
+    .line 73
     :cond_2
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -104,6 +112,7 @@
 
     const-string v0, "source == null"
 
+    .line 64
     invoke-static {p1, v0}, Lcom/squareup/picasso/Utils;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -124,6 +133,7 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .locals 0
 
+    .line 83
     iget-object p0, p0, Lcom/squareup/picasso/RequestHandler$Result;->bitmap:Landroid/graphics/Bitmap;
 
     return-object p0
@@ -132,6 +142,7 @@
 .method getExifOrientation()I
     .locals 0
 
+    .line 104
     iget p0, p0, Lcom/squareup/picasso/RequestHandler$Result;->exifOrientation:I
 
     return p0
@@ -140,6 +151,7 @@
 .method public getLoadedFrom()Lcom/squareup/picasso/Picasso$LoadedFrom;
     .locals 0
 
+    .line 96
     iget-object p0, p0, Lcom/squareup/picasso/RequestHandler$Result;->loadedFrom:Lcom/squareup/picasso/Picasso$LoadedFrom;
 
     return-object p0
@@ -148,6 +160,7 @@
 .method public getSource()Lokio/Source;
     .locals 0
 
+    .line 88
     iget-object p0, p0, Lcom/squareup/picasso/RequestHandler$Result;->source:Lokio/Source;
 
     return-object p0

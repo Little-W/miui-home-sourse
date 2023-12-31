@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/encoding/AbstractDecoder;
 .super Ljava/lang/Object;
+.source "AbstractDecoder.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/encoding/CompositeDecoder;
@@ -10,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,6 +26,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 43
     check-cast p0, Lkotlinx/serialization/encoding/CompositeDecoder;
 
     return-object p0
@@ -32,6 +35,7 @@
 .method public decodeBoolean()Z
     .locals 1
 
+    .line 26
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -63,6 +67,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 48
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeBoolean()Z
 
     move-result p0
@@ -73,6 +78,7 @@
 .method public decodeByte()B
     .locals 1
 
+    .line 27
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -104,6 +110,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 49
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeByte()B
 
     move-result p0
@@ -114,6 +121,7 @@
 .method public decodeChar()C
     .locals 1
 
+    .line 33
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -145,6 +153,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 55
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeChar()C
 
     move-result p0
@@ -159,6 +168,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 17
     invoke-static {p0, p1}, Lkotlinx/serialization/encoding/CompositeDecoder$DefaultImpls;->decodeCollectionSize(Lkotlinx/serialization/encoding/CompositeDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)I
 
     move-result p0
@@ -169,6 +179,7 @@
 .method public decodeDouble()D
     .locals 2
 
+    .line 32
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -200,6 +211,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 54
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeDouble()D
 
     move-result-wide p0
@@ -214,6 +226,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 35
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -241,6 +254,7 @@
 .method public decodeFloat()F
     .locals 1
 
+    .line 31
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -272,6 +286,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 53
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeFloat()F
 
     move-result p0
@@ -282,6 +297,7 @@
 .method public decodeInt()I
     .locals 1
 
+    .line 29
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -313,6 +329,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 51
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeInt()I
 
     move-result p0
@@ -323,6 +340,7 @@
 .method public decodeLong()J
     .locals 2
 
+    .line 30
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -354,6 +372,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 52
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeLong()J
 
     move-result-wide p0
@@ -399,6 +418,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 17
     invoke-static {p0, p1, p2, p3}, Lkotlinx/serialization/encoding/CompositeDecoder$DefaultImpls;->decodeNullableSerializableElement(Lkotlinx/serialization/encoding/CompositeDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -428,6 +448,7 @@
 
     invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 71
     invoke-interface {p3}, Lkotlinx/serialization/DeserializationStrategy;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p1
@@ -438,6 +459,7 @@
 
     if-nez p1, :cond_1
 
+    .line 72
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeNotNullMark()Z
 
     move-result p1
@@ -466,6 +488,7 @@
 .method public decodeSequentially()Z
     .locals 0
 
+    .line 17
     invoke-static {p0}, Lkotlinx/serialization/encoding/CompositeDecoder$DefaultImpls;->decodeSequentially(Lkotlinx/serialization/encoding/CompositeDecoder;)Z
 
     move-result p0
@@ -495,6 +518,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 17
     invoke-static {p0, p1, p2, p3}, Lkotlinx/serialization/encoding/CompositeDecoder$DefaultImpls;->decodeSerializableElement(Lkotlinx/serialization/encoding/CompositeDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -524,6 +548,7 @@
 
     invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 63
     invoke-virtual {p0, p3, p4}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeSerializableValue(Lkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -547,6 +572,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 17
     invoke-static {p0, p1}, Lkotlinx/serialization/encoding/Decoder$DefaultImpls;->decodeSerializableValue(Lkotlinx/serialization/encoding/Decoder;Lkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -570,6 +596,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 41
     invoke-virtual {p0, p1}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeSerializableValue(Lkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -580,6 +607,7 @@
 .method public decodeShort()S
     .locals 1
 
+    .line 28
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -611,6 +639,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 50
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeShort()S
 
     move-result p0
@@ -621,6 +650,7 @@
 .method public decodeString()Ljava/lang/String;
     .locals 1
 
+    .line 34
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -648,6 +678,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 56
     invoke-virtual {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;->decodeString()Ljava/lang/String;
 
     move-result-object p0
@@ -658,6 +689,7 @@
 .method public decodeValue()Ljava/lang/Object;
     .locals 2
 
+    .line 22
     new-instance v0, Lkotlinx/serialization/SerializationException;
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$1;
 .super Ljava/lang/Object;
+.source "CrashlyticsController.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/common/CrashlyticsUncaughtExceptionHandler$CrashListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;)V
     .locals 0
 
+    .line 145
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onUncaughtException(Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 151
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;->handleUncaughtException(Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;Ljava/lang/Thread;Ljava/lang/Throwable;)V

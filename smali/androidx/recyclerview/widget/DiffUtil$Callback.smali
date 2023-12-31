@@ -1,5 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/DiffUtil$Callback;
 .super Ljava/lang/Object;
+.source "DiffUtil.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 295
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

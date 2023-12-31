@@ -1,5 +1,6 @@
 .class Lkotlin/sequences/SequencesKt__SequenceBuilderKt;
 .super Ljava/lang/Object;
+.source "SequenceBuilder.kt"
 
 
 # direct methods
@@ -29,10 +30,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 40
     new-instance v0, Lkotlin/sequences/SequenceBuilderIterator;
 
     invoke-direct {v0}, Lkotlin/sequences/SequenceBuilderIterator;-><init>()V
 
+    .line 41
     move-object v1, v0
 
     check-cast v1, Lkotlin/coroutines/Continuation;
@@ -43,6 +46,7 @@
 
     invoke-virtual {v0, p0}, Lkotlin/sequences/SequenceBuilderIterator;->setNextStep(Lkotlin/coroutines/Continuation;)V
 
+    .line 42
     check-cast v0, Ljava/util/Iterator;
 
     return-object v0
@@ -74,6 +78,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 25
     new-instance v0, Lkotlin/sequences/SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1;
 
     invoke-direct {v0, p0}, Lkotlin/sequences/SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1;-><init>(Lkotlin/jvm/functions/Function2;)V

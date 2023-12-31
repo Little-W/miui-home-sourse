@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter$RecommendGameClickListener;
 .super Ljava/lang/Object;
+.source "RecommendGamesGridAdapter.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/modules/SerialModuleImpl;
 .super Lkotlinx/serialization/modules/SerializersModule;
+.source "SerializersModule.kt"
 
 
 # annotations
@@ -122,6 +123,7 @@
 
     const/4 v0, 0x0
 
+    .line 113
     invoke-direct {p0, v0}, Lkotlinx/serialization/modules/SerializersModule;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lkotlinx/serialization/modules/SerialModuleImpl;->class2Serializer:Ljava/util/Map;
@@ -144,8 +146,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 132
     iget-object v0, p0, Lkotlinx/serialization/modules/SerialModuleImpl;->class2Serializer:Ljava/util/Map;
 
+    .line 157
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -187,10 +191,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 133
     invoke-interface {p1, v4, v1}, Lkotlinx/serialization/modules/SerializersModuleCollector;->contextual(Lkotlin/reflect/KClass;Lkotlinx/serialization/KSerializer;)V
 
     goto :goto_0
 
+    .line 158
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -198,6 +204,7 @@
 
     throw p0
 
+    .line 134
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -205,9 +212,11 @@
 
     throw p0
 
+    .line 139
     :cond_2
     iget-object v0, p0, Lkotlinx/serialization/modules/SerialModuleImpl;->polyBase2Serializers:Ljava/util/Map;
 
+    .line 160
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -241,6 +250,7 @@
 
     check-cast v1, Ljava/util/Map;
 
+    .line 161
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -280,10 +290,12 @@
 
     if-eqz v5, :cond_4
 
+    .line 141
     invoke-interface {p1, v4, v6, v5}, Lkotlinx/serialization/modules/SerializersModuleCollector;->polymorphic(Lkotlin/reflect/KClass;Lkotlin/reflect/KClass;Lkotlinx/serialization/KSerializer;)V
 
     goto :goto_1
 
+    .line 162
     :cond_4
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -291,6 +303,7 @@
 
     throw p0
 
+    .line 143
     :cond_5
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -298,6 +311,7 @@
 
     throw p0
 
+    .line 142
     :cond_6
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -305,9 +319,11 @@
 
     throw p0
 
+    .line 149
     :cond_7
     iget-object p0, p0, Lkotlinx/serialization/modules/SerialModuleImpl;->polyBase2DefaultProvider:Ljava/util/Map;
 
+    .line 165
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -347,6 +363,7 @@
 
     const/4 v2, 0x1
 
+    .line 150
     invoke-static {v0, v2}, Lkotlin/jvm/internal/TypeIntrinsics;->beforeCheckcastToFunctionOfArity(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -395,6 +412,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 129
     iget-object p0, p0, Lkotlinx/serialization/modules/SerialModuleImpl;->class2Serializer:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -433,6 +451,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 122
     iget-object v0, p0, Lkotlinx/serialization/modules/SerialModuleImpl;->polyBase2NamedSerializers:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -466,10 +485,12 @@
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 123
     check-cast v0, Lkotlinx/serialization/DeserializationStrategy;
 
     return-object v0
 
+    .line 125
     :cond_2
     iget-object p0, p0, Lkotlinx/serialization/modules/SerialModuleImpl;->polyBase2DefaultProvider:Ljava/util/Map;
 
@@ -526,6 +547,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 116
     invoke-static {p2, p1}, Lkotlinx/serialization/internal/PlatformKt;->isInstanceOf(Ljava/lang/Object;Lkotlin/reflect/KClass;)Z
 
     move-result v0
@@ -536,6 +558,7 @@
 
     return-object v1
 
+    .line 117
     :cond_0
     iget-object p0, p0, Lkotlinx/serialization/modules/SerialModuleImpl;->polyBase2Serializers:Ljava/util/Map;
 

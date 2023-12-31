@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$1;
 .super Ljava/lang/Object;
+.source "FloatValueAnimatorBuilder.java"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder;Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$UpdateListener;)V
     .locals 0
 
+    .line 72
     iput-object p1, p0, Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$1;->this$0:Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder;
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$1;->val$listener:Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$UpdateListener;
@@ -40,6 +42,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
+    .line 75
     iget-object p0, p0, Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$1;->val$listener:Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$UpdateListener;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;

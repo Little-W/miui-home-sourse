@@ -1,5 +1,6 @@
 .class interface abstract Lcom/mi/preinstall/AutoInstallsParser$TagParser;
 .super Ljava/lang/Object;
+.source "AutoInstallsParser.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final Lkotlin/Result;
 .super Ljava/lang/Object;
+.source "Result.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -50,6 +51,7 @@
 .method private synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/Result;->value:Ljava/lang/Object;
@@ -115,6 +117,7 @@
 .method public static final exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
     .locals 1
 
+    .line 63
     instance-of v0, p0, Lkotlin/Result$Failure;
 
     if-eqz v0, :cond_0
@@ -159,6 +162,7 @@
 .method public static final isFailure-impl(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 37
     instance-of p0, p0, Lkotlin/Result$Failure;
 
     return p0
@@ -167,6 +171,7 @@
 .method public static final isSuccess-impl(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 31
     instance-of p0, p0, Lkotlin/Result$Failure;
 
     xor-int/lit8 p0, p0, 0x1
@@ -177,6 +182,7 @@
 .method public static toString-impl(Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
 
+    .line 74
     instance-of v0, p0, Lkotlin/Result$Failure;
 
     if-eqz v0, :cond_0
@@ -187,6 +193,7 @@
 
     goto :goto_0
 
+    .line 75
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -215,6 +222,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlin/Result;->value:Ljava/lang/Object;
 
     invoke-static {p0, p1}, Lkotlin/Result;->equals-impl(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -227,6 +235,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlin/Result;->value:Ljava/lang/Object;
 
     invoke-static {p0}, Lkotlin/Result;->hashCode-impl(Ljava/lang/Object;)I
@@ -239,6 +248,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlin/Result;->value:Ljava/lang/Object;
 
     invoke-static {p0}, Lkotlin/Result;->toString-impl(Ljava/lang/Object;)Ljava/lang/String;

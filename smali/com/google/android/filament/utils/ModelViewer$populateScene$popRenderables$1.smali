@@ -1,5 +1,6 @@
 .class final Lcom/google/android/filament/utils/ModelViewer$populateScene$popRenderables$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "ModelViewer.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -55,6 +56,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 62
     invoke-virtual {p0}, Lcom/google/android/filament/utils/ModelViewer$populateScene$popRenderables$1;->invoke()Z
 
     move-result p0
@@ -69,6 +71,7 @@
 .method public final invoke()Z
     .locals 3
 
+    .line 261
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer$populateScene$popRenderables$1;->$count:Lkotlin/jvm/internal/Ref$IntRef;
 
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer$populateScene$popRenderables$1;->$asset:Lcom/google/android/filament/gltfio/FilamentAsset;

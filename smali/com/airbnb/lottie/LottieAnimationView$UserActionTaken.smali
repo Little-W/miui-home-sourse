@@ -1,5 +1,6 @@
 .class final enum Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 .super Ljava/lang/Enum;
+.source "LottieAnimationView.java"
 
 
 # annotations
@@ -41,6 +42,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
+    .line 1151
     new-instance v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     const/4 v1, 0x0
@@ -51,6 +53,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;->SET_ANIMATION:Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
+    .line 1152
     new-instance v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     const/4 v2, 0x1
@@ -61,6 +64,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;->SET_PROGRESS:Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
+    .line 1153
     new-instance v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     const/4 v3, 0x2
@@ -71,6 +75,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;->SET_REPEAT_MODE:Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
+    .line 1154
     new-instance v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     const/4 v4, 0x3
@@ -81,6 +86,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;->SET_REPEAT_COUNT:Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
+    .line 1155
     new-instance v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     const/4 v5, 0x4
@@ -91,6 +97,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;->SET_IMAGE_ASSETS:Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
+    .line 1156
     new-instance v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     const/4 v6, 0x5
@@ -105,6 +112,7 @@
 
     new-array v0, v0, [Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
+    .line 1150
     sget-object v7, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;->SET_ANIMATION:Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     aput-object v7, v0, v1
@@ -142,6 +150,7 @@
         }
     .end annotation
 
+    .line 1150
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -150,6 +159,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
     .locals 1
 
+    .line 1150
     const-class v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -164,6 +174,7 @@
 .method public static values()[Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
     .locals 1
 
+    .line 1150
     sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;->$VALUES:[Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;
 
     invoke-virtual {v0}, [Lcom/airbnb/lottie/LottieAnimationView$UserActionTaken;->clone()Ljava/lang/Object;

@@ -56,12 +56,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/tasks/zzc;->zzd:Ljava/util/concurrent/Executor;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/gms/tasks/zzc;->zze:Lcom/google/android/gms/tasks/Continuation;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/gms/tasks/zzc;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     return-void
@@ -70,6 +74,7 @@
 .method static synthetic zza(Lcom/google/android/gms/tasks/zzc;)Lcom/google/android/gms/tasks/zzu;
     .locals 0
 
+    .line 9
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzc;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     return-object p0
@@ -78,6 +83,7 @@
 .method static synthetic zzb(Lcom/google/android/gms/tasks/zzc;)Lcom/google/android/gms/tasks/Continuation;
     .locals 0
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzc;->zze:Lcom/google/android/gms/tasks/Continuation;
 
     return-object p0
@@ -95,6 +101,7 @@
         }
     .end annotation
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzc;->zzd:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/gms/tasks/zzd;

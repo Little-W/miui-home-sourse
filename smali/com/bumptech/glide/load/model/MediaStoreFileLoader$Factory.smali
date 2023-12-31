@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/model/MediaStoreFileLoader$Factory;
 .super Ljava/lang/Object;
+.source "MediaStoreFileLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoaderFactory;
@@ -34,8 +35,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 109
     iput-object p1, p0, Lcom/bumptech/glide/load/model/MediaStoreFileLoader$Factory;->context:Landroid/content/Context;
 
     return-void
@@ -57,6 +60,7 @@
         }
     .end annotation
 
+    .line 115
     new-instance p1, Lcom/bumptech/glide/load/model/MediaStoreFileLoader;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/model/MediaStoreFileLoader$Factory;->context:Landroid/content/Context;

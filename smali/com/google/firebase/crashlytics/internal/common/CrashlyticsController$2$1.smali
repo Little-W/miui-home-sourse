@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2$1;
 .super Ljava/lang/Object;
+.source "CrashlyticsController.java"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/SuccessContinuation;
@@ -36,6 +37,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2;Ljava/util/concurrent/Executor;)V
     .locals 0
 
+    .line 208
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2$1;->this$1:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2$1;->val$executor:Ljava/util/concurrent/Executor;
@@ -68,16 +70,19 @@
 
     if-nez p1, :cond_0
 
+    .line 214
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p0
 
     const-string p1, "Received null app settings, cannot send reports at crash time."
 
+    .line 215
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/Logger;->w(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
+    .line 217
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -91,10 +96,12 @@
 
     const/4 v0, 0x0
 
+    .line 220
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2$1;->this$1:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2;
 
     iget-object v1, v1, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
+    .line 221
     invoke-static {v1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;->access$800(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object v1
@@ -107,6 +114,7 @@
 
     iget-object v1, v1, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
+    .line 222
     invoke-static {v1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;->access$300(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;)Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;
 
     move-result-object v1
@@ -119,6 +127,7 @@
 
     aput-object p0, p1, v0
 
+    .line 220
     invoke-static {p1}, Lcom/google/android/gms/tasks/Tasks;->whenAll([Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -134,6 +143,7 @@
         }
     .end annotation
 
+    .line 208
     check-cast p1, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;
 
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$2$1;->then(Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;)Lcom/google/android/gms/tasks/Task;

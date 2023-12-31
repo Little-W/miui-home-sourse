@@ -1,5 +1,6 @@
 .class public abstract enum Lcom/google/gson/FieldNamingPolicy;
 .super Ljava/lang/Enum;
+.source "FieldNamingPolicy.java"
 
 # interfaces
 .implements Lcom/google/gson/FieldNamingStrategy;
@@ -36,6 +37,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
+    .line 37
     new-instance v0, Lcom/google/gson/FieldNamingPolicy$1;
 
     const/4 v1, 0x0
@@ -46,6 +48,7 @@
 
     sput-object v0, Lcom/google/gson/FieldNamingPolicy;->IDENTITY:Lcom/google/gson/FieldNamingPolicy;
 
+    .line 53
     new-instance v0, Lcom/google/gson/FieldNamingPolicy$2;
 
     const/4 v2, 0x1
@@ -56,6 +59,7 @@
 
     sput-object v0, Lcom/google/gson/FieldNamingPolicy;->UPPER_CAMEL_CASE:Lcom/google/gson/FieldNamingPolicy;
 
+    .line 72
     new-instance v0, Lcom/google/gson/FieldNamingPolicy$3;
 
     const/4 v3, 0x2
@@ -66,6 +70,7 @@
 
     sput-object v0, Lcom/google/gson/FieldNamingPolicy;->UPPER_CAMEL_CASE_WITH_SPACES:Lcom/google/gson/FieldNamingPolicy;
 
+    .line 90
     new-instance v0, Lcom/google/gson/FieldNamingPolicy$4;
 
     const/4 v4, 0x3
@@ -76,6 +81,7 @@
 
     sput-object v0, Lcom/google/gson/FieldNamingPolicy;->LOWER_CASE_WITH_UNDERSCORES:Lcom/google/gson/FieldNamingPolicy;
 
+    .line 113
     new-instance v0, Lcom/google/gson/FieldNamingPolicy$5;
 
     const/4 v5, 0x4
@@ -86,6 +92,7 @@
 
     sput-object v0, Lcom/google/gson/FieldNamingPolicy;->LOWER_CASE_WITH_DASHES:Lcom/google/gson/FieldNamingPolicy;
 
+    .line 136
     new-instance v0, Lcom/google/gson/FieldNamingPolicy$6;
 
     const/4 v6, 0x5
@@ -100,6 +107,7 @@
 
     new-array v0, v0, [Lcom/google/gson/FieldNamingPolicy;
 
+    .line 31
     sget-object v7, Lcom/google/gson/FieldNamingPolicy;->IDENTITY:Lcom/google/gson/FieldNamingPolicy;
 
     aput-object v7, v0, v1
@@ -137,6 +145,7 @@
         }
     .end annotation
 
+    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -145,6 +154,7 @@
 .method synthetic constructor <init>(Ljava/lang/String;ILcom/google/gson/FieldNamingPolicy$1;)V
     .locals 0
 
+    .line 31
     invoke-direct {p0, p1, p2}, Lcom/google/gson/FieldNamingPolicy;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -153,10 +163,12 @@
 .method static separateCamelCase(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
+    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 148
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -166,10 +178,12 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 149
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
+    .line 150
     invoke-static {v3}, Ljava/lang/Character;->isUpperCase(C)Z
 
     move-result v4
@@ -182,8 +196,10 @@
 
     if-eqz v4, :cond_0
 
+    .line 151
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 153
     :cond_0
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -191,6 +207,7 @@
 
     goto :goto_0
 
+    .line 155
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -202,6 +219,7 @@
 .method static upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
+    .line 163
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -214,6 +232,7 @@
 
     move v3, v2
 
+    .line 164
     :goto_0
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
@@ -231,11 +250,13 @@
 
     goto :goto_0
 
+    .line 166
     :cond_0
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
+    .line 167
     invoke-static {v0}, Ljava/lang/Character;->isUpperCase(C)Z
 
     move-result v4
@@ -244,6 +265,7 @@
 
     return-object p0
 
+    .line 171
     :cond_1
     invoke-static {v0}, Ljava/lang/Character;->toUpperCase(C)C
 
@@ -251,6 +273,7 @@
 
     if-nez v3, :cond_2
 
+    .line 173
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -269,6 +292,7 @@
 
     return-object p0
 
+    .line 176
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -300,6 +324,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/gson/FieldNamingPolicy;
     .locals 1
 
+    .line 31
     const-class v0, Lcom/google/gson/FieldNamingPolicy;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -314,6 +339,7 @@
 .method public static values()[Lcom/google/gson/FieldNamingPolicy;
     .locals 1
 
+    .line 31
     sget-object v0, Lcom/google/gson/FieldNamingPolicy;->$VALUES:[Lcom/google/gson/FieldNamingPolicy;
 
     invoke-virtual {v0}, [Lcom/google/gson/FieldNamingPolicy;->clone()Ljava/lang/Object;

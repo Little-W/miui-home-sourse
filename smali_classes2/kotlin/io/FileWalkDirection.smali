@@ -1,5 +1,6 @@
 .class public final enum Lkotlin/io/FileWalkDirection;
 .super Ljava/lang/Enum;
+.source "FileTreeWalk.kt"
 
 
 # annotations
@@ -65,6 +66,7 @@
         }
     .end annotation
 
+    .line 20
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

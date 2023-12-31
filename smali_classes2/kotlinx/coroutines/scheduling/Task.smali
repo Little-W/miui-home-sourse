@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/scheduling/Task;
 .super Ljava/lang/Object;
+.source "Tasks.kt"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -15,6 +16,7 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 84
     sget-object v0, Lkotlinx/coroutines/scheduling/NonBlockingContext;->INSTANCE:Lkotlinx/coroutines/scheduling/NonBlockingContext;
 
     check-cast v0, Lkotlinx/coroutines/scheduling/TaskContext;
@@ -29,6 +31,7 @@
 .method public constructor <init>(JLkotlinx/coroutines/scheduling/TaskContext;)V
     .locals 0
 
+    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lkotlinx/coroutines/scheduling/Task;->submissionTime:J

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/SendChannel$DefaultImpls;
 .super Ljava/lang/Object;
+.source "Channel.kt"
 
 
 # annotations
@@ -25,6 +26,7 @@
 
     const/4 p1, 0x0
 
+    .line 105
     check-cast p1, Ljava/lang/Throwable;
 
     :cond_0
@@ -34,6 +36,7 @@
 
     return p0
 
+    .line 0
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

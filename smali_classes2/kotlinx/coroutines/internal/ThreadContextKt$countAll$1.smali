@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/internal/ThreadContextKt$countAll$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "ThreadContext.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -71,10 +72,12 @@
 .method public final invoke(Ljava/lang/Object;Lkotlin/coroutines/CoroutineContext$Element;)Ljava/lang/Object;
     .locals 0
 
+    .line 27
     instance-of p0, p2, Lkotlinx/coroutines/ThreadContextElement;
 
     if-eqz p0, :cond_3
 
+    .line 28
     instance-of p0, p1, Ljava/lang/Integer;
 
     if-nez p0, :cond_0
@@ -105,6 +108,7 @@
     :cond_2
     add-int/2addr p1, p0
 
+    .line 29
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2

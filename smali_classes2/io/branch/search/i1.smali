@@ -1,5 +1,6 @@
 .class public Lio/branch/search/i1;
 .super Lio/branch/search/BranchLocalSearchResult;
+.source "SourceFile"
 
 
 # instance fields

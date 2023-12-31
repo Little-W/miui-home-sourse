@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/encoding/CompositeEncoder$DefaultImpls;
 .super Ljava/lang/Object;
+.source "Encoding.kt"
 
 
 # annotations

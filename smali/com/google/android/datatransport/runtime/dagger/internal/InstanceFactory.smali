@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;
 .super Ljava/lang/Object;
+.source "InstanceFactory.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/dagger/Lazy;
@@ -47,6 +48,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 48
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;
 
     const/4 v1, 0x0
@@ -66,8 +68,10 @@
         }
     .end annotation
 
+    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 54
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;->instance:Ljava/lang/Object;
 
     return-void
@@ -85,6 +89,7 @@
         }
     .end annotation
 
+    .line 34
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;
 
     const-string v1, "instance cannot be null"
@@ -108,6 +113,7 @@
         }
     .end annotation
 
+    .line 59
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;->instance:Ljava/lang/Object;
 
     return-object p0

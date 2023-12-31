@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/widget/ImmersionAdapter$ViewEntry;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

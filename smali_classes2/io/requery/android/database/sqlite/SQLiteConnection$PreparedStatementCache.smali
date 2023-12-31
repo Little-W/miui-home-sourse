@@ -1,5 +1,6 @@
 .class final Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 .super Landroidx/collection/LruCache;
+.source "SQLiteConnection.java"
 
 
 # annotations
@@ -30,8 +31,10 @@
 .method public constructor <init>(Lio/requery/android/database/sqlite/SQLiteConnection;I)V
     .locals 0
 
+    .line 1333
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->this$0:Lio/requery/android/database/sqlite/SQLiteConnection;
 
+    .line 1334
     invoke-direct {p0, p2}, Landroidx/collection/LruCache;-><init>(I)V
 
     return-void
@@ -44,12 +47,15 @@
 
     const-string v0, "  Prepared statement cache:"
 
+    .line 1347
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 1348
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->snapshot()Ljava/util/Map;
 
     move-result-object p0
 
+    .line 1349
     invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
@@ -58,6 +64,7 @@
 
     const/4 v0, 0x0
 
+    .line 1351
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -79,22 +86,26 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 1352
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
+    .line 1353
     iget-boolean v3, v2, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
     if-eqz v3, :cond_0
 
+    .line 1354
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 1355
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,6 +122,7 @@
 
     iget-wide v4, v2, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
 
+    .line 1356
     invoke-static {v4, v5}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
 
     move-result-object v4
@@ -145,6 +157,7 @@
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1360
     invoke-static {v1}, Lio/requery/android/database/sqlite/SQLiteConnection;->access$300(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -159,6 +172,7 @@
 
     move-result-object v1
 
+    .line 1355
     invoke-interface {p1, v1}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
     :cond_0
@@ -169,6 +183,7 @@
     :cond_1
     const-string p0, "    <none>"
 
+    .line 1365
     invoke-interface {p1, p0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
     :cond_2
@@ -178,6 +193,7 @@
 .method protected bridge synthetic entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1331
     check-cast p2, Ljava/lang/String;
 
     check-cast p3, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -194,12 +210,15 @@
 
     const/4 p1, 0x0
 
+    .line 1340
     iput-boolean p1, p3, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
+    .line 1341
     iget-boolean p1, p3, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInUse:Z
 
     if-nez p1, :cond_0
 
+    .line 1342
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->this$0:Lio/requery/android/database/sqlite/SQLiteConnection;
 
     invoke-static {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->access$200(Lio/requery/android/database/sqlite/SQLiteConnection;Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V

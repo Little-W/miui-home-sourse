@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzbn;
 .super Lcom/google/android/gms/internal/measurement/zzag$zzb;
+.source "com.google.android.gms:play-services-measurement-sdk-api@@18.0.0"
 
 
 # instance fields
@@ -22,6 +23,7 @@
 .method constructor <init>(Lcom/google/android/gms/internal/measurement/zzag;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;ZZ)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzbn;->zzi:Lcom/google/android/gms/internal/measurement/zzag;
 
     iput-object p2, p0, Lcom/google/android/gms/internal/measurement/zzbn;->zzc:Ljava/lang/Long;
@@ -51,6 +53,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzbn;->zzc:Ljava/lang/Long;
 
     if-nez v0, :cond_0
@@ -67,6 +70,7 @@
     :goto_0
     move-wide v8, v0
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzbn;->zzi:Lcom/google/android/gms/internal/measurement/zzag;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzag;->zzc(Lcom/google/android/gms/internal/measurement/zzag;)Lcom/google/android/gms/internal/measurement/zzv;

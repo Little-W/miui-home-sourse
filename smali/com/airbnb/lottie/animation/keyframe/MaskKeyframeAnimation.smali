@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/animation/keyframe/MaskKeyframeAnimation;
 .super Ljava/lang/Object;
+.source "MaskKeyframeAnimation.java"
 
 
 # instance fields
@@ -50,10 +51,13 @@
         }
     .end annotation
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 18
     iput-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/MaskKeyframeAnimation;->masks:Ljava/util/List;
 
+    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -64,6 +68,7 @@
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/MaskKeyframeAnimation;->maskAnimations:Ljava/util/List;
 
+    .line 20
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -76,6 +81,7 @@
 
     const/4 v0, 0x0
 
+    .line 21
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -83,6 +89,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 22
     iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/MaskKeyframeAnimation;->maskAnimations:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -101,6 +108,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 23
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -111,6 +119,7 @@
 
     move-result-object v1
 
+    .line 24
     iget-object v2, p0, Lcom/airbnb/lottie/animation/keyframe/MaskKeyframeAnimation;->opacityAnimations:Ljava/util/List;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;->createAnimation()Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
@@ -142,6 +151,7 @@
         }
     .end annotation
 
+    .line 33
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/MaskKeyframeAnimation;->maskAnimations:Ljava/util/List;
 
     return-object p0
@@ -158,6 +168,7 @@
         }
     .end annotation
 
+    .line 29
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/MaskKeyframeAnimation;->masks:Ljava/util/List;
 
     return-object p0
@@ -176,6 +187,7 @@
         }
     .end annotation
 
+    .line 37
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/MaskKeyframeAnimation;->opacityAnimations:Ljava/util/List;
 
     return-object p0

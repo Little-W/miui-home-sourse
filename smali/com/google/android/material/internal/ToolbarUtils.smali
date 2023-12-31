@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/internal/ToolbarUtils;
 .super Ljava/lang/Object;
+.source "ToolbarUtils.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 48
     new-instance v0, Lcom/google/android/material/internal/ToolbarUtils$1;
 
     invoke-direct {v0}, Lcom/google/android/material/internal/ToolbarUtils$1;-><init>()V
@@ -32,6 +34,7 @@
 
     const/4 v0, 0x0
 
+    .line 93
     :goto_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getChildCount()I
 
@@ -39,18 +42,22 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 94
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
+    .line 95
     instance-of v2, v1, Landroid/widget/ImageView;
 
     if-eqz v2, :cond_0
 
+    .line 96
     check-cast v1, Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
 
+    .line 98
     invoke-virtual {v1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
@@ -85,6 +92,7 @@
 .method public static getLogoImageView(Landroidx/appcompat/widget/Toolbar;)Landroid/widget/ImageView;
     .locals 1
 
+    .line 88
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getLogo()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -99,6 +107,7 @@
 .method public static getSubtitleTextView(Landroidx/appcompat/widget/Toolbar;)Landroid/widget/TextView;
     .locals 1
 
+    .line 68
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getSubtitle()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -107,6 +116,7 @@
 
     move-result-object p0
 
+    .line 69
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -144,12 +154,14 @@
         }
     .end annotation
 
+    .line 73
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 74
     :goto_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getChildCount()I
 
@@ -157,16 +169,20 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 75
     invoke-virtual {p0, v1}, Landroidx/appcompat/widget/Toolbar;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 76
     instance-of v3, v2, Landroid/widget/TextView;
 
     if-eqz v3, :cond_0
 
+    .line 77
     check-cast v2, Landroid/widget/TextView;
 
+    .line 78
     invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v3
@@ -177,6 +193,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 79
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -191,6 +208,7 @@
 .method public static getTitleTextView(Landroidx/appcompat/widget/Toolbar;)Landroid/widget/TextView;
     .locals 1
 
+    .line 62
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -199,6 +217,7 @@
 
     move-result-object p0
 
+    .line 63
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0

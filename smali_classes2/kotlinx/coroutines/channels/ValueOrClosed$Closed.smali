@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/ValueOrClosed$Closed;
 .super Ljava/lang/Object;
+.source "Channel.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 402
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/ValueOrClosed$Closed;->cause:Ljava/lang/Throwable;
@@ -33,6 +35,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 405
     instance-of v0, p1, Lkotlinx/coroutines/channels/ValueOrClosed$Closed;
 
     if-eqz v0, :cond_0
@@ -63,6 +66,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 406
     iget-object p0, p0, Lkotlinx/coroutines/channels/ValueOrClosed$Closed;->cause:Ljava/lang/Throwable;
 
     if-eqz p0, :cond_0
@@ -83,6 +87,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 407
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/MirrorManagerImpl$3;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/widget/PopupWindow$OnDismissListener;

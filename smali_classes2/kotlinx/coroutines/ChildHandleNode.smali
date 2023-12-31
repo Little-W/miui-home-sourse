@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/ChildHandleNode;
 .super Lkotlinx/coroutines/JobCancellingNode;
+.source "JobSupport.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/ChildHandle;
@@ -24,6 +25,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/JobSupport;Lkotlinx/coroutines/ChildJob;)V
     .locals 0
 
+    .line 1472
     check-cast p1, Lkotlinx/coroutines/Job;
 
     invoke-direct {p0, p1}, Lkotlinx/coroutines/JobCancellingNode;-><init>(Lkotlinx/coroutines/Job;)V
@@ -38,6 +40,7 @@
 .method public childCancelled(Ljava/lang/Throwable;)Z
     .locals 0
 
+    .line 1474
     iget-object p0, p0, Lkotlinx/coroutines/ChildHandleNode;->job:Lkotlinx/coroutines/Job;
 
     check-cast p0, Lkotlinx/coroutines/JobSupport;
@@ -52,6 +55,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1469
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/ChildHandleNode;->invoke(Ljava/lang/Throwable;)V
@@ -64,6 +68,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1473
     iget-object p1, p0, Lkotlinx/coroutines/ChildHandleNode;->childJob:Lkotlinx/coroutines/ChildJob;
 
     iget-object p0, p0, Lkotlinx/coroutines/ChildHandleNode;->job:Lkotlinx/coroutines/Job;
@@ -78,6 +83,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1475
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

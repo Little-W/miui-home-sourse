@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/json/JsonImpl;
 .super Lkotlinx/serialization/json/Json;
+.source "Json.kt"
 
 
 # direct methods
@@ -12,8 +13,10 @@
 
     const/4 v0, 0x0
 
+    .line 261
     invoke-direct {p0, p1, v0}, Lkotlinx/serialization/json/Json;-><init>(Lkotlinx/serialization/json/internal/JsonConf;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 264
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonImpl;->validateConfiguration()V
 
     return-void
@@ -22,6 +25,7 @@
 .method private final validateConfiguration()V
     .locals 3
 
+    .line 268
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonImpl;->getSerializersModule()Lkotlinx/serialization/modules/SerializersModule;
 
     move-result-object v0
@@ -38,6 +42,7 @@
 
     return-void
 
+    .line 269
     :cond_0
     new-instance v0, Lkotlinx/serialization/json/internal/PolymorphismValidator;
 
@@ -55,6 +60,7 @@
 
     invoke-direct {v0, v1, v2}, Lkotlinx/serialization/json/internal/PolymorphismValidator;-><init>(ZLjava/lang/String;)V
 
+    .line 270
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonImpl;->getSerializersModule()Lkotlinx/serialization/modules/SerializersModule;
 
     move-result-object p0

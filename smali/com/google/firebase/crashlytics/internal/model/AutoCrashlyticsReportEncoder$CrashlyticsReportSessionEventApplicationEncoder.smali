@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;
 .super Ljava/lang/Object;
+.source "AutoCrashlyticsReportEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -43,6 +44,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 275
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;
 
     invoke-direct {v0}, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;-><init>()V
@@ -51,6 +53,7 @@
 
     const-string v0, "execution"
 
+    .line 277
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -59,6 +62,7 @@
 
     const-string v0, "customAttributes"
 
+    .line 279
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -67,6 +71,7 @@
 
     const-string v0, "internalKeys"
 
+    .line 281
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -75,6 +80,7 @@
 
     const-string v0, "background"
 
+    .line 283
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -83,6 +89,7 @@
 
     const-string/jumbo v0, "uiOrientation"
 
+    .line 285
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -95,6 +102,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 274
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -110,6 +118,7 @@
         }
     .end annotation
 
+    .line 290
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;->EXECUTION_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;->getExecution()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution;
@@ -118,6 +127,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 291
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;->CUSTOMATTRIBUTES_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;->getCustomAttributes()Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
@@ -126,6 +136,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 292
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;->INTERNALKEYS_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;->getInternalKeys()Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
@@ -134,6 +145,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 293
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;->BACKGROUND_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;->getBackground()Ljava/lang/Boolean;
@@ -142,6 +154,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 294
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;->UIORIENTATION_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;->getUiOrientation()I
@@ -161,6 +174,7 @@
         }
     .end annotation
 
+    .line 274
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

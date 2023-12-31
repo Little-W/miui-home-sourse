@@ -1,5 +1,6 @@
 .class public Lio/branch/search/internal/rawsqlite/BundleUpdateService;
 .super Landroid/app/job/JobService;
+.source "SourceFile"
 
 # interfaces
 .implements Lio/branch/search/internal/shared/IBranchOnRawSQLEvents;

@@ -1,5 +1,6 @@
 .class public final enum Lkotlin/reflect/KVisibility;
 .super Ljava/lang/Enum;
+.source "KVisibility.kt"
 
 
 # annotations
@@ -93,6 +94,7 @@
         }
     .end annotation
 
+    .line 30
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;
 .super Ljava/lang/Object;
+.source "SessionReportingCoordinator.java"
 
 
 # instance fields
@@ -18,16 +19,22 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;Lcom/google/firebase/crashlytics/internal/log/LogFileManager;Lcom/google/firebase/crashlytics/internal/common/UserMetadata;)V
     .locals 0
 
+    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 92
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->dataCapture:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;
 
+    .line 93
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
+    .line 94
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportsSender:Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;
 
+    .line 95
     iput-object p4, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->logFileManager:Lcom/google/firebase/crashlytics/internal/log/LogFileManager;
 
+    .line 96
     iput-object p5, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportMetadata:Lcom/google/firebase/crashlytics/internal/common/UserMetadata;
 
     return-void
@@ -36,6 +43,7 @@
 .method private addLogsAndCustomKeysToEvent(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;
     .locals 2
 
+    .line 227
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->logFileManager:Lcom/google/firebase/crashlytics/internal/log/LogFileManager;
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportMetadata:Lcom/google/firebase/crashlytics/internal/common/UserMetadata;
@@ -50,16 +58,19 @@
 .method private addLogsAndCustomKeysToEvent(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;Lcom/google/firebase/crashlytics/internal/log/LogFileManager;Lcom/google/firebase/crashlytics/internal/common/UserMetadata;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;
     .locals 1
 
+    .line 234
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;->toBuilder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Builder;
 
     move-result-object p0
 
+    .line 235
     invoke-virtual {p2}, Lcom/google/firebase/crashlytics/internal/log/LogFileManager;->getLogString()Ljava/lang/String;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
+    .line 239
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log$Builder;
 
     move-result-object v0
@@ -72,10 +83,12 @@
 
     move-result-object p2
 
+    .line 238
     invoke-virtual {p0, p2}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Builder;->setLog(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Builder;
 
     goto :goto_0
 
+    .line 241
     :cond_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -85,6 +98,7 @@
 
     invoke-virtual {p2, v0}, Lcom/google/firebase/crashlytics/internal/Logger;->v(Ljava/lang/String;)V
 
+    .line 248
     :goto_0
     invoke-virtual {p3}, Lcom/google/firebase/crashlytics/internal/common/UserMetadata;->getCustomKeys()Ljava/util/Map;
 
@@ -94,6 +108,7 @@
 
     move-result-object p2
 
+    .line 250
     invoke-virtual {p3}, Lcom/google/firebase/crashlytics/internal/common/UserMetadata;->getInternalKeys()Ljava/util/Map;
 
     move-result-object p3
@@ -102,12 +117,14 @@
 
     move-result-object p3
 
+    .line 252
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 254
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;->getApp()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;
 
     move-result-object p1
@@ -116,6 +133,7 @@
 
     move-result-object p1
 
+    .line 255
     invoke-static {p2}, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->from(Ljava/util/List;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object p2
@@ -124,6 +142,7 @@
 
     move-result-object p1
 
+    .line 256
     invoke-static {p3}, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->from(Ljava/util/List;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object p2
@@ -132,12 +151,15 @@
 
     move-result-object p1
 
+    .line 257
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;
 
     move-result-object p1
 
+    .line 253
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Builder;->setApp(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Builder;
 
+    .line 260
     :cond_1
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;
 
@@ -151,6 +173,7 @@
 
     const/4 v0, 0x0
 
+    .line 328
     :try_start_0
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getTraceInputStream()Ljava/io/InputStream;
 
@@ -158,6 +181,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 330
     invoke-static {v1}, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->convertInputStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
@@ -169,6 +193,7 @@
     :catch_0
     move-exception v1
 
+    .line 333
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v2
@@ -181,6 +206,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 336
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -197,14 +223,17 @@
 
     move-result-object v1
 
+    .line 334
     invoke-virtual {v2, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->w(Ljava/lang/String;)V
 
+    .line 341
     :cond_0
     :goto_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
 
     move-result-object v1
 
+    .line 342
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getImportance()I
 
     move-result v2
@@ -213,6 +242,7 @@
 
     move-result-object v1
 
+    .line 343
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getProcessName()Ljava/lang/String;
 
     move-result-object v2
@@ -221,6 +251,7 @@
 
     move-result-object v1
 
+    .line 344
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getReason()I
 
     move-result v2
@@ -229,6 +260,7 @@
 
     move-result-object v1
 
+    .line 345
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
 
     move-result-wide v2
@@ -237,6 +269,7 @@
 
     move-result-object v1
 
+    .line 346
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getPid()I
 
     move-result v2
@@ -245,6 +278,7 @@
 
     move-result-object v1
 
+    .line 347
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getPss()J
 
     move-result-wide v2
@@ -253,6 +287,7 @@
 
     move-result-object v1
 
+    .line 348
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getRss()J
 
     move-result-wide v2
@@ -261,10 +296,12 @@
 
     move-result-object p0
 
+    .line 349
     invoke-virtual {p0, v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;->setTraceFile(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
 
     move-result-object p0
 
+    .line 350
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;
 
     move-result-object p0
@@ -280,6 +317,7 @@
         }
     .end annotation
 
+    .line 356
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -288,6 +326,7 @@
 
     new-array v1, v1, [B
 
+    .line 359
     :goto_0
     invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
 
@@ -299,10 +338,12 @@
 
     const/4 v3, 0x0
 
+    .line 360
     invoke-virtual {v0, v1, v3, v2}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_0
 
+    .line 362
     :cond_0
     sget-object p0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -320,18 +361,22 @@
 .method public static create(Landroid/content/Context;Lcom/google/firebase/crashlytics/internal/common/IdManager;Lcom/google/firebase/crashlytics/internal/persistence/FileStore;Lcom/google/firebase/crashlytics/internal/common/AppData;Lcom/google/firebase/crashlytics/internal/log/LogFileManager;Lcom/google/firebase/crashlytics/internal/common/UserMetadata;Lcom/google/firebase/crashlytics/internal/stacktrace/StackTraceTrimmingStrategy;Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;)Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;
     .locals 6
 
+    .line 70
     new-instance v1, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;
 
     invoke-direct {v1, p0, p1, p3, p6}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;-><init>(Landroid/content/Context;Lcom/google/firebase/crashlytics/internal/common/IdManager;Lcom/google/firebase/crashlytics/internal/common/AppData;Lcom/google/firebase/crashlytics/internal/stacktrace/StackTraceTrimmingStrategy;)V
 
+    .line 72
     new-instance v2, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
     invoke-direct {v2, p2, p7}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;-><init>(Lcom/google/firebase/crashlytics/internal/persistence/FileStore;Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;)V
 
+    .line 75
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->create(Landroid/content/Context;)Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;
 
     move-result-object v3
 
+    .line 76
     new-instance p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;
 
     move-object v0, p0
@@ -358,12 +403,14 @@
         }
     .end annotation
 
+    .line 369
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->getStartTimestampMillis(Ljava/lang/String;)J
 
     move-result-wide p0
 
+    .line 373
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -383,6 +430,7 @@
 
     check-cast v0, Landroid/app/ApplicationExitInfo;
 
+    .line 375
     invoke-virtual {v0}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
 
     move-result-wide v2
@@ -393,6 +441,7 @@
 
     return-object v1
 
+    .line 381
     :cond_0
     invoke-virtual {v0}, Landroid/app/ApplicationExitInfo;->getReason()I
 
@@ -426,16 +475,19 @@
         }
     .end annotation
 
+    .line 308
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 309
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->ensureCapacity(I)V
 
+    .line 310
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -457,6 +509,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 312
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute$Builder;
 
     move-result-object v2
@@ -485,10 +538,12 @@
 
     move-result-object v1
 
+    .line 311
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 316
     :cond_0
     sget-object p0, Lcom/google/firebase/crashlytics/internal/common/-$$Lambda$SessionReportingCoordinator$TX0lZug2FS1EXHwsWNz9vWcgWJw;->INSTANCE:Lcom/google/firebase/crashlytics/internal/common/-$$Lambda$SessionReportingCoordinator$TX0lZug2FS1EXHwsWNz9vWcgWJw;
 
@@ -510,6 +565,7 @@
 .method static synthetic lambda$getSortedCustomAttributes$0(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute;Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute;)I
     .locals 0
 
+    .line 318
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute;->getKey()Ljava/lang/String;
 
     move-result-object p0
@@ -536,18 +592,21 @@
         }
     .end annotation
 
+    .line 288
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
+    .line 289
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;
 
+    .line 290
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p1
@@ -560,6 +619,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 291
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;->getSessionId()Ljava/lang/String;
 
     move-result-object v1
@@ -572,16 +632,19 @@
 
     invoke-virtual {p1, v0}, Lcom/google/firebase/crashlytics/internal/Logger;->d(Ljava/lang/String;)V
 
+    .line 292
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;->getReportFile()Ljava/io/File;
 
     move-result-object p0
 
+    .line 293
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 294
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p1
@@ -608,6 +671,7 @@
 
     goto :goto_0
 
+    .line 296
     :cond_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -638,11 +702,13 @@
 
     return p0
 
+    .line 300
     :cond_1
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p0
 
+    .line 301
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
 
     move-result-object p1
@@ -665,10 +731,12 @@
 
     move-object v5, p4
 
+    .line 271
     invoke-virtual {p4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
+    .line 273
     iget-object v2, v0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->dataCapture:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;
 
     const/4 v8, 0x4
@@ -683,18 +751,22 @@
 
     move/from16 v10, p7
 
+    .line 274
     invoke-virtual/range {v2 .. v10}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;->captureEventData(Ljava/lang/Throwable;Ljava/lang/Thread;Ljava/lang/String;JIIZ)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;
 
     move-result-object v2
 
+    .line 283
     iget-object v3, v0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
+    .line 284
     invoke-direct {p0, v2}, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->addLogsAndCustomKeysToEvent(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;
 
     move-result-object v0
 
     move-object v2, p3
 
+    .line 283
     invoke-virtual {v3, v0, p3, v1}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->persistEvent(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;Ljava/lang/String;Z)V
 
     return-void
@@ -714,6 +786,7 @@
         }
     .end annotation
 
+    .line 163
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
@@ -722,10 +795,12 @@
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->d(Ljava/lang/String;)V
 
+    .line 165
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 166
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -744,19 +819,23 @@
 
     check-cast v1, Lcom/google/firebase/crashlytics/internal/common/NativeSessionFile;
 
+    .line 167
     invoke-interface {v1}, Lcom/google/firebase/crashlytics/internal/common/NativeSessionFile;->asFilePayload()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 169
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 173
     :cond_1
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
+    .line 174
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$Builder;
 
     move-result-object p2
@@ -773,6 +852,7 @@
 
     move-result-object p2
 
+    .line 173
     invoke-virtual {p0, p1, p2}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->finalizeSessionWithNativeEvent(Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload;)V
 
     return-void
@@ -781,6 +861,7 @@
 .method public finalizeSessions(JLjava/lang/String;)V
     .locals 0
 
+    .line 191
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
     invoke-virtual {p0, p3, p1, p2}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->finalizeReports(Ljava/lang/String;J)V
@@ -791,6 +872,7 @@
 .method public hasReportsToSend()Z
     .locals 0
 
+    .line 199
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->hasFinalizedReports()Z
@@ -811,6 +893,7 @@
         }
     .end annotation
 
+    .line 195
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->getOpenSessionIds()Ljava/util/SortedSet;
@@ -823,12 +906,15 @@
 .method public onBeginSession(Ljava/lang/String;J)V
     .locals 1
 
+    .line 101
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->dataCapture:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;
 
+    .line 102
     invoke-virtual {v0, p1, p2, p3}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;->captureReportData(Ljava/lang/String;J)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
 
     move-result-object p1
 
+    .line 104
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->persistReport(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;)V
@@ -839,6 +925,7 @@
 .method public persistFatalEvent(Ljava/lang/Throwable;Ljava/lang/Thread;Ljava/lang/String;J)V
     .locals 10
 
+    .line 124
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
@@ -873,6 +960,7 @@
 
     move-wide v7, p4
 
+    .line 125
     invoke-direct/range {v2 .. v9}, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->persistEvent(Ljava/lang/Throwable;Ljava/lang/Thread;Ljava/lang/String;Ljava/lang/String;JZ)V
 
     return-void
@@ -881,6 +969,7 @@
 .method public persistNonFatalEvent(Ljava/lang/Throwable;Ljava/lang/Thread;Ljava/lang/String;J)V
     .locals 10
 
+    .line 130
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
@@ -915,6 +1004,7 @@
 
     move-wide v7, p4
 
+    .line 131
     invoke-direct/range {v2 .. v9}, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->persistEvent(Ljava/lang/Throwable;Ljava/lang/Thread;Ljava/lang/String;Ljava/lang/String;JZ)V
 
     return-void
@@ -935,12 +1025,14 @@
         }
     .end annotation
 
+    .line 142
     invoke-direct {p0, p1, p2}, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->findRelevantApplicationExitInfo(Ljava/lang/String;Ljava/util/List;)Landroid/app/ApplicationExitInfo;
 
     move-result-object p2
 
     if-nez p2, :cond_0
 
+    .line 145
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p0
@@ -963,9 +1055,11 @@
 
     return-void
 
+    .line 149
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->dataCapture:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;
 
+    .line 150
     invoke-static {p2}, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->convertApplicationExitInfo(Landroid/app/ApplicationExitInfo;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;
 
     move-result-object p2
@@ -974,6 +1068,7 @@
 
     move-result-object p2
 
+    .line 152
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
@@ -994,14 +1089,17 @@
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->d(Ljava/lang/String;)V
 
+    .line 153
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
+    .line 154
     invoke-direct {p0, p2, p3, p4}, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->addLogsAndCustomKeysToEvent(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;Lcom/google/firebase/crashlytics/internal/log/LogFileManager;Lcom/google/firebase/crashlytics/internal/common/UserMetadata;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;
 
     move-result-object p0
 
     const/4 p2, 0x1
 
+    .line 153
     invoke-virtual {v0, p0, p1, p2}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->persistEvent(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;Ljava/lang/String;Z)V
 
     return-void
@@ -1010,6 +1108,7 @@
 .method public removeAllReports()V
     .locals 0
 
+    .line 203
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->deleteAllReports()V
@@ -1030,16 +1129,20 @@
         }
     .end annotation
 
+    .line 213
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportPersistence:Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;
 
+    .line 214
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->loadFinalizedReports()Ljava/util/List;
 
     move-result-object v0
 
+    .line 215
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 216
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1057,8 +1160,10 @@
 
     check-cast v2, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;
 
+    .line 217
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;->reportsSender:Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;
 
+    .line 219
     invoke-virtual {v3, v2}, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->sendReport(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object v2
@@ -1067,14 +1172,17 @@
 
     invoke-direct {v3, p0}, Lcom/google/firebase/crashlytics/internal/common/-$$Lambda$SessionReportingCoordinator$2TWemv_1VA0ASKWrGsWON-xeX8o;-><init>(Lcom/google/firebase/crashlytics/internal/common/SessionReportingCoordinator;)V
 
+    .line 220
     invoke-virtual {v2, p1, v3}, Lcom/google/android/gms/tasks/Task;->continueWith(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object v2
 
+    .line 217
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 222
     :cond_0
     invoke-static {v1}, Lcom/google/android/gms/tasks/Tasks;->whenAll(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
 

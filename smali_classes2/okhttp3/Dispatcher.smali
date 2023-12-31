@@ -1,5 +1,6 @@
 .class public final Lokhttp3/Dispatcher;
 .super Ljava/lang/Object;
+.source "Dispatcher.java"
 
 
 # static fields
@@ -62,28 +63,34 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x40
 
+    .line 40
     iput v0, p0, Lokhttp3/Dispatcher;->maxRequests:I
 
     const/4 v0, 0x5
 
+    .line 41
     iput v0, p0, Lokhttp3/Dispatcher;->maxRequestsPerHost:I
 
+    .line 48
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lokhttp3/Dispatcher;->readyAsyncCalls:Ljava/util/Deque;
 
+    .line 51
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lokhttp3/Dispatcher;->runningAsyncCalls:Ljava/util/Deque;
 
+    .line 54
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
@@ -105,8 +112,10 @@
         }
     .end annotation
 
+    .line 219
     monitor-enter p0
 
+    .line 220
     :try_start_0
     invoke-interface {p1, p2}, Ljava/util/Deque;->remove(Ljava/lang/Object;)Z
 
@@ -114,12 +123,15 @@
 
     if-eqz p1, :cond_1
 
+    .line 221
     iget-object p1, p0, Lokhttp3/Dispatcher;->idleCallback:Ljava/lang/Runnable;
 
+    .line 222
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 224
     invoke-direct {p0}, Lokhttp3/Dispatcher;->promoteAndExecute()Z
 
     move-result p0
@@ -128,11 +140,13 @@
 
     if-eqz p1, :cond_0
 
+    .line 227
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_0
     return-void
 
+    .line 220
     :cond_1
     :try_start_1
     new-instance p1, Ljava/lang/AssertionError;
@@ -146,6 +160,7 @@
     :catchall_0
     move-exception p1
 
+    .line 222
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -156,12 +171,15 @@
 .method private promoteAndExecute()Z
     .locals 6
 
+    .line 168
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 170
     monitor-enter p0
 
+    .line 171
     :try_start_0
     iget-object v1, p0, Lokhttp3/Dispatcher;->readyAsyncCalls:Ljava/util/Deque;
 
@@ -176,12 +194,14 @@
 
     if-eqz v2, :cond_2
 
+    .line 172
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lokhttp3/RealCall$AsyncCall;
 
+    .line 174
     iget-object v3, p0, Lokhttp3/Dispatcher;->runningAsyncCalls:Ljava/util/Deque;
 
     invoke-interface {v3}, Ljava/util/Deque;->size()I
@@ -194,6 +214,7 @@
 
     goto :goto_1
 
+    .line 175
     :cond_0
     invoke-direct {p0, v2}, Lokhttp3/Dispatcher;->runningCallsForHost(Lokhttp3/RealCall$AsyncCall;)I
 
@@ -205,17 +226,21 @@
 
     goto :goto_0
 
+    .line 177
     :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
+    .line 178
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 179
     iget-object v3, p0, Lokhttp3/Dispatcher;->runningAsyncCalls:Ljava/util/Deque;
 
     invoke-interface {v3, v2}, Ljava/util/Deque;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 181
     :cond_2
     :goto_1
     invoke-virtual {p0}, Lokhttp3/Dispatcher;->runningCallsCount()I
@@ -233,11 +258,13 @@
     :cond_3
     move v1, v2
 
+    .line 182
     :goto_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 184
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -245,12 +272,14 @@
     :goto_3
     if-ge v2, v3, :cond_4
 
+    .line 185
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lokhttp3/RealCall$AsyncCall;
 
+    .line 186
     invoke-virtual {p0}, Lokhttp3/Dispatcher;->executorService()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v5
@@ -267,6 +296,7 @@
     :catchall_0
     move-exception v0
 
+    .line 182
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -278,6 +308,7 @@
 .method private runningCallsForHost(Lokhttp3/RealCall$AsyncCall;)I
     .locals 3
 
+    .line 195
     iget-object p0, p0, Lokhttp3/Dispatcher;->runningAsyncCalls:Ljava/util/Deque;
 
     invoke-interface {p0}, Ljava/util/Deque;->iterator()Ljava/util/Iterator;
@@ -300,6 +331,7 @@
 
     check-cast v1, Lokhttp3/RealCall$AsyncCall;
 
+    .line 196
     invoke-virtual {v1}, Lokhttp3/RealCall$AsyncCall;->get()Lokhttp3/RealCall;
 
     move-result-object v2
@@ -310,6 +342,7 @@
 
     goto :goto_0
 
+    .line 197
     :cond_1
     invoke-virtual {v1}, Lokhttp3/RealCall$AsyncCall;->host()Ljava/lang/String;
 
@@ -338,17 +371,21 @@
 .method enqueue(Lokhttp3/RealCall$AsyncCall;)V
     .locals 1
 
+    .line 134
     monitor-enter p0
 
+    .line 135
     :try_start_0
     iget-object v0, p0, Lokhttp3/Dispatcher;->readyAsyncCalls:Ljava/util/Deque;
 
     invoke-interface {v0, p1}, Ljava/util/Deque;->add(Ljava/lang/Object;)Z
 
+    .line 136
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 137
     invoke-direct {p0}, Lokhttp3/Dispatcher;->promoteAndExecute()Z
 
     return-void
@@ -356,6 +393,7 @@
     :catchall_0
     move-exception p1
 
+    .line 136
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -369,6 +407,7 @@
 
     monitor-enter p0
 
+    .line 204
     :try_start_0
     iget-object v0, p0, Lokhttp3/Dispatcher;->runningSyncCalls:Ljava/util/Deque;
 
@@ -376,6 +415,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 205
     monitor-exit p0
 
     return-void
@@ -393,11 +433,13 @@
 
     monitor-enter p0
 
+    .line 64
     :try_start_0
     iget-object v0, p0, Lokhttp3/Dispatcher;->executorService:Ljava/util/concurrent/ExecutorService;
 
     if-nez v0, :cond_0
 
+    .line 65
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     const/4 v2, 0x0
@@ -416,6 +458,7 @@
 
     const/4 v8, 0x0
 
+    .line 66
     invoke-static {v1, v8}, Lokhttp3/internal/Util;->threadFactory(Ljava/lang/String;Z)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v8
@@ -426,6 +469,7 @@
 
     iput-object v0, p0, Lokhttp3/Dispatcher;->executorService:Ljava/util/concurrent/ExecutorService;
 
+    .line 68
     :cond_0
     iget-object v0, p0, Lokhttp3/Dispatcher;->executorService:Ljava/util/concurrent/ExecutorService;
     :try_end_0
@@ -446,6 +490,7 @@
 .method finished(Lokhttp3/RealCall$AsyncCall;)V
     .locals 1
 
+    .line 209
     iget-object v0, p0, Lokhttp3/Dispatcher;->runningAsyncCalls:Ljava/util/Deque;
 
     invoke-direct {p0, v0, p1}, Lokhttp3/Dispatcher;->finished(Ljava/util/Deque;Ljava/lang/Object;)V
@@ -456,6 +501,7 @@
 .method finished(Lokhttp3/RealCall;)V
     .locals 1
 
+    .line 214
     iget-object v0, p0, Lokhttp3/Dispatcher;->runningSyncCalls:Ljava/util/Deque;
 
     invoke-direct {p0, v0, p1}, Lokhttp3/Dispatcher;->finished(Ljava/util/Deque;Ljava/lang/Object;)V
@@ -468,6 +514,7 @@
 
     monitor-enter p0
 
+    .line 255
     :try_start_0
     iget-object v0, p0, Lokhttp3/Dispatcher;->runningAsyncCalls:Ljava/util/Deque;
 

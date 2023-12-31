@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/airbnb/lottie/-$$Lambda$LottieTask$hi-nnNZnwrLnM9tiQYr399bB9h4;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

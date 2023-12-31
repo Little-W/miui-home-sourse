@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/google/gson/ExclusionStrategy;
 .super Ljava/lang/Object;
+.source "ExclusionStrategy.java"
 
 
 # virtual methods

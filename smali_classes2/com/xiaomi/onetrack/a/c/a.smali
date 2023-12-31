@@ -30,12 +30,16 @@
         }
     .end annotation
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
     iput p1, p0, Lcom/xiaomi/onetrack/a/c/a;->a:I
 
+    .line 14
     iput-object p2, p0, Lcom/xiaomi/onetrack/a/c/a;->b:Ljava/util/ArrayList;
 
+    .line 15
     iput-boolean p3, p0, Lcom/xiaomi/onetrack/a/c/a;->c:Z
 
     return-void

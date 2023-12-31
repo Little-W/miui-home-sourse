@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/firebase/encoders/Encoder;
 .super Ljava/lang/Object;
+.source "Encoder.java"
 
 
 # annotations

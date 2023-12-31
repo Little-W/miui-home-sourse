@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
+.source "SearchView.java"
 
 
 # annotations
@@ -33,6 +34,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 1332
     new-instance v0, Landroidx/appcompat/widget/SearchView$SavedState$1;
 
     invoke-direct {v0}, Landroidx/appcompat/widget/SearchView$SavedState$1;-><init>()V
@@ -45,10 +47,12 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
+    .line 1315
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     const/4 p2, 0x0
 
+    .line 1316
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
     move-result-object p1
@@ -67,6 +71,7 @@
 .method constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
+    .line 1311
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -77,6 +82,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1327
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,6 +91,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1328
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -117,8 +124,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1321
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 1322
     iget-boolean p0, p0, Landroidx/appcompat/widget/SearchView$SavedState;->isIconified:Z
 
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

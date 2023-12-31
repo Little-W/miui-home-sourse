@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/NetworkRequestHandler$ContentLengthException;
 .super Ljava/io/IOException;
+.source "NetworkRequestHandler.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 108
     invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     return-void

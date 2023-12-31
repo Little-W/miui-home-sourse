@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;
 .super Ljava/lang/Object;
+.source "DecodeJob.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 625
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +35,7 @@
 .method private isComplete(Z)Z
     .locals 1
 
+    .line 649
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isFailed:Z
 
     if-nez v0, :cond_0
@@ -68,11 +71,13 @@
 
     const/4 v0, 0x1
 
+    .line 633
     :try_start_0
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isEncodeComplete:Z
 
     const/4 v0, 0x0
 
+    .line 634
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isComplete(Z)Z
 
     move-result v0
@@ -98,11 +103,13 @@
 
     const/4 v0, 0x1
 
+    .line 638
     :try_start_0
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isFailed:Z
 
     const/4 v0, 0x0
 
+    .line 639
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isComplete(Z)Z
 
     move-result v0
@@ -128,9 +135,11 @@
 
     const/4 v0, 0x1
 
+    .line 628
     :try_start_0
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isReleased:Z
 
+    .line 629
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isComplete(Z)Z
 
     move-result p1
@@ -156,15 +165,19 @@
 
     const/4 v0, 0x0
 
+    .line 643
     :try_start_0
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isEncodeComplete:Z
 
+    .line 644
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isReleased:Z
 
+    .line 645
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$ReleaseManager;->isFailed:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 646
     monitor-exit p0
 
     return-void

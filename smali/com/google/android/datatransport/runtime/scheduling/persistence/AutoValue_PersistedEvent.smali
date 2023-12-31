@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;
 .super Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
+.source "AutoValue_PersistedEvent.java"
 
 
 # instance fields
@@ -14,20 +15,25 @@
 .method constructor <init>(JLcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)V
     .locals 0
 
+    .line 20
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;-><init>()V
 
+    .line 21
     iput-wide p1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->id:J
 
     if-eqz p3, :cond_1
 
+    .line 25
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     if-eqz p4, :cond_0
 
+    .line 29
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->event:Lcom/google/android/datatransport/runtime/EventInternal;
 
     return-void
 
+    .line 27
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -37,6 +43,7 @@
 
     throw p0
 
+    .line 23
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -58,6 +65,7 @@
 
     return v0
 
+    .line 61
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
 
@@ -65,8 +73,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 62
     check-cast p1, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
 
+    .line 63
     iget-wide v3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->id:J
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->getId()J
@@ -79,6 +89,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
+    .line 64
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->getTransportContext()Lcom/google/android/datatransport/runtime/TransportContext;
 
     move-result-object v3
@@ -91,6 +102,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->event:Lcom/google/android/datatransport/runtime/EventInternal;
 
+    .line 65
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->getEvent()Lcom/google/android/datatransport/runtime/EventInternal;
 
     move-result-object p1
@@ -116,6 +128,7 @@
 .method public getEvent()Lcom/google/android/datatransport/runtime/EventInternal;
     .locals 0
 
+    .line 44
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->event:Lcom/google/android/datatransport/runtime/EventInternal;
 
     return-object p0
@@ -124,6 +137,7 @@
 .method public getId()J
     .locals 2
 
+    .line 34
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->id:J
 
     return-wide v0
@@ -132,6 +146,7 @@
 .method public getTransportContext()Lcom/google/android/datatransport/runtime/TransportContext;
     .locals 0
 
+    .line 39
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     return-object p0
@@ -140,6 +155,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 74
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->id:J
 
     const/16 v2, 0x20
@@ -156,6 +172,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 76
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -166,6 +183,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 78
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->event:Lcom/google/android/datatransport/runtime/EventInternal;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -180,6 +198,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

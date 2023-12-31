@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask$1;
 .super Ljava/lang/Object;
+.source "XiaomiUpdateAgent.java"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 494
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
+    .line 497
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->openMarketOrArrange()V
 
     return-void

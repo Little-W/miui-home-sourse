@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/RequestBuilder;
 .super Lcom/bumptech/glide/request/BaseRequestOptions;
+.source "RequestBuilder.java"
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -93,12 +94,14 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 56
     new-instance v0, Lcom/bumptech/glide/request/RequestOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/RequestOptions;-><init>()V
 
     sget-object v1, Lcom/bumptech/glide/load/engine/DiskCacheStrategy;->DATA:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
+    .line 57
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/request/RequestOptions;->diskCacheStrategy(Lcom/bumptech/glide/load/engine/DiskCacheStrategy;)Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object v0
@@ -115,6 +118,7 @@
 
     const/4 v1, 0x1
 
+    .line 58
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/request/RequestOptions;->skipMemoryCache(Z)Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object v0
@@ -140,38 +144,48 @@
         }
     .end annotation
 
+    .line 88
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 77
     iput-boolean v0, p0, Lcom/bumptech/glide/RequestBuilder;->isDefaultTransitionOptionsSet:Z
 
+    .line 89
     iput-object p1, p0, Lcom/bumptech/glide/RequestBuilder;->glide:Lcom/bumptech/glide/Glide;
 
+    .line 90
     iput-object p2, p0, Lcom/bumptech/glide/RequestBuilder;->requestManager:Lcom/bumptech/glide/RequestManager;
 
+    .line 91
     iput-object p3, p0, Lcom/bumptech/glide/RequestBuilder;->transcodeClass:Ljava/lang/Class;
 
+    .line 92
     iput-object p4, p0, Lcom/bumptech/glide/RequestBuilder;->context:Landroid/content/Context;
 
+    .line 93
     invoke-virtual {p2, p3}, Lcom/bumptech/glide/RequestManager;->getDefaultTransitionOptions(Ljava/lang/Class;)Lcom/bumptech/glide/TransitionOptions;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/bumptech/glide/RequestBuilder;->transitionOptions:Lcom/bumptech/glide/TransitionOptions;
 
+    .line 94
     invoke-virtual {p1}, Lcom/bumptech/glide/Glide;->getGlideContext()Lcom/bumptech/glide/GlideContext;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/bumptech/glide/RequestBuilder;->glideContext:Lcom/bumptech/glide/GlideContext;
 
+    .line 96
     invoke-virtual {p2}, Lcom/bumptech/glide/RequestManager;->getDefaultRequestListeners()Ljava/util/List;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->initRequestListeners(Ljava/util/List;)V
 
+    .line 97
     invoke-virtual {p2}, Lcom/bumptech/glide/RequestManager;->getDefaultRequestOptions()Lcom/bumptech/glide/request/RequestOptions;
 
     move-result-object p1
@@ -198,16 +212,20 @@
         }
     .end annotation
 
+    .line 876
     iget-object v4, p0, Lcom/bumptech/glide/RequestBuilder;->transitionOptions:Lcom/bumptech/glide/TransitionOptions;
 
+    .line 881
     invoke-virtual {p3}, Lcom/bumptech/glide/request/BaseRequestOptions;->getPriority()Lcom/bumptech/glide/Priority;
 
     move-result-object v5
 
+    .line 882
     invoke-virtual {p3}, Lcom/bumptech/glide/request/BaseRequestOptions;->getOverrideWidth()I
 
     move-result v6
 
+    .line 883
     invoke-virtual {p3}, Lcom/bumptech/glide/request/BaseRequestOptions;->getOverrideHeight()I
 
     move-result v7
@@ -224,6 +242,7 @@
 
     move-object v9, p4
 
+    .line 876
     invoke-direct/range {v0 .. v9}, Lcom/bumptech/glide/RequestBuilder;->buildRequestRecursive(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/TransitionOptions;Lcom/bumptech/glide/Priority;IILcom/bumptech/glide/request/BaseRequestOptions;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object p0
@@ -255,10 +274,12 @@
 
     move-object v10, p0
 
+    .line 901
     iget-object v0, v10, Lcom/bumptech/glide/RequestBuilder;->errorBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     if-eqz v0, :cond_0
 
+    .line 902
     new-instance v0, Lcom/bumptech/glide/request/ErrorRequestCoordinator;
 
     move-object/from16 v1, p3
@@ -299,6 +320,7 @@
 
     move-object/from16 v9, p9
 
+    .line 907
     invoke-direct/range {v0 .. v9}, Lcom/bumptech/glide/RequestBuilder;->buildThumbnailRequestRecursive(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/TransitionOptions;Lcom/bumptech/glide/Priority;IILcom/bumptech/glide/request/BaseRequestOptions;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object v0
@@ -307,6 +329,7 @@
 
     return-object v0
 
+    .line 922
     :cond_1
     iget-object v1, v10, Lcom/bumptech/glide/RequestBuilder;->errorBuilder:Lcom/bumptech/glide/RequestBuilder;
 
@@ -314,12 +337,14 @@
 
     move-result v1
 
+    .line 923
     iget-object v2, v10, Lcom/bumptech/glide/RequestBuilder;->errorBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     invoke-virtual {v2}, Lcom/bumptech/glide/RequestBuilder;->getOverrideHeight()I
 
     move-result v2
 
+    .line 924
     invoke-static/range {p6 .. p7}, Lcom/bumptech/glide/util/Util;->isValidDimensions(II)Z
 
     move-result v3
@@ -328,16 +353,19 @@
 
     iget-object v3, v10, Lcom/bumptech/glide/RequestBuilder;->errorBuilder:Lcom/bumptech/glide/RequestBuilder;
 
+    .line 925
     invoke-virtual {v3}, Lcom/bumptech/glide/RequestBuilder;->isValidOverride()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
+    .line 926
     invoke-virtual/range {p8 .. p8}, Lcom/bumptech/glide/request/BaseRequestOptions;->getOverrideWidth()I
 
     move-result v1
 
+    .line 927
     invoke-virtual/range {p8 .. p8}, Lcom/bumptech/glide/request/BaseRequestOptions;->getOverrideHeight()I
 
     move-result v2
@@ -345,10 +373,12 @@
     :cond_2
     move v11, v2
 
+    .line 930
     iget-object v4, v10, Lcom/bumptech/glide/RequestBuilder;->errorBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     iget-object v8, v4, Lcom/bumptech/glide/RequestBuilder;->transitionOptions:Lcom/bumptech/glide/TransitionOptions;
 
+    .line 936
     invoke-virtual {v4}, Lcom/bumptech/glide/RequestBuilder;->getPriority()Lcom/bumptech/glide/Priority;
 
     move-result-object v9
@@ -365,10 +395,12 @@
 
     move-object/from16 v13, p9
 
+    .line 931
     invoke-direct/range {v4 .. v13}, Lcom/bumptech/glide/RequestBuilder;->buildRequestRecursive(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/TransitionOptions;Lcom/bumptech/glide/Priority;IILcom/bumptech/glide/request/BaseRequestOptions;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object v1
 
+    .line 941
     invoke-virtual {v14, v0, v1}, Lcom/bumptech/glide/request/ErrorRequestCoordinator;->setRequests(Lcom/bumptech/glide/request/Request;Lcom/bumptech/glide/request/Request;)V
 
     return-object v14
@@ -402,16 +434,20 @@
 
     move-object/from16 v11, p5
 
+    .line 955
     iget-object v0, v10, Lcom/bumptech/glide/RequestBuilder;->thumbnailBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     if-eqz v0, :cond_4
 
+    .line 957
     iget-boolean v1, v10, Lcom/bumptech/glide/RequestBuilder;->isThumbnailBuilt:Z
 
     if-nez v1, :cond_3
 
+    .line 962
     iget-object v1, v0, Lcom/bumptech/glide/RequestBuilder;->transitionOptions:Lcom/bumptech/glide/TransitionOptions;
 
+    .line 967
     iget-boolean v0, v0, Lcom/bumptech/glide/RequestBuilder;->isDefaultTransitionOptionsSet:Z
 
     if-eqz v0, :cond_0
@@ -423,6 +459,7 @@
     :cond_0
     move-object v15, v1
 
+    .line 971
     :goto_0
     iget-object v0, v10, Lcom/bumptech/glide/RequestBuilder;->thumbnailBuilder:Lcom/bumptech/glide/RequestBuilder;
 
@@ -432,6 +469,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 972
     iget-object v0, v10, Lcom/bumptech/glide/RequestBuilder;->thumbnailBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/RequestBuilder;->getPriority()Lcom/bumptech/glide/Priority;
@@ -448,18 +486,21 @@
     :goto_1
     move-object/from16 v16, v0
 
+    .line 974
     iget-object v0, v10, Lcom/bumptech/glide/RequestBuilder;->thumbnailBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/RequestBuilder;->getOverrideWidth()I
 
     move-result v0
 
+    .line 975
     iget-object v1, v10, Lcom/bumptech/glide/RequestBuilder;->thumbnailBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     invoke-virtual {v1}, Lcom/bumptech/glide/RequestBuilder;->getOverrideHeight()I
 
     move-result v1
 
+    .line 976
     invoke-static/range {p6 .. p7}, Lcom/bumptech/glide/util/Util;->isValidDimensions(II)Z
 
     move-result v2
@@ -468,16 +509,19 @@
 
     iget-object v2, v10, Lcom/bumptech/glide/RequestBuilder;->thumbnailBuilder:Lcom/bumptech/glide/RequestBuilder;
 
+    .line 977
     invoke-virtual {v2}, Lcom/bumptech/glide/RequestBuilder;->isValidOverride()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
+    .line 978
     invoke-virtual/range {p8 .. p8}, Lcom/bumptech/glide/request/BaseRequestOptions;->getOverrideWidth()I
 
     move-result v0
 
+    .line 979
     invoke-virtual/range {p8 .. p8}, Lcom/bumptech/glide/request/BaseRequestOptions;->getOverrideHeight()I
 
     move-result v1
@@ -487,6 +531,7 @@
 
     move/from16 v18, v1
 
+    .line 982
     new-instance v14, Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;
 
     invoke-direct {v14, v4}, Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;-><init>(Lcom/bumptech/glide/request/RequestCoordinator;)V
@@ -511,14 +556,17 @@
 
     move-object/from16 v9, p9
 
+    .line 984
     invoke-direct/range {v0 .. v9}, Lcom/bumptech/glide/RequestBuilder;->obtainRequest(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/BaseRequestOptions;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/TransitionOptions;Lcom/bumptech/glide/Priority;IILjava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 994
     iput-boolean v1, v10, Lcom/bumptech/glide/RequestBuilder;->isThumbnailBuilt:Z
 
+    .line 996
     iget-object v1, v10, Lcom/bumptech/glide/RequestBuilder;->thumbnailBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     move-object v11, v1
@@ -533,18 +581,22 @@
 
     move-object/from16 v20, p9
 
+    .line 997
     invoke-direct/range {v11 .. v20}, Lcom/bumptech/glide/RequestBuilder;->buildRequestRecursive(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/TransitionOptions;Lcom/bumptech/glide/Priority;IILcom/bumptech/glide/request/BaseRequestOptions;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object v1
 
     const/4 v3, 0x0
 
+    .line 1007
     iput-boolean v3, v10, Lcom/bumptech/glide/RequestBuilder;->isThumbnailBuilt:Z
 
+    .line 1008
     invoke-virtual {v2, v0, v1}, Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;->setRequests(Lcom/bumptech/glide/request/Request;Lcom/bumptech/glide/request/Request;)V
 
     return-object v2
 
+    .line 958
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -554,11 +606,13 @@
 
     throw v0
 
+    .line 1010
     :cond_4
     iget-object v0, v10, Lcom/bumptech/glide/RequestBuilder;->thumbSizeMultiplier:Ljava/lang/Float;
 
     if-eqz v0, :cond_5
 
+    .line 1012
     new-instance v12, Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;
 
     invoke-direct {v12, v4}, Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;-><init>(Lcom/bumptech/glide/request/RequestCoordinator;)V
@@ -583,10 +637,12 @@
 
     move-object/from16 v9, p9
 
+    .line 1014
     invoke-direct/range {v0 .. v9}, Lcom/bumptech/glide/RequestBuilder;->obtainRequest(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/BaseRequestOptions;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/TransitionOptions;Lcom/bumptech/glide/Priority;IILjava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object v13
 
+    .line 1025
     invoke-virtual/range {p8 .. p8}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object v0
@@ -601,6 +657,7 @@
 
     move-result-object v3
 
+    .line 1034
     invoke-direct {v10, v11}, Lcom/bumptech/glide/RequestBuilder;->getThumbnailPriority(Lcom/bumptech/glide/Priority;)Lcom/bumptech/glide/Priority;
 
     move-result-object v6
@@ -609,10 +666,12 @@
 
     move-object/from16 v1, p1
 
+    .line 1028
     invoke-direct/range {v0 .. v9}, Lcom/bumptech/glide/RequestBuilder;->obtainRequest(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/BaseRequestOptions;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/TransitionOptions;Lcom/bumptech/glide/Priority;IILjava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object v0
 
+    .line 1039
     invoke-virtual {v12, v13, v0}, Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;->setRequests(Lcom/bumptech/glide/request/Request;Lcom/bumptech/glide/request/Request;)V
 
     return-object v12
@@ -638,6 +697,7 @@
 
     move-object/from16 v9, p9
 
+    .line 1043
     invoke-direct/range {v0 .. v9}, Lcom/bumptech/glide/RequestBuilder;->obtainRequest(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/BaseRequestOptions;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/TransitionOptions;Lcom/bumptech/glide/Priority;IILjava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object v0
@@ -648,6 +708,7 @@
 .method private getThumbnailPriority(Lcom/bumptech/glide/Priority;)Lcom/bumptech/glide/Priority;
     .locals 2
 
+    .line 858
     sget-object v0, Lcom/bumptech/glide/RequestBuilder$1;->$SwitchMap$com$bumptech$glide$Priority:[I
 
     invoke-virtual {p1}, Lcom/bumptech/glide/Priority;->ordinal()I
@@ -674,6 +735,7 @@
 
     goto :goto_0
 
+    .line 867
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -699,17 +761,20 @@
 
     throw p1
 
+    .line 865
     :cond_1
     :goto_0
     sget-object p0, Lcom/bumptech/glide/Priority;->IMMEDIATE:Lcom/bumptech/glide/Priority;
 
     return-object p0
 
+    .line 862
     :cond_2
     sget-object p0, Lcom/bumptech/glide/Priority;->HIGH:Lcom/bumptech/glide/Priority;
 
     return-object p0
 
+    .line 860
     :cond_3
     sget-object p0, Lcom/bumptech/glide/Priority;->NORMAL:Lcom/bumptech/glide/Priority;
 
@@ -728,6 +793,7 @@
         }
     .end annotation
 
+    .line 116
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -745,6 +811,7 @@
 
     check-cast v0, Lcom/bumptech/glide/request/RequestListener;
 
+    .line 117
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/RequestBuilder;->addListener(Lcom/bumptech/glide/request/RequestListener;)Lcom/bumptech/glide/RequestBuilder;
 
     goto :goto_0
@@ -769,34 +836,42 @@
         }
     .end annotation
 
+    .line 630
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 631
     iget-boolean v0, p0, Lcom/bumptech/glide/RequestBuilder;->isModelSet:Z
 
     if-eqz v0, :cond_2
 
+    .line 635
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/RequestBuilder;->buildRequest(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/BaseRequestOptions;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/request/Request;
 
     move-result-object p2
 
+    .line 637
     invoke-interface {p1}, Lcom/bumptech/glide/request/target/Target;->getRequest()Lcom/bumptech/glide/request/Request;
 
     move-result-object p4
 
+    .line 638
     invoke-interface {p2, p4}, Lcom/bumptech/glide/request/Request;->isEquivalentTo(Lcom/bumptech/glide/request/Request;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 639
     invoke-direct {p0, p3, p4}, Lcom/bumptech/glide/RequestBuilder;->isSkipMemoryCacheWithCompletePreviousRequest(Lcom/bumptech/glide/request/BaseRequestOptions;Lcom/bumptech/glide/request/Request;)Z
 
     move-result p3
 
     if-nez p3, :cond_1
 
+    .line 640
     invoke-interface {p2}, Lcom/bumptech/glide/request/Request;->recycle()V
 
+    .line 645
     invoke-static {p4}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -809,24 +884,29 @@
 
     if-nez p0, :cond_0
 
+    .line 649
     invoke-interface {p4}, Lcom/bumptech/glide/request/Request;->begin()V
 
     :cond_0
     return-object p1
 
+    .line 654
     :cond_1
     iget-object p3, p0, Lcom/bumptech/glide/RequestBuilder;->requestManager:Lcom/bumptech/glide/RequestManager;
 
     invoke-virtual {p3, p1}, Lcom/bumptech/glide/RequestManager;->clear(Lcom/bumptech/glide/request/target/Target;)V
 
+    .line 655
     invoke-interface {p1, p2}, Lcom/bumptech/glide/request/target/Target;->setRequest(Lcom/bumptech/glide/request/Request;)V
 
+    .line 656
     iget-object p0, p0, Lcom/bumptech/glide/RequestBuilder;->requestManager:Lcom/bumptech/glide/RequestManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/RequestManager;->track(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/Request;)V
 
     return-object p1
 
+    .line 632
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -849,6 +929,7 @@
         }
     .end annotation
 
+    .line 668
     invoke-virtual {p1}, Lcom/bumptech/glide/request/BaseRequestOptions;->isMemoryCacheable()Z
 
     move-result p0
@@ -884,10 +965,12 @@
         }
     .end annotation
 
+    .line 373
     iput-object p1, p0, Lcom/bumptech/glide/RequestBuilder;->model:Ljava/lang/Object;
 
     const/4 p1, 0x1
 
+    .line 374
     iput-boolean p1, p0, Lcom/bumptech/glide/RequestBuilder;->isModelSet:Z
 
     return-object p0
@@ -917,6 +1000,7 @@
 
     move-object v0, p0
 
+    .line 1066
     iget-object v1, v0, Lcom/bumptech/glide/RequestBuilder;->context:Landroid/content/Context;
 
     iget-object v2, v0, Lcom/bumptech/glide/RequestBuilder;->glideContext:Lcom/bumptech/glide/GlideContext;
@@ -927,10 +1011,12 @@
 
     iget-object v10, v0, Lcom/bumptech/glide/RequestBuilder;->requestListeners:Ljava/util/List;
 
+    .line 1079
     invoke-virtual {v2}, Lcom/bumptech/glide/GlideContext;->getEngine()Lcom/bumptech/glide/load/engine/Engine;
 
     move-result-object v12
 
+    .line 1080
     invoke-virtual/range {p5 .. p5}, Lcom/bumptech/glide/TransitionOptions;->getTransitionFactory()Lcom/bumptech/glide/request/transition/TransitionFactory;
 
     move-result-object v13
@@ -959,6 +1045,7 @@
 
     move-object/from16 v14, p9
 
+    .line 1066
     invoke-static/range {v0 .. v14}, Lcom/bumptech/glide/request/SingleRequest;->obtain(Landroid/content/Context;Lcom/bumptech/glide/GlideContext;Ljava/lang/Object;Ljava/lang/Class;Lcom/bumptech/glide/request/BaseRequestOptions;IILcom/bumptech/glide/Priority;Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Ljava/util/List;Lcom/bumptech/glide/request/RequestCoordinator;Lcom/bumptech/glide/load/engine/Engine;Lcom/bumptech/glide/request/transition/TransitionFactory;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/request/SingleRequest;
 
     move-result-object v0
@@ -982,16 +1069,19 @@
 
     if-eqz p1, :cond_1
 
+    .line 190
     iget-object v0, p0, Lcom/bumptech/glide/RequestBuilder;->requestListeners:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 191
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/RequestBuilder;->requestListeners:Ljava/util/List;
 
+    .line 193
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestBuilder;->requestListeners:Ljava/util/List;
 
@@ -1013,8 +1103,10 @@
         }
     .end annotation
 
+    .line 136
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 137
     invoke-super {p0, p1}, Lcom/bumptech/glide/request/BaseRequestOptions;->apply(Lcom/bumptech/glide/request/BaseRequestOptions;)Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -1027,6 +1119,7 @@
 .method public bridge synthetic apply(Lcom/bumptech/glide/request/BaseRequestOptions;)Lcom/bumptech/glide/request/BaseRequestOptions;
     .locals 0
 
+    .line 51
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->apply(Lcom/bumptech/glide/request/BaseRequestOptions;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p0
@@ -1044,12 +1137,14 @@
         }
     .end annotation
 
+    .line 599
     invoke-super {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
 
     check-cast p0, Lcom/bumptech/glide/RequestBuilder;
 
+    .line 600
     iget-object v0, p0, Lcom/bumptech/glide/RequestBuilder;->transitionOptions:Lcom/bumptech/glide/TransitionOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/TransitionOptions;->clone()Lcom/bumptech/glide/TransitionOptions;
@@ -1064,6 +1159,7 @@
 .method public bridge synthetic clone()Lcom/bumptech/glide/request/BaseRequestOptions;
     .locals 0
 
+    .line 51
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestBuilder;->clone()Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p0
@@ -1079,6 +1175,7 @@
         }
     .end annotation
 
+    .line 51
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestBuilder;->clone()Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p0
@@ -1098,6 +1195,7 @@
         }
     .end annotation
 
+    .line 222
     iput-object p1, p0, Lcom/bumptech/glide/RequestBuilder;->errorBuilder:Lcom/bumptech/glide/RequestBuilder;
 
     return-object p0
@@ -1113,6 +1211,7 @@
         }
     .end annotation
 
+    .line 613
     invoke-static {}, Lcom/bumptech/glide/util/Executors;->mainThreadExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -1140,6 +1239,7 @@
         }
     .end annotation
 
+    .line 622
     invoke-direct {p0, p1, p2, p0, p3}, Lcom/bumptech/glide/RequestBuilder;->into(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/BaseRequestOptions;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/request/target/Target;
 
     move-result-object p0
@@ -1160,28 +1260,34 @@
         }
     .end annotation
 
+    .line 684
     invoke-static {}, Lcom/bumptech/glide/util/Util;->assertMainThread()V
 
+    .line 685
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 688
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationSet()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 689
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationAllowed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 690
     invoke-virtual {p1}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 694
     sget-object v0, Lcom/bumptech/glide/RequestBuilder$1;->$SwitchMap$android$widget$ImageView$ScaleType:[I
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
@@ -1198,6 +1304,7 @@
 
     goto :goto_0
 
+    .line 707
     :pswitch_0
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
@@ -1209,6 +1316,7 @@
 
     goto :goto_1
 
+    .line 704
     :pswitch_1
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
@@ -1220,6 +1328,7 @@
 
     goto :goto_1
 
+    .line 699
     :pswitch_2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
@@ -1231,6 +1340,7 @@
 
     goto :goto_1
 
+    .line 696
     :pswitch_3
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
@@ -1246,21 +1356,25 @@
     :goto_0
     move-object v0, p0
 
+    .line 716
     :goto_1
     iget-object v1, p0, Lcom/bumptech/glide/RequestBuilder;->glideContext:Lcom/bumptech/glide/GlideContext;
 
     iget-object v2, p0, Lcom/bumptech/glide/RequestBuilder;->transcodeClass:Ljava/lang/Class;
 
+    .line 717
     invoke-virtual {v1, p1, v2}, Lcom/bumptech/glide/GlideContext;->buildImageViewTarget(Landroid/widget/ImageView;Ljava/lang/Class;)Lcom/bumptech/glide/request/target/ViewTarget;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
+    .line 720
     invoke-static {}, Lcom/bumptech/glide/util/Executors;->mainThreadExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v2
 
+    .line 716
     invoke-direct {p0, p1, v1, v0, v2}, Lcom/bumptech/glide/RequestBuilder;->into(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/RequestListener;Lcom/bumptech/glide/request/BaseRequestOptions;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/request/target/Target;
 
     move-result-object p0
@@ -1296,8 +1410,10 @@
 
     const/4 v0, 0x0
 
+    .line 174
     iput-object v0, p0, Lcom/bumptech/glide/RequestBuilder;->requestListeners:Ljava/util/List;
 
+    .line 175
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->addListener(Lcom/bumptech/glide/request/RequestListener;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p0
@@ -1317,6 +1433,7 @@
         }
     .end annotation
 
+    .line 503
     invoke-direct {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->loadGeneric(Ljava/lang/Object;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p0
@@ -1336,6 +1453,7 @@
         }
     .end annotation
 
+    .line 368
     invoke-direct {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->loadGeneric(Ljava/lang/Object;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p0
@@ -1355,6 +1473,7 @@
 
     const/high16 v0, -0x80000000
 
+    .line 757
     invoke-virtual {p0, v0, v0}, Lcom/bumptech/glide/RequestBuilder;->submit(II)Lcom/bumptech/glide/request/FutureTarget;
 
     move-result-object p0
@@ -1372,10 +1491,12 @@
         }
     .end annotation
 
+    .line 774
     new-instance v0, Lcom/bumptech/glide/request/RequestFutureTarget;
 
     invoke-direct {v0, p1, p2}, Lcom/bumptech/glide/request/RequestFutureTarget;-><init>(II)V
 
+    .line 775
     invoke-static {}, Lcom/bumptech/glide/util/Executors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1

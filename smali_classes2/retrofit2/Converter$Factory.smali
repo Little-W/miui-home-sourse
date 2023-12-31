@@ -1,5 +1,6 @@
 .class public abstract Lretrofit2/Converter$Factory;
 .super Ljava/lang/Object;
+.source "Converter.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

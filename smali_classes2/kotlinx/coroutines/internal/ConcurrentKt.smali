@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/ConcurrentKt;
 .super Ljava/lang/Object;
+.source "Concurrent.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
+    .line 24
     :try_start_0
     const-class v0, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
@@ -36,6 +38,7 @@
     :catchall_0
     const/4 v0, 0x0
 
+    .line 23
     :goto_0
     sput-object v0, Lkotlinx/coroutines/internal/ConcurrentKt;->REMOVE_FUTURE_ON_CANCEL:Ljava/lang/reflect/Method;
 
@@ -47,6 +50,7 @@
 
     const/4 v0, 0x0
 
+    .line 32
     :try_start_0
     instance-of v1, p0, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
@@ -59,6 +63,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 33
     sget-object v1, Lkotlinx/coroutines/internal/ConcurrentKt;->REMOVE_FUTURE_ON_CANCEL:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_1

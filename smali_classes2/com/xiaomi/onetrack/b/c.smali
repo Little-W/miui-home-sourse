@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/b/a;Lorg/json/JSONObject;)V
     .locals 0
 
+    .line 449
     iput-object p1, p0, Lcom/xiaomi/onetrack/b/c;->b:Lcom/xiaomi/onetrack/b/a;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/b/c;->a:Lorg/json/JSONObject;
@@ -33,8 +34,10 @@
 
     const-string v1, "checkAppConfigVersion start"
 
+    .line 452
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 453
     iget-object p0, p0, Lcom/xiaomi/onetrack/b/c;->a:Lorg/json/JSONObject;
 
     const-string v1, "config"
@@ -49,6 +52,7 @@
 
     move v2, v1
 
+    .line 455
     :goto_0
     invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
@@ -56,6 +60,7 @@
 
     if-ge v2, v3, :cond_4
 
+    .line 456
     invoke-virtual {p0, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v3
@@ -69,10 +74,12 @@
     :cond_0
     const-string v4, "appId"
 
+    .line 457
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 458
     :goto_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -90,6 +97,7 @@
 
     invoke-static {v0, v5}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 459
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -105,10 +113,12 @@
     :cond_1
     const-string v5, "version"
 
+    .line 460
     invoke-virtual {v3, v5}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v3
 
+    .line 461
     :goto_2
     invoke-static {}, Lcom/xiaomi/onetrack/b/h;->a()Lcom/xiaomi/onetrack/b/h;
 
@@ -118,10 +128,12 @@
 
     move-result v5
 
+    .line 462
     invoke-static {v4}, Lcom/xiaomi/onetrack/b/a;->e(Ljava/lang/String;)Z
 
     move-result v6
 
+    .line 463
     invoke-static {}, Lcom/xiaomi/onetrack/b/a;->b()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v7
@@ -157,6 +169,7 @@
     :cond_2
     move v7, v1
 
+    .line 464
     :goto_3
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -200,14 +213,18 @@
 
     if-nez v7, :cond_3
 
+    .line 467
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v3
 
+    .line 468
     iput v1, v3, Landroid/os/Message;->what:I
 
+    .line 469
     iput-object v4, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 470
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v5
@@ -218,6 +235,7 @@
 
     double-to-long v5, v5
 
+    .line 471
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -238,12 +256,14 @@
 
     invoke-static {v0, v7}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 472
     invoke-static {}, Lcom/xiaomi/onetrack/b/a;->c()Lcom/xiaomi/onetrack/b/a$b;
 
     move-result-object v7
 
     invoke-virtual {v7, v3, v5, v6}, Lcom/xiaomi/onetrack/b/a$b;->sendMessageDelayed(Landroid/os/Message;J)Z
 
+    .line 473
     invoke-static {}, Lcom/xiaomi/onetrack/b/a;->b()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v3

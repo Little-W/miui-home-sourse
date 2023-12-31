@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/internal/util/ExceptionHelper;
 .super Ljava/lang/Object;
+.source "ExceptionHelper.java"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 53
     new-instance v0, Lio/reactivex2/internal/util/ExceptionHelper$Termination;
 
     invoke-direct {v0}, Lio/reactivex2/internal/util/ExceptionHelper$Termination;-><init>()V
@@ -42,6 +44,7 @@
         }
     .end annotation
 
+    .line 57
     :cond_0
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
@@ -49,6 +52,7 @@
 
     check-cast v0, Ljava/lang/Throwable;
 
+    .line 59
     sget-object v1, Lio/reactivex2/internal/util/ExceptionHelper;->TERMINATED:Ljava/lang/Throwable;
 
     const/4 v2, 0x0
@@ -66,6 +70,7 @@
 
     goto :goto_0
 
+    .line 67
     :cond_2
     new-instance v3, Lio/reactivex2/exceptions/CompositeException;
 
@@ -79,6 +84,7 @@
 
     invoke-direct {v3, v4}, Lio/reactivex2/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
+    .line 70
     :goto_0
     invoke-virtual {p0, v0, v3}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -103,16 +109,19 @@
         }
     .end annotation
 
+    .line 77
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Throwable;
 
+    .line 78
     sget-object v1, Lio/reactivex2/internal/util/ExceptionHelper;->TERMINATED:Ljava/lang/Throwable;
 
     if-eq v0, v1, :cond_0
 
+    .line 79
     invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -128,18 +137,22 @@
 .method public static wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
     .locals 1
 
+    .line 40
     instance-of v0, p0, Ljava/lang/Error;
 
     if-nez v0, :cond_1
 
+    .line 43
     instance-of v0, p0, Ljava/lang/RuntimeException;
 
     if-eqz v0, :cond_0
 
+    .line 44
     check-cast p0, Ljava/lang/RuntimeException;
 
     return-object p0
 
+    .line 46
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -147,6 +160,7 @@
 
     return-object v0
 
+    .line 41
     :cond_1
     check-cast p0, Ljava/lang/Error;
 

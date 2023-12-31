@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/core/app/ActivityCompat$OnRequestPermissionsResultCallback;
 .super Ljava/lang/Object;
+.source "ActivityCompat.java"
 
 
 # annotations

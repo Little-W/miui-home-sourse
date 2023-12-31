@@ -1,5 +1,6 @@
 .class Lcom/squareup/moshi/JsonAdapter$2;
 .super Lcom/squareup/moshi/JsonAdapter;
+.source "JsonAdapter.java"
 
 
 # annotations
@@ -30,6 +31,7 @@
 .method constructor <init>(Lcom/squareup/moshi/JsonAdapter;Lcom/squareup/moshi/JsonAdapter;)V
     .locals 0
 
+    .line 123
     iput-object p1, p0, Lcom/squareup/moshi/JsonAdapter$2;->this$0:Lcom/squareup/moshi/JsonAdapter;
 
     iput-object p2, p0, Lcom/squareup/moshi/JsonAdapter$2;->val$delegate:Lcom/squareup/moshi/JsonAdapter;
@@ -60,6 +62,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 125
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->peek()Lcom/squareup/moshi/JsonReader$Token;
 
     move-result-object v0
@@ -68,12 +71,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 126
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->nextNull()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 128
     :cond_0
     iget-object p0, p0, Lcom/squareup/moshi/JsonAdapter$2;->val$delegate:Lcom/squareup/moshi/JsonAdapter;
 
@@ -87,6 +92,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

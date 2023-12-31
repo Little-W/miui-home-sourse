@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/GeneratedSerializer$DefaultImpls;
 .super Ljava/lang/Object;
+.source "PluginHelperInterfaces.kt"
 
 
 # annotations
@@ -28,6 +29,7 @@
         }
     .end annotation
 
+    .line 23
     sget-object p0, Lkotlinx/serialization/internal/PluginHelperInterfacesKt;->EMPTY_SERIALIZER_ARRAY:[Lkotlinx/serialization/KSerializer;
 
     return-object p0

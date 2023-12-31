@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/utilities/ReflectUtils;
 .super Ljava/lang/Object;
+.source "ReflectUtils.java"
 
 
 # static fields
@@ -44,12 +45,14 @@
 .method static constructor <clinit>()V
     .locals 12
 
+    .line 16
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->sMethodCache:Ljava/util/Map;
 
+    .line 17
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -60,6 +63,7 @@
 
     new-array v0, v0, [Ljava/lang/Class;
 
+    .line 194
     sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     const/4 v2, 0x0
@@ -134,6 +138,7 @@
 
     const-string v11, "V"
 
+    .line 195
     filled-new-array/range {v3 .. v11}, [Ljava/lang/String;
 
     move-result-object v0
@@ -146,6 +151,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -165,6 +171,7 @@
         }
     .end annotation
 
+    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,6 +213,7 @@
         }
     .end annotation
 
+    .line 138
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,6 +253,7 @@
         }
     .end annotation
 
+    .line 186
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -261,6 +270,7 @@
 
     const-string v1, "getClass"
 
+    .line 188
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -282,6 +292,7 @@
         }
     .end annotation
 
+    .line 82
     invoke-static {p2}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getSignature(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p2
@@ -307,11 +318,13 @@
         }
     .end annotation
 
+    .line 52
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->generateFieldCacheKey(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 53
     sget-object v0, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->sFieldCache:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -322,14 +335,17 @@
 
     if-nez v0, :cond_0
 
+    .line 55
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 p0, 0x1
 
+    .line 56
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 57
     sget-object p0, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->sFieldCache:Ljava/util/Map;
 
     invoke-interface {p0, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -346,6 +362,7 @@
 
     const-string p2, "getField"
 
+    .line 61
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -369,11 +386,13 @@
         }
     .end annotation
 
+    .line 124
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->generateMethodCacheKey(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 125
     sget-object v0, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->sMethodCache:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -384,10 +403,12 @@
 
     if-nez v0, :cond_0
 
+    .line 127
     invoke-virtual {p0, p1, p3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
+    .line 128
     sget-object p0, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->sMethodCache:Ljava/util/Map;
 
     invoke-interface {p0, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -404,6 +425,7 @@
 
     const-string p2, "getMethod"
 
+    .line 132
     invoke-static {p1, p2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -424,16 +446,19 @@
         }
     .end annotation
 
+    .line 146
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/16 v1, 0x28
 
+    .line 147
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     if-eqz p1, :cond_0
 
+    .line 150
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -441,8 +466,10 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
+    .line 153
     aget-object v3, p1, v2
 
+    .line 154
     invoke-static {v3}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getSignature(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v3
@@ -456,14 +483,17 @@
     :cond_0
     const/16 p1, 0x29
 
+    .line 158
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 159
     invoke-static {p0}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getSignature(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 160
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -490,6 +520,7 @@
 
     const/4 v0, 0x0
 
+    .line 69
     :try_start_0
     invoke-static {p0, p2, p3}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Field;
 
@@ -497,6 +528,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 71
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -515,6 +547,7 @@
 
     const-string p2, "getObjectField"
 
+    .line 76
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -533,6 +566,7 @@
 
     const/4 v0, 0x0
 
+    .line 164
     :goto_0
     sget-object v1, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->PRIMITIVE_CLASSES:[Ljava/lang/Class;
 
@@ -540,10 +574,12 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 165
     aget-object v1, v1, v0
 
     if-ne p0, v1, :cond_0
 
+    .line 166
     sget-object p0, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->SIGNATURE_OF_PRIMTIVE_CLASSES:[Ljava/lang/String;
 
     aget-object p0, p0, v0
@@ -555,6 +591,7 @@
 
     goto :goto_0
 
+    .line 170
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -572,6 +609,7 @@
 
     const/4 v0, 0x0
 
+    .line 174
     :goto_0
     sget-object v1, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->PRIMITIVE_CLASSES:[Ljava/lang/Class;
 
@@ -579,6 +617,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 175
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -591,6 +630,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 176
     sget-object p0, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->SIGNATURE_OF_PRIMTIVE_CLASSES:[Ljava/lang/String;
 
     aget-object p0, p0, v0
@@ -605,12 +645,14 @@
 
     const-string v1, "/"
 
+    .line 180
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "["
 
+    .line 181
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -659,11 +701,13 @@
 
     const/4 v0, 0x0
 
+    .line 87
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Field;
 
     move-result-object p0
 
+    .line 88
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -679,6 +723,7 @@
 
     const-string p2, "getStaticFieldValue"
 
+    .line 90
     invoke-static {p1, p2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -704,6 +749,7 @@
         }
     .end annotation
 
+    .line 40
     :try_start_0
     invoke-static {p3, p5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
@@ -715,6 +761,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 42
     invoke-virtual {p0, p1, p6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -730,6 +777,7 @@
 
     const-string p2, "invokeObject"
 
+    .line 45
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -756,6 +804,7 @@
         }
     .end annotation
 
+    .line 26
     :try_start_0
     invoke-static {p3, p4}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
@@ -767,6 +816,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 28
     invoke-virtual {p0, p1, p5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -782,6 +832,7 @@
 
     const-string p2, "invokeObject"
 
+    .line 31
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -793,6 +844,7 @@
 .method public static setValue(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)V
     .locals 1
 
+    .line 97
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -802,10 +854,12 @@
 
     move-result-object p1
 
+    .line 98
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_0
 
+    .line 99
     check-cast p3, Ljava/lang/Integer;
 
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
@@ -820,11 +874,13 @@
 
     goto/16 :goto_0
 
+    .line 100
     :cond_0
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_1
 
+    .line 101
     check-cast p3, Ljava/lang/Float;
 
     invoke-virtual {p3}, Ljava/lang/Float;->floatValue()F
@@ -839,11 +895,13 @@
 
     goto/16 :goto_0
 
+    .line 102
     :cond_1
     sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_2
 
+    .line 103
     check-cast p3, Ljava/lang/Long;
 
     invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
@@ -858,11 +916,13 @@
 
     goto :goto_0
 
+    .line 104
     :cond_2
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_3
 
+    .line 105
     check-cast p3, Ljava/lang/Boolean;
 
     invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
@@ -877,11 +937,13 @@
 
     goto :goto_0
 
+    .line 106
     :cond_3
     sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_4
 
+    .line 107
     check-cast p3, Ljava/lang/Double;
 
     invoke-virtual {p3}, Ljava/lang/Double;->doubleValue()D
@@ -896,11 +958,13 @@
 
     goto :goto_0
 
+    .line 108
     :cond_4
     sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_5
 
+    .line 109
     check-cast p3, Ljava/lang/Character;
 
     invoke-virtual {p3}, Ljava/lang/Character;->charValue()C
@@ -915,11 +979,13 @@
 
     goto :goto_0
 
+    .line 110
     :cond_5
     sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_6
 
+    .line 111
     check-cast p3, Ljava/lang/Byte;
 
     invoke-virtual {p3}, Ljava/lang/Byte;->byteValue()B
@@ -934,11 +1000,13 @@
 
     goto :goto_0
 
+    .line 112
     :cond_6
     sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_7
 
+    .line 113
     check-cast p3, Ljava/lang/Short;
 
     invoke-virtual {p3}, Ljava/lang/Short;->shortValue()S
@@ -953,6 +1021,7 @@
 
     goto :goto_0
 
+    .line 115
     :cond_7
     invoke-virtual {p2, p3}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -971,6 +1040,7 @@
 
     const-string p2, "setValue"
 
+    .line 118
     invoke-static {p1, p2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzfq;
 .super Lcom/google/android/gms/internal/measurement/zzfg;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # annotations
@@ -47,10 +48,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzfg;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzfq;->zza:Lcom/google/android/gms/internal/measurement/zzfc;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/gms/internal/measurement/zzfq;->zzb:Lcom/google/android/gms/internal/measurement/zzfb;
 
     return-void
@@ -65,6 +69,7 @@
         .end annotation
     .end param
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfq;->zza:Lcom/google/android/gms/internal/measurement/zzfc;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzfc;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -86,6 +91,7 @@
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 11
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzey;->zza()Lcom/google/android/gms/internal/measurement/zzfx;
 
     move-result-object p0
@@ -96,6 +102,7 @@
 .method public final size()I
     .locals 0
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfq;->zza:Lcom/google/android/gms/internal/measurement/zzfc;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzfc;->size()I
@@ -108,6 +115,7 @@
 .method final zza([Ljava/lang/Object;I)I
     .locals 0
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzey;->zze()Lcom/google/android/gms/internal/measurement/zzfb;
 
     move-result-object p0
@@ -129,6 +137,7 @@
         }
     .end annotation
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzey;->zze()Lcom/google/android/gms/internal/measurement/zzfb;
 
     move-result-object p0
@@ -152,6 +161,7 @@
         }
     .end annotation
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfq;->zzb:Lcom/google/android/gms/internal/measurement/zzfb;
 
     return-object p0

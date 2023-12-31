@@ -1,5 +1,6 @@
 .class abstract Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;
 .super Ljava/lang/Object;
+.source "BaseAnimatableValue.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/model/animatable/AnimatableValue;
@@ -44,8 +45,10 @@
         }
     .end annotation
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 20
     iput-object p1, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
 
     return-void
@@ -64,6 +67,7 @@
         }
     .end annotation
 
+    .line 24
     iget-object p0, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
 
     return-object p0
@@ -72,6 +76,7 @@
 .method public isStatic()Z
     .locals 3
 
+    .line 29
     iget-object v0, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -116,10 +121,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 33
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 34
     iget-object v1, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
@@ -130,6 +137,7 @@
 
     const-string/jumbo v1, "values="
 
+    .line 35
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
@@ -144,6 +152,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 37
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

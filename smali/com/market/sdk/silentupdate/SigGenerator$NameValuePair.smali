@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/silentupdate/SigGenerator$NameValuePair;
 .super Ljava/lang/Object;
+.source "SigGenerator.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +35,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 94
     iget-object p0, p0, Lcom/market/sdk/silentupdate/SigGenerator$NameValuePair;->name:Ljava/lang/String;
 
     return-object p0
@@ -41,6 +44,7 @@
 .method public getValue()Ljava/lang/String;
     .locals 0
 
+    .line 102
     iget-object p0, p0, Lcom/market/sdk/silentupdate/SigGenerator$NameValuePair;->value:Ljava/lang/String;
 
     return-object p0
@@ -49,6 +53,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 98
     iput-object p1, p0, Lcom/market/sdk/silentupdate/SigGenerator$NameValuePair;->name:Ljava/lang/String;
 
     return-void
@@ -57,6 +62,7 @@
 .method public setValue(Ljava/lang/String;)V
     .locals 0
 
+    .line 106
     iput-object p1, p0, Lcom/market/sdk/silentupdate/SigGenerator$NameValuePair;->value:Ljava/lang/String;
 
     return-void

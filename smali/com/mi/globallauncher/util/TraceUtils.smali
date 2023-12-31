@@ -1,11 +1,13 @@
 .class public Lcom/mi/globallauncher/util/TraceUtils;
 .super Ljava/lang/Object;
+.source "TraceUtils.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -14,6 +16,7 @@
 .method public static logTrace(Ljava/lang/String;)V
     .locals 1
 
+    .line 7
     :try_start_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -26,6 +29,7 @@
     :catch_0
     move-exception p0
 
+    .line 9
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return-void

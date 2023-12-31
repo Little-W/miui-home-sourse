@@ -1,11 +1,13 @@
 .class public abstract Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;
 .super Ljava/lang/Object;
+.source "CrashlyticsReportWithSessionId.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -14,6 +16,7 @@
 .method public static create(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;Ljava/lang/String;Ljava/io/File;)Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;
     .locals 1
 
+    .line 34
     new-instance v0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;-><init>(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;Ljava/lang/String;Ljava/io/File;)V

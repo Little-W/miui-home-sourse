@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/ServiceProxy2$ProxyTask$1;
 .super Ljava/lang/Object;
+.source "ServiceProxy2.java"
 
 # interfaces
 .implements Landroid/content/ServiceConnection;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/market/sdk/ServiceProxy2$ProxyTask;Lcom/market/sdk/ServiceProxy2;Z)V
     .locals 0
 
+    .line 42
     iput-object p1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->this$1:Lcom/market/sdk/ServiceProxy2$ProxyTask;
 
     iput-object p2, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->val$this$0:Lcom/market/sdk/ServiceProxy2;
@@ -42,6 +44,7 @@
 .method static synthetic access$100(Lcom/market/sdk/ServiceProxy2$ProxyTask$1;Landroid/os/IBinder;)V
     .locals 0
 
+    .line 42
     invoke-direct {p0, p1}, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->doRemoteCall(Landroid/os/IBinder;)V
 
     return-void
@@ -52,6 +55,7 @@
 
     const/4 v0, 0x0
 
+    .line 62
     :try_start_0
     iget-object v1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->this$1:Lcom/market/sdk/ServiceProxy2$ProxyTask;
 
@@ -61,11 +65,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 63
     :try_start_1
     iget-boolean v1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->val$unbindAfterCall:Z
 
     if-eqz v1, :cond_0
 
+    .line 64
     iget-object v1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->this$1:Lcom/market/sdk/ServiceProxy2$ProxyTask;
 
     iget-object v1, v1, Lcom/market/sdk/ServiceProxy2$ProxyTask;->this$0:Lcom/market/sdk/ServiceProxy2;
@@ -82,6 +88,7 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
+    .line 65
     iget-object v1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->this$1:Lcom/market/sdk/ServiceProxy2$ProxyTask;
 
     invoke-static {v1, v0}, Lcom/market/sdk/ServiceProxy2$ProxyTask;->access$202(Lcom/market/sdk/ServiceProxy2$ProxyTask;Landroid/content/ServiceConnection;)Landroid/content/ServiceConnection;
@@ -109,8 +116,10 @@
 
     const-string v2, "doInBackground: "
 
+    .line 68
     invoke-static {v1, v2, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 70
     :cond_0
     :goto_1
     iget-object v0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->this$1:Lcom/market/sdk/ServiceProxy2$ProxyTask;
@@ -121,6 +130,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 71
     iget-object p0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->this$1:Lcom/market/sdk/ServiceProxy2$ProxyTask;
 
     invoke-static {p0}, Lcom/market/sdk/ServiceProxy2$ProxyTask;->access$400(Lcom/market/sdk/ServiceProxy2$ProxyTask;)Lcom/market/sdk/compat/FutureTaskCompat;
@@ -138,6 +148,7 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
+    .line 45
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -148,6 +159,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 46
     new-instance p1, Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;
 
     invoke-direct {p1, p0, p2}, Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;-><init>(Lcom/market/sdk/ServiceProxy2$ProxyTask$1;Landroid/os/IBinder;)V
@@ -156,10 +168,12 @@
 
     new-array p0, p0, [Ljava/lang/Void;
 
+    .line 53
     invoke-virtual {p1, p0}, Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 
+    .line 55
     :cond_0
     invoke-direct {p0, p2}, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;->doRemoteCall(Landroid/os/IBinder;)V
 

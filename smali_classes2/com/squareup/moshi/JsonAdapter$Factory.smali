@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/squareup/moshi/JsonAdapter$Factory;
 .super Ljava/lang/Object;
+.source "JsonAdapter.java"
 
 
 # annotations

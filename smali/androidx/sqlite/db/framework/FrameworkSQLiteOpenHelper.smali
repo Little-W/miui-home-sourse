@@ -1,5 +1,6 @@
 .class Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper;
 .super Ljava/lang/Object;
+.source "FrameworkSQLiteOpenHelper.java"
 
 # interfaces
 .implements Landroidx/sqlite/db/SupportSQLiteOpenHelper;
@@ -21,8 +22,10 @@
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;)V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     invoke-direct {p0, p1, p2, p3}, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper;->createDelegate(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;)Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;
 
     move-result-object p1
@@ -39,6 +42,7 @@
 
     new-array p0, p0, [Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;
 
+    .line 38
     new-instance v0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;
 
     invoke-direct {v0, p1, p2, p0, p3}, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;[Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;)V
@@ -51,6 +55,7 @@
 .method public close()V
     .locals 0
 
+    .line 64
     iget-object p0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper;->mDelegate:Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;
 
     invoke-virtual {p0}, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;->close()V
@@ -61,6 +66,7 @@
 .method public getWritableDatabase()Landroidx/sqlite/db/SupportSQLiteDatabase;
     .locals 0
 
+    .line 54
     iget-object p0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper;->mDelegate:Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;
 
     invoke-virtual {p0}, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;->getWritableSupportDatabase()Landroidx/sqlite/db/SupportSQLiteDatabase;
@@ -73,6 +79,7 @@
 .method public setWriteAheadLoggingEnabled(Z)V
     .locals 0
 
+    .line 49
     iget-object p0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper;->mDelegate:Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;
 
     invoke-virtual {p0, p1}, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper;->setWriteAheadLoggingEnabled(Z)V

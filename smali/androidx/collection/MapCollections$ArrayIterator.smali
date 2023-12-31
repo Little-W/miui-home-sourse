@@ -1,5 +1,6 @@
 .class final Landroidx/collection/MapCollections$ArrayIterator;
 .super Ljava/lang/Object;
+.source "MapCollections.java"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -43,16 +44,20 @@
 .method constructor <init>(Landroidx/collection/MapCollections;I)V
     .locals 1
 
+    .line 43
     iput-object p1, p0, Landroidx/collection/MapCollections$ArrayIterator;->this$0:Landroidx/collection/MapCollections;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 41
     iput-boolean v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mCanRemove:Z
 
+    .line 44
     iput p2, p0, Landroidx/collection/MapCollections$ArrayIterator;->mOffset:I
 
+    .line 45
     invoke-virtual {p1}, Landroidx/collection/MapCollections;->colGetSize()I
 
     move-result p1
@@ -67,6 +72,7 @@
 .method public hasNext()Z
     .locals 1
 
+    .line 50
     iget v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
     iget p0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mSize:I
@@ -92,12 +98,14 @@
         }
     .end annotation
 
+    .line 55
     invoke-virtual {p0}, Landroidx/collection/MapCollections$ArrayIterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 56
     iget-object v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
@@ -108,6 +116,7 @@
 
     move-result-object v0
 
+    .line 57
     iget v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
     const/4 v2, 0x1
@@ -116,10 +125,12 @@
 
     iput v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
+    .line 58
     iput-boolean v2, p0, Landroidx/collection/MapCollections$ArrayIterator;->mCanRemove:Z
 
     return-object v0
 
+    .line 55
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -131,16 +142,19 @@
 .method public remove()V
     .locals 1
 
+    .line 64
     iget-boolean v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mCanRemove:Z
 
     if-eqz v0, :cond_0
 
+    .line 67
     iget v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
+    .line 68
     iget v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mSize:I
 
     add-int/lit8 v0, v0, -0x1
@@ -149,8 +163,10 @@
 
     const/4 v0, 0x0
 
+    .line 69
     iput-boolean v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mCanRemove:Z
 
+    .line 70
     iget-object v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget p0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
@@ -159,6 +175,7 @@
 
     return-void
 
+    .line 65
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

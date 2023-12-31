@@ -1,11 +1,13 @@
 .class public Lcom/mi/globallauncher/util/BranchTrackUtils;
 .super Ljava/lang/Object;
+.source "BranchTrackUtils.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -14,8 +16,10 @@
 .method public static setBranchCloseTrack()V
     .locals 3
 
+    .line 13
     invoke-static {}, Lio/branch/search/BranchSearch;->optOutOfTracking()V
 
+    .line 14
     new-instance v0, Lio/branch/search/CustomEvent;
 
     invoke-direct {v0}, Lio/branch/search/CustomEvent;-><init>()V
@@ -40,8 +44,10 @@
 .method public static setBranchOpenTrack()V
     .locals 3
 
+    .line 8
     invoke-static {}, Lio/branch/search/BranchSearch;->optInToTracking()V
 
+    .line 9
     new-instance v0, Lio/branch/search/CustomEvent;
 
     invoke-direct {v0}, Lio/branch/search/CustomEvent;-><init>()V

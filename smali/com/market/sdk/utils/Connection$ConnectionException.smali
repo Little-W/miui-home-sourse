@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/utils/Connection$ConnectionException;
 .super Ljava/lang/Exception;
+.source "Connection.java"
 
 
 # annotations
@@ -27,10 +28,12 @@
 .method public constructor <init>(Lcom/market/sdk/utils/Connection;Lcom/market/sdk/utils/Connection$NetworkError;)V
     .locals 0
 
+    .line 481
     iput-object p1, p0, Lcom/market/sdk/utils/Connection$ConnectionException;->this$0:Lcom/market/sdk/utils/Connection;
 
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
+    .line 482
     iput-object p2, p0, Lcom/market/sdk/utils/Connection$ConnectionException;->mError:Lcom/market/sdk/utils/Connection$NetworkError;
 
     return-void

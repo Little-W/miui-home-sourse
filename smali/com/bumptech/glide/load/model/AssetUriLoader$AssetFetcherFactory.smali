@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/load/model/AssetUriLoader$AssetFetcherFactory;
 .super Ljava/lang/Object;
+.source "AssetUriLoader.java"
 
 
 # annotations

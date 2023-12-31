@@ -1,5 +1,6 @@
 .class public Lkotlin/jvm/internal/Reflection;
 .super Ljava/lang/Object;
+.source "Reflection.java"
 
 
 # static fields
@@ -17,10 +18,12 @@
     :try_start_0
     const-string v1, "kotlin.reflect.jvm.internal.ReflectionFactoryImpl"
 
+    .line 26
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
+    .line 27
     invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v1
@@ -39,6 +42,7 @@
 
     goto :goto_0
 
+    .line 34
     :cond_0
     new-instance v0, Lkotlin/jvm/internal/ReflectionFactory;
 
@@ -51,6 +55,7 @@
 
     new-array v0, v0, [Lkotlin/reflect/KClass;
 
+    .line 39
     sput-object v0, Lkotlin/jvm/internal/Reflection;->EMPTY_K_CLASS_ARRAY:[Lkotlin/reflect/KClass;
 
     return-void
@@ -59,6 +64,7 @@
 .method public static function(Lkotlin/jvm/internal/FunctionReference;)Lkotlin/reflect/KFunction;
     .locals 1
 
+    .line 89
     sget-object v0, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
     invoke-virtual {v0, p0}, Lkotlin/jvm/internal/ReflectionFactory;->function(Lkotlin/jvm/internal/FunctionReference;)Lkotlin/reflect/KFunction;
@@ -71,6 +77,7 @@
 .method public static getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
     .locals 1
 
+    .line 59
     sget-object v0, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
     invoke-virtual {v0, p0}, Lkotlin/jvm/internal/ReflectionFactory;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -83,6 +90,7 @@
 .method public static getOrCreateKotlinPackage(Ljava/lang/Class;)Lkotlin/reflect/KDeclarationContainer;
     .locals 2
 
+    .line 51
     sget-object v0, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
     const-string v1, ""
@@ -97,6 +105,7 @@
 .method public static renderLambdaToString(Lkotlin/jvm/internal/FunctionBase;)Ljava/lang/String;
     .locals 1
 
+    .line 83
     sget-object v0, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
     invoke-virtual {v0, p0}, Lkotlin/jvm/internal/ReflectionFactory;->renderLambdaToString(Lkotlin/jvm/internal/FunctionBase;)Ljava/lang/String;
@@ -109,6 +118,7 @@
 .method public static renderLambdaToString(Lkotlin/jvm/internal/Lambda;)Ljava/lang/String;
     .locals 1
 
+    .line 78
     sget-object v0, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
     invoke-virtual {v0, p0}, Lkotlin/jvm/internal/ReflectionFactory;->renderLambdaToString(Lkotlin/jvm/internal/Lambda;)Ljava/lang/String;
@@ -121,6 +131,7 @@
 .method public static typeOf(Ljava/lang/Class;)Lkotlin/reflect/KType;
     .locals 3
 
+    .line 127
     sget-object v0, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
     invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -143,6 +154,7 @@
 .method public static typeOf(Ljava/lang/Class;Lkotlin/reflect/KTypeProjection;)Lkotlin/reflect/KType;
     .locals 2
 
+    .line 132
     sget-object v0, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
     invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -165,6 +177,7 @@
 .method public static typeOf(Ljava/lang/Class;Lkotlin/reflect/KTypeProjection;Lkotlin/reflect/KTypeProjection;)Lkotlin/reflect/KType;
     .locals 3
 
+    .line 137
     sget-object v0, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
     invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;

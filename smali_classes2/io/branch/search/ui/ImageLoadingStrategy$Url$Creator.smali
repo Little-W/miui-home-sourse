@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/ui/ImageLoadingStrategy$Url$Creator;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

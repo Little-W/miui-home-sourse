@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_CustomAttribute$Builder;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute$Builder;
+.source "AutoValue_CrashlyticsReport_CustomAttribute.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 67
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute$Builder;-><init>()V
 
     return-void
@@ -33,12 +35,14 @@
 .method public build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute;
     .locals 3
 
+    .line 88
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_CustomAttribute$Builder;->key:Ljava/lang/String;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,11 +57,13 @@
 
     move-result-object v1
 
+    .line 91
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_CustomAttribute$Builder;->value:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
+    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,6 +78,7 @@
 
     move-result-object v1
 
+    .line 94
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -79,6 +86,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 97
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_CustomAttribute;
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_CustomAttribute$Builder;->key:Ljava/lang/String;
@@ -91,6 +99,7 @@
 
     return-object v0
 
+    .line 95
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -118,10 +127,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 74
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_CustomAttribute$Builder;->key:Ljava/lang/String;
 
     return-object p0
 
+    .line 72
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -137,10 +148,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 82
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_CustomAttribute$Builder;->value:Ljava/lang/String;
 
     return-object p0
 
+    .line 80
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

@@ -1,5 +1,6 @@
 .class public final Lkotlin/Triple;
 .super Ljava/lang/Object;
+.source "Tuples.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -56,6 +57,7 @@
         }
     .end annotation
 
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/Triple;->first:Ljava/lang/Object;
@@ -219,6 +221,7 @@
         }
     .end annotation
 
+    .line 67
     iget-object p0, p0, Lkotlin/Triple;->first:Ljava/lang/Object;
 
     return-object p0
@@ -232,6 +235,7 @@
         }
     .end annotation
 
+    .line 68
     iget-object p0, p0, Lkotlin/Triple;->second:Ljava/lang/Object;
 
     return-object p0
@@ -245,6 +249,7 @@
         }
     .end annotation
 
+    .line 69
     iget-object p0, p0, Lkotlin/Triple;->third:Ljava/lang/Object;
 
     return-object p0
@@ -306,6 +311,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 75
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

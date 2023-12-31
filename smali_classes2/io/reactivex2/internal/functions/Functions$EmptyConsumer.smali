@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/functions/Functions$EmptyConsumer;
 .super Ljava/lang/Object;
+.source "Functions.java"
 
 # interfaces
 .implements Lio/reactivex2/functions/Consumer;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 684
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

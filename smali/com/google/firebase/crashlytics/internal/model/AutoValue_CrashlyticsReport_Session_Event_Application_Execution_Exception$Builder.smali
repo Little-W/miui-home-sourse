@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;
+.source "AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception.java"
 
 
 # annotations
@@ -37,6 +38,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 112
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;-><init>()V
 
     return-void
@@ -47,12 +49,14 @@
 .method public build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;
     .locals 9
 
+    .line 148
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->type:Ljava/lang/String;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 149
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,11 +71,13 @@
 
     move-result-object v1
 
+    .line 151
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->frames:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     if-nez v0, :cond_1
 
+    .line 152
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,11 +92,13 @@
 
     move-result-object v1
 
+    .line 154
     :cond_1
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->overflowCount:Ljava/lang/Integer;
 
     if-nez v0, :cond_2
 
+    .line 155
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,6 +113,7 @@
 
     move-result-object v1
 
+    .line 157
     :cond_2
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -112,6 +121,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 160
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception;
 
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->type:Ljava/lang/String;
@@ -124,6 +134,7 @@
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->overflowCount:Ljava/lang/Integer;
 
+    .line 165
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
@@ -136,6 +147,7 @@
 
     return-object v0
 
+    .line 158
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -161,6 +173,7 @@
 .method public setCausedBy(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;
     .locals 0
 
+    .line 137
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->causedBy:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;
 
     return-object p0
@@ -180,10 +193,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 132
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->frames:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     return-object p0
 
+    .line 130
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -197,6 +212,7 @@
 .method public setOverflowCount(I)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;
     .locals 0
 
+    .line 142
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -209,6 +225,7 @@
 .method public setReason(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;
     .locals 0
 
+    .line 124
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->reason:Ljava/lang/String;
 
     return-object p0
@@ -219,10 +236,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 119
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception$Builder;->type:Ljava/lang/String;
 
     return-object p0
 
+    .line 117
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

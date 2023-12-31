@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/LottieDrawable$1;
 .super Ljava/lang/Object;
+.source "LottieDrawable.java"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/LottieDrawable;)V
     .locals 0
 
+    .line 88
     iput-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$1;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
+    .line 91
     iget-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$1;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-static {p1}, Lcom/airbnb/lottie/LottieDrawable;->access$000(Lcom/airbnb/lottie/LottieDrawable;)Lcom/airbnb/lottie/model/layer/CompositionLayer;
@@ -44,6 +47,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 92
     iget-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$1;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-static {p1}, Lcom/airbnb/lottie/LottieDrawable;->access$000(Lcom/airbnb/lottie/LottieDrawable;)Lcom/airbnb/lottie/model/layer/CompositionLayer;

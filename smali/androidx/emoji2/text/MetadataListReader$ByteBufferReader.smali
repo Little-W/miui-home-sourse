@@ -1,5 +1,6 @@
 .class Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;
 .super Ljava/lang/Object;
+.source "MetadataListReader.java"
 
 # interfaces
 .implements Landroidx/emoji2/text/MetadataListReader$OpenTypeReader;
@@ -24,10 +25,13 @@
 .method constructor <init>(Ljava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 315
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 316
     iput-object p1, p0, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;->mByteBuffer:Ljava/nio/ByteBuffer;
 
+    .line 317
     iget-object p0, p0, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     sget-object p1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
@@ -42,6 +46,7 @@
 .method public getPosition()J
     .locals 2
 
+    .line 342
     iget-object p0, p0, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
@@ -61,6 +66,7 @@
         }
     .end annotation
 
+    .line 332
     iget-object p0, p0, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
@@ -78,6 +84,7 @@
         }
     .end annotation
 
+    .line 327
     iget-object p0, p0, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
@@ -99,6 +106,7 @@
         }
     .end annotation
 
+    .line 322
     iget-object p0, p0, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
@@ -120,6 +128,7 @@
         }
     .end annotation
 
+    .line 337
     iget-object p0, p0, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I

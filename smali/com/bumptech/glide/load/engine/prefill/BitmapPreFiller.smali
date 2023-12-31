@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/engine/prefill/BitmapPreFiller;
 .super Ljava/lang/Object;
+.source "BitmapPreFiller.java"
 
 
 # instance fields
@@ -16,8 +17,10 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/engine/cache/MemoryCache;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Lcom/bumptech/glide/load/DecodeFormat;)V
     .locals 2
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 23
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -28,10 +31,13 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/prefill/BitmapPreFiller;->handler:Landroid/os/Handler;
 
+    .line 29
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/prefill/BitmapPreFiller;->memoryCache:Lcom/bumptech/glide/load/engine/cache/MemoryCache;
 
+    .line 30
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/prefill/BitmapPreFiller;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
+    .line 31
     iput-object p3, p0, Lcom/bumptech/glide/load/engine/prefill/BitmapPreFiller;->defaultFormat:Lcom/bumptech/glide/load/DecodeFormat;
 
     return-void

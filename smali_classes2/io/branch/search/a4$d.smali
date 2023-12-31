@@ -1,5 +1,6 @@
 .class public Lio/branch/search/a4$d;
 .super Landroidx/room/EntityInsertionAdapter;
+.source "SourceFile"
 
 
 # annotations

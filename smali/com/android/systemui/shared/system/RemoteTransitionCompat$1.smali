@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;
 .super Landroid/window/IRemoteTransition$Stub;
+.source "RemoteTransitionCompat.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Ljava/util/concurrent/Executor;Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;)V
     .locals 0
 
+    .line 60
     iput-object p1, p0, Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;->val$executor:Ljava/util/concurrent/Executor;
 
     iput-object p2, p0, Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;->val$runner:Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;
@@ -35,6 +37,7 @@
 .method static synthetic lambda$mergeAnimation$2(Landroid/window/IRemoteTransitionFinishedCallback;)V
     .locals 1
 
+    .line 77
     invoke-static {p0}, Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;->box(Landroid/window/IRemoteTransitionFinishedCallback;)Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;
 
     move-result-object p0
@@ -49,6 +52,7 @@
 .method static synthetic lambda$mergeAnimation$3(Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Landroid/os/IBinder;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 79
     invoke-interface/range {p0 .. p5}, Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;->mergeAnimation(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Landroid/os/IBinder;Ljava/lang/Runnable;)V
 
     return-void
@@ -57,6 +61,7 @@
 .method static synthetic lambda$startAnimation$0(Landroid/window/IRemoteTransitionFinishedCallback;)V
     .locals 1
 
+    .line 66
     invoke-static {p0}, Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;->box(Landroid/window/IRemoteTransitionFinishedCallback;)Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;
 
     move-result-object p0
@@ -71,6 +76,7 @@
 .method static synthetic lambda$startAnimation$1(Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;Landroid/os/IBinder;Lcom/android/systemui/shared/recents/system/TransitionInfoCompat;Landroid/view/SurfaceControl$Transaction;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 69
     invoke-interface {p0, p1, p2, p3, p4}, Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;->startAnimation(Landroid/os/IBinder;Lcom/android/systemui/shared/recents/system/TransitionInfoCompat;Landroid/view/SurfaceControl$Transaction;Ljava/lang/Runnable;)V
 
     return-void
@@ -81,10 +87,12 @@
 .method public mergeAnimation(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Landroid/os/IBinder;Landroid/window/IRemoteTransitionFinishedCallback;)V
     .locals 7
 
+    .line 76
     new-instance v6, Lcom/android/systemui/shared/system/-$$Lambda$RemoteTransitionCompat$1$UB9cWCzuzK2Ux2vfXFRjeeG7WFw;
 
     invoke-direct {v6, p5}, Lcom/android/systemui/shared/system/-$$Lambda$RemoteTransitionCompat$1$UB9cWCzuzK2Ux2vfXFRjeeG7WFw;-><init>(Landroid/window/IRemoteTransitionFinishedCallback;)V
 
+    .line 79
     iget-object p5, p0, Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;->val$executor:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;->val$runner:Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;
@@ -111,14 +119,17 @@
 .method public startAnimation(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Landroid/window/IRemoteTransitionFinishedCallback;)V
     .locals 6
 
+    .line 65
     new-instance v5, Lcom/android/systemui/shared/system/-$$Lambda$RemoteTransitionCompat$1$By4NqTyfG1XbxyF69Vkke7S3Jdw;
 
     invoke-direct {v5, p4}, Lcom/android/systemui/shared/system/-$$Lambda$RemoteTransitionCompat$1$By4NqTyfG1XbxyF69Vkke7S3Jdw;-><init>(Landroid/window/IRemoteTransitionFinishedCallback;)V
 
+    .line 68
     new-instance v3, Lcom/android/systemui/shared/recents/system/TransitionInfoCompat;
 
     invoke-direct {v3, p2}, Lcom/android/systemui/shared/recents/system/TransitionInfoCompat;-><init>(Landroid/window/TransitionInfo;)V
 
+    .line 69
     iget-object p2, p0, Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;->val$executor:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;->val$runner:Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;

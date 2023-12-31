@@ -1,5 +1,6 @@
 .class Lcom/google/android/flexbox/FlexboxHelper$FlexLinesResult;
 .super Ljava/lang/Object;
+.source "FlexboxHelper.java"
 
 
 # annotations
@@ -31,6 +32,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 2054
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,10 +45,12 @@
 
     const/4 v0, 0x0
 
+    .line 2061
     iput-object v0, p0, Lcom/google/android/flexbox/FlexboxHelper$FlexLinesResult;->mFlexLines:Ljava/util/List;
 
     const/4 v0, 0x0
 
+    .line 2062
     iput v0, p0, Lcom/google/android/flexbox/FlexboxHelper$FlexLinesResult;->mChildState:I
 
     return-void

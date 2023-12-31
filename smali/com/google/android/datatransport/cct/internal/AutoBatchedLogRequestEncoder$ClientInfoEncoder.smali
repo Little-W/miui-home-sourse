@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$ClientInfoEncoder;
 .super Ljava/lang/Object;
+.source "AutoBatchedLogRequestEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -37,6 +38,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 76
     new-instance v0, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$ClientInfoEncoder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$ClientInfoEncoder;-><init>()V
@@ -45,6 +47,7 @@
 
     const-string v0, "clientType"
 
+    .line 78
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -53,6 +56,7 @@
 
     const-string v0, "androidClientInfo"
 
+    .line 80
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -65,6 +69,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -80,6 +85,7 @@
         }
     .end annotation
 
+    .line 84
     sget-object p0, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$ClientInfoEncoder;->CLIENTTYPE_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/ClientInfo;->getClientType()Lcom/google/android/datatransport/cct/internal/ClientInfo$ClientType;
@@ -88,6 +94,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 85
     sget-object p0, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$ClientInfoEncoder;->ANDROIDCLIENTINFO_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/ClientInfo;->getAndroidClientInfo()Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;
@@ -107,6 +114,7 @@
         }
     .end annotation
 
+    .line 75
     check-cast p1, Lcom/google/android/datatransport/cct/internal/ClientInfo;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

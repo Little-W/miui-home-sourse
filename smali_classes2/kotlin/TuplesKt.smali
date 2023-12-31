@@ -1,5 +1,6 @@
 .class public final Lkotlin/TuplesKt;
 .super Ljava/lang/Object;
+.source "Tuples.kt"
 
 
 # direct methods
@@ -17,6 +18,7 @@
         }
     .end annotation
 
+    .line 43
     new-instance v0, Lkotlin/Pair;
 
     invoke-direct {v0, p0, p1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V

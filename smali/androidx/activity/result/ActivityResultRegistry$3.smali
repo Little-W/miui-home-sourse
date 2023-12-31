@@ -1,5 +1,6 @@
 .class Landroidx/activity/result/ActivityResultRegistry$3;
 .super Landroidx/activity/result/ActivityResultLauncher;
+.source "ActivityResultRegistry.java"
 
 
 # annotations
@@ -34,6 +35,7 @@
 .method constructor <init>(Landroidx/activity/result/ActivityResultRegistry;Ljava/lang/String;ILandroidx/activity/result/contract/ActivityResultContract;)V
     .locals 0
 
+    .line 221
     iput-object p1, p0, Landroidx/activity/result/ActivityResultRegistry$3;->this$0:Landroidx/activity/result/ActivityResultRegistry;
 
     iput-object p2, p0, Landroidx/activity/result/ActivityResultRegistry$3;->val$key:Ljava/lang/String;
@@ -59,6 +61,7 @@
         }
     .end annotation
 
+    .line 224
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$3;->this$0:Landroidx/activity/result/ActivityResultRegistry;
 
     iget-object v0, v0, Landroidx/activity/result/ActivityResultRegistry;->mLaunchedKeys:Ljava/util/ArrayList;
@@ -67,6 +70,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 225
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$3;->this$0:Landroidx/activity/result/ActivityResultRegistry;
 
     iget-object v0, v0, Landroidx/activity/result/ActivityResultRegistry;->mKeyToRc:Ljava/util/Map;
@@ -79,6 +83,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    .line 226
     iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry$3;->this$0:Landroidx/activity/result/ActivityResultRegistry;
 
     if-eqz v0, :cond_0
@@ -103,6 +108,7 @@
 .method public unregister()V
     .locals 1
 
+    .line 231
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$3;->this$0:Landroidx/activity/result/ActivityResultRegistry;
 
     iget-object p0, p0, Landroidx/activity/result/ActivityResultRegistry$3;->val$key:Ljava/lang/String;

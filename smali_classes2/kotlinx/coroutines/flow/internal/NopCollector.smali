@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/NopCollector;
 .super Ljava/lang/Object;
+.source "NopCollector.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -24,6 +25,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 9
     new-instance v0, Lkotlinx/coroutines/flow/internal/NopCollector;
 
     invoke-direct {v0}, Lkotlinx/coroutines/flow/internal/NopCollector;-><init>()V
@@ -36,6 +38,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,6 +60,7 @@
         }
     .end annotation
 
+    .line 12
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0

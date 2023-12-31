@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$1;
 .super Ljava/lang/Object;
+.source "DaggerTransportRuntimeComponent.java"
 
 
 # annotations

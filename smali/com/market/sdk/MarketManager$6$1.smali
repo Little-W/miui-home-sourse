@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/MarketManager$6$1;
 .super Landroid/os/ResultReceiver;
+.source "MarketManager.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager$6;Landroid/os/Handler;)V
     .locals 0
 
+    .line 481
     iput-object p1, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -35,6 +37,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 485
     iget-object p0, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 
     iget-object p0, p0, Lcom/market/sdk/MarketManager$6;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
@@ -49,6 +52,7 @@
 
     goto :goto_0
 
+    .line 487
     :cond_0
     iget-object p0, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 

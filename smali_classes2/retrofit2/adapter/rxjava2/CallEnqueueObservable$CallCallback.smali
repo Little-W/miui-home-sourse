@@ -1,5 +1,6 @@
 .class final Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;
 .super Ljava/lang/Object;
+.source "CallEnqueueObservable.java"
 
 # interfaces
 .implements Lio/reactivex/disposables/Disposable;
@@ -70,14 +71,18 @@
         }
     .end annotation
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 47
     iput-boolean v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->terminated:Z
 
+    .line 50
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->call:Lretrofit2/Call;
 
+    .line 51
     iput-object p2, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lio/reactivex/Observer;
 
     return-void
@@ -90,8 +95,10 @@
 
     const/4 v0, 0x1
 
+    .line 90
     iput-boolean v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->disposed:Z
 
+    .line 91
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->call:Lretrofit2/Call;
 
     invoke-interface {p0}, Lretrofit2/Call;->cancel()V
@@ -111,6 +118,7 @@
         }
     .end annotation
 
+    .line 79
     invoke-interface {p1}, Lretrofit2/Call;->isCanceled()Z
 
     move-result p1
@@ -119,6 +127,7 @@
 
     return-void
 
+    .line 82
     :cond_0
     :try_start_0
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lio/reactivex/Observer;
@@ -132,8 +141,10 @@
     :catchall_0
     move-exception p0
 
+    .line 84
     invoke-static {p0}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
+    .line 85
     new-instance p1, Lio/reactivex/exceptions/CompositeException;
 
     const/4 v0, 0x2
@@ -168,6 +179,7 @@
         }
     .end annotation
 
+    .line 55
     iget-boolean p1, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->disposed:Z
 
     if-eqz p1, :cond_0
@@ -177,17 +189,21 @@
     :cond_0
     const/4 p1, 0x1
 
+    .line 58
     :try_start_0
     iget-object v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lio/reactivex/Observer;
 
     invoke-interface {v0, p2}, Lio/reactivex/Observer;->onNext(Ljava/lang/Object;)V
 
+    .line 60
     iget-boolean p2, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->disposed:Z
 
     if-nez p2, :cond_2
 
+    .line 61
     iput-boolean p1, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->terminated:Z
 
+    .line 62
     iget-object p2, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lio/reactivex/Observer;
 
     invoke-interface {p2}, Lio/reactivex/Observer;->onComplete()V
@@ -199,19 +215,23 @@
     :catchall_0
     move-exception p2
 
+    .line 65
     iget-boolean v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->terminated:Z
 
     if-eqz v0, :cond_1
 
+    .line 66
     invoke-static {p2}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
+    .line 67
     :cond_1
     iget-boolean v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->disposed:Z
 
     if-nez v0, :cond_2
 
+    .line 69
     :try_start_1
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lio/reactivex/Observer;
 
@@ -224,8 +244,10 @@
     :catchall_1
     move-exception p0
 
+    .line 71
     invoke-static {p0}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
+    .line 72
     new-instance v0, Lio/reactivex/exceptions/CompositeException;
 
     const/4 v1, 0x2

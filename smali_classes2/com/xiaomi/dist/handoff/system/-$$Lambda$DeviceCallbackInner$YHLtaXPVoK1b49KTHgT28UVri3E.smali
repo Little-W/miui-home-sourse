@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/handoff/system/-$$Lambda$DeviceCallbackInner$YHLtaXPVoK1b49KTHgT28UVri3E;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

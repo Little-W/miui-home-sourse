@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/SealedClassSerializer$descriptor$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "SealedSerializer.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -52,6 +53,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 72
     check-cast p1, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/SealedClassSerializer$descriptor$1;->invoke(Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;)V
@@ -68,6 +70,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 80
     sget-object v0, Lkotlin/jvm/internal/StringCompanionObject;->INSTANCE:Lkotlin/jvm/internal/StringCompanionObject;
 
     invoke-static {v0}, Lkotlinx/serialization/builtins/BuiltinSerializersKt;->serializer(Lkotlin/jvm/internal/StringCompanionObject;)Lkotlinx/serialization/KSerializer;
@@ -92,6 +95,7 @@
 
     invoke-static/range {v1 .. v7}, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->element$default(Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;Ljava/util/List;ZILjava/lang/Object;)V
 
+    .line 82
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,6 +154,7 @@
 
     move-object v3, p1
 
+    .line 88
     invoke-static/range {v3 .. v9}, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->element$default(Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;Ljava/util/List;ZILjava/lang/Object;)V
 
     return-void

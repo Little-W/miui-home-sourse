@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;
 .super Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
+.source "AutoValue_AndroidClientInfo.java"
 
 
 # annotations
@@ -43,6 +44,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 217
     invoke-direct {p0}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;-><init>()V
 
     return-void
@@ -53,6 +55,7 @@
 .method public build()Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;
     .locals 15
 
+    .line 281
     new-instance v14, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;
 
     iget-object v1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->sdkVersion:Ljava/lang/Integer;
@@ -91,6 +94,7 @@
 .method public setApplicationBuild(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 276
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->applicationBuild:Ljava/lang/String;
 
     return-object p0
@@ -99,6 +103,7 @@
 .method public setCountry(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 266
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->country:Ljava/lang/String;
 
     return-object p0
@@ -107,6 +112,7 @@
 .method public setDevice(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 236
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->device:Ljava/lang/String;
 
     return-object p0
@@ -115,6 +121,7 @@
 .method public setFingerprint(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 256
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->fingerprint:Ljava/lang/String;
 
     return-object p0
@@ -123,6 +130,7 @@
 .method public setHardware(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 231
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->hardware:Ljava/lang/String;
 
     return-object p0
@@ -131,6 +139,7 @@
 .method public setLocale(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 261
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->locale:Ljava/lang/String;
 
     return-object p0
@@ -139,6 +148,7 @@
 .method public setManufacturer(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 251
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->manufacturer:Ljava/lang/String;
 
     return-object p0
@@ -147,6 +157,7 @@
 .method public setMccMnc(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 271
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->mccMnc:Ljava/lang/String;
 
     return-object p0
@@ -155,6 +166,7 @@
 .method public setModel(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 226
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->model:Ljava/lang/String;
 
     return-object p0
@@ -163,6 +175,7 @@
 .method public setOsBuild(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 246
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->osBuild:Ljava/lang/String;
 
     return-object p0
@@ -171,6 +184,7 @@
 .method public setProduct(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 241
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->product:Ljava/lang/String;
 
     return-object p0
@@ -179,6 +193,7 @@
 .method public setSdkVersion(Ljava/lang/Integer;)Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 0
 
+    .line 221
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;->sdkVersion:Ljava/lang/Integer;
 
     return-object p0

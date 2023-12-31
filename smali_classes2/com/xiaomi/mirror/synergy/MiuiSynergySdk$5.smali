@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$5;
 .super Lcom/xiaomi/mirror/ISameAccountApCallback$Stub;
+.source "SourceFile"
 
 
 # annotations

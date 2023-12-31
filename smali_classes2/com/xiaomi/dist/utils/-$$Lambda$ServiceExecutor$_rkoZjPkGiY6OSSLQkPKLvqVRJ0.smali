@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/utils/-$$Lambda$ServiceExecutor$_rkoZjPkGiY6OSSLQkPKLvqVRJ0;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/os/IBinder$DeathRecipient;

@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationExecutionExceptionEncoder;
 .super Ljava/lang/Object;
+.source "AutoCrashlyticsReportEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -43,6 +44,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 365
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationExecutionExceptionEncoder;
 
     invoke-direct {v0}, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationExecutionExceptionEncoder;-><init>()V
@@ -51,6 +53,7 @@
 
     const-string/jumbo v0, "type"
 
+    .line 367
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -59,6 +62,7 @@
 
     const-string v0, "reason"
 
+    .line 369
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -67,6 +71,7 @@
 
     const-string v0, "frames"
 
+    .line 371
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -75,6 +80,7 @@
 
     const-string v0, "causedBy"
 
+    .line 373
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -83,6 +89,7 @@
 
     const-string v0, "overflowCount"
 
+    .line 375
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -95,6 +102,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 364
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -110,6 +118,7 @@
         }
     .end annotation
 
+    .line 380
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationExecutionExceptionEncoder;->TYPE_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;->getType()Ljava/lang/String;
@@ -118,6 +127,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 381
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationExecutionExceptionEncoder;->REASON_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;->getReason()Ljava/lang/String;
@@ -126,6 +136,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 382
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationExecutionExceptionEncoder;->FRAMES_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;->getFrames()Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
@@ -134,6 +145,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 383
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationExecutionExceptionEncoder;->CAUSEDBY_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;->getCausedBy()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;
@@ -142,6 +154,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 384
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationExecutionExceptionEncoder;->OVERFLOWCOUNT_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;->getOverflowCount()I
@@ -161,6 +174,7 @@
         }
     .end annotation
 
+    .line 364
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

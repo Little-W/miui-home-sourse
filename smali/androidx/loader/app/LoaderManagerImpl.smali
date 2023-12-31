@@ -1,5 +1,6 @@
 .class Landroidx/loader/app/LoaderManagerImpl;
 .super Landroidx/loader/app/LoaderManager;
+.source "LoaderManagerImpl.java"
 
 
 # annotations
@@ -32,10 +33,13 @@
 .method constructor <init>(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/ViewModelStore;)V
     .locals 0
 
+    .line 371
     invoke-direct {p0}, Landroidx/loader/app/LoaderManager;-><init>()V
 
+    .line 372
     iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->mLifecycleOwner:Landroidx/lifecycle/LifecycleOwner;
 
+    .line 373
     invoke-static {p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->getInstance(Landroidx/lifecycle/ViewModelStore;)Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     move-result-object p1
@@ -52,6 +56,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 498
     iget-object p0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -62,6 +67,7 @@
 .method public markForRedelivery()V
     .locals 0
 
+    .line 481
     iget-object p0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {p0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->markForRedelivery()V
@@ -72,6 +78,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 486
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
@@ -80,8 +87,10 @@
 
     const-string v1, "LoaderManager{"
 
+    .line 487
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 488
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -94,16 +103,20 @@
 
     const-string v1, " in "
 
+    .line 489
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 490
     iget-object p0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLifecycleOwner:Landroidx/lifecycle/LifecycleOwner;
 
     invoke-static {p0, v0}, Landroidx/core/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     const-string/jumbo p0, "}}"
 
+    .line 491
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 492
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

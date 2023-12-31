@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/airbnb/lottie/-$$Lambda$LottieDrawable$WfHv56_rzywVN4O5yHulKLyF-_U;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/airbnb/lottie/LottieDrawable$LazyCompositionTask;

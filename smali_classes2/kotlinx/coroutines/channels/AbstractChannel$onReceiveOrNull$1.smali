@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/AbstractChannel$onReceiveOrNull$1;
 .super Ljava/lang/Object;
+.source "AbstractChannel.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/selects/SelectClause1;
@@ -37,6 +38,7 @@
         }
     .end annotation
 
+    .line 717
     iput-object p1, p0, Lkotlinx/coroutines/channels/AbstractChannel$onReceiveOrNull$1;->this$0:Lkotlinx/coroutines/channels/AbstractChannel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -64,6 +66,7 @@
         }
     .end annotation
 
+    .line 720
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractChannel$onReceiveOrNull$1;->this$0:Lkotlinx/coroutines/channels/AbstractChannel;
 
     if-eqz p2, :cond_0

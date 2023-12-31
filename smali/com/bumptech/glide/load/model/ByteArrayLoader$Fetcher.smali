@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/model/ByteArrayLoader$Fetcher;
 .super Ljava/lang/Object;
+.source "ByteArrayLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataFetcher;
@@ -51,10 +52,13 @@
         }
     .end annotation
 
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 61
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ByteArrayLoader$Fetcher;->model:[B
 
+    .line 62
     iput-object p2, p0, Lcom/bumptech/glide/load/model/ByteArrayLoader$Fetcher;->converter:Lcom/bumptech/glide/load/model/ByteArrayLoader$Converter;
 
     return-void
@@ -84,6 +88,7 @@
         }
     .end annotation
 
+    .line 84
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ByteArrayLoader$Fetcher;->converter:Lcom/bumptech/glide/load/model/ByteArrayLoader$Converter;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/model/ByteArrayLoader$Converter;->getDataClass()Ljava/lang/Class;
@@ -96,6 +101,7 @@
 .method public getDataSource()Lcom/bumptech/glide/load/DataSource;
     .locals 0
 
+    .line 90
     sget-object p0, Lcom/bumptech/glide/load/DataSource;->LOCAL:Lcom/bumptech/glide/load/DataSource;
 
     return-object p0
@@ -112,6 +118,7 @@
         }
     .end annotation
 
+    .line 67
     iget-object p1, p0, Lcom/bumptech/glide/load/model/ByteArrayLoader$Fetcher;->converter:Lcom/bumptech/glide/load/model/ByteArrayLoader$Converter;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ByteArrayLoader$Fetcher;->model:[B
@@ -120,6 +127,7 @@
 
     move-result-object p0
 
+    .line 68
     invoke-interface {p2, p0}, Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;->onDataReady(Ljava/lang/Object;)V
 
     return-void

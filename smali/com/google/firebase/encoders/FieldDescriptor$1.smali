@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/firebase/encoders/FieldDescriptor$1;
 .super Ljava/lang/Object;
+.source "FieldDescriptor.java"
 
 
 # annotations

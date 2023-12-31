@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/TransitionInfoExpose$RootExpose;
 .super Ljava/lang/Object;
+.source "TransitionInfoExpose.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method private constructor <init>(Landroid/window/TransitionInfo$Root;)V
     .locals 0
 
+    .line 246
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 247
     iput-object p1, p0, Lcom/android/hideapi/TransitionInfoExpose$RootExpose;->instance:Landroid/window/TransitionInfo$Root;
 
     return-void
@@ -31,6 +34,7 @@
 .method public static box(Landroid/window/TransitionInfo$Root;)Lcom/android/hideapi/TransitionInfoExpose$RootExpose;
     .locals 1
 
+    .line 255
     new-instance v0, Lcom/android/hideapi/TransitionInfoExpose$RootExpose;
 
     invoke-direct {v0, p0}, Lcom/android/hideapi/TransitionInfoExpose$RootExpose;-><init>(Landroid/window/TransitionInfo$Root;)V
@@ -43,6 +47,7 @@
 .method public getLeash()Landroid/view/SurfaceControl;
     .locals 4
 
+    .line 259
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$RootExpose;->instance:Landroid/window/TransitionInfo$Root;
 
     const-class v0, Landroid/view/SurfaceControl;
@@ -67,6 +72,7 @@
 .method public getOffset()Landroid/graphics/Point;
     .locals 4
 
+    .line 263
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$RootExpose;->instance:Landroid/window/TransitionInfo$Root;
 
     const-class v0, Landroid/graphics/Point;

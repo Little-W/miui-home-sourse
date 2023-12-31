@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/AwaitKt;
 .super Ljava/lang/Object;
+.source "Await.kt"
 
 
 # annotations
@@ -64,6 +65,7 @@
 
     move-result-object v1
 
+    .line 42
     iget v2, v0, Lkotlinx/coroutines/AwaitKt$awaitAll$2;->label:I
 
     const/4 v3, 0x1
@@ -80,6 +82,7 @@
 
     goto :goto_1
 
+    .line 43
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -89,9 +92,11 @@
 
     throw p0
 
+    .line 42
     :cond_2
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
+    .line 43
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result p1
@@ -111,6 +116,7 @@
 
     new-array v2, v2, [Lkotlinx/coroutines/Deferred;
 
+    .line 130
     invoke-interface {p0, v2}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
@@ -119,6 +125,7 @@
 
     check-cast v2, [Lkotlinx/coroutines/Deferred;
 
+    .line 43
     invoke-direct {p1, v2}, Lkotlinx/coroutines/AwaitAll;-><init>([Lkotlinx/coroutines/Deferred;)V
 
     iput-object p0, v0, Lkotlinx/coroutines/AwaitKt$awaitAll$2;->L$0:Ljava/lang/Object;
@@ -142,6 +149,7 @@
     :goto_2
     return-object p0
 
+    .line 130
     :cond_5
     new-instance p0, Ljava/lang/NullPointerException;
 

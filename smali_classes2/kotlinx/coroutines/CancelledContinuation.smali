@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/CancelledContinuation;
 .super Lkotlinx/coroutines/CompletedExceptionally;
+.source "CompletionState.kt"
 
 
 # static fields
@@ -43,6 +44,7 @@
 
     goto :goto_0
 
+    .line 63
     :cond_0
     new-instance p2, Ljava/util/concurrent/CancellationException;
 
@@ -73,6 +75,7 @@
 
     const/4 p1, 0x0
 
+    .line 64
     iput p1, p0, Lkotlinx/coroutines/CancelledContinuation;->_resumed:I
 
     return-void
@@ -83,6 +86,7 @@
 .method public final makeResumed()Z
     .locals 3
 
+    .line 65
     sget-object v0, Lkotlinx/coroutines/CancelledContinuation;->_resumed$FU:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     const/4 v1, 0x0

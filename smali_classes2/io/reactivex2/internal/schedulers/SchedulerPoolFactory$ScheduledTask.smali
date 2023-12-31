@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/schedulers/SchedulerPoolFactory$ScheduledTask;
 .super Ljava/lang/Object;
+.source "SchedulerPoolFactory.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public run()V
     .locals 2
 
+    .line 160
     new-instance p0, Ljava/util/ArrayList;
 
     sget-object v0, Lio/reactivex2/internal/schedulers/SchedulerPoolFactory;->POOLS:Ljava/util/Map;
@@ -57,18 +60,21 @@
 
     check-cast v0, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
+    .line 161
     invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->isShutdown()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 162
     sget-object v1, Lio/reactivex2/internal/schedulers/SchedulerPoolFactory;->POOLS:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 164
     :cond_0
     invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->purge()V
 

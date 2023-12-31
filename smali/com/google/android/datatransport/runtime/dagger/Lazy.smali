@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/datatransport/runtime/dagger/Lazy;
 .super Ljava/lang/Object;
+.source "Lazy.java"
 
 
 # annotations

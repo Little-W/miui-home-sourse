@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/AbstractCollectionSerializer;
 .super Ljava/lang/Object;
+.source "CollectionSerializers.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -26,6 +27,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +36,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;-><init>()V
 
     return-void
@@ -50,11 +53,13 @@
 
     const/4 p4, 0x1
 
+    .line 51
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->readElement(Lkotlinx/serialization/encoding/CompositeDecoder;ILjava/lang/Object;Z)V
 
     return-void
 
+    .line 0
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -75,6 +80,7 @@
         }
     .end annotation
 
+    .line 46
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -83,6 +89,7 @@
 
     move-result p1
 
+    .line 47
     invoke-virtual {p0, p2, p1}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->checkCapacity(Ljava/lang/Object;I)V
 
     return p1
@@ -148,6 +155,7 @@
 
     const/4 v0, 0x0
 
+    .line 43
     invoke-virtual {p0, p1, v0}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->merge(Lkotlinx/serialization/encoding/Decoder;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -171,6 +179,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 27
     invoke-virtual {p0, p2}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->toBuilder(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -184,11 +193,13 @@
 
     move-result-object p2
 
+    .line 28
     :goto_0
     invoke-virtual {p0, p2}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->builderSize(Ljava/lang/Object;)I
 
     move-result v7
 
+    .line 29
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -197,12 +208,14 @@
 
     move-result-object p1
 
+    .line 30
     invoke-interface {p1}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeSequentially()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 31
     invoke-direct {p0, p1, p2}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->readSize(Lkotlinx/serialization/encoding/CompositeDecoder;Ljava/lang/Object;)I
 
     move-result v0
@@ -211,6 +224,7 @@
 
     goto :goto_2
 
+    .line 34
     :cond_1
     :goto_1
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -225,6 +239,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 39
     :goto_2
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -232,6 +247,7 @@
 
     invoke-interface {p1, v0}, Lkotlinx/serialization/encoding/CompositeDecoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
+    .line 40
     invoke-virtual {p0, p2}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->toResult(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -253,6 +269,7 @@
 
     move-object v3, p2
 
+    .line 36
     invoke-static/range {v0 .. v6}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;->readElement$default(Lkotlinx/serialization/internal/AbstractCollectionSerializer;Lkotlinx/serialization/encoding/CompositeDecoder;ILjava/lang/Object;ZILjava/lang/Object;)V
 
     goto :goto_1

@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/installations/remote/AutoValue_TokenResult$Builder;
 .super Lcom/google/firebase/installations/remote/TokenResult$Builder;
+.source "AutoValue_TokenResult.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 88
     invoke-direct {p0}, Lcom/google/firebase/installations/remote/TokenResult$Builder;-><init>()V
 
     return-void
@@ -35,12 +37,14 @@
 .method public build()Lcom/google/firebase/installations/remote/TokenResult;
     .locals 8
 
+    .line 113
     iget-object v0, p0, Lcom/google/firebase/installations/remote/AutoValue_TokenResult$Builder;->tokenExpirationTimestamp:Ljava/lang/Long;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,6 +59,7 @@
 
     move-result-object v1
 
+    .line 116
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -62,12 +67,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 119
     new-instance v0, Lcom/google/firebase/installations/remote/AutoValue_TokenResult;
 
     iget-object v3, p0, Lcom/google/firebase/installations/remote/AutoValue_TokenResult$Builder;->token:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/google/firebase/installations/remote/AutoValue_TokenResult$Builder;->tokenExpirationTimestamp:Ljava/lang/Long;
 
+    .line 121
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -82,6 +89,7 @@
 
     return-object v0
 
+    .line 117
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -107,6 +115,7 @@
 .method public setResponseCode(Lcom/google/firebase/installations/remote/TokenResult$ResponseCode;)Lcom/google/firebase/installations/remote/TokenResult$Builder;
     .locals 0
 
+    .line 107
     iput-object p1, p0, Lcom/google/firebase/installations/remote/AutoValue_TokenResult$Builder;->responseCode:Lcom/google/firebase/installations/remote/TokenResult$ResponseCode;
 
     return-object p0
@@ -115,6 +124,7 @@
 .method public setToken(Ljava/lang/String;)Lcom/google/firebase/installations/remote/TokenResult$Builder;
     .locals 0
 
+    .line 97
     iput-object p1, p0, Lcom/google/firebase/installations/remote/AutoValue_TokenResult$Builder;->token:Ljava/lang/String;
 
     return-object p0
@@ -123,6 +133,7 @@
 .method public setTokenExpirationTimestamp(J)Lcom/google/firebase/installations/remote/TokenResult$Builder;
     .locals 0
 
+    .line 102
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1

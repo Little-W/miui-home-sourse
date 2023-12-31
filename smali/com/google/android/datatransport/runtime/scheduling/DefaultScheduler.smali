@@ -1,5 +1,6 @@
 .class public Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;
 .super Ljava/lang/Object;
+.source "DefaultScheduler.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/scheduling/Scheduler;
@@ -25,6 +26,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 36
     const-class v0, Lcom/google/android/datatransport/runtime/TransportRuntime;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -43,16 +45,22 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/datatransport/runtime/backends/BackendRegistry;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;)V
     .locals 0
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 50
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->executor:Ljava/util/concurrent/Executor;
 
+    .line 51
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->backendRegistry:Lcom/google/android/datatransport/runtime/backends/BackendRegistry;
 
+    .line 52
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->workScheduler:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;
 
+    .line 53
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->eventStore:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
+    .line 54
     iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->guard:Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;
 
     return-void
@@ -63,10 +71,12 @@
 .method public synthetic lambda$schedule$0$DefaultScheduler(Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)Ljava/lang/Object;
     .locals 1
 
+    .line 83
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->eventStore:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
     invoke-interface {v0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;->persist(Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
 
+    .line 84
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->workScheduler:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;
 
     const/4 p2, 0x1
@@ -81,9 +91,11 @@
 .method public synthetic lambda$schedule$1$DefaultScheduler(Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/TransportScheduleCallback;Lcom/google/android/datatransport/runtime/EventInternal;)V
     .locals 2
 
+    .line 69
     :try_start_0
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->backendRegistry:Lcom/google/android/datatransport/runtime/backends/BackendRegistry;
 
+    .line 70
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object v1
@@ -102,20 +114,24 @@
 
     const/4 v0, 0x0
 
+    .line 75
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object p1
 
     aput-object p1, p3, v0
 
+    .line 73
     invoke-static {p0, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 76
     sget-object p1, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->LOGGER:Ljava/util/logging/Logger;
 
     invoke-virtual {p1, p0}, Ljava/util/logging/Logger;->warning(Ljava/lang/String;)V
 
+    .line 77
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
@@ -124,11 +140,13 @@
 
     return-void
 
+    .line 80
     :cond_0
     invoke-interface {v0, p3}, Lcom/google/android/datatransport/runtime/backends/TransportBackend;->decorate(Lcom/google/android/datatransport/runtime/EventInternal;)Lcom/google/android/datatransport/runtime/EventInternal;
 
     move-result-object p3
 
+    .line 81
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->guard:Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;
 
     new-instance v1, Lcom/google/android/datatransport/runtime/scheduling/-$$Lambda$DefaultScheduler$n3OBz42ObbCIYysuPGXmoHB28aA;
@@ -139,6 +157,7 @@
 
     const/4 p0, 0x0
 
+    .line 87
     invoke-interface {p2, p0}, Lcom/google/android/datatransport/TransportScheduleCallback;->onSchedule(Ljava/lang/Exception;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -148,6 +167,7 @@
     :catch_0
     move-exception p0
 
+    .line 89
     sget-object p1, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->LOGGER:Ljava/util/logging/Logger;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -170,6 +190,7 @@
 
     invoke-virtual {p1, p3}, Ljava/util/logging/Logger;->warning(Ljava/lang/String;)V
 
+    .line 90
     invoke-interface {p2, p0}, Lcom/google/android/datatransport/TransportScheduleCallback;->onSchedule(Ljava/lang/Exception;)V
 
     :goto_0
@@ -179,6 +200,7 @@
 .method public schedule(Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/TransportScheduleCallback;)V
     .locals 2
 
+    .line 66
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;->executor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/datatransport/runtime/scheduling/-$$Lambda$DefaultScheduler$TUAu_XOWDlEdt54QDWOOZf2JNr8;

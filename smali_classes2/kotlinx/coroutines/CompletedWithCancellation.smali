@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/CompletedWithCancellation;
 .super Ljava/lang/Object;
+.source "CompletionState.kt"
 
 
 # instance fields
@@ -32,6 +33,7 @@
         }
     .end annotation
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/CompletedWithCancellation;->result:Ljava/lang/Object;

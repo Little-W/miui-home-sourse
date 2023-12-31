@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/util/SystemPropertiesCompat;
 .super Ljava/lang/Object;
+.source "SystemPropertiesCompat.java"
 
 
 # static fields
@@ -39,12 +40,14 @@
     :try_start_0
     const-string v1, "android.os.SystemProperties"
 
+    .line 30
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     sput-object v1, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
+    .line 31
     sget-object v1, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
     const/4 v2, 0x1
@@ -63,10 +66,12 @@
 
     sput-object v1, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->get_String:Ljava/lang/reflect/Method;
 
+    .line 32
     sget-object v1, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->get_String:Ljava/lang/reflect/Method;
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 33
     sget-object v1, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
     const/4 v3, 0x2
@@ -87,10 +92,12 @@
 
     sput-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->get_String_String:Ljava/lang/reflect/Method;
 
+    .line 34
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->get_String_String:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 35
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
     const-string v1, "getInt"
@@ -111,10 +118,12 @@
 
     sput-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getInt:Ljava/lang/reflect/Method;
 
+    .line 36
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getInt:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 37
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
     const-string v1, "getLong"
@@ -135,10 +144,12 @@
 
     sput-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getLong:Ljava/lang/reflect/Method;
 
+    .line 38
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getLong:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 39
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
     const-string v1, "getBoolean"
@@ -159,10 +170,12 @@
 
     sput-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getBoolean:Ljava/lang/reflect/Method;
 
+    .line 40
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getBoolean:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 41
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
     const-string v1, "set"
@@ -183,10 +196,12 @@
 
     sput-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->set:Ljava/lang/reflect/Method;
 
+    .line 42
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->set:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 43
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
     const-string v1, "addChangeCallback"
@@ -203,10 +218,12 @@
 
     sput-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->addChangeCallback:Ljava/lang/reflect/Method;
 
+    .line 44
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->addChangeCallback:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 45
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->SystemProperties:Ljava/lang/Class;
 
     const-string v1, "sChangeCallbacks"
@@ -215,10 +232,12 @@
 
     move-result-object v0
 
+    .line 46
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const/4 v1, 0x0
 
+    .line 47
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -237,6 +256,7 @@
     :catch_0
     move-exception v0
 
+    .line 55
     invoke-virtual {v0}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
     goto :goto_0
@@ -244,6 +264,7 @@
     :catch_1
     move-exception v0
 
+    .line 53
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
@@ -251,6 +272,7 @@
     :catch_2
     move-exception v0
 
+    .line 51
     invoke-virtual {v0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     goto :goto_0
@@ -258,6 +280,7 @@
     :catch_3
     move-exception v0
 
+    .line 49
     invoke-virtual {v0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     :goto_0
@@ -267,6 +290,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -275,6 +299,7 @@
 .method public static addChangeCallback(Ljava/lang/Runnable;)V
     .locals 4
 
+    .line 176
     :try_start_0
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->addChangeCallback:Ljava/lang/reflect/Method;
 
@@ -298,6 +323,7 @@
     :catch_0
     move-exception p0
 
+    .line 180
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
@@ -305,6 +331,7 @@
     :catch_1
     move-exception p0
 
+    .line 178
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     :goto_0
@@ -314,6 +341,7 @@
 .method public static get(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
+    .line 67
     :try_start_0
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->get_String:Ljava/lang/reflect/Method;
 
@@ -341,6 +369,7 @@
     :catch_0
     move-exception p0
 
+    .line 71
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
@@ -348,6 +377,7 @@
     :catch_1
     move-exception p0
 
+    .line 69
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     :goto_0
@@ -359,6 +389,7 @@
 .method public static get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
+    .line 84
     :try_start_0
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->get_String_String:Ljava/lang/reflect/Method;
 
@@ -390,6 +421,7 @@
     :catch_0
     move-exception p0
 
+    .line 88
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
@@ -397,6 +429,7 @@
     :catch_1
     move-exception p0
 
+    .line 86
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     :goto_0
@@ -406,6 +439,7 @@
 .method public static getBoolean(Ljava/lang/String;Z)Z
     .locals 4
 
+    .line 149
     :try_start_0
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getBoolean:Ljava/lang/reflect/Method;
 
@@ -437,6 +471,7 @@
     :catch_0
     move-exception p0
 
+    .line 153
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
@@ -444,6 +479,7 @@
     :catch_1
     move-exception p0
 
+    .line 151
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     :goto_0
@@ -453,6 +489,7 @@
 .method public static getInt(Ljava/lang/String;I)I
     .locals 4
 
+    .line 104
     :try_start_0
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getInt:Ljava/lang/reflect/Method;
 
@@ -484,6 +521,7 @@
     :catch_0
     move-exception p0
 
+    .line 108
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
@@ -491,6 +529,7 @@
     :catch_1
     move-exception p0
 
+    .line 106
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     :goto_0
@@ -500,6 +539,7 @@
 .method public static getLong(Ljava/lang/String;J)J
     .locals 4
 
+    .line 124
     :try_start_0
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->getLong:Ljava/lang/reflect/Method;
 
@@ -531,6 +571,7 @@
     :catch_0
     move-exception p0
 
+    .line 128
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
@@ -538,6 +579,7 @@
     :catch_1
     move-exception p0
 
+    .line 126
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     :goto_0
@@ -547,15 +589,18 @@
 .method public static removeChangeCallback(Ljava/lang/Runnable;)V
     .locals 2
 
+    .line 185
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->sChangeCallbacks:Ljava/util/ArrayList;
 
     monitor-enter v0
 
+    .line 186
     :try_start_0
     sget-object v1, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->sChangeCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 187
     monitor-exit v0
 
     return-void
@@ -573,6 +618,7 @@
 .method public static set(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
+    .line 166
     :try_start_0
     sget-object v0, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->set:Ljava/lang/reflect/Method;
 
@@ -600,6 +646,7 @@
     :catch_0
     move-exception p0
 
+    .line 170
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
@@ -607,6 +654,7 @@
     :catch_1
     move-exception p0
 
+    .line 168
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     :goto_0

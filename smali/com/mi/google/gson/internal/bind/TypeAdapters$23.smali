@@ -1,5 +1,6 @@
 .class final Lcom/mi/google/gson/internal/bind/TypeAdapters$23;
 .super Lcom/mi/google/gson/TypeAdapter;
+.source "TypeAdapters.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 540
     invoke-direct {p0}, Lcom/mi/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -40,6 +42,7 @@
         }
     .end annotation
 
+    .line 540
     invoke-virtual {p0, p1}, Lcom/mi/google/gson/internal/bind/TypeAdapters$23;->read(Lcom/mi/google/gson/stream/JsonReader;)Ljava/net/InetAddress;
 
     move-result-object p0
@@ -55,6 +58,7 @@
         }
     .end annotation
 
+    .line 543
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->peek()Lcom/mi/google/gson/stream/JsonToken;
 
     move-result-object p0
@@ -63,12 +67,14 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 544
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextNull()V
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 548
     :cond_0
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
@@ -89,6 +95,7 @@
         }
     .end annotation
 
+    .line 540
     check-cast p2, Ljava/net/InetAddress;
 
     invoke-virtual {p0, p1, p2}, Lcom/mi/google/gson/internal/bind/TypeAdapters$23;->write(Lcom/mi/google/gson/stream/JsonWriter;Ljava/net/InetAddress;)V
@@ -110,6 +117,7 @@
 
     goto :goto_0
 
+    .line 552
     :cond_0
     invoke-virtual {p2}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 

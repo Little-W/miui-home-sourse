@@ -1,5 +1,6 @@
 .class synthetic Lcom/airbnb/lottie/model/layer/CompositionLayer$1;
 .super Ljava/lang/Object;
+.source "CompositionLayer.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 68
     invoke-static {}, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->values()[Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
     move-result-object v0

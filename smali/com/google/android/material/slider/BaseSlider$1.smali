@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/slider/BaseSlider$1;
 .super Ljava/lang/Object;
+.source "BaseSlider.java"
 
 # interfaces
 .implements Lcom/google/android/material/slider/BaseSlider$TooltipDrawableFactory;
@@ -28,8 +29,10 @@
 .method public createTooltipDrawable()Lcom/google/android/material/tooltip/TooltipDrawable;
     .locals 7
 
+    .line 375
     iget-object v0, p0, Lcom/google/android/material/slider/BaseSlider$1;->this$0:Lcom/google/android/material/slider/BaseSlider;
 
+    .line 377
     invoke-virtual {v0}, Lcom/google/android/material/slider/BaseSlider;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -46,10 +49,12 @@
 
     new-array v6, v0, [I
 
+    .line 376
     invoke-static/range {v1 .. v6}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
+    .line 378
     iget-object p0, p0, Lcom/google/android/material/slider/BaseSlider$1;->this$0:Lcom/google/android/material/slider/BaseSlider;
 
     invoke-virtual {p0}, Lcom/google/android/material/slider/BaseSlider;->getContext()Landroid/content/Context;
@@ -60,6 +65,7 @@
 
     move-result-object p0
 
+    .line 379
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object p0

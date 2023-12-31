@@ -1,5 +1,6 @@
 .class final Lcom/google/android/libraries/gsa/launcherclient/i;
 .super Lcom/google/android/libraries/a/d;
+.source "LauncherClient.java"
 
 # interfaces
 .implements Landroid/os/Handler$Callback;
@@ -21,10 +22,12 @@
 .method constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/libraries/a/d;-><init>()V
 
     new-instance v0, Landroid/os/Handler;
 
+    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -64,10 +67,12 @@
 
     const/4 v1, 0x2
 
+    .line 21
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->a:Landroid/os/Handler;
 
+    .line 22
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p1
@@ -86,12 +91,15 @@
 
     new-instance v0, Landroid/os/Bundle;
 
+    .line 23
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "service_status"
 
+    .line 24
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 25
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/gsa/launcherclient/i;->a(Landroid/os/Bundle;)V
 
     return-void
@@ -106,6 +114,7 @@
 
     const/4 v1, 0x5
 
+    .line 26
     invoke-static {p0, v1, v0, v0, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
@@ -124,6 +133,7 @@
 
     move-result-object v0
 
+    .line 27
     invoke-virtual {v0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v0
@@ -132,8 +142,10 @@
 
     new-instance v0, Landroid/graphics/Point;
 
+    .line 28
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
+    .line 29
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1e
@@ -144,22 +156,27 @@
 
     move-result-object v1
 
+    .line 30
     invoke-virtual {v1}, Landroid/app/Activity;->getDisplay()Landroid/view/Display;
 
     move-result-object v1
 
     goto :goto_0
 
+    .line 34
     :cond_0
     iget-object v1, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->c:Landroid/view/WindowManager;
 
+    .line 31
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v1
 
+    .line 32
     :goto_0
     invoke-virtual {v1, v0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
+    .line 33
     iget v1, v0, Landroid/graphics/Point;->x:I
 
     iget v0, v0, Landroid/graphics/Point;->y:I
@@ -176,6 +193,7 @@
 
     move-result-object p1
 
+    .line 34
     invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -196,6 +214,7 @@
 
     return v1
 
+    .line 3
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -215,6 +234,7 @@
 
     return v3
 
+    .line 4
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -222,6 +242,7 @@
 
     iget-object v2, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 5
     invoke-static {v2}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->h(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/e;
 
     move-result-object v2
@@ -234,18 +255,22 @@
 
     iget-object p1, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 6
     invoke-static {p1, v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->a(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;Landroid/os/Bundle;)V
 
     iget-object p1, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 7
     invoke-static {p1, v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->b(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;Landroid/os/Bundle;)V
 
     iget-object p1, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 8
     invoke-static {p1, v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->c(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;Landroid/os/Bundle;)V
 
     iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 9
     invoke-static {p0, v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->d(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;Landroid/os/Bundle;)V
 
     return v1
@@ -253,10 +278,12 @@
     :cond_2
     iget-object v0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->e:Landroid/view/Window;
 
+    .line 10
     invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
+    .line 11
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Boolean;
@@ -271,6 +298,7 @@
 
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
+    .line 12
     iget p1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit16 p1, p1, 0x200
@@ -279,20 +307,24 @@
 
     goto :goto_0
 
+    .line 14
     :cond_3
     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
+    .line 13
     iget p1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     and-int/lit16 p1, p1, -0x201
 
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
+    .line 12
     :goto_0
     iget-object p1, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->c:Landroid/view/WindowManager;
 
     iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->e:Landroid/view/Window;
 
+    .line 14
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object p0
@@ -301,9 +333,11 @@
 
     return v1
 
+    .line 13
     :cond_4
     iget-object v0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 15
     invoke-static {v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->f(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)I
 
     move-result v0
@@ -312,6 +346,7 @@
 
     if-eqz v0, :cond_7
 
+    .line 16
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Float;
@@ -322,6 +357,7 @@
 
     iget-object v0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 17
     invoke-static {v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->g(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/LauncherClientCallbacks;
 
     move-result-object v0
@@ -336,6 +372,7 @@
 
     iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 18
     invoke-static {p0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->h(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/e;
 
     move-result-object p0
@@ -355,6 +392,7 @@
 
     iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 19
     invoke-static {p0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->h(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/e;
 
     move-result-object p0
@@ -368,6 +406,7 @@
     :cond_6
     iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/i;->b:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 20
     invoke-static {p0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->h(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/e;
 
     move-result-object p0

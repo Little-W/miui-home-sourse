@@ -1,5 +1,6 @@
 .class public final enum Lkotlin/text/RegexOption;
 .super Ljava/lang/Enum;
+.source "Regex.kt"
 
 # interfaces
 .implements Lkotlin/text/FlagEnum;
@@ -64,6 +65,7 @@
 
     move-object v1, v8
 
+    .line 33
     invoke-direct/range {v1 .. v7}, Lkotlin/text/RegexOption;-><init>(Ljava/lang/String;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v8, Lkotlin/text/RegexOption;->IGNORE_CASE:Lkotlin/text/RegexOption;
@@ -88,6 +90,7 @@
 
     move-object v9, v1
 
+    .line 39
     invoke-direct/range {v9 .. v15}, Lkotlin/text/RegexOption;-><init>(Ljava/lang/String;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lkotlin/text/RegexOption;->MULTILINE:Lkotlin/text/RegexOption;
@@ -112,6 +115,7 @@
 
     move-object v3, v1
 
+    .line 47
     invoke-direct/range {v3 .. v9}, Lkotlin/text/RegexOption;-><init>(Ljava/lang/String;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lkotlin/text/RegexOption;->LITERAL:Lkotlin/text/RegexOption;
@@ -130,6 +134,7 @@
 
     move-object v3, v1
 
+    .line 54
     invoke-direct/range {v3 .. v9}, Lkotlin/text/RegexOption;-><init>(Ljava/lang/String;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lkotlin/text/RegexOption;->UNIX_LINES:Lkotlin/text/RegexOption;
@@ -148,6 +153,7 @@
 
     move-object v3, v1
 
+    .line 57
     invoke-direct/range {v3 .. v9}, Lkotlin/text/RegexOption;-><init>(Ljava/lang/String;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lkotlin/text/RegexOption;->COMMENTS:Lkotlin/text/RegexOption;
@@ -166,6 +172,7 @@
 
     move-object v3, v1
 
+    .line 60
     invoke-direct/range {v3 .. v9}, Lkotlin/text/RegexOption;-><init>(Ljava/lang/String;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lkotlin/text/RegexOption;->DOT_MATCHES_ALL:Lkotlin/text/RegexOption;
@@ -184,6 +191,7 @@
 
     move-object v3, v1
 
+    .line 63
     invoke-direct/range {v3 .. v9}, Lkotlin/text/RegexOption;-><init>(Ljava/lang/String;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lkotlin/text/RegexOption;->CANON_EQ:Lkotlin/text/RegexOption;
@@ -205,6 +213,7 @@
         }
     .end annotation
 
+    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lkotlin/text/RegexOption;->value:I
@@ -223,6 +232,7 @@
 
     move p4, p3
 
+    .line 29
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Lkotlin/text/RegexOption;-><init>(Ljava/lang/String;III)V
 
@@ -262,6 +272,7 @@
 .method public getMask()I
     .locals 0
 
+    .line 29
     iget p0, p0, Lkotlin/text/RegexOption;->mask:I
 
     return p0
@@ -270,6 +281,7 @@
 .method public getValue()I
     .locals 0
 
+    .line 29
     iget p0, p0, Lkotlin/text/RegexOption;->value:I
 
     return p0

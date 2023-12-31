@@ -1,5 +1,6 @@
 .class public Lio/branch/search/internal/interfaces/LocalInterface$d;
 .super Landroid/content/BroadcastReceiver;
+.source "SourceFile"
 
 
 # annotations

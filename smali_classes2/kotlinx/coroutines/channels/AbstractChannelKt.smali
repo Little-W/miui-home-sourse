@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/AbstractChannelKt;
 .super Ljava/lang/Object;
+.source "AbstractChannel.kt"
 
 
 # annotations
@@ -26,6 +27,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 1010
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "EMPTY"
@@ -34,6 +36,7 @@
 
     sput-object v0, Lkotlinx/coroutines/channels/AbstractChannelKt;->EMPTY:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1014
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "OFFER_SUCCESS"
@@ -42,6 +45,7 @@
 
     sput-object v0, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_SUCCESS:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1018
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "OFFER_FAILED"
@@ -50,6 +54,7 @@
 
     sput-object v0, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1022
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "POLL_FAILED"
@@ -58,6 +63,7 @@
 
     sput-object v0, Lkotlinx/coroutines/channels/AbstractChannelKt;->POLL_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1026
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "ENQUEUE_FAILED"
@@ -66,6 +72,7 @@
 
     sput-object v0, Lkotlinx/coroutines/channels/AbstractChannelKt;->ENQUEUE_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1030
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "ON_CLOSE_HANDLER_INVOKED"

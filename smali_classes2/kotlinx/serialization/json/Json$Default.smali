@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/Json$Default;
 .super Lkotlinx/serialization/json/Json;
+.source "Json.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 15
 
+    .line 59
     new-instance v14, Lkotlinx/serialization/json/internal/JsonConf;
 
     const/4 v1, 0x0
@@ -59,6 +61,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 59
     invoke-direct {p0}, Lkotlinx/serialization/json/Json$Default;-><init>()V
 
     return-void

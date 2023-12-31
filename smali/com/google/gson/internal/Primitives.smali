@@ -1,11 +1,13 @@
 .class public final Lcom/google/gson/internal/Primitives;
 .super Ljava/lang/Object;
+.source "Primitives.java"
 
 
 # direct methods
 .method public static isPrimitive(Ljava/lang/reflect/Type;)Z
     .locals 1
 
+    .line 34
     instance-of v0, p0, Ljava/lang/Class;
 
     if-eqz v0, :cond_0
@@ -43,6 +45,7 @@
         }
     .end annotation
 
+    .line 66
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-ne p0, v0, :cond_0
@@ -51,6 +54,7 @@
 
     return-object p0
 
+    .line 67
     :cond_0
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
@@ -60,6 +64,7 @@
 
     return-object p0
 
+    .line 68
     :cond_1
     sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
@@ -69,6 +74,7 @@
 
     return-object p0
 
+    .line 69
     :cond_2
     sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
@@ -78,6 +84,7 @@
 
     return-object p0
 
+    .line 70
     :cond_3
     sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
@@ -87,6 +94,7 @@
 
     return-object p0
 
+    .line 71
     :cond_4
     sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
@@ -96,6 +104,7 @@
 
     return-object p0
 
+    .line 72
     :cond_5
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
@@ -105,6 +114,7 @@
 
     return-object p0
 
+    .line 73
     :cond_6
     sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
@@ -114,6 +124,7 @@
 
     return-object p0
 
+    .line 74
     :cond_7
     sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 

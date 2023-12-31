@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$3;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;

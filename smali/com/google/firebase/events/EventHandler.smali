@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/events/EventHandler;
 .super Ljava/lang/Object;
+.source "EventHandler.java"
 
 
 # annotations

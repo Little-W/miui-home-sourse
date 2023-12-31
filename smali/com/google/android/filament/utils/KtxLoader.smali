@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/KtxLoader;
 .super Ljava/lang/Object;
+.source "KtxLoader.kt"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 32
     new-instance v0, Lcom/google/android/filament/utils/KtxLoader;
 
     invoke-direct {v0}, Lcom/google/android/filament/utils/KtxLoader;-><init>()V
@@ -30,6 +32,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +45,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 59
     new-instance p3, Lcom/google/android/filament/utils/KtxLoader$Options;
 
     invoke-direct {p3}, Lcom/google/android/filament/utils/KtxLoader$Options;-><init>()V
@@ -61,6 +65,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 73
     new-instance p3, Lcom/google/android/filament/utils/KtxLoader$Options;
 
     invoke-direct {p3}, Lcom/google/android/filament/utils/KtxLoader$Options;-><init>()V
@@ -80,6 +85,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 45
     new-instance p3, Lcom/google/android/filament/utils/KtxLoader$Options;
 
     invoke-direct {p3}, Lcom/google/android/filament/utils/KtxLoader$Options;-><init>()V
@@ -118,10 +124,12 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 60
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v2
 
+    .line 61
     invoke-virtual {p2}, Ljava/nio/Buffer;->remaining()I
 
     move-result v5
@@ -138,6 +146,7 @@
 
     move-result-wide p2
 
+    .line 62
     new-instance p0, Lcom/google/android/filament/IndirectLight;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/filament/IndirectLight;-><init>(Lcom/google/android/filament/Engine;J)V
@@ -160,10 +169,12 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 74
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v2
 
+    .line 75
     invoke-virtual {p2}, Ljava/nio/Buffer;->remaining()I
 
     move-result v5
@@ -180,6 +191,7 @@
 
     move-result-wide p2
 
+    .line 76
     new-instance p0, Lcom/google/android/filament/Skybox;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/filament/Skybox;-><init>(Lcom/google/android/filament/Engine;J)V
@@ -202,10 +214,12 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 46
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v2
 
+    .line 47
     invoke-virtual {p2}, Ljava/nio/Buffer;->remaining()I
 
     move-result v5
@@ -222,6 +236,7 @@
 
     move-result-wide p2
 
+    .line 48
     new-instance p0, Lcom/google/android/filament/Texture;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/filament/Texture;-><init>(Lcom/google/android/filament/Engine;J)V

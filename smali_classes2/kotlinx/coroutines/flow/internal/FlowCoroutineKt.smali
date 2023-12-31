@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/FlowCoroutineKt;
 .super Ljava/lang/Object;
+.source "FlowCoroutine.kt"
 
 
 # annotations
@@ -30,6 +31,7 @@
         }
     .end annotation
 
+    .line 32
     new-instance v0, Lkotlinx/coroutines/flow/internal/FlowCoroutine;
 
     invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
@@ -38,6 +40,7 @@
 
     invoke-direct {v0, v1, p1}, Lkotlinx/coroutines/flow/internal/FlowCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Lkotlin/coroutines/Continuation;)V
 
+    .line 33
     move-object v1, v0
 
     check-cast v1, Lkotlinx/coroutines/internal/ScopeCoroutine;
@@ -46,6 +49,7 @@
 
     move-result-object p0
 
+    .line 31
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     move-result-object v0
@@ -82,6 +86,7 @@
         }
     .end annotation
 
+    .line 86
     new-instance v0, Lkotlinx/coroutines/flow/internal/FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$1;
 
     invoke-direct {v0, p0}, Lkotlinx/coroutines/flow/internal/FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$1;-><init>(Lkotlin/jvm/functions/Function3;)V

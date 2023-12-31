@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,10 +25,12 @@
 
     const-string v0, "content://com.vivo.vms.IdProvider/IdentifierId/OAID"
 
+    .line 19
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
+    .line 21
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -47,6 +50,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 23
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
@@ -55,6 +59,7 @@
 
     const-string v0, "value"
 
+    .line 24
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
@@ -63,6 +68,7 @@
 
     move-result-object p0
 
+    .line 26
     :cond_0
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
     :try_end_0
@@ -73,6 +79,7 @@
     :catch_0
     move-exception p1
 
+    .line 29
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1

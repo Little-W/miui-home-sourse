@@ -1,5 +1,6 @@
 .class Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;
 .super Ljava/lang/Object;
+.source "ReportFragment.java"
 
 # interfaces
 .implements Landroid/app/Application$ActivityLifecycleCallbacks;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +30,7 @@
 .method static registerIn(Landroid/app/Activity;)V
     .locals 1
 
+    .line 167
     new-instance v0, Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;
 
     invoke-direct {v0}, Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;-><init>()V
@@ -60,6 +63,7 @@
 .method public onActivityPostCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 178
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -70,6 +74,7 @@
 .method public onActivityPostResumed(Landroid/app/Activity;)V
     .locals 0
 
+    .line 196
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -80,6 +85,7 @@
 .method public onActivityPostStarted(Landroid/app/Activity;)V
     .locals 0
 
+    .line 187
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -90,6 +96,7 @@
 .method public onActivityPreDestroyed(Landroid/app/Activity;)V
     .locals 0
 
+    .line 224
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -100,6 +107,7 @@
 .method public onActivityPrePaused(Landroid/app/Activity;)V
     .locals 0
 
+    .line 201
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -110,6 +118,7 @@
 .method public onActivityPreStopped(Landroid/app/Activity;)V
     .locals 0
 
+    .line 210
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V

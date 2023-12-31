@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/utilities/WorldCirculate;
 .super Ljava/lang/Object;
+.source "WorldCirculate.java"
 
 
 # annotations
@@ -22,6 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,12 +34,14 @@
 
     const-string v0, "display"
 
+    .line 31
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/hardware/display/DisplayManager;
 
+    .line 32
     invoke-virtual {p1, p0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object p0
@@ -48,12 +52,14 @@
 .method public static getDisplayId(Landroid/app/ActivityManager$RecentTaskInfo;)I
     .locals 2
 
+    .line 24
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-lt v0, v1, :cond_0
 
+    .line 25
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
@@ -78,6 +84,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 38
     :try_start_0
     const-class v1, Landroid/view/Display;
 
@@ -89,12 +96,14 @@
 
     move-result-object v1
 
+    .line 39
     invoke-virtual {v1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 40
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,6 +139,7 @@
 
     const-string v1, "getOwnerPackageName = "
 
+    .line 43
     invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -145,6 +155,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 76
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -153,6 +164,7 @@
 
     goto :goto_0
 
+    .line 79
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -174,6 +186,7 @@
 
     const-string v1, ":"
 
+    .line 80
     invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
@@ -187,6 +200,7 @@
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
+    .line 84
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -201,22 +215,26 @@
 .method public static getWorldCirculateInfo(Landroid/app/ActivityManager$RecentTaskInfo;Landroid/content/Context;)Lcom/android/systemui/shared/recents/utilities/WorldCirculate$WorldCirculateInfo;
     .locals 2
 
+    .line 51
     invoke-static {p0}, Lcom/android/systemui/shared/recents/utilities/WorldCirculate;->getDisplayId(Landroid/app/ActivityManager$RecentTaskInfo;)I
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 53
     invoke-static {p0, p1}, Lcom/android/systemui/shared/recents/utilities/WorldCirculate;->getDisplay(ILandroid/content/Context;)Landroid/view/Display;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 55
     invoke-virtual {p0}, Landroid/view/Display;->getName()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 56
     new-instance v0, Lcom/android/systemui/shared/recents/utilities/WorldCirculate$WorldCirculateInfo;
 
     invoke-static {p0}, Lcom/android/systemui/shared/recents/utilities/WorldCirculate;->getOwnerPackageName(Landroid/view/Display;)Ljava/lang/String;
@@ -229,6 +247,7 @@
 
     move-result p0
 
+    .line 57
     invoke-static {p1}, Lcom/android/systemui/shared/recents/utilities/WorldCirculate;->getWorldCirculateDeviceName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -255,6 +274,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 64
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -263,6 +283,7 @@
 
     goto :goto_0
 
+    .line 67
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -284,6 +305,7 @@
 
     const-string v1, ":"
 
+    .line 68
     invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
@@ -297,6 +319,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 72
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -313,6 +336,7 @@
 
     const/4 v0, 0x0
 
+    .line 136
     invoke-static {p0, p1, v0}, Lcom/android/systemui/shared/recents/utilities/WorldCirculate;->startWorldCirculate(Landroid/content/Context;Landroid/app/ActivityManager$RunningTaskInfo;Lcom/android/systemui/shared/recents/model/Task;)V
 
     return-void
@@ -321,6 +345,7 @@
 .method public static startWorldCirculate(Landroid/content/Context;Landroid/app/ActivityManager$RunningTaskInfo;Lcom/android/systemui/shared/recents/model/Task;)V
     .locals 9
 
+    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,6 +366,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 89
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1d
@@ -355,9 +381,11 @@
 
     if-eqz p1, :cond_1
 
+    .line 98
     :try_start_0
     iget-object v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
 
+    .line 99
     iget-object p2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     if-nez v2, :cond_0
@@ -366,20 +394,24 @@
 
     goto :goto_0
 
+    .line 100
     :cond_0
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 101
     :goto_0
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v4
 
+    .line 102
     invoke-virtual {v4, p1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getRunningTaskInfoUserId(Landroid/app/ActivityManager$RunningTaskInfo;)I
 
     move-result v4
 
+    .line 103
     iget p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     const-string v5, "appPush"
@@ -394,10 +426,12 @@
     :cond_1
     if-eqz p2, :cond_3
 
+    .line 106
     invoke-virtual {p2}, Lcom/android/systemui/shared/recents/model/Task;->getBaseComponent()Landroid/content/ComponentName;
 
     move-result-object v2
 
+    .line 107
     invoke-virtual {p2}, Lcom/android/systemui/shared/recents/model/Task;->getTopComponent()Landroid/content/ComponentName;
 
     move-result-object p1
@@ -408,16 +442,19 @@
 
     goto :goto_1
 
+    .line 108
     :cond_2
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 109
     :goto_1
     iget-object v4, p2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     iget v4, v4, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
 
+    .line 110
     iget-object p2, p2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     iget p2, p2, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -443,6 +480,7 @@
 
     move-object v5, v0
 
+    .line 113
     :goto_2
     new-instance v6, Landroid/content/Intent;
 
@@ -450,26 +488,32 @@
 
     const-string v7, "com.milink.service.circulate"
 
+    .line 114
     invoke-virtual {v6, v7}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v7, "android.intent.category.DEFAULT"
 
+    .line 115
     invoke-virtual {v6, v7}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v7, 0x10000000
 
+    .line 116
     invoke-virtual {v6, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     const-string v7, "packageName"
 
+    .line 117
     invoke-virtual {v6, v7, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo v0, "uid"
 
+    .line 118
     invoke-virtual {v6, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v0, "id"
 
+    .line 119
     invoke-virtual {v6, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v0, "componentName"
@@ -480,6 +524,7 @@
 
     goto :goto_3
 
+    .line 120
     :cond_4
     invoke-virtual {v2}, Landroid/content/ComponentName;->getShortClassName()Ljava/lang/String;
 
@@ -496,6 +541,7 @@
 
     goto :goto_4
 
+    .line 121
     :cond_5
     invoke-virtual {v2}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
@@ -506,6 +552,7 @@
 
     const-string v0, "ref"
 
+    .line 122
     invoke-virtual {v6, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo v0, "topPackageName"
@@ -516,6 +563,7 @@
 
     goto :goto_5
 
+    .line 123
     :cond_6
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -532,6 +580,7 @@
 
     goto :goto_6
 
+    .line 124
     :cond_7
     invoke-virtual {p2}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
@@ -540,6 +589,7 @@
     :goto_6
     invoke-virtual {v6, v0, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 125
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -576,6 +626,7 @@
 
     goto :goto_8
 
+    .line 126
     :cond_9
     invoke-virtual {p2}, Landroid/content/ComponentName;->toString()Ljava/lang/String;
 
@@ -600,8 +651,10 @@
 
     move-result-object p1
 
+    .line 125
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 128
     invoke-virtual {p0, v6}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -611,6 +664,7 @@
     :goto_9
     const-string p1, "startWorldCirculate"
 
+    .line 130
     invoke-static {v1, p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_a
@@ -623,6 +677,7 @@
 
     const/4 v0, 0x0
 
+    .line 140
     invoke-static {p0, v0, p1}, Lcom/android/systemui/shared/recents/utilities/WorldCirculate;->startWorldCirculate(Landroid/content/Context;Landroid/app/ActivityManager$RunningTaskInfo;Lcom/android/systemui/shared/recents/model/Task;)V
 
     return-void

@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;
 .super Lcom/bumptech/glide/util/pool/StateVerifier;
+.source "StateVerifier.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 
     const/4 v0, 0x0
 
+    .line 41
     invoke-direct {p0, v0}, Lcom/bumptech/glide/util/pool/StateVerifier;-><init>(Lcom/bumptech/glide/util/pool/StateVerifier$1;)V
 
     return-void
@@ -33,6 +35,7 @@
 .method public setRecycled(Z)V
     .locals 0
 
+    .line 52
     iput-boolean p1, p0, Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;->isReleased:Z
 
     return-void
@@ -41,12 +44,14 @@
 .method public throwIfRecycled()V
     .locals 1
 
+    .line 45
     iget-boolean p0, p0, Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;->isReleased:Z
 
     if-nez p0, :cond_0
 
     return-void
 
+    .line 46
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

@@ -1,5 +1,6 @@
 .class public Landroidx/arch/core/executor/DefaultTaskExecutor;
 .super Landroidx/arch/core/executor/TaskExecutor;
+.source "DefaultTaskExecutor.java"
 
 
 # instance fields
@@ -14,14 +15,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 37
     invoke-direct {p0}, Landroidx/arch/core/executor/TaskExecutor;-><init>()V
 
+    .line 39
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/arch/core/executor/DefaultTaskExecutor;->mLock:Ljava/lang/Object;
 
+    .line 41
     new-instance v0, Landroidx/arch/core/executor/DefaultTaskExecutor$1;
 
     invoke-direct {v0, p0}, Landroidx/arch/core/executor/DefaultTaskExecutor$1;-><init>(Landroidx/arch/core/executor/DefaultTaskExecutor;)V
@@ -40,18 +44,21 @@
 .method private static createAsync(Landroid/os/Looper;)Landroid/os/Handler;
     .locals 7
 
+    .line 81
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
 
     if-lt v0, v1, :cond_0
 
+    .line 82
     invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
     move-result-object p0
 
     return-object p0
 
+    .line 84
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -59,6 +66,7 @@
 
     if-lt v0, v1, :cond_1
 
+    .line 86
     :try_start_0
     const-class v0, Landroid/os/Handler;
 
@@ -96,6 +104,7 @@
 
     aput-object v2, v1, v5
 
+    .line 88
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -115,6 +124,7 @@
 
     return-object v0
 
+    .line 93
     :catch_0
     new-instance v0, Landroid/os/Handler;
 
@@ -122,6 +132,7 @@
 
     return-object v0
 
+    .line 96
     :catch_1
     :cond_1
     new-instance v0, Landroid/os/Handler;
@@ -136,6 +147,7 @@
 .method public executeOnDiskIO(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 59
     iget-object p0, p0, Landroidx/arch/core/executor/DefaultTaskExecutor;->mDiskIO:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
@@ -146,6 +158,7 @@
 .method public isMainThread()Z
     .locals 1
 
+    .line 77
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p0
@@ -174,19 +187,23 @@
 .method public postToMainThread(Ljava/lang/Runnable;)V
     .locals 2
 
+    .line 64
     iget-object v0, p0, Landroidx/arch/core/executor/DefaultTaskExecutor;->mMainHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_1
 
+    .line 65
     iget-object v0, p0, Landroidx/arch/core/executor/DefaultTaskExecutor;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 66
     :try_start_0
     iget-object v1, p0, Landroidx/arch/core/executor/DefaultTaskExecutor;->mMainHandler:Landroid/os/Handler;
 
     if-nez v1, :cond_0
 
+    .line 67
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -197,6 +214,7 @@
 
     iput-object v1, p0, Landroidx/arch/core/executor/DefaultTaskExecutor;->mMainHandler:Landroid/os/Handler;
 
+    .line 69
     :cond_0
     monitor-exit v0
 
@@ -211,6 +229,7 @@
 
     throw p0
 
+    .line 72
     :cond_1
     :goto_0
     iget-object p0, p0, Landroidx/arch/core/executor/DefaultTaskExecutor;->mMainHandler:Landroid/os/Handler;

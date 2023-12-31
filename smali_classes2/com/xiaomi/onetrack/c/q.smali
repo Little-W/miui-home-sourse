@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/c/p;Z)V
     .locals 0
 
+    .line 111
     iput-object p1, p0, Lcom/xiaomi/onetrack/c/q;->b:Lcom/xiaomi/onetrack/c/p;
 
     iput-boolean p2, p0, Lcom/xiaomi/onetrack/c/q;->a:Z
@@ -29,10 +30,12 @@
 .method public run()V
     .locals 8
 
+    .line 114
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/q;->b:Lcom/xiaomi/onetrack/c/p;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/c/p;->a()V
 
+    .line 116
     :try_start_0
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/c/q;->a:Z
 
@@ -54,6 +57,7 @@
 
     aput v2, v0, v2
 
+    .line 123
     array-length v2, v0
 
     :goto_0
@@ -61,10 +65,12 @@
 
     aget v3, v0, v1
 
+    .line 124
     invoke-static {v3}, Lcom/xiaomi/onetrack/b/n;->a(I)I
 
     move-result v4
 
+    .line 125
     iget-object v5, p0, Lcom/xiaomi/onetrack/c/q;->b:Lcom/xiaomi/onetrack/c/p;
 
     invoke-virtual {v5, v3}, Lcom/xiaomi/onetrack/c/p;->hasMessages(I)Z
@@ -73,6 +79,7 @@
 
     if-nez v5, :cond_0
 
+    .line 126
     iget-object v5, p0, Lcom/xiaomi/onetrack/c/q;->b:Lcom/xiaomi/onetrack/c/p;
 
     int-to-long v6, v4
@@ -89,6 +96,7 @@
     :catch_0
     move-exception p0
 
+    .line 130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

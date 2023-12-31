@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/disposables/Disposable;
 .super Ljava/lang/Object;
+.source "Disposable.java"
 
 
 # virtual methods

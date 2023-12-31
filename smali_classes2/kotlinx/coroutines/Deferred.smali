@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/Deferred;
 .super Ljava/lang/Object;
+.source "Deferred.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/Job;

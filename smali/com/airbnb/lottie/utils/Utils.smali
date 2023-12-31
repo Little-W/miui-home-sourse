@@ -1,5 +1,6 @@
 .class public final Lcom/airbnb/lottie/utils/Utils;
 .super Ljava/lang/Object;
+.source "Utils.java"
 
 
 # static fields
@@ -49,24 +50,28 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 40
     new-instance v0, Lcom/airbnb/lottie/utils/Utils$1;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/utils/Utils$1;-><init>()V
 
     sput-object v0, Lcom/airbnb/lottie/utils/Utils;->threadLocalPathMeasure:Ljava/lang/ThreadLocal;
 
+    .line 47
     new-instance v0, Lcom/airbnb/lottie/utils/Utils$2;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/utils/Utils$2;-><init>()V
 
     sput-object v0, Lcom/airbnb/lottie/utils/Utils;->threadLocalTempPath:Ljava/lang/ThreadLocal;
 
+    .line 54
     new-instance v0, Lcom/airbnb/lottie/utils/Utils$3;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/utils/Utils$3;-><init>()V
 
     sput-object v0, Lcom/airbnb/lottie/utils/Utils;->threadLocalTempPath2:Ljava/lang/ThreadLocal;
 
+    .line 61
     new-instance v0, Lcom/airbnb/lottie/utils/Utils$4;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/utils/Utils$4;-><init>()V
@@ -75,6 +80,7 @@
 
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
+    .line 68
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v2
@@ -93,8 +99,10 @@
 
     const-string v0, "applyTrimPathIfNeeded"
 
+    .line 139
     invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
 
+    .line 140
     sget-object v1, Lcom/airbnb/lottie/utils/Utils;->threadLocalPathMeasure:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -103,6 +111,7 @@
 
     check-cast v1, Landroid/graphics/PathMeasure;
 
+    .line 141
     sget-object v2, Lcom/airbnb/lottie/utils/Utils;->threadLocalTempPath:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v2}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -111,6 +120,7 @@
 
     check-cast v2, Landroid/graphics/Path;
 
+    .line 142
     sget-object v3, Lcom/airbnb/lottie/utils/Utils;->threadLocalTempPath2:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -121,8 +131,10 @@
 
     const/4 v4, 0x0
 
+    .line 144
     invoke-virtual {v1, p0, v4}, Landroid/graphics/PathMeasure;->setPath(Landroid/graphics/Path;Z)V
 
+    .line 146
     invoke-virtual {v1}, Landroid/graphics/PathMeasure;->getLength()F
 
     move-result v4
@@ -139,6 +151,7 @@
 
     if-nez v6, :cond_0
 
+    .line 148
     invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
     return-void
@@ -152,6 +165,7 @@
 
     sub-float/2addr v6, v5
 
+    .line 151
     invoke-static {v6}, Ljava/lang/Math;->abs(F)F
 
     move-result v5
@@ -171,10 +185,12 @@
 
     mul-float/2addr p2, v4
 
+    .line 157
     invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
 
     move-result v5
 
+    .line 158
     invoke-static {p1, p2}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
@@ -193,12 +209,14 @@
 
     if-ltz p2, :cond_2
 
+    .line 166
     invoke-static {v5, v4}, Lcom/airbnb/lottie/utils/MiscUtils;->floorMod(FF)I
 
     move-result p2
 
     int-to-float v5, p2
 
+    .line 167
     invoke-static {p1, v4}, Lcom/airbnb/lottie/utils/MiscUtils;->floorMod(FF)I
 
     move-result p1
@@ -210,6 +228,7 @@
 
     if-gez p2, :cond_3
 
+    .line 171
     invoke-static {v5, v4}, Lcom/airbnb/lottie/utils/MiscUtils;->floorMod(FF)I
 
     move-result p2
@@ -221,6 +240,7 @@
 
     if-gez p2, :cond_4
 
+    .line 174
     invoke-static {p1, v4}, Lcom/airbnb/lottie/utils/MiscUtils;->floorMod(FF)I
 
     move-result p1
@@ -232,8 +252,10 @@
 
     if-nez p2, :cond_5
 
+    .line 179
     invoke-virtual {p0}, Landroid/graphics/Path;->reset()V
 
+    .line 180
     invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
     return-void
@@ -243,23 +265,28 @@
 
     sub-float/2addr v5, v4
 
+    .line 188
     :cond_6
     invoke-virtual {v2}, Landroid/graphics/Path;->reset()V
 
     const/4 p2, 0x1
 
+    .line 189
     invoke-virtual {v1, v5, p1, v2, p2}, Landroid/graphics/PathMeasure;->getSegment(FFLandroid/graphics/Path;Z)Z
 
     cmpl-float p3, p1, v4
 
     if-lez p3, :cond_7
 
+    .line 196
     invoke-virtual {v3}, Landroid/graphics/Path;->reset()V
 
     rem-float/2addr p1, v4
 
+    .line 197
     invoke-virtual {v1, v7, p1, v3, p2}, Landroid/graphics/PathMeasure;->getSegment(FFLandroid/graphics/Path;Z)Z
 
+    .line 202
     invoke-virtual {v2, v3}, Landroid/graphics/Path;->addPath(Landroid/graphics/Path;)V
 
     goto :goto_0
@@ -269,22 +296,28 @@
 
     if-gez p1, :cond_8
 
+    .line 204
     invoke-virtual {v3}, Landroid/graphics/Path;->reset()V
 
     add-float/2addr v5, v4
 
+    .line 205
     invoke-virtual {v1, v5, v4, v3, p2}, Landroid/graphics/PathMeasure;->getSegment(FFLandroid/graphics/Path;Z)Z
 
+    .line 210
     invoke-virtual {v2, v3}, Landroid/graphics/Path;->addPath(Landroid/graphics/Path;)V
 
+    .line 212
     :cond_8
     :goto_0
     invoke-virtual {p0, v2}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
 
+    .line 213
     invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
     return-void
 
+    .line 152
     :cond_9
     :goto_1
     invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
@@ -297,6 +330,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 128
     invoke-virtual {p1}, Lcom/airbnb/lottie/animation/content/TrimPathContent;->isHidden()Z
 
     move-result v0
@@ -305,6 +339,7 @@
 
     goto :goto_0
 
+    .line 131
     :cond_0
     invoke-virtual {p1}, Lcom/airbnb/lottie/animation/content/TrimPathContent;->getStart()Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
@@ -316,6 +351,7 @@
 
     move-result v0
 
+    .line 132
     invoke-virtual {p1}, Lcom/airbnb/lottie/animation/content/TrimPathContent;->getEnd()Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     move-result-object v1
@@ -326,6 +362,7 @@
 
     move-result v1
 
+    .line 133
     invoke-virtual {p1}, Lcom/airbnb/lottie/animation/content/TrimPathContent;->getOffset()Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     move-result-object p1
@@ -346,6 +383,7 @@
 
     div-float/2addr p1, v2
 
+    .line 134
     invoke-static {p0, v0, v1, p1}, Lcom/airbnb/lottie/utils/Utils;->applyTrimPathIfNeeded(Landroid/graphics/Path;FFF)V
 
     :cond_1
@@ -358,6 +396,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 91
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -369,6 +408,7 @@
     :catch_0
     move-exception p0
 
+    .line 93
     throw p0
 
     :catch_1
@@ -380,10 +420,12 @@
 .method public static createPath(Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;)Landroid/graphics/Path;
     .locals 8
 
+    .line 74
     new-instance v7, Landroid/graphics/Path;
 
     invoke-direct {v7}, Landroid/graphics/Path;-><init>()V
 
+    .line 75
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     iget v1, p0, Landroid/graphics/PointF;->y:F
@@ -394,6 +436,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 77
     invoke-virtual {p2}, Landroid/graphics/PointF;->length()F
 
     move-result v0
@@ -412,6 +455,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 78
     :cond_0
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
@@ -447,6 +491,7 @@
 
     goto :goto_0
 
+    .line 83
     :cond_1
     iget p0, p1, Landroid/graphics/PointF;->x:F
 
@@ -461,6 +506,7 @@
 .method public static dpScale()F
     .locals 1
 
+    .line 252
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -477,6 +523,7 @@
 .method public static getAnimationScale(Landroid/content/Context;)F
     .locals 4
 
+    .line 256
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -487,6 +534,7 @@
 
     if-lt v0, v3, :cond_0
 
+    .line 257
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -497,6 +545,7 @@
 
     return p0
 
+    .line 261
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -512,6 +561,7 @@
 .method public static getScale(Landroid/graphics/Matrix;)F
     .locals 6
 
+    .line 101
     sget-object v0, Lcom/airbnb/lottie/utils/Utils;->threadLocalPoints:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -524,12 +574,15 @@
 
     const/4 v2, 0x0
 
+    .line 103
     aput v1, v0, v2
 
     const/4 v3, 0x1
 
+    .line 104
     aput v1, v0, v3
 
+    .line 106
     sget v1, Lcom/airbnb/lottie/utils/Utils;->INV_SQRT_2:F
 
     const/4 v4, 0x2
@@ -538,16 +591,20 @@
 
     const/4 v5, 0x3
 
+    .line 107
     aput v1, v0, v5
 
+    .line 108
     invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->mapPoints([F)V
 
+    .line 109
     aget p0, v0, v4
 
     aget v1, v0, v2
 
     sub-float/2addr p0, v1
 
+    .line 110
     aget v1, v0, v5
 
     aget v0, v0, v3
@@ -558,6 +615,7 @@
 
     float-to-double v0, v1
 
+    .line 112
     invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide v0
@@ -570,6 +628,7 @@
 .method public static hasZeroScaleAxis(Landroid/graphics/Matrix;)Z
     .locals 6
 
+    .line 116
     sget-object v0, Lcom/airbnb/lottie/utils/Utils;->threadLocalPoints:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -582,26 +641,32 @@
 
     const/4 v2, 0x0
 
+    .line 118
     aput v1, v0, v2
 
     const/4 v3, 0x1
 
+    .line 119
     aput v1, v0, v3
 
     const/4 v1, 0x2
 
     const v4, 0x471212bb
 
+    .line 121
     aput v4, v0, v1
 
     const/4 v4, 0x3
 
     const v5, 0x471a973c
 
+    .line 122
     aput v5, v0, v4
 
+    .line 123
     invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->mapPoints([F)V
 
+    .line 124
     aget p0, v0, v2
 
     aget v1, v0, v1
@@ -728,6 +793,7 @@
 .method public static isNetworkException(Ljava/lang/Throwable;)Z
     .locals 1
 
+    .line 283
     instance-of v0, p0, Ljava/net/SocketException;
 
     if-nez v0, :cond_1
@@ -774,6 +840,7 @@
 .method public static resizeBitmapIfNeeded(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 1
 
+    .line 271
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -791,10 +858,12 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 274
     invoke-static {p0, p1, p2, v0}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
+    .line 275
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     return-object p1
@@ -805,6 +874,7 @@
 
     const/16 v0, 0x1f
 
+    .line 290
     invoke-static {p0, p1, p2, v0}, Lcom/airbnb/lottie/utils/Utils;->saveLayerCompat(Landroid/graphics/Canvas;Landroid/graphics/RectF;Landroid/graphics/Paint;I)V
 
     return-void
@@ -815,21 +885,26 @@
 
     const-string v0, "Utils#saveLayer"
 
+    .line 294
     invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
 
+    .line 295
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x17
 
     if-ge v1, v2, :cond_0
 
+    .line 298
     invoke-virtual {p0, p1, p2, p3}, Landroid/graphics/Canvas;->saveLayer(Landroid/graphics/RectF;Landroid/graphics/Paint;I)I
 
     goto :goto_0
 
+    .line 300
     :cond_0
     invoke-virtual {p0, p1, p2}, Landroid/graphics/Canvas;->saveLayer(Landroid/graphics/RectF;Landroid/graphics/Paint;)I
 
+    .line 302
     :goto_0
     invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 

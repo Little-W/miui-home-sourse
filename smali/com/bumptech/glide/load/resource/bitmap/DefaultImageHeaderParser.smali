@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;
 .super Ljava/lang/Object;
+.source "DefaultImageHeaderParser.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/ImageHeaderParser;
@@ -28,6 +29,7 @@
 
     const-string v0, "UTF-8"
 
+    .line 37
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -44,6 +46,7 @@
 
     new-array v0, v0, [I
 
+    .line 43
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->BYTES_PER_FORMAT:[I
@@ -71,6 +74,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -96,10 +100,12 @@
         }
     .end annotation
 
+    .line 150
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt16()I
 
     move-result v0
 
+    .line 152
     invoke-static {v0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->handles(I)Z
 
     move-result v1
@@ -112,12 +118,14 @@
 
     if-nez v1, :cond_1
 
+    .line 153
     invoke-static {v4, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 154
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,6 +145,7 @@
     :cond_0
     return v3
 
+    .line 158
     :cond_1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->moveToExifSegmentAndGetLength(Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;)I
 
@@ -144,6 +153,7 @@
 
     if-ne v0, v3, :cond_3
 
+    .line 160
     invoke-static {v4, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
@@ -152,11 +162,13 @@
 
     const-string p0, "Failed to parse exif segment length, or exif segment not found"
 
+    .line 161
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return v3
 
+    .line 166
     :cond_3
     const-class v1, [B
 
@@ -166,6 +178,7 @@
 
     check-cast v1, [B
 
+    .line 168
     :try_start_0
     invoke-direct {p0, p1, v1, v0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->parseExifSegment(Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;[BI)I
 
@@ -173,6 +186,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 170
     invoke-interface {p2, v1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;->put(Ljava/lang/Object;)V
 
     return p0
@@ -193,6 +207,7 @@
         }
     .end annotation
 
+    .line 88
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt16()I
 
     move-result p0
@@ -201,6 +216,7 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 92
     sget-object p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->JPEG:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     return-object p0
@@ -212,6 +228,7 @@
 
     and-int/2addr p0, v0
 
+    .line 95
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt16()I
 
     move-result v1
@@ -228,8 +245,10 @@
 
     const-wide/16 v0, 0x15
 
+    .line 100
     invoke-interface {p1, v0, v1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
 
+    .line 101
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getByte()I
 
     move-result p0
@@ -238,6 +257,7 @@
 
     if-lt p0, p1, :cond_1
 
+    .line 103
     sget-object p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->PNG_A:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     goto :goto_0
@@ -255,6 +275,7 @@
 
     if-ne v1, v3, :cond_3
 
+    .line 108
     sget-object p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->GIF:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     return-object p0
@@ -264,6 +285,7 @@
 
     if-eq p0, v1, :cond_4
 
+    .line 114
     sget-object p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     return-object p0
@@ -271,8 +293,10 @@
     :cond_4
     const-wide/16 v3, 0x4
 
+    .line 117
     invoke-interface {p1, v3, v4}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
 
+    .line 119
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt16()I
 
     move-result p0
@@ -293,10 +317,12 @@
 
     if-eq p0, v1, :cond_5
 
+    .line 121
     sget-object p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     return-object p0
 
+    .line 124
     :cond_5
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt16()I
 
@@ -320,6 +346,7 @@
 
     if-eq v0, v1, :cond_6
 
+    .line 126
     sget-object p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     return-object p0
@@ -331,8 +358,10 @@
 
     if-ne p0, v0, :cond_8
 
+    .line 130
     invoke-interface {p1, v3, v4}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
 
+    .line 131
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getByte()I
 
     move-result p0
@@ -356,8 +385,10 @@
 
     if-ne p0, v0, :cond_a
 
+    .line 136
     invoke-interface {p1, v3, v4}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
 
+    .line 137
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getByte()I
 
     move-result p0
@@ -376,6 +407,7 @@
     :goto_2
     return-object p0
 
+    .line 139
     :cond_a
     sget-object p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
@@ -421,6 +453,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 199
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->JPEG_EXIF_SEGMENT_PREAMBLE_BYTES:[B
 
     array-length v0, v0
@@ -439,6 +472,7 @@
 
     move v0, p0
 
+    .line 202
     :goto_1
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->JPEG_EXIF_SEGMENT_PREAMBLE_BYTES:[B
 
@@ -446,6 +480,7 @@
 
     if-ge v0, v2, :cond_2
 
+    .line 203
     aget-byte v2, p1, v0
 
     aget-byte v1, v1, v0
@@ -474,6 +509,7 @@
         }
     .end annotation
 
+    .line 218
     :cond_0
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt8()S
 
@@ -489,12 +525,14 @@
 
     if-eq p0, v0, :cond_2
 
+    .line 220
     invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 221
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -514,6 +552,7 @@
     :cond_1
     return v2
 
+    .line 226
     :cond_2
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt8()S
 
@@ -530,6 +569,7 @@
 
     if-ne p0, v0, :cond_5
 
+    .line 230
     invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
@@ -538,11 +578,13 @@
 
     const-string p0, "Found MARKER_EOI in exif segment"
 
+    .line 231
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
     return v2
 
+    .line 237
     :cond_5
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt16()I
 
@@ -556,6 +598,7 @@
 
     int-to-long v4, v0
 
+    .line 239
     invoke-interface {p1, v4, v5}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
 
     move-result-wide v6
@@ -564,12 +607,14 @@
 
     if-eqz v4, :cond_0
 
+    .line 241
     invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
+    .line 242
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -610,6 +655,7 @@
 
     const/4 v0, 0x6
 
+    .line 258
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->getInt16(I)S
 
     move-result v1
@@ -626,12 +672,14 @@
 
     if-eq v1, v2, :cond_1
 
+    .line 268
     invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 269
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -648,30 +696,36 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 271
     :cond_0
     sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     goto :goto_0
 
+    .line 262
     :cond_1
     sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     goto :goto_0
 
+    .line 265
     :cond_2
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
+    .line 275
     :goto_0
     invoke-virtual {p0, v1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->order(Ljava/nio/ByteOrder;)V
 
     const/16 v1, 0xa
 
+    .line 277
     invoke-virtual {p0, v1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->getInt32(I)I
 
     move-result v1
 
     add-int/2addr v1, v0
 
+    .line 278
     invoke-virtual {p0, v1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->getInt16(I)S
 
     move-result v0
@@ -681,10 +735,12 @@
     :goto_1
     if-ge v2, v0, :cond_e
 
+    .line 280
     invoke-static {v1, v2}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->calcTagOffset(II)I
 
     move-result v5
 
+    .line 282
     invoke-virtual {p0, v5}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->getInt16(I)S
 
     move-result v6
@@ -698,6 +754,7 @@
     :cond_3
     add-int/lit8 v7, v5, 0x2
 
+    .line 288
     invoke-virtual {p0, v7}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->getInt16(I)S
 
     move-result v7
@@ -715,12 +772,14 @@
     :cond_4
     add-int/lit8 v8, v5, 0x4
 
+    .line 297
     invoke-virtual {p0, v8}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->getInt32(I)I
 
     move-result v8
 
     if-gez v8, :cond_5
 
+    .line 299
     invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v5
@@ -729,10 +788,12 @@
 
     const-string v5, "Negative tiff component count"
 
+    .line 300
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_5
 
+    .line 305
     :cond_5
     invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
@@ -742,6 +803,7 @@
 
     if-eqz v9, :cond_6
 
+    .line 306
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -774,6 +836,7 @@
 
     invoke-static {v4, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 310
     :cond_6
     sget-object v9, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->BYTES_PER_FORMAT:[I
 
@@ -785,12 +848,14 @@
 
     if-le v8, v9, :cond_7
 
+    .line 312
     invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v5
 
     if-eqz v5, :cond_d
 
+    .line 313
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -814,6 +879,7 @@
 
     if-ltz v5, :cond_b
 
+    .line 319
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->length()I
 
     move-result v7
@@ -827,6 +893,7 @@
 
     add-int/2addr v8, v5
 
+    .line 326
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->length()I
 
     move-result v7
@@ -835,6 +902,7 @@
 
     goto :goto_2
 
+    .line 334
     :cond_9
     invoke-virtual {p0, v5}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->getInt16(I)S
 
@@ -842,6 +910,7 @@
 
     return p0
 
+    .line 327
     :cond_a
     :goto_2
     invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -850,6 +919,7 @@
 
     if-eqz v5, :cond_d
 
+    .line 328
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -868,6 +938,7 @@
 
     goto :goto_5
 
+    .line 320
     :cond_b
     :goto_3
     invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -876,6 +947,7 @@
 
     if-eqz v7, :cond_d
 
+    .line 321
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -898,6 +970,7 @@
 
     goto :goto_5
 
+    .line 291
     :cond_c
     :goto_4
     invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -906,6 +979,7 @@
 
     if-eqz v5, :cond_d
 
+    .line 292
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -942,6 +1016,7 @@
         }
     .end annotation
 
+    .line 177
     invoke-interface {p1, p2, p3}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->read([BI)I
 
     move-result p1
@@ -954,12 +1029,14 @@
 
     if-eq p1, p3, :cond_1
 
+    .line 179
     invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 180
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -985,6 +1062,7 @@
     :cond_0
     return v0
 
+    .line 187
     :cond_1
     invoke-direct {p0, p2, p3}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->hasJpegExifPreamble([BI)Z
 
@@ -992,6 +1070,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 189
     new-instance p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;
 
     invoke-direct {p0, p2, p3}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;-><init>([BI)V
@@ -1002,6 +1081,7 @@
 
     return p0
 
+    .line 191
     :cond_2
     invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
@@ -1011,6 +1091,7 @@
 
     const-string p0, "Missing jpeg exif preamble"
 
+    .line 192
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -1027,6 +1108,7 @@
         }
     .end annotation
 
+    .line 75
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;
 
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1037,12 +1119,14 @@
 
     invoke-direct {v0, p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;-><init>(Ljava/io/InputStream;)V
 
+    .line 76
     invoke-static {p2}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
+    .line 75
     invoke-direct {p0, v0, p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->getOrientation(Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;)I
 
     move-result p0
@@ -1058,6 +1142,7 @@
         }
     .end annotation
 
+    .line 63
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;
 
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1083,6 +1168,7 @@
         }
     .end annotation
 
+    .line 69
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$ByteBufferReader;
 
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;

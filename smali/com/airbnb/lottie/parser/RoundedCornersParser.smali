@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/parser/RoundedCornersParser;
 .super Ljava/lang/Object;
+.source "RoundedCornersParser.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 
     const-string v2, "hd"
 
+    .line 17
     filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
@@ -45,6 +47,7 @@
 
     move-object v3, v2
 
+    .line 33
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -52,6 +55,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 34
     sget-object v4, Lcom/airbnb/lottie/parser/RoundedCornersParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v4}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -68,10 +72,12 @@
 
     if-eq v4, v5, :cond_0
 
+    .line 45
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 42
     :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
@@ -79,6 +85,7 @@
 
     goto :goto_0
 
+    .line 39
     :cond_1
     invoke-static {p0, p1, v5}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;Z)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
@@ -86,6 +93,7 @@
 
     goto :goto_0
 
+    .line 36
     :cond_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -98,6 +106,7 @@
 
     goto :goto_1
 
+    .line 49
     :cond_4
     new-instance v0, Lcom/airbnb/lottie/model/content/RoundedCorners;
 

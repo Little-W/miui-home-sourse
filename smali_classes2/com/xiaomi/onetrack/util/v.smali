@@ -32,14 +32,18 @@
 .method public constructor <init>(Lcom/xiaomi/onetrack/Configuration;)V
     .locals 2
 
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 25
     iput-wide v0, p0, Lcom/xiaomi/onetrack/util/v;->j:J
 
+    .line 30
     iput-object p1, p0, Lcom/xiaomi/onetrack/util/v;->g:Lcom/xiaomi/onetrack/Configuration;
 
+    .line 31
     invoke-static {p1}, Lcom/xiaomi/onetrack/util/r;->a(Lcom/xiaomi/onetrack/Configuration;)Ljava/lang/String;
 
     move-result-object p1
@@ -56,6 +60,7 @@
 .method private b()Z
     .locals 4
 
+    .line 94
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -74,12 +79,14 @@
 
     if-lez v0, :cond_0
 
+    .line 95
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/xiaomi/onetrack/util/v;->j:J
 
+    .line 96
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v0
@@ -90,6 +97,7 @@
 
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/util/v;->i:Z
 
+    .line 99
     :cond_0
     iget-boolean p0, p0, Lcom/xiaomi/onetrack/util/v;->i:Z
 
@@ -101,6 +109,7 @@
 
     const-string p0, "onetrack_dau"
 
+    .line 58
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -133,6 +142,7 @@
 .method private c(Ljava/lang/String;)Z
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/v;->f:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
 
     if-eqz p0, :cond_0
@@ -157,6 +167,7 @@
 .method private d(Ljava/lang/String;)Z
     .locals 0
 
+    .line 66
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/v;->f:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
 
     if-eqz p0, :cond_0
@@ -183,6 +194,7 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
+    .line 78
     iget-object v0, p0, Lcom/xiaomi/onetrack/util/v;->g:Lcom/xiaomi/onetrack/Configuration;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/Configuration;->isUseCustomPrivacyPolicy()Z
@@ -191,6 +203,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 79
     iget-boolean p0, p0, Lcom/xiaomi/onetrack/util/v;->h:Z
 
     if-eqz p0, :cond_0
@@ -204,6 +217,7 @@
 
     return-object p0
 
+    .line 85
     :cond_1
     invoke-direct {p0}, Lcom/xiaomi/onetrack/util/v;->b()Z
 
@@ -224,6 +238,7 @@
 .method public a(Lcom/xiaomi/onetrack/OneTrack$IEventHook;)V
     .locals 0
 
+    .line 70
     iput-object p1, p0, Lcom/xiaomi/onetrack/util/v;->f:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
 
     return-void
@@ -232,6 +247,7 @@
 .method public a(Z)V
     .locals 0
 
+    .line 74
     iput-boolean p1, p0, Lcom/xiaomi/onetrack/util/v;->h:Z
 
     return-void
@@ -240,6 +256,7 @@
 .method public a(Ljava/lang/String;)Z
     .locals 6
 
+    .line 37
     iget-object v0, p0, Lcom/xiaomi/onetrack/util/v;->g:Lcom/xiaomi/onetrack/Configuration;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/Configuration;->isUseCustomPrivacyPolicy()Z
@@ -254,6 +271,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -280,15 +298,18 @@
 
     invoke-static {v3, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 39
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/util/v;->h:Z
 
     goto :goto_2
 
+    .line 41
     :cond_1
     invoke-direct {p0}, Lcom/xiaomi/onetrack/util/v;->b()Z
 
     move-result v0
 
+    .line 42
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -316,18 +337,22 @@
     :goto_2
     if-nez v0, :cond_8
 
+    .line 46
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/util/v;->b(Ljava/lang/String;)Z
 
     move-result v0
 
+    .line 47
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/util/v;->c(Ljava/lang/String;)Z
 
     move-result v1
 
+    .line 48
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/util/v;->d(Ljava/lang/String;)Z
 
     move-result p0
 
+    .line 49
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

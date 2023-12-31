@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/Fragment$1;
 .super Ljava/lang/Object;
+.source "Fragment.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
+    .line 256
     iput-object p1, p0, Landroidx/fragment/app/Fragment$1;->this$0:Landroidx/fragment/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 0
 
+    .line 259
     iget-object p0, p0, Landroidx/fragment/app/Fragment$1;->this$0:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->startPostponedEnterTransition()V

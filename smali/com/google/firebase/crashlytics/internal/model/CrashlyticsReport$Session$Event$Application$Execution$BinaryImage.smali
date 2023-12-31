@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage;
 .super Ljava/lang/Object;
+.source "CrashlyticsReport.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 836
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +33,7 @@
 .method public static builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage$Builder;
     .locals 1
 
+    .line 840
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_BinaryImage$Builder;
 
     invoke-direct {v0}, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_BinaryImage$Builder;-><init>()V
@@ -55,12 +58,14 @@
 .method public getUuidUtf8Bytes()[B
     .locals 1
 
+    .line 859
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage;->getUuid()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 860
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;->access$000()Ljava/nio/charset/Charset;
 
     move-result-object v0

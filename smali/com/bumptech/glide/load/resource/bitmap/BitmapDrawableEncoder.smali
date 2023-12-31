@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/bitmap/BitmapDrawableEncoder;
 .super Ljava/lang/Object;
+.source "BitmapDrawableEncoder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/ResourceEncoder;
@@ -43,10 +44,13 @@
         }
     .end annotation
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapDrawableEncoder;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
+    .line 23
     iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapDrawableEncoder;->encoder:Lcom/bumptech/glide/load/ResourceEncoder;
 
     return-void
@@ -68,6 +72,7 @@
         }
     .end annotation
 
+    .line 29
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapDrawableEncoder;->encoder:Lcom/bumptech/glide/load/ResourceEncoder;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;
@@ -96,6 +101,7 @@
 .method public bridge synthetic encode(Ljava/lang/Object;Ljava/io/File;Lcom/bumptech/glide/load/Options;)Z
     .locals 0
 
+    .line 16
     check-cast p1, Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/bumptech/glide/load/resource/bitmap/BitmapDrawableEncoder;->encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/File;Lcom/bumptech/glide/load/Options;)Z
@@ -108,6 +114,7 @@
 .method public getEncodeStrategy(Lcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/EncodeStrategy;
     .locals 0
 
+    .line 35
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapDrawableEncoder;->encoder:Lcom/bumptech/glide/load/ResourceEncoder;
 
     invoke-interface {p0, p1}, Lcom/bumptech/glide/load/ResourceEncoder;->getEncodeStrategy(Lcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/EncodeStrategy;

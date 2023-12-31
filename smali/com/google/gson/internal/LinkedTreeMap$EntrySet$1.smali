@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;
 .super Lcom/google/gson/internal/LinkedTreeMap$LinkedTreeMapIterator;
+.source "LinkedTreeMap.java"
 
 
 # annotations
@@ -31,6 +32,7 @@
 .method constructor <init>(Lcom/google/gson/internal/LinkedTreeMap$EntrySet;)V
     .locals 0
 
+    .line 566
     iput-object p1, p0, Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;->this$1:Lcom/google/gson/internal/LinkedTreeMap$EntrySet;
 
     iget-object p1, p1, Lcom/google/gson/internal/LinkedTreeMap$EntrySet;->this$0:Lcom/google/gson/internal/LinkedTreeMap;
@@ -45,6 +47,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 566
     invoke-virtual {p0}, Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;->next()Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -62,6 +65,7 @@
         }
     .end annotation
 
+    .line 568
     invoke-virtual {p0}, Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;->nextNode()Lcom/google/gson/internal/LinkedTreeMap$Node;
 
     move-result-object p0

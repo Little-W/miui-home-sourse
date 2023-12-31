@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;
 .super Ljava/lang/Object;
+.source "FloatingActionButton.java"
 
 # interfaces
 .implements Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$InternalTransformationCallback;
@@ -50,10 +51,12 @@
         }
     .end annotation
 
+    .line 1393
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1394
     iput-object p2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;->listener:Lcom/google/android/material/animation/TransformationCallback;
 
     return-void
@@ -64,6 +67,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1409
     instance-of v0, p1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;
 
     if-eqz v0, :cond_0
@@ -74,6 +78,7 @@
 
     iget-object p0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;->listener:Lcom/google/android/material/animation/TransformationCallback;
 
+    .line 1410
     invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -94,6 +99,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1415
     iget-object p0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;->listener:Lcom/google/android/material/animation/TransformationCallback;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -106,6 +112,7 @@
 .method public onScaleChanged()V
     .locals 1
 
+    .line 1404
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;->listener:Lcom/google/android/material/animation/TransformationCallback;
 
     iget-object p0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
@@ -118,6 +125,7 @@
 .method public onTranslationChanged()V
     .locals 1
 
+    .line 1399
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;->listener:Lcom/google/android/material/animation/TransformationCallback;
 
     iget-object p0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;

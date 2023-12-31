@@ -1,5 +1,6 @@
 .class public Landroidx/preference/Preference$BaseSavedState;
 .super Landroid/view/AbsSavedState;
+.source "Preference.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 2194
     new-instance v0, Landroidx/preference/Preference$BaseSavedState$1;
 
     invoke-direct {v0}, Landroidx/preference/Preference$BaseSavedState$1;-><init>()V
@@ -41,6 +43,7 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
+    .line 2208
     invoke-direct {p0, p1}, Landroid/view/AbsSavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -49,6 +52,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
+    .line 2212
     invoke-direct {p0, p1}, Landroid/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void

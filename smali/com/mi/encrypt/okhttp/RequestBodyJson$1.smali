@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/encrypt/okhttp/RequestBodyJson$1;
 .super Ljava/lang/Object;
+.source "RequestBodyJson.java"
 
 
 # annotations

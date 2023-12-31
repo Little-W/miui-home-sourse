@@ -1,5 +1,6 @@
 .class public Lorg/brotli/dec/BrotliInputStream;
 .super Ljava/io/InputStream;
+.source "BrotliInputStream.java"
 
 
 # instance fields
@@ -25,6 +26,7 @@
 
     const/4 v1, 0x0
 
+    .line 53
     invoke-direct {p0, p1, v0, v1}, Lorg/brotli/dec/BrotliInputStream;-><init>(Ljava/io/InputStream;I[B)V
 
     return-void
@@ -38,8 +40,10 @@
         }
     .end annotation
 
+    .line 88
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
+    .line 39
     new-instance v0, Lorg/brotli/dec/State;
 
     invoke-direct {v0}, Lorg/brotli/dec/State;-><init>()V
@@ -50,16 +54,20 @@
 
     if-eqz p1, :cond_1
 
+    .line 94
     new-array p2, p2, [B
 
     iput-object p2, p0, Lorg/brotli/dec/BrotliInputStream;->buffer:[B
 
     const/4 p2, 0x0
 
+    .line 95
     iput p2, p0, Lorg/brotli/dec/BrotliInputStream;->remainingBufferBytes:I
 
+    .line 96
     iput p2, p0, Lorg/brotli/dec/BrotliInputStream;->bufferOffset:I
 
+    .line 98
     :try_start_0
     iget-object p2, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
@@ -69,6 +77,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 103
     iget-object p0, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
     invoke-static {p0, p3}, Lorg/brotli/dec/Decode;->setCustomDictionary(Lorg/brotli/dec/State;[B)V
@@ -79,12 +88,14 @@
     :catch_0
     move-exception p0
 
+    .line 100
     new-instance p1, Ljava/io/IOException;
 
     invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
     throw p1
 
+    .line 92
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -94,6 +105,7 @@
 
     throw p0
 
+    .line 90
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -126,6 +138,7 @@
         }
     .end annotation
 
+    .line 112
     iget-object p0, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
     invoke-static {p0}, Lorg/brotli/dec/State;->close(Lorg/brotli/dec/State;)V
@@ -141,6 +154,7 @@
         }
     .end annotation
 
+    .line 121
     :try_start_0
     iget v0, p0, Lorg/brotli/dec/BrotliInputStream;->bufferOffset:I
 
@@ -148,6 +162,7 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 122
     iget-object v0, p0, Lorg/brotli/dec/BrotliInputStream;->buffer:[B
 
     iget-object v1, p0, Lorg/brotli/dec/BrotliInputStream;->buffer:[B
@@ -162,8 +177,10 @@
 
     iput v0, p0, Lorg/brotli/dec/BrotliInputStream;->remainingBufferBytes:I
 
+    .line 123
     iput v2, p0, Lorg/brotli/dec/BrotliInputStream;->bufferOffset:I
 
+    .line 124
     iget v0, p0, Lorg/brotli/dec/BrotliInputStream;->remainingBufferBytes:I
 
     const/4 v1, -0x1
@@ -172,6 +189,7 @@
 
     return v1
 
+    .line 128
     :cond_0
     iget-object v0, p0, Lorg/brotli/dec/BrotliInputStream;->buffer:[B
 
@@ -192,6 +210,7 @@
     :catch_0
     move-exception p0
 
+    .line 130
     new-instance v0, Ljava/io/IOException;
 
     invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
@@ -213,6 +232,7 @@
 
     add-int v0, p2, p3
 
+    .line 143
     array-length v1, p1
 
     if-gt v0, v1, :cond_3
@@ -223,6 +243,7 @@
 
     return v0
 
+    .line 149
     :cond_0
     iget v1, p0, Lorg/brotli/dec/BrotliInputStream;->remainingBufferBytes:I
 
@@ -236,16 +257,19 @@
 
     if-eqz v1, :cond_1
 
+    .line 151
     invoke-static {v1, p3}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
+    .line 152
     iget-object v2, p0, Lorg/brotli/dec/BrotliInputStream;->buffer:[B
 
     iget v3, p0, Lorg/brotli/dec/BrotliInputStream;->bufferOffset:I
 
     invoke-static {v2, v3, p1, p2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 153
     iget v2, p0, Lorg/brotli/dec/BrotliInputStream;->bufferOffset:I
 
     add-int/2addr v2, v1
@@ -260,28 +284,34 @@
 
     return v1
 
+    .line 161
     :cond_1
     :try_start_0
     iget-object v2, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
     iput-object p1, v2, Lorg/brotli/dec/State;->output:[B
 
+    .line 162
     iget-object p1, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
     iput p2, p1, Lorg/brotli/dec/State;->outputOffset:I
 
+    .line 163
     iget-object p1, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
     iput p3, p1, Lorg/brotli/dec/State;->outputLength:I
 
+    .line 164
     iget-object p1, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
     iput v0, p1, Lorg/brotli/dec/State;->outputUsed:I
 
+    .line 165
     iget-object p1, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
     invoke-static {p1}, Lorg/brotli/dec/Decode;->decompress(Lorg/brotli/dec/State;)V
 
+    .line 166
     iget-object p1, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
     iget p1, p1, Lorg/brotli/dec/State;->outputUsed:I
@@ -292,6 +322,7 @@
 
     return p0
 
+    .line 169
     :cond_2
     iget-object p0, p0, Lorg/brotli/dec/BrotliInputStream;->state:Lorg/brotli/dec/State;
 
@@ -306,12 +337,14 @@
     :catch_0
     move-exception p0
 
+    .line 171
     new-instance p1, Ljava/io/IOException;
 
     invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
     throw p1
 
+    .line 144
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -341,6 +374,7 @@
 
     throw p0
 
+    .line 142
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -362,6 +396,7 @@
 
     throw p0
 
+    .line 140
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

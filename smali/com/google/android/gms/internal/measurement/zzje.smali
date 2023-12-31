@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzje;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # static fields
@@ -12,12 +13,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 7
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzje;->zzc()Lcom/google/android/gms/internal/measurement/zzjc;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzje;->zza:Lcom/google/android/gms/internal/measurement/zzjc;
 
+    .line 8
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzjf;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/measurement/zzjf;-><init>()V
@@ -30,6 +33,7 @@
 .method static zza()Lcom/google/android/gms/internal/measurement/zzjc;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzje;->zza:Lcom/google/android/gms/internal/measurement/zzjc;
 
     return-object v0
@@ -38,6 +42,7 @@
 .method static zzb()Lcom/google/android/gms/internal/measurement/zzjc;
     .locals 1
 
+    .line 2
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzje;->zzb:Lcom/google/android/gms/internal/measurement/zzjc;
 
     return-object v0
@@ -49,6 +54,7 @@
     :try_start_0
     const-string v0, "com.google.protobuf.MapFieldSchemaFull"
 
+    .line 3
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -57,6 +63,7 @@
 
     new-array v2, v1, [Ljava/lang/Class;
 
+    .line 4
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0

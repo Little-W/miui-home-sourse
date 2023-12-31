@@ -1,5 +1,6 @@
 .class public Lio/branch/search/internal/sqlite/SQLiteDBInner_Impl;
 .super Lio/branch/search/internal/sqlite/SQLiteDBInner;
+.source "SourceFile"
 
 
 # instance fields

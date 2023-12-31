@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/manager/CommercialInit$1;
 .super Ljava/lang/Object;
+.source "CommercialInit.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/poco/PocoBranchGuideCallBack;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/manager/CommercialInit;Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;)V
     .locals 0
 
+    .line 159
     iput-object p1, p0, Lcom/mi/globallauncher/manager/CommercialInit$1;->this$0:Lcom/mi/globallauncher/manager/CommercialInit;
 
     iput-object p2, p0, Lcom/mi/globallauncher/manager/CommercialInit$1;->val$initInterface:Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;
@@ -40,6 +42,7 @@
 .method public onDialogDismiss()V
     .locals 0
 
+    .line 162
     iget-object p0, p0, Lcom/mi/globallauncher/manager/CommercialInit$1;->val$initInterface:Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;
 
     invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;->onDialogDismiss()V

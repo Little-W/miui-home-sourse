@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/google/gson/annotations/Until;
 .super Ljava/lang/Object;
+.source "Until.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

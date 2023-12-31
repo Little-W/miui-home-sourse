@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/globallauncher/config/CommercialClient$1;
 .super Ljava/lang/Object;
+.source "CommercialClient.java"
 
 
 # annotations

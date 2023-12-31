@@ -35,18 +35,22 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/CrashAnalysis;Ljava/lang/String;)V
     .locals 0
 
+    .line 386
     iput-object p1, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->d:Lcom/xiaomi/onetrack/CrashAnalysis;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 382
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->a:Ljava/util/List;
 
+    .line 387
     iput-object p2, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->c:Ljava/lang/String;
 
+    .line 388
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,6 +73,7 @@
 .method private a(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 407
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -77,10 +82,12 @@
 
     const-string p0, "__"
 
+    .line 408
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 409
     array-length p1, p0
 
     const/4 v0, 0x2
@@ -89,6 +96,7 @@
 
     const/4 p1, 0x0
 
+    .line 410
     aget-object p0, p0, p1
 
     const-string p1, "_"
@@ -97,12 +105,14 @@
 
     move-result-object p0
 
+    .line 411
     array-length p1, p0
 
     const/4 v1, 0x3
 
     if-ne p1, v1, :cond_0
 
+    .line 412
     aget-object p0, p0, v0
 
     return-object p0
@@ -120,6 +130,7 @@
 
     const/4 v0, 0x0
 
+    .line 420
     :goto_0
     iget-object v1, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->a:Ljava/util/List;
 
@@ -129,6 +140,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 421
     iget-object v1, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->a:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -137,6 +149,7 @@
 
     check-cast v1, Ljava/io/File;
 
+    .line 422
     invoke-virtual {v1}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
     move-result-object v1
@@ -145,16 +158,19 @@
 
     move-result-object v1
 
+    .line 423
     invoke-direct {p0, v1}, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     const v2, 0x19000
 
+    .line 424
     invoke-static {v1, v2}, Lcom/xiaomi/onetrack/util/k;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 425
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -169,22 +185,26 @@
 
     if-eqz v2, :cond_0
 
+    .line 426
     iget-object v2, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->c:Ljava/lang/String;
 
     invoke-static {v3, v2}, Lcom/xiaomi/onetrack/CrashAnalysis;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
+    .line 427
     iget-object v2, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->c:Ljava/lang/String;
 
     invoke-static {v3, v2}, Lcom/xiaomi/onetrack/CrashAnalysis;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 428
     invoke-static {v3}, Lcom/xiaomi/onetrack/CrashAnalysis;->a(Ljava/lang/String;)J
 
     move-result-wide v8
 
+    .line 429
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,6 +223,7 @@
 
     invoke-static {v10, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 430
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,6 +240,7 @@
 
     invoke-static {v10, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 431
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,6 +257,7 @@
 
     invoke-static {v10, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 432
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,6 +274,7 @@
 
     invoke-static {v10, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 433
     iget-object v2, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->d:Lcom/xiaomi/onetrack/CrashAnalysis;
 
     invoke-static {v2}, Lcom/xiaomi/onetrack/CrashAnalysis;->c(Lcom/xiaomi/onetrack/CrashAnalysis;)Lcom/xiaomi/onetrack/api/m;
@@ -261,6 +285,7 @@
 
     invoke-virtual/range {v2 .. v9}, Lcom/xiaomi/onetrack/api/m;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
+    .line 434
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -269,6 +294,7 @@
 
     const-string v1, "remove reported crash file"
 
+    .line 435
     invoke-static {v10, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -283,6 +309,7 @@
 .method a(Ljava/io/File;)Z
     .locals 2
 
+    .line 392
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -295,6 +322,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 393
     iget-object p0, p0, Lcom/xiaomi/onetrack/CrashAnalysis$FileProcessor;->a:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z

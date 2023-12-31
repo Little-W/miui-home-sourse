@@ -1,5 +1,6 @@
 .class public abstract Lcom/market/sdk/RemoteMethodInvoker;
 .super Lcom/market/sdk/compat/FutureTaskCompat;
+.source "RemoteMethodInvoker.java"
 
 # interfaces
 .implements Landroid/content/ServiceConnection;
@@ -42,6 +43,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 21
     invoke-static {}, Ljava/util/concurrent/Executors;->newCachedThreadPool()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
@@ -54,16 +56,20 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 16
     invoke-direct {p0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
     const-string v0, "com.xiaomi.market.data.MarketService"
 
+    .line 19
     iput-object v0, p0, Lcom/market/sdk/RemoteMethodInvoker;->MARKET_SERVICE_CLASS_NAME:Ljava/lang/String;
 
     const/4 v0, 0x0
 
+    .line 22
     iput-object v0, p0, Lcom/market/sdk/RemoteMethodInvoker;->mResult:Ljava/lang/Object;
 
+    .line 23
     invoke-static {}, Lcom/market/sdk/MarketManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -76,6 +82,7 @@
 .method static synthetic access$000(Lcom/market/sdk/RemoteMethodInvoker;)Ljava/lang/Object;
     .locals 0
 
+    .line 16
     iget-object p0, p0, Lcom/market/sdk/RemoteMethodInvoker;->mResult:Ljava/lang/Object;
 
     return-object p0
@@ -84,6 +91,7 @@
 .method static synthetic access$002(Lcom/market/sdk/RemoteMethodInvoker;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 16
     iput-object p1, p0, Lcom/market/sdk/RemoteMethodInvoker;->mResult:Ljava/lang/Object;
 
     return-object p1
@@ -92,6 +100,7 @@
 .method static synthetic access$100(Lcom/market/sdk/RemoteMethodInvoker;)Landroid/content/Context;
     .locals 0
 
+    .line 16
     iget-object p0, p0, Lcom/market/sdk/RemoteMethodInvoker;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -123,10 +132,12 @@
         }
     .end annotation
 
+    .line 55
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
+    .line 56
     new-instance v1, Landroid/content/ComponentName;
 
     sget-object v2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
@@ -137,6 +148,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
+    .line 57
     iget-object v1, p0, Lcom/market/sdk/RemoteMethodInvoker;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x1
@@ -147,6 +159,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 58
     invoke-virtual {p0}, Lcom/market/sdk/RemoteMethodInvoker;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -158,6 +171,7 @@
 
     const-string v0, "Can not find MarketService"
 
+    .line 60
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -168,10 +182,12 @@
 .method public invokeAsync()V
     .locals 4
 
+    .line 66
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
+    .line 67
     new-instance v1, Landroid/content/ComponentName;
 
     sget-object v2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
@@ -182,6 +198,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
+    .line 68
     iget-object v1, p0, Lcom/market/sdk/RemoteMethodInvoker;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x1
@@ -194,6 +211,7 @@
 .method public invokeInNewThread()V
     .locals 2
 
+    .line 72
     sget-object v0, Lcom/market/sdk/RemoteMethodInvoker;->sExcecutors:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/market/sdk/RemoteMethodInvoker$2;
@@ -208,6 +226,7 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
+    .line 31
     sget-object p1, Lcom/market/sdk/RemoteMethodInvoker;->sExcecutors:Ljava/util/concurrent/ExecutorService;
 
     new-instance v0, Lcom/market/sdk/RemoteMethodInvoker$1;

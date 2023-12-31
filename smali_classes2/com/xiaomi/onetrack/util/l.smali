@@ -17,6 +17,7 @@
 .method constructor <init>(I)V
     .locals 0
 
+    .line 28
     invoke-direct {p0, p1}, Landroid/util/LruCache;-><init>(I)V
 
     return-void
@@ -29,6 +30,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 31
     iget-object p0, p2, Lcom/xiaomi/onetrack/util/k$a;->a:Ljava/lang/String;
 
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -55,6 +57,7 @@
 .method protected synthetic sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 28
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Lcom/xiaomi/onetrack/util/k$a;

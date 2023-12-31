@@ -17,6 +17,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0

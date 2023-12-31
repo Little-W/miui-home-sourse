@@ -1,5 +1,6 @@
 .class public Lorg/ahocorasick/trie/Emit;
 .super Lorg/ahocorasick/interval/Interval;
+.source "Emit.java"
 
 # interfaces
 .implements Lorg/ahocorasick/interval/Intervalable;
@@ -13,8 +14,10 @@
 .method public constructor <init>(IILjava/lang/String;)V
     .locals 0
 
+    .line 11
     invoke-direct {p0, p1, p2}, Lorg/ahocorasick/interval/Interval;-><init>(II)V
 
+    .line 12
     iput-object p3, p0, Lorg/ahocorasick/trie/Emit;->keyword:Ljava/lang/String;
 
     return-void
@@ -25,6 +28,7 @@
 .method public getKeyword()Ljava/lang/String;
     .locals 0
 
+    .line 16
     iget-object p0, p0, Lorg/ahocorasick/trie/Emit;->keyword:Ljava/lang/String;
 
     return-object p0
@@ -33,6 +37,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

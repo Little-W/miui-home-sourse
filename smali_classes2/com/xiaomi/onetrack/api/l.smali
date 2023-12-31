@@ -17,6 +17,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/k;Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 57
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/l;->c:Lcom/xiaomi/onetrack/api/k;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/l;->a:Ljava/lang/Thread;
@@ -33,6 +34,7 @@
 .method public run()V
     .locals 2
 
+    .line 60
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/l;->c:Lcom/xiaomi/onetrack/api/k;
 
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/l;->a:Ljava/lang/Thread;

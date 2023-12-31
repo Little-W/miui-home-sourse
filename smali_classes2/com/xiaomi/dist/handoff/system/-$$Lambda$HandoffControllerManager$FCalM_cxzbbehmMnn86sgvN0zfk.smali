@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$FCalM_cxzbbehmMnn86sgvN0zfk;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/xiaomi/dist/handoff/system/PackageReceiver$Callback;

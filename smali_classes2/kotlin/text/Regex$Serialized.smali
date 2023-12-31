@@ -1,5 +1,6 @@
 .class final Lkotlin/text/Regex$Serialized;
 .super Ljava/lang/Object;
+.source "Regex.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -56,6 +57,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 231
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/text/Regex$Serialized;->pattern:Ljava/lang/String;
@@ -68,6 +70,7 @@
 .method private final readResolve()Ljava/lang/Object;
     .locals 2
 
+    .line 236
     new-instance v0, Lkotlin/text/Regex;
 
     iget-object v1, p0, Lkotlin/text/Regex$Serialized;->pattern:Ljava/lang/String;
@@ -92,6 +95,7 @@
 .method public final getFlags()I
     .locals 0
 
+    .line 231
     iget p0, p0, Lkotlin/text/Regex$Serialized;->flags:I
 
     return p0
@@ -100,6 +104,7 @@
 .method public final getPattern()Ljava/lang/String;
     .locals 0
 
+    .line 231
     iget-object p0, p0, Lkotlin/text/Regex$Serialized;->pattern:Ljava/lang/String;
 
     return-object p0

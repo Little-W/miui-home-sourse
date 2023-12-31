@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/reflect/ReflectTool;
 .super Ljava/lang/Object;
+.source "ReflectTool.java"
 
 
 # annotations
@@ -29,12 +30,14 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 21
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
+    .line 23
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x56
@@ -47,6 +50,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 24
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x5a
@@ -59,6 +63,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 25
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x42
@@ -71,6 +76,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 26
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x43
@@ -83,6 +89,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 27
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x53
@@ -95,6 +102,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 28
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x49
@@ -107,6 +115,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 29
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x4a
@@ -119,6 +128,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 30
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x46
@@ -131,6 +141,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 31
     sget-object v0, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     const/16 v1, 0x44
@@ -149,6 +160,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -161,6 +173,7 @@
 
     return-void
 
+    .line 157
     :cond_0
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -196,6 +209,7 @@
 .method private static assertEquals(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
+    .line 147
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -204,6 +218,7 @@
 
     return-void
 
+    .line 150
     :cond_0
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -243,6 +258,7 @@
 
     return-void
 
+    .line 164
     :cond_0
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -288,6 +304,7 @@
 
     const/4 v2, 0x0
 
+    .line 36
     :try_start_0
     invoke-static {p3}, Lcom/market/sdk/reflect/ReflectTool;->parseTypesFromSignature(Ljava/lang/String;)[Ljava/lang/Class;
 
@@ -298,6 +315,7 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 39
     :try_start_1
     invoke-virtual {p0, p2, p3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -314,6 +332,7 @@
     :catch_0
     move-exception p0
 
+    .line 41
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
@@ -322,8 +341,10 @@
     :goto_0
     const/4 p2, 0x1
 
+    .line 43
     invoke-virtual {p0, p2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 44
     invoke-virtual {p0, p1, p4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -338,6 +359,7 @@
     :catch_1
     move-exception p0
 
+    .line 52
     invoke-static {v1, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
@@ -345,6 +367,7 @@
     :catch_2
     move-exception p0
 
+    .line 50
     invoke-static {v1, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
@@ -352,6 +375,7 @@
     :catch_3
     move-exception p0
 
+    .line 48
     invoke-static {v1, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
@@ -359,6 +383,7 @@
     :catch_4
     move-exception p0
 
+    .line 46
     invoke-static {v1, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -380,6 +405,7 @@
 
     const-string v0, "Z"
 
+    .line 142
     invoke-static {p0, p1, p2, v0}, Lcom/market/sdk/reflect/ReflectTool;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -388,6 +414,7 @@
 
     goto :goto_0
 
+    .line 143
     :cond_0
     check-cast p0, Ljava/lang/Boolean;
 
@@ -414,6 +441,7 @@
 
     const-string v0, "I"
 
+    .line 137
     invoke-static {p0, p1, p2, v0}, Lcom/market/sdk/reflect/ReflectTool;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -422,6 +450,7 @@
 
     goto :goto_0
 
+    .line 138
     :cond_0
     check-cast p0, Ljava/lang/Integer;
 
@@ -454,13 +483,16 @@
 
     const/4 v1, 0x1
 
+    .line 113
     :try_start_0
     invoke-virtual {p0, p2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
+    .line 114
     invoke-virtual {v2, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 115
     invoke-virtual {v2, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -474,6 +506,7 @@
     :catch_0
     move-exception p0
 
+    .line 131
     invoke-virtual {p0}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
     goto :goto_0
@@ -481,18 +514,22 @@
     :catch_1
     move-exception p0
 
+    .line 129
     invoke-static {v0, p3, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
+    .line 118
     :catch_2
     :try_start_1
     invoke-virtual {p0, p2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p0
 
+    .line 119
     invoke-virtual {p0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 120
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -506,6 +543,7 @@
     :catch_3
     move-exception p0
 
+    .line 126
     invoke-virtual {p0}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
     goto :goto_0
@@ -513,6 +551,7 @@
     :catch_4
     move-exception p0
 
+    .line 124
     invoke-static {v0, p3, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -520,6 +559,7 @@
     :catch_5
     move-exception p0
 
+    .line 122
     invoke-static {v0, p3, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -531,6 +571,7 @@
 .method public static main([Ljava/lang/String;)V
     .locals 7
 
+    .line 170
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -551,6 +592,7 @@
 
     invoke-virtual {p0, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 171
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -587,6 +629,7 @@
 
     check-cast p0, Ljava/lang/String;
 
+    .line 172
     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -607,8 +650,10 @@
 
     const-string v2, "llo, wor"
 
+    .line 173
     invoke-static {p0, v2}, Lcom/market/sdk/reflect/ReflectTool;->assertEquals(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 175
     const-class p0, Ljava/lang/String;
 
     new-array v2, v5, [Ljava/lang/Object;
@@ -631,6 +676,7 @@
 
     move-result p0
 
+    .line 176
     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -649,8 +695,10 @@
 
     invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 177
     invoke-static {p0, v0}, Lcom/market/sdk/reflect/ReflectTool;->assertEquals(II)V
 
+    .line 179
     const-class p0, Ljava/lang/String;
 
     new-array v0, v4, [Ljava/lang/Object;
@@ -669,6 +717,7 @@
 
     move-result p0
 
+    .line 180
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -689,8 +738,10 @@
 
     const/16 v0, 0x1a
 
+    .line 181
     invoke-static {p0, v0}, Lcom/market/sdk/reflect/ReflectTool;->assertEquals(II)V
 
+    .line 182
     const-class p0, Ljava/lang/String;
 
     const-string v0, "count"
@@ -701,6 +752,7 @@
 
     move-result-object p0
 
+    .line 183
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -729,12 +781,15 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 184
     invoke-static {p0}, Lcom/market/sdk/reflect/ReflectTool;->assertNull(Ljava/lang/Object;)V
 
+    .line 186
     new-instance p0, Lcom/market/sdk/reflect/ReflectTool$TestReflect;
 
     invoke-direct {p0}, Lcom/market/sdk/reflect/ReflectTool$TestReflect;-><init>()V
 
+    .line 187
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -749,6 +804,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 188
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -769,8 +825,10 @@
 
     const-string v1, "The quick fox jumps over the lazy dogs."
 
+    .line 189
     invoke-static {v0, v1}, Lcom/market/sdk/reflect/ReflectTool;->assertEquals(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 191
     const-class v0, Lcom/market/sdk/reflect/ReflectTool$TestReflect;
 
     const/16 v1, -0x3ff
@@ -783,6 +841,7 @@
 
     move-result v0
 
+    .line 192
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -803,8 +862,10 @@
 
     const/16 v1, 0x141
 
+    .line 193
     invoke-static {v0, v1}, Lcom/market/sdk/reflect/ReflectTool;->assertEquals(II)V
 
+    .line 195
     const-class v0, Lcom/market/sdk/reflect/ReflectTool$TestReflect;
 
     const-string v1, "mTestArray"
@@ -815,6 +876,7 @@
 
     check-cast v0, [I
 
+    .line 196
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -823,6 +885,7 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/Object;)V
 
+    .line 197
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-array v2, v4, [Ljava/lang/String;
@@ -833,6 +896,7 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/Object;)V
 
+    .line 199
     array-length v1, v0
 
     move v2, v4
@@ -853,8 +917,10 @@
     :cond_1
     const/16 v1, 0xf
 
+    .line 202
     invoke-static {v3, v1}, Lcom/market/sdk/reflect/ReflectTool;->assertEquals(II)V
 
+    .line 204
     const-class v2, Lcom/market/sdk/reflect/ReflectTool$TestReflect;
 
     new-array v3, v5, [Ljava/lang/Object;
@@ -875,6 +941,7 @@
 
     move-result v0
 
+    .line 205
     invoke-static {v0, v1}, Lcom/market/sdk/reflect/ReflectTool;->assertEquals(II)V
 
     const-string v0, "Hello"
@@ -887,10 +954,12 @@
 
     const-string v6, "!"
 
+    .line 207
     filled-new-array {v0, v1, v2, v3, v6}, [Ljava/lang/String;
 
     move-result-object v0
 
+    .line 214
     const-class v1, Lcom/market/sdk/reflect/ReflectTool$TestReflect;
 
     new-array v2, v5, [Ljava/lang/Object;
@@ -907,12 +976,14 @@
 
     check-cast p0, Ljava/lang/String;
 
+    .line 215
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v0, p0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     const-string v0, "Hello, world!"
 
+    .line 216
     invoke-static {p0, v0}, Lcom/market/sdk/reflect/ReflectTool;->assertEquals(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -949,12 +1020,14 @@
     :cond_0
     const/16 v2, 0x28
 
+    .line 61
     invoke-virtual {p0, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v2
 
     const/16 v3, 0x29
 
+    .line 62
     invoke-virtual {p0, v3}, Ljava/lang/String;->indexOf(I)I
 
     move-result v3
@@ -963,6 +1036,7 @@
 
     add-int/2addr v2, v4
 
+    .line 63
     invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -973,6 +1047,7 @@
 
     goto/16 :goto_5
 
+    .line 67
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -988,6 +1063,7 @@
 
     move v6, v3
 
+    .line 71
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -995,12 +1071,14 @@
 
     if-ge v3, v7, :cond_8
 
+    .line 72
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
 
     if-gez v5, :cond_3
 
+    .line 73
     sget-object v8, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     invoke-static {v7}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
@@ -1015,6 +1093,7 @@
 
     if-eqz v6, :cond_2
 
+    .line 75
     sget-object v6, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
     invoke-static {v7}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
@@ -1039,6 +1118,7 @@
 
     goto :goto_1
 
+    .line 77
     :cond_2
     sget-object v6, Lcom/market/sdk/reflect/ReflectTool;->BASIC_TYPES:Ljava/util/Map;
 
@@ -1084,6 +1164,7 @@
 
     add-int/lit8 v5, v5, 0x1
 
+    .line 90
     invoke-virtual {p0, v5, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
@@ -1092,12 +1173,14 @@
 
     const-string v8, "."
 
+    .line 91
     invoke-virtual {v5, v7, v8}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     if-eqz v6, :cond_6
 
+    .line 93
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
@@ -1114,6 +1197,7 @@
 
     goto :goto_2
 
+    .line 95
     :cond_6
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -1132,6 +1216,7 @@
 
     goto :goto_0
 
+    .line 104
     :cond_8
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1139,6 +1224,7 @@
 
     new-array p0, p0, [Ljava/lang/Class;
 
+    .line 105
     :goto_4
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1146,6 +1232,7 @@
 
     if-ge v2, v1, :cond_9
 
+    .line 106
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1

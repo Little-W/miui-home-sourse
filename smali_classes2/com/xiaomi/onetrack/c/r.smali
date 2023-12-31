@@ -13,6 +13,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/c/p;)V
     .locals 0
 
+    .line 137
     iput-object p1, p0, Lcom/xiaomi/onetrack/c/r;->a:Lcom/xiaomi/onetrack/c/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,6 +26,7 @@
 .method public run()V
     .locals 1
 
+    .line 141
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/r;->a:Lcom/xiaomi/onetrack/c/p;
 
     invoke-static {v0}, Lcom/xiaomi/onetrack/c/p;->a(Lcom/xiaomi/onetrack/c/p;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -37,8 +39,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 142
     invoke-static {}, Lcom/xiaomi/onetrack/b/e;->b()V
 
+    .line 144
     :cond_0
     iget-object p0, p0, Lcom/xiaomi/onetrack/c/r;->a:Lcom/xiaomi/onetrack/c/p;
 

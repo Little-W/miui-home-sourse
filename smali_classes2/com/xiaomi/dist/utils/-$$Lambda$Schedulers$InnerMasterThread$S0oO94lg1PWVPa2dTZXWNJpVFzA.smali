@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/utils/-$$Lambda$Schedulers$InnerMasterThread$S0oO94lg1PWVPa2dTZXWNJpVFzA;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;

@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/EventLoopImplPlatform;
 .super Lkotlinx/coroutines/EventLoop;
+.source "EventLoop.kt"
 
 
 # annotations
@@ -12,6 +13,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoop;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method protected final reschedule(JLkotlinx/coroutines/EventLoopImplBase$DelayedTask;)V
     .locals 1
 
+    .line 17
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result v0
@@ -58,6 +61,7 @@
 
     throw p0
 
+    .line 18
     :cond_2
     :goto_1
     sget-object p0, Lkotlinx/coroutines/DefaultExecutor;->INSTANCE:Lkotlinx/coroutines/DefaultExecutor;
@@ -70,16 +74,19 @@
 .method protected final unpark()V
     .locals 1
 
+    .line 11
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoopImplPlatform;->getThread()Ljava/lang/Thread;
 
     move-result-object p0
 
+    .line 12
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
     if-eq v0, p0, :cond_1
 
+    .line 13
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0

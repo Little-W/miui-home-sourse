@@ -1,5 +1,6 @@
 .class public Landroidx/emoji2/text/EmojiProcessor$DefaultGlyphChecker;
 .super Ljava/lang/Object;
+.source "EmojiProcessor.java"
 
 # interfaces
 .implements Landroidx/emoji2/text/EmojiCompat$GlyphChecker;
@@ -36,6 +37,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 796
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -48,14 +50,17 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 803
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 804
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
     iput-object v0, p0, Landroidx/emoji2/text/EmojiProcessor$DefaultGlyphChecker;->mTextPaint:Landroid/text/TextPaint;
 
+    .line 805
     iget-object p0, p0, Landroidx/emoji2/text/EmojiProcessor$DefaultGlyphChecker;->mTextPaint:Landroid/text/TextPaint;
 
     const/high16 v0, 0x41200000    # 10.0f
@@ -68,6 +73,7 @@
 .method private static getStringBuilder()Ljava/lang/StringBuilder;
     .locals 2
 
+    .line 834
     sget-object v0, Landroidx/emoji2/text/EmojiProcessor$DefaultGlyphChecker;->sStringBuilder:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -76,6 +82,7 @@
 
     if-nez v0, :cond_0
 
+    .line 835
     sget-object v0, Landroidx/emoji2/text/EmojiProcessor$DefaultGlyphChecker;->sStringBuilder:Ljava/lang/ThreadLocal;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -84,6 +91,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
+    .line 837
     :cond_0
     sget-object v0, Landroidx/emoji2/text/EmojiProcessor$DefaultGlyphChecker;->sStringBuilder:Ljava/lang/ThreadLocal;
 
@@ -101,6 +109,7 @@
 .method public hasGlyph(Ljava/lang/CharSequence;III)Z
     .locals 3
 
+    .line 818
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
@@ -115,16 +124,19 @@
 
     return v1
 
+    .line 822
     :cond_0
     invoke-static {}, Landroidx/emoji2/text/EmojiProcessor$DefaultGlyphChecker;->getStringBuilder()Ljava/lang/StringBuilder;
 
     move-result-object p4
 
+    .line 823
     invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
     :goto_0
     if-ge p2, p3, :cond_1
 
+    .line 826
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
@@ -135,6 +147,7 @@
 
     goto :goto_0
 
+    .line 830
     :cond_1
     iget-object p0, p0, Landroidx/emoji2/text/EmojiProcessor$DefaultGlyphChecker;->mTextPaint:Landroid/text/TextPaint;
 

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/sdk/silentupdate/SilentUpdater$UpdateCallback;
 .super Ljava/lang/Object;
+.source "SilentUpdater.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;
 .super Landroid/media/browse/MediaBrowser$ItemCallback;
+.source "MediaBrowserCompatApi23.java"
 
 
 # annotations
@@ -41,8 +42,10 @@
         }
     .end annotation
 
+    .line 44
     invoke-direct {p0}, Landroid/media/browse/MediaBrowser$ItemCallback;-><init>()V
 
+    .line 45
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;->mItemCallback:Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;
 
     return-void
@@ -53,6 +56,7 @@
 .method public onError(Ljava/lang/String;)V
     .locals 0
 
+    .line 61
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;->mItemCallback:Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;
 
     invoke-interface {p0, p1}, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;->onError(Ljava/lang/String;)V
@@ -65,6 +69,7 @@
 
     if-nez p1, :cond_0
 
+    .line 51
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;->mItemCallback:Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;
 
     const/4 p1, 0x0
@@ -73,6 +78,7 @@
 
     goto :goto_0
 
+    .line 53
     :cond_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -80,8 +86,10 @@
 
     const/4 v1, 0x0
 
+    .line 54
     invoke-virtual {p1, v0, v1}, Landroid/media/browse/MediaBrowser$MediaItem;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 55
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;->mItemCallback:Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;
 
     invoke-interface {p0, v0}, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;->onItemLoaded(Landroid/os/Parcel;)V

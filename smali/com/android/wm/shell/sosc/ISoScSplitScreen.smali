@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/wm/shell/sosc/ISoScSplitScreen;
 .super Ljava/lang/Object;
+.source "ISoScSplitScreen.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

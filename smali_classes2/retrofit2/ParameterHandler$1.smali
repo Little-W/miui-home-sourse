@@ -1,5 +1,6 @@
 .class Lretrofit2/ParameterHandler$1;
 .super Lretrofit2/ParameterHandler;
+.source "ParameterHandler.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lretrofit2/ParameterHandler;)V
     .locals 0
 
+    .line 32
     iput-object p1, p0, Lretrofit2/ParameterHandler$1;->this$0:Lretrofit2/ParameterHandler;
 
     invoke-direct {p0}, Lretrofit2/ParameterHandler;-><init>()V
@@ -63,6 +65,7 @@
 
     return-void
 
+    .line 37
     :cond_0
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -79,6 +82,7 @@
 
     move-result-object v0
 
+    .line 38
     iget-object v1, p0, Lretrofit2/ParameterHandler$1;->this$0:Lretrofit2/ParameterHandler;
 
     invoke-virtual {v1, p1, v0}, Lretrofit2/ParameterHandler;->apply(Lretrofit2/RequestBuilder;Ljava/lang/Object;)V
@@ -101,6 +105,7 @@
         }
     .end annotation
 
+    .line 32
     check-cast p2, Ljava/lang/Iterable;
 
     invoke-virtual {p0, p1, p2}, Lretrofit2/ParameterHandler$1;->apply(Lretrofit2/RequestBuilder;Ljava/lang/Iterable;)V

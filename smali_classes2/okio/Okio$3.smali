@@ -1,5 +1,6 @@
 .class final Lokio/Okio$3;
 .super Ljava/lang/Object;
+.source "Okio.java"
 
 # interfaces
 .implements Lokio/Sink;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 199
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,6 +54,7 @@
 .method public timeout()Lokio/Timeout;
     .locals 0
 
+    .line 208
     sget-object p0, Lokio/Timeout;->NONE:Lokio/Timeout;
 
     return-object p0
@@ -65,6 +68,7 @@
         }
     .end annotation
 
+    .line 201
     invoke-virtual {p1, p2, p3}, Lokio/Buffer;->skip(J)V
 
     return-void

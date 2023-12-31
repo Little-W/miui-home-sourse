@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/ServiceProxy$ProxyTask;
 .super Ljava/lang/Object;
+.source "ServiceProxy.java"
 
 
 # annotations

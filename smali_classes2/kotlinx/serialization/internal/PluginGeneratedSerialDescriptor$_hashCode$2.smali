@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$_hashCode$2;
 .super Lkotlin/jvm/internal/Lambda;
+.source "PluginGeneratedSerialDescriptor.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -47,6 +48,7 @@
 .method public final invoke()I
     .locals 1
 
+    .line 45
     iget-object p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$_hashCode$2;->this$0:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
 
     invoke-static {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->access$getTypeParameterDescriptors$p(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)[Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -63,6 +65,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 17
     invoke-virtual {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$_hashCode$2;->invoke()I
 
     move-result p0

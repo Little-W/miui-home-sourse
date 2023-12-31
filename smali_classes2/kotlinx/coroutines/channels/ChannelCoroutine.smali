@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/channels/ChannelCoroutine;
 .super Lkotlinx/coroutines/AbstractCoroutine;
+.source "ChannelCoroutine.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/channels/Channel;
@@ -47,6 +48,7 @@
         }
     .end annotation
 
+    .line 15
     invoke-direct {p0, p1, p3}, Lkotlinx/coroutines/AbstractCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Z)V
 
     iput-object p2, p0, Lkotlinx/coroutines/channels/ChannelCoroutine;->_channel:Lkotlinx/coroutines/channels/Channel;
@@ -75,6 +77,7 @@
 
     goto :goto_0
 
+    .line 29
     :cond_0
     move-object p1, p0
 
@@ -82,12 +85,14 @@
 
     const/4 v0, 0x0
 
+    .line 43
     move-object v1, v0
 
     check-cast v1, Ljava/lang/String;
 
     check-cast v0, Ljava/lang/Throwable;
 
+    .line 44
     new-instance v1, Lkotlinx/coroutines/JobCancellationException;
 
     invoke-static {p1}, Lkotlinx/coroutines/JobSupport;->access$cancellationExceptionMessage(Lkotlinx/coroutines/JobSupport;)Ljava/lang/String;
@@ -105,6 +110,7 @@
     :goto_0
     check-cast p1, Ljava/lang/Throwable;
 
+    .line 29
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/channels/ChannelCoroutine;->cancelInternal(Ljava/lang/Throwable;)V
 
     return-void
@@ -117,14 +123,17 @@
 
     const/4 v1, 0x1
 
+    .line 33
     invoke-static {p0, p1, v0, v1, v0}, Lkotlinx/coroutines/JobSupport;->toCancellationException$default(Lkotlinx/coroutines/JobSupport;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)Ljava/util/concurrent/CancellationException;
 
     move-result-object p1
 
+    .line 34
     iget-object v0, p0, Lkotlinx/coroutines/channels/ChannelCoroutine;->_channel:Lkotlinx/coroutines/channels/Channel;
 
     invoke-interface {v0, p1}, Lkotlinx/coroutines/channels/Channel;->cancel(Ljava/util/concurrent/CancellationException;)V
 
+    .line 35
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/channels/ChannelCoroutine;->cancelCoroutine(Ljava/lang/Throwable;)Z
@@ -173,6 +182,7 @@
         }
     .end annotation
 
+    .line 13
     iget-object p0, p0, Lkotlinx/coroutines/channels/ChannelCoroutine;->_channel:Lkotlinx/coroutines/channels/Channel;
 
     return-object p0

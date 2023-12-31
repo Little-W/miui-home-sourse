@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/wm/shell/splitscreen/ISplitScreenT;
 .super Ljava/lang/Object;
+.source "ISplitScreenT.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

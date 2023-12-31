@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;
 .super Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;
+.source "SearchResultMaskAdapter.java"
 
 
 # annotations
@@ -49,12 +50,14 @@
 .method constructor <init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
     .locals 1
 
+    .line 418
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Lcom/mi/globallauncher/search/SearchResultMaskAdapter$1;)V
 
+    .line 419
     sget p1, Lcom/mi/globallauncher/R$id;->quick_search_guide_container:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -65,6 +68,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->container:Landroid/widget/RelativeLayout;
 
+    .line 420
     sget p1, Lcom/mi/globallauncher/R$id;->quick_search_title:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -75,6 +79,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->guideTitle:Landroid/widget/TextView;
 
+    .line 421
     sget p1, Lcom/mi/globallauncher/R$id;->quick_search_close_btn:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -85,6 +90,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->closeBtn:Landroid/widget/ImageView;
 
+    .line 422
     sget p1, Lcom/mi/globallauncher/R$id;->guide_all_apps_container:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -95,6 +101,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsContainer:Landroid/widget/RelativeLayout;
 
+    .line 423
     sget p1, Lcom/mi/globallauncher/R$id;->guide_quick_search_container:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -105,6 +112,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchContainer:Landroid/widget/RelativeLayout;
 
+    .line 424
     sget p1, Lcom/mi/globallauncher/R$id;->checkbox_all_apps:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -115,6 +123,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsCheckBox:Landroid/widget/CheckBox;
 
+    .line 425
     sget p1, Lcom/mi/globallauncher/R$id;->checkbox_quick_search:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -125,6 +134,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchCheckBox:Landroid/widget/CheckBox;
 
+    .line 426
     sget p1, Lcom/mi/globallauncher/R$id;->guide_image_all_apps:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -135,6 +145,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsImage:Landroid/widget/ImageView;
 
+    .line 427
     sget p1, Lcom/mi/globallauncher/R$id;->guide_image_quick_search:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -145,6 +156,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchImage:Landroid/widget/ImageView;
 
+    .line 428
     sget p1, Lcom/mi/globallauncher/R$id;->title_all_apps:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -155,6 +167,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsTitle:Landroid/widget/TextView;
 
+    .line 429
     sget p1, Lcom/mi/globallauncher/R$id;->title_quick_search:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -165,6 +178,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchTitle:Landroid/widget/TextView;
 
+    .line 430
     sget p1, Lcom/mi/globallauncher/R$id;->desc_all_apps:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -175,6 +189,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsDesc:Landroid/widget/TextView;
 
+    .line 431
     sget p1, Lcom/mi/globallauncher/R$id;->desc_quick_search:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -185,6 +200,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchDesc:Landroid/widget/TextView;
 
+    .line 432
     sget p1, Lcom/mi/globallauncher/R$id;->search_guide_ok_btn:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -201,6 +217,7 @@
 .method private removeViewHolder(I)V
     .locals 1
 
+    .line 491
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$300(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Ljava/util/List;
@@ -235,6 +252,7 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 492
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$300(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Ljava/util/List;
@@ -243,10 +261,12 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 493
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->notifyDataSetChanged()V
 
+    .line 494
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
@@ -264,12 +284,14 @@
 .method public synthetic lambda$updateView$0$SearchResultMaskAdapter$QuickSearchGuideViewHolder(Landroid/view/View;)V
     .locals 1
 
+    .line 463
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsCheckBox:Landroid/widget/CheckBox;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
+    .line 464
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchCheckBox:Landroid/widget/CheckBox;
 
     const/4 p1, 0x0
@@ -282,12 +304,14 @@
 .method public synthetic lambda$updateView$1$SearchResultMaskAdapter$QuickSearchGuideViewHolder(Landroid/view/View;)V
     .locals 1
 
+    .line 467
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsCheckBox:Landroid/widget/CheckBox;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
+    .line 468
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchCheckBox:Landroid/widget/CheckBox;
 
     const/4 p1, 0x1
@@ -300,6 +324,7 @@
 .method public synthetic lambda$updateView$2$SearchResultMaskAdapter$QuickSearchGuideViewHolder(ILandroid/view/View;)V
     .locals 2
 
+    .line 471
     iget-object p2, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {p2}, Landroid/widget/CheckBox;->isChecked()Z
@@ -310,6 +335,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 472
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p2
@@ -318,6 +344,7 @@
 
     goto :goto_0
 
+    .line 474
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -327,9 +354,11 @@
 
     invoke-interface {p2, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setFocusSearchOnEnterDrawerSwitch(Z)V
 
+    .line 476
     :goto_0
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->removeViewHolder(I)V
 
+    .line 477
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$1300(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/search/SearchResultMaskView$QuickSearchGuideListener;
@@ -338,6 +367,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 478
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$1300(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/search/SearchResultMaskView$QuickSearchGuideListener;
@@ -367,8 +397,10 @@
 .method public synthetic lambda$updateView$3$SearchResultMaskAdapter$QuickSearchGuideViewHolder(ILandroid/view/View;)V
     .locals 0
 
+    .line 482
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->removeViewHolder(I)V
 
+    .line 483
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$1300(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/search/SearchResultMaskView$QuickSearchGuideListener;
@@ -377,6 +409,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 484
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {p0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$1300(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/search/SearchResultMaskView$QuickSearchGuideListener;
@@ -392,6 +425,7 @@
 .method updateView(I)V
     .locals 3
 
+    .line 437
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$100(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Z
@@ -400,12 +434,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 438
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->container:Landroid/widget/RelativeLayout;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->branch_item_card_bg:I
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
+    .line 439
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->guideTitle:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -422,6 +458,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 440
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsTitle:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -438,6 +475,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 441
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchTitle:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -454,6 +492,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 442
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsDesc:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -470,6 +509,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 443
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchDesc:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -486,30 +526,35 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 444
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->closeBtn:Landroid/widget/ImageView;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->search_guide_close_btn:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 445
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsCheckBox:Landroid/widget/CheckBox;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->search_guide_checkbox_bg:I
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setBackgroundResource(I)V
 
+    .line 446
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchCheckBox:Landroid/widget/CheckBox;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->search_guide_checkbox_bg:I
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setBackgroundResource(I)V
 
+    .line 447
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsImage:Landroid/widget/ImageView;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->guide_all_apps:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 448
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchImage:Landroid/widget/ImageView;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->guide_quick_search:I
@@ -518,6 +563,7 @@
 
     goto/16 :goto_0
 
+    .line 450
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->container:Landroid/widget/RelativeLayout;
 
@@ -525,6 +571,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
+    .line 451
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->guideTitle:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -541,6 +588,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 452
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsTitle:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -557,6 +605,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 453
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchTitle:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -573,6 +622,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 454
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsDesc:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -589,6 +639,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 455
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchDesc:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -605,36 +656,42 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 456
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->closeBtn:Landroid/widget/ImageView;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->search_guide_close_btn_dark:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 457
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsCheckBox:Landroid/widget/CheckBox;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->search_guide_checkbox_bg_dark:I
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setBackgroundResource(I)V
 
+    .line 458
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchCheckBox:Landroid/widget/CheckBox;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->search_guide_checkbox_bg_dark:I
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setBackgroundResource(I)V
 
+    .line 459
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsImage:Landroid/widget/ImageView;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->guide_all_apps_dark:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 460
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchImage:Landroid/widget/ImageView;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->guide_quick_search_dark:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 462
     :goto_0
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->allAppsContainer:Landroid/widget/RelativeLayout;
 
@@ -644,6 +701,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 466
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->quickSearchContainer:Landroid/widget/RelativeLayout;
 
     new-instance v1, Lcom/mi/globallauncher/search/-$$Lambda$SearchResultMaskAdapter$QuickSearchGuideViewHolder$ayl_-eG2t3Am6JD9dNInC417ZUI;
@@ -652,6 +710,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 470
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->okBtn:Landroid/widget/TextView;
 
     new-instance v1, Lcom/mi/globallauncher/search/-$$Lambda$SearchResultMaskAdapter$QuickSearchGuideViewHolder$BlsPL8R-c7MFvL9T2f6JwHMlMS8;
@@ -660,6 +719,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 481
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;->closeBtn:Landroid/widget/ImageView;
 
     new-instance v1, Lcom/mi/globallauncher/search/-$$Lambda$SearchResultMaskAdapter$QuickSearchGuideViewHolder$wVuXUopAg_zAgbozy2ok3aqubKI;
@@ -668,6 +728,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 487
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0

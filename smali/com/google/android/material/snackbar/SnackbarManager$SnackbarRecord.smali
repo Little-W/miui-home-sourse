@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/snackbar/SnackbarManager$SnackbarRecord;
 .super Ljava/lang/Object;
+.source "SnackbarManager.java"
 
 
 # annotations
@@ -35,6 +36,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 185
     iget-object p0, p0, Lcom/google/android/material/snackbar/SnackbarManager$SnackbarRecord;->callback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;

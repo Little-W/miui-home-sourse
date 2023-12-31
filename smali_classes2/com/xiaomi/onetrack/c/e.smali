@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/c/d;Landroid/content/Intent;)V
     .locals 0
 
+    .line 84
     iput-object p1, p0, Lcom/xiaomi/onetrack/c/e;->b:Lcom/xiaomi/onetrack/c/d;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/c/e;->a:Landroid/content/Intent;
@@ -29,6 +30,7 @@
 .method public run()V
     .locals 3
 
+    .line 87
     iget-object p0, p0, Lcom/xiaomi/onetrack/c/e;->a:Landroid/content/Intent;
 
     invoke-virtual {p0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -37,6 +39,7 @@
 
     const-string v0, "android.intent.action.SCREEN_OFF"
 
+    .line 88
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -45,6 +48,7 @@
 
     if-nez v0, :cond_0
 
+    .line 89
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -56,8 +60,10 @@
 
     const-string v2, "screen on/off"
 
+    .line 90
     invoke-static {v0, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 92
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -73,6 +79,7 @@
     :cond_1
     const/4 p0, 0x2
 
+    .line 93
     :goto_0
     invoke-static {}, Lcom/xiaomi/onetrack/c/s;->a()Lcom/xiaomi/onetrack/c/s;
 
@@ -80,6 +87,7 @@
 
     invoke-virtual {v1, p0, v0}, Lcom/xiaomi/onetrack/c/s;->a(IZ)V
 
+    .line 94
     invoke-static {}, Lcom/xiaomi/onetrack/a/c/b;->a()Lcom/xiaomi/onetrack/a/c/b;
 
     move-result-object p0

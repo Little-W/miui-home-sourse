@@ -1,5 +1,6 @@
 .class final Lio/reactivex/schedulers/Schedulers$SingleHolder;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 58
     new-instance v0, Lio/reactivex/internal/schedulers/SingleScheduler;
 
     invoke-direct {v0}, Lio/reactivex/internal/schedulers/SingleScheduler;-><init>()V

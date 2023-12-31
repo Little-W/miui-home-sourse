@@ -1,5 +1,6 @@
 .class final Lpl/droidsonroids/gif/GifInfoHandle;
 .super Ljava/lang/Object;
+.source "GifInfoHandle.java"
 
 
 # instance fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 0
 
+    .line 27
     invoke-static {}, Lpl/droidsonroids/gif/LibraryLoader;->loadLibrary()V
 
     return-void
@@ -18,6 +20,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,8 +34,10 @@
         }
     .end annotation
 
+    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 64
     :try_start_0
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -52,6 +57,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 67
     :try_start_1
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->close()V
     :try_end_1
@@ -68,6 +74,7 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 71
     :catch_1
     throw p0
 .end method
@@ -80,12 +87,14 @@
         }
     .end annotation
 
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
     const/4 v2, 0x1
 
+    .line 40
     invoke-static {p1, v0, v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->openFileDescriptor(Ljava/io/FileDescriptor;JZ)J
 
     move-result-wide v0
@@ -103,14 +112,17 @@
         }
     .end annotation
 
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 56
     invoke-virtual {p1}, Ljava/io/InputStream;->markSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 59
     invoke-static {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->openStream(Ljava/io/InputStream;)J
 
     move-result-wide v0
@@ -119,6 +131,7 @@
 
     return-void
 
+    .line 57
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -137,8 +150,10 @@
         }
     .end annotation
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     invoke-static {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->openFile(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -156,8 +171,10 @@
         }
     .end annotation
 
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 48
     invoke-static {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->openDirectByteBuffer(Ljava/nio/ByteBuffer;)J
 
     move-result-wide v0
@@ -175,8 +192,10 @@
         }
     .end annotation
 
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 44
     invoke-static {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->openByteArray([B)J
 
     move-result-wide v0
@@ -241,17 +260,20 @@
         }
     .end annotation
 
+    .line 91
     :try_start_0
     invoke-static {}, Lpl/droidsonroids/gif/GifInfoHandle;->createTempNativeFileDescriptor()I
 
     move-result v0
 
+    .line 92
     invoke-static {p0, v0}, Landroid/system/Os;->dup2(Ljava/io/FileDescriptor;I)Ljava/io/FileDescriptor;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p1, :cond_0
 
+    .line 96
     invoke-static {p0}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
 
     :cond_0
@@ -264,6 +286,7 @@
 
     invoke-static {p0}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
 
+    .line 98
     :cond_1
     throw v0
 .end method
@@ -309,12 +332,14 @@
         }
     .end annotation
 
+    .line 76
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1b
 
     if-le v0, v1, :cond_0
 
+    .line 78
     :try_start_0
     invoke-static {p0, p3}, Lpl/droidsonroids/gif/GifInfoHandle;->getNativeFileDescriptor(Ljava/io/FileDescriptor;Z)I
 
@@ -327,6 +352,7 @@
     :catch_0
     move-exception p0
 
+    .line 80
     new-instance p1, Lpl/droidsonroids/gif/GifIOException;
 
     sget-object p2, Lpl/droidsonroids/gif/GifError;->OPEN_FAILED:Lpl/droidsonroids/gif/GifError;
@@ -341,11 +367,13 @@
 
     throw p1
 
+    .line 83
     :cond_0
     invoke-static {p0, p3}, Lpl/droidsonroids/gif/GifInfoHandle;->extractNativeFileDescriptor(Ljava/io/FileDescriptor;Z)I
 
     move-result p0
 
+    .line 85
     :goto_0
     invoke-static {p0, p1, p2}, Lpl/droidsonroids/gif/GifInfoHandle;->openNativeFileDescriptor(IJ)J
 
@@ -378,6 +406,7 @@
         }
     .end annotation
 
+    .line 102
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
@@ -390,6 +419,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 103
     new-instance p0, Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
@@ -403,18 +433,21 @@
     :cond_0
     const-string v0, "r"
 
+    .line 105
     invoke-virtual {p0, p1, v0}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 109
     new-instance p1, Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-direct {p1, p0}, Lpl/droidsonroids/gif/GifInfoHandle;-><init>(Landroid/content/res/AssetFileDescriptor;)V
 
     return-object p1
 
+    .line 107
     :cond_1
     new-instance p0, Ljava/io/IOException;
 
@@ -462,11 +495,13 @@
         }
     .end annotation
 
+    .line 300
     :try_start_0
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifInfoHandle;->recycle()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 302
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -476,6 +511,7 @@
 
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 303
     throw v0
 .end method
 
@@ -484,6 +520,7 @@
 
     monitor-enter p0
 
+    .line 286
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -510,6 +547,7 @@
 
     monitor-enter p0
 
+    .line 269
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -536,6 +574,7 @@
 
     monitor-enter p0
 
+    .line 273
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -562,6 +601,7 @@
 
     monitor-enter p0
 
+    .line 265
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -588,6 +628,7 @@
 
     monitor-enter p0
 
+    .line 261
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -614,6 +655,7 @@
 
     monitor-enter p0
 
+    .line 336
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -640,6 +682,7 @@
 
     monitor-enter p0
 
+    .line 228
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -666,6 +709,7 @@
 
     monitor-enter p0
 
+    .line 290
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -692,6 +736,7 @@
 
     monitor-enter p0
 
+    .line 245
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -718,6 +763,7 @@
 
     monitor-enter p0
 
+    .line 340
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -744,6 +790,7 @@
 
     monitor-enter p0
 
+    .line 332
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -770,6 +817,7 @@
 
     monitor-enter p0
 
+    .line 344
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -796,6 +844,7 @@
 
     monitor-enter p0
 
+    .line 294
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
     :try_end_0
@@ -832,6 +881,7 @@
 
     monitor-enter p0
 
+    .line 207
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -839,10 +889,12 @@
 
     const-wide/16 v0, 0x0
 
+    .line 208
     iput-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 209
     monitor-exit p0
 
     return-void
@@ -860,6 +912,7 @@
 
     monitor-enter p0
 
+    .line 199
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -886,6 +939,7 @@
 
     monitor-enter p0
 
+    .line 216
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -912,6 +966,7 @@
 
     monitor-enter p0
 
+    .line 212
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -938,6 +993,7 @@
 
     monitor-enter p0
 
+    .line 220
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -945,6 +1001,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 221
     monitor-exit p0
 
     return-void
@@ -962,6 +1019,7 @@
 
     monitor-enter p0
 
+    .line 277
     :try_start_0
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifInfoHandle;->gifInfoPtr:J
 
@@ -969,6 +1027,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 278
     monitor-exit p0
 
     return-void

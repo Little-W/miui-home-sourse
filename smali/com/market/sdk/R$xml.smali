@@ -1,5 +1,6 @@
 .class public final Lcom/market/sdk/R$xml;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 5572
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

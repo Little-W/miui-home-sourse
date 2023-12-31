@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/relinker/elf/Section32Header;
 .super Lpl/droidsonroids/relinker/elf/Elf$SectionHeader;
+.source "Section32Header.java"
 
 
 # direct methods
@@ -11,14 +12,17 @@
         }
     .end annotation
 
+    .line 24
     invoke-direct {p0}, Lpl/droidsonroids/relinker/elf/Elf$SectionHeader;-><init>()V
 
     const/4 v0, 0x4
 
+    .line 25
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 26
     iget-boolean v1, p2, Lpl/droidsonroids/relinker/elf/Elf$Header;->bigEndian:Z
 
     if-eqz v1, :cond_0
@@ -33,6 +37,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 28
     iget-wide v1, p2, Lpl/droidsonroids/relinker/elf/Elf$Header;->shoff:J
 
     iget p2, p2, Lpl/droidsonroids/relinker/elf/Elf$Header;->shentsize:I

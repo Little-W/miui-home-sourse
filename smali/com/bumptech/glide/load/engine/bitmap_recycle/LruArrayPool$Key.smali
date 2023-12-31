@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;
 .super Ljava/lang/Object;
+.source "LruArrayPool.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;
@@ -35,8 +36,10 @@
 .method constructor <init>(Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;)V
     .locals 0
 
+    .line 245
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 246
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->pool:Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
     return-void
@@ -47,14 +50,17 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 256
     instance-of v0, p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 257
     check-cast p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;
 
+    .line 258
     iget v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->size:I
 
     iget v2, p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->size:I
@@ -76,10 +82,12 @@
 .method public hashCode()I
     .locals 1
 
+    .line 275
     iget v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->size:I
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 276
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->arrayClass:Ljava/lang/Class;
 
     if-eqz p0, :cond_0
@@ -109,8 +117,10 @@
         }
     .end annotation
 
+    .line 250
     iput p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->size:I
 
+    .line 251
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->arrayClass:Ljava/lang/Class;
 
     return-void
@@ -119,6 +129,7 @@
 .method public offer()V
     .locals 1
 
+    .line 270
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->pool:Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
     invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;->offer(Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;)V
@@ -129,6 +140,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 265
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

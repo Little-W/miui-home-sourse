@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/wm/shell/pip/IPipAnimationListener;
 .super Ljava/lang/Object;
+.source "IPipAnimationListener.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

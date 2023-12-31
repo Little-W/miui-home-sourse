@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/Excluder$1;
 .super Lcom/google/gson/TypeAdapter;
+.source "Excluder.java"
 
 
 # annotations
@@ -45,6 +46,7 @@
 .method constructor <init>(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)V
     .locals 0
 
+    .line 122
     iput-object p1, p0, Lcom/google/gson/internal/Excluder$1;->this$0:Lcom/google/gson/internal/Excluder;
 
     iput-boolean p2, p0, Lcom/google/gson/internal/Excluder$1;->val$skipDeserialize:Z
@@ -70,12 +72,14 @@
         }
     .end annotation
 
+    .line 143
     iget-object v0, p0, Lcom/google/gson/internal/Excluder$1;->delegate:Lcom/google/gson/TypeAdapter;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
+    .line 146
     :cond_0
     iget-object v0, p0, Lcom/google/gson/internal/Excluder$1;->val$gson:Lcom/google/gson/Gson;
 
@@ -111,16 +115,19 @@
         }
     .end annotation
 
+    .line 127
     iget-boolean v0, p0, Lcom/google/gson/internal/Excluder$1;->val$skipDeserialize:Z
 
     if-eqz v0, :cond_0
 
+    .line 128
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->skipValue()V
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 131
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/Excluder$1;->delegate()Lcom/google/gson/TypeAdapter;
 
@@ -149,14 +156,17 @@
         }
     .end annotation
 
+    .line 135
     iget-boolean v0, p0, Lcom/google/gson/internal/Excluder$1;->val$skipSerialize:Z
 
     if-eqz v0, :cond_0
 
+    .line 136
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
     return-void
 
+    .line 139
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/Excluder$1;->delegate()Lcom/google/gson/TypeAdapter;
 

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/timepicker/ClockFaceView$2;
 .super Landroidx/core/view/AccessibilityDelegateCompat;
+.source "ClockFaceView.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/timepicker/ClockFaceView;)V
     .locals 0
 
+    .line 153
     iput-object p1, p0, Lcom/google/android/material/timepicker/ClockFaceView$2;->this$0:Lcom/google/android/material/timepicker/ClockFaceView;
 
     invoke-direct {p0}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>()V
@@ -33,8 +35,10 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 7
 
+    .line 157
     invoke-super {p0, p1, p2}, Landroidx/core/view/AccessibilityDelegateCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
+    .line 158
     sget v0, Lcom/google/android/material/R$id;->material_value_index:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -49,6 +53,7 @@
 
     if-lez v3, :cond_0
 
+    .line 160
     iget-object p0, p0, Lcom/google/android/material/timepicker/ClockFaceView$2;->this$0:Lcom/google/android/material/timepicker/ClockFaceView;
 
     invoke-static {p0}, Lcom/google/android/material/timepicker/ClockFaceView;->access$200(Lcom/google/android/material/timepicker/ClockFaceView;)Landroid/util/SparseArray;
@@ -74,20 +79,25 @@
 
     const/4 v5, 0x0
 
+    .line 170
     invoke-virtual {p1}, Landroid/view/View;->isSelected()Z
 
     move-result v6
 
+    .line 164
     invoke-static/range {v1 .. v6}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;->obtain(IIIIZZ)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;
 
     move-result-object p0
 
+    .line 163
     invoke-virtual {p2, p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setCollectionItemInfo(Ljava/lang/Object;)V
 
     const/4 p0, 0x1
 
+    .line 172
     invoke-virtual {p2, p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClickable(Z)V
 
+    .line 173
     sget-object p0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_CLICK:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
     invoke-virtual {p2, p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
@@ -102,10 +112,12 @@
 
     if-ne p2, v0, :cond_0
 
+    .line 179
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p2
 
+    .line 180
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v0
@@ -122,6 +134,7 @@
 
     add-float/2addr v0, v1
 
+    .line 181
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
     move-result v1
@@ -136,6 +149,7 @@
 
     add-float/2addr p1, v1
 
+    .line 182
     iget-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView$2;->this$0:Lcom/google/android/material/timepicker/ClockFaceView;
 
     invoke-static {v1}, Lcom/google/android/material/timepicker/ClockFaceView;->access$000(Lcom/google/android/material/timepicker/ClockFaceView;)Lcom/google/android/material/timepicker/ClockHandView;
@@ -154,12 +168,15 @@
 
     move v7, p1
 
+    .line 183
     invoke-static/range {v1 .. v8}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
 
     move-result-object v1
 
+    .line 182
     invoke-virtual {v9, v1}, Lcom/google/android/material/timepicker/ClockHandView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
+    .line 184
     iget-object p0, p0, Lcom/google/android/material/timepicker/ClockFaceView$2;->this$0:Lcom/google/android/material/timepicker/ClockFaceView;
 
     invoke-static {p0}, Lcom/google/android/material/timepicker/ClockFaceView;->access$000(Lcom/google/android/material/timepicker/ClockFaceView;)Lcom/google/android/material/timepicker/ClockHandView;
@@ -170,16 +187,19 @@
 
     move-wide v1, p2
 
+    .line 185
     invoke-static/range {v1 .. v8}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
 
     move-result-object p1
 
+    .line 184
     invoke-virtual {p0, p1}, Lcom/google/android/material/timepicker/ClockHandView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     const/4 p0, 0x1
 
     return p0
 
+    .line 188
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroidx/core/view/AccessibilityDelegateCompat;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 

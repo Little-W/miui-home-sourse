@@ -1,5 +1,6 @@
 .class Lkotlin/collections/MapsKt__MapWithDefaultKt;
 .super Ljava/lang/Object;
+.source "MapWithDefault.kt"
 
 
 # annotations
@@ -27,10 +28,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 21
     instance-of v0, p0, Lkotlin/collections/MapWithDefault;
 
     if-eqz v0, :cond_0
 
+    .line 22
     check-cast p0, Lkotlin/collections/MapWithDefault;
 
     invoke-interface {p0, p1}, Lkotlin/collections/MapWithDefault;->getOrImplicitDefault(Ljava/lang/Object;)Ljava/lang/Object;
@@ -39,6 +42,7 @@
 
     return-object p0
 
+    .line 105
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,6 +50,7 @@
 
     if-nez v0, :cond_2
 
+    .line 106
     invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result p0
@@ -54,6 +59,7 @@
 
     goto :goto_0
 
+    .line 24
     :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 

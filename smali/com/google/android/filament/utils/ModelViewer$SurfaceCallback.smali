@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;
 .super Ljava/lang/Object;
+.source "ModelViewer.kt"
 
 # interfaces
 .implements Lcom/google/android/filament/android/UiHelper$RendererCallback;
@@ -33,6 +34,7 @@
         }
     .end annotation
 
+    .line 321
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +47,7 @@
 .method public onDetachedFromSurface()V
     .locals 2
 
+    .line 330
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {v0}, Lcom/google/android/filament/utils/ModelViewer;->access$getDisplayHelper$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/android/DisplayHelper;
@@ -53,6 +56,7 @@
 
     invoke-virtual {v0}, Lcom/google/android/filament/android/DisplayHelper;->detach()V
 
+    .line 331
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {v0}, Lcom/google/android/filament/utils/ModelViewer;->access$getSwapChain$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/SwapChain;
@@ -61,6 +65,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 332
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {v1}, Lcom/google/android/filament/utils/ModelViewer;->getEngine()Lcom/google/android/filament/Engine;
@@ -69,6 +74,7 @@
 
     invoke-virtual {v1, v0}, Lcom/google/android/filament/Engine;->destroySwapChain(Lcom/google/android/filament/SwapChain;)V
 
+    .line 333
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {v0}, Lcom/google/android/filament/utils/ModelViewer;->getEngine()Lcom/google/android/filament/Engine;
@@ -77,6 +83,7 @@
 
     invoke-virtual {v0}, Lcom/google/android/filament/Engine;->flushAndWait()V
 
+    .line 334
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     const/4 v0, 0x0
@@ -96,6 +103,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 323
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {v0}, Lcom/google/android/filament/utils/ModelViewer;->access$getSwapChain$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/SwapChain;
@@ -112,6 +120,7 @@
 
     invoke-virtual {v1, v0}, Lcom/google/android/filament/Engine;->destroySwapChain(Lcom/google/android/filament/SwapChain;)V
 
+    .line 324
     :cond_0
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
@@ -125,6 +134,7 @@
 
     invoke-static {v0, p1}, Lcom/google/android/filament/utils/ModelViewer;->access$setSwapChain$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/SwapChain;)V
 
+    .line 325
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {p1}, Lcom/google/android/filament/utils/ModelViewer;->access$getSurfaceView$p(Lcom/google/android/filament/utils/ModelViewer;)Landroid/view/SurfaceView;
@@ -151,6 +161,7 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/google/android/filament/android/DisplayHelper;->attach(Lcom/google/android/filament/Renderer;Landroid/view/Display;)V
 
+    .line 326
     :cond_1
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
@@ -191,6 +202,7 @@
 
     move/from16 v2, p2
 
+    .line 339
     iget-object v3, v0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {v3}, Lcom/google/android/filament/utils/ModelViewer;->getView()Lcom/google/android/filament/View;
@@ -211,6 +223,7 @@
 
     div-double v10, v3, v5
 
+    .line 341
     iget-object v3, v0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {v3}, Lcom/google/android/filament/utils/ModelViewer;->getCamera()Lcom/google/android/filament/Camera;
@@ -227,6 +240,7 @@
 
     invoke-virtual/range {v7 .. v16}, Lcom/google/android/filament/Camera;->setProjection(DDDDLcom/google/android/filament/Camera$Fov;)V
 
+    .line 342
     iget-object v0, v0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {v0}, Lcom/google/android/filament/utils/ModelViewer;->access$getCameraManipulator$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/utils/Manipulator;

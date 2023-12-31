@@ -1,5 +1,6 @@
 .class Lkotlin/text/CharsKt__CharKt;
 .super Lkotlin/text/CharsKt__CharJVMKt;
+.source "Char.kt"
 
 
 # direct methods
@@ -19,6 +20,7 @@
 
     return v1
 
+    .line 221
     :cond_1
     invoke-static {p0}, Ljava/lang/Character;->toUpperCase(C)C
 
@@ -32,6 +34,7 @@
 
     return v0
 
+    .line 222
     :cond_2
     invoke-static {p0}, Ljava/lang/Character;->toLowerCase(C)C
 

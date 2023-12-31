@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/manager/-$$Lambda$CommercialInit$3bClUW1gGqwt99RhLIh2352WgGQ;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

@@ -42,6 +42,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,6 +51,7 @@
 .method public static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 127
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,6 +74,7 @@
 
     const-string v0, "OneTrackSdk"
 
+    .line 28
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
 
@@ -79,10 +82,12 @@
 
     const-string v2, "debug.onetrack.log"
 
+    .line 29
     invoke-static {v2}, Lcom/xiaomi/onetrack/util/ab;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 30
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -117,10 +122,12 @@
 
     const-string v2, "debug.onetrack.upload"
 
+    .line 32
     invoke-static {v2}, Lcom/xiaomi/onetrack/util/ab;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 33
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -151,10 +158,12 @@
 
     const-string v2, "debug.onetrack.test"
 
+    .line 35
     invoke-static {v2}, Lcom/xiaomi/onetrack/util/ab;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 36
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -181,8 +190,10 @@
     :goto_2
     sput-boolean v4, Lcom/xiaomi/onetrack/util/p;->n:Z
 
+    .line 38
     invoke-static {}, Lcom/xiaomi/onetrack/util/p;->b()V
 
+    .line 39
     invoke-static {}, Lcom/xiaomi/onetrack/util/p;->c()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -192,6 +203,7 @@
     :catch_0
     move-exception v1
 
+    .line 42
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -212,6 +224,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 45
     :goto_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -245,10 +258,12 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 50
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 51
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -271,6 +286,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 100
     :cond_1
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -283,6 +299,7 @@
 
     mul-int/lit16 v1, v0, 0xbb8
 
+    .line 102
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -297,6 +314,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 104
     invoke-virtual {p1, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
@@ -321,26 +339,31 @@
 
     goto :goto_0
 
+    .line 119
     :cond_2
     invoke-static {p0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 116
     :cond_3
     invoke-static {p0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 113
     :cond_4
     invoke-static {p0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 110
     :cond_5
     invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 107
     :cond_6
     invoke-static {p0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -353,10 +376,12 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 56
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 57
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -370,8 +395,10 @@
 .method public static a(Z)V
     .locals 0
 
+    .line 131
     sput-boolean p0, Lcom/xiaomi/onetrack/util/p;->k:Z
 
+    .line 132
     invoke-static {}, Lcom/xiaomi/onetrack/util/p;->b()V
 
     return-void
@@ -380,6 +407,7 @@
 .method private static b()V
     .locals 2
 
+    .line 136
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->k:Z
 
     if-nez v0, :cond_1
@@ -402,6 +430,7 @@
     :goto_1
     sput-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
+    .line 137
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -444,10 +473,12 @@
 .method public static b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 62
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 63
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -463,10 +494,12 @@
 .method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 68
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 69
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -480,8 +513,10 @@
 .method public static b(Z)V
     .locals 0
 
+    .line 141
     sput-boolean p0, Lcom/xiaomi/onetrack/util/p;->m:Z
 
+    .line 142
     invoke-static {}, Lcom/xiaomi/onetrack/util/p;->c()V
 
     return-void
@@ -490,6 +525,7 @@
 .method private static c()V
     .locals 2
 
+    .line 146
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->m:Z
 
     if-nez v0, :cond_1
@@ -512,6 +548,7 @@
     :goto_1
     sput-boolean v0, Lcom/xiaomi/onetrack/util/p;->c:Z
 
+    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -554,10 +591,12 @@
 .method public static c(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 74
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 75
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -573,10 +612,12 @@
 .method public static c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 80
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 81
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -590,10 +631,12 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 86
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 87
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -609,10 +652,12 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 92
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 93
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

@@ -1,11 +1,13 @@
 .class final Lcom/google/android/filament/Asserts;
 .super Ljava/lang/Object;
+.source "Asserts.java"
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 
     goto :goto_0
 
+    .line 104
     :cond_0
     array-length v1, p0
 
@@ -30,6 +33,7 @@
     :goto_0
     return-object p0
 
+    .line 105
     :cond_1
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -43,6 +47,7 @@
 .method static assertDouble4In([D)V
     .locals 1
 
+    .line 111
     array-length p0, p0
 
     const/4 v0, 0x4
@@ -51,6 +56,7 @@
 
     return-void
 
+    .line 112
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -72,6 +78,7 @@
 
     goto :goto_0
 
+    .line 75
     :cond_0
     array-length v1, p0
 
@@ -80,6 +87,7 @@
     :goto_0
     return-object p0
 
+    .line 76
     :cond_1
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -93,6 +101,7 @@
 .method static assertFloat3In([F)V
     .locals 1
 
+    .line 82
     array-length p0, p0
 
     const/4 v0, 0x3
@@ -101,6 +110,7 @@
 
     return-void
 
+    .line 83
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -122,6 +132,7 @@
 
     goto :goto_0
 
+    .line 90
     :cond_0
     array-length v1, p0
 
@@ -130,6 +141,7 @@
     :goto_0
     return-object p0
 
+    .line 91
     :cond_1
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -143,6 +155,7 @@
 .method static assertFloat4In([F)V
     .locals 1
 
+    .line 97
     array-length p0, p0
 
     const/4 v0, 0x4
@@ -151,6 +164,7 @@
 
     return-void
 
+    .line 98
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -172,6 +186,7 @@
 
     goto :goto_0
 
+    .line 30
     :cond_0
     array-length v1, p0
 
@@ -180,6 +195,7 @@
     :goto_0
     return-object p0
 
+    .line 31
     :cond_1
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -193,6 +209,7 @@
 .method static assertMat3fIn([F)V
     .locals 1
 
+    .line 37
     array-length p0, p0
 
     const/16 v0, 0x9
@@ -201,6 +218,7 @@
 
     return-void
 
+    .line 38
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -222,6 +240,7 @@
 
     goto :goto_0
 
+    .line 45
     :cond_0
     array-length v1, p0
 
@@ -230,6 +249,7 @@
     :goto_0
     return-object p0
 
+    .line 46
     :cond_1
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -243,6 +263,7 @@
 .method static assertMat4dIn([D)V
     .locals 1
 
+    .line 52
     array-length p0, p0
 
     const/16 v0, 0x10
@@ -251,6 +272,7 @@
 
     return-void
 
+    .line 53
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -272,6 +294,7 @@
 
     goto :goto_0
 
+    .line 60
     :cond_0
     array-length v1, p0
 
@@ -280,6 +303,7 @@
     :goto_0
     return-object p0
 
+    .line 61
     :cond_1
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -293,6 +317,7 @@
 .method static assertMat4fIn([F)V
     .locals 1
 
+    .line 67
     array-length p0, p0
 
     const/16 v0, 0x10
@@ -301,6 +326,7 @@
 
     return-void
 
+    .line 68
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 

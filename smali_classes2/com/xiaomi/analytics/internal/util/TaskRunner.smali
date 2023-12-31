@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/analytics/internal/util/TaskRunner;
 .super Ljava/lang/Object;
+.source "TaskRunner.java"
 
 
 # static fields
@@ -14,6 +15,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
+    .line 17
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -24,6 +26,7 @@
 
     sput v0, Lcom/xiaomi/analytics/internal/util/TaskRunner;->NUMBER_OF_CORES:I
 
+    .line 27
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget v3, Lcom/xiaomi/analytics/internal/util/TaskRunner;->NUMBER_OF_CORES:I
@@ -44,12 +47,14 @@
 
     sput-object v0, Lcom/xiaomi/analytics/internal/util/TaskRunner;->sExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 
+    .line 33
     sget-object v0, Lcom/xiaomi/analytics/internal/util/TaskRunner;->sExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
+    .line 44
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
@@ -62,6 +67,7 @@
 .method public static execute(Ljava/lang/Runnable;)V
     .locals 2
 
+    .line 39
     :try_start_0
     sget-object v0, Lcom/xiaomi/analytics/internal/util/TaskRunner;->sExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 
@@ -76,6 +82,7 @@
 
     const-string v0, "TaskRunner"
 
+    .line 41
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

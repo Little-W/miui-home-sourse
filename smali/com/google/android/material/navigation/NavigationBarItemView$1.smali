@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/navigation/NavigationBarItemView$1;
 .super Ljava/lang/Object;
+.source "NavigationBarItemView.java"
 
 # interfaces
 .implements Landroid/view/View$OnLayoutChangeListener;
@@ -24,6 +25,7 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
+    .line 164
     iget-object p1, p0, Lcom/google/android/material/navigation/NavigationBarItemView$1;->this$0:Lcom/google/android/material/navigation/NavigationBarItemView;
 
     invoke-static {p1}, Lcom/google/android/material/navigation/NavigationBarItemView;->access$200(Lcom/google/android/material/navigation/NavigationBarItemView;)Landroid/widget/ImageView;
@@ -36,6 +38,7 @@
 
     if-nez p1, :cond_0
 
+    .line 165
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarItemView$1;->this$0:Lcom/google/android/material/navigation/NavigationBarItemView;
 
     invoke-static {p0}, Lcom/google/android/material/navigation/NavigationBarItemView;->access$200(Lcom/google/android/material/navigation/NavigationBarItemView;)Landroid/widget/ImageView;

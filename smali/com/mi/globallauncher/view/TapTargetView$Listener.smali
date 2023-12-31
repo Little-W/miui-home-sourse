@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/view/TapTargetView$Listener;
 .super Ljava/lang/Object;
+.source "TapTargetView.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 199
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
 
     const/4 p0, 0x0
 
+    .line 218
     invoke-virtual {p1, p0}, Lcom/mi/globallauncher/view/TapTargetView;->dismiss(Z)V
 
     return-void
@@ -45,6 +48,7 @@
 
     const/4 p0, 0x1
 
+    .line 204
     invoke-virtual {p1, p0}, Lcom/mi/globallauncher/view/TapTargetView;->dismiss(Z)V
 
     return-void
@@ -59,6 +63,7 @@
 .method public onTargetLongClick(Lcom/mi/globallauncher/view/TapTargetView;)V
     .locals 0
 
+    .line 211
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/view/TapTargetView$Listener;->onTargetClick(Lcom/mi/globallauncher/view/TapTargetView;)V
 
     return-void

@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;
 .super Ljava/lang/Object;
+.source "AndroidClientInfo.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method public static builder()Lcom/google/android/datatransport/cct/internal/AndroidClientInfo$Builder;
     .locals 1
 
+    .line 85
     new-instance v0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$Builder;-><init>()V

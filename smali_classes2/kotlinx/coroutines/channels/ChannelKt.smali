@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/ChannelKt;
 .super Ljava/lang/Object;
+.source "Channel.kt"
 
 
 # direct methods
@@ -38,10 +39,12 @@
 
     if-ne p0, v1, :cond_0
 
+    .line 668
     sget-object v0, Lkotlinx/coroutines/channels/BufferOverflow;->DROP_OLDEST:Lkotlinx/coroutines/channels/BufferOverflow;
 
     if-ne p1, v0, :cond_0
 
+    .line 669
     new-instance p0, Lkotlinx/coroutines/channels/ConflatedChannel;
 
     invoke-direct {p0, p2}, Lkotlinx/coroutines/channels/ConflatedChannel;-><init>(Lkotlin/jvm/functions/Function1;)V
@@ -50,6 +53,7 @@
 
     goto :goto_0
 
+    .line 671
     :cond_0
     new-instance v0, Lkotlinx/coroutines/channels/ArrayChannel;
 
@@ -59,11 +63,13 @@
 
     check-cast p0, Lkotlinx/coroutines/channels/AbstractChannel;
 
+    .line 668
     :goto_0
     check-cast p0, Lkotlinx/coroutines/channels/Channel;
 
     goto :goto_3
 
+    .line 662
     :cond_1
     new-instance p0, Lkotlinx/coroutines/channels/LinkedListChannel;
 
@@ -73,11 +79,13 @@
 
     goto :goto_3
 
+    .line 651
     :cond_2
     sget-object p0, Lkotlinx/coroutines/channels/BufferOverflow;->SUSPEND:Lkotlinx/coroutines/channels/BufferOverflow;
 
     if-ne p1, p0, :cond_3
 
+    .line 652
     new-instance p0, Lkotlinx/coroutines/channels/RendezvousChannel;
 
     invoke-direct {p0, p2}, Lkotlinx/coroutines/channels/RendezvousChannel;-><init>(Lkotlin/jvm/functions/Function1;)V
@@ -86,6 +94,7 @@
 
     goto :goto_1
 
+    .line 654
     :cond_3
     new-instance p0, Lkotlinx/coroutines/channels/ArrayChannel;
 
@@ -93,11 +102,13 @@
 
     check-cast p0, Lkotlinx/coroutines/channels/AbstractChannel;
 
+    .line 651
     :goto_1
     check-cast p0, Lkotlinx/coroutines/channels/Channel;
 
     goto :goto_3
 
+    .line 657
     :cond_4
     sget-object p0, Lkotlinx/coroutines/channels/BufferOverflow;->SUSPEND:Lkotlinx/coroutines/channels/BufferOverflow;
 
@@ -111,6 +122,7 @@
     :goto_2
     if-eqz v1, :cond_6
 
+    .line 660
     new-instance p0, Lkotlinx/coroutines/channels/ConflatedChannel;
 
     invoke-direct {p0, p2}, Lkotlinx/coroutines/channels/ConflatedChannel;-><init>(Lkotlin/jvm/functions/Function1;)V
@@ -119,6 +131,7 @@
 
     goto :goto_3
 
+    .line 657
     :cond_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -134,9 +147,11 @@
 
     throw p0
 
+    .line 663
     :cond_7
     new-instance p0, Lkotlinx/coroutines/channels/ArrayChannel;
 
+    .line 664
     sget-object v0, Lkotlinx/coroutines/channels/BufferOverflow;->SUSPEND:Lkotlinx/coroutines/channels/BufferOverflow;
 
     if-ne p1, v0, :cond_8
@@ -147,6 +162,7 @@
 
     move-result v1
 
+    .line 663
     :cond_8
     invoke-direct {p0, v1, p1, p2}, Lkotlinx/coroutines/channels/ArrayChannel;-><init>(ILkotlinx/coroutines/channels/BufferOverflow;Lkotlin/jvm/functions/Function1;)V
 
@@ -170,6 +186,7 @@
 
     if-eqz p4, :cond_1
 
+    .line 646
     sget-object p1, Lkotlinx/coroutines/channels/BufferOverflow;->SUSPEND:Lkotlinx/coroutines/channels/BufferOverflow;
 
     :cond_1
@@ -179,6 +196,7 @@
 
     const/4 p2, 0x0
 
+    .line 647
     check-cast p2, Lkotlin/jvm/functions/Function1;
 
     :cond_2

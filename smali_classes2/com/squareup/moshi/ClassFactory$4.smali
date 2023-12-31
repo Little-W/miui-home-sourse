@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/ClassFactory$4;
 .super Lcom/squareup/moshi/ClassFactory;
+.source "ClassFactory.java"
 
 
 # annotations
@@ -30,6 +31,7 @@
 .method constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/Class;)V
     .locals 0
 
+    .line 120
     iput-object p1, p0, Lcom/squareup/moshi/ClassFactory$4;->val$newInstance:Ljava/lang/reflect/Method;
 
     iput-object p2, p0, Lcom/squareup/moshi/ClassFactory$4;->val$rawType:Ljava/lang/Class;
@@ -56,6 +58,7 @@
         }
     .end annotation
 
+    .line 123
     iget-object v0, p0, Lcom/squareup/moshi/ClassFactory$4;->val$newInstance:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x2
@@ -86,6 +89,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 126
     iget-object p0, p0, Lcom/squareup/moshi/ClassFactory$4;->val$rawType:Ljava/lang/Class;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;

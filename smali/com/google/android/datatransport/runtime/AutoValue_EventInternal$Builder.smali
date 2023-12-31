@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;
 .super Lcom/google/android/datatransport/runtime/EventInternal$Builder;
+.source "AutoValue_EventInternal.java"
 
 
 # annotations
@@ -40,6 +41,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 123
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;-><init>()V
 
     return-void
@@ -50,12 +52,14 @@
 .method public build()Lcom/google/android/datatransport/runtime/EventInternal;
     .locals 12
 
+    .line 174
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->transportName:Ljava/lang/String;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 175
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,11 +74,13 @@
 
     move-result-object v1
 
+    .line 177
     :cond_0
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->encodedPayload:Lcom/google/android/datatransport/runtime/EncodedPayload;
 
     if-nez v0, :cond_1
 
+    .line 178
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,11 +95,13 @@
 
     move-result-object v1
 
+    .line 180
     :cond_1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->eventMillis:Ljava/lang/Long;
 
     if-nez v0, :cond_2
 
+    .line 181
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,11 +116,13 @@
 
     move-result-object v1
 
+    .line 183
     :cond_2
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->uptimeMillis:Ljava/lang/Long;
 
     if-nez v0, :cond_3
 
+    .line 184
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,11 +137,13 @@
 
     move-result-object v1
 
+    .line 186
     :cond_3
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->autoMetadata:Ljava/util/Map;
 
     if-nez v0, :cond_4
 
+    .line 187
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,6 +158,7 @@
 
     move-result-object v1
 
+    .line 189
     :cond_4
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -153,6 +166,7 @@
 
     if-eqz v0, :cond_5
 
+    .line 192
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;
 
     iget-object v3, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->transportName:Ljava/lang/String;
@@ -163,12 +177,14 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->eventMillis:Ljava/lang/Long;
 
+    .line 196
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v6
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->uptimeMillis:Ljava/lang/Long;
 
+    .line 197
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v8
@@ -183,6 +199,7 @@
 
     return-object v0
 
+    .line 190
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -217,12 +234,14 @@
         }
     .end annotation
 
+    .line 166
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->autoMetadata:Ljava/util/Map;
 
     if-eqz p0, :cond_0
 
     return-object p0
 
+    .line 167
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -248,10 +267,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 161
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->autoMetadata:Ljava/util/Map;
 
     return-object p0
 
+    .line 159
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -265,6 +286,7 @@
 .method public setCode(Ljava/lang/Integer;)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
     .locals 0
 
+    .line 135
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->code:Ljava/lang/Integer;
 
     return-object p0
@@ -275,10 +297,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 143
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->encodedPayload:Lcom/google/android/datatransport/runtime/EncodedPayload;
 
     return-object p0
 
+    .line 141
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -292,6 +316,7 @@
 .method public setEventMillis(J)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
     .locals 0
 
+    .line 148
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -306,10 +331,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 130
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;->transportName:Ljava/lang/String;
 
     return-object p0
 
+    .line 128
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -323,6 +350,7 @@
 .method public setUptimeMillis(J)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
     .locals 0
 
+    .line 153
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1

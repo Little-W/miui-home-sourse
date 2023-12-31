@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/serialization/encoding/CompositeDecoder;
 .super Ljava/lang/Object;
+.source "Decoding.kt"
 
 
 # annotations

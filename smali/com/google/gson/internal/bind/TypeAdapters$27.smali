@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/bind/TypeAdapters$27;
 .super Lcom/google/gson/TypeAdapter;
+.source "TypeAdapters.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 593
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -40,6 +42,7 @@
         }
     .end annotation
 
+    .line 593
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$27;->read(Lcom/google/gson/stream/JsonReader;)Ljava/util/Calendar;
 
     move-result-object p0
@@ -55,6 +58,7 @@
         }
     .end annotation
 
+    .line 603
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object p0
@@ -63,12 +67,14 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 604
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 607
     :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->beginObject()V
 
@@ -86,6 +92,7 @@
 
     move v6, v5
 
+    .line 614
     :cond_1
     :goto_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
@@ -96,16 +103,19 @@
 
     if-eq p0, v0, :cond_7
 
+    .line 615
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 616
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextInt()I
 
     move-result v0
 
     const-string/jumbo v7, "year"
 
+    .line 617
     invoke-virtual {v7, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -119,6 +129,7 @@
     :cond_2
     const-string v7, "month"
 
+    .line 619
     invoke-virtual {v7, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -132,6 +143,7 @@
     :cond_3
     const-string v7, "dayOfMonth"
 
+    .line 621
     invoke-virtual {v7, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -145,6 +157,7 @@
     :cond_4
     const-string v7, "hourOfDay"
 
+    .line 623
     invoke-virtual {v7, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -158,6 +171,7 @@
     :cond_5
     const-string v7, "minute"
 
+    .line 625
     invoke-virtual {v7, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -171,6 +185,7 @@
     :cond_6
     const-string v7, "second"
 
+    .line 627
     invoke-virtual {v7, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -181,9 +196,11 @@
 
     goto :goto_0
 
+    .line 631
     :cond_7
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->endObject()V
 
+    .line 632
     new-instance p0, Ljava/util/GregorianCalendar;
 
     move-object v0, p0
@@ -201,6 +218,7 @@
         }
     .end annotation
 
+    .line 593
     check-cast p2, Ljava/util/Calendar;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$27;->write(Lcom/google/gson/stream/JsonWriter;Ljava/util/Calendar;)V
@@ -218,19 +236,23 @@
 
     if-nez p2, :cond_0
 
+    .line 638
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
     return-void
 
+    .line 641
     :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->beginObject()Lcom/google/gson/stream/JsonWriter;
 
     const-string/jumbo p0, "year"
 
+    .line 642
     invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
     const/4 p0, 0x1
 
+    .line 643
     invoke-virtual {p2, p0}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
@@ -241,10 +263,12 @@
 
     const-string p0, "month"
 
+    .line 644
     invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
     const/4 p0, 0x2
 
+    .line 645
     invoke-virtual {p2, p0}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
@@ -255,10 +279,12 @@
 
     const-string p0, "dayOfMonth"
 
+    .line 646
     invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
     const/4 p0, 0x5
 
+    .line 647
     invoke-virtual {p2, p0}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
@@ -269,10 +295,12 @@
 
     const-string p0, "hourOfDay"
 
+    .line 648
     invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
     const/16 p0, 0xb
 
+    .line 649
     invoke-virtual {p2, p0}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
@@ -283,10 +311,12 @@
 
     const-string p0, "minute"
 
+    .line 650
     invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
     const/16 p0, 0xc
 
+    .line 651
     invoke-virtual {p2, p0}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
@@ -297,10 +327,12 @@
 
     const-string p0, "second"
 
+    .line 652
     invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
     const/16 p0, 0xd
 
+    .line 653
     invoke-virtual {p2, p0}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
@@ -309,6 +341,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/gson/stream/JsonWriter;->value(J)Lcom/google/gson/stream/JsonWriter;
 
+    .line 654
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->endObject()Lcom/google/gson/stream/JsonWriter;
 
     return-void

@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/crashlytics/internal/send/-$$Lambda$DataTransportCrashlyticsReportSender$STxxV2AgBuv04UYSWiLJKKG3YWM;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/android/datatransport/TransportScheduleCallback;

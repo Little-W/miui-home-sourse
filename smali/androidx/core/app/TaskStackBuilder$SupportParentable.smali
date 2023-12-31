@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/core/app/TaskStackBuilder$SupportParentable;
 .super Ljava/lang/Object;
+.source "TaskStackBuilder.java"
 
 
 # annotations

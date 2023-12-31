@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/ListLikeSerializer;
 .super Lkotlinx/serialization/internal/AbstractCollectionSerializer;
+.source "CollectionSerializers.kt"
 
 
 # annotations
@@ -46,6 +47,7 @@
 
     const/4 v0, 0x0
 
+    .line 59
     invoke-direct {p0, v0}, Lkotlinx/serialization/internal/AbstractCollectionSerializer;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lkotlinx/serialization/internal/ListLikeSerializer;->elementSerializer:Lkotlinx/serialization/KSerializer;
@@ -56,6 +58,7 @@
 .method public synthetic constructor <init>(Lkotlinx/serialization/KSerializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 57
     invoke-direct {p0, p1}, Lkotlinx/serialization/internal/ListLikeSerializer;-><init>(Lkotlinx/serialization/KSerializer;)V
 
     return-void
@@ -109,6 +112,7 @@
 
     add-int v2, p3, v1
 
+    .line 76
     invoke-virtual {p0, p1, v2, p2, v0}, Lkotlinx/serialization/internal/ListLikeSerializer;->readElement(Lkotlinx/serialization/encoding/CompositeDecoder;ILjava/lang/Object;Z)V
 
     add-int/lit8 v1, v1, 0x1
@@ -118,6 +122,7 @@
     :cond_1
     return-void
 
+    .line 74
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -148,6 +153,7 @@
 
     invoke-static {p1, p4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 80
     invoke-virtual {p0}, Lkotlinx/serialization/internal/ListLikeSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v1
@@ -191,10 +197,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 65
     invoke-virtual {p0, p2}, Lkotlinx/serialization/internal/ListLikeSerializer;->collectionSize(Ljava/lang/Object;)I
 
     move-result v0
 
+    .line 66
     invoke-virtual {p0}, Lkotlinx/serialization/internal/ListLikeSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v1
@@ -203,6 +211,7 @@
 
     move-result-object p1
 
+    .line 67
     invoke-virtual {p0, p2}, Lkotlinx/serialization/internal/ListLikeSerializer;->collectionIterator(Ljava/lang/Object;)Ljava/util/Iterator;
 
     move-result-object p2
@@ -212,6 +221,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 69
     invoke-virtual {p0}, Lkotlinx/serialization/internal/ListLikeSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v2
@@ -230,6 +240,7 @@
 
     goto :goto_0
 
+    .line 70
     :cond_0
     invoke-virtual {p0}, Lkotlinx/serialization/internal/ListLikeSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 

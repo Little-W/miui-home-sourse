@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/JsonObject;
 .super Lkotlinx/serialization/json/JsonElement;
+.source "JsonElement.kt"
 
 # interfaces
 .implements Ljava/util/Map;
@@ -78,6 +79,7 @@
 
     const/4 v0, 0x0
 
+    .line 116
     invoke-direct {p0, v0}, Lkotlinx/serialization/json/JsonElement;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lkotlinx/serialization/json/JsonObject;->content:Ljava/util/Map;
@@ -138,6 +140,7 @@
 .method public final bridge containsKey(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 116
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -175,6 +178,7 @@
 .method public final bridge containsValue(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 116
     instance-of v0, p1, Lkotlinx/serialization/json/JsonElement;
 
     if-eqz v0, :cond_0
@@ -222,6 +226,7 @@
         }
     .end annotation
 
+    .line 116
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonObject;->getEntries()Ljava/util/Set;
 
     move-result-object p0
@@ -232,6 +237,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 117
     iget-object p0, p0, Lkotlinx/serialization/json/JsonObject;->content:Ljava/util/Map;
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -244,6 +250,7 @@
 .method public final bridge get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
+    .line 116
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -357,6 +364,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 118
     iget-object p0, p0, Lkotlinx/serialization/json/JsonObject;->content:Ljava/util/Map;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -389,6 +397,7 @@
         }
     .end annotation
 
+    .line 116
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonObject;->getKeys()Ljava/util/Set;
 
     move-result-object p0
@@ -531,6 +540,7 @@
 .method public final bridge size()I
     .locals 0
 
+    .line 116
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonObject;->getSize()I
 
     move-result p0
@@ -541,6 +551,7 @@
 .method public toString()Ljava/lang/String;
     .locals 9
 
+    .line 120
     iget-object p0, p0, Lkotlinx/serialization/json/JsonObject;->content:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -553,22 +564,26 @@
 
     const-string p0, ","
 
+    .line 121
     move-object v1, p0
 
     check-cast v1, Ljava/lang/CharSequence;
 
     const-string p0, "{"
 
+    .line 122
     move-object v2, p0
 
     check-cast v2, Ljava/lang/CharSequence;
 
     const-string p0, "}"
 
+    .line 123
     move-object v3, p0
 
     check-cast v3, Ljava/lang/CharSequence;
 
+    .line 124
     sget-object p0, Lkotlinx/serialization/json/JsonObject$toString$1;->INSTANCE:Lkotlinx/serialization/json/JsonObject$toString$1;
 
     move-object v6, p0
@@ -583,6 +598,7 @@
 
     const/4 v8, 0x0
 
+    .line 120
     invoke-static/range {v0 .. v8}, Lkotlin/collections/CollectionsKt;->joinToString$default(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -601,6 +617,7 @@
         }
     .end annotation
 
+    .line 116
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonObject;->getValues()Ljava/util/Collection;
 
     move-result-object p0

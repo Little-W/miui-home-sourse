@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder;
 .super Ljava/lang/Object;
+.source "ByteBufferRewinder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataRewinder;
@@ -30,8 +31,10 @@
 .method public constructor <init>(Ljava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 16
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder;->buffer:Ljava/nio/ByteBuffer;
 
     return-void
@@ -53,6 +56,7 @@
         }
     .end annotation
 
+    .line 10
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder;->rewindAndGet()Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -63,12 +67,14 @@
 .method public rewindAndGet()Ljava/nio/ByteBuffer;
     .locals 2
 
+    .line 22
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder;->buffer:Ljava/nio/ByteBuffer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 23
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder;->buffer:Ljava/nio/ByteBuffer;
 
     return-object p0

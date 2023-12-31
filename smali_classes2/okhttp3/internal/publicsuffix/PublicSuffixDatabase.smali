@@ -1,5 +1,6 @@
 .class public final Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;
 .super Ljava/lang/Object;
+.source "PublicSuffixDatabase.java"
 
 
 # static fields
@@ -36,20 +37,24 @@
 
     aput-byte v2, v0, v1
 
+    .line 39
     sput-object v0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->WILDCARD_LABEL:[B
 
     new-array v0, v1, [Ljava/lang/String;
 
+    .line 40
     sput-object v0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->EMPTY_RULE:[Ljava/lang/String;
 
     const-string v0, "*"
 
+    .line 41
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->PREVAILING_RULE:[Ljava/lang/String;
 
+    .line 45
     new-instance v0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;
 
     invoke-direct {v0}, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;-><init>()V
@@ -62,8 +67,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 48
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -72,6 +79,7 @@
 
     iput-object v0, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->listRead:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 51
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -90,6 +98,7 @@
 
     move-object/from16 v1, p1
 
+    .line 199
     array-length v2, v0
 
     const/4 v3, 0x0
@@ -103,6 +112,7 @@
 
     add-int v5, v2, v4
 
+    .line 202
     div-int/lit8 v5, v5, 0x2
 
     :goto_1
@@ -112,6 +122,7 @@
 
     if-le v5, v7, :cond_0
 
+    .line 205
     aget-byte v8, v0, v5
 
     if-eq v8, v6, :cond_0
@@ -130,6 +141,7 @@
     :goto_2
     add-int v10, v5, v9
 
+    .line 212
     aget-byte v11, v0, v10
 
     if-eq v11, v6, :cond_1
@@ -161,6 +173,7 @@
 
     goto :goto_4
 
+    .line 231
     :cond_3
     aget-object v14, v1, v11
 
@@ -171,6 +184,7 @@
     :goto_4
     add-int v15, v5, v13
 
+    .line 234
     aget-byte v15, v0, v15
 
     and-int/lit16 v15, v15, 0xff
@@ -190,6 +204,7 @@
 
     goto :goto_5
 
+    .line 243
     :cond_5
     aget-object v15, v1, v11
 
@@ -197,6 +212,7 @@
 
     if-ne v15, v12, :cond_2
 
+    .line 246
     array-length v9, v1
 
     sub-int/2addr v9, v8
@@ -226,6 +242,7 @@
     :cond_7
     sub-int v7, v6, v13
 
+    .line 263
     aget-object v8, v1, v11
 
     array-length v8, v8
@@ -235,10 +252,12 @@
     :goto_8
     add-int/lit8 v11, v11, 0x1
 
+    .line 264
     array-length v9, v1
 
     if-ge v11, v9, :cond_8
 
+    .line 265
     aget-object v9, v1, v11
 
     array-length v9, v9
@@ -257,6 +276,7 @@
 
     goto :goto_7
 
+    .line 274
     :cond_a
     new-instance v1, Ljava/lang/String;
 
@@ -285,6 +305,7 @@
 .method private findMatchingRule([Ljava/lang/String;)[Ljava/lang/String;
     .locals 7
 
+    .line 111
     iget-object v0, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->listRead:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -305,10 +326,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 112
     invoke-direct {p0}, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->readTheListUninterruptibly()V
 
     goto :goto_0
 
+    .line 115
     :cond_0
     :try_start_0
     iget-object v0, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->readCompleteLatch:Ljava/util/concurrent/CountDownLatch;
@@ -319,6 +342,7 @@
 
     goto :goto_0
 
+    .line 117
     :catch_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -326,29 +350,35 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
+    .line 121
     :goto_0
     monitor-enter p0
 
+    .line 122
     :try_start_1
     iget-object v0, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->publicSuffixListBytes:[B
 
     if-eqz v0, :cond_d
 
+    .line 126
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 129
     array-length v0, p1
 
     new-array v0, v0, [[B
 
     move v3, v1
 
+    .line 130
     :goto_1
     array-length v4, p1
 
     if-ge v3, v4, :cond_1
 
+    .line 131
     aget-object v4, p1, v3
 
     sget-object v5, Lokhttp3/internal/Util;->UTF_8:Ljava/nio/charset/Charset;
@@ -366,6 +396,7 @@
     :cond_1
     move p1, v1
 
+    .line 137
     :goto_2
     array-length v3, v0
 
@@ -373,6 +404,7 @@
 
     if-ge p1, v3, :cond_3
 
+    .line 138
     iget-object v3, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->publicSuffixListBytes:[B
 
     invoke-static {v3, v0, p1}, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->binarySearchBytes([B[[BI)Ljava/lang/String;
@@ -391,11 +423,13 @@
     :cond_3
     move-object v3, v4
 
+    .line 151
     :goto_3
     array-length p1, v0
 
     if-le p1, v2, :cond_5
 
+    .line 152
     invoke-virtual {v0}, [[B->clone()Ljava/lang/Object;
 
     move-result-object p1
@@ -404,6 +438,7 @@
 
     move v5, v1
 
+    .line 153
     :goto_4
     array-length v6, p1
 
@@ -411,10 +446,12 @@
 
     if-ge v5, v6, :cond_5
 
+    .line 154
     sget-object v6, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->WILDCARD_LABEL:[B
 
     aput-object v6, p1, v5
 
+    .line 155
     iget-object v6, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->publicSuffixListBytes:[B
 
     invoke-static {v6, p1, v5}, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->binarySearchBytes([B[[BI)Ljava/lang/String;
@@ -436,6 +473,7 @@
     :goto_5
     if-eqz v6, :cond_7
 
+    .line 166
     :goto_6
     array-length p1, v0
 
@@ -443,6 +481,7 @@
 
     if-ge v1, p1, :cond_7
 
+    .line 167
     iget-object p1, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->publicSuffixExceptionListBytes:[B
 
     invoke-static {p1, v0, v1}, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->binarySearchBytes([B[[BI)Ljava/lang/String;
@@ -464,6 +503,7 @@
     :goto_7
     if-eqz p1, :cond_8
 
+    .line 178
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -480,6 +520,7 @@
 
     const-string p1, "\\."
 
+    .line 179
     invoke-virtual {p0, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -491,6 +532,7 @@
 
     if-nez v6, :cond_9
 
+    .line 181
     sget-object p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->PREVAILING_RULE:[Ljava/lang/String;
 
     return-object p0
@@ -500,12 +542,14 @@
 
     const-string p0, "\\."
 
+    .line 185
     invoke-virtual {v3, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_8
 
+    .line 186
     :cond_a
     sget-object p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->EMPTY_RULE:[Ljava/lang/String;
 
@@ -514,15 +558,18 @@
 
     const-string p1, "\\."
 
+    .line 189
     invoke-virtual {v6, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_9
 
+    .line 190
     :cond_b
     sget-object p1, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->EMPTY_RULE:[Ljava/lang/String;
 
+    .line 192
     :goto_9
     array-length v0, p0
 
@@ -538,6 +585,7 @@
     :goto_a
     return-object p0
 
+    .line 123
     :cond_d
     :try_start_2
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -551,6 +599,7 @@
     :catchall_0
     move-exception p1
 
+    .line 126
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -561,6 +610,7 @@
 .method public static get()Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;
     .locals 1
 
+    .line 61
     sget-object v0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->instance:Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;
 
     return-object v0
@@ -574,6 +624,7 @@
         }
     .end annotation
 
+    .line 313
     const-class v0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;
 
     const-string v1, "publicsuffixes.gz"
@@ -586,6 +637,7 @@
 
     return-void
 
+    .line 316
     :cond_0
     new-instance v1, Lokio/GzipSource;
 
@@ -599,38 +651,50 @@
 
     move-result-object v0
 
+    .line 318
     :try_start_0
     invoke-interface {v0}, Lokio/BufferedSource;->readInt()I
 
     move-result v1
 
+    .line 319
     new-array v1, v1, [B
 
+    .line 320
     invoke-interface {v0, v1}, Lokio/BufferedSource;->readFully([B)V
 
+    .line 322
     invoke-interface {v0}, Lokio/BufferedSource;->readInt()I
 
     move-result v2
 
+    .line 323
     new-array v2, v2, [B
 
+    .line 324
     invoke-interface {v0, v2}, Lokio/BufferedSource;->readFully([B)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 326
     invoke-static {v0}, Lokhttp3/internal/Util;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 329
     monitor-enter p0
 
+    .line 330
     :try_start_1
     iput-object v1, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->publicSuffixListBytes:[B
 
+    .line 331
     iput-object v2, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->publicSuffixExceptionListBytes:[B
 
+    .line 332
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 334
     iget-object p0, p0, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->readCompleteLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -640,6 +704,7 @@
     :catchall_0
     move-exception v0
 
+    .line 332
     :try_start_2
     monitor-exit p0
     :try_end_2
@@ -650,6 +715,7 @@
     :catchall_1
     move-exception p0
 
+    .line 326
     invoke-static {v0}, Lokhttp3/internal/Util;->closeQuietly(Ljava/io/Closeable;)V
 
     throw p0
@@ -660,6 +726,7 @@
 
     const/4 v0, 0x0
 
+    .line 292
     :goto_0
     :try_start_0
     invoke-direct {p0}, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->readTheList()V
@@ -670,6 +737,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 304
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p0
@@ -687,6 +755,7 @@
     :catch_0
     move-exception p0
 
+    .line 298
     :try_start_1
     invoke-static {}, Lokhttp3/internal/platform/Platform;->get()Lokhttp3/internal/platform/Platform;
 
@@ -702,6 +771,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 304
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p0
@@ -711,6 +781,7 @@
     :cond_1
     return-void
 
+    .line 295
     :catch_1
     :try_start_2
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
@@ -724,6 +795,7 @@
     :goto_1
     if-eqz v0, :cond_2
 
+    .line 304
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -741,20 +813,24 @@
 
     if-eqz p1, :cond_3
 
+    .line 83
     invoke-static {p1}, Ljava/net/IDN;->toUnicode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "\\."
 
+    .line 84
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 85
     invoke-direct {p0, v0}, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->findMatchingRule([Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 86
     array-length v2, v0
 
     array-length v3, p0
@@ -777,6 +853,7 @@
 
     return-object p0
 
+    .line 92
     :cond_0
     aget-object v2, p0, v5
 
@@ -786,12 +863,14 @@
 
     if-ne v2, v4, :cond_1
 
+    .line 94
     array-length v0, v0
 
     array-length p0, p0
 
     goto :goto_0
 
+    .line 97
     :cond_1
     array-length v0, v0
 
@@ -802,19 +881,23 @@
     :goto_0
     sub-int/2addr v0, p0
 
+    .line 100
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 101
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
+    .line 102
     :goto_1
     array-length v1, p1
 
     if-ge v0, v1, :cond_2
 
+    .line 103
     aget-object v1, p1, v0
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -827,6 +910,7 @@
 
     goto :goto_1
 
+    .line 105
     :cond_2
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
@@ -836,12 +920,14 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
+    .line 107
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 80
     :cond_3
     new-instance p0, Ljava/lang/NullPointerException;
 

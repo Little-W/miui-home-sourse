@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/DefaultSpecialEffectsController$8;
 .super Ljava/lang/Object;
+.source "DefaultSpecialEffectsController.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Ljava/util/ArrayList;)V
     .locals 0
 
+    .line 577
     iput-object p1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$8;->this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
     iput-object p2, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$8;->val$transitioningViews:Ljava/util/ArrayList;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 580
     iget-object p0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$8;->val$transitioningViews:Ljava/util/ArrayList;
 
     const/4 v0, 0x4

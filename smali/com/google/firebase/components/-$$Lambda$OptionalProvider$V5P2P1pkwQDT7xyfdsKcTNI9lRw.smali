@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/components/-$$Lambda$OptionalProvider$V5P2P1pkwQDT7xyfdsKcTNI9lRw;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/inject/Provider;

@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;
 .super Ljava/lang/Object;
+.source "ModelViewer.kt"
 
 # interfaces
 .implements Landroid/view/View$OnAttachStateChangeListener;
@@ -29,6 +30,7 @@
         }
     .end annotation
 
+    .line 269
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,6 +49,7 @@
 .method public onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 1
 
+    .line 272
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {p1}, Lcom/google/android/filament/utils/ModelViewer;->access$getUiHelper$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/android/UiHelper;
@@ -55,10 +58,12 @@
 
     invoke-virtual {p1}, Lcom/google/android/filament/android/UiHelper;->detach()V
 
+    .line 274
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/ModelViewer;->destroyModel()V
 
+    .line 275
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {p1}, Lcom/google/android/filament/utils/ModelViewer;->access$getAssetLoader$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/gltfio/AssetLoader;
@@ -67,6 +72,7 @@
 
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/AssetLoader;->destroy()V
 
+    .line 276
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {p1}, Lcom/google/android/filament/utils/ModelViewer;->access$getResourceLoader$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/gltfio/ResourceLoader;
@@ -75,6 +81,7 @@
 
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/ResourceLoader;->destroy()V
 
+    .line 278
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/ModelViewer;->getEngine()Lcom/google/android/filament/Engine;
@@ -89,6 +96,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/filament/Engine;->destroyEntity(I)V
 
+    .line 279
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/ModelViewer;->getEngine()Lcom/google/android/filament/Engine;
@@ -103,6 +111,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/filament/Engine;->destroyRenderer(Lcom/google/android/filament/Renderer;)V
 
+    .line 280
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/ModelViewer;->getEngine()Lcom/google/android/filament/Engine;
@@ -117,6 +126,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/filament/Engine;->destroyView(Lcom/google/android/filament/View;)V
 
+    .line 281
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/ModelViewer;->getEngine()Lcom/google/android/filament/Engine;
@@ -131,6 +141,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/filament/Engine;->destroyScene(Lcom/google/android/filament/Scene;)V
 
+    .line 282
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/ModelViewer;->getEngine()Lcom/google/android/filament/Engine;
@@ -145,6 +156,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/filament/Engine;->destroyCamera(Lcom/google/android/filament/Camera;)V
 
+    .line 284
     invoke-static {}, Lcom/google/android/filament/EntityManager;->get()Lcom/google/android/filament/EntityManager;
 
     move-result-object p1
@@ -157,6 +169,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/filament/EntityManager;->destroy(I)V
 
+    .line 286
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/ModelViewer;->getEngine()Lcom/google/android/filament/Engine;

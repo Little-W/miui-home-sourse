@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/config/CommercialParamUtil;
 .super Ljava/lang/Object;
+.source "CommercialParamUtil.java"
 
 
 # static fields
@@ -55,12 +56,14 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 84
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
+    .line 87
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
     invoke-static {}, Lcom/miui/privacy/http/CommercialHttpUtils;->getAndroidVersion()Ljava/lang/String;
@@ -71,6 +74,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 88
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
     invoke-static {}, Lcom/miui/privacy/http/CommercialHttpUtils;->getModel()Ljava/lang/String;
@@ -81,6 +85,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 89
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
     invoke-static {}, Lcom/miui/privacy/http/CommercialHttpUtils;->getDevice()Ljava/lang/String;
@@ -91,6 +96,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 90
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
     invoke-static {}, Lcom/miui/privacy/http/CommercialHttpUtils;->getProduct()Ljava/lang/String;
@@ -101,6 +107,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 91
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
     invoke-static {}, Lcom/miui/privacy/http/CommercialHttpUtils;->getDevelopVersion()Ljava/lang/String;
@@ -117,6 +124,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -128,6 +136,7 @@
     :try_start_0
     const-string v0, "UTF-8"
 
+    .line 67
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -136,6 +145,7 @@
 
     return-object p0
 
+    .line 70
     :catch_0
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
@@ -162,10 +172,12 @@
 
     if-nez p0, :cond_0
 
+    .line 96
     new-instance p0, Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
+    .line 99
     :cond_0
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
@@ -181,6 +193,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 100
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
     invoke-static {}, Lcom/miui/privacy/http/CommercialHttpUtils;->getLanguage()Ljava/lang/String;
@@ -195,6 +208,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 101
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
     move-result-object v0
@@ -207,6 +221,7 @@
 
     move-result-object v0
 
+    .line 102
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
     move-result-object v1
@@ -217,6 +232,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 103
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,6 +251,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 105
     :cond_1
     sget-object v1, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
@@ -242,6 +259,7 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 109
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -256,6 +274,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 110
     sget-object v0, Lcom/mi/globallauncher/config/CommercialParamUtil;->STATIC_PARAMS:Ljava/util/HashMap;
 
     invoke-interface {p0, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
@@ -264,14 +283,17 @@
 
     const-string v1, "GLOBAL_MIUI_HOME"
 
+    .line 111
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "cids"
 
     const-string v1, "branch_open,quick_search_open,show_new_feature,branch_device_enable,branch_result_page_style,getapps_download_function"
 
+    .line 112
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 114
     invoke-static {p0}, Lcom/mi/globallauncher/config/CommercialParamUtil;->getSign(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v0
@@ -280,6 +302,7 @@
 
     invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 115
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -297,16 +320,19 @@
     :try_start_0
     const-string v0, "MD5"
 
+    .line 75
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
+    .line 76
     invoke-static {p0}, Lcom/mi/globallauncher/config/CommercialParamUtil;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
 
+    .line 77
     new-instance p0, Ljava/math/BigInteger;
 
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
@@ -325,6 +351,7 @@
 
     aput-object p0, v1, v2
 
+    .line 78
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -336,6 +363,7 @@
     :catch_0
     move-exception p0
 
+    .line 80
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -356,14 +384,17 @@
         }
     .end annotation
 
+    .line 42
     invoke-static {p0}, Lcom/mi/globallauncher/config/CommercialParamUtil;->getSortMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p0
 
+    .line 43
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 44
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -385,6 +416,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 45
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
@@ -393,8 +425,10 @@
 
     const-string v2, "&"
 
+    .line 46
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 48
     :cond_0
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -421,16 +455,19 @@
     :cond_1
     const-string p0, "&key="
 
+    .line 52
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p0, "4fd450ec3389b623d119a62b5c574ee7"
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 54
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 55
     invoke-static {p0}, Lcom/mi/globallauncher/config/CommercialParamUtil;->getMd5Digest(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -456,12 +493,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 62
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0, p0}, Ljava/util/TreeMap;-><init>(Ljava/util/Map;)V
 
     return-object v0
 
+    .line 60
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

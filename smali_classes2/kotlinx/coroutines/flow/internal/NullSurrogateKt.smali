@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/NullSurrogateKt;
 .super Ljava/lang/Object;
+.source "NullSurrogate.kt"
 
 
 # static fields
@@ -14,6 +15,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 18
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "NULL"
@@ -22,6 +24,7 @@
 
     sput-object v0, Lkotlinx/coroutines/flow/internal/NullSurrogateKt;->NULL:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 26
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "UNINITIALIZED"
@@ -30,6 +33,7 @@
 
     sput-object v0, Lkotlinx/coroutines/flow/internal/NullSurrogateKt;->UNINITIALIZED:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 34
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "DONE"

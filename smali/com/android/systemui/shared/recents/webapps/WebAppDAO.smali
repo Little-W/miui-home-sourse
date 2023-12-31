@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
 .super Ljava/lang/Object;
+.source "WebAppDAO.java"
 
 
 # annotations
@@ -43,12 +44,15 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 19
     iput-object v0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mContentResolver:Landroid/content/ContentResolver;
 
+    .line 20
     new-instance v1, Ljava/util/HashMap;
 
     const/4 v2, 0x6
@@ -59,20 +63,24 @@
 
     const/4 v1, 0x0
 
+    .line 21
     iput-boolean v1, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mIsReady:Z
 
+    .line 23
     new-instance v1, Lcom/android/systemui/shared/recents/webapps/WebAppDAO$DataChangeBroadcastReceiver;
 
     invoke-direct {v1, p0, v0}, Lcom/android/systemui/shared/recents/webapps/WebAppDAO$DataChangeBroadcastReceiver;-><init>(Lcom/android/systemui/shared/recents/webapps/WebAppDAO;Lcom/android/systemui/shared/recents/webapps/WebAppDAO$1;)V
 
     iput-object v1, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mDataChangeBroadcastReceiver:Lcom/android/systemui/shared/recents/webapps/WebAppDAO$DataChangeBroadcastReceiver;
 
+    .line 25
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mContentResolver:Landroid/content/ContentResolver;
 
+    .line 26
     iget-object p0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mDataChangeBroadcastReceiver:Lcom/android/systemui/shared/recents/webapps/WebAppDAO$DataChangeBroadcastReceiver;
 
     new-instance v0, Landroid/content/IntentFilter;
@@ -89,6 +97,7 @@
 .method static synthetic access$100(Lcom/android/systemui/shared/recents/webapps/WebAppDAO;)V
     .locals 0
 
+    .line 16
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->query()V
 
     return-void
@@ -99,6 +108,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 102
     :try_start_0
     invoke-interface {p1}, Landroid/database/Cursor;->isClosed()Z
 
@@ -106,6 +116,7 @@
 
     if-nez p0, :cond_0
 
+    .line 103
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -124,6 +135,7 @@
 
     return-object p0
 
+    .line 76
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mMap:Ljava/util/Map;
 
@@ -139,10 +151,12 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
     .locals 1
 
+    .line 30
     sget-object v0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->sInstance:Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
 
     if-nez v0, :cond_0
 
+    .line 31
     new-instance v0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -153,6 +167,7 @@
 
     sput-object v0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->sInstance:Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
 
+    .line 33
     :cond_0
     sget-object p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->sInstance:Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
 
@@ -168,6 +183,7 @@
 
     return p0
 
+    .line 83
     :cond_0
     iget-object v0, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
@@ -187,6 +203,7 @@
 
     const-string v0, "miui.browser.webapps.app"
 
+    .line 85
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -202,6 +219,7 @@
 .method private final isReady()Z
     .locals 0
 
+    .line 92
     iget-boolean p0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mIsReady:Z
 
     return p0
@@ -212,6 +230,7 @@
 
     const-string p0, "WebappsContentProvider"
 
+    .line 110
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -220,6 +239,7 @@
 .method private final query()V
     .locals 6
 
+    .line 48
     iget-object v0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v1, "content://miui.browser.webapps/"
@@ -242,6 +262,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 50
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
@@ -249,28 +270,33 @@
     :goto_0
     if-eqz v1, :cond_0
 
+    .line 52
     new-instance v1, Lcom/android/systemui/shared/recents/webapps/WebAppInfo;
 
     invoke-direct {v1, v0}, Lcom/android/systemui/shared/recents/webapps/WebAppInfo;-><init>(Landroid/database/Cursor;)V
 
+    .line 53
     iget-object v2, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mMap:Ljava/util/Map;
 
     iget-object v3, v1, Lcom/android/systemui/shared/recents/webapps/WebAppInfo;->mTaskAffinity:Ljava/lang/String;
 
     invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 54
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v1
 
     goto :goto_0
 
+    .line 56
     :cond_0
     invoke-direct {p0, v0}, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->closeCursor(Landroid/database/Cursor;)V
 
     :cond_1
     const/4 v0, 0x1
 
+    .line 58
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mIsReady:Z
 
     return-void
@@ -281,20 +307,24 @@
 .method public get(Landroid/content/pm/ActivityInfo;)Lcom/android/systemui/shared/recents/webapps/WebAppInfo;
     .locals 1
 
+    .line 62
     invoke-direct {p0, p1}, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->isNeedToCheck(Landroid/content/pm/ActivityInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 63
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->isReady()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 64
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->query()V
 
+    .line 66
     :cond_0
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->taskAffinity:Ljava/lang/String;
 
@@ -315,8 +345,10 @@
 
     const/4 v0, 0x0
 
+    .line 96
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mIsReady:Z
 
+    .line 97
     iget-object p0, p0, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->mMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V

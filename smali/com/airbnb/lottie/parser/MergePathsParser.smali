@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/parser/MergePathsParser;
 .super Ljava/lang/Object;
+.source "MergePathsParser.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 
     const-string v2, "hd"
 
+    .line 9
     filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
@@ -45,6 +47,7 @@
 
     move-object v1, v0
 
+    .line 23
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -52,6 +55,7 @@
 
     if-eqz v3, :cond_3
 
+    .line 24
     sget-object v3, Lcom/airbnb/lottie/parser/MergePathsParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -68,12 +72,15 @@
 
     if-eq v3, v4, :cond_0
 
+    .line 35
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
+    .line 36
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 32
     :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
@@ -81,6 +88,7 @@
 
     goto :goto_0
 
+    .line 29
     :cond_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
@@ -92,6 +100,7 @@
 
     goto :goto_0
 
+    .line 26
     :cond_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -99,6 +108,7 @@
 
     goto :goto_0
 
+    .line 40
     :cond_3
     new-instance p0, Lcom/airbnb/lottie/model/content/MergePaths;
 

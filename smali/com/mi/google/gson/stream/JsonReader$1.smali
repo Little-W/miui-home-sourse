@@ -1,5 +1,6 @@
 .class final Lcom/mi/google/gson/stream/JsonReader$1;
 .super Lcom/mi/google/gson/internal/JsonReaderInternalAccess;
+.source "JsonReader.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1585
     invoke-direct {p0}, Lcom/mi/google/gson/internal/JsonReaderInternalAccess;-><init>()V
 
     return-void
@@ -32,21 +34,25 @@
         }
     .end annotation
 
+    .line 1587
     instance-of p0, p1, Lcom/mi/google/gson/internal/bind/JsonTreeReader;
 
     if-eqz p0, :cond_0
 
+    .line 1588
     check-cast p1, Lcom/mi/google/gson/internal/bind/JsonTreeReader;
 
     invoke-virtual {p1}, Lcom/mi/google/gson/internal/bind/JsonTreeReader;->promoteNameToValue()V
 
     return-void
 
+    .line 1591
     :cond_0
     iget p0, p1, Lcom/mi/google/gson/stream/JsonReader;->peeked:I
 
     if-nez p0, :cond_1
 
+    .line 1593
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->doPeek()I
 
     move-result p0
@@ -58,6 +64,7 @@
 
     const/16 p0, 0x9
 
+    .line 1596
     iput p0, p1, Lcom/mi/google/gson/stream/JsonReader;->peeked:I
 
     goto :goto_0
@@ -69,6 +76,7 @@
 
     const/16 p0, 0x8
 
+    .line 1598
     iput p0, p1, Lcom/mi/google/gson/stream/JsonReader;->peeked:I
 
     goto :goto_0
@@ -80,11 +88,13 @@
 
     const/16 p0, 0xa
 
+    .line 1600
     iput p0, p1, Lcom/mi/google/gson/stream/JsonReader;->peeked:I
 
     :goto_0
     return-void
 
+    .line 1602
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -96,6 +106,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1603
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->peek()Lcom/mi/google/gson/stream/JsonToken;
 
     move-result-object v1

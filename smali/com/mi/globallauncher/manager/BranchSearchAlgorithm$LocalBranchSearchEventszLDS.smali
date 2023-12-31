@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEventszLDS;
 .super Ljava/lang/Object;
+.source "BranchSearchAlgorithm.java"
 
 # interfaces
 .implements Lio/branch/search/IBranchExclusiveCompositeSearchPlusAppStoreEvents;
@@ -32,8 +33,10 @@
 .method public constructor <init>(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)V
     .locals 1
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 50
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -46,6 +49,7 @@
 .method static synthetic lambda$onBranchLocalSearchComplete$0(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;Lio/branch/search/BranchLocalSearchResult;)V
     .locals 0
 
+    .line 63
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$300(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
 
     move-result-object p0
@@ -58,6 +62,7 @@
 .method static synthetic lambda$onBranchRemoteSearchComplete$1(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;Lio/branch/search/BranchSearchResult;)V
     .locals 0
 
+    .line 75
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$300(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
 
     move-result-object p0
@@ -78,10 +83,12 @@
 .method public onBranchLocalSearchComplete(Lio/branch/search/BranchLocalSearchResult;)V
     .locals 2
 
+    .line 59
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEventszLDS;->mReference:Ljava/lang/ref/WeakReference;
 
     if-eqz p0, :cond_0
 
+    .line 60
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -92,6 +99,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 62
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$000(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Landroid/os/Handler;
 
     move-result-object v0
@@ -109,10 +117,12 @@
 .method public onBranchRemoteSearchComplete(Lio/branch/search/BranchSearchResult;Lio/branch/search/BranchSearchError;)V
     .locals 1
 
+    .line 70
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEventszLDS;->mReference:Ljava/lang/ref/WeakReference;
 
     if-eqz p0, :cond_0
 
+    .line 71
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -123,6 +133,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 73
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$100(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Z
 
     move-result p2
@@ -147,6 +158,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 74
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$000(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Landroid/os/Handler;
 
     move-result-object p2

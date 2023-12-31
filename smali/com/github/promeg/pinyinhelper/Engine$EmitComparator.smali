@@ -1,5 +1,6 @@
 .class final Lcom/github/promeg/pinyinhelper/Engine$EmitComparator;
 .super Ljava/lang/Object;
+.source "Engine.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 92
     check-cast p1, Lorg/ahocorasick/trie/Emit;
 
     check-cast p2, Lorg/ahocorasick/trie/Emit;
@@ -53,6 +56,7 @@
 .method public compare(Lorg/ahocorasick/trie/Emit;Lorg/ahocorasick/trie/Emit;)I
     .locals 4
 
+    .line 96
     invoke-virtual {p1}, Lorg/ahocorasick/trie/Emit;->getStart()I
 
     move-result p0
@@ -69,6 +73,7 @@
 
     if-ne p0, v0, :cond_2
 
+    .line 98
     invoke-virtual {p1}, Lorg/ahocorasick/trie/Emit;->size()I
 
     move-result p0
@@ -102,6 +107,7 @@
     :goto_0
     return v1
 
+    .line 101
     :cond_2
     invoke-virtual {p1}, Lorg/ahocorasick/trie/Emit;->getStart()I
 

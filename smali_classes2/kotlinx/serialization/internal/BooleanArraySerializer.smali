@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/BooleanArraySerializer;
 .super Lkotlinx/serialization/internal/PrimitiveArraySerializer;
+.source "PrimitiveArraysSerializers.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -27,6 +28,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 369
     new-instance v0, Lkotlinx/serialization/internal/BooleanArraySerializer;
 
     invoke-direct {v0}, Lkotlinx/serialization/internal/BooleanArraySerializer;-><init>()V
@@ -39,6 +41,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 370
     sget-object v0, Lkotlin/jvm/internal/BooleanCompanionObject;->INSTANCE:Lkotlin/jvm/internal/BooleanCompanionObject;
 
     invoke-static {v0}, Lkotlinx/serialization/builtins/BuiltinSerializersKt;->serializer(Lkotlin/jvm/internal/BooleanCompanionObject;)Lkotlinx/serialization/KSerializer;
@@ -55,6 +58,7 @@
 .method public bridge synthetic collectionSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 369
     check-cast p1, [Z
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/BooleanArraySerializer;->collectionSize([Z)I
@@ -71,6 +75,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 372
     array-length p0, p1
 
     return p0
@@ -79,6 +84,7 @@
 .method public bridge synthetic empty()Ljava/lang/Object;
     .locals 0
 
+    .line 369
     invoke-virtual {p0}, Lkotlinx/serialization/internal/BooleanArraySerializer;->empty()[Z
 
     move-result-object p0
@@ -99,6 +105,7 @@
 .method public bridge synthetic readElement(Lkotlinx/serialization/encoding/CompositeDecoder;ILjava/lang/Object;Z)V
     .locals 0
 
+    .line 369
     check-cast p3, Lkotlinx/serialization/internal/BooleanArrayBuilder;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lkotlinx/serialization/internal/BooleanArraySerializer;->readElement(Lkotlinx/serialization/encoding/CompositeDecoder;ILkotlinx/serialization/internal/BooleanArrayBuilder;Z)V
@@ -117,6 +124,7 @@
 
     invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 377
     invoke-virtual {p0}, Lkotlinx/serialization/internal/BooleanArraySerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -133,6 +141,7 @@
 .method public bridge synthetic toBuilder(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 369
     check-cast p1, [Z
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/BooleanArraySerializer;->toBuilder([Z)Lkotlinx/serialization/internal/BooleanArrayBuilder;
@@ -149,6 +158,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 373
     new-instance p0, Lkotlinx/serialization/internal/BooleanArrayBuilder;
 
     invoke-direct {p0, p1}, Lkotlinx/serialization/internal/BooleanArrayBuilder;-><init>([Z)V
@@ -159,6 +169,7 @@
 .method public bridge synthetic writeContent(Lkotlinx/serialization/encoding/CompositeEncoder;Ljava/lang/Object;I)V
     .locals 0
 
+    .line 369
     check-cast p2, [Z
 
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/serialization/internal/BooleanArraySerializer;->writeContent(Lkotlinx/serialization/encoding/CompositeEncoder;[ZI)V
@@ -182,6 +193,7 @@
     :goto_0
     if-ge v0, p3, :cond_0
 
+    .line 382
     invoke-virtual {p0}, Lkotlinx/serialization/internal/BooleanArraySerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v1

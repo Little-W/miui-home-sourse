@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/ISystemUiProxy$Default;
 .super Ljava/lang/Object;
+.source "ISystemUiProxy.java"
 
 # interfaces
 .implements Lcom/android/systemui/shared/recents/ISystemUiProxy;
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

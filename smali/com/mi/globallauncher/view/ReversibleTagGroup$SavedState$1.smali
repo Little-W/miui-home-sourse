@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState$1;
 .super Ljava/lang/Object;
+.source "ReversibleTagGroup.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 604
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState;
     .locals 0
 
+    .line 606
     new-instance p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState;
 
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -49,6 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 604
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState;
 
     move-result-object p0
@@ -59,6 +63,7 @@
 .method public newArray(I)[Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState;
     .locals 0
 
+    .line 610
     new-array p0, p1, [Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState;
 
     return-object p0
@@ -67,6 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 604
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState$1;->newArray(I)[Lcom/mi/globallauncher/view/ReversibleTagGroup$SavedState;
 
     move-result-object p0

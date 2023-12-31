@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;
 .super Ljava/lang/Object;
+.source "AutoCrashlyticsReportEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -55,6 +56,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 98
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;
 
     invoke-direct {v0}, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;-><init>()V
@@ -63,6 +65,7 @@
 
     const-string v0, "generator"
 
+    .line 100
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -71,6 +74,7 @@
 
     const-string v0, "identifier"
 
+    .line 102
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -79,6 +83,7 @@
 
     const-string v0, "startedAt"
 
+    .line 104
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -87,6 +92,7 @@
 
     const-string v0, "endedAt"
 
+    .line 106
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -95,6 +101,7 @@
 
     const-string v0, "crashed"
 
+    .line 108
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -103,6 +110,7 @@
 
     const-string v0, "app"
 
+    .line 110
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -111,6 +119,7 @@
 
     const-string/jumbo v0, "user"
 
+    .line 112
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -119,6 +128,7 @@
 
     const-string v0, "os"
 
+    .line 114
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -127,6 +137,7 @@
 
     const-string v0, "device"
 
+    .line 116
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -135,6 +146,7 @@
 
     const-string v0, "events"
 
+    .line 118
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -143,6 +155,7 @@
 
     const-string v0, "generatorType"
 
+    .line 120
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -155,6 +168,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -170,6 +184,7 @@
         }
     .end annotation
 
+    .line 125
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->GENERATOR_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getGenerator()Ljava/lang/String;
@@ -178,6 +193,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 126
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->IDENTIFIER_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getIdentifierUtf8Bytes()[B
@@ -186,6 +202,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 127
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->STARTEDAT_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getStartedAt()J
@@ -194,6 +211,7 @@
 
     invoke-interface {p2, p0, v0, v1}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;J)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 128
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->ENDEDAT_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getEndedAt()Ljava/lang/Long;
@@ -202,6 +220,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 129
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->CRASHED_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->isCrashed()Z
@@ -210,6 +229,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Z)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 130
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->APP_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getApp()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;
@@ -218,6 +238,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 131
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->USER_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getUser()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User;
@@ -226,6 +247,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 132
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->OS_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getOs()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;
@@ -234,6 +256,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 133
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->DEVICE_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getDevice()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;
@@ -242,6 +265,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 134
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->EVENTS_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getEvents()Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
@@ -250,6 +274,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 135
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEncoder;->GENERATORTYPE_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->getGeneratorType()I
@@ -269,6 +294,7 @@
         }
     .end annotation
 
+    .line 97
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

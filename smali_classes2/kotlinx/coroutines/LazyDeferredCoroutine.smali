@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/LazyDeferredCoroutine;
 .super Lkotlinx/coroutines/DeferredCoroutine;
+.source "Builders.common.kt"
 
 
 # annotations
@@ -46,8 +47,10 @@
 
     const/4 v0, 0x0
 
+    .line 110
     invoke-direct {p0, p1, v0}, Lkotlinx/coroutines/DeferredCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Z)V
 
+    .line 111
     move-object p1, p0
 
     check-cast p1, Lkotlin/coroutines/Continuation;
@@ -66,6 +69,7 @@
 .method protected onStart()V
     .locals 1
 
+    .line 114
     iget-object v0, p0, Lkotlinx/coroutines/LazyDeferredCoroutine;->continuation:Lkotlin/coroutines/Continuation;
 
     check-cast p0, Lkotlin/coroutines/Continuation;

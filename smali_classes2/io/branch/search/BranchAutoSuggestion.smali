@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchAutoSuggestion;
 .super Lio/branch/search/AnalyticsEntity;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;

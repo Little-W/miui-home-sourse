@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;
 .super Ljava/lang/Object;
+.source "PocoBranchInitInterface.java"
 
 
 # virtual methods

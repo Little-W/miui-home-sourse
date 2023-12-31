@@ -1,5 +1,6 @@
 .class Landroidx/core/view/GestureDetectorCompat$GestureDetectorCompatImplJellybeanMr2;
 .super Ljava/lang/Object;
+.source "GestureDetectorCompat.java"
 
 # interfaces
 .implements Landroidx/core/view/GestureDetectorCompat$GestureDetectorCompatImpl;
@@ -24,8 +25,10 @@
 .method constructor <init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V
     .locals 1
 
+    .line 469
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 470
     new-instance v0, Landroid/view/GestureDetector;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V
@@ -40,6 +43,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
+    .line 480
     iget-object p0, p0, Landroidx/core/view/GestureDetectorCompat$GestureDetectorCompatImplJellybeanMr2;->mDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {p0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z

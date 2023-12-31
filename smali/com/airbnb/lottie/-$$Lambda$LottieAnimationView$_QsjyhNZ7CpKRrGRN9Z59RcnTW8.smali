@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/airbnb/lottie/-$$Lambda$LottieAnimationView$_QsjyhNZ7CpKRrGRN9Z59RcnTW8;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/airbnb/lottie/LottieListener;

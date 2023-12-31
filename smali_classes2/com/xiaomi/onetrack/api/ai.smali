@@ -25,6 +25,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/m;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
     .locals 0
 
+    .line 254
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/ai;->g:Lcom/xiaomi/onetrack/api/m;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/ai;->a:Ljava/lang/String;
@@ -51,6 +52,7 @@
 
     const-string v0, "onetrack_bug_report"
 
+    .line 258
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/ai;->g:Lcom/xiaomi/onetrack/api/m;
 
@@ -58,6 +60,7 @@
 
     move-result-object v11
 
+    .line 259
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/ai;->g:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/api/m;->a(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/api/j;
@@ -78,6 +81,7 @@
 
     iget-object v9, p0, Lcom/xiaomi/onetrack/api/ai;->g:Lcom/xiaomi/onetrack/api/m;
 
+    .line 260
     invoke-static {v9}, Lcom/xiaomi/onetrack/api/m;->b(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/Configuration;
 
     move-result-object v9
@@ -104,6 +108,7 @@
 
     move-result-object p0
 
+    .line 259
     invoke-interface {v1, v0, p0}, Lcom/xiaomi/onetrack/api/j;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -113,6 +118,7 @@
     :catch_0
     move-exception p0
 
+    .line 262
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

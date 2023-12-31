@@ -1,5 +1,6 @@
 .class synthetic Landroidx/fragment/app/FragmentStateManager$2;
 .super Ljava/lang/Object;
+.source "FragmentStateManager.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 177
     invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0

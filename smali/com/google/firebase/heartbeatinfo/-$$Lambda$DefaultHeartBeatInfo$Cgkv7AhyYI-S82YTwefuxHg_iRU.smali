@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/heartbeatinfo/-$$Lambda$DefaultHeartBeatInfo$Cgkv7AhyYI-S82YTwefuxHg_iRU;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/components/ComponentFactory;

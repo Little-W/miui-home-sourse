@@ -28,8 +28,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/gms/tasks/zzu;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/zzu;-><init>()V
@@ -51,6 +53,7 @@
         }
     .end annotation
 
+    .line 14
     iget-object p0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zza:Lcom/google/android/gms/tasks/zzu;
 
     return-object p0
@@ -59,6 +62,7 @@
 .method public setException(Ljava/lang/Exception;)V
     .locals 0
 
+    .line 11
     iget-object p0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zza:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzu;->setException(Ljava/lang/Exception;)V
@@ -74,6 +78,7 @@
         }
     .end annotation
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zza:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzu;->setResult(Ljava/lang/Object;)V
@@ -84,6 +89,7 @@
 .method public trySetException(Ljava/lang/Exception;)Z
     .locals 0
 
+    .line 13
     iget-object p0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zza:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzu;->trySetException(Ljava/lang/Exception;)Z
@@ -101,6 +107,7 @@
         }
     .end annotation
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zza:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzu;->trySetResult(Ljava/lang/Object;)Z

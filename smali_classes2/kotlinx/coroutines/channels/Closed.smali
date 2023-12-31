@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/Closed;
 .super Lkotlinx/coroutines/channels/Send;
+.source "AbstractChannel.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/channels/ReceiveOrClosed;
@@ -30,6 +31,7 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1104
     invoke-direct {p0}, Lkotlinx/coroutines/channels/Send;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/Closed;->closeCause:Ljava/lang/Throwable;
@@ -59,6 +61,7 @@
 .method public bridge synthetic getOfferResult()Ljava/lang/Object;
     .locals 0
 
+    .line 1102
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/Closed;->getOfferResult()Lkotlinx/coroutines/channels/Closed;
 
     move-result-object p0
@@ -82,6 +85,7 @@
 .method public bridge synthetic getPollResult()Ljava/lang/Object;
     .locals 0
 
+    .line 1102
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/Closed;->getPollResult()Lkotlinx/coroutines/channels/Closed;
 
     move-result-object p0
@@ -105,6 +109,7 @@
 .method public final getReceiveException()Ljava/lang/Throwable;
     .locals 1
 
+    .line 1106
     iget-object p0, p0, Lkotlinx/coroutines/channels/Closed;->closeCause:Ljava/lang/Throwable;
 
     if-eqz p0, :cond_0
@@ -127,6 +132,7 @@
 .method public final getSendException()Ljava/lang/Throwable;
     .locals 1
 
+    .line 1105
     iget-object p0, p0, Lkotlinx/coroutines/channels/Closed;->closeCause:Ljava/lang/Throwable;
 
     if-eqz p0, :cond_0
@@ -156,6 +162,7 @@
         }
     .end annotation
 
+    .line 1114
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result p0
@@ -177,6 +184,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,6 +229,7 @@
         }
     .end annotation
 
+    .line 1112
     sget-object p0, Lkotlinx/coroutines/CancellableContinuationImplKt;->RESUME_TOKEN:Lkotlinx/coroutines/internal/Symbol;
 
     if-eqz p2, :cond_0
@@ -234,6 +243,7 @@
 .method public tryResumeSend(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)Lkotlinx/coroutines/internal/Symbol;
     .locals 0
 
+    .line 1110
     sget-object p0, Lkotlinx/coroutines/CancellableContinuationImplKt;->RESUME_TOKEN:Lkotlinx/coroutines/internal/Symbol;
 
     if-eqz p1, :cond_0

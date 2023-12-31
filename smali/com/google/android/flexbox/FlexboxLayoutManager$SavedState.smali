@@ -1,5 +1,6 @@
 .class Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;
 .super Ljava/lang/Object;
+.source "FlexboxLayoutManager.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -38,6 +39,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 3064
     new-instance v0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState$1;
 
     invoke-direct {v0}, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState$1;-><init>()V
@@ -50,6 +52,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 3043
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,14 +61,17 @@
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 3046
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3047
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorPosition:I
 
+    .line 3048
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -78,6 +84,7 @@
 .method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/flexbox/FlexboxLayoutManager$1;)V
     .locals 0
 
+    .line 3021
     invoke-direct {p0, p1}, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -86,12 +93,15 @@
 .method private constructor <init>(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;)V
     .locals 1
 
+    .line 3051
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3052
     iget v0, p1, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorPosition:I
 
     iput v0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorPosition:I
 
+    .line 3053
     iget p1, p1, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorOffset:I
 
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorOffset:I
@@ -102,6 +112,7 @@
 .method synthetic constructor <init>(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;Lcom/google/android/flexbox/FlexboxLayoutManager$1;)V
     .locals 0
 
+    .line 3021
     invoke-direct {p0, p1}, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;-><init>(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;)V
 
     return-void
@@ -110,6 +121,7 @@
 .method static synthetic access$200(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;)I
     .locals 0
 
+    .line 3021
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorPosition:I
 
     return p0
@@ -118,6 +130,7 @@
 .method static synthetic access$202(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;I)I
     .locals 0
 
+    .line 3021
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorPosition:I
 
     return p1
@@ -126,6 +139,7 @@
 .method static synthetic access$300(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;)I
     .locals 0
 
+    .line 3021
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorOffset:I
 
     return p0
@@ -134,6 +148,7 @@
 .method static synthetic access$302(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;I)I
     .locals 0
 
+    .line 3021
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorOffset:I
 
     return p1
@@ -142,6 +157,7 @@
 .method static synthetic access$400(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;)V
     .locals 0
 
+    .line 3021
     invoke-direct {p0}, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->invalidateAnchor()V
 
     return-void
@@ -150,6 +166,7 @@
 .method static synthetic access$600(Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;I)Z
     .locals 0
 
+    .line 3021
     invoke-direct {p0, p1}, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->hasValidAnchor(I)Z
 
     move-result p0
@@ -160,6 +177,7 @@
 .method private hasValidAnchor(I)Z
     .locals 0
 
+    .line 3061
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorPosition:I
 
     if-ltz p0, :cond_0
@@ -182,6 +200,7 @@
 
     const/4 v0, -0x1
 
+    .line 3057
     iput v0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorPosition:I
 
     return-void
@@ -200,6 +219,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 3078
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -234,10 +254,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 3039
     iget p2, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorPosition:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3040
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;->mAnchorOffset:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

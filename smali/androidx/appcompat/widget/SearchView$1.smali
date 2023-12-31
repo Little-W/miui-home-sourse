@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$1;
 .super Ljava/lang/Object;
+.source "SearchView.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
 
+    .line 179
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$1;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 0
 
+    .line 182
     iget-object p0, p0, Landroidx/appcompat/widget/SearchView$1;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView;->updateFocusedState()V

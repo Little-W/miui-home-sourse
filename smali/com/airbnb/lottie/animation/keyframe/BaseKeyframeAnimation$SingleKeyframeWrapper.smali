@@ -1,5 +1,6 @@
 .class final Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;
 .super Ljava/lang/Object;
+.source "BaseKeyframeAnimation.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$KeyframesWrapper;
@@ -53,14 +54,17 @@
         }
     .end annotation
 
+    .line 239
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x40800000    # -1.0f
 
+    .line 237
     iput v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->cachedInterpolatedProgress:F
 
     const/4 v0, 0x0
 
+    .line 240
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -84,6 +88,7 @@
         }
     .end annotation
 
+    .line 255
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->keyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     return-object p0
@@ -92,6 +97,7 @@
 .method public getEndProgress()F
     .locals 0
 
+    .line 265
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->keyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/value/Keyframe;->getEndProgress()F
@@ -104,6 +110,7 @@
 .method public getStartDelayProgress()F
     .locals 0
 
+    .line 260
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->keyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/value/Keyframe;->getStartProgress()F
@@ -116,6 +123,7 @@
 .method public isCachedValueEnabled(F)Z
     .locals 1
 
+    .line 270
     iget v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->cachedInterpolatedProgress:F
 
     cmpl-float v0, v0, p1
@@ -126,6 +134,7 @@
 
     return p0
 
+    .line 273
     :cond_0
     iput p1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->cachedInterpolatedProgress:F
 
@@ -145,6 +154,7 @@
 .method public isValueChanged(F)Z
     .locals 0
 
+    .line 250
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->keyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/value/Keyframe;->isStatic()Z

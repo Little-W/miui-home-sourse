@@ -1,5 +1,6 @@
 .class public abstract Lcom/market/pm/IMarketInstallerService$Stub;
 .super Landroid/os/Binder;
+.source "IMarketInstallerService.java"
 
 # interfaces
 .implements Lcom/market/pm/IMarketInstallerService;
@@ -32,10 +33,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 13
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.market.pm.IMarketInstallerService"
 
+    .line 14
     invoke-virtual {p0, p0, v0}, Lcom/market/pm/IMarketInstallerService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -53,20 +56,24 @@
     :cond_0
     const-string v0, "com.market.pm.IMarketInstallerService"
 
+    .line 25
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 26
     instance-of v1, v0, Lcom/market/pm/IMarketInstallerService;
 
     if-eqz v1, :cond_1
 
+    .line 27
     check-cast v0, Lcom/market/pm/IMarketInstallerService;
 
     return-object v0
 
+    .line 29
     :cond_1
     new-instance v0, Lcom/market/pm/IMarketInstallerService$Stub$Proxy;
 
@@ -101,20 +108,24 @@
 
     if-eq p1, v2, :cond_0
 
+    .line 75
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 42
     :cond_0
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v0
 
+    .line 47
     :cond_1
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 49
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -123,6 +134,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 50
     sget-object p1, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -136,6 +148,7 @@
     :cond_2
     move-object p1, p4
 
+    .line 56
     :goto_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -143,6 +156,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 57
     sget-object v1, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -156,6 +170,7 @@
     :cond_3
     move-object v1, p4
 
+    .line 63
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -163,6 +178,7 @@
 
     if-eqz v2, :cond_4
 
+    .line 64
     sget-object p4, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -173,9 +189,11 @@
 
     check-cast p4, Landroid/os/Bundle;
 
+    .line 69
     :cond_4
     invoke-virtual {p0, p1, v1, p4}, Lcom/market/pm/IMarketInstallerService$Stub;->installPackage(Landroid/net/Uri;Landroid/os/ResultReceiver;Landroid/os/Bundle;)V
 
+    .line 70
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v0

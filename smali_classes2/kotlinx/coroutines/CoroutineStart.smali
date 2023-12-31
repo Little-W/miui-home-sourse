@@ -1,5 +1,6 @@
 .class public final enum Lkotlinx/coroutines/CoroutineStart;
 .super Ljava/lang/Enum;
+.source "CoroutineStart.kt"
 
 
 # annotations
@@ -93,6 +94,7 @@
         }
     .end annotation
 
+    .line 21
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -152,6 +154,7 @@
         }
     .end annotation
 
+    .line 89
     sget-object v0, Lkotlinx/coroutines/CoroutineStart$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p0}, Lkotlinx/coroutines/CoroutineStart;->ordinal()I
@@ -178,6 +181,7 @@
 
     goto :goto_0
 
+    .line 93
     :cond_0
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
@@ -185,16 +189,19 @@
 
     throw p0
 
+    .line 92
     :cond_1
     invoke-static {p1, p2}, Lkotlinx/coroutines/intrinsics/UndispatchedKt;->startCoroutineUndispatched(Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)V
 
     goto :goto_0
 
+    .line 91
     :cond_2
     invoke-static {p1, p2}, Lkotlin/coroutines/ContinuationKt;->startCoroutine(Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)V
 
     goto :goto_0
 
+    .line 90
     :cond_3
     invoke-static {p1, p2}, Lkotlinx/coroutines/intrinsics/CancellableKt;->startCoroutineCancellable(Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)V
 
@@ -222,6 +229,7 @@
         }
     .end annotation
 
+    .line 108
     sget-object v0, Lkotlinx/coroutines/CoroutineStart$WhenMappings;->$EnumSwitchMapping$1:[I
 
     invoke-virtual {p0}, Lkotlinx/coroutines/CoroutineStart;->ordinal()I
@@ -248,6 +256,7 @@
 
     goto :goto_0
 
+    .line 112
     :cond_0
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
@@ -255,11 +264,13 @@
 
     throw p0
 
+    .line 111
     :cond_1
     invoke-static {p1, p2, p3}, Lkotlinx/coroutines/intrinsics/UndispatchedKt;->startCoroutineUndispatched(Lkotlin/jvm/functions/Function2;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
 
     goto :goto_0
 
+    .line 110
     :cond_2
     invoke-static {p1, p2, p3}, Lkotlin/coroutines/ContinuationKt;->startCoroutine(Lkotlin/jvm/functions/Function2;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
 
@@ -278,6 +289,7 @@
 
     move-object v2, p3
 
+    .line 109
     invoke-static/range {v0 .. v5}, Lkotlinx/coroutines/intrinsics/CancellableKt;->startCoroutineCancellable$default(Lkotlin/jvm/functions/Function2;Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
 
     :goto_0
@@ -287,6 +299,7 @@
 .method public final isLazy()Z
     .locals 1
 
+    .line 121
     check-cast p0, Lkotlinx/coroutines/CoroutineStart;
 
     sget-object v0, Lkotlinx/coroutines/CoroutineStart;->LAZY:Lkotlinx/coroutines/CoroutineStart;

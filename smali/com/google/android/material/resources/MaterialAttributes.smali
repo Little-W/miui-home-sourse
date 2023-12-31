@@ -1,15 +1,18 @@
 .class public Lcom/google/android/material/resources/MaterialAttributes;
 .super Ljava/lang/Object;
+.source "MaterialAttributes.java"
 
 
 # direct methods
 .method public static resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
     .locals 2
 
+    .line 46
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
+    .line 47
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
@@ -33,18 +36,21 @@
 .method public static resolveBoolean(Landroid/content/Context;IZ)Z
     .locals 1
 
+    .line 106
     invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 107
     iget p1, p0, Landroid/util/TypedValue;->type:I
 
     const/16 v0, 0x12
 
     if-ne p1, v0, :cond_1
 
+    .line 108
     iget p0, p0, Landroid/util/TypedValue;->data:I
 
     if-eqz p0, :cond_0
@@ -64,18 +70,21 @@
 .method public static resolveInteger(Landroid/content/Context;II)I
     .locals 1
 
+    .line 118
     invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 119
     iget p1, p0, Landroid/util/TypedValue;->type:I
 
     const/16 v0, 0x10
 
     if-ne p1, v0, :cond_0
 
+    .line 120
     iget p2, p0, Landroid/util/TypedValue;->data:I
 
     :cond_0
@@ -85,16 +94,19 @@
 .method public static resolveOrThrow(Landroid/content/Context;ILjava/lang/String;)I
     .locals 3
 
+    .line 62
     invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 74
     iget p0, v0, Landroid/util/TypedValue;->data:I
 
     return p0
 
+    .line 68
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -108,6 +120,7 @@
 
     const/4 p2, 0x1
 
+    .line 72
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -120,6 +133,7 @@
 
     const-string p0, "%1$s requires a value for the %2$s attribute to be set in your app theme. You can either set the attribute in your theme or update your theme to inherit from Theme.MaterialComponents (or a descendant)."
 
+    .line 69
     invoke-static {p0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -132,6 +146,7 @@
 .method public static resolveOrThrow(Landroid/view/View;I)I
     .locals 1
 
+    .line 85
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -144,6 +159,7 @@
 
     move-result-object p0
 
+    .line 84
     invoke-static {v0, p1, p0}, Lcom/google/android/material/resources/MaterialAttributes;->resolveOrThrow(Landroid/content/Context;ILjava/lang/String;)I
 
     move-result p0

@@ -1,17 +1,20 @@
 .class public Lcom/google/android/material/canvas/CanvasCompat;
 .super Ljava/lang/Object;
+.source "CanvasCompat.java"
 
 
 # direct methods
 .method public static saveLayerAlpha(Landroid/graphics/Canvas;FFFFI)I
     .locals 7
 
+    .line 58
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-le v0, v1, :cond_0
 
+    .line 59
     invoke-virtual/range {p0 .. p5}, Landroid/graphics/Canvas;->saveLayerAlpha(FFFFI)I
 
     move-result p0
@@ -33,6 +36,7 @@
 
     move v5, p5
 
+    .line 61
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->saveLayerAlpha(FFFFII)I
 
     move-result p0

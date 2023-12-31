@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/ExecutorCoroutineDispatcher$Key$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Executors.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -58,6 +59,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 22
     check-cast p1, Lkotlin/coroutines/CoroutineContext$Element;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/ExecutorCoroutineDispatcher$Key$1;->invoke(Lkotlin/coroutines/CoroutineContext$Element;)Lkotlinx/coroutines/ExecutorCoroutineDispatcher;
@@ -70,6 +72,7 @@
 .method public final invoke(Lkotlin/coroutines/CoroutineContext$Element;)Lkotlinx/coroutines/ExecutorCoroutineDispatcher;
     .locals 0
 
+    .line 24
     instance-of p0, p1, Lkotlinx/coroutines/ExecutorCoroutineDispatcher;
 
     if-nez p0, :cond_0

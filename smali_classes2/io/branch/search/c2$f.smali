@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/c2$f;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

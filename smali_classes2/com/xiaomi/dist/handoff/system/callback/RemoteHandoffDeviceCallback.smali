@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;
 .super Ljava/lang/Object;
+.source "RemoteHandoffDeviceCallback.java"
 
 
 # virtual methods

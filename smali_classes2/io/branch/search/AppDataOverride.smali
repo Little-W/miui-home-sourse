@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/AppDataOverride;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields

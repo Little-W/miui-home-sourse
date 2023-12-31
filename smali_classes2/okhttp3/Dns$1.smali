@@ -1,5 +1,6 @@
 .class Lokhttp3/Dns$1;
 .super Ljava/lang/Object;
+.source "Dns.java"
 
 # interfaces
 .implements Lokhttp3/Dns;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +50,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 40
     :try_start_0
     invoke-static {p1}, Ljava/net/InetAddress;->getAllByName(Ljava/lang/String;)[Ljava/net/InetAddress;
 
@@ -64,6 +67,7 @@
     :catch_0
     move-exception p0
 
+    .line 42
     new-instance v0, Ljava/net/UnknownHostException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -82,10 +86,13 @@
 
     invoke-direct {v0, p1}, Ljava/net/UnknownHostException;-><init>(Ljava/lang/String;)V
 
+    .line 44
     invoke-virtual {v0, p0}, Ljava/net/UnknownHostException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
+    .line 45
     throw v0
 
+    .line 38
     :cond_0
     new-instance p0, Ljava/net/UnknownHostException;
 

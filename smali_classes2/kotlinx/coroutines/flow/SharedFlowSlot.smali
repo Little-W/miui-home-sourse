@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/flow/SharedFlowSlot;
 .super Lkotlinx/coroutines/flow/internal/AbstractSharedFlowSlot;
+.source "SharedFlow.kt"
 
 
 # annotations
@@ -35,10 +36,12 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 220
     invoke-direct {p0}, Lkotlinx/coroutines/flow/internal/AbstractSharedFlowSlot;-><init>()V
 
     const-wide/16 v0, -0x1
 
+    .line 222
     iput-wide v0, p0, Lkotlinx/coroutines/flow/SharedFlowSlot;->index:J
 
     return-void
@@ -49,6 +52,7 @@
 .method public bridge synthetic allocateLocked(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 220
     check-cast p1, Lkotlinx/coroutines/flow/SharedFlowImpl;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/flow/SharedFlowSlot;->allocateLocked(Lkotlinx/coroutines/flow/SharedFlowImpl;)Z
@@ -68,6 +72,7 @@
         }
     .end annotation
 
+    .line 228
     iget-wide v0, p0, Lkotlinx/coroutines/flow/SharedFlowSlot;->index:J
 
     const-wide/16 v2, 0x0
@@ -80,6 +85,7 @@
 
     return p0
 
+    .line 229
     :cond_0
     invoke-virtual {p1}, Lkotlinx/coroutines/flow/SharedFlowImpl;->updateNewCollectorIndexLocked$kotlinx_coroutines_core()J
 
@@ -95,6 +101,7 @@
 .method public bridge synthetic freeLocked(Ljava/lang/Object;)[Lkotlin/coroutines/Continuation;
     .locals 0
 
+    .line 220
     check-cast p1, Lkotlinx/coroutines/flow/SharedFlowImpl;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/flow/SharedFlowSlot;->freeLocked(Lkotlinx/coroutines/flow/SharedFlowImpl;)[Lkotlin/coroutines/Continuation;
@@ -117,6 +124,7 @@
         }
     .end annotation
 
+    .line 234
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result v0
@@ -152,20 +160,24 @@
 
     throw p0
 
+    .line 235
     :cond_2
     :goto_1
     iget-wide v0, p0, Lkotlinx/coroutines/flow/SharedFlowSlot;->index:J
 
     const-wide/16 v2, -0x1
 
+    .line 236
     iput-wide v2, p0, Lkotlinx/coroutines/flow/SharedFlowSlot;->index:J
 
     const/4 v2, 0x0
 
+    .line 237
     check-cast v2, Lkotlin/coroutines/Continuation;
 
     iput-object v2, p0, Lkotlinx/coroutines/flow/SharedFlowSlot;->cont:Lkotlin/coroutines/Continuation;
 
+    .line 238
     invoke-virtual {p1, v0, v1}, Lkotlinx/coroutines/flow/SharedFlowImpl;->updateCollectorIndexLocked$kotlinx_coroutines_core(J)[Lkotlin/coroutines/Continuation;
 
     move-result-object p0

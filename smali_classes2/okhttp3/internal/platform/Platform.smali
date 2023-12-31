@@ -1,5 +1,6 @@
 .class public Lokhttp3/internal/platform/Platform;
 .super Ljava/lang/Object;
+.source "Platform.java"
 
 
 # static fields
@@ -12,12 +13,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 78
     invoke-static {}, Lokhttp3/internal/platform/Platform;->findPlatform()Lokhttp3/internal/platform/Platform;
 
     move-result-object v0
 
     sput-object v0, Lokhttp3/internal/platform/Platform;->PLATFORM:Lokhttp3/internal/platform/Platform;
 
+    .line 81
     const-class v0, Lokhttp3/OkHttpClient;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -36,6 +39,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,6 +59,7 @@
         }
     .end annotation
 
+    .line 162
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -63,6 +68,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 163
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -72,18 +78,21 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 164
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lokhttp3/Protocol;
 
+    .line 165
     sget-object v4, Lokhttp3/Protocol;->HTTP_1_0:Lokhttp3/Protocol;
 
     if-ne v3, v4, :cond_0
 
     goto :goto_1
 
+    .line 166
     :cond_0
     invoke-virtual {v3}, Lokhttp3/Protocol;->toString()Ljava/lang/String;
 
@@ -111,10 +120,12 @@
         }
     .end annotation
 
+    .line 260
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
 
+    .line 261
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -124,18 +135,21 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 262
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lokhttp3/Protocol;
 
+    .line 263
     sget-object v4, Lokhttp3/Protocol;->HTTP_1_0:Lokhttp3/Protocol;
 
     if-ne v3, v4, :cond_0
 
     goto :goto_1
 
+    .line 264
     :cond_0
     invoke-virtual {v3}, Lokhttp3/Protocol;->toString()Ljava/lang/String;
 
@@ -147,6 +161,7 @@
 
     invoke-virtual {v0, v4}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
+    .line 265
     invoke-virtual {v3}, Lokhttp3/Protocol;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -158,6 +173,7 @@
 
     goto :goto_0
 
+    .line 267
     :cond_1
     invoke-virtual {v0}, Lokio/Buffer;->readByteArray()[B
 
@@ -169,6 +185,7 @@
 .method private static findAndroidPlatform()Lokhttp3/internal/platform/Platform;
     .locals 2
 
+    .line 240
     invoke-static {}, Lokhttp3/internal/platform/Android10Platform;->buildIfSupported()Lokhttp3/internal/platform/Platform;
 
     move-result-object v0
@@ -177,6 +194,7 @@
 
     return-object v0
 
+    .line 246
     :cond_0
     invoke-static {}, Lokhttp3/internal/platform/AndroidPlatform;->buildIfSupported()Lokhttp3/internal/platform/Platform;
 
@@ -186,6 +204,7 @@
 
     return-object v0
 
+    .line 249
     :cond_1
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -199,12 +218,14 @@
 .method private static findJvmPlatform()Lokhttp3/internal/platform/Platform;
     .locals 1
 
+    .line 215
     invoke-static {}, Lokhttp3/internal/platform/Platform;->isConscryptPreferred()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 216
     invoke-static {}, Lokhttp3/internal/platform/ConscryptPlatform;->buildIfSupported()Lokhttp3/internal/platform/ConscryptPlatform;
 
     move-result-object v0
@@ -213,6 +234,7 @@
 
     return-object v0
 
+    .line 223
     :cond_0
     invoke-static {}, Lokhttp3/internal/platform/Jdk9Platform;->buildIfSupported()Lokhttp3/internal/platform/Jdk9Platform;
 
@@ -222,6 +244,7 @@
 
     return-object v0
 
+    .line 229
     :cond_1
     invoke-static {}, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->buildIfSupported()Lokhttp3/internal/platform/Platform;
 
@@ -231,6 +254,7 @@
 
     return-object v0
 
+    .line 236
     :cond_2
     new-instance v0, Lokhttp3/internal/platform/Platform;
 
@@ -242,18 +266,21 @@
 .method private static findPlatform()Lokhttp3/internal/platform/Platform;
     .locals 1
 
+    .line 201
     invoke-static {}, Lokhttp3/internal/platform/Platform;->isAndroid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 202
     invoke-static {}, Lokhttp3/internal/platform/Platform;->findAndroidPlatform()Lokhttp3/internal/platform/Platform;
 
     move-result-object v0
 
     return-object v0
 
+    .line 204
     :cond_0
     invoke-static {}, Lokhttp3/internal/platform/Platform;->findJvmPlatform()Lokhttp3/internal/platform/Platform;
 
@@ -265,6 +292,7 @@
 .method public static get()Lokhttp3/internal/platform/Platform;
     .locals 1
 
+    .line 84
     sget-object v0, Lokhttp3/internal/platform/Platform;->PLATFORM:Lokhttp3/internal/platform/Platform;
 
     return-object v0
@@ -275,6 +303,7 @@
 
     const-string v0, "java.vm.name"
 
+    .line 211
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -293,6 +322,7 @@
 
     const-string v0, "okhttp.platform"
 
+    .line 190
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -309,6 +339,7 @@
 
     return v0
 
+    .line 195
     :cond_0
     invoke-static {}, Ljava/security/Security;->getProviders()[Ljava/security/Provider;
 
@@ -324,6 +355,7 @@
 
     const-string v1, "Conscrypt"
 
+    .line 196
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -342,6 +374,7 @@
 .method public buildCertificateChainCleaner(Ljavax/net/ssl/X509TrustManager;)Lokhttp3/internal/tls/CertificateChainCleaner;
     .locals 1
 
+    .line 172
     new-instance v0, Lokhttp3/internal/tls/BasicCertificateChainCleaner;
 
     invoke-virtual {p0, p1}, Lokhttp3/internal/platform/Platform;->buildTrustRootIndex(Ljavax/net/ssl/X509TrustManager;)Lokhttp3/internal/tls/TrustRootIndex;
@@ -356,6 +389,7 @@
 .method public buildTrustRootIndex(Ljavax/net/ssl/X509TrustManager;)Lokhttp3/internal/tls/TrustRootIndex;
     .locals 0
 
+    .line 312
     new-instance p0, Lokhttp3/internal/tls/BasicTrustRootIndex;
 
     invoke-interface {p1}, Ljavax/net/ssl/X509TrustManager;->getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
@@ -407,6 +441,7 @@
         }
     .end annotation
 
+    .line 129
     invoke-virtual {p1, p2, p3}, Ljava/net/Socket;->connect(Ljava/net/SocketAddress;I)V
 
     return-void
@@ -425,12 +460,14 @@
 
     const-string p0, "java.specification.version"
 
+    .line 294
     invoke-static {p0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "1.7"
 
+    .line 295
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -440,6 +477,7 @@
     :try_start_0
     const-string p0, "TLSv1.2"
 
+    .line 298
     invoke-static {p0}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
 
     move-result-object p0
@@ -453,6 +491,7 @@
     :try_start_1
     const-string p0, "TLS"
 
+    .line 305
     invoke-static {p0}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
 
     move-result-object p0
@@ -464,6 +503,7 @@
     :catch_1
     move-exception p0
 
+    .line 307
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "No TLS provider"
@@ -486,6 +526,7 @@
 .method public getStackTraceForCloseable(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
+    .line 147
     sget-object p0, Lokhttp3/internal/platform/Platform;->logger:Ljava/util/logging/Logger;
 
     sget-object v0, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
@@ -496,6 +537,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 148
     new-instance p0, Ljava/lang/Throwable;
 
     invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
@@ -527,6 +569,7 @@
 
     if-ne p1, p0, :cond_0
 
+    .line 133
     sget-object p0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
     goto :goto_0
@@ -534,6 +577,7 @@
     :cond_0
     sget-object p0, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
 
+    .line 134
     :goto_0
     sget-object p1, Lokhttp3/internal/platform/Platform;->logger:Ljava/util/logging/Logger;
 
@@ -547,6 +591,7 @@
 
     if-nez p2, :cond_0
 
+    .line 155
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -564,6 +609,7 @@
     :cond_0
     const/4 v0, 0x5
 
+    .line 158
     check-cast p2, Ljava/lang/Throwable;
 
     invoke-virtual {p0, v0, p1, p2}, Lokhttp3/internal/platform/Platform;->log(ILjava/lang/String;Ljava/lang/Throwable;)V
@@ -574,6 +620,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 319
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0

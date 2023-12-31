@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/LoggerFactory;
 .super Ljava/lang/Object;
+.source "LoggerFactory.java"
 
 
 # annotations
@@ -29,8 +30,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -54,6 +57,7 @@
         }
     .end annotation
 
+    .line 20
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -62,6 +66,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 23
     iget-object v0, p0, Lcom/xiaomi/analytics/LoggerFactory;->mMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -77,6 +82,7 @@
     :try_start_0
     new-array v1, v0, [Ljava/lang/Class;
 
+    .line 26
     const-class v2, Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -91,12 +97,14 @@
 
     aput-object p2, v0, v3
 
+    .line 27
     invoke-virtual {p1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/xiaomi/analytics/BaseLogger;
 
+    .line 28
     iget-object p0, p0, Lcom/xiaomi/analytics/LoggerFactory;->mMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0, p2, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -110,6 +118,7 @@
 
     const-string p1, "LoggerFactory"
 
+    .line 31
     invoke-static {p1}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -118,6 +127,7 @@
 
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 33
     new-instance p0, Ljava/lang/IllegalStateException;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -141,6 +151,7 @@
     :cond_0
     return-object v0
 
+    .line 21
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

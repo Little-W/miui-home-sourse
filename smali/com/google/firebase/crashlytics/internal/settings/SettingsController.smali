@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/settings/SettingsController;
 .super Ljava/lang/Object;
+.source "SettingsController.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;
@@ -46,14 +47,17 @@
 .method constructor <init>(Landroid/content/Context;Lcom/google/firebase/crashlytics/internal/settings/model/SettingsRequest;Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;Lcom/google/firebase/crashlytics/internal/settings/network/SettingsSpiCall;Lcom/google/firebase/crashlytics/internal/common/DataCollectionArbiter;)V
     .locals 2
 
+    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 64
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settings:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 65
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     new-instance v1, Lcom/google/android/gms/tasks/TaskCompletionSource;
@@ -64,20 +68,28 @@
 
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->appSettingsData:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 76
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->context:Landroid/content/Context;
 
+    .line 77
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settingsRequest:Lcom/google/firebase/crashlytics/internal/settings/model/SettingsRequest;
 
+    .line 78
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->currentTimeProvider:Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;
 
+    .line 79
     iput-object p4, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settingsJsonParser:Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;
 
+    .line 80
     iput-object p5, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->cachedSettingsIo:Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;
 
+    .line 81
     iput-object p6, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settingsSpiCall:Lcom/google/firebase/crashlytics/internal/settings/network/SettingsSpiCall;
 
+    .line 82
     iput-object p7, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->dataCollectionArbiter:Lcom/google/firebase/crashlytics/internal/common/DataCollectionArbiter;
 
+    .line 84
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settings:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {p3}, Lcom/google/firebase/crashlytics/internal/settings/DefaultSettingsJsonTransform;->defaultSettings(Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;)Lcom/google/firebase/crashlytics/internal/settings/model/Settings;
@@ -92,6 +104,7 @@
 .method static synthetic access$000(Lcom/google/firebase/crashlytics/internal/settings/SettingsController;)Lcom/google/firebase/crashlytics/internal/settings/model/SettingsRequest;
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settingsRequest:Lcom/google/firebase/crashlytics/internal/settings/model/SettingsRequest;
 
     return-object p0
@@ -100,6 +113,7 @@
 .method static synthetic access$100(Lcom/google/firebase/crashlytics/internal/settings/SettingsController;)Lcom/google/firebase/crashlytics/internal/settings/network/SettingsSpiCall;
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settingsSpiCall:Lcom/google/firebase/crashlytics/internal/settings/network/SettingsSpiCall;
 
     return-object p0
@@ -108,6 +122,7 @@
 .method static synthetic access$200(Lcom/google/firebase/crashlytics/internal/settings/SettingsController;)Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settingsJsonParser:Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;
 
     return-object p0
@@ -116,6 +131,7 @@
 .method static synthetic access$300(Lcom/google/firebase/crashlytics/internal/settings/SettingsController;)Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->cachedSettingsIo:Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;
 
     return-object p0
@@ -129,6 +145,7 @@
         }
     .end annotation
 
+    .line 48
     invoke-direct {p0, p1, p2}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->logSettings(Lorg/json/JSONObject;Ljava/lang/String;)V
 
     return-void
@@ -137,6 +154,7 @@
 .method static synthetic access$500(Lcom/google/firebase/crashlytics/internal/settings/SettingsController;Ljava/lang/String;)Z
     .locals 0
 
+    .line 48
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->setStoredBuildInstanceIdentifier(Ljava/lang/String;)Z
 
     move-result p0
@@ -147,6 +165,7 @@
 .method static synthetic access$600(Lcom/google/firebase/crashlytics/internal/settings/SettingsController;)Ljava/util/concurrent/atomic/AtomicReference;
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settings:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-object p0
@@ -155,6 +174,7 @@
 .method static synthetic access$700(Lcom/google/firebase/crashlytics/internal/settings/SettingsController;)Ljava/util/concurrent/atomic/AtomicReference;
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->appSettingsData:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-object p0
@@ -163,24 +183,29 @@
 .method public static create(Landroid/content/Context;Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/common/IdManager;Lcom/google/firebase/crashlytics/internal/network/HttpRequestFactory;Ljava/lang/String;Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/persistence/FileStore;Lcom/google/firebase/crashlytics/internal/common/DataCollectionArbiter;)Lcom/google/firebase/crashlytics/internal/settings/SettingsController;
     .locals 15
 
+    .line 97
     invoke-virtual/range {p2 .. p2}, Lcom/google/firebase/crashlytics/internal/common/IdManager;->getInstallerPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 98
     new-instance v10, Lcom/google/firebase/crashlytics/internal/common/SystemCurrentTimeProvider;
 
     invoke-direct {v10}, Lcom/google/firebase/crashlytics/internal/common/SystemCurrentTimeProvider;-><init>()V
 
+    .line 99
     new-instance v11, Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;
 
     invoke-direct {v11, v10}, Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;-><init>(Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;)V
 
+    .line 100
     new-instance v12, Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;
 
     move-object/from16 v1, p6
 
     invoke-direct {v12, v1}, Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;-><init>(Lcom/google/firebase/crashlytics/internal/persistence/FileStore;)V
 
+    .line 101
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const/4 v2, 0x1
@@ -197,20 +222,24 @@
 
     move-result-object v1
 
+    .line 102
     new-instance v13, Lcom/google/firebase/crashlytics/internal/settings/network/DefaultSettingsSpiCall;
 
     move-object/from16 v3, p3
 
     invoke-direct {v13, v1, v3}, Lcom/google/firebase/crashlytics/internal/settings/network/DefaultSettingsSpiCall;-><init>(Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/network/HttpRequestFactory;)V
 
+    .line 105
     invoke-virtual/range {p2 .. p2}, Lcom/google/firebase/crashlytics/internal/common/IdManager;->getModelName()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 106
     invoke-virtual/range {p2 .. p2}, Lcom/google/firebase/crashlytics/internal/common/IdManager;->getOsBuildVersionString()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 107
     invoke-virtual/range {p2 .. p2}, Lcom/google/firebase/crashlytics/internal/common/IdManager;->getOsDisplayVersionString()Ljava/lang/String;
 
     move-result-object v6
@@ -219,6 +248,7 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
+    .line 110
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->getMappingFileId(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v7
@@ -235,10 +265,12 @@
 
     aput-object p4, v1, v2
 
+    .line 109
     invoke-static {v1}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->createInstanceIdFrom([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
+    .line 111
     invoke-static {v0}, Lcom/google/firebase/crashlytics/internal/common/DeliveryMechanism;->determineFrom(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/common/DeliveryMechanism;
 
     move-result-object v0
@@ -247,6 +279,7 @@
 
     move-result v9
 
+    .line 113
     new-instance v14, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsRequest;
 
     move-object v0, v14
@@ -269,6 +302,7 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/common/InstallIdProvider;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 125
     new-instance v0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;
 
     move-object v1, v0
@@ -297,6 +331,7 @@
 
     const/4 v0, 0x0
 
+    .line 234
     :try_start_0
     sget-object v1, Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;->SKIP_CACHE_LOOKUP:Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;
 
@@ -306,6 +341,7 @@
 
     if-nez v1, :cond_4
 
+    .line 235
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->cachedSettingsIo:Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;
 
     invoke-virtual {v1}, Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;->readCachedSettings()Lorg/json/JSONObject;
@@ -314,6 +350,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 238
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settingsJsonParser:Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;
 
     invoke-virtual {v2, v1}, Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;->parseSettingsJson(Lorg/json/JSONObject;)Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;
@@ -324,14 +361,17 @@
 
     const-string v3, "Loaded cached settings: "
 
+    .line 241
     invoke-direct {p0, v1, v3}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->logSettings(Lorg/json/JSONObject;Ljava/lang/String;)V
 
+    .line 243
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->currentTimeProvider:Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;
 
     invoke-interface {p0}, Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;->getCurrentTimeMillis()J
 
     move-result-wide v3
 
+    .line 245
     sget-object p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;->IGNORE_CACHE_EXPIRATION:Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;
 
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;->equals(Ljava/lang/Object;)Z
@@ -340,6 +380,7 @@
 
     if-nez p0, :cond_1
 
+    .line 246
     invoke-virtual {v2, v3, v4}, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->isExpired(J)Z
 
     move-result p0
@@ -348,6 +389,7 @@
 
     goto :goto_0
 
+    .line 250
     :cond_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -361,6 +403,7 @@
 
     goto :goto_2
 
+    .line 248
     :cond_1
     :goto_0
     :try_start_1
@@ -385,6 +428,7 @@
 
     goto :goto_1
 
+    .line 253
     :cond_2
     :try_start_2
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
@@ -397,6 +441,7 @@
 
     goto :goto_2
 
+    .line 256
     :cond_3
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -413,6 +458,7 @@
     :catch_1
     move-exception p0
 
+    .line 260
     :goto_1
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -430,6 +476,7 @@
 .method private getStoredBuildInstanceIdentifier()Ljava/lang/String;
     .locals 2
 
+    .line 271
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->context:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->getSharedPrefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
@@ -440,6 +487,7 @@
 
     const-string v1, ""
 
+    .line 272
     invoke-interface {p0, v0, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -455,6 +503,7 @@
         }
     .end annotation
 
+    .line 267
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p0
@@ -483,20 +532,24 @@
 .method private setStoredBuildInstanceIdentifier(Ljava/lang/String;)Z
     .locals 1
 
+    .line 277
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->context:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->getSharedPrefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
+    .line 278
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     const-string v0, "existing_instance_identifier"
 
+    .line 279
     invoke-interface {p0, v0, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 280
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     const/4 p0, 0x1
@@ -509,14 +562,17 @@
 .method buildInstanceIdentifierChanged()Z
     .locals 1
 
+    .line 285
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->getStoredBuildInstanceIdentifier()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 286
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settingsRequest:Lcom/google/firebase/crashlytics/internal/settings/model/SettingsRequest;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsRequest;->instanceId:Ljava/lang/String;
 
+    .line 287
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -537,6 +593,7 @@
         }
     .end annotation
 
+    .line 145
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->appSettingsData:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -555,6 +612,7 @@
 .method public getSettings()Lcom/google/firebase/crashlytics/internal/settings/model/Settings;
     .locals 0
 
+    .line 137
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settings:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -580,22 +638,26 @@
         }
     .end annotation
 
+    .line 168
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->buildInstanceIdentifierChanged()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 169
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->getCachedSettingsData(Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;)Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 171
     iget-object p2, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settings:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p2, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
+    .line 172
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->appSettingsData:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -612,25 +674,30 @@
 
     const/4 p0, 0x0
 
+    .line 173
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
 
     return-object p0
 
+    .line 182
     :cond_0
     sget-object p1, Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;->IGNORE_CACHE_EXPIRATION:Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;
 
+    .line 183
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->getCachedSettingsData(Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;)Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
+    .line 185
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->settings:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
+    .line 186
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->appSettingsData:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -645,9 +712,11 @@
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetResult(Ljava/lang/Object;)Z
 
+    .line 190
     :cond_1
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->dataCollectionArbiter:Lcom/google/firebase/crashlytics/internal/common/DataCollectionArbiter;
 
+    .line 191
     invoke-virtual {p1, p2}, Lcom/google/firebase/crashlytics/internal/common/DataCollectionArbiter;->waitForDataCollectionPermission(Ljava/util/concurrent/Executor;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1
@@ -656,6 +725,7 @@
 
     invoke-direct {v0, p0}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController$1;-><init>(Lcom/google/firebase/crashlytics/internal/settings/SettingsController;)V
 
+    .line 192
     invoke-virtual {p1, p2, v0}, Lcom/google/android/gms/tasks/Task;->onSuccessTask(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/SuccessContinuation;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -676,6 +746,7 @@
         }
     .end annotation
 
+    .line 154
     sget-object v0, Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;->USE_CACHE:Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;
 
     invoke-virtual {p0, v0, p1}, Lcom/google/firebase/crashlytics/internal/settings/SettingsController;->loadSettingsData(Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;Ljava/util/concurrent/Executor;)Lcom/google/android/gms/tasks/Task;

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/wm/shell/pip/IPip;
 .super Ljava/lang/Object;
+.source "IPip.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

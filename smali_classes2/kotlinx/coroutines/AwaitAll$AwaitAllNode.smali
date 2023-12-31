@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/AwaitAll$AwaitAllNode;
 .super Lkotlinx/coroutines/JobNode;
+.source "Await.kt"
 
 
 # annotations
@@ -58,6 +59,7 @@
         }
     .end annotation
 
+    .line 104
     iput-object p1, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->this$0:Lkotlinx/coroutines/AwaitAll;
 
     invoke-direct {p0, p3}, Lkotlinx/coroutines/JobNode;-><init>(Lkotlinx/coroutines/Job;)V
@@ -66,6 +68,7 @@
 
     const/4 p1, 0x0
 
+    .line 107
     iput-object p1, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->_disposer:Ljava/lang/Object;
 
     return-void
@@ -83,6 +86,7 @@
         }
     .end annotation
 
+    .line 109
     iget-object p0, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->_disposer:Ljava/lang/Object;
 
     check-cast p0, Lkotlinx/coroutines/AwaitAll$DisposeHandlersOnCancel;
@@ -93,6 +97,7 @@
 .method public final getHandle()Lkotlinx/coroutines/DisposableHandle;
     .locals 1
 
+    .line 105
     iget-object p0, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->handle:Lkotlinx/coroutines/DisposableHandle;
 
     if-nez p0, :cond_0
@@ -108,6 +113,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 104
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->invoke(Ljava/lang/Throwable;)V
@@ -122,6 +128,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 114
     iget-object v0, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->continuation:Lkotlinx/coroutines/CancellableContinuation;
 
     invoke-interface {v0, p1}, Lkotlinx/coroutines/CancellableContinuation;->tryResumeWithException(Ljava/lang/Throwable;)Ljava/lang/Object;
@@ -130,10 +137,12 @@
 
     if-eqz p1, :cond_2
 
+    .line 116
     iget-object v0, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->continuation:Lkotlinx/coroutines/CancellableContinuation;
 
     invoke-interface {v0, p1}, Lkotlinx/coroutines/CancellableContinuation;->completeResume(Ljava/lang/Object;)V
 
+    .line 119
     invoke-virtual {p0}, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->getDisposer()Lkotlinx/coroutines/AwaitAll$DisposeHandlersOnCancel;
 
     move-result-object p0
@@ -144,6 +153,7 @@
 
     goto :goto_1
 
+    .line 121
     :cond_0
     iget-object p1, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->this$0:Lkotlinx/coroutines/AwaitAll;
 
@@ -155,6 +165,7 @@
 
     if-nez p1, :cond_2
 
+    .line 122
     iget-object p1, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->continuation:Lkotlinx/coroutines/CancellableContinuation;
 
     check-cast p1, Lkotlin/coroutines/Continuation;
@@ -165,6 +176,7 @@
 
     move-result-object p0
 
+    .line 129
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p0
@@ -173,6 +185,7 @@
 
     check-cast v0, Ljava/util/Collection;
 
+    .line 130
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -182,6 +195,7 @@
 
     aget-object v3, p0, v2
 
+    .line 122
     invoke-interface {v3}, Lkotlinx/coroutines/Deferred;->getCompleted()Ljava/lang/Object;
 
     move-result-object v3
@@ -192,9 +206,11 @@
 
     goto :goto_0
 
+    .line 132
     :cond_1
     check-cast v0, Ljava/util/List;
 
+    .line 122
     sget-object p0, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
     invoke-static {v0}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
@@ -218,6 +234,7 @@
         }
     .end annotation
 
+    .line 110
     iput-object p1, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->_disposer:Ljava/lang/Object;
 
     return-void
@@ -226,6 +243,7 @@
 .method public final setHandle(Lkotlinx/coroutines/DisposableHandle;)V
     .locals 0
 
+    .line 105
     iput-object p1, p0, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->handle:Lkotlinx/coroutines/DisposableHandle;
 
     return-void

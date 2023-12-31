@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/request/RequestOptions;
 .super Lcom/bumptech/glide/request/BaseRequestOptions;
+.source "RequestOptions.java"
 
 
 # annotations
@@ -16,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 26
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;-><init>()V
 
     return-void
@@ -32,6 +34,7 @@
         }
     .end annotation
 
+    .line 264
     new-instance v0, Lcom/bumptech/glide/request/RequestOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/RequestOptions;-><init>()V
@@ -48,6 +51,7 @@
 .method public static diskCacheStrategyOf(Lcom/bumptech/glide/load/engine/DiskCacheStrategy;)Lcom/bumptech/glide/request/RequestOptions;
     .locals 1
 
+    .line 63
     new-instance v0, Lcom/bumptech/glide/request/RequestOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/RequestOptions;-><init>()V
@@ -64,6 +68,7 @@
 .method public static signatureOf(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/request/RequestOptions;
     .locals 1
 
+    .line 161
     new-instance v0, Lcom/bumptech/glide/request/RequestOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/RequestOptions;-><init>()V

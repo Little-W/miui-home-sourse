@@ -1,5 +1,6 @@
 .class Landroidx/core/view/WindowInsetsControllerCompat$Impl26;
 .super Landroidx/core/view/WindowInsetsControllerCompat$Impl23;
+.source "WindowInsetsControllerCompat.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Landroid/view/Window;Landroid/view/View;)V
     .locals 0
 
+    .line 575
     invoke-direct {p0, p1, p2}, Landroidx/core/view/WindowInsetsControllerCompat$Impl23;-><init>(Landroid/view/Window;Landroid/view/View;)V
 
     return-void
@@ -33,16 +35,20 @@
 
     const/high16 p1, 0x8000000
 
+    .line 587
     invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl26;->unsetWindowFlag(I)V
 
     const/high16 p1, -0x80000000
 
+    .line 588
     invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl26;->setWindowFlag(I)V
 
+    .line 589
     invoke-virtual {p0, v0}, Landroidx/core/view/WindowInsetsControllerCompat$Impl26;->setSystemUiFlag(I)V
 
     goto :goto_0
 
+    .line 591
     :cond_0
     invoke-virtual {p0, v0}, Landroidx/core/view/WindowInsetsControllerCompat$Impl26;->unsetSystemUiFlag(I)V
 

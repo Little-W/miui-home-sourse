@@ -1,5 +1,6 @@
 .class public Lio/branch/search/s3$a$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;

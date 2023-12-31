@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/InvokeOnCancelling;
 .super Lkotlinx/coroutines/JobCancellingNode;
+.source "JobSupport.kt"
 
 
 # annotations
@@ -62,12 +63,14 @@
         }
     .end annotation
 
+    .line 1460
     invoke-direct {p0, p1}, Lkotlinx/coroutines/JobCancellingNode;-><init>(Lkotlinx/coroutines/Job;)V
 
     iput-object p2, p0, Lkotlinx/coroutines/InvokeOnCancelling;->handler:Lkotlin/jvm/functions/Function1;
 
     const/4 p1, 0x0
 
+    .line 1462
     iput p1, p0, Lkotlinx/coroutines/InvokeOnCancelling;->_invoked:I
 
     return-void
@@ -78,6 +81,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1457
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/InvokeOnCancelling;->invoke(Ljava/lang/Throwable;)V
@@ -90,6 +94,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 3
 
+    .line 1464
     sget-object v0, Lkotlinx/coroutines/InvokeOnCancelling;->_invoked$FU:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     const/4 v1, 0x0
@@ -113,6 +118,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1466
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

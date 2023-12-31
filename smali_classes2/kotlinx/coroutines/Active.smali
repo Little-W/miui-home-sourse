@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/Active;
 .super Ljava/lang/Object;
+.source "CancellableContinuationImpl.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/NotCompleted;
@@ -13,6 +14,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 516
     new-instance v0, Lkotlinx/coroutines/Active;
 
     invoke-direct {v0}, Lkotlinx/coroutines/Active;-><init>()V
@@ -25,6 +27,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 516
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

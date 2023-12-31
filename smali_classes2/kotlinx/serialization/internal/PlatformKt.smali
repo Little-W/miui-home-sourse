@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/PlatformKt;
 .super Ljava/lang/Object;
+.source "Platform.kt"
 
 
 # annotations
@@ -25,18 +26,21 @@
     :try_start_0
     const-string v1, "Companion"
 
+    .line 112
     invoke-virtual {p0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p0
 
     const-string v1, "companion"
 
+    .line 113
     invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 114
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -69,6 +73,7 @@
 
     new-array v0, v0, [Lkotlinx/serialization/KSerializer;
 
+    .line 23
     invoke-static {p0, v0}, Lkotlinx/serialization/internal/PlatformKt;->constructSerializerForGivenTypeArgs(Lkotlin/reflect/KClass;[Lkotlinx/serialization/KSerializer;)Lkotlinx/serialization/KSerializer;
 
     move-result-object p0
@@ -101,10 +106,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 33
     invoke-static {p0}, Lkotlin/jvm/JvmClassMappingKt;->getJavaClass(Lkotlin/reflect/KClass;)Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 34
     invoke-virtual {v0}, Ljava/lang/Class;->isEnum()Z
 
     move-result v1
@@ -117,12 +124,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 35
     invoke-static {v0}, Lkotlinx/serialization/internal/PlatformKt;->createEnumSerializer(Ljava/lang/Class;)Lkotlinx/serialization/KSerializer;
 
     move-result-object p0
 
     return-object p0
 
+    .line 37
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Class;->isInterface()Z
 
@@ -130,12 +139,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 38
     invoke-static {p0}, Lkotlinx/serialization/internal/PlatformKt;->interfaceSerializer(Lkotlin/reflect/KClass;)Lkotlinx/serialization/KSerializer;
 
     move-result-object p0
 
     return-object p0
 
+    .line 41
     :cond_1
     array-length v1, p1
 
@@ -153,6 +164,7 @@
 
     return-object p1
 
+    .line 44
     :cond_2
     invoke-static {v0}, Lkotlinx/serialization/internal/PlatformKt;->findObjectSerializer(Ljava/lang/Class;)Lkotlinx/serialization/KSerializer;
 
@@ -165,6 +177,7 @@
     :cond_3
     const/4 p1, 0x0
 
+    .line 48
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredClasses()[Ljava/lang/Class;
 
@@ -174,6 +187,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 159
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -189,6 +203,7 @@
 
     const-string v6, "it"
 
+    .line 48
     invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -228,6 +243,7 @@
 
     const-string v0, "INSTANCE"
 
+    .line 49
     invoke-virtual {v4, v0}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -262,6 +278,7 @@
 
     return-object p1
 
+    .line 55
     :cond_a
     invoke-static {p0}, Lkotlinx/serialization/internal/PlatformKt;->polymorphicSerializer(Lkotlin/reflect/KClass;)Lkotlinx/serialization/KSerializer;
 
@@ -284,10 +301,12 @@
         }
     .end annotation
 
+    .line 121
     invoke-virtual {p0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 122
     new-instance v1, Lkotlinx/serialization/internal/EnumSerializer;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
@@ -339,6 +358,7 @@
         }
     .end annotation
 
+    .line 128
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -347,6 +367,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 170
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -368,6 +389,7 @@
 
     aget-object v9, v0, v4
 
+    .line 128
     invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v9}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
@@ -435,10 +457,12 @@
     :cond_4
     if-eqz v6, :cond_c
 
+    .line 131
     invoke-virtual {v6, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 133
     invoke-virtual {p0}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object p0
@@ -447,6 +471,7 @@
 
     invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 181
     array-length v1, p0
 
     move v4, v2
@@ -460,6 +485,7 @@
 
     aget-object v9, p0, v4
 
+    .line 133
     invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v9}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
@@ -543,10 +569,12 @@
 
     new-array p0, v2, [Ljava/lang/Object;
 
+    .line 135
     invoke-virtual {v6, v0, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 137
     instance-of v0, p0, Lkotlinx/serialization/KSerializer;
 
     if-nez v0, :cond_b
@@ -576,6 +604,7 @@
         }
     .end annotation
 
+    .line 88
     invoke-static {p0}, Lkotlin/jvm/JvmClassMappingKt;->getJavaClass(Lkotlin/reflect/KClass;)Ljava/lang/Class;
 
     move-result-object v0
@@ -590,6 +619,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 89
     invoke-interface {v0}, Lkotlinx/serialization/Serializable;->with()Ljava/lang/Class;
 
     move-result-object v0
@@ -617,6 +647,7 @@
 
     return-object p0
 
+    .line 90
     :cond_1
     :goto_0
     new-instance v0, Lkotlinx/serialization/PolymorphicSerializer;
@@ -645,6 +676,7 @@
         }
     .end annotation
 
+    .line 97
     invoke-static {p0}, Lkotlinx/serialization/internal/PlatformKt;->companionOrNull(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -653,6 +685,7 @@
 
     if-eqz p0, :cond_6
 
+    .line 99
     :try_start_0
     array-length v1, p1
 
@@ -693,6 +726,7 @@
     :cond_2
     move-object v1, v3
 
+    .line 100
     :goto_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -712,6 +746,7 @@
 
     move-result-object v1
 
+    .line 101
     array-length v2, p1
 
     invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
@@ -739,6 +774,7 @@
     :catch_0
     move-exception p0
 
+    .line 105
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
@@ -749,6 +785,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 106
     new-instance v0, Ljava/lang/reflect/InvocationTargetException;
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
@@ -771,6 +808,7 @@
 
     throw v0
 
+    .line 105
     :cond_5
     check-cast p0, Ljava/lang/Throwable;
 
@@ -805,6 +843,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 152
     invoke-static {p1}, Lkotlin/jvm/JvmClassMappingKt;->getJavaObjectType(Lkotlin/reflect/KClass;)Ljava/lang/Class;
 
     move-result-object p1
@@ -828,6 +867,7 @@
         }
     .end annotation
 
+    .line 62
     const-class v0, Lkotlinx/serialization/Serializable;
 
     invoke-virtual {p0, v0}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -836,6 +876,7 @@
 
     if-nez v0, :cond_0
 
+    .line 63
     const-class v0, Lkotlinx/serialization/Polymorphic;
 
     invoke-virtual {p0, v0}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -870,6 +911,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 154
     invoke-static {p0}, Lkotlin/jvm/JvmClassMappingKt;->getJavaClass(Lkotlin/reflect/KClass;)Ljava/lang/Class;
 
     move-result-object p0
@@ -896,6 +938,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 29
     invoke-static {p0}, Lkotlinx/serialization/internal/Platform_commonKt;->serializerNotRegistered(Lkotlin/reflect/KClass;)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -919,10 +962,12 @@
         }
     .end annotation
 
+    .line 71
     invoke-static {p0}, Lkotlin/jvm/JvmClassMappingKt;->getJavaClass(Lkotlin/reflect/KClass;)Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 72
     const-class v1, Lkotlinx/serialization/Polymorphic;
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -931,6 +976,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 73
     new-instance v0, Lkotlinx/serialization/PolymorphicSerializer;
 
     invoke-direct {v0, p0}, Lkotlinx/serialization/PolymorphicSerializer;-><init>(Lkotlin/reflect/KClass;)V
@@ -939,6 +985,7 @@
 
     return-object v0
 
+    .line 75
     :cond_0
     const-class v1, Lkotlinx/serialization/Serializable;
 
@@ -950,6 +997,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 76
     invoke-interface {v0}, Lkotlinx/serialization/Serializable;->with()Ljava/lang/Class;
 
     move-result-object v0
@@ -970,6 +1018,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 77
     new-instance v0, Lkotlinx/serialization/PolymorphicSerializer;
 
     invoke-direct {v0, p0}, Lkotlinx/serialization/PolymorphicSerializer;-><init>(Lkotlin/reflect/KClass;)V
@@ -1006,6 +1055,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 27
     invoke-static {p1}, Lkotlin/jvm/JvmClassMappingKt;->getJavaClass(Lkotlin/reflect/KClass;)Ljava/lang/Class;
 
     move-result-object p1

@@ -1,5 +1,6 @@
 .class public final Landroid/window/TransitionInfo$AnimationOptions;
 .super Ljava/lang/Object;
+.source "TransitionInfo.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -38,6 +39,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 748
     new-instance v0, Landroid/window/TransitionInfo$AnimationOptions$1;
 
     invoke-direct {v0}, Landroid/window/TransitionInfo$AnimationOptions$1;-><init>()V
@@ -52,6 +54,7 @@
 .method public describeContents()I
     .locals 1
 
+    .line 764
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -64,6 +67,7 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 1
 
+    .line 681
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -76,6 +80,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 745
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"

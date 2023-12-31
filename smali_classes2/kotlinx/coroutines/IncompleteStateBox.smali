@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/IncompleteStateBox;
 .super Ljava/lang/Object;
+.source "JobSupport.kt"
 
 
 # instance fields
@@ -10,6 +11,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/Incomplete;)V
     .locals 0
 
+    .line 1280
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/IncompleteStateBox;->state:Lkotlinx/coroutines/Incomplete;

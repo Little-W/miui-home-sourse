@@ -1,5 +1,6 @@
 .class public interface abstract Lio/branch/search/b0;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods

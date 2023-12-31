@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/internal/ViewUtils$RelativePadding;
 .super Ljava/lang/Object;
+.source "ViewUtils.java"
 
 
 # annotations
@@ -27,14 +28,19 @@
 .method public constructor <init>(IIII)V
     .locals 0
 
+    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 126
     iput p1, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->start:I
 
+    .line 127
     iput p2, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->top:I
 
+    .line 128
     iput p3, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->end:I
 
+    .line 129
     iput p4, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
     return-void
@@ -43,20 +49,25 @@
 .method public constructor <init>(Lcom/google/android/material/internal/ViewUtils$RelativePadding;)V
     .locals 1
 
+    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 133
     iget v0, p1, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->start:I
 
     iput v0, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->start:I
 
+    .line 134
     iget v0, p1, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->top:I
 
     iput v0, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->top:I
 
+    .line 135
     iget v0, p1, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->end:I
 
     iput v0, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->end:I
 
+    .line 136
     iget p1, p1, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
     iput p1, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I

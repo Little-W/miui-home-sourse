@@ -1,5 +1,6 @@
 .class abstract Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
 .super Ljava/lang/Object;
+.source "EventStoreConfig.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

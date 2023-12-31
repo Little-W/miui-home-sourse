@@ -1,5 +1,6 @@
 .class Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper$1;
 .super Ljava/lang/Object;
+.source "FrameworkSQLiteOpenHelper.java"
 
 # interfaces
 .implements Landroid/database/DatabaseErrorHandler;
@@ -26,6 +27,7 @@
 .method constructor <init>([Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;)V
     .locals 0
 
+    .line 81
     iput-object p1, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper$1;->val$dbRef:[Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;
 
     iput-object p2, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper$1;->val$callback:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;
@@ -40,6 +42,7 @@
 .method public onCorruption(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 1
 
+    .line 84
     iget-object p1, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper$1;->val$dbRef:[Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;
 
     const/4 v0, 0x0
@@ -48,6 +51,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 86
     iget-object p0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper$OpenHelper$1;->val$callback:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;
 
     invoke-virtual {p0, p1}, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;->onCorruption(Landroidx/sqlite/db/SupportSQLiteDatabase;)V

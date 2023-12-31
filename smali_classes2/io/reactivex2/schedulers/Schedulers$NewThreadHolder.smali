@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/schedulers/Schedulers$NewThreadHolder;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 71
     new-instance v0, Lio/reactivex2/internal/schedulers/NewThreadScheduler;
 
     invoke-direct {v0}, Lio/reactivex2/internal/schedulers/NewThreadScheduler;-><init>()V

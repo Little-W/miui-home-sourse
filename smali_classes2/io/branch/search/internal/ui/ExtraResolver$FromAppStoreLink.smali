@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/ExtraResolver$FromAppStoreLink;
 .super Lio/branch/search/internal/ui/ExtraResolver;
+.source "SourceFile"
 
 
 # annotations

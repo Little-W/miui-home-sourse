@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/config/CommercialRemoteConfigConstant;
 .super Ljava/lang/Object;
+.source "CommercialRemoteConfigConstant.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

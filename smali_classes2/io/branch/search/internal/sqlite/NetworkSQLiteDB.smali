@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/internal/sqlite/NetworkSQLiteDB;
 .super Landroidx/room/RoomDatabase;
+.source "SourceFile"
 
 
 # direct methods

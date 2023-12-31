@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/util/LogTime;
 .super Ljava/lang/Object;
+.source "LogTime.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
+    .line 12
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
@@ -37,6 +39,7 @@
 .method public static getElapsedMillis(J)D
     .locals 2
 
+    .line 37
     invoke-static {}, Lcom/bumptech/glide/util/LogTime;->getLogTime()J
 
     move-result-wide v0
@@ -55,18 +58,21 @@
 .method public static getLogTime()J
     .locals 2
 
+    .line 24
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_0
 
+    .line 25
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
     return-wide v0
 
+    .line 27
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 

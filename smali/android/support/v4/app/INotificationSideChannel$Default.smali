@@ -1,5 +1,6 @@
 .class public Landroid/support/v4/app/INotificationSideChannel$Default;
 .super Ljava/lang/Object;
+.source "INotificationSideChannel.java"
 
 # interfaces
 .implements Landroid/support/v4/app/INotificationSideChannel;
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

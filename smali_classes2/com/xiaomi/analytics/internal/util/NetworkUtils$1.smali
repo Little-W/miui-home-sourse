@@ -1,5 +1,6 @@
 .class synthetic Lcom/xiaomi/analytics/internal/util/NetworkUtils$1;
 .super Ljava/lang/Object;
+.source "NetworkUtils.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 30
     invoke-static {}, Lcom/xiaomi/analytics/internal/util/NetState;->values()[Lcom/xiaomi/analytics/internal/util/NetState;
 
     move-result-object v0

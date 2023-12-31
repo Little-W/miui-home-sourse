@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/config/-$$Lambda$CommercialCloudConfigJobService$uzv-cXaq8508UdspXbu8DKF-XIM;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lio/reactivex/functions/Consumer;

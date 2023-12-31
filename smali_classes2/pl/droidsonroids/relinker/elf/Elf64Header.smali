@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/relinker/elf/Elf64Header;
 .super Lpl/droidsonroids/relinker/elf/Elf$Header;
+.source "Elf64Header.java"
 
 
 # instance fields
@@ -15,20 +16,25 @@
         }
     .end annotation
 
+    .line 25
     invoke-direct {p0}, Lpl/droidsonroids/relinker/elf/Elf$Header;-><init>()V
 
+    .line 26
     iput-boolean p1, p0, Lpl/droidsonroids/relinker/elf/Elf64Header;->bigEndian:Z
 
+    .line 27
     iput-object p2, p0, Lpl/droidsonroids/relinker/elf/Elf64Header;->parser:Lpl/droidsonroids/relinker/elf/ElfParser;
 
     const/16 v0, 0x8
 
+    .line 29
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     if-eqz p1, :cond_0
 
+    .line 30
     sget-object p1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     goto :goto_0
@@ -41,6 +47,7 @@
 
     const-wide/16 v1, 0x10
 
+    .line 32
     invoke-virtual {p2, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readHalf(Ljava/nio/ByteBuffer;J)I
 
     move-result p1
@@ -49,6 +56,7 @@
 
     const-wide/16 v1, 0x20
 
+    .line 33
     invoke-virtual {p2, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readLong(Ljava/nio/ByteBuffer;J)J
 
     move-result-wide v1
@@ -57,6 +65,7 @@
 
     const-wide/16 v1, 0x28
 
+    .line 34
     invoke-virtual {p2, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readLong(Ljava/nio/ByteBuffer;J)J
 
     move-result-wide v1
@@ -65,6 +74,7 @@
 
     const-wide/16 v1, 0x36
 
+    .line 35
     invoke-virtual {p2, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readHalf(Ljava/nio/ByteBuffer;J)I
 
     move-result p1
@@ -73,6 +83,7 @@
 
     const-wide/16 v1, 0x38
 
+    .line 36
     invoke-virtual {p2, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readHalf(Ljava/nio/ByteBuffer;J)I
 
     move-result p1
@@ -81,6 +92,7 @@
 
     const-wide/16 v1, 0x3a
 
+    .line 37
     invoke-virtual {p2, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readHalf(Ljava/nio/ByteBuffer;J)I
 
     move-result p1
@@ -89,6 +101,7 @@
 
     const-wide/16 v1, 0x3c
 
+    .line 38
     invoke-virtual {p2, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readHalf(Ljava/nio/ByteBuffer;J)I
 
     move-result p1
@@ -97,6 +110,7 @@
 
     const-wide/16 v1, 0x3e
 
+    .line 39
     invoke-virtual {p2, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readHalf(Ljava/nio/ByteBuffer;J)I
 
     move-result p1
@@ -116,6 +130,7 @@
         }
     .end annotation
 
+    .line 55
     new-instance v6, Lpl/droidsonroids/relinker/elf/Dynamic64Structure;
 
     iget-object v1, p0, Lpl/droidsonroids/relinker/elf/Elf64Header;->parser:Lpl/droidsonroids/relinker/elf/ElfParser;
@@ -141,6 +156,7 @@
         }
     .end annotation
 
+    .line 49
     new-instance v0, Lpl/droidsonroids/relinker/elf/Program64Header;
 
     iget-object v1, p0, Lpl/droidsonroids/relinker/elf/Elf64Header;->parser:Lpl/droidsonroids/relinker/elf/ElfParser;
@@ -158,6 +174,7 @@
         }
     .end annotation
 
+    .line 44
     new-instance v0, Lpl/droidsonroids/relinker/elf/Section64Header;
 
     iget-object v1, p0, Lpl/droidsonroids/relinker/elf/Elf64Header;->parser:Lpl/droidsonroids/relinker/elf/ElfParser;

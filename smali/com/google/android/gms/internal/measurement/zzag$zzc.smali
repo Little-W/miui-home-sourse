@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzag$zzc;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-sdk-api@@18.0.0"
 
 # interfaces
 .implements Landroid/app/Application$ActivityLifecycleCallbacks;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/gms/internal/measurement/zzag;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzag$zzc;->zza:Lcom/google/android/gms/internal/measurement/zzag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzag$zzc;->zza:Lcom/google/android/gms/internal/measurement/zzag;
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzbp;
@@ -50,6 +53,7 @@
 .method public final onActivityDestroyed(Landroid/app/Activity;)V
     .locals 2
 
+    .line 20
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzag$zzc;->zza:Lcom/google/android/gms/internal/measurement/zzag;
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzbu;
@@ -64,6 +68,7 @@
 .method public final onActivityPaused(Landroid/app/Activity;)V
     .locals 2
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzag$zzc;->zza:Lcom/google/android/gms/internal/measurement/zzag;
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzbq;
@@ -78,6 +83,7 @@
 .method public final onActivityResumed(Landroid/app/Activity;)V
     .locals 2
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzag$zzc;->zza:Lcom/google/android/gms/internal/measurement/zzag;
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzbr;
@@ -92,10 +98,12 @@
 .method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 3
 
+    .line 12
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzt;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/measurement/zzt;-><init>()V
 
+    .line 13
     iget-object v1, p0, Lcom/google/android/gms/internal/measurement/zzag$zzc;->zza:Lcom/google/android/gms/internal/measurement/zzag;
 
     new-instance v2, Lcom/google/android/gms/internal/measurement/zzbs;
@@ -106,12 +114,14 @@
 
     const-wide/16 p0, 0x32
 
+    .line 15
     invoke-virtual {v0, p0, p1}, Lcom/google/android/gms/internal/measurement/zzt;->zzb(J)Landroid/os/Bundle;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 18
     invoke-virtual {p2, p0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
     :cond_0
@@ -121,6 +131,7 @@
 .method public final onActivityStarted(Landroid/app/Activity;)V
     .locals 2
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzag$zzc;->zza:Lcom/google/android/gms/internal/measurement/zzag;
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzbo;
@@ -135,6 +146,7 @@
 .method public final onActivityStopped(Landroid/app/Activity;)V
     .locals 2
 
+    .line 10
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzag$zzc;->zza:Lcom/google/android/gms/internal/measurement/zzag;
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzbt;

@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/flow/internal/FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$1$lambda$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "FlowCoroutine.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -115,6 +116,7 @@
 
     move-result-object v0
 
+    .line 51
     iget v1, p0, Lkotlinx/coroutines/flow/internal/FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$1$lambda$1;->label:I
 
     const/4 v2, 0x1

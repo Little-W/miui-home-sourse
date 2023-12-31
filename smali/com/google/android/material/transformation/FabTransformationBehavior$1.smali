@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/transformation/FabTransformationBehavior$1;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "FabTransformationBehavior.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method constructor <init>(Lcom/google/android/material/transformation/FabTransformationBehavior;ZLandroid/view/View;Landroid/view/View;)V
     .locals 0
 
+    .line 169
     iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->this$0:Lcom/google/android/material/transformation/FabTransformationBehavior;
 
     iput-boolean p2, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$expanded:Z
@@ -45,22 +47,26 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
+    .line 182
     iget-boolean p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$expanded:Z
 
     if-nez p1, :cond_0
 
+    .line 183
     iget-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$child:Landroid/view/View;
 
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 185
     iget-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$dependency:Landroid/view/View;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
+    .line 186
     iget-object p0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$dependency:Landroid/view/View;
 
     const/4 p1, 0x0
@@ -74,22 +80,26 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
+    .line 172
     iget-boolean p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$expanded:Z
 
     if-eqz p1, :cond_0
 
+    .line 173
     iget-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$child:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 175
     iget-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$dependency:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
+    .line 176
     iget-object p0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$1;->val$dependency:Landroid/view/View;
 
     const/4 p1, 0x4

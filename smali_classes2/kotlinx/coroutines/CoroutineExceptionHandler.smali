@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/CoroutineExceptionHandler;
 .super Ljava/lang/Object;
+.source "CoroutineExceptionHandler.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/CoroutineContext$Element;

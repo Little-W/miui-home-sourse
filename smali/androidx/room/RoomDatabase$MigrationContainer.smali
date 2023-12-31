@@ -1,5 +1,6 @@
 .class public Landroidx/room/RoomDatabase$MigrationContainer;
 .super Ljava/lang/Object;
+.source "RoomDatabase.java"
 
 
 # annotations
@@ -30,8 +31,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 677
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 678
     new-instance v0, Landroidx/collection/SparseArrayCompat;
 
     invoke-direct {v0}, Landroidx/collection/SparseArrayCompat;-><init>()V
@@ -79,6 +82,7 @@
     :cond_2
     if-le p3, p4, :cond_9
 
+    .line 732
     :goto_1
     iget-object v3, p0, Landroidx/room/RoomDatabase$MigrationContainer;->mMigrations:Landroidx/collection/SparseArrayCompat;
 
@@ -94,6 +98,7 @@
 
     return-object v4
 
+    .line 737
     :cond_3
     invoke-virtual {v3}, Landroidx/collection/SparseArrayCompat;->size()I
 
@@ -117,6 +122,7 @@
     :goto_2
     if-eq v5, v7, :cond_8
 
+    .line 750
     invoke-virtual {v3, v5}, Landroidx/collection/SparseArrayCompat;->keyAt(I)I
 
     move-result v8
@@ -147,6 +153,7 @@
     :goto_4
     if-eqz v9, :cond_7
 
+    .line 758
     invoke-virtual {v3, v5}, Landroidx/collection/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -189,6 +196,7 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 721
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -205,11 +213,13 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 724
     :goto_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 725
     invoke-direct {p0, v1, v0, p1, p2}, Landroidx/room/RoomDatabase$MigrationContainer;->findUpMigrationPath(Ljava/util/List;ZII)Ljava/util/List;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/DesktopRecommendArgs;
 .super Ljava/lang/Object;
+.source "DesktopRecommendArgs.java"
 
 
 # static fields
@@ -56,14 +57,19 @@
         }
     .end annotation
 
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 23
     iput-wide p1, p0, Lcom/market/sdk/DesktopRecommendArgs;->folderId:J
 
+    .line 24
     iput-object p3, p0, Lcom/market/sdk/DesktopRecommendArgs;->folderName:Ljava/lang/String;
 
+    .line 25
     iput-object p4, p0, Lcom/market/sdk/DesktopRecommendArgs;->installedPackages:Ljava/util/ArrayList;
 
+    .line 26
     iput-object p5, p0, Lcom/market/sdk/DesktopRecommendArgs;->extraParams:Ljava/util/Map;
 
     return-void
@@ -72,10 +78,12 @@
 .method public constructor <init>(Landroid/os/Bundle;)V
     .locals 2
 
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "key_folder_id"
 
+    .line 30
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -84,6 +92,7 @@
 
     const-string v0, "key_folder_name"
 
+    .line 31
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -92,6 +101,7 @@
 
     const-string v0, "key_pkg_list"
 
+    .line 32
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -100,6 +110,7 @@
 
     const-string v0, "key_extra_params"
 
+    .line 33
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -126,10 +137,12 @@
         }
     .end annotation
 
+    .line 67
     new-instance v0, Lcom/google/gson/Gson;
 
     invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
 
+    .line 68
     invoke-virtual {v0, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -151,14 +164,17 @@
         }
     .end annotation
 
+    .line 72
     new-instance v0, Lcom/google/gson/Gson;
 
     invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
 
+    .line 73
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
+    .line 74
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -186,6 +202,7 @@
         }
     .end annotation
 
+    .line 49
     iget-object p0, p0, Lcom/market/sdk/DesktopRecommendArgs;->extraParams:Ljava/util/Map;
 
     return-object p0
@@ -194,6 +211,7 @@
 .method public getFolderId()J
     .locals 2
 
+    .line 37
     iget-wide v0, p0, Lcom/market/sdk/DesktopRecommendArgs;->folderId:J
 
     return-wide v0
@@ -202,6 +220,7 @@
 .method public getFolderName()Ljava/lang/String;
     .locals 0
 
+    .line 41
     iget-object p0, p0, Lcom/market/sdk/DesktopRecommendArgs;->folderName:Ljava/lang/String;
 
     return-object p0
@@ -218,6 +237,7 @@
         }
     .end annotation
 
+    .line 45
     iget-object p0, p0, Lcom/market/sdk/DesktopRecommendArgs;->installedPackages:Ljava/util/ArrayList;
 
     return-object p0
@@ -226,30 +246,35 @@
 .method public parcel()Landroid/os/Bundle;
     .locals 4
 
+    .line 58
     new-instance v0, Landroid/os/Bundle;
 
     const/4 v1, 0x4
 
     invoke-direct {v0, v1}, Landroid/os/Bundle;-><init>(I)V
 
+    .line 59
     iget-wide v1, p0, Lcom/market/sdk/DesktopRecommendArgs;->folderId:J
 
     const-string v3, "key_folder_id"
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
+    .line 60
     iget-object v1, p0, Lcom/market/sdk/DesktopRecommendArgs;->folderName:Ljava/lang/String;
 
     const-string v2, "key_folder_name"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 61
     iget-object v1, p0, Lcom/market/sdk/DesktopRecommendArgs;->installedPackages:Ljava/util/ArrayList;
 
     const-string v2, "key_pkg_list"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
+    .line 62
     iget-object p0, p0, Lcom/market/sdk/DesktopRecommendArgs;->extraParams:Ljava/util/Map;
 
     invoke-static {p0}, Lcom/market/sdk/DesktopRecommendArgs;->convertToJson(Ljava/util/Map;)Ljava/lang/String;

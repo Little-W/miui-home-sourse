@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/relinker/elf/Dynamic64Structure;
 .super Lpl/droidsonroids/relinker/elf/Elf$DynamicStructure;
+.source "Dynamic64Structure.java"
 
 
 # direct methods
@@ -11,14 +12,17 @@
         }
     .end annotation
 
+    .line 24
     invoke-direct {p0}, Lpl/droidsonroids/relinker/elf/Elf$DynamicStructure;-><init>()V
 
     const/16 v0, 0x8
 
+    .line 25
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 26
     iget-boolean p2, p2, Lpl/droidsonroids/relinker/elf/Elf$Header;->bigEndian:Z
 
     if-eqz p2, :cond_0
@@ -39,6 +43,7 @@
 
     add-long/2addr p3, v1
 
+    .line 29
     invoke-virtual {p1, v0, p3, p4}, Lpl/droidsonroids/relinker/elf/ElfParser;->readLong(Ljava/nio/ByteBuffer;J)J
 
     move-result-wide v1
@@ -49,6 +54,7 @@
 
     add-long/2addr p3, v1
 
+    .line 30
     invoke-virtual {p1, v0, p3, p4}, Lpl/droidsonroids/relinker/elf/ElfParser;->readLong(Ljava/nio/ByteBuffer;J)J
 
     move-result-wide p1

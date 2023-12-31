@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/Stats;
 .super Ljava/lang/Object;
+.source "Stats.java"
 
 
 # annotations
@@ -44,10 +45,13 @@
 .method constructor <init>(Lcom/squareup/picasso/Cache;)V
     .locals 2
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     iput-object p1, p0, Lcom/squareup/picasso/Stats;->cache:Lcom/squareup/picasso/Cache;
 
+    .line 53
     new-instance p1, Landroid/os/HandlerThread;
 
     const-string v0, "Picasso-Stats"
@@ -58,10 +62,12 @@
 
     iput-object p1, p0, Lcom/squareup/picasso/Stats;->statsThread:Landroid/os/HandlerThread;
 
+    .line 54
     iget-object p1, p0, Lcom/squareup/picasso/Stats;->statsThread:Landroid/os/HandlerThread;
 
     invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
+    .line 55
     iget-object p1, p0, Lcom/squareup/picasso/Stats;->statsThread:Landroid/os/HandlerThread;
 
     invoke-virtual {p1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -70,6 +76,7 @@
 
     invoke-static {p1}, Lcom/squareup/picasso/Utils;->flushStackLocalLeaks(Landroid/os/Looper;)V
 
+    .line 56
     new-instance p1, Lcom/squareup/picasso/Stats$StatsHandler;
 
     iget-object v0, p0, Lcom/squareup/picasso/Stats;->statsThread:Landroid/os/HandlerThread;
@@ -90,6 +97,7 @@
 
     int-to-long v0, p0
 
+    .line 123
     div-long/2addr p1, v0
 
     return-wide p1
@@ -98,10 +106,12 @@
 .method private processBitmap(Landroid/graphics/Bitmap;I)V
     .locals 1
 
+    .line 118
     invoke-static {p1}, Lcom/squareup/picasso/Utils;->getBitmapBytes(Landroid/graphics/Bitmap;)I
 
     move-result p1
 
+    .line 119
     iget-object p0, p0, Lcom/squareup/picasso/Stats;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x0
@@ -122,6 +132,7 @@
 
     move-object/from16 v0, p0
 
+    .line 110
     new-instance v25, Lcom/squareup/picasso/StatsSnapshot;
 
     move-object/from16 v1, v25
@@ -174,6 +185,7 @@
 
     move/from16 v22, v0
 
+    .line 113
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v23
@@ -192,6 +204,7 @@
 
     const/4 v0, 0x2
 
+    .line 60
     invoke-direct {p0, p1, v0}, Lcom/squareup/picasso/Stats;->processBitmap(Landroid/graphics/Bitmap;I)V
 
     return-void
@@ -202,6 +215,7 @@
 
     const/4 v0, 0x3
 
+    .line 64
     invoke-direct {p0, p1, v0}, Lcom/squareup/picasso/Stats;->processBitmap(Landroid/graphics/Bitmap;I)V
 
     return-void
@@ -210,6 +224,7 @@
 .method dispatchCacheHit()V
     .locals 1
 
+    .line 72
     iget-object p0, p0, Lcom/squareup/picasso/Stats;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x0
@@ -222,6 +237,7 @@
 .method dispatchCacheMiss()V
     .locals 1
 
+    .line 76
     iget-object p0, p0, Lcom/squareup/picasso/Stats;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x1
@@ -234,6 +250,7 @@
 .method dispatchDownloadFinished(J)V
     .locals 0
 
+    .line 68
     iget-object p0, p0, Lcom/squareup/picasso/Stats;->handler:Landroid/os/Handler;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -254,18 +271,21 @@
 .method performBitmapDecoded(J)V
     .locals 2
 
+    .line 98
     iget v0, p0, Lcom/squareup/picasso/Stats;->originalBitmapCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/squareup/picasso/Stats;->originalBitmapCount:I
 
+    .line 99
     iget-wide v0, p0, Lcom/squareup/picasso/Stats;->totalOriginalBitmapSize:J
 
     add-long/2addr v0, p1
 
     iput-wide v0, p0, Lcom/squareup/picasso/Stats;->totalOriginalBitmapSize:J
 
+    .line 100
     iget p1, p0, Lcom/squareup/picasso/Stats;->originalBitmapCount:I
 
     iget-wide v0, p0, Lcom/squareup/picasso/Stats;->totalOriginalBitmapSize:J
@@ -282,18 +302,21 @@
 .method performBitmapTransformed(J)V
     .locals 2
 
+    .line 104
     iget v0, p0, Lcom/squareup/picasso/Stats;->transformedBitmapCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/squareup/picasso/Stats;->transformedBitmapCount:I
 
+    .line 105
     iget-wide v0, p0, Lcom/squareup/picasso/Stats;->totalTransformedBitmapSize:J
 
     add-long/2addr v0, p1
 
     iput-wide v0, p0, Lcom/squareup/picasso/Stats;->totalTransformedBitmapSize:J
 
+    .line 106
     iget p1, p0, Lcom/squareup/picasso/Stats;->originalBitmapCount:I
 
     iget-wide v0, p0, Lcom/squareup/picasso/Stats;->totalTransformedBitmapSize:J
@@ -310,6 +333,7 @@
 .method performCacheHit()V
     .locals 4
 
+    .line 84
     iget-wide v0, p0, Lcom/squareup/picasso/Stats;->cacheHits:J
 
     const-wide/16 v2, 0x1
@@ -324,6 +348,7 @@
 .method performCacheMiss()V
     .locals 4
 
+    .line 88
     iget-wide v0, p0, Lcom/squareup/picasso/Stats;->cacheMisses:J
 
     const-wide/16 v2, 0x1
@@ -338,12 +363,14 @@
 .method performDownloadFinished(Ljava/lang/Long;)V
     .locals 4
 
+    .line 92
     iget v0, p0, Lcom/squareup/picasso/Stats;->downloadCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/squareup/picasso/Stats;->downloadCount:I
 
+    .line 93
     iget-wide v0, p0, Lcom/squareup/picasso/Stats;->totalDownloadSize:J
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -354,6 +381,7 @@
 
     iput-wide v0, p0, Lcom/squareup/picasso/Stats;->totalDownloadSize:J
 
+    .line 94
     iget p1, p0, Lcom/squareup/picasso/Stats;->downloadCount:I
 
     iget-wide v0, p0, Lcom/squareup/picasso/Stats;->totalDownloadSize:J

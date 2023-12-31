@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/internal/OnUndeliveredElementKt$bindCancellationFun$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "OnUndeliveredElement.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -68,6 +69,7 @@
 .method public final invoke(Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 37
     iget-object p1, p0, Lkotlinx/coroutines/internal/OnUndeliveredElementKt$bindCancellationFun$1;->$this_bindCancellationFun:Lkotlin/jvm/functions/Function1;
 
     iget-object v0, p0, Lkotlinx/coroutines/internal/OnUndeliveredElementKt$bindCancellationFun$1;->$element:Ljava/lang/Object;

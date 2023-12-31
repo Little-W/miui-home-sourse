@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionOperatingSystemEncoder;
 .super Ljava/lang/Object;
+.source "AutoCrashlyticsReportEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -41,6 +42,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 194
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionOperatingSystemEncoder;
 
     invoke-direct {v0}, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionOperatingSystemEncoder;-><init>()V
@@ -49,6 +51,7 @@
 
     const-string v0, "platform"
 
+    .line 196
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -57,6 +60,7 @@
 
     const-string/jumbo v0, "version"
 
+    .line 198
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -65,6 +69,7 @@
 
     const-string v0, "buildVersion"
 
+    .line 200
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -73,6 +78,7 @@
 
     const-string v0, "jailbroken"
 
+    .line 202
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -85,6 +91,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 193
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -100,6 +107,7 @@
         }
     .end annotation
 
+    .line 207
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionOperatingSystemEncoder;->PLATFORM_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->getPlatform()I
@@ -108,6 +116,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;I)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 208
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionOperatingSystemEncoder;->VERSION_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->getVersion()Ljava/lang/String;
@@ -116,6 +125,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 209
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionOperatingSystemEncoder;->BUILDVERSION_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->getBuildVersion()Ljava/lang/String;
@@ -124,6 +134,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 210
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionOperatingSystemEncoder;->JAILBROKEN_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->isJailbroken()Z
@@ -143,6 +154,7 @@
         }
     .end annotation
 
+    .line 193
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

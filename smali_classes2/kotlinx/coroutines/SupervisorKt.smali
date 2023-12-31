@@ -1,11 +1,13 @@
 .class public final Lkotlinx/coroutines/SupervisorKt;
 .super Ljava/lang/Object;
+.source "Supervisor.kt"
 
 
 # direct methods
 .method public static final SupervisorJob(Lkotlinx/coroutines/Job;)Lkotlinx/coroutines/CompletableJob;
     .locals 1
 
+    .line 33
     new-instance v0, Lkotlinx/coroutines/SupervisorJobImpl;
 
     invoke-direct {v0, p0}, Lkotlinx/coroutines/SupervisorJobImpl;-><init>(Lkotlinx/coroutines/Job;)V
@@ -24,6 +26,7 @@
 
     const/4 p0, 0x0
 
+    .line 33
     check-cast p0, Lkotlinx/coroutines/Job;
 
     :cond_0

@@ -1,5 +1,6 @@
 .class public Lio/branch/search/g3$d;
 .super Landroidx/room/SharedSQLiteStatement;
+.source "SourceFile"
 
 
 # annotations

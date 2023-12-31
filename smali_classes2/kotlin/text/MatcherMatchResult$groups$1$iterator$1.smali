@@ -1,5 +1,6 @@
 .class final Lkotlin/text/MatcherMatchResult$groups$1$iterator$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Regex.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -48,6 +49,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 280
     check-cast p1, Ljava/lang/Number;
 
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
@@ -64,6 +66,7 @@
 .method public final invoke(I)Lkotlin/text/MatchGroup;
     .locals 0
 
+    .line 284
     iget-object p0, p0, Lkotlin/text/MatcherMatchResult$groups$1$iterator$1;->this$0:Lkotlin/text/MatcherMatchResult$groups$1;
 
     invoke-virtual {p0, p1}, Lkotlin/text/MatcherMatchResult$groups$1;->get(I)Lkotlin/text/MatchGroup;

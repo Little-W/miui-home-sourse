@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/common/-$$Lambda$DeviceType$M8QrIuPwgp9TDI0Fr2EFI4O2qqM;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/function/Predicate;

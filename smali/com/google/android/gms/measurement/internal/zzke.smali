@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzke;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # instance fields
@@ -12,10 +13,13 @@
 .method public constructor <init>(Lcom/google/android/gms/common/util/Clock;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzke;->zza:Lcom/google/android/gms/common/util/Clock;
 
     return-void
@@ -26,6 +30,7 @@
 .method public final zza()V
     .locals 2
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzke;->zza:Lcom/google/android/gms/common/util/Clock;
 
     invoke-interface {v0}, Lcom/google/android/gms/common/util/Clock;->elapsedRealtime()J
@@ -40,6 +45,7 @@
 .method public final zza(J)Z
     .locals 2
 
+    .line 9
     iget-wide p1, p0, Lcom/google/android/gms/measurement/internal/zzke;->zzb:J
 
     const-wide/16 v0, 0x0
@@ -52,6 +58,7 @@
 
     return p2
 
+    .line 11
     :cond_0
     iget-object p1, p0, Lcom/google/android/gms/measurement/internal/zzke;->zza:Lcom/google/android/gms/common/util/Clock;
 
@@ -82,6 +89,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 7
     iput-wide v0, p0, Lcom/google/android/gms/measurement/internal/zzke;->zzb:J
 
     return-void

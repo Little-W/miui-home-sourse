@@ -1,5 +1,6 @@
 .class public abstract Lorg/greenrobot/eventbus/util/ErrorDialogFragmentFactory;
 .super Ljava/lang/Object;
+.source "ErrorDialogFragmentFactory.java"
 
 
 # annotations

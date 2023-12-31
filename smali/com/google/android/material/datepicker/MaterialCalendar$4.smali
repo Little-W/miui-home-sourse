@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/datepicker/MaterialCalendar$4;
 .super Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+.source "MaterialCalendar.java"
 
 
 # annotations
@@ -25,16 +26,19 @@
 .method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
     .locals 0
 
+    .line 234
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$4;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
+    .line 236
     invoke-static {}, Lcom/google/android/material/datepicker/UtcDates;->getUtcCalendar()Ljava/util/Calendar;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$4;->startItem:Ljava/util/Calendar;
 
+    .line 237
     invoke-static {}, Lcom/google/android/material/datepicker/UtcDates;->getUtcCalendar()Ljava/util/Calendar;
 
     move-result-object p1
@@ -51,6 +55,7 @@
 
     move-object/from16 v0, p0
 
+    .line 242
     invoke-virtual/range {p2 .. p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v1
@@ -59,6 +64,7 @@
 
     if-eqz v1, :cond_6
 
+    .line 243
     invoke-virtual/range {p2 .. p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object v1
@@ -69,6 +75,7 @@
 
     goto/16 :goto_5
 
+    .line 246
     :cond_0
     invoke-virtual/range {p2 .. p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -76,12 +83,14 @@
 
     check-cast v1, Lcom/google/android/material/datepicker/YearGridAdapter;
 
+    .line 247
     invoke-virtual/range {p2 .. p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object v2
 
     check-cast v2, Landroidx/recyclerview/widget/GridLayoutManager;
 
+    .line 249
     iget-object v3, v0, Lcom/google/android/material/datepicker/MaterialCalendar$4;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-static {v3}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$200(Lcom/google/android/material/datepicker/MaterialCalendar;)Lcom/google/android/material/datepicker/DateSelector;
@@ -110,6 +119,7 @@
 
     check-cast v4, Landroidx/core/util/Pair;
 
+    .line 250
     iget-object v5, v4, Landroidx/core/util/Pair;->first:Ljava/lang/Object;
 
     if-eqz v5, :cond_1
@@ -120,6 +130,7 @@
 
     goto :goto_0
 
+    .line 253
     :cond_2
     iget-object v5, v0, Lcom/google/android/material/datepicker/MaterialCalendar$4;->startItem:Ljava/util/Calendar;
 
@@ -133,6 +144,7 @@
 
     invoke-virtual {v5, v6, v7}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
+    .line 254
     iget-object v5, v0, Lcom/google/android/material/datepicker/MaterialCalendar$4;->endItem:Ljava/util/Calendar;
 
     iget-object v4, v4, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
@@ -145,6 +157,7 @@
 
     invoke-virtual {v5, v6, v7}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
+    .line 256
     iget-object v4, v0, Lcom/google/android/material/datepicker/MaterialCalendar$4;->startItem:Ljava/util/Calendar;
 
     const/4 v5, 0x1
@@ -157,6 +170,7 @@
 
     move-result v4
 
+    .line 257
     iget-object v6, v0, Lcom/google/android/material/datepicker/MaterialCalendar$4;->endItem:Ljava/util/Calendar;
 
     invoke-virtual {v6, v5}, Ljava/util/Calendar;->get(I)I
@@ -167,20 +181,24 @@
 
     move-result v5
 
+    .line 258
     invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/GridLayoutManager;->findViewByPosition(I)Landroid/view/View;
 
     move-result-object v6
 
+    .line 259
     invoke-virtual {v2, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->findViewByPosition(I)Landroid/view/View;
 
     move-result-object v7
 
+    .line 261
     invoke-virtual {v2}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanCount()I
 
     move-result v8
 
     div-int/2addr v4, v8
 
+    .line 262
     invoke-virtual {v2}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanCount()I
 
     move-result v8
@@ -192,12 +210,14 @@
     :goto_1
     if-gt v8, v5, :cond_1
 
+    .line 265
     invoke-virtual {v2}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanCount()I
 
     move-result v9
 
     mul-int/2addr v9, v8
 
+    .line 266
     invoke-virtual {v2, v9}, Landroidx/recyclerview/widget/GridLayoutManager;->findViewByPosition(I)Landroid/view/View;
 
     move-result-object v9
@@ -206,6 +226,7 @@
 
     goto :goto_4
 
+    .line 270
     :cond_3
     invoke-virtual {v9}, Landroid/view/View;->getTop()I
 
@@ -225,6 +246,7 @@
 
     add-int/2addr v10, v11
 
+    .line 271
     invoke-virtual {v9}, Landroid/view/View;->getBottom()I
 
     move-result v9
@@ -245,6 +267,7 @@
 
     if-ne v8, v4, :cond_4
 
+    .line 272
     invoke-virtual {v6}, Landroid/view/View;->getLeft()I
 
     move-result v11
@@ -265,6 +288,7 @@
     :goto_2
     if-ne v8, v5, :cond_5
 
+    .line 275
     invoke-virtual {v7}, Landroid/view/View;->getLeft()I
 
     move-result v12
@@ -279,6 +303,7 @@
 
     goto :goto_3
 
+    .line 276
     :cond_5
     invoke-virtual/range {p2 .. p2}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
 
@@ -293,6 +318,7 @@
 
     int-to-float v9, v9
 
+    .line 277
     iget-object v11, v0, Lcom/google/android/material/datepicker/MaterialCalendar$4;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-static {v11}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$400(Lcom/google/android/material/datepicker/MaterialCalendar;)Lcom/google/android/material/datepicker/CalendarStyle;

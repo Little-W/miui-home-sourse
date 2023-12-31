@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/ResumeUndispatchedRunnable;
 .super Ljava/lang/Object;
+.source "Executors.kt"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -39,6 +40,7 @@
         }
     .end annotation
 
+    .line 156
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/ResumeUndispatchedRunnable;->dispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
@@ -53,6 +55,7 @@
 .method public run()V
     .locals 2
 
+    .line 161
     iget-object v0, p0, Lkotlinx/coroutines/ResumeUndispatchedRunnable;->continuation:Lkotlinx/coroutines/CancellableContinuation;
 
     iget-object p0, p0, Lkotlinx/coroutines/ResumeUndispatchedRunnable;->dispatcher:Lkotlinx/coroutines/CoroutineDispatcher;

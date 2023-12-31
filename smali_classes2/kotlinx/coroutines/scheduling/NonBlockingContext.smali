@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/scheduling/NonBlockingContext;
 .super Ljava/lang/Object;
+.source "Tasks.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/scheduling/TaskContext;
@@ -15,6 +16,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 72
     new-instance v0, Lkotlinx/coroutines/scheduling/NonBlockingContext;
 
     invoke-direct {v0}, Lkotlinx/coroutines/scheduling/NonBlockingContext;-><init>()V
@@ -27,6 +29,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +46,7 @@
 .method public getTaskMode()I
     .locals 0
 
+    .line 73
     sget p0, Lkotlinx/coroutines/scheduling/NonBlockingContext;->taskMode:I
 
     return p0

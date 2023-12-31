@@ -1,5 +1,6 @@
 .class synthetic Lio/requery/android/database/sqlite/SQLiteFunction$1;
 .super Ljava/lang/Object;
+.source "SQLiteFunction.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/request/RequestCoordinator;
 .super Ljava/lang/Object;
+.source "RequestCoordinator.java"
 
 
 # virtual methods

@@ -7,7 +7,6 @@
         <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/launcher_sliding_up_gesture" android:key="launcher_slide_up_global_pref" android:defaultValue="true" />
     </PreferenceCategory>
     <PreferenceCategory android:key="drawer_settings">
-        <MyXCheckBoxPreference android:persistent="false" android:title="隐藏应用抽屉指示器" android:key="app_drawer_indicator" android:defaultValue="false" />
         <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/recommend_app" android:key="key_recommend_apps" android:summary="@string/show_most_popular_apps_you_used" android:defaultValue="false" />
         <com.miui.home.settings.preference.ValuePreference android:title="@string/manager_group_settings" android:key="key_app_category" />
         <com.miui.home.settings.preference.ValuePreference android:title="@string/drawer_background" android:key="key_drawer_background" />

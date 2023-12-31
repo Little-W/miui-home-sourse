@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/MirrorMenu$Builder;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/KtxLoader$Options;
 .super Ljava/lang/Object;
+.source "KtxLoader.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +33,7 @@
 .method public final getSrgb()Z
     .locals 0
 
+    .line 34
     iget-boolean p0, p0, Lcom/google/android/filament/utils/KtxLoader$Options;->srgb:Z
 
     return p0
@@ -39,6 +42,7 @@
 .method public final setSrgb(Z)V
     .locals 0
 
+    .line 34
     iput-boolean p1, p0, Lcom/google/android/filament/utils/KtxLoader$Options;->srgb:Z
 
     return-void

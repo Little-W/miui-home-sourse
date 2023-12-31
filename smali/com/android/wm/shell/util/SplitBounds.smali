@@ -1,5 +1,6 @@
 .class public Lcom/android/wm/shell/util/SplitBounds;
 .super Lcom/android/wm/shell/util/StagedSplitBounds;
+.source "SplitBounds.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -27,6 +28,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 123
     new-instance v0, Lcom/android/wm/shell/util/SplitBounds$1;
 
     invoke-direct {v0}, Lcom/android/wm/shell/util/SplitBounds$1;-><init>()V
@@ -39,8 +41,10 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 65
     invoke-direct {p0}, Lcom/android/wm/shell/util/StagedSplitBounds;-><init>()V
 
+    .line 66
     sget-object v0, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
@@ -51,6 +55,7 @@
 
     iput-object v0, p0, Lcom/android/wm/shell/util/SplitBounds;->leftTopBounds:Landroid/graphics/Rect;
 
+    .line 67
     sget-object v0, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
@@ -61,6 +66,7 @@
 
     iput-object v0, p0, Lcom/android/wm/shell/util/SplitBounds;->rightBottomBounds:Landroid/graphics/Rect;
 
+    .line 68
     sget-object v0, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
@@ -71,36 +77,42 @@
 
     iput-object v0, p0, Lcom/android/wm/shell/util/SplitBounds;->visualDividerBounds:Landroid/graphics/Rect;
 
+    .line 69
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/wm/shell/util/SplitBounds;->topTaskPercent:F
 
+    .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/wm/shell/util/SplitBounds;->leftTaskPercent:F
 
+    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/wm/shell/util/SplitBounds;->appsStackedVertically:Z
 
+    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/wm/shell/util/SplitBounds;->leftTopTaskId:I
 
+    .line 73
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/wm/shell/util/SplitBounds;->rightBottomTaskId:I
 
+    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -109,6 +121,7 @@
 
     iput v0, p0, Lcom/android/wm/shell/util/SplitBounds;->dividerWidthPercent:F
 
+    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -133,6 +146,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 99
     instance-of v0, p1, Lcom/android/wm/shell/util/SplitBounds;
 
     const/4 v1, 0x0
@@ -141,9 +155,11 @@
 
     return v1
 
+    .line 103
     :cond_0
     check-cast p1, Lcom/android/wm/shell/util/SplitBounds;
 
+    .line 104
     iget-object v0, p0, Lcom/android/wm/shell/util/SplitBounds;->leftTopBounds:Landroid/graphics/Rect;
 
     iget-object v2, p1, Lcom/android/wm/shell/util/SplitBounds;->leftTopBounds:Landroid/graphics/Rect;
@@ -158,6 +174,7 @@
 
     iget-object v2, p1, Lcom/android/wm/shell/util/SplitBounds;->rightBottomBounds:Landroid/graphics/Rect;
 
+    .line 105
     invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -189,6 +206,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 112
     iget-object v1, p0, Lcom/android/wm/shell/util/SplitBounds;->leftTopBounds:Landroid/graphics/Rect;
 
     const/4 v2, 0x0
@@ -231,6 +249,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -291,42 +310,52 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
+    .line 80
     iget-object v0, p0, Lcom/android/wm/shell/util/SplitBounds;->leftTopBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
 
+    .line 81
     iget-object v0, p0, Lcom/android/wm/shell/util/SplitBounds;->rightBottomBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
 
+    .line 82
     iget-object v0, p0, Lcom/android/wm/shell/util/SplitBounds;->visualDividerBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
 
+    .line 83
     iget p2, p0, Lcom/android/wm/shell/util/SplitBounds;->topTaskPercent:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
+    .line 84
     iget p2, p0, Lcom/android/wm/shell/util/SplitBounds;->leftTaskPercent:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
+    .line 85
     iget-boolean p2, p0, Lcom/android/wm/shell/util/SplitBounds;->appsStackedVertically:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBoolean(Z)V
 
+    .line 86
     iget p2, p0, Lcom/android/wm/shell/util/SplitBounds;->leftTopTaskId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 87
     iget p2, p0, Lcom/android/wm/shell/util/SplitBounds;->rightBottomTaskId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 88
     iget p2, p0, Lcom/android/wm/shell/util/SplitBounds;->dividerWidthPercent:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
+    .line 89
     iget p0, p0, Lcom/android/wm/shell/util/SplitBounds;->dividerHeightPercent:F
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeFloat(F)V

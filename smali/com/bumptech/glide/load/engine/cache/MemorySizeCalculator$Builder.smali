@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;
 .super Ljava/lang/Object;
+.source "MemorySizeCalculator.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 146
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -61,12 +63,15 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x40000000    # 2.0f
 
+    .line 159
     iput v0, p0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->memoryCacheScreens:F
 
+    .line 160
     sget v0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->BITMAP_POOL_TARGET_SCREENS:I
 
     int-to-float v0, v0
@@ -75,20 +80,25 @@
 
     const v0, 0x3ecccccd    # 0.4f
 
+    .line 161
     iput v0, p0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->maxSizeMultiplier:F
 
     const v0, 0x3ea8f5c3    # 0.33f
 
+    .line 162
     iput v0, p0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->lowMemoryMaxSizeMultiplier:F
 
     const/high16 v0, 0x400000
 
+    .line 163
     iput v0, p0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->arrayPoolSizeBytes:I
 
+    .line 166
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->context:Landroid/content/Context;
 
     const-string v0, "activity"
 
+    .line 168
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -97,8 +107,10 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->activityManager:Landroid/app/ActivityManager;
 
+    .line 169
     new-instance v0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$DisplayMetricsScreenDimensions;
 
+    .line 170
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -111,6 +123,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->screenDimensions:Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$ScreenDimensions;
 
+    .line 176
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1a
@@ -127,6 +140,7 @@
 
     const/4 p1, 0x0
 
+    .line 177
     iput p1, p0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;->bitmapPoolScreens:F
 
     :cond_0
@@ -138,6 +152,7 @@
 .method public build()Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator;
     .locals 1
 
+    .line 260
     new-instance v0, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator;
 
     invoke-direct {v0, p0}, Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator;-><init>(Lcom/bumptech/glide/load/engine/cache/MemorySizeCalculator$Builder;)V

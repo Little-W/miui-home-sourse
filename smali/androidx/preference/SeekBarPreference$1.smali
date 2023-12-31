@@ -1,5 +1,6 @@
 .class Landroidx/preference/SeekBarPreference$1;
 .super Ljava/lang/Object;
+.source "SeekBarPreference.java"
 
 # interfaces
 .implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/preference/SeekBarPreference;)V
     .locals 0
 
+    .line 74
     iput-object p1, p0, Landroidx/preference/SeekBarPreference$1;->this$0:Landroidx/preference/SeekBarPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,6 +40,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 77
     iget-object p3, p0, Landroidx/preference/SeekBarPreference$1;->this$0:Landroidx/preference/SeekBarPreference;
 
     iget-boolean p3, p3, Landroidx/preference/SeekBarPreference;->mUpdatesContinuously:Z
@@ -50,6 +53,7 @@
 
     if-nez p3, :cond_1
 
+    .line 78
     :cond_0
     iget-object p0, p0, Landroidx/preference/SeekBarPreference$1;->this$0:Landroidx/preference/SeekBarPreference;
 
@@ -57,6 +61,7 @@
 
     goto :goto_0
 
+    .line 81
     :cond_1
     iget-object p0, p0, Landroidx/preference/SeekBarPreference$1;->this$0:Landroidx/preference/SeekBarPreference;
 
@@ -73,6 +78,7 @@
 .method public onStartTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
 
+    .line 87
     iget-object p0, p0, Landroidx/preference/SeekBarPreference$1;->this$0:Landroidx/preference/SeekBarPreference;
 
     const/4 p1, 0x1
@@ -85,12 +91,14 @@
 .method public onStopTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 2
 
+    .line 92
     iget-object v0, p0, Landroidx/preference/SeekBarPreference$1;->this$0:Landroidx/preference/SeekBarPreference;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroidx/preference/SeekBarPreference;->mTrackingTouch:Z
 
+    .line 93
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v0
@@ -107,6 +115,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 94
     iget-object p0, p0, Landroidx/preference/SeekBarPreference$1;->this$0:Landroidx/preference/SeekBarPreference;
 
     invoke-virtual {p0, p1}, Landroidx/preference/SeekBarPreference;->syncValueInternal(Landroid/widget/SeekBar;)V

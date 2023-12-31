@@ -1,5 +1,6 @@
 .class public final Lkotlin/jvm/JvmClassMappingKt;
 .super Ljava/lang/Object;
+.source "JvmClassMapping.kt"
 
 
 # direct methods
@@ -21,6 +22,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 28
     check-cast p0, Lkotlin/jvm/internal/ClassBasedDeclarationContainer;
 
     invoke-interface {p0}, Lkotlin/jvm/internal/ClassBasedDeclarationContainer;->getJClass()Ljava/lang/Class;
@@ -59,12 +61,14 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 58
     check-cast p0, Lkotlin/jvm/internal/ClassBasedDeclarationContainer;
 
     invoke-interface {p0}, Lkotlin/jvm/internal/ClassBasedDeclarationContainer;->getJClass()Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 59
     invoke-virtual {p0}, Ljava/lang/Class;->isPrimitive()Z
 
     move-result v0
@@ -84,6 +88,7 @@
 
     throw p0
 
+    .line 61
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -105,6 +110,7 @@
     :sswitch_0
     const-string v2, "short"
 
+    .line 65
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -118,6 +124,7 @@
     :sswitch_1
     const-string v2, "float"
 
+    .line 67
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -131,6 +138,7 @@
     :sswitch_2
     const-string v2, "boolean"
 
+    .line 62
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -144,6 +152,7 @@
     :sswitch_3
     const-string v2, "void"
 
+    .line 70
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -157,6 +166,7 @@
     :sswitch_4
     const-string v2, "long"
 
+    .line 68
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -170,6 +180,7 @@
     :sswitch_5
     const-string v2, "char"
 
+    .line 63
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -183,6 +194,7 @@
     :sswitch_6
     const-string v2, "byte"
 
+    .line 64
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -196,6 +208,7 @@
     :sswitch_7
     const-string v2, "int"
 
+    .line 66
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -209,6 +222,7 @@
     :sswitch_8
     const-string v2, "double"
 
+    .line 69
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -223,6 +237,7 @@
 
     return-object p0
 
+    .line 61
     :cond_4
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -264,6 +279,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 80
     invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
 
     move-result-object p0

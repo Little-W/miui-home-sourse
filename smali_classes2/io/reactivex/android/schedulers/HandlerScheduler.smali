@@ -1,5 +1,6 @@
 .class final Lio/reactivex/android/schedulers/HandlerScheduler;
 .super Lio/reactivex/Scheduler;
+.source "HandlerScheduler.java"
 
 
 # annotations
@@ -19,8 +20,10 @@
 .method constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Lio/reactivex/Scheduler;-><init>()V
 
+    .line 28
     iput-object p1, p0, Lio/reactivex/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
     return-void
@@ -31,6 +34,7 @@
 .method public createWorker()Lio/reactivex/Scheduler$Worker;
     .locals 1
 
+    .line 44
     new-instance v0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;
 
     iget-object p0, p0, Lio/reactivex/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
@@ -47,16 +51,19 @@
 
     if-eqz p4, :cond_0
 
+    .line 36
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
+    .line 37
     new-instance v0, Lio/reactivex/android/schedulers/HandlerScheduler$ScheduledRunnable;
 
     iget-object v1, p0, Lio/reactivex/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
     invoke-direct {v0, v1, p1}, Lio/reactivex/android/schedulers/HandlerScheduler$ScheduledRunnable;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
+    .line 38
     iget-object p0, p0, Lio/reactivex/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
     invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
@@ -67,6 +74,7 @@
 
     return-object v0
 
+    .line 34
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -76,6 +84,7 @@
 
     throw p0
 
+    .line 33
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 

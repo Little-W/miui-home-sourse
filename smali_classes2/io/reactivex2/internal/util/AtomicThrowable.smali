@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/internal/util/AtomicThrowable;
 .super Ljava/util/concurrent/atomic/AtomicReference;
+.source "AtomicThrowable.java"
 
 
 # annotations
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public addThrowable(Ljava/lang/Throwable;)Z
     .locals 0
 
+    .line 34
     invoke-static {p0, p1}, Lio/reactivex2/internal/util/ExceptionHelper;->addThrowable(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Throwable;)Z
 
     move-result p0
@@ -40,6 +43,7 @@
 .method public isTerminated()Z
     .locals 1
 
+    .line 47
     invoke-virtual {p0}, Lio/reactivex2/internal/util/AtomicThrowable;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -62,6 +66,7 @@
 .method public terminate()Ljava/lang/Throwable;
     .locals 0
 
+    .line 43
     invoke-static {p0}, Lio/reactivex2/internal/util/ExceptionHelper;->terminate(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Throwable;
 
     move-result-object p0

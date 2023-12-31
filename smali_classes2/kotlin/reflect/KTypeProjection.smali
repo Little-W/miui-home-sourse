@@ -1,5 +1,6 @@
 .class public final Lkotlin/reflect/KTypeProjection;
 .super Ljava/lang/Object;
+.source "KTypeProjection.kt"
 
 
 # annotations
@@ -34,6 +35,7 @@
 
     sput-object v0, Lkotlin/reflect/KTypeProjection;->Companion:Lkotlin/reflect/KTypeProjection$Companion;
 
+    .line 54
     new-instance v0, Lkotlin/reflect/KTypeProjection;
 
     invoke-direct {v0, v1, v1}, Lkotlin/reflect/KTypeProjection;-><init>(Lkotlin/reflect/KVariance;Lkotlin/reflect/KType;)V
@@ -46,12 +48,14 @@
 .method public constructor <init>(Lkotlin/reflect/KVariance;Lkotlin/reflect/KType;)V
     .locals 2
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/reflect/KTypeProjection;->variance:Lkotlin/reflect/KVariance;
 
     iput-object p2, p0, Lkotlin/reflect/KTypeProjection;->type:Lkotlin/reflect/KType;
 
+    .line 35
     iget-object p1, p0, Lkotlin/reflect/KTypeProjection;->variance:Lkotlin/reflect/KVariance;
 
     const/4 p2, 0x1
@@ -90,6 +94,7 @@
     :goto_2
     if-nez p2, :cond_4
 
+    .line 36
     iget-object p1, p0, Lkotlin/reflect/KTypeProjection;->variance:Lkotlin/reflect/KVariance;
 
     if-nez p1, :cond_3
@@ -98,6 +103,7 @@
 
     goto :goto_3
 
+    .line 39
     :cond_3
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -119,6 +125,7 @@
 
     move-result-object p0
 
+    .line 35
     :goto_3
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -186,6 +193,7 @@
 .method public final getType()Lkotlin/reflect/KType;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lkotlin/reflect/KTypeProjection;->type:Lkotlin/reflect/KType;
 
     return-object p0
@@ -194,6 +202,7 @@
 .method public final getVariance()Lkotlin/reflect/KVariance;
     .locals 0
 
+    .line 27
     iget-object p0, p0, Lkotlin/reflect/KTypeProjection;->variance:Lkotlin/reflect/KVariance;
 
     return-object p0
@@ -237,6 +246,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 43
     iget-object v0, p0, Lkotlin/reflect/KTypeProjection;->variance:Lkotlin/reflect/KVariance;
 
     if-nez v0, :cond_0
@@ -266,6 +276,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -291,6 +302,7 @@
 
     throw p0
 
+    .line 46
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -310,6 +322,7 @@
 
     goto :goto_0
 
+    .line 45
     :cond_3
     iget-object p0, p0, Lkotlin/reflect/KTypeProjection;->type:Lkotlin/reflect/KType;
 

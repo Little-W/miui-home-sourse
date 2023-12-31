@@ -1,5 +1,6 @@
 .class Lkotlin/text/StringsKt__StringNumberConversionsKt;
 .super Lkotlin/text/StringsKt__StringNumberConversionsJVMKt;
+.source "StringNumberConversions.kt"
 
 
 # direct methods
@@ -12,6 +13,7 @@
 
     const/16 v0, 0xa
 
+    .line 57
     invoke-static {p0, v0}, Lkotlin/text/StringsKt;->toIntOrNull(Ljava/lang/String;I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -26,8 +28,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 67
     invoke-static {p1}, Lkotlin/text/CharsKt;->checkRadix(I)I
 
+    .line 69
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -41,12 +45,14 @@
     :cond_0
     const/4 v2, 0x0
 
+    .line 76
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
     const/16 v4, 0x30
 
+    .line 77
     invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->compare(II)I
 
     move-result v4
@@ -97,6 +103,7 @@
     :goto_1
     if-ge v6, v0, :cond_9
 
+    .line 102
     invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
@@ -114,6 +121,7 @@
 
     if-ne v7, v4, :cond_6
 
+    .line 107
     div-int v7, v5, p1
 
     if-ge v2, v7, :cond_7
@@ -140,6 +148,7 @@
     :cond_9
     if-eqz v3, :cond_a
 
+    .line 124
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -166,6 +175,7 @@
 
     const/16 v0, 0xa
 
+    .line 132
     invoke-static {p0, v0}, Lkotlin/text/StringsKt;->toLongOrNull(Ljava/lang/String;I)Ljava/lang/Long;
 
     move-result-object p0
@@ -184,8 +194,10 @@
 
     invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 142
     invoke-static/range {p1 .. p1}, Lkotlin/text/CharsKt;->checkRadix(I)I
 
+    .line 144
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -199,12 +211,14 @@
     :cond_0
     const/4 v4, 0x0
 
+    .line 151
     invoke-virtual {v0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
 
     const/16 v6, 0x30
 
+    .line 152
     invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->compare(II)I
 
     move-result v6
@@ -253,6 +267,7 @@
     :goto_1
     if-ge v9, v2, :cond_9
 
+    .line 177
     invoke-virtual {v0, v9}, Ljava/lang/String;->charAt(I)C
 
     move-result v14
@@ -276,6 +291,7 @@
 
     int-to-long v12, v1
 
+    .line 182
     div-long v12, v7, v12
 
     cmp-long v15, v10, v12
@@ -312,6 +328,7 @@
     :cond_9
     if-eqz v4, :cond_a
 
+    .line 199
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/poco/IPocoBranchSearchGuideManager;
 .super Ljava/lang/Object;
+.source "IPocoBranchSearchGuideManager.java"
 
 
 # virtual methods

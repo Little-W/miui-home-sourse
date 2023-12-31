@@ -1,5 +1,6 @@
 .class public Lcom/google/android/flexbox/FlexLine;
 .super Ljava/lang/Object;
+.source "FlexLine.java"
 
 
 # instance fields
@@ -52,20 +53,26 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x7fffffff
 
+    .line 34
     iput v0, p0, Lcom/google/android/flexbox/FlexLine;->mLeft:I
 
+    .line 36
     iput v0, p0, Lcom/google/android/flexbox/FlexLine;->mTop:I
 
     const/high16 v0, -0x80000000
 
+    .line 38
     iput v0, p0, Lcom/google/android/flexbox/FlexLine;->mRight:I
 
+    .line 40
     iput v0, p0, Lcom/google/android/flexbox/FlexLine;->mBottom:I
 
+    .line 87
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -80,6 +87,7 @@
 .method public getCrossSize()I
     .locals 0
 
+    .line 117
     iget p0, p0, Lcom/google/android/flexbox/FlexLine;->mCrossSize:I
 
     return p0
@@ -88,6 +96,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 125
     iget p0, p0, Lcom/google/android/flexbox/FlexLine;->mItemCount:I
 
     return p0
@@ -96,6 +105,7 @@
 .method public getItemCountNotGone()I
     .locals 1
 
+    .line 133
     iget v0, p0, Lcom/google/android/flexbox/FlexLine;->mItemCount:I
 
     iget p0, p0, Lcom/google/android/flexbox/FlexLine;->mGoneItemCount:I
@@ -108,12 +118,14 @@
 .method updatePositionFromView(Landroid/view/View;IIII)V
     .locals 4
 
+    .line 170
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/flexbox/FlexItem;
 
+    .line 171
     iget v1, p0, Lcom/google/android/flexbox/FlexLine;->mLeft:I
 
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
@@ -134,6 +146,7 @@
 
     iput p2, p0, Lcom/google/android/flexbox/FlexLine;->mLeft:I
 
+    .line 172
     iget p2, p0, Lcom/google/android/flexbox/FlexLine;->mTop:I
 
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
@@ -154,6 +167,7 @@
 
     iput p2, p0, Lcom/google/android/flexbox/FlexLine;->mTop:I
 
+    .line 173
     iget p2, p0, Lcom/google/android/flexbox/FlexLine;->mRight:I
 
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
@@ -174,8 +188,10 @@
 
     iput p2, p0, Lcom/google/android/flexbox/FlexLine;->mRight:I
 
+    .line 174
     iget p2, p0, Lcom/google/android/flexbox/FlexLine;->mBottom:I
 
+    .line 175
     invoke-virtual {p1}, Landroid/view/View;->getBottom()I
 
     move-result p1

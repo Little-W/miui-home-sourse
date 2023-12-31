@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/descriptors/SerialKind;
 .super Ljava/lang/Object;
+.source "SerialKinds.kt"
 
 
 # annotations
@@ -15,6 +16,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +25,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 29
     invoke-direct {p0}, Lkotlinx/serialization/descriptors/SerialKind;-><init>()V
 
     return-void
@@ -33,6 +36,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 62
     invoke-virtual {p0}, Lkotlinx/serialization/descriptors/SerialKind;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -47,6 +51,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 58
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0

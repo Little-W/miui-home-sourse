@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;
 .super Ljava/lang/Object;
+.source "ProtobufValueEncoderContext.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ValueEncoderContext;
@@ -19,14 +20,18 @@
 .method constructor <init>(Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext;)V
     .locals 1
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 25
     iput-boolean v0, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->encoded:Z
 
+    .line 26
     iput-boolean v0, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->skipDefault:Z
 
+    .line 31
     iput-object p1, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->objEncoderCtx:Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext;
 
     return-void
@@ -35,16 +40,19 @@
 .method private checkNotUsed()V
     .locals 1
 
+    .line 41
     iget-boolean v0, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->encoded:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
+    .line 44
     iput-boolean v0, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->encoded:Z
 
     return-void
 
+    .line 42
     :cond_0
     new-instance p0, Lcom/google/firebase/encoders/EncodingException;
 
@@ -65,8 +73,10 @@
         }
     .end annotation
 
+    .line 50
     invoke-direct {p0}, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->checkNotUsed()V
 
+    .line 51
     iget-object v0, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->objEncoderCtx:Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext;
 
     iget-object v1, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->field:Lcom/google/firebase/encoders/FieldDescriptor;
@@ -86,8 +96,10 @@
         }
     .end annotation
 
+    .line 90
     invoke-direct {p0}, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->checkNotUsed()V
 
+    .line 91
     iget-object v0, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->objEncoderCtx:Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext;
 
     iget-object v1, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->field:Lcom/google/firebase/encoders/FieldDescriptor;
@@ -104,10 +116,13 @@
 
     const/4 v0, 0x0
 
+    .line 35
     iput-boolean v0, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->encoded:Z
 
+    .line 36
     iput-object p1, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->field:Lcom/google/firebase/encoders/FieldDescriptor;
 
+    .line 37
     iput-boolean p2, p0, Lcom/google/firebase/encoders/proto/ProtobufValueEncoderContext;->skipDefault:Z
 
     return-void

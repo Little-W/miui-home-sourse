@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffController$BsMsRX9hwc9l4vxIEoqxLGCr92M;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/xiaomi/dist/utils/ExecutorHelper$ExceptionHandler;

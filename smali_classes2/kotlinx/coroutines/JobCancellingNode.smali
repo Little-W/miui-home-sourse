@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/JobCancellingNode;
 .super Lkotlinx/coroutines/JobNode;
+.source "JobSupport.kt"
 
 
 # annotations
@@ -23,6 +24,7 @@
         }
     .end annotation
 
+    .line 1455
     invoke-direct {p0, p1}, Lkotlinx/coroutines/JobNode;-><init>(Lkotlinx/coroutines/Job;)V
 
     return-void

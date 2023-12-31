@@ -1,5 +1,6 @@
 .class final enum Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 .super Ljava/lang/Enum;
+.source "MediaStoreRequestHandler.java"
 
 
 # annotations
@@ -43,6 +44,7 @@
 .method static constructor <clinit>()V
     .locals 13
 
+    .line 127
     new-instance v6, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
     const-string v1, "MICRO"
@@ -61,6 +63,7 @@
 
     sput-object v6, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->MICRO:Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
+    .line 128
     new-instance v0, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
     const-string v8, "MINI"
@@ -79,6 +82,7 @@
 
     sput-object v0, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->MINI:Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
+    .line 129
     new-instance v0, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
     const-string v2, "FULL"
@@ -101,6 +105,7 @@
 
     new-array v0, v0, [Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
+    .line 126
     sget-object v1, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->MICRO:Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
     const/4 v2, 0x0
@@ -132,12 +137,16 @@
         }
     .end annotation
 
+    .line 135
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 136
     iput p3, p0, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->androidKind:I
 
+    .line 137
     iput p4, p0, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->width:I
 
+    .line 138
     iput p5, p0, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->height:I
 
     return-void
@@ -146,6 +155,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
     .locals 1
 
+    .line 126
     const-class v0, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -160,6 +170,7 @@
 .method public static values()[Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
     .locals 1
 
+    .line 126
     sget-object v0, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->$VALUES:[Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
     invoke-virtual {v0}, [Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->clone()Ljava/lang/Object;

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/navigation/NavigationBarItemView$2;
 .super Ljava/lang/Object;
+.source "NavigationBarItemView.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/google/android/material/navigation/NavigationBarItemView;I)V
     .locals 0
 
+    .line 304
     iput-object p1, p0, Lcom/google/android/material/navigation/NavigationBarItemView$2;->this$0:Lcom/google/android/material/navigation/NavigationBarItemView;
 
     iput p2, p0, Lcom/google/android/material/navigation/NavigationBarItemView$2;->val$width:I
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 307
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarItemView$2;->this$0:Lcom/google/android/material/navigation/NavigationBarItemView;
 
     iget p0, p0, Lcom/google/android/material/navigation/NavigationBarItemView$2;->val$width:I

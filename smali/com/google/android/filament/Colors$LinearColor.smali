@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/filament/Colors$LinearColor;
 .super Ljava/lang/Object;
+.source "Colors.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

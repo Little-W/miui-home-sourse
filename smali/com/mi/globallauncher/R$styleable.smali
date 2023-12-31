@@ -1,5 +1,6 @@
 .class public final Lcom/mi/globallauncher/R$styleable;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -2421,6 +2422,7 @@
 
     new-array v0, v0, [I
 
+    .line 4950
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/mi/globallauncher/R$styleable;->ActionBar:[I
@@ -2435,12 +2437,14 @@
 
     aput v3, v1, v2
 
+    .line 5007
     sput-object v1, Lcom/mi/globallauncher/R$styleable;->ActionBarLayout:[I
 
     const/4 v1, 0x3
 
     new-array v3, v1, [I
 
+    .line 5009
     fill-array-data v3, :array_1
 
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->ActionBarMovableLayout:[I
@@ -2451,16 +2455,19 @@
 
     aput v4, v3, v2
 
+    .line 5013
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->ActionMenuItemView:[I
 
     new-array v3, v2, [I
 
+    .line 5015
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->ActionMenuView:[I
 
     const/16 v3, 0xd
 
     new-array v4, v3, [I
 
+    .line 5016
     fill-array-data v4, :array_2
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->ActionMode:[I
@@ -2469,6 +2476,7 @@
 
     new-array v5, v4, [I
 
+    .line 5030
     fill-array-data v5, :array_3
 
     sput-object v5, Lcom/mi/globallauncher/R$styleable;->ActivityChooserView:[I
@@ -2477,6 +2485,7 @@
 
     new-array v5, v5, [I
 
+    .line 5033
     fill-array-data v5, :array_4
 
     sput-object v5, Lcom/mi/globallauncher/R$styleable;->AlertDialog:[I
@@ -2485,12 +2494,14 @@
 
     new-array v6, v5, [I
 
+    .line 5045
     fill-array-data v6, :array_5
 
     sput-object v6, Lcom/mi/globallauncher/R$styleable;->AnimatedStateListDrawableCompat:[I
 
     new-array v6, v4, [I
 
+    .line 5052
     fill-array-data v6, :array_6
 
     sput-object v6, Lcom/mi/globallauncher/R$styleable;->AnimatedStateListDrawableItem:[I
@@ -2499,18 +2510,21 @@
 
     new-array v7, v6, [I
 
+    .line 5055
     fill-array-data v7, :array_7
 
     sput-object v7, Lcom/mi/globallauncher/R$styleable;->AnimatedStateListDrawableTransition:[I
 
     new-array v7, v6, [I
 
+    .line 5060
     fill-array-data v7, :array_8
 
     sput-object v7, Lcom/mi/globallauncher/R$styleable;->AppCompatImageView:[I
 
     new-array v7, v6, [I
 
+    .line 5065
     fill-array-data v7, :array_9
 
     sput-object v7, Lcom/mi/globallauncher/R$styleable;->AppCompatSeekBar:[I
@@ -2519,6 +2533,7 @@
 
     new-array v8, v7, [I
 
+    .line 5070
     fill-array-data v8, :array_a
 
     sput-object v8, Lcom/mi/globallauncher/R$styleable;->AppCompatTextHelper:[I
@@ -2527,6 +2542,7 @@
 
     new-array v8, v8, [I
 
+    .line 5078
     fill-array-data v8, :array_b
 
     sput-object v8, Lcom/mi/globallauncher/R$styleable;->AppCompatTextView:[I
@@ -2535,6 +2551,7 @@
 
     new-array v8, v8, [I
 
+    .line 5101
     fill-array-data v8, :array_c
 
     sput-object v8, Lcom/mi/globallauncher/R$styleable;->AppCompatTheme:[I
@@ -2543,12 +2560,14 @@
 
     new-array v9, v8, [I
 
+    .line 5229
     fill-array-data v9, :array_d
 
     sput-object v9, Lcom/mi/globallauncher/R$styleable;->ArrowPopupView:[I
 
     new-array v9, v4, [I
 
+    .line 5244
     fill-array-data v9, :array_e
 
     sput-object v9, Lcom/mi/globallauncher/R$styleable;->BackgroundStyle:[I
@@ -2559,16 +2578,19 @@
 
     aput v10, v9, v2
 
+    .line 5247
     sput-object v9, Lcom/mi/globallauncher/R$styleable;->ButtonBarLayout:[I
 
     new-array v3, v3, [I
 
+    .line 5249
     fill-array-data v3, :array_f
 
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->CardView:[I
 
     new-array v3, v5, [I
 
+    .line 5263
     fill-array-data v3, :array_10
 
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->CheckBoxPreference:[I
@@ -2577,12 +2599,14 @@
 
     new-array v9, v3, [I
 
+    .line 5270
     fill-array-data v9, :array_11
 
     sput-object v9, Lcom/mi/globallauncher/R$styleable;->CheckWidgetDrawable:[I
 
     new-array v9, v6, [I
 
+    .line 5281
     fill-array-data v9, :array_12
 
     sput-object v9, Lcom/mi/globallauncher/R$styleable;->CheckedTextView:[I
@@ -2591,12 +2615,14 @@
 
     new-array v10, v9, [I
 
+    .line 5286
     fill-array-data v10, :array_13
 
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->ColorStateListItem:[I
 
     new-array v10, v6, [I
 
+    .line 5292
     fill-array-data v10, :array_14
 
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->CompoundButton:[I
@@ -2605,12 +2631,14 @@
 
     new-array v10, v10, [I
 
+    .line 5297
     fill-array-data v10, :array_15
 
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->ConstraintLayout_Layout:[I
 
     new-array v10, v4, [I
 
+    .line 5388
     fill-array-data v10, :array_16
 
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->ConstraintLayout_placeholder:[I
@@ -2619,24 +2647,28 @@
 
     new-array v10, v10, [I
 
+    .line 5391
     fill-array-data v10, :array_17
 
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->ConstraintSet:[I
 
     new-array v10, v4, [I
 
+    .line 5503
     fill-array-data v10, :array_18
 
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->CoordinatorLayout:[I
 
     new-array v10, v7, [I
 
+    .line 5506
     fill-array-data v10, :array_19
 
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->CoordinatorLayout_Layout:[I
 
     new-array v10, v3, [I
 
+    .line 5514
     fill-array-data v10, :array_1a
 
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->DatePicker:[I
@@ -2647,12 +2679,14 @@
 
     aput v11, v10, v2
 
+    .line 5525
     sput-object v10, Lcom/mi/globallauncher/R$styleable;->DateTimePicker:[I
 
     const/16 v10, 0xc
 
     new-array v11, v10, [I
 
+    .line 5527
     fill-array-data v11, :array_1b
 
     sput-object v11, Lcom/mi/globallauncher/R$styleable;->DialogPreference:[I
@@ -2661,18 +2695,21 @@
 
     new-array v12, v11, [I
 
+    .line 5540
     fill-array-data v12, :array_1c
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->DrawableStates:[I
 
     new-array v12, v11, [I
 
+    .line 5549
     fill-array-data v12, :array_1d
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->DrawerArrowToggle:[I
 
     new-array v12, v9, [I
 
+    .line 5558
     fill-array-data v12, :array_1e
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->DropDownPreference:[I
@@ -2683,6 +2720,7 @@
 
     aput v13, v12, v2
 
+    .line 5564
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->EditText:[I
 
     new-array v12, v0, [I
@@ -2691,16 +2729,19 @@
 
     aput v13, v12, v2
 
+    .line 5566
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->EditTextPreference:[I
 
     new-array v12, v9, [I
 
+    .line 5568
     fill-array-data v12, :array_1f
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->FilterSortTabView:[I
 
     new-array v12, v6, [I
 
+    .line 5574
     fill-array-data v12, :array_20
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->FilterSortView:[I
@@ -2709,66 +2750,77 @@
 
     new-array v12, v12, [I
 
+    .line 5579
     fill-array-data v12, :array_21
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->FloatingActionButton:[I
 
     new-array v12, v7, [I
 
+    .line 5599
     fill-array-data v12, :array_22
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->FontFamily:[I
 
     new-array v12, v3, [I
 
+    .line 5607
     fill-array-data v12, :array_23
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->FontFamilyFont:[I
 
     new-array v12, v1, [I
 
+    .line 5618
     fill-array-data v12, :array_24
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->Fragment:[I
 
     new-array v12, v4, [I
 
+    .line 5622
     fill-array-data v12, :array_25
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->FragmentContainerView:[I
 
     new-array v12, v4, [I
 
+    .line 5625
     fill-array-data v12, :array_26
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->GifTextureView:[I
 
     new-array v12, v4, [I
 
+    .line 5628
     fill-array-data v12, :array_27
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->GifView:[I
 
     new-array v12, v10, [I
 
+    .line 5631
     fill-array-data v12, :array_28
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->GradientColor:[I
 
     new-array v12, v4, [I
 
+    .line 5644
     fill-array-data v12, :array_29
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->GradientColorItem:[I
 
     new-array v12, v7, [I
 
+    .line 5647
     fill-array-data v12, :array_2a
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->GuidePopupView:[I
 
     new-array v12, v1, [I
 
+    .line 5655
     fill-array-data v12, :array_2b
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->Level:[I
@@ -2777,24 +2829,28 @@
 
     new-array v13, v12, [I
 
+    .line 5659
     fill-array-data v13, :array_2c
 
     sput-object v13, Lcom/mi/globallauncher/R$styleable;->LinearLayoutCompat:[I
 
     new-array v13, v6, [I
 
+    .line 5669
     fill-array-data v13, :array_2d
 
     sput-object v13, Lcom/mi/globallauncher/R$styleable;->LinearLayoutCompat_Layout:[I
 
     new-array v13, v4, [I
 
+    .line 5674
     fill-array-data v13, :array_2e
 
     sput-object v13, Lcom/mi/globallauncher/R$styleable;->ListPopupWindow:[I
 
     new-array v13, v9, [I
 
+    .line 5677
     fill-array-data v13, :array_2f
 
     sput-object v13, Lcom/mi/globallauncher/R$styleable;->ListPreference:[I
@@ -2803,12 +2859,14 @@
 
     new-array v14, v13, [I
 
+    .line 5683
     fill-array-data v14, :array_30
 
     sput-object v14, Lcom/mi/globallauncher/R$styleable;->LottieAnimationView:[I
 
     new-array v14, v5, [I
 
+    .line 5701
     fill-array-data v14, :array_31
 
     sput-object v14, Lcom/mi/globallauncher/R$styleable;->MenuGroup:[I
@@ -2817,96 +2875,112 @@
 
     new-array v14, v14, [I
 
+    .line 5708
     fill-array-data v14, :array_32
 
     sput-object v14, Lcom/mi/globallauncher/R$styleable;->MenuItem:[I
 
     new-array v14, v12, [I
 
+    .line 5732
     fill-array-data v14, :array_33
 
     sput-object v14, Lcom/mi/globallauncher/R$styleable;->MenuView:[I
 
     new-array v14, v6, [I
 
+    .line 5742
     fill-array-data v14, :array_34
 
     sput-object v14, Lcom/mi/globallauncher/R$styleable;->MessageView:[I
 
     new-array v12, v12, [I
 
+    .line 5747
     fill-array-data v12, :array_35
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->MiuixAppcompatAlphabetIndexer:[I
 
     new-array v12, v1, [I
 
+    .line 5757
     fill-array-data v12, :array_36
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->MiuixManifest:[I
 
     new-array v12, v9, [I
 
+    .line 5761
     fill-array-data v12, :array_37
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->MiuixManifestModule:[I
 
     new-array v12, v1, [I
 
+    .line 5767
     fill-array-data v12, :array_38
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->MiuixManifestUsesSdk:[I
 
     new-array v12, v11, [I
 
+    .line 5771
     fill-array-data v12, :array_39
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->MiuixSmoothContainerDrawable:[I
 
     new-array v12, v11, [I
 
+    .line 5780
     fill-array-data v12, :array_3a
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->MiuixSmoothFrameLayout:[I
 
     new-array v12, v1, [I
 
+    .line 5789
     fill-array-data v12, :array_3b
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->MiuixSmoothGradientDrawable:[I
 
     new-array v12, v6, [I
 
+    .line 5793
     fill-array-data v12, :array_3c
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->MultiSelectListPreference:[I
 
     new-array v12, v3, [I
 
+    .line 5798
     fill-array-data v12, :array_3d
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->NumberPicker:[I
 
     new-array v12, v4, [I
 
+    .line 5809
     fill-array-data v12, :array_3e
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->OverflowMenuButton:[I
 
     new-array v12, v6, [I
 
+    .line 5812
     fill-array-data v12, :array_3f
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PlaceholderDrawablePadding:[I
 
     new-array v12, v4, [I
 
+    .line 5817
     fill-array-data v12, :array_40
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PlaceholderDrawableSize:[I
 
     new-array v12, v1, [I
 
+    .line 5820
     fill-array-data v12, :array_41
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PopupWindow:[I
@@ -2917,36 +2991,42 @@
 
     aput v14, v12, v2
 
+    .line 5824
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PopupWindowBackgroundState:[I
 
     const/16 v12, 0x24
 
     new-array v12, v12, [I
 
+    .line 5826
     fill-array-data v12, :array_42
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->Preference:[I
 
     new-array v12, v6, [I
 
+    .line 5863
     fill-array-data v12, :array_43
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PreferenceFragment:[I
 
     new-array v12, v6, [I
 
+    .line 5868
     fill-array-data v12, :array_44
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PreferenceFragmentCompat:[I
 
     new-array v12, v1, [I
 
+    .line 5873
     fill-array-data v12, :array_45
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PreferenceGroup:[I
 
     new-array v12, v6, [I
 
+    .line 5877
     fill-array-data v12, :array_46
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PreferenceImageView:[I
@@ -2955,18 +3035,21 @@
 
     new-array v12, v12, [I
 
+    .line 5882
     fill-array-data v12, :array_47
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->PreferenceTheme:[I
 
     new-array v12, v4, [I
 
+    .line 5899
     fill-array-data v12, :array_48
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->ProgressBar:[I
 
     new-array v12, v4, [I
 
+    .line 5902
     fill-array-data v12, :array_49
 
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->RadioButtonPreference:[I
@@ -2977,16 +3060,19 @@
 
     aput v14, v12, v2
 
+    .line 5905
     sput-object v12, Lcom/mi/globallauncher/R$styleable;->RadioSetPreferenceCategory:[I
 
     new-array v4, v4, [I
 
+    .line 5907
     fill-array-data v4, :array_4a
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->RecycleListView:[I
 
     new-array v4, v10, [I
 
+    .line 5910
     fill-array-data v4, :array_4b
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->RecyclerView:[I
@@ -2995,48 +3081,56 @@
 
     new-array v4, v4, [I
 
+    .line 5923
     fill-array-data v4, :array_4c
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->ReversibleTagGroup:[I
 
     new-array v4, v13, [I
 
+    .line 5945
     fill-array-data v4, :array_4d
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->SearchView:[I
 
     new-array v4, v3, [I
 
+    .line 5963
     fill-array-data v4, :array_4e
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->SeekBar:[I
 
     new-array v4, v7, [I
 
+    .line 5974
     fill-array-data v4, :array_4f
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->SeekBarPreference:[I
 
     new-array v4, v11, [I
 
+    .line 5982
     fill-array-data v4, :array_50
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->SlidingButton:[I
 
     new-array v4, v11, [I
 
+    .line 5991
     fill-array-data v4, :array_51
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->Spinner:[I
 
     new-array v4, v1, [I
 
+    .line 6000
     fill-array-data v4, :array_52
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->SpringBackLayout:[I
 
     new-array v4, v5, [I
 
+    .line 6004
     fill-array-data v4, :array_53
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->StateListDrawable:[I
@@ -3047,22 +3141,26 @@
 
     aput v5, v4, v2
 
+    .line 6011
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->StateListDrawableItem:[I
 
     new-array v4, v8, [I
 
+    .line 6013
     fill-array-data v4, :array_54
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->SwitchCompat:[I
 
     new-array v4, v3, [I
 
+    .line 6028
     fill-array-data v4, :array_55
 
     sput-object v4, Lcom/mi/globallauncher/R$styleable;->SwitchPreference:[I
 
     new-array v3, v3, [I
 
+    .line 6039
     fill-array-data v3, :array_56
 
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->SwitchPreferenceCompat:[I
@@ -3071,6 +3169,7 @@
 
     new-array v3, v3, [I
 
+    .line 6050
     fill-array-data v3, :array_57
 
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->TextAppearance:[I
@@ -3079,24 +3178,28 @@
 
     new-array v3, v3, [I
 
+    .line 6067
     fill-array-data v3, :array_58
 
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->Toolbar:[I
 
     new-array v3, v9, [I
 
+    .line 6098
     fill-array-data v3, :array_59
 
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->View:[I
 
     new-array v3, v1, [I
 
+    .line 6104
     fill-array-data v3, :array_5a
 
     sput-object v3, Lcom/mi/globallauncher/R$styleable;->ViewBackgroundHelper:[I
 
     new-array v1, v1, [I
 
+    .line 6108
     fill-array-data v1, :array_5b
 
     sput-object v1, Lcom/mi/globallauncher/R$styleable;->ViewStubCompat:[I
@@ -3105,6 +3208,7 @@
 
     new-array v1, v1, [I
 
+    .line 6112
     fill-array-data v1, :array_5c
 
     sput-object v1, Lcom/mi/globallauncher/R$styleable;->Window:[I
@@ -3115,10 +3219,12 @@
 
     aput v1, v0, v2
 
+    .line 6142
     sput-object v0, Lcom/mi/globallauncher/R$styleable;->miuiPopupMenu:[I
 
     new-array v0, v6, [I
 
+    .line 6144
     fill-array-data v0, :array_5d
 
     sput-object v0, Lcom/mi/globallauncher/R$styleable;->miuixAppcompatStateEditText:[I
@@ -4591,6 +4697,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 4948
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

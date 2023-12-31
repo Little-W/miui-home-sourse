@@ -1,5 +1,6 @@
 .class final Landroidx/drawerlayout/widget/DrawerLayout$ChildAccessibilityDelegate;
 .super Landroidx/core/view/AccessibilityDelegateCompat;
+.source "DrawerLayout.java"
 
 
 # annotations
@@ -17,8 +18,10 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 0
 
+    .line 2541
     invoke-super {p0, p1, p2}, Landroidx/core/view/AccessibilityDelegateCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
+    .line 2543
     invoke-static {p1}, Landroidx/drawerlayout/widget/DrawerLayout;->includeChildForAccessibility(Landroid/view/View;)Z
 
     move-result p0
@@ -27,6 +30,7 @@
 
     const/4 p0, 0x0
 
+    .line 2547
     invoke-virtual {p2, p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setParent(Landroid/view/View;)V
 
     :cond_0

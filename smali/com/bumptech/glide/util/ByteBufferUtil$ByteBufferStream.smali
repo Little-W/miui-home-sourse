@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;
 .super Ljava/io/InputStream;
+.source "ByteBufferUtil.java"
 
 
 # annotations
@@ -23,12 +24,15 @@
 .method constructor <init>(Ljava/nio/ByteBuffer;)V
     .locals 1
 
+    .line 185
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 183
     iput v0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->markPos:I
 
+    .line 186
     iput-object p1, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     return-void
@@ -39,6 +43,7 @@
 .method public available()I
     .locals 0
 
+    .line 191
     iget-object p0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
@@ -53,6 +58,7 @@
 
     monitor-enter p0
 
+    .line 204
     :try_start_0
     iget-object p1, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
@@ -64,6 +70,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 205
     monitor-exit p0
 
     return-void
@@ -87,6 +94,7 @@
 .method public read()I
     .locals 1
 
+    .line 196
     iget-object v0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -99,6 +107,7 @@
 
     return p0
 
+    .line 199
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
@@ -117,6 +126,7 @@
         }
     .end annotation
 
+    .line 214
     iget-object v0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -129,6 +139,7 @@
 
     return p0
 
+    .line 217
     :cond_0
     invoke-virtual {p0}, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->available()I
 
@@ -138,6 +149,7 @@
 
     move-result p3
 
+    .line 218
     iget-object p0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
@@ -155,6 +167,7 @@
 
     monitor-enter p0
 
+    .line 224
     :try_start_0
     iget v0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->markPos:I
 
@@ -162,6 +175,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 228
     iget-object v0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     iget v1, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->markPos:I
@@ -170,10 +184,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 229
     monitor-exit p0
 
     return-void
 
+    .line 225
     :cond_0
     :try_start_1
     new-instance v0, Ljava/io/IOException;
@@ -202,6 +218,7 @@
         }
     .end annotation
 
+    .line 233
     iget-object v0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -214,6 +231,7 @@
 
     return-wide p0
 
+    .line 237
     :cond_0
     invoke-virtual {p0}, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->available()I
 
@@ -225,6 +243,7 @@
 
     move-result-wide p1
 
+    .line 238
     iget-object p0, p0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I

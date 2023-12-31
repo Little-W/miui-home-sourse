@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzam;
 .super Lcom/google/android/gms/internal/measurement/zzag$zzb;
+.source "com.google.android.gms:play-services-measurement-sdk-api@@18.0.0"
 
 
 # instance fields
@@ -16,6 +17,7 @@
 .method constructor <init>(Lcom/google/android/gms/internal/measurement/zzag;Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzam;->zzf:Lcom/google/android/gms/internal/measurement/zzag;
 
     iput-object p2, p0, Lcom/google/android/gms/internal/measurement/zzam;->zzc:Landroid/app/Activity;
@@ -39,6 +41,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzam;->zzf:Lcom/google/android/gms/internal/measurement/zzag;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzag;->zzc(Lcom/google/android/gms/internal/measurement/zzag;)Lcom/google/android/gms/internal/measurement/zzv;
@@ -47,6 +50,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzam;->zzc:Landroid/app/Activity;
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     move-result-object v2
@@ -57,6 +61,7 @@
 
     iget-wide v5, p0, Lcom/google/android/gms/internal/measurement/zzam;->zza:J
 
+    .line 4
     invoke-interface/range {v1 .. v6}, Lcom/google/android/gms/internal/measurement/zzv;->setCurrentScreen(Lcom/google/android/gms/dynamic/IObjectWrapper;Ljava/lang/String;Ljava/lang/String;J)V
 
     return-void

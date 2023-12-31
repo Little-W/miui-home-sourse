@@ -1,5 +1,6 @@
 .class public final enum Lcom/mi/google/gson/stream/JsonToken;
 .super Ljava/lang/Enum;
+.source "JsonToken.java"
 
 
 # annotations
@@ -40,6 +41,7 @@
 .method static constructor <clinit>()V
     .locals 12
 
+    .line 31
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/4 v1, 0x0
@@ -50,6 +52,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->BEGIN_ARRAY:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 37
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/4 v2, 0x1
@@ -60,6 +63,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->END_ARRAY:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 43
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/4 v3, 0x2
@@ -70,6 +74,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->BEGIN_OBJECT:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 49
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/4 v4, 0x3
@@ -80,6 +85,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->END_OBJECT:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 56
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/4 v5, 0x4
@@ -90,6 +96,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->NAME:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 61
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/4 v6, 0x5
@@ -100,6 +107,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->STRING:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 67
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/4 v7, 0x6
@@ -110,6 +118,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->NUMBER:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 72
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/4 v8, 0x7
@@ -120,6 +129,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->BOOLEAN:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 77
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/16 v9, 0x8
@@ -130,6 +140,7 @@
 
     sput-object v0, Lcom/mi/google/gson/stream/JsonToken;->NULL:Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 84
     new-instance v0, Lcom/mi/google/gson/stream/JsonToken;
 
     const/16 v10, 0x9
@@ -144,6 +155,7 @@
 
     new-array v0, v0, [Lcom/mi/google/gson/stream/JsonToken;
 
+    .line 25
     sget-object v11, Lcom/mi/google/gson/stream/JsonToken;->BEGIN_ARRAY:Lcom/mi/google/gson/stream/JsonToken;
 
     aput-object v11, v0, v1
@@ -197,6 +209,7 @@
         }
     .end annotation
 
+    .line 25
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -205,6 +218,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/mi/google/gson/stream/JsonToken;
     .locals 1
 
+    .line 25
     const-class v0, Lcom/mi/google/gson/stream/JsonToken;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -219,6 +233,7 @@
 .method public static values()[Lcom/mi/google/gson/stream/JsonToken;
     .locals 1
 
+    .line 25
     sget-object v0, Lcom/mi/google/gson/stream/JsonToken;->$VALUES:[Lcom/mi/google/gson/stream/JsonToken;
 
     invoke-virtual {v0}, [Lcom/mi/google/gson/stream/JsonToken;->clone()Ljava/lang/Object;

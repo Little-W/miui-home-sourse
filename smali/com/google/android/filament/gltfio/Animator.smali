@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/gltfio/Animator;
 .super Ljava/lang/Object;
+.source "Animator.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method constructor <init>(J)V
     .locals 0
 
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 42
     iput-wide p1, p0, Lcom/google/android/filament/gltfio/Animator;->mNativeObject:J
 
     return-void
@@ -37,6 +40,7 @@
 .method public applyAnimation(IF)V
     .locals 2
 
+    .line 55
     invoke-virtual {p0}, Lcom/google/android/filament/gltfio/Animator;->getNativeObject()J
 
     move-result-wide v0
@@ -51,6 +55,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 107
     iput-wide v0, p0, Lcom/google/android/filament/gltfio/Animator;->mNativeObject:J
 
     return-void
@@ -59,6 +64,7 @@
 .method public getAnimationCount()I
     .locals 2
 
+    .line 73
     invoke-virtual {p0}, Lcom/google/android/filament/gltfio/Animator;->getNativeObject()J
 
     move-result-wide v0
@@ -73,6 +79,7 @@
 .method public getAnimationDuration(I)F
     .locals 2
 
+    .line 84
     invoke-virtual {p0}, Lcom/google/android/filament/gltfio/Animator;->getNativeObject()J
 
     move-result-wide v0
@@ -87,6 +94,7 @@
 .method public getAnimationName(I)Ljava/lang/String;
     .locals 2
 
+    .line 96
     invoke-virtual {p0}, Lcom/google/android/filament/gltfio/Animator;->getNativeObject()J
 
     move-result-wide v0
@@ -101,6 +109,7 @@
 .method getNativeObject()J
     .locals 4
 
+    .line 100
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/Animator;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -111,6 +120,7 @@
 
     return-wide v0
 
+    .line 101
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -124,6 +134,7 @@
 .method public updateBoneMatrices()V
     .locals 2
 
+    .line 66
     invoke-virtual {p0}, Lcom/google/android/filament/gltfio/Animator;->getNativeObject()J
 
     move-result-wide v0

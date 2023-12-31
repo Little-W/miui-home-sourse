@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/ArrayJsonAdapter$1;
 .super Ljava/lang/Object;
+.source "ArrayJsonAdapter.java"
 
 # interfaces
 .implements Lcom/squareup/moshi/JsonAdapter$Factory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +49,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 35
     invoke-static {p1}, Lcom/squareup/moshi/Types;->arrayComponentType(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
     move-result-object p0
@@ -57,6 +60,7 @@
 
     return-object p1
 
+    .line 37
     :cond_0
     invoke-interface {p2}, Ljava/util/Set;->isEmpty()Z
 
@@ -66,15 +70,18 @@
 
     return-object p1
 
+    .line 38
     :cond_1
     invoke-static {p0}, Lcom/squareup/moshi/Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object p1
 
+    .line 39
     invoke-virtual {p3, p0}, Lcom/squareup/moshi/Moshi;->adapter(Ljava/lang/reflect/Type;)Lcom/squareup/moshi/JsonAdapter;
 
     move-result-object p0
 
+    .line 40
     new-instance p2, Lcom/squareup/moshi/ArrayJsonAdapter;
 
     invoke-direct {p2, p1, p0}, Lcom/squareup/moshi/ArrayJsonAdapter;-><init>(Ljava/lang/Class;Lcom/squareup/moshi/JsonAdapter;)V

@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/crashlytics/-$$Lambda$AnalyticsDeferredProxy$1RYJBD5bXWtJsWZhT0xTWH8lCIs;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/analytics/AnalyticsEventLogger;

@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader$Factory;
 .super Ljava/lang/Object;
+.source "MediaStoreVideoThumbLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoaderFactory;
@@ -34,8 +35,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 65
     iput-object p1, p0, Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader$Factory;->context:Landroid/content/Context;
 
     return-void
@@ -57,6 +60,7 @@
         }
     .end annotation
 
+    .line 71
     new-instance p1, Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader$Factory;->context:Landroid/content/Context;

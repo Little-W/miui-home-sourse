@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/analytics/zza;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-api@@18.0.0"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/firebase/analytics/FirebaseAnalytics;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/firebase/analytics/zza;->zza:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +43,7 @@
         }
     .end annotation
 
+    .line 3
     iget-object p0, p0, Lcom/google/firebase/analytics/zza;->zza:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
     invoke-static {p0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->zza(Lcom/google/firebase/analytics/FirebaseAnalytics;)Lcom/google/android/gms/internal/measurement/zzag;

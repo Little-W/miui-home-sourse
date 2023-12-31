@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/BranchBaseAppResult;
 .super Lio/branch/search/AnalyticsEntity;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;

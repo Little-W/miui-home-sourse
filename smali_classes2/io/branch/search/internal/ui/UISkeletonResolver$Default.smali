@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/UISkeletonResolver$Default;
 .super Lio/branch/search/internal/ui/UISkeletonResolver;
+.source "SourceFile"
 
 
 # annotations

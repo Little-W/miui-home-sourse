@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/u0;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods

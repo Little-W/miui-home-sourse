@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/model/TaskStack$2;
 .super Ljava/lang/Object;
+.source "TaskStack.java"
 
 # interfaces
 .implements Lcom/android/systemui/shared/recents/model/TaskFilter;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/model/TaskStack;)V
     .locals 0
 
+    .line 235
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack$2;->this$0:Lcom/android/systemui/shared/recents/model/TaskStack;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,6 +48,7 @@
         }
     .end annotation
 
+    .line 238
     iget-boolean p0, p2, Lcom/android/systemui/shared/recents/model/Task;->isStackTask:Z
 
     return p0

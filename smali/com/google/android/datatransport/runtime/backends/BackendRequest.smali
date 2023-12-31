@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/runtime/backends/BackendRequest;
 .super Ljava/lang/Object;
+.source "BackendRequest.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method public static builder()Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;
     .locals 1
 
+    .line 36
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;-><init>()V

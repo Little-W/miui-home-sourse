@@ -45,16 +45,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/tasks/zzi;->mLock:Ljava/lang/Object;
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/gms/tasks/zzi;->zzd:Ljava/util/concurrent/Executor;
 
+    .line 4
     iput-object p2, p0, Lcom/google/android/gms/tasks/zzi;->zzl:Lcom/google/android/gms/tasks/OnCompleteListener;
 
     return-void
@@ -63,6 +67,7 @@
 .method static synthetic zza(Lcom/google/android/gms/tasks/zzi;)Ljava/lang/Object;
     .locals 0
 
+    .line 15
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzi;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -71,6 +76,7 @@
 .method static synthetic zzb(Lcom/google/android/gms/tasks/zzi;)Lcom/google/android/gms/tasks/OnCompleteListener;
     .locals 0
 
+    .line 16
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzi;->zzl:Lcom/google/android/gms/tasks/OnCompleteListener;
 
     return-object p0
@@ -88,24 +94,29 @@
         }
     .end annotation
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzi;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 7
     :try_start_0
     iget-object v1, p0, Lcom/google/android/gms/tasks/zzi;->zzl:Lcom/google/android/gms/tasks/OnCompleteListener;
 
     if-nez v1, :cond_0
 
+    .line 8
     monitor-exit v0
 
     return-void
 
+    .line 9
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzi;->zzd:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/gms/tasks/zzj;
@@ -119,6 +130,7 @@
     :catchall_0
     move-exception p0
 
+    .line 9
     :try_start_1
     monitor-exit v0
     :try_end_1

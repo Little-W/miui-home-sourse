@@ -1,5 +1,6 @@
 .class public Lio/branch/search/internal/interfaces/LocalInterface$d$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;

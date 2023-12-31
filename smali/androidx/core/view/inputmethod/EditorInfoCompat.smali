@@ -1,5 +1,6 @@
 .class public final Landroidx/core/view/inputmethod/EditorInfoCompat;
 .super Ljava/lang/Object;
+.source "EditorInfoCompat.java"
 
 
 # annotations
@@ -22,6 +23,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 93
     sput-object v0, Landroidx/core/view/inputmethod/EditorInfoCompat;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
     return-void
@@ -30,33 +32,39 @@
 .method public static getContentMimeTypes(Landroid/view/inputmethod/EditorInfo;)[Ljava/lang/String;
     .locals 2
 
+    .line 183
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x19
 
     if-lt v0, v1, :cond_1
 
+    .line 184
     iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->contentMimeTypes:[Ljava/lang/String;
 
     if-eqz p0, :cond_0
 
     goto :goto_0
 
+    .line 185
     :cond_0
     sget-object p0, Landroidx/core/view/inputmethod/EditorInfoCompat;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
     :goto_0
     return-object p0
 
+    .line 187
     :cond_1
     iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     if-nez v0, :cond_2
 
+    .line 188
     sget-object p0, Landroidx/core/view/inputmethod/EditorInfoCompat;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
     return-object p0
 
+    .line 190
     :cond_2
     iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
@@ -68,6 +76,7 @@
 
     if-nez v0, :cond_3
 
+    .line 192
     iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     const-string v0, "android.support.v13.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
@@ -81,6 +90,7 @@
 
     goto :goto_1
 
+    .line 194
     :cond_4
     sget-object v0, Landroidx/core/view/inputmethod/EditorInfoCompat;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
@@ -101,6 +111,7 @@
 
     return p0
 
+    .line 465
     :cond_0
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -112,6 +123,7 @@
 
     return p0
 
+    .line 463
     :cond_1
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -159,27 +171,32 @@
 .method public static setContentMimeTypes(Landroid/view/inputmethod/EditorInfo;[Ljava/lang/String;)V
     .locals 2
 
+    .line 160
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x19
 
     if-lt v0, v1, :cond_0
 
+    .line 161
     iput-object p1, p0, Landroid/view/inputmethod/EditorInfo;->contentMimeTypes:[Ljava/lang/String;
 
     goto :goto_0
 
+    .line 163
     :cond_0
     iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     if-nez v0, :cond_1
 
+    .line 164
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
+    .line 166
     :cond_1
     iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
@@ -187,6 +204,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
+    .line 167
     iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     const-string v0, "android.support.v13.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
@@ -200,18 +218,22 @@
 .method public static setInitialSurroundingSubText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
     .locals 5
 
+    .line 237
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 238
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
+    .line 239
     invoke-static {p0, p1, p2}, Landroidx/core/view/inputmethod/EditorInfoCompat$Api30Impl;->setInitialSurroundingSubText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
 
     return-void
 
+    .line 244
     :cond_0
     iget v0, p0, Landroid/view/inputmethod/EditorInfo;->initialSelStart:I
 
@@ -219,32 +241,38 @@
 
     if-le v0, v1, :cond_1
 
+    .line 245
     iget v0, p0, Landroid/view/inputmethod/EditorInfo;->initialSelEnd:I
 
     goto :goto_0
 
+    .line 246
     :cond_1
     iget v0, p0, Landroid/view/inputmethod/EditorInfo;->initialSelStart:I
 
     :goto_0
     sub-int/2addr v0, p2
 
+    .line 247
     iget v1, p0, Landroid/view/inputmethod/EditorInfo;->initialSelStart:I
 
     iget v2, p0, Landroid/view/inputmethod/EditorInfo;->initialSelEnd:I
 
     if-le v1, v2, :cond_2
 
+    .line 248
     iget v1, p0, Landroid/view/inputmethod/EditorInfo;->initialSelStart:I
 
     goto :goto_1
 
+    .line 249
     :cond_2
     iget v1, p0, Landroid/view/inputmethod/EditorInfo;->initialSelEnd:I
 
     :goto_1
     sub-int/2addr v1, p2
 
+    .line 251
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
@@ -261,6 +289,7 @@
 
     goto :goto_2
 
+    .line 259
     :cond_3
     iget p2, p0, Landroid/view/inputmethod/EditorInfo;->inputType:I
 
@@ -270,6 +299,7 @@
 
     if-eqz p2, :cond_4
 
+    .line 260
     invoke-static {p0, v3, v4, v4}, Landroidx/core/view/inputmethod/EditorInfoCompat;->setSurroundingText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
 
     return-void
@@ -279,15 +309,18 @@
 
     if-gt v2, p2, :cond_5
 
+    .line 265
     invoke-static {p0, p1, v0, v1}, Landroidx/core/view/inputmethod/EditorInfoCompat;->setSurroundingText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
 
     return-void
 
+    .line 269
     :cond_5
     invoke-static {p0, p1, v0, v1}, Landroidx/core/view/inputmethod/EditorInfoCompat;->trimLongSurroundingText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
 
     return-void
 
+    .line 254
     :cond_6
     :goto_2
     invoke-static {p0, v3, v4, v4}, Landroidx/core/view/inputmethod/EditorInfoCompat;->setSurroundingText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
@@ -298,6 +331,7 @@
 .method public static setInitialSurroundingText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;)V
     .locals 3
 
+    .line 214
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
@@ -306,10 +340,12 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 215
     invoke-static {p0, p1, v1}, Landroidx/core/view/inputmethod/EditorInfoCompat$Api30Impl;->setInitialSurroundingSubText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
 
     goto :goto_0
 
+    .line 217
     :cond_0
     invoke-static {p0, p1, v1}, Landroidx/core/view/inputmethod/EditorInfoCompat;->setInitialSurroundingSubText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
 
@@ -320,10 +356,12 @@
 .method private static setSurroundingText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
     .locals 2
 
+    .line 485
     iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
+    .line 486
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -333,6 +371,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 490
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0, p1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
@@ -342,6 +381,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 491
     :goto_0
     iget-object p1, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
@@ -349,12 +389,14 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
+    .line 492
     iget-object p1, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     const-string v0, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_HEAD"
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 493
     iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     const-string p1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_END"
@@ -382,6 +424,7 @@
     :cond_0
     move v2, v0
 
+    .line 297
     :goto_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -399,24 +442,28 @@
 
     double-to-int v5, v7
 
+    .line 300
     invoke-static {p2, v5}, Ljava/lang/Math;->min(II)I
 
     move-result v5
 
     sub-int v5, v4, v5
 
+    .line 301
     invoke-static {v3, v5}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
     sub-int/2addr v4, v3
 
+    .line 303
     invoke-static {p2, v4}, Ljava/lang/Math;->min(II)I
 
     move-result v4
 
     sub-int/2addr p2, v4
 
+    .line 310
     invoke-static {p1, p2, v1}, Landroidx/core/view/inputmethod/EditorInfoCompat;->isCutOnSurrogate(Ljava/lang/CharSequence;II)Z
 
     move-result v5
@@ -434,6 +481,7 @@
 
     sub-int/2addr v5, v6
 
+    .line 315
     invoke-static {p1, v5, v6}, Landroidx/core/view/inputmethod/EditorInfoCompat;->isCutOnSurrogate(Ljava/lang/CharSequence;II)Z
 
     move-result v5
@@ -451,12 +499,14 @@
 
     add-int v0, p2, v4
 
+    .line 324
     invoke-interface {p1, p2, v0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p2
 
     add-int/2addr v3, p3
 
+    .line 326
     invoke-interface {p1, p3, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -469,6 +519,7 @@
 
     aput-object p1, p3, v6
 
+    .line 329
     invoke-static {p3}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -478,6 +529,7 @@
     :cond_3
     add-int/2addr v5, p2
 
+    .line 332
     invoke-interface {p1, p2, v5}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -487,6 +539,7 @@
 
     add-int/2addr v2, v4
 
+    .line 339
     invoke-static {p0, p1, v4, v2}, Landroidx/core/view/inputmethod/EditorInfoCompat;->setSurroundingText(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
 
     return-void

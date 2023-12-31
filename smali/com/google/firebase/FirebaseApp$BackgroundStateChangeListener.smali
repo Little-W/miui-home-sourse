@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/FirebaseApp$BackgroundStateChangeListener;
 .super Ljava/lang/Object;
+.source "FirebaseApp.java"
 
 
 # annotations

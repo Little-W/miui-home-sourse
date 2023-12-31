@@ -1,5 +1,6 @@
 .class final Lio/requery/android/database/sqlite/SQLiteDatabase$2;
 .super Ljava/lang/Object;
+.source "SQLiteDatabase.java"
 
 # interfaces
 .implements Ljava/io/FileFilter;
@@ -24,6 +25,7 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 767
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteDatabase$2;->val$prefix:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public accept(Ljava/io/File;)Z
     .locals 0
 
+    .line 770
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object p1

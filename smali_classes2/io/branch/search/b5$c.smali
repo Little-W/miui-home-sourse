@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/b5$c;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "SourceFile"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;

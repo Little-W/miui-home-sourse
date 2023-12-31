@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/components/CycleDetector$ComponentNode;
 .super Ljava/lang/Object;
+.source "CycleDetector.java"
 
 
 # annotations
@@ -55,20 +56,24 @@
         }
     .end annotation
 
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 56
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->dependencies:Ljava/util/Set;
 
+    .line 57
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->dependents:Ljava/util/Set;
 
+    .line 60
     iput-object p1, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->component:Lcom/google/firebase/components/Component;
 
     return-void
@@ -79,6 +84,7 @@
 .method addDependency(Lcom/google/firebase/components/CycleDetector$ComponentNode;)V
     .locals 0
 
+    .line 64
     iget-object p0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->dependencies:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -89,6 +95,7 @@
 .method addDependent(Lcom/google/firebase/components/CycleDetector$ComponentNode;)V
     .locals 0
 
+    .line 68
     iget-object p0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->dependents:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -106,6 +113,7 @@
         }
     .end annotation
 
+    .line 80
     iget-object p0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->component:Lcom/google/firebase/components/Component;
 
     return-object p0
@@ -122,6 +130,7 @@
         }
     .end annotation
 
+    .line 72
     iget-object p0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->dependencies:Ljava/util/Set;
 
     return-object p0
@@ -130,6 +139,7 @@
 .method isLeaf()Z
     .locals 0
 
+    .line 88
     iget-object p0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->dependencies:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->isEmpty()Z
@@ -142,6 +152,7 @@
 .method isRoot()Z
     .locals 0
 
+    .line 84
     iget-object p0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->dependents:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->isEmpty()Z
@@ -154,6 +165,7 @@
 .method removeDependent(Lcom/google/firebase/components/CycleDetector$ComponentNode;)V
     .locals 0
 
+    .line 76
     iget-object p0, p0, Lcom/google/firebase/components/CycleDetector$ComponentNode;->dependents:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z

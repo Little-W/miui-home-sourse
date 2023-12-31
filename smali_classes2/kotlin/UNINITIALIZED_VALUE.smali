@@ -1,5 +1,6 @@
 .class public final Lkotlin/UNINITIALIZED_VALUE;
 .super Ljava/lang/Object;
+.source "Lazy.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 71
     new-instance v0, Lkotlin/UNINITIALIZED_VALUE;
 
     invoke-direct {v0}, Lkotlin/UNINITIALIZED_VALUE;-><init>()V
@@ -22,6 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

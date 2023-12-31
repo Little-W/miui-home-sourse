@@ -1,5 +1,6 @@
 .class public abstract Lkotlin/collections/AbstractIterator;
 .super Ljava/lang/Object;
+.source "AbstractIterator.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -34,8 +35,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 21
     sget-object v0, Lkotlin/collections/State;->NotReady:Lkotlin/collections/State;
 
     iput-object v0, p0, Lkotlin/collections/AbstractIterator;->state:Lkotlin/collections/State;
@@ -46,12 +49,15 @@
 .method private final tryToComputeNext()Z
     .locals 1
 
+    .line 41
     sget-object v0, Lkotlin/collections/State;->Failed:Lkotlin/collections/State;
 
     iput-object v0, p0, Lkotlin/collections/AbstractIterator;->state:Lkotlin/collections/State;
 
+    .line 42
     invoke-virtual {p0}, Lkotlin/collections/AbstractIterator;->computeNext()V
 
+    .line 43
     iget-object p0, p0, Lkotlin/collections/AbstractIterator;->state:Lkotlin/collections/State;
 
     sget-object v0, Lkotlin/collections/State;->Ready:Lkotlin/collections/State;
@@ -77,6 +83,7 @@
 .method protected final done()V
     .locals 1
 
+    .line 70
     sget-object v0, Lkotlin/collections/State;->Done:Lkotlin/collections/State;
 
     iput-object v0, p0, Lkotlin/collections/AbstractIterator;->state:Lkotlin/collections/State;
@@ -87,6 +94,7 @@
 .method public hasNext()Z
     .locals 4
 
+    .line 25
     iget-object v0, p0, Lkotlin/collections/AbstractIterator;->state:Lkotlin/collections/State;
 
     sget-object v1, Lkotlin/collections/State;->Failed:Lkotlin/collections/State;
@@ -107,6 +115,7 @@
     :goto_0
     if-eqz v0, :cond_3
 
+    .line 26
     iget-object v0, p0, Lkotlin/collections/AbstractIterator;->state:Lkotlin/collections/State;
 
     sget-object v1, Lkotlin/collections/AbstractIterator$WhenMappings;->$EnumSwitchMapping$0:[I
@@ -123,6 +132,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 29
     invoke-direct {p0}, Lkotlin/collections/AbstractIterator;->tryToComputeNext()Z
 
     move-result v2
@@ -136,6 +146,7 @@
     :goto_1
     return v2
 
+    .line 25
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -160,20 +171,24 @@
         }
     .end annotation
 
+    .line 34
     invoke-virtual {p0}, Lkotlin/collections/AbstractIterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 35
     sget-object v0, Lkotlin/collections/State;->NotReady:Lkotlin/collections/State;
 
     iput-object v0, p0, Lkotlin/collections/AbstractIterator;->state:Lkotlin/collections/State;
 
+    .line 37
     iget-object p0, p0, Lkotlin/collections/AbstractIterator;->nextValue:Ljava/lang/Object;
 
     return-object p0
 
+    .line 34
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -204,8 +219,10 @@
         }
     .end annotation
 
+    .line 62
     iput-object p1, p0, Lkotlin/collections/AbstractIterator;->nextValue:Ljava/lang/Object;
 
+    .line 63
     sget-object p1, Lkotlin/collections/State;->Ready:Lkotlin/collections/State;
 
     iput-object p1, p0, Lkotlin/collections/AbstractIterator;->state:Lkotlin/collections/State;

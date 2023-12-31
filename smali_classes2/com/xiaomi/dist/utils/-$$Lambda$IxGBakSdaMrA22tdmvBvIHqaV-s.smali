@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/utils/-$$Lambda$IxGBakSdaMrA22tdmvBvIHqaV-s;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

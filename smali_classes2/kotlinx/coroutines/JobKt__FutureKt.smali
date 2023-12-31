@@ -1,5 +1,6 @@
 .class final synthetic Lkotlinx/coroutines/JobKt__FutureKt;
 .super Ljava/lang/Object;
+.source "Future.kt"
 
 
 # direct methods
@@ -15,6 +16,7 @@
         }
     .end annotation
 
+    .line 33
     new-instance v0, Lkotlinx/coroutines/CancelFutureOnCancel;
 
     invoke-direct {v0, p1}, Lkotlinx/coroutines/CancelFutureOnCancel;-><init>(Ljava/util/concurrent/Future;)V

@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/airbnb/lottie/-$$Lambda$hLy8mtPbk1k-fFhJ6CfDU5npgic;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/airbnb/lottie/LottieListener;

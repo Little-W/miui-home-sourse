@@ -1,5 +1,6 @@
 .class public final Lokhttp3/internal/Version;
 .super Ljava/lang/Object;
+.source "Version.java"
 
 
 # direct methods

@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/CopyableThrowable;
 .super Ljava/lang/Object;
+.source "Debug.common.kt"
 
 
 # annotations

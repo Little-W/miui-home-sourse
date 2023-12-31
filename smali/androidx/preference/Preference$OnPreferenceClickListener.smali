@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/preference/Preference$OnPreferenceClickListener;
 .super Ljava/lang/Object;
+.source "Preference.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/AppActivityLifecycleTracker;
 .super Ljava/lang/Object;
+.source "AppActivityLifecycleTracker.java"
 
 # interfaces
 .implements Landroid/app/Application$ActivityLifecycleCallbacks;
@@ -29,8 +30,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
     invoke-static {}, Lcom/market/sdk/MarketManager;->getManager()Lcom/market/sdk/MarketManager;
 
     move-result-object v0
@@ -49,6 +52,7 @@
 .method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 24
     iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
     const/4 p2, 0x0
@@ -61,6 +65,7 @@
 .method public onActivityDestroyed(Landroid/app/Activity;)V
     .locals 1
 
+    .line 54
     iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
     const/4 v0, 0x5
@@ -73,6 +78,7 @@
 .method public onActivityPaused(Landroid/app/Activity;)V
     .locals 1
 
+    .line 39
     iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
     const/4 v0, 0x3
@@ -85,6 +91,7 @@
 .method public onActivityResumed(Landroid/app/Activity;)V
     .locals 1
 
+    .line 34
     iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
     const/4 v0, 0x2
@@ -97,6 +104,7 @@
 .method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 49
     iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
     const/4 p2, 0x6
@@ -109,6 +117,7 @@
 .method public onActivityStarted(Landroid/app/Activity;)V
     .locals 1
 
+    .line 29
     iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
     const/4 v0, 0x1
@@ -121,6 +130,7 @@
 .method public onActivityStopped(Landroid/app/Activity;)V
     .locals 1
 
+    .line 44
     iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
     const/4 v0, 0x4

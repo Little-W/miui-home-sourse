@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/android/systemui/shared/recents/system/-$$Lambda$ActivityManagerWrapper$BTFmHVFJqsmSkXiToZlxYdN4NMc;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/function/Predicate;

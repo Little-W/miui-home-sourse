@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/navigation/NavigationView;
 .super Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
+.source "NavigationView.java"
 
 
 # annotations
@@ -59,6 +60,7 @@
 
     aput v3, v1, v2
 
+    .line 110
     sput-object v1, Lcom/google/android/material/navigation/NavigationView;->CHECKED_STATE_SET:[I
 
     new-array v0, v0, [I
@@ -67,8 +69,10 @@
 
     aput v1, v0, v2
 
+    .line 111
     sput-object v0, Lcom/google/android/material/navigation/NavigationView;->DISABLED_STATE_SET:[I
 
+    .line 113
     sget v0, Lcom/google/android/material/R$style;->Widget_Design_NavigationView:I
 
     sput v0, Lcom/google/android/material/navigation/NavigationView;->DEF_STYLE_RES:I
@@ -79,10 +83,12 @@
 .method private getMenuInflater()Landroid/view/MenuInflater;
     .locals 2
 
+    .line 918
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->menuInflater:Landroid/view/MenuInflater;
 
     if-nez v0, :cond_0
 
+    .line 919
     new-instance v0, Landroidx/appcompat/view/SupportMenuInflater;
 
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getContext()Landroid/content/Context;
@@ -93,6 +99,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->menuInflater:Landroid/view/MenuInflater;
 
+    .line 921
     :cond_0
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->menuInflater:Landroid/view/MenuInflater;
 
@@ -102,6 +109,7 @@
 .method private maybeUpdateCornerSizeForDrawerLayout(II)V
     .locals 4
 
+    .line 353
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -114,6 +122,7 @@
 
     if-lez v0, :cond_2
 
+    .line 355
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -122,12 +131,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 357
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/material/shape/MaterialShapeDrawable;
 
+    .line 359
     invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object v1
@@ -136,8 +147,10 @@
 
     move-result-object v1
 
+    .line 360
     iget v2, p0, Lcom/google/android/material/navigation/NavigationView;->layoutGravity:I
 
+    .line 361
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v3
@@ -150,12 +163,14 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 364
     iget v2, p0, Lcom/google/android/material/navigation/NavigationView;->drawerLayoutCornerSize:I
 
     int-to-float v2, v2
 
     invoke-virtual {v1, v2}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setTopRightCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
 
+    .line 365
     iget v2, p0, Lcom/google/android/material/navigation/NavigationView;->drawerLayoutCornerSize:I
 
     int-to-float v2, v2
@@ -164,6 +179,7 @@
 
     goto :goto_0
 
+    .line 368
     :cond_0
     iget v2, p0, Lcom/google/android/material/navigation/NavigationView;->drawerLayoutCornerSize:I
 
@@ -171,12 +187,14 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setTopLeftCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
 
+    .line 369
     iget v2, p0, Lcom/google/android/material/navigation/NavigationView;->drawerLayoutCornerSize:I
 
     int-to-float v2, v2
 
     invoke-virtual {v1, v2}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setBottomLeftCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
 
+    .line 371
     :goto_0
     invoke-virtual {v1}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->build()Lcom/google/android/material/shape/ShapeAppearanceModel;
 
@@ -184,21 +202,25 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
 
+    .line 373
     iget-object v1, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipPath:Landroid/graphics/Path;
 
     if-nez v1, :cond_1
 
+    .line 374
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
     iput-object v1, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipPath:Landroid/graphics/Path;
 
+    .line 376
     :cond_1
     iget-object v1, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipPath:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
+    .line 377
     iget-object v1, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipBounds:Landroid/graphics/RectF;
 
     int-to-float p1, p1
@@ -209,14 +231,17 @@
 
     invoke-virtual {v1, v2, v2, p1, p2}, Landroid/graphics/RectF;->set(FFFF)V
 
+    .line 378
     invoke-static {}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->getInstance()Lcom/google/android/material/shape/ShapeAppearancePathProvider;
 
     move-result-object p1
 
+    .line 380
     invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object p2
 
+    .line 381
     invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getInterpolation()F
 
     move-result v0
@@ -225,8 +250,10 @@
 
     iget-object v2, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipPath:Landroid/graphics/Path;
 
+    .line 379
     invoke-virtual {p1, p2, v0, v1, v2}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->calculatePath(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Landroid/graphics/Path;)V
 
+    .line 384
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->invalidate()V
 
     goto :goto_1
@@ -234,8 +261,10 @@
     :cond_2
     const/4 p1, 0x0
 
+    .line 386
     iput-object p1, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipPath:Landroid/graphics/Path;
 
+    .line 387
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipBounds:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Landroid/graphics/RectF;->setEmpty()V
@@ -249,25 +278,31 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
+    .line 500
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipPath:Landroid/graphics/Path;
 
     if-nez v0, :cond_0
 
+    .line 501
     invoke-super {p0, p1}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     return-void
 
+    .line 505
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
+    .line 506
     iget-object v1, p0, Lcom/google/android/material/navigation/NavigationView;->shapeClipPath:Landroid/graphics/Path;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
+    .line 507
     invoke-super {p0, p1}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
+    .line 508
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
@@ -276,6 +311,7 @@
 .method public getCheckedItem()Landroid/view/MenuItem;
     .locals 0
 
+    .line 783
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getCheckedItem()Landroidx/appcompat/view/menu/MenuItemImpl;
@@ -288,6 +324,7 @@
 .method public getDividerInsetEnd()I
     .locals 0
 
+    .line 877
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getDividerInsetEnd()I
@@ -300,6 +337,7 @@
 .method public getDividerInsetStart()I
     .locals 0
 
+    .line 862
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getDividerInsetStart()I
@@ -312,6 +350,7 @@
 .method public getHeaderCount()I
     .locals 0
 
+    .line 572
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getHeaderCount()I
@@ -324,6 +363,7 @@
 .method public getItemBackground()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 636
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getItemBackground()Landroid/graphics/drawable/Drawable;
@@ -336,6 +376,7 @@
 .method public getItemHorizontalPadding()I
     .locals 0
 
+    .line 668
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getItemHorizontalPadding()I
@@ -348,6 +389,7 @@
 .method public getItemIconPadding()I
     .locals 0
 
+    .line 730
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getItemIconPadding()I
@@ -360,6 +402,7 @@
 .method public getItemIconTintList()Landroid/content/res/ColorStateList;
     .locals 0
 
+    .line 594
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getItemTintList()Landroid/content/res/ColorStateList;
@@ -372,6 +415,7 @@
 .method public getItemMaxLines()I
     .locals 0
 
+    .line 820
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getItemMaxLines()I
@@ -384,6 +428,7 @@
 .method public getItemTextColor()Landroid/content/res/ColorStateList;
     .locals 0
 
+    .line 615
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getItemTextColor()Landroid/content/res/ColorStateList;
@@ -396,6 +441,7 @@
 .method public getItemVerticalPadding()I
     .locals 0
 
+    .line 699
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getItemVerticalPadding()I
@@ -408,6 +454,7 @@
 .method public getMenu()Landroid/view/Menu;
     .locals 0
 
+    .line 535
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->menu:Lcom/google/android/material/internal/NavigationMenu;
 
     return-object p0
@@ -416,6 +463,7 @@
 .method public getSubheaderInsetEnd()I
     .locals 0
 
+    .line 907
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getSubheaderInsetEnd()I
@@ -428,6 +476,7 @@
 .method public getSubheaderInsetStart()I
     .locals 0
 
+    .line 892
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter;->getSubheaderInsetStart()I
@@ -440,8 +489,10 @@
 .method protected onAttachedToWindow()V
     .locals 0
 
+    .line 398
     invoke-super {p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onAttachedToWindow()V
 
+    .line 399
     invoke-static {p0}, Lcom/google/android/material/shape/MaterialShapeUtils;->setParentAbsoluteElevation(Landroid/view/View;)V
 
     return-void
@@ -450,14 +501,17 @@
 .method protected onDetachedFromWindow()V
     .locals 2
 
+    .line 947
     invoke-super {p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onDetachedFromWindow()V
 
+    .line 948
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-ge v0, v1, :cond_0
 
+    .line 949
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
@@ -468,6 +522,7 @@
 
     goto :goto_0
 
+    .line 951
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -484,6 +539,7 @@
 .method protected onMeasure(II)V
     .locals 3
 
+    .line 481
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
@@ -498,6 +554,7 @@
 
     goto :goto_0
 
+    .line 491
     :cond_0
     iget p1, p0, Lcom/google/android/material/navigation/NavigationView;->maxWidth:I
 
@@ -507,6 +564,7 @@
 
     goto :goto_0
 
+    .line 488
     :cond_1
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -518,10 +576,12 @@
 
     move-result p1
 
+    .line 487
     invoke-static {p1, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p1
 
+    .line 495
     :goto_0
     invoke-super {p0, p1, p2}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onMeasure(II)V
 
@@ -531,23 +591,28 @@
 .method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
+    .line 460
     instance-of v0, p1, Lcom/google/android/material/navigation/NavigationView$SavedState;
 
     if-nez v0, :cond_0
 
+    .line 461
     invoke-super {p0, p1}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
 
+    .line 464
     :cond_0
     check-cast p1, Lcom/google/android/material/navigation/NavigationView$SavedState;
 
+    .line 465
     invoke-virtual {p1}, Lcom/google/android/material/navigation/NavigationView$SavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
+    .line 466
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->menu:Lcom/google/android/material/internal/NavigationMenu;
 
     iget-object p1, p1, Lcom/google/android/material/navigation/NavigationView$SavedState;->menuState:Landroid/os/Bundle;
@@ -560,20 +625,24 @@
 .method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
+    .line 451
     invoke-super {p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
+    .line 452
     new-instance v1, Lcom/google/android/material/navigation/NavigationView$SavedState;
 
     invoke-direct {v1, v0}, Lcom/google/android/material/navigation/NavigationView$SavedState;-><init>(Landroid/os/Parcelable;)V
 
+    .line 453
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, v1, Lcom/google/android/material/navigation/NavigationView$SavedState;->menuState:Landroid/os/Bundle;
 
+    .line 454
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->menu:Lcom/google/android/material/internal/NavigationMenu;
 
     iget-object v0, v1, Lcom/google/android/material/navigation/NavigationView$SavedState;->menuState:Landroid/os/Bundle;
@@ -586,8 +655,10 @@
 .method protected onSizeChanged(IIII)V
     .locals 0
 
+    .line 404
     invoke-super {p0, p1, p2, p3, p4}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onSizeChanged(IIII)V
 
+    .line 405
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/navigation/NavigationView;->maybeUpdateCornerSizeForDrawerLayout(II)V
 
     return-void
@@ -596,6 +667,7 @@
 .method public setBottomInsetScrimEnabled(Z)V
     .locals 0
 
+    .line 854
     iput-boolean p1, p0, Lcom/google/android/material/navigation/NavigationView;->bottomInsetScrimEnabled:Z
 
     return-void
@@ -604,6 +676,7 @@
 .method public setCheckedItem(I)V
     .locals 1
 
+    .line 759
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->menu:Lcom/google/android/material/internal/NavigationMenu;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/internal/NavigationMenu;->findItem(I)Landroid/view/MenuItem;
@@ -612,6 +685,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 761
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     check-cast p1, Landroidx/appcompat/view/menu/MenuItemImpl;
@@ -625,6 +699,7 @@
 .method public setCheckedItem(Landroid/view/MenuItem;)V
     .locals 1
 
+    .line 771
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->menu:Lcom/google/android/material/internal/NavigationMenu;
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
@@ -637,6 +712,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 773
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     check-cast p1, Landroidx/appcompat/view/menu/MenuItemImpl;
@@ -645,6 +721,7 @@
 
     return-void
 
+    .line 775
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -658,6 +735,7 @@
 .method public setDividerInsetEnd(I)V
     .locals 0
 
+    .line 884
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setDividerInsetEnd(I)V
@@ -668,6 +746,7 @@
 .method public setDividerInsetStart(I)V
     .locals 0
 
+    .line 869
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setDividerInsetStart(I)V
@@ -678,14 +757,17 @@
 .method public setElevation(F)V
     .locals 2
 
+    .line 410
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
+    .line 411
     invoke-super {p0, p1}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->setElevation(F)V
 
+    .line 413
     :cond_0
     invoke-static {p0, p1}, Lcom/google/android/material/shape/MaterialShapeUtils;->setElevation(Landroid/view/View;F)V
 
@@ -695,6 +777,7 @@
 .method public setItemBackground(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 657
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemBackground(Landroid/graphics/drawable/Drawable;)V
@@ -705,6 +788,7 @@
 .method public setItemBackgroundResource(I)V
     .locals 1
 
+    .line 647
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -721,6 +805,7 @@
 .method public setItemHorizontalPadding(I)V
     .locals 0
 
+    .line 678
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemHorizontalPadding(I)V
@@ -731,6 +816,7 @@
 .method public setItemHorizontalPaddingResource(I)V
     .locals 1
 
+    .line 688
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getResources()Landroid/content/res/Resources;
@@ -749,6 +835,7 @@
 .method public setItemIconPadding(I)V
     .locals 0
 
+    .line 740
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemIconPadding(I)V
@@ -759,6 +846,7 @@
 .method public setItemIconPaddingResource(I)V
     .locals 1
 
+    .line 750
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getResources()Landroid/content/res/Resources;
@@ -777,6 +865,7 @@
 .method public setItemIconSize(I)V
     .locals 0
 
+    .line 802
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemIconSize(I)V
@@ -787,6 +876,7 @@
 .method public setItemIconTintList(Landroid/content/res/ColorStateList;)V
     .locals 0
 
+    .line 604
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemIconTintList(Landroid/content/res/ColorStateList;)V
@@ -797,6 +887,7 @@
 .method public setItemMaxLines(I)V
     .locals 0
 
+    .line 811
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemMaxLines(I)V
@@ -807,6 +898,7 @@
 .method public setItemTextAppearance(I)V
     .locals 0
 
+    .line 792
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemTextAppearance(I)V
@@ -817,6 +909,7 @@
 .method public setItemTextColor(Landroid/content/res/ColorStateList;)V
     .locals 0
 
+    .line 625
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemTextColor(Landroid/content/res/ColorStateList;)V
@@ -827,6 +920,7 @@
 .method public setItemVerticalPadding(I)V
     .locals 0
 
+    .line 709
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setItemVerticalPadding(I)V
@@ -837,6 +931,7 @@
 .method public setItemVerticalPaddingResource(I)V
     .locals 1
 
+    .line 719
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationView;->getResources()Landroid/content/res/Resources;
@@ -855,6 +950,7 @@
 .method public setNavigationItemSelectedListener(Lcom/google/android/material/navigation/NavigationView$OnNavigationItemSelectedListener;)V
     .locals 0
 
+    .line 476
     iput-object p1, p0, Lcom/google/android/material/navigation/NavigationView;->listener:Lcom/google/android/material/navigation/NavigationView$OnNavigationItemSelectedListener;
 
     return-void
@@ -863,12 +959,15 @@
 .method public setOverScrollMode(I)V
     .locals 0
 
+    .line 340
     invoke-super {p0, p1}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->setOverScrollMode(I)V
 
+    .line 341
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     if-eqz p0, :cond_0
 
+    .line 342
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setOverScrollMode(I)V
 
     :cond_0
@@ -878,6 +977,7 @@
 .method public setSubheaderInsetEnd(I)V
     .locals 0
 
+    .line 914
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setSubheaderInsetStart(I)V
@@ -888,6 +988,7 @@
 .method public setSubheaderInsetStart(I)V
     .locals 0
 
+    .line 899
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->setSubheaderInsetStart(I)V
@@ -898,6 +999,7 @@
 .method public setTopInsetScrimEnabled(Z)V
     .locals 0
 
+    .line 837
     iput-boolean p1, p0, Lcom/google/android/material/navigation/NavigationView;->topInsetScrimEnabled:Z
 
     return-void

@@ -1,5 +1,6 @@
 .class final Lkotlin/collections/ArraysKt___ArraysKt$withIndex$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "_Arrays.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -64,6 +65,7 @@
         }
     .end annotation
 
+    .line 11723
     iget-object p0, p0, Lkotlin/collections/ArraysKt___ArraysKt$withIndex$1;->$this_withIndex:[Ljava/lang/Object;
 
     invoke-static {p0}, Lkotlin/jvm/internal/ArrayIteratorKt;->iterator([Ljava/lang/Object;)Ljava/util/Iterator;

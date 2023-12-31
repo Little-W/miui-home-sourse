@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/descriptors/ContextAwareKt;
 .super Ljava/lang/Object;
+.source "ContextAware.kt"
 
 
 # annotations
@@ -29,6 +30,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 82
     new-instance v0, Lkotlinx/serialization/descriptors/ContextDescriptor;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/serialization/descriptors/ContextDescriptor;-><init>(Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlin/reflect/KClass;)V

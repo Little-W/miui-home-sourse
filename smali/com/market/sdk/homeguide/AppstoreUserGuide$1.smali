@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/homeguide/AppstoreUserGuide$1;
 .super Ljava/lang/Object;
+.source "AppstoreUserGuide.java"
 
 # interfaces
 .implements Lcom/market/sdk/homeguide/Callback;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/market/sdk/homeguide/AppstoreUserGuide;Lcom/market/sdk/homeguide/Interceptor;Lcom/market/sdk/homeguide/HomeUserGuideData;)V
     .locals 0
 
+    .line 157
     iput-object p1, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->this$0:Lcom/market/sdk/homeguide/AppstoreUserGuide;
 
     iput-object p2, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->val$interceptor:Lcom/market/sdk/homeguide/Interceptor;
@@ -44,6 +46,7 @@
 .method public onFinish(Z)V
     .locals 1
 
+    .line 165
     iget-object v0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->val$data:Lcom/market/sdk/homeguide/HomeUserGuideData;
 
     invoke-virtual {v0}, Lcom/market/sdk/homeguide/HomeUserGuideData;->getLocalFilePath()Ljava/lang/String;
@@ -56,6 +59,7 @@
 
     if-nez v0, :cond_0
 
+    .line 166
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->val$data:Lcom/market/sdk/homeguide/HomeUserGuideData;
@@ -77,6 +81,7 @@
 
     const-string v0, "need_show_user_guide"
 
+    .line 169
     invoke-static {v0, p0, p1}, Lcom/market/sdk/utils/PrefUtils;->setBoolean(Ljava/lang/String;Z[Lcom/market/sdk/utils/PrefUtils$PrefFile;)V
 
     :cond_1
@@ -86,6 +91,7 @@
 .method public onIntercept()Z
     .locals 0
 
+    .line 160
     iget-object p0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->val$interceptor:Lcom/market/sdk/homeguide/Interceptor;
 
     if-eqz p0, :cond_0

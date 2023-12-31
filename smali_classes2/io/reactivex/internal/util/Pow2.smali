@@ -1,5 +1,6 @@
 .class public final Lio/reactivex/internal/util/Pow2;
 .super Ljava/lang/Object;
+.source "Pow2.java"
 
 
 # direct methods
@@ -10,6 +11,7 @@
 
     sub-int/2addr p0, v0
 
+    .line 34
     invoke-static {p0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
 
     move-result p0

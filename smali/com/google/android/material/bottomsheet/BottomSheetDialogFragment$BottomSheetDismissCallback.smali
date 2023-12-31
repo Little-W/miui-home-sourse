@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment$BottomSheetDismissCallback;
 .super Lcom/google/android/material/bottomsheet/BottomSheetBehavior$BottomSheetCallback;
+.source "BottomSheetDialogFragment.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method private constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;)V
     .locals 0
 
+    .line 99
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment$BottomSheetDismissCallback;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;
 
     invoke-direct {p0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$BottomSheetCallback;-><init>()V
@@ -31,6 +33,7 @@
 .method synthetic constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment$1;)V
     .locals 0
 
+    .line 99
     invoke-direct {p0, p1}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment$BottomSheetDismissCallback;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;)V
 
     return-void
@@ -51,6 +54,7 @@
 
     if-ne p2, p1, :cond_0
 
+    .line 104
     iget-object p0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment$BottomSheetDismissCallback;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;
 
     invoke-static {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->access$100(Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;)V

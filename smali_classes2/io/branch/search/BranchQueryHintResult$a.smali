@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchQueryHintResult$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

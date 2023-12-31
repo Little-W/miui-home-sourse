@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/JsonUtf8Writer;
 .super Lcom/squareup/moshi/JsonWriter;
+.source "JsonUtf8Writer.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 45
     sput-object v0, Lcom/squareup/moshi/JsonUtf8Writer;->REPLACEMENT_CHARS:[Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -29,6 +31,7 @@
 
     if-gt v1, v2, :cond_0
 
+    .line 47
     sget-object v2, Lcom/squareup/moshi/JsonUtf8Writer;->REPLACEMENT_CHARS:[Ljava/lang/String;
 
     const/4 v3, 0x1
@@ -53,6 +56,7 @@
 
     goto :goto_0
 
+    .line 49
     :cond_0
     sget-object v0, Lcom/squareup/moshi/JsonUtf8Writer;->REPLACEMENT_CHARS:[Ljava/lang/String;
 
@@ -66,36 +70,42 @@
 
     const-string v2, "\\\\"
 
+    .line 50
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
     const-string v2, "\\t"
 
+    .line 51
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
     const-string v2, "\\b"
 
+    .line 52
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
     const-string v2, "\\n"
 
+    .line 53
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
     const-string v2, "\\r"
 
+    .line 54
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
     const-string v2, "\\f"
 
+    .line 55
     aput-object v2, v0, v1
 
     return-void
@@ -109,12 +119,15 @@
         }
     .end annotation
 
+    .line 277
     sget-object v0, Lcom/squareup/moshi/JsonUtf8Writer;->REPLACEMENT_CHARS:[Ljava/lang/String;
 
     const/16 v1, 0x22
 
+    .line 278
     invoke-interface {p0, v1}, Lokio/BufferedSink;->writeByte(I)Lokio/BufferedSink;
 
+    .line 280
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -126,6 +139,7 @@
     :goto_0
     if-ge v3, v2, :cond_5
 
+    .line 282
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -134,6 +148,7 @@
 
     if-ge v5, v6, :cond_0
 
+    .line 285
     aget-object v5, v0, v5
 
     if-nez v5, :cond_2
@@ -160,8 +175,10 @@
     :goto_1
     if-ge v4, v3, :cond_3
 
+    .line 297
     invoke-interface {p0, p1, v4, v3}, Lokio/BufferedSink;->writeUtf8(Ljava/lang/String;II)Lokio/BufferedSink;
 
+    .line 299
     :cond_3
     invoke-interface {p0, v5}, Lokio/BufferedSink;->writeUtf8(Ljava/lang/String;)Lokio/BufferedSink;
 
@@ -176,8 +193,10 @@
     :cond_5
     if-ge v4, v2, :cond_6
 
+    .line 303
     invoke-interface {p0, p1, v4, v2}, Lokio/BufferedSink;->writeUtf8(Ljava/lang/String;II)Lokio/BufferedSink;
 
+    .line 305
     :cond_6
     invoke-interface {p0, v1}, Lokio/BufferedSink;->writeByte(I)Lokio/BufferedSink;
 
@@ -194,10 +213,12 @@
         }
     .end annotation
 
+    .line 263
     iget-object v0, p0, Lcom/squareup/moshi/JsonUtf8Writer;->sink:Lokio/BufferedSink;
 
     invoke-interface {v0}, Lokio/BufferedSink;->close()V
 
+    .line 265
     iget v0, p0, Lcom/squareup/moshi/JsonUtf8Writer;->stackSize:I
 
     const/4 v1, 0x1
@@ -206,6 +227,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 266
     iget-object v2, p0, Lcom/squareup/moshi/JsonUtf8Writer;->scopes:[I
 
     sub-int/2addr v0, v1
@@ -219,10 +241,12 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 269
     iput v0, p0, Lcom/squareup/moshi/JsonUtf8Writer;->stackSize:I
 
     return-void
 
+    .line 267
     :cond_1
     new-instance p0, Ljava/io/IOException;
 
@@ -241,16 +265,19 @@
         }
     .end annotation
 
+    .line 251
     iget v0, p0, Lcom/squareup/moshi/JsonUtf8Writer;->stackSize:I
 
     if-eqz v0, :cond_0
 
+    .line 254
     iget-object p0, p0, Lcom/squareup/moshi/JsonUtf8Writer;->sink:Lokio/BufferedSink;
 
     invoke-interface {p0}, Lokio/BufferedSink;->flush()V
 
     return-void
 
+    .line 252
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

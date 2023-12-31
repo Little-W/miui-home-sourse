@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Builder;
+.source "AutoValue_CrashlyticsReport_Session_Application.java"
 
 
 # annotations
@@ -33,6 +34,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 148
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Builder;-><init>()V
 
     return-void
@@ -43,12 +45,14 @@
 .method public build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;
     .locals 11
 
+    .line 203
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->identifier:Ljava/lang/String;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 204
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,11 +67,13 @@
 
     move-result-object v1
 
+    .line 206
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->version:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
+    .line 207
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,6 +88,7 @@
 
     move-result-object v1
 
+    .line 209
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -89,6 +96,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 212
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;
 
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->identifier:Ljava/lang/String;
@@ -113,6 +121,7 @@
 
     return-object v0
 
+    .line 210
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -138,6 +147,7 @@
 .method public setDevelopmentPlatform(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Builder;
     .locals 0
 
+    .line 192
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->developmentPlatform:Ljava/lang/String;
 
     return-object p0
@@ -146,6 +156,7 @@
 .method public setDevelopmentPlatformVersion(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Builder;
     .locals 0
 
+    .line 197
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->developmentPlatformVersion:Ljava/lang/String;
 
     return-object p0
@@ -154,6 +165,7 @@
 .method public setDisplayVersion(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Builder;
     .locals 0
 
+    .line 177
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->displayVersion:Ljava/lang/String;
 
     return-object p0
@@ -164,10 +176,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 164
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->identifier:Ljava/lang/String;
 
     return-object p0
 
+    .line 162
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -181,6 +195,7 @@
 .method public setInstallationUuid(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Builder;
     .locals 0
 
+    .line 187
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->installationUuid:Ljava/lang/String;
 
     return-object p0
@@ -191,10 +206,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 172
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$Builder;->version:Ljava/lang/String;
 
     return-object p0
 
+    .line 170
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/NativeSessionFileGzipper;
 .super Ljava/lang/Object;
+.source "NativeSessionFileGzipper.java"
 
 
 # direct methods
@@ -22,6 +23,7 @@
 
     const/4 v1, 0x0
 
+    .line 56
     :try_start_0
     new-instance v2, Ljava/util/zip/GZIPOutputStream;
 
@@ -33,6 +35,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 60
     :goto_0
     :try_start_1
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
@@ -43,15 +46,18 @@
 
     const/4 v1, 0x0
 
+    .line 61
     invoke-virtual {v2, v0, v1, p1}, Ljava/util/zip/GZIPOutputStream;->write([BII)V
 
     goto :goto_0
 
+    .line 64
     :cond_1
     invoke-virtual {v2}, Ljava/util/zip/GZIPOutputStream;->finish()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 66
     invoke-static {v2}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     return-void
@@ -69,6 +75,7 @@
     :goto_1
     invoke-static {v1}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 67
     throw p0
 .end method
 
@@ -84,6 +91,7 @@
         }
     .end annotation
 
+    .line 31
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -103,6 +111,7 @@
 
     const/4 v1, 0x0
 
+    .line 34
     :try_start_0
     invoke-interface {v0}, Lcom/google/firebase/crashlytics/internal/common/NativeSessionFile;->getStream()Ljava/io/InputStream;
 
@@ -113,22 +122,26 @@
 
     if-nez v1, :cond_0
 
+    .line 43
     :catch_0
     :goto_1
     invoke-static {v1}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     goto :goto_0
 
+    .line 38
     :cond_0
     :try_start_1
     new-instance v2, Ljava/io/File;
 
+    .line 39
     invoke-interface {v0}, Lcom/google/firebase/crashlytics/internal/common/NativeSessionFile;->getReportsEndpointFilename()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {v2, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 38
     invoke-static {v1, v2}, Lcom/google/firebase/crashlytics/internal/common/NativeSessionFileGzipper;->gzipInputStream(Ljava/io/InputStream;Ljava/io/File;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -139,8 +152,10 @@
     :catchall_0
     move-exception p0
 
+    .line 43
     invoke-static {v1}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 44
     throw p0
 
     :cond_1

@@ -1,5 +1,6 @@
 .class abstract Lokhttp3/internal/http1/Http1Codec$AbstractSource;
 .super Ljava/lang/Object;
+.source "Http1Codec.java"
 
 # interfaces
 .implements Lokio/Source;
@@ -30,10 +31,12 @@
 .method private constructor <init>(Lokhttp3/internal/http1/Http1Codec;)V
     .locals 2
 
+    .line 352
     iput-object p1, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 353
     new-instance p1, Lokio/ForwardingTimeout;
 
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
@@ -50,6 +53,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 355
     iput-wide v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->bytesRead:J
 
     return-void
@@ -58,6 +62,7 @@
 .method synthetic constructor <init>(Lokhttp3/internal/http1/Http1Codec;Lokhttp3/internal/http1/Http1Codec$1;)V
     .locals 0
 
+    .line 352
     invoke-direct {p0, p1}, Lokhttp3/internal/http1/Http1Codec$AbstractSource;-><init>(Lokhttp3/internal/http1/Http1Codec;)V
 
     return-void
@@ -73,6 +78,7 @@
         }
     .end annotation
 
+    .line 379
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     iget v0, v0, Lokhttp3/internal/http1/Http1Codec;->state:I
@@ -83,6 +89,7 @@
 
     return-void
 
+    .line 380
     :cond_0
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
@@ -92,20 +99,24 @@
 
     if-ne v0, v2, :cond_2
 
+    .line 382
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     iget-object v2, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->timeout:Lokio/ForwardingTimeout;
 
     invoke-virtual {v0, v2}, Lokhttp3/internal/http1/Http1Codec;->detachTimeout(Lokio/ForwardingTimeout;)V
 
+    .line 384
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     iput v1, v0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
+    .line 385
     iget-object v0, v0, Lokhttp3/internal/http1/Http1Codec;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     if-eqz v0, :cond_1
 
+    .line 386
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     iget-object v1, v0, Lokhttp3/internal/http1/Http1Codec;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
@@ -123,6 +134,7 @@
     :cond_1
     return-void
 
+    .line 380
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -157,6 +169,7 @@
         }
     .end annotation
 
+    .line 363
     :try_start_0
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
@@ -172,6 +185,7 @@
 
     if-lez p3, :cond_0
 
+    .line 365
     iget-wide v0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->bytesRead:J
 
     add-long/2addr v0, p1
@@ -188,14 +202,17 @@
 
     const/4 p2, 0x0
 
+    .line 369
     invoke-virtual {p0, p2, p1}, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->endOfInput(ZLjava/io/IOException;)V
 
+    .line 370
     throw p1
 .end method
 
 .method public timeout()Lokio/Timeout;
     .locals 0
 
+    .line 358
     iget-object p0, p0, Lokhttp3/internal/http1/Http1Codec$AbstractSource;->timeout:Lokio/ForwardingTimeout;
 
     return-object p0

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/squareup/picasso/Transformation;
 .super Ljava/lang/Object;
+.source "Transformation.java"
 
 
 # virtual methods

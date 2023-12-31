@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;
 .super Lcom/android/wm/shell/sosc/ISoScSplitScreenListener$Stub;
+.source "SoscSplitScreenController.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;)V
     .locals 0
 
+    .line 226
     iput-object p1, p0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
     invoke-direct {p0}, Lcom/android/wm/shell/sosc/ISoScSplitScreenListener$Stub;-><init>()V
@@ -40,6 +42,7 @@
 
     move-object v0, p0
 
+    .line 251
     iget-object v1, v0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;->access$200(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;)Ljava/util/Set;
@@ -48,6 +51,7 @@
 
     monitor-enter v1
 
+    .line 252
     :try_start_0
     iget-object v0, v0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
@@ -90,15 +94,18 @@
 
     move/from16 v11, p8
 
+    .line 253
     invoke-interface/range {v3 .. v11}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$SoscSplitScreenListener;->onPreSoScStateChanged(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IZZII)V
 
     goto :goto_0
 
+    .line 255
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 256
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -180,6 +187,7 @@
     :catchall_0
     move-exception v0
 
+    .line 255
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -200,10 +208,12 @@
 
     move/from16 v10, p4
 
+    .line 264
     iget-object v1, v0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
     invoke-static {v1, v10}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;->access$302(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;I)I
 
+    .line 265
     iget-object v1, v0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;->access$200(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;)Ljava/util/Set;
@@ -212,6 +222,7 @@
 
     monitor-enter v11
 
+    .line 266
     :try_start_0
     iget-object v0, v0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
@@ -254,15 +265,18 @@
 
     move/from16 v9, p9
 
+    .line 267
     invoke-interface/range {v0 .. v9}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$SoscSplitScreenListener;->onSoScStateChanged(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;ILandroid/app/ActivityManager$RunningTaskInfo;Landroid/app/ActivityManager$RunningTaskInfo;ZII)V
 
     goto :goto_0
 
+    .line 269
     :cond_0
     monitor-exit v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 270
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -350,6 +364,7 @@
     :catchall_0
     move-exception v0
 
+    .line 269
     :try_start_1
     monitor-exit v11
     :try_end_1
@@ -366,6 +381,7 @@
         }
     .end annotation
 
+    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -390,6 +406,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 230
     iget-object v0, p0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
     invoke-static {v0}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;->access$200(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;)Ljava/util/Set;
@@ -398,6 +415,7 @@
 
     monitor-enter v0
 
+    .line 231
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
@@ -422,10 +440,12 @@
 
     check-cast v1, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$SoscSplitScreenListener;
 
+    .line 232
     invoke-interface {v1, p1, p2}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$SoscSplitScreenListener;->onStagePositionChanged(II)V
 
     goto :goto_0
 
+    .line 234
     :cond_0
     monitor-exit v0
 
@@ -449,6 +469,7 @@
         }
     .end annotation
 
+    .line 239
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -479,6 +500,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 240
     iget-object v0, p0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
     invoke-static {v0}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;->access$200(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;)Ljava/util/Set;
@@ -487,6 +509,7 @@
 
     monitor-enter v0
 
+    .line 241
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$2;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
@@ -511,10 +534,12 @@
 
     check-cast v1, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$SoscSplitScreenListener;
 
+    .line 242
     invoke-interface {v1, p1, p2, p3}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$SoscSplitScreenListener;->onTaskStageChanged(IIZ)V
 
     goto :goto_0
 
+    .line 244
     :cond_0
     monitor-exit v0
 

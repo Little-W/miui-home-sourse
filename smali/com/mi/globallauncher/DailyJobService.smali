@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/DailyJobService;
 .super Landroid/app/job/JobService;
+.source "DailyJobService.java"
 
 
 # static fields
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
     return-void
@@ -24,12 +26,14 @@
 
     const/16 v0, 0x64
 
+    .line 50
     invoke-virtual {p0, v0}, Landroid/app/job/JobScheduler;->cancel(I)V
 
     const-string p0, "AppCategoryInfoUpdate"
 
     const-string/jumbo v0, "update service canceled"
 
+    .line 51
     invoke-static {p0, v0}, Lcom/mi/globallauncher/util/CommercialLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -38,12 +42,14 @@
 .method public static setupUpdateService(Landroid/content/Context;Landroid/app/job/JobScheduler;)V
     .locals 2
 
+    .line 34
     new-instance v0, Landroid/content/ComponentName;
 
     const-class v1, Lcom/mi/globallauncher/DailyJobService;
 
     invoke-direct {v0, p0, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
+    .line 37
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -62,6 +68,7 @@
     :catch_0
     move-exception p0
 
+    .line 39
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -69,12 +76,14 @@
     :goto_0
     if-eqz p0, :cond_0
 
+    .line 41
     invoke-virtual {p0}, Landroid/content/pm/ServiceInfo;->isEnabled()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 42
     new-instance p0, Landroid/app/job/JobInfo$Builder;
 
     const/16 v1, 0x64
@@ -83,16 +92,19 @@
 
     const-wide/32 v0, 0x5265c00
 
+    .line 43
     invoke-virtual {p0, v0, v1}, Landroid/app/job/JobInfo$Builder;->setPeriodic(J)Landroid/app/job/JobInfo$Builder;
 
     move-result-object p0
 
     const/4 v0, 0x1
 
+    .line 44
     invoke-virtual {p0, v0}, Landroid/app/job/JobInfo$Builder;->setRequiredNetworkType(I)Landroid/app/job/JobInfo$Builder;
 
     move-result-object p0
 
+    .line 45
     invoke-virtual {p0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
     move-result-object p0
@@ -116,6 +128,7 @@
 .method public onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 0
 
+    .line 29
     sget-object p0, Lcom/mi/globallauncher/config/CommercialRemoteConfig;->mInstance:Lcom/mi/globallauncher/config/CommercialRemoteConfig;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/config/CommercialRemoteConfig;->fetchRemoteConfig()V

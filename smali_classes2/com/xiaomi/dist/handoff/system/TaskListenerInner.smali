@@ -1,5 +1,6 @@
 .class interface abstract Lcom/xiaomi/dist/handoff/system/TaskListenerInner;
 .super Ljava/lang/Object;
+.source "TaskListenerInner.java"
 
 
 # virtual methods

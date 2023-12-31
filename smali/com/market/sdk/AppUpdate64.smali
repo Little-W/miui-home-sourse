@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/AppUpdate64;
 .super Ljava/lang/Object;
+.source "AppUpdate64.java"
 
 
 # instance fields
@@ -14,12 +15,16 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     iput-object p1, p0, Lcom/market/sdk/AppUpdate64;->packageName:Ljava/lang/String;
 
+    .line 10
     iput-object p2, p0, Lcom/market/sdk/AppUpdate64;->versionCode:Ljava/lang/String;
 
+    .line 11
     iput-object p3, p0, Lcom/market/sdk/AppUpdate64;->versionName:Ljava/lang/String;
 
     return-void
@@ -30,6 +35,7 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
+    .line 24
     iget-object p0, p0, Lcom/market/sdk/AppUpdate64;->packageName:Ljava/lang/String;
 
     return-object p0
@@ -38,6 +44,7 @@
 .method public getVersionCode()Ljava/lang/String;
     .locals 0
 
+    .line 32
     iget-object p0, p0, Lcom/market/sdk/AppUpdate64;->versionCode:Ljava/lang/String;
 
     return-object p0
@@ -46,6 +53,7 @@
 .method public getVersionName()Ljava/lang/String;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/market/sdk/AppUpdate64;->versionName:Ljava/lang/String;
 
     return-object p0
@@ -54,6 +62,7 @@
 .method public setPackageName(Ljava/lang/String;)V
     .locals 0
 
+    .line 28
     iput-object p1, p0, Lcom/market/sdk/AppUpdate64;->packageName:Ljava/lang/String;
 
     return-void
@@ -62,6 +71,7 @@
 .method public setVersionCode(Ljava/lang/String;)V
     .locals 0
 
+    .line 36
     iput-object p1, p0, Lcom/market/sdk/AppUpdate64;->versionCode:Ljava/lang/String;
 
     return-void
@@ -70,6 +80,7 @@
 .method public setVersionName(Ljava/lang/String;)V
     .locals 0
 
+    .line 44
     iput-object p1, p0, Lcom/market/sdk/AppUpdate64;->versionName:Ljava/lang/String;
 
     return-void
@@ -78,6 +89,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

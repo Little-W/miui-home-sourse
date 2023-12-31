@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/constraintlayout/solver/ArrayRow$ArrayRowVariables;
 .super Ljava/lang/Object;
+.source "ArrayRow.java"
 
 
 # annotations

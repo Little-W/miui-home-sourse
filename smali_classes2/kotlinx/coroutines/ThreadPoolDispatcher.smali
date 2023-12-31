@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/ThreadPoolDispatcher;
 .super Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;
+.source "ThreadPoolDispatcher.kt"
 
 
 # instance fields
@@ -16,18 +17,21 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
+    .line 81
     invoke-direct {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;-><init>()V
 
     iput p1, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->nThreads:I
 
     iput-object p2, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->name:Ljava/lang/String;
 
+    .line 82
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->threadNo:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 84
     iget p1, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->nThreads:I
 
     new-instance p2, Lkotlinx/coroutines/ThreadPoolDispatcher$executor$1;
@@ -44,6 +48,7 @@
 
     iput-object p1, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->executor:Ljava/util/concurrent/Executor;
 
+    .line 89
     invoke-virtual {p0}, Lkotlinx/coroutines/ThreadPoolDispatcher;->initFutureCancellation$kotlinx_coroutines_core()V
 
     return-void
@@ -52,6 +57,7 @@
 .method public static final synthetic access$getNThreads$p(Lkotlinx/coroutines/ThreadPoolDispatcher;)I
     .locals 0
 
+    .line 78
     iget p0, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->nThreads:I
 
     return p0
@@ -60,6 +66,7 @@
 .method public static final synthetic access$getName$p(Lkotlinx/coroutines/ThreadPoolDispatcher;)Ljava/lang/String;
     .locals 0
 
+    .line 78
     iget-object p0, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->name:Ljava/lang/String;
 
     return-object p0
@@ -68,6 +75,7 @@
 .method public static final synthetic access$getThreadNo$p(Lkotlinx/coroutines/ThreadPoolDispatcher;)Ljava/util/concurrent/atomic/AtomicInteger;
     .locals 0
 
+    .line 78
     iget-object p0, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->threadNo:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-object p0
@@ -78,6 +86,7 @@
 .method public close()V
     .locals 1
 
+    .line 96
     invoke-virtual {p0}, Lkotlinx/coroutines/ThreadPoolDispatcher;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p0
@@ -103,6 +112,7 @@
 .method public getExecutor()Ljava/util/concurrent/Executor;
     .locals 0
 
+    .line 84
     iget-object p0, p0, Lkotlinx/coroutines/ThreadPoolDispatcher;->executor:Ljava/util/concurrent/Executor;
 
     return-object p0
@@ -111,6 +121,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 99
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

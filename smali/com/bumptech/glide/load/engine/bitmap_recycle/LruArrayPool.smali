@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;
 .super Ljava/lang/Object;
+.source "LruArrayPool.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
@@ -63,26 +64,31 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 30
     new-instance v0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->groupedMap:Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;
 
+    .line 31
     new-instance v0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->keyPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
+    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->sortedSizes:Ljava/util/Map;
 
+    .line 33
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -91,6 +97,7 @@
 
     const/high16 v0, 0x400000
 
+    .line 39
     iput v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->maxSize:I
 
     return-void
@@ -99,32 +106,38 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 30
     new-instance v0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->groupedMap:Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;
 
+    .line 31
     new-instance v0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->keyPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
+    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->sortedSizes:Ljava/util/Map;
 
+    .line 33
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->adapters:Ljava/util/Map;
 
+    .line 48
     iput p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->maxSize:I
 
     return-void
@@ -140,10 +153,12 @@
         }
     .end annotation
 
+    .line 167
     invoke-direct {p0, p2}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getSizesForAdapter(Ljava/lang/Class;)Ljava/util/NavigableMap;
 
     move-result-object p2
 
+    .line 168
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -156,6 +171,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 173
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -164,6 +180,7 @@
 
     if-ne p0, v1, :cond_0
 
+    .line 174
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -172,6 +189,7 @@
 
     goto :goto_0
 
+    .line 176
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -192,6 +210,7 @@
     :goto_0
     return-void
 
+    .line 170
     :cond_1
     new-instance p2, Ljava/lang/NullPointerException;
 
@@ -223,6 +242,7 @@
 .method private evict()V
     .locals 1
 
+    .line 150
     iget v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->maxSize:I
 
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->evictToSize(I)V
@@ -233,24 +253,29 @@
 .method private evictToSize(I)V
     .locals 5
 
+    .line 154
     :cond_0
     :goto_0
     iget v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->currentSize:I
 
     if-le v0, p1, :cond_1
 
+    .line 155
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->groupedMap:Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;->removeLast()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 156
     invoke-static {v0}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 157
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getAdapterFromObject(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;
 
     move-result-object v1
 
+    .line 158
     iget v2, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->currentSize:I
 
     invoke-interface {v1, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getArrayLength(Ljava/lang/Object;)I
@@ -267,6 +292,7 @@
 
     iput v2, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->currentSize:I
 
+    .line 159
     invoke-interface {v1, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getArrayLength(Ljava/lang/Object;)I
 
     move-result v2
@@ -277,6 +303,7 @@
 
     invoke-direct {p0, v2, v3}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->decrementArrayOfSize(ILjava/lang/Class;)V
 
+    .line 160
     invoke-interface {v1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getTag()Ljava/lang/String;
 
     move-result-object v2
@@ -289,6 +316,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 161
     invoke-interface {v1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getTag()Ljava/lang/String;
 
     move-result-object v2
@@ -331,6 +359,7 @@
         }
     .end annotation
 
+    .line 191
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -356,6 +385,7 @@
         }
     .end annotation
 
+    .line 196
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->adapters:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -366,6 +396,7 @@
 
     if-nez v0, :cond_2
 
+    .line 198
     const-class v0, [I
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -374,12 +405,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 199
     new-instance v0, Lcom/bumptech/glide/load/engine/bitmap_recycle/IntegerArrayAdapter;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/IntegerArrayAdapter;-><init>()V
 
     goto :goto_0
 
+    .line 200
     :cond_0
     const-class v0, [B
 
@@ -389,10 +422,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 201
     new-instance v0, Lcom/bumptech/glide/load/engine/bitmap_recycle/ByteArrayAdapter;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ByteArrayAdapter;-><init>()V
 
+    .line 206
     :goto_0
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->adapters:Ljava/util/Map;
 
@@ -400,6 +435,7 @@
 
     goto :goto_1
 
+    .line 203
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -411,6 +447,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 204
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p1
@@ -442,6 +479,7 @@
         }
     .end annotation
 
+    .line 118
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->groupedMap:Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;->get(Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;)Ljava/lang/Object;
@@ -464,16 +502,19 @@
         }
     .end annotation
 
+    .line 97
     invoke-direct {p0, p2}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getAdapterFromType(Ljava/lang/Class;)Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;
 
     move-result-object v0
 
+    .line 98
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getArrayForKey(Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;)Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 100
     iget v2, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->currentSize:I
 
     invoke-interface {v0, v1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getArrayLength(Ljava/lang/Object;)I
@@ -490,6 +531,7 @@
 
     iput v2, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->currentSize:I
 
+    .line 101
     invoke-interface {v0, v1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getArrayLength(Ljava/lang/Object;)I
 
     move-result v2
@@ -499,6 +541,7 @@
     :cond_0
     if-nez v1, :cond_2
 
+    .line 105
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getTag()Ljava/lang/String;
 
     move-result-object p0
@@ -511,6 +554,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 106
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getTag()Ljava/lang/String;
 
     move-result-object p0
@@ -537,6 +581,7 @@
 
     invoke-static {p0, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 108
     :cond_1
     iget p0, p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->size:I
 
@@ -562,6 +607,7 @@
         }
     .end annotation
 
+    .line 181
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->sortedSizes:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -572,10 +618,12 @@
 
     if-nez v0, :cond_0
 
+    .line 183
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
+    .line 184
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->sortedSizes:Ljava/util/Map;
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -587,6 +635,7 @@
 .method private isNoMoreThanHalfFull()Z
     .locals 1
 
+    .line 131
     iget v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->currentSize:I
 
     if-eqz v0, :cond_1
@@ -617,6 +666,7 @@
 .method private isSmallEnoughForReuse(I)Z
     .locals 0
 
+    .line 122
     iget p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->maxSize:I
 
     div-int/lit8 p0, p0, 0x2
@@ -639,6 +689,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 127
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->isNoMoreThanHalfFull()Z
 
     move-result p0
@@ -674,11 +725,13 @@
 
     const/4 v0, 0x0
 
+    .line 136
     :try_start_0
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->evictToSize(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 137
     monitor-exit p0
 
     return-void
@@ -705,6 +758,7 @@
 
     monitor-enter p0
 
+    .line 86
     :try_start_0
     invoke-direct {p0, p2}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getSizesForAdapter(Ljava/lang/Class;)Ljava/util/NavigableMap;
 
@@ -720,12 +774,14 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    .line 88
     invoke-direct {p0, p1, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->mayFillRequest(ILjava/lang/Integer;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 89
     iget-object p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->keyPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -738,6 +794,7 @@
 
     goto :goto_0
 
+    .line 91
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->keyPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
@@ -745,6 +802,7 @@
 
     move-result-object p1
 
+    .line 93
     :goto_0
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getForKey(Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;Ljava/lang/Class;)Ljava/lang/Object;
 
@@ -778,6 +836,7 @@
 
     monitor-enter p0
 
+    .line 80
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->keyPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
 
@@ -785,6 +844,7 @@
 
     move-result-object p1
 
+    .line 81
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getForKey(Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
@@ -815,25 +875,30 @@
 
     monitor-enter p0
 
+    .line 60
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 62
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getAdapterFromType(Ljava/lang/Class;)Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;
 
     move-result-object v1
 
+    .line 63
     invoke-interface {v1, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getArrayLength(Ljava/lang/Object;)I
 
     move-result v2
 
+    .line 64
     invoke-interface {v1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;->getElementSizeInBytes()I
 
     move-result v1
 
     mul-int/2addr v1, v2
 
+    .line 65
     invoke-direct {p0, v1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->isSmallEnoughForReuse(I)Z
 
     move-result v3
@@ -842,10 +907,12 @@
 
     if-nez v3, :cond_0
 
+    .line 66
     monitor-exit p0
 
     return-void
 
+    .line 68
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->keyPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$KeyPool;
@@ -854,14 +921,17 @@
 
     move-result-object v2
 
+    .line 70
     iget-object v3, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->groupedMap:Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;
 
     invoke-virtual {v3, v2, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap;->put(Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;Ljava/lang/Object;)V
 
+    .line 71
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->getSizesForAdapter(Ljava/lang/Class;)Ljava/util/NavigableMap;
 
     move-result-object p1
 
+    .line 72
     iget v0, v2, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->size:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -874,6 +944,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    .line 73
     iget v2, v2, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool$Key;->size:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -900,16 +971,19 @@
 
     invoke-interface {p1, v2, v0}, Ljava/util/NavigableMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 74
     iget p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->currentSize:I
 
     add-int/2addr p1, v1
 
     iput p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->currentSize:I
 
+    .line 75
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->evict()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 76
     monitor-exit p0
 
     return-void
@@ -931,6 +1005,7 @@
 
     if-lt p1, v0, :cond_0
 
+    .line 142
     :try_start_0
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->clearMemory()V
 
@@ -950,6 +1025,7 @@
 
     if-ne p1, v0, :cond_2
 
+    .line 145
     :cond_1
     iget p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/LruArrayPool;->maxSize:I
 
@@ -959,6 +1035,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 147
     :cond_2
     :goto_0
     monitor-exit p0

@@ -1,5 +1,6 @@
 .class final Lorg/brotli/dec/Utils;
 .super Ljava/lang/Object;
+.source "Utils.java"
 
 
 # static fields
@@ -16,10 +17,12 @@
 
     new-array v1, v0, [B
 
+    .line 14
     sput-object v1, Lorg/brotli/dec/Utils;->BYTE_ZEROES:[B
 
     new-array v0, v0, [I
 
+    .line 16
     sput-object v0, Lorg/brotli/dec/Utils;->INT_ZEROES:[I
 
     return-void
@@ -37,12 +40,14 @@
 
     add-int/lit16 v2, v1, 0x400
 
+    .line 31
     invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
 
     move-result v2
 
     sub-int/2addr v2, v1
 
+    .line 32
     sget-object v3, Lorg/brotli/dec/Utils;->BYTE_ZEROES:[B
 
     add-int v4, p1, v1
@@ -69,12 +74,14 @@
 
     add-int/lit16 v2, v1, 0x400
 
+    .line 50
     invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
 
     move-result v2
 
     sub-int/2addr v2, v1
 
+    .line 51
     sget-object v3, Lorg/brotli/dec/Utils;->INT_ZEROES:[I
 
     add-int v4, p1, v1

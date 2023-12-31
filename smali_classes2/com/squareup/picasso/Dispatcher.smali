@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/Dispatcher;
 .super Ljava/lang/Object;
+.source "Dispatcher.java"
 
 
 # annotations
@@ -93,18 +94,22 @@
 .method constructor <init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Landroid/os/Handler;Lcom/squareup/picasso/Downloader;Lcom/squareup/picasso/Cache;Lcom/squareup/picasso/Stats;)V
     .locals 1
 
+    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 102
     new-instance v0, Lcom/squareup/picasso/Dispatcher$DispatcherThread;
 
     invoke-direct {v0}, Lcom/squareup/picasso/Dispatcher$DispatcherThread;-><init>()V
 
     iput-object v0, p0, Lcom/squareup/picasso/Dispatcher;->dispatcherThread:Lcom/squareup/picasso/Dispatcher$DispatcherThread;
 
+    .line 103
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->dispatcherThread:Lcom/squareup/picasso/Dispatcher$DispatcherThread;
 
     invoke-virtual {v0}, Lcom/squareup/picasso/Dispatcher$DispatcherThread;->start()V
 
+    .line 104
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->dispatcherThread:Lcom/squareup/picasso/Dispatcher$DispatcherThread;
 
     invoke-virtual {v0}, Lcom/squareup/picasso/Dispatcher$DispatcherThread;->getLooper()Landroid/os/Looper;
@@ -113,34 +118,41 @@
 
     invoke-static {v0}, Lcom/squareup/picasso/Utils;->flushStackLocalLeaks(Landroid/os/Looper;)V
 
+    .line 105
     iput-object p1, p0, Lcom/squareup/picasso/Dispatcher;->context:Landroid/content/Context;
 
+    .line 106
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher;->service:Ljava/util/concurrent/ExecutorService;
 
+    .line 107
     new-instance p2, Ljava/util/LinkedHashMap;
 
     invoke-direct {p2}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher;->hunterMap:Ljava/util/Map;
 
+    .line 108
     new-instance p2, Ljava/util/WeakHashMap;
 
     invoke-direct {p2}, Ljava/util/WeakHashMap;-><init>()V
 
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher;->failedActions:Ljava/util/Map;
 
+    .line 109
     new-instance p2, Ljava/util/WeakHashMap;
 
     invoke-direct {p2}, Ljava/util/WeakHashMap;-><init>()V
 
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher;->pausedActions:Ljava/util/Map;
 
+    .line 110
     new-instance p2, Ljava/util/LinkedHashSet;
 
     invoke-direct {p2}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher;->pausedTags:Ljava/util/Set;
 
+    .line 111
     new-instance p2, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;
 
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->dispatcherThread:Lcom/squareup/picasso/Dispatcher$DispatcherThread;
@@ -153,14 +165,19 @@
 
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
+    .line 112
     iput-object p4, p0, Lcom/squareup/picasso/Dispatcher;->downloader:Lcom/squareup/picasso/Downloader;
 
+    .line 113
     iput-object p3, p0, Lcom/squareup/picasso/Dispatcher;->mainThreadHandler:Landroid/os/Handler;
 
+    .line 114
     iput-object p5, p0, Lcom/squareup/picasso/Dispatcher;->cache:Lcom/squareup/picasso/Cache;
 
+    .line 115
     iput-object p6, p0, Lcom/squareup/picasso/Dispatcher;->stats:Lcom/squareup/picasso/Stats;
 
+    .line 116
     new-instance p2, Ljava/util/ArrayList;
 
     const/4 p3, 0x4
@@ -169,6 +186,7 @@
 
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher;->batch:Ljava/util/List;
 
+    .line 117
     iget-object p2, p0, Lcom/squareup/picasso/Dispatcher;->context:Landroid/content/Context;
 
     invoke-static {p2}, Lcom/squareup/picasso/Utils;->isAirplaneModeOn(Landroid/content/Context;)Z
@@ -179,18 +197,21 @@
 
     const-string p2, "android.permission.ACCESS_NETWORK_STATE"
 
+    .line 118
     invoke-static {p1, p2}, Lcom/squareup/picasso/Utils;->hasPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/squareup/picasso/Dispatcher;->scansNetworkChanges:Z
 
+    .line 119
     new-instance p1, Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;
 
     invoke-direct {p1, p0}, Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;-><init>(Lcom/squareup/picasso/Dispatcher;)V
 
     iput-object p1, p0, Lcom/squareup/picasso/Dispatcher;->receiver:Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;
 
+    .line 120
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->receiver:Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;
 
     invoke-virtual {p0}, Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;->register()V
@@ -201,6 +222,7 @@
 .method private batch(Lcom/squareup/picasso/BitmapHunter;)V
     .locals 3
 
+    .line 433
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->isCancelled()Z
 
     move-result v0
@@ -209,20 +231,24 @@
 
     return-void
 
+    .line 436
     :cond_0
     iget-object v0, p1, Lcom/squareup/picasso/BitmapHunter;->result:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
+    .line 437
     iget-object v0, p1, Lcom/squareup/picasso/BitmapHunter;->result:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->prepareToDraw()V
 
+    .line 439
     :cond_1
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->batch:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 440
     iget-object p1, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x7
@@ -233,6 +259,7 @@
 
     if-nez p1, :cond_2
 
+    .line 441
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const-wide/16 v1, 0xc8
@@ -246,6 +273,7 @@
 .method private flushFailedActions()V
     .locals 5
 
+    .line 396
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->failedActions:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -254,6 +282,7 @@
 
     if-nez v0, :cond_1
 
+    .line 397
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->failedActions:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -264,6 +293,7 @@
 
     move-result-object v0
 
+    .line 398
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -271,14 +301,17 @@
 
     if-eqz v1, :cond_1
 
+    .line 399
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/squareup/picasso/Action;
 
+    .line 400
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
+    .line 401
     invoke-virtual {v1}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object v2
@@ -287,6 +320,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 402
     invoke-virtual {v1}, Lcom/squareup/picasso/Action;->getRequest()Lcom/squareup/picasso/Request;
 
     move-result-object v2
@@ -304,6 +338,7 @@
     :cond_0
     const/4 v2, 0x0
 
+    .line 404
     invoke-virtual {p0, v1, v2}, Lcom/squareup/picasso/Dispatcher;->performSubmit(Lcom/squareup/picasso/Action;Z)V
 
     goto :goto_0
@@ -325,6 +360,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 446
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -336,24 +372,29 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 447
     invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/squareup/picasso/BitmapHunter;
 
+    .line 448
     invoke-virtual {p0}, Lcom/squareup/picasso/BitmapHunter;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object p0
 
+    .line 449
     iget-boolean p0, p0, Lcom/squareup/picasso/Picasso;->loggingEnabled:Z
 
     if-eqz p0, :cond_3
 
+    .line 450
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 451
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -371,6 +412,7 @@
 
     check-cast v0, Lcom/squareup/picasso/BitmapHunter;
 
+    .line 452
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
@@ -381,6 +423,7 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 453
     :cond_1
     invoke-static {v0}, Lcom/squareup/picasso/Utils;->getLogIdsForHunter(Lcom/squareup/picasso/BitmapHunter;)Ljava/lang/String;
 
@@ -390,6 +433,7 @@
 
     goto :goto_0
 
+    .line 455
     :cond_2
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -409,6 +453,7 @@
 .method private markForReplay(Lcom/squareup/picasso/Action;)V
     .locals 2
 
+    .line 425
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
@@ -417,8 +462,10 @@
 
     const/4 v1, 0x1
 
+    .line 427
     iput-boolean v1, p1, Lcom/squareup/picasso/Action;->willReplay:Z
 
+    .line 428
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->failedActions:Ljava/util/Map;
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -430,14 +477,17 @@
 .method private markForReplay(Lcom/squareup/picasso/BitmapHunter;)V
     .locals 3
 
+    .line 410
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->getAction()Lcom/squareup/picasso/Action;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 412
     invoke-direct {p0, v0}, Lcom/squareup/picasso/Dispatcher;->markForReplay(Lcom/squareup/picasso/Action;)V
 
+    .line 414
     :cond_0
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->getActions()Ljava/util/List;
 
@@ -447,6 +497,7 @@
 
     const/4 v0, 0x0
 
+    .line 417
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -454,12 +505,14 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
+    .line 418
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/squareup/picasso/Action;
 
+    .line 419
     invoke-direct {p0, v2}, Lcom/squareup/picasso/Dispatcher;->markForReplay(Lcom/squareup/picasso/Action;)V
 
     add-int/lit8 v0, v0, 0x1
@@ -475,6 +528,7 @@
 .method dispatchAirplaneModeChange(Z)V
     .locals 2
 
+    .line 171
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x0
@@ -493,6 +547,7 @@
 .method dispatchCancel(Lcom/squareup/picasso/Action;)V
     .locals 1
 
+    .line 143
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x2
@@ -509,6 +564,7 @@
 .method dispatchComplete(Lcom/squareup/picasso/BitmapHunter;)V
     .locals 1
 
+    .line 155
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x4
@@ -525,6 +581,7 @@
 .method dispatchFailed(Lcom/squareup/picasso/BitmapHunter;)V
     .locals 1
 
+    .line 163
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x6
@@ -541,6 +598,7 @@
 .method dispatchNetworkStateChange(Landroid/net/NetworkInfo;)V
     .locals 1
 
+    .line 167
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const/16 v0, 0x9
@@ -557,6 +615,7 @@
 .method dispatchRetry(Lcom/squareup/picasso/BitmapHunter;)V
     .locals 2
 
+    .line 159
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x5
@@ -575,6 +634,7 @@
 .method dispatchSubmit(Lcom/squareup/picasso/Action;)V
     .locals 1
 
+    .line 139
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x1
@@ -591,6 +651,7 @@
 .method performAirplaneModeChange(Z)V
     .locals 0
 
+    .line 382
     iput-boolean p1, p0, Lcom/squareup/picasso/Dispatcher;->airplaneMode:Z
 
     return-void
@@ -599,16 +660,19 @@
 .method performBatchComplete()V
     .locals 3
 
+    .line 366
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/squareup/picasso/Dispatcher;->batch:Ljava/util/List;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 367
     iget-object v1, p0, Lcom/squareup/picasso/Dispatcher;->batch:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
+    .line 368
     iget-object v1, p0, Lcom/squareup/picasso/Dispatcher;->mainThreadHandler:Landroid/os/Handler;
 
     const/16 v2, 0x8
@@ -619,6 +683,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 369
     invoke-direct {p0, v0}, Lcom/squareup/picasso/Dispatcher;->logBatch(Ljava/util/List;)V
 
     return-void
@@ -627,10 +692,12 @@
 .method performCancel(Lcom/squareup/picasso/Action;)V
     .locals 4
 
+    .line 215
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 216
     iget-object v1, p0, Lcom/squareup/picasso/Dispatcher;->hunterMap:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -645,18 +712,22 @@
 
     if-eqz v1, :cond_0
 
+    .line 218
     invoke-virtual {v1, p1}, Lcom/squareup/picasso/BitmapHunter;->detach(Lcom/squareup/picasso/Action;)V
 
+    .line 219
     invoke-virtual {v1}, Lcom/squareup/picasso/BitmapHunter;->cancel()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 220
     iget-object v1, p0, Lcom/squareup/picasso/Dispatcher;->hunterMap:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 221
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
@@ -665,6 +736,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 222
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getRequest()Lcom/squareup/picasso/Request;
 
     move-result-object v0
@@ -675,6 +747,7 @@
 
     invoke-static {v3, v2, v0}, Lcom/squareup/picasso/Utils;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 227
     :cond_0
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->pausedTags:Ljava/util/Set;
 
@@ -688,6 +761,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 228
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->pausedActions:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getTarget()Ljava/lang/Object;
@@ -696,6 +770,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 229
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
@@ -704,6 +779,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 230
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getRequest()Lcom/squareup/picasso/Request;
 
     move-result-object v0
@@ -716,6 +792,7 @@
 
     invoke-static {v3, v2, v0, v1}, Lcom/squareup/picasso/Utils;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 235
     :cond_1
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->failedActions:Ljava/util/Map;
 
@@ -731,6 +808,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 236
     invoke-virtual {p0}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object p1
@@ -739,6 +817,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 237
     invoke-virtual {p0}, Lcom/squareup/picasso/Action;->getRequest()Lcom/squareup/picasso/Request;
 
     move-result-object p0
@@ -758,6 +837,7 @@
 .method performComplete(Lcom/squareup/picasso/BitmapHunter;)V
     .locals 3
 
+    .line 355
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->getMemoryPolicy()I
 
     move-result v0
@@ -768,6 +848,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 356
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->cache:Lcom/squareup/picasso/Cache;
 
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->getKey()Ljava/lang/String;
@@ -780,6 +861,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/squareup/picasso/Cache;->set(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
+    .line 358
     :cond_0
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->hunterMap:Ljava/util/Map;
 
@@ -789,8 +871,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 359
     invoke-direct {p0, p1}, Lcom/squareup/picasso/Dispatcher;->batch(Lcom/squareup/picasso/BitmapHunter;)V
 
+    .line 360
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object p0
@@ -799,6 +883,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 361
     invoke-static {p1}, Lcom/squareup/picasso/Utils;->getLogIdsForHunter(Lcom/squareup/picasso/BitmapHunter;)Ljava/lang/String;
 
     move-result-object p0
@@ -818,6 +903,7 @@
 .method performError(Lcom/squareup/picasso/BitmapHunter;Z)V
     .locals 3
 
+    .line 373
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
@@ -826,6 +912,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 374
     invoke-static {p1}, Lcom/squareup/picasso/Utils;->getLogIdsForHunter(Lcom/squareup/picasso/BitmapHunter;)Ljava/lang/String;
 
     move-result-object v0
@@ -860,6 +947,7 @@
 
     invoke-static {v1, v2, v0, p2}, Lcom/squareup/picasso/Utils;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 377
     :cond_1
     iget-object p2, p0, Lcom/squareup/picasso/Dispatcher;->hunterMap:Ljava/util/Map;
 
@@ -869,6 +957,7 @@
 
     invoke-interface {p2, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 378
     invoke-direct {p0, p1}, Lcom/squareup/picasso/Dispatcher;->batch(Lcom/squareup/picasso/BitmapHunter;)V
 
     return-void
@@ -877,12 +966,14 @@
 .method performNetworkStateChange(Landroid/net/NetworkInfo;)V
     .locals 2
 
+    .line 386
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->service:Ljava/util/concurrent/ExecutorService;
 
     instance-of v1, v0, Lcom/squareup/picasso/PicassoExecutorService;
 
     if-eqz v1, :cond_0
 
+    .line 387
     check-cast v0, Lcom/squareup/picasso/PicassoExecutorService;
 
     invoke-virtual {v0, p1}, Lcom/squareup/picasso/PicassoExecutorService;->adjustThreadCount(Landroid/net/NetworkInfo;)V
@@ -890,12 +981,14 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 390
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 391
     invoke-direct {p0}, Lcom/squareup/picasso/Dispatcher;->flushFailedActions()V
 
     :cond_1
@@ -905,6 +998,7 @@
 .method performPauseTag(Ljava/lang/Object;)V
     .locals 13
 
+    .line 243
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->pausedTags:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -915,6 +1009,7 @@
 
     return-void
 
+    .line 249
     :cond_0
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->hunterMap:Ljava/util/Map;
 
@@ -934,22 +1029,26 @@
 
     if-eqz v1, :cond_8
 
+    .line 250
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/squareup/picasso/BitmapHunter;
 
+    .line 251
     invoke-virtual {v1}, Lcom/squareup/picasso/BitmapHunter;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object v2
 
     iget-boolean v2, v2, Lcom/squareup/picasso/Picasso;->loggingEnabled:Z
 
+    .line 253
     invoke-virtual {v1}, Lcom/squareup/picasso/BitmapHunter;->getAction()Lcom/squareup/picasso/Action;
 
     move-result-object v3
 
+    .line 254
     invoke-virtual {v1}, Lcom/squareup/picasso/BitmapHunter;->getActions()Ljava/util/List;
 
     move-result-object v4
@@ -958,6 +1057,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 255
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result v6
@@ -989,6 +1089,7 @@
 
     if-eqz v3, :cond_4
 
+    .line 262
     invoke-virtual {v3}, Lcom/squareup/picasso/Action;->getTag()Ljava/lang/Object;
 
     move-result-object v11
@@ -999,8 +1100,10 @@
 
     if-eqz v11, :cond_4
 
+    .line 263
     invoke-virtual {v1, v3}, Lcom/squareup/picasso/BitmapHunter;->detach(Lcom/squareup/picasso/Action;)V
 
+    .line 264
     iget-object v11, p0, Lcom/squareup/picasso/Dispatcher;->pausedActions:Ljava/util/Map;
 
     invoke-virtual {v3}, Lcom/squareup/picasso/Action;->getTarget()Ljava/lang/Object;
@@ -1011,6 +1114,7 @@
 
     if-eqz v2, :cond_4
 
+    .line 266
     iget-object v3, v3, Lcom/squareup/picasso/Action;->request:Lcom/squareup/picasso/Request;
 
     invoke-virtual {v3}, Lcom/squareup/picasso/Request;->logId()Ljava/lang/String;
@@ -1036,6 +1140,7 @@
     :cond_4
     if-eqz v6, :cond_7
 
+    .line 272
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v3
@@ -1045,12 +1150,14 @@
     :goto_2
     if-ltz v3, :cond_7
 
+    .line 273
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/squareup/picasso/Action;
 
+    .line 274
     invoke-virtual {v5}, Lcom/squareup/picasso/Action;->getTag()Ljava/lang/Object;
 
     move-result-object v6
@@ -1063,9 +1170,11 @@
 
     goto :goto_3
 
+    .line 278
     :cond_5
     invoke-virtual {v1, v5}, Lcom/squareup/picasso/BitmapHunter;->detach(Lcom/squareup/picasso/Action;)V
 
+    .line 279
     iget-object v6, p0, Lcom/squareup/picasso/Dispatcher;->pausedActions:Ljava/util/Map;
 
     invoke-virtual {v5}, Lcom/squareup/picasso/Action;->getTarget()Ljava/lang/Object;
@@ -1076,6 +1185,7 @@
 
     if-eqz v2, :cond_6
 
+    .line 281
     iget-object v5, v5, Lcom/squareup/picasso/Action;->request:Lcom/squareup/picasso/Request;
 
     invoke-virtual {v5}, Lcom/squareup/picasso/Request;->logId()Ljava/lang/String;
@@ -1104,6 +1214,7 @@
 
     goto :goto_2
 
+    .line 289
     :cond_7
     invoke-virtual {v1}, Lcom/squareup/picasso/BitmapHunter;->cancel()Z
 
@@ -1111,10 +1222,12 @@
 
     if-eqz v3, :cond_1
 
+    .line 290
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     if-eqz v2, :cond_1
 
+    .line 292
     invoke-static {v1}, Lcom/squareup/picasso/Utils;->getLogIdsForHunter(Lcom/squareup/picasso/BitmapHunter;)Ljava/lang/String;
 
     move-result-object v1
@@ -1134,6 +1247,7 @@
 .method performResumeTag(Ljava/lang/Object;)V
     .locals 4
 
+    .line 300
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->pausedTags:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -1147,6 +1261,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 305
     iget-object v1, p0, Lcom/squareup/picasso/Dispatcher;->pausedActions:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1165,12 +1280,14 @@
 
     if-eqz v2, :cond_3
 
+    .line 306
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/squareup/picasso/Action;
 
+    .line 307
     invoke-virtual {v2}, Lcom/squareup/picasso/Action;->getTag()Ljava/lang/Object;
 
     move-result-object v3
@@ -1183,13 +1300,16 @@
 
     if-nez v0, :cond_2
 
+    .line 309
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 311
     :cond_2
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 312
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -1197,6 +1317,7 @@
     :cond_3
     if-eqz v0, :cond_4
 
+    .line 317
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->mainThreadHandler:Landroid/os/Handler;
 
     const/16 p1, 0xd
@@ -1214,6 +1335,7 @@
 .method performRetry(Lcom/squareup/picasso/BitmapHunter;)V
     .locals 3
 
+    .line 323
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->isCancelled()Z
 
     move-result v0
@@ -1222,6 +1344,7 @@
 
     return-void
 
+    .line 325
     :cond_0
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->service:Ljava/util/concurrent/ExecutorService;
 
@@ -1233,6 +1356,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 326
     invoke-virtual {p0, p1, v1}, Lcom/squareup/picasso/Dispatcher;->performError(Lcom/squareup/picasso/BitmapHunter;Z)V
 
     return-void
@@ -1240,10 +1364,12 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 331
     iget-boolean v2, p0, Lcom/squareup/picasso/Dispatcher;->scansNetworkChanges:Z
 
     if-eqz v2, :cond_2
 
+    .line 332
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->context:Landroid/content/Context;
 
     const-string v2, "connectivity"
@@ -1254,10 +1380,12 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
+    .line 333
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
+    .line 336
     :cond_2
     iget-boolean v2, p0, Lcom/squareup/picasso/Dispatcher;->airplaneMode:Z
 
@@ -1267,6 +1395,7 @@
 
     if-eqz v0, :cond_5
 
+    .line 337
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
@@ -1275,6 +1404,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 338
     invoke-static {p1}, Lcom/squareup/picasso/Utils;->getLogIdsForHunter(Lcom/squareup/picasso/BitmapHunter;)Ljava/lang/String;
 
     move-result-object v0
@@ -1285,6 +1415,7 @@
 
     invoke-static {v1, v2, v0}, Lcom/squareup/picasso/Utils;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 340
     :cond_3
     invoke-virtual {p1}, Lcom/squareup/picasso/BitmapHunter;->getException()Ljava/lang/Exception;
 
@@ -1294,6 +1425,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 341
     iget v0, p1, Lcom/squareup/picasso/BitmapHunter;->networkPolicy:I
 
     sget-object v1, Lcom/squareup/picasso/NetworkPolicy;->NO_CACHE:Lcom/squareup/picasso/NetworkPolicy;
@@ -1304,6 +1436,7 @@
 
     iput v0, p1, Lcom/squareup/picasso/BitmapHunter;->networkPolicy:I
 
+    .line 343
     :cond_4
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->service:Ljava/util/concurrent/ExecutorService;
 
@@ -1315,6 +1448,7 @@
 
     goto :goto_0
 
+    .line 346
     :cond_5
     iget-boolean v0, p0, Lcom/squareup/picasso/Dispatcher;->scansNetworkChanges:Z
 
@@ -1328,11 +1462,13 @@
 
     const/4 v1, 0x1
 
+    .line 347
     :cond_6
     invoke-virtual {p0, p1, v1}, Lcom/squareup/picasso/Dispatcher;->performError(Lcom/squareup/picasso/BitmapHunter;Z)V
 
     if-eqz v1, :cond_7
 
+    .line 349
     invoke-direct {p0, p1}, Lcom/squareup/picasso/Dispatcher;->markForReplay(Lcom/squareup/picasso/BitmapHunter;)V
 
     :cond_7
@@ -1345,6 +1481,7 @@
 
     const/4 v0, 0x1
 
+    .line 176
     invoke-virtual {p0, p1, v0}, Lcom/squareup/picasso/Dispatcher;->performSubmit(Lcom/squareup/picasso/Action;Z)V
 
     return-void
@@ -1353,6 +1490,7 @@
 .method performSubmit(Lcom/squareup/picasso/Action;Z)V
     .locals 4
 
+    .line 180
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->pausedTags:Ljava/util/Set;
 
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getTag()Ljava/lang/Object;
@@ -1367,6 +1505,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 181
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->pausedActions:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getTarget()Ljava/lang/Object;
@@ -1375,6 +1514,7 @@
 
     invoke-interface {p0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 182
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object p0
@@ -1383,6 +1523,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 183
     iget-object p0, p1, Lcom/squareup/picasso/Action;->request:Lcom/squareup/picasso/Request;
 
     invoke-virtual {p0}, Lcom/squareup/picasso/Request;->logId()Ljava/lang/String;
@@ -1397,6 +1538,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 184
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getTag()Ljava/lang/Object;
 
     move-result-object p1
@@ -1413,11 +1555,13 @@
 
     const-string p2, "paused"
 
+    .line 183
     invoke-static {v1, p2, p0, p1}, Lcom/squareup/picasso/Utils;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 
+    .line 189
     :cond_1
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->hunterMap:Ljava/util/Map;
 
@@ -1433,10 +1577,12 @@
 
     if-eqz v0, :cond_2
 
+    .line 191
     invoke-virtual {v0, p1}, Lcom/squareup/picasso/BitmapHunter;->attach(Lcom/squareup/picasso/Action;)V
 
     return-void
 
+    .line 195
     :cond_2
     iget-object v0, p0, Lcom/squareup/picasso/Dispatcher;->service:Ljava/util/concurrent/ExecutorService;
 
@@ -1446,6 +1592,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 196
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object p0
@@ -1454,6 +1601,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 197
     iget-object p0, p1, Lcom/squareup/picasso/Action;->request:Lcom/squareup/picasso/Request;
 
     invoke-virtual {p0}, Lcom/squareup/picasso/Request;->logId()Ljava/lang/String;
@@ -1469,6 +1617,7 @@
     :cond_3
     return-void
 
+    .line 202
     :cond_4
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
@@ -1482,6 +1631,7 @@
 
     move-result-object v0
 
+    .line 203
     iget-object v2, p0, Lcom/squareup/picasso/Dispatcher;->service:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v2, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
@@ -1490,6 +1640,7 @@
 
     iput-object v2, v0, Lcom/squareup/picasso/BitmapHunter;->future:Ljava/util/concurrent/Future;
 
+    .line 204
     iget-object v2, p0, Lcom/squareup/picasso/Dispatcher;->hunterMap:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getKey()Ljava/lang/String;
@@ -1500,6 +1651,7 @@
 
     if-eqz p2, :cond_5
 
+    .line 206
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher;->failedActions:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getTarget()Ljava/lang/Object;
@@ -1508,6 +1660,7 @@
 
     invoke-interface {p0, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 209
     :cond_5
     invoke-virtual {p1}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
@@ -1517,6 +1670,7 @@
 
     if-eqz p0, :cond_6
 
+    .line 210
     iget-object p0, p1, Lcom/squareup/picasso/Action;->request:Lcom/squareup/picasso/Request;
 
     invoke-virtual {p0}, Lcom/squareup/picasso/Request;->logId()Ljava/lang/String;

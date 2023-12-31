@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
 .super Ljava/lang/Object;
+.source "BranchSearchCallback.java"
 
 
 # virtual methods

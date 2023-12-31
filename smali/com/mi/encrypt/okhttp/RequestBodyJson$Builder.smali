@@ -1,5 +1,6 @@
 .class public Lcom/mi/encrypt/okhttp/RequestBodyJson$Builder;
 .super Ljava/lang/Object;
+.source "RequestBodyJson.java"
 
 
 # annotations
@@ -48,14 +49,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 58
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/mi/encrypt/okhttp/RequestBodyJson$Builder;->headers:Ljava/util/HashMap;
 
+    .line 59
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -70,6 +74,7 @@
 .method public build()Lcom/mi/encrypt/okhttp/RequestBodyJson;
     .locals 5
 
+    .line 71
     new-instance v0, Lcom/mi/encrypt/okhttp/RequestBodyJson;
 
     iget-object v1, p0, Lcom/mi/encrypt/okhttp/RequestBodyJson$Builder;->method:Ljava/lang/String;
@@ -82,6 +87,7 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/mi/encrypt/okhttp/RequestBodyJson;-><init>(Ljava/lang/String;[BLjava/lang/String;Lcom/mi/encrypt/okhttp/RequestBodyJson$1;)V
 
+    .line 72
     invoke-static {v0}, Lcom/mi/encrypt/okhttp/RequestBodyJson;->access$100(Lcom/mi/encrypt/okhttp/RequestBodyJson;)Ljava/util/Map;
 
     move-result-object v1
@@ -96,6 +102,7 @@
 .method public setMethod(Ljava/lang/String;)V
     .locals 0
 
+    .line 81
     iput-object p1, p0, Lcom/mi/encrypt/okhttp/RequestBodyJson$Builder;->method:Ljava/lang/String;
 
     return-void
@@ -114,6 +121,7 @@
         }
     .end annotation
 
+    .line 77
     iput-object p1, p0, Lcom/mi/encrypt/okhttp/RequestBodyJson$Builder;->multiMapHeaders:Ljava/util/Map;
 
     return-void
@@ -122,6 +130,7 @@
 .method public setPlainBody([B)V
     .locals 0
 
+    .line 63
     iput-object p1, p0, Lcom/mi/encrypt/okhttp/RequestBodyJson$Builder;->plainBody:[B
 
     return-void
@@ -130,6 +139,7 @@
 .method public setQuery(Ljava/lang/String;)V
     .locals 0
 
+    .line 67
     iput-object p1, p0, Lcom/mi/encrypt/okhttp/RequestBodyJson$Builder;->query:Ljava/lang/String;
 
     return-void

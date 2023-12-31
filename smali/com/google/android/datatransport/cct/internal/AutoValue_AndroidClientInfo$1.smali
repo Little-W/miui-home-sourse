@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$1;
 .super Ljava/lang/Object;
+.source "AutoValue_AndroidClientInfo.java"
 
 
 # annotations

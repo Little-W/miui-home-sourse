@@ -11,6 +11,7 @@
 
     const-string v0, "com.google.android.gms.common.internal.ICertData"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/gms/internal/common/zzb;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -28,18 +29,22 @@
     :cond_0
     const-string v0, "com.google.android.gms.common.internal.ICertData"
 
+    .line 5
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
+    .line 6
     instance-of v1, v0, Lcom/google/android/gms/common/internal/zzi;
 
     if-eqz v1, :cond_1
 
+    .line 7
     check-cast v0, Lcom/google/android/gms/common/internal/zzi;
 
     return-object v0
 
+    .line 8
     :cond_1
     new-instance v0, Lcom/google/android/gms/common/internal/zzk;
 
@@ -70,24 +75,30 @@
 
     return p0
 
+    .line 14
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/gms/common/internal/zzj;->zzc()I
 
     move-result p0
 
+    .line 15
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 16
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
+    .line 10
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/gms/common/internal/zzj;->zzb()Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     move-result-object p0
 
+    .line 11
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 12
     invoke-static {p3, p0}, Lcom/google/android/gms/internal/common/zzc;->zza(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
     :goto_0

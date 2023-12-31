@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder$Factory;
 .super Ljava/lang/Object;
+.source "ByteBufferRewinder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataRewinder$Factory;
@@ -29,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public bridge synthetic build(Ljava/lang/Object;)Lcom/bumptech/glide/load/data/DataRewinder;
     .locals 0
 
+    .line 34
     check-cast p1, Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder$Factory;->build(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/load/data/DataRewinder;
@@ -61,6 +64,7 @@
         }
     .end annotation
 
+    .line 39
     new-instance p0, Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder;
 
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/resource/bytes/ByteBufferRewinder;-><init>(Ljava/nio/ByteBuffer;)V
@@ -79,6 +83,7 @@
         }
     .end annotation
 
+    .line 45
     const-class p0, Ljava/nio/ByteBuffer;
 
     return-object p0

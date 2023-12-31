@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/mirror/synergy/DeviceType;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields

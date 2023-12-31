@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/StateFlowKt;
 .super Ljava/lang/Object;
+.source "StateFlow.kt"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 186
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "NONE"
@@ -26,6 +28,7 @@
 
     sput-object v0, Lkotlinx/coroutines/flow/StateFlowKt;->NONE:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 189
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "PENDING"
@@ -49,6 +52,7 @@
         }
     .end annotation
 
+    .line 181
     new-instance v0, Lkotlinx/coroutines/flow/StateFlowImpl;
 
     if-eqz p0, :cond_0
@@ -69,6 +73,7 @@
 .method public static final synthetic access$getNONE$p()Lkotlinx/coroutines/internal/Symbol;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/flow/StateFlowKt;->NONE:Lkotlinx/coroutines/internal/Symbol;
 
     return-object v0
@@ -77,6 +82,7 @@
 .method public static final synthetic access$getPENDING$p()Lkotlinx/coroutines/internal/Symbol;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/flow/StateFlowKt;->PENDING:Lkotlinx/coroutines/internal/Symbol;
 
     return-object v0
@@ -93,6 +99,7 @@
         }
     .end annotation
 
+    .line 364
     :cond_0
     invoke-interface {p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
@@ -104,6 +111,7 @@
 
     move-result v0
 
+    .line 365
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1

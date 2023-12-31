@@ -1,5 +1,6 @@
 .class public abstract Landroidx/core/view/ActionProvider;
 .super Ljava/lang/Object;
+.source "ActionProvider.java"
 
 
 # annotations
@@ -23,8 +24,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 133
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 134
     iput-object p1, p0, Landroidx/core/view/ActionProvider;->mContext:Landroid/content/Context;
 
     return-void
@@ -54,6 +57,7 @@
 .method public onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;
     .locals 0
 
+    .line 164
     invoke-virtual {p0}, Landroidx/core/view/ActionProvider;->onCreateActionView()Landroid/view/View;
 
     move-result-object p0
@@ -88,8 +92,10 @@
 
     const/4 v0, 0x0
 
+    .line 306
     iput-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
 
+    .line 307
     iput-object v0, p0, Landroidx/core/view/ActionProvider;->mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
 
     return-void
@@ -98,6 +104,7 @@
 .method public setSubUiVisibilityListener(Landroidx/core/view/ActionProvider$SubUiVisibilityListener;)V
     .locals 0
 
+    .line 283
     iput-object p1, p0, Landroidx/core/view/ActionProvider;->mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
 
     return-void
@@ -106,12 +113,14 @@
 .method public setVisibilityListener(Landroidx/core/view/ActionProvider$VisibilityListener;)V
     .locals 2
 
+    .line 293
     iget-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
+    .line 294
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,6 +129,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 295
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -140,8 +150,10 @@
 
     const-string v1, "ActionProvider(support)"
 
+    .line 294
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 298
     :cond_0
     iput-object p1, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
 
@@ -151,10 +163,12 @@
 .method public subUiVisibilityChanged(Z)V
     .locals 0
 
+    .line 273
     iget-object p0, p0, Landroidx/core/view/ActionProvider;->mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
 
     if-eqz p0, :cond_0
 
+    .line 274
     invoke-interface {p0, p1}, Landroidx/core/view/ActionProvider$SubUiVisibilityListener;->onSubUiVisibilityChanged(Z)V
 
     :cond_0

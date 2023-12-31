@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/descriptors/ContextDescriptor;
 .super Ljava/lang/Object;
+.source "ContextAware.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -40,12 +41,14 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/ContextDescriptor;->original:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     iput-object p2, p0, Lkotlinx/serialization/descriptors/ContextDescriptor;->kClass:Lkotlin/reflect/KClass;
 
+    .line 93
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,6 +91,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 96
     instance-of v0, p1, Lkotlinx/serialization/descriptors/ContextDescriptor;
 
     if-nez v0, :cond_0
@@ -101,6 +105,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 97
     iget-object v1, p0, Lkotlinx/serialization/descriptors/ContextDescriptor;->original:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     iget-object v2, p1, Lkotlinx/serialization/descriptors/ContextDescriptor;->original:Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -194,6 +199,7 @@
 .method public getSerialName()Ljava/lang/String;
     .locals 0
 
+    .line 93
     iget-object p0, p0, Lkotlinx/serialization/descriptors/ContextDescriptor;->serialName:Ljava/lang/String;
 
     return-object p0
@@ -202,6 +208,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 101
     iget-object v0, p0, Lkotlinx/serialization/descriptors/ContextDescriptor;->kClass:Lkotlin/reflect/KClass;
 
     invoke-interface {v0}, Lkotlin/reflect/KClass;->hashCode()I
@@ -210,6 +217,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 102
     invoke-virtual {p0}, Lkotlinx/serialization/descriptors/ContextDescriptor;->getSerialName()Ljava/lang/String;
 
     move-result-object p0
@@ -238,6 +246,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

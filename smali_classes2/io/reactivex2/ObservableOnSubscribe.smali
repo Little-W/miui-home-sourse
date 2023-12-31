@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/ObservableOnSubscribe;
 .super Ljava/lang/Object;
+.source "ObservableOnSubscribe.java"
 
 
 # annotations

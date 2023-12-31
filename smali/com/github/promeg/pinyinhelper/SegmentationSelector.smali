@@ -1,5 +1,6 @@
 .class interface abstract Lcom/github/promeg/pinyinhelper/SegmentationSelector;
 .super Ljava/lang/Object;
+.source "SegmentationSelector.java"
 
 
 # virtual methods

@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/util/pool/FactoryPools$2;
 .super Ljava/lang/Object;
+.source "FactoryPools.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/util/pool/FactoryPools$Factory;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 0
 
+    .line 85
     invoke-virtual {p0}, Lcom/bumptech/glide/util/pool/FactoryPools$2;->create()Ljava/util/List;
 
     move-result-object p0
@@ -56,6 +59,7 @@
         }
     .end annotation
 
+    .line 89
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V

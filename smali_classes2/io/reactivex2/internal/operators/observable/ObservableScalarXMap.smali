@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/internal/operators/observable/ObservableScalarXMap;
 .super Ljava/lang/Object;
+.source "ObservableScalarXMap.java"
 
 
 # annotations

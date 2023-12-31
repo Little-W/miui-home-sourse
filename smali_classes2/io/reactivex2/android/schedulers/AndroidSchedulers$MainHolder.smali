@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/android/schedulers/AndroidSchedulers$MainHolder;
 .super Ljava/lang/Object;
+.source "AndroidSchedulers.java"
 
 
 # annotations
@@ -21,10 +22,12 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 29
     new-instance v0, Lio/reactivex2/android/schedulers/HandlerScheduler;
 
     new-instance v1, Landroid/os/Handler;
 
+    .line 30
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2

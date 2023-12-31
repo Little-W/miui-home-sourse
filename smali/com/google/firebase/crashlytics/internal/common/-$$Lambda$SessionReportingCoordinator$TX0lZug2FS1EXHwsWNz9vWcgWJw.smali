@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/crashlytics/internal/common/-$$Lambda$SessionReportingCoordinator$TX0lZug2FS1EXHwsWNz9vWcgWJw;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/Comparator;

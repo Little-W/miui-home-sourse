@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/cct/internal/LogRequest$Builder;
 .super Ljava/lang/Object;
+.source "LogRequest.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,6 +62,7 @@
 .method public setSource(I)Lcom/google/android/datatransport/cct/internal/LogRequest$Builder;
     .locals 0
 
+    .line 75
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -74,6 +77,7 @@
 .method public setSource(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/LogRequest$Builder;
     .locals 0
 
+    .line 81
     invoke-virtual {p0, p1}, Lcom/google/android/datatransport/cct/internal/LogRequest$Builder;->setLogSourceName(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/LogRequest$Builder;
 
     move-result-object p0

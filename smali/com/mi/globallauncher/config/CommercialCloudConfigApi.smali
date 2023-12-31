@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/config/CommercialCloudConfigApi;
 .super Ljava/lang/Object;
+.source "CommercialCloudConfigApi.java"
 
 
 # virtual methods

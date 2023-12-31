@@ -1,5 +1,6 @@
 .class public final Lkotlin/Pair;
 .super Ljava/lang/Object;
+.source "Tuples.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -46,6 +47,7 @@
         }
     .end annotation
 
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/Pair;->first:Ljava/lang/Object;
@@ -177,6 +179,7 @@
         }
     .end annotation
 
+    .line 27
     iget-object p0, p0, Lkotlin/Pair;->first:Ljava/lang/Object;
 
     return-object p0
@@ -190,6 +193,7 @@
         }
     .end annotation
 
+    .line 28
     iget-object p0, p0, Lkotlin/Pair;->second:Ljava/lang/Object;
 
     return-object p0
@@ -233,6 +237,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

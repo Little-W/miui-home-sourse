@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonTransform;
 .super Ljava/lang/Object;
+.source "SettingsJsonTransform.java"
 
 
 # virtual methods

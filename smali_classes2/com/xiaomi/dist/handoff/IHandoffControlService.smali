@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/dist/handoff/IHandoffControlService;
 .super Ljava/lang/Object;
+.source "IHandoffControlService.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

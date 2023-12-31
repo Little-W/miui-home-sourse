@@ -1,5 +1,6 @@
 .class final Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;
 .super Ljava/lang/Object;
+.source "AnimateLayoutChangeDetector.java"
 
 
 # static fields
@@ -14,6 +15,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 46
     new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     const/4 v1, -0x1
@@ -22,6 +24,7 @@
 
     sput-object v0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->ZERO_MARGIN_LAYOUT_PARAMS:Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 47
     sget-object v0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->ZERO_MARGIN_LAYOUT_PARAMS:Landroid/view/ViewGroup$MarginLayoutParams;
 
     const/4 v1, 0x0
@@ -34,8 +37,10 @@
 .method constructor <init>(Landroidx/recyclerview/widget/LinearLayoutManager;)V
     .locals 0
 
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 53
     iput-object p1, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     return-void
@@ -44,6 +49,7 @@
 .method private arePagesLaidOutContiguously()Z
     .locals 11
 
+    .line 66
     iget-object v0, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->getChildCount()I
@@ -56,6 +62,7 @@
 
     return v1
 
+    .line 71
     :cond_0
     iget-object v2, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -77,6 +84,7 @@
     :goto_0
     const/4 v4, 0x2
 
+    .line 72
     filled-new-array {v0, v4}, [I
 
     move-result-object v4
@@ -94,6 +102,7 @@
     :goto_1
     if-ge v5, v0, :cond_6
 
+    .line 74
     iget-object v6, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v6, v5}, Landroidx/recyclerview/widget/LinearLayoutManager;->getChildAt(I)Landroid/view/View;
@@ -102,26 +111,32 @@
 
     if-eqz v6, :cond_5
 
+    .line 78
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v7
 
+    .line 80
     instance-of v8, v7, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v8, :cond_2
 
+    .line 81
     check-cast v7, Landroid/view/ViewGroup$MarginLayoutParams;
 
     goto :goto_2
 
+    .line 83
     :cond_2
     sget-object v7, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->ZERO_MARGIN_LAYOUT_PARAMS:Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 85
     :goto_2
     aget-object v8, v4, v5
 
     if-eqz v2, :cond_3
 
+    .line 86
     invoke-virtual {v6}, Landroid/view/View;->getLeft()I
 
     move-result v9
@@ -130,6 +145,7 @@
 
     goto :goto_3
 
+    .line 87
     :cond_3
     invoke-virtual {v6}, Landroid/view/View;->getTop()I
 
@@ -142,10 +158,12 @@
 
     aput v9, v8, v3
 
+    .line 88
     aget-object v8, v4, v5
 
     if-eqz v2, :cond_4
 
+    .line 89
     invoke-virtual {v6}, Landroid/view/View;->getRight()I
 
     move-result v6
@@ -154,6 +172,7 @@
 
     goto :goto_4
 
+    .line 90
     :cond_4
     invoke-virtual {v6}, Landroid/view/View;->getBottom()I
 
@@ -170,6 +189,7 @@
 
     goto :goto_1
 
+    .line 76
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -179,6 +199,7 @@
 
     throw p0
 
+    .line 94
     :cond_6
     new-instance v2, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;
 
@@ -193,6 +214,7 @@
 
     add-int/lit8 v2, p0, -0x1
 
+    .line 103
     aget-object v2, v4, v2
 
     aget v2, v2, v1
@@ -210,6 +232,7 @@
 
     goto :goto_5
 
+    .line 109
     :cond_8
     aget-object p0, v4, v3
 
@@ -221,6 +244,7 @@
 
     sub-int/2addr p0, v2
 
+    .line 110
     aget-object v2, v4, v3
 
     aget v2, v2, v3
@@ -248,6 +272,7 @@
 .method private hasRunningChangingLayoutTransition()Z
     .locals 4
 
+    .line 117
     iget-object v0, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->getChildCount()I
@@ -261,6 +286,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 119
     iget-object v3, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v3, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->getChildAt(I)Landroid/view/View;
@@ -289,14 +315,17 @@
 .method private static hasRunningChangingLayoutTransition(Landroid/view/View;)Z
     .locals 5
 
+    .line 127
     instance-of v0, p0, Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
+    .line 128
     check-cast p0, Landroid/view/ViewGroup;
 
+    .line 129
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getLayoutTransition()Landroid/animation/LayoutTransition;
 
     move-result-object v0
@@ -305,6 +334,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 130
     invoke-virtual {v0}, Landroid/animation/LayoutTransition;->isChangingLayout()Z
 
     move-result v0
@@ -313,6 +343,7 @@
 
     return v2
 
+    .line 133
     :cond_0
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -323,6 +354,7 @@
     :goto_0
     if-ge v3, v0, :cond_2
 
+    .line 135
     invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -349,6 +381,7 @@
 .method mayHaveInterferingAnimations()Z
     .locals 2
 
+    .line 60
     invoke-direct {p0}, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->arePagesLaidOutContiguously()Z
 
     move-result v0
@@ -365,6 +398,7 @@
 
     if-gt v0, v1, :cond_1
 
+    .line 61
     :cond_0
     invoke-direct {p0}, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->hasRunningChangingLayoutTransition()Z
 

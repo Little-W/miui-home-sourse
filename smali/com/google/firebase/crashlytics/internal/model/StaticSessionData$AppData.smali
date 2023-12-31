@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
 .super Ljava/lang/Object;
+.source "StaticSessionData.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method public static create(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
     .locals 9
 
+    .line 61
     new-instance v8, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;
 
     move-object v0, v8

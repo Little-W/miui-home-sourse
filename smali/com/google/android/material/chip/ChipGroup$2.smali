@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/chip/ChipGroup$2;
 .super Ljava/lang/Object;
+.source "ChipGroup.java"
 
 # interfaces
 .implements Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/google/android/material/chip/ChipGroup;Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;)V
     .locals 0
 
+    .line 335
     iput-object p1, p0, Lcom/google/android/material/chip/ChipGroup$2;->this$0:Lcom/google/android/material/chip/ChipGroup;
 
     iput-object p2, p0, Lcom/google/android/material/chip/ChipGroup$2;->val$listener:Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 339
     iget-object p2, p0, Lcom/google/android/material/chip/ChipGroup$2;->this$0:Lcom/google/android/material/chip/ChipGroup;
 
     invoke-static {p2}, Lcom/google/android/material/chip/ChipGroup;->access$200(Lcom/google/android/material/chip/ChipGroup;)Lcom/google/android/material/internal/CheckableGroup;
@@ -63,6 +66,7 @@
 
     return-void
 
+    .line 342
     :cond_0
     iget-object p2, p0, Lcom/google/android/material/chip/ChipGroup$2;->val$listener:Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;
 

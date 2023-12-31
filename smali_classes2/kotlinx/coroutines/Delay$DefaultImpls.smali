@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/Delay$DefaultImpls;
 .super Ljava/lang/Object;
+.source "Delay.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method public static invokeOnTimeout(Lkotlinx/coroutines/Delay;JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
     .locals 0
 
+    .line 61
     invoke-static {}, Lkotlinx/coroutines/DefaultExecutorKt;->getDefaultDelay()Lkotlinx/coroutines/Delay;
 
     move-result-object p0

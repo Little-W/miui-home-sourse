@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/Utils;
 .super Ljava/lang/Object;
+.source "Utils.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 21
     new-instance v0, Lcom/google/android/filament/utils/Utils;
 
     invoke-direct {v0}, Lcom/google/android/filament/utils/Utils;-><init>()V
@@ -22,6 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,10 +35,12 @@
 .method public final init()V
     .locals 0
 
+    .line 27
     invoke-static {}, Lcom/google/android/filament/Filament;->init()V
 
     const-string p0, "filament-utils-jni"
 
+    .line 28
     invoke-static {p0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void

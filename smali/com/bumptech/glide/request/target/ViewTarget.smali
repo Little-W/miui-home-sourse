@@ -1,5 +1,6 @@
 .class public abstract Lcom/bumptech/glide/request/target/ViewTarget;
 .super Lcom/bumptech/glide/request/target/BaseTarget;
+.source "ViewTarget.java"
 
 
 # annotations
@@ -58,8 +59,10 @@
         }
     .end annotation
 
+    .line 64
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/BaseTarget;-><init>()V
 
+    .line 65
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -68,6 +71,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
+    .line 66
     new-instance v0, Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;
 
     invoke-direct {v0, p1}, Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;-><init>(Landroid/view/View;)V
@@ -80,10 +84,12 @@
 .method private getTag()Ljava/lang/Object;
     .locals 1
 
+    .line 294
     sget-object v0, Lcom/bumptech/glide/request/target/ViewTarget;->tagId:Ljava/lang/Integer;
 
     if-nez v0, :cond_0
 
+    .line 295
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -92,6 +98,7 @@
 
     return-object p0
 
+    .line 297
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
@@ -109,6 +116,7 @@
 .method private maybeAddAttachStateListener()V
     .locals 2
 
+    .line 184
     iget-object v0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->attachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
     if-eqz v0, :cond_1
@@ -119,6 +127,7 @@
 
     goto :goto_0
 
+    .line 188
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
@@ -126,6 +135,7 @@
 
     const/4 v0, 0x1
 
+    .line 189
     iput-boolean v0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->isAttachStateListenerAdded:Z
 
     :cond_1
@@ -136,6 +146,7 @@
 .method private maybeRemoveAttachStateListener()V
     .locals 2
 
+    .line 193
     iget-object v0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->attachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
     if-eqz v0, :cond_1
@@ -146,6 +157,7 @@
 
     goto :goto_0
 
+    .line 197
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
@@ -153,6 +165,7 @@
 
     const/4 v0, 0x0
 
+    .line 198
     iput-boolean v0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->isAttachStateListenerAdded:Z
 
     :cond_1
@@ -163,20 +176,24 @@
 .method private setTag(Ljava/lang/Object;)V
     .locals 1
 
+    .line 284
     sget-object v0, Lcom/bumptech/glide/request/target/ViewTarget;->tagId:Ljava/lang/Integer;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
+    .line 285
     sput-boolean v0, Lcom/bumptech/glide/request/target/ViewTarget;->isTagUsedAtLeastOnce:Z
 
+    .line 286
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 288
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
@@ -195,20 +212,24 @@
 .method public getRequest()Lcom/bumptech/glide/request/Request;
     .locals 1
 
+    .line 265
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/ViewTarget;->getTag()Ljava/lang/Object;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 268
     instance-of v0, p0, Lcom/bumptech/glide/request/Request;
 
     if-eqz v0, :cond_0
 
+    .line 269
     check-cast p0, Lcom/bumptech/glide/request/Request;
 
     goto :goto_0
 
+    .line 271
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -228,6 +249,7 @@
 .method public getSize(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
     .locals 0
 
+    .line 221
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->sizeDeterminer:Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;->getSize(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
@@ -238,16 +260,20 @@
 .method public onLoadCleared(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 233
     invoke-super {p0, p1}, Lcom/bumptech/glide/request/target/BaseTarget;->onLoadCleared(Landroid/graphics/drawable/Drawable;)V
 
+    .line 234
     iget-object p1, p0, Lcom/bumptech/glide/request/target/ViewTarget;->sizeDeterminer:Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;
 
     invoke-virtual {p1}, Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;->clearCallbacksAndListener()V
 
+    .line 236
     iget-boolean p1, p0, Lcom/bumptech/glide/request/target/ViewTarget;->isClearedByUs:Z
 
     if-nez p1, :cond_0
 
+    .line 237
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/ViewTarget;->maybeRemoveAttachStateListener()V
 
     :cond_0
@@ -257,8 +283,10 @@
 .method public onLoadStarted(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 179
     invoke-super {p0, p1}, Lcom/bumptech/glide/request/target/BaseTarget;->onLoadStarted(Landroid/graphics/drawable/Drawable;)V
 
+    .line 180
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/ViewTarget;->maybeAddAttachStateListener()V
 
     return-void
@@ -267,6 +295,7 @@
 .method public removeCallback(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
     .locals 0
 
+    .line 227
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->sizeDeterminer:Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;->removeCallback(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
@@ -277,6 +306,7 @@
 .method public setRequest(Lcom/bumptech/glide/request/Request;)V
     .locals 0
 
+    .line 248
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/ViewTarget;->setTag(Ljava/lang/Object;)V
 
     return-void
@@ -285,6 +315,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 280
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

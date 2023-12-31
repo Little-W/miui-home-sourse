@@ -1,5 +1,6 @@
 .class final Lcom/mi/google/gson/internal/bind/TreeTypeAdapter$SingleTypeFactory;
 .super Ljava/lang/Object;
+.source "TreeTypeAdapter.java"
 
 # interfaces
 .implements Lcom/mi/google/gson/TypeAdapterFactory;
@@ -72,10 +73,12 @@
         }
     .end annotation
 
+    .line 143
     iget-object v0, p0, Lcom/mi/google/gson/internal/bind/TreeTypeAdapter$SingleTypeFactory;->exactType:Lcom/mi/google/gson/reflect/TypeToken;
 
     if-eqz v0, :cond_2
 
+    .line 144
     invoke-virtual {v0, p2}, Lcom/mi/google/gson/reflect/TypeToken;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -114,6 +117,7 @@
     :cond_2
     iget-object v0, p0, Lcom/mi/google/gson/internal/bind/TreeTypeAdapter$SingleTypeFactory;->hierarchyType:Ljava/lang/Class;
 
+    .line 145
     invoke-virtual {p2}, Lcom/mi/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v1
@@ -125,6 +129,7 @@
     :goto_1
     if-eqz v0, :cond_3
 
+    .line 146
     new-instance v0, Lcom/mi/google/gson/internal/bind/TreeTypeAdapter;
 
     iget-object v2, p0, Lcom/mi/google/gson/internal/bind/TreeTypeAdapter$SingleTypeFactory;->serializer:Lcom/mi/google/gson/JsonSerializer;

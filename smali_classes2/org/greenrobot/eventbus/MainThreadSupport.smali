@@ -1,5 +1,6 @@
 .class public interface abstract Lorg/greenrobot/eventbus/MainThreadSupport;
 .super Ljava/lang/Object;
+.source "MainThreadSupport.java"
 
 
 # annotations

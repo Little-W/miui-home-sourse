@@ -1,5 +1,6 @@
 .class Lkotlin/io/FilesKt__FileReadWriteKt;
 .super Lkotlin/io/FilesKt__FilePathComponentsKt;
+.source "FileReadWrite.kt"
 
 
 # annotations
@@ -20,6 +21,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 125
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -76,6 +78,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 125
     sget-object p1, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
     :cond_0
@@ -97,6 +100,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 108
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -153,6 +157,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 134
     invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object p1
@@ -173,6 +178,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 134
     sget-object p2, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
     :cond_0

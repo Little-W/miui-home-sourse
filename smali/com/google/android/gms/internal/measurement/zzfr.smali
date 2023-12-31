@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzfr;
 .super Lcom/google/android/gms/internal/measurement/zzfb;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # annotations
@@ -20,6 +21,7 @@
 .method constructor <init>(Lcom/google/android/gms/internal/measurement/zzfo;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzfr;->zza:Lcom/google/android/gms/internal/measurement/zzfo;
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzfb;-><init>()V
@@ -32,6 +34,7 @@
 .method public final synthetic get(I)Ljava/lang/Object;
     .locals 1
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfr;->zza:Lcom/google/android/gms/internal/measurement/zzfo;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzfo;->zza(Lcom/google/android/gms/internal/measurement/zzfo;)I
@@ -40,6 +43,7 @@
 
     invoke-static {p1, v0}, Lcom/google/android/gms/internal/measurement/zzeb;->zza(II)I
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfr;->zza:Lcom/google/android/gms/internal/measurement/zzfo;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzfo;->zzb(Lcom/google/android/gms/internal/measurement/zzfo;)[Ljava/lang/Object;
@@ -48,8 +52,10 @@
 
     mul-int/lit8 p1, p1, 0x2
 
+    .line 7
     aget-object v0, v0, p1
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfr;->zza:Lcom/google/android/gms/internal/measurement/zzfo;
 
     invoke-static {p0}, Lcom/google/android/gms/internal/measurement/zzfo;->zzb(Lcom/google/android/gms/internal/measurement/zzfo;)[Ljava/lang/Object;
@@ -58,8 +64,10 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 9
     aget-object p0, p0, p1
 
+    .line 10
     new-instance p1, Ljava/util/AbstractMap$SimpleImmutableEntry;
 
     invoke-direct {p1, v0, p0}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -70,6 +78,7 @@
 .method public final size()I
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfr;->zza:Lcom/google/android/gms/internal/measurement/zzfo;
 
     invoke-static {p0}, Lcom/google/android/gms/internal/measurement/zzfo;->zza(Lcom/google/android/gms/internal/measurement/zzfo;)I

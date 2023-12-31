@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/model/TaskStack;
 .super Ljava/lang/Object;
+.source "TaskStack.java"
 
 
 # annotations
@@ -50,26 +51,31 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 233
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 217
     new-instance v0, Lcom/android/systemui/shared/recents/model/TaskStack$1;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/model/TaskStack$1;-><init>(Lcom/android/systemui/shared/recents/model/TaskStack;)V
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->FREEFORM_COMPARATOR:Ljava/util/Comparator;
 
+    .line 229
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mRawTaskList:Ljava/util/ArrayList;
 
+    .line 230
     new-instance v0, Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-direct {v0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
+    .line 235
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     new-instance v1, Lcom/android/systemui/shared/recents/model/TaskStack$2;
@@ -96,6 +102,7 @@
         }
     .end annotation
 
+    .line 557
     new-instance p0, Landroid/util/ArrayMap;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -104,6 +111,7 @@
 
     invoke-direct {p0, v0}, Landroid/util/ArrayMap;-><init>(I)V
 
+    .line 558
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -113,12 +121,14 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 560
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 561
     iget-object v3, v2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {p0, v3, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -144,10 +154,12 @@
         }
     .end annotation
 
+    .line 465
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 466
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
@@ -162,6 +174,7 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 3
 
+    .line 567
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,6 +189,7 @@
 
     move-result-object v0
 
+    .line 569
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p1, "TaskStack"
@@ -184,6 +198,7 @@
 
     const-string p1, " numStackTasks="
 
+    .line 570
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
@@ -194,14 +209,17 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(I)V
 
+    .line 571
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
+    .line 572
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 573
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p1
@@ -211,6 +229,7 @@
     :goto_0
     if-ge v1, p1, :cond_0
 
+    .line 575
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -230,10 +249,12 @@
 .method public findTaskWithId(I)Lcom/android/systemui/shared/recents/model/Task;
     .locals 4
 
+    .line 531
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/TaskStack;->computeAllTasksList()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 532
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -243,6 +264,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 534
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -251,6 +273,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 535
     invoke-virtual {v2, p1}, Lcom/android/systemui/shared/recents/model/Task;->isSameTaskFromId(I)Z
 
     move-result v3
@@ -273,12 +296,14 @@
 .method public getFreeformTaskCount()I
     .locals 4
 
+    .line 497
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 499
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -290,12 +315,14 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 501
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 502
     invoke-virtual {v3}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
     move-result v3
@@ -324,16 +351,19 @@
         }
     .end annotation
 
+    .line 449
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 450
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 451
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -343,18 +373,21 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 453
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 454
     invoke-virtual {v3}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 455
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -369,12 +402,14 @@
 .method public getLaunchTarget()Lcom/android/systemui/shared/recents/model/Task;
     .locals 4
 
+    .line 513
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 514
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -384,12 +419,14 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 516
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 517
     iget-boolean v3, v2, Lcom/android/systemui/shared/recents/model/Task;->isLaunchTarget:Z
 
     if-eqz v3, :cond_0
@@ -410,12 +447,14 @@
 .method public getStackFirstTask(Z)Lcom/android/systemui/shared/recents/model/Task;
     .locals 4
 
+    .line 413
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 414
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -429,6 +468,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 417
     :goto_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -438,12 +478,14 @@
 
     if-gt v0, v2, :cond_3
 
+    .line 418
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 419
     invoke-virtual {v2}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
     move-result v3
@@ -470,6 +512,7 @@
 .method public getStackFrontMostTask(Z)Lcom/android/systemui/shared/recents/model/Task;
     .locals 0
 
+    .line 393
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskStack;->getStackFirstTask(Z)Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object p0
@@ -480,12 +523,14 @@
 .method public getStackTaskCount()I
     .locals 4
 
+    .line 481
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 483
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -497,12 +542,14 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 485
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 486
     invoke-virtual {v3}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
     move-result v3
@@ -531,6 +578,7 @@
         }
     .end annotation
 
+    .line 442
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
@@ -543,6 +591,7 @@
 .method public getTaskCount()I
     .locals 0
 
+    .line 474
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->size()I
@@ -563,14 +612,17 @@
         }
     .end annotation
 
+    .line 428
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 429
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/TaskStack;->computeAllTasksList()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 430
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -580,12 +632,14 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
+    .line 432
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 433
     iget-object v3, v3, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -601,6 +655,7 @@
 .method public indexOfStackTask(Lcom/android/systemui/shared/recents/model/Task;)I
     .locals 0
 
+    .line 526
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->indexOf(Lcom/android/systemui/shared/recents/model/Task;)I
@@ -613,16 +668,19 @@
 .method public moveTaskToStack(Lcom/android/systemui/shared/recents/model/Task;I)V
     .locals 5
 
+    .line 253
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object v0
 
+    .line 254
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
+    .line 255
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
     move-result v2
@@ -633,12 +691,14 @@
 
     if-ne p2, v2, :cond_0
 
+    .line 257
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0, p1, v1, p2}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->moveTaskToStack(Lcom/android/systemui/shared/recents/model/Task;II)V
 
     goto :goto_2
 
+    .line 258
     :cond_0
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
@@ -657,6 +717,7 @@
     :goto_0
     if-ltz v1, :cond_2
 
+    .line 262
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -678,6 +739,7 @@
 
     goto :goto_0
 
+    .line 267
     :cond_2
     :goto_1
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
@@ -692,12 +754,14 @@
 .method public removeAllTasks()V
     .locals 4
 
+    .line 298
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object v0
 
+    .line 299
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -707,22 +771,26 @@
     :goto_0
     if-ltz v1, :cond_1
 
+    .line 300
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 301
     invoke-virtual {v2}, Lcom/android/systemui/shared/recents/model/Task;->isProtected()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 302
     iget-object v3, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0, v3, v2}, Lcom/android/systemui/shared/recents/model/TaskStack;->removeTaskImpl(Lcom/android/systemui/shared/recents/model/FilteredTaskList;Lcom/android/systemui/shared/recents/model/Task;)V
 
+    .line 303
     iget-object v3, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mRawTaskList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -732,11 +800,13 @@
 
     goto :goto_0
 
+    .line 306
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mCb:Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;
 
     if-eqz v0, :cond_2
 
+    .line 308
     invoke-interface {v0, p0}, Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;->onStackTasksRemoved(Lcom/android/systemui/shared/recents/model/TaskStack;)V
 
     :cond_2
@@ -746,6 +816,7 @@
 .method public removeTask(Lcom/android/systemui/shared/recents/model/Task;Lcom/android/systemui/shared/recents/utilities/AnimationProps;)V
     .locals 3
 
+    .line 282
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->contains(Lcom/android/systemui/shared/recents/model/Task;)Z
@@ -754,24 +825,29 @@
 
     if-eqz v0, :cond_0
 
+    .line 283
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/systemui/shared/recents/model/TaskStack;->removeTaskImpl(Lcom/android/systemui/shared/recents/model/FilteredTaskList;Lcom/android/systemui/shared/recents/model/Task;)V
 
     const/4 v0, 0x0
 
+    .line 284
     invoke-virtual {p0, v0}, Lcom/android/systemui/shared/recents/model/TaskStack;->getStackFrontMostTask(Z)Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v0
 
+    .line 285
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mCb:Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;
 
     if-eqz v1, :cond_0
 
     const/4 v2, 0x1
 
+    .line 287
     invoke-interface {v1, p1, v0, p2, v2}, Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;->onStackTaskRemoved(Lcom/android/systemui/shared/recents/model/Task;Lcom/android/systemui/shared/recents/model/Task;Lcom/android/systemui/shared/recents/utilities/AnimationProps;Z)V
 
+    .line 291
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mRawTaskList:Ljava/util/ArrayList;
 
@@ -783,6 +859,7 @@
 .method removeTaskImpl(Lcom/android/systemui/shared/recents/model/FilteredTaskList;Lcom/android/systemui/shared/recents/model/Task;)V
     .locals 0
 
+    .line 274
     invoke-virtual {p1, p2}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->remove(Lcom/android/systemui/shared/recents/model/Task;)Z
 
     return-void
@@ -791,6 +868,7 @@
 .method public setCallbacks(Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;)V
     .locals 0
 
+    .line 245
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mCb:Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;
 
     return-void
@@ -808,28 +886,34 @@
         }
     .end annotation
 
+    .line 320
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mRawTaskList:Ljava/util/ArrayList;
 
     invoke-direct {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskStack;->createTaskKeyMapFromList(Ljava/util/List;)Landroid/util/ArrayMap;
 
     move-result-object p1
 
+    .line 321
     invoke-direct {p0, p2}, Lcom/android/systemui/shared/recents/model/TaskStack;->createTaskKeyMapFromList(Ljava/util/List;)Landroid/util/ArrayMap;
 
     move-result-object v0
 
+    .line 322
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 323
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 324
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    .line 327
     iget-object v4, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mCb:Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;
 
     const/4 v5, 0x0
@@ -838,6 +922,7 @@
 
     move p3, v5
 
+    .line 332
     :cond_0
     iget-object v4, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mRawTaskList:Ljava/util/ArrayList;
 
@@ -850,6 +935,7 @@
     :goto_0
     if-ltz v4, :cond_2
 
+    .line 334
     iget-object v6, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mRawTaskList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -858,6 +944,7 @@
 
     check-cast v6, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 335
     iget-object v7, v6, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {v0, v7}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -868,6 +955,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 337
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -875,6 +963,7 @@
 
     goto :goto_0
 
+    .line 343
     :cond_2
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -885,12 +974,14 @@
     :goto_1
     if-ge v4, v0, :cond_5
 
+    .line 345
     invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 346
     iget-object v7, v6, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {p1, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -903,6 +994,7 @@
 
     if-eqz p3, :cond_3
 
+    .line 348
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -910,10 +1002,12 @@
     :cond_3
     if-eqz v7, :cond_4
 
+    .line 352
     invoke-virtual {v7, v6}, Lcom/android/systemui/shared/recents/model/Task;->copyFrom(Lcom/android/systemui/shared/recents/model/Task;)V
 
     move-object v6, v7
 
+    .line 355
     :cond_4
     :goto_2
     invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -922,6 +1016,7 @@
 
     goto :goto_1
 
+    .line 359
     :cond_5
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -932,6 +1027,7 @@
     :goto_3
     if-ltz p1, :cond_6
 
+    .line 360
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -944,21 +1040,26 @@
 
     goto :goto_3
 
+    .line 362
     :cond_6
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->FREEFORM_COMPARATOR:Ljava/util/Comparator;
 
     invoke-static {v3, p1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 364
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p1, v3}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->set(Ljava/util/List;)V
 
+    .line 365
     iput-object v3, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mRawTaskList:Ljava/util/ArrayList;
 
+    .line 368
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
+    .line 369
     invoke-virtual {p0, v5}, Lcom/android/systemui/shared/recents/model/TaskStack;->getStackFrontMostTask(Z)Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object p2
@@ -968,6 +1069,7 @@
     :goto_4
     if-ge v0, p1, :cond_7
 
+    .line 371
     iget-object v3, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mCb:Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -984,6 +1086,7 @@
 
     goto :goto_4
 
+    .line 377
     :cond_7
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -992,6 +1095,7 @@
     :goto_5
     if-ge v5, p1, :cond_8
 
+    .line 379
     iget-object p2, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mCb:Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1009,6 +1113,7 @@
     :cond_8
     if-eqz p3, :cond_9
 
+    .line 384
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mCb:Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;
 
     invoke-interface {p1, p0}, Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;->onStackTasksUpdated(Lcom/android/systemui/shared/recents/model/TaskStack;)V
@@ -1020,6 +1125,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 544
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1044,12 +1150,14 @@
 
     move-result-object v0
 
+    .line 545
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 546
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -1059,6 +1167,7 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
+    .line 548
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

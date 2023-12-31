@@ -1,5 +1,6 @@
 .class public Lorg/greenrobot/eventbus/Logger$AndroidLogger;
 .super Ljava/lang/Object;
+.source "Logger.java"
 
 # interfaces
 .implements Lorg/greenrobot/eventbus/Logger;
@@ -33,6 +34,7 @@
     :try_start_0
     const-string v1, "android.util.Log"
 
+    .line 34
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -43,6 +45,7 @@
 
     const/4 v0, 0x1
 
+    .line 38
     :catch_0
     :cond_0
     sput-boolean v0, Lorg/greenrobot/eventbus/Logger$AndroidLogger;->ANDROID_LOG_AVAILABLE:Z
@@ -53,8 +56,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 49
     iput-object p1, p0, Lorg/greenrobot/eventbus/Logger$AndroidLogger;->tag:Ljava/lang/String;
 
     return-void
@@ -63,6 +68,7 @@
 .method public static isAndroidLogAvailable()Z
     .locals 1
 
+    .line 42
     sget-boolean v0, Lorg/greenrobot/eventbus/Logger$AndroidLogger;->ANDROID_LOG_AVAILABLE:Z
 
     return v0
@@ -73,10 +79,12 @@
 .method public log(Ljava/util/logging/Level;Ljava/lang/String;)V
     .locals 1
 
+    .line 53
     sget-object v0, Ljava/util/logging/Level;->OFF:Ljava/util/logging/Level;
 
     if-eq p1, v0, :cond_0
 
+    .line 54
     invoke-virtual {p0, p1}, Lorg/greenrobot/eventbus/Logger$AndroidLogger;->mapLevel(Ljava/util/logging/Level;)I
 
     move-result p1
@@ -92,10 +100,12 @@
 .method public log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 59
     sget-object v0, Ljava/util/logging/Level;->OFF:Ljava/util/logging/Level;
 
     if-eq p1, v0, :cond_0
 
+    .line 61
     invoke-virtual {p0, p1}, Lorg/greenrobot/eventbus/Logger$AndroidLogger;->mapLevel(Ljava/util/logging/Level;)I
 
     move-result p1
@@ -131,6 +141,7 @@
 .method protected mapLevel(Ljava/util/logging/Level;)I
     .locals 0
 
+    .line 66
     invoke-virtual {p1}, Ljava/util/logging/Level;->intValue()I
 
     move-result p0

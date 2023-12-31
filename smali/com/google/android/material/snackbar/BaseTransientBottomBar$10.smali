@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/snackbar/BaseTransientBottomBar$10;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "BaseTransientBottomBar.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;I)V
     .locals 0
 
+    .line 910
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$10;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
     iput p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$10;->val$event:I
@@ -37,6 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
+    .line 913
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$10;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
     iget p0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$10;->val$event:I

@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/manager/BranchStaticHelper;
 .super Ljava/lang/Object;
+.source "BranchStaticHelper.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/branchInterface/IBranchStaticInterface;
@@ -13,6 +14,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,6 +23,7 @@
 .method private static checkShowNewFeatureTimes()Z
     .locals 7
 
+    .line 43
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -40,6 +43,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 47
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -65,6 +69,7 @@
     :cond_1
     if-eqz v2, :cond_2
 
+    .line 49
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -79,6 +84,7 @@
 
     if-ne v0, v3, :cond_5
 
+    .line 53
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -104,6 +110,7 @@
     :cond_4
     if-eqz v2, :cond_5
 
+    .line 55
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -117,25 +124,30 @@
 .method public static getInstance()Lcom/mi/globallauncher/branchInterface/IBranchStaticInterface;
     .locals 2
 
+    .line 15
     sget-object v0, Lcom/mi/globallauncher/manager/BranchStaticHelper;->instance:Lcom/mi/globallauncher/manager/BranchStaticHelper;
 
     if-nez v0, :cond_1
 
+    .line 16
     const-class v0, Lcom/mi/globallauncher/manager/BranchStaticHelper;
 
     monitor-enter v0
 
+    .line 17
     :try_start_0
     sget-object v1, Lcom/mi/globallauncher/manager/BranchStaticHelper;->instance:Lcom/mi/globallauncher/manager/BranchStaticHelper;
 
     if-nez v1, :cond_0
 
+    .line 18
     new-instance v1, Lcom/mi/globallauncher/manager/BranchStaticHelper;
 
     invoke-direct {v1}, Lcom/mi/globallauncher/manager/BranchStaticHelper;-><init>()V
 
     sput-object v1, Lcom/mi/globallauncher/manager/BranchStaticHelper;->instance:Lcom/mi/globallauncher/manager/BranchStaticHelper;
 
+    .line 20
     :cond_0
     monitor-exit v0
 
@@ -150,6 +162,7 @@
 
     throw v1
 
+    .line 22
     :cond_1
     :goto_0
     sget-object v0, Lcom/mi/globallauncher/manager/BranchStaticHelper;->instance:Lcom/mi/globallauncher/manager/BranchStaticHelper;
@@ -162,6 +175,7 @@
 .method public showNewFeatureTag()Z
     .locals 2
 
+    .line 27
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
@@ -176,6 +190,7 @@
 
     return v0
 
+    .line 30
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -191,6 +206,7 @@
 
     return v1
 
+    .line 33
     :cond_1
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -214,6 +230,7 @@
 
     goto :goto_0
 
+    .line 36
     :cond_2
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -227,6 +244,7 @@
 
     return v0
 
+    .line 39
     :cond_3
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchStaticHelper;->checkShowNewFeatureTimes()Z
 
@@ -242,12 +260,14 @@
 .method public updateDrawerModeForCloudConfig()V
     .locals 1
 
+    .line 65
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
 
     invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setChangeToDrawerForBranch()V
 
+    .line 66
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
@@ -256,6 +276,7 @@
 
     invoke-interface {p0, v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setUpdateDrawerModeForCloudConfig(Z)V
 
+    .line 67
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p0
@@ -266,6 +287,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 68
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
@@ -274,6 +296,7 @@
 
     invoke-interface {p0, v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setNewFeatureShowed(Z)V
 
+    .line 69
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
@@ -282,6 +305,7 @@
 
     goto :goto_0
 
+    .line 71
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -289,18 +313,21 @@
 
     invoke-interface {p0, v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setNewFeatureShowed(Z)V
 
+    .line 72
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
 
     invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->resetShowNewFeatureCounts()V
 
+    .line 73
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
 
     invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->resetShowNewFeatureTime()V
 
+    .line 74
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0

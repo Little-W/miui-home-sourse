@@ -1,5 +1,6 @@
 .class public Lcom/android/wm/shell/util/CounterRotator;
 .super Ljava/lang/Object;
+.source "CounterRotator.java"
 
 
 # instance fields
@@ -10,10 +11,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 31
     iput-object v0, p0, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
     return-void
@@ -24,12 +27,14 @@
 .method public addChild(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
     .locals 0
 
+    .line 73
     iget-object p0, p0, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
     if-nez p0, :cond_0
 
     return-void
 
+    .line 74
     :cond_0
     invoke-virtual {p1, p2, p0}, Landroid/view/SurfaceControl$Transaction;->reparent(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
@@ -39,12 +44,14 @@
 .method public cleanUp(Landroid/view/SurfaceControl$Transaction;)V
     .locals 1
 
+    .line 82
     iget-object v0, p0, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 83
     :cond_0
     invoke-static {p1}, Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;->box(Landroid/view/SurfaceControl$Transaction;)Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;
 
@@ -60,6 +67,7 @@
 .method public getSurface()Landroid/view/SurfaceControl;
     .locals 0
 
+    .line 35
     iget-object p0, p0, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -72,6 +80,7 @@
 
     return-void
 
+    .line 47
     :cond_0
     new-instance v0, Landroid/view/SurfaceControl$Builder;
 
@@ -79,14 +88,17 @@
 
     const-string v1, "Transition Unrotate"
 
+    .line 48
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
+    .line 47
     invoke-static {v0}, Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;->box(Landroid/view/SurfaceControl$Builder;)Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;
 
     move-result-object v0
 
+    .line 49
     invoke-virtual {v0}, Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;->setContainerLayer()Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;
 
     move-result-object v0
@@ -95,26 +107,31 @@
 
     move-result-object v0
 
+    .line 50
     invoke-virtual {v0, p2}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p2
 
+    .line 51
     invoke-virtual {p2}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
+    .line 55
     iget-object p2, p0, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-static {p1, p2, p3}, Lcom/android/systemui/shared/recents/utilities/RotationUtils;->rotateSurface(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;I)V
 
+    .line 56
     new-instance p2, Landroid/graphics/Point;
 
     const/4 v0, 0x0
 
     invoke-direct {p2, v0, v0}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 59
     rem-int/lit8 v0, p3, 0x2
 
     if-eqz v0, :cond_1
@@ -130,8 +147,10 @@
 
     float-to-int p5, p5
 
+    .line 64
     invoke-static {p2, p3, p4, p5}, Lcom/android/systemui/shared/recents/utilities/RotationUtils;->rotatePoint(Landroid/graphics/Point;III)V
 
+    .line 65
     iget-object p3, p0, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
     iget p4, p2, Landroid/graphics/Point;->x:I
@@ -144,6 +163,7 @@
 
     invoke-virtual {p1, p3, p4, p2}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
+    .line 66
     iget-object p0, p0, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, p0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/PolymorphicKt;
 .super Ljava/lang/Object;
+.source "Polymorphic.kt"
 
 
 # annotations
@@ -12,6 +13,7 @@
 .method public static final synthetic access$findActualSerializer(Lkotlinx/serialization/json/JsonEncoder;Lkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)Lkotlinx/serialization/SerializationStrategy;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lkotlinx/serialization/json/internal/PolymorphicKt;->findActualSerializer(Lkotlinx/serialization/json/JsonEncoder;Lkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)Lkotlinx/serialization/SerializationStrategy;
 
     move-result-object p0
@@ -26,14 +28,17 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 56
     instance-of v0, p0, Lkotlinx/serialization/descriptors/SerialKind$ENUM;
 
     if-nez v0, :cond_2
 
+    .line 57
     instance-of v0, p0, Lkotlinx/serialization/descriptors/PrimitiveKind;
 
     if-nez v0, :cond_1
 
+    .line 58
     instance-of p0, p0, Lkotlinx/serialization/descriptors/PolymorphicKind;
 
     if-nez p0, :cond_0
@@ -55,6 +60,7 @@
 
     throw p0
 
+    .line 57
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -70,6 +76,7 @@
 
     throw p0
 
+    .line 56
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -107,6 +114,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 62
     instance-of v0, p1, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;
 
     if-eqz v0, :cond_5
@@ -125,6 +133,7 @@
 
     goto/16 :goto_1
 
+    .line 66
     :cond_0
     invoke-interface {p0}, Lkotlinx/serialization/json/JsonDecoder;->decodeJsonElement()Lkotlinx/serialization/json/JsonElement;
 
@@ -134,12 +143,15 @@
 
     move-result-object v1
 
+    .line 83
     instance-of v2, v0, Lkotlinx/serialization/json/JsonObject;
 
     if-eqz v2, :cond_4
 
+    .line 66
     check-cast v0, Lkotlinx/serialization/json/JsonObject;
 
+    .line 67
     invoke-interface {p0}, Lkotlinx/serialization/json/JsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v1
@@ -150,6 +162,7 @@
 
     iget-object v1, v1, Lkotlinx/serialization/json/internal/JsonConf;->classDiscriminator:Ljava/lang/String;
 
+    .line 68
     invoke-virtual {v0, v1}, Lkotlinx/serialization/json/JsonObject;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -173,6 +186,7 @@
     :cond_1
     const/4 v2, 0x0
 
+    .line 69
     :goto_0
     check-cast p1, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;
 
@@ -186,6 +200,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 73
     invoke-interface {p0}, Lkotlinx/serialization/json/JsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object p0
@@ -207,6 +222,7 @@
 
     throw p0
 
+    .line 70
     :cond_3
     invoke-static {v2, v0}, Lkotlinx/serialization/json/internal/PolymorphicKt;->throwSerializerNotFound(Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;)Ljava/lang/Void;
 
@@ -219,6 +235,7 @@
     :cond_4
     const/4 p0, -0x1
 
+    .line 86
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,6 +280,7 @@
 
     move-result-object p1
 
+    .line 84
     invoke-static {p0, p1}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -271,6 +289,7 @@
 
     throw p0
 
+    .line 63
     :cond_5
     :goto_1
     check-cast p0, Lkotlinx/serialization/encoding/Decoder;
@@ -301,8 +320,10 @@
 
     if-eqz p1, :cond_1
 
+    .line 28
     check-cast p1, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;
 
+    .line 29
     move-object v0, p0
 
     check-cast v0, Lkotlinx/serialization/encoding/Encoder;
@@ -313,6 +334,7 @@
 
     move-result-object p2
 
+    .line 30
     check-cast p1, Lkotlinx/serialization/SerializationStrategy;
 
     invoke-interface {p0}, Lkotlinx/serialization/json/JsonEncoder;->getJson()Lkotlinx/serialization/json/Json;
@@ -327,6 +349,7 @@
 
     invoke-static {p1, p2, p0}, Lkotlinx/serialization/json/internal/PolymorphicKt;->validateIfSealed(Lkotlinx/serialization/SerializationStrategy;Lkotlinx/serialization/SerializationStrategy;Ljava/lang/String;)V
 
+    .line 31
     invoke-interface {p2}, Lkotlinx/serialization/SerializationStrategy;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -335,10 +358,12 @@
 
     move-result-object p0
 
+    .line 32
     invoke-static {p0}, Lkotlinx/serialization/json/internal/PolymorphicKt;->checkKind(Lkotlinx/serialization/descriptors/SerialKind;)V
 
     return-object p2
 
+    .line 29
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -348,6 +373,7 @@
 
     throw p0
 
+    .line 28
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -367,6 +393,7 @@
 
     goto :goto_0
 
+    .line 79
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -389,6 +416,7 @@
     :goto_0
     const/4 v0, -0x1
 
+    .line 80
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -431,12 +459,14 @@
         }
     .end annotation
 
+    .line 41
     instance-of v0, p0, Lkotlinx/serialization/SealedClassSerializer;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 43
     :cond_0
     invoke-interface {p1}, Lkotlinx/serialization/SerializationStrategy;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -454,6 +484,7 @@
 
     return-void
 
+    .line 44
     :cond_1
     invoke-interface {p0}, Lkotlinx/serialization/SerializationStrategy;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -463,6 +494,7 @@
 
     move-result-object p0
 
+    .line 45
     invoke-interface {p1}, Lkotlinx/serialization/SerializationStrategy;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p1
@@ -471,6 +503,7 @@
 
     move-result-object p1
 
+    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -495,6 +528,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 48
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p0, "\'. "
@@ -513,6 +547,7 @@
 
     move-result-object p0
 
+    .line 46
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

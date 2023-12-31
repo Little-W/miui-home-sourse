@@ -1,5 +1,6 @@
 .class public abstract Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;
 .super Ljava/lang/Object;
+.source "CommonNavigatorAdapter.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     new-instance v0, Landroid/database/DataSetObservable;
 
     invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
@@ -43,6 +46,7 @@
 .method public final notifyDataSetChanged()V
     .locals 0
 
+    .line 35
     iget-object p0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
@@ -53,6 +57,7 @@
 .method public final registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 0
 
+    .line 27
     iget-object p0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {p0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
@@ -63,6 +68,7 @@
 .method public final unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {p0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V

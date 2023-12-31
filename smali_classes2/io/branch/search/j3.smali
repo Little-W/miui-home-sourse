@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/j3;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods

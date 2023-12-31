@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/descriptors/SerialDescriptorImpl$toString$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "SerialDescriptors.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -48,6 +49,7 @@
 .method public final invoke(I)Ljava/lang/CharSequence;
     .locals 2
 
+    .line 302
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,6 +90,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 267
     check-cast p1, Ljava/lang/Number;
 
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I

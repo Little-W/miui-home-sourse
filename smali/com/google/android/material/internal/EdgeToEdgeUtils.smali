@@ -1,11 +1,13 @@
 .class public Lcom/google/android/material/internal/EdgeToEdgeUtils;
 .super Ljava/lang/Object;
+.source "EdgeToEdgeUtils.java"
 
 
 # direct methods
 .method public static applyEdgeToEdge(Landroid/view/Window;ZLjava/lang/Integer;Ljava/lang/Integer;)V
     .locals 5
 
+    .line 77
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -21,6 +23,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 83
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -41,6 +44,7 @@
     :goto_1
     if-eqz p3, :cond_3
 
+    .line 85
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -55,6 +59,7 @@
 
     if-eqz v0, :cond_7
 
+    .line 88
     :cond_5
     invoke-virtual {p0}, Landroid/view/Window;->getContext()Landroid/content/Context;
 
@@ -70,6 +75,7 @@
 
     if-eqz v2, :cond_6
 
+    .line 90
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -77,6 +83,7 @@
     :cond_6
     if-eqz v0, :cond_7
 
+    .line 93
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -84,8 +91,10 @@
     :cond_7
     xor-int/lit8 v0, p1, 0x1
 
+    .line 97
     invoke-static {p0, v0}, Landroidx/core/view/WindowCompat;->setDecorFitsSystemWindows(Landroid/view/Window;Z)V
 
+    .line 99
     invoke-virtual {p0}, Landroid/view/Window;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -94,6 +103,7 @@
 
     move-result v0
 
+    .line 100
     invoke-virtual {p0}, Landroid/view/Window;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -102,10 +112,13 @@
 
     move-result p1
 
+    .line 102
     invoke-virtual {p0, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
+    .line 103
     invoke-virtual {p0, p1}, Landroid/view/Window;->setNavigationBarColor(I)V
 
+    .line 106
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -118,6 +131,7 @@
 
     move-result p2
 
+    .line 109
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result p3
@@ -126,10 +140,12 @@
 
     move-result p3
 
+    .line 108
     invoke-static {p1, p3}, Lcom/google/android/material/internal/EdgeToEdgeUtils;->isUsingLightSystemBar(IZ)Z
 
     move-result p1
 
+    .line 112
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object p3
@@ -140,8 +156,10 @@
 
     if-eqz p0, :cond_8
 
+    .line 114
     invoke-virtual {p0, p2}, Landroidx/core/view/WindowInsetsControllerCompat;->setAppearanceLightStatusBars(Z)V
 
+    .line 115
     invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat;->setAppearanceLightNavigationBars(Z)V
 
     :cond_8
@@ -157,18 +175,21 @@
 
     if-eqz p1, :cond_0
 
+    .line 138
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1b
 
     if-ge v2, v3, :cond_0
 
+    .line 140
     invoke-static {p0, v1, v0}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
 
     move-result p0
 
     const/16 p1, 0x80
 
+    .line 141
     invoke-static {p0, p1}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
 
     move-result p0
@@ -182,6 +203,7 @@
 
     return p0
 
+    .line 146
     :cond_1
     invoke-static {p0, v1, v0}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
 
@@ -199,18 +221,21 @@
 
     if-eqz p1, :cond_0
 
+    .line 121
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x17
 
     if-ge v2, v3, :cond_0
 
+    .line 125
     invoke-static {p0, v1, v0}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
 
     move-result p0
 
     const/16 p1, 0x80
 
+    .line 126
     invoke-static {p0, p1}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
 
     move-result p0
@@ -224,6 +249,7 @@
 
     return p0
 
+    .line 131
     :cond_1
     invoke-static {p0, v1, v0}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
 
@@ -235,6 +261,7 @@
 .method private static isUsingLightSystemBar(IZ)Z
     .locals 1
 
+    .line 150
     invoke-static {p0}, Lcom/google/android/material/color/MaterialColors;->isColorLight(I)Z
 
     move-result v0

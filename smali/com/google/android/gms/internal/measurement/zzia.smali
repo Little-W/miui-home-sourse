@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zzia;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # static fields
@@ -20,6 +21,7 @@
 
     const-string v0, "UTF-8"
 
+    .line 23
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -28,6 +30,7 @@
 
     const-string v0, "ISO-8859-1"
 
+    .line 24
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -38,6 +41,7 @@
 
     new-array v1, v0, [B
 
+    .line 26
     sput-object v1, Lcom/google/android/gms/internal/measurement/zzia;->zzb:[B
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -46,14 +50,18 @@
 
     sput-object v1, Lcom/google/android/gms/internal/measurement/zzia;->zzd:Ljava/nio/ByteBuffer;
 
+    .line 27
     sget-object v1, Lcom/google/android/gms/internal/measurement/zzia;->zzb:[B
 
+    .line 29
     array-length v2, v1
 
+    .line 30
     invoke-static {v1, v0, v2, v0}, Lcom/google/android/gms/internal/measurement/zzhb;->zza([BIIZ)Lcom/google/android/gms/internal/measurement/zzhb;
 
     move-result-object v0
 
+    .line 31
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzia;->zze:Lcom/google/android/gms/internal/measurement/zzhb;
 
     return-void
@@ -73,6 +81,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 16
     aget-byte v1, p1, p0
 
     add-int/2addr v0, v1
@@ -128,6 +137,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -139,6 +149,7 @@
 .method static zza(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 22
     check-cast p0, Lcom/google/android/gms/internal/measurement/zzjj;
 
     invoke-interface {p0}, Lcom/google/android/gms/internal/measurement/zzjj;->zzbt()Lcom/google/android/gms/internal/measurement/zzji;
@@ -174,6 +185,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -185,6 +197,7 @@
 .method static zza(Lcom/google/android/gms/internal/measurement/zzjj;)Z
     .locals 1
 
+    .line 19
     instance-of v0, p0, Lcom/google/android/gms/internal/measurement/zzgh;
 
     if-eqz v0, :cond_0
@@ -200,6 +213,7 @@
 .method public static zza([B)Z
     .locals 0
 
+    .line 7
     invoke-static {p0}, Lcom/google/android/gms/internal/measurement/zzlb;->zza([B)Z
 
     move-result p0
@@ -210,6 +224,7 @@
 .method public static zzb([B)Ljava/lang/String;
     .locals 2
 
+    .line 8
     new-instance v0, Ljava/lang/String;
 
     sget-object v1, Lcom/google/android/gms/internal/measurement/zzia;->zza:Ljava/nio/charset/Charset;
@@ -222,10 +237,12 @@
 .method public static zzc([B)I
     .locals 2
 
+    .line 11
     array-length v0, p0
 
     const/4 v1, 0x0
 
+    .line 12
     invoke-static {v0, p0, v1, v0}, Lcom/google/android/gms/internal/measurement/zzia;->zza(I[BII)I
 
     move-result p0

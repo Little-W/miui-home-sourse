@@ -1,5 +1,6 @@
 .class public interface abstract Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/IPagerIndicator;
 .super Ljava/lang/Object;
+.source "IPagerIndicator.java"
 
 
 # virtual methods

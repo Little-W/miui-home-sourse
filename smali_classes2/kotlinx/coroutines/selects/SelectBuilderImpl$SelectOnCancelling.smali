@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/selects/SelectBuilderImpl$SelectOnCancelling;
 .super Lkotlinx/coroutines/JobCancellingNode;
+.source "Select.kt"
 
 
 # annotations
@@ -36,6 +37,7 @@
         }
     .end annotation
 
+    .line 336
     iput-object p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$SelectOnCancelling;->this$0:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
     invoke-direct {p0, p2}, Lkotlinx/coroutines/JobCancellingNode;-><init>(Lkotlinx/coroutines/Job;)V
@@ -48,6 +50,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 336
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/selects/SelectBuilderImpl$SelectOnCancelling;->invoke(Ljava/lang/Throwable;)V
@@ -60,6 +63,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 339
     iget-object p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$SelectOnCancelling;->this$0:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
     invoke-virtual {p1}, Lkotlinx/coroutines/selects/SelectBuilderImpl;->trySelect()Z
@@ -68,6 +72,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 340
     iget-object p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$SelectOnCancelling;->this$0:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
     iget-object p0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$SelectOnCancelling;->job:Lkotlinx/coroutines/Job;
@@ -87,6 +92,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 342
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

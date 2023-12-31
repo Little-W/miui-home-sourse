@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/LazyStandaloneCoroutine;
 .super Lkotlinx/coroutines/StandaloneCoroutine;
+.source "Builders.common.kt"
 
 
 # instance fields
@@ -36,8 +37,10 @@
 
     const/4 v0, 0x0
 
+    .line 197
     invoke-direct {p0, p1, v0}, Lkotlinx/coroutines/StandaloneCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Z)V
 
+    .line 198
     move-object p1, p0
 
     check-cast p1, Lkotlin/coroutines/Continuation;
@@ -56,6 +59,7 @@
 .method protected onStart()V
     .locals 1
 
+    .line 201
     iget-object v0, p0, Lkotlinx/coroutines/LazyStandaloneCoroutine;->continuation:Lkotlin/coroutines/Continuation;
 
     check-cast p0, Lkotlin/coroutines/Continuation;

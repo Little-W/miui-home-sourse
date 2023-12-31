@@ -1,5 +1,6 @@
 .class public abstract Lio/reactivex/Maybe;
 .super Ljava/lang/Object;
+.source "Maybe.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

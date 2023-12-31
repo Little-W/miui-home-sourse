@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;
 .super Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
+.source "AutoValue_SchedulerConfig.java"
 
 
 # instance fields
@@ -31,18 +32,22 @@
         }
     .end annotation
 
+    .line 18
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;-><init>()V
 
     if-eqz p1, :cond_1
 
+    .line 22
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     if-eqz p2, :cond_0
 
+    .line 26
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;->values:Ljava/util/Map;
 
     return-void
 
+    .line 24
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -52,6 +57,7 @@
 
     throw p0
 
+    .line 20
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -73,6 +79,7 @@
 
     return v0
 
+    .line 52
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
@@ -80,8 +87,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 53
     check-cast p1, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
+    .line 54
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;->getClock()Lcom/google/android/datatransport/runtime/time/Clock;
@@ -96,6 +105,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;->values:Ljava/util/Map;
 
+    .line 55
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;->getValues()Ljava/util/Map;
 
     move-result-object p1
@@ -121,6 +131,7 @@
 .method getClock()Lcom/google/android/datatransport/runtime/time/Clock;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     return-object p0
@@ -138,6 +149,7 @@
         }
     .end annotation
 
+    .line 36
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;->values:Ljava/util/Map;
 
     return-object p0
@@ -146,6 +158,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 64
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -158,6 +171,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 66
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig;->values:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->hashCode()I
@@ -172,6 +186,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

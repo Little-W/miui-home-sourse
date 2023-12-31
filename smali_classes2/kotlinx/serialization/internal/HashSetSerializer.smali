@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/HashSetSerializer;
 .super Lkotlinx/serialization/internal/ListLikeSerializer;
+.source "CollectionSerializers.kt"
 
 
 # annotations
@@ -39,8 +40,10 @@
 
     const/4 v0, 0x0
 
+    .line 238
     invoke-direct {p0, p1, v0}, Lkotlinx/serialization/internal/ListLikeSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 240
     new-instance v0, Lkotlinx/serialization/internal/HashSetClassDesc;
 
     invoke-interface {p1}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -61,6 +64,7 @@
 .method public bridge synthetic builder()Ljava/lang/Object;
     .locals 0
 
+    .line 236
     invoke-virtual {p0}, Lkotlinx/serialization/internal/HashSetSerializer;->builder()Ljava/util/HashSet;
 
     move-result-object p0
@@ -78,6 +82,7 @@
         }
     .end annotation
 
+    .line 243
     new-instance p0, Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
@@ -88,6 +93,7 @@
 .method public bridge synthetic builderSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 236
     check-cast p1, Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/HashSetSerializer;->builderSize(Ljava/util/HashSet;)I
@@ -111,6 +117,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 244
     invoke-virtual {p1}, Ljava/util/HashSet;->size()I
 
     move-result p0
@@ -121,6 +128,7 @@
 .method public bridge synthetic checkCapacity(Ljava/lang/Object;I)V
     .locals 0
 
+    .line 236
     check-cast p1, Ljava/util/HashSet;
 
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/HashSetSerializer;->checkCapacity(Ljava/util/HashSet;I)V
@@ -148,6 +156,7 @@
 .method public bridge synthetic collectionIterator(Ljava/lang/Object;)Ljava/util/Iterator;
     .locals 0
 
+    .line 236
     check-cast p1, Ljava/util/Set;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/HashSetSerializer;->collectionIterator(Ljava/util/Set;)Ljava/util/Iterator;
@@ -173,6 +182,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 242
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -183,6 +193,7 @@
 .method public bridge synthetic collectionSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 236
     check-cast p1, Ljava/util/Set;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/HashSetSerializer;->collectionSize(Ljava/util/Set;)I
@@ -206,6 +217,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 241
     invoke-interface {p1}, Ljava/util/Set;->size()I
 
     move-result p0
@@ -216,6 +228,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 240
     iget-object p0, p0, Lkotlinx/serialization/internal/HashSetSerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -224,6 +237,7 @@
 .method public bridge synthetic insert(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 236
     check-cast p1, Ljava/util/HashSet;
 
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/serialization/internal/HashSetSerializer;->insert(Ljava/util/HashSet;ILjava/lang/Object;)V
@@ -245,6 +259,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 248
     invoke-virtual {p1, p3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -253,6 +268,7 @@
 .method public bridge synthetic toBuilder(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 236
     check-cast p1, Ljava/util/Set;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/HashSetSerializer;->toBuilder(Ljava/util/Set;)Ljava/util/HashSet;
@@ -278,6 +294,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 246
     instance-of p0, p1, Ljava/util/HashSet;
 
     if-nez p0, :cond_0
@@ -310,6 +327,7 @@
 .method public bridge synthetic toResult(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 236
     check-cast p1, Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/HashSetSerializer;->toResult(Ljava/util/HashSet;)Ljava/util/Set;
@@ -335,6 +353,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 245
     check-cast p1, Ljava/util/Set;
 
     return-object p1

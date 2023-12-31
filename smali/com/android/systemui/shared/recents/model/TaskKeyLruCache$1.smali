@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$1;
 .super Landroid/util/LruCache;
+.source "TaskKeyLruCache.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;I)V
     .locals 0
 
+    .line 53
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$1;->this$0:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
@@ -48,6 +50,7 @@
         }
     .end annotation
 
+    .line 57
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$1;->this$0:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->access$000(Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;)Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;
@@ -56,6 +59,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 58
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$1;->this$0:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->access$000(Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;)Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;
@@ -76,6 +80,7 @@
 
     invoke-interface {p1, p3}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;->onEntryEvicted(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
 
+    .line 60
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$1;->this$0:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
@@ -91,6 +96,7 @@
 .method protected bridge synthetic entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 53
     check-cast p2, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$1;->entryRemoved(ZLjava/lang/Integer;Ljava/lang/Object;Ljava/lang/Object;)V

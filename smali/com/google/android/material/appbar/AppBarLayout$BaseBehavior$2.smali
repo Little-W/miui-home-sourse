@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;
 .super Ljava/lang/Object;
+.source "AppBarLayout.java"
 
 # interfaces
 .implements Landroidx/core/view/accessibility/AccessibilityViewCommand;
@@ -32,6 +33,7 @@
 .method constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;I)V
     .locals 0
 
+    .line 1770
     iput-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
     iput-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$coordinatorLayout:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
@@ -52,6 +54,7 @@
 .method public perform(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;)Z
     .locals 8
 
+    .line 1773
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
     iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$coordinatorLayout:Landroidx/coordinatorlayout/widget/CoordinatorLayout;

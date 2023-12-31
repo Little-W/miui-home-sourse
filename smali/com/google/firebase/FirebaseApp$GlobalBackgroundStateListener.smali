@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/FirebaseApp$GlobalBackgroundStateListener;
 .super Ljava/lang/Object;
+.source "FirebaseApp.java"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/internal/BackgroundDetector$BackgroundStateChangeListener;
@@ -32,6 +33,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 664
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -44,6 +46,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 661
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,6 +55,7 @@
 .method static synthetic access$100(Landroid/content/Context;)V
     .locals 0
 
+    .line 661
     invoke-static {p0}, Lcom/google/firebase/FirebaseApp$GlobalBackgroundStateListener;->ensureBackgroundStateListenerRegistered(Landroid/content/Context;)V
 
     return-void
@@ -60,12 +64,14 @@
 .method private static ensureBackgroundStateListenerRegistered(Landroid/content/Context;)V
     .locals 3
 
+    .line 668
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastIceCreamSandwich()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 669
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -76,6 +82,7 @@
 
     goto :goto_0
 
+    .line 672
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -83,6 +90,7 @@
 
     check-cast p0, Landroid/app/Application;
 
+    .line 673
     sget-object v0, Lcom/google/firebase/FirebaseApp$GlobalBackgroundStateListener;->INSTANCE:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -91,10 +99,12 @@
 
     if-nez v0, :cond_1
 
+    .line 674
     new-instance v0, Lcom/google/firebase/FirebaseApp$GlobalBackgroundStateListener;
 
     invoke-direct {v0}, Lcom/google/firebase/FirebaseApp$GlobalBackgroundStateListener;-><init>()V
 
+    .line 675
     sget-object v1, Lcom/google/firebase/FirebaseApp$GlobalBackgroundStateListener;->INSTANCE:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v2, 0x0
@@ -105,8 +115,10 @@
 
     if-eqz v1, :cond_1
 
+    .line 676
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->initialize(Landroid/app/Application;)V
 
+    .line 677
     invoke-static {}, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->getInstance()Lcom/google/android/gms/common/api/internal/BackgroundDetector;
 
     move-result-object p0
@@ -123,12 +135,14 @@
 .method public onBackgroundStateChanged(Z)V
     .locals 3
 
+    .line 684
     invoke-static {}, Lcom/google/firebase/FirebaseApp;->access$300()Ljava/lang/Object;
 
     move-result-object p0
 
     monitor-enter p0
 
+    .line 685
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -158,6 +172,7 @@
 
     check-cast v1, Lcom/google/firebase/FirebaseApp;
 
+    .line 686
     invoke-static {v1}, Lcom/google/firebase/FirebaseApp;->access$500(Lcom/google/firebase/FirebaseApp;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v2
@@ -168,10 +183,12 @@
 
     if-eqz v2, :cond_0
 
+    .line 687
     invoke-static {v1, p1}, Lcom/google/firebase/FirebaseApp;->access$600(Lcom/google/firebase/FirebaseApp;Z)V
 
     goto :goto_0
 
+    .line 690
     :cond_1
     monitor-exit p0
 

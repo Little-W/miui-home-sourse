@@ -1,5 +1,6 @@
 .class final Lkotlin/text/DelimitedRangesSequence;
 .super Ljava/lang/Object;
+.source "Strings.kt"
 
 # interfaces
 .implements Lkotlin/sequences/Sequence;
@@ -66,6 +67,7 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/text/DelimitedRangesSequence;->input:Ljava/lang/CharSequence;
@@ -82,6 +84,7 @@
 .method public static final synthetic access$getGetNextMatch$p(Lkotlin/text/DelimitedRangesSequence;)Lkotlin/jvm/functions/Function2;
     .locals 0
 
+    .line 1165
     iget-object p0, p0, Lkotlin/text/DelimitedRangesSequence;->getNextMatch:Lkotlin/jvm/functions/Function2;
 
     return-object p0
@@ -90,6 +93,7 @@
 .method public static final synthetic access$getInput$p(Lkotlin/text/DelimitedRangesSequence;)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1165
     iget-object p0, p0, Lkotlin/text/DelimitedRangesSequence;->input:Ljava/lang/CharSequence;
 
     return-object p0
@@ -98,6 +102,7 @@
 .method public static final synthetic access$getLimit$p(Lkotlin/text/DelimitedRangesSequence;)I
     .locals 0
 
+    .line 1165
     iget p0, p0, Lkotlin/text/DelimitedRangesSequence;->limit:I
 
     return p0
@@ -106,6 +111,7 @@
 .method public static final synthetic access$getStartIndex$p(Lkotlin/text/DelimitedRangesSequence;)I
     .locals 0
 
+    .line 1165
     iget p0, p0, Lkotlin/text/DelimitedRangesSequence;->startIndex:I
 
     return p0
@@ -124,6 +130,7 @@
         }
     .end annotation
 
+    .line 1172
     new-instance v0, Lkotlin/text/DelimitedRangesSequence$iterator$1;
 
     invoke-direct {v0, p0}, Lkotlin/text/DelimitedRangesSequence$iterator$1;-><init>(Lkotlin/text/DelimitedRangesSequence;)V

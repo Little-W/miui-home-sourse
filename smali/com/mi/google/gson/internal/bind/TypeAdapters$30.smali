@@ -1,5 +1,6 @@
 .class final Lcom/mi/google/gson/internal/bind/TypeAdapters$30;
 .super Ljava/lang/Object;
+.source "TypeAdapters.java"
 
 # interfaces
 .implements Lcom/mi/google/gson/TypeAdapterFactory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 824
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,10 +44,12 @@
         }
     .end annotation
 
+    .line 827
     invoke-virtual {p2}, Lcom/mi/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 828
     const-class p1, Ljava/lang/Enum;
 
     invoke-virtual {p1, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -60,6 +64,7 @@
 
     goto :goto_0
 
+    .line 831
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Class;->isEnum()Z
 
@@ -67,10 +72,12 @@
 
     if-nez p1, :cond_1
 
+    .line 832
     invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 834
     :cond_1
     new-instance p1, Lcom/mi/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;
 

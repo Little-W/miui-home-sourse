@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/behavior/SwipeDismissBehavior$2;
 .super Ljava/lang/Object;
+.source "SwipeDismissBehavior.java"
 
 # interfaces
 .implements Landroidx/core/view/accessibility/AccessibilityViewCommand;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/behavior/SwipeDismissBehavior;)V
     .locals 0
 
+    .line 415
     iput-object p1, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$2;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public perform(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;)Z
     .locals 3
 
+    .line 418
     iget-object p2, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$2;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
     invoke-virtual {p2, p1}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->canSwipeDismissView(Landroid/view/View;)Z
@@ -46,6 +49,7 @@
 
     if-eqz p2, :cond_6
 
+    .line 420
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result p2
@@ -61,6 +65,7 @@
     :cond_0
     move p2, v0
 
+    .line 421
     :goto_0
     iget-object v2, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$2;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
@@ -82,6 +87,7 @@
     :cond_2
     move v0, v1
 
+    .line 424
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
@@ -91,19 +97,23 @@
 
     neg-int p2, p2
 
+    .line 425
     :cond_4
     invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->offsetLeftAndRight(Landroid/view/View;I)V
 
     const/4 p2, 0x0
 
+    .line 426
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
+    .line 427
     iget-object p2, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$2;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
     iget-object p2, p2, Lcom/google/android/material/behavior/SwipeDismissBehavior;->listener:Lcom/google/android/material/behavior/SwipeDismissBehavior$OnDismissListener;
 
     if-eqz p2, :cond_5
 
+    .line 428
     iget-object p0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$2;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
     iget-object p0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->listener:Lcom/google/android/material/behavior/SwipeDismissBehavior$OnDismissListener;

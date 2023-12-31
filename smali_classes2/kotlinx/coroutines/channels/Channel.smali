@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/channels/Channel;
 .super Ljava/lang/Object;
+.source "Channel.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/channels/ReceiveChannel;

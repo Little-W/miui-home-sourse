@@ -1,5 +1,6 @@
 .class public final Lkotlin/jvm/internal/FloatCompanionObject;
 .super Ljava/lang/Object;
+.source "PrimitiveCompanionObjects.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 32
     new-instance v0, Lkotlin/jvm/internal/FloatCompanionObject;
 
     invoke-direct {v0}, Lkotlin/jvm/internal/FloatCompanionObject;-><init>()V
@@ -22,6 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

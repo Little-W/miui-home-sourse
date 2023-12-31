@@ -1,11 +1,13 @@
 .class public Lcom/market/sdk/utils/VersionUtils;
 .super Ljava/lang/Object;
+.source "VersionUtils.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
     :try_start_0
     const-string v4, "\\d{1,2}\\.\\d{1,2}\\.\\d{1,2}(-internal)?"
 
+    .line 15
     invoke-virtual {p0, v4}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v5
@@ -33,9 +36,11 @@
 
     return v3
 
+    .line 19
     :cond_0
     sget-object v5, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
+    .line 20
     invoke-virtual {v5, v4}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v4
@@ -44,23 +49,28 @@
 
     return v3
 
+    .line 23
     :cond_1
     invoke-virtual {v5, v2, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 24
     invoke-virtual {p0, v2, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 25
     invoke-virtual {v4, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
+    .line 26
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 27
     aget-object v0, v1, v3
 
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -95,6 +105,7 @@
 
     add-long/2addr v4, v8
 
+    .line 28
     aget-object v1, p0, v3
 
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -138,6 +149,7 @@
     :catchall_0
     move-exception p0
 
+    .line 31
     invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -163,6 +175,7 @@
     :try_start_0
     const-string v4, "V\\d{1,2}\\.\\d{1,2}\\.\\d{1,2}\\.\\d{1,2}"
 
+    .line 38
     invoke-virtual {v0, v4}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v4
@@ -173,6 +186,7 @@
 
     if-nez v4, :cond_0
 
+    .line 40
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -190,17 +204,20 @@
 
     return v3
 
+    .line 43
     :cond_0
     sget-object v4, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     const-string v6, "V\\d{1,2}\\.\\d{1,2}\\.\\d{1,2}\\.\\d{1,2}\\..*"
 
+    .line 44
     invoke-virtual {v4, v6}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
+    .line 45
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,6 +234,7 @@
 
     invoke-static {v2, v1}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 46
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,15 +251,18 @@
 
     return v3
 
+    .line 49
     :cond_1
     invoke-virtual {v4, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
+    .line 50
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 51
     aget-object v1, v4, v3
 
     const/4 v5, 0x1
@@ -274,6 +295,7 @@
 
     aget-object v10, v4, v1
 
+    .line 52
     invoke-static {v10}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v10
@@ -294,6 +316,7 @@
 
     add-long v6, v6, v16
 
+    .line 53
     aget-object v4, v0, v3
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -308,6 +331,7 @@
 
     aget-object v4, v0, v5
 
+    .line 54
     invoke-static {v4}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v8
@@ -328,12 +352,14 @@
 
     aget-object v0, v0, v10
 
+    .line 55
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
     add-long v0, v16, v0
 
+    .line 56
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -350,6 +376,7 @@
 
     invoke-static {v2, v4}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 57
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,6 +407,7 @@
     :catchall_0
     move-exception v0
 
+    .line 60
     invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v0

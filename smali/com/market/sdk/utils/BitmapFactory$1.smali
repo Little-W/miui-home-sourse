@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/utils/BitmapFactory$1;
 .super Landroid/content/ContextWrapper;
+.source "BitmapFactory.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 166
     invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
     return-void

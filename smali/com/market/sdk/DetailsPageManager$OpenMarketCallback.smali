@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;
 .super Ljava/lang/Object;
+.source "DetailsPageManager.java"
 
 
 # annotations

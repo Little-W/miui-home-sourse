@@ -1,5 +1,6 @@
 .class final synthetic Lkotlinx/coroutines/flow/internal/SafeCollectorKt$emitFun$1;
 .super Lkotlin/jvm/internal/FunctionReferenceImpl;
+.source "SafeCollector.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -92,6 +93,7 @@
 
     invoke-static {p0}, Lkotlin/jvm/internal/InlineMarker;->mark(I)V
 
+    .line 15
     invoke-interface {p1, p2, p3}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0

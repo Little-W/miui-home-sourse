@@ -1,11 +1,13 @@
 .class public final Lkotlinx/coroutines/EventLoopKt;
 .super Ljava/lang/Object;
+.source "EventLoop.kt"
 
 
 # direct methods
 .method public static final createEventLoop()Lkotlinx/coroutines/EventLoop;
     .locals 2
 
+    .line 26
     new-instance v0, Lkotlinx/coroutines/BlockingEventLoop;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;

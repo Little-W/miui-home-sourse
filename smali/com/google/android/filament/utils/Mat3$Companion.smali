@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/Mat3$Companion;
 .super Ljava/lang/Object;
+.source "Matrix.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +31,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 116
     invoke-direct {p0}, Lcom/google/android/filament/utils/Mat3$Companion;-><init>()V
 
     return-void
@@ -39,6 +42,7 @@
 .method public final identity()Lcom/google/android/filament/utils/Mat3;
     .locals 6
 
+    .line 126
     new-instance p0, Lcom/google/android/filament/utils/Mat3;
 
     const/4 v1, 0x0
@@ -65,6 +69,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 118
     array-length p0, p1
 
     const/4 v0, 0x1
@@ -85,8 +90,10 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 119
     new-instance p0, Lcom/google/android/filament/utils/Mat3;
 
+    .line 120
     new-instance v2, Lcom/google/android/filament/utils/Float3;
 
     aget v1, p1, v1
@@ -101,6 +108,7 @@
 
     invoke-direct {v2, v1, v3, v4}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 121
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     aget v0, p1, v0
@@ -115,6 +123,7 @@
 
     invoke-direct {v1, v0, v3, v4}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 122
     new-instance v0, Lcom/google/android/filament/utils/Float3;
 
     const/4 v3, 0x2
@@ -131,10 +140,12 @@
 
     invoke-direct {v0, v3, v4, p1}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 119
     invoke-direct {p0, v2, v1, v0}, Lcom/google/android/filament/utils/Mat3;-><init>(Lcom/google/android/filament/utils/Float3;Lcom/google/android/filament/utils/Float3;Lcom/google/android/filament/utils/Float3;)V
 
     return-object p0
 
+    .line 118
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

@@ -1,5 +1,6 @@
 .class public final enum Lcom/market/sdk/AbTestIdentifier;
 .super Ljava/lang/Enum;
+.source "AbTestIdentifier.java"
 
 
 # annotations
@@ -24,6 +25,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 8
     new-instance v0, Lcom/market/sdk/AbTestIdentifier;
 
     const/4 v1, 0x0
@@ -48,6 +50,7 @@
 
     new-array v0, v0, [Lcom/market/sdk/AbTestIdentifier;
 
+    .line 7
     sget-object v3, Lcom/market/sdk/AbTestIdentifier;->IMEI_MD5:Lcom/market/sdk/AbTestIdentifier;
 
     aput-object v3, v0, v1
@@ -69,6 +72,7 @@
         }
     .end annotation
 
+    .line 7
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -77,6 +81,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/market/sdk/AbTestIdentifier;
     .locals 1
 
+    .line 7
     const-class v0, Lcom/market/sdk/AbTestIdentifier;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -91,6 +96,7 @@
 .method public static values()[Lcom/market/sdk/AbTestIdentifier;
     .locals 1
 
+    .line 7
     sget-object v0, Lcom/market/sdk/AbTestIdentifier;->$VALUES:[Lcom/market/sdk/AbTestIdentifier;
 
     invoke-virtual {v0}, [Lcom/market/sdk/AbTestIdentifier;->clone()Ljava/lang/Object;

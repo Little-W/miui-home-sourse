@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;
 .super Lcom/google/android/datatransport/runtime/SendRequest$Builder;
+.source "AutoValue_SendRequest.java"
 
 
 # annotations
@@ -43,6 +44,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 109
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/SendRequest$Builder;-><init>()V
 
     return-void
@@ -53,12 +55,14 @@
 .method public build()Lcom/google/android/datatransport/runtime/SendRequest;
     .locals 9
 
+    .line 154
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 155
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,11 +77,13 @@
 
     move-result-object v1
 
+    .line 157
     :cond_0
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->transportName:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
+    .line 158
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,11 +98,13 @@
 
     move-result-object v1
 
+    .line 160
     :cond_1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->event:Lcom/google/android/datatransport/Event;
 
     if-nez v0, :cond_2
 
+    .line 161
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,11 +119,13 @@
 
     move-result-object v1
 
+    .line 163
     :cond_2
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->transformer:Lcom/google/android/datatransport/Transformer;
 
     if-nez v0, :cond_3
 
+    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,11 +140,13 @@
 
     move-result-object v1
 
+    .line 166
     :cond_3
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->encoding:Lcom/google/android/datatransport/Encoding;
 
     if-nez v0, :cond_4
 
+    .line 167
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,6 +161,7 @@
 
     move-result-object v1
 
+    .line 169
     :cond_4
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -156,6 +169,7 @@
 
     if-eqz v0, :cond_5
 
+    .line 172
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;
 
     iget-object v3, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
@@ -176,6 +190,7 @@
 
     return-object v0
 
+    .line 170
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -203,10 +218,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 148
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->encoding:Lcom/google/android/datatransport/Encoding;
 
     return-object p0
 
+    .line 146
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -230,10 +247,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 132
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->event:Lcom/google/android/datatransport/Event;
 
     return-object p0
 
+    .line 130
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -257,10 +276,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 140
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->transformer:Lcom/google/android/datatransport/Transformer;
 
     return-object p0
 
+    .line 138
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -276,10 +297,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 116
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     return-object p0
 
+    .line 114
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -295,10 +318,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 124
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;->transportName:Ljava/lang/String;
 
     return-object p0
 
+    .line 122
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

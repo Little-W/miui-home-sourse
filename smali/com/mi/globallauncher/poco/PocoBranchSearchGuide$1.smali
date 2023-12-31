@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;
 .super Landroid/text/style/URLSpan;
+.source "PocoBranchSearchGuide.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/Activity;Z)V
     .locals 0
 
+    .line 170
     iput-object p2, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$tempUrl:Ljava/lang/String;
 
     iput-object p3, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$activity:Landroid/app/Activity;
@@ -41,6 +43,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
+    .line 173
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$tempUrl:Ljava/lang/String;
 
     const-string v0, "http://url1"
@@ -51,6 +54,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 174
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$activity:Landroid/app/Activity;
 
     const/4 v0, 0x1
@@ -61,6 +65,7 @@
 
     goto :goto_0
 
+    .line 175
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$tempUrl:Ljava/lang/String;
 
@@ -72,6 +77,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 176
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$activity:Landroid/app/Activity;
 
     const/4 v0, 0x2
@@ -80,6 +86,7 @@
 
     invoke-static {p1, v0, v1}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->access$000(Landroid/app/Activity;IZ)V
 
+    .line 178
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$activity:Landroid/app/Activity;
@@ -94,8 +101,10 @@
 .method public updateDrawState(Landroid/text/TextPaint;)V
     .locals 1
 
+    .line 183
     invoke-super {p0, p1}, Landroid/text/style/URLSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
+    .line 184
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$activity:Landroid/app/Activity;
 
     iget-boolean p0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;->val$lightMode:Z
@@ -118,6 +127,7 @@
 
     const/4 p0, 0x1
 
+    .line 185
     invoke-virtual {p1, p0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
     return-void

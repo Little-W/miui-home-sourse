@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzfu;
 .super Lcom/google/android/gms/internal/measurement/zzfg;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # annotations
@@ -35,8 +36,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzfg;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/gms/internal/measurement/zzeb;->zza(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -54,10 +57,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzfg;-><init>()V
 
+    .line 5
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zza:Ljava/lang/Object;
 
+    .line 6
     iput p2, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zzb:I
 
     return-void
@@ -68,6 +74,7 @@
 .method public final contains(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 9
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zza:Ljava/lang/Object;
 
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -80,10 +87,12 @@
 .method public final hashCode()I
     .locals 1
 
+    .line 17
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zzb:I
 
     if-nez v0, :cond_0
 
+    .line 19
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zza:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -99,6 +108,7 @@
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 23
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzey;->zza()Lcom/google/android/gms/internal/measurement/zzfx;
 
     move-result-object p0
@@ -117,6 +127,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
+    .line 22
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zza:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -157,6 +168,7 @@
 .method final zza([Ljava/lang/Object;I)I
     .locals 0
 
+    .line 15
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zza:Ljava/lang/Object;
 
     aput-object p0, p1, p2
@@ -176,8 +188,10 @@
         }
     .end annotation
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zza:Ljava/lang/Object;
 
+    .line 11
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzfl;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/internal/measurement/zzfl;-><init>(Ljava/lang/Object;)V
@@ -196,6 +210,7 @@
 .method final zzg()Z
     .locals 0
 
+    .line 21
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zzb:I
 
     if-eqz p0, :cond_0
@@ -220,6 +235,7 @@
         }
     .end annotation
 
+    .line 13
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfu;->zza:Ljava/lang/Object;
 
     invoke-static {p0}, Lcom/google/android/gms/internal/measurement/zzfb;->zza(Ljava/lang/Object;)Lcom/google/android/gms/internal/measurement/zzfb;

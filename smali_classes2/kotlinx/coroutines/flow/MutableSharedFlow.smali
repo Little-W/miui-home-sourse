@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/flow/MutableSharedFlow;
 .super Ljava/lang/Object;
+.source "SharedFlow.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;

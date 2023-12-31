@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/JobNode;
 .super Lkotlinx/coroutines/CompletionHandlerBase;
+.source "JobSupport.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/DisposableHandle;
@@ -38,6 +39,7 @@
         }
     .end annotation
 
+    .line 1349
     invoke-direct {p0}, Lkotlinx/coroutines/CompletionHandlerBase;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/JobNode;->job:Lkotlinx/coroutines/Job;
@@ -50,6 +52,7 @@
 .method public dispose()V
     .locals 1
 
+    .line 1352
     iget-object v0, p0, Lkotlinx/coroutines/JobNode;->job:Lkotlinx/coroutines/Job;
 
     if-eqz v0, :cond_0

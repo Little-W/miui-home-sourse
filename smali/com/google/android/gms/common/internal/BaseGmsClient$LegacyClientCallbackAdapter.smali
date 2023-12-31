@@ -24,6 +24,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/internal/BaseGmsClient;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;->zzct:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,12 +37,14 @@
 .method public onReportServiceBinding(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 1
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/ConnectionResult;->isSuccess()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;->zzct:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     const/4 p1, 0x0
@@ -54,6 +57,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;->zzct:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
@@ -63,6 +67,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;->zzct:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     invoke-static {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzg(Lcom/google/android/gms/common/internal/BaseGmsClient;)Lcom/google/android/gms/common/internal/BaseGmsClient$BaseOnConnectionFailedListener;

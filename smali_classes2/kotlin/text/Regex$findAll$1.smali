@@ -1,5 +1,6 @@
 .class final Lkotlin/text/Regex$findAll$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Regex.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -55,6 +56,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 83
     invoke-virtual {p0}, Lkotlin/text/Regex$findAll$1;->invoke()Lkotlin/text/MatchResult;
 
     move-result-object p0
@@ -65,6 +67,7 @@
 .method public final invoke()Lkotlin/text/MatchResult;
     .locals 2
 
+    .line 134
     iget-object v0, p0, Lkotlin/text/Regex$findAll$1;->this$0:Lkotlin/text/Regex;
 
     iget-object v1, p0, Lkotlin/text/Regex$findAll$1;->$input:Ljava/lang/CharSequence;

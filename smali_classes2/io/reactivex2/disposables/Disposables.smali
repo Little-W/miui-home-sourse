@@ -1,11 +1,13 @@
 .class public final Lio/reactivex2/disposables/Disposables;
 .super Ljava/lang/Object;
+.source "Disposables.java"
 
 
 # direct methods
 .method public static disposed()Lio/reactivex2/disposables/Disposable;
     .locals 1
 
+    .line 111
     sget-object v0, Lio/reactivex2/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex2/internal/disposables/EmptyDisposable;
 
     return-object v0
@@ -16,8 +18,10 @@
 
     const-string v0, "run is null"
 
+    .line 43
     invoke-static {p0, v0}, Lio/reactivex2/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 44
     new-instance v0, Lio/reactivex2/disposables/RunnableDisposable;
 
     invoke-direct {v0, p0}, Lio/reactivex2/disposables/RunnableDisposable;-><init>(Ljava/lang/Runnable;)V

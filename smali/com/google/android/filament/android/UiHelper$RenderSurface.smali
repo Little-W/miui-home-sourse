@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/android/filament/android/UiHelper$RenderSurface;
 .super Ljava/lang/Object;
+.source "UiHelper.java"
 
 
 # annotations

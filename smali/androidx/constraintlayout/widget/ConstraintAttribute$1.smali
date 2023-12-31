@@ -1,5 +1,6 @@
 .class synthetic Landroidx/constraintlayout/widget/ConstraintAttribute$1;
 .super Ljava/lang/Object;
+.source "ConstraintAttribute.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 88
     invoke-static {}, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->values()[Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     move-result-object v0

@@ -32,8 +32,10 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     :try_start_0
     new-instance v0, Landroid/os/HandlerThread;
 
@@ -41,8 +43,10 @@
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
+    .line 53
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
+    .line 54
     new-instance v1, Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -60,6 +64,7 @@
     :catchall_0
     move-exception p0
 
+    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,12 +94,15 @@
 .method public static a()Lcom/xiaomi/onetrack/c/l;
     .locals 1
 
+    .line 34
     sget-object v0, Lcom/xiaomi/onetrack/c/l;->f:Lcom/xiaomi/onetrack/c/l;
 
     if-nez v0, :cond_0
 
+    .line 35
     invoke-static {}, Lcom/xiaomi/onetrack/c/l;->b()V
 
+    .line 37
     :cond_0
     sget-object v0, Lcom/xiaomi/onetrack/c/l;->f:Lcom/xiaomi/onetrack/c/l;
 
@@ -104,6 +112,7 @@
 .method static synthetic a(Lcom/xiaomi/onetrack/c/l;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 21
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/onetrack/c/l;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -128,6 +137,7 @@
 
     const/4 v1, 0x0
 
+    .line 150
     :try_start_0
     sget-object v2, Lcom/xiaomi/onetrack/c/l;->e:Ljava/lang/String;
 
@@ -143,6 +153,7 @@
 
     move-result-object p0
 
+    .line 151
     new-instance v2, Ljava/io/File;
 
     invoke-static {}, Lcom/xiaomi/onetrack/c/l;->c()Ljava/lang/String;
@@ -151,6 +162,7 @@
 
     invoke-direct {v2, v3, p0}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 152
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -160,17 +172,21 @@
 
     if-nez p0, :cond_0
 
+    .line 169
     :try_start_1
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 170
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
+    .line 153
     monitor-exit v0
 
     return-object v1
 
+    .line 155
     :cond_0
     :try_start_2
     new-instance p0, Ljava/util/ArrayList;
@@ -180,6 +196,7 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 156
     :try_start_3
     new-instance v3, Ljava/io/FileReader;
 
@@ -188,6 +205,7 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 157
     :try_start_4
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -196,6 +214,7 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 159
     :goto_0
     :try_start_5
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -204,18 +223,22 @@
 
     if-eqz v1, :cond_1
 
+    .line 160
     invoke-static {v1}, Lcom/xiaomi/onetrack/d/c;->a(Ljava/lang/String;)[B
 
     move-result-object v1
 
+    .line 161
     invoke-static {v1}, Lcom/xiaomi/onetrack/c/c;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 162
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
+    .line 163
     invoke-interface {p0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
@@ -223,10 +246,12 @@
 
     goto :goto_0
 
+    .line 169
     :cond_1
     :try_start_6
     invoke-static {v2}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 170
     invoke-static {v3}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
@@ -290,6 +315,7 @@
     :try_start_7
     const-string v4, "SystemImpCacheManager"
 
+    .line 166
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,19 +336,23 @@
 
     invoke-static {v4, v5}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 167
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    .line 169
     :try_start_8
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 170
     invoke-static {v3}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
     move-object p0, v2
 
+    .line 172
     :goto_3
     monitor-exit v0
 
@@ -331,12 +361,15 @@
     :catchall_2
     move-exception p0
 
+    .line 169
     :goto_4
     :try_start_9
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 170
     invoke-static {v3}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 171
     throw p0
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
@@ -352,25 +385,30 @@
 .method public static b()V
     .locals 2
 
+    .line 41
     sget-object v0, Lcom/xiaomi/onetrack/c/l;->f:Lcom/xiaomi/onetrack/c/l;
 
     if-nez v0, :cond_1
 
+    .line 42
     const-class v0, Lcom/xiaomi/onetrack/c/l;
 
     monitor-enter v0
 
+    .line 43
     :try_start_0
     sget-object v1, Lcom/xiaomi/onetrack/c/l;->f:Lcom/xiaomi/onetrack/c/l;
 
     if-nez v1, :cond_0
 
+    .line 44
     new-instance v1, Lcom/xiaomi/onetrack/c/l;
 
     invoke-direct {v1}, Lcom/xiaomi/onetrack/c/l;-><init>()V
 
     sput-object v1, Lcom/xiaomi/onetrack/c/l;->f:Lcom/xiaomi/onetrack/c/l;
 
+    .line 46
     :cond_0
     monitor-exit v0
 
@@ -397,6 +435,7 @@
 
     const/4 v0, 0x0
 
+    .line 88
     :try_start_0
     sget-object v1, Lcom/xiaomi/onetrack/c/l;->e:Ljava/lang/String;
 
@@ -412,6 +451,7 @@
 
     move-result-object p1
 
+    .line 89
     new-instance v1, Ljava/io/File;
 
     invoke-static {}, Lcom/xiaomi/onetrack/c/l;->c()Ljava/lang/String;
@@ -420,12 +460,14 @@
 
     invoke-direct {v1, v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 90
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
+    .line 91
     invoke-virtual {v1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object p1
@@ -436,10 +478,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 92
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
     goto :goto_0
 
+    .line 95
     :cond_0
     new-instance p1, Ljava/io/File;
 
@@ -453,10 +497,13 @@
 
     invoke-direct {p1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 96
     invoke-virtual {p1}, Ljava/io/File;->mkdirs()Z
 
+    .line 97
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
+    .line 101
     :cond_1
     :goto_0
     new-instance p1, Lorg/json/JSONObject;
@@ -465,12 +512,15 @@
 
     const-string v3, "eventName"
 
+    .line 102
     invoke-virtual {p1, v3, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p2, "data"
 
+    .line 103
     invoke-virtual {p1, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
+    .line 104
     invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -479,12 +529,14 @@
 
     move-result-object p1
 
+    .line 106
     new-instance p2, Ljava/io/FileWriter;
 
     invoke-direct {p2, v1, v2}, Ljava/io/FileWriter;-><init>(Ljava/io/File;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 107
     :try_start_1
     new-instance p3, Ljava/io/BufferedWriter;
 
@@ -492,20 +544,25 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 108
     :try_start_2
     invoke-static {p1}, Lcom/xiaomi/onetrack/d/c;->a([B)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 109
     invoke-virtual {p3, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
+    .line 110
     invoke-virtual {p3}, Ljava/io/BufferedWriter;->newLine()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 114
     :try_start_3
     invoke-static {p3}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 115
     invoke-static {p2}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
@@ -536,6 +593,7 @@
     :try_start_4
     const-string p2, "SystemImpCacheManager"
 
+    .line 112
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -558,13 +616,16 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
+    .line 114
     :try_start_5
     invoke-static {p3}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 115
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
+    .line 117
     :goto_3
     monitor-exit p0
 
@@ -573,11 +634,14 @@
     :catchall_3
     move-exception p1
 
+    .line 114
     :try_start_6
     invoke-static {p3}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 115
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
+    .line 116
     throw p1
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
@@ -593,10 +657,12 @@
 .method private static c()Ljava/lang/String;
     .locals 2
 
+    .line 62
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
 
     move-result-object v0
 
+    .line 63
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -633,6 +699,7 @@
 
     monitor-enter p0
 
+    .line 125
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -642,6 +709,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 126
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -656,6 +724,7 @@
 
     goto :goto_1
 
+    .line 129
     :cond_0
     sget-object v1, Lcom/xiaomi/onetrack/c/l;->e:Ljava/lang/String;
 
@@ -671,15 +740,18 @@
 
     move-result-object p1
 
+    .line 130
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
+    .line 131
     :goto_0
     array-length v1, v0
 
     if-ge v3, v1, :cond_3
 
+    .line 133
     aget-object v1, v0, v3
 
     invoke-virtual {v1}, Ljava/io/File;->isFile()Z
@@ -688,6 +760,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 134
     aget-object v1, v0, v3
 
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -700,6 +773,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 135
     aget-object p1, v0, v3
 
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
@@ -714,6 +788,7 @@
 
     goto :goto_0
 
+    .line 127
     :cond_2
     :goto_1
     monitor-exit p0
@@ -731,6 +806,7 @@
     :try_start_1
     const-string v0, "SystemImpCacheManager"
 
+    .line 141
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -753,6 +829,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 143
     :cond_3
     :goto_2
     monitor-exit p0
@@ -768,6 +845,7 @@
 .method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 72
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/l;->h:Landroid/os/Handler;
 
     if-eqz v0, :cond_1
@@ -786,6 +864,7 @@
 
     goto :goto_0
 
+    .line 75
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/l;->h:Landroid/os/Handler;
 
@@ -805,6 +884,7 @@
 
     monitor-enter p0
 
+    .line 177
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/l;->h:Landroid/os/Handler;
 
@@ -818,6 +898,7 @@
 
     goto :goto_0
 
+    .line 180
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/l;->h:Landroid/os/Handler;
 
@@ -829,10 +910,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 198
     monitor-exit p0
 
     return-void
 
+    .line 178
     :cond_1
     :goto_0
     monitor-exit p0

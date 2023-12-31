@@ -1,5 +1,6 @@
 .class synthetic Lcom/airbnb/lottie/RenderMode$1;
 .super Ljava/lang/Object;
+.source "RenderMode.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 17
     invoke-static {}, Lcom/airbnb/lottie/RenderMode;->values()[Lcom/airbnb/lottie/RenderMode;
 
     move-result-object v0

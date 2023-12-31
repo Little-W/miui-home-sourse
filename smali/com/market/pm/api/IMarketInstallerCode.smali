@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/pm/api/IMarketInstallerCode;
 .super Ljava/lang/Object;
+.source "IMarketInstallerCode.java"
 
 
 # static fields

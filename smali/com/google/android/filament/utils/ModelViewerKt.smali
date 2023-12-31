@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/ModelViewerKt;
 .super Ljava/lang/Object;
+.source "ModelViewer.kt"
 
 
 # static fields

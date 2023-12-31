@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/homeguide/HomeUserGuideData;
 .super Lcom/market/sdk/AbsParcelable;
+.source "HomeUserGuideData.java"
 
 
 # static fields
@@ -26,6 +27,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 60
     new-instance v0, Lcom/market/sdk/homeguide/HomeUserGuideData$1;
 
     invoke-direct {v0}, Lcom/market/sdk/homeguide/HomeUserGuideData$1;-><init>()V
@@ -38,6 +40,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Lcom/market/sdk/AbsParcelable;-><init>()V
 
     return-void
@@ -46,8 +49,10 @@
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 21
     invoke-direct {p0, p1}, Lcom/market/sdk/AbsParcelable;-><init>(Landroid/os/Parcel;)V
 
+    .line 22
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -56,6 +61,7 @@
 
     iput-object v0, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->viewConfig:Lcom/market/sdk/homeguide/ViewConfig;
 
+    .line 23
     const-class v0, Landroid/net/Uri;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -86,6 +92,7 @@
 .method public getHomeScreenUri()Landroid/net/Uri;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->homeScreen:Landroid/net/Uri;
 
     return-object p0
@@ -94,6 +101,7 @@
 .method public getLocalFilePath()Ljava/lang/String;
     .locals 0
 
+    .line 44
     iget-object p0, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->localFilePath:Ljava/lang/String;
 
     return-object p0
@@ -102,6 +110,7 @@
 .method public getViewConfig()Lcom/market/sdk/homeguide/ViewConfig;
     .locals 0
 
+    .line 27
     iget-object p0, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->viewConfig:Lcom/market/sdk/homeguide/ViewConfig;
 
     return-object p0
@@ -110,6 +119,7 @@
 .method public isValid()Z
     .locals 2
 
+    .line 52
     iget-object v0, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->viewConfig:Lcom/market/sdk/homeguide/ViewConfig;
 
     const/4 v1, 0x0
@@ -124,6 +134,7 @@
 
     goto :goto_0
 
+    .line 55
     :cond_0
     iget-object p0, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->homeScreen:Landroid/net/Uri;
 
@@ -144,6 +155,7 @@
 .method public setHomeScreenUri(Landroid/net/Uri;)V
     .locals 0
 
+    .line 36
     iput-object p1, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->homeScreen:Landroid/net/Uri;
 
     return-void
@@ -152,6 +164,7 @@
 .method public setLocalFilePath(Ljava/lang/String;)V
     .locals 0
 
+    .line 48
     iput-object p1, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->localFilePath:Ljava/lang/String;
 
     return-void
@@ -160,6 +173,7 @@
 .method public setViewConfig(Lcom/market/sdk/homeguide/ViewConfig;)V
     .locals 0
 
+    .line 31
     iput-object p1, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->viewConfig:Lcom/market/sdk/homeguide/ViewConfig;
 
     return-void
@@ -168,12 +182,15 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 79
     invoke-super {p0, p1, p2}, Lcom/market/sdk/AbsParcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 80
     iget-object p2, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->viewConfig:Lcom/market/sdk/homeguide/ViewConfig;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
+    .line 81
     iget-object p0, p0, Lcom/market/sdk/homeguide/HomeUserGuideData;->homeScreen:Landroid/net/Uri;
 
     const/4 p2, 0x0

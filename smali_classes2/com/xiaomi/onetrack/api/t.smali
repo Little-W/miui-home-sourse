@@ -17,6 +17,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/m;Ljava/lang/String;Z)V
     .locals 0
 
+    .line 491
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/t;->c:Lcom/xiaomi/onetrack/api/m;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/t;->a:Ljava/lang/String;
@@ -37,6 +38,7 @@
 
     const-string v1, "OneTrackImp"
 
+    .line 495
     :try_start_0
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/t;->c:Lcom/xiaomi/onetrack/api/m;
 
@@ -52,10 +54,12 @@
 
     const-string p0, "config.autoTrackActivityAction is false, ignore onetrack_pa resume event"
 
+    .line 496
     invoke-static {v1, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 499
     :cond_0
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/t;->c:Lcom/xiaomi/onetrack/api/m;
 
@@ -63,6 +67,7 @@
 
     move-result-object v7
 
+    .line 500
     iget-object v3, p0, Lcom/xiaomi/onetrack/api/t;->a:Ljava/lang/String;
 
     const-string v4, "onetrack_pa"
@@ -97,6 +102,7 @@
 
     move-result-object v2
 
+    .line 501
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/t;->c:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {p0}, Lcom/xiaomi/onetrack/api/m;->a(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/api/j;
@@ -105,12 +111,14 @@
 
     invoke-interface {p0, v0, v2}, Lcom/xiaomi/onetrack/api/j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 502
     sget-boolean p0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz p0, :cond_1
 
     const-string p0, "trackPageStartAuto"
 
+    .line 503
     invoke-static {v1, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -120,6 +128,7 @@
     :catch_0
     move-exception p0
 
+    .line 506
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

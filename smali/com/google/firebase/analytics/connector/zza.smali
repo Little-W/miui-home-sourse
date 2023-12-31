@@ -1,5 +1,6 @@
 .class final synthetic Lcom/google/firebase/analytics/connector/zza;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-api@@18.0.0"
 
 # interfaces
 .implements Lcom/google/firebase/events/EventHandler;

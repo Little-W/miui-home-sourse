@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/resource/bitmap/Downsampler$1;
 .super Ljava/lang/Object;
+.source "Downsampler.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

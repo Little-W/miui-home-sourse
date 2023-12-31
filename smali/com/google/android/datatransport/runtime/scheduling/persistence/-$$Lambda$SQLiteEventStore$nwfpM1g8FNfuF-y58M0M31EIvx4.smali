@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/android/datatransport/runtime/scheduling/persistence/-$$Lambda$SQLiteEventStore$nwfpM1g8FNfuF-y58M0M31EIvx4;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;

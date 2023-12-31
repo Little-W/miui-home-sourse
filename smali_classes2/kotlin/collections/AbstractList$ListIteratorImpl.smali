@@ -1,5 +1,6 @@
 .class Lkotlin/collections/AbstractList$ListIteratorImpl;
 .super Lkotlin/collections/AbstractList$IteratorImpl;
+.source "AbstractList.kt"
 
 # interfaces
 .implements Ljava/util/ListIterator;
@@ -38,10 +39,12 @@
         }
     .end annotation
 
+    .line 86
     iput-object p1, p0, Lkotlin/collections/AbstractList$ListIteratorImpl;->this$0:Lkotlin/collections/AbstractList;
 
     invoke-direct {p0, p1}, Lkotlin/collections/AbstractList$IteratorImpl;-><init>(Lkotlin/collections/AbstractList;)V
 
+    .line 89
     sget-object v0, Lkotlin/collections/AbstractList;->Companion:Lkotlin/collections/AbstractList$Companion;
 
     invoke-virtual {p1}, Lkotlin/collections/AbstractList;->size()I
@@ -50,6 +53,7 @@
 
     invoke-virtual {v0, p2, p1}, Lkotlin/collections/AbstractList$Companion;->checkPositionIndex$kotlin_stdlib(II)V
 
+    .line 90
     invoke-virtual {p0, p2}, Lkotlin/collections/AbstractList$ListIteratorImpl;->setIndex(I)V
 
     return-void
@@ -77,6 +81,7 @@
 .method public hasPrevious()Z
     .locals 0
 
+    .line 93
     invoke-virtual {p0}, Lkotlin/collections/AbstractList$ListIteratorImpl;->getIndex()I
 
     move-result p0
@@ -97,6 +102,7 @@
 .method public nextIndex()I
     .locals 0
 
+    .line 95
     invoke-virtual {p0}, Lkotlin/collections/AbstractList$ListIteratorImpl;->getIndex()I
 
     move-result p0
@@ -112,12 +118,14 @@
         }
     .end annotation
 
+    .line 98
     invoke-virtual {p0}, Lkotlin/collections/AbstractList$ListIteratorImpl;->hasPrevious()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 99
     iget-object v0, p0, Lkotlin/collections/AbstractList$ListIteratorImpl;->this$0:Lkotlin/collections/AbstractList;
 
     invoke-virtual {p0}, Lkotlin/collections/AbstractList$ListIteratorImpl;->getIndex()I
@@ -138,6 +146,7 @@
 
     return-object p0
 
+    .line 98
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -151,6 +160,7 @@
 .method public previousIndex()I
     .locals 0
 
+    .line 102
     invoke-virtual {p0}, Lkotlin/collections/AbstractList$ListIteratorImpl;->getIndex()I
 
     move-result p0

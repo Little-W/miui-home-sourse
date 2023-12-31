@@ -26,12 +26,15 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "com.mdid.msa"
 
+    .line 19
     iput-object v0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->a:Ljava/lang/String;
 
+    .line 20
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     const/4 v1, 0x1
@@ -40,6 +43,7 @@
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->b:Ljava/util/concurrent/LinkedBlockingQueue;
 
+    .line 76
     new-instance v0, Lcom/xiaomi/onetrack/util/oaid/helpers/ZTEDeviceIDHelper$1;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/onetrack/util/oaid/helpers/ZTEDeviceIDHelper$1;-><init>(Lcom/xiaomi/onetrack/util/oaid/helpers/m;)V
@@ -52,10 +56,12 @@
 .method private a(Ljava/lang/String;Landroid/content/Context;)V
     .locals 2
 
+    .line 23
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
+    .line 24
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->a:Ljava/lang/String;
 
     const-string v1, "com.mdid.msa.service.MsaKlService"
@@ -64,10 +70,12 @@
 
     const-string p0, "com.bun.msa.action.start.service"
 
+    .line 25
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p0, "com.bun.msa.param.pkgname"
 
+    .line 26
     invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     :try_start_0
@@ -75,8 +83,10 @@
 
     const/4 p1, 0x1
 
+    .line 28
     invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    .line 29
     invoke-virtual {p2, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     move-result-object p0
@@ -90,6 +100,7 @@
     :catch_0
     move-exception p0
 
+    .line 33
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -109,6 +120,7 @@
 
     const-string v0, "ZTEDeviceIDHelper"
 
+    .line 39
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -127,19 +139,23 @@
     :catch_0
     move-exception v1
 
+    .line 41
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 43
     :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 44
     invoke-direct {p0, v1, p1}, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->a(Ljava/lang/String;Landroid/content/Context;)V
 
+    .line 46
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
@@ -148,18 +164,22 @@
 
     const-string v4, "com.mdid.msa.service.MsaIdService"
 
+    .line 47
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v3, "com.bun.msa.action.bindto.service"
 
+    .line 48
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v3, "com.bun.msa.param.pkgname"
 
+    .line 49
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, ""
 
+    .line 51
     iget-object v3, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->c:Landroid/content/ServiceConnection;
 
     const/4 v4, 0x1
@@ -170,6 +190,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 54
     :try_start_1
     iget-object v2, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->b:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -188,6 +209,7 @@
 
     if-nez v2, :cond_0
 
+    .line 66
     :try_start_2
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->c:Landroid/content/ServiceConnection;
 
@@ -200,6 +222,7 @@
     :catch_1
     move-exception p0
 
+    .line 68
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -209,12 +232,14 @@
     :goto_1
     return-object v1
 
+    .line 58
     :cond_0
     :try_start_3
     new-instance v3, Lcom/xiaomi/onetrack/util/oaid/a/g$a$a;
 
     invoke-direct {v3, v2}, Lcom/xiaomi/onetrack/util/oaid/a/g$a$a;-><init>(Landroid/os/IBinder;)V
 
+    .line 60
     invoke-interface {v3}, Lcom/xiaomi/onetrack/util/oaid/a/g;->b()Ljava/lang/String;
 
     move-result-object v1
@@ -222,6 +247,7 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 66
     :try_start_4
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->c:Landroid/content/ServiceConnection;
 
@@ -234,6 +260,7 @@
     :catch_2
     move-exception p0
 
+    .line 68
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -250,6 +277,7 @@
     :catch_3
     move-exception v2
 
+    .line 63
     :try_start_5
     invoke-virtual {v2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -259,6 +287,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 66
     :try_start_6
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/m;->c:Landroid/content/ServiceConnection;
 
@@ -281,12 +310,14 @@
     :catch_4
     move-exception p0
 
+    .line 68
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 70
     :goto_3
     throw v1
 

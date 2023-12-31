@@ -1,5 +1,6 @@
 .class public Lorg/ahocorasick/interval/Interval;
 .super Ljava/lang/Object;
+.source "Interval.java"
 
 # interfaces
 .implements Lorg/ahocorasick/interval/Intervalable;
@@ -15,10 +16,13 @@
 .method public constructor <init>(II)V
     .locals 0
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     iput p1, p0, Lorg/ahocorasick/interval/Interval;->start:I
 
+    .line 10
     iput p2, p0, Lorg/ahocorasick/interval/Interval;->end:I
 
     return-void
@@ -29,6 +33,7 @@
 .method public compareTo(Ljava/lang/Object;)I
     .locals 2
 
+    .line 51
     instance-of v0, p1, Lorg/ahocorasick/interval/Intervalable;
 
     if-nez v0, :cond_0
@@ -37,9 +42,11 @@
 
     return p0
 
+    .line 54
     :cond_0
     check-cast p1, Lorg/ahocorasick/interval/Intervalable;
 
+    .line 55
     iget v0, p0, Lorg/ahocorasick/interval/Interval;->start:I
 
     invoke-interface {p1}, Lorg/ahocorasick/interval/Intervalable;->getStart()I
@@ -52,6 +59,7 @@
 
     goto :goto_0
 
+    .line 56
     :cond_1
     iget p0, p0, Lorg/ahocorasick/interval/Interval;->end:I
 
@@ -68,6 +76,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 36
     instance-of v0, p1, Lorg/ahocorasick/interval/Intervalable;
 
     const/4 v1, 0x0
@@ -76,9 +85,11 @@
 
     return v1
 
+    .line 39
     :cond_0
     check-cast p1, Lorg/ahocorasick/interval/Intervalable;
 
+    .line 40
     iget v0, p0, Lorg/ahocorasick/interval/Interval;->start:I
 
     invoke-interface {p1}, Lorg/ahocorasick/interval/Intervalable;->getStart()I
@@ -89,6 +100,7 @@
 
     iget p0, p0, Lorg/ahocorasick/interval/Interval;->end:I
 
+    .line 41
     invoke-interface {p1}, Lorg/ahocorasick/interval/Intervalable;->getEnd()I
 
     move-result p1
@@ -104,6 +116,7 @@
 .method public getEnd()I
     .locals 0
 
+    .line 18
     iget p0, p0, Lorg/ahocorasick/interval/Interval;->end:I
 
     return p0
@@ -112,6 +125,7 @@
 .method public getStart()I
     .locals 0
 
+    .line 14
     iget p0, p0, Lorg/ahocorasick/interval/Interval;->start:I
 
     return p0
@@ -120,6 +134,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 46
     iget v0, p0, Lorg/ahocorasick/interval/Interval;->start:I
 
     rem-int/lit8 v0, v0, 0x64
@@ -136,6 +151,7 @@
 .method public size()I
     .locals 1
 
+    .line 22
     iget v0, p0, Lorg/ahocorasick/interval/Interval;->end:I
 
     iget p0, p0, Lorg/ahocorasick/interval/Interval;->start:I
@@ -150,6 +166,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 61
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/view/-$$Lambda$BranchSearchGuide$wDZft42D88sCuH27OZBrfHXo1zA;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

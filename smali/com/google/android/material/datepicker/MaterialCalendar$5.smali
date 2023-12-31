@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/datepicker/MaterialCalendar$5;
 .super Landroidx/core/view/AccessibilityDelegateCompat;
+.source "MaterialCalendar.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
     .locals 0
 
+    .line 372
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$5;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-direct {p0}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>()V
@@ -33,8 +35,10 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 0
 
+    .line 377
     invoke-super {p0, p1, p2}, Landroidx/core/view/AccessibilityDelegateCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
+    .line 379
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$5;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-static {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$500(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroid/view/View;
@@ -47,6 +51,7 @@
 
     if-nez p1, :cond_0
 
+    .line 380
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$5;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     sget p1, Lcom/google/android/material/R$string;->mtrl_picker_toggle_to_year_selection:I
@@ -57,6 +62,7 @@
 
     goto :goto_0
 
+    .line 381
     :cond_0
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$5;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
@@ -66,6 +72,7 @@
 
     move-result-object p0
 
+    .line 378
     :goto_0
     invoke-virtual {p2, p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setHintText(Ljava/lang/CharSequence;)V
 

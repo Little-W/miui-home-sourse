@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/AnalyticsEntity;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

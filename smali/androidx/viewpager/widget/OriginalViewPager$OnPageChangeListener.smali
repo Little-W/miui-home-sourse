@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/viewpager/widget/OriginalViewPager$OnPageChangeListener;
 .super Ljava/lang/Object;
+.source "OriginalViewPager.java"
 
 
 # annotations

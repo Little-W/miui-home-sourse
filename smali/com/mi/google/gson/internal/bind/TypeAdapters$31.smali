@@ -1,5 +1,6 @@
 .class final Lcom/mi/google/gson/internal/bind/TypeAdapters$31;
 .super Ljava/lang/Object;
+.source "TypeAdapters.java"
 
 # interfaces
 .implements Lcom/mi/google/gson/TypeAdapterFactory;
@@ -38,6 +39,7 @@
         }
     .end annotation
 
+    .line 843
     iget-object p1, p0, Lcom/mi/google/gson/internal/bind/TypeAdapters$31;->val$type:Lcom/mi/google/gson/reflect/TypeToken;
 
     invoke-virtual {p2, p1}, Lcom/mi/google/gson/reflect/TypeToken;->equals(Ljava/lang/Object;)Z

@@ -1,5 +1,6 @@
 .class public final Lcom/google/firebase/components/ComponentDiscovery;
 .super Ljava/lang/Object;
+.source "ComponentDiscovery.java"
 
 
 # annotations
@@ -50,10 +51,13 @@
         }
     .end annotation
 
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 69
     iput-object p1, p0, Lcom/google/firebase/components/ComponentDiscovery;->context:Ljava/lang/Object;
 
+    .line 70
     iput-object p2, p0, Lcom/google/firebase/components/ComponentDiscovery;->retriever:Lcom/google/firebase/components/ComponentDiscovery$RegistrarNameRetriever;
 
     return-void
@@ -75,6 +79,7 @@
         }
     .end annotation
 
+    .line 64
     new-instance v0, Lcom/google/firebase/components/ComponentDiscovery;
 
     new-instance v1, Lcom/google/firebase/components/ComponentDiscovery$MetadataRegistrarNameRetriever;
@@ -99,11 +104,13 @@
 
     const/4 v3, 0x0
 
+    .line 120
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
 
+    .line 121
     const-class v5, Lcom/google/firebase/components/ComponentRegistrar;
 
     invoke-virtual {v5, v4}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -114,6 +121,7 @@
 
     new-array v5, v3, [Ljava/lang/Class;
 
+    .line 126
     invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v4
@@ -128,6 +136,7 @@
 
     return-object v4
 
+    .line 122
     :cond_0
     new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
 
@@ -143,6 +152,7 @@
 
     aput-object v7, v6, v2
 
+    .line 123
     invoke-static {v5, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -160,12 +170,14 @@
     :catch_0
     move-exception v1
 
+    .line 141
     new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
 
     new-array v2, v2, [Ljava/lang/Object;
 
     aput-object p0, v2, v3
 
+    .line 142
     invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -177,12 +189,14 @@
     :catch_1
     move-exception v1
 
+    .line 138
     new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
 
     new-array v2, v2, [Ljava/lang/Object;
 
     aput-object p0, v2, v3
 
+    .line 139
     invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -194,12 +208,14 @@
     :catch_2
     move-exception v0
 
+    .line 135
     new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
 
     new-array v2, v2, [Ljava/lang/Object;
 
     aput-object p0, v2, v3
 
+    .line 136
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -211,12 +227,14 @@
     :catch_3
     move-exception v0
 
+    .line 131
     new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
 
     new-array v2, v2, [Ljava/lang/Object;
 
     aput-object p0, v2, v3
 
+    .line 132
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -232,6 +250,7 @@
 
     const-string p0, "Class %s is not an found."
 
+    .line 128
     invoke-static {p0, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -248,6 +267,7 @@
 .method static synthetic lambda$discoverLazy$0(Ljava/lang/String;)Lcom/google/firebase/components/ComponentRegistrar;
     .locals 0
 
+    .line 112
     invoke-static {p0}, Lcom/google/firebase/components/ComponentDiscovery;->instantiate(Ljava/lang/String;)Lcom/google/firebase/components/ComponentRegistrar;
 
     move-result-object p0
@@ -269,10 +289,12 @@
         }
     .end annotation
 
+    .line 110
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 111
     iget-object v1, p0, Lcom/google/firebase/components/ComponentDiscovery;->retriever:Lcom/google/firebase/components/ComponentDiscovery$RegistrarNameRetriever;
 
     iget-object p0, p0, Lcom/google/firebase/components/ComponentDiscovery;->context:Ljava/lang/Object;
@@ -298,6 +320,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 112
     new-instance v2, Lcom/google/firebase/components/-$$Lambda$ComponentDiscovery$oLM-yhYK-SYmNT0x_BcVGBdypps;
 
     invoke-direct {v2, v1}, Lcom/google/firebase/components/-$$Lambda$ComponentDiscovery$oLM-yhYK-SYmNT0x_BcVGBdypps;-><init>(Ljava/lang/String;)V

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/shared/BranchAndroidDependentUtilsKt;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/JsonBuilder;
 .super Ljava/lang/Object;
+.source "Json.kt"
 
 
 # annotations
@@ -40,48 +41,60 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 155
     iget-boolean v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->encodeDefaults:Z
 
     iput-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->encodeDefaults:Z
 
+    .line 162
     iget-boolean v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->ignoreUnknownKeys:Z
 
     iput-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->ignoreUnknownKeys:Z
 
+    .line 174
     iget-boolean v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->isLenient:Z
 
     iput-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->isLenient:Z
 
+    .line 181
     iget-boolean v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->allowStructuredMapKeys:Z
 
     iput-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->allowStructuredMapKeys:Z
 
+    .line 187
     iget-boolean v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->prettyPrint:Z
 
     iput-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->prettyPrint:Z
 
+    .line 196
     iget-object v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->prettyPrintIndent:Ljava/lang/String;
 
     iput-object v0, p0, Lkotlinx/serialization/json/JsonBuilder;->prettyPrintIndent:Ljava/lang/String;
 
+    .line 205
     iget-boolean v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->coerceInputValues:Z
 
     iput-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->coerceInputValues:Z
 
+    .line 212
     iget-boolean v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->useArrayPolymorphism:Z
 
     iput-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->useArrayPolymorphism:Z
 
+    .line 218
     iget-object v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->classDiscriminator:Ljava/lang/String;
 
     iput-object v0, p0, Lkotlinx/serialization/json/JsonBuilder;->classDiscriminator:Ljava/lang/String;
 
+    .line 226
     iget-boolean v0, p1, Lkotlinx/serialization/json/internal/JsonConf;->allowSpecialFloatingPointValues:Z
 
     iput-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->allowSpecialFloatingPointValues:Z
 
+    .line 231
     iget-object p1, p1, Lkotlinx/serialization/json/internal/JsonConf;->serializersModule:Lkotlinx/serialization/modules/SerializersModule;
 
     iput-object p1, p0, Lkotlinx/serialization/json/JsonBuilder;->serializersModule:Lkotlinx/serialization/modules/SerializersModule;
@@ -94,6 +107,7 @@
 .method public final build$kotlinx_serialization_json()Lkotlinx/serialization/json/internal/JsonConf;
     .locals 13
 
+    .line 235
     iget-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->useArrayPolymorphism:Z
 
     if-eqz v0, :cond_1
@@ -125,6 +139,7 @@
 
     throw p0
 
+    .line 239
     :cond_1
     :goto_0
     iget-boolean v0, p0, Lkotlinx/serialization/json/JsonBuilder;->prettyPrint:Z
@@ -133,6 +148,7 @@
 
     if-nez v0, :cond_3
 
+    .line 240
     iget-object v0, p0, Lkotlinx/serialization/json/JsonBuilder;->prettyPrintIndent:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -158,6 +174,7 @@
 
     throw p0
 
+    .line 243
     :cond_3
     iget-object v0, p0, Lkotlinx/serialization/json/JsonBuilder;->prettyPrintIndent:Ljava/lang/String;
 
@@ -171,6 +188,7 @@
 
     if-eqz v0, :cond_9
 
+    .line 245
     iget-object v0, p0, Lkotlinx/serialization/json/JsonBuilder;->prettyPrintIndent:Ljava/lang/String;
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -179,6 +197,7 @@
 
     move v3, v2
 
+    .line 277
     :goto_1
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -235,6 +254,7 @@
 
     goto :goto_5
 
+    .line 247
     :cond_8
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -252,6 +272,7 @@
 
     move-result-object p0
 
+    .line 246
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -264,26 +285,31 @@
 
     throw v0
 
+    .line 251
     :cond_9
     :goto_5
     new-instance v0, Lkotlinx/serialization/json/internal/JsonConf;
 
+    .line 252
     iget-boolean v2, p0, Lkotlinx/serialization/json/JsonBuilder;->encodeDefaults:Z
 
     iget-boolean v3, p0, Lkotlinx/serialization/json/JsonBuilder;->ignoreUnknownKeys:Z
 
     iget-boolean v4, p0, Lkotlinx/serialization/json/JsonBuilder;->isLenient:Z
 
+    .line 253
     iget-boolean v5, p0, Lkotlinx/serialization/json/JsonBuilder;->allowStructuredMapKeys:Z
 
     iget-boolean v6, p0, Lkotlinx/serialization/json/JsonBuilder;->prettyPrint:Z
 
     iget-object v7, p0, Lkotlinx/serialization/json/JsonBuilder;->prettyPrintIndent:Ljava/lang/String;
 
+    .line 254
     iget-boolean v8, p0, Lkotlinx/serialization/json/JsonBuilder;->coerceInputValues:Z
 
     iget-boolean v9, p0, Lkotlinx/serialization/json/JsonBuilder;->useArrayPolymorphism:Z
 
+    .line 255
     iget-object v10, p0, Lkotlinx/serialization/json/JsonBuilder;->classDiscriminator:Ljava/lang/String;
 
     iget-boolean v11, p0, Lkotlinx/serialization/json/JsonBuilder;->allowSpecialFloatingPointValues:Z
@@ -292,6 +318,7 @@
 
     move-object v1, v0
 
+    .line 251
     invoke-direct/range {v1 .. v12}, Lkotlinx/serialization/json/internal/JsonConf;-><init>(ZZZZZLjava/lang/String;ZZLjava/lang/String;ZLkotlinx/serialization/modules/SerializersModule;)V
 
     return-object v0
@@ -300,6 +327,7 @@
 .method public final setEncodeDefaults(Z)V
     .locals 0
 
+    .line 155
     iput-boolean p1, p0, Lkotlinx/serialization/json/JsonBuilder;->encodeDefaults:Z
 
     return-void
@@ -308,6 +336,7 @@
 .method public final setIgnoreUnknownKeys(Z)V
     .locals 0
 
+    .line 162
     iput-boolean p1, p0, Lkotlinx/serialization/json/JsonBuilder;->ignoreUnknownKeys:Z
 
     return-void

@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver$1;
 .super Landroid/view/BatchedInputEventReceiver;
+.source "InputChannelCompat.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver;Landroid/view/InputChannel;Landroid/os/Looper;Landroid/view/Choreographer;Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;)V
     .locals 0
 
+    .line 77
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver$1;->this$0:Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver;
 
     iput-object p5, p0, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver$1;->val$listener:Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;
@@ -37,12 +39,14 @@
 .method public onInputEvent(Landroid/view/InputEvent;)V
     .locals 1
 
+    .line 81
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver$1;->val$listener:Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;
 
     invoke-interface {v0, p1}, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;->onInputEvent(Landroid/view/InputEvent;)V
 
     const/4 v0, 0x1
 
+    .line 82
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver$1;->finishInputEvent(Landroid/view/InputEvent;Z)V
 
     return-void

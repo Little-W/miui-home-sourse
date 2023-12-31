@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/TreeJsonDecoderKt;
 .super Ljava/lang/Object;
+.source "TreeJsonDecoder.kt"
 
 
 # direct methods
@@ -14,6 +15,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 269
     invoke-interface {p0, p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementIndex(Ljava/lang/String;)I
 
     move-result v0
@@ -24,6 +26,7 @@
 
     return v0
 
+    .line 271
     :cond_0
     new-instance v0, Lkotlinx/serialization/SerializationException;
 
@@ -89,6 +92,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 32
     new-instance v0, Lkotlinx/serialization/json/internal/JsonTreeDecoder;
 
     invoke-interface {p3}, Lkotlinx/serialization/DeserializationStrategy;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;

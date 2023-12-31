@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/engine/bitmap_recycle/ByteArrayAdapter;
 .super Ljava/lang/Object;
+.source "ByteArrayAdapter.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;
@@ -19,6 +20,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +31,7 @@
 .method public bridge synthetic getArrayLength(Ljava/lang/Object;)I
     .locals 0
 
+    .line 6
     check-cast p1, [B
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ByteArrayAdapter;->getArrayLength([B)I
@@ -41,6 +44,7 @@
 .method public getArrayLength([B)I
     .locals 0
 
+    .line 17
     array-length p0, p1
 
     return p0
@@ -65,6 +69,7 @@
 .method public bridge synthetic newArray(I)Ljava/lang/Object;
     .locals 0
 
+    .line 6
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ByteArrayAdapter;->newArray(I)[B
 
     move-result-object p0
@@ -75,6 +80,7 @@
 .method public newArray(I)[B
     .locals 0
 
+    .line 22
     new-array p0, p1, [B
 
     return-object p0

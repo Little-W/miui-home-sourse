@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/Utils$1;
 .super Landroid/os/Handler;
+.source "Utils.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
+    .line 332
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -27,6 +29,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
+    .line 334
     invoke-virtual {p0}, Lcom/squareup/picasso/Utils$1;->obtainMessage()Landroid/os/Message;
 
     move-result-object p1

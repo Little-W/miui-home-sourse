@@ -1,5 +1,6 @@
 .class public final Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;
 .super Ljava/lang/Object;
+.source "PlaybackStateCompat.java"
 
 
 # annotations
@@ -27,14 +28,17 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
     .locals 1
 
+    .line 1050
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1051
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 1055
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -43,14 +47,18 @@
 
     if-eqz p3, :cond_0
 
+    .line 1063
     iput-object p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;->mAction:Ljava/lang/String;
 
+    .line 1064
     iput-object p2, p0, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;->mName:Ljava/lang/CharSequence;
 
+    .line 1065
     iput p3, p0, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;->mIcon:I
 
     return-void
 
+    .line 1060
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -60,6 +68,7 @@
 
     throw p0
 
+    .line 1056
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -69,6 +78,7 @@
 
     throw p0
 
+    .line 1052
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -84,6 +94,7 @@
 .method public build()Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
     .locals 4
 
+    .line 1089
     new-instance v0, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
 
     iget-object v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;->mAction:Ljava/lang/String;
@@ -102,6 +113,7 @@
 .method public setExtras(Landroid/os/Bundle;)Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;
     .locals 0
 
+    .line 1078
     iput-object p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;->mExtras:Landroid/os/Bundle;
 
     return-object p0

@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/internal/ThreadContextKt$findOne$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "ThreadContext.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -89,6 +90,7 @@
 
     return-object p1
 
+    .line 38
     :cond_0
     instance-of p0, p2, Lkotlinx/coroutines/ThreadContextElement;
 

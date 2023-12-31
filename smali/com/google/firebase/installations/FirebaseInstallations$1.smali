@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/installations/FirebaseInstallations$1;
 .super Ljava/lang/Object;
+.source "FirebaseInstallations.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -24,8 +25,10 @@
 .method constructor <init>()V
     .locals 2
 
+    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 96
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -42,6 +45,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
+    .line 100
     new-instance v0, Ljava/lang/Thread;
 
     const/4 v1, 0x1
@@ -50,6 +54,7 @@
 
     iget-object p0, p0, Lcom/google/firebase/installations/FirebaseInstallations$1;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 101
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result p0

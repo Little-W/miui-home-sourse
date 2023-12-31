@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchLocalLinkResult;
 .super Lio/branch/search/BranchBaseLinkResult;
+.source "SourceFile"
 
 
 # static fields

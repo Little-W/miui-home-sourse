@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/JobSupportKt;
 .super Ljava/lang/Object;
+.source "JobSupport.kt"
 
 
 # static fields
@@ -22,6 +23,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 1287
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "COMPLETING_ALREADY"
@@ -30,6 +32,7 @@
 
     sput-object v0, Lkotlinx/coroutines/JobSupportKt;->COMPLETING_ALREADY:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1290
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "COMPLETING_WAITING_CHILDREN"
@@ -38,6 +41,7 @@
 
     sput-object v0, Lkotlinx/coroutines/JobSupportKt;->COMPLETING_WAITING_CHILDREN:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1292
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "COMPLETING_RETRY"
@@ -46,6 +50,7 @@
 
     sput-object v0, Lkotlinx/coroutines/JobSupportKt;->COMPLETING_RETRY:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1294
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "TOO_LATE_TO_CANCEL"
@@ -54,6 +59,7 @@
 
     sput-object v0, Lkotlinx/coroutines/JobSupportKt;->TOO_LATE_TO_CANCEL:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1301
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "SEALED"
@@ -62,6 +68,7 @@
 
     sput-object v0, Lkotlinx/coroutines/JobSupportKt;->SEALED:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 1303
     new-instance v0, Lkotlinx/coroutines/Empty;
 
     const/4 v1, 0x0
@@ -70,6 +77,7 @@
 
     sput-object v0, Lkotlinx/coroutines/JobSupportKt;->EMPTY_NEW:Lkotlinx/coroutines/Empty;
 
+    .line 1305
     new-instance v0, Lkotlinx/coroutines/Empty;
 
     const/4 v1, 0x1
@@ -84,6 +92,7 @@
 .method public static final synthetic access$getCOMPLETING_ALREADY$p()Lkotlinx/coroutines/internal/Symbol;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/JobSupportKt;->COMPLETING_ALREADY:Lkotlinx/coroutines/internal/Symbol;
 
     return-object v0
@@ -92,6 +101,7 @@
 .method public static final synthetic access$getCOMPLETING_RETRY$p()Lkotlinx/coroutines/internal/Symbol;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/JobSupportKt;->COMPLETING_RETRY:Lkotlinx/coroutines/internal/Symbol;
 
     return-object v0
@@ -100,6 +110,7 @@
 .method public static final synthetic access$getEMPTY_ACTIVE$p()Lkotlinx/coroutines/Empty;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/JobSupportKt;->EMPTY_ACTIVE:Lkotlinx/coroutines/Empty;
 
     return-object v0
@@ -108,6 +119,7 @@
 .method public static final synthetic access$getEMPTY_NEW$p()Lkotlinx/coroutines/Empty;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/JobSupportKt;->EMPTY_NEW:Lkotlinx/coroutines/Empty;
 
     return-object v0
@@ -116,6 +128,7 @@
 .method public static final synthetic access$getSEALED$p()Lkotlinx/coroutines/internal/Symbol;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/JobSupportKt;->SEALED:Lkotlinx/coroutines/internal/Symbol;
 
     return-object v0
@@ -124,6 +137,7 @@
 .method public static final synthetic access$getTOO_LATE_TO_CANCEL$p()Lkotlinx/coroutines/internal/Symbol;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/JobSupportKt;->TOO_LATE_TO_CANCEL:Lkotlinx/coroutines/internal/Symbol;
 
     return-object v0
@@ -132,6 +146,7 @@
 .method public static final boxIncomplete(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
+    .line 1281
     instance-of v0, p0, Lkotlinx/coroutines/Incomplete;
 
     if-eqz v0, :cond_0
@@ -151,6 +166,7 @@
 .method public static final unboxState(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
+    .line 1282
     instance-of v0, p0, Lkotlinx/coroutines/IncompleteStateBox;
 
     if-nez v0, :cond_0

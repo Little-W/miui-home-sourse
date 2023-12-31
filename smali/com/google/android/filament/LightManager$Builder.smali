@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/LightManager$Builder;
 .super Ljava/lang/Object;
+.source "LightManager.java"
 
 
 # annotations
@@ -29,8 +30,10 @@
 .method public constructor <init>(Lcom/google/android/filament/LightManager$Type;)V
     .locals 2
 
+    .line 287
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 288
     invoke-virtual {p1}, Lcom/google/android/filament/LightManager$Type;->ordinal()I
 
     move-result p1
@@ -41,6 +44,7 @@
 
     iput-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
+    .line 289
     new-instance p1, Lcom/google/android/filament/LightManager$Builder$BuilderFinalizer;
 
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
@@ -57,6 +61,7 @@
 .method public build(Lcom/google/android/filament/Engine;I)V
     .locals 2
 
+    .line 586
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
@@ -71,6 +76,7 @@
 
     return-void
 
+    .line 587
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -100,6 +106,7 @@
 .method public castLight(Z)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 339
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/LightManager;->access$300(JZ)V
@@ -110,6 +117,7 @@
 .method public castShadows(Z)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 306
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/LightManager;->access$100(JZ)V
@@ -120,6 +128,7 @@
 .method public color(FFF)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 397
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/LightManager;->access$600(JFFF)V
@@ -130,6 +139,7 @@
 .method public direction(FFF)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 379
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/LightManager;->access$500(JFFF)V
@@ -140,6 +150,7 @@
 .method public falloff(F)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 500
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/LightManager;->access$1000(JF)V
@@ -150,6 +161,7 @@
 .method public intensity(F)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 418
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/LightManager;->access$700(JF)V
@@ -160,6 +172,7 @@
 .method public intensity(FF)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 453
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/LightManager;->access$800(JFF)V
@@ -170,6 +183,7 @@
 .method public intensityCandela(F)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 471
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/LightManager;->access$900(JF)V
@@ -180,6 +194,7 @@
 .method public position(FFF)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 358
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/LightManager;->access$400(JFFF)V
@@ -190,6 +205,7 @@
 .method public shadowOptions(Lcom/google/android/filament/LightManager$ShadowOptions;)Lcom/google/android/filament/LightManager$Builder;
     .locals 12
 
+    .line 318
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     iget v2, p1, Lcom/google/android/filament/LightManager$ShadowOptions;->mapSize:I
@@ -220,6 +236,7 @@
 .method public spotLightCone(FF)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 525
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/LightManager;->access$1100(JFF)V
@@ -230,6 +247,7 @@
 .method public sunAngularRadius(F)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 539
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/LightManager;->access$1200(JF)V
@@ -240,6 +258,7 @@
 .method public sunHaloFalloff(F)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 567
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/LightManager;->access$1400(JF)V
@@ -250,6 +269,7 @@
 .method public sunHaloSize(F)Lcom/google/android/filament/LightManager$Builder;
     .locals 2
 
+    .line 553
     iget-wide v0, p0, Lcom/google/android/filament/LightManager$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/LightManager;->access$1300(JF)V

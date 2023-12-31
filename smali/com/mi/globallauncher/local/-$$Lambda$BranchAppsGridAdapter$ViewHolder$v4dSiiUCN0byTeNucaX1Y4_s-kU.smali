@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/local/-$$Lambda$BranchAppsGridAdapter$ViewHolder$v4dSiiUCN0byTeNucaX1Y4_s-kU;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

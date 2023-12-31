@@ -1,5 +1,6 @@
 .class final Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;
 .super Ljava/lang/Object;
+.source "ContentInfoCompat.java"
 
 # interfaces
 .implements Landroidx/core/view/ContentInfoCompat$BuilderCompat;
@@ -24,8 +25,10 @@
 .method constructor <init>(Landroid/content/ClipData;I)V
     .locals 1
 
+    .line 665
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 666
     new-instance v0, Landroid/view/ContentInfo$Builder;
 
     invoke-direct {v0, p1, p2}, Landroid/view/ContentInfo$Builder;-><init>(Landroid/content/ClipData;I)V
@@ -40,6 +43,7 @@
 .method public build()Landroidx/core/view/ContentInfoCompat;
     .locals 2
 
+    .line 701
     new-instance v0, Landroidx/core/view/ContentInfoCompat;
 
     new-instance v1, Landroidx/core/view/ContentInfoCompat$Compat31Impl;
@@ -60,6 +64,7 @@
 .method public setExtras(Landroid/os/Bundle;)V
     .locals 0
 
+    .line 695
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
     invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setExtras(Landroid/os/Bundle;)Landroid/view/ContentInfo$Builder;
@@ -70,6 +75,7 @@
 .method public setFlags(I)V
     .locals 0
 
+    .line 685
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
     invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setFlags(I)Landroid/view/ContentInfo$Builder;
@@ -80,6 +86,7 @@
 .method public setLinkUri(Landroid/net/Uri;)V
     .locals 0
 
+    .line 690
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
     invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setLinkUri(Landroid/net/Uri;)Landroid/view/ContentInfo$Builder;

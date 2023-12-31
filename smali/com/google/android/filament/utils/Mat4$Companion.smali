@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/Mat4$Companion;
 .super Ljava/lang/Object;
+.source "Matrix.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 212
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +31,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 212
     invoke-direct {p0}, Lcom/google/android/filament/utils/Mat4$Companion;-><init>()V
 
     return-void
@@ -39,6 +42,7 @@
 .method public final identity()Lcom/google/android/filament/utils/Mat4;
     .locals 7
 
+    .line 223
     new-instance p0, Lcom/google/android/filament/utils/Mat4;
 
     const/4 v1, 0x0
@@ -67,6 +71,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 214
     array-length p0, p1
 
     const/4 v0, 0x1
@@ -87,8 +92,10 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 215
     new-instance p0, Lcom/google/android/filament/utils/Mat4;
 
+    .line 216
     new-instance v2, Lcom/google/android/filament/utils/Float4;
 
     aget v1, p1, v1
@@ -107,6 +114,7 @@
 
     invoke-direct {v2, v1, v3, v4, v5}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 217
     new-instance v1, Lcom/google/android/filament/utils/Float4;
 
     aget v0, p1, v0
@@ -125,6 +133,7 @@
 
     invoke-direct {v1, v0, v3, v4, v5}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 218
     new-instance v0, Lcom/google/android/filament/utils/Float4;
 
     const/4 v3, 0x2
@@ -145,6 +154,7 @@
 
     invoke-direct {v0, v3, v4, v5, v6}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 219
     new-instance v3, Lcom/google/android/filament/utils/Float4;
 
     const/4 v4, 0x3
@@ -165,10 +175,12 @@
 
     invoke-direct {v3, v4, v5, v6, p1}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 215
     invoke-direct {p0, v2, v1, v0, v3}, Lcom/google/android/filament/utils/Mat4;-><init>(Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;)V
 
     return-object p0
 
+    .line 214
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

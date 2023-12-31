@@ -1,5 +1,6 @@
 .class Lcom/android/internal/util/StateMachine$SmHandler$QuittingState;
 .super Lcom/android/internal/util/State;
+.source "StateMachine.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method private constructor <init>(Lcom/android/internal/util/StateMachine$SmHandler;)V
     .locals 0
 
+    .line 777
     iput-object p1, p0, Lcom/android/internal/util/StateMachine$SmHandler$QuittingState;->this$0:Lcom/android/internal/util/StateMachine$SmHandler;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -31,6 +33,7 @@
 .method synthetic constructor <init>(Lcom/android/internal/util/StateMachine$SmHandler;Lcom/android/internal/util/StateMachine$1;)V
     .locals 0
 
+    .line 777
     invoke-direct {p0, p1}, Lcom/android/internal/util/StateMachine$SmHandler$QuittingState;-><init>(Lcom/android/internal/util/StateMachine$SmHandler;)V
 
     return-void

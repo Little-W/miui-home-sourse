@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/ResourceManagerInternal$DrawableDelegate;
 .super Ljava/lang/Object;
+.source "ResourceManagerInternal.java"
 
 # interfaces
 .implements Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 554
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public createFromXmlInner(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 3
 
+    .line 558
     invoke-interface {p3}, Landroid/util/AttributeSet;->getClassAttribute()Ljava/lang/String;
 
     move-result-object p0
@@ -38,9 +41,11 @@
 
     if-eqz p0, :cond_1
 
+    .line 561
     :try_start_0
     const-class v1, Landroidx/appcompat/widget/ResourceManagerInternal$DrawableDelegate;
 
+    .line 562
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v1
@@ -51,6 +56,7 @@
 
     const-class v1, Landroid/graphics/drawable/Drawable;
 
+    .line 563
     invoke-virtual {p0, v1}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object p0
@@ -59,6 +65,7 @@
 
     new-array v2, v1, [Ljava/lang/Class;
 
+    .line 564
     invoke-virtual {p0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p0
@@ -71,12 +78,14 @@
 
     check-cast p0, Landroid/graphics/drawable/Drawable;
 
+    .line 565
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
 
     if-lt v1, v2, :cond_0
 
+    .line 566
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -85,6 +94,7 @@
 
     goto :goto_0
 
+    .line 569
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -104,6 +114,7 @@
 
     const-string p2, "Exception while inflating <drawable>"
 
+    .line 573
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1

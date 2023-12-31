@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zzfn;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # direct methods
@@ -10,6 +11,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

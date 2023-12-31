@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/android/systemui/shared/recents/system/-$$Lambda$ActivityManagerWrapper$qDdYczEdkena5n2WJrlP6_rQcxE;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/function/IntFunction;

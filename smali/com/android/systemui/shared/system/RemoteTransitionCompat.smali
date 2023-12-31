@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/system/RemoteTransitionCompat;
 .super Ljava/lang/Object;
+.source "RemoteTransitionCompat.java"
 
 
 # static fields
@@ -14,8 +15,10 @@
 .method public constructor <init>(Landroid/window/RemoteTransition;)V
     .locals 0
 
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 51
     iput-object p1, p0, Lcom/android/systemui/shared/system/RemoteTransitionCompat;->mWrapped:Landroid/window/RemoteTransition;
 
     return-void
@@ -24,8 +27,10 @@
 .method public constructor <init>(Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;Ljava/util/concurrent/Executor;Landroid/content/ContextWrapper;)V
     .locals 0
 
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 47
     invoke-static {p1, p2, p3}, Lcom/android/systemui/shared/system/RemoteTransitionCompat;->newRemoteTransitionForRunner(Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;Ljava/util/concurrent/Executor;Landroid/content/ContextWrapper;)Landroid/window/RemoteTransition;
 
     move-result-object p1
@@ -38,10 +43,12 @@
 .method public static newRemoteTransitionForRunner(Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;Ljava/util/concurrent/Executor;Landroid/content/ContextWrapper;)Landroid/window/RemoteTransition;
     .locals 1
 
+    .line 60
     new-instance v0, Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;
 
     invoke-direct {v0, p1, p0}, Lcom/android/systemui/shared/system/RemoteTransitionCompat$1;-><init>(Ljava/util/concurrent/Executor;Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;)V
 
+    .line 82
     invoke-static {p2}, Lcom/android/systemui/shared/recents/utilities/Utilities;->getIApplicationThread(Landroid/content/ContextWrapper;)Landroid/app/IApplicationThread;
 
     move-result-object p0
@@ -60,6 +67,7 @@
 .method public getWrapped()Landroid/window/RemoteTransition;
     .locals 0
 
+    .line 55
     iget-object p0, p0, Lcom/android/systemui/shared/system/RemoteTransitionCompat;->mWrapped:Landroid/window/RemoteTransition;
 
     return-object p0

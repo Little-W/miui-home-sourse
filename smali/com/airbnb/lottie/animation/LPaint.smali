@@ -1,11 +1,13 @@
 .class public Lcom/airbnb/lottie/animation/LPaint;
 .super Landroid/graphics/Paint;
+.source "LPaint.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 20
     invoke-direct {p0}, Landroid/graphics/Paint;-><init>()V
 
     return-void
@@ -14,6 +16,7 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 24
     invoke-direct {p0, p1}, Landroid/graphics/Paint;-><init>(I)V
 
     return-void
@@ -22,8 +25,10 @@
 .method public constructor <init>(ILandroid/graphics/PorterDuff$Mode;)V
     .locals 0
 
+    .line 33
     invoke-direct {p0, p1}, Landroid/graphics/Paint;-><init>(I)V
 
+    .line 34
     new-instance p1, Landroid/graphics/PorterDuffXfermode;
 
     invoke-direct {p1, p2}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
@@ -36,8 +41,10 @@
 .method public constructor <init>(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
+    .line 28
     invoke-direct {p0}, Landroid/graphics/Paint;-><init>()V
 
+    .line 29
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     invoke-direct {v0, p1}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
@@ -52,6 +59,7 @@
 .method public setAlpha(I)V
     .locals 4
 
+    .line 51
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xff
@@ -62,10 +70,12 @@
 
     if-ge v0, v3, :cond_0
 
+    .line 52
     invoke-virtual {p0}, Lcom/airbnb/lottie/animation/LPaint;->getColor()I
 
     move-result v0
 
+    .line 53
     invoke-static {p1, v2, v1}, Lcom/airbnb/lottie/utils/MiscUtils;->clamp(III)I
 
     move-result p1
@@ -82,6 +92,7 @@
 
     goto :goto_0
 
+    .line 55
     :cond_0
     invoke-static {p1, v2, v1}, Lcom/airbnb/lottie/utils/MiscUtils;->clamp(III)I
 

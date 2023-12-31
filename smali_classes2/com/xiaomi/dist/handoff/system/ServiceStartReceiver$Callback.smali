@@ -1,5 +1,6 @@
 .class interface abstract Lcom/xiaomi/dist/handoff/system/ServiceStartReceiver$Callback;
 .super Ljava/lang/Object;
+.source "ServiceStartReceiver.java"
 
 
 # annotations

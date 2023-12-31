@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/breadcrumbs/DisabledBreadcrumbSource;
 .super Ljava/lang/Object;
+.source "DisabledBreadcrumbSource.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/breadcrumbs/BreadcrumbSource;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +21,7 @@
 .method public registerBreadcrumbHandler(Lcom/google/firebase/crashlytics/internal/breadcrumbs/BreadcrumbHandler;)V
     .locals 0
 
+    .line 25
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p0

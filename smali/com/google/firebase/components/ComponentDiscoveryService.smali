@@ -1,11 +1,13 @@
 .class public Lcom/google/firebase/components/ComponentDiscoveryService;
 .super Landroid/app/Service;
+.source "ComponentDiscoveryService.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     return-void

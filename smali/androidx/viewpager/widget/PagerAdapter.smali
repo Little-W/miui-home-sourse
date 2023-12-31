@@ -1,5 +1,6 @@
 .class public abstract Landroidx/viewpager/widget/PagerAdapter;
 .super Ljava/lang/Object;
+.source "PagerAdapter.java"
 
 
 # instance fields
@@ -12,6 +13,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 202
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Required method destroyItem was not overridden"
@@ -24,6 +26,7 @@
 .method public destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 0
 
+    .line 129
     invoke-virtual {p0, p1, p2, p3}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(Landroid/view/View;ILjava/lang/Object;)V
 
     return-void
@@ -40,6 +43,7 @@
 .method public finishUpdate(Landroid/view/ViewGroup;)V
     .locals 0
 
+    .line 154
     invoke-virtual {p0, p1}, Landroidx/viewpager/widget/PagerAdapter;->finishUpdate(Landroid/view/View;)V
 
     return-void
@@ -69,6 +73,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 184
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Required method instantiateItem was not overridden"
@@ -81,6 +86,7 @@
 .method public instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
     .locals 0
 
+    .line 115
     invoke-virtual {p0, p1, p2}, Landroidx/viewpager/widget/PagerAdapter;->instantiateItem(Landroid/view/View;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -116,6 +122,7 @@
 .method public setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 0
 
+    .line 143
     invoke-virtual {p0, p1, p2, p3}, Landroidx/viewpager/widget/PagerAdapter;->setPrimaryItem(Landroid/view/View;ILjava/lang/Object;)V
 
     return-void
@@ -124,11 +131,14 @@
 .method setViewPagerObserver(Landroid/database/DataSetObserver;)V
     .locals 0
 
+    .line 316
     monitor-enter p0
 
+    .line 317
     :try_start_0
     iput-object p1, p0, Landroidx/viewpager/widget/PagerAdapter;->mViewPagerObserver:Landroid/database/DataSetObserver;
 
+    .line 318
     monitor-exit p0
 
     return-void
@@ -154,6 +164,7 @@
 .method public startUpdate(Landroid/view/ViewGroup;)V
     .locals 0
 
+    .line 99
     invoke-virtual {p0, p1}, Landroidx/viewpager/widget/PagerAdapter;->startUpdate(Landroid/view/View;)V
 
     return-void

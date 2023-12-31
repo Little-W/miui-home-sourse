@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/NamedValueDecoder;
 .super Lkotlinx/serialization/internal/TaggedDecoder;
+.source "Tagged.kt"
 
 
 # annotations
@@ -16,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 306
     invoke-direct {p0}, Lkotlinx/serialization/internal/TaggedDecoder;-><init>()V
 
     return-void
@@ -34,6 +36,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 312
     move-object p0, p1
 
     check-cast p0, Ljava/lang/CharSequence;
@@ -84,6 +87,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 310
     invoke-interface {p1, p2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -94,6 +98,7 @@
 .method public bridge synthetic getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
     .locals 0
 
+    .line 306
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/NamedValueDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/String;
 
     move-result-object p0
@@ -108,6 +113,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 307
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/NamedValueDecoder;->elementName(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/String;
 
     move-result-object p1
@@ -126,6 +132,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 309
     invoke-virtual {p0}, Lkotlinx/serialization/internal/NamedValueDecoder;->getCurrentTagOrNull()Ljava/lang/Object;
 
     move-result-object v0

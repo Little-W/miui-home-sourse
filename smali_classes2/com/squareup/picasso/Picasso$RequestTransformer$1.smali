@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/Picasso$RequestTransformer$1;
 .super Ljava/lang/Object;
+.source "Picasso.java"
 
 # interfaces
 .implements Lcom/squareup/picasso/Picasso$RequestTransformer;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

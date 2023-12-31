@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/network/DefaultLottieFetchResult;
 .super Ljava/lang/Object;
+.source "DefaultLottieFetchResult.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/network/LottieFetchResult;
@@ -13,8 +14,10 @@
 .method public constructor <init>(Ljava/net/HttpURLConnection;)V
     .locals 0
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 20
     iput-object p1, p0, Lcom/airbnb/lottie/network/DefaultLottieFetchResult;->connection:Ljava/net/HttpURLConnection;
 
     return-void
@@ -28,6 +31,7 @@
         }
     .end annotation
 
+    .line 54
     new-instance p0, Ljava/io/BufferedReader;
 
     new-instance v0, Ljava/io/InputStreamReader;
@@ -40,10 +44,12 @@
 
     invoke-direct {p0, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
+    .line 55
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 59
     :goto_0
     :try_start_0
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -52,6 +58,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 60
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v0, 0xa
@@ -62,12 +69,14 @@
 
     goto :goto_0
 
+    .line 64
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Ljava/io/BufferedReader;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 69
     :catch_0
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -78,11 +87,13 @@
     :catchall_0
     move-exception p1
 
+    .line 64
     :try_start_2
     invoke-virtual {p0}, Ljava/io/BufferedReader;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 68
     :catch_1
     throw p1
 .end method
@@ -97,6 +108,7 @@
         }
     .end annotation
 
+    .line 32
     iget-object p0, p0, Lcom/airbnb/lottie/network/DefaultLottieFetchResult;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
@@ -109,6 +121,7 @@
 .method public close()V
     .locals 0
 
+    .line 50
     iget-object p0, p0, Lcom/airbnb/lottie/network/DefaultLottieFetchResult;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->disconnect()V
@@ -119,6 +132,7 @@
 .method public contentType()Ljava/lang/String;
     .locals 0
 
+    .line 36
     iget-object p0, p0, Lcom/airbnb/lottie/network/DefaultLottieFetchResult;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getContentType()Ljava/lang/String;
@@ -131,6 +145,7 @@
 .method public error()Ljava/lang/String;
     .locals 2
 
+    .line 41
     :try_start_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/network/DefaultLottieFetchResult;->isSuccessful()Z
 
@@ -142,6 +157,7 @@
 
     goto :goto_0
 
+    .line 42
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -197,8 +213,10 @@
 
     const-string v0, "get error failed "
 
+    .line 44
     invoke-static {v0, p0}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 45
     invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -211,6 +229,7 @@
 
     const/4 v0, 0x0
 
+    .line 25
     :try_start_0
     iget-object p0, p0, Lcom/airbnb/lottie/network/DefaultLottieFetchResult;->connection:Ljava/net/HttpURLConnection;
 

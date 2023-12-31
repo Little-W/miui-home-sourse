@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/RemoteTransitionExpose;
 .super Ljava/lang/Object;
+.source "RemoteTransitionExpose.java"
 
 
 # direct methods
@@ -14,6 +15,7 @@
         }
     .end annotation
 
+    .line 20
     const-class v0, Landroid/window/RemoteTransition;
 
     const-class v1, Landroid/os/Parcelable$Creator;
@@ -32,6 +34,7 @@
 .method public static newInstance(Landroid/window/IRemoteTransition;)Landroid/window/RemoteTransition;
     .locals 5
 
+    .line 12
     const-class v0, Landroid/window/RemoteTransition;
 
     const/4 v1, 0x1
@@ -60,6 +63,7 @@
 .method public static newInstance(Landroid/window/IRemoteTransition;Landroid/app/IApplicationThread;Ljava/lang/String;)Landroid/window/RemoteTransition;
     .locals 7
 
+    .line 16
     const-class v0, Landroid/window/RemoteTransition;
 
     const/4 v1, 0x3

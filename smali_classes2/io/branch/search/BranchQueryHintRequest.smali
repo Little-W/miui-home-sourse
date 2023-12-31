@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchQueryHintRequest;
 .super Lio/branch/search/f;
+.source "SourceFile"
 
 
 # annotations

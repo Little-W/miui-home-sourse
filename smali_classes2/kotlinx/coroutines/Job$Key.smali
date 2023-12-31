@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/Job$Key;
 .super Ljava/lang/Object;
+.source "Job.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/CoroutineContext$Key;
@@ -33,12 +34,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 116
     new-instance v0, Lkotlinx/coroutines/Job$Key;
 
     invoke-direct {v0}, Lkotlinx/coroutines/Job$Key;-><init>()V
 
     sput-object v0, Lkotlinx/coroutines/Job$Key;->$$INSTANCE:Lkotlinx/coroutines/Job$Key;
 
+    .line 123
     sget-object v0, Lkotlinx/coroutines/CoroutineExceptionHandler;->Key:Lkotlinx/coroutines/CoroutineExceptionHandler$Key;
 
     return-void
@@ -47,6 +50,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class public final enum Lcom/market/sdk/MarketType;
 .super Ljava/lang/Enum;
+.source "MarketType.java"
 
 
 # annotations
@@ -36,6 +37,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
+    .line 11
     new-instance v0, Lcom/market/sdk/MarketType;
 
     const-string v1, "com.xiaomi.market"
@@ -48,6 +50,7 @@
 
     sput-object v0, Lcom/market/sdk/MarketType;->MARKET_PHONE:Lcom/market/sdk/MarketType;
 
+    .line 12
     new-instance v0, Lcom/market/sdk/MarketType;
 
     const/4 v3, 0x1
@@ -58,6 +61,7 @@
 
     sput-object v0, Lcom/market/sdk/MarketType;->MARKET_PAD:Lcom/market/sdk/MarketType;
 
+    .line 13
     new-instance v0, Lcom/market/sdk/MarketType;
 
     const/4 v1, 0x2
@@ -70,6 +74,7 @@
 
     sput-object v0, Lcom/market/sdk/MarketType;->MIPICKS:Lcom/market/sdk/MarketType;
 
+    .line 14
     new-instance v0, Lcom/market/sdk/MarketType;
 
     const/4 v4, 0x3
@@ -86,6 +91,7 @@
 
     new-array v0, v0, [Lcom/market/sdk/MarketType;
 
+    .line 10
     sget-object v5, Lcom/market/sdk/MarketType;->MARKET_PHONE:Lcom/market/sdk/MarketType;
 
     aput-object v5, v0, v2
@@ -117,16 +123,20 @@
         }
     .end annotation
 
+    .line 20
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     const/4 p1, -0x1
 
+    .line 17
     iput p1, p0, Lcom/market/sdk/MarketType;->mVersionCode:I
 
     const/4 p1, 0x0
 
+    .line 18
     iput-object p1, p0, Lcom/market/sdk/MarketType;->mIsEnabled:Ljava/lang/Boolean;
 
+    .line 21
     iput-object p3, p0, Lcom/market/sdk/MarketType;->mPackageName:Ljava/lang/String;
 
     return-void
@@ -135,6 +145,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/market/sdk/MarketType;
     .locals 1
 
+    .line 10
     const-class v0, Lcom/market/sdk/MarketType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -149,6 +160,7 @@
 .method public static values()[Lcom/market/sdk/MarketType;
     .locals 1
 
+    .line 10
     sget-object v0, Lcom/market/sdk/MarketType;->$VALUES:[Lcom/market/sdk/MarketType;
 
     invoke-virtual {v0}, [Lcom/market/sdk/MarketType;->clone()Ljava/lang/Object;
@@ -165,6 +177,7 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
+    .line 25
     iget-object p0, p0, Lcom/market/sdk/MarketType;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -173,12 +186,14 @@
 .method public getVersionCode()I
     .locals 3
 
+    .line 29
     iget v0, p0, Lcom/market/sdk/MarketType;->mVersionCode:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 30
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -187,6 +202,7 @@
 
     move-result-object v0
 
+    .line 32
     :try_start_0
     iget-object v1, p0, Lcom/market/sdk/MarketType;->mPackageName:Ljava/lang/String;
 
@@ -196,6 +212,7 @@
 
     move-result-object v0
 
+    .line 33
     iget v0, v0, Landroid/content/pm/PackageInfo;->versionCode:I
 
     iput v0, p0, Lcom/market/sdk/MarketType;->mVersionCode:I
@@ -207,8 +224,10 @@
     :catch_0
     const/4 v0, -0x2
 
+    .line 35
     iput v0, p0, Lcom/market/sdk/MarketType;->mVersionCode:I
 
+    .line 38
     :cond_0
     :goto_0
     iget p0, p0, Lcom/market/sdk/MarketType;->mVersionCode:I
@@ -219,10 +238,12 @@
 .method public isEnabled()Z
     .locals 1
 
+    .line 42
     iget-object v0, p0, Lcom/market/sdk/MarketType;->mIsEnabled:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
 
+    .line 43
     iget-object v0, p0, Lcom/market/sdk/MarketType;->mPackageName:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/market/sdk/utils/PkgUtils;->isPackageEnabled(Ljava/lang/String;)Z
@@ -235,6 +256,7 @@
 
     iput-object v0, p0, Lcom/market/sdk/MarketType;->mIsEnabled:Ljava/lang/Boolean;
 
+    .line 45
     :cond_0
     iget-object p0, p0, Lcom/market/sdk/MarketType;->mIsEnabled:Ljava/lang/Boolean;
 

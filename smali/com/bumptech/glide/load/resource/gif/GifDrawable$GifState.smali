@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/resource/gif/GifDrawable$GifState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
+.source "GifDrawable.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method constructor <init>(Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;)V
     .locals 0
 
+    .line 450
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
+    .line 451
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifDrawable$GifState;->frameLoader:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
     return-void
@@ -41,6 +44,7 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    .line 463
     new-instance v0, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
 
     invoke-direct {v0, p0}, Lcom/bumptech/glide/load/resource/gif/GifDrawable;-><init>(Lcom/bumptech/glide/load/resource/gif/GifDrawable$GifState;)V
@@ -51,6 +55,7 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 457
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/gif/GifDrawable$GifState;->newDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0

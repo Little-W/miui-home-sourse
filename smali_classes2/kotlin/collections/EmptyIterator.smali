@@ -1,5 +1,6 @@
 .class public final Lkotlin/collections/EmptyIterator;
 .super Ljava/lang/Object;
+.source "Collections.kt"
 
 # interfaces
 .implements Ljava/util/ListIterator;
@@ -13,6 +14,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 15
     new-instance v0, Lkotlin/collections/EmptyIterator;
 
     invoke-direct {v0}, Lkotlin/collections/EmptyIterator;-><init>()V
@@ -25,6 +27,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,6 +66,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 15
     invoke-virtual {p0}, Lkotlin/collections/EmptyIterator;->next()Ljava/lang/Void;
 
     move-result-object p0
@@ -73,6 +77,7 @@
 .method public next()Ljava/lang/Void;
     .locals 0
 
+    .line 20
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -93,6 +98,7 @@
 .method public bridge synthetic previous()Ljava/lang/Object;
     .locals 0
 
+    .line 15
     invoke-virtual {p0}, Lkotlin/collections/EmptyIterator;->previous()Ljava/lang/Void;
 
     move-result-object p0
@@ -103,6 +109,7 @@
 .method public previous()Ljava/lang/Void;
     .locals 0
 
+    .line 21
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V

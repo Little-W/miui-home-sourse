@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/internal/ui/ImageResolver;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

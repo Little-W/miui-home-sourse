@@ -1,5 +1,6 @@
 .class public final synthetic Landroidx/emoji2/text/-$$Lambda$ConcurrencyHelpers$Qhda3GwBFI6UfuZmxtHjo-q5ORU;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;

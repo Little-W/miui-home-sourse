@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/ResourceLoader$FileDescriptorFactory;
 .super Ljava/lang/Object;
+.source "ResourceLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoaderFactory;
@@ -34,8 +35,10 @@
 .method public constructor <init>(Landroid/content/res/Resources;)V
     .locals 0
 
+    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 92
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ResourceLoader$FileDescriptorFactory;->resources:Landroid/content/res/Resources;
 
     return-void
@@ -57,6 +60,7 @@
         }
     .end annotation
 
+    .line 98
     new-instance v0, Lcom/bumptech/glide/load/model/ResourceLoader;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ResourceLoader$FileDescriptorFactory;->resources:Landroid/content/res/Resources;
@@ -65,6 +69,7 @@
 
     const-class v2, Landroid/os/ParcelFileDescriptor;
 
+    .line 99
     invoke-virtual {p1, v1, v2}, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory;->build(Ljava/lang/Class;Ljava/lang/Class;)Lcom/bumptech/glide/load/model/ModelLoader;
 
     move-result-object p1

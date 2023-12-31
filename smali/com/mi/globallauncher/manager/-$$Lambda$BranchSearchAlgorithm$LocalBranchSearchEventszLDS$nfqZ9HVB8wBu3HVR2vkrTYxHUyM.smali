@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/manager/-$$Lambda$BranchSearchAlgorithm$LocalBranchSearchEventszLDS$nfqZ9HVB8wBu3HVR2vkrTYxHUyM;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/internal/ToolbarUtils$1;
 .super Ljava/lang/Object;
+.source "ToolbarUtils.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public compare(Landroid/view/View;Landroid/view/View;)I
     .locals 0
 
+    .line 52
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result p0
@@ -55,6 +58,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 49
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/view/View;

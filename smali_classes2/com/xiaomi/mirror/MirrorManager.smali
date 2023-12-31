@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/MirrorManager;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods

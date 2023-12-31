@@ -1,5 +1,6 @@
 .class Lpl/droidsonroids/gif/InvalidationHandler;
 .super Landroid/os/Handler;
+.source "InvalidationHandler.java"
 
 
 # instance fields
@@ -18,6 +19,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
+    .line 24
     iget-object p0, p0, Lpl/droidsonroids/gif/InvalidationHandler;->mDrawableRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -30,6 +32,7 @@
 
     return-void
 
+    .line 28
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -37,10 +40,12 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 29
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->invalidateSelf()V
 
     goto :goto_1
 
+    .line 31
     :cond_1
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mListeners:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
@@ -61,6 +66,7 @@
 
     check-cast v0, Lpl/droidsonroids/gif/AnimationListener;
 
+    .line 32
     iget v1, p1, Landroid/os/Message;->what:I
 
     invoke-interface {v0, v1}, Lpl/droidsonroids/gif/AnimationListener;->onAnimationCompleted(I)V

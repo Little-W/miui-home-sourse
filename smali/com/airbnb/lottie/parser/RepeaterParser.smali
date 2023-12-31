@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/parser/RepeaterParser;
 .super Ljava/lang/Object;
+.source "RepeaterParser.java"
 
 
 # static fields
@@ -20,6 +21,7 @@
 
     const-string v4, "hd"
 
+    .line 14
     filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
 
     move-result-object v0
@@ -55,6 +57,7 @@
 
     move-object v6, v5
 
+    .line 33
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -62,6 +65,7 @@
 
     if-eqz v1, :cond_5
 
+    .line 34
     sget-object v1, Lcom/airbnb/lottie/parser/RepeaterParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -86,10 +90,12 @@
 
     if-eq v1, v2, :cond_0
 
+    .line 51
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 48
     :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
@@ -97,6 +103,7 @@
 
     goto :goto_0
 
+    .line 45
     :cond_1
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableTransformParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableTransform;
 
@@ -104,6 +111,7 @@
 
     goto :goto_0
 
+    .line 42
     :cond_2
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;Z)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
@@ -111,6 +119,7 @@
 
     goto :goto_0
 
+    .line 39
     :cond_3
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;Z)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
@@ -118,6 +127,7 @@
 
     goto :goto_0
 
+    .line 36
     :cond_4
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -125,6 +135,7 @@
 
     goto :goto_0
 
+    .line 55
     :cond_5
     new-instance p0, Lcom/airbnb/lottie/model/content/Repeater;
 

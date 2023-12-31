@@ -1,5 +1,6 @@
 .class public Lio/branch/search/internal/sqlite/NetworkSQLiteDB_Impl;
 .super Lio/branch/search/internal/sqlite/NetworkSQLiteDB;
+.source "SourceFile"
 
 
 # instance fields

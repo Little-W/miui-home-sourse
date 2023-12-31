@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/animation/AnimatorSetCompat;
 .super Ljava/lang/Object;
+.source "AnimatorSetCompat.java"
 
 
 # direct methods
@@ -15,6 +16,7 @@
         }
     .end annotation
 
+    .line 39
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -30,12 +32,14 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 40
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/animation/Animator;
 
+    .line 41
     invoke-virtual {v5}, Landroid/animation/Animator;->getStartDelay()J
 
     move-result-wide v6
@@ -59,16 +63,20 @@
 
     new-array v0, v0, [I
 
+    .line 43
     fill-array-data v0, :array_0
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
+    .line 44
     invoke-virtual {v0, v3, v4}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
+    .line 45
     invoke-interface {p1, v1, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 47
     invoke-virtual {p0, p1}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
     return-void

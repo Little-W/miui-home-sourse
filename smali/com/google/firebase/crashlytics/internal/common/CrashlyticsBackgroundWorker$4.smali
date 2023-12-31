@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$4;
 .super Ljava/lang/Object;
+.source "CrashlyticsBackgroundWorker.java"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/Continuation;
@@ -34,6 +35,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;)V
     .locals 0
 
+    .line 114
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$4;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +53,7 @@
         }
     .end annotation
 
+    .line 114
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$4;->then(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Void;
 
     move-result-object p0

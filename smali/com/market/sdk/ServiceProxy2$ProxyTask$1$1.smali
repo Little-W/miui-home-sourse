@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;
 .super Landroid/os/AsyncTask;
+.source "ServiceProxy2.java"
 
 
 # annotations
@@ -33,6 +34,7 @@
 .method constructor <init>(Lcom/market/sdk/ServiceProxy2$ProxyTask$1;Landroid/os/IBinder;)V
     .locals 0
 
+    .line 46
     iput-object p1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;->this$2:Lcom/market/sdk/ServiceProxy2$ProxyTask$1;
 
     iput-object p2, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;->val$service:Landroid/os/IBinder;
@@ -47,6 +49,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 46
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -59,6 +62,7 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 0
 
+    .line 50
     iget-object p1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;->this$2:Lcom/market/sdk/ServiceProxy2$ProxyTask$1;
 
     iget-object p0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1$1;->val$service:Landroid/os/IBinder;

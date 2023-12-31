@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext$1;
 .super Ljava/lang/Object;
+.source "ProtobufDataEncoderContext.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 247
     invoke-static {}, Lcom/google/firebase/encoders/proto/Protobuf$IntEncoding;->values()[Lcom/google/firebase/encoders/proto/Protobuf$IntEncoding;
 
     move-result-object v0

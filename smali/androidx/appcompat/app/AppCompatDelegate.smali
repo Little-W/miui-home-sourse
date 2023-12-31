@@ -1,5 +1,6 @@
 .class public abstract Landroidx/appcompat/app/AppCompatDelegate;
 .super Ljava/lang/Object;
+.source "AppCompatDelegate.java"
 
 
 # static fields
@@ -23,12 +24,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 173
     new-instance v0, Landroidx/collection/ArraySet;
 
     invoke-direct {v0}, Landroidx/collection/ArraySet;-><init>()V
 
     sput-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegates:Landroidx/collection/ArraySet;
 
+    .line 175
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +44,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 271
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,13 +53,16 @@
 .method static addActiveDelegate(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 3
 
+    .line 655
     sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 658
     :try_start_0
     invoke-static {p0}, Landroidx/appcompat/app/AppCompatDelegate;->removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
 
+    .line 660
     sget-object v1, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegates:Landroidx/collection/ArraySet;
 
     new-instance v2, Ljava/lang/ref/WeakReference;
@@ -64,6 +71,7 @@
 
     invoke-virtual {v1, v2}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
 
+    .line 661
     monitor-exit v0
 
     return-void
@@ -81,6 +89,7 @@
 .method public static create(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
 
+    .line 230
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)V
@@ -91,6 +100,7 @@
 .method public static create(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
 
+    .line 241
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)V
@@ -101,6 +111,7 @@
 .method public static getDefaultNightMode()I
     .locals 1
 
+    .line 604
     sget v0, Landroidx/appcompat/app/AppCompatDelegate;->sDefaultNightMode:I
 
     return v0
@@ -109,13 +120,16 @@
 .method static removeActivityDelegate(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 1
 
+    .line 665
     sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 667
     :try_start_0
     invoke-static {p0}, Landroidx/appcompat/app/AppCompatDelegate;->removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
 
+    .line 668
     monitor-exit v0
 
     return-void
@@ -133,10 +147,12 @@
 .method private static removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 3
 
+    .line 672
     sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 673
     :try_start_0
     sget-object v1, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegates:Landroidx/collection/ArraySet;
 
@@ -144,6 +160,7 @@
 
     move-result-object v1
 
+    .line 674
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -152,6 +169,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 675
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -168,11 +186,13 @@
 
     if-nez v2, :cond_0
 
+    .line 679
     :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
+    .line 682
     :cond_2
     monitor-exit v0
 
@@ -204,6 +224,7 @@
 .method public attachBaseContext2(Landroid/content/Context;)Landroid/content/Context;
     .locals 0
 
+    .line 395
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatDelegate;->attachBaseContext(Landroid/content/Context;)V
 
     return-object p1

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/Material;
 .super Ljava/lang/Object;
+.source "Material.java"
 
 
 # annotations
@@ -38,14 +39,18 @@
 .method constructor <init>(J)V
     .locals 1
 
+    .line 277
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 278
     iput-wide p1, p0, Lcom/google/android/filament/Material;->mNativeObject:J
 
+    .line 279
     invoke-static {p1, p2}, Lcom/google/android/filament/Material;->nGetDefaultInstance(J)J
 
     move-result-wide p1
 
+    .line 280
     new-instance v0, Lcom/google/android/filament/MaterialInstance;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/filament/MaterialInstance;-><init>(Lcom/google/android/filament/Material;J)V
@@ -58,6 +63,7 @@
 .method static synthetic access$000(JLjava/nio/Buffer;I)J
     .locals 0
 
+    .line 39
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/Material;->nBuilderBuild(JLjava/nio/Buffer;I)J
 
     move-result-wide p0
@@ -149,6 +155,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 894
     iput-wide v0, p0, Lcom/google/android/filament/Material;->mNativeObject:J
 
     return-void
@@ -157,6 +164,7 @@
 .method public createInstance()Lcom/google/android/filament/MaterialInstance;
     .locals 4
 
+    .line 326
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -171,12 +179,14 @@
 
     if-eqz v2, :cond_0
 
+    .line 328
     new-instance v2, Lcom/google/android/filament/MaterialInstance;
 
     invoke-direct {v2, p0, v0, v1}, Lcom/google/android/filament/MaterialInstance;-><init>(Lcom/google/android/filament/Material;J)V
 
     return-object v2
 
+    .line 327
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -190,6 +200,7 @@
 .method public createInstance(Ljava/lang/String;)Lcom/google/android/filament/MaterialInstance;
     .locals 4
 
+    .line 341
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -204,12 +215,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 343
     new-instance p1, Lcom/google/android/filament/MaterialInstance;
 
     invoke-direct {p1, p0, v0, v1}, Lcom/google/android/filament/MaterialInstance;-><init>(Lcom/google/android/filament/Material;J)V
 
     return-object p1
 
+    .line 342
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -223,6 +236,7 @@
 .method public getBlendingMode()Lcom/google/android/filament/Material$BlendingMode;
     .locals 3
 
+    .line 393
     invoke-static {}, Lcom/google/android/filament/Material$BlendingMode;->values()[Lcom/google/android/filament/Material$BlendingMode;
 
     move-result-object v0
@@ -243,6 +257,7 @@
 .method public getCullingMode()Lcom/google/android/filament/Material$CullingMode;
     .locals 3
 
+    .line 438
     invoke-static {}, Lcom/google/android/filament/Material$CullingMode;->values()[Lcom/google/android/filament/Material$CullingMode;
 
     move-result-object v0
@@ -263,6 +278,7 @@
 .method public getDefaultInstance()Lcom/google/android/filament/MaterialInstance;
     .locals 0
 
+    .line 349
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     return-object p0
@@ -271,6 +287,7 @@
 .method public getInterpolation()Lcom/google/android/filament/Material$Interpolation;
     .locals 3
 
+    .line 382
     invoke-static {}, Lcom/google/android/filament/Material$Interpolation;->values()[Lcom/google/android/filament/Material$Interpolation;
 
     move-result-object v0
@@ -291,6 +308,7 @@
 .method public getMaskThreshold()F
     .locals 2
 
+    .line 493
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -305,6 +323,7 @@
 .method public getName()Ljava/lang/String;
     .locals 2
 
+    .line 360
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -319,6 +338,7 @@
 .method public getNativeObject()J
     .locals 4
 
+    .line 887
     iget-wide v0, p0, Lcom/google/android/filament/Material;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -329,6 +349,7 @@
 
     return-wide v0
 
+    .line 888
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -342,6 +363,7 @@
 .method public getParameterCount()I
     .locals 2
 
+    .line 561
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -364,16 +386,19 @@
         }
     .end annotation
 
+    .line 573
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getParameterCount()I
 
     move-result v0
 
+    .line 574
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
     if-lez v0, :cond_0
 
+    .line 575
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v2
@@ -387,6 +412,7 @@
 .method public getRefractionMode()Lcom/google/android/filament/Material$RefractionMode;
     .locals 3
 
+    .line 404
     invoke-static {}, Lcom/google/android/filament/Material$RefractionMode;->values()[Lcom/google/android/filament/Material$RefractionMode;
 
     move-result-object v0
@@ -407,6 +433,7 @@
 .method public getRefractionType()Lcom/google/android/filament/Material$RefractionType;
     .locals 3
 
+    .line 415
     invoke-static {}, Lcom/google/android/filament/Material$RefractionType;->values()[Lcom/google/android/filament/Material$RefractionType;
 
     move-result-object v0
@@ -435,10 +462,12 @@
         }
     .end annotation
 
+    .line 526
     iget-object v0, p0, Lcom/google/android/filament/Material;->mRequiredAttributes:Ljava/util/Set;
 
     if-nez v0, :cond_2
 
+    .line 527
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -447,6 +476,7 @@
 
     move-result v0
 
+    .line 528
     const-class v1, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     invoke-static {v1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -455,12 +485,14 @@
 
     iput-object v1, p0, Lcom/google/android/filament/Material;->mRequiredAttributes:Ljava/util/Set;
 
+    .line 529
     invoke-static {}, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->values()[Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
+    .line 530
     :goto_0
     array-length v3, v1
 
@@ -474,6 +506,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 532
     iget-object v3, p0, Lcom/google/android/filament/Material;->mRequiredAttributes:Ljava/util/Set;
 
     aget-object v4, v1, v2
@@ -485,6 +518,7 @@
 
     goto :goto_0
 
+    .line 535
     :cond_1
     iget-object v0, p0, Lcom/google/android/filament/Material;->mRequiredAttributes:Ljava/util/Set;
 
@@ -494,6 +528,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/Material;->mRequiredAttributes:Ljava/util/Set;
 
+    .line 537
     :cond_2
     iget-object p0, p0, Lcom/google/android/filament/Material;->mRequiredAttributes:Ljava/util/Set;
 
@@ -503,6 +538,7 @@
 .method getRequiredAttributesAsInt()I
     .locals 2
 
+    .line 549
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -517,6 +553,7 @@
 .method public getShading()Lcom/google/android/filament/Material$Shading;
     .locals 3
 
+    .line 371
     invoke-static {}, Lcom/google/android/filament/Material$Shading;->values()[Lcom/google/android/filament/Material$Shading;
 
     move-result-object v0
@@ -537,6 +574,7 @@
 .method public getSpecularAntiAliasingThreshold()F
     .locals 2
 
+    .line 515
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -551,6 +589,7 @@
 .method public getSpecularAntiAliasingVariance()F
     .locals 2
 
+    .line 504
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -565,6 +604,7 @@
 .method public getVertexDomain()Lcom/google/android/filament/Material$VertexDomain;
     .locals 3
 
+    .line 427
     invoke-static {}, Lcom/google/android/filament/Material$VertexDomain;->values()[Lcom/google/android/filament/Material$VertexDomain;
 
     move-result-object v0
@@ -585,6 +625,7 @@
 .method public hasParameter(Ljava/lang/String;)Z
     .locals 2
 
+    .line 587
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -599,6 +640,7 @@
 .method public isColorWriteEnabled()Z
     .locals 2
 
+    .line 449
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -613,6 +655,7 @@
 .method public isDepthCullingEnabled()Z
     .locals 2
 
+    .line 471
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -627,6 +670,7 @@
 .method public isDepthWriteEnabled()Z
     .locals 2
 
+    .line 460
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -641,6 +685,7 @@
 .method public isDoubleSided()Z
     .locals 2
 
+    .line 482
     invoke-virtual {p0}, Lcom/google/android/filament/Material;->getNativeObject()J
 
     move-result-wide v0
@@ -655,6 +700,7 @@
 .method public setDefaultParameter(Ljava/lang/String;F)V
     .locals 0
 
+    .line 611
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;F)V
@@ -665,6 +711,7 @@
 .method public setDefaultParameter(Ljava/lang/String;FF)V
     .locals 0
 
+    .line 649
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;FF)V
@@ -675,6 +722,7 @@
 .method public setDefaultParameter(Ljava/lang/String;FFF)V
     .locals 0
 
+    .line 690
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;FFF)V
@@ -685,6 +733,7 @@
 .method public setDefaultParameter(Ljava/lang/String;FFFF)V
     .locals 6
 
+    .line 734
     iget-object v0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     move-object v1, p1
@@ -705,6 +754,7 @@
 .method public setDefaultParameter(Ljava/lang/String;I)V
     .locals 0
 
+    .line 623
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;I)V
@@ -715,6 +765,7 @@
 .method public setDefaultParameter(Ljava/lang/String;II)V
     .locals 0
 
+    .line 662
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;II)V
@@ -725,6 +776,7 @@
 .method public setDefaultParameter(Ljava/lang/String;III)V
     .locals 0
 
+    .line 704
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;III)V
@@ -735,6 +787,7 @@
 .method public setDefaultParameter(Ljava/lang/String;IIII)V
     .locals 6
 
+    .line 749
     iget-object v0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     move-object v1, p1
@@ -755,6 +808,7 @@
 .method public setDefaultParameter(Ljava/lang/String;Lcom/google/android/filament/Colors$RgbType;FFF)V
     .locals 6
 
+    .line 852
     iget-object v0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     move-object v1, p1
@@ -775,6 +829,7 @@
 .method public setDefaultParameter(Ljava/lang/String;Lcom/google/android/filament/Colors$RgbaType;FFFF)V
     .locals 7
 
+    .line 869
     iget-object v0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     move-object v1, p1
@@ -797,6 +852,7 @@
 .method public setDefaultParameter(Ljava/lang/String;Lcom/google/android/filament/MaterialInstance$BooleanElement;[ZII)V
     .locals 6
 
+    .line 778
     iget-object v0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     move-object v1, p1
@@ -817,6 +873,7 @@
 .method public setDefaultParameter(Ljava/lang/String;Lcom/google/android/filament/MaterialInstance$FloatElement;[FII)V
     .locals 6
 
+    .line 836
     iget-object v0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     move-object v1, p1
@@ -837,6 +894,7 @@
 .method public setDefaultParameter(Ljava/lang/String;Lcom/google/android/filament/MaterialInstance$IntElement;[III)V
     .locals 6
 
+    .line 807
     iget-object v0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     move-object v1, p1
@@ -857,6 +915,7 @@
 .method public setDefaultParameter(Ljava/lang/String;Lcom/google/android/filament/Texture;Lcom/google/android/filament/TextureSampler;)V
     .locals 0
 
+    .line 883
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;Lcom/google/android/filament/Texture;Lcom/google/android/filament/TextureSampler;)V
@@ -867,6 +926,7 @@
 .method public setDefaultParameter(Ljava/lang/String;Z)V
     .locals 0
 
+    .line 599
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;Z)V
@@ -877,6 +937,7 @@
 .method public setDefaultParameter(Ljava/lang/String;ZZ)V
     .locals 0
 
+    .line 636
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;ZZ)V
@@ -887,6 +948,7 @@
 .method public setDefaultParameter(Ljava/lang/String;ZZZ)V
     .locals 0
 
+    .line 676
     iget-object p0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/filament/MaterialInstance;->setParameter(Ljava/lang/String;ZZZ)V
@@ -897,6 +959,7 @@
 .method public setDefaultParameter(Ljava/lang/String;ZZZZ)V
     .locals 6
 
+    .line 719
     iget-object v0, p0, Lcom/google/android/filament/Material;->mDefaultInstance:Lcom/google/android/filament/MaterialInstance;
 
     move-object v1, p1

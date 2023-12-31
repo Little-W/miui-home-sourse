@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/disklrucache/DiskLruCache$DiskLruCacheThreadFactory;
 .super Ljava/lang/Object;
+.source "DiskLruCache.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -20,6 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 882
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +30,7 @@
 .method synthetic constructor <init>(Lcom/bumptech/glide/disklrucache/DiskLruCache$1;)V
     .locals 0
 
+    .line 882
     invoke-direct {p0}, Lcom/bumptech/glide/disklrucache/DiskLruCache$DiskLruCacheThreadFactory;-><init>()V
 
     return-void
@@ -40,6 +43,7 @@
 
     monitor-enter p0
 
+    .line 885
     :try_start_0
     new-instance v0, Ljava/lang/Thread;
 
@@ -49,10 +53,12 @@
 
     const/4 p1, 0x1
 
+    .line 886
     invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 887
     monitor-exit p0
 
     return-object v0

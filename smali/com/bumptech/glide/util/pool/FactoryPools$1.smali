@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/util/pool/FactoryPools$1;
 .super Ljava/lang/Object;
+.source "FactoryPools.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/util/pool/FactoryPools$Resetter;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

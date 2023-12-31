@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/ThreadContextElement$DefaultImpls;
 .super Ljava/lang/Object;
+.source "ThreadContextElement.kt"
 
 
 # annotations

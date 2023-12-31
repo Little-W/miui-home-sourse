@@ -1,5 +1,6 @@
 .class public final Lkotlin/text/Regex$Companion;
 .super Ljava/lang/Object;
+.source "Regex.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 239
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 239
     invoke-direct {p0}, Lkotlin/text/Regex$Companion;-><init>()V
 
     return-void
@@ -33,6 +36,7 @@
 .method public static final synthetic access$ensureUnicodeCase(Lkotlin/text/Regex$Companion;I)I
     .locals 0
 
+    .line 239
     invoke-direct {p0, p1}, Lkotlin/text/Regex$Companion;->ensureUnicodeCase(I)I
 
     move-result p0

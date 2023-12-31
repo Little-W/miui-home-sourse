@@ -1,5 +1,6 @@
 .class final enum Lcom/mi/google/gson/LongSerializationPolicy$1;
 .super Lcom/mi/google/gson/LongSerializationPolicy;
+.source "LongSerializationPolicy.java"
 
 
 # annotations
@@ -19,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 34
     invoke-direct {p0, p1, p2, v0}, Lcom/mi/google/gson/LongSerializationPolicy;-><init>(Ljava/lang/String;ILcom/mi/google/gson/LongSerializationPolicy$1;)V
 
     return-void
@@ -29,6 +31,7 @@
 .method public serialize(Ljava/lang/Long;)Lcom/mi/google/gson/JsonElement;
     .locals 0
 
+    .line 36
     new-instance p0, Lcom/mi/google/gson/JsonPrimitive;
 
     invoke-direct {p0, p1}, Lcom/mi/google/gson/JsonPrimitive;-><init>(Ljava/lang/Number;)V

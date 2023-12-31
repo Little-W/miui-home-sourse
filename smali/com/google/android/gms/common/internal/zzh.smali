@@ -16,16 +16,21 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZI)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/common/internal/zzh;->mPackageName:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/gms/common/internal/zzh;->zzej:Ljava/lang/String;
 
+    .line 4
     iput-boolean p3, p0, Lcom/google/android/gms/common/internal/zzh;->zzek:Z
 
     const/16 p1, 0x81
 
+    .line 5
     iput p1, p0, Lcom/google/android/gms/common/internal/zzh;->zzdt:I
 
     return-void
@@ -36,6 +41,7 @@
 .method final getPackageName()Ljava/lang/String;
     .locals 0
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzh;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -44,6 +50,7 @@
 .method final zzq()I
     .locals 0
 
+    .line 9
     iget p0, p0, Lcom/google/android/gms/common/internal/zzh;->zzdt:I
 
     return p0
@@ -52,6 +59,7 @@
 .method final zzt()Ljava/lang/String;
     .locals 0
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzh;->zzej:Ljava/lang/String;
 
     return-object p0

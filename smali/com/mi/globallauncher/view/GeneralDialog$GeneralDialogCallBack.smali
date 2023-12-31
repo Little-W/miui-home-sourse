@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/view/GeneralDialog$GeneralDialogCallBack;
 .super Ljava/lang/Object;
+.source "GeneralDialog.java"
 
 
 # annotations

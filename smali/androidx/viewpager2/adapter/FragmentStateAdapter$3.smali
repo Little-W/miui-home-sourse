@@ -1,5 +1,6 @@
 .class Landroidx/viewpager2/adapter/FragmentStateAdapter$3;
 .super Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
+.source "FragmentStateAdapter.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;Landroidx/fragment/app/Fragment;Landroid/widget/FrameLayout;)V
     .locals 0
 
+    .line 369
     iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
     iput-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->val$fragment:Landroidx/fragment/app/Fragment;
@@ -41,12 +43,15 @@
 .method public onFragmentViewCreated(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 376
     iget-object p4, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->val$fragment:Landroidx/fragment/app/Fragment;
 
     if-ne p2, p4, :cond_0
 
+    .line 377
     invoke-virtual {p1, p0}, Landroidx/fragment/app/FragmentManager;->unregisterFragmentLifecycleCallbacks(Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;)V
 
+    .line 378
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
     iget-object p0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->val$container:Landroid/widget/FrameLayout;

@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 .super Ljava/lang/Object;
+.source "QueueFile.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 588
     new-instance v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     const/4 v1, 0x0
@@ -41,10 +43,13 @@
 .method constructor <init>(II)V
     .locals 0
 
+    .line 602
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 603
     iput p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
 
+    .line 604
     iput p2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->length:I
 
     return-void
@@ -55,6 +60,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 609
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

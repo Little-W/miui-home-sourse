@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;
 .super Ljava/lang/Object;
+.source "MultiModelLoaderFactory.java"
 
 
 # annotations
@@ -68,12 +69,16 @@
         }
     .end annotation
 
+    .line 196
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 197
     iput-object p1, p0, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;->modelClass:Ljava/lang/Class;
 
+    .line 198
     iput-object p2, p0, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;->dataClass:Ljava/lang/Class;
 
+    .line 199
     iput-object p3, p0, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;->factory:Lcom/bumptech/glide/load/model/ModelLoaderFactory;
 
     return-void
@@ -91,6 +96,7 @@
         }
     .end annotation
 
+    .line 207
     iget-object p0, p0, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;->modelClass:Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -112,6 +118,7 @@
         }
     .end annotation
 
+    .line 203
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;->handles(Ljava/lang/Class;)Z
 
     move-result p1

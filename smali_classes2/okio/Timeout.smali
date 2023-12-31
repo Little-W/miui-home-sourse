@@ -1,5 +1,6 @@
 .class public Lokio/Timeout;
 .super Ljava/lang/Object;
+.source "Timeout.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 48
     new-instance v0, Lokio/Timeout$1;
 
     invoke-direct {v0}, Lokio/Timeout$1;-><init>()V
@@ -30,6 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +45,7 @@
 
     const/4 v0, 0x0
 
+    .line 134
     iput-boolean v0, p0, Lokio/Timeout;->hasDeadline:Z
 
     return-object p0
@@ -52,6 +56,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 128
     iput-wide v0, p0, Lokio/Timeout;->timeoutNanos:J
 
     return-object p0
@@ -60,14 +65,17 @@
 .method public deadlineNanoTime()J
     .locals 2
 
+    .line 104
     iget-boolean v0, p0, Lokio/Timeout;->hasDeadline:Z
 
     if-eqz v0, :cond_0
 
+    .line 105
     iget-wide v0, p0, Lokio/Timeout;->deadlineNanoTime:J
 
     return-wide v0
 
+    .line 104
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -83,8 +91,10 @@
 
     const/4 v0, 0x1
 
+    .line 114
     iput-boolean v0, p0, Lokio/Timeout;->hasDeadline:Z
 
+    .line 115
     iput-wide p1, p0, Lokio/Timeout;->deadlineNanoTime:J
 
     return-object p0
@@ -93,6 +103,7 @@
 .method public hasDeadline()Z
     .locals 0
 
+    .line 94
     iget-boolean p0, p0, Lokio/Timeout;->hasDeadline:Z
 
     return p0
@@ -106,12 +117,14 @@
         }
     .end annotation
 
+    .line 144
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 149
     iget-boolean v0, p0, Lokio/Timeout;->hasDeadline:Z
 
     if-eqz v0, :cond_1
@@ -132,6 +145,7 @@
 
     goto :goto_0
 
+    .line 150
     :cond_0
     new-instance p0, Ljava/io/InterruptedIOException;
 
@@ -145,6 +159,7 @@
     :goto_0
     return-void
 
+    .line 145
     :cond_2
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -152,6 +167,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
+    .line 146
     new-instance p0, Ljava/io/InterruptedIOException;
 
     const-string v0, "interrupted"
@@ -172,6 +188,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 83
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide p1
@@ -180,6 +197,7 @@
 
     return-object p0
 
+    .line 82
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -189,6 +207,7 @@
 
     throw p0
 
+    .line 81
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -214,6 +233,7 @@
 .method public timeoutNanos()J
     .locals 2
 
+    .line 89
     iget-wide v0, p0, Lokio/Timeout;->timeoutNanos:J
 
     return-wide v0

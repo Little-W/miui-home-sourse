@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/utils/Constants;
 .super Ljava/lang/Object;
+.source "Constants.java"
 
 
 # annotations
@@ -132,12 +133,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 23
     invoke-static {}, Lcom/market/sdk/utils/Client;->isInternationalMiui()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/market/sdk/utils/Constants;->sUseInternationalUrl:Z
 
+    .line 24
     sget-object v0, Lcom/market/sdk/ServerType;->PRODUCT:Lcom/market/sdk/ServerType;
 
     sput-object v0, Lcom/market/sdk/utils/Constants;->sServer:Lcom/market/sdk/ServerType;
@@ -148,6 +151,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -156,6 +160,7 @@
 .method public static configURL()V
     .locals 2
 
+    .line 39
     sget-object v0, Lcom/market/sdk/utils/Constants;->customUrl:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -164,10 +169,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 40
     sget-boolean v0, Lcom/market/sdk/utils/Constants;->sUseInternationalUrl:Z
 
     if-eqz v0, :cond_0
 
+    .line 41
     sget-object v0, Lcom/market/sdk/utils/Constants;->sServer:Lcom/market/sdk/ServerType;
 
     invoke-virtual {v0}, Lcom/market/sdk/ServerType;->getGlobalBaseUrl()Ljava/lang/String;
@@ -178,6 +185,7 @@
 
     goto :goto_0
 
+    .line 43
     :cond_0
     sget-object v0, Lcom/market/sdk/utils/Constants;->sServer:Lcom/market/sdk/ServerType;
 
@@ -187,6 +195,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Constants;->URL_BASE:Ljava/lang/String;
 
+    .line 45
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -206,6 +215,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Constants;->UPDATE_URL:Ljava/lang/String;
 
+    .line 46
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,6 +236,7 @@
 
     goto :goto_1
 
+    .line 48
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -252,6 +263,7 @@
 .method public static customURL(Ljava/lang/String;)V
     .locals 1
 
+    .line 53
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -260,6 +272,7 @@
 
     return-void
 
+    .line 55
     :cond_0
     sput-object p0, Lcom/market/sdk/utils/Constants;->customUrl:Ljava/lang/String;
 
@@ -269,12 +282,15 @@
 .method public static setServerType(Lcom/market/sdk/ServerType;)V
     .locals 0
 
+    .line 33
     sput-object p0, Lcom/market/sdk/utils/Constants;->sServer:Lcom/market/sdk/ServerType;
 
     const-string p0, ""
 
+    .line 34
     sput-object p0, Lcom/market/sdk/utils/Constants;->customUrl:Ljava/lang/String;
 
+    .line 35
     invoke-static {}, Lcom/market/sdk/utils/Constants;->configURL()V
 
     return-void
@@ -283,12 +299,15 @@
 .method public static setUseInternalProductUrl(Z)V
     .locals 0
 
+    .line 27
     sput-boolean p0, Lcom/market/sdk/utils/Constants;->sUseInternationalUrl:Z
 
     const-string p0, ""
 
+    .line 28
     sput-object p0, Lcom/market/sdk/utils/Constants;->customUrl:Ljava/lang/String;
 
+    .line 29
     invoke-static {}, Lcom/market/sdk/utils/Constants;->configURL()V
 
     return-void

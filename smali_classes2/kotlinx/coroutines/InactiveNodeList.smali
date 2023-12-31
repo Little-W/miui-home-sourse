@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/InactiveNodeList;
 .super Ljava/lang/Object;
+.source "JobSupport.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/Incomplete;
@@ -13,6 +14,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/NodeList;)V
     .locals 0
 
+    .line 1375
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/InactiveNodeList;->list:Lkotlinx/coroutines/NodeList;
@@ -25,6 +27,7 @@
 .method public getList()Lkotlinx/coroutines/NodeList;
     .locals 0
 
+    .line 1376
     iget-object p0, p0, Lkotlinx/coroutines/InactiveNodeList;->list:Lkotlinx/coroutines/NodeList;
 
     return-object p0
@@ -41,6 +44,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 1379
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getDEBUG()Z
 
     move-result v0

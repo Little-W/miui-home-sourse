@@ -1,5 +1,6 @@
 .class interface abstract Lcom/xiaomi/dist/handoff/system/PackageReceiver$Callback;
 .super Ljava/lang/Object;
+.source "PackageReceiver.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final Landroidx/core/util/Preconditions;
 .super Ljava/lang/Object;
+.source "Preconditions.java"
 
 
 # direct methods
@@ -10,6 +11,7 @@
 
     return-void
 
+    .line 52
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -39,6 +41,7 @@
 
     return p0
 
+    .line 250
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -48,6 +51,7 @@
 
     aput-object p3, v3, v2
 
+    .line 252
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -62,6 +66,7 @@
 
     const-string p1, "%s is out of range of [%d, %d] (too high)"
 
+    .line 251
     invoke-static {v4, p1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -70,6 +75,7 @@
 
     throw p0
 
+    .line 246
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -79,6 +85,7 @@
 
     aput-object p3, v3, v2
 
+    .line 248
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -93,6 +100,7 @@
 
     const-string p1, "%s is out of range of [%d, %d] (too low)"
 
+    .line 247
     invoke-static {v4, p1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -109,6 +117,7 @@
 
     return p0
 
+    .line 225
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -124,6 +133,7 @@
 
     return p0
 
+    .line 209
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -141,6 +151,7 @@
 
     return p0
 
+    .line 191
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -152,6 +163,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 192
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -162,6 +174,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 193
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -195,6 +208,7 @@
 
     return-object p0
 
+    .line 137
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -219,6 +233,7 @@
 
     return-object p0
 
+    .line 154
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -238,6 +253,7 @@
 
     return-void
 
+    .line 169
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

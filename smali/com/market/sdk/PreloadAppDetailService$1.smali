@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/PreloadAppDetailService$1;
 .super Ljava/lang/Object;
+.source "PreloadAppDetailService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/market/sdk/PreloadAppDetailService;Ljava/lang/String;)V
     .locals 0
 
+    .line 36
     iput-object p1, p0, Lcom/market/sdk/PreloadAppDetailService$1;->this$0:Lcom/market/sdk/PreloadAppDetailService;
 
     iput-object p2, p0, Lcom/market/sdk/PreloadAppDetailService$1;->val$deeplink:Ljava/lang/String;
@@ -45,6 +47,7 @@
         }
     .end annotation
 
+    .line 39
     iget-object v0, p0, Lcom/market/sdk/PreloadAppDetailService$1;->this$0:Lcom/market/sdk/PreloadAppDetailService;
 
     invoke-static {v0}, Lcom/market/sdk/PreloadAppDetailService;->access$000(Lcom/market/sdk/PreloadAppDetailService;)Lcom/xiaomi/market/IPreloadAppDetailService;
@@ -53,6 +56,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 40
     iget-object v0, p0, Lcom/market/sdk/PreloadAppDetailService$1;->this$0:Lcom/market/sdk/PreloadAppDetailService;
 
     invoke-static {v0}, Lcom/market/sdk/PreloadAppDetailService;->access$000(Lcom/market/sdk/PreloadAppDetailService;)Lcom/xiaomi/market/IPreloadAppDetailService;
@@ -70,6 +74,7 @@
 
     const-string v0, "IPreloadAppDetailService is null"
 
+    .line 42
     invoke-static {p0, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0

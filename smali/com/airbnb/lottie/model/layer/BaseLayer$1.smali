@@ -1,5 +1,6 @@
 .class synthetic Lcom/airbnb/lottie/model/layer/BaseLayer$1;
 .super Ljava/lang/Object;
+.source "BaseLayer.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
+    .line 364
     invoke-static {}, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->values()[Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
     move-result-object v0
@@ -96,6 +98,7 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
+    .line 56
     :catch_3
     invoke-static {}, Lcom/airbnb/lottie/model/layer/Layer$LayerType;->values()[Lcom/airbnb/lottie/model/layer/Layer$LayerType;
 

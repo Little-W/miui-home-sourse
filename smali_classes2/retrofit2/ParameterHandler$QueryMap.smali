@@ -1,5 +1,6 @@
 .class final Lretrofit2/ParameterHandler$QueryMap;
 .super Lretrofit2/ParameterHandler;
+.source "ParameterHandler.java"
 
 
 # annotations
@@ -53,10 +54,13 @@
         }
     .end annotation
 
+    .line 143
     invoke-direct {p0}, Lretrofit2/ParameterHandler;-><init>()V
 
+    .line 144
     iput-object p1, p0, Lretrofit2/ParameterHandler$QueryMap;->valueConverter:Lretrofit2/Converter;
 
+    .line 145
     iput-boolean p2, p0, Lretrofit2/ParameterHandler$QueryMap;->encoded:Z
 
     return-void
@@ -76,6 +80,7 @@
         }
     .end annotation
 
+    .line 139
     check-cast p2, Ljava/util/Map;
 
     invoke-virtual {p0, p1, p2}, Lretrofit2/ParameterHandler$QueryMap;->apply(Lretrofit2/RequestBuilder;Ljava/util/Map;)V
@@ -107,6 +112,7 @@
 
     if-eqz p2, :cond_4
 
+    .line 154
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -128,6 +134,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 155
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -136,6 +143,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 159
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -144,6 +152,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 165
     iget-object v3, p0, Lretrofit2/ParameterHandler$QueryMap;->valueConverter:Lretrofit2/Converter;
 
     invoke-interface {v3, v0}, Lretrofit2/Converter;->convert(Ljava/lang/Object;)Ljava/lang/Object;
@@ -154,12 +163,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 176
     iget-boolean v0, p0, Lretrofit2/ParameterHandler$QueryMap;->encoded:Z
 
     invoke-virtual {p1, v1, v3, v0}, Lretrofit2/RequestBuilder;->addQueryParam(Ljava/lang/String;Ljava/lang/String;Z)V
 
     goto :goto_0
 
+    .line 167
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -179,6 +190,7 @@
 
     iget-object p0, p0, Lretrofit2/ParameterHandler$QueryMap;->valueConverter:Lretrofit2/Converter;
 
+    .line 170
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -205,6 +217,7 @@
 
     throw p1
 
+    .line 161
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -228,6 +241,7 @@
 
     throw p0
 
+    .line 157
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -240,6 +254,7 @@
     :cond_3
     return-void
 
+    .line 151
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

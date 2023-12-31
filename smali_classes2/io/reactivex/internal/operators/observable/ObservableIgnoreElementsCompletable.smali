@@ -1,5 +1,6 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableIgnoreElementsCompletable;
 .super Lio/reactivex/Completable;
+.source "ObservableIgnoreElementsCompletable.java"
 
 
 # annotations
@@ -35,8 +36,10 @@
         }
     .end annotation
 
+    .line 25
     invoke-direct {p0}, Lio/reactivex/Completable;-><init>()V
 
+    .line 26
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableIgnoreElementsCompletable;->source:Lio/reactivex/ObservableSource;
 
     return-void

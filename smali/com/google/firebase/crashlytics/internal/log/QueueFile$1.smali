@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;
 .super Ljava/lang/Object;
+.source "QueueFile.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/log/QueueFile$ElementReader;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/log/QueueFile;Ljava/lang/StringBuilder;)V
     .locals 0
 
+    .line 561
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;->this$0:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;->val$builder:Ljava/lang/StringBuilder;
@@ -36,6 +38,7 @@
 
     const/4 p1, 0x1
 
+    .line 562
     iput-boolean p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;->first:Z
 
     return-void
@@ -51,16 +54,19 @@
         }
     .end annotation
 
+    .line 566
     iget-boolean p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;->first:Z
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x0
 
+    .line 567
     iput-boolean p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;->first:Z
 
     goto :goto_0
 
+    .line 569
     :cond_0
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;->val$builder:Ljava/lang/StringBuilder;
 
@@ -68,6 +74,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 571
     :goto_0
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;->val$builder:Ljava/lang/StringBuilder;
 

@@ -1,5 +1,6 @@
 .class public abstract Lokhttp3/ResponseBody;
 .super Ljava/lang/Object;
+.source "ResponseBody.java"
 
 # interfaces
 .implements Ljava/io/Closeable;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,12 +19,14 @@
 .method private charset()Ljava/nio/charset/Charset;
     .locals 1
 
+    .line 183
     invoke-virtual {p0}, Lokhttp3/ResponseBody;->contentType()Lokhttp3/MediaType;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 184
     sget-object v0, Lokhttp3/internal/Util;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v0}, Lokhttp3/MediaType;->charset(Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;
@@ -47,12 +51,14 @@
 
     if-eqz p3, :cond_0
 
+    .line 224
     new-instance v0, Lokhttp3/ResponseBody$1;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lokhttp3/ResponseBody$1;-><init>(Lokhttp3/MediaType;JLokio/BufferedSource;)V
 
     return-object v0
 
+    .line 223
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -70,6 +76,7 @@
         .end annotation
     .end param
 
+    .line 210
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
@@ -78,6 +85,7 @@
 
     move-result-object v0
 
+    .line 211
     array-length p1, p1
 
     int-to-long v1, p1
@@ -94,6 +102,7 @@
 .method public final byteStream()Ljava/io/InputStream;
     .locals 0
 
+    .line 116
     invoke-virtual {p0}, Lokhttp3/ResponseBody;->source()Lokio/BufferedSource;
 
     move-result-object p0
@@ -113,6 +122,7 @@
         }
     .end annotation
 
+    .line 129
     invoke-virtual {p0}, Lokhttp3/ResponseBody;->contentLength()J
 
     move-result-wide v0
@@ -123,10 +133,12 @@
 
     if-gtz v2, :cond_2
 
+    .line 134
     invoke-virtual {p0}, Lokhttp3/ResponseBody;->source()Lokio/BufferedSource;
 
     move-result-object p0
 
+    .line 137
     :try_start_0
     invoke-interface {p0}, Lokio/BufferedSource;->readByteArray()[B
 
@@ -134,6 +146,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 139
     invoke-static {p0}, Lokhttp3/internal/Util;->closeQuietly(Ljava/io/Closeable;)V
 
     const-wide/16 v3, -0x1
@@ -142,6 +155,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 141
     array-length p0, v2
 
     int-to-long v3, p0
@@ -152,6 +166,7 @@
 
     goto :goto_0
 
+    .line 142
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -192,10 +207,12 @@
     :catchall_0
     move-exception v0
 
+    .line 139
     invoke-static {p0}, Lokhttp3/internal/Util;->closeQuietly(Ljava/io/Closeable;)V
 
     throw v0
 
+    .line 131
     :cond_2
     new-instance p0, Ljava/io/IOException;
 
@@ -221,6 +238,7 @@
 .method public close()V
     .locals 0
 
+    .line 188
     invoke-virtual {p0}, Lokhttp3/ResponseBody;->source()Lokio/BufferedSource;
 
     move-result-object p0
@@ -249,10 +267,12 @@
         }
     .end annotation
 
+    .line 173
     invoke-virtual {p0}, Lokhttp3/ResponseBody;->source()Lokio/BufferedSource;
 
     move-result-object v0
 
+    .line 175
     :try_start_0
     invoke-direct {p0}, Lokhttp3/ResponseBody;->charset()Ljava/nio/charset/Charset;
 
@@ -262,12 +282,14 @@
 
     move-result-object p0
 
+    .line 176
     invoke-interface {v0, p0}, Lokio/BufferedSource;->readString(Ljava/nio/charset/Charset;)Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 178
     invoke-static {v0}, Lokhttp3/internal/Util;->closeQuietly(Ljava/io/Closeable;)V
 
     return-object p0

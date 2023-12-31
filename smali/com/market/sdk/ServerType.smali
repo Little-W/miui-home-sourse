@@ -1,5 +1,6 @@
 .class public final enum Lcom/market/sdk/ServerType;
 .super Ljava/lang/Enum;
+.source "ServerType.java"
 
 
 # annotations
@@ -28,6 +29,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
+    .line 10
     new-instance v0, Lcom/market/sdk/ServerType;
 
     const/4 v1, 0x0
@@ -46,6 +48,7 @@
 
     new-array v0, v0, [Lcom/market/sdk/ServerType;
 
+    .line 9
     sget-object v2, Lcom/market/sdk/ServerType;->PRODUCT:Lcom/market/sdk/ServerType;
 
     aput-object v2, v0, v1
@@ -66,10 +69,13 @@
         }
     .end annotation
 
+    .line 14
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 15
     iput-object p3, p0, Lcom/market/sdk/ServerType;->baseUrl:Ljava/lang/String;
 
+    .line 16
     iput-object p4, p0, Lcom/market/sdk/ServerType;->globalBaseUrl:Ljava/lang/String;
 
     return-void
@@ -78,6 +84,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/market/sdk/ServerType;
     .locals 1
 
+    .line 9
     const-class v0, Lcom/market/sdk/ServerType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -92,6 +99,7 @@
 .method public static values()[Lcom/market/sdk/ServerType;
     .locals 1
 
+    .line 9
     sget-object v0, Lcom/market/sdk/ServerType;->$VALUES:[Lcom/market/sdk/ServerType;
 
     invoke-virtual {v0}, [Lcom/market/sdk/ServerType;->clone()Ljava/lang/Object;
@@ -108,6 +116,7 @@
 .method public getBaseUrl()Ljava/lang/String;
     .locals 0
 
+    .line 20
     iget-object p0, p0, Lcom/market/sdk/ServerType;->baseUrl:Ljava/lang/String;
 
     return-object p0
@@ -116,6 +125,7 @@
 .method public getGlobalBaseUrl()Ljava/lang/String;
     .locals 0
 
+    .line 24
     iget-object p0, p0, Lcom/market/sdk/ServerType;->globalBaseUrl:Ljava/lang/String;
 
     return-object p0

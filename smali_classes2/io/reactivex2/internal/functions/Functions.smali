@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/internal/functions/Functions;
 .super Ljava/lang/Object;
+.source "Functions.java"
 
 
 # annotations
@@ -125,72 +126,84 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 81
     new-instance v0, Lio/reactivex2/internal/functions/Functions$Identity;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$Identity;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->IDENTITY:Lio/reactivex2/functions/Function;
 
+    .line 93
     new-instance v0, Lio/reactivex2/internal/functions/Functions$EmptyRunnable;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$EmptyRunnable;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->EMPTY_RUNNABLE:Ljava/lang/Runnable;
 
+    .line 95
     new-instance v0, Lio/reactivex2/internal/functions/Functions$EmptyAction;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$EmptyAction;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex2/functions/Action;
 
+    .line 97
     new-instance v0, Lio/reactivex2/internal/functions/Functions$EmptyConsumer;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$EmptyConsumer;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->EMPTY_CONSUMER:Lio/reactivex2/functions/Consumer;
 
+    .line 109
     new-instance v0, Lio/reactivex2/internal/functions/Functions$ErrorConsumer;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$ErrorConsumer;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->ERROR_CONSUMER:Lio/reactivex2/functions/Consumer;
 
+    .line 115
     new-instance v0, Lio/reactivex2/internal/functions/Functions$OnErrorMissingConsumer;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$OnErrorMissingConsumer;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->ON_ERROR_MISSING:Lio/reactivex2/functions/Consumer;
 
+    .line 117
     new-instance v0, Lio/reactivex2/internal/functions/Functions$EmptyLongConsumer;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$EmptyLongConsumer;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->EMPTY_LONG_CONSUMER:Lio/reactivex2/functions/LongConsumer;
 
+    .line 119
     new-instance v0, Lio/reactivex2/internal/functions/Functions$TruePredicate;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$TruePredicate;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->ALWAYS_TRUE:Lio/reactivex2/functions/Predicate;
 
+    .line 121
     new-instance v0, Lio/reactivex2/internal/functions/Functions$FalsePredicate;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$FalsePredicate;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->ALWAYS_FALSE:Lio/reactivex2/functions/Predicate;
 
+    .line 123
     new-instance v0, Lio/reactivex2/internal/functions/Functions$NullCallable;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$NullCallable;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->NULL_SUPPLIER:Ljava/util/concurrent/Callable;
 
+    .line 125
     new-instance v0, Lio/reactivex2/internal/functions/Functions$NaturalObjectComparator;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$NaturalObjectComparator;-><init>()V
 
     sput-object v0, Lio/reactivex2/internal/functions/Functions;->NATURAL_COMPARATOR:Ljava/util/Comparator;
 
+    .line 514
     new-instance v0, Lio/reactivex2/internal/functions/Functions$MaxRequestSubscription;
 
     invoke-direct {v0}, Lio/reactivex2/internal/functions/Functions$MaxRequestSubscription;-><init>()V
@@ -213,6 +226,7 @@
         }
     .end annotation
 
+    .line 251
     new-instance v0, Lio/reactivex2/internal/functions/Functions$ArrayListCapacityCallable;
 
     invoke-direct {v0, p0}, Lio/reactivex2/internal/functions/Functions$ArrayListCapacityCallable;-><init>(I)V
@@ -232,6 +246,7 @@
         }
     .end annotation
 
+    .line 106
     sget-object v0, Lio/reactivex2/internal/functions/Functions;->EMPTY_CONSUMER:Lio/reactivex2/functions/Consumer;
 
     return-object v0

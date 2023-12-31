@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;
 .super Landroid/content/BroadcastReceiver;
+.source "Dispatcher.java"
 
 
 # annotations
@@ -27,8 +28,10 @@
 .method constructor <init>(Lcom/squareup/picasso/Dispatcher;)V
     .locals 0
 
+    .line 538
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 539
     iput-object p1, p0, Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     return-void
@@ -49,6 +52,7 @@
 
     return-void
 
+    .line 562
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -56,6 +60,7 @@
 
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
+    .line 563
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -64,6 +69,7 @@
 
     const-string p1, "state"
 
+    .line 564
     invoke-virtual {p2, p1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v0
@@ -72,6 +78,7 @@
 
     return-void
 
+    .line 567
     :cond_1
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
@@ -88,6 +95,7 @@
     :cond_2
     const-string p2, "android.net.conn.CONNECTIVITY_CHANGE"
 
+    .line 568
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -96,12 +104,14 @@
 
     const-string p2, "connectivity"
 
+    .line 569
     invoke-static {p1, p2}, Lcom/squareup/picasso/Utils;->getService(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/net/ConnectivityManager;
 
+    .line 570
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
@@ -128,14 +138,17 @@
 .method register()V
     .locals 2
 
+    .line 543
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
+    .line 544
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 545
     iget-object v1, p0, Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     iget-boolean v1, v1, Lcom/squareup/picasso/Dispatcher;->scansNetworkChanges:Z
@@ -144,8 +157,10 @@
 
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
+    .line 546
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 548
     :cond_0
     iget-object v1, p0, Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 

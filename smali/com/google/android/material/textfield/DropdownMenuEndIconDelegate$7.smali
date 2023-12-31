@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$7;
 .super Ljava/lang/Object;
+.source "DropdownMenuEndIconDelegate.java"
 
 # interfaces
 .implements Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
     .locals 0
 
+    .line 270
     iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$7;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onTouchExplorationStateChanged(Z)V
     .locals 1
 
+    .line 273
     iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$7;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     iget-object v0, v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
@@ -50,6 +53,7 @@
 
     iget-object v0, v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
 
+    .line 274
     invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
     move-result-object v0
@@ -60,6 +64,7 @@
 
     if-nez v0, :cond_1
 
+    .line 275
     iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$7;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;

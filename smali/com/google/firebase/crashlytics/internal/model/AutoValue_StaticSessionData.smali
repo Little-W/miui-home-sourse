@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;
 .super Lcom/google/firebase/crashlytics/internal/model/StaticSessionData;
+.source "AutoValue_StaticSessionData.java"
 
 
 # instance fields
@@ -14,22 +15,27 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$OsData;Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$DeviceData;)V
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData;-><init>()V
 
     if-eqz p1, :cond_2
 
+    .line 21
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->appData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
 
     if-eqz p2, :cond_1
 
+    .line 25
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->osData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$OsData;
 
     if-eqz p3, :cond_0
 
+    .line 29
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->deviceData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$DeviceData;
 
     return-void
 
+    .line 27
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -39,6 +45,7 @@
 
     throw p0
 
+    .line 23
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -48,6 +55,7 @@
 
     throw p0
 
+    .line 19
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -63,6 +71,7 @@
 .method public appData()Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->appData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
 
     return-object p0
@@ -71,6 +80,7 @@
 .method public deviceData()Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$DeviceData;
     .locals 0
 
+    .line 44
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->deviceData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$DeviceData;
 
     return-object p0
@@ -85,6 +95,7 @@
 
     return v0
 
+    .line 61
     :cond_0
     instance-of v1, p1, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData;
 
@@ -92,8 +103,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 62
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData;
 
+    .line 63
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->appData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData;->appData()Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
@@ -108,6 +121,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->osData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$OsData;
 
+    .line 64
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData;->osData()Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$OsData;
 
     move-result-object v3
@@ -120,6 +134,7 @@
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->deviceData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$DeviceData;
 
+    .line 65
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData;->deviceData()Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$DeviceData;
 
     move-result-object p1
@@ -145,6 +160,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 74
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->appData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -157,6 +173,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 76
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->osData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$OsData;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -167,6 +184,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 78
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->deviceData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$DeviceData;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -181,6 +199,7 @@
 .method public osData()Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$OsData;
     .locals 0
 
+    .line 39
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData;->osData:Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$OsData;
 
     return-object p0
@@ -189,6 +208,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

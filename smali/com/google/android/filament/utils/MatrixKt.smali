@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/MatrixKt;
 .super Ljava/lang/Object;
+.source "Matrix.kt"
 
 
 # annotations
@@ -16,6 +17,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 359
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getX()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v0
@@ -24,6 +26,7 @@
 
     move-result v0
 
+    .line 360
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getX()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v1
@@ -32,6 +35,7 @@
 
     move-result v1
 
+    .line 361
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getX()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v2
@@ -40,6 +44,7 @@
 
     move-result v2
 
+    .line 362
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getY()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v3
@@ -48,6 +53,7 @@
 
     move-result v3
 
+    .line 363
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getY()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v4
@@ -56,6 +62,7 @@
 
     move-result v4
 
+    .line 364
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getY()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v5
@@ -64,6 +71,7 @@
 
     move-result v5
 
+    .line 365
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getZ()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v6
@@ -72,6 +80,7 @@
 
     move-result v6
 
+    .line 366
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getZ()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v7
@@ -80,6 +89,7 @@
 
     move-result v7
 
+    .line 367
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getZ()Lcom/google/android/filament/utils/Float3;
 
     move-result-object p0
@@ -116,6 +126,7 @@
 
     add-float/2addr v11, v12
 
+    .line 375
     sget-object v12, Lcom/google/android/filament/utils/Mat3;->Companion:Lcom/google/android/filament/utils/Mat3$Companion;
 
     const/16 v13, 0x9
@@ -228,6 +239,7 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 389
     new-instance v0, Lcom/google/android/filament/utils/Mat4;
 
     const/4 v3, 0x0
@@ -246,6 +258,7 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/google/android/filament/utils/Mat4;-><init>(Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 391
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -264,6 +277,7 @@
 
     mul-float/2addr v2, v3
 
+    .line 392
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v3
@@ -282,6 +296,7 @@
 
     mul-float/2addr v3, v4
 
+    .line 393
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v4
@@ -300,6 +315,7 @@
 
     mul-float/2addr v4, v5
 
+    .line 394
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v5
@@ -318,6 +334,7 @@
 
     mul-float/2addr v5, v6
 
+    .line 395
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v6
@@ -336,6 +353,7 @@
 
     mul-float/2addr v6, v7
 
+    .line 396
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v7
@@ -354,6 +372,7 @@
 
     mul-float/2addr v7, v8
 
+    .line 397
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v8
@@ -372,6 +391,7 @@
 
     mul-float/2addr v8, v9
 
+    .line 398
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v9
@@ -390,6 +410,7 @@
 
     mul-float/2addr v9, v10
 
+    .line 399
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v10
@@ -408,6 +429,7 @@
 
     mul-float/2addr v10, v11
 
+    .line 400
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v11
@@ -426,6 +448,7 @@
 
     mul-float/2addr v11, v12
 
+    .line 401
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v12
@@ -444,6 +467,7 @@
 
     mul-float/2addr v12, v13
 
+    .line 402
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v13
@@ -462,6 +486,7 @@
 
     mul-float/2addr v13, v14
 
+    .line 404
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -502,6 +527,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setX(F)V
 
+    .line 405
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -548,6 +574,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setX(F)V
 
+    .line 406
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -588,6 +615,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setY(F)V
 
+    .line 407
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -634,6 +662,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setY(F)V
 
+    .line 408
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -674,6 +703,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setZ(F)V
 
+    .line 409
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -720,6 +750,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setZ(F)V
 
+    .line 410
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -760,6 +791,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setW(F)V
 
+    .line 411
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -806,6 +838,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setW(F)V
 
+    .line 412
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -846,6 +879,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setX(F)V
 
+    .line 413
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -892,6 +926,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setX(F)V
 
+    .line 414
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -932,6 +967,7 @@
 
     invoke-virtual {v14, v2}, Lcom/google/android/filament/utils/Float4;->setY(F)V
 
+    .line 415
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -978,6 +1014,7 @@
 
     invoke-virtual {v2, v14}, Lcom/google/android/filament/utils/Float4;->setY(F)V
 
+    .line 416
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -1018,6 +1055,7 @@
 
     invoke-virtual {v2, v5}, Lcom/google/android/filament/utils/Float4;->setZ(F)V
 
+    .line 417
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -1064,6 +1102,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/filament/utils/Float4;->setZ(F)V
 
+    .line 418
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -1104,6 +1143,7 @@
 
     invoke-virtual {v2, v6}, Lcom/google/android/filament/utils/Float4;->setW(F)V
 
+    .line 419
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -1150,6 +1190,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/filament/utils/Float4;->setW(F)V
 
+    .line 421
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -1168,6 +1209,7 @@
 
     mul-float/2addr v2, v3
 
+    .line 422
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v3
@@ -1186,6 +1228,7 @@
 
     mul-float/2addr v3, v4
 
+    .line 423
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v4
@@ -1204,6 +1247,7 @@
 
     mul-float/2addr v4, v5
 
+    .line 424
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v5
@@ -1222,6 +1266,7 @@
 
     mul-float/2addr v5, v6
 
+    .line 425
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v6
@@ -1240,6 +1285,7 @@
 
     mul-float/2addr v6, v7
 
+    .line 426
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v7
@@ -1258,6 +1304,7 @@
 
     mul-float/2addr v7, v8
 
+    .line 427
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v8
@@ -1276,6 +1323,7 @@
 
     mul-float/2addr v8, v9
 
+    .line 428
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v9
@@ -1294,6 +1342,7 @@
 
     mul-float/2addr v9, v10
 
+    .line 429
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v10
@@ -1312,6 +1361,7 @@
 
     mul-float/2addr v10, v11
 
+    .line 430
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v11
@@ -1330,6 +1380,7 @@
 
     mul-float/2addr v11, v12
 
+    .line 431
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v12
@@ -1348,6 +1399,7 @@
 
     mul-float/2addr v12, v13
 
+    .line 432
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v13
@@ -1366,6 +1418,7 @@
 
     mul-float/2addr v13, v14
 
+    .line 434
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1406,6 +1459,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setX(F)V
 
+    .line 435
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1452,6 +1506,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setX(F)V
 
+    .line 436
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1492,6 +1547,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setY(F)V
 
+    .line 437
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1538,6 +1594,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setY(F)V
 
+    .line 438
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1578,6 +1635,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setZ(F)V
 
+    .line 439
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1624,6 +1682,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setZ(F)V
 
+    .line 440
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1664,6 +1723,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setW(F)V
 
+    .line 441
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1710,6 +1770,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setW(F)V
 
+    .line 442
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1750,6 +1811,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setX(F)V
 
+    .line 443
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1796,6 +1858,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setX(F)V
 
+    .line 444
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v14
@@ -1836,6 +1899,7 @@
 
     invoke-virtual {v14, v15}, Lcom/google/android/filament/utils/Float4;->setY(F)V
 
+    .line 445
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -1882,6 +1946,7 @@
 
     invoke-virtual {v2, v14}, Lcom/google/android/filament/utils/Float4;->setY(F)V
 
+    .line 446
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -1922,6 +1987,7 @@
 
     invoke-virtual {v2, v8}, Lcom/google/android/filament/utils/Float4;->setZ(F)V
 
+    .line 447
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -1968,6 +2034,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/filament/utils/Float4;->setZ(F)V
 
+    .line 448
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -2008,6 +2075,7 @@
 
     invoke-virtual {v2, v12}, Lcom/google/android/filament/utils/Float4;->setW(F)V
 
+    .line 449
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -2054,6 +2122,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/filament/utils/Float4;->setW(F)V
 
+    .line 451
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
@@ -2132,6 +2201,7 @@
 
     add-float/2addr v2, v1
 
+    .line 453
     invoke-virtual {v0, v2}, Lcom/google/android/filament/utils/Mat4;->div(F)Lcom/google/android/filament/utils/Mat4;
 
     move-result-object v0
@@ -2154,6 +2224,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 566
     new-instance v0, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float3;->getX()F
@@ -2188,6 +2259,7 @@
 
     invoke-direct {v0, v1, v2, p1}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 496
     invoke-static {p0, v0, p2}, Lcom/google/android/filament/utils/MatrixKt;->lookTowards(Lcom/google/android/filament/utils/Float3;Lcom/google/android/filament/utils/Float3;Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Mat4;
 
     move-result-object p0
@@ -2202,6 +2274,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 495
     new-instance p2, Lcom/google/android/filament/utils/Float3;
 
     const/4 v1, 0x0
@@ -2241,10 +2314,12 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 500
     invoke-static {p1}, Lcom/google/android/filament/utils/VectorKt;->normalize(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object p1
 
+    .line 567
     new-instance v0, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float3;->getY()F
@@ -2315,10 +2390,12 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 501
     invoke-static {v0}, Lcom/google/android/filament/utils/VectorKt;->normalize(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object p2
 
+    .line 568
     new-instance v0, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p2}, Lcom/google/android/filament/utils/Float3;->getY()F
@@ -2389,10 +2466,12 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 502
     invoke-static {v0}, Lcom/google/android/filament/utils/VectorKt;->normalize(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object v0
 
+    .line 503
     new-instance v1, Lcom/google/android/filament/utils/Mat4;
 
     new-instance v2, Lcom/google/android/filament/utils/Float4;
@@ -2431,6 +2510,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 499
     new-instance p2, Lcom/google/android/filament/utils/Float3;
 
     const/4 v1, 0x0
@@ -2462,10 +2542,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 556
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v0
 
+    .line 557
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -2482,6 +2564,7 @@
 
     invoke-direct {v1, v2, v3, v0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 558
     invoke-virtual {v1}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v0
@@ -2516,10 +2599,12 @@
 
     add-float/2addr v0, v2
 
+    .line 559
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v1
 
+    .line 560
     new-instance v2, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v1}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -2536,6 +2621,7 @@
 
     invoke-direct {v2, v3, v4, v1}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 561
     invoke-virtual {v2}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v1
@@ -2570,10 +2656,12 @@
 
     add-float/2addr v1, v3
 
+    .line 562
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v2
 
+    .line 563
     new-instance v3, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v2}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -2590,6 +2678,7 @@
 
     invoke-direct {v3, v4, v5, v2}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 564
     invoke-virtual {v3}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v2
@@ -2624,10 +2713,12 @@
 
     add-float/2addr v2, v4
 
+    .line 493
     new-instance v3, Lcom/google/android/filament/utils/Float3;
 
     invoke-direct {v3, v0, v1, v2}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 565
     new-instance v0, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v3}, Lcom/google/android/filament/utils/Float3;->getX()F
@@ -2652,6 +2743,7 @@
 
     invoke-direct {v0, v1, v4, v2}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 493
     invoke-static {v0}, Lcom/google/android/filament/utils/MatrixKt;->scale(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Mat4;
 
     move-result-object v0
@@ -2666,8 +2758,10 @@
 .method public static final ortho(FFFFFF)Lcom/google/android/filament/utils/Mat4;
     .locals 25
 
+    .line 514
     new-instance v0, Lcom/google/android/filament/utils/Mat4;
 
+    .line 515
     new-instance v8, Lcom/google/android/filament/utils/Float4;
 
     const/high16 v9, 0x3f800000    # 1.0f
@@ -2692,6 +2786,7 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/google/android/filament/utils/Float4;-><init>(FFFFILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 516
     new-instance v1, Lcom/google/android/filament/utils/Float4;
 
     sub-float v2, p3, p2
@@ -2712,6 +2807,7 @@
 
     invoke-direct/range {v11 .. v17}, Lcom/google/android/filament/utils/Float4;-><init>(FFFFILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 517
     new-instance v3, Lcom/google/android/filament/utils/Float4;
 
     sub-float v4, p5, p4
@@ -2734,6 +2830,7 @@
 
     invoke-direct/range {v18 .. v24}, Lcom/google/android/filament/utils/Float4;-><init>(FFFFILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 518
     new-instance v5, Lcom/google/android/filament/utils/Float4;
 
     add-float v6, p1, p0
@@ -2758,6 +2855,7 @@
 
     invoke-direct {v5, v6, v7, v2, v9}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 514
     invoke-direct {v0, v8, v1, v3, v5}, Lcom/google/android/filament/utils/Mat4;-><init>(Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;)V
 
     return-object v0
@@ -2776,6 +2874,7 @@
 
     float-to-double v0, v0
 
+    .line 507
     invoke-static {v0, v1}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide v0
@@ -2802,6 +2901,7 @@
 
     div-float v6, v4, p1
 
+    .line 511
     new-instance v12, Lcom/google/android/filament/utils/Mat4;
 
     new-instance v13, Lcom/google/android/filament/utils/Float4;
@@ -2894,10 +2994,12 @@
 
     move-object v1, p0
 
+    .line 537
     invoke-static/range {v1 .. v6}, Lcom/google/android/filament/utils/Float3;->copy$default(Lcom/google/android/filament/utils/Float3;FFFILjava/lang/Object;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object p0
 
+    .line 538
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v0
@@ -2906,22 +3008,27 @@
 
     mul-float/2addr v0, v1
 
+    .line 539
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Float3;->setX(F)V
 
+    .line 540
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getY()F
 
     move-result v0
 
     mul-float/2addr v0, v1
 
+    .line 541
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Float3;->setY(F)V
 
+    .line 542
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getZ()F
 
     move-result v0
 
     mul-float/2addr v0, v1
 
+    .line 543
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Float3;->setZ(F)V
 
     const/4 v8, 0x0
@@ -2936,16 +3043,19 @@
 
     move-object v7, p0
 
+    .line 545
     invoke-static/range {v7 .. v12}, Lcom/google/android/filament/utils/Float3;->copy$default(Lcom/google/android/filament/utils/Float3;FFFILjava/lang/Object;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object v0
 
+    .line 546
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v1
 
     float-to-double v1, v1
 
+    .line 465
     invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v1
@@ -2954,12 +3064,14 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/filament/utils/Float3;->setX(F)V
 
+    .line 547
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float3;->getY()F
 
     move-result v1
 
     float-to-double v1, v1
 
+    .line 465
     invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v1
@@ -2968,12 +3080,14 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/filament/utils/Float3;->setY(F)V
 
+    .line 548
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float3;->getZ()F
 
     move-result v1
 
     float-to-double v1, v1
 
+    .line 465
     invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v1
@@ -2982,16 +3096,19 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/filament/utils/Float3;->setZ(F)V
 
+    .line 550
     invoke-static/range {v7 .. v12}, Lcom/google/android/filament/utils/Float3;->copy$default(Lcom/google/android/filament/utils/Float3;FFFILjava/lang/Object;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object p0
 
+    .line 551
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v1
 
     float-to-double v1, v1
 
+    .line 466
     invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v1
@@ -3000,12 +3117,14 @@
 
     invoke-virtual {p0, v1}, Lcom/google/android/filament/utils/Float3;->setX(F)V
 
+    .line 552
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getY()F
 
     move-result v1
 
     float-to-double v1, v1
 
+    .line 466
     invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v1
@@ -3014,12 +3133,14 @@
 
     invoke-virtual {p0, v1}, Lcom/google/android/filament/utils/Float3;->setY(F)V
 
+    .line 553
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getZ()F
 
     move-result v1
 
     float-to-double v1, v1
 
+    .line 466
     invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v1
@@ -3028,12 +3149,14 @@
 
     invoke-virtual {p0, v1}, Lcom/google/android/filament/utils/Float3;->setZ(F)V
 
+    .line 468
     sget-object v1, Lcom/google/android/filament/utils/Mat4;->Companion:Lcom/google/android/filament/utils/Mat4$Companion;
 
     const/16 v2, 0x10
 
     new-array v2, v2, [F
 
+    .line 469
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float3;->getY()F
 
     move-result v3
@@ -3120,6 +3243,7 @@
 
     aput v3, v2, v4
 
+    .line 470
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float3;->getY()F
 
     move-result v4
@@ -3204,6 +3328,7 @@
 
     aput v3, v2, v4
 
+    .line 471
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getY()F
 
     move-result v4
@@ -3264,6 +3389,7 @@
 
     aput v0, v2, p0
 
+    .line 468
     invoke-virtual {v1, v2}, Lcom/google/android/filament/utils/Mat4$Companion;->of([F)Lcom/google/android/filament/utils/Mat4;
 
     move-result-object p0
@@ -3278,14 +3404,17 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 476
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v0
 
+    .line 477
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getY()F
 
     move-result v1
 
+    .line 478
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getZ()F
 
     move-result p0
@@ -3296,12 +3425,14 @@
 
     float-to-double v2, p1
 
+    .line 481
     invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v4
 
     double-to-float p1, v4
 
+    .line 482
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v2
@@ -3312,6 +3443,7 @@
 
     sub-float v4, v3, p1
 
+    .line 485
     sget-object v5, Lcom/google/android/filament/utils/Mat4;->Companion:Lcom/google/android/filament/utils/Mat4$Companion;
 
     const/16 v6, 0x10
@@ -3446,10 +3578,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 531
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v0
 
+    .line 532
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -3466,14 +3600,17 @@
 
     invoke-direct {v1, v2, v3, v0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 462
     invoke-static {v1}, Lcom/google/android/filament/utils/VectorKt;->normalize(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object v5
 
+    .line 533
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v0
 
+    .line 534
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -3490,14 +3627,17 @@
 
     invoke-direct {v1, v2, v3, v0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 462
     invoke-static {v1}, Lcom/google/android/filament/utils/VectorKt;->normalize(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object v6
 
+    .line 535
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object p0
 
+    .line 536
     new-instance v0, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -3514,6 +3654,7 @@
 
     invoke-direct {v0, v1, v2, p0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 462
     invoke-static {v0}, Lcom/google/android/filament/utils/VectorKt;->normalize(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Float3;
 
     move-result-object v7
@@ -3542,6 +3683,7 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 456
     new-instance v0, Lcom/google/android/filament/utils/Mat4;
 
     new-instance v9, Lcom/google/android/filament/utils/Float4;
@@ -3624,10 +3766,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 522
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v0
 
+    .line 523
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -3644,6 +3788,7 @@
 
     invoke-direct {v1, v2, v3, v0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 524
     invoke-virtual {v1}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v0
@@ -3686,10 +3831,12 @@
 
     double-to-float v0, v0
 
+    .line 522
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getY()Lcom/google/android/filament/utils/Float4;
 
     move-result-object v1
 
+    .line 525
     new-instance v2, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v1}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -3706,6 +3853,7 @@
 
     invoke-direct {v2, v3, v4, v1}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 526
     invoke-virtual {v2}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v1
@@ -3748,10 +3896,12 @@
 
     double-to-float v1, v1
 
+    .line 522
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getZ()Lcom/google/android/filament/utils/Float4;
 
     move-result-object p0
 
+    .line 527
     new-instance v2, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -3768,6 +3918,7 @@
 
     invoke-direct {v2, v3, v4, p0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 528
     invoke-virtual {v2}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result p0
@@ -3810,10 +3961,12 @@
 
     double-to-float p0, v2
 
+    .line 522
     new-instance v2, Lcom/google/android/filament/utils/Float3;
 
     invoke-direct {v2, v0, v1, p0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 457
     invoke-static {v2}, Lcom/google/android/filament/utils/MatrixKt;->scale(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Mat4;
 
     move-result-object p0
@@ -3828,6 +3981,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 459
     new-instance v0, Lcom/google/android/filament/utils/Mat4;
 
     new-instance v5, Lcom/google/android/filament/utils/Float4;
@@ -3860,10 +4014,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 529
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getW()Lcom/google/android/filament/utils/Float4;
 
     move-result-object p0
 
+    .line 530
     new-instance v0, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float4;->getX()F
@@ -3880,6 +4036,7 @@
 
     invoke-direct {v0, v1, v2, p0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 460
     invoke-static {v0}, Lcom/google/android/filament/utils/MatrixKt;->translation(Lcom/google/android/filament/utils/Float3;)Lcom/google/android/filament/utils/Mat4;
 
     move-result-object p0
@@ -3894,8 +4051,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 348
     new-instance v0, Lcom/google/android/filament/utils/Mat2;
 
+    .line 349
     new-instance v1, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat2;->getX()Lcom/google/android/filament/utils/Float2;
@@ -3916,6 +4075,7 @@
 
     invoke-direct {v1, v2, v3}, Lcom/google/android/filament/utils/Float2;-><init>(FF)V
 
+    .line 350
     new-instance v2, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat2;->getX()Lcom/google/android/filament/utils/Float2;
@@ -3936,6 +4096,7 @@
 
     invoke-direct {v2, v3, p0}, Lcom/google/android/filament/utils/Float2;-><init>(FF)V
 
+    .line 348
     invoke-direct {v0, v1, v2}, Lcom/google/android/filament/utils/Mat2;-><init>(Lcom/google/android/filament/utils/Float2;Lcom/google/android/filament/utils/Float2;)V
 
     return-object v0
@@ -3948,8 +4109,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 353
     new-instance v0, Lcom/google/android/filament/utils/Mat3;
 
+    .line 354
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getX()Lcom/google/android/filament/utils/Float3;
@@ -3978,6 +4141,7 @@
 
     invoke-direct {v1, v2, v3, v4}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 355
     new-instance v2, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getX()Lcom/google/android/filament/utils/Float3;
@@ -4006,6 +4170,7 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 356
     new-instance v3, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat3;->getX()Lcom/google/android/filament/utils/Float3;
@@ -4034,6 +4199,7 @@
 
     invoke-direct {v3, v4, v5, p0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 353
     invoke-direct {v0, v1, v2, v3}, Lcom/google/android/filament/utils/Mat3;-><init>(Lcom/google/android/filament/utils/Float3;Lcom/google/android/filament/utils/Float3;Lcom/google/android/filament/utils/Float3;)V
 
     return-object v0
@@ -4046,8 +4212,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 382
     new-instance v0, Lcom/google/android/filament/utils/Mat4;
 
+    .line 383
     new-instance v1, Lcom/google/android/filament/utils/Float4;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
@@ -4084,6 +4252,7 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 384
     new-instance v2, Lcom/google/android/filament/utils/Float4;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
@@ -4120,6 +4289,7 @@
 
     invoke-direct {v2, v3, v4, v5, v6}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 385
     new-instance v3, Lcom/google/android/filament/utils/Float4;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
@@ -4156,6 +4326,7 @@
 
     invoke-direct {v3, v4, v5, v6, v7}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 386
     new-instance v4, Lcom/google/android/filament/utils/Float4;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Mat4;->getX()Lcom/google/android/filament/utils/Float4;
@@ -4192,6 +4363,7 @@
 
     invoke-direct {v4, v5, v6, v7, p0}, Lcom/google/android/filament/utils/Float4;-><init>(FFFF)V
 
+    .line 382
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/android/filament/utils/Mat4;-><init>(Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;Lcom/google/android/filament/utils/Float4;)V
 
     return-object v0

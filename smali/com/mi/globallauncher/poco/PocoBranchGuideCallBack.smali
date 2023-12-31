@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/poco/PocoBranchGuideCallBack;
 .super Ljava/lang/Object;
+.source "PocoBranchGuideCallBack.java"
 
 
 # virtual methods

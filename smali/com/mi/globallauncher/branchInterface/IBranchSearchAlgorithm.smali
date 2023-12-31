@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;
 .super Ljava/lang/Object;
+.source "IBranchSearchAlgorithm.java"
 
 
 # virtual methods

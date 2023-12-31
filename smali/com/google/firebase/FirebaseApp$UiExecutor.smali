@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/FirebaseApp$UiExecutor;
 .super Ljava/lang/Object;
+.source "FirebaseApp.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;
@@ -24,6 +25,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 696
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -40,6 +42,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 694
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +51,7 @@
 .method synthetic constructor <init>(Lcom/google/firebase/FirebaseApp$1;)V
     .locals 0
 
+    .line 694
     invoke-direct {p0}, Lcom/google/firebase/FirebaseApp$UiExecutor;-><init>()V
 
     return-void
@@ -58,6 +62,7 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 700
     sget-object p0, Lcom/google/firebase/FirebaseApp$UiExecutor;->HANDLER:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z

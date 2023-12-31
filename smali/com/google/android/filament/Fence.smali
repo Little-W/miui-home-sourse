@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/Fence;
 .super Ljava/lang/Object;
+.source "Fence.java"
 
 
 # annotations
@@ -23,8 +24,10 @@
 .method constructor <init>(J)V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 24
     iput-wide p1, p0, Lcom/google/android/filament/Fence;->mNativeObject:J
 
     return-void
@@ -39,6 +42,7 @@
 .method public static waitAndDestroy(Lcom/google/android/filament/Fence;Lcom/google/android/filament/Fence$Mode;)Lcom/google/android/filament/Fence$FenceStatus;
     .locals 2
 
+    .line 59
     invoke-virtual {p0}, Lcom/google/android/filament/Fence;->getNativeObject()J
 
     move-result-wide v0
@@ -57,15 +61,18 @@
 
     if-eqz p0, :cond_0
 
+    .line 67
     sget-object p0, Lcom/google/android/filament/Fence$FenceStatus;->ERROR:Lcom/google/android/filament/Fence$FenceStatus;
 
     return-object p0
 
+    .line 64
     :cond_0
     sget-object p0, Lcom/google/android/filament/Fence$FenceStatus;->CONDITION_SATISFIED:Lcom/google/android/filament/Fence$FenceStatus;
 
     return-object p0
 
+    .line 62
     :cond_1
     sget-object p0, Lcom/google/android/filament/Fence$FenceStatus;->ERROR:Lcom/google/android/filament/Fence$FenceStatus;
 
@@ -79,6 +86,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 79
     iput-wide v0, p0, Lcom/google/android/filament/Fence;->mNativeObject:J
 
     return-void
@@ -87,6 +95,7 @@
 .method public getNativeObject()J
     .locals 4
 
+    .line 72
     iget-wide v0, p0, Lcom/google/android/filament/Fence;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -97,6 +106,7 @@
 
     return-wide v0
 
+    .line 73
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -110,6 +120,7 @@
 .method public wait(Lcom/google/android/filament/Fence$Mode;J)Lcom/google/android/filament/Fence$FenceStatus;
     .locals 2
 
+    .line 44
     invoke-virtual {p0}, Lcom/google/android/filament/Fence;->getNativeObject()J
 
     move-result-wide v0
@@ -132,20 +143,24 @@
 
     if-eq p0, p1, :cond_0
 
+    .line 54
     sget-object p0, Lcom/google/android/filament/Fence$FenceStatus;->ERROR:Lcom/google/android/filament/Fence$FenceStatus;
 
     return-object p0
 
+    .line 51
     :cond_0
     sget-object p0, Lcom/google/android/filament/Fence$FenceStatus;->TIMEOUT_EXPIRED:Lcom/google/android/filament/Fence$FenceStatus;
 
     return-object p0
 
+    .line 49
     :cond_1
     sget-object p0, Lcom/google/android/filament/Fence$FenceStatus;->CONDITION_SATISFIED:Lcom/google/android/filament/Fence$FenceStatus;
 
     return-object p0
 
+    .line 47
     :cond_2
     sget-object p0, Lcom/google/android/filament/Fence$FenceStatus;->ERROR:Lcom/google/android/filament/Fence$FenceStatus;
 

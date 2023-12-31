@@ -13,6 +13,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/util/oaid/helpers/k;)V
     .locals 0
 
+    .line 52
     iput-object p1, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/SamsungDeviceIDHelper$1;->a:Lcom/xiaomi/onetrack/util/oaid/helpers/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,6 +26,7 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
 
+    .line 56
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/SamsungDeviceIDHelper$1;->a:Lcom/xiaomi/onetrack/util/oaid/helpers/k;
 
@@ -43,6 +45,7 @@
     :catch_0
     move-exception p0
 
+    .line 59
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0

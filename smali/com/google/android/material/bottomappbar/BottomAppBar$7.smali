@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomappbar/BottomAppBar$7;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "BottomAppBar.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
     .locals 0
 
+    .line 800
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
     iput-object p2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$actionMenuView:Landroidx/appcompat/widget/ActionMenuView;
@@ -49,6 +51,7 @@
 
     const/4 p1, 0x1
 
+    .line 805
     iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->cancelled:Z
 
     return-void
@@ -57,10 +60,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
+    .line 810
     iget-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->cancelled:Z
 
     if-nez p1, :cond_1
 
+    .line 811
     iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
     invoke-static {p1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->access$2000(Lcom/google/android/material/bottomappbar/BottomAppBar;)I
@@ -76,6 +81,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 812
     :goto_0
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
@@ -85,6 +91,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->replaceMenu(I)V
 
+    .line 813
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
     iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$7;->val$actionMenuView:Landroidx/appcompat/widget/ActionMenuView;

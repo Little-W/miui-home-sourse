@@ -1,5 +1,6 @@
 .class public final Landroidx/tracing/Trace;
 .super Ljava/lang/Object;
+.source "Trace.java"
 
 
 # static fields
@@ -12,12 +13,14 @@
 .method public static beginSection(Ljava/lang/String;)V
     .locals 2
 
+    .line 80
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
 
     if-lt v0, v1, :cond_0
 
+    .line 81
     invoke-static {p0}, Landroidx/tracing/TraceApi18Impl;->beginSection(Ljava/lang/String;)V
 
     :cond_0
@@ -27,12 +30,14 @@
 .method public static endSection()V
     .locals 2
 
+    .line 93
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
 
     if-lt v0, v1, :cond_0
 
+    .line 94
     invoke-static {}, Landroidx/tracing/TraceApi18Impl;->endSection()V
 
     :cond_0
@@ -42,22 +47,27 @@
 .method private static handleException(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 2
 
+    .line 229
     instance-of v0, p1, Ljava/lang/reflect/InvocationTargetException;
 
     if-eqz v0, :cond_1
 
+    .line 230
     invoke-virtual {p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
+    .line 231
     instance-of p1, p0, Ljava/lang/RuntimeException;
 
     if-eqz p1, :cond_0
 
+    .line 232
     check-cast p0, Ljava/lang/RuntimeException;
 
     throw p0
 
+    .line 234
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -65,6 +75,7 @@
 
     throw p1
 
+    .line 237
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -94,11 +105,13 @@
 .method public static isEnabled()Z
     .locals 1
 
+    .line 61
     :try_start_0
     sget-object v0, Landroidx/tracing/Trace;->sIsTagEnabledMethod:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
+    .line 62
     invoke-static {}, Landroid/os/Trace;->isEnabled()Z
 
     move-result v0
@@ -108,6 +121,7 @@
 
     return v0
 
+    .line 66
     :catch_0
     :cond_0
     invoke-static {}, Landroidx/tracing/Trace;->isEnabledFallback()Z
@@ -122,6 +136,7 @@
 
     const-string v0, "isTagEnabled"
 
+    .line 159
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v2, 0x0
@@ -130,6 +145,7 @@
 
     if-lt v1, v3, :cond_1
 
+    .line 161
     :try_start_0
     sget-object v1, Landroidx/tracing/Trace;->sIsTagEnabledMethod:Ljava/lang/reflect/Method;
 
@@ -139,6 +155,7 @@
 
     if-nez v1, :cond_0
 
+    .line 162
     const-class v1, Landroid/os/Trace;
 
     const-string v5, "TRACE_TAG_APP"
@@ -147,12 +164,14 @@
 
     move-result-object v1
 
+    .line 163
     invoke-virtual {v1, v4}, Ljava/lang/reflect/Field;->getLong(Ljava/lang/Object;)J
 
     move-result-wide v5
 
     sput-wide v5, Landroidx/tracing/Trace;->sTraceTagApp:J
 
+    .line 164
     const-class v1, Landroid/os/Trace;
 
     new-array v5, v3, [Ljava/lang/Class;
@@ -161,12 +180,14 @@
 
     aput-object v6, v5, v2
 
+    .line 165
     invoke-virtual {v1, v0, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
     sput-object v1, Landroidx/tracing/Trace;->sIsTagEnabledMethod:Ljava/lang/reflect/Method;
 
+    .line 167
     :cond_0
     sget-object v1, Landroidx/tracing/Trace;->sIsTagEnabledMethod:Ljava/lang/reflect/Method;
 
@@ -197,6 +218,7 @@
     :catch_0
     move-exception v1
 
+    .line 169
     invoke-static {v0, v1}, Landroidx/tracing/Trace;->handleException(Ljava/lang/String;Ljava/lang/Exception;)V
 
     :cond_1

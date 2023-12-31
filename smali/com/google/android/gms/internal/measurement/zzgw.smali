@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzgw;
 .super Lcom/google/android/gms/internal/measurement/zzgz;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # instance fields
@@ -12,16 +13,20 @@
 .method constructor <init>([BII)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/measurement/zzgz;-><init>([B)V
 
     add-int v0, p2, p3
 
+    .line 2
     array-length p1, p1
 
     invoke-static {p2, v0, p1}, Lcom/google/android/gms/internal/measurement/zzgw;->zzb(III)I
 
+    .line 3
     iput p2, p0, Lcom/google/android/gms/internal/measurement/zzgw;->zzc:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/gms/internal/measurement/zzgw;->zzd:I
 
     return-void
@@ -32,6 +37,7 @@
 .method public final zza(I)B
     .locals 3
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzgp;->zza()I
 
     move-result v0
@@ -46,6 +52,7 @@
 
     if-gez p1, :cond_0
 
+    .line 9
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     const/16 v0, 0x16
@@ -68,6 +75,7 @@
 
     throw p0
 
+    .line 10
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -97,6 +105,7 @@
 
     throw p0
 
+    .line 11
     :cond_1
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzgw;->zzb:[B
 
@@ -112,6 +121,7 @@
 .method public final zza()I
     .locals 0
 
+    .line 13
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzgw;->zzd:I
 
     return p0
@@ -120,6 +130,7 @@
 .method final zzb(I)B
     .locals 1
 
+    .line 12
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzgw;->zzb:[B
 
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzgw;->zzc:I
@@ -134,6 +145,7 @@
 .method protected final zze()I
     .locals 0
 
+    .line 14
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzgw;->zzc:I
 
     return p0

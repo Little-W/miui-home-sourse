@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchShortcutList;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields

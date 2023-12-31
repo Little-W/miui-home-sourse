@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/encrypt/okhttp/EncryptInterceptor$1;
 .super Ljava/lang/Object;
+.source "EncryptInterceptor.java"
 
 
 # annotations

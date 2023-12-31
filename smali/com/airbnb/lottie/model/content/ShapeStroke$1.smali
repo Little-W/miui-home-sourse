@@ -1,5 +1,6 @@
 .class synthetic Lcom/airbnb/lottie/model/content/ShapeStroke$1;
 .super Ljava/lang/Object;
+.source "ShapeStroke.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
+    .line 42
     invoke-static {}, Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;->values()[Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;
 
     move-result-object v0
@@ -80,6 +82,7 @@
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
+    .line 24
     :catch_2
     invoke-static {}, Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;->values()[Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;
 

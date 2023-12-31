@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/parser/PathKeyframeParser;
 .super Ljava/lang/Object;
+.source "PathKeyframeParser.java"
 
 
 # direct methods
@@ -11,6 +12,7 @@
         }
     .end annotation
 
+    .line 20
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->peek()Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;
 
     move-result-object v0
@@ -29,6 +31,7 @@
     :goto_0
     move v5, v0
 
+    .line 22
     invoke-static {}, Lcom/airbnb/lottie/utils/Utils;->dpScale()F
 
     move-result v3
@@ -41,10 +44,12 @@
 
     move-object v2, p1
 
+    .line 21
     invoke-static/range {v1 .. v6}, Lcom/airbnb/lottie/parser/KeyframeParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;FLcom/airbnb/lottie/parser/ValueParser;ZZ)Lcom/airbnb/lottie/value/Keyframe;
 
     move-result-object p0
 
+    .line 24
     new-instance v0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;
 
     invoke-direct {v0, p1, p0}, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;-><init>(Lcom/airbnb/lottie/LottieComposition;Lcom/airbnb/lottie/value/Keyframe;)V

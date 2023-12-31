@@ -1,5 +1,6 @@
 .class public final Lcom/xiaomi/mirror/opensdk/R$styleable;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -53,6 +54,7 @@
 
     new-array v0, v0, [I
 
+    .line 97
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/xiaomi/mirror/opensdk/R$styleable;->MiuiDragShadow:[I
@@ -81,6 +83,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

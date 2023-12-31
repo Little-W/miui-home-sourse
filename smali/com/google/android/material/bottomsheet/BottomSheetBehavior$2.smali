@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomsheet/BottomSheetBehavior$2;
 .super Ljava/lang/Object;
+.source "BottomSheetBehavior.java"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)V
     .locals 0
 
+    .line 1450
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
+    .line 1453
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -46,6 +49,7 @@
 
     move-result p1
 
+    .line 1454
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     invoke-static {v0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->access$200(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -54,6 +58,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1455
     iget-object p0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     invoke-static {p0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->access$200(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)Lcom/google/android/material/shape/MaterialShapeDrawable;

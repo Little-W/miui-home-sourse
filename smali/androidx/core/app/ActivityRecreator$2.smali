@@ -1,5 +1,6 @@
 .class Landroidx/core/app/ActivityRecreator$2;
 .super Ljava/lang/Object;
+.source "ActivityRecreator.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroid/app/Application;Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;)V
     .locals 0
 
+    .line 159
     iput-object p1, p0, Landroidx/core/app/ActivityRecreator$2;->val$application:Landroid/app/Application;
 
     iput-object p2, p0, Landroidx/core/app/ActivityRecreator$2;->val$callbacks:Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 166
     iget-object v0, p0, Landroidx/core/app/ActivityRecreator$2;->val$application:Landroid/app/Application;
 
     iget-object p0, p0, Landroidx/core/app/ActivityRecreator$2;->val$callbacks:Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;

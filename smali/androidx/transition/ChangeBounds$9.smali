@@ -1,5 +1,6 @@
 .class Landroidx/transition/ChangeBounds$9;
 .super Landroidx/transition/TransitionListenerAdapter;
+.source "ChangeBounds.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>(Landroidx/transition/ChangeBounds;Landroid/view/ViewGroup;)V
     .locals 0
 
+    .line 394
     iput-object p1, p0, Landroidx/transition/ChangeBounds$9;->this$0:Landroidx/transition/ChangeBounds;
 
     iput-object p2, p0, Landroidx/transition/ChangeBounds$9;->val$parent:Landroid/view/ViewGroup;
@@ -33,6 +35,7 @@
 
     const/4 p1, 0x0
 
+    .line 395
     iput-boolean p1, p0, Landroidx/transition/ChangeBounds$9;->mCanceled:Z
 
     return-void
@@ -43,6 +46,7 @@
 .method public onTransitionCancel(Landroidx/transition/Transition;)V
     .locals 1
 
+    .line 399
     iget-object p1, p0, Landroidx/transition/ChangeBounds$9;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v0, 0x0
@@ -51,6 +55,7 @@
 
     const/4 p1, 0x1
 
+    .line 400
     iput-boolean p1, p0, Landroidx/transition/ChangeBounds$9;->mCanceled:Z
 
     return-void
@@ -59,16 +64,19 @@
 .method public onTransitionEnd(Landroidx/transition/Transition;)V
     .locals 2
 
+    .line 405
     iget-boolean v0, p0, Landroidx/transition/ChangeBounds$9;->mCanceled:Z
 
     if-nez v0, :cond_0
 
+    .line 406
     iget-object v0, p0, Landroidx/transition/ChangeBounds$9;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroidx/transition/ViewGroupUtils;->suppressLayout(Landroid/view/ViewGroup;Z)V
 
+    .line 408
     :cond_0
     invoke-virtual {p1, p0}, Landroidx/transition/Transition;->removeListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
 
@@ -78,6 +86,7 @@
 .method public onTransitionPause(Landroidx/transition/Transition;)V
     .locals 0
 
+    .line 413
     iget-object p0, p0, Landroidx/transition/ChangeBounds$9;->val$parent:Landroid/view/ViewGroup;
 
     const/4 p1, 0x0
@@ -90,6 +99,7 @@
 .method public onTransitionResume(Landroidx/transition/Transition;)V
     .locals 0
 
+    .line 418
     iget-object p0, p0, Landroidx/transition/ChangeBounds$9;->val$parent:Landroid/view/ViewGroup;
 
     const/4 p1, 0x1

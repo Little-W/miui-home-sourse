@@ -1,5 +1,6 @@
 .class public final Lokhttp3/CacheControl$Builder;
 .super Ljava/lang/Object;
+.source "CacheControl.java"
 
 
 # annotations
@@ -35,14 +36,18 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 281
     iput v0, p0, Lokhttp3/CacheControl$Builder;->maxAgeSeconds:I
 
+    .line 282
     iput v0, p0, Lokhttp3/CacheControl$Builder;->maxStaleSeconds:I
 
+    .line 283
     iput v0, p0, Lokhttp3/CacheControl$Builder;->minFreshSeconds:I
 
     return-void
@@ -53,6 +58,7 @@
 .method public build()Lokhttp3/CacheControl;
     .locals 1
 
+    .line 370
     new-instance v0, Lokhttp3/CacheControl;
 
     invoke-direct {v0, p0}, Lokhttp3/CacheControl;-><init>(Lokhttp3/CacheControl$Builder;)V
@@ -67,6 +73,7 @@
 
     int-to-long v0, p1
 
+    .line 325
     invoke-virtual {p2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
 
     move-result-wide p1
@@ -84,11 +91,13 @@
     :cond_0
     long-to-int p1, p1
 
+    .line 328
     :goto_0
     iput p1, p0, Lokhttp3/CacheControl$Builder;->maxStaleSeconds:I
 
     return-object p0
 
+    .line 324
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -116,6 +125,7 @@
 
     const/4 v0, 0x1
 
+    .line 290
     iput-boolean v0, p0, Lokhttp3/CacheControl$Builder;->noCache:Z
 
     return-object p0
@@ -126,6 +136,7 @@
 
     const/4 v0, 0x1
 
+    .line 296
     iput-boolean v0, p0, Lokhttp3/CacheControl$Builder;->noStore:Z
 
     return-object p0
@@ -136,6 +147,7 @@
 
     const/4 v0, 0x1
 
+    .line 354
     iput-boolean v0, p0, Lokhttp3/CacheControl$Builder;->onlyIfCached:Z
 
     return-object p0

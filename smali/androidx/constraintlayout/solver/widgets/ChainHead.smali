@@ -1,5 +1,6 @@
 .class public Landroidx/constraintlayout/solver/widgets/ChainHead;
 .super Ljava/lang/Object;
+.source "ChainHead.java"
 
 
 # instance fields
@@ -60,20 +61,26 @@
 .method public constructor <init>(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;IZ)V
     .locals 1
 
+    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 42
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalWeight:F
 
     const/4 v0, 0x0
 
+    .line 48
     iput-boolean v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mIsRtl:Z
 
+    .line 64
     iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mFirst:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
+    .line 65
     iput p2, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
+    .line 66
     iput-boolean p3, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mIsRtl:Z
 
     return-void
@@ -82,16 +89,19 @@
 .method private defineChainProperties()V
     .locals 13
 
+    .line 84
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
     const/4 v1, 0x2
 
     mul-int/2addr v0, v1
 
+    .line 85
     iget-object v2, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mFirst:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     const/4 v3, 0x1
 
+    .line 86
     iput-boolean v3, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOptimizable:Z
 
     const/4 v4, 0x0
@@ -105,12 +115,14 @@
     :goto_0
     if-nez v2, :cond_15
 
+    .line 93
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mWidgetsCount:I
 
     add-int/2addr v7, v3
 
     iput v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mWidgetsCount:I
 
+    .line 94
     iget-object v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mNextChainWidget:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     iget v8, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
@@ -119,12 +131,14 @@
 
     aput-object v9, v7, v8
 
+    .line 95
     iget-object v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListNextMatchConstraintsWidget:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     iget v8, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
     aput-object v9, v7, v8
 
+    .line 96
     invoke-virtual {v5}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getVisibility()I
 
     move-result v7
@@ -133,12 +147,14 @@
 
     if-eq v7, v8, :cond_10
 
+    .line 97
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mVisibleWidgets:I
 
     add-int/2addr v7, v3
 
     iput v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mVisibleWidgets:I
 
+    .line 98
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
     invoke-virtual {v5, v7}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getDimensionBehaviour(I)Landroidx/constraintlayout/solver/widgets/ConstraintWidget$DimensionBehaviour;
@@ -149,6 +165,7 @@
 
     if-eq v7, v8, :cond_0
 
+    .line 99
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
     iget v8, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
@@ -161,6 +178,7 @@
 
     iput v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
+    .line 101
     :cond_0
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
@@ -176,6 +194,7 @@
 
     iput v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
+    .line 102
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
     iget-object v8, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListAnchors:[Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
@@ -192,6 +211,7 @@
 
     iput v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
+    .line 103
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalMargins:I
 
     iget-object v8, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListAnchors:[Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
@@ -206,6 +226,7 @@
 
     iput v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalMargins:I
 
+    .line 104
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalMargins:I
 
     iget-object v8, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListAnchors:[Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
@@ -220,15 +241,19 @@
 
     iput v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalMargins:I
 
+    .line 106
     iget-object v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mFirstVisibleWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     if-nez v7, :cond_1
 
+    .line 107
     iput-object v5, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mFirstVisibleWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
+    .line 109
     :cond_1
     iput-object v5, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mLastVisibleWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
+    .line 112
     iget-object v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListDimensionBehaviors:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget$DimensionBehaviour;
 
     iget v8, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
@@ -239,6 +264,7 @@
 
     if-ne v7, v8, :cond_10
 
+    .line 113
     iget-object v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mResolvedMatchConstraintDefault:[I
 
     iget v8, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
@@ -267,6 +293,7 @@
 
     if-ne v7, v1, :cond_9
 
+    .line 116
     :cond_2
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mWidgetsMatchCount:I
 
@@ -274,6 +301,7 @@
 
     iput v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mWidgetsMatchCount:I
 
+    .line 117
     iget-object v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mWeight:[F
 
     iget v10, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
@@ -284,6 +312,7 @@
 
     if-lez v10, :cond_3
 
+    .line 119
     iget v10, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalWeight:F
 
     iget-object v11, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mWeight:[F
@@ -296,6 +325,7 @@
 
     iput v10, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalWeight:F
 
+    .line 122
     :cond_3
     iget v10, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
@@ -309,63 +339,77 @@
 
     if-gez v7, :cond_4
 
+    .line 124
     iput-boolean v3, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mHasUndefinedWeights:Z
 
     goto :goto_1
 
+    .line 126
     :cond_4
     iput-boolean v3, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mHasDefinedWeights:Z
 
+    .line 128
     :goto_1
     iget-object v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mWeightedMatchConstraintsWidgets:Ljava/util/ArrayList;
 
     if-nez v7, :cond_5
 
+    .line 129
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mWeightedMatchConstraintsWidgets:Ljava/util/ArrayList;
 
+    .line 131
     :cond_5
     iget-object v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mWeightedMatchConstraintsWidgets:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 134
     :cond_6
     iget-object v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mFirstMatchConstraintWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     if-nez v7, :cond_7
 
+    .line 135
     iput-object v5, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mFirstMatchConstraintWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
+    .line 137
     :cond_7
     iget-object v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mLastMatchConstraintWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     if-eqz v7, :cond_8
 
+    .line 138
     iget-object v7, v7, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListNextMatchConstraintsWidget:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     iget v10, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
     aput-object v5, v7, v10
 
+    .line 140
     :cond_8
     iput-object v5, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mLastMatchConstraintWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
+    .line 142
     :cond_9
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
     if-nez v7, :cond_c
 
+    .line 143
     iget v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mMatchConstraintDefaultWidth:I
 
     if-eqz v7, :cond_a
 
+    .line 144
     iput-boolean v4, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOptimizable:Z
 
     goto :goto_2
 
+    .line 145
     :cond_a
     iget v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mMatchConstraintMinWidth:I
 
@@ -375,20 +419,24 @@
 
     if-eqz v7, :cond_f
 
+    .line 146
     :cond_b
     iput-boolean v4, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOptimizable:Z
 
     goto :goto_2
 
+    .line 149
     :cond_c
     iget v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mMatchConstraintDefaultHeight:I
 
     if-eqz v7, :cond_d
 
+    .line 150
     iput-boolean v4, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOptimizable:Z
 
     goto :goto_2
 
+    .line 151
     :cond_d
     iget v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mMatchConstraintMinHeight:I
 
@@ -398,9 +446,11 @@
 
     if-eqz v7, :cond_f
 
+    .line 152
     :cond_e
     iput-boolean v4, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOptimizable:Z
 
+    .line 155
     :cond_f
     :goto_2
     iget v7, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mDimensionRatio:F
@@ -409,19 +459,23 @@
 
     if-eqz v7, :cond_10
 
+    .line 157
     iput-boolean v4, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOptimizable:Z
 
+    .line 158
     iput-boolean v3, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mHasRatio:Z
 
     :cond_10
     if-eq v6, v5, :cond_11
 
+    .line 163
     iget-object v6, v6, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mNextChainWidget:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     iget v7, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
     aput-object v5, v6, v7
 
+    .line 168
     :cond_11
     iget-object v6, v5, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListAnchors:[Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
@@ -433,8 +487,10 @@
 
     if-eqz v6, :cond_13
 
+    .line 170
     iget-object v6, v6, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
+    .line 171
     iget-object v7, v6, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListAnchors:[Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     aget-object v7, v7, v0
@@ -476,11 +532,13 @@
 
     goto/16 :goto_0
 
+    .line 184
     :cond_15
     iget-object v1, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mFirstVisibleWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     if-eqz v1, :cond_16
 
+    .line 185
     iget v2, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
     iget-object v1, v1, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListAnchors:[Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
@@ -495,11 +553,13 @@
 
     iput v2, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
+    .line 187
     :cond_16
     iget-object v1, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mLastVisibleWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     if-eqz v1, :cond_17
 
+    .line 188
     iget v2, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
     iget-object v1, v1, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mListAnchors:[Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
@@ -516,9 +576,11 @@
 
     iput v2, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mTotalSize:I
 
+    .line 190
     :cond_17
     iput-object v5, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mLast:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
+    .line 192
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mOrientation:I
 
     if-nez v0, :cond_18
@@ -527,17 +589,20 @@
 
     if-eqz v0, :cond_18
 
+    .line 193
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mLast:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mHead:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     goto :goto_5
 
+    .line 195
     :cond_18
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mFirst:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mHead:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
+    .line 198
     :goto_5
     iget-boolean v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mHasDefinedWeights:Z
 
@@ -561,6 +626,7 @@
 .method private static isMatchConstraintEqualityCandidate(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;I)Z
     .locals 2
 
+    .line 77
     invoke-virtual {p0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getVisibility()I
 
     move-result v0
@@ -608,15 +674,18 @@
 .method public define()V
     .locals 1
 
+    .line 234
     iget-boolean v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mDefined:Z
 
     if-nez v0, :cond_0
 
+    .line 235
     invoke-direct {p0}, Landroidx/constraintlayout/solver/widgets/ChainHead;->defineChainProperties()V
 
     :cond_0
     const/4 v0, 0x1
 
+    .line 237
     iput-boolean v0, p0, Landroidx/constraintlayout/solver/widgets/ChainHead;->mDefined:Z
 
     return-void

@@ -1,5 +1,6 @@
 .class interface abstract Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;
 .super Ljava/lang/Object;
+.source "MediaBrowserCompat.java"
 
 
 # annotations

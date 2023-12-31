@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/TextDelegate;
 .super Ljava/lang/Object;
+.source "TextDelegate.java"
 
 
 # instance fields
@@ -27,6 +28,7 @@
 .method public getText(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 53
     invoke-virtual {p0, p2}, Lcom/airbnb/lottie/TextDelegate;->getText(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -37,6 +39,7 @@
 .method public final getTextInternal(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 98
     iget-boolean v0, p0, Lcom/airbnb/lottie/TextDelegate;->cacheText:Z
 
     if-eqz v0, :cond_0
@@ -49,6 +52,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 99
     iget-object p0, p0, Lcom/airbnb/lottie/TextDelegate;->stringMap:Ljava/util/Map;
 
     invoke-interface {p0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -59,15 +63,18 @@
 
     return-object p0
 
+    .line 101
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/TextDelegate;->getText(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 102
     iget-boolean v0, p0, Lcom/airbnb/lottie/TextDelegate;->cacheText:Z
 
     if-eqz v0, :cond_1
 
+    .line 103
     iget-object p0, p0, Lcom/airbnb/lottie/TextDelegate;->stringMap:Ljava/util/Map;
 
     invoke-interface {p0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

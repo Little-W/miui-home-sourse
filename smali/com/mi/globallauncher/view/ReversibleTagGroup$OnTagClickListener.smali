@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagClickListener;
 .super Ljava/lang/Object;
+.source "ReversibleTagGroup.java"
 
 
 # annotations

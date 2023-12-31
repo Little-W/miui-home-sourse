@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/system/BackgroundExecutor$1;
 .super Ljava/lang/Object;
+.source "BackgroundExecutor.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -26,10 +27,12 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/BackgroundExecutor;)V
     .locals 1
 
+    .line 33
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor$1;->this$0:Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v0, 0x1
@@ -46,6 +49,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
+    .line 37
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -1,5 +1,6 @@
 .class final Lkotlin/jvm/internal/ArrayIterator;
 .super Ljava/lang/Object;
+.source "ArrayIterator.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -43,6 +44,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/jvm/internal/ArrayIterator;->array:[Ljava/lang/Object;
@@ -55,6 +57,7 @@
 .method public hasNext()Z
     .locals 1
 
+    .line 10
     iget v0, p0, Lkotlin/jvm/internal/ArrayIterator;->index:I
 
     iget-object p0, p0, Lkotlin/jvm/internal/ArrayIterator;->array:[Ljava/lang/Object;
@@ -82,6 +85,7 @@
         }
     .end annotation
 
+    .line 11
     :try_start_0
     iget-object v0, p0, Lkotlin/jvm/internal/ArrayIterator;->array:[Ljava/lang/Object;
 

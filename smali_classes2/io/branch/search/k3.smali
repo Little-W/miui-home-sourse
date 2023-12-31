@@ -1,5 +1,6 @@
 .class public Lio/branch/search/k3;
 .super Lio/branch/search/j3;
+.source "SourceFile"
 
 
 # instance fields

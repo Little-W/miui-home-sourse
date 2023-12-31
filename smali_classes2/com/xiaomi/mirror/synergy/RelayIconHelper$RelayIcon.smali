@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

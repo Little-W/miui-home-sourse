@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/handoff/system/HandoffController$2;
 .super Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub;
+.source "HandoffController.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/xiaomi/dist/handoff/system/HandoffController;)V
     .locals 0
 
+    .line 537
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$2;->this$0:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     invoke-direct {p0}, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub;-><init>()V
@@ -33,6 +35,7 @@
 .method public synthetic lambda$onLocalHandoffTaskUpdate$0$HandoffController$2([Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)V
     .locals 5
 
+    .line 542
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -42,6 +45,7 @@
 
     aget-object v2, p1, v1
 
+    .line 543
     iget-object v3, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$2;->this$0:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     invoke-virtual {v2}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getAppId()I
@@ -58,6 +62,7 @@
 
     goto :goto_0
 
+    .line 545
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$2;->this$0:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
@@ -65,6 +70,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 546
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$2;->this$0:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffController;->mTaskListenerInner:Lcom/xiaomi/dist/handoff/system/TaskListenerInner;
@@ -84,6 +90,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 540
     invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -98,6 +105,7 @@
 
     invoke-static {v1, v2, v0}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 541
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$2;->this$0:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     invoke-static {v0}, Lcom/xiaomi/dist/handoff/system/HandoffController;->access$000(Lcom/xiaomi/dist/handoff/system/HandoffController;)Lcom/xiaomi/dist/utils/Schedulers$MasterThread;

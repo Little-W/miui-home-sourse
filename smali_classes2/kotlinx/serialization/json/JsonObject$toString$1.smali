@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/json/JsonObject$toString$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "JsonElement.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -90,6 +91,7 @@
 
     check-cast p1, Lkotlinx/serialization/json/JsonElement;
 
+    .line 124
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,6 +120,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 116
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/JsonObject$toString$1;->invoke(Ljava/util/Map$Entry;)Ljava/lang/CharSequence;

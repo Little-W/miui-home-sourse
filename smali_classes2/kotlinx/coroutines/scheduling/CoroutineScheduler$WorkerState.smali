@@ -1,5 +1,6 @@
 .class public final enum Lkotlinx/coroutines/scheduling/CoroutineScheduler$WorkerState;
 .super Ljava/lang/Enum;
+.source "CoroutineScheduler.kt"
 
 
 # annotations
@@ -116,6 +117,7 @@
         }
     .end annotation
 
+    .line 927
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

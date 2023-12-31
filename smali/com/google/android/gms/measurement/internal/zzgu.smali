@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/measurement/internal/zzgu;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # static fields
@@ -130,6 +131,7 @@
 
     const-string v56, "session_id"
 
+    .line 2
     filled-new-array/range {v0 .. v56}, [Ljava/lang/String;
 
     move-result-object v0
@@ -250,6 +252,7 @@
 
     const-string v57, "_sid"
 
+    .line 3
     filled-new-array/range {v1 .. v57}, [Ljava/lang/String;
 
     move-result-object v0
@@ -258,6 +261,7 @@
 
     const-string v0, "items"
 
+    .line 4
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -330,6 +334,7 @@
 
     const-string v33, "item_location_id"
 
+    .line 5
     filled-new-array/range {v1 .. v33}, [Ljava/lang/String;
 
     move-result-object v0
@@ -342,6 +347,7 @@
 .method public static zza(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/measurement/internal/zzgu;->zza:[Ljava/lang/String;
 
     sget-object v1, Lcom/google/android/gms/measurement/internal/zzgu;->zzb:[Ljava/lang/String;

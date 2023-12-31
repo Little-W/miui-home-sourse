@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,6 +19,7 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 14
     new-instance v0, Lcom/xiaomi/onetrack/f/e;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/xiaomi/onetrack/f/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -30,6 +32,7 @@
 .method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 24
     new-instance v0, Lcom/xiaomi/onetrack/f/f;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/xiaomi/onetrack/f/f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

@@ -1,5 +1,6 @@
 .class final Lkotlin/text/StringsKt__StringsKt$splitToSequence$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Strings.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -64,6 +65,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1279
     iget-object p0, p0, Lkotlin/text/StringsKt__StringsKt$splitToSequence$1;->$this_splitToSequence:Ljava/lang/CharSequence;
 
     invoke-static {p0, p1}, Lkotlin/text/StringsKt;->substring(Ljava/lang/CharSequence;Lkotlin/ranges/IntRange;)Ljava/lang/String;

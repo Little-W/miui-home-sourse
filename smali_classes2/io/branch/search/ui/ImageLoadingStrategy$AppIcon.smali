@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/ui/ImageLoadingStrategy$AppIcon;
 .super Lio/branch/search/ui/ImageLoadingStrategy;
+.source "SourceFile"
 
 
 # annotations

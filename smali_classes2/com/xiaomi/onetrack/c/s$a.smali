@@ -21,6 +21,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 36
     new-instance v0, Lcom/xiaomi/onetrack/c/s;
 
     const/4 v1, 0x0
@@ -35,6 +36,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +45,7 @@
 .method static synthetic a()Lcom/xiaomi/onetrack/c/s;
     .locals 1
 
+    .line 35
     sget-object v0, Lcom/xiaomi/onetrack/c/s$a;->a:Lcom/xiaomi/onetrack/c/s;
 
     return-object v0

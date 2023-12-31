@@ -1,5 +1,6 @@
 .class public abstract Lcom/bumptech/glide/load/data/LocalUriFetcher;
 .super Ljava/lang/Object;
+.source "LocalUriFetcher.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataFetcher;
@@ -36,10 +37,13 @@
 .method public constructor <init>(Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 36
     iput-object p1, p0, Lcom/bumptech/glide/load/data/LocalUriFetcher;->contentResolver:Landroid/content/ContentResolver;
 
+    .line 37
     iput-object p2, p0, Lcom/bumptech/glide/load/data/LocalUriFetcher;->uri:Landroid/net/Uri;
 
     return-void
@@ -56,10 +60,12 @@
 .method public cleanup()V
     .locals 1
 
+    .line 57
     iget-object v0, p0, Lcom/bumptech/glide/load/data/LocalUriFetcher;->data:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 59
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/load/data/LocalUriFetcher;->close(Ljava/lang/Object;)V
     :try_end_0
@@ -87,6 +93,7 @@
 .method public getDataSource()Lcom/bumptech/glide/load/DataSource;
     .locals 0
 
+    .line 74
     sget-object p0, Lcom/bumptech/glide/load/DataSource;->LOCAL:Lcom/bumptech/glide/load/DataSource;
 
     return-object p0
@@ -103,6 +110,7 @@
         }
     .end annotation
 
+    .line 44
     :try_start_0
     iget-object p1, p0, Lcom/bumptech/glide/load/data/LocalUriFetcher;->uri:Landroid/net/Uri;
 
@@ -116,6 +124,7 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 52
     iget-object p0, p0, Lcom/bumptech/glide/load/data/LocalUriFetcher;->data:Ljava/lang/Object;
 
     invoke-interface {p2, p0}, Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;->onDataReady(Ljava/lang/Object;)V
@@ -129,6 +138,7 @@
 
     const-string v0, "LocalUriFetcher"
 
+    .line 46
     invoke-static {v0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
@@ -137,8 +147,10 @@
 
     const-string p1, "Failed to open Uri"
 
+    .line 47
     invoke-static {v0, p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 49
     :cond_0
     invoke-interface {p2, p0}, Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;->onLoadFailed(Ljava/lang/Exception;)V
 

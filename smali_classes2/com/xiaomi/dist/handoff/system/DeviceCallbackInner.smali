@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;
 .super Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback$Stub;
+.source "DeviceCallbackInner.java"
 
 
 # instance fields
@@ -16,6 +17,7 @@
 .method getSessionInfo()Lcom/xiaomi/dist/handoff/parcel/HandoffSessionInfo;
     .locals 0
 
+    .line 42
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;->mSessionInfo:Lcom/xiaomi/dist/handoff/parcel/HandoffSessionInfo;
 
     return-object p0
@@ -24,6 +26,7 @@
 .method public synthetic lambda$onDeviceOffline$1$DeviceCallbackInner(Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;)V
     .locals 0
 
+    .line 65
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;->mDeviceCallback:Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;
 
     invoke-interface {p0, p1}, Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;->onDeviceOffline(Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;)V
@@ -34,6 +37,7 @@
 .method public synthetic lambda$onDeviceOnline$0$DeviceCallbackInner(Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;)V
     .locals 0
 
+    .line 55
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;->mDeviceCallback:Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;
 
     invoke-interface {p0, p1}, Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;->onDeviceOnline(Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;)V
@@ -48,18 +52,22 @@
 
     const-string v1, "IRemoteHandoffDeviceCallback.onDeviceOffline"
 
+    .line 61
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 62
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
+    .line 63
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;->mDeviceCallback:Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;
 
     invoke-interface {p0, p1}, Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;->onDeviceOffline(Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;)V
 
     goto :goto_0
 
+    .line 65
     :cond_0
     new-instance v1, Lcom/xiaomi/dist/handoff/system/-$$Lambda$DeviceCallbackInner$YHLtaXPVoK1b49KTHgT28UVri3E;
 
@@ -78,18 +86,22 @@
 
     const-string v1, "IRemoteHandoffDeviceCallback.onDeviceOnline"
 
+    .line 51
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 52
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
+    .line 53
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;->mDeviceCallback:Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;
 
     invoke-interface {p0, p1}, Lcom/xiaomi/dist/handoff/system/callback/RemoteHandoffDeviceCallback;->onDeviceOnline(Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;)V
 
     goto :goto_0
 
+    .line 55
     :cond_0
     new-instance v1, Lcom/xiaomi/dist/handoff/system/-$$Lambda$DeviceCallbackInner$PtxgUbIQfTnZ87Rkt5NzH2vwp18;
 
@@ -104,6 +116,7 @@
 .method setDeviceCallbackId(I)V
     .locals 0
 
+    .line 38
     iput p1, p0, Lcom/xiaomi/dist/handoff/system/DeviceCallbackInner;->mDeviceCallbackId:I
 
     return-void

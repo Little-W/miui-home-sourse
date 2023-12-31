@@ -1,5 +1,6 @@
 .class public final synthetic Lio/branch/search/w4$a;
 .super Lkotlin/jvm/internal/FunctionReferenceImpl;
+.source "SourceFile"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;

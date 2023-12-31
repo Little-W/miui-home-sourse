@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/CancellableContinuationKt;
 .super Ljava/lang/Object;
+.source "CancellableContinuation.kt"
 
 
 # annotations
@@ -21,14 +22,17 @@
         }
     .end annotation
 
+    .line 374
     new-instance v0, Lkotlinx/coroutines/DisposeOnCancel;
 
     invoke-direct {v0, p1}, Lkotlinx/coroutines/DisposeOnCancel;-><init>(Lkotlinx/coroutines/DisposableHandle;)V
 
     check-cast v0, Lkotlinx/coroutines/CancelHandlerBase;
 
+    .line 390
     check-cast v0, Lkotlin/jvm/functions/Function1;
 
+    .line 374
     invoke-interface {p0, v0}, Lkotlinx/coroutines/CancellableContinuation;->invokeOnCancellation(Lkotlin/jvm/functions/Function1;)V
 
     return-void
@@ -48,18 +52,21 @@
         }
     .end annotation
 
+    .line 334
     instance-of v0, p0, Lkotlinx/coroutines/internal/DispatchedContinuation;
 
     const/4 v1, 0x2
 
     if-nez v0, :cond_0
 
+    .line 335
     new-instance v0, Lkotlinx/coroutines/CancellableContinuationImpl;
 
     invoke-direct {v0, p0, v1}, Lkotlinx/coroutines/CancellableContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;I)V
 
     return-object v0
 
+    .line 351
     :cond_0
     move-object v0, p0
 
@@ -87,6 +94,7 @@
 
     return-object v0
 
+    .line 352
     :cond_2
     new-instance v0, Lkotlinx/coroutines/CancellableContinuationImpl;
 
@@ -107,14 +115,17 @@
         }
     .end annotation
 
+    .line 360
     new-instance v0, Lkotlinx/coroutines/RemoveOnCancel;
 
     invoke-direct {v0, p1}, Lkotlinx/coroutines/RemoveOnCancel;-><init>(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)V
 
     check-cast v0, Lkotlinx/coroutines/CancelHandlerBase;
 
+    .line 389
     check-cast v0, Lkotlin/jvm/functions/Function1;
 
+    .line 360
     invoke-interface {p0, v0}, Lkotlinx/coroutines/CancellableContinuation;->invokeOnCancellation(Lkotlin/jvm/functions/Function1;)V
 
     return-void

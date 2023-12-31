@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;
 .super Ljava/lang/Object;
+.source "MaterialThemeOverlay.java"
 
 
 # static fields
@@ -22,6 +23,7 @@
 
     aput v2, v0, v1
 
+    .line 48
     sget v2, Lcom/google/android/material/R$attr;->theme:I
 
     const/4 v3, 0x1
@@ -32,6 +34,7 @@
 
     new-array v0, v3, [I
 
+    .line 51
     sget v2, Lcom/google/android/material/R$attr;->materialThemeOverlay:I
 
     aput v2, v0, v1
@@ -44,6 +47,7 @@
 .method private static obtainAndroidThemeOverlayId(Landroid/content/Context;Landroid/util/AttributeSet;)I
     .locals 2
 
+    .line 94
     sget-object v0, Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;->ANDROID_THEME_OVERLAY_ATTRS:[I
 
     invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -52,16 +56,19 @@
 
     const/4 p1, 0x0
 
+    .line 95
     invoke-virtual {p0, p1, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
     const/4 v1, 0x1
 
+    .line 96
     invoke-virtual {p0, v1, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p1
 
+    .line 97
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     if-eqz v0, :cond_0
@@ -75,18 +82,22 @@
 .method private static obtainMaterialThemeOverlayId(Landroid/content/Context;Landroid/util/AttributeSet;II)I
     .locals 1
 
+    .line 112
     sget-object v0, Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;->MATERIAL_THEME_OVERLAY_ATTR:[I
 
+    .line 113
     invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
+    .line 115
     invoke-virtual {p0, p1, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p1
 
+    .line 116
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return p1
@@ -95,10 +106,12 @@
 .method public static wrap(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
     .locals 1
 
+    .line 67
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;->obtainMaterialThemeOverlayId(Landroid/content/Context;Landroid/util/AttributeSet;II)I
 
     move-result p2
 
+    .line 68
     instance-of p3, p0, Landroidx/appcompat/view/ContextThemeWrapper;
 
     const/4 v0, 0x1
@@ -109,6 +122,7 @@
 
     check-cast p3, Landroidx/appcompat/view/ContextThemeWrapper;
 
+    .line 69
     invoke-virtual {p3}, Landroidx/appcompat/view/ContextThemeWrapper;->getThemeResId()I
 
     move-result p3
@@ -129,17 +143,20 @@
 
     goto :goto_1
 
+    .line 75
     :cond_1
     new-instance p3, Landroidx/appcompat/view/ContextThemeWrapper;
 
     invoke-direct {p3, p0, p2}, Landroidx/appcompat/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
+    .line 79
     invoke-static {p0, p1}, Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;->obtainAndroidThemeOverlayId(Landroid/content/Context;Landroid/util/AttributeSet;)I
 
     move-result p0
 
     if-eqz p0, :cond_2
 
+    .line 81
     invoke-virtual {p3}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p1

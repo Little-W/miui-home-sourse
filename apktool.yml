@@ -1,5 +1,5 @@
-version: 2.9.0
-apkFileName: MiuiHomeMod.apk
+version: 2.9.1
+apkFileName: RELEASE-4.39.14.7718-11212221.apk
 isFrameworkApk: false
 usesFramework:
   ids:

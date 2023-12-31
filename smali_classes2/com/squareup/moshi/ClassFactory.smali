@@ -1,5 +1,6 @@
 .class abstract Lcom/squareup/moshi/ClassFactory;
 .super Ljava/lang/Object;
+.source "ClassFactory.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +47,15 @@
     :try_start_0
     new-array v3, v1, [Ljava/lang/Class;
 
+    .line 39
     invoke-virtual {p0, v3}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v3
 
+    .line 40
     invoke-virtual {v3, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
+    .line 41
     new-instance v4, Lcom/squareup/moshi/ClassFactory$1;
 
     invoke-direct {v4, v3, p0}, Lcom/squareup/moshi/ClassFactory$1;-><init>(Ljava/lang/reflect/Constructor;Ljava/lang/Class;)V
@@ -65,18 +70,22 @@
     :try_start_1
     const-string v4, "sun.misc.Unsafe"
 
+    .line 61
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
 
     const-string v5, "theUnsafe"
 
+    .line 62
     invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v5
 
+    .line 63
     invoke-virtual {v5, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 64
     invoke-virtual {v5, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -85,6 +94,7 @@
 
     new-array v7, v2, [Ljava/lang/Class;
 
+    .line 65
     const-class v8, Ljava/lang/Class;
 
     aput-object v8, v7, v1
@@ -93,6 +103,7 @@
 
     move-result-object v4
 
+    .line 66
     new-instance v6, Lcom/squareup/moshi/ClassFactory$2;
 
     invoke-direct {v6, v4, v5, p0}, Lcom/squareup/moshi/ClassFactory$2;-><init>(Ljava/lang/reflect/Method;Ljava/lang/Object;Ljava/lang/Class;)V
@@ -107,6 +118,7 @@
     :catch_1
     const/4 v4, 0x2
 
+    .line 87
     :try_start_2
     const-class v5, Ljava/io/ObjectStreamClass;
 
@@ -122,10 +134,12 @@
 
     move-result-object v5
 
+    .line 89
     invoke-virtual {v5, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     new-array v6, v2, [Ljava/lang/Object;
 
+    .line 90
     const-class v7, Ljava/lang/Object;
 
     aput-object v7, v6, v1
@@ -140,6 +154,7 @@
 
     move-result v3
 
+    .line 91
     const-class v5, Ljava/io/ObjectStreamClass;
 
     new-array v6, v4, [Ljava/lang/Class;
@@ -156,8 +171,10 @@
 
     move-result-object v5
 
+    .line 93
     invoke-virtual {v5, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 94
     new-instance v6, Lcom/squareup/moshi/ClassFactory$3;
 
     invoke-direct {v6, v5, p0, v3}, Lcom/squareup/moshi/ClassFactory$3;-><init>(Ljava/lang/reflect/Method;Ljava/lang/Class;I)V
@@ -168,6 +185,7 @@
 
     return-object v6
 
+    .line 117
     :catch_2
     :try_start_3
     const-class v3, Ljava/io/ObjectInputStream;
@@ -186,8 +204,10 @@
 
     move-result-object v0
 
+    .line 119
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 120
     new-instance v1, Lcom/squareup/moshi/ClassFactory$4;
 
     invoke-direct {v1, v0, p0}, Lcom/squareup/moshi/ClassFactory$4;-><init>(Ljava/lang/reflect/Method;Ljava/lang/Class;)V
@@ -196,6 +216,7 @@
 
     return-object v1
 
+    .line 132
     :catch_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -224,12 +245,14 @@
     :catch_4
     move-exception p0
 
+    .line 106
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v0
 
+    .line 104
     :catch_5
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -237,6 +260,7 @@
 
     throw p0
 
+    .line 76
     :catch_6
     new-instance p0, Ljava/lang/AssertionError;
 

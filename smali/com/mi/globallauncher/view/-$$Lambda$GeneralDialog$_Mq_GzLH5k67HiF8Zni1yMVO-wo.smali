@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/view/-$$Lambda$GeneralDialog$_Mq_GzLH5k67HiF8Zni1yMVO-wo;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

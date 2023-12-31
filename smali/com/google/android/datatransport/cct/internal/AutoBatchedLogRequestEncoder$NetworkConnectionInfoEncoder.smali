@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$NetworkConnectionInfoEncoder;
 .super Ljava/lang/Object;
+.source "AutoBatchedLogRequestEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -37,6 +38,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 163
     new-instance v0, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$NetworkConnectionInfoEncoder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$NetworkConnectionInfoEncoder;-><init>()V
@@ -45,6 +47,7 @@
 
     const-string v0, "networkType"
 
+    .line 165
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -53,6 +56,7 @@
 
     const-string v0, "mobileSubtype"
 
+    .line 167
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -65,6 +69,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -80,6 +85,7 @@
         }
     .end annotation
 
+    .line 171
     sget-object p0, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$NetworkConnectionInfoEncoder;->NETWORKTYPE_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;->getNetworkType()Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
@@ -88,6 +94,7 @@
 
     invoke-interface {p2, p0, v0}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;Ljava/lang/Object;)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 172
     sget-object p0, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$NetworkConnectionInfoEncoder;->MOBILESUBTYPE_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;->getMobileSubtype()Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;
@@ -107,6 +114,7 @@
         }
     .end annotation
 
+    .line 162
     check-cast p1, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

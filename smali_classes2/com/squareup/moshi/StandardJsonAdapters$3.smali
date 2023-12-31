@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/StandardJsonAdapters$3;
 .super Lcom/squareup/moshi/JsonAdapter;
+.source "StandardJsonAdapters.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 88
     invoke-direct {p0}, Lcom/squareup/moshi/JsonAdapter;-><init>()V
 
     return-void
@@ -46,6 +48,7 @@
 
     const/16 v1, 0xff
 
+    .line 90
     invoke-static {p1, p0, v0, v1}, Lcom/squareup/moshi/StandardJsonAdapters;->rangeCheckNextInt(Lcom/squareup/moshi/JsonReader;Ljava/lang/String;II)I
 
     move-result p0
@@ -67,6 +70,7 @@
         }
     .end annotation
 
+    .line 88
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/StandardJsonAdapters$3;->fromJson(Lcom/squareup/moshi/JsonReader;)Ljava/lang/Byte;
 
     move-result-object p0

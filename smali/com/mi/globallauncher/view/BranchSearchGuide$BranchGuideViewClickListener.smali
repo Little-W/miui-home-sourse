@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;
 .super Ljava/lang/Object;
+.source "BranchSearchGuide.java"
 
 
 # annotations

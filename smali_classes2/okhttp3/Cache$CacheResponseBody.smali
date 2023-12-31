@@ -1,5 +1,6 @@
 .class Lokhttp3/Cache$CacheResponseBody;
 .super Lokhttp3/ResponseBody;
+.source "Cache.java"
 
 
 # annotations
@@ -33,20 +34,26 @@
 .method constructor <init>(Lokhttp3/internal/cache/DiskLruCache$Snapshot;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 744
     invoke-direct {p0}, Lokhttp3/ResponseBody;-><init>()V
 
+    .line 745
     iput-object p1, p0, Lokhttp3/Cache$CacheResponseBody;->snapshot:Lokhttp3/internal/cache/DiskLruCache$Snapshot;
 
+    .line 746
     iput-object p2, p0, Lokhttp3/Cache$CacheResponseBody;->contentType:Ljava/lang/String;
 
+    .line 747
     iput-object p3, p0, Lokhttp3/Cache$CacheResponseBody;->contentLength:Ljava/lang/String;
 
     const/4 p2, 0x1
 
+    .line 749
     invoke-virtual {p1, p2}, Lokhttp3/internal/cache/DiskLruCache$Snapshot;->getSource(I)Lokio/Source;
 
     move-result-object p2
 
+    .line 750
     new-instance p3, Lokhttp3/Cache$CacheResponseBody$1;
 
     invoke-direct {p3, p0, p2, p1}, Lokhttp3/Cache$CacheResponseBody$1;-><init>(Lokhttp3/Cache$CacheResponseBody;Lokio/Source;Lokhttp3/internal/cache/DiskLruCache$Snapshot;)V
@@ -67,6 +74,7 @@
 
     const-wide/16 v0, -0x1
 
+    .line 764
     :try_start_0
     iget-object v2, p0, Lokhttp3/Cache$CacheResponseBody;->contentLength:Ljava/lang/String;
 
@@ -88,6 +96,7 @@
 .method public contentType()Lokhttp3/MediaType;
     .locals 0
 
+    .line 759
     iget-object p0, p0, Lokhttp3/Cache$CacheResponseBody;->contentType:Ljava/lang/String;
 
     if-eqz p0, :cond_0
@@ -108,6 +117,7 @@
 .method public source()Lokio/BufferedSource;
     .locals 0
 
+    .line 771
     iget-object p0, p0, Lokhttp3/Cache$CacheResponseBody;->bodySource:Lokio/BufferedSource;
 
     return-object p0

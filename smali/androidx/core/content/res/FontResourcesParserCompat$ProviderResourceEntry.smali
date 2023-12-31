@@ -1,5 +1,6 @@
 .class public final Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;
 .super Ljava/lang/Object;
+.source "FontResourcesParserCompat.java"
 
 # interfaces
 .implements Landroidx/core/content/res/FontResourcesParserCompat$FamilyResourceEntry;
@@ -30,14 +31,19 @@
 .method public constructor <init>(Landroidx/core/provider/FontRequest;IILjava/lang/String;)V
     .locals 0
 
+    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 87
     iput-object p1, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mRequest:Landroidx/core/provider/FontRequest;
 
+    .line 88
     iput p2, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mStrategy:I
 
+    .line 89
     iput p3, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mTimeoutMs:I
 
+    .line 90
     iput-object p4, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mSystemFontFamilyName:Ljava/lang/String;
 
     return-void
@@ -48,6 +54,7 @@
 .method public getFetchStrategy()I
     .locals 0
 
+    .line 103
     iget p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mStrategy:I
 
     return p0
@@ -56,6 +63,7 @@
 .method public getRequest()Landroidx/core/provider/FontRequest;
     .locals 0
 
+    .line 99
     iget-object p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mRequest:Landroidx/core/provider/FontRequest;
 
     return-object p0
@@ -64,6 +72,7 @@
 .method public getSystemFontFamilyName()Ljava/lang/String;
     .locals 0
 
+    .line 113
     iget-object p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mSystemFontFamilyName:Ljava/lang/String;
 
     return-object p0
@@ -72,6 +81,7 @@
 .method public getTimeout()I
     .locals 0
 
+    .line 107
     iget p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mTimeoutMs:I
 
     return p0

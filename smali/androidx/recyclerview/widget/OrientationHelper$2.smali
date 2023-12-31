@@ -1,5 +1,6 @@
 .class final Landroidx/recyclerview/widget/OrientationHelper$2;
 .super Landroidx/recyclerview/widget/OrientationHelper;
+.source "OrientationHelper.java"
 
 
 # annotations
@@ -19,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 356
     invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/OrientationHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroidx/recyclerview/widget/OrientationHelper$1;)V
 
     return-void
@@ -29,12 +31,14 @@
 .method public getDecoratedEnd(Landroid/view/View;)I
     .locals 1
 
+    .line 396
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
+    .line 397
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedBottom(Landroid/view/View;)I
@@ -51,12 +55,14 @@
 .method public getDecoratedMeasurement(Landroid/view/View;)I
     .locals 1
 
+    .line 380
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
+    .line 381
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedMeasuredHeight(Landroid/view/View;)I
@@ -77,12 +83,14 @@
 .method public getDecoratedMeasurementInOther(Landroid/view/View;)I
     .locals 1
 
+    .line 388
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
+    .line 389
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedMeasuredWidth(Landroid/view/View;)I
@@ -103,12 +111,14 @@
 .method public getDecoratedStart(Landroid/view/View;)I
     .locals 1
 
+    .line 403
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
+    .line 404
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedTop(Landroid/view/View;)I
@@ -125,6 +135,7 @@
 .method public getEnd()I
     .locals 0
 
+    .line 364
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getHeight()I
@@ -137,6 +148,7 @@
 .method public getEndAfterPadding()I
     .locals 1
 
+    .line 359
     iget-object v0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getHeight()I
@@ -157,6 +169,7 @@
 .method public getEndPadding()I
     .locals 0
 
+    .line 432
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingBottom()I
@@ -169,6 +182,7 @@
 .method public getMode()I
     .locals 0
 
+    .line 437
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getHeightMode()I
@@ -181,6 +195,7 @@
 .method public getModeInOther()I
     .locals 0
 
+    .line 442
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getWidthMode()I
@@ -193,6 +208,7 @@
 .method public getStartAfterPadding()I
     .locals 0
 
+    .line 374
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingTop()I
@@ -205,6 +221,7 @@
 .method public getTotalSpace()I
     .locals 2
 
+    .line 421
     iget-object v0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getHeight()I
@@ -221,6 +238,7 @@
 
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
+    .line 422
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingBottom()I
 
     move-result p0
@@ -233,6 +251,7 @@
 .method public getTransformedEndWithDecoration(Landroid/view/View;)I
     .locals 3
 
+    .line 409
     iget-object v0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mTmpRect:Landroid/graphics/Rect;
@@ -241,6 +260,7 @@
 
     invoke-virtual {v0, p1, v2, v1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
 
+    .line 410
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mTmpRect:Landroid/graphics/Rect;
 
     iget p0, p0, Landroid/graphics/Rect;->bottom:I
@@ -251,6 +271,7 @@
 .method public getTransformedStartWithDecoration(Landroid/view/View;)I
     .locals 3
 
+    .line 415
     iget-object v0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mTmpRect:Landroid/graphics/Rect;
@@ -259,6 +280,7 @@
 
     invoke-virtual {v0, p1, v2, v1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
 
+    .line 416
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mTmpRect:Landroid/graphics/Rect;
 
     iget p0, p0, Landroid/graphics/Rect;->top:I
@@ -269,6 +291,7 @@
 .method public offsetChildren(I)V
     .locals 0
 
+    .line 369
     iget-object p0, p0, Landroidx/recyclerview/widget/OrientationHelper$2;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->offsetChildrenVertical(I)V

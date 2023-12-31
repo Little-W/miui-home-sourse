@@ -1,5 +1,6 @@
 .class public final synthetic Lio/branch/search/g;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields

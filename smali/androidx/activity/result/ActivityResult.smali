@@ -1,5 +1,6 @@
 .class public final Landroidx/activity/result/ActivityResult;
 .super Ljava/lang/Object;
+.source "ActivityResult.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -27,6 +28,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 109
     new-instance v0, Landroidx/activity/result/ActivityResult$1;
 
     invoke-direct {v0}, Landroidx/activity/result/ActivityResult$1;-><init>()V
@@ -39,10 +41,13 @@
 .method public constructor <init>(ILandroid/content/Intent;)V
     .locals 0
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 46
     iput p1, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
+    .line 47
     iput-object p2, p0, Landroidx/activity/result/ActivityResult;->mData:Landroid/content/Intent;
 
     return-void
@@ -51,14 +56,17 @@
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
+    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -93,6 +101,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 90
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -123,6 +132,7 @@
 .method public getData()Landroid/content/Intent;
     .locals 0
 
+    .line 67
     iget-object p0, p0, Landroidx/activity/result/ActivityResult;->mData:Landroid/content/Intent;
 
     return-object p0
@@ -131,6 +141,7 @@
 .method public getResultCode()I
     .locals 0
 
+    .line 59
     iget p0, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
     return p0
@@ -139,6 +150,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,6 +161,7 @@
 
     iget v1, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
+    .line 73
     invoke-static {v1}, Landroidx/activity/result/ActivityResult;->resultCodeToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -177,10 +190,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
+    .line 96
     iget v0, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 97
     iget-object v0, p0, Landroidx/activity/result/ActivityResult;->mData:Landroid/content/Intent;
 
     if-nez v0, :cond_0
@@ -195,10 +210,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 98
     iget-object p0, p0, Landroidx/activity/result/ActivityResult;->mData:Landroid/content/Intent;
 
     if-eqz p0, :cond_1
 
+    .line 99
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     :cond_1

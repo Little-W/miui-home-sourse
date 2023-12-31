@@ -1,5 +1,6 @@
 .class public final Lokhttp3/MultipartBody$Part;
 .super Ljava/lang/Object;
+.source "MultipartBody.java"
 
 
 # annotations
@@ -30,10 +31,13 @@
         .end annotation
     .end param
 
+    .line 269
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 270
     iput-object p1, p0, Lokhttp3/MultipartBody$Part;->headers:Lokhttp3/Headers;
 
+    .line 271
     iput-object p2, p0, Lokhttp3/MultipartBody$Part;->body:Lokhttp3/RequestBody;
 
     return-void
@@ -52,6 +56,7 @@
 
     const-string v0, "Content-Type"
 
+    .line 234
     invoke-virtual {p0, v0}, Lokhttp3/Headers;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -60,6 +65,7 @@
 
     goto :goto_0
 
+    .line 235
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -75,6 +81,7 @@
 
     const-string v0, "Content-Length"
 
+    .line 237
     invoke-virtual {p0, v0}, Lokhttp3/Headers;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -83,6 +90,7 @@
 
     goto :goto_1
 
+    .line 238
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -92,6 +100,7 @@
 
     throw p0
 
+    .line 240
     :cond_3
     :goto_1
     new-instance v0, Lokhttp3/MultipartBody$Part;
@@ -100,6 +109,7 @@
 
     return-object v0
 
+    .line 232
     :cond_4
     new-instance p0, Ljava/lang/NullPointerException;
 

@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/flow/SharedFlowImpl$collect$1;
 .super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "SharedFlow.kt"
 
 
 # annotations

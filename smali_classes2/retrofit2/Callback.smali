@@ -1,5 +1,6 @@
 .class public interface abstract Lretrofit2/Callback;
 .super Ljava/lang/Object;
+.source "Callback.java"
 
 
 # annotations

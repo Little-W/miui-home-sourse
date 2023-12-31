@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/android/systemui/shared/recents/utilities/-$$Lambda$RemoteAnimationFinishCallbackManager$6SxPl8REr6wrLkHSItRYd3Ny59w;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;
 .super Ljava/lang/Object;
+.source "AlarmManagerScheduler.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;
@@ -21,16 +22,22 @@
 .method constructor <init>(Landroid/content/Context;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Landroid/app/AlarmManager;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;)V
     .locals 0
 
+    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 68
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->context:Landroid/content/Context;
 
+    .line 69
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->eventStore:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
+    .line 70
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->alarmManager:Landroid/app/AlarmManager;
 
+    .line 71
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 72
     iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->config:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
     return-void
@@ -41,6 +48,7 @@
 
     const-string v0, "alarm"
 
+    .line 56
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -59,6 +67,7 @@
 
     move-object v6, p4
 
+    .line 53
     invoke-direct/range {v1 .. v6}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;-><init>(Landroid/content/Context;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Landroid/app/AlarmManager;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;)V
 
     return-void
@@ -69,6 +78,7 @@
 .method isJobServiceOn(Landroid/content/Intent;)Z
     .locals 2
 
+    .line 77
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->context:Landroid/content/Context;
 
     const/4 v0, 0x0
@@ -92,6 +102,7 @@
 
     const/4 v0, 0x0
 
+    .line 82
     invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->schedule(Lcom/google/android/datatransport/runtime/TransportContext;IZ)V
 
     return-void
@@ -100,10 +111,12 @@
 .method public schedule(Lcom/google/android/datatransport/runtime/TransportContext;IZ)V
     .locals 8
 
+    .line 93
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
+    .line 94
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object v1
@@ -112,6 +125,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 96
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object v1
@@ -126,8 +140,10 @@
 
     const-string v2, "priority"
 
+    .line 95
     invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 97
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object v1
@@ -136,6 +152,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 99
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object v1
@@ -146,8 +163,10 @@
 
     const-string v3, "extras"
 
+    .line 98
     invoke-virtual {v0, v3, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 101
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
@@ -157,6 +176,7 @@
 
     invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
+    .line 102
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v0
@@ -165,12 +185,14 @@
 
     const-string v0, "attemptNumber"
 
+    .line 103
     invoke-virtual {v1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v0, "AlarmManagerScheduler"
 
     if-nez p3, :cond_1
 
+    .line 105
     invoke-virtual {p0, v1}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->isJobServiceOn(Landroid/content/Intent;)Z
 
     move-result p3
@@ -179,10 +201,12 @@
 
     const-string p0, "Upload for context %s is already scheduled. Returning..."
 
+    .line 106
     invoke-static {v0, p0, p1}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 
+    .line 111
     :cond_1
     iget-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->eventStore:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
@@ -190,8 +214,10 @@
 
     move-result-wide v3
 
+    .line 113
     iget-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->config:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
+    .line 114
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object v5
@@ -208,6 +234,7 @@
 
     const/4 p1, 0x1
 
+    .line 120
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
@@ -216,12 +243,14 @@
 
     const/4 p1, 0x2
 
+    .line 121
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
     aput-object v3, p3, p1
 
+    .line 122
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -232,24 +261,29 @@
 
     const-string p1, "Scheduling upload for context %s in %dms(Backend next call timestamp %d). Attempt %d"
 
+    .line 116
     invoke-static {v0, p1, p3}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 124
     iget-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->context:Landroid/content/Context;
 
     invoke-static {p1, v2, v1, v2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 
+    .line 125
     iget-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->alarmManager:Landroid/app/AlarmManager;
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 126
     invoke-interface {p0}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
 
     move-result-wide v0
 
     add-long/2addr v0, v5
 
+    .line 125
     invoke-virtual {p3, p2, v0, v1, p1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
     return-void

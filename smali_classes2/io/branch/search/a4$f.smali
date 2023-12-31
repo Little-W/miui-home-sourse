@@ -1,5 +1,6 @@
 .class public Lio/branch/search/a4$f;
 .super Landroidx/room/SharedSQLiteStatement;
+.source "SourceFile"
 
 
 # annotations

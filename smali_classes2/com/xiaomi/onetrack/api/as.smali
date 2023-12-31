@@ -54,6 +54,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,6 +63,7 @@
 .method synthetic constructor <init>(Lcom/xiaomi/onetrack/api/at;)V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/as;-><init>()V
 
     return-void
@@ -70,6 +72,7 @@
 .method static synthetic a(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->o:Ljava/lang/String;
 
     return-object p1
@@ -78,6 +81,7 @@
 .method static synthetic b(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->n:Ljava/lang/String;
 
     return-object p1
@@ -86,6 +90,7 @@
 .method static synthetic c(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->r:Ljava/lang/String;
 
     return-object p1
@@ -94,6 +99,7 @@
 .method static synthetic d(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->m:Ljava/lang/String;
 
     return-object p1
@@ -102,6 +108,7 @@
 .method static synthetic e(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->q:Ljava/lang/String;
 
     return-object p1
@@ -110,6 +117,7 @@
 .method static synthetic f(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->l:Ljava/lang/String;
 
     return-object p1
@@ -118,6 +126,7 @@
 .method static synthetic g(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->j:Ljava/lang/String;
 
     return-object p1
@@ -126,6 +135,7 @@
 .method static synthetic h(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->p:Ljava/lang/String;
 
     return-object p1
@@ -134,6 +144,7 @@
 .method static synthetic i(Lcom/xiaomi/onetrack/api/as;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 10
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/as;->k:Ljava/lang/String;
 
     return-object p1
@@ -144,6 +155,7 @@
 .method public a()Ljava/lang/String;
     .locals 0
 
+    .line 44
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->j:Ljava/lang/String;
 
     return-object p0
@@ -152,6 +164,7 @@
 .method public b()Ljava/lang/String;
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->k:Ljava/lang/String;
 
     return-object p0
@@ -160,6 +173,7 @@
 .method public c()Ljava/lang/String;
     .locals 0
 
+    .line 52
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->l:Ljava/lang/String;
 
     return-object p0
@@ -168,6 +182,7 @@
 .method public d()Ljava/lang/String;
     .locals 0
 
+    .line 56
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->m:Ljava/lang/String;
 
     return-object p0
@@ -176,6 +191,7 @@
 .method public e()Ljava/lang/String;
     .locals 0
 
+    .line 60
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->n:Ljava/lang/String;
 
     return-object p0
@@ -184,6 +200,7 @@
 .method public f()Ljava/lang/String;
     .locals 0
 
+    .line 64
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->o:Ljava/lang/String;
 
     return-object p0
@@ -192,6 +209,7 @@
 .method public g()Ljava/lang/String;
     .locals 0
 
+    .line 68
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->p:Ljava/lang/String;
 
     return-object p0
@@ -200,6 +218,7 @@
 .method public h()Ljava/lang/String;
     .locals 0
 
+    .line 72
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->q:Ljava/lang/String;
 
     return-object p0
@@ -208,6 +227,7 @@
 .method public i()Ljava/lang/String;
     .locals 0
 
+    .line 76
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->r:Ljava/lang/String;
 
     return-object p0
@@ -216,6 +236,7 @@
 .method public j()Lorg/json/JSONObject;
     .locals 3
 
+    .line 81
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -223,54 +244,63 @@
     :try_start_0
     const-string v1, "name"
 
+    .line 83
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/as;->j:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "gender"
 
+    .line 84
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/as;->k:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "birthday"
 
+    .line 85
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/as;->l:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "phone"
 
+    .line 86
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/as;->m:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "job"
 
+    .line 87
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/as;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "hobby"
 
+    .line 88
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/as;->o:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "region"
 
+    .line 89
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/as;->p:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "province"
 
+    .line 90
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/as;->q:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "city"
 
+    .line 91
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/as;->r:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -282,6 +312,7 @@
     :catch_0
     move-exception p0
 
+    .line 93
     invoke-virtual {p0}, Lorg/json/JSONException;->printStackTrace()V
 
     :goto_0
@@ -291,6 +322,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 100
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/api/as;->j()Lorg/json/JSONObject;
 
     move-result-object p0

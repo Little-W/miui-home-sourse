@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/flow/internal/SafeCollector_commonKt$checkContext$result$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "SafeCollector.common.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -49,10 +50,12 @@
 .method public final invoke(ILkotlin/coroutines/CoroutineContext$Element;)I
     .locals 2
 
+    .line 26
     invoke-interface {p2}, Lkotlin/coroutines/CoroutineContext$Element;->getKey()Lkotlin/coroutines/CoroutineContext$Key;
 
     move-result-object v0
 
+    .line 27
     iget-object p0, p0, Lkotlinx/coroutines/flow/internal/SafeCollector_commonKt$checkContext$result$1;->$this_checkContext:Lkotlinx/coroutines/flow/internal/SafeCollector;
 
     iget-object p0, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->collectContext:Lkotlin/coroutines/CoroutineContext;
@@ -61,6 +64,7 @@
 
     move-result-object p0
 
+    .line 28
     sget-object v1, Lkotlinx/coroutines/Job;->Key:Lkotlinx/coroutines/Job$Key;
 
     if-eq v0, v1, :cond_1
@@ -77,11 +81,13 @@
     :goto_0
     return p0
 
+    .line 33
     :cond_1
     check-cast p0, Lkotlinx/coroutines/Job;
 
     if-eqz p2, :cond_4
 
+    .line 34
     check-cast p2, Lkotlinx/coroutines/Job;
 
     invoke-static {p2, p0}, Lkotlinx/coroutines/flow/internal/SafeCollector_commonKt;->transitiveCoroutineParent(Lkotlinx/coroutines/Job;Lkotlinx/coroutines/Job;)Lkotlinx/coroutines/Job;
@@ -100,6 +106,7 @@
     :goto_1
     return p1
 
+    .line 68
     :cond_3
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -113,6 +120,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 70
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p2, ", expected child of "
@@ -137,6 +145,7 @@
 
     move-result-object p0
 
+    .line 67
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -149,6 +158,7 @@
 
     throw p1
 
+    .line 34
     :cond_4
     new-instance p0, Ljava/lang/NullPointerException;
 

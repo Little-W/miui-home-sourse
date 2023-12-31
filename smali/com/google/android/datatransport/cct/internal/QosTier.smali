@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/datatransport/cct/internal/QosTier;
 .super Ljava/lang/Enum;
+.source "QosTier.java"
 
 
 # annotations
@@ -46,6 +47,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
+    .line 21
     new-instance v0, Lcom/google/android/datatransport/cct/internal/QosTier;
 
     const/4 v1, 0x0
@@ -56,6 +58,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->DEFAULT:Lcom/google/android/datatransport/cct/internal/QosTier;
 
+    .line 22
     new-instance v0, Lcom/google/android/datatransport/cct/internal/QosTier;
 
     const/4 v2, 0x1
@@ -66,6 +69,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->UNMETERED_ONLY:Lcom/google/android/datatransport/cct/internal/QosTier;
 
+    .line 23
     new-instance v0, Lcom/google/android/datatransport/cct/internal/QosTier;
 
     const/4 v3, 0x2
@@ -76,6 +80,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->UNMETERED_OR_DAILY:Lcom/google/android/datatransport/cct/internal/QosTier;
 
+    .line 24
     new-instance v0, Lcom/google/android/datatransport/cct/internal/QosTier;
 
     const/4 v4, 0x3
@@ -86,6 +91,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->FAST_IF_RADIO_AWAKE:Lcom/google/android/datatransport/cct/internal/QosTier;
 
+    .line 25
     new-instance v0, Lcom/google/android/datatransport/cct/internal/QosTier;
 
     const/4 v5, 0x4
@@ -96,6 +102,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->NEVER:Lcom/google/android/datatransport/cct/internal/QosTier;
 
+    .line 26
     new-instance v0, Lcom/google/android/datatransport/cct/internal/QosTier;
 
     const/4 v6, -0x1
@@ -112,6 +119,7 @@
 
     new-array v0, v0, [Lcom/google/android/datatransport/cct/internal/QosTier;
 
+    .line 20
     sget-object v8, Lcom/google/android/datatransport/cct/internal/QosTier;->DEFAULT:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     aput-object v8, v0, v1
@@ -138,42 +146,49 @@
 
     sput-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->$VALUES:[Lcom/google/android/datatransport/cct/internal/QosTier;
 
+    .line 30
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->valueMap:Landroid/util/SparseArray;
 
+    .line 33
     sget-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->valueMap:Landroid/util/SparseArray;
 
     sget-object v7, Lcom/google/android/datatransport/cct/internal/QosTier;->DEFAULT:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 34
     sget-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->valueMap:Landroid/util/SparseArray;
 
     sget-object v1, Lcom/google/android/datatransport/cct/internal/QosTier;->UNMETERED_ONLY:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 35
     sget-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->valueMap:Landroid/util/SparseArray;
 
     sget-object v1, Lcom/google/android/datatransport/cct/internal/QosTier;->UNMETERED_OR_DAILY:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 36
     sget-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->valueMap:Landroid/util/SparseArray;
 
     sget-object v1, Lcom/google/android/datatransport/cct/internal/QosTier;->FAST_IF_RADIO_AWAKE:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 37
     sget-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->valueMap:Landroid/util/SparseArray;
 
     sget-object v1, Lcom/google/android/datatransport/cct/internal/QosTier;->NEVER:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     invoke-virtual {v0, v5, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 38
     sget-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->valueMap:Landroid/util/SparseArray;
 
     sget-object v1, Lcom/google/android/datatransport/cct/internal/QosTier;->UNRECOGNIZED:Lcom/google/android/datatransport/cct/internal/QosTier;
@@ -191,8 +206,10 @@
         }
     .end annotation
 
+    .line 41
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 42
     iput p3, p0, Lcom/google/android/datatransport/cct/internal/QosTier;->value:I
 
     return-void
@@ -223,26 +240,31 @@
 
     return-object p0
 
+    .line 61
     :cond_0
     sget-object p0, Lcom/google/android/datatransport/cct/internal/QosTier;->NEVER:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     return-object p0
 
+    .line 59
     :cond_1
     sget-object p0, Lcom/google/android/datatransport/cct/internal/QosTier;->FAST_IF_RADIO_AWAKE:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     return-object p0
 
+    .line 57
     :cond_2
     sget-object p0, Lcom/google/android/datatransport/cct/internal/QosTier;->UNMETERED_OR_DAILY:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     return-object p0
 
+    .line 55
     :cond_3
     sget-object p0, Lcom/google/android/datatransport/cct/internal/QosTier;->UNMETERED_ONLY:Lcom/google/android/datatransport/cct/internal/QosTier;
 
     return-object p0
 
+    .line 53
     :cond_4
     sget-object p0, Lcom/google/android/datatransport/cct/internal/QosTier;->DEFAULT:Lcom/google/android/datatransport/cct/internal/QosTier;
 
@@ -252,6 +274,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/QosTier;
     .locals 1
 
+    .line 20
     const-class v0, Lcom/google/android/datatransport/cct/internal/QosTier;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -266,6 +289,7 @@
 .method public static values()[Lcom/google/android/datatransport/cct/internal/QosTier;
     .locals 1
 
+    .line 20
     sget-object v0, Lcom/google/android/datatransport/cct/internal/QosTier;->$VALUES:[Lcom/google/android/datatransport/cct/internal/QosTier;
 
     invoke-virtual {v0}, [Lcom/google/android/datatransport/cct/internal/QosTier;->clone()Ljava/lang/Object;
@@ -282,6 +306,7 @@
 .method public final getNumber()I
     .locals 0
 
+    .line 46
     iget p0, p0, Lcom/google/android/datatransport/cct/internal/QosTier;->value:I
 
     return p0

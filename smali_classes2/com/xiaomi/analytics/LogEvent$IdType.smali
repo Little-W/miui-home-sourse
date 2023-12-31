@@ -1,5 +1,6 @@
 .class public final enum Lcom/xiaomi/analytics/LogEvent$IdType;
 .super Ljava/lang/Enum;
+.source "LogEvent.java"
 
 
 # annotations
@@ -47,6 +48,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
+    .line 52
     new-instance v0, Lcom/xiaomi/analytics/LogEvent$IdType;
 
     const/4 v1, 0x0
@@ -87,6 +89,7 @@
 
     sput-object v0, Lcom/xiaomi/analytics/LogEvent$IdType;->TYPE_ANDROID_ID:Lcom/xiaomi/analytics/LogEvent$IdType;
 
+    .line 53
     new-instance v0, Lcom/xiaomi/analytics/LogEvent$IdType;
 
     const/4 v5, 0x4
@@ -121,6 +124,7 @@
 
     new-array v0, v0, [Lcom/xiaomi/analytics/LogEvent$IdType;
 
+    .line 51
     sget-object v8, Lcom/xiaomi/analytics/LogEvent$IdType;->TYPE_DEFAULT:Lcom/xiaomi/analytics/LogEvent$IdType;
 
     aput-object v8, v0, v1
@@ -162,12 +166,15 @@
         }
     .end annotation
 
+    .line 57
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     const/4 p1, 0x0
 
+    .line 55
     iput p1, p0, Lcom/xiaomi/analytics/LogEvent$IdType;->mValue:I
 
+    .line 58
     iput p3, p0, Lcom/xiaomi/analytics/LogEvent$IdType;->mValue:I
 
     return-void
@@ -176,6 +183,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/analytics/LogEvent$IdType;
     .locals 1
 
+    .line 51
     const-class v0, Lcom/xiaomi/analytics/LogEvent$IdType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -190,6 +198,7 @@
 .method public static values()[Lcom/xiaomi/analytics/LogEvent$IdType;
     .locals 1
 
+    .line 51
     sget-object v0, Lcom/xiaomi/analytics/LogEvent$IdType;->$VALUES:[Lcom/xiaomi/analytics/LogEvent$IdType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/analytics/LogEvent$IdType;->clone()Ljava/lang/Object;
@@ -206,6 +215,7 @@
 .method public value()I
     .locals 0
 
+    .line 62
     iget p0, p0, Lcom/xiaomi/analytics/LogEvent$IdType;->mValue:I
 
     return p0

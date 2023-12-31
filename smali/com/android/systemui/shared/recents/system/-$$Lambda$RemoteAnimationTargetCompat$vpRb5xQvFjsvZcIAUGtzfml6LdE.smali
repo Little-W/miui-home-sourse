@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/android/systemui/shared/recents/system/-$$Lambda$RemoteAnimationTargetCompat$vpRb5xQvFjsvZcIAUGtzfml6LdE;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/function/Predicate;

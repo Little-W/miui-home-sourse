@@ -1,5 +1,6 @@
 .class synthetic Lcom/android/internal/util/StateMachine$1;
 .super Ljava/lang/Object;
+.source "StateMachine.java"
 
 
 # annotations

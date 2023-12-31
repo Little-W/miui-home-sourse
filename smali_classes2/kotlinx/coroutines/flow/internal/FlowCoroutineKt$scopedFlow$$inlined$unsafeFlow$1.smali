@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$1;
 .super Ljava/lang/Object;
+.source "SafeCollector.common.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/Flow;
@@ -38,6 +39,7 @@
 
     iput-object p1, p0, Lkotlinx/coroutines/flow/internal/FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$1;->$block$inlined:Lkotlin/jvm/functions/Function3;
 
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +50,7 @@
 .method public collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 2
 
+    .line 113
     new-instance v0, Lkotlinx/coroutines/flow/internal/FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$1$lambda$1;
 
     const/4 v1, 0x0
@@ -68,6 +71,7 @@
 
     return-object p0
 
+    .line 109
     :cond_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 

@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/json/JsonArraySerializer$JsonArrayDescriptor;
 .super Ljava/lang/Object;
+.source "JsonElementSerializers.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -34,6 +35,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 174
     new-instance v0, Lkotlinx/serialization/json/JsonArraySerializer$JsonArrayDescriptor;
 
     invoke-direct {v0}, Lkotlinx/serialization/json/JsonArraySerializer$JsonArrayDescriptor;-><init>()V
@@ -42,6 +44,7 @@
 
     const-string v0, "kotlinx.serialization.json.JsonArray"
 
+    .line 176
     sput-object v0, Lkotlinx/serialization/json/JsonArraySerializer$JsonArrayDescriptor;->serialName:Ljava/lang/String;
 
     return-void
@@ -50,8 +53,10 @@
 .method private constructor <init>()V
     .locals 3
 
+    .line 174
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 237
     const-class v0, Ljava/util/List;
 
     sget-object v1, Lkotlin/reflect/KTypeProjection;->Companion:Lkotlin/reflect/KTypeProjection$Companion;
@@ -80,10 +85,12 @@
 
     move-result-object v0
 
+    .line 236
     iput-object v0, p0, Lkotlinx/serialization/json/JsonArraySerializer$JsonArrayDescriptor;->$$delegate_0:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-void
 
+    .line 238
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -163,6 +170,7 @@
 .method public getSerialName()Ljava/lang/String;
     .locals 0
 
+    .line 176
     sget-object p0, Lkotlinx/serialization/json/JsonArraySerializer$JsonArrayDescriptor;->serialName:Ljava/lang/String;
 
     return-object p0

@@ -1,5 +1,6 @@
 .class Landroidx/core/provider/CallbackWithHandler$2;
 .super Ljava/lang/Object;
+.source "CallbackWithHandler.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -28,6 +29,7 @@
 .method constructor <init>(Landroidx/core/provider/CallbackWithHandler;Landroidx/core/provider/FontsContractCompat$FontRequestCallback;I)V
     .locals 0
 
+    .line 68
     iput-object p1, p0, Landroidx/core/provider/CallbackWithHandler$2;->this$0:Landroidx/core/provider/CallbackWithHandler;
 
     iput-object p2, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
@@ -44,6 +46,7 @@
 .method public run()V
     .locals 1
 
+    .line 71
     iget-object v0, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
 
     iget p0, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$reason:I

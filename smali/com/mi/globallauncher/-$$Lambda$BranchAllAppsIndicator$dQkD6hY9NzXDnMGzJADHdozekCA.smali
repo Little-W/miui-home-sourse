@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/-$$Lambda$BranchAllAppsIndicator$dQkD6hY9NzXDnMGzJADHdozekCA;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

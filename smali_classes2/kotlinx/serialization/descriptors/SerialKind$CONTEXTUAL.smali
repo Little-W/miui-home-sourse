@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/descriptors/SerialKind$CONTEXTUAL;
 .super Lkotlinx/serialization/descriptors/SerialKind;
+.source "SerialKinds.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 54
     new-instance v0, Lkotlinx/serialization/descriptors/SerialKind$CONTEXTUAL;
 
     invoke-direct {v0}, Lkotlinx/serialization/descriptors/SerialKind$CONTEXTUAL;-><init>()V
@@ -35,6 +37,7 @@
 
     const/4 v0, 0x0
 
+    .line 54
     invoke-direct {p0, v0}, Lkotlinx/serialization/descriptors/SerialKind;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void

@@ -1,5 +1,6 @@
 .class public final Lkotlin/text/Regex$fromInt$$inlined$apply$lambda$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Regex.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -73,6 +74,7 @@
         }
     .end annotation
 
+    .line 23
     iget p0, p0, Lkotlin/text/Regex$fromInt$$inlined$apply$lambda$1;->$value$inlined:I
 
     check-cast p1, Lkotlin/text/FlagEnum;

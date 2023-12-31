@@ -1,5 +1,6 @@
 .class interface abstract Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
 .super Ljava/lang/Object;
+.source "ReportFragment.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Lcom/google/android/filament/android/DisplayHelper$1;
 .super Ljava/lang/Object;
+.source "DisplayHelper.java"
 
 # interfaces
 .implements Landroid/hardware/display/DisplayManager$DisplayListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/google/android/filament/android/DisplayHelper;Landroid/view/Display;)V
     .locals 0
 
+    .line 92
     iput-object p1, p0, Lcom/google/android/filament/android/DisplayHelper$1;->this$0:Lcom/google/android/filament/android/DisplayHelper;
 
     iput-object p2, p0, Lcom/google/android/filament/android/DisplayHelper$1;->val$display:Landroid/view/Display;
@@ -46,6 +48,7 @@
 .method public onDisplayChanged(I)V
     .locals 1
 
+    .line 101
     iget-object v0, p0, Lcom/google/android/filament/android/DisplayHelper$1;->val$display:Landroid/view/Display;
 
     invoke-virtual {v0}, Landroid/view/Display;->getDisplayId()I
@@ -54,6 +57,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 102
     iget-object p0, p0, Lcom/google/android/filament/android/DisplayHelper$1;->this$0:Lcom/google/android/filament/android/DisplayHelper;
 
     invoke-static {p0}, Lcom/google/android/filament/android/DisplayHelper;->access$000(Lcom/google/android/filament/android/DisplayHelper;)V

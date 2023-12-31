@@ -1,5 +1,6 @@
 .class public Landroidx/constraintlayout/solver/widgets/analyzer/BasicMeasure$Measure;
 .super Ljava/lang/Object;
+.source "BasicMeasure.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 440
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

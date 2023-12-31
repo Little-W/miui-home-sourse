@@ -1,5 +1,6 @@
 .class public final Landroidx/core/text/TextUtilsCompat;
 .super Ljava/lang/Object;
+.source "TextUtilsCompat.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 33
     new-instance v0, Ljava/util/Locale;
 
     const-string v1, ""
@@ -24,6 +26,7 @@
 .method private static getLayoutDirectionFromFirstChar(Ljava/util/Locale;)I
     .locals 3
 
+    .line 119
     invoke-virtual {p0, p0}, Ljava/util/Locale;->getDisplayName(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object p0
@@ -55,12 +58,14 @@
 .method public static getLayoutDirectionFromLocale(Ljava/util/Locale;)I
     .locals 2
 
+    .line 90
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_0
 
+    .line 91
     invoke-static {p0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
 
     move-result p0
@@ -70,6 +75,7 @@
     :cond_0
     if-eqz p0, :cond_3
 
+    .line 93
     sget-object v0, Landroidx/core/text/TextUtilsCompat;->ROOT:Ljava/util/Locale;
 
     invoke-virtual {p0, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -78,12 +84,14 @@
 
     if-nez v0, :cond_3
 
+    .line 94
     invoke-static {p0}, Landroidx/core/text/ICUCompat;->maximizeAndGetScript(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
+    .line 95
     invoke-static {p0}, Landroidx/core/text/TextUtilsCompat;->getLayoutDirectionFromFirstChar(Ljava/util/Locale;)I
 
     move-result p0
@@ -93,6 +101,7 @@
     :cond_1
     const-string p0, "Arab"
 
+    .line 99
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p0
@@ -101,6 +110,7 @@
 
     const-string p0, "Hebr"
 
+    .line 100
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p0

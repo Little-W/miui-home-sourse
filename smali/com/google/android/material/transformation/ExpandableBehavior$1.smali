@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/transformation/ExpandableBehavior$1;
 .super Ljava/lang/Object;
+.source "ExpandableBehavior.java"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
@@ -30,6 +31,7 @@
 .method constructor <init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILcom/google/android/material/expandable/ExpandableWidget;)V
     .locals 0
 
+    .line 106
     iput-object p1, p0, Lcom/google/android/material/transformation/ExpandableBehavior$1;->this$0:Lcom/google/android/material/transformation/ExpandableBehavior;
 
     iput-object p2, p0, Lcom/google/android/material/transformation/ExpandableBehavior$1;->val$child:Landroid/view/View;
@@ -48,6 +50,7 @@
 .method public onPreDraw()Z
     .locals 4
 
+    .line 109
     iget-object v0, p0, Lcom/google/android/material/transformation/ExpandableBehavior$1;->val$child:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -56,6 +59,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
+    .line 111
     iget-object v0, p0, Lcom/google/android/material/transformation/ExpandableBehavior$1;->this$0:Lcom/google/android/material/transformation/ExpandableBehavior;
 
     invoke-static {v0}, Lcom/google/android/material/transformation/ExpandableBehavior;->access$000(Lcom/google/android/material/transformation/ExpandableBehavior;)I
@@ -68,6 +72,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 112
     iget-object v0, p0, Lcom/google/android/material/transformation/ExpandableBehavior$1;->this$0:Lcom/google/android/material/transformation/ExpandableBehavior;
 
     iget-object v1, p0, Lcom/google/android/material/transformation/ExpandableBehavior$1;->val$dep:Lcom/google/android/material/expandable/ExpandableWidget;

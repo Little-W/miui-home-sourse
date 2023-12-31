@@ -1,5 +1,6 @@
 .class public Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
 .super Ljava/lang/Object;
+.source "PluginGeneratedSerialDescriptor.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -67,6 +68,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->serialName:Ljava/lang/String;
@@ -77,8 +79,10 @@
 
     const/4 p1, -0x1
 
+    .line 25
     iput p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->added:I
 
+    .line 26
     iget p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->elementsCount:I
 
     new-array p2, p1, [Ljava/lang/String;
@@ -99,16 +103,19 @@
     :cond_0
     iput-object p2, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->names:[Ljava/lang/String;
 
+    .line 27
     iget p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->elementsCount:I
 
     new-array p2, p1, [Ljava/util/List;
 
     iput-object p2, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->propertiesAnnotations:[Ljava/util/List;
 
+    .line 31
     new-array p1, p1, [Z
 
     iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->elementsOptionality:[Z
 
+    .line 35
     new-instance p1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$indices$2;
 
     invoke-direct {p1, p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$indices$2;-><init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
@@ -121,6 +128,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->indices$delegate:Lkotlin/Lazy;
 
+    .line 37
     new-instance p1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$childSerializers$2;
 
     invoke-direct {p1, p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$childSerializers$2;-><init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
@@ -133,6 +141,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->childSerializers$delegate:Lkotlin/Lazy;
 
+    .line 40
     new-instance p1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$typeParameterDescriptors$2;
 
     invoke-direct {p1, p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$typeParameterDescriptors$2;-><init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
@@ -145,6 +154,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->typeParameterDescriptors$delegate:Lkotlin/Lazy;
 
+    .line 45
     new-instance p1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$_hashCode$2;
 
     invoke-direct {p1, p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$_hashCode$2;-><init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
@@ -163,6 +173,7 @@
 .method public static final synthetic access$buildIndices(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)Ljava/util/Map;
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->buildIndices()Ljava/util/Map;
 
     move-result-object p0
@@ -173,6 +184,7 @@
 .method public static final synthetic access$getGeneratedSerializer$p(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)Lkotlinx/serialization/internal/GeneratedSerializer;
     .locals 0
 
+    .line 17
     iget-object p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->generatedSerializer:Lkotlinx/serialization/internal/GeneratedSerializer;
 
     return-object p0
@@ -181,6 +193,7 @@
 .method public static final synthetic access$getTypeParameterDescriptors$p(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)[Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->getTypeParameterDescriptors()[Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -200,10 +213,12 @@
         }
     .end annotation
 
+    .line 84
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 85
     iget-object v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->names:[Ljava/lang/String;
 
     array-length v1, v1
@@ -213,6 +228,7 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
+    .line 86
     move-object v3, v0
 
     check-cast v3, Ljava/util/Map;
@@ -231,6 +247,7 @@
 
     goto :goto_0
 
+    .line 88
     :cond_0
     check-cast v0, Ljava/util/Map;
 
@@ -322,6 +339,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 48
     iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->names:[Ljava/lang/String;
 
     iget v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->added:I
@@ -334,10 +352,12 @@
 
     aput-object p1, v0, v1
 
+    .line 49
     iget-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->elementsOptionality:[Z
 
     aput-boolean p2, p1, v1
 
+    .line 50
     iget-object p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->propertiesAnnotations:[Ljava/util/List;
 
     const/4 p1, 0x0
@@ -363,6 +383,7 @@
 
     goto/16 :goto_1
 
+    .line 138
     :cond_1
     instance-of v2, p1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
 
@@ -370,6 +391,7 @@
 
     goto/16 :goto_1
 
+    .line 139
     :cond_2
     invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getSerialName()Ljava/lang/String;
 
@@ -393,9 +415,11 @@
 
     goto :goto_1
 
+    .line 140
     :cond_3
     check-cast p1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
 
+    .line 92
     invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->getTypeParameterDescriptors()[Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v2
@@ -412,6 +436,7 @@
 
     goto :goto_1
 
+    .line 141
     :cond_4
     invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementsCount()I
 
@@ -425,6 +450,7 @@
 
     goto :goto_1
 
+    .line 142
     :cond_5
     invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementsCount()I
 
@@ -435,6 +461,7 @@
     :goto_0
     if-ge v2, p1, :cond_0
 
+    .line 143
     invoke-interface {p0, v2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v4
@@ -461,6 +488,7 @@
 
     goto :goto_1
 
+    .line 144
     :cond_6
     invoke-interface {p0, v2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -500,10 +528,12 @@
 .method public getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 74
     invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->getChildSerializers()[Lkotlinx/serialization/KSerializer;
 
     move-result-object p0
 
+    .line 133
     aget-object p0, p0, p1
 
     invoke-interface {p0}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -520,6 +550,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 81
     invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->getIndices()Ljava/util/Map;
 
     move-result-object p0
@@ -548,8 +579,10 @@
 .method public getElementName(I)Ljava/lang/String;
     .locals 0
 
+    .line 80
     iget-object p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->names:[Ljava/lang/String;
 
+    .line 136
     aget-object p0, p0, p1
 
     return-object p0
@@ -558,6 +591,7 @@
 .method public final getElementsCount()I
     .locals 0
 
+    .line 20
     iget p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->elementsCount:I
 
     return p0
@@ -566,6 +600,7 @@
 .method public getKind()Lkotlinx/serialization/descriptors/SerialKind;
     .locals 0
 
+    .line 22
     sget-object p0, Lkotlinx/serialization/descriptors/StructureKind$CLASS;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$CLASS;
 
     check-cast p0, Lkotlinx/serialization/descriptors/SerialKind;
@@ -584,6 +619,7 @@
         }
     .end annotation
 
+    .line 32
     invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->getIndices()Ljava/util/Map;
 
     move-result-object p0
@@ -598,6 +634,7 @@
 .method public getSerialName()Ljava/lang/String;
     .locals 0
 
+    .line 18
     iget-object p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->serialName:Ljava/lang/String;
 
     return-object p0
@@ -606,6 +643,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 95
     invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->get_hashCode()I
 
     move-result p0
@@ -616,6 +654,7 @@
 .method public isNullable()Z
     .locals 0
 
+    .line 17
     invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor$DefaultImpls;->isNullable(Lkotlinx/serialization/descriptors/SerialDescriptor;)Z
 
     move-result p0
@@ -626,6 +665,7 @@
 .method public toString()Ljava/lang/String;
     .locals 10
 
+    .line 98
     invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->getIndices()Ljava/util/Map;
 
     move-result-object v0

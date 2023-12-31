@@ -12,10 +12,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 52
     sget v0, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
 
     sput v0, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
 
+    .line 53
     new-instance v0, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;
 
     invoke-direct {v0}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;-><init>()V
@@ -28,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +39,7 @@
 .method public static getInstance()Lcom/google/android/gms/common/GoogleApiAvailabilityLight;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->zzm:Lcom/google/android/gms/common/GoogleApiAvailabilityLight;
 
     return-object v0
@@ -46,6 +50,7 @@
 .method public getApkVersion(Landroid/content/Context;)I
     .locals 0
 
+    .line 29
     invoke-static {p1}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->getApkVersion(Landroid/content/Context;)I
 
     move-result p0
@@ -56,6 +61,7 @@
 .method public isGooglePlayServicesAvailable(Landroid/content/Context;)I
     .locals 1
 
+    .line 3
     sget v0, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
 
     invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->isGooglePlayServicesAvailable(Landroid/content/Context;I)I
@@ -68,10 +74,12 @@
 .method public isGooglePlayServicesAvailable(Landroid/content/Context;I)I
     .locals 0
 
+    .line 5
     invoke-static {p1, p2}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->isGooglePlayServicesAvailable(Landroid/content/Context;I)I
 
     move-result p0
 
+    .line 6
     invoke-static {p1, p0}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->isPlayServicesPossiblyUpdating(Landroid/content/Context;I)Z
 
     move-result p1

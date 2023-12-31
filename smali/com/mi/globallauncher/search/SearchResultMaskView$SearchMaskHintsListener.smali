@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/search/SearchResultMaskView$SearchMaskHintsListener;
 .super Ljava/lang/Object;
+.source "SearchResultMaskView.java"
 
 
 # annotations

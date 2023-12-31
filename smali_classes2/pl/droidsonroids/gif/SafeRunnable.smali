@@ -1,5 +1,6 @@
 .class abstract Lpl/droidsonroids/gif/SafeRunnable;
 .super Ljava/lang/Object;
+.source "SafeRunnable.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -13,8 +14,10 @@
 .method constructor <init>(Lpl/droidsonroids/gif/GifDrawable;)V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 11
     iput-object p1, p0, Lpl/droidsonroids/gif/SafeRunnable;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     return-void
@@ -28,6 +31,7 @@
 .method public final run()V
     .locals 2
 
+    .line 17
     :try_start_0
     iget-object v0, p0, Lpl/droidsonroids/gif/SafeRunnable;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
@@ -37,6 +41,7 @@
 
     if-nez v0, :cond_0
 
+    .line 18
     invoke-virtual {p0}, Lpl/droidsonroids/gif/SafeRunnable;->doWork()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -47,18 +52,21 @@
     :catchall_0
     move-exception p0
 
+    .line 21
     invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 23
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
     invoke-interface {v0, v1, p0}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
+    .line 25
     :cond_1
     throw p0
 .end method

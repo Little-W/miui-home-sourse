@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/MarketService$15;
 .super Ljava/lang/Object;
+.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketService;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
     .locals 0
 
+    .line 213
     iput-object p1, p0, Lcom/market/sdk/MarketService$15;->this$0:Lcom/market/sdk/MarketService;
 
     iput-object p2, p0, Lcom/market/sdk/MarketService$15;->val$args:Landroid/os/Bundle;
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 216
     iget-object v0, p0, Lcom/market/sdk/MarketService$15;->this$0:Lcom/market/sdk/MarketService;
 
     invoke-static {v0}, Lcom/market/sdk/MarketService;->access$000(Lcom/market/sdk/MarketService;)Lcom/market/sdk/IMarketService;

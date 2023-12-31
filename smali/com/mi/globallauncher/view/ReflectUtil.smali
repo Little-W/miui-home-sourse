@@ -1,11 +1,13 @@
 .class Lcom/mi/globallauncher/view/ReflectUtil;
 .super Ljava/lang/Object;
+.source "ReflectUtil.java"
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,6 +22,7 @@
         }
     .end annotation
 
+    .line 27
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -30,8 +33,10 @@
 
     const/4 v0, 0x1
 
+    .line 28
     invoke-virtual {p1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 29
     invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

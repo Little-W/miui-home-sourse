@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/ModelViewer;
 .super Ljava/lang/Object;
+.source "ModelViewer.kt"
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -84,6 +85,7 @@
 
     sput-object v0, Lcom/google/android/filament/utils/ModelViewer;->Companion:Lcom/google/android/filament/utils/ModelViewer$Companion;
 
+    .line 347
     new-instance v0, Lcom/google/android/filament/utils/Float3;
 
     const/4 v1, 0x0
@@ -108,17 +110,20 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 125
     invoke-direct {p0, p2}, Lcom/google/android/filament/utils/ModelViewer;-><init>(Lcom/google/android/filament/Engine;)V
 
     if-eqz p3, :cond_0
 
     goto :goto_0
 
+    .line 126
     :cond_0
     new-instance p2, Lcom/google/android/filament/utils/Manipulator$Builder;
 
     invoke-direct {p2}, Lcom/google/android/filament/utils/Manipulator$Builder;-><init>()V
 
+    .line 127
     sget-object p3, Lcom/google/android/filament/utils/ModelViewer;->kDefaultObjectPosition:Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p3}, Lcom/google/android/filament/utils/Float3;->getX()F
@@ -141,6 +146,7 @@
 
     move-result-object p2
 
+    .line 128
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getWidth()I
 
     move-result p3
@@ -153,6 +159,7 @@
 
     move-result-object p2
 
+    .line 129
     sget-object p3, Lcom/google/android/filament/utils/Manipulator$Mode;->ORBIT:Lcom/google/android/filament/utils/Manipulator$Mode;
 
     invoke-virtual {p2, p3}, Lcom/google/android/filament/utils/Manipulator$Builder;->build(Lcom/google/android/filament/utils/Manipulator$Mode;)Lcom/google/android/filament/utils/Manipulator;
@@ -166,8 +173,10 @@
     :goto_0
     iput-object p3, p0, Lcom/google/android/filament/utils/ModelViewer;->cameraManipulator:Lcom/google/android/filament/utils/Manipulator;
 
+    .line 131
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->surfaceView:Landroid/view/SurfaceView;
 
+    .line 132
     new-instance p2, Lcom/google/android/filament/utils/GestureDetector;
 
     move-object p3, p1
@@ -187,6 +196,7 @@
 
     iput-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->gestureDetector:Lcom/google/android/filament/utils/GestureDetector;
 
+    .line 133
     new-instance p2, Lcom/google/android/filament/android/DisplayHelper;
 
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getContext()Landroid/content/Context;
@@ -197,6 +207,7 @@
 
     iput-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->displayHelper:Lcom/google/android/filament/android/DisplayHelper;
 
+    .line 134
     iget-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->uiHelper:Lcom/google/android/filament/android/UiHelper;
 
     new-instance v0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;
@@ -207,10 +218,12 @@
 
     invoke-virtual {p2, v0}, Lcom/google/android/filament/android/UiHelper;->setRenderCallback(Lcom/google/android/filament/android/UiHelper$RendererCallback;)V
 
+    .line 135
     iget-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->uiHelper:Lcom/google/android/filament/android/UiHelper;
 
     invoke-virtual {p2, p1}, Lcom/google/android/filament/android/UiHelper;->attachTo(Landroid/view/SurfaceView;)V
 
+    .line 136
     invoke-direct {p0, p3}, Lcom/google/android/filament/utils/ModelViewer;->addDetachListener(Landroid/view/View;)V
 
     return-void
@@ -223,6 +236,7 @@
 
     if-eqz p5, :cond_0
 
+    .line 125
     invoke-static {}, Lcom/google/android/filament/Engine;->create()Lcom/google/android/filament/Engine;
 
     move-result-object p2
@@ -257,17 +271,20 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 140
     invoke-direct {p0, p2}, Lcom/google/android/filament/utils/ModelViewer;-><init>(Lcom/google/android/filament/Engine;)V
 
     if-eqz p3, :cond_0
 
     goto :goto_0
 
+    .line 141
     :cond_0
     new-instance p2, Lcom/google/android/filament/utils/Manipulator$Builder;
 
     invoke-direct {p2}, Lcom/google/android/filament/utils/Manipulator$Builder;-><init>()V
 
+    .line 142
     sget-object p3, Lcom/google/android/filament/utils/ModelViewer;->kDefaultObjectPosition:Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p3}, Lcom/google/android/filament/utils/Float3;->getX()F
@@ -290,6 +307,7 @@
 
     move-result-object p2
 
+    .line 143
     invoke-virtual {p1}, Landroid/view/TextureView;->getWidth()I
 
     move-result p3
@@ -302,6 +320,7 @@
 
     move-result-object p2
 
+    .line 144
     sget-object p3, Lcom/google/android/filament/utils/Manipulator$Mode;->ORBIT:Lcom/google/android/filament/utils/Manipulator$Mode;
 
     invoke-virtual {p2, p3}, Lcom/google/android/filament/utils/Manipulator$Builder;->build(Lcom/google/android/filament/utils/Manipulator$Mode;)Lcom/google/android/filament/utils/Manipulator;
@@ -315,8 +334,10 @@
     :goto_0
     iput-object p3, p0, Lcom/google/android/filament/utils/ModelViewer;->cameraManipulator:Lcom/google/android/filament/utils/Manipulator;
 
+    .line 146
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->textureView:Landroid/view/TextureView;
 
+    .line 147
     new-instance p2, Lcom/google/android/filament/utils/GestureDetector;
 
     move-object p3, p1
@@ -336,6 +357,7 @@
 
     iput-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->gestureDetector:Lcom/google/android/filament/utils/GestureDetector;
 
+    .line 148
     new-instance p2, Lcom/google/android/filament/android/DisplayHelper;
 
     invoke-virtual {p1}, Landroid/view/TextureView;->getContext()Landroid/content/Context;
@@ -346,6 +368,7 @@
 
     iput-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->displayHelper:Lcom/google/android/filament/android/DisplayHelper;
 
+    .line 149
     iget-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->uiHelper:Lcom/google/android/filament/android/UiHelper;
 
     new-instance v0, Lcom/google/android/filament/utils/ModelViewer$SurfaceCallback;
@@ -356,10 +379,12 @@
 
     invoke-virtual {p2, v0}, Lcom/google/android/filament/android/UiHelper;->setRenderCallback(Lcom/google/android/filament/android/UiHelper$RendererCallback;)V
 
+    .line 150
     iget-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->uiHelper:Lcom/google/android/filament/android/UiHelper;
 
     invoke-virtual {p2, p1}, Lcom/google/android/filament/android/UiHelper;->attachTo(Landroid/view/TextureView;)V
 
+    .line 151
     invoke-direct {p0, p3}, Lcom/google/android/filament/utils/ModelViewer;->addDetachListener(Landroid/view/View;)V
 
     return-void
@@ -372,6 +397,7 @@
 
     if-eqz p5, :cond_0
 
+    .line 140
     invoke-static {}, Lcom/google/android/filament/Engine;->create()Lcom/google/android/filament/Engine;
 
     move-result-object p2
@@ -402,14 +428,17 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
 
     const/4 p1, 0x1
 
+    .line 73
     iput-boolean p1, p0, Lcom/google/android/filament/utils/ModelViewer;->normalizeSkinningWeights:Z
 
+    .line 81
     new-instance v0, Lcom/google/android/filament/android/UiHelper;
 
     sget-object v1, Lcom/google/android/filament/android/UiHelper$ContextErrorPolicy;->DONT_CHECK:Lcom/google/android/filament/android/UiHelper$ContextErrorPolicy;
@@ -422,22 +451,27 @@
 
     new-array v0, v0, [I
 
+    .line 92
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->readyRenderables:[I
 
     const/4 v0, 0x3
 
     new-array v1, v0, [D
 
+    .line 94
     iput-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->eyePos:[D
 
     new-array v1, v0, [D
 
+    .line 95
     iput-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->target:[D
 
     new-array v0, v0, [D
 
+    .line 96
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->upward:[D
 
+    .line 99
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
 
     invoke-virtual {v0}, Lcom/google/android/filament/Engine;->createRenderer()Lcom/google/android/filament/Renderer;
@@ -450,6 +484,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->renderer:Lcom/google/android/filament/Renderer;
 
+    .line 100
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
 
     invoke-virtual {v0}, Lcom/google/android/filament/Engine;->createScene()Lcom/google/android/filament/Scene;
@@ -462,6 +497,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->scene:Lcom/google/android/filament/Scene;
 
+    .line 101
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
 
     invoke-virtual {v0}, Lcom/google/android/filament/Engine;->createCamera()Lcom/google/android/filament/Camera;
@@ -482,6 +518,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->camera:Lcom/google/android/filament/Camera;
 
+    .line 102
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
 
     invoke-virtual {v0}, Lcom/google/android/filament/Engine;->createView()Lcom/google/android/filament/View;
@@ -494,18 +531,21 @@
 
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->view:Lcom/google/android/filament/View;
 
+    .line 103
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->view:Lcom/google/android/filament/View;
 
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->scene:Lcom/google/android/filament/Scene;
 
     invoke-virtual {v0, v1}, Lcom/google/android/filament/View;->setScene(Lcom/google/android/filament/Scene;)V
 
+    .line 104
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->view:Lcom/google/android/filament/View;
 
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->camera:Lcom/google/android/filament/Camera;
 
     invoke-virtual {v0, v1}, Lcom/google/android/filament/View;->setCamera(Lcom/google/android/filament/Camera;)V
 
+    .line 106
     new-instance v0, Lcom/google/android/filament/gltfio/AssetLoader;
 
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
@@ -522,6 +562,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->assetLoader:Lcom/google/android/filament/gltfio/AssetLoader;
 
+    .line 107
     new-instance v0, Lcom/google/android/filament/gltfio/ResourceLoader;
 
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
@@ -534,6 +575,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->resourceLoader:Lcom/google/android/filament/gltfio/ResourceLoader;
 
+    .line 112
     invoke-static {}, Lcom/google/android/filament/EntityManager;->get()Lcom/google/android/filament/EntityManager;
 
     move-result-object v0
@@ -546,6 +588,7 @@
 
     const v0, 0x45cb2000    # 6500.0f
 
+    .line 114
     invoke-static {v0}, Lcom/google/android/filament/Colors;->cct(F)[F
 
     move-result-object v0
@@ -560,18 +603,21 @@
 
     aget v0, v0, v3
 
+    .line 115
     new-instance v3, Lcom/google/android/filament/LightManager$Builder;
 
     sget-object v4, Lcom/google/android/filament/LightManager$Type;->DIRECTIONAL:Lcom/google/android/filament/LightManager$Type;
 
     invoke-direct {v3, v4}, Lcom/google/android/filament/LightManager$Builder;-><init>(Lcom/google/android/filament/LightManager$Type;)V
 
+    .line 116
     invoke-virtual {v3, v1, v2, v0}, Lcom/google/android/filament/LightManager$Builder;->color(FFF)Lcom/google/android/filament/LightManager$Builder;
 
     move-result-object v0
 
     const v1, 0x47c35000    # 100000.0f
 
+    .line 117
     invoke-virtual {v0, v1}, Lcom/google/android/filament/LightManager$Builder;->intensity(F)Lcom/google/android/filament/LightManager$Builder;
 
     move-result-object v0
@@ -580,20 +626,24 @@
 
     const/high16 v2, -0x40800000    # -1.0f
 
+    .line 118
     invoke-virtual {v0, v1, v2, v1}, Lcom/google/android/filament/LightManager$Builder;->direction(FFF)Lcom/google/android/filament/LightManager$Builder;
 
     move-result-object v0
 
+    .line 119
     invoke-virtual {v0, p1}, Lcom/google/android/filament/LightManager$Builder;->castShadows(Z)Lcom/google/android/filament/LightManager$Builder;
 
     move-result-object p1
 
+    .line 120
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
 
     iget v1, p0, Lcom/google/android/filament/utils/ModelViewer;->light:I
 
     invoke-virtual {p1, v0, v1}, Lcom/google/android/filament/LightManager$Builder;->build(Lcom/google/android/filament/Engine;I)V
 
+    .line 122
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->scene:Lcom/google/android/filament/Scene;
 
     iget p0, p0, Lcom/google/android/filament/utils/ModelViewer;->light:I
@@ -606,6 +656,7 @@
 .method public static final synthetic access$getAnimator$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/gltfio/Animator;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->animator:Lcom/google/android/filament/gltfio/Animator;
 
     return-object p0
@@ -614,6 +665,7 @@
 .method public static final synthetic access$getAsset$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/gltfio/FilamentAsset;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     return-object p0
@@ -622,6 +674,7 @@
 .method public static final synthetic access$getAssetLoader$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/gltfio/AssetLoader;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->assetLoader:Lcom/google/android/filament/gltfio/AssetLoader;
 
     return-object p0
@@ -630,6 +683,7 @@
 .method public static final synthetic access$getCameraManipulator$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/utils/Manipulator;
     .locals 1
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->cameraManipulator:Lcom/google/android/filament/utils/Manipulator;
 
     if-nez p0, :cond_0
@@ -645,6 +699,7 @@
 .method public static final synthetic access$getDisplayHelper$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/android/DisplayHelper;
     .locals 1
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->displayHelper:Lcom/google/android/filament/android/DisplayHelper;
 
     if-nez p0, :cond_0
@@ -660,6 +715,7 @@
 .method public static final synthetic access$getReadyRenderables$p(Lcom/google/android/filament/utils/ModelViewer;)[I
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->readyRenderables:[I
 
     return-object p0
@@ -668,6 +724,7 @@
 .method public static final synthetic access$getRenderer$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/Renderer;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->renderer:Lcom/google/android/filament/Renderer;
 
     return-object p0
@@ -676,6 +733,7 @@
 .method public static final synthetic access$getResourceLoader$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/gltfio/ResourceLoader;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->resourceLoader:Lcom/google/android/filament/gltfio/ResourceLoader;
 
     return-object p0
@@ -684,6 +742,7 @@
 .method public static final synthetic access$getSurfaceView$p(Lcom/google/android/filament/utils/ModelViewer;)Landroid/view/SurfaceView;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->surfaceView:Landroid/view/SurfaceView;
 
     return-object p0
@@ -692,6 +751,7 @@
 .method public static final synthetic access$getSwapChain$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/SwapChain;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->swapChain:Lcom/google/android/filament/SwapChain;
 
     return-object p0
@@ -700,6 +760,7 @@
 .method public static final synthetic access$getTextureView$p(Lcom/google/android/filament/utils/ModelViewer;)Landroid/view/TextureView;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->textureView:Landroid/view/TextureView;
 
     return-object p0
@@ -708,6 +769,7 @@
 .method public static final synthetic access$getUiHelper$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/android/UiHelper;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->uiHelper:Lcom/google/android/filament/android/UiHelper;
 
     return-object p0
@@ -716,6 +778,7 @@
 .method public static final synthetic access$setAnimator$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/gltfio/Animator;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->animator:Lcom/google/android/filament/gltfio/Animator;
 
     return-void
@@ -724,6 +787,7 @@
 .method public static final synthetic access$setAsset$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/gltfio/FilamentAsset;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     return-void
@@ -732,6 +796,7 @@
 .method public static final synthetic access$setAssetLoader$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/gltfio/AssetLoader;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->assetLoader:Lcom/google/android/filament/gltfio/AssetLoader;
 
     return-void
@@ -740,6 +805,7 @@
 .method public static final synthetic access$setCameraManipulator$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/utils/Manipulator;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->cameraManipulator:Lcom/google/android/filament/utils/Manipulator;
 
     return-void
@@ -748,6 +814,7 @@
 .method public static final synthetic access$setDisplayHelper$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/android/DisplayHelper;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->displayHelper:Lcom/google/android/filament/android/DisplayHelper;
 
     return-void
@@ -756,6 +823,7 @@
 .method public static final synthetic access$setResourceLoader$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/gltfio/ResourceLoader;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->resourceLoader:Lcom/google/android/filament/gltfio/ResourceLoader;
 
     return-void
@@ -764,6 +832,7 @@
 .method public static final synthetic access$setSurfaceView$p(Lcom/google/android/filament/utils/ModelViewer;Landroid/view/SurfaceView;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->surfaceView:Landroid/view/SurfaceView;
 
     return-void
@@ -772,6 +841,7 @@
 .method public static final synthetic access$setSwapChain$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/SwapChain;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->swapChain:Lcom/google/android/filament/SwapChain;
 
     return-void
@@ -780,6 +850,7 @@
 .method public static final synthetic access$setTextureView$p(Lcom/google/android/filament/utils/ModelViewer;Landroid/view/TextureView;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->textureView:Landroid/view/TextureView;
 
     return-void
@@ -788,6 +859,7 @@
 .method private final addDetachListener(Landroid/view/View;)V
     .locals 1
 
+    .line 269
     new-instance v0, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;
 
     invoke-direct {v0, p0}, Lcom/google/android/filament/utils/ModelViewer$addDetachListener$1;-><init>(Lcom/google/android/filament/utils/ModelViewer;)V
@@ -802,6 +874,7 @@
 .method private final populateScene(Lcom/google/android/filament/gltfio/FilamentAsset;)V
     .locals 5
 
+    .line 260
     new-instance v0, Lkotlin/jvm/internal/Ref$IntRef;
 
     invoke-direct {v0}, Lkotlin/jvm/internal/Ref$IntRef;-><init>()V
@@ -810,12 +883,14 @@
 
     iput v1, v0, Lkotlin/jvm/internal/Ref$IntRef;->element:I
 
+    .line 261
     new-instance v1, Lcom/google/android/filament/utils/ModelViewer$populateScene$popRenderables$1;
 
     invoke-direct {v1, p0, v0, p1}, Lcom/google/android/filament/utils/ModelViewer$populateScene$popRenderables$1;-><init>(Lcom/google/android/filament/utils/ModelViewer;Lkotlin/jvm/internal/Ref$IntRef;Lcom/google/android/filament/gltfio/FilamentAsset;)V
 
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
+    .line 262
     :goto_0
     invoke-interface {v1}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
@@ -829,6 +904,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 263
     iget-object v2, p0, Lcom/google/android/filament/utils/ModelViewer;->scene:Lcom/google/android/filament/Scene;
 
     iget-object v3, p0, Lcom/google/android/filament/utils/ModelViewer;->readyRenderables:[I
@@ -849,6 +925,7 @@
 
     goto :goto_0
 
+    .line 265
     :cond_0
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->scene:Lcom/google/android/filament/Scene;
 
@@ -874,6 +951,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 203
     sget-object p1, Lcom/google/android/filament/utils/ModelViewer;->kDefaultObjectPosition:Lcom/google/android/filament/utils/Float3;
 
     :cond_0
@@ -887,10 +965,12 @@
 .method public final destroyModel()V
     .locals 3
 
+    .line 220
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     if-eqz v0, :cond_0
 
+    .line 221
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->scene:Lcom/google/android/filament/Scene;
 
     invoke-virtual {v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->getEntities()[I
@@ -899,18 +979,21 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/filament/Scene;->removeEntities([I)V
 
+    .line 222
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->assetLoader:Lcom/google/android/filament/gltfio/AssetLoader;
 
     invoke-virtual {v1, v0}, Lcom/google/android/filament/gltfio/AssetLoader;->destroyAsset(Lcom/google/android/filament/gltfio/FilamentAsset;)V
 
     const/4 v0, 0x0
 
+    .line 223
     move-object v1, v0
 
     check-cast v1, Lcom/google/android/filament/gltfio/FilamentAsset;
 
     iput-object v1, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
+    .line 224
     check-cast v0, Lcom/google/android/filament/gltfio/Animator;
 
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->animator:Lcom/google/android/filament/gltfio/Animator;
@@ -939,10 +1022,12 @@
         }
     .end annotation
 
+    .line 305
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 306
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->getResourceUris()[Ljava/lang/String;
 
     move-result-object v1
@@ -951,6 +1036,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 307
     array-length v2, v1
 
     const/4 v3, 0x0
@@ -960,6 +1046,7 @@
 
     aget-object v4, v1, v3
 
+    .line 308
     move-object v5, v0
 
     check-cast v5, Ljava/util/Map;
@@ -978,6 +1065,7 @@
 
     goto :goto_0
 
+    .line 311
     :cond_0
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getMain()Lkotlinx/coroutines/MainCoroutineDispatcher;
 
@@ -1005,6 +1093,7 @@
 
     return-object p0
 
+    .line 319
     :cond_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -1014,6 +1103,7 @@
 .method public final getAnimator()Lcom/google/android/filament/gltfio/Animator;
     .locals 0
 
+    .line 66
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->animator:Lcom/google/android/filament/gltfio/Animator;
 
     return-object p0
@@ -1022,6 +1112,7 @@
 .method public final getAsset()Lcom/google/android/filament/gltfio/FilamentAsset;
     .locals 0
 
+    .line 63
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     return-object p0
@@ -1030,6 +1121,7 @@
 .method public final getCamera()Lcom/google/android/filament/Camera;
     .locals 0
 
+    .line 78
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->camera:Lcom/google/android/filament/Camera;
 
     return-object p0
@@ -1038,6 +1130,7 @@
 .method public final getEngine()Lcom/google/android/filament/Engine;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
 
     return-object p0
@@ -1046,6 +1139,7 @@
 .method public final getLight()I
     .locals 0
 
+    .line 79
     iget p0, p0, Lcom/google/android/filament/utils/ModelViewer;->light:I
 
     return p0
@@ -1054,6 +1148,7 @@
 .method public final getNormalizeSkinningWeights()Z
     .locals 0
 
+    .line 73
     iget-boolean p0, p0, Lcom/google/android/filament/utils/ModelViewer;->normalizeSkinningWeights:Z
 
     return p0
@@ -1062,6 +1157,7 @@
 .method public final getProgress()F
     .locals 0
 
+    .line 71
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->resourceLoader:Lcom/google/android/filament/gltfio/ResourceLoader;
 
     invoke-virtual {p0}, Lcom/google/android/filament/gltfio/ResourceLoader;->asyncGetLoadProgress()F
@@ -1074,6 +1170,7 @@
 .method public final getRecomputeBoundingBoxes()Z
     .locals 0
 
+    .line 74
     iget-boolean p0, p0, Lcom/google/android/filament/utils/ModelViewer;->recomputeBoundingBoxes:Z
 
     return p0
@@ -1082,6 +1179,7 @@
 .method public final getScene()Lcom/google/android/filament/Scene;
     .locals 0
 
+    .line 76
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->scene:Lcom/google/android/filament/Scene;
 
     return-object p0
@@ -1090,6 +1188,7 @@
 .method public final getView()Lcom/google/android/filament/View;
     .locals 0
 
+    .line 77
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->view:Lcom/google/android/filament/View;
 
     return-object p0
@@ -1102,8 +1201,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 158
     invoke-virtual {p0}, Lcom/google/android/filament/utils/ModelViewer;->destroyModel()V
 
+    .line 159
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->assetLoader:Lcom/google/android/filament/gltfio/AssetLoader;
 
     invoke-virtual {v0, p1}, Lcom/google/android/filament/gltfio/AssetLoader;->createAssetFromBinary(Ljava/nio/Buffer;)Lcom/google/android/filament/gltfio/FilamentAsset;
@@ -1112,20 +1213,24 @@
 
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
+    .line 160
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     if-eqz p1, :cond_0
 
+    .line 161
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->resourceLoader:Lcom/google/android/filament/gltfio/ResourceLoader;
 
     invoke-virtual {v0, p1}, Lcom/google/android/filament/gltfio/ResourceLoader;->asyncBeginLoad(Lcom/google/android/filament/gltfio/FilamentAsset;)Z
 
+    .line 162
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->getAnimator()Lcom/google/android/filament/gltfio/Animator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->animator:Lcom/google/android/filament/gltfio/Animator;
 
+    .line 163
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->releaseSourceData()V
 
     :cond_0
@@ -1155,8 +1260,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 173
     invoke-virtual {p0}, Lcom/google/android/filament/utils/ModelViewer;->destroyModel()V
 
+    .line 174
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->assetLoader:Lcom/google/android/filament/gltfio/AssetLoader;
 
     invoke-virtual {v0, p1}, Lcom/google/android/filament/gltfio/AssetLoader;->createAssetFromJson(Ljava/nio/Buffer;)Lcom/google/android/filament/gltfio/FilamentAsset;
@@ -1165,10 +1272,12 @@
 
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
+    .line 175
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     if-eqz p1, :cond_1
 
+    .line 176
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->getResourceUris()[Ljava/lang/String;
 
     move-result-object v0
@@ -1182,6 +1291,7 @@
 
     aget-object v3, v0, v2
 
+    .line 177
     iget-object v4, p0, Lcom/google/android/filament/utils/ModelViewer;->resourceLoader:Lcom/google/android/filament/gltfio/ResourceLoader;
 
     const-string/jumbo v5, "uri"
@@ -1200,17 +1310,20 @@
 
     goto :goto_0
 
+    .line 179
     :cond_0
     iget-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->resourceLoader:Lcom/google/android/filament/gltfio/ResourceLoader;
 
     invoke-virtual {p2, p1}, Lcom/google/android/filament/gltfio/ResourceLoader;->asyncBeginLoad(Lcom/google/android/filament/gltfio/FilamentAsset;)Z
 
+    .line 180
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->getAnimator()Lcom/google/android/filament/gltfio/Animator;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/google/android/filament/utils/ModelViewer;->animator:Lcom/google/android/filament/gltfio/Animator;
 
+    .line 181
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->releaseSourceData()V
 
     :cond_1
@@ -1240,8 +1353,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 191
     invoke-virtual {p0}, Lcom/google/android/filament/utils/ModelViewer;->destroyModel()V
 
+    .line 192
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->assetLoader:Lcom/google/android/filament/gltfio/AssetLoader;
 
     invoke-virtual {v0, p1}, Lcom/google/android/filament/gltfio/AssetLoader;->createAssetFromJson(Ljava/nio/Buffer;)Lcom/google/android/filament/gltfio/FilamentAsset;
@@ -1250,6 +1365,7 @@
 
     iput-object p1, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
+    .line 193
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
 
     move-result-object p1
@@ -1292,6 +1408,7 @@
 
     invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 300
     invoke-virtual {p0, p2}, Lcom/google/android/filament/utils/ModelViewer;->onTouchEvent(Landroid/view/MotionEvent;)V
 
     const/4 p0, 0x1
@@ -1306,6 +1423,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 295
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->gestureDetector:Lcom/google/android/filament/utils/GestureDetector;
 
     if-nez p0, :cond_0
@@ -1325,6 +1443,7 @@
 
     move-object/from16 v0, p0
 
+    .line 235
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->uiHelper:Lcom/google/android/filament/android/UiHelper;
 
     invoke-virtual {v1}, Lcom/google/android/filament/android/UiHelper;->isReadyToRender()Z
@@ -1335,17 +1454,20 @@
 
     return-void
 
+    .line 240
     :cond_0
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->resourceLoader:Lcom/google/android/filament/gltfio/ResourceLoader;
 
     invoke-virtual {v1}, Lcom/google/android/filament/gltfio/ResourceLoader;->asyncUpdateLoad()V
 
+    .line 243
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     if-eqz v1, :cond_1
 
     invoke-direct {v0, v1}, Lcom/google/android/filament/utils/ModelViewer;->populateScene(Lcom/google/android/filament/gltfio/FilamentAsset;)V
 
+    .line 246
     :cond_1
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->cameraManipulator:Lcom/google/android/filament/utils/Manipulator;
 
@@ -1364,8 +1486,10 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/google/android/filament/utils/Manipulator;->getLookAt([D[D[D)V
 
+    .line 247
     iget-object v5, v0, Lcom/google/android/filament/utils/ModelViewer;->camera:Lcom/google/android/filament/Camera;
 
+    .line 248
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->eyePos:[D
 
     const/4 v2, 0x0
@@ -1380,6 +1504,7 @@
 
     aget-wide v10, v1, v4
 
+    .line 249
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->target:[D
 
     aget-wide v12, v1, v2
@@ -1388,6 +1513,7 @@
 
     aget-wide v16, v1, v4
 
+    .line 250
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->upward:[D
 
     aget-wide v18, v1, v2
@@ -1396,8 +1522,10 @@
 
     aget-wide v22, v1, v4
 
+    .line 247
     invoke-virtual/range {v5 .. v23}, Lcom/google/android/filament/Camera;->lookAt(DDDDDDDDD)V
 
+    .line 253
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->renderer:Lcom/google/android/filament/Renderer;
 
     iget-object v2, v0, Lcom/google/android/filament/utils/ModelViewer;->swapChain:Lcom/google/android/filament/SwapChain;
@@ -1415,12 +1543,14 @@
 
     if-eqz v1, :cond_4
 
+    .line 254
     iget-object v1, v0, Lcom/google/android/filament/utils/ModelViewer;->renderer:Lcom/google/android/filament/Renderer;
 
     iget-object v2, v0, Lcom/google/android/filament/utils/ModelViewer;->view:Lcom/google/android/filament/View;
 
     invoke-virtual {v1, v2}, Lcom/google/android/filament/Renderer;->render(Lcom/google/android/filament/View;)V
 
+    .line 255
     iget-object v0, v0, Lcom/google/android/filament/utils/ModelViewer;->renderer:Lcom/google/android/filament/Renderer;
 
     invoke-virtual {v0}, Lcom/google/android/filament/Renderer;->endFrame()V
@@ -1432,6 +1562,7 @@
 .method public final setNormalizeSkinningWeights(Z)V
     .locals 0
 
+    .line 73
     iput-boolean p1, p0, Lcom/google/android/filament/utils/ModelViewer;->normalizeSkinningWeights:Z
 
     return-void
@@ -1440,6 +1571,7 @@
 .method public final setRecomputeBoundingBoxes(Z)V
     .locals 0
 
+    .line 74
     iput-boolean p1, p0, Lcom/google/android/filament/utils/ModelViewer;->recomputeBoundingBoxes:Z
 
     return-void
@@ -1452,10 +1584,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 204
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer;->asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     if-eqz v0, :cond_0
 
+    .line 205
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer;->engine:Lcom/google/android/filament/Engine;
 
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getTransformManager()Lcom/google/android/filament/TransformManager;
@@ -1466,6 +1600,7 @@
 
     invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 206
     invoke-virtual {v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->getBoundingBox()Lcom/google/android/filament/Box;
 
     move-result-object v1
@@ -1494,6 +1629,7 @@
 
     invoke-direct {v3, v5, v7, v1}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 207
     invoke-virtual {v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->getBoundingBox()Lcom/google/android/filament/Box;
 
     move-result-object v1
@@ -1514,6 +1650,7 @@
 
     invoke-direct {v2, v4, v5, v1}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 351
     invoke-virtual {v2}, Lcom/google/android/filament/utils/Float3;->getX()F
 
     move-result v1
@@ -1540,6 +1677,7 @@
 
     div-float/2addr v2, v1
 
+    .line 352
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float3;->getX()F
@@ -1562,6 +1700,7 @@
 
     invoke-direct {v1, v4, v5, p1}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 360
     new-instance p1, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v3}, Lcom/google/android/filament/utils/Float3;->getX()F
@@ -1596,6 +1735,7 @@
 
     invoke-direct {p1, v4, v5, v3}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 211
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     invoke-direct {v1, v2}, Lcom/google/android/filament/utils/Float3;-><init>(F)V
@@ -1616,6 +1756,7 @@
 
     move-result-object p1
 
+    .line 212
     invoke-virtual {v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->getRoot()I
 
     move-result v0

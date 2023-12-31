@@ -34,14 +34,19 @@
         }
     .end annotation
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15
     iput-object p1, p0, Lcom/xiaomi/onetrack/c/h;->a:Lorg/json/JSONArray;
 
+    .line 16
     iput p2, p0, Lcom/xiaomi/onetrack/c/h;->b:I
 
+    .line 17
     iput-object p3, p0, Lcom/xiaomi/onetrack/c/h;->c:Ljava/util/ArrayList;
 
+    .line 18
     iput-boolean p4, p0, Lcom/xiaomi/onetrack/c/h;->d:Z
 
     return-void

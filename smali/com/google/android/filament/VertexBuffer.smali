@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/VertexBuffer;
 .super Ljava/lang/Object;
+.source "VertexBuffer.java"
 
 
 # annotations
@@ -22,8 +23,10 @@
 .method private constructor <init>(J)V
     .locals 0
 
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 57
     iput-wide p1, p0, Lcom/google/android/filament/VertexBuffer;->mNativeObject:J
 
     return-void
@@ -32,6 +35,7 @@
 .method synthetic constructor <init>(JLcom/google/android/filament/VertexBuffer$1;)V
     .locals 0
 
+    .line 53
     invoke-direct {p0, p1, p2}, Lcom/google/android/filament/VertexBuffer;-><init>(J)V
 
     return-void
@@ -40,6 +44,7 @@
 .method static synthetic access$000()J
     .locals 2
 
+    .line 53
     invoke-static {}, Lcom/google/android/filament/VertexBuffer;->nCreateBuilder()J
 
     move-result-wide v0
@@ -50,6 +55,7 @@
 .method static synthetic access$100(JI)V
     .locals 0
 
+    .line 53
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/VertexBuffer;->nBuilderVertexCount(JI)V
 
     return-void
@@ -58,6 +64,7 @@
 .method static synthetic access$200(JI)V
     .locals 0
 
+    .line 53
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/VertexBuffer;->nBuilderBufferCount(JI)V
 
     return-void
@@ -66,6 +73,7 @@
 .method static synthetic access$300(JIIIII)V
     .locals 0
 
+    .line 53
     invoke-static/range {p0 .. p6}, Lcom/google/android/filament/VertexBuffer;->nBuilderAttribute(JIIIII)V
 
     return-void
@@ -74,6 +82,7 @@
 .method static synthetic access$400(JIZ)V
     .locals 0
 
+    .line 53
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/VertexBuffer;->nBuilderNormalized(JIZ)V
 
     return-void
@@ -82,6 +91,7 @@
 .method static synthetic access$500(JJ)J
     .locals 0
 
+    .line 53
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/VertexBuffer;->nBuilderBuild(JJ)J
 
     move-result-wide p0
@@ -92,6 +102,7 @@
 .method static synthetic access$700(J)V
     .locals 0
 
+    .line 53
     invoke-static {p0, p1}, Lcom/google/android/filament/VertexBuffer;->nDestroyBuilder(J)V
 
     return-void
@@ -130,6 +141,7 @@
 .method public static populateTangentQuaternions(Lcom/google/android/filament/VertexBuffer$QuatTangentContext;)V
     .locals 12
 
+    .line 425
     iget-object v0, p0, Lcom/google/android/filament/VertexBuffer$QuatTangentContext;->quatType:Lcom/google/android/filament/VertexBuffer$QuatType;
 
     invoke-virtual {v0}, Lcom/google/android/filament/VertexBuffer$QuatType;->ordinal()I
@@ -142,6 +154,7 @@
 
     iget-object v0, p0, Lcom/google/android/filament/VertexBuffer$QuatTangentContext;->outBuffer:Ljava/nio/Buffer;
 
+    .line 426
     invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
 
     move-result v4
@@ -152,6 +165,7 @@
 
     iget-object v0, p0, Lcom/google/android/filament/VertexBuffer$QuatTangentContext;->normals:Ljava/nio/Buffer;
 
+    .line 427
     invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
 
     move-result v7
@@ -160,6 +174,7 @@
 
     iget-object v9, p0, Lcom/google/android/filament/VertexBuffer$QuatTangentContext;->tangents:Ljava/nio/Buffer;
 
+    .line 428
     iget-object v0, p0, Lcom/google/android/filament/VertexBuffer$QuatTangentContext;->tangents:Ljava/nio/Buffer;
 
     if-eqz v0, :cond_0
@@ -180,6 +195,7 @@
 
     iget v11, p0, Lcom/google/android/filament/VertexBuffer$QuatTangentContext;->tangentsStride:I
 
+    .line 425
     invoke-static/range {v1 .. v11}, Lcom/google/android/filament/VertexBuffer;->nPopulateTangentQuaternions(IILjava/nio/Buffer;IILjava/nio/Buffer;IILjava/nio/Buffer;II)V
 
     return-void
@@ -192,6 +208,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 440
     iput-wide v0, p0, Lcom/google/android/filament/VertexBuffer;->mNativeObject:J
 
     return-void
@@ -200,6 +217,7 @@
 .method public getNativeObject()J
     .locals 4
 
+    .line 433
     iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -210,6 +228,7 @@
 
     return-wide v0
 
+    .line 434
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -223,6 +242,7 @@
 .method public getVertexCount()I
     .locals 2
 
+    .line 334
     invoke-virtual {p0}, Lcom/google/android/filament/VertexBuffer;->getNativeObject()J
 
     move-result-wide v0
@@ -253,6 +273,7 @@
 
     move-object v3, p3
 
+    .line 350
     invoke-virtual/range {v0 .. v7}, Lcom/google/android/filament/VertexBuffer;->setBufferAt(Lcom/google/android/filament/Engine;ILjava/nio/Buffer;IILjava/lang/Object;Ljava/lang/Runnable;)V
 
     return-void
@@ -277,6 +298,7 @@
 
     move v5, p5
 
+    .line 369
     invoke-virtual/range {v0 .. v7}, Lcom/google/android/filament/VertexBuffer;->setBufferAt(Lcom/google/android/filament/Engine;ILjava/nio/Buffer;IILjava/lang/Object;Ljava/lang/Runnable;)V
 
     return-void
@@ -285,6 +307,7 @@
 .method public setBufferAt(Lcom/google/android/filament/Engine;ILjava/nio/Buffer;IILjava/lang/Object;Ljava/lang/Runnable;)V
     .locals 11
 
+    .line 393
     invoke-virtual {p0}, Lcom/google/android/filament/VertexBuffer;->getNativeObject()J
 
     move-result-wide v0
@@ -293,12 +316,14 @@
 
     move-result-wide v2
 
+    .line 394
     invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
 
     move-result v6
 
     if-nez p5, :cond_0
 
+    .line 395
     invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
 
     move-result v4
@@ -321,6 +346,7 @@
 
     move-object/from16 v10, p7
 
+    .line 393
     invoke-static/range {v0 .. v10}, Lcom/google/android/filament/VertexBuffer;->nSetBufferAt(JJILjava/nio/Buffer;IIILjava/lang/Object;Ljava/lang/Runnable;)I
 
     move-result v0
@@ -329,6 +355,7 @@
 
     return-void
 
+    .line 397
     :cond_1
     new-instance v0, Ljava/nio/BufferOverflowException;
 

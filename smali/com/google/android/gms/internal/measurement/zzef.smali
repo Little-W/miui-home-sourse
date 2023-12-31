@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zzef;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # direct methods
@@ -17,6 +18,7 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/android/gms/internal/measurement/zzeh;
 
     if-nez v0, :cond_2
@@ -27,17 +29,20 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v0, p0, Ljava/io/Serializable;
 
     if-eqz v0, :cond_1
 
+    .line 4
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzee;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/internal/measurement/zzee;-><init>(Lcom/google/android/gms/internal/measurement/zzec;)V
 
     return-object v0
 
+    .line 5
     :cond_1
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzeh;
 
@@ -66,6 +71,7 @@
         }
     .end annotation
 
+    .line 7
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzeg;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/internal/measurement/zzeg;-><init>(Ljava/lang/Object;)V

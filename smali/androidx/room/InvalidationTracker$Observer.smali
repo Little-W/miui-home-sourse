@@ -1,5 +1,6 @@
 .class public abstract Landroidx/room/InvalidationTracker$Observer;
 .super Ljava/lang/Object;
+.source "InvalidationTracker.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method protected varargs constructor <init>(Ljava/lang/String;[Ljava/lang/String;)V
     .locals 1
 
+    .line 535
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 536
     array-length v0, p2
 
     add-int/lit8 v0, v0, 0x1
@@ -35,6 +38,7 @@
 
     iput-object v0, p0, Landroidx/room/InvalidationTracker$Observer;->mTables:[Ljava/lang/String;
 
+    .line 537
     iget-object p0, p0, Landroidx/room/InvalidationTracker$Observer;->mTables:[Ljava/lang/String;
 
     array-length p2, p2

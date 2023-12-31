@@ -1,5 +1,6 @@
 .class public final Lkotlin/random/XorWowRandom;
 .super Lkotlin/random/Random;
+.source "XorWowRandom.kt"
 
 
 # annotations
@@ -44,6 +45,7 @@
 
     move v2, p2
 
+    .line 29
     invoke-direct/range {v0 .. v6}, Lkotlin/random/XorWowRandom;-><init>(IIIIII)V
 
     return-void
@@ -52,6 +54,7 @@
 .method public constructor <init>(IIIIII)V
     .locals 0
 
+    .line 26
     invoke-direct {p0}, Lkotlin/random/Random;-><init>()V
 
     iput p1, p0, Lkotlin/random/XorWowRandom;->x:I
@@ -66,6 +69,7 @@
 
     iput p6, p0, Lkotlin/random/XorWowRandom;->addend:I
 
+    .line 32
     iget p1, p0, Lkotlin/random/XorWowRandom;->x:I
 
     iget p2, p0, Lkotlin/random/XorWowRandom;->y:I
@@ -103,6 +107,7 @@
     :goto_1
     if-ge p2, p1, :cond_1
 
+    .line 35
     invoke-virtual {p0}, Lkotlin/random/XorWowRandom;->nextInt()I
 
     add-int/lit8 p2, p2, 0x1
@@ -112,6 +117,7 @@
     :cond_1
     return-void
 
+    .line 32
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -133,6 +139,7 @@
 .method public nextBits(I)I
     .locals 0
 
+    .line 55
     invoke-virtual {p0}, Lkotlin/random/XorWowRandom;->nextInt()I
 
     move-result p0
@@ -147,26 +154,32 @@
 .method public nextInt()I
     .locals 3
 
+    .line 41
     iget v0, p0, Lkotlin/random/XorWowRandom;->x:I
 
     ushr-int/lit8 v1, v0, 0x2
 
     xor-int/2addr v0, v1
 
+    .line 43
     iget v1, p0, Lkotlin/random/XorWowRandom;->y:I
 
     iput v1, p0, Lkotlin/random/XorWowRandom;->x:I
 
+    .line 44
     iget v1, p0, Lkotlin/random/XorWowRandom;->z:I
 
     iput v1, p0, Lkotlin/random/XorWowRandom;->y:I
 
+    .line 45
     iget v1, p0, Lkotlin/random/XorWowRandom;->w:I
 
     iput v1, p0, Lkotlin/random/XorWowRandom;->z:I
 
+    .line 46
     iget v1, p0, Lkotlin/random/XorWowRandom;->v:I
 
+    .line 47
     iput v1, p0, Lkotlin/random/XorWowRandom;->w:I
 
     shl-int/lit8 v2, v0, 0x1
@@ -179,8 +192,10 @@
 
     xor-int/2addr v0, v1
 
+    .line 49
     iput v0, p0, Lkotlin/random/XorWowRandom;->v:I
 
+    .line 50
     iget v1, p0, Lkotlin/random/XorWowRandom;->addend:I
 
     const v2, 0x587c5
@@ -189,6 +204,7 @@
 
     iput v1, p0, Lkotlin/random/XorWowRandom;->addend:I
 
+    .line 51
     iget p0, p0, Lkotlin/random/XorWowRandom;->addend:I
 
     add-int/2addr v0, p0

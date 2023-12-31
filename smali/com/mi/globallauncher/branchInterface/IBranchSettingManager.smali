@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;
 .super Ljava/lang/Object;
+.source "IBranchSettingManager.java"
 
 
 # virtual methods

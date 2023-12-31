@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/manager/-$$Lambda$BranchGuildController$D_kDXqM4rEfIbQmP4E7KDwFAM9w;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/mi/globallauncher/view/GeneralDialog$GeneralDialogCallBack;

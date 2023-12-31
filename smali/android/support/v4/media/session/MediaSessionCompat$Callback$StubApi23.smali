@@ -1,5 +1,6 @@
 .class Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;
 .super Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;
+.source "MediaSessionCompat.java"
 
 # interfaces
 .implements Landroid/support/v4/media/session/MediaSessionCompatApi23$Callback;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
     .locals 0
 
+    .line 1508
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
@@ -36,6 +38,7 @@
 .method public onPlayFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 1513
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V

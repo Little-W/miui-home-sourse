@@ -1,5 +1,6 @@
 .class Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraCallback;
 .super Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;
+.source "MediaControllerCompat.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
     .locals 0
 
+    .line 2249
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
 
     return-void
@@ -32,6 +34,7 @@
         }
     .end annotation
 
+    .line 2279
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -47,6 +50,7 @@
         }
     .end annotation
 
+    .line 2261
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -71,6 +75,7 @@
         }
     .end annotation
 
+    .line 2267
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -86,6 +91,7 @@
         }
     .end annotation
 
+    .line 2273
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -101,6 +107,7 @@
         }
     .end annotation
 
+    .line 2255
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -116,6 +123,7 @@
         }
     .end annotation
 
+    .line 2285
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V

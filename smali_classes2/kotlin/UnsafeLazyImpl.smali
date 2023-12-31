@@ -1,5 +1,6 @@
 .class public final Lkotlin/UnsafeLazyImpl;
 .super Ljava/lang/Object;
+.source "Lazy.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -48,10 +49,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 75
     iput-object p1, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/functions/Function0;
 
+    .line 76
     sget-object p1, Lkotlin/UNINITIALIZED_VALUE;->INSTANCE:Lkotlin/UNINITIALIZED_VALUE;
 
     iput-object p1, p0, Lkotlin/UnsafeLazyImpl;->_value:Ljava/lang/Object;
@@ -62,6 +66,7 @@
 .method private final writeReplace()Ljava/lang/Object;
     .locals 1
 
+    .line 92
     new-instance v0, Lkotlin/InitializedLazyImpl;
 
     invoke-virtual {p0}, Lkotlin/UnsafeLazyImpl;->getValue()Ljava/lang/Object;
@@ -83,12 +88,14 @@
         }
     .end annotation
 
+    .line 80
     iget-object v0, p0, Lkotlin/UnsafeLazyImpl;->_value:Ljava/lang/Object;
 
     sget-object v1, Lkotlin/UNINITIALIZED_VALUE;->INSTANCE:Lkotlin/UNINITIALIZED_VALUE;
 
     if-ne v0, v1, :cond_0
 
+    .line 81
     iget-object v0, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/functions/Function0;
 
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
@@ -101,10 +108,12 @@
 
     const/4 v0, 0x0
 
+    .line 82
     check-cast v0, Lkotlin/jvm/functions/Function0;
 
     iput-object v0, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/functions/Function0;
 
+    .line 85
     :cond_0
     iget-object p0, p0, Lkotlin/UnsafeLazyImpl;->_value:Ljava/lang/Object;
 
@@ -114,6 +123,7 @@
 .method public isInitialized()Z
     .locals 1
 
+    .line 88
     iget-object p0, p0, Lkotlin/UnsafeLazyImpl;->_value:Ljava/lang/Object;
 
     sget-object v0, Lkotlin/UNINITIALIZED_VALUE;->INSTANCE:Lkotlin/UNINITIALIZED_VALUE;
@@ -134,6 +144,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 90
     invoke-virtual {p0}, Lkotlin/UnsafeLazyImpl;->isInitialized()Z
 
     move-result v0

@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/DownloadResponse;
 .super Ljava/lang/Object;
+.source "DownloadResponse.java"
 
 
 # static fields
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class Landroidx/emoji2/text/MetadataRepo$Node;
 .super Ljava/lang/Object;
+.source "MetadataRepo.java"
 
 
 # annotations
@@ -33,6 +34,7 @@
 
     const/4 v0, 0x1
 
+    .line 242
     invoke-direct {p0, v0}, Landroidx/emoji2/text/MetadataRepo$Node;-><init>(I)V
 
     return-void
@@ -41,8 +43,10 @@
 .method constructor <init>(I)V
     .locals 1
 
+    .line 246
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 247
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0, p1}, Landroid/util/SparseArray;-><init>(I)V
@@ -57,6 +61,7 @@
 .method get(I)Landroidx/emoji2/text/MetadataRepo$Node;
     .locals 0
 
+    .line 251
     iget-object p0, p0, Landroidx/emoji2/text/MetadataRepo$Node;->mChildren:Landroid/util/SparseArray;
 
     if-nez p0, :cond_0
@@ -79,6 +84,7 @@
 .method final getData()Landroidx/emoji2/text/EmojiMetadata;
     .locals 0
 
+    .line 255
     iget-object p0, p0, Landroidx/emoji2/text/MetadataRepo$Node;->mData:Landroidx/emoji2/text/EmojiMetadata;
 
     return-object p0
@@ -87,6 +93,7 @@
 .method put(Landroidx/emoji2/text/EmojiMetadata;II)V
     .locals 2
 
+    .line 260
     invoke-virtual {p1, p2}, Landroidx/emoji2/text/EmojiMetadata;->getCodepointAt(I)I
 
     move-result v0
@@ -97,10 +104,12 @@
 
     if-nez v0, :cond_0
 
+    .line 262
     new-instance v0, Landroidx/emoji2/text/MetadataRepo$Node;
 
     invoke-direct {v0}, Landroidx/emoji2/text/MetadataRepo$Node;-><init>()V
 
+    .line 263
     iget-object p0, p0, Landroidx/emoji2/text/MetadataRepo$Node;->mChildren:Landroid/util/SparseArray;
 
     invoke-virtual {p1, p2}, Landroidx/emoji2/text/EmojiMetadata;->getCodepointAt(I)I
@@ -114,10 +123,12 @@
 
     add-int/lit8 p2, p2, 0x1
 
+    .line 267
     invoke-virtual {v0, p1, p2, p3}, Landroidx/emoji2/text/MetadataRepo$Node;->put(Landroidx/emoji2/text/EmojiMetadata;II)V
 
     goto :goto_0
 
+    .line 269
     :cond_1
     iput-object p1, v0, Landroidx/emoji2/text/MetadataRepo$Node;->mData:Landroidx/emoji2/text/EmojiMetadata;
 

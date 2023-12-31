@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/TextInputLayout$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
+.source "TextInputLayout.java"
 
 
 # annotations
@@ -41,6 +42,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 2951
     new-instance v0, Lcom/google/android/material/textfield/TextInputLayout$SavedState$1;
 
     invoke-direct {v0}, Lcom/google/android/material/textfield/TextInputLayout$SavedState$1;-><init>()V
@@ -53,8 +55,10 @@
 .method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 
+    .line 2917
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
+    .line 2918
     sget-object p2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -65,6 +69,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->error:Ljava/lang/CharSequence;
 
+    .line 2919
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
@@ -81,6 +86,7 @@
     :goto_0
     iput-boolean v0, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->isEndIconChecked:Z
 
+    .line 2920
     sget-object p2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -91,6 +97,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->hintText:Ljava/lang/CharSequence;
 
+    .line 2921
     sget-object p2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -101,6 +108,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->helperText:Ljava/lang/CharSequence;
 
+    .line 2922
     sget-object p2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -117,6 +125,7 @@
 .method constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
+    .line 2913
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -127,6 +136,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 2938
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -135,6 +145,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2939
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -191,24 +202,30 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
+    .line 2927
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2928
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->error:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
+    .line 2929
     iget-boolean v0, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->isEndIconChecked:Z
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2930
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->hintText:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
+    .line 2931
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->helperText:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
+    .line 2932
     iget-object p0, p0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->placeholderText:Ljava/lang/CharSequence;
 
     invoke-static {p0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V

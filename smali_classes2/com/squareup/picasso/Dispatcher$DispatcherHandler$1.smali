@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/Dispatcher$DispatcherHandler$1;
 .super Ljava/lang/Object;
+.source "Dispatcher.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/squareup/picasso/Dispatcher$DispatcherHandler;Landroid/os/Message;)V
     .locals 0
 
+    .line 518
     iput-object p1, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler$1;->this$0:Lcom/squareup/picasso/Dispatcher$DispatcherHandler;
 
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler$1;->val$msg:Landroid/os/Message;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 3
 
+    .line 520
     new-instance v0, Ljava/lang/AssertionError;
 
     new-instance v1, Ljava/lang/StringBuilder;

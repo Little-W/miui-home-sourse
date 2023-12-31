@@ -1,5 +1,6 @@
 .class Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;
 .super Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
+.source "AnimationHandler.java"
 
 
 # annotations
@@ -25,18 +26,22 @@
 .method constructor <init>(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;)V
     .locals 2
 
+    .line 229
     invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;)V
 
     const-wide/16 v0, -0x1
 
+    .line 226
     iput-wide v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;->mLastFrameTime:J
 
+    .line 230
     new-instance p1, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14$1;
 
     invoke-direct {p1, p0}, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14$1;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;)V
 
     iput-object p1, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;->mRunnable:Ljava/lang/Runnable;
 
+    .line 237
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -55,6 +60,7 @@
 .method postFrameCallback()V
     .locals 4
 
+    .line 242
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -69,10 +75,12 @@
 
     const-wide/16 v0, 0x0
 
+    .line 243
     invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
 
+    .line 244
     iget-object v2, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;->mRunnable:Ljava/lang/Runnable;

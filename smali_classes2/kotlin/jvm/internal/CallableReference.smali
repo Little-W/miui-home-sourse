@@ -1,5 +1,6 @@
 .class public abstract Lkotlin/jvm/internal/CallableReference;
 .super Ljava/lang/Object;
+.source "CallableReference.java"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -36,6 +37,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 48
     invoke-static {}, Lkotlin/jvm/internal/CallableReference$NoReceiver;->access$000()Lkotlin/jvm/internal/CallableReference$NoReceiver;
 
     move-result-object v0
@@ -48,6 +50,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 60
     sget-object v0, Lkotlin/jvm/internal/CallableReference;->NO_RECEIVER:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Lkotlin/jvm/internal/CallableReference;-><init>(Ljava/lang/Object;)V
@@ -70,6 +73,7 @@
 
     move-object v1, p1
 
+    .line 65
     invoke-direct/range {v0 .. v5}, Lkotlin/jvm/internal/CallableReference;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
@@ -78,16 +82,22 @@
 .method protected constructor <init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 70
     iput-object p1, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
+    .line 71
     iput-object p2, p0, Lkotlin/jvm/internal/CallableReference;->owner:Ljava/lang/Class;
 
+    .line 72
     iput-object p3, p0, Lkotlin/jvm/internal/CallableReference;->name:Ljava/lang/String;
 
+    .line 73
     iput-object p4, p0, Lkotlin/jvm/internal/CallableReference;->signature:Ljava/lang/String;
 
+    .line 74
     iput-boolean p5, p0, Lkotlin/jvm/internal/CallableReference;->isTopLevel:Z
 
     return-void
@@ -98,6 +108,7 @@
 .method public varargs call([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 161
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -112,6 +123,7 @@
 .method public callBy(Ljava/util/Map;)Ljava/lang/Object;
     .locals 0
 
+    .line 166
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -126,14 +138,17 @@
 .method public compute()Lkotlin/reflect/KCallable;
     .locals 1
 
+    .line 86
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->reflected:Lkotlin/reflect/KCallable;
 
     if-nez v0, :cond_0
 
+    .line 88
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->computeReflected()Lkotlin/reflect/KCallable;
 
     move-result-object v0
 
+    .line 89
     iput-object v0, p0, Lkotlin/jvm/internal/CallableReference;->reflected:Lkotlin/reflect/KCallable;
 
     :cond_0
@@ -154,6 +169,7 @@
         }
     .end annotation
 
+    .line 150
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -168,6 +184,7 @@
 .method public getBoundReceiver()Ljava/lang/Object;
     .locals 0
 
+    .line 81
     iget-object p0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
     return-object p0
@@ -176,6 +193,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 120
     iget-object p0, p0, Lkotlin/jvm/internal/CallableReference;->name:Ljava/lang/String;
 
     return-object p0
@@ -184,6 +202,7 @@
 .method public getOwner()Lkotlin/reflect/KDeclarationContainer;
     .locals 1
 
+    .line 111
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->owner:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -223,6 +242,7 @@
         }
     .end annotation
 
+    .line 140
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -237,6 +257,7 @@
 .method protected getReflected()Lkotlin/reflect/KCallable;
     .locals 1
 
+    .line 96
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->compute()Lkotlin/reflect/KCallable;
 
     move-result-object v0
@@ -245,6 +266,7 @@
 
     return-object v0
 
+    .line 98
     :cond_0
     new-instance p0, Lkotlin/jvm/KotlinReflectionNotSupportedError;
 
@@ -256,6 +278,7 @@
 .method public getReturnType()Lkotlin/reflect/KType;
     .locals 0
 
+    .line 145
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -270,6 +293,7 @@
 .method public getSignature()Ljava/lang/String;
     .locals 0
 
+    .line 132
     iget-object p0, p0, Lkotlin/jvm/internal/CallableReference;->signature:Ljava/lang/String;
 
     return-object p0
@@ -286,6 +310,7 @@
         }
     .end annotation
 
+    .line 156
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -300,6 +325,7 @@
 .method public getVisibility()Lkotlin/reflect/KVisibility;
     .locals 0
 
+    .line 172
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -314,6 +340,7 @@
 .method public isAbstract()Z
     .locals 0
 
+    .line 190
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -328,6 +355,7 @@
 .method public isFinal()Z
     .locals 0
 
+    .line 178
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -342,6 +370,7 @@
 .method public isOpen()Z
     .locals 0
 
+    .line 184
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0
@@ -356,6 +385,7 @@
 .method public isSuspend()Z
     .locals 0
 
+    .line 196
     invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->getReflected()Lkotlin/reflect/KCallable;
 
     move-result-object p0

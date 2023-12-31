@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/SafeCollectorKt;
 .super Ljava/lang/Object;
+.source "SafeCollector.kt"
 
 
 # static fields
@@ -26,6 +27,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 15
     new-instance v0, Lkotlinx/coroutines/flow/internal/SafeCollectorKt$emitFun$1;
 
     invoke-direct {v0}, Lkotlinx/coroutines/flow/internal/SafeCollectorKt$emitFun$1;-><init>()V
@@ -46,6 +48,7 @@
 .method public static final synthetic access$getEmitFun$p()Lkotlin/jvm/functions/Function3;
     .locals 1
 
+    .line 1
     sget-object v0, Lkotlinx/coroutines/flow/internal/SafeCollectorKt;->emitFun:Lkotlin/jvm/functions/Function3;
 
     return-object v0

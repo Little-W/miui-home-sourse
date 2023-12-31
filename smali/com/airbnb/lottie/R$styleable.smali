@@ -1,5 +1,6 @@
 .class public final Lcom/airbnb/lottie/R$styleable;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -1099,6 +1100,7 @@
 
     new-array v0, v0, [I
 
+    .line 1296
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/airbnb/lottie/R$styleable;->ActionBar:[I
@@ -1113,6 +1115,7 @@
 
     aput v3, v1, v2
 
+    .line 1353
     sput-object v1, Lcom/airbnb/lottie/R$styleable;->ActionBarLayout:[I
 
     new-array v1, v0, [I
@@ -1121,16 +1124,19 @@
 
     aput v3, v1, v2
 
+    .line 1355
     sput-object v1, Lcom/airbnb/lottie/R$styleable;->ActionMenuItemView:[I
 
     new-array v1, v2, [I
 
+    .line 1357
     sput-object v1, Lcom/airbnb/lottie/R$styleable;->ActionMenuView:[I
 
     const/16 v1, 0xd
 
     new-array v1, v1, [I
 
+    .line 1358
     fill-array-data v1, :array_1
 
     sput-object v1, Lcom/airbnb/lottie/R$styleable;->ActionMode:[I
@@ -1139,6 +1145,7 @@
 
     new-array v3, v1, [I
 
+    .line 1372
     fill-array-data v3, :array_2
 
     sput-object v3, Lcom/airbnb/lottie/R$styleable;->ActivityChooserView:[I
@@ -1147,6 +1154,7 @@
 
     new-array v3, v3, [I
 
+    .line 1375
     fill-array-data v3, :array_3
 
     sput-object v3, Lcom/airbnb/lottie/R$styleable;->AlertDialog:[I
@@ -1155,12 +1163,14 @@
 
     new-array v4, v3, [I
 
+    .line 1387
     fill-array-data v4, :array_4
 
     sput-object v4, Lcom/airbnb/lottie/R$styleable;->AnimatedStateListDrawableCompat:[I
 
     new-array v4, v1, [I
 
+    .line 1394
     fill-array-data v4, :array_5
 
     sput-object v4, Lcom/airbnb/lottie/R$styleable;->AnimatedStateListDrawableItem:[I
@@ -1169,18 +1179,21 @@
 
     new-array v5, v4, [I
 
+    .line 1397
     fill-array-data v5, :array_6
 
     sput-object v5, Lcom/airbnb/lottie/R$styleable;->AnimatedStateListDrawableTransition:[I
 
     new-array v5, v4, [I
 
+    .line 1402
     fill-array-data v5, :array_7
 
     sput-object v5, Lcom/airbnb/lottie/R$styleable;->AppCompatImageView:[I
 
     new-array v5, v4, [I
 
+    .line 1407
     fill-array-data v5, :array_8
 
     sput-object v5, Lcom/airbnb/lottie/R$styleable;->AppCompatSeekBar:[I
@@ -1189,6 +1202,7 @@
 
     new-array v6, v5, [I
 
+    .line 1412
     fill-array-data v6, :array_9
 
     sput-object v6, Lcom/airbnb/lottie/R$styleable;->AppCompatTextHelper:[I
@@ -1197,6 +1211,7 @@
 
     new-array v6, v6, [I
 
+    .line 1420
     fill-array-data v6, :array_a
 
     sput-object v6, Lcom/airbnb/lottie/R$styleable;->AppCompatTextView:[I
@@ -1205,6 +1220,7 @@
 
     new-array v6, v6, [I
 
+    .line 1443
     fill-array-data v6, :array_b
 
     sput-object v6, Lcom/airbnb/lottie/R$styleable;->AppCompatTheme:[I
@@ -1215,18 +1231,21 @@
 
     aput v7, v6, v2
 
+    .line 1571
     sput-object v6, Lcom/airbnb/lottie/R$styleable;->ButtonBarLayout:[I
 
     const/4 v6, 0x5
 
     new-array v7, v6, [I
 
+    .line 1573
     fill-array-data v7, :array_c
 
     sput-object v7, Lcom/airbnb/lottie/R$styleable;->ColorStateListItem:[I
 
     new-array v7, v4, [I
 
+    .line 1579
     fill-array-data v7, :array_d
 
     sput-object v7, Lcom/airbnb/lottie/R$styleable;->CompoundButton:[I
@@ -1235,12 +1254,14 @@
 
     new-array v8, v7, [I
 
+    .line 1584
     fill-array-data v8, :array_e
 
     sput-object v8, Lcom/airbnb/lottie/R$styleable;->DrawerArrowToggle:[I
 
     new-array v5, v5, [I
 
+    .line 1593
     fill-array-data v5, :array_f
 
     sput-object v5, Lcom/airbnb/lottie/R$styleable;->FontFamily:[I
@@ -1249,6 +1270,7 @@
 
     new-array v5, v5, [I
 
+    .line 1601
     fill-array-data v5, :array_10
 
     sput-object v5, Lcom/airbnb/lottie/R$styleable;->FontFamilyFont:[I
@@ -1257,12 +1279,14 @@
 
     new-array v8, v5, [I
 
+    .line 1612
     fill-array-data v8, :array_11
 
     sput-object v8, Lcom/airbnb/lottie/R$styleable;->Fragment:[I
 
     new-array v8, v1, [I
 
+    .line 1616
     fill-array-data v8, :array_12
 
     sput-object v8, Lcom/airbnb/lottie/R$styleable;->FragmentContainerView:[I
@@ -1271,12 +1295,14 @@
 
     new-array v8, v8, [I
 
+    .line 1619
     fill-array-data v8, :array_13
 
     sput-object v8, Lcom/airbnb/lottie/R$styleable;->GradientColor:[I
 
     new-array v8, v1, [I
 
+    .line 1632
     fill-array-data v8, :array_14
 
     sput-object v8, Lcom/airbnb/lottie/R$styleable;->GradientColorItem:[I
@@ -1285,18 +1311,21 @@
 
     new-array v9, v8, [I
 
+    .line 1635
     fill-array-data v9, :array_15
 
     sput-object v9, Lcom/airbnb/lottie/R$styleable;->LinearLayoutCompat:[I
 
     new-array v4, v4, [I
 
+    .line 1645
     fill-array-data v4, :array_16
 
     sput-object v4, Lcom/airbnb/lottie/R$styleable;->LinearLayoutCompat_Layout:[I
 
     new-array v4, v1, [I
 
+    .line 1650
     fill-array-data v4, :array_17
 
     sput-object v4, Lcom/airbnb/lottie/R$styleable;->ListPopupWindow:[I
@@ -1305,12 +1334,14 @@
 
     new-array v9, v4, [I
 
+    .line 1653
     fill-array-data v9, :array_18
 
     sput-object v9, Lcom/airbnb/lottie/R$styleable;->LottieAnimationView:[I
 
     new-array v9, v3, [I
 
+    .line 1671
     fill-array-data v9, :array_19
 
     sput-object v9, Lcom/airbnb/lottie/R$styleable;->MenuGroup:[I
@@ -1319,18 +1350,21 @@
 
     new-array v9, v9, [I
 
+    .line 1678
     fill-array-data v9, :array_1a
 
     sput-object v9, Lcom/airbnb/lottie/R$styleable;->MenuItem:[I
 
     new-array v8, v8, [I
 
+    .line 1702
     fill-array-data v8, :array_1b
 
     sput-object v8, Lcom/airbnb/lottie/R$styleable;->MenuView:[I
 
     new-array v8, v5, [I
 
+    .line 1712
     fill-array-data v8, :array_1c
 
     sput-object v8, Lcom/airbnb/lottie/R$styleable;->PopupWindow:[I
@@ -1341,28 +1375,33 @@
 
     aput v9, v8, v2
 
+    .line 1716
     sput-object v8, Lcom/airbnb/lottie/R$styleable;->PopupWindowBackgroundState:[I
 
     new-array v1, v1, [I
 
+    .line 1718
     fill-array-data v1, :array_1d
 
     sput-object v1, Lcom/airbnb/lottie/R$styleable;->RecycleListView:[I
 
     new-array v1, v4, [I
 
+    .line 1721
     fill-array-data v1, :array_1e
 
     sput-object v1, Lcom/airbnb/lottie/R$styleable;->SearchView:[I
 
     new-array v1, v7, [I
 
+    .line 1739
     fill-array-data v1, :array_1f
 
     sput-object v1, Lcom/airbnb/lottie/R$styleable;->Spinner:[I
 
     new-array v1, v3, [I
 
+    .line 1748
     fill-array-data v1, :array_20
 
     sput-object v1, Lcom/airbnb/lottie/R$styleable;->StateListDrawable:[I
@@ -1373,12 +1412,14 @@
 
     aput v1, v0, v2
 
+    .line 1755
     sput-object v0, Lcom/airbnb/lottie/R$styleable;->StateListDrawableItem:[I
 
     const/16 v0, 0xe
 
     new-array v0, v0, [I
 
+    .line 1757
     fill-array-data v0, :array_21
 
     sput-object v0, Lcom/airbnb/lottie/R$styleable;->SwitchCompat:[I
@@ -1387,6 +1428,7 @@
 
     new-array v0, v0, [I
 
+    .line 1772
     fill-array-data v0, :array_22
 
     sput-object v0, Lcom/airbnb/lottie/R$styleable;->TextAppearance:[I
@@ -1395,24 +1437,28 @@
 
     new-array v0, v0, [I
 
+    .line 1789
     fill-array-data v0, :array_23
 
     sput-object v0, Lcom/airbnb/lottie/R$styleable;->Toolbar:[I
 
     new-array v0, v6, [I
 
+    .line 1820
     fill-array-data v0, :array_24
 
     sput-object v0, Lcom/airbnb/lottie/R$styleable;->View:[I
 
     new-array v0, v5, [I
 
+    .line 1826
     fill-array-data v0, :array_25
 
     sput-object v0, Lcom/airbnb/lottie/R$styleable;->ViewBackgroundHelper:[I
 
     new-array v0, v5, [I
 
+    .line 1830
     fill-array-data v0, :array_26
 
     sput-object v0, Lcom/airbnb/lottie/R$styleable;->ViewStubCompat:[I

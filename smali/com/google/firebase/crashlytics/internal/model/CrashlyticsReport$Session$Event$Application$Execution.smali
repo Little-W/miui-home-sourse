@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution;
 .super Ljava/lang/Object;
+.source "CrashlyticsReport.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 650
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
 .method public static builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;
     .locals 1
 
+    .line 654
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;
 
     invoke-direct {v0}, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;-><init>()V

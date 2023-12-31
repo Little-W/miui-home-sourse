@@ -1,5 +1,6 @@
 .class Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$1;
 .super Ljava/lang/Object;
+.source "AsyncLayoutInflater.java"
 
 # interfaces
 .implements Landroid/os/Handler$Callback;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;)V
     .locals 0
 
+    .line 95
     iput-object p1, p0, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$1;->this$0:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,14 +38,17 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 4
 
+    .line 98
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$InflateRequest;
 
+    .line 99
     iget-object v0, p1, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$InflateRequest;->view:Landroid/view/View;
 
     if-nez v0, :cond_0
 
+    .line 100
     iget-object v0, p0, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$1;->this$0:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;
 
     iget-object v0, v0, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;->mInflater:Landroid/view/LayoutInflater;
@@ -60,6 +65,7 @@
 
     iput-object v0, p1, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$InflateRequest;->view:Landroid/view/View;
 
+    .line 103
     :cond_0
     iget-object v0, p1, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$InflateRequest;->callback:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$OnInflateFinishedListener;
 
@@ -71,6 +77,7 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$OnInflateFinishedListener;->onInflateFinished(Landroid/view/View;ILandroid/view/ViewGroup;)V
 
+    .line 105
     iget-object p0, p0, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$1;->this$0:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;
 
     iget-object p0, p0, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;->mInflateThread:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$InflateThread;

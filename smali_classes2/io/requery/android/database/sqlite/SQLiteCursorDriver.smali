@@ -1,5 +1,6 @@
 .class public interface abstract Lio/requery/android/database/sqlite/SQLiteCursorDriver;
 .super Ljava/lang/Object;
+.source "SQLiteCursorDriver.java"
 
 
 # virtual methods

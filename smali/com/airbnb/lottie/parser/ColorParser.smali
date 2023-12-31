@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/parser/ColorParser;
 .super Ljava/lang/Object;
+.source "ColorParser.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/parser/ValueParser;
@@ -24,6 +25,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 10
     new-instance v0, Lcom/airbnb/lottie/parser/ColorParser;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/parser/ColorParser;-><init>()V
@@ -36,6 +38,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,6 +54,7 @@
         }
     .end annotation
 
+    .line 16
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->peek()Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;
 
     move-result-object p0
@@ -69,21 +73,26 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 18
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->beginArray()V
 
+    .line 20
     :cond_1
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
     move-result-wide v0
 
+    .line 21
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
     move-result-wide v2
 
+    .line 22
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
     move-result-wide v4
 
+    .line 26
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->peek()Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;
 
     move-result-object p2
@@ -94,6 +103,7 @@
 
     if-ne p2, v6, :cond_2
 
+    .line 27
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
     move-result-wide v9
@@ -106,6 +116,7 @@
     :goto_1
     if-eqz p0, :cond_3
 
+    .line 30
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endArray()V
 
     :cond_3
@@ -144,6 +155,7 @@
 
     double-to-int v0, v4
 
+    .line 45
     invoke-static {p0, p1, p2, v0}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p0
@@ -163,6 +175,7 @@
         }
     .end annotation
 
+    .line 9
     invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/parser/ColorParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;F)Ljava/lang/Integer;
 
     move-result-object p0

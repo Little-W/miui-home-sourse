@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/json/JsonElement;
 .super Ljava/lang/Object;
+.source "JsonElement.kt"
 
 
 # annotations
@@ -36,6 +37,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +46,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonElement;-><init>()V
 
     return-void

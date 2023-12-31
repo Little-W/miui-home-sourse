@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/app/AppCompatActivity$1;
 .super Ljava/lang/Object;
+.source "AppCompatActivity.java"
 
 # interfaces
 .implements Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/appcompat/app/AppCompatActivity;)V
     .locals 0
 
+    .line 117
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatActivity$1;->this$0:Landroidx/appcompat/app/AppCompatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +38,12 @@
 .method public saveState()Landroid/os/Bundle;
     .locals 1
 
+    .line 121
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 122
     iget-object p0, p0, Landroidx/appcompat/app/AppCompatActivity$1;->this$0:Landroidx/appcompat/app/AppCompatActivity;
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getDelegate()Landroidx/appcompat/app/AppCompatDelegate;

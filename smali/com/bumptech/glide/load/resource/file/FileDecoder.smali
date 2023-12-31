@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/file/FileDecoder;
 .super Ljava/lang/Object;
+.source "FileDecoder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/ResourceDecoder;
@@ -21,6 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +45,7 @@
         }
     .end annotation
 
+    .line 23
     new-instance p0, Lcom/bumptech/glide/load/resource/file/FileResource;
 
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/resource/file/FileResource;-><init>(Ljava/io/File;)V
@@ -58,6 +61,7 @@
         }
     .end annotation
 
+    .line 13
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/file/FileDecoder;->decode(Ljava/io/File;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/engine/Resource;
@@ -83,6 +87,7 @@
         }
     .end annotation
 
+    .line 13
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/file/FileDecoder;->handles(Ljava/io/File;Lcom/bumptech/glide/load/Options;)Z

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/airbnb/lottie/model/content/ContentModel;
 .super Ljava/lang/Object;
+.source "ContentModel.java"
 
 
 # virtual methods

@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/cct/internal/LogEvent;
 .super Ljava/lang/Object;
+.source "LogEvent.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method private static builder()Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 1
 
+    .line 55
     new-instance v0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;-><init>()V
@@ -32,6 +35,7 @@
 .method public static jsonBuilder(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 1
 
+    .line 51
     invoke-static {}, Lcom/google/android/datatransport/cct/internal/LogEvent;->builder()Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
 
     move-result-object v0
@@ -46,6 +50,7 @@
 .method public static protoBuilder([B)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 1
 
+    .line 46
     invoke-static {}, Lcom/google/android/datatransport/cct/internal/LogEvent;->builder()Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
 
     move-result-object v0

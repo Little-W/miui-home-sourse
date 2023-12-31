@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/crashlytics/-$$Lambda$AnalyticsDeferredProxy$XlQJJbDAh2jtrDIs0f3MUS2H3YU;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/breadcrumbs/BreadcrumbSource;

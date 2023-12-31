@@ -1,5 +1,6 @@
 .class public Lorg/greenrobot/eventbus/util/ErrorDialogFragments$Support;
 .super Landroidx/fragment/app/DialogFragment;
+.source "ErrorDialogFragments.java"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 80
     invoke-direct {p0}, Landroidx/fragment/app/DialogFragment;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
+    .line 88
     invoke-virtual {p0}, Lorg/greenrobot/eventbus/util/ErrorDialogFragments$Support;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -46,6 +49,7 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 1
 
+    .line 83
     invoke-virtual {p0}, Lorg/greenrobot/eventbus/util/ErrorDialogFragments$Support;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1

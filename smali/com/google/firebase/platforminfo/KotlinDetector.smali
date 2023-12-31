@@ -1,11 +1,13 @@
 .class public final Lcom/google/firebase/platforminfo/KotlinDetector;
 .super Ljava/lang/Object;
+.source "KotlinDetector.java"
 
 
 # direct methods
 .method public static detectVersion()Ljava/lang/String;
     .locals 1
 
+    .line 31
     :try_start_0
     sget-object v0, Lkotlin/KotlinVersion;->CURRENT:Lkotlin/KotlinVersion;
 

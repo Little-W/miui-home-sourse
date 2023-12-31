@@ -1,5 +1,6 @@
 .class public abstract Lcom/bumptech/glide/util/pool/StateVerifier;
 .super Ljava/lang/Object;
+.source "StateVerifier.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method synthetic constructor <init>(Lcom/bumptech/glide/util/pool/StateVerifier$1;)V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Lcom/bumptech/glide/util/pool/StateVerifier;-><init>()V
 
     return-void
@@ -30,6 +33,7 @@
 .method public static newInstance()Lcom/bumptech/glide/util/pool/StateVerifier;
     .locals 1
 
+    .line 20
     new-instance v0, Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;
 
     invoke-direct {v0}, Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;-><init>()V

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;
 .super Ljava/lang/Object;
+.source "Primitives.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -23,6 +24,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;->serialName:Ljava/lang/String;
@@ -35,6 +37,7 @@
 .method private final error()Ljava/lang/Void;
     .locals 1
 
+    .line 50
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Primitive descriptor does not have elements"
@@ -51,6 +54,7 @@
 .method public getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 47
     invoke-direct {p0}, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;->error()Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -67,6 +71,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 45
     invoke-direct {p0}, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;->error()Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -79,6 +84,7 @@
 .method public getElementName(I)Ljava/lang/String;
     .locals 0
 
+    .line 44
     invoke-direct {p0}, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;->error()Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -99,6 +105,7 @@
 .method public getKind()Lkotlinx/serialization/descriptors/PrimitiveKind;
     .locals 0
 
+    .line 41
     iget-object p0, p0, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;->kind:Lkotlinx/serialization/descriptors/PrimitiveKind;
 
     return-object p0
@@ -107,6 +114,7 @@
 .method public bridge synthetic getKind()Lkotlinx/serialization/descriptors/SerialKind;
     .locals 0
 
+    .line 39
     invoke-virtual {p0}, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/PrimitiveKind;
 
     move-result-object p0
@@ -119,6 +127,7 @@
 .method public getSerialName()Ljava/lang/String;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;->serialName:Ljava/lang/String;
 
     return-object p0
@@ -127,6 +136,7 @@
 .method public isNullable()Z
     .locals 0
 
+    .line 39
     invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor$DefaultImpls;->isNullable(Lkotlinx/serialization/descriptors/SerialDescriptor;)Z
 
     move-result p0
@@ -137,6 +147,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/RenderableManager$PrimitiveType;
 .super Ljava/lang/Enum;
+.source "RenderableManager.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
+    .line 93
     new-instance v0, Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
     const/4 v1, 0x0
@@ -49,6 +51,7 @@
 
     sput-object v0, Lcom/google/android/filament/RenderableManager$PrimitiveType;->POINTS:Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
+    .line 94
     new-instance v0, Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
     const/4 v2, 0x1
@@ -59,6 +62,7 @@
 
     sput-object v0, Lcom/google/android/filament/RenderableManager$PrimitiveType;->LINES:Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
+    .line 95
     new-instance v0, Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
     const/4 v3, 0x2
@@ -75,6 +79,7 @@
 
     new-array v0, v0, [Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
+    .line 92
     sget-object v4, Lcom/google/android/filament/RenderableManager$PrimitiveType;->POINTS:Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
     aput-object v4, v0, v1
@@ -100,6 +105,7 @@
         }
     .end annotation
 
+    .line 98
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/google/android/filament/RenderableManager$PrimitiveType;->mType:I
@@ -110,6 +116,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/RenderableManager$PrimitiveType;
     .locals 1
 
+    .line 92
     const-class v0, Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -124,6 +131,7 @@
 .method public static values()[Lcom/google/android/filament/RenderableManager$PrimitiveType;
     .locals 1
 
+    .line 92
     sget-object v0, Lcom/google/android/filament/RenderableManager$PrimitiveType;->$VALUES:[Lcom/google/android/filament/RenderableManager$PrimitiveType;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/RenderableManager$PrimitiveType;->clone()Ljava/lang/Object;
@@ -140,6 +148,7 @@
 .method getValue()I
     .locals 0
 
+    .line 99
     iget p0, p0, Lcom/google/android/filament/RenderableManager$PrimitiveType;->mType:I
 
     return p0

@@ -1,5 +1,6 @@
 .class Lokhttp3/Authenticator$1;
 .super Ljava/lang/Object;
+.source "Authenticator.java"
 
 # interfaces
 .implements Lokhttp3/Authenticator;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

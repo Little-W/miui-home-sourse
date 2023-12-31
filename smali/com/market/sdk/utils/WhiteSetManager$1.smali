@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/utils/WhiteSetManager$1;
 .super Lcom/market/sdk/RemoteMethodInvoker;
+.source "WhiteSetManager.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lcom/market/sdk/compat/FutureTaskCompat;)V
     .locals 0
 
+    .line 106
     iput-object p1, p0, Lcom/market/sdk/utils/WhiteSetManager$1;->val$futureTask:Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {p0}, Lcom/market/sdk/RemoteMethodInvoker;-><init>()V
@@ -46,6 +48,7 @@
         }
     .end annotation
 
+    .line 106
     invoke-virtual {p0, p1}, Lcom/market/sdk/utils/WhiteSetManager$1;->innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Void;
 
     move-result-object p0
@@ -61,12 +64,14 @@
         }
     .end annotation
 
+    .line 110
     new-instance v0, Lcom/market/sdk/utils/WhiteSetManager$1$1;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/market/sdk/utils/WhiteSetManager$1$1;-><init>(Lcom/market/sdk/utils/WhiteSetManager$1;Landroid/os/Handler;)V
 
+    .line 118
     :try_start_0
     invoke-interface {p1, v0}, Lcom/market/sdk/IMarketService;->getWhiteSetV2(Landroid/os/ResultReceiver;)V
     :try_end_0

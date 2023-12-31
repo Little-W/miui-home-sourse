@@ -1,5 +1,6 @@
 .class Landroidx/core/app/AppOpsManagerCompat$Api29Impl;
 .super Ljava/lang/Object;
+.source "AppOpsManagerCompat.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 
     return p0
 
+    .line 246
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->checkOpNoThrow(Ljava/lang/String;ILjava/lang/String;)I
 
@@ -34,6 +36,7 @@
 .method static getOpPackageName(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
+    .line 254
     invoke-virtual {p0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -44,6 +47,7 @@
 .method static getSystemService(Landroid/content/Context;)Landroid/app/AppOpsManager;
     .locals 1
 
+    .line 233
     const-class v0, Landroid/app/AppOpsManager;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;

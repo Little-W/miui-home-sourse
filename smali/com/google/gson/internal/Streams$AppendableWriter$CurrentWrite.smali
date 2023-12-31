@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/Streams$AppendableWriter$CurrentWrite;
 .super Ljava/lang/Object;
+.source "Streams.java"
 
 # interfaces
 .implements Ljava/lang/CharSequence;
@@ -24,6 +25,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +36,7 @@
 .method public charAt(I)C
     .locals 0
 
+    .line 112
     iget-object p0, p0, Lcom/google/gson/internal/Streams$AppendableWriter$CurrentWrite;->chars:[C
 
     aget-char p0, p0, p1
@@ -44,6 +47,7 @@
 .method public length()I
     .locals 0
 
+    .line 109
     iget-object p0, p0, Lcom/google/gson/internal/Streams$AppendableWriter$CurrentWrite;->chars:[C
 
     array-length p0, p0
@@ -54,6 +58,7 @@
 .method public subSequence(II)Ljava/lang/CharSequence;
     .locals 1
 
+    .line 115
     new-instance v0, Ljava/lang/String;
 
     iget-object p0, p0, Lcom/google/gson/internal/Streams$AppendableWriter$CurrentWrite;->chars:[C

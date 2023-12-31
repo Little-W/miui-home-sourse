@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/PolymorphismValidator;
 .super Ljava/lang/Object;
+.source "PolymorphismValidator.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/modules/SerializersModuleCollector;
@@ -19,6 +20,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-boolean p1, p0, Lkotlinx/serialization/json/internal/PolymorphismValidator;->useArrayPolymorphism:Z
@@ -39,6 +41,7 @@
         }
     .end annotation
 
+    .line 61
     invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementsCount()I
 
     move-result v0
@@ -48,10 +51,12 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 62
     invoke-interface {p1, v1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementName(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 63
     iget-object v3, p0, Lkotlinx/serialization/json/internal/PolymorphismValidator;->discriminator:Ljava/lang/String;
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -64,9 +69,11 @@
 
     goto :goto_0
 
+    .line 64
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
+    .line 65
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,6 +110,7 @@
 
     move-result-object p1
 
+    .line 64
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     check-cast p0, Ljava/lang/Throwable;
@@ -124,10 +132,12 @@
         }
     .end annotation
 
+    .line 36
     invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
     move-result-object p1
 
+    .line 37
     instance-of v0, p1, Lkotlinx/serialization/descriptors/PolymorphicKind;
 
     const-string v1, "Serializer for "
@@ -142,12 +152,14 @@
 
     if-nez v0, :cond_2
 
+    .line 42
     iget-boolean p0, p0, Lkotlinx/serialization/json/internal/PolymorphismValidator;->useArrayPolymorphism:Z
 
     if-eqz p0, :cond_0
 
     return-void
 
+    .line 49
     :cond_0
     sget-object p0, Lkotlinx/serialization/descriptors/StructureKind$LIST;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$LIST;
 
@@ -165,19 +177,23 @@
 
     if-nez p0, :cond_1
 
+    .line 48
     instance-of p0, p1, Lkotlinx/serialization/descriptors/PrimitiveKind;
 
     if-nez p0, :cond_1
 
+    .line 49
     instance-of p0, p1, Lkotlinx/serialization/descriptors/SerialKind$ENUM;
 
     if-nez p0, :cond_1
 
     return-void
 
+    .line 51
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
+    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,12 +220,14 @@
 
     move-result-object p1
 
+    .line 51
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     check-cast p0, Ljava/lang/Throwable;
 
     throw p0
 
+    .line 38
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -233,6 +251,7 @@
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 39
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, " is not concrete. To work with multiple hierarchies, register it as a base class."
@@ -243,6 +262,7 @@
 
     move-result-object p1
 
+    .line 38
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     check-cast p0, Ljava/lang/Throwable;
@@ -305,16 +325,20 @@
 
     invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 27
     invoke-interface {p3}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p1
 
+    .line 28
     invoke-direct {p0, p1, p2}, Lkotlinx/serialization/json/internal/PolymorphismValidator;->checkKind(Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlin/reflect/KClass;)V
 
+    .line 29
     iget-boolean p3, p0, Lkotlinx/serialization/json/internal/PolymorphismValidator;->useArrayPolymorphism:Z
 
     if-nez p3, :cond_0
 
+    .line 31
     invoke-direct {p0, p1, p2}, Lkotlinx/serialization/json/internal/PolymorphismValidator;->checkDiscriminatorCollisions(Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlin/reflect/KClass;)V
 
     :cond_0

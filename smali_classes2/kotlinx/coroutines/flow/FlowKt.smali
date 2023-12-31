@@ -18,6 +18,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lkotlinx/coroutines/flow/FlowKt__CollectKt;->collect(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lkotlinx/coroutines/flow/FlowKt__DelayKt;->debounce(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object p0
@@ -65,6 +67,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lkotlinx/coroutines/flow/FlowKt__CollectKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/Job;
 
     move-result-object p0
@@ -94,6 +97,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lkotlinx/coroutines/flow/FlowKt__TransformKt;->onEach(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function2;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object p0

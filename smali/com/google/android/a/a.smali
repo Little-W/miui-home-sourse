@@ -1,5 +1,6 @@
 .class public Lcom/google/android/a/a;
 .super Ljava/lang/Object;
+.source "BaseProxy.java"
 
 # interfaces
 .implements Landroid/os/IInterface;
@@ -29,12 +30,14 @@
 .method protected final a()Landroid/os/Parcel;
     .locals 1
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/google/android/a/a;->b:Ljava/lang/String;
 
+    .line 2
     invoke-virtual {v0, p0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     return-object v0
@@ -63,10 +66,12 @@
 
     const/4 v1, 0x1
 
+    .line 10
     invoke-interface {p0, p1, p2, v0, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 11
     invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -76,5 +81,6 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     throw p0
 .end method

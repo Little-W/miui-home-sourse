@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/encoders/proto/-$$Lambda$ProtobufDataEncoderContext$GrnqT7BliQwjE8CB4RFyP3_ydXo;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;

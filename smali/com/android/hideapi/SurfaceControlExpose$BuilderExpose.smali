@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;
 .super Ljava/lang/Object;
+.source "SurfaceControlExpose.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method private constructor <init>(Landroid/view/SurfaceControl$Builder;)V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     iput-object p1, p0, Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;->instance:Landroid/view/SurfaceControl$Builder;
 
     return-void
@@ -31,6 +34,7 @@
 .method public static box(Landroid/view/SurfaceControl$Builder;)Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;
     .locals 1
 
+    .line 22
     new-instance v0, Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;
 
     invoke-direct {v0, p0}, Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;-><init>(Landroid/view/SurfaceControl$Builder;)V
@@ -43,6 +47,7 @@
 .method public setContainerLayer()Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;
     .locals 5
 
+    .line 26
     iget-object v0, p0, Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;->instance:Landroid/view/SurfaceControl$Builder;
 
     const-class v1, Landroid/view/SurfaceControl$Builder;
@@ -63,6 +68,7 @@
 .method public unbox()Landroid/view/SurfaceControl$Builder;
     .locals 0
 
+    .line 18
     iget-object p0, p0, Lcom/android/hideapi/SurfaceControlExpose$BuilderExpose;->instance:Landroid/view/SurfaceControl$Builder;
 
     return-object p0

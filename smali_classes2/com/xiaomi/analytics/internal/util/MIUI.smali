@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/analytics/internal/util/MIUI;
 .super Ljava/lang/Object;
+.source "MIUI.java"
 
 
 # direct methods
@@ -9,22 +10,26 @@
     :try_start_0
     const-string v0, "miui.os.Build"
 
+    .line 25
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "IS_ALPHA_BUILD"
 
+    .line 26
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 27
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 28
     check-cast v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -47,22 +52,26 @@
     :try_start_0
     const-string v0, "miui.os.Build"
 
+    .line 58
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "IS_CTA_BUILD"
 
+    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 60
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 61
     check-cast v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -85,22 +94,26 @@
     :try_start_0
     const-string v0, "miui.os.Build"
 
+    .line 36
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "IS_DEVELOPMENT_VERSION"
 
+    .line 37
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 38
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 39
     check-cast v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -124,6 +137,7 @@
 
     const/4 v1, 0x1
 
+    .line 71
     :try_start_0
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -133,6 +147,7 @@
 
     return v1
 
+    .line 72
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -142,6 +157,7 @@
 
     const/4 v3, 0x0
 
+    .line 73
     invoke-static {p0, v2, v3}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -153,6 +169,7 @@
     :cond_1
     if-nez v3, :cond_2
 
+    .line 75
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,6 +196,7 @@
 
     const-string v2, "isDeviceProvisioned exception"
 
+    .line 79
     invoke-static {v0, v2, p0}, Lcom/xiaomi/analytics/internal/util/ALog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v1
@@ -190,22 +208,26 @@
     :try_start_0
     const-string v0, "miui.os.Build"
 
+    .line 14
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "IS_INTERNATIONAL_BUILD"
 
+    .line 15
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 16
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 17
     check-cast v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -228,22 +250,26 @@
     :try_start_0
     const-string v0, "miui.os.Build"
 
+    .line 47
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "IS_STABLE_VERSION"
 
+    .line 48
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 49
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 50
     check-cast v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -263,6 +289,7 @@
 .method public static shouldNotAccessNetworkOrLocation(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
+    .line 85
     invoke-static {}, Lcom/xiaomi/analytics/internal/util/MIUI;->isCTABuild()Z
 
     move-result v0
@@ -273,10 +300,12 @@
 
     const-string p0, "should not access network or location, cta"
 
+    .line 86
     invoke-static {p1, p0}, Lcom/xiaomi/analytics/internal/util/ALog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
+    .line 89
     :cond_0
     invoke-static {p0}, Lcom/xiaomi/analytics/internal/util/MIUI;->isDeviceProvisioned(Landroid/content/Context;)Z
 
@@ -286,6 +315,7 @@
 
     const-string p0, "should not access network or location, not provisioned"
 
+    .line 90
     invoke-static {p1, p0}, Lcom/xiaomi/analytics/internal/util/ALog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1

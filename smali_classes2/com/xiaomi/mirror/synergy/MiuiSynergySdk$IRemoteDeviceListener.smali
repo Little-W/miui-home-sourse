@@ -1,5 +1,6 @@
 .class public abstract Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$IRemoteDeviceListener;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

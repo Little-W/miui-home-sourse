@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zzdf;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # static fields
@@ -20,12 +21,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 27
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzdy;->zzc()Lcom/google/android/gms/internal/measurement/zzdy;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzdf;->zza:Lcom/google/android/gms/internal/measurement/zzdy;
 
+    .line 28
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -38,6 +41,7 @@
 .method private static zza(Landroid/content/Context;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -47,12 +51,14 @@
     :try_start_0
     const-string v1, "com.google.android.gms"
 
+    .line 2
     invoke-virtual {p0, v1, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 7
     iget p0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     and-int/lit16 p0, p0, 0x81
@@ -71,12 +77,14 @@
 .method public static zza(Landroid/content/Context;Landroid/net/Uri;)Z
     .locals 4
 
+    .line 8
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "com.google.android.gms.phenotype"
 
+    .line 9
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -85,6 +93,7 @@
 
     if-nez v0, :cond_0
 
+    .line 10
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -115,6 +124,7 @@
 
     return v1
 
+    .line 12
     :cond_0
     sget-object p1, Lcom/google/android/gms/internal/measurement/zzdf;->zza:Lcom/google/android/gms/internal/measurement/zzdy;
 
@@ -124,6 +134,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 13
     sget-object p0, Lcom/google/android/gms/internal/measurement/zzdf;->zza:Lcom/google/android/gms/internal/measurement/zzdy;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzdy;->zzb()Ljava/lang/Object;
@@ -138,11 +149,13 @@
 
     return p0
 
+    .line 14
     :cond_1
     sget-object p1, Lcom/google/android/gms/internal/measurement/zzdf;->zzb:Ljava/lang/Object;
 
     monitor-enter p1
 
+    .line 15
     :try_start_0
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzdf;->zza:Lcom/google/android/gms/internal/measurement/zzdy;
 
@@ -152,6 +165,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 16
     sget-object p0, Lcom/google/android/gms/internal/measurement/zzdf;->zza:Lcom/google/android/gms/internal/measurement/zzdy;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzdy;->zzb()Ljava/lang/Object;
@@ -171,6 +185,7 @@
     :cond_2
     const-string v0, "com.google.android.gms"
 
+    .line 17
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -188,6 +203,7 @@
 
     goto :goto_1
 
+    .line 20
     :cond_3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -195,6 +211,7 @@
 
     const-string v3, "com.google.android.gms.phenotype"
 
+    .line 21
     invoke-virtual {v0, v3, v1}, Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
@@ -203,8 +220,10 @@
 
     const-string v3, "com.google.android.gms"
 
+    .line 22
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
+    .line 23
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -219,6 +238,7 @@
     :goto_1
     if-eqz v0, :cond_5
 
+    .line 24
     invoke-static {p0}, Lcom/google/android/gms/internal/measurement/zzdf;->zza(Landroid/content/Context;)Z
 
     move-result p0
@@ -238,10 +258,12 @@
 
     sput-object p0, Lcom/google/android/gms/internal/measurement/zzdf;->zza:Lcom/google/android/gms/internal/measurement/zzdy;
 
+    .line 25
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 26
     sget-object p0, Lcom/google/android/gms/internal/measurement/zzdf;->zza:Lcom/google/android/gms/internal/measurement/zzdy;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzdy;->zzb()Ljava/lang/Object;
@@ -259,6 +281,7 @@
     :catchall_0
     move-exception p0
 
+    .line 25
     :try_start_1
     monitor-exit p1
     :try_end_1

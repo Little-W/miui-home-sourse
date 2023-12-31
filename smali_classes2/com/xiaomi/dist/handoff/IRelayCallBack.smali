@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/dist/handoff/IRelayCallBack;
 .super Ljava/lang/Object;
+.source "IRelayCallBack.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

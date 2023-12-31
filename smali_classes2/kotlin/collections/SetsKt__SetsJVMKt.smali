@@ -1,5 +1,6 @@
 .class Lkotlin/collections/SetsKt__SetsJVMKt;
 .super Ljava/lang/Object;
+.source "SetsJVM.kt"
 
 
 # direct methods
@@ -15,6 +16,7 @@
         }
     .end annotation
 
+    .line 18
     invoke-static {p0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0

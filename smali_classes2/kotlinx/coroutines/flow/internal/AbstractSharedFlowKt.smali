@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/AbstractSharedFlowKt;
 .super Ljava/lang/Object;
+.source "AbstractSharedFlow.kt"
 
 
 # static fields
@@ -23,6 +24,7 @@
 
     new-array v0, v0, [Lkotlin/coroutines/Continuation;
 
+    .line 15
     sput-object v0, Lkotlinx/coroutines/flow/internal/AbstractSharedFlowKt;->EMPTY_RESUMES:[Lkotlin/coroutines/Continuation;
 
     return-void

@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/model/LazyHeaders$StringHeaderFactory;
 .super Ljava/lang/Object;
+.source "LazyHeaders.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/LazyHeaderFactory;
@@ -24,8 +25,10 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 262
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 263
     iput-object p1, p0, Lcom/bumptech/glide/load/model/LazyHeaders$StringHeaderFactory;->value:Ljava/lang/String;
 
     return-void
@@ -36,6 +39,7 @@
 .method public buildHeader()Ljava/lang/String;
     .locals 0
 
+    .line 268
     iget-object p0, p0, Lcom/bumptech/glide/load/model/LazyHeaders$StringHeaderFactory;->value:Ljava/lang/String;
 
     return-object p0
@@ -44,12 +48,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 280
     instance-of v0, p1, Lcom/bumptech/glide/load/model/LazyHeaders$StringHeaderFactory;
 
     if-eqz v0, :cond_0
 
+    .line 281
     check-cast p1, Lcom/bumptech/glide/load/model/LazyHeaders$StringHeaderFactory;
 
+    .line 282
     iget-object p0, p0, Lcom/bumptech/glide/load/model/LazyHeaders$StringHeaderFactory;->value:Ljava/lang/String;
 
     iget-object p1, p1, Lcom/bumptech/glide/load/model/LazyHeaders$StringHeaderFactory;->value:Ljava/lang/String;
@@ -69,6 +76,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 289
     iget-object p0, p0, Lcom/bumptech/glide/load/model/LazyHeaders$StringHeaderFactory;->value:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -81,6 +89,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 273
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -18,6 +18,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -41,6 +42,7 @@
 .method public static varargs hashCode([Ljava/lang/Object;)I
     .locals 0
 
+    .line 2
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result p0
@@ -51,6 +53,7 @@
 .method public static toStringHelper(Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
     .locals 2
 
+    .line 3
     new-instance v0, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
     const/4 v1, 0x0

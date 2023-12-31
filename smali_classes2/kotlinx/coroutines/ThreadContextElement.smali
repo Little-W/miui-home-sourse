@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/ThreadContextElement;
 .super Ljava/lang/Object;
+.source "ThreadContextElement.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/CoroutineContext$Element;

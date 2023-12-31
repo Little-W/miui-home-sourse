@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/google/android/gms/tasks/zzi;Lcom/google/android/gms/tasks/Task;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/tasks/zzj;->zzm:Lcom/google/android/gms/tasks/zzi;
 
     iput-object p2, p0, Lcom/google/android/gms/tasks/zzj;->zzg:Lcom/google/android/gms/tasks/Task;
@@ -29,6 +30,7 @@
 .method public final run()V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzj;->zzm:Lcom/google/android/gms/tasks/zzi;
 
     invoke-static {v0}, Lcom/google/android/gms/tasks/zzi;->zza(Lcom/google/android/gms/tasks/zzi;)Ljava/lang/Object;
@@ -37,6 +39,7 @@
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/google/android/gms/tasks/zzj;->zzm:Lcom/google/android/gms/tasks/zzi;
 
@@ -46,6 +49,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/gms/tasks/zzj;->zzm:Lcom/google/android/gms/tasks/zzi;
 
     invoke-static {v1}, Lcom/google/android/gms/tasks/zzi;->zzb(Lcom/google/android/gms/tasks/zzi;)Lcom/google/android/gms/tasks/OnCompleteListener;
@@ -56,6 +60,7 @@
 
     invoke-interface {v1, p0}, Lcom/google/android/gms/tasks/OnCompleteListener;->onComplete(Lcom/google/android/gms/tasks/Task;)V
 
+    .line 5
     :cond_0
     monitor-exit v0
 

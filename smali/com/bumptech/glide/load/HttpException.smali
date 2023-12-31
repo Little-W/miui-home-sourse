@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/HttpException;
 .super Ljava/io/IOException;
+.source "HttpException.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 .method public constructor <init>(I)V
     .locals 2
 
+    .line 22
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -40,6 +42,7 @@
 
     const/4 v0, -0x1
 
+    .line 26
     invoke-direct {p0, p1, v0}, Lcom/bumptech/glide/load/HttpException;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -50,6 +53,7 @@
 
     const/4 v0, 0x0
 
+    .line 30
     invoke-direct {p0, p1, p2, v0}, Lcom/bumptech/glide/load/HttpException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
 
     return-void
@@ -58,8 +62,10 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/Throwable;)V
     .locals 0
 
+    .line 34
     invoke-direct {p0, p1, p3}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 35
     iput p2, p0, Lcom/bumptech/glide/load/HttpException;->statusCode:I
 
     return-void
@@ -70,6 +76,7 @@
 .method public getStatusCode()I
     .locals 0
 
+    .line 43
     iget p0, p0, Lcom/bumptech/glide/load/HttpException;->statusCode:I
 
     return p0

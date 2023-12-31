@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/utils/Schedulers$SingleInstanceProvider;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 # interfaces
 .implements Lcom/xiaomi/dist/utils/Schedulers$ISchedulerProvider;
@@ -57,8 +58,10 @@
         }
     .end annotation
 
+    .line 199
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 200
     iput-object p1, p0, Lcom/xiaomi/dist/utils/Schedulers$SingleInstanceProvider;->mSupplier:Ljava/util/function/Supplier;
 
     return-void
@@ -74,22 +77,27 @@
         }
     .end annotation
 
+    .line 205
     iget-object v0, p0, Lcom/xiaomi/dist/utils/Schedulers$SingleInstanceProvider;->inst:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 206
     iget-object p0, p0, Lcom/xiaomi/dist/utils/Schedulers$SingleInstanceProvider;->inst:Ljava/lang/Object;
 
     return-object p0
 
+    .line 208
     :cond_0
     monitor-enter p0
 
+    .line 209
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/dist/utils/Schedulers$SingleInstanceProvider;->inst:Ljava/lang/Object;
 
     if-nez v0, :cond_1
 
+    .line 210
     iget-object v0, p0, Lcom/xiaomi/dist/utils/Schedulers$SingleInstanceProvider;->mSupplier:Ljava/util/function/Supplier;
 
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
@@ -98,11 +106,13 @@
 
     iput-object v0, p0, Lcom/xiaomi/dist/utils/Schedulers$SingleInstanceProvider;->inst:Ljava/lang/Object;
 
+    .line 212
     :cond_1
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 213
     iget-object p0, p0, Lcom/xiaomi/dist/utils/Schedulers$SingleInstanceProvider;->inst:Ljava/lang/Object;
 
     return-object p0
@@ -110,6 +120,7 @@
     :catchall_0
     move-exception v0
 
+    .line 212
     :try_start_1
     monitor-exit p0
     :try_end_1

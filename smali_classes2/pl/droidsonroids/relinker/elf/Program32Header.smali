@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/relinker/elf/Program32Header;
 .super Lpl/droidsonroids/relinker/elf/Elf$ProgramHeader;
+.source "Program32Header.java"
 
 
 # direct methods
@@ -11,14 +12,17 @@
         }
     .end annotation
 
+    .line 24
     invoke-direct {p0}, Lpl/droidsonroids/relinker/elf/Elf$ProgramHeader;-><init>()V
 
     const/4 v0, 0x4
 
+    .line 25
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 26
     iget-boolean v1, p2, Lpl/droidsonroids/relinker/elf/Elf$Header;->bigEndian:Z
 
     if-eqz v1, :cond_0
@@ -33,6 +37,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 28
     iget-wide v1, p2, Lpl/droidsonroids/relinker/elf/Elf$Header;->phoff:J
 
     iget p2, p2, Lpl/droidsonroids/relinker/elf/Elf$Header;->phentsize:I
@@ -43,6 +48,7 @@
 
     add-long/2addr v1, p3
 
+    .line 29
     invoke-virtual {p1, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readWord(Ljava/nio/ByteBuffer;J)J
 
     move-result-wide p2
@@ -53,6 +59,7 @@
 
     add-long/2addr p2, v1
 
+    .line 30
     invoke-virtual {p1, v0, p2, p3}, Lpl/droidsonroids/relinker/elf/ElfParser;->readWord(Ljava/nio/ByteBuffer;J)J
 
     move-result-wide p2
@@ -63,6 +70,7 @@
 
     add-long/2addr p2, v1
 
+    .line 31
     invoke-virtual {p1, v0, p2, p3}, Lpl/droidsonroids/relinker/elf/ElfParser;->readWord(Ljava/nio/ByteBuffer;J)J
 
     move-result-wide p2
@@ -73,6 +81,7 @@
 
     add-long/2addr v1, p2
 
+    .line 32
     invoke-virtual {p1, v0, v1, v2}, Lpl/droidsonroids/relinker/elf/ElfParser;->readWord(Ljava/nio/ByteBuffer;J)J
 
     move-result-wide p1

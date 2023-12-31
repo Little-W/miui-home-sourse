@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/flow/internal/SafeCollector$collectContextSize$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "SafeCollector.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -67,6 +68,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 21
     check-cast p1, Ljava/lang/Number;
 
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I

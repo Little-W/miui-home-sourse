@@ -1,5 +1,6 @@
 .class public final Lcom/squareup/moshi/Moshi;
 .super Ljava/lang/Object;
+.source "Moshi.java"
 
 
 # annotations
@@ -61,6 +62,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x5
@@ -69,30 +71,35 @@
 
     sput-object v0, Lcom/squareup/moshi/Moshi;->BUILT_IN_FACTORIES:Ljava/util/List;
 
+    .line 37
     sget-object v0, Lcom/squareup/moshi/Moshi;->BUILT_IN_FACTORIES:Ljava/util/List;
 
     sget-object v1, Lcom/squareup/moshi/StandardJsonAdapters;->FACTORY:Lcom/squareup/moshi/JsonAdapter$Factory;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 38
     sget-object v0, Lcom/squareup/moshi/Moshi;->BUILT_IN_FACTORIES:Ljava/util/List;
 
     sget-object v1, Lcom/squareup/moshi/CollectionJsonAdapter;->FACTORY:Lcom/squareup/moshi/JsonAdapter$Factory;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 39
     sget-object v0, Lcom/squareup/moshi/Moshi;->BUILT_IN_FACTORIES:Ljava/util/List;
 
     sget-object v1, Lcom/squareup/moshi/MapJsonAdapter;->FACTORY:Lcom/squareup/moshi/JsonAdapter$Factory;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 40
     sget-object v0, Lcom/squareup/moshi/Moshi;->BUILT_IN_FACTORIES:Ljava/util/List;
 
     sget-object v1, Lcom/squareup/moshi/ArrayJsonAdapter;->FACTORY:Lcom/squareup/moshi/JsonAdapter$Factory;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 41
     sget-object v0, Lcom/squareup/moshi/Moshi;->BUILT_IN_FACTORIES:Ljava/util/List;
 
     sget-object v1, Lcom/squareup/moshi/ClassJsonAdapter;->FACTORY:Lcom/squareup/moshi/JsonAdapter$Factory;
@@ -105,24 +112,29 @@
 .method constructor <init>(Lcom/squareup/moshi/Moshi$Builder;)V
     .locals 3
 
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 45
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     iput-object v0, p0, Lcom/squareup/moshi/Moshi;->reentrantCalls:Ljava/lang/ThreadLocal;
 
+    .line 46
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/squareup/moshi/Moshi;->adapterCache:Ljava/util/Map;
 
+    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p1, Lcom/squareup/moshi/Moshi$Builder;->factories:Ljava/util/List;
 
+    .line 50
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -137,14 +149,17 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 51
     iget-object p1, p1, Lcom/squareup/moshi/Moshi$Builder;->factories:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 52
     sget-object p1, Lcom/squareup/moshi/Moshi;->BUILT_IN_FACTORIES:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 53
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -168,6 +183,7 @@
         }
     .end annotation
 
+    .line 146
     invoke-interface {p2}, Ljava/util/Set;->isEmpty()Z
 
     move-result p0
@@ -189,6 +205,7 @@
 
     aput-object p2, p0, p1
 
+    .line 147
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -212,6 +229,7 @@
         }
     .end annotation
 
+    .line 62
     sget-object v0, Lcom/squareup/moshi/Util;->NO_ANNOTATIONS:Ljava/util/Set;
 
     invoke-virtual {p0, p1, v0}, Lcom/squareup/moshi/Moshi;->adapter(Ljava/lang/reflect/Type;Ljava/util/Set;)Lcom/squareup/moshi/JsonAdapter;
@@ -235,6 +253,7 @@
         }
     .end annotation
 
+    .line 58
     sget-object v0, Lcom/squareup/moshi/Util;->NO_ANNOTATIONS:Ljava/util/Set;
 
     invoke-virtual {p0, p1, v0}, Lcom/squareup/moshi/Moshi;->adapter(Ljava/lang/reflect/Type;Ljava/util/Set;)Lcom/squareup/moshi/JsonAdapter;
@@ -261,18 +280,22 @@
         }
     .end annotation
 
+    .line 72
     invoke-static {p1}, Lcom/squareup/moshi/Types;->canonicalize(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
     move-result-object p1
 
+    .line 75
     invoke-direct {p0, p1, p2}, Lcom/squareup/moshi/Moshi;->cacheKey(Ljava/lang/reflect/Type;Ljava/util/Set;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 76
     iget-object v1, p0, Lcom/squareup/moshi/Moshi;->adapterCache:Ljava/util/Map;
 
     monitor-enter v1
 
+    .line 77
     :try_start_0
     iget-object v2, p0, Lcom/squareup/moshi/Moshi;->adapterCache:Ljava/util/Map;
 
@@ -284,15 +307,18 @@
 
     if-eqz v2, :cond_0
 
+    .line 78
     monitor-exit v1
 
     return-object v2
 
+    .line 79
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 82
     iget-object v1, p0, Lcom/squareup/moshi/Moshi;->reentrantCalls:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -305,6 +331,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 84
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -314,12 +341,14 @@
     :goto_0
     if-ge v4, v3, :cond_3
 
+    .line 85
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/squareup/moshi/Moshi$DeferredAdapter;
 
+    .line 86
     iget-object v6, v5, Lcom/squareup/moshi/Moshi$DeferredAdapter;->cacheKey:Ljava/lang/Object;
 
     invoke-virtual {v6, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -335,22 +364,27 @@
 
     goto :goto_0
 
+    .line 91
     :cond_2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 92
     iget-object v3, p0, Lcom/squareup/moshi/Moshi;->reentrantCalls:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v3, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
+    .line 96
     :cond_3
     new-instance v3, Lcom/squareup/moshi/Moshi$DeferredAdapter;
 
     invoke-direct {v3, v0}, Lcom/squareup/moshi/Moshi$DeferredAdapter;-><init>(Ljava/lang/Object;)V
 
+    .line 97
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 99
     :try_start_1
     iget-object v4, p0, Lcom/squareup/moshi/Moshi;->factories:Ljava/util/List;
 
@@ -361,6 +395,7 @@
     :goto_1
     if-ge v2, v4, :cond_6
 
+    .line 100
     iget-object v5, p0, Lcom/squareup/moshi/Moshi;->factories:Ljava/util/List;
 
     invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -375,23 +410,28 @@
 
     if-eqz v5, :cond_5
 
+    .line 102
     invoke-virtual {v3, v5}, Lcom/squareup/moshi/Moshi$DeferredAdapter;->ready(Lcom/squareup/moshi/JsonAdapter;)V
 
+    .line 103
     iget-object p1, p0, Lcom/squareup/moshi/Moshi;->adapterCache:Ljava/util/Map;
 
     monitor-enter p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 104
     :try_start_2
     iget-object p2, p0, Lcom/squareup/moshi/Moshi;->adapterCache:Ljava/util/Map;
 
     invoke-interface {p2, v0, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 105
     monitor-exit p1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 110
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -400,12 +440,14 @@
 
     invoke-interface {v1, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 111
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
+    .line 112
     iget-object p0, p0, Lcom/squareup/moshi/Moshi;->reentrantCalls:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p0}, Ljava/lang/ThreadLocal;->remove()V
@@ -416,6 +458,7 @@
     :catchall_0
     move-exception p2
 
+    .line 105
     :try_start_3
     monitor-exit p1
     :try_end_3
@@ -431,6 +474,7 @@
 
     goto :goto_1
 
+    .line 110
     :cond_6
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -440,16 +484,19 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 111
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
+    .line 112
     iget-object p0, p0, Lcom/squareup/moshi/Moshi;->reentrantCalls:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p0}, Ljava/lang/ThreadLocal;->remove()V
 
+    .line 116
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -480,6 +527,7 @@
     :catchall_1
     move-exception p1
 
+    .line 110
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result p2
@@ -488,12 +536,14 @@
 
     invoke-interface {v1, p2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 111
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result p2
 
     if-eqz p2, :cond_8
 
+    .line 112
     iget-object p0, p0, Lcom/squareup/moshi/Moshi;->reentrantCalls:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p0}, Ljava/lang/ThreadLocal;->remove()V
@@ -504,6 +554,7 @@
     :catchall_2
     move-exception p0
 
+    .line 79
     :try_start_5
     monitor-exit v1
     :try_end_5

@@ -1,5 +1,6 @@
 .class public final Lio/reactivex/internal/operators/flowable/FlowableFromObservable;
 .super Lio/reactivex/Flowable;
+.source "FlowableFromObservable.java"
 
 
 # annotations
@@ -36,8 +37,10 @@
         }
     .end annotation
 
+    .line 23
     invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
 
+    .line 24
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableFromObservable;->upstream:Lio/reactivex/Observable;
 
     return-void

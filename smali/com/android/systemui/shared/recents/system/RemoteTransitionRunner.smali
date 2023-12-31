@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/system/RemoteTransitionRunner;
 .super Ljava/lang/Object;
+.source "RemoteTransitionRunner.java"
 
 
 # virtual methods

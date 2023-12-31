@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/airbnb/lottie/PerformanceTracker$FrameListener;
 .super Ljava/lang/Object;
+.source "PerformanceTracker.java"
 
 
 # annotations

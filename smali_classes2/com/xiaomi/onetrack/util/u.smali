@@ -24,6 +24,7 @@
 
     const-string v0, "ro.miui.cust_variant"
 
+    .line 51
     :try_start_0
     new-instance v1, Ljava/util/HashSet;
 
@@ -31,90 +32,105 @@
 
     sput-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
+    .line 52
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "android"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 53
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.miui.analytics"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 54
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.miui.cit"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 55
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.xiaomi.finddevice"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 56
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.miui.securitycenter"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 57
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.android.settings"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 58
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.android.vending"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 59
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.google.android.gms"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 60
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.xiaomi.factory.mmi"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 61
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.miui.qr"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 62
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.android.contacts"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 63
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.qualcomm.qti.autoregistration"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 64
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.miui.tsmclient"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 65
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.miui.sekeytool"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 66
     sget-object v1, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v2, "com.android.updater"
@@ -123,6 +139,7 @@
 
     const-string v1, "cn_chinamobile"
 
+    .line 67
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/ab;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -135,6 +152,7 @@
 
     const-string v1, "cn_chinatelecom"
 
+    .line 68
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/ab;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -145,6 +163,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 69
     :cond_0
     sget-object v0, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
@@ -152,6 +171,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 70
     sget-object v0, Lcom/xiaomi/onetrack/util/u;->c:Ljava/util/Set;
 
     const-string v1, "com.miui.dmregservice"
@@ -165,6 +185,7 @@
     :catch_0
     move-exception v0
 
+    .line 73
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -195,6 +216,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -205,6 +227,7 @@
 
     const/4 v0, 0x0
 
+    .line 100
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->a()Z
 
@@ -214,6 +237,7 @@
 
     return v0
 
+    .line 104
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->h()Z
 
@@ -225,6 +249,7 @@
 
     const-string v2, "ro.miui.restrict_imei"
 
+    .line 105
     invoke-static {v2}, Lcom/xiaomi/onetrack/util/ab;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -245,6 +270,7 @@
     :catch_0
     move-exception v1
 
+    .line 108
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -273,6 +299,7 @@
 .method public static a(Landroid/content/Context;)Z
     .locals 2
 
+    .line 78
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -281,12 +308,14 @@
 
     const-string v0, "android.permission.READ_PHONE_STATE"
 
+    .line 79
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/u;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
 
     return p0
 
+    .line 81
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/u;->a()Z
 
@@ -296,10 +325,12 @@
 
     if-eqz v0, :cond_2
 
+    .line 82
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 83
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/u;->a(Ljava/lang/String;)Z
 
     move-result v0
@@ -322,6 +353,7 @@
     :goto_0
     return p0
 
+    .line 85
     :cond_2
     invoke-static {p0, v1}, Lcom/xiaomi/onetrack/util/u;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -333,6 +365,7 @@
 .method private static a(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
+    .line 120
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -361,6 +394,7 @@
 .method private static a(Ljava/lang/String;)Z
     .locals 1
 
+    .line 115
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -391,6 +425,7 @@
 .method public static b(Landroid/content/Context;)Z
     .locals 2
 
+    .line 91
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -399,6 +434,7 @@
 
     const-string v0, "android.permission.READ_PHONE_STATE"
 
+    .line 92
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/u;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -408,6 +444,7 @@
     :cond_0
     const-string v0, "android.permission.READ_PRIVILEGED_PHONE_STATE"
 
+    .line 94
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/u;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0

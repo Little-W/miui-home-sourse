@@ -1,5 +1,6 @@
 .class Landroidx/cursoradapter/widget/CursorAdapter$ChangeObserver;
 .super Landroid/database/ContentObserver;
+.source "CursorAdapter.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method constructor <init>(Landroidx/cursoradapter/widget/CursorAdapter;)V
     .locals 0
 
+    .line 476
     iput-object p1, p0, Landroidx/cursoradapter/widget/CursorAdapter$ChangeObserver;->this$0:Landroidx/cursoradapter/widget/CursorAdapter;
 
+    .line 477
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -45,6 +48,7 @@
 .method public onChange(Z)V
     .locals 0
 
+    .line 487
     iget-object p0, p0, Landroidx/cursoradapter/widget/CursorAdapter$ChangeObserver;->this$0:Landroidx/cursoradapter/widget/CursorAdapter;
 
     invoke-virtual {p0}, Landroidx/cursoradapter/widget/CursorAdapter;->onContentChanged()V

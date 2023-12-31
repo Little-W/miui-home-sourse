@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/local/appUsage/AppUsageMonitor;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/lifecycle/LifecycleObserver;

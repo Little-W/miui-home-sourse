@@ -1,5 +1,6 @@
 .class Landroid/view/IDisplayFoldListener$Stub$Proxy;
 .super Ljava/lang/Object;
+.source "IDisplayFoldListener.java"
 
 # interfaces
 .implements Landroid/view/IDisplayFoldListener;
@@ -28,8 +29,10 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 81
     iput-object p1, p0, Landroid/view/IDisplayFoldListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -40,6 +43,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
+    .line 85
     iget-object p0, p0, Landroid/view/IDisplayFoldListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0
@@ -53,6 +57,7 @@
         }
     .end annotation
 
+    .line 94
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -60,8 +65,10 @@
     :try_start_0
     const-string v1, "android.view.IDisplayFoldListener"
 
+    .line 96
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 97
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 v1, 0x1
@@ -75,9 +82,11 @@
     :cond_0
     const/4 v2, 0x0
 
+    .line 98
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 99
     iget-object p0, p0, Landroid/view/IDisplayFoldListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x0
@@ -88,12 +97,14 @@
 
     if-nez p0, :cond_1
 
+    .line 100
     invoke-static {}, Landroid/view/IDisplayFoldListener$Stub;->getDefaultImpl()Landroid/view/IDisplayFoldListener;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 101
     invoke-static {}, Landroid/view/IDisplayFoldListener$Stub;->getDefaultImpl()Landroid/view/IDisplayFoldListener;
 
     move-result-object p0
@@ -102,6 +113,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 106
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -116,5 +128,6 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 107
     throw p0
 .end method

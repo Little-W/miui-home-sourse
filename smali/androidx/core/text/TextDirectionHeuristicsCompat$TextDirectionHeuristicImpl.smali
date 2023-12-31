@@ -1,5 +1,6 @@
 .class abstract Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;
 .super Ljava/lang/Object;
+.source "TextDirectionHeuristicsCompat.java"
 
 # interfaces
 .implements Landroidx/core/text/TextDirectionHeuristicCompat;
@@ -24,8 +25,10 @@
 .method constructor <init>(Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;)V
     .locals 0
 
+    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 115
     iput-object p1, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->mAlgorithm:Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;
 
     return-void
@@ -34,6 +37,7 @@
 .method private doCheck(Ljava/lang/CharSequence;II)Z
     .locals 1
 
+    .line 140
     iget-object v0, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->mAlgorithm:Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;
 
     invoke-interface {v0, p1, p2, p3}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;->checkRtl(Ljava/lang/CharSequence;II)I
@@ -46,6 +50,7 @@
 
     if-eq p1, p2, :cond_0
 
+    .line 146
     invoke-virtual {p0}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->defaultIsRtl()Z
 
     move-result p0
@@ -75,6 +80,7 @@
 
     if-ltz p3, :cond_1
 
+    .line 130
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -83,16 +89,19 @@
 
     if-lt v0, p2, :cond_1
 
+    .line 133
     iget-object v0, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->mAlgorithm:Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;
 
     if-nez v0, :cond_0
 
+    .line 134
     invoke-virtual {p0}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->defaultIsRtl()Z
 
     move-result p0
 
     return p0
 
+    .line 136
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->doCheck(Ljava/lang/CharSequence;II)Z
 
@@ -100,6 +109,7 @@
 
     return p0
 
+    .line 131
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

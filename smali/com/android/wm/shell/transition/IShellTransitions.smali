@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/wm/shell/transition/IShellTransitions;
 .super Ljava/lang/Object;
+.source "IShellTransitions.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

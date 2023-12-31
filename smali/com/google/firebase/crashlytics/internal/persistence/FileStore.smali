@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 .super Ljava/lang/Object;
+.source "FileStore.java"
 
 
 # instance fields
@@ -18,8 +19,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 66
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -36,6 +39,7 @@
 
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
 
+    .line 67
     new-instance p1, Ljava/io/File;
 
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
@@ -50,6 +54,7 @@
 
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->sessionsDir:Ljava/io/File;
 
+    .line 68
     new-instance p1, Ljava/io/File;
 
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
@@ -64,6 +69,7 @@
 
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->reportsDir:Ljava/io/File;
 
+    .line 69
     new-instance p1, Ljava/io/File;
 
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
@@ -78,6 +84,7 @@
 
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->priorityReportsDir:Ljava/io/File;
 
+    .line 70
     new-instance p1, Ljava/io/File;
 
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
@@ -98,6 +105,7 @@
 .method private getSessionDir(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 115
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->sessionsDir:Ljava/io/File;
@@ -118,6 +126,7 @@
 
     monitor-enter v0
 
+    .line 174
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -125,6 +134,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 175
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v1
@@ -133,10 +143,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 176
     monitor-exit v0
 
     return-object p0
 
+    .line 178
     :cond_0
     :try_start_1
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
@@ -161,10 +173,13 @@
 
     move-result-object v2
 
+    .line 179
     invoke-virtual {v1, v2}, Lcom/google/firebase/crashlytics/internal/Logger;->d(Ljava/lang/String;)V
 
+    .line 184
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
+    .line 187
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
@@ -174,10 +189,12 @@
 
     if-eqz v1, :cond_2
 
+    .line 190
     monitor-exit v0
 
     return-object p0
 
+    .line 188
     :cond_2
     :try_start_2
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -213,6 +230,7 @@
 .method private static prepareDir(Ljava/io/File;)Ljava/io/File;
     .locals 0
 
+    .line 169
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
     return-object p0
@@ -221,12 +239,14 @@
 .method static recursiveDelete(Ljava/io/File;)Z
     .locals 4
 
+    .line 95
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 97
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -236,12 +256,14 @@
 
     aget-object v3, v0, v2
 
+    .line 98
     invoke-static {v3}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->recursiveDelete(Ljava/io/File;)Z
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 101
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
@@ -264,6 +286,7 @@
 
     if-nez p0, :cond_0
 
+    .line 194
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -288,10 +311,12 @@
 
     new-array v0, v0, [Ljava/io/File;
 
+    .line 81
     new-instance v1, Ljava/io/File;
 
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
 
+    .line 83
     invoke-virtual {v2}, Ljava/io/File;->getParent()Ljava/lang/String;
 
     move-result-object v2
@@ -308,6 +333,7 @@
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
 
+    .line 84
     invoke-virtual {p0}, Ljava/io/File;->getParent()Ljava/lang/String;
 
     move-result-object p0
@@ -320,6 +346,7 @@
 
     aput-object v1, v0, p0
 
+    .line 87
     array-length p0, v0
 
     :goto_0
@@ -327,6 +354,7 @@
 
     aget-object v1, v0, v2
 
+    .line 88
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -339,6 +367,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 89
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v3
@@ -375,12 +404,14 @@
 .method public deleteSessionFiles(Ljava/lang/String;)Z
     .locals 1
 
+    .line 135
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->sessionsDir:Ljava/io/File;
 
     invoke-direct {v0, p0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 136
     invoke-static {v0}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->recursiveDelete(Ljava/io/File;)Z
 
     move-result p0
@@ -399,6 +430,7 @@
         }
     .end annotation
 
+    .line 140
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->sessionsDir:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->list()[Ljava/lang/String;
@@ -415,6 +447,7 @@
 .method public getCommonFile(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 106
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
@@ -437,6 +470,7 @@
         }
     .end annotation
 
+    .line 111
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->rootDir:Ljava/io/File;
 
     invoke-virtual {p0, p1}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
@@ -453,6 +487,7 @@
 .method public getNativeReport(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 160
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->nativeReportsDir:Ljava/io/File;
@@ -473,6 +508,7 @@
         }
     .end annotation
 
+    .line 164
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->nativeReportsDir:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -489,6 +525,7 @@
 .method public getNativeSessionDir(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 131
     new-instance v0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->getSessionDir(Ljava/lang/String;)Ljava/io/File;
@@ -509,6 +546,7 @@
 .method public getPriorityReport(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 152
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->priorityReportsDir:Ljava/io/File;
@@ -529,6 +567,7 @@
         }
     .end annotation
 
+    .line 156
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->priorityReportsDir:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -545,6 +584,7 @@
 .method public getReport(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 144
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->reportsDir:Ljava/io/File;
@@ -565,6 +605,7 @@
         }
     .end annotation
 
+    .line 148
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->reportsDir:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -581,6 +622,7 @@
 .method public getSessionFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 123
     new-instance v0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->getSessionDir(Ljava/lang/String;)Ljava/io/File;
@@ -606,6 +648,7 @@
         }
     .end annotation
 
+    .line 127
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->getSessionDir(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0

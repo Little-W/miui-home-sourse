@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;
+.source "AutoValue_CrashlyticsReport_Session_Event_Application_Execution.java"
 
 
 # annotations
@@ -45,6 +46,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 113
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;-><init>()V
 
     return-void
@@ -55,12 +57,14 @@
 .method public build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution;
     .locals 9
 
+    .line 149
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;->signal:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Signal;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 150
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,11 +79,13 @@
 
     move-result-object v1
 
+    .line 152
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;->binaries:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     if-nez v0, :cond_1
 
+    .line 153
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,6 +100,7 @@
 
     move-result-object v1
 
+    .line 155
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -101,6 +108,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 158
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution;
 
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;->threads:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
@@ -121,6 +129,7 @@
 
     return-object v0
 
+    .line 156
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -146,6 +155,7 @@
 .method public setAppExitInfo(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;
     .locals 0
 
+    .line 127
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;->appExitInfo:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;
 
     return-object p0
@@ -165,10 +175,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 143
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;->binaries:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     return-object p0
 
+    .line 141
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -182,6 +194,7 @@
 .method public setException(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;
     .locals 0
 
+    .line 122
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;->exception:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;
 
     return-object p0
@@ -192,10 +205,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 135
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;->signal:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Signal;
 
     return-object p0
 
+    .line 133
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -218,6 +233,7 @@
         }
     .end annotation
 
+    .line 117
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution$Builder;->threads:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     return-object p0

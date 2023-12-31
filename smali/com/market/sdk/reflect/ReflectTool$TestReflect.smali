@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/reflect/ReflectTool$TestReflect;
 .super Ljava/lang/Object;
+.source "ReflectTool.java"
 
 
 # annotations
@@ -27,18 +28,22 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 224
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "The quick fox jumps over the lazy dogs."
 
+    .line 225
     iput-object v0, p0, Lcom/market/sdk/reflect/ReflectTool$TestReflect;->mTestField:Ljava/lang/String;
 
     const/4 v0, 0x5
 
     new-array v1, v0, [I
 
+    .line 226
     iput-object v1, p0, Lcom/market/sdk/reflect/ReflectTool$TestReflect;->mTestArray:[I
 
+    .line 227
     iget-object p0, p0, Lcom/market/sdk/reflect/ReflectTool$TestReflect;->mTestArray:[I
 
     const/4 v1, 0x1
@@ -49,16 +54,20 @@
 
     const/4 v2, 0x2
 
+    .line 228
     aput v2, p0, v1
 
     const/4 v1, 0x3
 
+    .line 229
     aput v1, p0, v2
 
     const/4 v2, 0x4
 
+    .line 230
     aput v2, p0, v1
 
+    .line 231
     aput v0, p0, v2
 
     return-void
@@ -69,10 +78,12 @@
 .method public concat([Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
+    .line 243
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 244
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -82,12 +93,14 @@
 
     aget-object v2, p1, v1
 
+    .line 245
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 247
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -99,6 +112,7 @@
 .method public sum([I)I
     .locals 3
 
+    .line 236
     array-length p0, p1
 
     const/4 v0, 0x0

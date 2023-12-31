@@ -1,5 +1,6 @@
 .class final Lcom/google/android/filament/utils/ModelViewer$loadModelGltfAsync$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "ModelViewer.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -128,6 +129,7 @@
 
     move-result-object v0
 
+    .line 193
     iget v1, p0, Lcom/google/android/filament/utils/ModelViewer$loadModelGltfAsync$1;->label:I
 
     const/4 v2, 0x1
@@ -144,6 +146,7 @@
 
     goto :goto_0
 
+    .line 195
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -153,11 +156,13 @@
 
     throw p0
 
+    .line 193
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$loadModelGltfAsync$1;->p$:Lkotlinx/coroutines/CoroutineScope;
 
+    .line 194
     iget-object v1, p0, Lcom/google/android/filament/utils/ModelViewer$loadModelGltfAsync$1;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-virtual {v1}, Lcom/google/android/filament/utils/ModelViewer;->getAsset()Lcom/google/android/filament/gltfio/FilamentAsset;
@@ -183,6 +188,7 @@
 
     return-object v0
 
+    .line 195
     :cond_3
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

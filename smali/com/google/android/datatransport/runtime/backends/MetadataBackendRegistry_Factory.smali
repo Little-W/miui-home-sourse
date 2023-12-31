@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;
 .super Ljava/lang/Object;
+.source "MetadataBackendRegistry_Factory.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
@@ -53,10 +54,13 @@
         }
     .end annotation
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 19
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->applicationContextProvider:Ljavax/inject/Provider;
 
+    .line 20
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->creationContextFactoryProvider:Ljavax/inject/Provider;
 
     return-void
@@ -77,6 +81,7 @@
         }
     .end annotation
 
+    .line 30
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;)V
@@ -87,6 +92,7 @@
 .method public static newInstance(Landroid/content/Context;Ljava/lang/Object;)Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;
     .locals 1
 
+    .line 35
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;
 
     check-cast p1, Lcom/google/android/datatransport/runtime/backends/CreationContextFactory;
@@ -101,6 +107,7 @@
 .method public get()Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;
     .locals 1
 
+    .line 25
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->applicationContextProvider:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -125,6 +132,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->get()Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public abstract Landroidx/viewpager2/adapter/FragmentStateAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
+.source "FragmentStateAdapter.java"
 
 # interfaces
 .implements Landroidx/viewpager2/adapter/StatefulAdapter;
@@ -44,6 +45,7 @@
 .method private scheduleViewAttach(Landroidx/fragment/app/Fragment;Landroid/widget/FrameLayout;)V
     .locals 2
 
+    .line 368
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     new-instance v1, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;
@@ -62,6 +64,7 @@
 .method addViewToContainer(Landroid/view/View;Landroid/widget/FrameLayout;)V
     .locals 1
 
+    .line 386
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result p0
@@ -70,6 +73,7 @@
 
     if-gt p0, v0, :cond_3
 
+    .line 390
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
@@ -78,6 +82,7 @@
 
     return-void
 
+    .line 394
     :cond_0
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->getChildCount()I
 
@@ -85,8 +90,10 @@
 
     if-lez p0, :cond_1
 
+    .line 395
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->removeAllViews()V
 
+    .line 398
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -94,6 +101,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 399
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
@@ -102,11 +110,13 @@
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
+    .line 402
     :cond_2
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     return-void
 
+    .line 387
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -128,6 +138,7 @@
 .method placeFragmentInViewHolder(Landroidx/viewpager2/adapter/FragmentViewHolder;)V
     .locals 5
 
+    .line 285
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragments:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {p1}, Landroidx/viewpager2/adapter/FragmentViewHolder;->getItemId()J
@@ -144,14 +155,17 @@
 
     if-eqz v0, :cond_8
 
+    .line 289
     invoke-virtual {p1}, Landroidx/viewpager2/adapter/FragmentViewHolder;->getContainer()Landroid/widget/FrameLayout;
 
     move-result-object v2
 
+    .line 290
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v3
 
+    .line 311
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v4
@@ -162,6 +176,7 @@
 
     goto :goto_0
 
+    .line 312
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -169,6 +184,7 @@
 
     throw p0
 
+    .line 316
     :cond_1
     :goto_0
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
@@ -179,10 +195,12 @@
 
     if-nez v3, :cond_2
 
+    .line 317
     invoke-direct {p0, v0, v2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->scheduleViewAttach(Landroidx/fragment/app/Fragment;Landroid/widget/FrameLayout;)V
 
     return-void
 
+    .line 322
     :cond_2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
@@ -196,17 +214,20 @@
 
     if-eqz v1, :cond_4
 
+    .line 323
     invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
     if-eq p1, v2, :cond_3
 
+    .line 324
     invoke-virtual {p0, v3, v2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->addViewToContainer(Landroid/view/View;Landroid/widget/FrameLayout;)V
 
     :cond_3
     return-void
 
+    .line 330
     :cond_4
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
@@ -214,10 +235,12 @@
 
     if-eqz v1, :cond_5
 
+    .line 331
     invoke-virtual {p0, v3, v2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->addViewToContainer(Landroid/view/View;Landroid/widget/FrameLayout;)V
 
     return-void
 
+    .line 336
     :cond_5
     invoke-virtual {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->shouldDelayFragmentTransactions()Z
 
@@ -225,8 +248,10 @@
 
     if-nez v1, :cond_6
 
+    .line 337
     invoke-direct {p0, v0, v2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->scheduleViewAttach(Landroidx/fragment/app/Fragment;Landroid/widget/FrameLayout;)V
 
+    .line 338
     iget-object v1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
@@ -241,6 +266,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 339
     invoke-virtual {p1}, Landroidx/viewpager2/adapter/FragmentViewHolder;->getItemId()J
 
     move-result-wide v3
@@ -257,12 +283,15 @@
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 340
     invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/FragmentTransaction;->setMaxLifecycle(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
+    .line 341
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitNow()V
 
+    .line 342
     iget-object p0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragmentMaxLifecycleEnforcer:Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;
 
     const/4 p1, 0x0
@@ -271,6 +300,7 @@
 
     goto :goto_1
 
+    .line 344
     :cond_6
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
@@ -282,6 +312,7 @@
 
     return-void
 
+    .line 347
     :cond_7
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
@@ -294,6 +325,7 @@
     :goto_1
     return-void
 
+    .line 287
     :cond_8
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -305,6 +337,7 @@
 .method shouldDelayFragmentTransactions()Z
     .locals 0
 
+    .line 470
     iget-object p0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->isStateSaved()Z

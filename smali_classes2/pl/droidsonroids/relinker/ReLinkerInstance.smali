@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/relinker/ReLinkerInstance;
 .super Ljava/lang/Object;
+.source "ReLinkerInstance.java"
 
 
 # instance fields
@@ -28,6 +29,7 @@
 .method protected constructor <init>()V
     .locals 2
 
+    .line 43
     new-instance v0, Lpl/droidsonroids/relinker/SystemLibraryLoader;
 
     invoke-direct {v0}, Lpl/droidsonroids/relinker/SystemLibraryLoader;-><init>()V
@@ -44,8 +46,10 @@
 .method protected constructor <init>(Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;Lpl/droidsonroids/relinker/ReLinker$LibraryInstaller;)V
     .locals 1
 
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -56,12 +60,15 @@
 
     if-eqz p2, :cond_0
 
+    .line 56
     iput-object p1, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryLoader:Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
 
+    .line 57
     iput-object p2, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryInstaller:Lpl/droidsonroids/relinker/ReLinker$LibraryInstaller;
 
     return-void
 
+    .line 53
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -71,6 +78,7 @@
 
     throw p0
 
+    .line 49
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -84,6 +92,7 @@
 .method static synthetic access$000(Lpl/droidsonroids/relinker/ReLinkerInstance;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 31
     invoke-direct {p0, p1, p2, p3}, Lpl/droidsonroids/relinker/ReLinkerInstance;->loadLibraryInternal(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -92,6 +101,7 @@
 .method private loadLibraryInternal(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 11
 
+    .line 157
     iget-object v0, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->loadedLibraries:Ljava/util/Set;
 
     invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -114,6 +124,7 @@
 
     const-string p2, "%s already loaded previously!"
 
+    .line 158
     invoke-virtual {p0, p2, p1}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -121,11 +132,13 @@
     :cond_0
     const/4 v0, 0x2
 
+    .line 163
     :try_start_0
     iget-object v3, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryLoader:Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
 
     invoke-interface {v3, p2}, Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;->loadLibrary(Ljava/lang/String;)V
 
+    .line 164
     iget-object v3, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->loadedLibraries:Ljava/util/Set;
 
     invoke-interface {v3, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -138,6 +151,7 @@
 
     aput-object p3, v4, v2
 
+    .line 165
     invoke-virtual {p0, v3, v4}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -149,6 +163,7 @@
 
     new-array v4, v2, [Ljava/lang/Object;
 
+    .line 169
     invoke-static {v3}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v3
@@ -167,12 +182,15 @@
 
     const-string v4, "%s (%s) was not loaded normally, re-linking..."
 
+    .line 172
     invoke-virtual {p0, v4, v3}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 173
     invoke-virtual {p0, p1, p2, p3}, Lpl/droidsonroids/relinker/ReLinkerInstance;->getWorkaroundLibFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v3
 
+    .line 174
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v4
@@ -183,6 +201,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 175
     :cond_1
     iget-boolean v4, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->force:Z
 
@@ -196,11 +215,14 @@
 
     const-string v5, "Forcing a re-link of %s (%s)..."
 
+    .line 176
     invoke-virtual {p0, v5, v4}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 179
     :cond_2
     invoke-virtual {p0, p1, p2, p3}, Lpl/droidsonroids/relinker/ReLinkerInstance;->cleanupOldLibFiles(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 180
     iget-object v5, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryInstaller:Lpl/droidsonroids/relinker/ReLinker$LibraryInstaller;
 
     iget-object v4, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryLoader:Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
@@ -211,6 +233,7 @@
 
     iget-object v4, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryLoader:Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
 
+    .line 181
     invoke-interface {v4, p2}, Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;->mapLibraryName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
@@ -221,8 +244,10 @@
 
     move-object v10, p0
 
+    .line 180
     invoke-interface/range {v5 .. v10}, Lpl/droidsonroids/relinker/ReLinker$LibraryInstaller;->installLibrary(Landroid/content/Context;[Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Lpl/droidsonroids/relinker/ReLinkerInstance;)V
 
+    .line 185
     :cond_3
     :try_start_1
     iget-boolean v4, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->recursive:Z
@@ -233,6 +258,7 @@
 
     const/4 v4, 0x0
 
+    .line 189
     :try_start_2
     new-instance v5, Lpl/droidsonroids/relinker/elf/ElfParser;
 
@@ -240,6 +266,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 190
     :try_start_3
     invoke-virtual {v5}, Lpl/droidsonroids/relinker/elf/ElfParser;->parseNeededDependencies()Ljava/util/List;
 
@@ -247,9 +274,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 192
     :try_start_4
     invoke-virtual {v5}, Lpl/droidsonroids/relinker/elf/ElfParser;->close()V
 
+    .line 194
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -267,6 +296,7 @@
 
     check-cast v5, Ljava/lang/String;
 
+    .line 195
     iget-object v6, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryLoader:Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
 
     invoke-interface {v6, v5}, Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;->unmapLibraryName(Ljava/lang/String;)Ljava/lang/String;
@@ -287,13 +317,16 @@
     :catchall_1
     move-exception p1
 
+    .line 192
     :goto_1
     invoke-virtual {v4}, Lpl/droidsonroids/relinker/elf/ElfParser;->close()V
 
+    .line 193
     throw p1
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
+    .line 204
     :catch_1
     :cond_4
     iget-object p1, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryLoader:Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
@@ -304,6 +337,7 @@
 
     invoke-interface {p1, v3}, Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;->loadPath(Ljava/lang/String;)V
 
+    .line 205
     iget-object p1, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->loadedLibraries:Ljava/util/Set;
 
     invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -316,6 +350,7 @@
 
     const-string p2, "%s (%s) was re-linked!"
 
+    .line 206
     invoke-virtual {p0, p2, p1}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -326,20 +361,24 @@
 .method protected cleanupOldLibFiles(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
+    .line 248
     invoke-virtual {p0, p1}, Lpl/droidsonroids/relinker/ReLinkerInstance;->getWorkaroundLibDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
+    .line 249
     invoke-virtual {p0, p1, p2, p3}, Lpl/droidsonroids/relinker/ReLinkerInstance;->getWorkaroundLibFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p1
 
+    .line 250
     iget-object p3, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryLoader:Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
 
     invoke-interface {p3, p2}, Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;->mapLibraryName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 251
     new-instance p3, Lpl/droidsonroids/relinker/ReLinkerInstance$2;
 
     invoke-direct {p3, p0, p2}, Lpl/droidsonroids/relinker/ReLinkerInstance$2;-><init>(Lpl/droidsonroids/relinker/ReLinkerInstance;Ljava/lang/String;)V
@@ -352,6 +391,7 @@
 
     return-void
 
+    .line 260
     :cond_0
     array-length p3, p2
 
@@ -362,6 +402,7 @@
 
     aget-object v1, p2, v0
 
+    .line 261
     iget-boolean v2, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->force:Z
 
     if-nez v2, :cond_1
@@ -380,6 +421,7 @@
 
     if-nez v2, :cond_2
 
+    .line 262
     :cond_1
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
@@ -399,6 +441,7 @@
 
     const/4 v0, 0x0
 
+    .line 215
     invoke-virtual {p1, p0, v0}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object p0
@@ -409,18 +452,21 @@
 .method protected getWorkaroundLibFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 227
     iget-object v0, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->libraryLoader:Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
 
     invoke-interface {v0, p2}, Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;->mapLibraryName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 229
     invoke-static {p3}, Lpl/droidsonroids/relinker/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 230
     new-instance p3, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lpl/droidsonroids/relinker/ReLinkerInstance;->getWorkaroundLibDir(Landroid/content/Context;)Ljava/io/File;
@@ -431,6 +477,7 @@
 
     return-object p3
 
+    .line 233
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -464,6 +511,7 @@
 
     const/4 v0, 0x0
 
+    .line 92
     invoke-virtual {p0, p1, p2, v0, v0}, Lpl/droidsonroids/relinker/ReLinkerInstance;->loadLibrary(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lpl/droidsonroids/relinker/ReLinker$LoadListener;)V
 
     return-void
@@ -474,6 +522,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 130
     invoke-static {p2}, Lpl/droidsonroids/relinker/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -490,14 +539,17 @@
 
     const-string v1, "Beginning load of %s..."
 
+    .line 134
     invoke-virtual {p0, v1, v0}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-nez p4, :cond_0
 
+    .line 136
     invoke-direct {p0, p1, p2, p3}, Lpl/droidsonroids/relinker/ReLinkerInstance;->loadLibraryInternal(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 138
     :cond_0
     new-instance v0, Ljava/lang/Thread;
 
@@ -519,11 +571,13 @@
 
     invoke-direct {v0, v7}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
+    .line 150
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :goto_0
     return-void
 
+    .line 131
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -533,6 +587,7 @@
 
     throw p0
 
+    .line 127
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -546,10 +601,12 @@
 .method public log(Ljava/lang/String;)V
     .locals 0
 
+    .line 272
     iget-object p0, p0, Lpl/droidsonroids/relinker/ReLinkerInstance;->logger:Lpl/droidsonroids/relinker/ReLinker$Logger;
 
     if-eqz p0, :cond_0
 
+    .line 273
     invoke-interface {p0, p1}, Lpl/droidsonroids/relinker/ReLinker$Logger;->log(Ljava/lang/String;)V
 
     :cond_0
@@ -559,6 +616,7 @@
 .method public varargs log(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 268
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {v0, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;
 .super Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
+.source "AutoValue_EventStoreConfig.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 105
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;-><init>()V
 
     return-void
@@ -39,12 +41,14 @@
 .method build()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
     .locals 11
 
+    .line 135
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->maxStorageSizeInBytes:Ljava/lang/Long;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 136
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,11 +63,13 @@
 
     move-result-object v1
 
+    .line 138
     :cond_0
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->loadBatchSize:Ljava/lang/Integer;
 
     if-nez v0, :cond_1
 
+    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,11 +84,13 @@
 
     move-result-object v1
 
+    .line 141
     :cond_1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->criticalSectionEnterTimeoutMs:Ljava/lang/Integer;
 
     if-nez v0, :cond_2
 
+    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,11 +105,13 @@
 
     move-result-object v1
 
+    .line 144
     :cond_2
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->eventCleanUpAge:Ljava/lang/Long;
 
     if-nez v0, :cond_3
 
+    .line 145
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,11 +126,13 @@
 
     move-result-object v1
 
+    .line 147
     :cond_3
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->maxBlobByteSizePerRow:Ljava/lang/Integer;
 
     if-nez v0, :cond_4
 
+    .line 148
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -135,6 +147,7 @@
 
     move-result-object v1
 
+    .line 150
     :cond_4
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -142,34 +155,40 @@
 
     if-eqz v0, :cond_5
 
+    .line 153
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig;
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->maxStorageSizeInBytes:Ljava/lang/Long;
 
+    .line 154
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v3
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->loadBatchSize:Ljava/lang/Integer;
 
+    .line 155
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->criticalSectionEnterTimeoutMs:Ljava/lang/Integer;
 
+    .line 156
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->eventCleanUpAge:Ljava/lang/Long;
 
+    .line 157
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v7
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->maxBlobByteSizePerRow:Ljava/lang/Integer;
 
+    .line 158
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result v9
@@ -182,6 +201,7 @@
 
     return-object v0
 
+    .line 151
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -207,6 +227,7 @@
 .method setCriticalSectionEnterTimeoutMs(I)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
     .locals 0
 
+    .line 119
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -219,6 +240,7 @@
 .method setEventCleanUpAge(J)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
     .locals 0
 
+    .line 124
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -231,6 +253,7 @@
 .method setLoadBatchSize(I)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
     .locals 0
 
+    .line 114
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -243,6 +266,7 @@
 .method setMaxBlobByteSizePerRow(I)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
     .locals 0
 
+    .line 129
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -255,6 +279,7 @@
 .method setMaxStorageSizeInBytes(J)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
     .locals 0
 
+    .line 109
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1

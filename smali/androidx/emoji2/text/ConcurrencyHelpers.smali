@@ -1,5 +1,6 @@
 .class Landroidx/emoji2/text/ConcurrencyHelpers;
 .super Ljava/lang/Object;
+.source "ConcurrencyHelpers.java"
 
 
 # annotations
@@ -14,10 +15,12 @@
 .method static createBackgroundPriorityExecutor(Ljava/lang/String;)Ljava/util/concurrent/ThreadPoolExecutor;
     .locals 8
 
+    .line 56
     new-instance v7, Landroidx/emoji2/text/-$$Lambda$ConcurrencyHelpers$Qhda3GwBFI6UfuZmxtHjo-q5ORU;
 
     invoke-direct {v7, p0}, Landroidx/emoji2/text/-$$Lambda$ConcurrencyHelpers$Qhda3GwBFI6UfuZmxtHjo-q5ORU;-><init>(Ljava/lang/String;)V
 
+    .line 61
     new-instance p0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
@@ -38,6 +41,7 @@
 
     const/4 v0, 0x1
 
+    .line 69
     invoke-virtual {p0, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
     return-object p0
@@ -46,12 +50,14 @@
 .method static synthetic lambda$createBackgroundPriorityExecutor$0(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 1
 
+    .line 57
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     const/16 p0, 0xa
 
+    .line 58
     invoke-virtual {v0, p0}, Ljava/lang/Thread;->setPriority(I)V
 
     return-object v0
@@ -60,12 +66,14 @@
 .method static mainHandlerAsync()Landroid/os/Handler;
     .locals 2
 
+    .line 77
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
 
     if-lt v0, v1, :cond_0
 
+    .line 78
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -76,6 +84,7 @@
 
     return-object v0
 
+    .line 80
     :cond_0
     new-instance v0, Landroid/os/Handler;
 

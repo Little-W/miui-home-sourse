@@ -1,5 +1,6 @@
 .class final synthetic Lkotlinx/coroutines/flow/FlowKt__CollectKt;
 .super Ljava/lang/Object;
+.source "Collect.kt"
 
 
 # direct methods
@@ -18,6 +19,7 @@
         }
     .end annotation
 
+    .line 30
     sget-object v0, Lkotlinx/coroutines/flow/internal/NopCollector;->INSTANCE:Lkotlinx/coroutines/flow/internal/NopCollector;
 
     check-cast v0, Lkotlinx/coroutines/flow/FlowCollector;
@@ -55,6 +57,7 @@
         }
     .end annotation
 
+    .line 49
     new-instance v0, Lkotlinx/coroutines/flow/FlowKt__CollectKt$launchIn$1;
 
     const/4 v1, 0x0

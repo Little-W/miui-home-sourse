@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 .super Ljava/lang/Object;
+.source "HardwareConfigState.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 40
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/proc/self/fd"
@@ -32,10 +34,12 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 55
     iput-boolean v0, p0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->isHardwareConfigAllowed:Z
 
     return-void
@@ -44,25 +48,30 @@
 .method static getInstance()Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
     .locals 2
 
+    .line 60
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->instance:Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
     if-nez v0, :cond_1
 
+    .line 61
     const-class v0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
     monitor-enter v0
 
+    .line 62
     :try_start_0
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->instance:Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
     if-nez v1, :cond_0
 
+    .line 63
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
     invoke-direct {v1}, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;-><init>()V
 
     sput-object v1, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->instance:Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
+    .line 65
     :cond_0
     monitor-exit v0
 
@@ -77,6 +86,7 @@
 
     throw v1
 
+    .line 67
     :cond_1
     :goto_0
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->instance:Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
@@ -89,6 +99,7 @@
 
     monitor-enter p0
 
+    .line 103
     :try_start_0
     iget v0, p0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->decodesSinceLastFdCheck:I
 
@@ -104,8 +115,10 @@
 
     const/4 v0, 0x0
 
+    .line 104
     iput v0, p0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->decodesSinceLastFdCheck:I
 
+    .line 105
     sget-object v2, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->FD_SIZE_LIST:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->list()[Ljava/lang/String;
@@ -120,9 +133,11 @@
 
     move v0, v1
 
+    .line 106
     :cond_0
     iput-boolean v0, p0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->isHardwareConfigAllowed:Z
 
+    .line 108
     iget-boolean v0, p0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->isHardwareConfigAllowed:Z
 
     if-nez v0, :cond_1
@@ -139,6 +154,7 @@
 
     const-string v0, "Downsampler"
 
+    .line 109
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,6 +177,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 116
     :cond_1
     iget-boolean v0, p0, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->isHardwareConfigAllowed:Z
     :try_end_0
@@ -187,6 +204,7 @@
 
     if-eqz p5, :cond_3
 
+    .line 83
     sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1a
@@ -204,6 +222,7 @@
 
     if-lt p2, p5, :cond_1
 
+    .line 93
     invoke-direct {p0}, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->isFdSizeBelowHardwareLimit()Z
 
     move-result p0
@@ -220,10 +239,12 @@
     :goto_0
     if-eqz p0, :cond_2
 
+    .line 96
     sget-object p1, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
 
     iput-object p1, p3, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
+    .line 97
     iput-boolean p4, p3, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
 
     :cond_2

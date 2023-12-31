@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/DefaultSpecialEffectsController$4$1;
 .super Ljava/lang/Object;
+.source "DefaultSpecialEffectsController.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/fragment/app/DefaultSpecialEffectsController$4;)V
     .locals 0
 
+    .line 255
     iput-object p1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$4$1;->this$1:Landroidx/fragment/app/DefaultSpecialEffectsController$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 2
 
+    .line 258
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$4$1;->this$1:Landroidx/fragment/app/DefaultSpecialEffectsController$4;
 
     iget-object v0, v0, Landroidx/fragment/app/DefaultSpecialEffectsController$4;->val$container:Landroid/view/ViewGroup;
@@ -46,6 +49,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
 
+    .line 259
     iget-object p0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$4$1;->this$1:Landroidx/fragment/app/DefaultSpecialEffectsController$4;
 
     iget-object p0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$4;->val$animationInfo:Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;

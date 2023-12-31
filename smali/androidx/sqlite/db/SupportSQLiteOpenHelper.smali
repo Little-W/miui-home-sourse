@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/sqlite/db/SupportSQLiteOpenHelper;
 .super Ljava/lang/Object;
+.source "SupportSQLiteOpenHelper.java"
 
 
 # annotations

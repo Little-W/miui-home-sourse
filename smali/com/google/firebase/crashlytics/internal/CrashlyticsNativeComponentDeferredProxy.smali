@@ -1,5 +1,6 @@
 .class public final Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;
 .super Ljava/lang/Object;
+.source "CrashlyticsNativeComponentDeferredProxy.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponent;
@@ -43,6 +44,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 25
     new-instance v0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy$MissingNativeSessionFileProvider;
 
     const/4 v1, 0x0
@@ -65,8 +67,10 @@
         }
     .end annotation
 
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -75,8 +79,10 @@
 
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->availableNativeComponent:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 34
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->deferredNativeComponent:Lcom/google/firebase/inject/Deferred;
 
+    .line 36
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->deferredNativeComponent:Lcom/google/firebase/inject/Deferred;
 
     new-instance v0, Lcom/google/firebase/crashlytics/internal/-$$Lambda$CrashlyticsNativeComponentDeferredProxy$7NRuOGLlJiZHqRwz-2rcS10so9w;
@@ -91,6 +97,7 @@
 .method static synthetic lambda$prepareNativeSession$1(Ljava/lang/String;Ljava/lang/String;JLcom/google/firebase/crashlytics/internal/model/StaticSessionData;Lcom/google/firebase/inject/Provider;)V
     .locals 6
 
+    .line 67
     invoke-interface {p5}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object p5
@@ -107,6 +114,7 @@
 
     move-object v5, p4
 
+    .line 68
     invoke-interface/range {v0 .. v5}, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponent;->prepareNativeSession(Ljava/lang/String;Ljava/lang/String;JLcom/google/firebase/crashlytics/internal/model/StaticSessionData;)V
 
     return-void
@@ -117,6 +125,7 @@
 .method public getSessionFileProvider(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/NativeSessionFileProvider;
     .locals 0
 
+    .line 75
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->availableNativeComponent:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -127,10 +136,12 @@
 
     if-nez p0, :cond_0
 
+    .line 77
     sget-object p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->MISSING_NATIVE_SESSION_FILE_PROVIDER:Lcom/google/firebase/crashlytics/internal/NativeSessionFileProvider;
 
     goto :goto_0
 
+    .line 78
     :cond_0
     invoke-interface {p0, p1}, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponent;->getSessionFileProvider(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/NativeSessionFileProvider;
 
@@ -143,6 +154,7 @@
 .method public hasCrashDataForCurrentSession()Z
     .locals 0
 
+    .line 45
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->availableNativeComponent:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -153,6 +165,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 46
     invoke-interface {p0}, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponent;->hasCrashDataForCurrentSession()Z
 
     move-result p0
@@ -173,6 +186,7 @@
 .method public hasCrashDataForSession(Ljava/lang/String;)Z
     .locals 0
 
+    .line 51
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->availableNativeComponent:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -183,6 +197,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 52
     invoke-interface {p0, p1}, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponent;->hasCrashDataForSession(Ljava/lang/String;)Z
 
     move-result p0
@@ -203,6 +218,7 @@
 .method public synthetic lambda$new$0$CrashlyticsNativeComponentDeferredProxy(Lcom/google/firebase/inject/Provider;)V
     .locals 2
 
+    .line 38
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
@@ -211,6 +227,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->d(Ljava/lang/String;)V
 
+    .line 39
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->availableNativeComponent:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-interface {p1}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
@@ -227,6 +244,7 @@
 .method public prepareNativeSession(Ljava/lang/String;Ljava/lang/String;JLcom/google/firebase/crashlytics/internal/model/StaticSessionData;)V
     .locals 7
 
+    .line 62
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
@@ -247,6 +265,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->v(Ljava/lang/String;)V
 
+    .line 64
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy;->deferredNativeComponent:Lcom/google/firebase/inject/Deferred;
 
     new-instance v6, Lcom/google/firebase/crashlytics/internal/-$$Lambda$CrashlyticsNativeComponentDeferredProxy$lNwtOK8UDFlAPI3wPnIK4eFWxec;

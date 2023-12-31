@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/RayKt;
 .super Ljava/lang/Object;
+.source "Ray.kt"
 
 
 # annotations
@@ -16,6 +17,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 21
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Ray;->getOrigin()Lcom/google/android/filament/utils/Float3;
 
     move-result-object v0
@@ -24,6 +26,7 @@
 
     move-result-object p0
 
+    .line 23
     new-instance v1, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float3;->getX()F
@@ -46,6 +49,7 @@
 
     invoke-direct {v1, v2, v3, p0}, Lcom/google/android/filament/utils/Float3;-><init>(FFF)V
 
+    .line 24
     new-instance p0, Lcom/google/android/filament/utils/Float3;
 
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float3;->getX()F

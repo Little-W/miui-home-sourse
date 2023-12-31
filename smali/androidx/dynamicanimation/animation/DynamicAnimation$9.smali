@@ -1,5 +1,6 @@
 .class final Landroidx/dynamicanimation/animation/DynamicAnimation$9;
 .super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
 
 
 # annotations
@@ -19,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 179
     invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
 
     return-void
@@ -29,6 +31,7 @@
 .method public getValue(Landroid/view/View;)F
     .locals 0
 
+    .line 187
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result p0
@@ -39,6 +42,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
+    .line 179
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$9;->getValue(Landroid/view/View;)F
@@ -51,6 +55,7 @@
 .method public setValue(Landroid/view/View;F)V
     .locals 0
 
+    .line 182
     invoke-virtual {p1, p2}, Landroid/view/View;->setX(F)V
 
     return-void
@@ -59,6 +64,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
+    .line 179
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$9;->setValue(Landroid/view/View;F)V

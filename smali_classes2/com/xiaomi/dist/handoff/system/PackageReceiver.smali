@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/dist/handoff/system/PackageReceiver;
 .super Landroid/content/BroadcastReceiver;
+.source "PackageReceiver.java"
 
 
 # annotations
@@ -19,8 +20,10 @@
 .method private constructor <init>(Lcom/xiaomi/dist/handoff/system/PackageReceiver$Callback;)V
     .locals 0
 
+    .line 42
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 43
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/system/PackageReceiver;->mCallback:Lcom/xiaomi/dist/handoff/system/PackageReceiver$Callback;
 
     return-void
@@ -37,6 +40,7 @@
 .method static checkPackageInstalled(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
+    .line 31
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -47,6 +51,7 @@
 
     return v1
 
+    .line 35
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -70,6 +75,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 49
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -82,6 +88,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 51
     invoke-virtual {p2}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
 
     move-result-object p1
@@ -98,8 +105,10 @@
 
     const-string v1, "package removed, packageName=%s"
 
+    .line 52
     invoke-static {v0, v1, p2}, Lcom/xiaomi/dist/handoff/system/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 53
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/PackageReceiver;->mCallback:Lcom/xiaomi/dist/handoff/system/PackageReceiver$Callback;
 
     invoke-interface {p0, p1}, Lcom/xiaomi/dist/handoff/system/PackageReceiver$Callback;->onPackageRemoved(Ljava/lang/String;)V
@@ -111,23 +120,28 @@
 .method static registerPackageRemoveCallback(Landroid/content/Context;Lcom/xiaomi/dist/handoff/system/PackageReceiver$Callback;)Lcom/xiaomi/dist/handoff/system/PackageReceiver;
     .locals 2
 
+    .line 17
     :try_start_0
     new-instance v0, Lcom/xiaomi/dist/handoff/system/PackageReceiver;
 
     invoke-direct {v0, p1}, Lcom/xiaomi/dist/handoff/system/PackageReceiver;-><init>(Lcom/xiaomi/dist/handoff/system/PackageReceiver$Callback;)V
 
+    .line 18
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
+    .line 19
     invoke-virtual {p1, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "package"
 
+    .line 20
     invoke-virtual {p1, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
+    .line 21
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -149,6 +163,7 @@
 
     const-string v0, "register package remove callback failed"
 
+    .line 24
     invoke-static {p0, v0, p1}, Lcom/xiaomi/dist/handoff/system/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p0, 0x0

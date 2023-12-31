@@ -1,5 +1,6 @@
 .class public final Lretrofit2/adapter/rxjava2/HttpException;
 .super Lretrofit2/HttpException;
+.source "HttpException.java"
 
 
 # annotations
@@ -18,6 +19,7 @@
         }
     .end annotation
 
+    .line 24
     invoke-direct {p0, p1}, Lretrofit2/HttpException;-><init>(Lretrofit2/Response;)V
 
     return-void

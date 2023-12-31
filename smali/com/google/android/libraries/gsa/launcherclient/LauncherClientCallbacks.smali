@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/libraries/gsa/launcherclient/LauncherClientCallbacks;
 .super Ljava/lang/Object;
+.source "LauncherClientCallbacks.java"
 
 
 # virtual methods

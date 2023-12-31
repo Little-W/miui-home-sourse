@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchDeepViewFragment$Legacy;
 .super Landroid/app/DialogFragment;
+.source "SourceFile"
 
 
 # annotations

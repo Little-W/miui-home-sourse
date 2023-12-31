@@ -1,5 +1,6 @@
 .class Landroidx/recyclerview/widget/AsyncListDiffer$1$2;
 .super Ljava/lang/Object;
+.source "AsyncListDiffer.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/AsyncListDiffer$1;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
     .locals 0
 
+    .line 347
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$2;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$2;->val$result:Landroidx/recyclerview/widget/DiffUtil$DiffResult;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 3
 
+    .line 350
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$2;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
@@ -52,6 +55,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 351
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$2;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->this$0:Landroidx/recyclerview/widget/AsyncListDiffer;

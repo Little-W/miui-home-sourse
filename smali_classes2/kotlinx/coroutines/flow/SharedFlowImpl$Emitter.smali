@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/flow/SharedFlowImpl$Emitter;
 .super Ljava/lang/Object;
+.source "SharedFlow.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/DisposableHandle;
@@ -57,6 +58,7 @@
         }
     .end annotation
 
+    .line 629
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/flow/SharedFlowImpl$Emitter;->flow:Lkotlinx/coroutines/flow/SharedFlowImpl;
@@ -75,6 +77,7 @@
 .method public dispose()V
     .locals 1
 
+    .line 635
     iget-object v0, p0, Lkotlinx/coroutines/flow/SharedFlowImpl$Emitter;->flow:Lkotlinx/coroutines/flow/SharedFlowImpl;
 
     invoke-static {v0, p0}, Lkotlinx/coroutines/flow/SharedFlowImpl;->access$cancelEmitter(Lkotlinx/coroutines/flow/SharedFlowImpl;Lkotlinx/coroutines/flow/SharedFlowImpl$Emitter;)V

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/ICommercialInit;
 .super Ljava/lang/Object;
+.source "ICommercialInit.java"
 
 
 # virtual methods

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/AdLogic$Static;
 .super Lio/branch/search/internal/ui/AdLogic;
+.source "SourceFile"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Lkotlin/io/FilesKt__UtilsKt;
 .super Lkotlin/io/FilesKt__FileTreeWalkKt;
+.source "Utils.kt"
 
 
 # annotations
@@ -16,12 +17,14 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 347
     invoke-static {p0}, Lkotlin/io/FilesKt;->walkBottomUp(Ljava/io/File;)Lkotlin/io/FileTreeWalk;
 
     move-result-object p0
 
     check-cast p0, Lkotlin/sequences/Sequence;
 
+    .line 476
     invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -44,6 +47,7 @@
 
     check-cast v2, Ljava/io/File;
 
+    .line 347
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     move-result v3
@@ -77,6 +81,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 105
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -109,6 +114,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 437
     invoke-static {p1}, Lkotlin/io/FilesKt;->isRooted(Ljava/io/File;)Z
 
     move-result v0
@@ -117,6 +123,7 @@
 
     return-object p1
 
+    .line 439
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->toString()Ljava/lang/String;
 
@@ -126,6 +133,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 440
     move-object v0, p0
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -218,6 +226,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 450
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V

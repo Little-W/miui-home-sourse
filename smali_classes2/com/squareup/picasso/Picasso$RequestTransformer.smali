@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/squareup/picasso/Picasso$RequestTransformer;
 .super Ljava/lang/Object;
+.source "Picasso.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 95
     new-instance v0, Lcom/squareup/picasso/Picasso$RequestTransformer$1;
 
     invoke-direct {v0}, Lcom/squareup/picasso/Picasso$RequestTransformer$1;-><init>()V

@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/Dispatcher$DispatcherHandler;
 .super Landroid/os/Handler;
+.source "Dispatcher.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method constructor <init>(Landroid/os/Looper;Lcom/squareup/picasso/Dispatcher;)V
     .locals 0
 
+    .line 463
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 464
     iput-object p2, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     return-void
@@ -33,12 +36,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
+    .line 468
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x0
 
     packed-switch v0, :pswitch_data_0
 
+    .line 518
     :pswitch_0
     sget-object v0, Lcom/squareup/picasso/Picasso;->HANDLER:Landroid/os/Handler;
 
@@ -50,24 +55,29 @@
 
     goto :goto_1
 
+    .line 485
     :pswitch_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 486
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p0, p1}, Lcom/squareup/picasso/Dispatcher;->performResumeTag(Ljava/lang/Object;)V
 
     goto :goto_1
 
+    .line 480
     :pswitch_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 481
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p0, p1}, Lcom/squareup/picasso/Dispatcher;->performPauseTag(Ljava/lang/Object;)V
 
     goto :goto_1
 
+    .line 514
     :pswitch_3
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
@@ -87,17 +97,20 @@
 
     goto :goto_1
 
+    .line 509
     :pswitch_4
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/net/NetworkInfo;
 
+    .line 510
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p0, p1}, Lcom/squareup/picasso/Dispatcher;->performNetworkStateChange(Landroid/net/NetworkInfo;)V
 
     goto :goto_1
 
+    .line 505
     :pswitch_5
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
@@ -105,55 +118,65 @@
 
     goto :goto_1
 
+    .line 500
     :pswitch_6
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/squareup/picasso/BitmapHunter;
 
+    .line 501
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p0, p1, v1}, Lcom/squareup/picasso/Dispatcher;->performError(Lcom/squareup/picasso/BitmapHunter;Z)V
 
     goto :goto_1
 
+    .line 495
     :pswitch_7
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/squareup/picasso/BitmapHunter;
 
+    .line 496
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p0, p1}, Lcom/squareup/picasso/Dispatcher;->performRetry(Lcom/squareup/picasso/BitmapHunter;)V
 
     goto :goto_1
 
+    .line 490
     :pswitch_8
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/squareup/picasso/BitmapHunter;
 
+    .line 491
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p0, p1}, Lcom/squareup/picasso/Dispatcher;->performComplete(Lcom/squareup/picasso/BitmapHunter;)V
 
     goto :goto_1
 
+    .line 475
     :pswitch_9
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/squareup/picasso/Action;
 
+    .line 476
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p0, p1}, Lcom/squareup/picasso/Dispatcher;->performCancel(Lcom/squareup/picasso/Action;)V
 
     goto :goto_1
 
+    .line 470
     :pswitch_a
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/squareup/picasso/Action;
 
+    .line 471
     iget-object p0, p0, Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->dispatcher:Lcom/squareup/picasso/Dispatcher;
 
     invoke-virtual {p0, p1}, Lcom/squareup/picasso/Dispatcher;->performSubmit(Lcom/squareup/picasso/Action;)V

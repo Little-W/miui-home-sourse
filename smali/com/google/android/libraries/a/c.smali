@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/libraries/a/c;
 .super Ljava/lang/Object;
+.source "ILauncherOverlay.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

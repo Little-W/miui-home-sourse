@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlin/sequences/Sequence;
 .super Ljava/lang/Object;
+.source "Sequence.kt"
 
 
 # annotations

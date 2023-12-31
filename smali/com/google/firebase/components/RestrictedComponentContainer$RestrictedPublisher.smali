@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/components/RestrictedComponentContainer$RestrictedPublisher;
 .super Ljava/lang/Object;
+.source "RestrictedComponentContainer.java"
 
 # interfaces
 .implements Lcom/google/firebase/events/Publisher;
@@ -44,10 +45,13 @@
         }
     .end annotation
 
+    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 162
     iput-object p1, p0, Lcom/google/firebase/components/RestrictedComponentContainer$RestrictedPublisher;->allowedPublishedEvents:Ljava/util/Set;
 
+    .line 163
     iput-object p2, p0, Lcom/google/firebase/components/RestrictedComponentContainer$RestrictedPublisher;->delegate:Lcom/google/firebase/events/Publisher;
 
     return-void

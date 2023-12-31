@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/MarketService$1;
 .super Ljava/lang/Object;
+.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -32,6 +33,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketService;Lcom/market/sdk/compat/FutureTaskCompat;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
+    .line 50
     iput-object p1, p0, Lcom/market/sdk/MarketService$1;->this$0:Lcom/market/sdk/MarketService;
 
     iput-object p2, p0, Lcom/market/sdk/MarketService$1;->val$future:Lcom/market/sdk/compat/FutureTaskCompat;
@@ -57,6 +59,7 @@
         }
     .end annotation
 
+    .line 53
     iget-object v0, p0, Lcom/market/sdk/MarketService$1;->val$future:Lcom/market/sdk/compat/FutureTaskCompat;
 
     iget-object v1, p0, Lcom/market/sdk/MarketService$1;->this$0:Lcom/market/sdk/MarketService;

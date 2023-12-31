@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     return-void
@@ -43,23 +44,27 @@
     :cond_0
     const-string v0, "com.zui.deviceidservice.IDeviceidInterface"
 
+    .line 203
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
+    .line 204
     instance-of v1, v0, Lcom/xiaomi/onetrack/util/oaid/a/c;
 
     if-nez v1, :cond_1
 
     goto :goto_0
 
+    .line 208
     :cond_1
     check-cast v0, Lcom/xiaomi/onetrack/util/oaid/a/c;
 
     return-object v0
 
+    .line 205
     :cond_2
     :goto_0
     new-instance v0, Lcom/xiaomi/onetrack/util/oaid/a/c$a$a;
@@ -105,20 +110,24 @@
 
     if-eq p1, v2, :cond_0
 
+    .line 193
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 190
     :cond_0
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v0
 
+    .line 184
     :cond_1
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 185
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -127,15 +136,19 @@
 
     move-result-object p0
 
+    .line 186
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 187
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v0
 
+    .line 178
     :cond_2
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 179
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -144,47 +157,61 @@
 
     move-result-object p0
 
+    .line 180
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 181
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v0
 
+    .line 172
     :cond_3
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 173
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/util/oaid/a/c$a;->c()Z
 
     move-result p0
 
+    .line 174
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 175
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     return v0
 
+    .line 166
     :cond_4
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 167
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/util/oaid/a/c$a;->b()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 168
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 169
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v0
 
+    .line 160
     :cond_5
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 161
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/util/oaid/a/c$a;->a()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 162
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 163
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v0

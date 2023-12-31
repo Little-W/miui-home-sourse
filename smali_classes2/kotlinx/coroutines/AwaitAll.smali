@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/AwaitAll;
 .super Ljava/lang/Object;
+.source "Await.kt"
 
 
 # annotations
@@ -69,10 +70,12 @@
         }
     .end annotation
 
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/AwaitAll;->deferreds:[Lkotlinx/coroutines/Deferred;
 
+    .line 70
     iget-object p1, p0, Lkotlinx/coroutines/AwaitAll;->deferreds:[Lkotlinx/coroutines/Deferred;
 
     array-length p1, p1
@@ -85,6 +88,7 @@
 .method public static final synthetic access$getDeferreds$p(Lkotlinx/coroutines/AwaitAll;)[Lkotlinx/coroutines/Deferred;
     .locals 0
 
+    .line 69
     iget-object p0, p0, Lkotlinx/coroutines/AwaitAll;->deferreds:[Lkotlinx/coroutines/Deferred;
 
     return-object p0
@@ -105,6 +109,7 @@
         }
     .end annotation
 
+    .line 130
     new-instance v0, Lkotlinx/coroutines/CancellableContinuationImpl;
 
     invoke-static {p1}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->intercepted(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -115,12 +120,15 @@
 
     invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/CancellableContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;I)V
 
+    .line 136
     invoke-virtual {v0}, Lkotlinx/coroutines/CancellableContinuationImpl;->initCancellability()V
 
+    .line 137
     move-object v1, v0
 
     check-cast v1, Lkotlinx/coroutines/CancellableContinuation;
 
+    .line 75
     invoke-static {p0}, Lkotlinx/coroutines/AwaitAll;->access$getDeferreds$p(Lkotlinx/coroutines/AwaitAll;)[Lkotlinx/coroutines/Deferred;
 
     move-result-object v2
@@ -146,14 +154,17 @@
 
     move-result v6
 
+    .line 76
     invoke-static {p0}, Lkotlinx/coroutines/AwaitAll;->access$getDeferreds$p(Lkotlinx/coroutines/AwaitAll;)[Lkotlinx/coroutines/Deferred;
 
     move-result-object v7
 
     aget-object v6, v7, v6
 
+    .line 77
     invoke-interface {v6}, Lkotlinx/coroutines/Deferred;->start()Z
 
+    .line 78
     new-instance v7, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;
 
     move-object v8, v6
@@ -162,29 +173,35 @@
 
     invoke-direct {v7, p0, v1, v8}, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;-><init>(Lkotlinx/coroutines/AwaitAll;Lkotlinx/coroutines/CancellableContinuation;Lkotlinx/coroutines/Job;)V
 
+    .line 79
     move-object v8, v7
 
     check-cast v8, Lkotlinx/coroutines/CompletionHandlerBase;
 
+    .line 138
     check-cast v8, Lkotlin/jvm/functions/Function1;
 
+    .line 79
     invoke-interface {v6, v8}, Lkotlinx/coroutines/Deferred;->invokeOnCompletion(Lkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/DisposableHandle;
 
     move-result-object v6
 
     invoke-virtual {v7, v6}, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->setHandle(Lkotlinx/coroutines/DisposableHandle;)V
 
+    .line 78
     aput-object v7, v3, v5
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
+    .line 82
     :cond_0
     new-instance v2, Lkotlinx/coroutines/AwaitAll$DisposeHandlersOnCancel;
 
     invoke-direct {v2, p0, v3}, Lkotlinx/coroutines/AwaitAll$DisposeHandlersOnCancel;-><init>(Lkotlinx/coroutines/AwaitAll;[Lkotlinx/coroutines/AwaitAll$AwaitAllNode;)V
 
+    .line 139
     array-length p0, v3
 
     :goto_1
@@ -192,12 +209,14 @@
 
     aget-object v5, v3, v4
 
+    .line 84
     invoke-virtual {v5, v2}, Lkotlinx/coroutines/AwaitAll$AwaitAllNode;->setDisposer(Lkotlinx/coroutines/AwaitAll$DisposeHandlersOnCancel;)V
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
+    .line 87
     :cond_1
     invoke-interface {v1}, Lkotlinx/coroutines/CancellableContinuation;->isCompleted()Z
 
@@ -205,22 +224,28 @@
 
     if-eqz p0, :cond_2
 
+    .line 89
     invoke-virtual {v2}, Lkotlinx/coroutines/AwaitAll$DisposeHandlersOnCancel;->disposeAll()V
 
     goto :goto_2
 
+    .line 91
     :cond_2
     check-cast v2, Lkotlinx/coroutines/CancelHandlerBase;
 
+    .line 141
     check-cast v2, Lkotlin/jvm/functions/Function1;
 
+    .line 91
     invoke-interface {v1, v2}, Lkotlinx/coroutines/CancellableContinuation;->invokeOnCancellation(Lkotlin/jvm/functions/Function1;)V
 
+    .line 142
     :goto_2
     invoke-virtual {v0}, Lkotlinx/coroutines/CancellableContinuationImpl;->getResult()Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 129
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     move-result-object v0

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/internal/measurement/zzfe;
 .super Lcom/google/android/gms/internal/measurement/zzek;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -48,10 +49,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzek;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzfe;->zza:Lcom/google/android/gms/internal/measurement/zzfc;
 
+    .line 3
     iput p2, p0, Lcom/google/android/gms/internal/measurement/zzfe;->zzb:I
 
     return-void
@@ -66,6 +70,7 @@
         .end annotation
     .end param
 
+    .line 9
     invoke-super {p0, p1}, Lcom/google/android/gms/internal/measurement/zzek;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -76,6 +81,7 @@
 .method public bridge synthetic hashCode()I
     .locals 0
 
+    .line 8
     invoke-super {p0}, Lcom/google/android/gms/internal/measurement/zzek;->hashCode()I
 
     move-result p0
@@ -86,6 +92,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 7
     invoke-super {p0}, Lcom/google/android/gms/internal/measurement/zzek;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -96,6 +103,7 @@
 .method public final synthetic zza()Ljava/util/Map;
     .locals 0
 
+    .line 11
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfe;->zza:Lcom/google/android/gms/internal/measurement/zzfc;
 
     return-object p0
@@ -110,6 +118,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     invoke-super {p0, p1}, Lcom/google/android/gms/internal/measurement/zzek;->zza(Ljava/lang/Object;)Z
 
     move-result p0
@@ -138,6 +147,7 @@
         }
     .end annotation
 
+    .line 6
     new-instance p0, Ljava/lang/AssertionError;
 
     const-string v0, "should never be called"

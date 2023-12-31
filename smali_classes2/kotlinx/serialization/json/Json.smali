@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/json/Json;
 .super Ljava/lang/Object;
+.source "Json.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/StringFormat;
@@ -39,6 +40,7 @@
 .method private constructor <init>(Lkotlinx/serialization/json/internal/JsonConf;)V
     .locals 0
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/json/Json;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
@@ -49,6 +51,7 @@
 .method public synthetic constructor <init>(Lkotlinx/serialization/json/internal/JsonConf;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 51
     invoke-direct {p0, p1}, Lkotlinx/serialization/json/Json;-><init>(Lkotlinx/serialization/json/internal/JsonConf;)V
 
     return-void
@@ -78,20 +81,24 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 83
     new-instance v0, Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-direct {v0, p2}, Lkotlinx/serialization/json/internal/JsonReader;-><init>(Ljava/lang/String;)V
 
+    .line 84
     new-instance p2, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;
 
     sget-object v1, Lkotlinx/serialization/json/internal/WriteMode;->OBJ:Lkotlinx/serialization/json/internal/WriteMode;
 
     invoke-direct {p2, p0, v1, v0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;-><init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/internal/WriteMode;Lkotlinx/serialization/json/internal/JsonReader;)V
 
+    .line 85
     invoke-virtual {p2, p1}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->decodeSerializableValue(Lkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 86
     invoke-virtual {v0}, Lkotlinx/serialization/json/internal/JsonReader;->isDone()Z
 
     move-result p1
@@ -145,14 +152,18 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 68
     new-instance v1, Lkotlinx/serialization/json/internal/StreamingJsonEncoder;
 
+    .line 70
     sget-object v2, Lkotlinx/serialization/json/internal/WriteMode;->OBJ:Lkotlinx/serialization/json/internal/WriteMode;
 
+    .line 71
     invoke-static {}, Lkotlinx/serialization/json/internal/WriteMode;->values()[Lkotlinx/serialization/json/internal/WriteMode;
 
     move-result-object v3
@@ -161,10 +172,13 @@
 
     new-array v3, v3, [Lkotlinx/serialization/json/JsonEncoder;
 
+    .line 68
     invoke-direct {v1, v0, p0, v2, v3}, Lkotlinx/serialization/json/internal/StreamingJsonEncoder;-><init>(Ljava/lang/StringBuilder;Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/internal/WriteMode;[Lkotlinx/serialization/json/JsonEncoder;)V
 
+    .line 73
     invoke-virtual {v1, p1, p2}, Lkotlinx/serialization/json/internal/StreamingJsonEncoder;->encodeSerializableValue(Lkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)V
 
+    .line 74
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -179,6 +193,7 @@
 .method public final getConfiguration$kotlinx_serialization_json()Lkotlinx/serialization/json/internal/JsonConf;
     .locals 0
 
+    .line 51
     iget-object p0, p0, Lkotlinx/serialization/json/Json;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
 
     return-object p0
@@ -187,6 +202,7 @@
 .method public getSerializersModule()Lkotlinx/serialization/modules/SerializersModule;
     .locals 0
 
+    .line 54
     iget-object p0, p0, Lkotlinx/serialization/json/Json;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
 
     iget-object p0, p0, Lkotlinx/serialization/json/internal/JsonConf;->serializersModule:Lkotlinx/serialization/modules/SerializersModule;

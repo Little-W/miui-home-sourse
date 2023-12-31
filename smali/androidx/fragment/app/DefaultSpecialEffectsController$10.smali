@@ -1,5 +1,6 @@
 .class synthetic Landroidx/fragment/app/DefaultSpecialEffectsController$10;
 .super Ljava/lang/Object;
+.source "DefaultSpecialEffectsController.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 63
     invoke-static {}, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->values()[Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     move-result-object v0

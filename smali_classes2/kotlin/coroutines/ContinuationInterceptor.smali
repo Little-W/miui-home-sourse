@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlin/coroutines/ContinuationInterceptor;
 .super Ljava/lang/Object;
+.source "ContinuationInterceptor.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/CoroutineContext$Element;

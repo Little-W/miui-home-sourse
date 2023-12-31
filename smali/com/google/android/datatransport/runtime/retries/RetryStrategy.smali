@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/datatransport/runtime/retries/RetryStrategy;
 .super Ljava/lang/Object;
+.source "RetryStrategy.java"
 
 
 # annotations

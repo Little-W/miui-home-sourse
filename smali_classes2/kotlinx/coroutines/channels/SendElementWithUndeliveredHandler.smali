@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/SendElementWithUndeliveredHandler;
 .super Lkotlinx/coroutines/channels/SendElement;
+.source "AbstractChannel.kt"
 
 
 # annotations
@@ -44,6 +45,7 @@
         }
     .end annotation
 
+    .line 1086
     invoke-direct {p0, p1, p2}, Lkotlinx/coroutines/channels/SendElement;-><init>(Ljava/lang/Object;Lkotlinx/coroutines/CancellableContinuation;)V
 
     iput-object p3, p0, Lkotlinx/coroutines/channels/SendElementWithUndeliveredHandler;->onUndeliveredElement:Lkotlin/jvm/functions/Function1;
@@ -56,6 +58,7 @@
 .method public remove()Z
     .locals 1
 
+    .line 1088
     invoke-super {p0}, Lkotlinx/coroutines/channels/SendElement;->remove()Z
 
     move-result v0
@@ -66,6 +69,7 @@
 
     return p0
 
+    .line 1090
     :cond_0
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/SendElementWithUndeliveredHandler;->undeliveredElement()V
 
@@ -77,6 +81,7 @@
 .method public undeliveredElement()V
     .locals 2
 
+    .line 1095
     iget-object v0, p0, Lkotlinx/coroutines/channels/SendElementWithUndeliveredHandler;->onUndeliveredElement:Lkotlin/jvm/functions/Function1;
 
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/SendElementWithUndeliveredHandler;->getPollResult()Ljava/lang/Object;

@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;
 .super Ljava/lang/Object;
+.source "FirebaseInstallationServiceClient.java"
 
 
 # static fields
@@ -40,6 +41,7 @@
 
     const-string v0, "[0-9]+s"
 
+    .line 103
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -48,6 +50,7 @@
 
     const-string v0, "UTF-8"
 
+    .line 106
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -72,14 +75,19 @@
         }
     .end annotation
 
+    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 125
     iput-object p1, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->context:Landroid/content/Context;
 
+    .line 126
     iput-object p2, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->userAgentPublisher:Lcom/google/firebase/inject/Provider;
 
+    .line 127
     iput-object p3, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->heartbeatInfo:Lcom/google/firebase/inject/Provider;
 
+    .line 128
     new-instance p1, Lcom/google/firebase/installations/remote/RequestLimiter;
 
     invoke-direct {p1}, Lcom/google/firebase/installations/remote/RequestLimiter;-><init>()V
@@ -104,6 +112,7 @@
 
     aput-object p2, v0, p1
 
+    .line 622
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -136,6 +145,7 @@
 
     const-string p0, "Firebase options used while communicating with Firebase server APIs: %s, %s%s"
 
+    .line 620
     invoke-static {p0, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -146,6 +156,7 @@
 .method private static buildCreateFirebaseInstallationRequestBody(Ljava/lang/String;Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 2
 
+    .line 267
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -153,22 +164,26 @@
 
     const-string v1, "fid"
 
+    .line 268
     invoke-virtual {v0, v1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p0, "appId"
 
+    .line 269
     invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p0, "authVersion"
 
     const-string p1, "FIS_v2"
 
+    .line 270
     invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p0, "sdkVersion"
 
     const-string p1, "a:17.0.0"
 
+    .line 271
     invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -178,6 +193,7 @@
     :catch_0
     move-exception p0
 
+    .line 274
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -188,6 +204,7 @@
 .method private static buildGenerateAuthTokenRequestBody()Lorg/json/JSONObject;
     .locals 3
 
+    .line 294
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -197,14 +214,17 @@
 
     const-string v2, "a:17.0.0"
 
+    .line 295
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
+    .line 297
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     const-string v2, "installation"
 
+    .line 298
     invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -214,6 +234,7 @@
     :catch_0
     move-exception v0
 
+    .line 301
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -228,6 +249,7 @@
 
     const/4 v1, 0x0
 
+    .line 577
     :try_start_0
     iget-object v2, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->context:Landroid/content/Context;
 
@@ -243,6 +265,7 @@
 
     if-nez v2, :cond_0
 
+    .line 580
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -270,6 +293,7 @@
     :cond_0
     const/4 v3, 0x0
 
+    .line 583
     invoke-static {v2, v3}, Lcom/google/android/gms/common/util/Hex;->bytesToStringUppercase([BZ)Ljava/lang/String;
 
     move-result-object p0
@@ -281,6 +305,7 @@
     :catch_0
     move-exception v2
 
+    .line 586
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -314,6 +339,7 @@
         }
     .end annotation
 
+    .line 364
     :try_start_0
     new-instance p0, Ljava/net/URL;
 
@@ -339,6 +365,7 @@
 
     aput-object p1, v1, v2
 
+    .line 365
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -352,6 +379,7 @@
     :catch_0
     move-exception p0
 
+    .line 369
     new-instance p1, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
     invoke-virtual {p0}, Ljava/net/MalformedURLException;->getMessage()Ljava/lang/String;
@@ -373,6 +401,7 @@
         }
     .end annotation
 
+    .line 234
     invoke-virtual {p0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -415,6 +444,7 @@
 
     const-string v1, "Firebase Installations can not communicate with Firebase server APIs due to invalid configuration. Please update your Firebase initialization process and set valid Firebase options (API key, Project ID, Application ID) when initializing Firebase."
 
+    .line 462
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -423,10 +453,12 @@
 .method private static logFisCommunicationError(Ljava/net/HttpURLConnection;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 611
     invoke-static {p0}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->readErrorResponse(Ljava/net/HttpURLConnection;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 612
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -435,8 +467,10 @@
 
     const-string v0, "Firebase-Installations"
 
+    .line 613
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 614
     invoke-static {p1, p2, p3}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->availableFirebaseOptions(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -455,6 +489,7 @@
         }
     .end annotation
 
+    .line 474
     :try_start_0
     invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
@@ -466,36 +501,44 @@
 
     const/16 v0, 0x2710
 
+    .line 480
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
     const/4 v1, 0x0
 
+    .line 481
     invoke-virtual {p1, v1}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
+    .line 482
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
     const-string v0, "application/json"
 
     const-string v1, "Content-Type"
 
+    .line 483
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "Accept"
 
+    .line 484
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Content-Encoding"
 
     const-string v1, "gzip"
 
+    .line 485
     invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Cache-Control"
 
     const-string v1, "no-cache"
 
+    .line 486
     invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 487
     iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -506,6 +549,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 488
     iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->heartbeatInfo:Lcom/google/firebase/inject/Provider;
 
     invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
@@ -522,8 +566,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 489
     iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->heartbeatInfo:Lcom/google/firebase/inject/Provider;
 
+    .line 490
     invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -536,12 +582,15 @@
 
     move-result-object v0
 
+    .line 491
     sget-object v1, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;->NONE:Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;
 
     if-eq v0, v1, :cond_0
 
+    .line 492
     iget-object v1, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->userAgentPublisher:Lcom/google/firebase/inject/Provider;
 
+    .line 493
     invoke-interface {v1}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v1
@@ -554,8 +603,10 @@
 
     const-string/jumbo v2, "x-firebase-client"
 
+    .line 492
     invoke-virtual {p1, v2, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 495
     invoke-virtual {v0}, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;->getCode()I
 
     move-result v0
@@ -566,8 +617,10 @@
 
     const-string/jumbo v1, "x-firebase-client-log-type"
 
+    .line 494
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 498
     :cond_0
     invoke-direct {p0}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->getFingerprintHashForPackage()Ljava/lang/String;
 
@@ -579,10 +632,12 @@
 
     const-string/jumbo p0, "x-goog-api-key"
 
+    .line 499
     invoke-virtual {p1, p0, p2}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p1
 
+    .line 476
     :catch_0
     new-instance p0, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
@@ -598,8 +653,10 @@
 .method static parseTokenExpirationTimestamp(Ljava/lang/String;)J
     .locals 2
 
+    .line 598
     sget-object v0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->EXPIRATION_TIMESTAMP_PATTERN:Ljava/util/regex/Pattern;
 
+    .line 599
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
@@ -610,10 +667,12 @@
 
     const-string v1, "Invalid Expiration Timestamp."
 
+    .line 598
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     if-eqz p0, :cond_1
 
+    .line 601
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -625,6 +684,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 603
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -658,10 +718,12 @@
         }
     .end annotation
 
+    .line 506
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object p0
 
+    .line 507
     new-instance p1, Landroid/util/JsonReader;
 
     new-instance v0, Ljava/io/InputStreamReader;
@@ -672,16 +734,20 @@
 
     invoke-direct {p1, v0}, Landroid/util/JsonReader;-><init>(Ljava/io/Reader;)V
 
+    .line 508
     invoke-static {}, Lcom/google/firebase/installations/remote/TokenResult;->builder()Lcom/google/firebase/installations/remote/TokenResult$Builder;
 
     move-result-object v0
 
+    .line 509
     invoke-static {}, Lcom/google/firebase/installations/remote/InstallationResponse;->builder()Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
 
     move-result-object v1
 
+    .line 512
     invoke-virtual {p1}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 513
     :goto_0
     invoke-virtual {p1}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -689,18 +755,21 @@
 
     if-eqz v2, :cond_7
 
+    .line 514
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "name"
 
+    .line 515
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 516
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v2
@@ -712,12 +781,14 @@
     :cond_0
     const-string v3, "fid"
 
+    .line 517
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 518
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v2
@@ -729,12 +800,14 @@
     :cond_1
     const-string v3, "refreshToken"
 
+    .line 519
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
+    .line 520
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v2
@@ -746,14 +819,17 @@
     :cond_2
     const-string v3, "authToken"
 
+    .line 521
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_6
 
+    .line 522
     invoke-virtual {p1}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 523
     :goto_1
     invoke-virtual {p1}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -761,18 +837,21 @@
 
     if-eqz v2, :cond_5
 
+    .line 524
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v2
 
     const-string/jumbo v3, "token"
 
+    .line 525
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
+    .line 526
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v2
@@ -784,12 +863,14 @@
     :cond_3
     const-string v3, "expiresIn"
 
+    .line 527
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
+    .line 529
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v2
@@ -798,15 +879,18 @@
 
     move-result-wide v2
 
+    .line 528
     invoke-virtual {v0, v2, v3}, Lcom/google/firebase/installations/remote/TokenResult$Builder;->setTokenExpirationTimestamp(J)Lcom/google/firebase/installations/remote/TokenResult$Builder;
 
     goto :goto_1
 
+    .line 531
     :cond_4
     invoke-virtual {p1}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_1
 
+    .line 534
     :cond_5
     invoke-virtual {v0}, Lcom/google/firebase/installations/remote/TokenResult$Builder;->build()Lcom/google/firebase/installations/remote/TokenResult;
 
@@ -814,22 +898,28 @@
 
     invoke-virtual {v1, v2}, Lcom/google/firebase/installations/remote/InstallationResponse$Builder;->setAuthToken(Lcom/google/firebase/installations/remote/TokenResult;)Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
 
+    .line 535
     invoke-virtual {p1}, Landroid/util/JsonReader;->endObject()V
 
     goto/16 :goto_0
 
+    .line 537
     :cond_6
     invoke-virtual {p1}, Landroid/util/JsonReader;->skipValue()V
 
     goto/16 :goto_0
 
+    .line 540
     :cond_7
     invoke-virtual {p1}, Landroid/util/JsonReader;->endObject()V
 
+    .line 541
     invoke-virtual {p1}, Landroid/util/JsonReader;->close()V
 
+    .line 542
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
+    .line 543
     sget-object p0, Lcom/google/firebase/installations/remote/InstallationResponse$ResponseCode;->OK:Lcom/google/firebase/installations/remote/InstallationResponse$ResponseCode;
 
     invoke-virtual {v1, p0}, Lcom/google/firebase/installations/remote/InstallationResponse$Builder;->setResponseCode(Lcom/google/firebase/installations/remote/InstallationResponse$ResponseCode;)Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
@@ -846,6 +936,7 @@
 .method private static readErrorResponse(Ljava/net/HttpURLConnection;)Ljava/lang/String;
     .locals 7
 
+    .line 628
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
 
     move-result-object v0
@@ -856,6 +947,7 @@
 
     return-object v1
 
+    .line 632
     :cond_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -867,11 +959,13 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
+    .line 634
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 635
     :goto_0
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -879,6 +973,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 636
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v3, 0xa
@@ -896,6 +991,7 @@
 
     const/4 v5, 0x0
 
+    .line 641
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v6
@@ -918,6 +1014,7 @@
 
     aput-object v0, v4, p0
 
+    .line 638
     invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -925,6 +1022,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 646
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_1
@@ -941,9 +1039,11 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 650
     :catch_1
     throw p0
 
+    .line 646
     :catch_2
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
@@ -963,10 +1063,12 @@
         }
     .end annotation
 
+    .line 549
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object p0
 
+    .line 550
     new-instance p1, Landroid/util/JsonReader;
 
     new-instance v0, Ljava/io/InputStreamReader;
@@ -977,12 +1079,15 @@
 
     invoke-direct {p1, v0}, Landroid/util/JsonReader;-><init>(Ljava/io/Reader;)V
 
+    .line 551
     invoke-static {}, Lcom/google/firebase/installations/remote/TokenResult;->builder()Lcom/google/firebase/installations/remote/TokenResult$Builder;
 
     move-result-object v0
 
+    .line 554
     invoke-virtual {p1}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 555
     :goto_0
     invoke-virtual {p1}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -990,18 +1095,21 @@
 
     if-eqz v1, :cond_2
 
+    .line 556
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v2, "token"
 
+    .line 557
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 558
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v1
@@ -1013,12 +1121,14 @@
     :cond_0
     const-string v2, "expiresIn"
 
+    .line 559
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 560
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v1
@@ -1031,18 +1141,23 @@
 
     goto :goto_0
 
+    .line 562
     :cond_1
     invoke-virtual {p1}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 565
     :cond_2
     invoke-virtual {p1}, Landroid/util/JsonReader;->endObject()V
 
+    .line 566
     invoke-virtual {p1}, Landroid/util/JsonReader;->close()V
 
+    .line 567
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
+    .line 569
     sget-object p0, Lcom/google/firebase/installations/remote/TokenResult$ResponseCode;->OK:Lcom/google/firebase/installations/remote/TokenResult$ResponseCode;
 
     invoke-virtual {v0, p0}, Lcom/google/firebase/installations/remote/TokenResult$Builder;->setResponseCode(Lcom/google/firebase/installations/remote/TokenResult$ResponseCode;)Lcom/google/firebase/installations/remote/TokenResult$Builder;
@@ -1064,6 +1179,7 @@
         }
     .end annotation
 
+    .line 222
     invoke-static {p2, p3}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->buildCreateFirebaseInstallationRequestBody(Ljava/lang/String;Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p0
@@ -1072,6 +1188,7 @@
 
     move-result-object p0
 
+    .line 221
     invoke-static {p1, p0}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->writeRequestBodyToOutputStream(Ljava/net/URLConnection;[B)V
 
     return-void
@@ -1085,6 +1202,7 @@
         }
     .end annotation
 
+    .line 281
     invoke-static {}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->buildGenerateAuthTokenRequestBody()Lorg/json/JSONObject;
 
     move-result-object p0
@@ -1093,6 +1211,7 @@
 
     move-result-object p0
 
+    .line 280
     invoke-static {p1, p0}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->writeRequestBodyToOutputStream(Ljava/net/URLConnection;[B)V
 
     return-void
@@ -1106,24 +1225,29 @@
         }
     .end annotation
 
+    .line 239
     invoke-virtual {p0}, Ljava/net/URLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 243
     new-instance v0, Ljava/util/zip/GZIPOutputStream;
 
     invoke-direct {v0, p0}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
 
+    .line 245
     :try_start_0
     invoke-virtual {v0, p1}, Ljava/util/zip/GZIPOutputStream;->write([B)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 248
     :try_start_1
     invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->close()V
 
+    .line 249
     invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -1134,16 +1258,20 @@
     :catchall_0
     move-exception p1
 
+    .line 248
     :try_start_2
     invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->close()V
 
+    .line 249
     invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 253
     :catch_1
     throw p1
 
+    .line 241
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -1164,6 +1292,7 @@
         }
     .end annotation
 
+    .line 157
     iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->requestLimiter:Lcom/google/firebase/installations/remote/RequestLimiter;
 
     invoke-virtual {v0}, Lcom/google/firebase/installations/remote/RequestLimiter;->isRequestAllowed()Z
@@ -1184,10 +1313,12 @@
 
     const-string v4, "projects/%s/installations"
 
+    .line 163
     invoke-static {v4, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 164
     invoke-direct {p0, v2}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->getFullyQualifiedRequestUri(Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object v2
@@ -1197,8 +1328,10 @@
 
     const v4, 0x8001
 
+    .line 167
     invoke-static {v4}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
+    .line 168
     invoke-direct {p0, v2, p1}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->openHttpURLConnection(Ljava/net/URL;Ljava/lang/String;)Ljava/net/HttpURLConnection;
 
     move-result-object v4
@@ -1206,33 +1339,41 @@
     :try_start_0
     const-string v5, "POST"
 
+    .line 171
     invoke-virtual {v4, v5}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
+    .line 172
     invoke-virtual {v4, v0}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
     if-eqz p5, :cond_0
 
     const-string/jumbo v5, "x-goog-fis-android-iid-migration-auth"
 
+    .line 176
     invoke-virtual {v4, v5, p5}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 179
     :cond_0
     invoke-direct {p0, v4, p2, p4}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->writeFIDCreateRequestBodyToOutputStream(Ljava/net/HttpURLConnection;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 181
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v5
 
+    .line 182
     iget-object v6, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->requestLimiter:Lcom/google/firebase/installations/remote/RequestLimiter;
 
     invoke-virtual {v6, v5}, Lcom/google/firebase/installations/remote/RequestLimiter;->setNextRequestTime(I)V
 
+    .line 184
     invoke-static {v5}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->isSuccessfulResponseCode(I)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
+    .line 185
     invoke-direct {p0, v4}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->readCreateResponse(Ljava/net/HttpURLConnection;)Lcom/google/firebase/installations/remote/InstallationResponse;
 
     move-result-object p0
@@ -1241,13 +1382,16 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 208
     :goto_1
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 209
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
 
     return-object p0
 
+    .line 188
     :cond_1
     :try_start_1
     invoke-static {v4, p4, p1, p3}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->logFisCommunicationError(Ljava/net/HttpURLConnection;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -1266,9 +1410,11 @@
 
     goto :goto_2
 
+    .line 201
     :cond_2
     invoke-static {}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->logBadConfigError()V
 
+    .line 204
     invoke-static {}, Lcom/google/firebase/installations/remote/InstallationResponse;->builder()Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
 
     move-result-object v5
@@ -1285,6 +1431,7 @@
 
     goto :goto_1
 
+    .line 191
     :cond_3
     new-instance v5, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
@@ -1303,22 +1450,28 @@
     :catchall_0
     move-exception p0
 
+    .line 208
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 209
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
 
+    .line 210
     throw p0
 
+    .line 208
     :catch_0
     :goto_2
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 209
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 213
     :cond_4
     new-instance p0, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
@@ -1328,6 +1481,7 @@
 
     throw p0
 
+    .line 158
     :cond_5
     new-instance p0, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
@@ -1346,6 +1500,7 @@
         }
     .end annotation
 
+    .line 397
     iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->requestLimiter:Lcom/google/firebase/installations/remote/RequestLimiter;
 
     invoke-virtual {v0}, Lcom/google/firebase/installations/remote/RequestLimiter;->isRequestAllowed()Z
@@ -1370,10 +1525,12 @@
 
     const-string p2, "projects/%s/installations/%s/authTokens:generate"
 
+    .line 404
     invoke-static {p2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 405
     invoke-direct {p0, p2}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->getFullyQualifiedRequestUri(Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object p2
@@ -1383,8 +1540,10 @@
 
     const v0, 0x8003
 
+    .line 408
     invoke-static {v0}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
+    .line 409
     invoke-direct {p0, p2, p1}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->openHttpURLConnection(Ljava/net/URL;Ljava/lang/String;)Ljava/net/HttpURLConnection;
 
     move-result-object v0
@@ -1392,10 +1551,12 @@
     :try_start_0
     const-string v4, "POST"
 
+    .line 411
     invoke-virtual {v0, v4}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
     const-string v4, "Authorization"
 
+    .line 412
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1412,24 +1573,30 @@
 
     invoke-virtual {v0, v4, v5}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 413
     invoke-virtual {v0, v3}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
+    .line 415
     invoke-direct {p0, v0}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->writeGenerateAuthTokenRequestBodyToOutputStream(Ljava/net/HttpURLConnection;)V
 
+    .line 417
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v4
 
+    .line 418
     iget-object v5, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->requestLimiter:Lcom/google/firebase/installations/remote/RequestLimiter;
 
     invoke-virtual {v5, v4}, Lcom/google/firebase/installations/remote/RequestLimiter;->setNextRequestTime(I)V
 
+    .line 420
     invoke-static {v4}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->isSuccessfulResponseCode(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
+    .line 421
     invoke-direct {p0, v0}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->readGenerateAuthTokenResponse(Ljava/net/HttpURLConnection;)Lcom/google/firebase/installations/remote/TokenResult;
 
     move-result-object p0
@@ -1438,9 +1605,11 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 448
     :goto_1
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 449
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
 
     return-object p0
@@ -1448,6 +1617,7 @@
     :cond_0
     const/4 v5, 0x0
 
+    .line 424
     :try_start_1
     invoke-static {v0, v5, p1, p3}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->logFisCommunicationError(Ljava/net/HttpURLConnection;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1476,9 +1646,11 @@
 
     goto :goto_3
 
+    .line 441
     :cond_2
     invoke-static {}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->logBadConfigError()V
 
+    .line 443
     invoke-static {}, Lcom/google/firebase/installations/remote/TokenResult;->builder()Lcom/google/firebase/installations/remote/TokenResult$Builder;
 
     move-result-object v4
@@ -1495,6 +1667,7 @@
 
     goto :goto_1
 
+    .line 431
     :cond_3
     new-instance v4, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
@@ -1506,6 +1679,7 @@
 
     throw v4
 
+    .line 427
     :cond_4
     :goto_2
     invoke-static {}, Lcom/google/firebase/installations/remote/TokenResult;->builder()Lcom/google/firebase/installations/remote/TokenResult$Builder;
@@ -1531,22 +1705,28 @@
     :catchall_0
     move-exception p0
 
+    .line 448
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 449
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
 
+    .line 450
     throw p0
 
+    .line 448
     :catch_0
     :goto_3
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 449
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
 
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_0
 
+    .line 452
     :cond_5
     new-instance p0, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
@@ -1556,6 +1736,7 @@
 
     throw p0
 
+    .line 398
     :cond_6
     new-instance p0, Lcom/google/firebase/installations/FirebaseInstallationsException;
 

@@ -1,5 +1,6 @@
 .class final Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 .super Ljava/lang/Object;
+.source "SQLiteSession.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 968
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +39,7 @@
 .method synthetic constructor <init>(Lio/requery/android/database/sqlite/SQLiteSession$1;)V
     .locals 0
 
+    .line 968
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;
 .super Ljava/lang/Object;
+.source "StreamingJsonEncoder.kt"
 
 
 # annotations
@@ -39,6 +40,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
@@ -47,6 +49,7 @@
 
     const/4 p1, 0x1
 
+    .line 185
     iput-boolean p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->writingFirst:Z
 
     return-void
@@ -57,6 +60,7 @@
 .method public final getWritingFirst()Z
     .locals 0
 
+    .line 185
     iget-boolean p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->writingFirst:Z
 
     return p0
@@ -67,6 +71,7 @@
 
     const/4 v0, 0x1
 
+    .line 189
     iput-boolean v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->writingFirst:Z
 
     iget v1, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->level:I
@@ -83,8 +88,10 @@
 
     const/4 v0, 0x0
 
+    .line 197
     iput-boolean v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->writingFirst:Z
 
+    .line 198
     iget-object v1, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->json:Lkotlinx/serialization/json/Json;
 
     invoke-virtual {v1}, Lkotlinx/serialization/json/Json;->getConfiguration$kotlinx_serialization_json()Lkotlinx/serialization/json/internal/JsonConf;
@@ -97,8 +104,10 @@
 
     const-string v1, "\n"
 
+    .line 199
     invoke-virtual {p0, v1}, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->print(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 200
     iget v1, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->level:I
 
     :goto_0
@@ -125,6 +134,7 @@
 .method public final print(B)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 213
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -139,6 +149,7 @@
 .method public final print(C)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 209
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -149,6 +160,7 @@
 .method public final print(D)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 212
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
@@ -159,6 +171,7 @@
 .method public final print(F)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 211
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
@@ -169,6 +182,7 @@
 .method public final print(I)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 215
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -179,6 +193,7 @@
 .method public final print(J)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 216
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
@@ -193,6 +208,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 210
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -203,6 +219,7 @@
 .method public final print(S)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 214
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -217,6 +234,7 @@
 .method public final print(Z)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 217
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
@@ -231,6 +249,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 218
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->sb:Ljava/lang/StringBuilder;
 
     invoke-static {p0, p1}, Lkotlinx/serialization/json/internal/StringOpsKt;->printQuoted(Ljava/lang/StringBuilder;Ljava/lang/String;)V
@@ -241,6 +260,7 @@
 .method public final space()V
     .locals 1
 
+    .line 205
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->json:Lkotlinx/serialization/json/Json;
 
     invoke-virtual {v0}, Lkotlinx/serialization/json/Json;->getConfiguration$kotlinx_serialization_json()Lkotlinx/serialization/json/internal/JsonConf;
@@ -253,6 +273,7 @@
 
     const/16 v0, 0x20
 
+    .line 206
     invoke-virtual {p0, v0}, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->print(C)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -262,6 +283,7 @@
 .method public final unIndent()V
     .locals 1
 
+    .line 193
     iget v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonEncoder$Composer;->level:I
 
     add-int/lit8 v0, v0, -0x1

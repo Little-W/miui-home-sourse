@@ -22,6 +22,7 @@
 
     return v0
 
+    .line 3
     :cond_0
     div-int/lit16 p0, p0, 0x3e8
 

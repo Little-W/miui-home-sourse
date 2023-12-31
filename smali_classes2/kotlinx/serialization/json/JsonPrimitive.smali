@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/json/JsonPrimitive;
 .super Lkotlinx/serialization/json/JsonElement;
+.source "JsonElement.kt"
 
 
 # annotations
@@ -38,6 +39,7 @@
 
     const/4 v0, 0x0
 
+    .line 30
     invoke-direct {p0, v0}, Lkotlinx/serialization/json/JsonElement;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
@@ -46,6 +48,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonPrimitive;-><init>()V
 
     return-void
@@ -59,6 +62,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 45
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonPrimitive;->getContent()Ljava/lang/String;
 
     move-result-object p0

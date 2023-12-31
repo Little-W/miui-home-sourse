@@ -1,5 +1,6 @@
 .class public interface abstract Lokhttp3/internal/io/FileSystem;
 .super Ljava/lang/Object;
+.source "FileSystem.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 42
     new-instance v0, Lokhttp3/internal/io/FileSystem$1;
 
     invoke-direct {v0}, Lokhttp3/internal/io/FileSystem$1;-><init>()V

@@ -1,5 +1,6 @@
 .class final Landroidx/viewpager2/widget/ScrollEventAdapter$ScrollEventValues;
 .super Ljava/lang/Object;
+.source "ScrollEventAdapter.java"
 
 
 # annotations
@@ -27,14 +28,17 @@
 
     const/4 v0, -0x1
 
+    .line 456
     iput v0, p0, Landroidx/viewpager2/widget/ScrollEventAdapter$ScrollEventValues;->mPosition:I
 
     const/4 v0, 0x0
 
+    .line 457
     iput v0, p0, Landroidx/viewpager2/widget/ScrollEventAdapter$ScrollEventValues;->mOffset:F
 
     const/4 v0, 0x0
 
+    .line 458
     iput v0, p0, Landroidx/viewpager2/widget/ScrollEventAdapter$ScrollEventValues;->mOffsetPx:I
 
     return-void

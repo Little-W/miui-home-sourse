@@ -1,5 +1,6 @@
 .class interface abstract Lcom/mi/globallauncher/view/ToolbarTapTarget$ToolbarProxy;
 .super Ljava/lang/Object;
+.source "ToolbarTapTarget.java"
 
 
 # annotations

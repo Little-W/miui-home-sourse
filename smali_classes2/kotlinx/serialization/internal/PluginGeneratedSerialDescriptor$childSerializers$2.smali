@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$childSerializers$2;
 .super Lkotlin/jvm/internal/Lambda;
+.source "PluginGeneratedSerialDescriptor.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -48,6 +49,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 17
     invoke-virtual {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$childSerializers$2;->invoke()[Lkotlinx/serialization/KSerializer;
 
     move-result-object p0
@@ -65,6 +67,7 @@
         }
     .end annotation
 
+    .line 37
     iget-object p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$childSerializers$2;->this$0:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
 
     invoke-static {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->access$getGeneratedSerializer$p(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)Lkotlinx/serialization/internal/GeneratedSerializer;

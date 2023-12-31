@@ -1,5 +1,6 @@
 .class Lcom/android/wm/shell/util/GroupedRecentTaskInfo$1;
 .super Ljava/lang/Object;
+.source "GroupedRecentTaskInfo.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
     .locals 0
 
+    .line 24
     new-instance p0, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
 
     invoke-direct {p0, p1}, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;-><init>(Landroid/os/Parcel;)V
@@ -49,6 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 22
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/util/GroupedRecentTaskInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
 
     move-result-object p0
@@ -59,6 +63,7 @@
 .method public newArray(I)[Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
     .locals 0
 
+    .line 28
     new-array p0, p1, [Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
 
     return-object p0
@@ -67,6 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 22
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/util/GroupedRecentTaskInfo$1;->newArray(I)[Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
 
     move-result-object p0

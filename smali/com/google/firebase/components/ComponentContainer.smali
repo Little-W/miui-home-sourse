@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/components/ComponentContainer;
 .super Ljava/lang/Object;
+.source "ComponentContainer.java"
 
 
 # virtual methods

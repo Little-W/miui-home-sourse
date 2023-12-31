@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/BranchLocalError;
 .super Ljava/lang/Exception;
+.source "SourceFile"
 
 
 # annotations

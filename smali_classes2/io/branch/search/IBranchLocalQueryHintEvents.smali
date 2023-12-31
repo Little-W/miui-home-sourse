@@ -1,5 +1,6 @@
 .class public interface abstract Lio/branch/search/IBranchLocalQueryHintEvents;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods

@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/channels/LinkedListChannel;
 .super Lkotlinx/coroutines/channels/AbstractChannel;
+.source "LinkedListChannel.kt"
 
 
 # annotations
@@ -27,6 +28,7 @@
         }
     .end annotation
 
+    .line 20
     invoke-direct {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;-><init>(Lkotlin/jvm/functions/Function1;)V
 
     return-void
@@ -75,11 +77,13 @@
         }
     .end annotation
 
+    .line 29
     :cond_0
     invoke-super {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;->offerInternal(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 31
     sget-object v1, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_SUCCESS:Lkotlinx/coroutines/internal/Symbol;
 
     if-ne v0, v1, :cond_1
@@ -88,21 +92,25 @@
 
     return-object p0
 
+    .line 32
     :cond_1
     sget-object v1, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
     if-ne v0, v1, :cond_3
 
+    .line 33
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/channels/LinkedListChannel;->sendBuffered(Ljava/lang/Object;)Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
+    .line 34
     sget-object p0, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_SUCCESS:Lkotlinx/coroutines/internal/Symbol;
 
     return-object p0
 
+    .line 35
     :cond_2
     instance-of v1, v0, Lkotlinx/coroutines/channels/Closed;
 
@@ -110,6 +118,7 @@
 
     return-object v0
 
+    .line 39
     :cond_3
     instance-of p0, v0, Lkotlinx/coroutines/channels/Closed;
 
@@ -117,6 +126,7 @@
 
     return-object v0
 
+    .line 40
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 

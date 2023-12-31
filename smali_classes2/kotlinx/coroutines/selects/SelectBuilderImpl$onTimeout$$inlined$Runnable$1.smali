@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/selects/SelectBuilderImpl$onTimeout$$inlined$Runnable$1;
 .super Ljava/lang/Object;
+.source "Runnable.kt"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -44,6 +45,7 @@
 .method public final run()V
     .locals 1
 
+    .line 19
     iget-object v0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$onTimeout$$inlined$Runnable$1;->this$0:Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/selects/SelectBuilderImpl;->trySelect()Z
@@ -52,6 +54,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 20
     iget-object v0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$onTimeout$$inlined$Runnable$1;->$block$inlined:Lkotlin/jvm/functions/Function1;
 
     iget-object p0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$onTimeout$$inlined$Runnable$1;->this$0:Lkotlinx/coroutines/selects/SelectBuilderImpl;

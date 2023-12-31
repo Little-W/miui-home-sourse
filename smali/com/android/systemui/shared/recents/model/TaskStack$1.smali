@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/model/TaskStack$1;
 .super Ljava/lang/Object;
+.source "TaskStack.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -33,6 +34,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/model/TaskStack;)V
     .locals 0
 
+    .line 217
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack$1;->this$0:Lcom/android/systemui/shared/recents/model/TaskStack;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +47,7 @@
 .method public compare(Lcom/android/systemui/shared/recents/model/Task;Lcom/android/systemui/shared/recents/model/Task;)I
     .locals 2
 
+    .line 220
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
     move-result p0
@@ -61,6 +64,7 @@
 
     return p0
 
+    .line 222
     :cond_0
     invoke-virtual {p2}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
@@ -78,6 +82,7 @@
 
     return p0
 
+    .line 225
     :cond_1
     iget p0, p1, Lcom/android/systemui/shared/recents/model/Task;->temporarySortIndexInStack:I
 
@@ -97,6 +102,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 217
     check-cast p1, Lcom/android/systemui/shared/recents/model/Task;
 
     check-cast p2, Lcom/android/systemui/shared/recents/model/Task;

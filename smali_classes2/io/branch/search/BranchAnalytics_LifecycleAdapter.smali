@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchAnalytics_LifecycleAdapter;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/lifecycle/GeneratedAdapter;

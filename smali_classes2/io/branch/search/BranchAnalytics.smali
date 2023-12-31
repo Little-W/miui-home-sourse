@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchAnalytics;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/lifecycle/LifecycleObserver;

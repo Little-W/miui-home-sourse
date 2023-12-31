@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/PairSerializer;
 .super Lkotlinx/serialization/internal/KeyValueSerializer;
+.source "Tuples.kt"
 
 
 # annotations
@@ -45,8 +46,10 @@
 
     const/4 v0, 0x0
 
+    .line 92
     invoke-direct {p0, p1, p2, v0}, Lkotlinx/serialization/internal/KeyValueSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 93
     new-instance v0, Lkotlinx/serialization/internal/PairSerializer$descriptor$1;
 
     invoke-direct {v0, p1, p2}, Lkotlinx/serialization/internal/PairSerializer$descriptor$1;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;)V
@@ -73,6 +76,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 93
     iget-object p0, p0, Lkotlinx/serialization/internal/PairSerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -81,6 +85,7 @@
 .method public bridge synthetic getKey(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 89
     check-cast p1, Lkotlin/Pair;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/PairSerializer;->getKey(Lkotlin/Pair;)Ljava/lang/Object;
@@ -104,6 +109,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 97
     invoke-virtual {p1}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
 
     move-result-object p0
@@ -114,6 +120,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 89
     check-cast p1, Lkotlin/Pair;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/PairSerializer;->getValue(Lkotlin/Pair;)Ljava/lang/Object;
@@ -137,6 +144,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 98
     invoke-virtual {p1}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
 
     move-result-object p0
@@ -147,6 +155,7 @@
 .method public bridge synthetic toResult(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 89
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/PairSerializer;->toResult(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p0
@@ -164,6 +173,7 @@
         }
     .end annotation
 
+    .line 100
     invoke-static {p1, p2}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p0

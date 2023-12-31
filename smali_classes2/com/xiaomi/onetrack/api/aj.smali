@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/m;Ljava/util/Map;)V
     .locals 0
 
+    .line 269
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/aj;->b:Lcom/xiaomi/onetrack/api/m;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/aj;->a:Ljava/util/Map;
@@ -31,6 +32,7 @@
 
     const-string v0, "ot_profile_set"
 
+    .line 273
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/aj;->b:Lcom/xiaomi/onetrack/api/m;
 
@@ -38,6 +40,7 @@
 
     move-result-object v5
 
+    .line 274
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/aj;->a:Ljava/util/Map;
 
     const/4 v2, 0x0
@@ -46,6 +49,7 @@
 
     move-result-object v2
 
+    .line 275
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/aj;->b:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/api/m;->b(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/Configuration;
@@ -74,6 +78,7 @@
 
     move-result-object v1
 
+    .line 276
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/aj;->b:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {p0}, Lcom/xiaomi/onetrack/api/m;->a(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/api/j;
@@ -89,6 +94,7 @@
     :catch_0
     move-exception p0
 
+    .line 278
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

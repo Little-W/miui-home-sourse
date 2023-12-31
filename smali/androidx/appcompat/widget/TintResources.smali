@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/TintResources;
 .super Landroidx/appcompat/widget/ResourcesWrapper;
+.source "TintResources.java"
 
 
 # instance fields
@@ -18,8 +19,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/res/Resources;)V
     .locals 0
 
+    .line 35
     invoke-direct {p0, p2}, Landroidx/appcompat/widget/ResourcesWrapper;-><init>(Landroid/content/res/Resources;)V
 
+    .line 36
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -39,10 +42,12 @@
         }
     .end annotation
 
+    .line 46
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/TintResources;->getDrawableCanonical(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 47
     iget-object p0, p0, Landroidx/appcompat/widget/TintResources;->mContextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -55,6 +60,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 49
     invoke-static {}, Landroidx/appcompat/widget/ResourceManagerInternal;->get()Landroidx/appcompat/widget/ResourceManagerInternal;
 
     move-result-object v1

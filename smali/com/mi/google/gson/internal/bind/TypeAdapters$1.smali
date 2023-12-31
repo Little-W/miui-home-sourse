@@ -1,5 +1,6 @@
 .class final Lcom/mi/google/gson/internal/bind/TypeAdapters$1;
 .super Lcom/mi/google/gson/TypeAdapter;
+.source "TypeAdapters.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 69
     invoke-direct {p0}, Lcom/mi/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -40,6 +42,7 @@
         }
     .end annotation
 
+    .line 81
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->peek()Lcom/mi/google/gson/stream/JsonToken;
 
     move-result-object p0
@@ -48,12 +51,14 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 82
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextNull()V
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 85
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -72,6 +77,7 @@
         }
     .end annotation
 
+    .line 69
     invoke-virtual {p0, p1}, Lcom/mi/google/gson/internal/bind/TypeAdapters$1;->read(Lcom/mi/google/gson/stream/JsonReader;)Ljava/lang/Class;
 
     move-result-object p0
@@ -89,10 +95,12 @@
 
     if-nez p2, :cond_0
 
+    .line 73
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonWriter;->nullValue()Lcom/mi/google/gson/stream/JsonWriter;
 
     return-void
 
+    .line 75
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -104,6 +112,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 76
     invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p2
@@ -131,6 +140,7 @@
         }
     .end annotation
 
+    .line 69
     check-cast p2, Ljava/lang/Class;
 
     invoke-virtual {p0, p1, p2}, Lcom/mi/google/gson/internal/bind/TypeAdapters$1;->write(Lcom/mi/google/gson/stream/JsonWriter;Ljava/lang/Class;)V

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/android/HandlerDispatcherKt;
 .super Ljava/lang/Object;
+.source "HandlerDispatcher.kt"
 
 
 # annotations
@@ -18,6 +19,7 @@
 
     const/4 v0, 0x0
 
+    .line 100
     :try_start_0
     sget-object v1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
@@ -83,6 +85,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 77
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x10
@@ -91,6 +94,7 @@
 
     goto :goto_0
 
+    .line 81
     :cond_0
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -104,6 +108,7 @@
 
     if-lt p1, v0, :cond_2
 
+    .line 83
     const-class p1, Landroid/os/Handler;
 
     new-array v0, v3, [Ljava/lang/Class;
@@ -122,6 +127,7 @@
 
     aput-object p0, v0, v2
 
+    .line 84
     invoke-virtual {p1, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -141,6 +147,7 @@
 
     throw p0
 
+    .line 89
     :cond_2
     :try_start_0
     const-class p1, Landroid/os/Handler;
@@ -153,6 +160,7 @@
 
     aput-object v5, v4, v2
 
+    .line 90
     const-class v5, Landroid/os/Handler$Callback;
 
     aput-object v5, v4, v3
@@ -163,6 +171,7 @@
 
     aput-object v5, v4, v6
 
+    .line 89
     invoke-virtual {p1, v4}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -175,6 +184,7 @@
 
     aput-object v1, v0, v3
 
+    .line 95
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -189,6 +199,7 @@
 
     return-object p0
 
+    .line 93
     :catch_0
     new-instance p1, Landroid/os/Handler;
 
@@ -196,6 +207,7 @@
 
     return-object p1
 
+    .line 78
     :cond_3
     :goto_0
     new-instance p1, Landroid/os/Handler;

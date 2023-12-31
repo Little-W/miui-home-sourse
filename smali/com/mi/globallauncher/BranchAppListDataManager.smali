@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/BranchAppListDataManager;
 .super Ljava/lang/Object;
+.source "BranchAppListDataManager.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 28
     new-instance v0, Lcom/mi/globallauncher/BranchAppListDataManager;
 
     invoke-direct {v0}, Lcom/mi/globallauncher/BranchAppListDataManager;-><init>()V
@@ -35,6 +37,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,6 +56,7 @@
 
     move p1, p0
 
+    .line 85
     :goto_0
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
@@ -64,6 +68,7 @@
 
     if-ge p0, v3, :cond_3
 
+    .line 86
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object v3
@@ -116,6 +121,7 @@
     :cond_3
     if-eqz p1, :cond_4
 
+    .line 100
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -125,6 +131,7 @@
     :cond_4
     if-ne v1, v0, :cond_5
 
+    .line 104
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -133,6 +140,7 @@
 
     move-result v1
 
+    .line 106
     :cond_5
     invoke-virtual {p2}, Lio/branch/search/BranchAutoSuggestResult;->getSuggestions()Ljava/util/List;
 
@@ -144,6 +152,7 @@
 
     move-result-object p0
 
+    .line 107
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -156,12 +165,14 @@
 .method private addBranchLocalSearchResult(ILio/branch/search/BranchLocalSearchResult;Landroid/content/res/Resources;Lcom/mi/globallauncher/BranchAppListDataManager$AppendBranchLocalSearchResultCallback;)V
     .locals 4
 
+    .line 133
     invoke-virtual {p2}, Lio/branch/search/BranchLocalSearchResult;->getResults()Ljava/util/List;
 
     move-result-object p0
 
     if-eqz p0, :cond_6
 
+    .line 134
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p2
@@ -172,6 +183,7 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 136
     invoke-interface {p4}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendBranchLocalSearchResultCallback;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -181,6 +193,7 @@
     :cond_0
     const p1, 0x7f070106
 
+    .line 138
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
@@ -191,14 +204,17 @@
 
     const/4 p2, 0x4
 
+    .line 139
     iput p2, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->resultGroup:I
 
+    .line 140
     invoke-interface {p4}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendBranchLocalSearchResultCallback;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p2
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 142
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -233,6 +249,7 @@
     :cond_2
     move v2, p2
 
+    .line 146
     :goto_2
     invoke-interface {p0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -267,11 +284,13 @@
     :cond_5
     move v0, p2
 
+    .line 155
     :goto_3
     invoke-static {v3, v0}, Lcom/mi/globallauncher/BranchAdapterItemManager;->asLocalBranchSearchItem(Lio/branch/search/BranchLocalAppResult;I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object v0
 
+    .line 156
     invoke-interface {p4}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendBranchLocalSearchResultCallback;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -293,6 +312,7 @@
 
     return-void
 
+    .line 217
     :cond_0
     invoke-virtual {p2}, Lio/branch/search/BranchSearchResult;->getResults()Ljava/util/List;
 
@@ -300,6 +320,7 @@
 
     if-eqz p0, :cond_b
 
+    .line 218
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p2
@@ -310,12 +331,14 @@
 
     if-ne p1, p2, :cond_1
 
+    .line 220
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
+    .line 222
     :cond_1
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->getResources()Landroid/content/res/Resources;
 
@@ -333,8 +356,10 @@
 
     const/4 p2, 0x4
 
+    .line 223
     iput p2, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->resultGroup:I
 
+    .line 224
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p2
@@ -345,6 +370,7 @@
 
     move p2, p1
 
+    .line 229
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -363,6 +389,7 @@
     :cond_2
     move v1, p1
 
+    .line 231
     :goto_1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -379,6 +406,7 @@
     :cond_3
     move v2, p1
 
+    .line 232
     :goto_2
     invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -386,22 +414,26 @@
 
     check-cast v3, Lio/branch/search/BranchAppResult;
 
+    .line 233
     invoke-virtual {v3}, Lio/branch/search/BranchAppResult;->getLinks()Ljava/util/List;
 
     move-result-object v3
 
     if-nez v1, :cond_4
 
+    .line 234
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v4
 
     if-eqz v4, :cond_4
 
+    .line 235
     invoke-static {}, Lcom/mi/globallauncher/BranchAdapterItemManager;->asSearchResultDivider()Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object v4
 
+    .line 236
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object v5
@@ -411,6 +443,7 @@
     :cond_4
     move v4, p1
 
+    .line 239
     :goto_3
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -432,6 +465,7 @@
     :goto_4
     if-eqz v2, :cond_6
 
+    .line 241
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v6
@@ -447,6 +481,7 @@
     :cond_6
     move v6, p1
 
+    .line 242
     :goto_5
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -483,11 +518,13 @@
     :cond_9
     move v5, p1
 
+    .line 251
     :goto_6
     invoke-static {v7, v5}, Lcom/mi/globallauncher/BranchAdapterItemManager;->asBranchSearchItem(Ljava/lang/Object;I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object v5
 
+    .line 252
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object v6
@@ -510,6 +547,7 @@
 .method private addBranchShowLdsSearchResult(ILio/branch/search/BranchSearchResult;Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;)V
     .locals 5
 
+    .line 263
     invoke-virtual {p2}, Lio/branch/search/BranchSearchResult;->getResults()Ljava/util/List;
 
     move-result-object p0
@@ -518,6 +556,7 @@
 
     if-eqz p0, :cond_6
 
+    .line 264
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p2
@@ -528,12 +567,14 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 266
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
+    .line 268
     :cond_0
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->getResources()Landroid/content/res/Resources;
 
@@ -551,14 +592,17 @@
 
     const/4 p2, 0x4
 
+    .line 269
     iput p2, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->resultGroup:I
 
+    .line 270
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p2
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 272
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -570,6 +614,7 @@
     :goto_0
     if-ge v0, p1, :cond_6
 
+    .line 274
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -627,11 +672,13 @@
     :cond_5
     move v2, p2
 
+    .line 285
     :goto_3
     invoke-static {v1, v2}, Lcom/mi/globallauncher/BranchAdapterItemManager;->asBranchSearchItem(Ljava/lang/Object;I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object v1
 
+    .line 286
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object v2
@@ -649,6 +696,7 @@
 .method private addMarketSearchOrEmptySearch(Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;)V
     .locals 0
 
+    .line 293
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/BranchAppListDataManager;->hasSearchResult(Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;)Z
 
     move-result p0
@@ -657,10 +705,12 @@
 
     const/4 p0, 0x0
 
+    .line 294
     invoke-static {p0}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->asEmptySearch(I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object p0
 
+    .line 295
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -676,6 +726,7 @@
 
     const/4 p0, 0x0
 
+    .line 69
     :goto_0
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
@@ -687,6 +738,7 @@
 
     if-ge p0, v0, :cond_1
 
+    .line 70
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -718,6 +770,7 @@
 
     if-eq p0, p1, :cond_2
 
+    .line 78
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -737,6 +790,7 @@
 .method public static getInstance()Lcom/mi/globallauncher/BranchAppListDataManager;
     .locals 1
 
+    .line 34
     sget-object v0, Lcom/mi/globallauncher/BranchAppListDataManager;->instance:Lcom/mi/globallauncher/BranchAppListDataManager;
 
     return-object v0
@@ -745,6 +799,7 @@
 .method private hasSearchResult(Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;)Z
     .locals 3
 
+    .line 300
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -766,6 +821,7 @@
 
     check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
+    .line 301
     iget v0, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->resultGroup:I
 
     const/4 v1, 0x1
@@ -810,8 +866,10 @@
 .method public appendAutoSuggestResult(Lio/branch/search/BranchAutoSuggestResult;Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;)Z
     .locals 5
 
+    .line 39
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->resetClickSearchResultCount()V
 
+    .line 41
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -824,8 +882,10 @@
 
     if-nez v0, :cond_0
 
+    .line 42
     invoke-direct {p0, v1, p2}, Lcom/mi/globallauncher/BranchAppListDataManager;->clearAutoSuggestResult(ILcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;)V
 
+    .line 43
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p0
@@ -841,6 +901,7 @@
 
     if-eqz p1, :cond_5
 
+    .line 46
     invoke-virtual {p1}, Lio/branch/search/BranchAutoSuggestResult;->getSuggestions()Ljava/util/List;
 
     move-result-object v2
@@ -862,6 +923,7 @@
     :cond_1
     move v2, v0
 
+    .line 49
     :goto_0
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
@@ -873,6 +935,7 @@
 
     if-ge v2, v3, :cond_3
 
+    .line 50
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object v3
@@ -902,6 +965,7 @@
     :goto_1
     if-eq v2, v1, :cond_4
 
+    .line 58
     invoke-virtual {p1}, Lio/branch/search/BranchAutoSuggestResult;->getSuggestions()Ljava/util/List;
 
     move-result-object p0
@@ -912,6 +976,7 @@
 
     move-result-object p0
 
+    .line 59
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -920,11 +985,13 @@
 
     goto :goto_3
 
+    .line 62
     :cond_4
     invoke-direct {p0, v2, p1, p2}, Lcom/mi/globallauncher/BranchAppListDataManager;->addAutoSuggestResult(ILio/branch/search/BranchAutoSuggestResult;Lcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;)V
 
     goto :goto_3
 
+    .line 47
     :cond_5
     :goto_2
     invoke-direct {p0, v1, p2}, Lcom/mi/globallauncher/BranchAppListDataManager;->clearAutoSuggestResult(ILcom/mi/globallauncher/BranchAppListDataManager$AppendAutoSuggestResultCallBack;)V
@@ -936,14 +1003,18 @@
 .method public appendBranchLocalSearchResult(Lio/branch/search/BranchLocalSearchResult;Landroid/content/res/Resources;Lcom/mi/globallauncher/BranchAppListDataManager$AppendBranchLocalSearchResultCallback;Lcom/mi/globallauncher/BranchAppListDataManager$ClearItemsForBranchResultCallBack;)V
     .locals 1
 
+    .line 124
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->resetClickSearchResultCount()V
 
     const/4 v0, -0x1
 
+    .line 126
     invoke-virtual {p0, v0, p4}, Lcom/mi/globallauncher/BranchAppListDataManager;->clearItemsForBranchResult(ILcom/mi/globallauncher/BranchAppListDataManager$ClearItemsForBranchResultCallBack;)V
 
+    .line 127
     invoke-direct {p0, v0, p1, p2, p3}, Lcom/mi/globallauncher/BranchAppListDataManager;->addBranchLocalSearchResult(ILio/branch/search/BranchLocalSearchResult;Landroid/content/res/Resources;Lcom/mi/globallauncher/BranchAppListDataManager$AppendBranchLocalSearchResultCallback;)V
 
+    .line 128
     invoke-interface {p3}, Lcom/mi/globallauncher/BranchAppListDataManager$AppendBranchLocalSearchResultCallback;->refreshBaseRecyclerView()V
 
     return-void
@@ -952,12 +1023,15 @@
 .method public appendBranchSearchResult(Lio/branch/search/BranchSearchResult;Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;Lcom/mi/globallauncher/BranchAppListDataManager$ClearItemsForBranchResultCallBack;)V
     .locals 2
 
+    .line 197
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->resetClickSearchResultCount()V
 
     const/4 v0, -0x1
 
+    .line 199
     invoke-virtual {p0, v0, p3}, Lcom/mi/globallauncher/BranchAppListDataManager;->clearItemsForBranchResult(ILcom/mi/globallauncher/BranchAppListDataManager$ClearItemsForBranchResultCallBack;)V
 
+    .line 200
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p3
@@ -968,6 +1042,7 @@
 
     if-nez p3, :cond_0
 
+    .line 202
     invoke-direct {p0, v0, p1, p2}, Lcom/mi/globallauncher/BranchAppListDataManager;->addBranchSearchResult(ILio/branch/search/BranchSearchResult;Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;)V
 
     goto :goto_0
@@ -977,12 +1052,15 @@
 
     if-ne p3, v1, :cond_1
 
+    .line 204
     invoke-direct {p0, v0, p1, p2}, Lcom/mi/globallauncher/BranchAppListDataManager;->addBranchShowLdsSearchResult(ILio/branch/search/BranchSearchResult;Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;)V
 
+    .line 206
     :cond_1
     :goto_0
     invoke-direct {p0, p2}, Lcom/mi/globallauncher/BranchAppListDataManager;->addMarketSearchOrEmptySearch(Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;)V
 
+    .line 207
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;->refreshBaseRecyclerView()V
 
     return-void
@@ -993,6 +1071,7 @@
 
     const/4 p0, 0x0
 
+    .line 167
     :goto_0
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$ClearItemsForBranchResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
@@ -1004,6 +1083,7 @@
 
     if-ge p0, v0, :cond_1
 
+    .line 168
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$ClearItemsForBranchResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -1052,6 +1132,7 @@
 
     if-eq p0, p1, :cond_3
 
+    .line 179
     invoke-interface {p2}, Lcom/mi/globallauncher/BranchAppListDataManager$ClearItemsForBranchResultCallBack;->adapterItems()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -1089,10 +1170,12 @@
         }
     .end annotation
 
+    .line 313
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 314
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -1103,6 +1186,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 315
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1117,6 +1201,7 @@
 
     if-lt p1, v0, :cond_2
 
+    .line 316
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1135,6 +1220,7 @@
 
     check-cast p2, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
+    .line 317
     iget v0, p2, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->resultGroup:I
 
     const/4 v1, 0x3
@@ -1147,6 +1233,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 319
     :cond_1
     invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

@@ -1,5 +1,6 @@
 .class public final Lkotlin/reflect/KTypeProjection$Companion;
 .super Ljava/lang/Object;
+.source "KTypeProjection.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 50
     invoke-direct {p0}, Lkotlin/reflect/KTypeProjection$Companion;-><init>()V
 
     return-void
@@ -39,6 +42,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 71
     new-instance p0, Lkotlin/reflect/KTypeProjection;
 
     sget-object v0, Lkotlin/reflect/KVariance;->INVARIANT:Lkotlin/reflect/KVariance;

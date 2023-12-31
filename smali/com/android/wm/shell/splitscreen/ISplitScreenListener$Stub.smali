@@ -1,5 +1,6 @@
 .class public abstract Lcom/android/wm/shell/splitscreen/ISplitScreenListener$Stub;
 .super Landroid/os/Binder;
+.source "ISplitScreenListener.java"
 
 # interfaces
 .implements Lcom/android/wm/shell/splitscreen/ISplitScreenListener;
@@ -35,12 +36,14 @@
     :cond_0
     const-string v0, "com.android.wm.shell.splitscreen.ISplitScreenListener"
 
+    .line 33
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 34
     instance-of v1, v0, Lcom/android/wm/shell/splitscreen/ISplitScreenListener;
 
     if-eqz v1, :cond_1
@@ -61,6 +64,7 @@
 .method public static getDefaultImpl()Lcom/android/wm/shell/splitscreen/ISplitScreenListener;
     .locals 1
 
+    .line 83
     sget-object v0, Lcom/android/wm/shell/splitscreen/ISplitScreenListener$Stub$Proxy;->sDefaultImpl:Lcom/android/wm/shell/splitscreen/ISplitScreenListener;
 
     return-object v0
@@ -90,23 +94,28 @@
 
     if-eq p1, v2, :cond_0
 
+    .line 66
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 59
     :cond_0
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 60
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 61
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
+    .line 62
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
@@ -120,26 +129,32 @@
     :cond_1
     const/4 p2, 0x0
 
+    .line 63
     :goto_0
     invoke-virtual {p0, p1, p3, p2}, Lcom/android/wm/shell/splitscreen/ISplitScreenListener$Stub;->onTaskStageChanged(IIZ)V
 
     return v0
 
+    .line 53
     :cond_2
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 54
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 55
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
+    .line 56
     invoke-virtual {p0, p1, p2}, Lcom/android/wm/shell/splitscreen/ISplitScreenListener$Stub;->onStagePositionChanged(II)V
 
     return v0
 
+    .line 46
     :cond_3
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

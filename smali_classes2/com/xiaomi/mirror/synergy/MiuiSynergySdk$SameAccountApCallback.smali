@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountApCallback;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

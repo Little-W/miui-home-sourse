@@ -1,5 +1,6 @@
 .class public final enum Lio/reactivex/internal/disposables/EmptyDisposable;
 .super Ljava/lang/Enum;
+.source "EmptyDisposable.java"
 
 # interfaces
 .implements Lio/reactivex/internal/fuseable/QueueDisposable;
@@ -30,6 +31,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 34
     new-instance v0, Lio/reactivex/internal/disposables/EmptyDisposable;
 
     const/4 v1, 0x0
@@ -40,6 +42,7 @@
 
     sput-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
+    .line 38
     new-instance v0, Lio/reactivex/internal/disposables/EmptyDisposable;
 
     const/4 v2, 0x1
@@ -54,6 +57,7 @@
 
     new-array v0, v0, [Lio/reactivex/internal/disposables/EmptyDisposable;
 
+    .line 28
     sget-object v3, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     aput-object v3, v0, v1
@@ -75,6 +79,7 @@
         }
     .end annotation
 
+    .line 28
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -83,10 +88,12 @@
 .method public static complete(Lio/reactivex/CompletableObserver;)V
     .locals 1
 
+    .line 67
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-interface {p0, v0}, Lio/reactivex/CompletableObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 68
     invoke-interface {p0}, Lio/reactivex/CompletableObserver;->onComplete()V
 
     return-void
@@ -102,10 +109,12 @@
         }
     .end annotation
 
+    .line 57
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-interface {p0, v0}, Lio/reactivex/MaybeObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 58
     invoke-interface {p0}, Lio/reactivex/MaybeObserver;->onComplete()V
 
     return-void
@@ -121,10 +130,12 @@
         }
     .end annotation
 
+    .line 52
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-interface {p0, v0}, Lio/reactivex/Observer;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 53
     invoke-interface {p0}, Lio/reactivex/Observer;->onComplete()V
 
     return-void
@@ -133,10 +144,12 @@
 .method public static error(Ljava/lang/Throwable;Lio/reactivex/CompletableObserver;)V
     .locals 1
 
+    .line 72
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-interface {p1, v0}, Lio/reactivex/CompletableObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 73
     invoke-interface {p1, p0}, Lio/reactivex/CompletableObserver;->onError(Ljava/lang/Throwable;)V
 
     return-void
@@ -153,10 +166,12 @@
         }
     .end annotation
 
+    .line 82
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-interface {p1, v0}, Lio/reactivex/MaybeObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 83
     invoke-interface {p1, p0}, Lio/reactivex/MaybeObserver;->onError(Ljava/lang/Throwable;)V
 
     return-void
@@ -173,10 +188,12 @@
         }
     .end annotation
 
+    .line 62
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-interface {p1, v0}, Lio/reactivex/Observer;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 63
     invoke-interface {p1, p0}, Lio/reactivex/Observer;->onError(Ljava/lang/Throwable;)V
 
     return-void
@@ -193,10 +210,12 @@
         }
     .end annotation
 
+    .line 77
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-interface {p1, v0}, Lio/reactivex/SingleObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 78
     invoke-interface {p1, p0}, Lio/reactivex/SingleObserver;->onError(Ljava/lang/Throwable;)V
 
     return-void
@@ -205,6 +224,7 @@
 .method public static valueOf(Ljava/lang/String;)Lio/reactivex/internal/disposables/EmptyDisposable;
     .locals 1
 
+    .line 28
     const-class v0, Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -219,6 +239,7 @@
 .method public static values()[Lio/reactivex/internal/disposables/EmptyDisposable;
     .locals 1
 
+    .line 28
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->$VALUES:[Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-virtual {v0}, [Lio/reactivex/internal/disposables/EmptyDisposable;->clone()Ljava/lang/Object;
@@ -247,6 +268,7 @@
 .method public isDisposed()Z
     .locals 1
 
+    .line 48
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     if-ne p0, v0, :cond_0
@@ -273,6 +295,7 @@
 .method public offer(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 89
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Should not be called!"
@@ -285,6 +308,7 @@
 .method public offer(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
+    .line 94
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Should not be called!"

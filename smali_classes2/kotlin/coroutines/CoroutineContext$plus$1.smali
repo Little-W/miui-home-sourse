@@ -1,5 +1,6 @@
 .class final Lkotlin/coroutines/CoroutineContext$plus$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "CoroutineContext.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -59,6 +60,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 14
     check-cast p1, Lkotlin/coroutines/CoroutineContext;
 
     check-cast p2, Lkotlin/coroutines/CoroutineContext$Element;
@@ -81,6 +83,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 33
     invoke-interface {p2}, Lkotlin/coroutines/CoroutineContext$Element;->getKey()Lkotlin/coroutines/CoroutineContext$Key;
 
     move-result-object p0
@@ -89,6 +92,7 @@
 
     move-result-object p0
 
+    .line 34
     sget-object p1, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
     if-ne p0, p1, :cond_0
@@ -97,6 +101,7 @@
 
     goto :goto_1
 
+    .line 36
     :cond_0
     sget-object p1, Lkotlin/coroutines/ContinuationInterceptor;->Key:Lkotlin/coroutines/ContinuationInterceptor$Key;
 
@@ -110,6 +115,7 @@
 
     if-nez p1, :cond_1
 
+    .line 37
     new-instance p1, Lkotlin/coroutines/CombinedContext;
 
     invoke-direct {p1, p0, p2}, Lkotlin/coroutines/CombinedContext;-><init>(Lkotlin/coroutines/CoroutineContext;Lkotlin/coroutines/CoroutineContext$Element;)V
@@ -118,6 +124,7 @@
 
     goto :goto_0
 
+    .line 38
     :cond_1
     sget-object v0, Lkotlin/coroutines/ContinuationInterceptor;->Key:Lkotlin/coroutines/ContinuationInterceptor$Key;
 
@@ -127,6 +134,7 @@
 
     move-result-object p0
 
+    .line 39
     sget-object v0, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
     if-ne p0, v0, :cond_2
@@ -141,6 +149,7 @@
 
     goto :goto_0
 
+    .line 40
     :cond_2
     new-instance v0, Lkotlin/coroutines/CombinedContext;
 
@@ -156,6 +165,7 @@
 
     move-object p0, v0
 
+    .line 37
     :goto_0
     move-object p2, p0
 

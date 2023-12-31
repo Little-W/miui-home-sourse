@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/ContainerResolver$LinkContainerResolver$$serializer;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lkotlinx/serialization/internal/GeneratedSerializer;

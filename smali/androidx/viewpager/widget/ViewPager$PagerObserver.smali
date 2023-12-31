@@ -1,5 +1,6 @@
 .class Landroidx/viewpager/widget/ViewPager$PagerObserver;
 .super Landroid/database/DataSetObserver;
+.source "ViewPager.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Landroidx/viewpager/widget/ViewPager;)V
     .locals 0
 
+    .line 3092
     iput-object p1, p0, Landroidx/viewpager/widget/ViewPager$PagerObserver;->this$0:Landroidx/viewpager/widget/ViewPager;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -33,6 +35,7 @@
 .method public onChanged()V
     .locals 0
 
+    .line 3097
     iget-object p0, p0, Landroidx/viewpager/widget/ViewPager$PagerObserver;->this$0:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->dataSetChanged()V
@@ -43,6 +46,7 @@
 .method public onInvalidated()V
     .locals 0
 
+    .line 3101
     iget-object p0, p0, Landroidx/viewpager/widget/ViewPager$PagerObserver;->this$0:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->dataSetChanged()V

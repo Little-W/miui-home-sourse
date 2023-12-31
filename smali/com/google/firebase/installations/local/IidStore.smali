@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/installations/local/IidStore;
 .super Ljava/lang/Object;
+.source "IidStore.java"
 
 
 # static fields
@@ -24,6 +25,7 @@
 
     const-string v3, ""
 
+    .line 50
     filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
@@ -36,8 +38,10 @@
 .method public constructor <init>(Lcom/google/firebase/FirebaseApp;)V
     .locals 3
 
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 60
     invoke-virtual {p1}, Lcom/google/firebase/FirebaseApp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -46,12 +50,14 @@
 
     const/4 v2, 0x0
 
+    .line 61
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
+    .line 63
     invoke-static {p1}, Lcom/google/firebase/installations/local/IidStore;->getDefaultSenderId(Lcom/google/firebase/FirebaseApp;)Ljava/lang/String;
 
     move-result-object p1
@@ -64,6 +70,7 @@
 .method private createTokenKey(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 97
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,6 +97,7 @@
 .method private static getDefaultSenderId(Lcom/google/firebase/FirebaseApp;)Ljava/lang/String;
     .locals 3
 
+    .line 74
     invoke-virtual {p0}, Lcom/google/firebase/FirebaseApp;->getOptions()Lcom/google/firebase/FirebaseOptions;
 
     move-result-object v0
@@ -102,6 +110,7 @@
 
     return-object v0
 
+    .line 78
     :cond_0
     invoke-virtual {p0}, Lcom/google/firebase/FirebaseApp;->getOptions()Lcom/google/firebase/FirebaseOptions;
 
@@ -113,6 +122,7 @@
 
     const-string v0, "1:"
 
+    .line 79
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -132,10 +142,12 @@
     :cond_1
     const-string v0, ":"
 
+    .line 85
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 86
     array-length v0, p0
 
     const/4 v1, 0x4
@@ -149,8 +161,10 @@
     :cond_2
     const/4 v0, 0x1
 
+    .line 89
     aget-object p0, p0, v0
 
+    .line 90
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -166,6 +180,7 @@
 .method private static getIdFromPublicKey(Ljava/security/PublicKey;)Ljava/lang/String;
     .locals 3
 
+    .line 177
     invoke-interface {p0}, Ljava/security/PublicKey;->getEncoded()[B
 
     move-result-object p0
@@ -173,16 +188,19 @@
     :try_start_0
     const-string v0, "SHA1"
 
+    .line 184
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
+    .line 186
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->digest([B)[B
 
     move-result-object p0
 
     const/4 v0, 0x0
 
+    .line 187
     aget-byte v1, p0, v0
 
     and-int/lit8 v1, v1, 0xf
@@ -193,12 +211,14 @@
 
     int-to-byte v1, v1
 
+    .line 189
     aput-byte v1, p0, v0
 
     const/16 v1, 0x8
 
     const/16 v2, 0xb
 
+    .line 190
     invoke-static {p0, v0, v1, v2}, Landroid/util/Base64;->encodeToString([BIII)Ljava/lang/String;
 
     move-result-object p0
@@ -212,6 +232,7 @@
 
     const-string v0, "Unexpected error, device missing required algorithms"
 
+    .line 193
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -222,6 +243,7 @@
 .method private parseIidTokenFromJson(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 118
     :try_start_0
     new-instance p0, Lorg/json/JSONObject;
 
@@ -229,6 +251,7 @@
 
     const-string/jumbo p1, "token"
 
+    .line 119
     invoke-virtual {p0, p1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -248,6 +271,7 @@
 
     const/16 p0, 0x8
 
+    .line 203
     :try_start_0
     invoke-static {p1, p0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
@@ -255,10 +279,12 @@
 
     const-string p1, "RSA"
 
+    .line 204
     invoke-static {p1}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
 
     move-result-object p1
 
+    .line 205
     new-instance v0, Ljava/security/spec/X509EncodedKeySpec;
 
     invoke-direct {v0, p0}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
@@ -276,6 +302,7 @@
     :catch_0
     move-exception p0
 
+    .line 207
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -302,10 +329,12 @@
 .method private readInstanceIdFromLocalStorage()Ljava/lang/String;
     .locals 3
 
+    .line 148
     iget-object v0, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
     monitor-enter v0
 
+    .line 149
     :try_start_0
     iget-object p0, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
@@ -324,6 +353,7 @@
     :catchall_0
     move-exception p0
 
+    .line 150
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -334,10 +364,12 @@
 .method private readPublicKeyFromLocalStorageAndCalculateInstanceId()Ljava/lang/String;
     .locals 4
 
+    .line 155
     iget-object v0, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
     monitor-enter v0
 
+    .line 156
     :try_start_0
     iget-object v1, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
@@ -351,10 +383,12 @@
 
     if-nez v1, :cond_0
 
+    .line 158
     monitor-exit v0
 
     return-object v3
 
+    .line 161
     :cond_0
     invoke-direct {p0, v1}, Lcom/google/firebase/installations/local/IidStore;->parseKey(Ljava/lang/String;)Ljava/security/PublicKey;
 
@@ -362,10 +396,12 @@
 
     if-nez p0, :cond_1
 
+    .line 163
     monitor-exit v0
 
     return-object v3
 
+    .line 166
     :cond_1
     invoke-static {p0}, Lcom/google/firebase/installations/local/IidStore;->getIdFromPublicKey(Ljava/security/PublicKey;)Ljava/lang/String;
 
@@ -378,6 +414,7 @@
     :catchall_0
     move-exception p0
 
+    .line 167
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -390,10 +427,12 @@
 .method public readIid()Ljava/lang/String;
     .locals 2
 
+    .line 127
     iget-object v0, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
     monitor-enter v0
 
+    .line 134
     :try_start_0
     invoke-direct {p0}, Lcom/google/firebase/installations/local/IidStore;->readInstanceIdFromLocalStorage()Ljava/lang/String;
 
@@ -401,10 +440,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 137
     monitor-exit v0
 
     return-object v1
 
+    .line 142
     :cond_0
     invoke-direct {p0}, Lcom/google/firebase/installations/local/IidStore;->readPublicKeyFromLocalStorageAndCalculateInstanceId()Ljava/lang/String;
 
@@ -417,6 +458,7 @@
     :catchall_0
     move-exception p0
 
+    .line 143
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -427,10 +469,12 @@
 .method public readToken()Ljava/lang/String;
     .locals 7
 
+    .line 102
     iget-object v0, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
     monitor-enter v0
 
+    .line 103
     :try_start_0
     sget-object v1, Lcom/google/firebase/installations/local/IidStore;->ALLOWABLE_SCOPES:[Ljava/lang/String;
 
@@ -445,12 +489,14 @@
 
     aget-object v5, v1, v3
 
+    .line 104
     iget-object v6, p0, Lcom/google/firebase/installations/local/IidStore;->defaultSenderId:Ljava/lang/String;
 
     invoke-direct {p0, v6, v5}, Lcom/google/firebase/installations/local/IidStore;->createTokenKey(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 105
     iget-object v6, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
     invoke-interface {v6, v5, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -459,6 +505,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 106
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
@@ -467,6 +514,7 @@
 
     const-string/jumbo v1, "{"
 
+    .line 107
     invoke-virtual {v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -487,6 +535,7 @@
 
     goto :goto_0
 
+    .line 111
     :cond_2
     monitor-exit v0
 
@@ -495,6 +544,7 @@
     :catchall_0
     move-exception p0
 
+    .line 112
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

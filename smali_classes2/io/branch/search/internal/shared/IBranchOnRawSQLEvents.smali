@@ -1,5 +1,6 @@
 .class public interface abstract Lio/branch/search/internal/shared/IBranchOnRawSQLEvents;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods

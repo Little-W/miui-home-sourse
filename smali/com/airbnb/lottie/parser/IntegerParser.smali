@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/parser/IntegerParser;
 .super Ljava/lang/Object;
+.source "IntegerParser.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/parser/ValueParser;
@@ -24,6 +25,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 8
     new-instance v0, Lcom/airbnb/lottie/parser/IntegerParser;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/parser/IntegerParser;-><init>()V
@@ -36,6 +38,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,6 +54,7 @@
         }
     .end annotation
 
+    .line 14
     invoke-static {p1}, Lcom/airbnb/lottie/parser/JsonUtils;->valueFromObject(Lcom/airbnb/lottie/parser/moshi/JsonReader;)F
 
     move-result p0
@@ -76,6 +80,7 @@
         }
     .end annotation
 
+    .line 7
     invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/parser/IntegerParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;F)Ljava/lang/Integer;
 
     move-result-object p0

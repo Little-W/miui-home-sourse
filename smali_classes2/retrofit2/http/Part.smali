@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lretrofit2/http/Part;
 .super Ljava/lang/Object;
+.source "Part.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

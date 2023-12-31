@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/UnitSerializer;
 .super Ljava/lang/Object;
+.source "Primitives.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -36,6 +37,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 78
     new-instance v0, Lkotlinx/serialization/internal/UnitSerializer;
 
     invoke-direct {v0}, Lkotlinx/serialization/internal/UnitSerializer;-><init>()V
@@ -48,6 +50,7 @@
 .method private constructor <init>()V
     .locals 3
 
+    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Lkotlinx/serialization/internal/ObjectSerializer;
@@ -68,6 +71,7 @@
 .method public bridge synthetic deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
     .locals 0
 
+    .line 78
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/UnitSerializer;->deserialize(Lkotlinx/serialization/encoding/Decoder;)V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -104,6 +108,7 @@
 .method public bridge synthetic serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
     .locals 0
 
+    .line 78
     check-cast p2, Lkotlin/Unit;
 
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/UnitSerializer;->serialize(Lkotlinx/serialization/encoding/Encoder;Lkotlin/Unit;)V

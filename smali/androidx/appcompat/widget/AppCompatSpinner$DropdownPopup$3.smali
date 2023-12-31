@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$3;
 .super Ljava/lang/Object;
+.source "AppCompatSpinner.java"
 
 # interfaces
 .implements Landroid/widget/PopupWindow$OnDismissListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
     .locals 0
 
+    .line 1088
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$3;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
     iput-object p2, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$3;->val$layoutListener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -40,6 +42,7 @@
 .method public onDismiss()V
     .locals 1
 
+    .line 1091
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$3;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
     iget-object v0, v0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
@@ -50,6 +53,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1093
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$3;->val$layoutListener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V

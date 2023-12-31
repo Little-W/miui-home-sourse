@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/View$AmbientOcclusion;
 .super Ljava/lang/Enum;
+.source "View.java"
 
 
 # annotations
@@ -33,6 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 411
     new-instance v0, Lcom/google/android/filament/View$AmbientOcclusion;
 
     const/4 v1, 0x0
@@ -43,6 +45,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$AmbientOcclusion;->NONE:Lcom/google/android/filament/View$AmbientOcclusion;
 
+    .line 412
     new-instance v0, Lcom/google/android/filament/View$AmbientOcclusion;
 
     const/4 v2, 0x1
@@ -57,6 +60,7 @@
 
     new-array v0, v0, [Lcom/google/android/filament/View$AmbientOcclusion;
 
+    .line 410
     sget-object v3, Lcom/google/android/filament/View$AmbientOcclusion;->NONE:Lcom/google/android/filament/View$AmbientOcclusion;
 
     aput-object v3, v0, v1
@@ -78,6 +82,7 @@
         }
     .end annotation
 
+    .line 410
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -86,6 +91,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/View$AmbientOcclusion;
     .locals 1
 
+    .line 410
     const-class v0, Lcom/google/android/filament/View$AmbientOcclusion;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -100,6 +106,7 @@
 .method public static values()[Lcom/google/android/filament/View$AmbientOcclusion;
     .locals 1
 
+    .line 410
     sget-object v0, Lcom/google/android/filament/View$AmbientOcclusion;->$VALUES:[Lcom/google/android/filament/View$AmbientOcclusion;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/View$AmbientOcclusion;->clone()Ljava/lang/Object;

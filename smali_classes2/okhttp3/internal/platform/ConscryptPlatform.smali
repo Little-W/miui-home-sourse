@@ -1,11 +1,13 @@
 .class public Lokhttp3/internal/platform/ConscryptPlatform;
 .super Lokhttp3/internal/platform/Platform;
+.source "ConscryptPlatform.java"
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Lokhttp3/internal/platform/Platform;-><init>()V
 
     return-void
@@ -19,8 +21,10 @@
     :try_start_0
     const-string v1, "org.conscrypt.Conscrypt"
 
+    .line 105
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
+    .line 107
     invoke-static {}, Lorg/conscrypt/Conscrypt;->isAvailable()Z
 
     move-result v1
@@ -29,6 +33,7 @@
 
     return-object v0
 
+    .line 111
     :cond_0
     new-instance v1, Lokhttp3/internal/platform/ConscryptPlatform;
 
@@ -45,6 +50,7 @@
 .method private getProvider()Ljava/security/Provider;
     .locals 0
 
+    .line 40
     invoke-static {}, Lorg/conscrypt/Conscrypt;->newProviderBuilder()Lorg/conscrypt/Conscrypt$ProviderBuilder;
 
     move-result-object p0
@@ -65,6 +71,7 @@
 .method public configureSslSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
     .locals 0
 
+    .line 119
     invoke-static {p1}, Lorg/conscrypt/Conscrypt;->isConscrypt(Ljavax/net/ssl/SSLSocketFactory;)Z
 
     move-result p0
@@ -73,6 +80,7 @@
 
     const/4 p0, 0x1
 
+    .line 120
     invoke-static {p1, p0}, Lorg/conscrypt/Conscrypt;->setUseEngineSocket(Ljavax/net/ssl/SSLSocketFactory;Z)V
 
     :cond_0
@@ -98,6 +106,7 @@
         }
     .end annotation
 
+    .line 66
     invoke-static {p1}, Lorg/conscrypt/Conscrypt;->isConscrypt(Ljavax/net/ssl/SSLSocket;)Z
 
     move-result v0
@@ -108,10 +117,13 @@
 
     const/4 p0, 0x1
 
+    .line 69
     invoke-static {p1, p0}, Lorg/conscrypt/Conscrypt;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V
 
+    .line 70
     invoke-static {p1, p2}, Lorg/conscrypt/Conscrypt;->setHostname(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;)V
 
+    .line 74
     :cond_0
     invoke-static {p3}, Lokhttp3/internal/platform/Platform;->alpnProtocolNames(Ljava/util/List;)Ljava/util/List;
 
@@ -121,6 +133,7 @@
 
     new-array p2, p2, [Ljava/lang/String;
 
+    .line 75
     invoke-interface {p0, p2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -131,6 +144,7 @@
 
     goto :goto_0
 
+    .line 77
     :cond_1
     invoke-super {p0, p1, p2, p3}, Lokhttp3/internal/platform/Platform;->configureTlsExtensions(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
 
@@ -144,6 +158,7 @@
     :try_start_0
     const-string v0, "TLSv1.3"
 
+    .line 91
     invoke-direct {p0}, Lokhttp3/internal/platform/ConscryptPlatform;->getProvider()Ljava/security/Provider;
 
     move-result-object v1
@@ -162,6 +177,7 @@
     :try_start_1
     const-string v1, "TLS"
 
+    .line 95
     invoke-direct {p0}, Lokhttp3/internal/platform/ConscryptPlatform;->getProvider()Ljava/security/Provider;
 
     move-result-object p0
@@ -174,6 +190,7 @@
 
     return-object p0
 
+    .line 97
     :catch_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -189,18 +206,21 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 82
     invoke-static {p1}, Lorg/conscrypt/Conscrypt;->isConscrypt(Ljavax/net/ssl/SSLSocket;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 83
     invoke-static {p1}, Lorg/conscrypt/Conscrypt;->getApplicationProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 85
     :cond_0
     invoke-super {p0, p1}, Lokhttp3/internal/platform/Platform;->getSelectedProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
 

@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_FilesPayload$Builder;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$Builder;
+.source "AutoValue_CrashlyticsReport_FilesPayload.java"
 
 
 # annotations
@@ -31,6 +32,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 73
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$Builder;-><init>()V
 
     return-void
@@ -41,12 +43,14 @@
 .method public build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload;
     .locals 3
 
+    .line 95
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_FilesPayload$Builder;->files:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,6 +65,7 @@
 
     move-result-object v1
 
+    .line 98
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -68,6 +73,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 101
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_FilesPayload;
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_FilesPayload$Builder;->files:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
@@ -80,6 +86,7 @@
 
     return-object v0
 
+    .line 99
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -116,10 +123,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 84
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_FilesPayload$Builder;->files:Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     return-object p0
 
+    .line 82
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -133,6 +142,7 @@
 .method public setOrgId(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$Builder;
     .locals 0
 
+    .line 89
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_FilesPayload$Builder;->orgId:Ljava/lang/String;
 
     return-object p0

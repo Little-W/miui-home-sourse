@@ -1,5 +1,6 @@
 .class interface abstract Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$EndListener;
 .super Ljava/lang/Object;
+.source "FloatValueAnimatorBuilder.java"
 
 
 # annotations

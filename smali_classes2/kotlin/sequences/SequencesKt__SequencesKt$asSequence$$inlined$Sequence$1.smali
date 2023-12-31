@@ -1,5 +1,6 @@
 .class public final Lkotlin/sequences/SequencesKt__SequencesKt$asSequence$$inlined$Sequence$1;
 .super Ljava/lang/Object;
+.source "Sequences.kt"
 
 # interfaces
 .implements Lkotlin/sequences/Sequence;
@@ -38,6 +39,7 @@
 
     iput-object p1, p0, Lkotlin/sequences/SequencesKt__SequencesKt$asSequence$$inlined$Sequence$1;->$this_asSequence$inlined:Ljava/util/Iterator;
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,6 +57,7 @@
         }
     .end annotation
 
+    .line 681
     iget-object p0, p0, Lkotlin/sequences/SequencesKt__SequencesKt$asSequence$$inlined$Sequence$1;->$this_asSequence$inlined:Ljava/util/Iterator;
 
     return-object p0

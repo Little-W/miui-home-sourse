@@ -1,5 +1,6 @@
 .class public final Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
 .super Ljava/lang/Object;
+.source "ProtobufEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/config/EncoderConfig;
@@ -77,6 +78,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 69
     sget-object v0, Lcom/google/firebase/encoders/proto/-$$Lambda$ProtobufEncoder$Builder$RXvYJ6SiKEbAFhRqRMHt-wZ1FqU;->INSTANCE:Lcom/google/firebase/encoders/proto/-$$Lambda$ProtobufEncoder$Builder$RXvYJ6SiKEbAFhRqRMHt-wZ1FqU;
 
     sput-object v0, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->DEFAULT_FALLBACK_ENCODER:Lcom/google/firebase/encoders/ObjectEncoder;
@@ -87,20 +89,24 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 75
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->objectEncoders:Ljava/util/Map;
 
+    .line 76
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->valueEncoders:Ljava/util/Map;
 
+    .line 77
     sget-object v0, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->DEFAULT_FALLBACK_ENCODER:Lcom/google/firebase/encoders/ObjectEncoder;
 
     iput-object v0, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->fallbackEncoder:Lcom/google/firebase/encoders/ObjectEncoder;
@@ -116,6 +122,7 @@
         }
     .end annotation
 
+    .line 71
     new-instance p1, Lcom/google/firebase/encoders/EncodingException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -126,6 +133,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 72
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -150,6 +158,7 @@
 .method public build()Lcom/google/firebase/encoders/proto/ProtobufEncoder;
     .locals 4
 
+    .line 112
     new-instance v0, Lcom/google/firebase/encoders/proto/ProtobufEncoder;
 
     new-instance v1, Ljava/util/HashMap;
@@ -174,6 +183,7 @@
 .method public configureWith(Lcom/google/firebase/encoders/config/Configurator;)Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
     .locals 0
 
+    .line 107
     invoke-interface {p1, p0}, Lcom/google/firebase/encoders/config/Configurator;->configure(Lcom/google/firebase/encoders/config/EncoderConfig;)V
 
     return-object p0
@@ -182,6 +192,7 @@
 .method public bridge synthetic registerEncoder(Ljava/lang/Class;Lcom/google/firebase/encoders/ObjectEncoder;)Lcom/google/firebase/encoders/config/EncoderConfig;
     .locals 0
 
+    .line 68
     invoke-virtual {p0, p1, p2}, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->registerEncoder(Ljava/lang/Class;Lcom/google/firebase/encoders/ObjectEncoder;)Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
 
     move-result-object p0
@@ -204,10 +215,12 @@
         }
     .end annotation
 
+    .line 83
     iget-object v0, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->objectEncoders:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 85
     iget-object p2, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->valueEncoders:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;

@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;
 .super Ljava/lang/Object;
+.source "TransitionInfoExpose.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method private constructor <init>(Landroid/window/TransitionInfo$Change;)V
     .locals 0
 
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 107
     iput-object p1, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     return-void
@@ -31,6 +34,7 @@
 .method public static box(Landroid/window/TransitionInfo$Change;)Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;
     .locals 1
 
+    .line 115
     new-instance v0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;
 
     invoke-direct {v0, p0}, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;-><init>(Landroid/window/TransitionInfo$Change;)V
@@ -43,6 +47,7 @@
 .method public getAllowEnterPip()Z
     .locals 5
 
+    .line 119
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
@@ -63,6 +68,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 121
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -74,6 +80,7 @@
 
     const-string v0, "getAllowEnterPip: return null from reflection, use default value false"
 
+    .line 123
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -82,6 +89,7 @@
 .method public getBackgroundColor()I
     .locals 5
 
+    .line 171
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -102,6 +110,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 173
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -113,6 +122,7 @@
 
     const-string v0, "getBackgroundColor: return null from reflection, use default value 0"
 
+    .line 175
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -121,6 +131,7 @@
 .method public getEndAbsBounds()Landroid/graphics/Rect;
     .locals 4
 
+    .line 133
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     const-class v0, Landroid/graphics/Rect;
@@ -145,6 +156,7 @@
 .method public getEndDisplayId()I
     .locals 5
 
+    .line 222
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -165,6 +177,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 224
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -176,6 +189,7 @@
 
     const-string v0, "getEndDisplayId: return null from reflection, use default value 0"
 
+    .line 226
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -184,6 +198,7 @@
 .method public getEndRelOffset()Landroid/graphics/Point;
     .locals 4
 
+    .line 137
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     const-class v0, Landroid/graphics/Point;
@@ -208,6 +223,7 @@
 .method public getEndRotation()I
     .locals 5
 
+    .line 141
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -228,6 +244,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 143
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -239,6 +256,7 @@
 
     const-string v0, "getEndRotation: return null from reflection, use default value 0"
 
+    .line 145
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -247,6 +265,7 @@
 .method public getFlags()I
     .locals 5
 
+    .line 151
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -267,6 +286,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 153
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -278,6 +298,7 @@
 
     const-string v0, "getFlags: return null from reflection, use default value 0"
 
+    .line 155
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -286,6 +307,7 @@
 .method public getLastParent()Landroid/window/WindowContainerToken;
     .locals 4
 
+    .line 218
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     const-class v0, Landroid/window/WindowContainerToken;
@@ -310,6 +332,7 @@
 .method public getLeash()Landroid/view/SurfaceControl;
     .locals 4
 
+    .line 182
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     const-class v0, Landroid/view/SurfaceControl;
@@ -334,6 +357,7 @@
 .method public getMode()I
     .locals 5
 
+    .line 161
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -354,6 +378,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 163
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -365,6 +390,7 @@
 
     const-string v0, "getMode: return null from reflection, use default value 0"
 
+    .line 165
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -373,6 +399,7 @@
 .method public getParent()Landroid/window/WindowContainerToken;
     .locals 4
 
+    .line 186
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     const-class v0, Landroid/window/WindowContainerToken;
@@ -397,6 +424,7 @@
 .method public getStartAbsBounds()Landroid/graphics/Rect;
     .locals 4
 
+    .line 190
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     const-class v0, Landroid/graphics/Rect;
@@ -421,6 +449,7 @@
 .method public getStartDisplayId()I
     .locals 5
 
+    .line 232
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -441,6 +470,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 234
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -452,6 +482,7 @@
 
     const-string v0, "getStartDisplayId: return null from reflection, use default value 0"
 
+    .line 236
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -460,6 +491,7 @@
 .method public getStartRotation()I
     .locals 5
 
+    .line 194
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -480,6 +512,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 196
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -491,6 +524,7 @@
 
     const-string v0, "getStartRotation: return null from reflection, use default value 0"
 
+    .line 198
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -499,6 +533,7 @@
 .method public getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
     .locals 4
 
+    .line 204
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     const-class v0, Landroid/app/ActivityManager$RunningTaskInfo;
@@ -523,6 +558,7 @@
 .method public hasFlags(I)Z
     .locals 5
 
+    .line 208
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
@@ -555,6 +591,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 210
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -566,6 +603,7 @@
 
     const-string p1, "hasFlags: return null from reflection, use default value false"
 
+    .line 212
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
@@ -574,6 +612,7 @@
 .method public unbox()Landroid/window/TransitionInfo$Change;
     .locals 0
 
+    .line 111
     iget-object p0, p0, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->instance:Landroid/window/TransitionInfo$Change;
 
     return-object p0

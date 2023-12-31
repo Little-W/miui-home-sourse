@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/gms/internal/measurement/zzfx;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -22,6 +23,7 @@
 .method protected constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +36,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

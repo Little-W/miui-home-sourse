@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/util/ByteBufferUtil;
 .super Ljava/lang/Object;
+.source "ByteBufferUtil.java"
 
 
 # annotations
@@ -26,6 +27,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 22
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -45,6 +47,7 @@
 
     const/4 v0, 0x0
 
+    .line 33
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->length()J
 
@@ -62,6 +65,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 43
     new-instance v7, Ljava/io/RandomAccessFile;
 
     const-string v1, "r"
@@ -70,6 +74,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 44
     :try_start_1
     invoke-virtual {v7}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -77,6 +82,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 45
     :try_start_2
     sget-object v2, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
@@ -96,11 +102,13 @@
 
     if-eqz p0, :cond_0
 
+    .line 49
     :try_start_3
     invoke-virtual {p0}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
+    .line 56
     :catch_0
     :cond_0
     :try_start_4
@@ -127,6 +135,7 @@
 
     goto :goto_0
 
+    .line 40
     :cond_1
     :try_start_5
     new-instance p0, Ljava/io/IOException;
@@ -137,6 +146,7 @@
 
     throw p0
 
+    .line 36
     :cond_2
     new-instance p0, Ljava/io/IOException;
 
@@ -156,6 +166,7 @@
     :goto_0
     if-eqz v0, :cond_3
 
+    .line 49
     :try_start_6
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_6
@@ -165,11 +176,13 @@
     :cond_3
     if-eqz v7, :cond_4
 
+    .line 56
     :try_start_7
     invoke-virtual {v7}, Ljava/io/RandomAccessFile;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
 
+    .line 59
     :catch_3
     :cond_4
     throw p0
@@ -178,6 +191,7 @@
 .method private static getSafeArray(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
     .locals 3
 
+    .line 160
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->isReadOnly()Z
 
     move-result v0
@@ -190,6 +204,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 161
     new-instance v0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
@@ -217,12 +232,14 @@
 .method public static toBytes(Ljava/nio/ByteBuffer;)[B
     .locals 2
 
+    .line 119
     invoke-static {p0}, Lcom/bumptech/glide/util/ByteBufferUtil;->getSafeArray(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 120
     iget v1, v0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->offset:I
 
     if-nez v1, :cond_0
@@ -235,17 +252,20 @@
 
     if-ne v1, v0, :cond_0
 
+    .line 121
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 123
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
+    .line 124
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
@@ -254,8 +274,10 @@
 
     const/4 v1, 0x0
 
+    .line 125
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 126
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     move-object p0, v0
@@ -274,10 +296,12 @@
 
     const/4 v0, 0x0
 
+    .line 65
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     const/4 v1, 0x0
 
+    .line 69
     :try_start_0
     new-instance v2, Ljava/io/RandomAccessFile;
 
@@ -287,28 +311,35 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 70
     :try_start_1
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v1
 
+    .line 71
     invoke-virtual {v1, p0}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
 
+    .line 72
     invoke-virtual {v1, v0}, Ljava/nio/channels/FileChannel;->force(Z)V
 
+    .line 73
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
+    .line 74
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v1, :cond_0
 
+    .line 78
     :try_start_2
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
+    .line 85
     :catch_0
     :cond_0
     :try_start_3
@@ -332,6 +363,7 @@
     :goto_0
     if-eqz v1, :cond_1
 
+    .line 78
     :try_start_4
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_4
@@ -341,11 +373,13 @@
     :cond_1
     if-eqz v2, :cond_2
 
+    .line 85
     :try_start_5
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
+    .line 88
     :catch_3
     :cond_2
     throw p0
@@ -354,6 +388,7 @@
 .method public static toStream(Ljava/nio/ByteBuffer;)Ljava/io/InputStream;
     .locals 1
 
+    .line 133
     new-instance v0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;
 
     invoke-direct {v0, p0}, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;-><init>(Ljava/nio/ByteBuffer;)V

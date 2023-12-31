@@ -1,5 +1,6 @@
 .class public final Landroidx/media/MediaSessionManager;
 .super Ljava/lang/Object;
+.source "MediaSessionManager.java"
 
 
 # annotations
@@ -25,12 +26,14 @@
 
     const/4 v1, 0x3
 
+    .line 42
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     sput-boolean v0, Landroidx/media/MediaSessionManager;->DEBUG:Z
 
+    .line 44
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V

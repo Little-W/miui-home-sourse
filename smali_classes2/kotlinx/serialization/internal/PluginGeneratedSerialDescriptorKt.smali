@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptorKt;
 .super Ljava/lang/Object;
+.source "PluginGeneratedSerialDescriptor.kt"
 
 
 # annotations
@@ -20,6 +21,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 123
     invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getSerialName()Ljava/lang/String;
 
     move-result-object v0
@@ -30,16 +32,19 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 124
     invoke-static {p1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result p1
 
     add-int/2addr v0, p1
 
+    .line 125
     invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptorKt;->getElementDescriptors(Lkotlinx/serialization/descriptors/SerialDescriptor;)Ljava/lang/Iterable;
 
     move-result-object p0
 
+    .line 135
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -63,8 +68,10 @@
 
     mul-int/lit8 v2, v2, 0x1f
 
+    .line 133
     check-cast v3, Lkotlinx/serialization/descriptors/SerialDescriptor;
 
+    .line 126
     invoke-interface {v3}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getSerialName()Ljava/lang/String;
 
     move-result-object v3
@@ -80,6 +87,7 @@
 
     goto :goto_0
 
+    .line 139
     :cond_1
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -98,8 +106,10 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 137
     check-cast p1, Lkotlinx/serialization/descriptors/SerialDescriptor;
 
+    .line 127
     invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
     move-result-object p1

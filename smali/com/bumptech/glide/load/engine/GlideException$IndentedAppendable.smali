@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;
 .super Ljava/lang/Object;
+.source "GlideException.java"
 
 # interfaces
 .implements Ljava/lang/Appendable;
@@ -26,12 +27,15 @@
 .method constructor <init>(Ljava/lang/Appendable;)V
     .locals 1
 
+    .line 232
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 230
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->printedNewLine:Z
 
+    .line 233
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->appendable:Ljava/lang/Appendable;
 
     return-void
@@ -60,14 +64,17 @@
         }
     .end annotation
 
+    .line 238
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->printedNewLine:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 239
     iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->printedNewLine:Z
 
+    .line 240
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->appendable:Ljava/lang/Appendable;
 
     const-string v2, "  "
@@ -81,9 +88,11 @@
 
     const/4 v1, 0x1
 
+    .line 242
     :cond_1
     iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->printedNewLine:Z
 
+    .line 243
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->appendable:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
@@ -99,10 +108,12 @@
         }
     .end annotation
 
+    .line 249
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->safeSequence(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
+    .line 250
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -124,24 +135,29 @@
         }
     .end annotation
 
+    .line 256
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->safeSequence(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
+    .line 257
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->printedNewLine:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 258
     iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->printedNewLine:Z
 
+    .line 259
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->appendable:Ljava/lang/Appendable;
 
     const-string v2, "  "
 
     invoke-interface {v0, v2}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
+    .line 261
     :cond_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -164,6 +180,7 @@
     :cond_1
     iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->printedNewLine:Z
 
+    .line 262
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->appendable:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1, p2, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;

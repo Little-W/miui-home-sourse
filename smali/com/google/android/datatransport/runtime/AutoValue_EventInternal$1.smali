@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$1;
 .super Ljava/lang/Object;
+.source "AutoValue_EventInternal.java"
 
 
 # annotations

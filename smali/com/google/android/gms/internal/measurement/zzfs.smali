@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzfs;
 .super Lcom/google/android/gms/internal/measurement/zzfg;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # annotations
@@ -42,6 +43,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
+    .line 31
     new-instance v6, Lcom/google/android/gms/internal/measurement/zzfs;
 
     const/4 v0, 0x0
@@ -68,16 +70,22 @@
 .method constructor <init>([Ljava/lang/Object;I[Ljava/lang/Object;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzfg;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzb:[Ljava/lang/Object;
 
+    .line 3
     iput-object p3, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzc:[Ljava/lang/Object;
 
+    .line 4
     iput p4, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzd:I
 
+    .line 5
     iput p2, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zze:I
 
+    .line 6
     iput p5, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzf:I
 
     return-void
@@ -92,6 +100,7 @@
         .end annotation
     .end param
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzc:[Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -102,22 +111,26 @@
 
     goto :goto_1
 
+    .line 11
     :cond_0
     invoke-static {p1}, Lcom/google/android/gms/internal/measurement/zzez;->zza(Ljava/lang/Object;)I
 
     move-result v2
 
+    .line 12
     :goto_0
     iget v3, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzd:I
 
     and-int/2addr v2, v3
 
+    .line 13
     aget-object v3, v0, v2
 
     if-nez v3, :cond_1
 
     return v1
 
+    .line 16
     :cond_1
     invoke-virtual {v3, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -142,6 +155,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 28
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zze:I
 
     return p0
@@ -150,6 +164,7 @@
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 30
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzey;->zza()Lcom/google/android/gms/internal/measurement/zzfx;
 
     move-result-object p0
@@ -160,6 +175,7 @@
 .method public final size()I
     .locals 0
 
+    .line 19
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzf:I
 
     return p0
@@ -168,6 +184,7 @@
 .method final zza([Ljava/lang/Object;I)I
     .locals 3
 
+    .line 24
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzb:[Ljava/lang/Object;
 
     iget v1, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzf:I
@@ -176,6 +193,7 @@
 
     invoke-static {v0, v2, p1, p2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 25
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzf:I
 
     add-int/2addr p2, p0
@@ -193,6 +211,7 @@
         }
     .end annotation
 
+    .line 20
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzey;->zze()Lcom/google/android/gms/internal/measurement/zzfb;
 
     move-result-object p0
@@ -209,6 +228,7 @@
 .method final zzb()[Ljava/lang/Object;
     .locals 0
 
+    .line 21
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzb:[Ljava/lang/Object;
 
     return-object p0
@@ -225,6 +245,7 @@
 .method final zzd()I
     .locals 0
 
+    .line 23
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzf:I
 
     return p0
@@ -256,6 +277,7 @@
         }
     .end annotation
 
+    .line 26
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzb:[Ljava/lang/Object;
 
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfs;->zzf:I

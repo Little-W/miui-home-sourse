@@ -1,5 +1,6 @@
 .class public abstract Landroidx/transition/Visibility;
 .super Landroidx/transition/Transition;
+.source "Visibility.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 
     const-string v1, "android:visibility:parent"
 
+    .line 81
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -39,10 +41,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 100
     invoke-direct {p0}, Landroidx/transition/Transition;-><init>()V
 
     const/4 v0, 0x3
 
+    .line 98
     iput v0, p0, Landroidx/transition/Visibility;->mMode:I
 
     return-void
@@ -51,12 +55,14 @@
 .method private captureValues(Landroidx/transition/TransitionValues;)V
     .locals 2
 
+    .line 150
     iget-object p0, p1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result p0
 
+    .line 151
     iget-object v0, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -67,6 +73,7 @@
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 152
     iget-object p0, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object v0, p1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
@@ -83,10 +90,12 @@
 
     new-array p0, p0, [I
 
+    .line 154
     iget-object v0, p1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->getLocationOnScreen([I)V
 
+    .line 155
     iget-object p1, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v0, "android:visibility:screenLocation"
@@ -99,14 +108,17 @@
 .method private getVisibilityChangeInfo(Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroidx/transition/Visibility$VisibilityInfo;
     .locals 6
 
+    .line 195
     new-instance p0, Landroidx/transition/Visibility$VisibilityInfo;
 
     invoke-direct {p0}, Landroidx/transition/Visibility$VisibilityInfo;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 196
     iput-boolean v0, p0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
+    .line 197
     iput-boolean v0, p0, Landroidx/transition/Visibility$VisibilityInfo;->mFadeIn:Z
 
     const-string v1, "android:visibility:parent"
@@ -119,6 +131,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 198
     iget-object v5, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v5, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -127,6 +140,7 @@
 
     if-eqz v5, :cond_0
 
+    .line 199
     iget-object v5, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v5, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -141,6 +155,7 @@
 
     iput v5, p0, Landroidx/transition/Visibility$VisibilityInfo;->mStartVisibility:I
 
+    .line 200
     iget-object v5, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v5, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -153,14 +168,17 @@
 
     goto :goto_0
 
+    .line 202
     :cond_0
     iput v3, p0, Landroidx/transition/Visibility$VisibilityInfo;->mStartVisibility:I
 
+    .line 203
     iput-object v2, p0, Landroidx/transition/Visibility$VisibilityInfo;->mStartParent:Landroid/view/ViewGroup;
 
     :goto_0
     if-eqz p2, :cond_1
 
+    .line 205
     iget-object v5, p2, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v5, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -169,6 +187,7 @@
 
     if-eqz v5, :cond_1
 
+    .line 206
     iget-object v2, p2, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v2, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -183,6 +202,7 @@
 
     iput v2, p0, Landroidx/transition/Visibility$VisibilityInfo;->mEndVisibility:I
 
+    .line 207
     iget-object v2, p2, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -195,9 +215,11 @@
 
     goto :goto_1
 
+    .line 209
     :cond_1
     iput v3, p0, Landroidx/transition/Visibility$VisibilityInfo;->mEndVisibility:I
 
+    .line 210
     iput-object v2, p0, Landroidx/transition/Visibility$VisibilityInfo;->mEndParent:Landroid/view/ViewGroup;
 
     :goto_1
@@ -207,6 +229,7 @@
 
     if-eqz p2, :cond_6
 
+    .line 213
     iget p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mStartVisibility:I
 
     iget p2, p0, Landroidx/transition/Visibility$VisibilityInfo;->mEndVisibility:I
@@ -221,6 +244,7 @@
 
     return-object p0
 
+    .line 217
     :cond_2
     iget p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mStartVisibility:I
 
@@ -228,45 +252,57 @@
 
     if-eq p1, p2, :cond_4
 
+    .line 218
     iget p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mStartVisibility:I
 
     if-nez p1, :cond_3
 
+    .line 219
     iput-boolean v0, p0, Landroidx/transition/Visibility$VisibilityInfo;->mFadeIn:Z
 
+    .line 220
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     goto :goto_2
 
+    .line 221
     :cond_3
     iget p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mEndVisibility:I
 
     if-nez p1, :cond_8
 
+    .line 222
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mFadeIn:Z
 
+    .line 223
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     goto :goto_2
 
+    .line 227
     :cond_4
     iget-object p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mEndParent:Landroid/view/ViewGroup;
 
     if-nez p1, :cond_5
 
+    .line 228
     iput-boolean v0, p0, Landroidx/transition/Visibility$VisibilityInfo;->mFadeIn:Z
 
+    .line 229
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     goto :goto_2
 
+    .line 230
     :cond_5
     iget-object p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mStartParent:Landroid/view/ViewGroup;
 
     if-nez p1, :cond_8
 
+    .line 231
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mFadeIn:Z
 
+    .line 232
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     goto :goto_2
@@ -274,12 +310,15 @@
     :cond_6
     if-nez p1, :cond_7
 
+    .line 236
     iget p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mEndVisibility:I
 
     if-nez p1, :cond_7
 
+    .line 237
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mFadeIn:Z
 
+    .line 238
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     goto :goto_2
@@ -287,12 +326,15 @@
     :cond_7
     if-nez p2, :cond_8
 
+    .line 239
     iget p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mStartVisibility:I
 
     if-nez p1, :cond_8
 
+    .line 240
     iput-boolean v0, p0, Landroidx/transition/Visibility$VisibilityInfo;->mFadeIn:Z
 
+    .line 241
     iput-boolean v1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     :cond_8
@@ -305,6 +347,7 @@
 .method public captureEndValues(Landroidx/transition/TransitionValues;)V
     .locals 0
 
+    .line 165
     invoke-direct {p0, p1}, Landroidx/transition/Visibility;->captureValues(Landroidx/transition/TransitionValues;)V
 
     return-void
@@ -313,6 +356,7 @@
 .method public captureStartValues(Landroidx/transition/TransitionValues;)V
     .locals 0
 
+    .line 160
     invoke-direct {p0, p1}, Landroidx/transition/Visibility;->captureValues(Landroidx/transition/TransitionValues;)V
 
     return-void
@@ -321,10 +365,12 @@
 .method public createAnimator(Landroid/view/ViewGroup;Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 8
 
+    .line 250
     invoke-direct {p0, p2, p3}, Landroidx/transition/Visibility;->getVisibilityChangeInfo(Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroidx/transition/Visibility$VisibilityInfo;
 
     move-result-object v0
 
+    .line 251
     iget-boolean v1, v0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     if-eqz v1, :cond_2
@@ -337,11 +383,13 @@
 
     if-eqz v1, :cond_2
 
+    .line 253
     :cond_0
     iget-boolean v1, v0, Landroidx/transition/Visibility$VisibilityInfo;->mFadeIn:Z
 
     if-eqz v1, :cond_1
 
+    .line 254
     iget v5, v0, Landroidx/transition/Visibility$VisibilityInfo;->mStartVisibility:I
 
     iget v7, v0, Landroidx/transition/Visibility$VisibilityInfo;->mEndVisibility:I
@@ -360,6 +408,7 @@
 
     return-object p0
 
+    .line 257
     :cond_1
     iget v3, v0, Landroidx/transition/Visibility$VisibilityInfo;->mStartVisibility:I
 
@@ -388,6 +437,7 @@
 .method public getTransitionProperties()[Ljava/lang/String;
     .locals 0
 
+    .line 146
     sget-object p0, Landroidx/transition/Visibility;->sTransitionProperties:[Ljava/lang/String;
 
     return-object p0
@@ -409,16 +459,19 @@
 
     if-eqz p2, :cond_1
 
+    .line 510
     iget-object v1, p2, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v2, "android:visibility:visibility"
 
+    .line 511
     invoke-interface {v1, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     iget-object v3, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
+    .line 512
     invoke-interface {v3, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
@@ -427,11 +480,13 @@
 
     return v0
 
+    .line 517
     :cond_1
     invoke-direct {p0, p1, p2}, Landroidx/transition/Visibility;->getVisibilityChangeInfo(Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroidx/transition/Visibility$VisibilityInfo;
 
     move-result-object p0
 
+    .line 518
     iget-boolean p1, p0, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     if-eqz p1, :cond_3
@@ -462,6 +517,7 @@
 .method public onAppear(Landroid/view/ViewGroup;Landroidx/transition/TransitionValues;ILandroidx/transition/TransitionValues;I)Landroid/animation/Animator;
     .locals 2
 
+    .line 283
     iget p3, p0, Landroidx/transition/Visibility;->mMode:I
 
     const/4 p5, 0x1
@@ -479,6 +535,7 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 287
     iget-object p3, p4, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
     invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -489,24 +546,29 @@
 
     const/4 p5, 0x0
 
+    .line 288
     invoke-virtual {p0, p3, p5}, Landroidx/transition/Visibility;->getMatchedTransitionValues(Landroid/view/View;Z)Landroidx/transition/TransitionValues;
 
     move-result-object v1
 
+    .line 290
     invoke-virtual {p0, p3, p5}, Landroidx/transition/Visibility;->getTransitionValues(Landroid/view/View;Z)Landroidx/transition/TransitionValues;
 
     move-result-object p3
 
+    .line 292
     invoke-direct {p0, v1, p3}, Landroidx/transition/Visibility;->getVisibilityChangeInfo(Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroidx/transition/Visibility$VisibilityInfo;
 
     move-result-object p3
 
+    .line 293
     iget-boolean p3, p3, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     if-eqz p3, :cond_1
 
     return-object v0
 
+    .line 297
     :cond_1
     iget-object p3, p4, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
@@ -532,6 +594,7 @@
 .method public onDisappear(Landroid/view/ViewGroup;Landroidx/transition/TransitionValues;ILandroidx/transition/TransitionValues;I)Landroid/animation/Animator;
     .locals 9
 
+    .line 340
     iget p3, p0, Landroidx/transition/Visibility;->mMode:I
 
     const/4 v0, 0x2
@@ -549,11 +612,13 @@
 
     return-object v1
 
+    .line 349
     :cond_1
     iget-object p3, p2, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
     if-eqz p4, :cond_2
 
+    .line 350
     iget-object v2, p4, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
     goto :goto_0
@@ -561,6 +626,7 @@
     :cond_2
     move-object v2, v1
 
+    .line 355
     :goto_0
     sget v3, Landroidx/transition/R$id;->save_overlay_view:I
 
@@ -585,6 +651,7 @@
     :cond_3
     if-eqz v2, :cond_6
 
+    .line 365
     invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
@@ -633,6 +700,7 @@
     :goto_4
     if-eqz v2, :cond_a
 
+    .line 390
     invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
@@ -641,6 +709,7 @@
 
     goto :goto_5
 
+    .line 393
     :cond_8
     invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -650,28 +719,34 @@
 
     if-eqz v2, :cond_a
 
+    .line 394
     invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/View;
 
+    .line 395
     invoke-virtual {p0, v2, v5}, Landroidx/transition/Visibility;->getTransitionValues(Landroid/view/View;Z)Landroidx/transition/TransitionValues;
 
     move-result-object v7
 
+    .line 396
     invoke-virtual {p0, v2, v5}, Landroidx/transition/Visibility;->getMatchedTransitionValues(Landroid/view/View;Z)Landroidx/transition/TransitionValues;
 
     move-result-object v8
 
+    .line 399
     invoke-direct {p0, v7, v8}, Landroidx/transition/Visibility;->getVisibilityChangeInfo(Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroidx/transition/Visibility$VisibilityInfo;
 
     move-result-object v7
 
+    .line 400
     iget-boolean v7, v7, Landroidx/transition/Visibility$VisibilityInfo;->mVisibilityChange:Z
 
     if-nez v7, :cond_9
 
+    .line 401
     invoke-static {p1, p3, v2}, Landroidx/transition/TransitionUtils;->copyViewImage(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)Landroid/view/View;
 
     move-result-object v2
@@ -680,11 +755,13 @@
 
     goto :goto_6
 
+    .line 404
     :cond_9
     invoke-virtual {v2}, Landroid/view/View;->getId()I
 
     move-result v7
 
+    .line 405
     invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
@@ -695,6 +772,7 @@
 
     if-eq v7, v2, :cond_a
 
+    .line 406
     invoke-virtual {p1, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
@@ -717,6 +795,7 @@
 
     if-nez v2, :cond_b
 
+    .line 421
     iget-object p5, p2, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v1, "android:visibility:screenLocation"
@@ -729,14 +808,18 @@
 
     check-cast p5, [I
 
+    .line 422
     aget v1, p5, v4
 
+    .line 423
     aget p5, p5, v5
 
     new-array v0, v0, [I
 
+    .line 425
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getLocationOnScreen([I)V
 
+    .line 426
     aget v4, v0, v4
 
     sub-int/2addr v1, v4
@@ -749,6 +832,7 @@
 
     invoke-virtual {v3, v1}, Landroid/view/View;->offsetLeftAndRight(I)V
 
+    .line 427
     aget v0, v0, v5
 
     sub-int/2addr p5, v0
@@ -761,12 +845,14 @@
 
     invoke-virtual {v3, p5}, Landroid/view/View;->offsetTopAndBottom(I)V
 
+    .line 428
     invoke-static {p1}, Landroidx/transition/ViewGroupUtils;->getOverlay(Landroid/view/ViewGroup;)Landroidx/transition/ViewGroupOverlayImpl;
 
     move-result-object p5
 
     invoke-interface {p5, v3}, Landroidx/transition/ViewGroupOverlayImpl;->add(Landroid/view/View;)V
 
+    .line 430
     :cond_b
     invoke-virtual {p0, p1, v3, p2, p4}, Landroidx/transition/Visibility;->onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroid/animation/Animator;
 
@@ -776,6 +862,7 @@
 
     if-nez p2, :cond_c
 
+    .line 433
     invoke-static {p1}, Landroidx/transition/ViewGroupUtils;->getOverlay(Landroid/view/ViewGroup;)Landroidx/transition/ViewGroupOverlayImpl;
 
     move-result-object p0
@@ -784,11 +871,13 @@
 
     goto :goto_8
 
+    .line 435
     :cond_c
     sget p4, Landroidx/transition/R$id;->save_overlay_view:I
 
     invoke-virtual {p3, p4, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
+    .line 438
     new-instance p4, Landroidx/transition/Visibility$1;
 
     invoke-direct {p4, p0, p1, v3, p3}, Landroidx/transition/Visibility$1;-><init>(Landroidx/transition/Visibility;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)V
@@ -802,30 +891,38 @@
     :cond_e
     if-eqz v6, :cond_10
 
+    .line 467
     invoke-virtual {v6}, Landroid/view/View;->getVisibility()I
 
     move-result p3
 
+    .line 468
     invoke-static {v6, v4}, Landroidx/transition/ViewUtils;->setTransitionVisibility(Landroid/view/View;I)V
 
+    .line 469
     invoke-virtual {p0, p1, v6, p2, p4}, Landroidx/transition/Visibility;->onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroid/animation/Animator;
 
     move-result-object p1
 
     if-eqz p1, :cond_f
 
+    .line 471
     new-instance p2, Landroidx/transition/Visibility$DisappearListener;
 
     invoke-direct {p2, v6, p5, v5}, Landroidx/transition/Visibility$DisappearListener;-><init>(Landroid/view/View;IZ)V
 
+    .line 473
     invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 474
     invoke-static {p1, p2}, Landroidx/transition/AnimatorUtils;->addPauseListener(Landroid/animation/Animator;Landroid/animation/AnimatorListenerAdapter;)V
 
+    .line 475
     invoke-virtual {p0, p2}, Landroidx/transition/Visibility;->addListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
 
     goto :goto_9
 
+    .line 477
     :cond_f
     invoke-static {v6, p3}, Landroidx/transition/ViewUtils;->setTransitionVisibility(Landroid/view/View;I)V
 
@@ -843,10 +940,12 @@
 
     if-nez v0, :cond_0
 
+    .line 129
     iput p1, p0, Landroidx/transition/Visibility;->mMode:I
 
     return-void
 
+    .line 127
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

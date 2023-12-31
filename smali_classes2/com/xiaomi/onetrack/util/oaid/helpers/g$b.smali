@@ -24,6 +24,7 @@
 .method public constructor <init>(Lcom/xiaomi/onetrack/util/oaid/helpers/g;)V
     .locals 0
 
+    .line 50
     iput-object p1, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/g$b;->a:Lcom/xiaomi/onetrack/util/oaid/helpers/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
         }
     .end annotation
 
+    .line 56
     :try_start_0
     new-instance v0, Lcom/xiaomi/onetrack/util/oaid/helpers/g$a;
 
@@ -48,6 +50,7 @@
 
     invoke-direct {v0, v1, p1, p2, p3}, Lcom/xiaomi/onetrack/util/oaid/helpers/g$a;-><init>(Lcom/xiaomi/onetrack/util/oaid/helpers/g;Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)V
 
+    .line 57
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/g$b;->a:Lcom/xiaomi/onetrack/util/oaid/helpers/g;
 
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/oaid/helpers/g;->a:Ljava/util/concurrent/LinkedBlockingQueue;
@@ -65,6 +68,7 @@
     :catch_0
     move-exception p0
 
+    .line 60
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
@@ -75,6 +79,7 @@
     :catch_1
     move-exception p0
 
+    .line 64
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0

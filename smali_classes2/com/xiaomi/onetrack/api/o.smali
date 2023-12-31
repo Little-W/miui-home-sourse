@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/m;Ljava/util/Map;)V
     .locals 0
 
+    .line 330
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/o;->b:Lcom/xiaomi/onetrack/api/m;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/o;->a:Ljava/util/Map;
@@ -31,6 +32,7 @@
 
     const-string v0, "ot_profile_increment"
 
+    .line 334
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/o;->b:Lcom/xiaomi/onetrack/api/m;
 
@@ -38,12 +40,14 @@
 
     move-result-object v5
 
+    .line 335
     new-instance v2, Lorg/json/JSONObject;
 
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/o;->a:Ljava/util/Map;
 
     invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
+    .line 336
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/o;->b:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/api/m;->b(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/Configuration;
@@ -72,6 +76,7 @@
 
     move-result-object v1
 
+    .line 337
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/o;->b:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {p0}, Lcom/xiaomi/onetrack/api/m;->a(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/api/j;
@@ -87,6 +92,7 @@
     :catch_0
     move-exception p0
 
+    .line 339
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zzku;
 .super Ljava/util/AbstractList;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/internal/measurement/zziq;
@@ -26,8 +27,10 @@
 .method public constructor <init>(Lcom/google/android/gms/internal/measurement/zziq;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzku;->zza:Lcom/google/android/gms/internal/measurement/zziq;
 
     return-void
@@ -36,6 +39,7 @@
 .method static synthetic zza(Lcom/google/android/gms/internal/measurement/zzku;)Lcom/google/android/gms/internal/measurement/zziq;
     .locals 0
 
+    .line 14
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzku;->zza:Lcom/google/android/gms/internal/measurement/zziq;
 
     return-object p0
@@ -46,6 +50,7 @@
 .method public final synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 12
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzku;->zza:Lcom/google/android/gms/internal/measurement/zziq;
 
     invoke-interface {p0, p1}, Lcom/google/android/gms/internal/measurement/zziq;->get(I)Ljava/lang/Object;
@@ -74,6 +79,7 @@
         }
     .end annotation
 
+    .line 8
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzkw;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/internal/measurement/zzkw;-><init>(Lcom/google/android/gms/internal/measurement/zzku;)V
@@ -92,6 +98,7 @@
         }
     .end annotation
 
+    .line 7
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzkx;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/measurement/zzkx;-><init>(Lcom/google/android/gms/internal/measurement/zzku;I)V
@@ -102,6 +109,7 @@
 .method public final size()I
     .locals 0
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzku;->zza:Lcom/google/android/gms/internal/measurement/zziq;
 
     invoke-interface {p0}, Lcom/google/android/gms/internal/measurement/zziq;->size()I
@@ -114,6 +122,7 @@
 .method public final zza(Lcom/google/android/gms/internal/measurement/zzgp;)V
     .locals 0
 
+    .line 6
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -124,6 +133,7 @@
 .method public final zzb(I)Ljava/lang/Object;
     .locals 0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzku;->zza:Lcom/google/android/gms/internal/measurement/zziq;
 
     invoke-interface {p0, p1}, Lcom/google/android/gms/internal/measurement/zziq;->zzb(I)Ljava/lang/Object;
@@ -143,6 +153,7 @@
         }
     .end annotation
 
+    .line 9
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzku;->zza:Lcom/google/android/gms/internal/measurement/zziq;
 
     invoke-interface {p0}, Lcom/google/android/gms/internal/measurement/zziq;->zzb()Ljava/util/List;

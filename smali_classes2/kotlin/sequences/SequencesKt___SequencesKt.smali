@@ -1,5 +1,6 @@
 .class Lkotlin/sequences/SequencesKt___SequencesKt;
 .super Lkotlin/sequences/SequencesKt___SequencesJvmKt;
+.source "_Sequences.kt"
 
 
 # annotations
@@ -27,6 +28,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2714
     new-instance v0, Lkotlin/sequences/SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1;
 
     invoke-direct {v0, p0}, Lkotlin/sequences/SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1;-><init>(Lkotlin/sequences/Sequence;)V
@@ -57,6 +59,7 @@
 
     const/4 v0, 0x1
 
+    .line 2375
     invoke-static {p0, p1, p1, v0}, Lkotlin/sequences/SequencesKt;->windowed(Lkotlin/sequences/Sequence;IIZ)Lkotlin/sequences/Sequence;
 
     move-result-object p0
@@ -90,6 +93,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 396
     new-instance v0, Lkotlin/sequences/FilteringSequence;
 
     const/4 v1, 0x1
@@ -127,6 +131,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1017
     new-instance v0, Lkotlin/sequences/TransformingSequence;
 
     invoke-direct {v0, p0, p1}, Lkotlin/sequences/TransformingSequence;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)V
@@ -158,6 +163,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 752
     invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -173,6 +179,7 @@
 
     move-result-object v0
 
+    .line 753
     invoke-interface {p1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -199,6 +206,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 773
     invoke-static {p0}, Lkotlin/sequences/SequencesKt;->toMutableList(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p0
@@ -228,6 +236,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 782
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -261,6 +270,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 793
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
@@ -301,6 +311,7 @@
 
     const/4 v0, 0x0
 
+    .line 2584
     invoke-static {p0, p1, p2, p3, v0}, Lkotlin/collections/SlidingWindowKt;->windowedSequence(Lkotlin/sequences/Sequence;IIZZ)Lkotlin/sequences/Sequence;
 
     move-result-object p0

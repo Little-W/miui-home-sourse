@@ -1,5 +1,6 @@
 .class Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;
 .super Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;
+.source "TextDirectionHeuristicsCompat.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 253
     new-instance v0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;
 
     invoke-direct {v0}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;-><init>()V
@@ -35,6 +37,7 @@
 
     const/4 v0, 0x0
 
+    .line 244
     invoke-direct {p0, v0}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;-><init>(Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;)V
 
     return-void
@@ -45,6 +48,7 @@
 .method protected defaultIsRtl()Z
     .locals 1
 
+    .line 249
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p0

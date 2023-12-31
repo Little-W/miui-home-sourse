@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/utils/ExecutorHelper$1;
 .super Ljava/lang/Object;
+.source "ExecutorHelper.java"
 
 # interfaces
 .implements Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutRunnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/xiaomi/dist/utils/ExecutorHelper$Task;)V
     .locals 0
 
+    .line 77
     iput-object p1, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$1;->val$task:Lcom/xiaomi/dist/utils/ExecutorHelper$Task;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public getTimeout()J
     .locals 2
 
+    .line 85
     iget-object p0, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$1;->val$task:Lcom/xiaomi/dist/utils/ExecutorHelper$Task;
 
     invoke-interface {p0}, Lcom/xiaomi/dist/utils/ExecutorHelper$Task;->getTimeout()J
@@ -48,6 +51,7 @@
 .method public run()V
     .locals 0
 
+    .line 80
     iget-object p0, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$1;->val$task:Lcom/xiaomi/dist/utils/ExecutorHelper$Task;
 
     invoke-interface {p0}, Lcom/xiaomi/dist/utils/ExecutorHelper$Task;->run()V

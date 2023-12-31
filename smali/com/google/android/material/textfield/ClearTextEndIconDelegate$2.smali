@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/ClearTextEndIconDelegate$2;
 .super Ljava/lang/Object;
+.source "ClearTextEndIconDelegate.java"
 
 # interfaces
 .implements Landroid/view/View$OnFocusChangeListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)V
     .locals 0
 
+    .line 62
     iput-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$2;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onFocusChange(Landroid/view/View;Z)V
     .locals 0
 
+    .line 65
     iget-object p0, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$2;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-static {p0}, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->access$000(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)Z

@@ -1,5 +1,6 @@
 .class final Lkotlin/text/StringsKt__IndentKt$getIndentFunction$2;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Indent.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -64,6 +65,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

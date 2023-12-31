@@ -1,5 +1,6 @@
 .class public final Lkotlin/random/FallbackThreadLocalRandom;
 .super Lkotlin/random/AbstractPlatformRandom;
+.source "PlatformRandom.kt"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 50
     invoke-direct {p0}, Lkotlin/random/AbstractPlatformRandom;-><init>()V
 
+    .line 51
     new-instance v0, Lkotlin/random/FallbackThreadLocalRandom$implStorage$1;
 
     invoke-direct {v0}, Lkotlin/random/FallbackThreadLocalRandom$implStorage$1;-><init>()V
@@ -26,6 +29,7 @@
 .method public getImpl()Ljava/util/Random;
     .locals 1
 
+    .line 57
     iget-object p0, p0, Lkotlin/random/FallbackThreadLocalRandom;->implStorage:Lkotlin/random/FallbackThreadLocalRandom$implStorage$1;
 
     invoke-virtual {p0}, Lkotlin/random/FallbackThreadLocalRandom$implStorage$1;->get()Ljava/lang/Object;

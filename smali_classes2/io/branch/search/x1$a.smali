@@ -1,5 +1,6 @@
 .class public synthetic Lio/branch/search/x1$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

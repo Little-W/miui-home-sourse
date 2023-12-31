@@ -1,5 +1,6 @@
 .class public Lorg/ahocorasick/interval/IntervalableComparatorByPosition;
 .super Ljava/lang/Object;
+.source "IntervalableComparatorByPosition.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 5
     check-cast p1, Lorg/ahocorasick/interval/Intervalable;
 
     check-cast p2, Lorg/ahocorasick/interval/Intervalable;
@@ -44,6 +47,7 @@
 .method public compare(Lorg/ahocorasick/interval/Intervalable;Lorg/ahocorasick/interval/Intervalable;)I
     .locals 0
 
+    .line 9
     invoke-interface {p1}, Lorg/ahocorasick/interval/Intervalable;->getStart()I
 
     move-result p0

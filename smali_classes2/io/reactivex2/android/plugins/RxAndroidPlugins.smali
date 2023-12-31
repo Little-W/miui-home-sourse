@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/android/plugins/RxAndroidPlugins;
 .super Ljava/lang/Object;
+.source "RxAndroidPlugins.java"
 
 
 # static fields
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 106
     :try_start_0
     invoke-interface {p0, p1}, Lio/reactivex2/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -55,6 +57,7 @@
     :catchall_0
     move-exception p0
 
+    .line 108
     invoke-static {p0}, Lio/reactivex2/exceptions/Exceptions;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -80,6 +83,7 @@
         }
     .end annotation
 
+    .line 97
     invoke-static {p0, p1}, Lio/reactivex2/android/plugins/RxAndroidPlugins;->apply(Lio/reactivex2/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -90,6 +94,7 @@
 
     return-object p0
 
+    .line 99
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -112,6 +117,7 @@
         }
     .end annotation
 
+    .line 86
     :try_start_0
     invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
@@ -123,6 +129,7 @@
 
     return-object p0
 
+    .line 88
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -137,6 +144,7 @@
     :catchall_0
     move-exception p0
 
+    .line 92
     invoke-static {p0}, Lio/reactivex2/exceptions/Exceptions;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -158,16 +166,19 @@
 
     if-eqz p0, :cond_1
 
+    .line 38
     sget-object v0, Lio/reactivex2/android/plugins/RxAndroidPlugins;->onInitMainThreadHandler:Lio/reactivex2/functions/Function;
 
     if-nez v0, :cond_0
 
+    .line 40
     invoke-static {p0}, Lio/reactivex2/android/plugins/RxAndroidPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex2/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
+    .line 42
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex2/android/plugins/RxAndroidPlugins;->applyRequireNonNull(Lio/reactivex2/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex2/Scheduler;
 
@@ -175,6 +186,7 @@
 
     return-object p0
 
+    .line 36
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -190,12 +202,14 @@
 
     if-eqz p0, :cond_1
 
+    .line 53
     sget-object v0, Lio/reactivex2/android/plugins/RxAndroidPlugins;->onMainThreadHandler:Lio/reactivex2/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
+    .line 57
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex2/android/plugins/RxAndroidPlugins;->apply(Lio/reactivex2/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -205,6 +219,7 @@
 
     return-object p0
 
+    .line 51
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 

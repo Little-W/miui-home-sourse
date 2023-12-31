@@ -1,5 +1,6 @@
 .class public final enum Lcom/squareup/picasso/NetworkPolicy;
 .super Ljava/lang/Enum;
+.source "NetworkPolicy.java"
 
 
 # annotations
@@ -30,6 +31,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
+    .line 23
     new-instance v0, Lcom/squareup/picasso/NetworkPolicy;
 
     const/4 v1, 0x0
@@ -42,6 +44,7 @@
 
     sput-object v0, Lcom/squareup/picasso/NetworkPolicy;->NO_CACHE:Lcom/squareup/picasso/NetworkPolicy;
 
+    .line 28
     new-instance v0, Lcom/squareup/picasso/NetworkPolicy;
 
     const/4 v3, 0x2
@@ -52,6 +55,7 @@
 
     sput-object v0, Lcom/squareup/picasso/NetworkPolicy;->NO_STORE:Lcom/squareup/picasso/NetworkPolicy;
 
+    .line 31
     new-instance v0, Lcom/squareup/picasso/NetworkPolicy;
 
     const-string v4, "OFFLINE"
@@ -66,6 +70,7 @@
 
     new-array v0, v0, [Lcom/squareup/picasso/NetworkPolicy;
 
+    .line 19
     sget-object v4, Lcom/squareup/picasso/NetworkPolicy;->NO_CACHE:Lcom/squareup/picasso/NetworkPolicy;
 
     aput-object v4, v0, v1
@@ -91,8 +96,10 @@
         }
     .end annotation
 
+    .line 47
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 48
     iput p3, p0, Lcom/squareup/picasso/NetworkPolicy;->index:I
 
     return-void
@@ -101,6 +108,7 @@
 .method public static isOfflineOnly(I)Z
     .locals 1
 
+    .line 42
     sget-object v0, Lcom/squareup/picasso/NetworkPolicy;->OFFLINE:Lcom/squareup/picasso/NetworkPolicy;
 
     iget v0, v0, Lcom/squareup/picasso/NetworkPolicy;->index:I
@@ -123,6 +131,7 @@
 .method public static shouldReadFromDiskCache(I)Z
     .locals 1
 
+    .line 34
     sget-object v0, Lcom/squareup/picasso/NetworkPolicy;->NO_CACHE:Lcom/squareup/picasso/NetworkPolicy;
 
     iget v0, v0, Lcom/squareup/picasso/NetworkPolicy;->index:I
@@ -145,6 +154,7 @@
 .method public static shouldWriteToDiskCache(I)Z
     .locals 1
 
+    .line 38
     sget-object v0, Lcom/squareup/picasso/NetworkPolicy;->NO_STORE:Lcom/squareup/picasso/NetworkPolicy;
 
     iget v0, v0, Lcom/squareup/picasso/NetworkPolicy;->index:I
@@ -167,6 +177,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/squareup/picasso/NetworkPolicy;
     .locals 1
 
+    .line 19
     const-class v0, Lcom/squareup/picasso/NetworkPolicy;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -181,6 +192,7 @@
 .method public static values()[Lcom/squareup/picasso/NetworkPolicy;
     .locals 1
 
+    .line 19
     sget-object v0, Lcom/squareup/picasso/NetworkPolicy;->$VALUES:[Lcom/squareup/picasso/NetworkPolicy;
 
     invoke-virtual {v0}, [Lcom/squareup/picasso/NetworkPolicy;->clone()Ljava/lang/Object;

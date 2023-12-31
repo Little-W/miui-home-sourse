@@ -1,5 +1,6 @@
 .class public abstract Lcom/squareup/picasso/RequestHandler;
 .super Ljava/lang/Object;
+.source "RequestHandler.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,6 +47,7 @@
 
     float-to-double p0, p1
 
+    .line 170
     invoke-static {p0, p1}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide p0
@@ -65,6 +68,7 @@
 
     float-to-double p0, p0
 
+    .line 172
     invoke-static {p0, p1}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide p0
@@ -80,6 +84,7 @@
 
     float-to-double v0, p3
 
+    .line 174
     invoke-static {v0, v1}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v0
@@ -94,32 +99,38 @@
 
     float-to-double p2, p2
 
+    .line 175
     invoke-static {p2, p3}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide p2
 
     double-to-int p0, p2
 
+    .line 176
     iget-boolean p2, p5, Lcom/squareup/picasso/Request;->centerInside:Z
 
     if-eqz p2, :cond_4
 
+    .line 177
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
 
     goto :goto_2
 
+    .line 178
     :cond_4
     invoke-static {p1, p0}, Ljava/lang/Math;->min(II)I
 
     move-result p0
 
+    .line 181
     :goto_2
     iput p0, p4, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     const/4 p0, 0x0
 
+    .line 182
     iput-boolean p0, p4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     return-void
@@ -128,6 +139,7 @@
 .method static calculateInSampleSize(IILandroid/graphics/BitmapFactory$Options;Lcom/squareup/picasso/Request;)V
     .locals 6
 
+    .line 159
     iget v2, p2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     iget v3, p2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
@@ -148,10 +160,12 @@
 .method static createBitmapOptions(Lcom/squareup/picasso/Request;)Landroid/graphics/BitmapFactory$Options;
     .locals 4
 
+    .line 138
     invoke-virtual {p0}, Lcom/squareup/picasso/Request;->hasSize()Z
 
     move-result v0
 
+    .line 139
     iget-object v1, p0, Lcom/squareup/picasso/Request;->config:Landroid/graphics/Bitmap$Config;
 
     if-eqz v1, :cond_0
@@ -170,27 +184,33 @@
 
     if-nez v1, :cond_1
 
+    .line 141
     iget-boolean v3, p0, Lcom/squareup/picasso/Request;->purgeable:Z
 
     if-eqz v3, :cond_2
 
+    .line 142
     :cond_1
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
+    .line 143
     iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
+    .line 144
     iget-boolean v0, p0, Lcom/squareup/picasso/Request;->purgeable:Z
 
     iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inInputShareable:Z
 
+    .line 145
     iget-boolean v0, p0, Lcom/squareup/picasso/Request;->purgeable:Z
 
     iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
     if-eqz v1, :cond_2
 
+    .line 147
     iget-object p0, p0, Lcom/squareup/picasso/Request;->config:Landroid/graphics/Bitmap$Config;
 
     iput-object p0, v2, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
@@ -204,6 +224,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 154
     iget-boolean p0, p0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     if-eqz p0, :cond_0

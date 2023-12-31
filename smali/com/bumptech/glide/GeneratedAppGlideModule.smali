@@ -1,11 +1,13 @@
 .class abstract Lcom/bumptech/glide/GeneratedAppGlideModule;
 .super Lcom/bumptech/glide/module/AppGlideModule;
+.source "GeneratedAppGlideModule.java"
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Lcom/bumptech/glide/module/AppGlideModule;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/palette/graphics/Palette$Filter;
 .super Ljava/lang/Object;
+.source "Palette.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer$SizeDeterminerLayoutListener;
 .super Ljava/lang/Object;
+.source "ViewTarget.java"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
@@ -32,8 +33,10 @@
 .method constructor <init>(Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;)V
     .locals 1
 
+    .line 513
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 514
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -52,12 +55,14 @@
 
     const/4 v1, 0x2
 
+    .line 519
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 520
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,6 +79,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 522
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer$SizeDeterminerLayoutListener;->sizeDeterminerRef:Ljava/lang/ref/WeakReference;
 
@@ -85,6 +91,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 524
     invoke-virtual {p0}, Lcom/bumptech/glide/request/target/ViewTarget$SizeDeterminer;->checkCurrentDimens()V
 
     :cond_1

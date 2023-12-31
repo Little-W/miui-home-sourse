@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/Option;
 .super Ljava/lang/Object;
+.source "Option.java"
 
 
 # annotations
@@ -58,6 +59,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 28
     new-instance v0, Lcom/bumptech/glide/load/Option$1;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/Option$1;-><init>()V
@@ -79,16 +81,20 @@
         }
     .end annotation
 
+    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 94
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/bumptech/glide/load/Option;->key:Ljava/lang/String;
 
+    .line 95
     iput-object p2, p0, Lcom/bumptech/glide/load/Option;->defaultValue:Ljava/lang/Object;
 
+    .line 96
     invoke-static {p3}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -116,6 +122,7 @@
         }
     .end annotation
 
+    .line 89
     new-instance v0, Lcom/bumptech/glide/load/Option;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/bumptech/glide/load/Option;-><init>(Ljava/lang/String;Ljava/lang/Object;Lcom/bumptech/glide/load/Option$CacheKeyUpdater;)V
@@ -135,6 +142,7 @@
         }
     .end annotation
 
+    .line 143
     sget-object v0, Lcom/bumptech/glide/load/Option;->EMPTY_UPDATER:Lcom/bumptech/glide/load/Option$CacheKeyUpdater;
 
     return-object v0
@@ -143,10 +151,12 @@
 .method private getKeyBytes()[B
     .locals 2
 
+    .line 120
     iget-object v0, p0, Lcom/bumptech/glide/load/Option;->keyBytes:[B
 
     if-nez v0, :cond_0
 
+    .line 121
     iget-object v0, p0, Lcom/bumptech/glide/load/Option;->key:Ljava/lang/String;
 
     sget-object v1, Lcom/bumptech/glide/load/Key;->CHARSET:Ljava/nio/charset/Charset;
@@ -157,6 +167,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/Option;->keyBytes:[B
 
+    .line 123
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/load/Option;->keyBytes:[B
 
@@ -177,6 +188,7 @@
         }
     .end annotation
 
+    .line 50
     new-instance v0, Lcom/bumptech/glide/load/Option;
 
     invoke-static {}, Lcom/bumptech/glide/load/Option;->emptyUpdater()Lcom/bumptech/glide/load/Option$CacheKeyUpdater;
@@ -204,6 +216,7 @@
         }
     .end annotation
 
+    .line 62
     new-instance v0, Lcom/bumptech/glide/load/Option;
 
     invoke-static {}, Lcom/bumptech/glide/load/Option;->emptyUpdater()Lcom/bumptech/glide/load/Option$CacheKeyUpdater;
@@ -220,12 +233,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 128
     instance-of v0, p1, Lcom/bumptech/glide/load/Option;
 
     if-eqz v0, :cond_0
 
+    .line 129
     check-cast p1, Lcom/bumptech/glide/load/Option;
 
+    .line 130
     iget-object p0, p0, Lcom/bumptech/glide/load/Option;->key:Ljava/lang/String;
 
     iget-object p1, p1, Lcom/bumptech/glide/load/Option;->key:Ljava/lang/String;
@@ -250,6 +266,7 @@
         }
     .end annotation
 
+    .line 106
     iget-object p0, p0, Lcom/bumptech/glide/load/Option;->defaultValue:Ljava/lang/Object;
 
     return-object p0
@@ -258,6 +275,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 137
     iget-object p0, p0, Lcom/bumptech/glide/load/Option;->key:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -270,6 +288,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 148
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -307,6 +326,7 @@
         }
     .end annotation
 
+    .line 115
     iget-object v0, p0, Lcom/bumptech/glide/load/Option;->cacheKeyUpdater:Lcom/bumptech/glide/load/Option$CacheKeyUpdater;
 
     invoke-direct {p0}, Lcom/bumptech/glide/load/Option;->getKeyBytes()[B

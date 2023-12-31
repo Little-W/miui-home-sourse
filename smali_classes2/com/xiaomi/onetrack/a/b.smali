@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/a/a;Lcom/xiaomi/onetrack/f/b;)V
     .locals 0
 
+    .line 68
     iput-object p1, p0, Lcom/xiaomi/onetrack/a/b;->b:Lcom/xiaomi/onetrack/a/a;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/a/b;->a:Lcom/xiaomi/onetrack/f/b;
@@ -29,12 +30,14 @@
 .method public run()V
     .locals 3
 
+    .line 71
     iget-object v0, p0, Lcom/xiaomi/onetrack/a/b;->a:Lcom/xiaomi/onetrack/f/b;
 
     instance-of v1, v0, Lcom/xiaomi/onetrack/a/b/b;
 
     if-eqz v1, :cond_0
 
+    .line 72
     check-cast v0, Lcom/xiaomi/onetrack/a/b/b;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/a/b/b;->a()Ljava/util/List;
@@ -43,12 +46,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 73
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
+    .line 74
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -66,12 +71,14 @@
 
     check-cast v1, Lcom/xiaomi/onetrack/a/b/a;
 
+    .line 75
     iget-object v2, p0, Lcom/xiaomi/onetrack/a/b;->b:Lcom/xiaomi/onetrack/a/a;
 
     invoke-static {v2, v1}, Lcom/xiaomi/onetrack/a/a;->a(Lcom/xiaomi/onetrack/a/a;Lcom/xiaomi/onetrack/a/b/a;)J
 
     goto :goto_0
 
+    .line 79
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/a/c/b;->a()Lcom/xiaomi/onetrack/a/c/b;
 

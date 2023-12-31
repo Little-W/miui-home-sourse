@@ -1,5 +1,6 @@
 .class public final Lokhttp3/CertificatePinner$Builder;
 .super Ljava/lang/Object;
+.source "CertificatePinner.java"
 
 
 # annotations
@@ -29,8 +30,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 320
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 321
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -45,6 +48,7 @@
 .method public build()Lokhttp3/CertificatePinner;
     .locals 2
 
+    .line 341
     new-instance v0, Lokhttp3/CertificatePinner;
 
     new-instance v1, Ljava/util/LinkedHashSet;

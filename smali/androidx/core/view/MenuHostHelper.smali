@@ -1,5 +1,6 @@
 .class public Landroidx/core/view/MenuHostHelper;
 .super Ljava/lang/Object;
+.source "MenuHostHelper.java"
 
 
 # instance fields
@@ -31,20 +32,24 @@
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 39
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/core/view/MenuHostHelper;->mMenuProviders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
+    .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/core/view/MenuHostHelper;->mProviderToLifecycleContainers:Ljava/util/Map;
 
+    .line 50
     iput-object p1, p0, Landroidx/core/view/MenuHostHelper;->mOnInvalidateMenuCallback:Ljava/lang/Runnable;
 
     return-void
@@ -55,6 +60,7 @@
 .method public onCreateMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
     .locals 1
 
+    .line 61
     iget-object p0, p0, Landroidx/core/view/MenuHostHelper;->mMenuProviders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -74,6 +80,7 @@
 
     check-cast v0, Landroidx/core/view/MenuProvider;
 
+    .line 62
     invoke-interface {v0, p1, p2}, Landroidx/core/view/MenuProvider;->onCreateMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     goto :goto_0
@@ -85,6 +92,7 @@
 .method public onMenuItemSelected(Landroid/view/MenuItem;)Z
     .locals 1
 
+    .line 75
     iget-object p0, p0, Landroidx/core/view/MenuHostHelper;->mMenuProviders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -104,6 +112,7 @@
 
     check-cast v0, Landroidx/core/view/MenuProvider;
 
+    .line 76
     invoke-interface {v0, p1}, Landroidx/core/view/MenuProvider;->onMenuItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0

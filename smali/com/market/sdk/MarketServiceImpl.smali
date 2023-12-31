@@ -1,11 +1,13 @@
 .class public Lcom/market/sdk/MarketServiceImpl;
 .super Lcom/market/sdk/IMarketService$Stub;
+.source "MarketServiceImpl.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Lcom/market/sdk/IMarketService$Stub;-><init>()V
 
     return-void
@@ -49,6 +51,7 @@
 
     const/4 p1, 0x0
 
+    .line 72
     invoke-virtual {p2, p0, p1}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
     return-void
@@ -97,6 +100,7 @@
         }
     .end annotation
 
+    .line 65
     new-instance p0, Landroid/os/Bundle;
 
     invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
@@ -105,10 +109,12 @@
 
     const-string v1, ""
 
+    .line 66
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
+    .line 67
     invoke-virtual {p1, v0, p0}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
     return-void

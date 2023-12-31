@@ -23,12 +23,15 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/gms/common/BlockingServiceConnection;->zze:Z
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
@@ -51,16 +54,20 @@
 
     const-string v0, "BlockingServiceConnection.getServiceWithTimeout() called on main thread"
 
+    .line 7
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotMainThread(Ljava/lang/String;)V
 
+    .line 8
     iget-boolean v0, p0, Lcom/google/android/gms/common/BlockingServiceConnection;->zze:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
+    .line 10
     iput-boolean v0, p0, Lcom/google/android/gms/common/BlockingServiceConnection;->zze:Z
 
+    .line 11
     iget-object p0, p0, Lcom/google/android/gms/common/BlockingServiceConnection;->zzf:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
@@ -73,6 +80,7 @@
 
     return-object p0
 
+    .line 13
     :cond_0
     new-instance p0, Ljava/util/concurrent/TimeoutException;
 
@@ -82,6 +90,7 @@
 
     throw p0
 
+    .line 9
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -95,6 +104,7 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/common/BlockingServiceConnection;->zzf:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {p0, p2}, Ljava/util/concurrent/BlockingQueue;->add(Ljava/lang/Object;)Z

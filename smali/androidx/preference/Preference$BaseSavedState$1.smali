@@ -1,5 +1,6 @@
 .class final Landroidx/preference/Preference$BaseSavedState$1;
 .super Ljava/lang/Object;
+.source "Preference.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 2195
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/preference/Preference$BaseSavedState;
     .locals 0
 
+    .line 2198
     new-instance p0, Landroidx/preference/Preference$BaseSavedState;
 
     invoke-direct {p0, p1}, Landroidx/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcel;)V
@@ -49,6 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 2195
     invoke-virtual {p0, p1}, Landroidx/preference/Preference$BaseSavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/preference/Preference$BaseSavedState;
 
     move-result-object p0
@@ -59,6 +63,7 @@
 .method public newArray(I)[Landroidx/preference/Preference$BaseSavedState;
     .locals 0
 
+    .line 2203
     new-array p0, p1, [Landroidx/preference/Preference$BaseSavedState;
 
     return-object p0
@@ -67,6 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 2195
     invoke-virtual {p0, p1}, Landroidx/preference/Preference$BaseSavedState$1;->newArray(I)[Landroidx/preference/Preference$BaseSavedState;
 
     move-result-object p0

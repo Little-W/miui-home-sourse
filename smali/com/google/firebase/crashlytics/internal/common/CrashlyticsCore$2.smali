@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$2;
 .super Ljava/lang/Object;
+.source "CrashlyticsCore.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;)V
     .locals 0
 
+    .line 383
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$2;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$2;->val$settingsDataProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 386
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$2;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$2;->val$settingsDataProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;

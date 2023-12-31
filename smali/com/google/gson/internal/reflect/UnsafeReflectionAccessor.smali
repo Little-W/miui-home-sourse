@@ -1,5 +1,6 @@
 .class final Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;
 .super Lcom/google/gson/internal/reflect/ReflectionAccessor;
+.source "UnsafeReflectionAccessor.java"
 
 
 # static fields
@@ -16,14 +17,17 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 31
     invoke-direct {p0}, Lcom/google/gson/internal/reflect/ReflectionAccessor;-><init>()V
 
+    .line 34
     invoke-static {}, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->getUnsafeInstance()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->theUnsafe:Ljava/lang/Object;
 
+    .line 35
     invoke-static {}, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->getOverrideField()Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -36,6 +40,7 @@
 .method private static getOverrideField()Ljava/lang/reflect/Field;
     .locals 2
 
+    .line 81
     :try_start_0
     const-class v0, Ljava/lang/reflect/AccessibleObject;
 
@@ -63,12 +68,14 @@
     :try_start_0
     const-string v1, "sun.misc.Unsafe"
 
+    .line 70
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     sput-object v1, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->unsafeClass:Ljava/lang/Class;
 
+    .line 71
     sget-object v1, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->unsafeClass:Ljava/lang/Class;
 
     const-string v2, "theUnsafe"
@@ -79,8 +86,10 @@
 
     const/4 v2, 0x1
 
+    .line 72
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 73
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -96,6 +105,7 @@
 .method public makeAccessible(Ljava/lang/reflect/AccessibleObject;)V
     .locals 3
 
+    .line 40
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->makeAccessibleWithUnsafe(Ljava/lang/reflect/AccessibleObject;)Z
 
     move-result p0
@@ -104,6 +114,7 @@
 
     const/4 p0, 0x1
 
+    .line 44
     :try_start_0
     invoke-virtual {p1, p0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
     :try_end_0
@@ -114,6 +125,7 @@
     :catch_0
     move-exception p0
 
+    .line 46
     new-instance v0, Lcom/google/gson/JsonIOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -146,6 +158,7 @@
 .method makeAccessibleWithUnsafe(Ljava/lang/reflect/AccessibleObject;)Z
     .locals 10
 
+    .line 55
     iget-object v0, p0, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->theUnsafe:Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -156,6 +169,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 57
     :try_start_0
     sget-object v0, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->unsafeClass:Ljava/lang/Class;
 
@@ -173,6 +187,7 @@
 
     move-result-object v0
 
+    .line 58
     iget-object v2, p0, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->theUnsafe:Ljava/lang/Object;
 
     new-array v4, v3, [Ljava/lang/Object;
@@ -191,6 +206,7 @@
 
     move-result-wide v4
 
+    .line 59
     sget-object v0, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->unsafeClass:Ljava/lang/Class;
 
     const-string v2, "putBoolean"
@@ -217,6 +233,7 @@
 
     move-result-object v0
 
+    .line 60
     iget-object p0, p0, Lcom/google/gson/internal/reflect/UnsafeReflectionAccessor;->theUnsafe:Ljava/lang/Object;
 
     new-array v2, v6, [Ljava/lang/Object;

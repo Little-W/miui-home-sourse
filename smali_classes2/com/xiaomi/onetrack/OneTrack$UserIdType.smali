@@ -45,6 +45,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
+    .line 48
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     const/4 v1, 0x0
@@ -57,6 +58,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->XIAOMI:Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
+    .line 49
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     const/4 v2, 0x1
@@ -69,6 +71,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->PHONE_NUMBER:Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
+    .line 50
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     const/4 v3, 0x2
@@ -81,6 +84,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->WEIXIN:Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
+    .line 51
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     const/4 v4, 0x3
@@ -93,6 +97,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->WEIBO:Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
+    .line 52
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     const/4 v5, 0x4
@@ -105,6 +110,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->QQ:Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
+    .line 53
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     const/4 v6, 0x5
@@ -121,6 +127,7 @@
 
     new-array v0, v0, [Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
+    .line 47
     sget-object v7, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->XIAOMI:Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     aput-object v7, v0, v1
@@ -160,8 +167,10 @@
         }
     .end annotation
 
+    .line 57
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 58
     iput-object p3, p0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->a:Ljava/lang/String;
 
     return-void
@@ -170,6 +179,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/onetrack/OneTrack$UserIdType;
     .locals 1
 
+    .line 47
     const-class v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -184,6 +194,7 @@
 .method public static values()[Lcom/xiaomi/onetrack/OneTrack$UserIdType;
     .locals 1
 
+    .line 47
     sget-object v0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->b:[Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/onetrack/OneTrack$UserIdType;->clone()Ljava/lang/Object;
@@ -200,6 +211,7 @@
 .method public getUserIdType()Ljava/lang/String;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->a:Ljava/lang/String;
 
     return-object p0

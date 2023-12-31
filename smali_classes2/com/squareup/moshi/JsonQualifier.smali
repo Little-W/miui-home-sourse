@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/squareup/moshi/JsonQualifier;
 .super Ljava/lang/Object;
+.source "JsonQualifier.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

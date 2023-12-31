@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;
 .super Lkotlinx/coroutines/MainCoroutineDispatcher;
+.source "MainDispatchers.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/Delay;
@@ -21,6 +22,7 @@
 .method public constructor <init>(Ljava/lang/Throwable;Ljava/lang/String;)V
     .locals 0
 
+    .line 86
     invoke-direct {p0}, Lkotlinx/coroutines/MainCoroutineDispatcher;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->cause:Ljava/lang/Throwable;
@@ -33,10 +35,12 @@
 .method private final missing()Ljava/lang/Void;
     .locals 4
 
+    .line 106
     iget-object v0, p0, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->cause:Ljava/lang/Throwable;
 
     if-eqz v0, :cond_1
 
+    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,6 +81,7 @@
 
     move-result-object v0
 
+    .line 110
     new-instance v1, Ljava/lang/IllegalStateException;
 
     iget-object p0, p0, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->cause:Ljava/lang/Throwable;
@@ -87,6 +92,7 @@
 
     throw v1
 
+    .line 107
     :cond_1
     invoke-static {}, Lkotlinx/coroutines/internal/MainDispatchersKt;->throwMissingMainDispatcherException()Ljava/lang/Void;
 
@@ -102,6 +108,7 @@
 .method public dispatch(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)Ljava/lang/Void;
     .locals 0
 
+    .line 100
     invoke-direct {p0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->missing()Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -114,6 +121,7 @@
 .method public bridge synthetic dispatch(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 83
     invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->dispatch(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)Ljava/lang/Void;
 
     return-void
@@ -122,6 +130,7 @@
 .method public getImmediate()Lkotlinx/coroutines/MainCoroutineDispatcher;
     .locals 0
 
+    .line 88
     check-cast p0, Lkotlinx/coroutines/MainCoroutineDispatcher;
 
     return-object p0
@@ -130,6 +139,7 @@
 .method public invokeOnTimeout(JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
     .locals 0
 
+    .line 97
     invoke-direct {p0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->missing()Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -142,6 +152,7 @@
 .method public isDispatchNeeded(Lkotlin/coroutines/CoroutineContext;)Z
     .locals 0
 
+    .line 91
     invoke-direct {p0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->missing()Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -164,6 +175,7 @@
         }
     .end annotation
 
+    .line 103
     invoke-direct {p0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->missing()Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -176,6 +188,7 @@
 .method public bridge synthetic scheduleResumeAfterDelay(JLkotlinx/coroutines/CancellableContinuation;)V
     .locals 0
 
+    .line 83
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->scheduleResumeAfterDelay(JLkotlinx/coroutines/CancellableContinuation;)Ljava/lang/Void;
 
     return-void
@@ -184,6 +197,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

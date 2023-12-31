@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/channels/ArrayChannel;
 .super Lkotlinx/coroutines/channels/AbstractChannel;
+.source "ArrayChannel.kt"
 
 
 # annotations
@@ -46,12 +47,14 @@
         }
     .end annotation
 
+    .line 29
     invoke-direct {p0, p3}, Lkotlinx/coroutines/channels/AbstractChannel;-><init>(Lkotlin/jvm/functions/Function1;)V
 
     iput p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->capacity:I
 
     iput-object p2, p0, Lkotlinx/coroutines/channels/ArrayChannel;->onBufferOverflow:Lkotlinx/coroutines/channels/BufferOverflow;
 
+    .line 33
     iget p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->capacity:I
 
     const/4 p2, 0x0
@@ -68,12 +71,14 @@
     :goto_0
     if-eqz p3, :cond_1
 
+    .line 36
     new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 42
     iget p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->capacity:I
 
     const/16 p3, 0x8
@@ -102,10 +107,12 @@
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
+    .line 45
     iput p2, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
     return-void
 
+    .line 33
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -148,12 +155,15 @@
         }
     .end annotation
 
+    .line 151
     iget v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->capacity:I
 
     if-ge p1, v0, :cond_0
 
+    .line 152
     invoke-direct {p0, p1}, Lkotlinx/coroutines/channels/ArrayChannel;->ensureCapacity(I)V
 
+    .line 153
     iget-object v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
     iget p0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
@@ -168,6 +178,7 @@
 
     goto :goto_2
 
+    .line 156
     :cond_0
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
@@ -204,6 +215,7 @@
 
     throw p0
 
+    .line 157
     :cond_3
     :goto_1
     iget-object v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
@@ -220,6 +232,7 @@
 
     add-int/2addr p1, v2
 
+    .line 158
     array-length v3, v0
 
     rem-int/2addr p1, v3
@@ -228,6 +241,7 @@
 
     add-int/2addr v2, v1
 
+    .line 159
     array-length p1, v0
 
     rem-int/2addr v2, p1
@@ -241,12 +255,14 @@
 .method private final ensureCapacity(I)V
     .locals 7
 
+    .line 165
     iget-object v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
     array-length v1, v0
 
     if-lt p1, v1, :cond_1
 
+    .line 166
     array-length v0, v0
 
     mul-int/lit8 v0, v0, 0x2
@@ -257,6 +273,7 @@
 
     move-result v0
 
+    .line 167
     new-array v1, v0, [Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -266,6 +283,7 @@
     :goto_0
     if-ge v3, p1, :cond_0
 
+    .line 169
     iget-object v4, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
     iget v5, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
@@ -284,13 +302,16 @@
 
     goto :goto_0
 
+    .line 171
     :cond_0
     sget-object v3, Lkotlinx/coroutines/channels/AbstractChannelKt;->EMPTY:Lkotlinx/coroutines/internal/Symbol;
 
     invoke-static {v1, v3, p1, v0}, Lkotlin/collections/ArraysKt;->fill([Ljava/lang/Object;Ljava/lang/Object;II)V
 
+    .line 172
     iput-object v1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
+    .line 173
     iput v2, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
 
     :cond_1
@@ -300,6 +321,7 @@
 .method private final updateBufferSize(I)Lkotlinx/coroutines/internal/Symbol;
     .locals 3
 
+    .line 137
     iget v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->capacity:I
 
     const/4 v1, 0x0
@@ -310,10 +332,12 @@
 
     add-int/2addr p1, v2
 
+    .line 138
     iput p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
     return-object v1
 
+    .line 142
     :cond_0
     iget-object p0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->onBufferOverflow:Lkotlinx/coroutines/channels/BufferOverflow;
 
@@ -337,6 +361,7 @@
 
     goto :goto_0
 
+    .line 145
     :cond_1
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
@@ -344,11 +369,13 @@
 
     throw p0
 
+    .line 144
     :cond_2
     sget-object v1, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_SUCCESS:Lkotlinx/coroutines/internal/Symbol;
 
     goto :goto_0
 
+    .line 143
     :cond_3
     sget-object v1, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
@@ -368,12 +395,15 @@
         }
     .end annotation
 
+    .line 278
     iget-object v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 319
     check-cast v0, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 279
     :try_start_0
     invoke-super {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;->enqueueReceiveInternal(Lkotlinx/coroutines/channels/Receive;)Z
 
@@ -396,12 +426,15 @@
 .method protected enqueueSend(Lkotlinx/coroutines/channels/Send;)Ljava/lang/Object;
     .locals 1
 
+    .line 130
     iget-object v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 316
     check-cast v0, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 131
     :try_start_0
     invoke-super {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;->enqueueSend(Lkotlinx/coroutines/channels/Send;)Ljava/lang/Object;
 
@@ -424,6 +457,7 @@
 .method protected getBufferDebugString()Ljava/lang/String;
     .locals 2
 
+    .line 307
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -474,6 +508,7 @@
 .method protected final isBufferEmpty()Z
     .locals 0
 
+    .line 48
     iget p0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
     if-nez p0, :cond_0
@@ -492,6 +527,7 @@
 .method protected final isBufferFull()Z
     .locals 2
 
+    .line 50
     iget v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
     iget v1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->capacity:I
@@ -526,19 +562,24 @@
 
     const/4 v0, 0x0
 
+    .line 58
     move-object v1, v0
 
     check-cast v1, Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
+    .line 59
     iget-object v1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 313
     check-cast v1, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 60
     :try_start_0
     iget v2, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
+    .line 61
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/ArrayChannel;->getClosedForSend()Lkotlinx/coroutines/channels/Closed;
 
     move-result-object v3
@@ -551,6 +592,7 @@
 
     return-object v3
 
+    .line 63
     :cond_0
     :try_start_1
     invoke-direct {p0, v2}, Lkotlinx/coroutines/channels/ArrayChannel;->updateBufferSize(I)Lkotlinx/coroutines/internal/Symbol;
@@ -568,6 +610,7 @@
     :cond_1
     if-nez v2, :cond_7
 
+    .line 67
     :cond_2
     :try_start_2
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/ArrayChannel;->takeFirstReceiveOrPeekClosed()Lkotlinx/coroutines/channels/ReceiveOrClosed;
@@ -576,12 +619,15 @@
 
     if-eqz v3, :cond_7
 
+    .line 68
     instance-of v4, v3, Lkotlinx/coroutines/channels/Closed;
 
     if-eqz v4, :cond_3
 
+    .line 69
     iput v2, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
+    .line 70
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -590,6 +636,7 @@
 
     return-object v3
 
+    .line 72
     :cond_3
     :try_start_3
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
@@ -600,6 +647,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 74
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result v0
@@ -631,20 +679,24 @@
 
     throw p0
 
+    .line 75
     :cond_6
     :goto_1
     iput v2, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
+    .line 81
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 84
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     invoke-interface {v3, p1}, Lkotlinx/coroutines/channels/ReceiveOrClosed;->completeResumeReceive(Ljava/lang/Object;)V
 
+    .line 85
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     invoke-interface {v3}, Lkotlinx/coroutines/channels/ReceiveOrClosed;->getOfferResult()Ljava/lang/Object;
@@ -653,10 +705,12 @@
 
     return-object p0
 
+    .line 80
     :cond_7
     :try_start_4
     invoke-direct {p0, v2, p1}, Lkotlinx/coroutines/channels/ArrayChannel;->enqueueElement(ILjava/lang/Object;)V
 
+    .line 81
     sget-object p0, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_SUCCESS:Lkotlinx/coroutines/internal/Symbol;
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -676,18 +730,23 @@
 .method protected onCancelIdempotent(Z)V
     .locals 9
 
+    .line 285
     iget-object v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->onUndeliveredElement:Lkotlin/jvm/functions/Function1;
 
     const/4 v1, 0x0
 
+    .line 286
     check-cast v1, Lkotlinx/coroutines/internal/UndeliveredElementException;
 
+    .line 287
     iget-object v2, p0, Lkotlinx/coroutines/channels/ArrayChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 320
     check-cast v2, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 288
     :try_start_0
     iget v3, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
@@ -700,6 +759,7 @@
     :goto_0
     if-ge v1, v3, :cond_1
 
+    .line 289
     iget-object v6, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
     iget v7, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
@@ -708,14 +768,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 290
     sget-object v7, Lkotlinx/coroutines/channels/AbstractChannelKt;->EMPTY:Lkotlinx/coroutines/internal/Symbol;
 
     if-eq v6, v7, :cond_0
 
+    .line 292
     invoke-static {v0, v6, v5}, Lkotlinx/coroutines/internal/OnUndeliveredElementKt;->callUndeliveredElementCatchingException(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;
 
     move-result-object v5
 
+    .line 294
     :cond_0
     iget-object v6, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
@@ -725,6 +788,7 @@
 
     aput-object v8, v6, v7
 
+    .line 295
     iget v6, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
 
     add-int/lit8 v6, v6, 0x1
@@ -741,21 +805,25 @@
 
     goto :goto_0
 
+    .line 297
     :cond_1
     iput v4, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
+    .line 298
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 300
     invoke-super {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;->onCancelIdempotent(Z)V
 
     if-nez v5, :cond_2
 
     return-void
 
+    .line 301
     :cond_2
     check-cast v5, Ljava/lang/Throwable;
 
@@ -764,6 +832,7 @@
     :catchall_0
     move-exception p0
 
+    .line 298
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p0
@@ -782,21 +851,26 @@
 
     const/4 v0, 0x0
 
+    .line 219
     move-object v1, v0
 
     check-cast v1, Lkotlinx/coroutines/channels/Send;
 
+    .line 222
     iget-object v2, p0, Lkotlinx/coroutines/channels/ArrayChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 318
     check-cast v2, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 223
     :try_start_0
     iget v3, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
     if-nez v3, :cond_1
 
+    .line 224
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/ArrayChannel;->getClosedForSend()Lkotlinx/coroutines/channels/Closed;
 
     move-result-object p0
@@ -815,6 +889,7 @@
 
     return-object p0
 
+    .line 226
     :cond_1
     :try_start_1
     iget-object v4, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
@@ -823,6 +898,7 @@
 
     aget-object v4, v4, v5
 
+    .line 227
     iget-object v5, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
     iget v6, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
@@ -831,21 +907,26 @@
 
     add-int/lit8 v0, v3, -0x1
 
+    .line 228
     iput v0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
+    .line 230
     sget-object v0, Lkotlinx/coroutines/channels/AbstractChannelKt;->POLL_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
+    .line 231
     iget v5, p0, Lkotlinx/coroutines/channels/ArrayChannel;->capacity:I
 
     const/4 v6, 0x1
 
     if-ne v3, v5, :cond_7
 
+    .line 233
     :goto_1
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/ArrayChannel;->describeTryPoll()Lkotlinx/coroutines/channels/AbstractChannel$TryPollDesc;
 
     move-result-object v5
 
+    .line 234
     move-object v7, v5
 
     check-cast v7, Lkotlinx/coroutines/internal/AtomicDesc;
@@ -856,6 +937,7 @@
 
     if-nez v7, :cond_2
 
+    .line 237
     invoke-virtual {v5}, Lkotlinx/coroutines/channels/AbstractChannel$TryPollDesc;->getResult()Ljava/lang/Object;
 
     move-result-object v0
@@ -864,6 +946,7 @@
 
     check-cast v1, Lkotlinx/coroutines/channels/Send;
 
+    .line 239
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     invoke-virtual {v1}, Lkotlinx/coroutines/channels/Send;->getPollResult()Ljava/lang/Object;
@@ -874,6 +957,7 @@
 
     goto :goto_3
 
+    .line 242
     :cond_2
     sget-object v5, Lkotlinx/coroutines/channels/AbstractChannelKt;->POLL_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
@@ -881,6 +965,7 @@
 
     goto :goto_2
 
+    .line 243
     :cond_3
     sget-object v5, Lkotlinx/coroutines/internal/AtomicKt;->RETRY_ATOMIC:Ljava/lang/Object;
 
@@ -888,6 +973,7 @@
 
     goto :goto_1
 
+    .line 244
     :cond_4
     invoke-static {}, Lkotlinx/coroutines/selects/SelectKt;->getALREADY_SELECTED()Ljava/lang/Object;
 
@@ -895,8 +981,10 @@
 
     if-ne v7, v0, :cond_5
 
+    .line 245
     iput v3, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
+    .line 246
     iget-object p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
     iget p0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
@@ -905,16 +993,19 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 247
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object v7
 
+    .line 249
     :cond_5
     :try_start_2
     instance-of v0, v7, Lkotlinx/coroutines/channels/Closed;
 
     if-eqz v0, :cond_6
 
+    .line 250
     move-object v1, v7
 
     check-cast v1, Lkotlinx/coroutines/channels/Send;
@@ -925,6 +1016,7 @@
 
     goto :goto_3
 
+    .line 255
     :cond_6
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -956,6 +1048,7 @@
     :goto_2
     const/4 v5, 0x0
 
+    .line 259
     :goto_3
     sget-object v7, Lkotlinx/coroutines/channels/AbstractChannelKt;->POLL_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
@@ -965,8 +1058,10 @@
 
     if-nez v7, :cond_8
 
+    .line 260
     iput v3, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
+    .line 261
     iget-object p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
     iget v7, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
@@ -983,6 +1078,7 @@
 
     goto :goto_4
 
+    .line 264
     :cond_8
     invoke-interface {p1}, Lkotlinx/coroutines/selects/SelectInstance;->trySelect()Z
 
@@ -990,14 +1086,17 @@
 
     if-nez p1, :cond_9
 
+    .line 265
     iput v3, p0, Lkotlinx/coroutines/channels/ArrayChannel;->size:I
 
+    .line 266
     iget-object p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->buffer:[Ljava/lang/Object;
 
     iget p0, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
 
     aput-object v4, p1, p0
 
+    .line 267
     invoke-static {}, Lkotlinx/coroutines/selects/SelectKt;->getALREADY_SELECTED()Ljava/lang/Object;
 
     move-result-object p0
@@ -1008,6 +1107,7 @@
 
     return-object p0
 
+    .line 270
     :cond_9
     :goto_4
     :try_start_3
@@ -1023,6 +1123,7 @@
 
     iput p1, p0, Lkotlinx/coroutines/channels/ArrayChannel;->head:I
 
+    .line 271
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -1031,6 +1132,7 @@
 
     if-eqz v5, :cond_a
 
+    .line 274
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     invoke-virtual {v1}, Lkotlinx/coroutines/channels/Send;->completeResumeSend()V
@@ -1041,6 +1143,7 @@
     :catchall_0
     move-exception p0
 
+    .line 271
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p0

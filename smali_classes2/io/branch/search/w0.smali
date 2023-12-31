@@ -1,5 +1,6 @@
 .class public Lio/branch/search/w0;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields

@@ -1,5 +1,6 @@
 .class interface abstract Lcom/airbnb/lottie/animation/content/GreedyContent;
 .super Ljava/lang/Object;
+.source "GreedyContent.java"
 
 
 # virtual methods

@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/EngineResource;
 .super Ljava/lang/Object;
+.source "EngineResource.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/Resource;
@@ -58,8 +59,10 @@
         }
     .end annotation
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 28
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -68,8 +71,10 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
+    .line 29
     iput-boolean p2, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isCacheable:Z
 
+    .line 30
     iput-boolean p3, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecyclable:Z
 
     return-void
@@ -82,11 +87,13 @@
 
     monitor-enter p0
 
+    .line 87
     :try_start_0
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecycled:Z
 
     if-nez v0, :cond_0
 
+    .line 90
     iget v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->acquired:I
 
     add-int/lit8 v0, v0, 0x1
@@ -95,10 +102,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 91
     monitor-exit p0
 
     return-void
 
+    .line 88
     :cond_0
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -127,6 +136,7 @@
         }
     .end annotation
 
+    .line 55
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Resource;->get()Ljava/lang/Object;
@@ -146,6 +156,7 @@
         }
     .end annotation
 
+    .line 39
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     return-object p0
@@ -161,6 +172,7 @@
         }
     .end annotation
 
+    .line 49
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Resource;->getResourceClass()Ljava/lang/Class;
@@ -173,6 +185,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 60
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Resource;->getSize()I
@@ -185,6 +198,7 @@
 .method isCacheable()Z
     .locals 0
 
+    .line 43
     iget-boolean p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isCacheable:Z
 
     return p0
@@ -195,34 +209,41 @@
 
     monitor-enter p0
 
+    .line 65
     :try_start_0
     iget v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->acquired:I
 
     if-gtz v0, :cond_2
 
+    .line 68
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecycled:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
+    .line 71
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecycled:Z
 
+    .line 72
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecyclable:Z
 
     if-eqz v0, :cond_0
 
+    .line 73
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 75
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 69
     :cond_1
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -233,6 +254,7 @@
 
     throw v0
 
+    .line 66
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -255,20 +277,24 @@
 .method release()V
     .locals 3
 
+    .line 107
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->listener:Lcom/bumptech/glide/load/engine/EngineResource$ResourceListener;
 
     monitor-enter v0
 
+    .line 108
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 109
     :try_start_1
     iget v1, p0, Lcom/bumptech/glide/load/engine/EngineResource;->acquired:I
 
     if-lez v1, :cond_1
 
+    .line 112
     iget v1, p0, Lcom/bumptech/glide/load/engine/EngineResource;->acquired:I
 
     add-int/lit8 v1, v1, -0x1
@@ -277,17 +303,20 @@
 
     if-nez v1, :cond_0
 
+    .line 113
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineResource;->listener:Lcom/bumptech/glide/load/engine/EngineResource$ResourceListener;
 
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/EngineResource;->key:Lcom/bumptech/glide/load/Key;
 
     invoke-interface {v1, v2, p0}, Lcom/bumptech/glide/load/engine/EngineResource$ResourceListener;->onResourceReleased(Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/EngineResource;)V
 
+    .line 115
     :cond_0
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 116
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -295,6 +324,7 @@
 
     return-void
 
+    .line 110
     :cond_1
     :try_start_3
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -308,6 +338,7 @@
     :catchall_0
     move-exception v1
 
+    .line 115
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -318,6 +349,7 @@
     :catchall_1
     move-exception p0
 
+    .line 116
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -330,13 +362,16 @@
 
     monitor-enter p0
 
+    .line 34
     :try_start_0
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineResource;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 35
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/EngineResource;->listener:Lcom/bumptech/glide/load/engine/EngineResource$ResourceListener;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 36
     monitor-exit p0
 
     return-void
@@ -354,6 +389,7 @@
 
     monitor-enter p0
 
+    .line 121
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 

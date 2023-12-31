@@ -1,5 +1,6 @@
 .class Lokhttp3/internal/http2/PushObserver$1;
 .super Ljava/lang/Object;
+.source "PushObserver.java"
 
 # interfaces
 .implements Lokhttp3/internal/http2/PushObserver;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +39,7 @@
 
     int-to-long p0, p3
 
+    .line 88
     invoke-interface {p2, p0, p1}, Lokio/BufferedSource;->skip(J)V
 
     const/4 p0, 0x1

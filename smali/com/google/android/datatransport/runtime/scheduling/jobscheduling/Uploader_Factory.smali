@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;
 .super Ljava/lang/Object;
+.source "Uploader_Factory.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
@@ -144,24 +145,34 @@
         }
     .end annotation
 
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->contextProvider:Ljavax/inject/Provider;
 
+    .line 44
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->backendRegistryProvider:Ljavax/inject/Provider;
 
+    .line 45
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->eventStoreProvider:Ljavax/inject/Provider;
 
+    .line 46
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->workSchedulerProvider:Ljavax/inject/Provider;
 
+    .line 47
     iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->executorProvider:Ljavax/inject/Provider;
 
+    .line 48
     iput-object p6, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->guardProvider:Ljavax/inject/Provider;
 
+    .line 49
     iput-object p7, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clockProvider:Ljavax/inject/Provider;
 
+    .line 50
     iput-object p8, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->uptimeClockProvider:Ljavax/inject/Provider;
 
+    .line 51
     iput-object p9, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clientHealthMetricsStoreProvider:Ljavax/inject/Provider;
 
     return-void
@@ -203,6 +214,7 @@
         }
     .end annotation
 
+    .line 65
     new-instance v10, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;
 
     move-object v0, v10
@@ -233,6 +245,7 @@
 .method public static newInstance(Landroid/content/Context;Lcom/google/android/datatransport/runtime/backends/BackendRegistry;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;Ljava/util/concurrent/Executor;Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/scheduling/persistence/ClientHealthMetricsStore;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
     .locals 11
 
+    .line 72
     new-instance v10, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
 
     move-object v0, v10
@@ -265,6 +278,7 @@
 .method public get()Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
     .locals 10
 
+    .line 56
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->contextProvider:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -365,6 +379,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 14
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->get()Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
 
     move-result-object p0

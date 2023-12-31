@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$ConfigCallback;
 .super Ljava/lang/Object;
+.source "CommercialCloudConfigJobService.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/internal/measurement/zzhl;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # annotations
@@ -39,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 34
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzhl;
 
     const/4 v1, 0x1
@@ -53,8 +55,10 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 27
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -67,8 +71,10 @@
 .method private constructor <init>(Z)V
     .locals 0
 
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 30
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p1
@@ -81,23 +87,28 @@
 .method public static zza()Lcom/google/android/gms/internal/measurement/zzhl;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzhl;->zzc:Lcom/google/android/gms/internal/measurement/zzhl;
 
     if-nez v0, :cond_1
 
+    .line 3
     const-class v1, Lcom/google/android/gms/internal/measurement/zzhl;
 
     monitor-enter v1
 
+    .line 4
     :try_start_0
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzhl;->zzc:Lcom/google/android/gms/internal/measurement/zzhl;
 
     if-nez v0, :cond_0
 
+    .line 7
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzhl;->zze:Lcom/google/android/gms/internal/measurement/zzhl;
 
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzhl;->zzc:Lcom/google/android/gms/internal/measurement/zzhl;
 
+    .line 8
     :cond_0
     monitor-exit v1
 
@@ -120,6 +131,7 @@
 .method public static zzb()Lcom/google/android/gms/internal/measurement/zzhl;
     .locals 2
 
+    .line 10
     const-class v0, Lcom/google/android/gms/internal/measurement/zzhl;
 
     sget-object v1, Lcom/google/android/gms/internal/measurement/zzhl;->zzd:Lcom/google/android/gms/internal/measurement/zzhl;
@@ -128,25 +140,31 @@
 
     return-object v1
 
+    .line 13
     :cond_0
     monitor-enter v0
 
+    .line 14
     :try_start_0
     sget-object v1, Lcom/google/android/gms/internal/measurement/zzhl;->zzd:Lcom/google/android/gms/internal/measurement/zzhl;
 
     if-eqz v1, :cond_1
 
+    .line 16
     monitor-exit v0
 
     return-object v1
 
+    .line 18
     :cond_1
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzhw;->zza(Ljava/lang/Class;)Lcom/google/android/gms/internal/measurement/zzhl;
 
     move-result-object v1
 
+    .line 20
     sput-object v1, Lcom/google/android/gms/internal/measurement/zzhl;->zzd:Lcom/google/android/gms/internal/measurement/zzhl;
 
+    .line 21
     monitor-exit v0
 
     return-object v1
@@ -154,6 +172,7 @@
     :catchall_0
     move-exception v1
 
+    .line 22
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -175,12 +194,14 @@
         }
     .end annotation
 
+    .line 23
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzhl;->zzf:Ljava/util/Map;
 
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzhl$zza;
 
     invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/measurement/zzhl$zza;-><init>(Ljava/lang/Object;I)V
 
+    .line 24
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public final Lcom/xiaomi/dist/handoff/AppMeta;
 .super Ljava/lang/Object;
+.source "AppMeta.java"
 
 
 # instance fields
@@ -22,20 +23,28 @@
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Z)V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     iput p1, p0, Lcom/xiaomi/dist/handoff/AppMeta;->appId:I
 
+    .line 33
     iput-object p2, p0, Lcom/xiaomi/dist/handoff/AppMeta;->name:Ljava/lang/String;
 
+    .line 34
     iput-object p3, p0, Lcom/xiaomi/dist/handoff/AppMeta;->androidPackageName:Ljava/lang/String;
 
+    .line 35
     iput-object p4, p0, Lcom/xiaomi/dist/handoff/AppMeta;->winPackageName:Ljava/lang/String;
 
+    .line 36
     iput-object p5, p0, Lcom/xiaomi/dist/handoff/AppMeta;->iconUri:Ljava/lang/String;
 
+    .line 37
     iput-object p6, p0, Lcom/xiaomi/dist/handoff/AppMeta;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 38
     iput-boolean p7, p0, Lcom/xiaomi/dist/handoff/AppMeta;->supportHandoff:Z
 
     return-void
@@ -57,6 +66,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 72
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -69,9 +79,11 @@
 
     goto :goto_1
 
+    .line 73
     :cond_1
     check-cast p1, Lcom/xiaomi/dist/handoff/AppMeta;
 
+    .line 74
     iget v2, p0, Lcom/xiaomi/dist/handoff/AppMeta;->appId:I
 
     iget v3, p1, Lcom/xiaomi/dist/handoff/AppMeta;->appId:I
@@ -92,6 +104,7 @@
 
     iget-object v3, p1, Lcom/xiaomi/dist/handoff/AppMeta;->androidPackageName:Ljava/lang/String;
 
+    .line 75
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -102,6 +115,7 @@
 
     iget-object v3, p1, Lcom/xiaomi/dist/handoff/AppMeta;->winPackageName:Ljava/lang/String;
 
+    .line 76
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -112,6 +126,7 @@
 
     iget-object v3, p1, Lcom/xiaomi/dist/handoff/AppMeta;->iconUri:Ljava/lang/String;
 
+    .line 77
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -122,6 +137,7 @@
 
     iget-object p1, p1, Lcom/xiaomi/dist/handoff/AppMeta;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 78
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -144,6 +160,7 @@
 .method public getAndroidPackageName()Ljava/lang/String;
     .locals 0
 
+    .line 50
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/AppMeta;->androidPackageName:Ljava/lang/String;
 
     return-object p0
@@ -152,6 +169,7 @@
 .method public getAppId()I
     .locals 0
 
+    .line 42
     iget p0, p0, Lcom/xiaomi/dist/handoff/AppMeta;->appId:I
 
     return p0
@@ -160,6 +178,7 @@
 .method public getIconDrawable()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/AppMeta;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -168,6 +187,7 @@
 .method public getIconUri()Ljava/lang/String;
     .locals 0
 
+    .line 58
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/AppMeta;->iconUri:Ljava/lang/String;
 
     return-object p0
@@ -176,6 +196,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 46
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/AppMeta;->name:Ljava/lang/String;
 
     return-object p0
@@ -188,6 +209,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 83
     iget v1, p0, Lcom/xiaomi/dist/handoff/AppMeta;->appId:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -238,6 +260,7 @@
 .method public isSupportHandoff()Z
     .locals 0
 
+    .line 66
     iget-boolean p0, p0, Lcom/xiaomi/dist/handoff/AppMeta;->supportHandoff:Z
 
     return p0
@@ -246,6 +269,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

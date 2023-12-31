@@ -1,5 +1,6 @@
 .class final Lcom/google/android/libraries/gsa/launcherclient/g;
 .super Ljava/lang/Object;
+.source "LauncherClient.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -29,6 +30,7 @@
 
     iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/h;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->i(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)V
 
     return-void

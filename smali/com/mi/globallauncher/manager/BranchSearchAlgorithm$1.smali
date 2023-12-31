@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$1;
 .super Ljava/lang/Object;
+.source "BranchSearchAlgorithm.java"
 
 # interfaces
 .implements Lio/branch/search/IBranchAutoSuggestEvents;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)V
     .locals 0
 
+    .line 171
     iput-object p1, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$1;->this$0:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onBranchAutoSuggestError(Lio/branch/search/BranchSearchError;)V
     .locals 2
 
+    .line 184
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,6 +71,7 @@
 
     invoke-static {v0, p1}, Lcom/mi/globallauncher/util/CommercialLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 185
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$1;->this$0:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;
 
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$300(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
@@ -86,6 +90,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 174
     invoke-virtual {p1}, Lio/branch/search/BranchAutoSuggestResult;->getSuggestions()Ljava/util/List;
 
     move-result-object v0
@@ -98,6 +103,7 @@
 
     goto :goto_0
 
+    .line 178
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -125,6 +131,7 @@
 
     invoke-static {v1, v0}, Lcom/mi/globallauncher/util/CommercialLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 179
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$1;->this$0:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;
 
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$300(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
@@ -135,6 +142,7 @@
 
     return-void
 
+    .line 175
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$1;->this$0:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;

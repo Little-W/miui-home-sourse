@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/Fragment$3;
 .super Ljava/lang/Object;
+.source "Fragment.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/SpecialEffectsController;)V
     .locals 0
 
+    .line 2777
     iput-object p1, p0, Landroidx/fragment/app/Fragment$3;->this$0:Landroidx/fragment/app/Fragment;
 
     iput-object p2, p0, Landroidx/fragment/app/Fragment$3;->val$controller:Landroidx/fragment/app/SpecialEffectsController;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 0
 
+    .line 2780
     iget-object p0, p0, Landroidx/fragment/app/Fragment$3;->val$controller:Landroidx/fragment/app/SpecialEffectsController;
 
     invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController;->executePendingOperations()V

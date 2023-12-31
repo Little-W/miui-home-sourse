@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/DialogFragment$5;
 .super Landroidx/fragment/app/FragmentContainer;
+.source "DialogFragment.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Landroidx/fragment/app/DialogFragment;Landroidx/fragment/app/FragmentContainer;)V
     .locals 0
 
+    .line 506
     iput-object p1, p0, Landroidx/fragment/app/DialogFragment$5;->this$0:Landroidx/fragment/app/DialogFragment;
 
     iput-object p2, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
@@ -37,6 +39,7 @@
 .method public onFindViewById(I)Landroid/view/View;
     .locals 1
 
+    .line 510
     iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentContainer;->onHasView()Z
@@ -45,6 +48,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 511
     iget-object p0, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentContainer;->onFindViewById(I)Landroid/view/View;
@@ -53,6 +57,7 @@
 
     return-object p0
 
+    .line 513
     :cond_0
     iget-object p0, p0, Landroidx/fragment/app/DialogFragment$5;->this$0:Landroidx/fragment/app/DialogFragment;
 
@@ -66,6 +71,7 @@
 .method public onHasView()Z
     .locals 1
 
+    .line 518
     iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentContainer;->onHasView()Z

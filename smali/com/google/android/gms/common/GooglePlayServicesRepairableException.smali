@@ -10,8 +10,10 @@
 .method public constructor <init>(ILjava/lang/String;Landroid/content/Intent;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p2, p3}, Lcom/google/android/gms/common/UserRecoverableException;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/gms/common/GooglePlayServicesRepairableException;->zzag:I
 
     return-void
@@ -22,6 +24,7 @@
 .method public getConnectionStatusCode()I
     .locals 0
 
+    .line 4
     iget p0, p0, Lcom/google/android/gms/common/GooglePlayServicesRepairableException;->zzag:I
 
     return p0

@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/schedulers/ComputationScheduler$PoolWorker;
 .super Lio/reactivex2/internal/schedulers/NewThreadWorker;
+.source "ComputationScheduler.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
     .locals 0
 
+    .line 243
     invoke-direct {p0, p1}, Lio/reactivex2/internal/schedulers/NewThreadWorker;-><init>(Ljava/util/concurrent/ThreadFactory;)V
 
     return-void

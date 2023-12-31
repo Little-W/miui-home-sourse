@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/RequestManager$RequestManagerConnectivityListener;
 .super Ljava/lang/Object;
+.source "RequestManager.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/manager/ConnectivityMonitor$ConnectivityListener;
@@ -26,10 +27,12 @@
 .method constructor <init>(Lcom/bumptech/glide/RequestManager;Lcom/bumptech/glide/manager/RequestTracker;)V
     .locals 0
 
+    .line 667
     iput-object p1, p0, Lcom/bumptech/glide/RequestManager$RequestManagerConnectivityListener;->this$0:Lcom/bumptech/glide/RequestManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 668
     iput-object p2, p0, Lcom/bumptech/glide/RequestManager$RequestManagerConnectivityListener;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
 
     return-void
@@ -42,15 +45,18 @@
 
     if-eqz p1, :cond_0
 
+    .line 674
     iget-object p1, p0, Lcom/bumptech/glide/RequestManager$RequestManagerConnectivityListener;->this$0:Lcom/bumptech/glide/RequestManager;
 
     monitor-enter p1
 
+    .line 675
     :try_start_0
     iget-object p0, p0, Lcom/bumptech/glide/RequestManager$RequestManagerConnectivityListener;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/manager/RequestTracker;->restartRequests()V
 
+    .line 676
     monitor-exit p1
 
     goto :goto_0

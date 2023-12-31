@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;
 .super Lcom/bumptech/glide/request/target/SimpleTarget;
+.source "GifFrameLoader.java"
 
 
 # annotations
@@ -35,12 +36,16 @@
 .method constructor <init>(Landroid/os/Handler;IJ)V
     .locals 0
 
+    .line 315
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/SimpleTarget;-><init>()V
 
+    .line 316
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->handler:Landroid/os/Handler;
 
+    .line 317
     iput p2, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->index:I
 
+    .line 318
     iput-wide p3, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->targetTime:J
 
     return-void
@@ -51,6 +56,7 @@
 .method getResource()Landroid/graphics/Bitmap;
     .locals 0
 
+    .line 322
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->resource:Landroid/graphics/Bitmap;
 
     return-object p0
@@ -69,8 +75,10 @@
         }
     .end annotation
 
+    .line 328
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->resource:Landroid/graphics/Bitmap;
 
+    .line 329
     iget-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->handler:Landroid/os/Handler;
 
     const/4 p2, 0x1
@@ -79,6 +87,7 @@
 
     move-result-object p1
 
+    .line 330
     iget-object p2, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->handler:Landroid/os/Handler;
 
     iget-wide v0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->targetTime:J
@@ -91,6 +100,7 @@
 .method public bridge synthetic onResourceReady(Ljava/lang/Object;Lcom/bumptech/glide/request/transition/Transition;)V
     .locals 0
 
+    .line 308
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->onResourceReady(Landroid/graphics/Bitmap;Lcom/bumptech/glide/request/transition/Transition;)V

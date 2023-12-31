@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;
 .super Ljava/lang/Object;
+.source "SettingsDataProvider.java"
 
 
 # virtual methods

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory$InstanceHolder;
 .super Ljava/lang/Object;
+.source "TimeModule_UptimeClockFactory.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 26
     new-instance v0, Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory;-><init>()V
@@ -33,6 +35,7 @@
 .method static synthetic access$000()Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory;
     .locals 1
 
+    .line 25
     sget-object v0, Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory$InstanceHolder;->INSTANCE:Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory;
 
     return-object v0

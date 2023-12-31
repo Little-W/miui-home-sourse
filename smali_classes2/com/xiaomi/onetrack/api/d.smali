@@ -18,6 +18,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/c;)V
     .locals 0
 
+    .line 115
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/d;->a:Lcom/xiaomi/onetrack/api/c;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,6 +37,7 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
+    .line 119
     :try_start_0
     iget-object p1, p0, Lcom/xiaomi/onetrack/api/d;->a:Lcom/xiaomi/onetrack/api/c;
 
@@ -45,10 +47,12 @@
 
     if-eqz p1, :cond_2
 
+    .line 120
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 121
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -60,6 +64,7 @@
     :cond_0
     const-string p2, "android.intent.action.SCREEN_ON"
 
+    .line 124
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -68,6 +73,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 125
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/d;->a:Lcom/xiaomi/onetrack/api/c;
 
     invoke-static {p0}, Lcom/xiaomi/onetrack/api/c;->a(Lcom/xiaomi/onetrack/api/c;)Landroid/os/Handler;
@@ -83,12 +89,14 @@
     :cond_1
     const-string p2, "android.intent.action.SCREEN_OFF"
 
+    .line 126
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 127
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/d;->a:Lcom/xiaomi/onetrack/api/c;
 
     invoke-static {p0}, Lcom/xiaomi/onetrack/api/c;->a(Lcom/xiaomi/onetrack/api/c;)Landroid/os/Handler;
@@ -106,6 +114,7 @@
     :catchall_0
     move-exception p0
 
+    .line 131
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

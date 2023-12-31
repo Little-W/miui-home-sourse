@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/PrimitiveArrayDescriptor;
 .super Lkotlinx/serialization/internal/ListLikeDescriptor;
+.source "CollectionDescriptors.kt"
 
 
 # instance fields
@@ -16,8 +17,10 @@
 
     const/4 v0, 0x0
 
+    .line 113
     invoke-direct {p0, p1, v0}, Lkotlinx/serialization/internal/ListLikeDescriptor;-><init>(Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,6 +49,7 @@
 .method public getSerialName()Ljava/lang/String;
     .locals 0
 
+    .line 114
     iget-object p0, p0, Lkotlinx/serialization/internal/PrimitiveArrayDescriptor;->serialName:Ljava/lang/String;
 
     return-object p0

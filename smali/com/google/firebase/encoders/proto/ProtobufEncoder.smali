@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/encoders/proto/ProtobufEncoder;
 .super Ljava/lang/Object;
+.source "ProtobufEncoder.java"
 
 
 # annotations
@@ -68,12 +69,16 @@
         }
     .end annotation
 
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 39
     iput-object p1, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->objectEncoders:Ljava/util/Map;
 
+    .line 40
     iput-object p2, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->valueEncoders:Ljava/util/Map;
 
+    .line 41
     iput-object p3, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->fallbackEncoder:Lcom/google/firebase/encoders/ObjectEncoder;
 
     return-void
@@ -82,6 +87,7 @@
 .method public static builder()Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
     .locals 1
 
+    .line 65
     new-instance v0, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
 
     invoke-direct {v0}, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;-><init>()V
@@ -99,6 +105,7 @@
         }
     .end annotation
 
+    .line 46
     new-instance v0, Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext;
 
     iget-object v1, p0, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->objectEncoders:Ljava/util/Map;
@@ -109,6 +116,7 @@
 
     invoke-direct {v0, p2, v1, v2, p0}, Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext;-><init>(Ljava/io/OutputStream;Ljava/util/Map;Ljava/util/Map;Lcom/google/firebase/encoders/ObjectEncoder;)V
 
+    .line 49
     invoke-virtual {v0, p1}, Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext;->encode(Ljava/lang/Object;)Lcom/google/firebase/encoders/proto/ProtobufDataEncoderContext;
 
     return-void
@@ -117,15 +125,18 @@
 .method public encode(Ljava/lang/Object;)[B
     .locals 1
 
+    .line 55
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 57
     :try_start_0
     invoke-virtual {p0, p1, v0}, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->encode(Ljava/lang/Object;Ljava/io/OutputStream;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 61
     :catch_0
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 

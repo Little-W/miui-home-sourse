@@ -21,6 +21,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/gms/common/wrappers/Wrappers;->packageManager(Landroid/content/Context;)Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;
 
     move-result-object p0
@@ -31,6 +32,7 @@
 
     move-result-object p0
 
+    .line 5
     iget-object p1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz p1, :cond_0
@@ -45,12 +47,14 @@
 
     const-string p1, "SHA1"
 
+    .line 6
     invoke-static {p1}, Lcom/google/android/gms/common/util/AndroidUtilsLight;->zzj(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 8
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v0, 0x0
@@ -83,6 +87,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 12
     :try_start_0
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 

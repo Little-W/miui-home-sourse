@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;
 .super Ljava/lang/Object;
+.source "RemoteAnimationAdapterCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;Landroid/view/IRemoteAnimationFinishedCallback;)V
     .locals 0
 
+    .line 97
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;->this$0:Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;->val$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 2
 
+    .line 101
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;->val$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
@@ -56,6 +59,7 @@
 
     const-string v1, "Failed to call app controlled animation finished callback"
 
+    .line 103
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

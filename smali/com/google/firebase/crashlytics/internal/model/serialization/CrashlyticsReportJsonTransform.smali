@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;
 .super Ljava/lang/Object;
+.source "CrashlyticsReportJsonTransform.java"
 
 
 # annotations
@@ -18,22 +19,26 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 34
     new-instance v0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 
     invoke-direct {v0}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;-><init>()V
 
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder;->CONFIG:Lcom/google/firebase/encoders/config/Configurator;
 
+    .line 36
     invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->configureWith(Lcom/google/firebase/encoders/config/Configurator;)Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 37
     invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->ignoreNullValues(Z)Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 
     move-result-object v0
 
+    .line 38
     invoke-virtual {v0}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->build()Lcom/google/firebase/encoders/DataEncoder;
 
     move-result-object v0
@@ -46,6 +51,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -119,12 +125,15 @@
         }
     .end annotation
 
+    .line 298
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Builder;
 
     move-result-object v0
 
+    .line 300
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 301
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -132,12 +141,14 @@
 
     if-eqz v1, :cond_7
 
+    .line 302
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 303
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -246,10 +257,12 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 323
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 320
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -259,6 +272,7 @@
 
     goto :goto_0
 
+    .line 317
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -268,6 +282,7 @@
 
     goto :goto_0
 
+    .line 314
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -277,6 +292,7 @@
 
     goto :goto_0
 
+    .line 311
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -286,6 +302,7 @@
 
     goto/16 :goto_0
 
+    .line 308
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -295,6 +312,7 @@
 
     goto/16 :goto_0
 
+    .line 305
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -304,9 +322,11 @@
 
     goto/16 :goto_0
 
+    .line 327
     :cond_7
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 329
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;
 
     move-result-object p0
@@ -332,12 +352,15 @@
         }
     .end annotation
 
+    .line 207
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
 
     move-result-object v0
 
+    .line 209
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 210
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -345,12 +368,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 211
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 212
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -465,10 +490,12 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
+    .line 238
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 235
     :pswitch_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -478,6 +505,7 @@
 
     goto :goto_0
 
+    .line 232
     :pswitch_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -487,6 +515,7 @@
 
     goto :goto_0
 
+    .line 229
     :pswitch_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -496,6 +525,7 @@
 
     goto/16 :goto_0
 
+    .line 226
     :pswitch_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -505,6 +535,7 @@
 
     goto/16 :goto_0
 
+    .line 223
     :pswitch_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -514,6 +545,7 @@
 
     goto/16 :goto_0
 
+    .line 220
     :pswitch_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -523,6 +555,7 @@
 
     goto/16 :goto_0
 
+    .line 217
     :pswitch_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -532,6 +565,7 @@
 
     goto/16 :goto_0
 
+    .line 214
     :pswitch_7
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -541,9 +575,11 @@
 
     goto/16 :goto_0
 
+    .line 242
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 243
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;
 
     move-result-object p0
@@ -596,12 +632,15 @@
         }
     .end annotation
 
+    .line 752
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 754
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginArray()V
 
+    .line 755
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -609,6 +648,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 756
     invoke-interface {p1, p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform$ObjectParser;->parse(Landroid/util/JsonReader;)Ljava/lang/Object;
 
     move-result-object v1
@@ -617,9 +657,11 @@
 
     goto :goto_0
 
+    .line 758
     :cond_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->endArray()V
 
+    .line 760
     invoke-static {v0}, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->from(Ljava/util/List;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object p0
@@ -635,12 +677,15 @@
         }
     .end annotation
 
+    .line 728
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute$Builder;
 
     move-result-object v0
 
+    .line 730
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 731
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -648,12 +693,14 @@
 
     if-eqz v1, :cond_5
 
+    .line 732
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 733
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -700,10 +747,12 @@
 
     if-eq v2, v5, :cond_3
 
+    .line 741
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 738
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -713,6 +762,7 @@
 
     goto :goto_0
 
+    .line 735
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -722,9 +772,11 @@
 
     goto :goto_0
 
+    .line 745
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 746
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$CustomAttribute;
 
     move-result-object p0
@@ -740,12 +792,15 @@
         }
     .end annotation
 
+    .line 368
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device$Builder;
 
     move-result-object v0
 
+    .line 370
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 371
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -753,12 +808,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 372
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 373
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -886,10 +943,12 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
+    .line 402
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 399
     :pswitch_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -899,6 +958,7 @@
 
     goto :goto_0
 
+    .line 396
     :pswitch_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -908,6 +968,7 @@
 
     goto/16 :goto_0
 
+    .line 393
     :pswitch_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -917,6 +978,7 @@
 
     goto/16 :goto_0
 
+    .line 390
     :pswitch_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextBoolean()Z
 
@@ -926,6 +988,7 @@
 
     goto/16 :goto_0
 
+    .line 387
     :pswitch_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -935,6 +998,7 @@
 
     goto/16 :goto_0
 
+    .line 384
     :pswitch_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -944,6 +1008,7 @@
 
     goto/16 :goto_0
 
+    .line 381
     :pswitch_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -953,6 +1018,7 @@
 
     goto/16 :goto_0
 
+    .line 378
     :pswitch_7
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -962,6 +1028,7 @@
 
     goto/16 :goto_0
 
+    .line 375
     :pswitch_8
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -971,9 +1038,11 @@
 
     goto/16 :goto_0
 
+    .line 406
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 408
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;
 
     move-result-object p0
@@ -1017,12 +1086,15 @@
         }
     .end annotation
 
+    .line 413
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Builder;
 
     move-result-object v0
 
+    .line 415
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 416
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -1030,12 +1102,14 @@
 
     if-eqz v1, :cond_6
 
+    .line 417
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 418
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -1127,10 +1201,12 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 435
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 432
     :cond_1
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEventLog(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log;
 
@@ -1140,6 +1216,7 @@
 
     goto :goto_0
 
+    .line 429
     :cond_2
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEventDevice(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;
 
@@ -1149,6 +1226,7 @@
 
     goto :goto_0
 
+    .line 426
     :cond_3
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEventApp(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;
 
@@ -1158,6 +1236,7 @@
 
     goto :goto_0
 
+    .line 423
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -1167,6 +1246,7 @@
 
     goto :goto_0
 
+    .line 420
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -1176,9 +1256,11 @@
 
     goto :goto_0
 
+    .line 439
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 440
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;
 
     move-result-object p0
@@ -1205,12 +1287,15 @@
         }
     .end annotation
 
+    .line 446
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Builder;
 
     move-result-object v0
 
+    .line 448
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 449
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -1218,12 +1303,14 @@
 
     if-eqz v1, :cond_6
 
+    .line 450
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 451
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -1315,32 +1402,40 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 470
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 466
     :cond_1
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$NhzBXeLMMIRDAHr-yokwvoZKlwo;->INSTANCE:Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$NhzBXeLMMIRDAHr-yokwvoZKlwo;
 
+    .line 467
     invoke-static {p0, v1}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseArray(Landroid/util/JsonReader;Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform$ObjectParser;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object v1
 
+    .line 466
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Builder;->setInternalKeys(Lcom/google/firebase/crashlytics/internal/model/ImmutableList;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Builder;
 
     goto :goto_0
 
+    .line 462
     :cond_2
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$NhzBXeLMMIRDAHr-yokwvoZKlwo;->INSTANCE:Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$NhzBXeLMMIRDAHr-yokwvoZKlwo;
 
+    .line 463
     invoke-static {p0, v1}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseArray(Landroid/util/JsonReader;Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform$ObjectParser;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object v1
 
+    .line 462
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Builder;->setCustomAttributes(Lcom/google/firebase/crashlytics/internal/model/ImmutableList;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Builder;
 
     goto :goto_0
 
+    .line 459
     :cond_3
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEventExecution(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution;
 
@@ -1350,6 +1445,7 @@
 
     goto :goto_0
 
+    .line 456
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -1359,6 +1455,7 @@
 
     goto :goto_0
 
+    .line 453
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextBoolean()Z
 
@@ -1372,9 +1469,11 @@
 
     goto/16 :goto_0
 
+    .line 474
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 475
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;
 
     move-result-object p0
@@ -1401,12 +1500,15 @@
         }
     .end annotation
 
+    .line 580
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage$Builder;
 
     move-result-object v0
 
+    .line 582
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 583
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -1414,12 +1516,14 @@
 
     if-eqz v1, :cond_5
 
+    .line 584
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 585
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -1494,10 +1598,12 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 599
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 596
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -1511,6 +1617,7 @@
 
     goto :goto_0
 
+    .line 593
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -1520,6 +1627,7 @@
 
     goto :goto_0
 
+    .line 590
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -1529,6 +1637,7 @@
 
     goto :goto_0
 
+    .line 587
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -1538,9 +1647,11 @@
 
     goto :goto_0
 
+    .line 603
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 604
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$BinaryImage;
 
     move-result-object p0
@@ -1566,12 +1677,15 @@
         }
     .end annotation
 
+    .line 672
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;
 
     move-result-object v0
 
+    .line 674
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 675
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -1579,12 +1693,14 @@
 
     if-eqz v1, :cond_7
 
+    .line 676
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 677
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -1693,10 +1809,12 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 697
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 694
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -1706,6 +1824,7 @@
 
     goto :goto_0
 
+    .line 691
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -1715,6 +1834,7 @@
 
     goto :goto_0
 
+    .line 688
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextBoolean()Z
 
@@ -1724,6 +1844,7 @@
 
     goto :goto_0
 
+    .line 685
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -1733,6 +1854,7 @@
 
     goto/16 :goto_0
 
+    .line 682
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -1742,6 +1864,7 @@
 
     goto/16 :goto_0
 
+    .line 679
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -1755,9 +1878,11 @@
 
     goto/16 :goto_0
 
+    .line 701
     :cond_7
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 702
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;
 
     move-result-object p0
@@ -1785,12 +1910,15 @@
         }
     .end annotation
 
+    .line 481
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;
 
     move-result-object v0
 
+    .line 483
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 484
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -1798,12 +1926,14 @@
 
     if-eqz v1, :cond_6
 
+    .line 485
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 486
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -1895,10 +2025,12 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 505
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 502
     :cond_1
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseAppExitInfo(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;
 
@@ -1908,17 +2040,21 @@
 
     goto :goto_0
 
+    .line 498
     :cond_2
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$CDavwmIaUoxPoo5Upyr-1hcsJXE;->INSTANCE:Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$CDavwmIaUoxPoo5Upyr-1hcsJXE;
 
+    .line 499
     invoke-static {p0, v1}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseArray(Landroid/util/JsonReader;Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform$ObjectParser;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object v1
 
+    .line 498
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;->setBinaries(Lcom/google/firebase/crashlytics/internal/model/ImmutableList;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;
 
     goto :goto_0
 
+    .line 495
     :cond_3
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEventSignal(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Signal;
 
@@ -1928,6 +2064,7 @@
 
     goto :goto_0
 
+    .line 492
     :cond_4
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEventExecutionException(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;
 
@@ -1937,20 +2074,25 @@
 
     goto :goto_0
 
+    .line 488
     :cond_5
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$NcslUolmMJ2rhykSKHnzkuM2hYY;->INSTANCE:Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$NcslUolmMJ2rhykSKHnzkuM2hYY;
 
+    .line 489
     invoke-static {p0, v1}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseArray(Landroid/util/JsonReader;Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform$ObjectParser;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object v1
 
+    .line 488
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;->setThreads(Lcom/google/firebase/crashlytics/internal/model/ImmutableList;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;
 
     goto/16 :goto_0
 
+    .line 509
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 510
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution;
 
     move-result-object p0
@@ -1975,12 +2117,15 @@
         }
     .end annotation
 
+    .line 517
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;
 
     move-result-object v0
 
+    .line 519
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 520
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -1988,12 +2133,14 @@
 
     if-eqz v1, :cond_6
 
+    .line 521
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 522
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -2085,10 +2232,12 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 540
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 537
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2098,6 +2247,7 @@
 
     goto :goto_0
 
+    .line 534
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2107,6 +2257,7 @@
 
     goto :goto_0
 
+    .line 531
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -2116,17 +2267,21 @@
 
     goto :goto_0
 
+    .line 527
     :cond_4
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$dIOx2087eNrDPBVbiDN535D2ZNE;->INSTANCE:Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$dIOx2087eNrDPBVbiDN535D2ZNE;
 
+    .line 528
     invoke-static {p0, v1}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseArray(Landroid/util/JsonReader;Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform$ObjectParser;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object v1
 
+    .line 527
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;->setFrames(Lcom/google/firebase/crashlytics/internal/model/ImmutableList;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;
 
     goto :goto_0
 
+    .line 524
     :cond_5
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEventExecutionException(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;
 
@@ -2136,9 +2291,11 @@
 
     goto :goto_0
 
+    .line 544
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 545
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Exception;
 
     move-result-object p0
@@ -2163,12 +2320,15 @@
         }
     .end annotation
 
+    .line 640
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame$Builder;
 
     move-result-object v0
 
+    .line 642
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 643
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -2176,12 +2336,14 @@
 
     if-eqz v1, :cond_6
 
+    .line 644
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 645
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -2273,10 +2435,12 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 662
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 659
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2286,6 +2450,7 @@
 
     goto :goto_0
 
+    .line 656
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -2295,6 +2460,7 @@
 
     goto :goto_0
 
+    .line 653
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -2304,6 +2470,7 @@
 
     goto :goto_0
 
+    .line 650
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2313,6 +2480,7 @@
 
     goto :goto_0
 
+    .line 647
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -2322,9 +2490,11 @@
 
     goto :goto_0
 
+    .line 666
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 667
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;
 
     move-result-object p0
@@ -2351,12 +2521,15 @@
         }
     .end annotation
 
+    .line 707
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log$Builder;
 
     move-result-object v0
 
+    .line 709
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 710
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -2364,12 +2537,14 @@
 
     if-eqz v1, :cond_3
 
+    .line 711
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 712
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -2395,10 +2570,12 @@
     :goto_1
     if-eqz v2, :cond_2
 
+    .line 717
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 714
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2408,9 +2585,11 @@
 
     goto :goto_0
 
+    .line 721
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 722
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log;
 
     move-result-object p0
@@ -2426,12 +2605,15 @@
         }
     .end annotation
 
+    .line 552
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Signal;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Signal$Builder;
 
     move-result-object v0
 
+    .line 554
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 555
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -2439,12 +2621,14 @@
 
     if-eqz v1, :cond_7
 
+    .line 556
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 557
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -2512,10 +2696,12 @@
 
     if-eq v2, v5, :cond_4
 
+    .line 568
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 565
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -2525,6 +2711,7 @@
 
     goto :goto_0
 
+    .line 562
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2534,6 +2721,7 @@
 
     goto :goto_0
 
+    .line 559
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2543,9 +2731,11 @@
 
     goto :goto_0
 
+    .line 572
     :cond_7
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 573
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Signal$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Signal;
 
     move-result-object p0
@@ -2561,12 +2751,15 @@
         }
     .end annotation
 
+    .line 611
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Builder;
 
     move-result-object v0
 
+    .line 613
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 614
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -2574,12 +2767,14 @@
 
     if-eqz v1, :cond_7
 
+    .line 615
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 616
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -2647,21 +2842,26 @@
 
     if-eq v2, v5, :cond_4
 
+    .line 628
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 624
     :cond_4
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$dIOx2087eNrDPBVbiDN535D2ZNE;->INSTANCE:Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$dIOx2087eNrDPBVbiDN535D2ZNE;
 
+    .line 625
     invoke-static {p0, v1}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseArray(Landroid/util/JsonReader;Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform$ObjectParser;)Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     move-result-object v1
 
+    .line 624
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Builder;->setFrames(Lcom/google/firebase/crashlytics/internal/model/ImmutableList;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Builder;
 
     goto :goto_0
 
+    .line 621
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2671,6 +2871,7 @@
 
     goto :goto_0
 
+    .line 618
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -2680,9 +2881,11 @@
 
     goto :goto_0
 
+    .line 632
     :cond_7
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 633
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread;
 
     move-result-object p0
@@ -2698,12 +2901,15 @@
         }
     .end annotation
 
+    .line 250
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File$Builder;
 
     move-result-object v0
 
+    .line 252
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 253
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -2711,12 +2917,14 @@
 
     if-eqz v1, :cond_5
 
+    .line 254
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 255
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -2763,10 +2971,12 @@
 
     if-eq v2, v5, :cond_3
 
+    .line 263
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 260
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2782,6 +2992,7 @@
 
     goto :goto_0
 
+    .line 257
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2791,9 +3002,11 @@
 
     goto :goto_0
 
+    .line 267
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 269
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File;
 
     move-result-object p0
@@ -2809,12 +3022,15 @@
         }
     .end annotation
 
+    .line 181
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$Builder;
 
     move-result-object v0
 
+    .line 183
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 184
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -2822,12 +3038,14 @@
 
     if-eqz v1, :cond_5
 
+    .line 185
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 186
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -2874,10 +3092,12 @@
 
     if-eq v2, v5, :cond_3
 
+    .line 194
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 191
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -2887,6 +3107,7 @@
 
     goto :goto_0
 
+    .line 188
     :cond_4
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$PcYtebWm8LLEihGxNBWQex7movQ;->INSTANCE:Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$PcYtebWm8LLEihGxNBWQex7movQ;
 
@@ -2898,9 +3119,11 @@
 
     goto :goto_0
 
+    .line 198
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 200
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload;
 
     move-result-object p0
@@ -2916,12 +3139,15 @@
         }
     .end annotation
 
+    .line 336
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem$Builder;
 
     move-result-object v0
 
+    .line 338
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 339
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -2929,12 +3155,14 @@
 
     if-eqz v1, :cond_5
 
+    .line 340
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 341
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -3009,10 +3237,12 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 355
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 352
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextBoolean()Z
 
@@ -3022,6 +3252,7 @@
 
     goto :goto_0
 
+    .line 349
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3031,6 +3262,7 @@
 
     goto :goto_0
 
+    .line 346
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3040,6 +3272,7 @@
 
     goto :goto_0
 
+    .line 343
     :cond_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -3049,9 +3282,11 @@
 
     goto :goto_0
 
+    .line 359
     :cond_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 361
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;
 
     move-result-object p0
@@ -3077,12 +3312,15 @@
         }
     .end annotation
 
+    .line 86
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Builder;
 
     move-result-object v0
 
+    .line 88
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 89
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -3090,12 +3328,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 90
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 91
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -3210,10 +3450,12 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
+    .line 117
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 114
     :pswitch_0
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseNdkPayload(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload;
 
@@ -3223,6 +3465,7 @@
 
     goto :goto_0
 
+    .line 111
     :pswitch_1
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseSession(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;
 
@@ -3232,6 +3475,7 @@
 
     goto :goto_0
 
+    .line 108
     :pswitch_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3241,6 +3485,7 @@
 
     goto/16 :goto_0
 
+    .line 105
     :pswitch_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3250,6 +3495,7 @@
 
     goto/16 :goto_0
 
+    .line 102
     :pswitch_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3259,6 +3505,7 @@
 
     goto/16 :goto_0
 
+    .line 99
     :pswitch_5
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -3268,6 +3515,7 @@
 
     goto/16 :goto_0
 
+    .line 96
     :pswitch_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3277,6 +3525,7 @@
 
     goto/16 :goto_0
 
+    .line 93
     :pswitch_7
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3286,9 +3535,11 @@
 
     goto/16 :goto_0
 
+    .line 121
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 122
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
 
     move-result-object p0
@@ -3328,12 +3579,15 @@
         }
     .end annotation
 
+    .line 128
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Builder;
 
     move-result-object v0
 
+    .line 130
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 131
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -3341,12 +3595,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 132
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 133
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -3502,10 +3758,12 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
+    .line 169
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto/16 :goto_0
 
+    .line 166
     :pswitch_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextInt()I
 
@@ -3515,6 +3773,7 @@
 
     goto/16 :goto_0
 
+    .line 163
     :pswitch_1
     sget-object v1, Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$Ckb34QcYctmy_Q7QdvSnBmK1U98;->INSTANCE:Lcom/google/firebase/crashlytics/internal/model/serialization/-$$Lambda$CrashlyticsReportJsonTransform$Ckb34QcYctmy_Q7QdvSnBmK1U98;
 
@@ -3526,6 +3785,7 @@
 
     goto/16 :goto_0
 
+    .line 160
     :pswitch_2
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseDevice(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Device;
 
@@ -3535,6 +3795,7 @@
 
     goto/16 :goto_0
 
+    .line 157
     :pswitch_3
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseOs(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;
 
@@ -3544,6 +3805,7 @@
 
     goto/16 :goto_0
 
+    .line 154
     :pswitch_4
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseApp(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;
 
@@ -3553,6 +3815,7 @@
 
     goto/16 :goto_0
 
+    .line 151
     :pswitch_5
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseUser(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User;
 
@@ -3562,6 +3825,7 @@
 
     goto/16 :goto_0
 
+    .line 148
     :pswitch_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextBoolean()Z
 
@@ -3571,6 +3835,7 @@
 
     goto/16 :goto_0
 
+    .line 145
     :pswitch_7
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -3584,6 +3849,7 @@
 
     goto/16 :goto_0
 
+    .line 142
     :pswitch_8
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextLong()J
 
@@ -3593,6 +3859,7 @@
 
     goto/16 :goto_0
 
+    .line 139
     :pswitch_9
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3602,10 +3869,12 @@
 
     move-result-object v1
 
+    .line 138
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Builder;->setIdentifierFromUtf8Bytes([B)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Builder;
 
     goto/16 :goto_0
 
+    .line 135
     :pswitch_a
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3615,9 +3884,11 @@
 
     goto/16 :goto_0
 
+    .line 173
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 175
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session;
 
     move-result-object p0
@@ -3665,12 +3936,15 @@
         }
     .end annotation
 
+    .line 275
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User$Builder;
 
     move-result-object v0
 
+    .line 277
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
+    .line 278
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -3678,12 +3952,14 @@
 
     if-eqz v1, :cond_3
 
+    .line 279
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, -0x1
 
+    .line 280
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -3709,10 +3985,12 @@
     :goto_1
     if-eqz v2, :cond_2
 
+    .line 285
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 282
     :cond_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -3722,9 +4000,11 @@
 
     goto :goto_0
 
+    .line 289
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
+    .line 291
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User;
 
     move-result-object p0
@@ -3742,6 +4022,7 @@
         }
     .end annotation
 
+    .line 67
     :try_start_0
     new-instance p0, Landroid/util/JsonReader;
 
@@ -3753,6 +4034,7 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 68
     :try_start_1
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEvent(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;
 
@@ -3760,6 +4042,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 69
     :try_start_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->close()V
     :try_end_2
@@ -3770,6 +4053,7 @@
     :catchall_0
     move-exception p1
 
+    .line 67
     :try_start_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->close()V
     :try_end_3
@@ -3791,6 +4075,7 @@
     :catch_0
     move-exception p0
 
+    .line 70
     new-instance p1, Ljava/io/IOException;
 
     invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
@@ -3801,6 +4086,7 @@
 .method public eventToJson(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event;)Ljava/lang/String;
     .locals 0
 
+    .line 47
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->CRASHLYTICS_REPORT_JSON_ENCODER:Lcom/google/firebase/encoders/DataEncoder;
 
     invoke-interface {p0, p1}, Lcom/google/firebase/encoders/DataEncoder;->encode(Ljava/lang/Object;)Ljava/lang/String;
@@ -3818,6 +4104,7 @@
         }
     .end annotation
 
+    .line 58
     :try_start_0
     new-instance p0, Landroid/util/JsonReader;
 
@@ -3829,6 +4116,7 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 59
     :try_start_1
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseReport(Landroid/util/JsonReader;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
 
@@ -3836,6 +4124,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 60
     :try_start_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->close()V
     :try_end_2
@@ -3846,6 +4135,7 @@
     :catchall_0
     move-exception p1
 
+    .line 58
     :try_start_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->close()V
     :try_end_3
@@ -3867,6 +4157,7 @@
     :catch_0
     move-exception p0
 
+    .line 61
     new-instance p1, Ljava/io/IOException;
 
     invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
@@ -3877,6 +4168,7 @@
 .method public reportToJson(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;)Ljava/lang/String;
     .locals 0
 
+    .line 42
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->CRASHLYTICS_REPORT_JSON_ENCODER:Lcom/google/firebase/encoders/DataEncoder;
 
     invoke-interface {p0, p1}, Lcom/google/firebase/encoders/DataEncoder;->encode(Ljava/lang/Object;)Ljava/lang/String;

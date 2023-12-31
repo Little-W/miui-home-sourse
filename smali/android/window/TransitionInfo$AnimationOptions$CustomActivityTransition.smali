@@ -1,5 +1,6 @@
 .class public Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;
 .super Ljava/lang/Object;
+.source "TransitionInfo.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -32,6 +33,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 806
     new-instance v0, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition$1;
 
     invoke-direct {v0}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition$1;-><init>()V
@@ -44,6 +46,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 784
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,6 +57,7 @@
 .method public describeContents()I
     .locals 1
 
+    .line 798
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -66,6 +70,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 803
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"

@@ -1,5 +1,6 @@
 .class final Lcom/mi/google/gson/internal/Streams$AppendableWriter;
 .super Ljava/io/Writer;
+.source "Streams.java"
 
 
 # annotations
@@ -29,14 +30,17 @@
 .method constructor <init>(Ljava/lang/Appendable;)V
     .locals 1
 
+    .line 87
     invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
+    .line 85
     new-instance v0, Lcom/mi/google/gson/internal/Streams$AppendableWriter$CurrentWrite;
 
     invoke-direct {v0}, Lcom/mi/google/gson/internal/Streams$AppendableWriter$CurrentWrite;-><init>()V
 
     iput-object v0, p0, Lcom/mi/google/gson/internal/Streams$AppendableWriter;->currentWrite:Lcom/mi/google/gson/internal/Streams$AppendableWriter$CurrentWrite;
 
+    .line 88
     iput-object p1, p0, Lcom/mi/google/gson/internal/Streams$AppendableWriter;->appendable:Ljava/lang/Appendable;
 
     return-void
@@ -64,6 +68,7 @@
         }
     .end annotation
 
+    .line 97
     iget-object p0, p0, Lcom/mi/google/gson/internal/Streams$AppendableWriter;->appendable:Ljava/lang/Appendable;
 
     int-to-char p1, p1
@@ -81,10 +86,12 @@
         }
     .end annotation
 
+    .line 92
     iget-object v0, p0, Lcom/mi/google/gson/internal/Streams$AppendableWriter;->currentWrite:Lcom/mi/google/gson/internal/Streams$AppendableWriter$CurrentWrite;
 
     iput-object p1, v0, Lcom/mi/google/gson/internal/Streams$AppendableWriter$CurrentWrite;->chars:[C
 
+    .line 93
     iget-object p0, p0, Lcom/mi/google/gson/internal/Streams$AppendableWriter;->appendable:Ljava/lang/Appendable;
 
     add-int/2addr p3, p2

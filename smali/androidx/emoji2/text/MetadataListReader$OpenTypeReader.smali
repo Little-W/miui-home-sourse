@@ -1,5 +1,6 @@
 .class interface abstract Landroidx/emoji2/text/MetadataListReader$OpenTypeReader;
 .super Ljava/lang/Object;
+.source "MetadataListReader.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/o1$j;
 .super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "SourceFile"
 
 
 # annotations

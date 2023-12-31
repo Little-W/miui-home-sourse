@@ -1,5 +1,6 @@
 .class public Landroidx/room/util/TableInfo$Index;
 .super Ljava/lang/Object;
+.source "TableInfo.java"
 
 
 # annotations
@@ -43,12 +44,16 @@
         }
     .end annotation
 
+    .line 545
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 546
     iput-object p1, p0, Landroidx/room/util/TableInfo$Index;->name:Ljava/lang/String;
 
+    .line 547
     iput-boolean p2, p0, Landroidx/room/util/TableInfo$Index;->unique:Z
 
+    .line 548
     iput-object p3, p0, Landroidx/room/util/TableInfo$Index;->columns:Ljava/util/List;
 
     return-void
@@ -70,6 +75,7 @@
 
     if-eqz p1, :cond_5
 
+    .line 554
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -82,9 +88,11 @@
 
     goto :goto_0
 
+    .line 556
     :cond_1
     check-cast p1, Landroidx/room/util/TableInfo$Index;
 
+    .line 557
     iget-boolean v1, p0, Landroidx/room/util/TableInfo$Index;->unique:Z
 
     iget-boolean v2, p1, Landroidx/room/util/TableInfo$Index;->unique:Z
@@ -93,6 +101,7 @@
 
     return v0
 
+    .line 560
     :cond_2
     iget-object v1, p0, Landroidx/room/util/TableInfo$Index;->columns:Ljava/util/List;
 
@@ -106,6 +115,7 @@
 
     return v0
 
+    .line 563
     :cond_3
     iget-object v0, p0, Landroidx/room/util/TableInfo$Index;->name:Ljava/lang/String;
 
@@ -117,6 +127,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 564
     iget-object p0, p1, Landroidx/room/util/TableInfo$Index;->name:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -125,6 +136,7 @@
 
     return p0
 
+    .line 566
     :cond_4
     iget-object p0, p0, Landroidx/room/util/TableInfo$Index;->name:Ljava/lang/String;
 
@@ -144,6 +156,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 573
     iget-object v0, p0, Landroidx/room/util/TableInfo$Index;->name:Ljava/lang/String;
 
     const-string v1, "index_"
@@ -154,12 +167,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 574
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     goto :goto_0
 
+    .line 576
     :cond_0
     iget-object v0, p0, Landroidx/room/util/TableInfo$Index;->name:Ljava/lang/String;
 
@@ -170,12 +185,14 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 578
     iget-boolean v1, p0, Landroidx/room/util/TableInfo$Index;->unique:Z
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 579
     iget-object p0, p0, Landroidx/room/util/TableInfo$Index;->columns:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->hashCode()I
@@ -190,6 +207,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 585
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

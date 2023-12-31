@@ -1,5 +1,6 @@
 .class Landroidx/emoji2/viewsintegration/EmojiEditTextHelper$HelperInternal;
 .super Ljava/lang/Object;
+.source "EmojiEditTextHelper.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 230
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

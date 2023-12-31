@@ -1066,5 +1066,4 @@ Enhanced security."</string>
     <string name="xiaomi_market_sdk_update_dialog_ok">Update</string>
     <string name="xiaomi_market_sdk_update_dialog_title">An update is available</string>
     <string name="yesterday">Yesterday</string>
-    <string name="stack_string_kashi">仿iOS堆叠</string>
 </resources>

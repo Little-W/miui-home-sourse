@@ -1,5 +1,6 @@
 .class public interface abstract Lpl/droidsonroids/relinker/elf/Elf;
 .super Ljava/lang/Object;
+.source "Elf.java"
 
 
 # annotations

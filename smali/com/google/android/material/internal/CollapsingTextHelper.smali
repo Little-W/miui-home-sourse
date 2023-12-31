@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/material/internal/CollapsingTextHelper;
 .super Ljava/lang/Object;
+.source "CollapsingTextHelper.java"
 
 
 # static fields
@@ -156,6 +157,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 76
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x1
@@ -176,14 +178,18 @@
 
     const/4 v0, 0x0
 
+    .line 86
     sput-object v0, Lcom/google/android/material/internal/CollapsingTextHelper;->DEBUG_DRAW_PAINT:Landroid/graphics/Paint;
 
+    .line 87
     sget-object v0, Lcom/google/android/material/internal/CollapsingTextHelper;->DEBUG_DRAW_PAINT:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_1
 
+    .line 88
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    .line 89
     sget-object v0, Lcom/google/android/material/internal/CollapsingTextHelper;->DEBUG_DRAW_PAINT:Landroid/graphics/Paint;
 
     const v1, -0xff01
@@ -197,40 +203,52 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 2
 
+    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
+    .line 105
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextGravity:I
 
+    .line 106
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextGravity:I
 
     const/high16 v0, 0x41700000    # 15.0f
 
+    .line 107
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextSize:F
 
+    .line 108
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextSize:F
 
     const/4 v0, 0x1
 
+    .line 132
     iput-boolean v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtlTextDirectionHeuristicsEnabled:Z
 
+    .line 174
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->maxLines:I
 
     const/4 v0, 0x0
 
+    .line 175
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->lineSpacingAdd:F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 176
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->lineSpacingMultiplier:F
 
+    .line 177
     sget v0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->DEFAULT_HYPHENATION_FREQUENCY:I
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->hyphenationFrequency:I
 
+    .line 180
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
+    .line 182
     new-instance v0, Landroid/text/TextPaint;
 
     const/16 v1, 0x81
@@ -239,6 +257,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
+    .line 183
     new-instance v0, Landroid/text/TextPaint;
 
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
@@ -247,30 +266,35 @@
 
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->tmpPaint:Landroid/text/TextPaint;
 
+    .line 185
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
+    .line 186
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
+    .line 187
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentBounds:Landroid/graphics/RectF;
 
+    .line 189
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateFadeModeThresholdFraction()F
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeThresholdFraction:F
 
+    .line 190
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -295,6 +319,7 @@
 
     sub-float/2addr v0, p2
 
+    .line 1249
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v1
@@ -313,6 +338,7 @@
 
     add-float/2addr v1, v2
 
+    .line 1250
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v2
@@ -331,6 +357,7 @@
 
     add-float/2addr v2, v3
 
+    .line 1251
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v3
@@ -349,6 +376,7 @@
 
     add-float/2addr v3, v4
 
+    .line 1252
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result p0
@@ -367,6 +395,7 @@
 
     add-float/2addr p0, p1
 
+    .line 1253
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
@@ -395,8 +424,10 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 710
     invoke-direct {p0, v0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateUsingTextSize(FZ)V
 
+    .line 711
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDraw:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
@@ -405,8 +436,10 @@
 
     if-eqz v1, :cond_0
 
+    .line 712
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
+    .line 713
     invoke-virtual {v1}, Landroid/text/StaticLayout;->getWidth()I
 
     move-result v1
@@ -421,6 +454,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDrawCollapsed:Ljava/lang/CharSequence;
 
+    .line 715
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDrawCollapsed:Ljava/lang/CharSequence;
 
@@ -428,6 +462,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 716
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     invoke-direct {p0, v2, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->measureTextWidth(Landroid/text/TextPaint;Ljava/lang/CharSequence;)F
@@ -438,14 +473,18 @@
 
     goto :goto_0
 
+    .line 718
     :cond_1
     iput v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextWidth:F
 
+    .line 720
     :goto_0
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextGravity:I
 
+    .line 723
     iget-boolean v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
+    .line 721
     invoke-static {v0, v2}, Landroidx/core/view/GravityCompat;->getAbsoluteGravity(II)I
 
     move-result v0
@@ -462,6 +501,7 @@
 
     if-eq v2, v3, :cond_2
 
+    .line 734
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v2}, Landroid/text/TextPaint;->descent()F
@@ -478,6 +518,7 @@
 
     div-float/2addr v2, v5
 
+    .line 735
     iget-object v6, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->centerY()I
@@ -492,6 +533,7 @@
 
     goto :goto_1
 
+    .line 727
     :cond_2
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
@@ -511,6 +553,7 @@
 
     goto :goto_1
 
+    .line 730
     :cond_3
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
@@ -533,6 +576,7 @@
 
     if-eq v0, v6, :cond_4
 
+    .line 748
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -543,6 +587,7 @@
 
     goto :goto_2
 
+    .line 744
     :cond_4
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
@@ -558,6 +603,7 @@
 
     goto :goto_2
 
+    .line 741
     :cond_5
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
@@ -575,9 +621,11 @@
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawX:F
 
+    .line 752
     :goto_2
     invoke-direct {p0, v1, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateUsingTextSize(FZ)V
 
+    .line 753
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz p1, :cond_6
@@ -593,6 +641,7 @@
     :cond_6
     move p1, v1
 
+    .line 755
     :goto_3
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
@@ -602,6 +651,7 @@
 
     if-le v8, v7, :cond_7
 
+    .line 756
     invoke-virtual {v0}, Landroid/text/StaticLayout;->getWidth()I
 
     move-result v0
@@ -610,17 +660,20 @@
 
     goto :goto_4
 
+    .line 757
     :cond_7
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDraw:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_8
 
+    .line 758
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     invoke-direct {p0, v1, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->measureTextWidth(Landroid/text/TextPaint;Ljava/lang/CharSequence;)F
 
     move-result v1
 
+    .line 760
     :cond_8
     :goto_4
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
@@ -639,10 +692,13 @@
     :goto_5
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedLineCount:I
 
+    .line 762
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextGravity:I
 
+    .line 765
     iget-boolean v8, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
+    .line 763
     invoke-static {v0, v8}, Landroidx/core/view/GravityCompat;->getAbsoluteGravity(II)I
 
     move-result v0
@@ -655,6 +711,7 @@
 
     div-float/2addr p1, v5
 
+    .line 776
     iget-object v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v3}, Landroid/graphics/Rect;->centerY()I
@@ -669,6 +726,7 @@
 
     goto :goto_6
 
+    .line 768
     :cond_a
     iget-object v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
@@ -690,6 +748,7 @@
 
     goto :goto_6
 
+    .line 771
     :cond_b
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
@@ -706,6 +765,7 @@
 
     if-eq p1, v6, :cond_c
 
+    .line 789
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
     iget p1, p1, Landroid/graphics/Rect;->left:I
@@ -716,6 +776,7 @@
 
     goto :goto_7
 
+    .line 785
     :cond_c
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
@@ -729,6 +790,7 @@
 
     goto :goto_7
 
+    .line 782
     :cond_d
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
@@ -744,9 +806,11 @@
 
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawX:F
 
+    .line 794
     :goto_7
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->clearTexture()V
 
+    .line 796
     iget p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedFraction:F
 
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setInterpolatedTextSize(F)V
@@ -757,6 +821,7 @@
 .method private calculateCurrentOffsets()V
     .locals 1
 
+    .line 592
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedFraction:F
 
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateOffsets(F)V
@@ -767,6 +832,7 @@
 .method private calculateFadeModeTextAlpha(F)F
     .locals 4
 
+    .line 670
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeThresholdFraction:F
 
     cmpg-float v1, p1, v0
@@ -777,6 +843,7 @@
 
     if-gtz v1, :cond_0
 
+    .line 671
     iget p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeStartFraction:F
 
     invoke-static {v3, v2, p0, v0, p1}, Lcom/google/android/material/animation/AnimationUtils;->lerp(FFFFF)F
@@ -785,6 +852,7 @@
 
     return p0
 
+    .line 678
     :cond_0
     invoke-static {v2, v3, v0, v3, p1}, Lcom/google/android/material/animation/AnimationUtils;->lerp(FFFFF)F
 
@@ -796,6 +864,7 @@
 .method private calculateFadeModeThresholdFraction()F
     .locals 2
 
+    .line 327
     iget p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeStartFraction:F
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -814,14 +883,17 @@
 .method private calculateIsRtl(Ljava/lang/CharSequence;)Z
     .locals 2
 
+    .line 936
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->isDefaultIsRtl()Z
 
     move-result v0
 
+    .line 937
     iget-boolean v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtlTextDirectionHeuristicsEnabled:Z
 
     if-eqz v1, :cond_0
 
+    .line 938
     invoke-direct {p0, p1, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->isTextDirectionHeuristicsIsRtl(Ljava/lang/CharSequence;Z)Z
 
     move-result v0
@@ -833,8 +905,10 @@
 .method private calculateOffsets(F)V
     .locals 5
 
+    .line 596
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->interpolateBounds(F)V
 
+    .line 598
     iget-boolean v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeEnabled:Z
 
     const/4 v1, 0x0
@@ -843,31 +917,37 @@
 
     if-eqz v0, :cond_1
 
+    .line 599
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeThresholdFraction:F
 
     cmpg-float v0, p1, v0
 
     if-gez v0, :cond_0
 
+    .line 601
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawX:F
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawX:F
 
+    .line 602
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawY:F
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawY:F
 
+    .line 604
     invoke-direct {p0, v1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setInterpolatedTextSize(F)V
 
     move v0, v1
 
     goto :goto_0
 
+    .line 607
     :cond_0
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawX:F
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawX:F
 
+    .line 608
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawY:F
 
     const/4 v3, 0x0
@@ -884,12 +964,14 @@
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawY:F
 
+    .line 610
     invoke-direct {p0, v2}, Lcom/google/android/material/internal/CollapsingTextHelper;->setInterpolatedTextSize(F)V
 
     move v0, v2
 
     goto :goto_0
 
+    .line 614
     :cond_1
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawX:F
 
@@ -903,6 +985,7 @@
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawX:F
 
+    .line 615
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawY:F
 
     iget v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawY:F
@@ -915,6 +998,7 @@
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawY:F
 
+    .line 617
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setInterpolatedTextSize(F)V
 
     move v0, p1
@@ -922,16 +1006,20 @@
     :goto_0
     sub-float v3, v2, p1
 
+    .line 620
     sget-object v4, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
+    .line 621
     invoke-static {v1, v2, v3, v4}, Lcom/google/android/material/internal/CollapsingTextHelper;->lerp(FFFLandroid/animation/TimeInterpolator;)F
 
     move-result v3
 
     sub-float v3, v2, v3
 
+    .line 620
     invoke-direct {p0, v3}, Lcom/google/android/material/internal/CollapsingTextHelper;->setCollapsedTextBlend(F)V
 
+    .line 622
     sget-object v3, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-static {v2, v1, p1, v3}, Lcom/google/android/material/internal/CollapsingTextHelper;->lerp(FFFLandroid/animation/TimeInterpolator;)F
@@ -940,14 +1028,17 @@
 
     invoke-direct {p0, v1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setExpandedTextBlend(F)V
 
+    .line 624
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextColor:Landroid/content/res/ColorStateList;
 
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextColor:Landroid/content/res/ColorStateList;
 
     if-eq v1, v2, :cond_2
 
+    .line 627
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
+    .line 629
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->getCurrentExpandedTextColor()I
 
     move-result v2
@@ -956,14 +1047,17 @@
 
     move-result v3
 
+    .line 628
     invoke-static {v2, v3, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->blendARGB(IIF)I
 
     move-result v0
 
+    .line 627
     invoke-virtual {v1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
     goto :goto_1
 
+    .line 631
     :cond_2
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
@@ -973,6 +1067,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
+    .line 634
     :goto_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -980,6 +1075,7 @@
 
     if-lt v0, v1, :cond_4
 
+    .line 635
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedLetterSpacing:F
 
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedLetterSpacing:F
@@ -988,23 +1084,28 @@
 
     if-eqz v2, :cond_3
 
+    .line 636
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     sget-object v3, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
+    .line 637
     invoke-static {v1, v0, p1, v3}, Lcom/google/android/material/internal/CollapsingTextHelper;->lerp(FFFLandroid/animation/TimeInterpolator;)F
 
     move-result v0
 
+    .line 636
     invoke-virtual {v2, v0}, Landroid/text/TextPaint;->setLetterSpacing(F)V
 
     goto :goto_2
 
+    .line 643
     :cond_3
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v1, v0}, Landroid/text/TextPaint;->setLetterSpacing(F)V
 
+    .line 648
     :cond_4
     :goto_2
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedShadowRadius:F
@@ -1019,6 +1120,7 @@
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowRadius:F
 
+    .line 649
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedShadowDx:F
 
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedShadowDx:F
@@ -1029,6 +1131,7 @@
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowDx:F
 
+    .line 650
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedShadowDy:F
 
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedShadowDy:F
@@ -1039,8 +1142,10 @@
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowDy:F
 
+    .line 651
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedShadowColor:Landroid/content/res/ColorStateList;
 
+    .line 653
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->getCurrentColor(Landroid/content/res/ColorStateList;)I
 
     move-result v0
@@ -1051,12 +1156,14 @@
 
     move-result v1
 
+    .line 652
     invoke-static {v0, v1, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->blendARGB(IIF)I
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowColor:I
 
+    .line 654
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowRadius:F
@@ -1069,16 +1176,19 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
+    .line 657
     iget-boolean v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeEnabled:Z
 
     if-eqz v0, :cond_5
 
+    .line 658
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getAlpha()I
 
     move-result v0
 
+    .line 661
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateFadeModeTextAlpha(F)F
 
     move-result p1
@@ -1089,10 +1199,12 @@
 
     float-to-int p1, p1
 
+    .line 663
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setAlpha(I)V
 
+    .line 666
     :cond_5
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
@@ -1106,6 +1218,7 @@
 
     const/4 v0, 0x0
 
+    .line 968
     invoke-direct {p0, p1, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateUsingTextSize(FZ)V
 
     return-void
@@ -1114,12 +1227,14 @@
 .method private calculateUsingTextSize(FZ)V
     .locals 12
 
+    .line 973
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->text:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 977
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
@@ -1129,6 +1244,7 @@
 
     int-to-float v0, v0
 
+    .line 978
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
@@ -1139,6 +1255,7 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
+    .line 985
     invoke-static {p1, v2}, Lcom/google/android/material/internal/CollapsingTextHelper;->isClose(FF)Z
 
     move-result v3
@@ -1151,18 +1268,23 @@
 
     if-eqz v3, :cond_2
 
+    .line 986
     iget p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextSize:F
 
+    .line 987
     iget p2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedLetterSpacing:F
 
+    .line 988
     iput v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->scale:F
 
+    .line 989
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentTypeface:Landroid/graphics/Typeface;
 
     iget-object v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypeface:Landroid/graphics/Typeface;
 
     if-eq v1, v3, :cond_1
 
+    .line 990
     iput-object v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentTypeface:Landroid/graphics/Typeface;
 
     move v1, v6
@@ -1181,17 +1303,21 @@
 
     goto :goto_3
 
+    .line 995
     :cond_2
     iget v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextSize:F
 
+    .line 996
     iget v7, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedLetterSpacing:F
 
+    .line 997
     iget-object v8, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentTypeface:Landroid/graphics/Typeface;
 
     iget-object v9, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypeface:Landroid/graphics/Typeface;
 
     if-eq v8, v9, :cond_3
 
+    .line 998
     iput-object v9, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentTypeface:Landroid/graphics/Typeface;
 
     move v8, v6
@@ -1201,6 +1327,7 @@
     :cond_3
     move v8, v5
 
+    .line 1001
     :goto_1
     invoke-static {p1, v4}, Lcom/google/android/material/internal/CollapsingTextHelper;->isClose(FF)Z
 
@@ -1208,10 +1335,12 @@
 
     if-eqz v9, :cond_4
 
+    .line 1003
     iput v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->scale:F
 
     goto :goto_2
 
+    .line 1006
     :cond_4
     iget v9, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextSize:F
 
@@ -1219,6 +1348,7 @@
 
     iget-object v11, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textSizeInterpolator:Landroid/animation/TimeInterpolator;
 
+    .line 1007
     invoke-static {v9, v10, p1, v11}, Lcom/google/android/material/internal/CollapsingTextHelper;->lerp(FFFLandroid/animation/TimeInterpolator;)F
 
     move-result p1
@@ -1229,6 +1359,7 @@
 
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->scale:F
 
+    .line 1011
     :goto_2
     iget p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextSize:F
 
@@ -1252,6 +1383,7 @@
 
     div-float/2addr v0, p1
 
+    .line 1028
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -1263,6 +1395,7 @@
 
     if-lez p1, :cond_b
 
+    .line 1034
     iget p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentTextSize:F
 
     cmpl-float p1, p1, v3
@@ -1276,6 +1409,7 @@
     :cond_7
     move p1, v5
 
+    .line 1035
     :goto_4
     iget p2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentLetterSpacing:F
 
@@ -1295,6 +1429,7 @@
 
     if-nez p2, :cond_a
 
+    .line 1036
     iget-boolean p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->boundsChanged:Z
 
     if-nez p1, :cond_a
@@ -1312,13 +1447,17 @@
     :goto_6
     move v8, v6
 
+    .line 1037
     :goto_7
     iput v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentTextSize:F
 
+    .line 1038
     iput v7, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentLetterSpacing:F
 
+    .line 1039
     iput-boolean v5, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->boundsChanged:Z
 
+    .line 1042
     :cond_b
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDraw:Ljava/lang/CharSequence;
 
@@ -1326,6 +1465,7 @@
 
     if-eqz v8, :cond_10
 
+    .line 1043
     :cond_c
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
@@ -1333,24 +1473,28 @@
 
     invoke-virtual {p1, p2}, Landroid/text/TextPaint;->setTextSize(F)V
 
+    .line 1044
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget-object p2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentTypeface:Landroid/graphics/Typeface;
 
     invoke-virtual {p1, p2}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
+    .line 1045
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 p2, 0x15
 
     if-lt p1, p2, :cond_d
 
+    .line 1046
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget p2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentLetterSpacing:F
 
     invoke-virtual {p1, p2}, Landroid/text/TextPaint;->setLetterSpacing(F)V
 
+    .line 1049
     :cond_d
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
@@ -1365,6 +1509,7 @@
     :cond_e
     invoke-virtual {p1, v5}, Landroid/text/TextPaint;->setLinearText(Z)V
 
+    .line 1051
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->text:Ljava/lang/CharSequence;
 
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateIsRtl(Ljava/lang/CharSequence;)Z
@@ -1373,6 +1518,7 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
+    .line 1052
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->shouldDrawMultiline()Z
 
     move-result p1
@@ -1390,6 +1536,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
+    .line 1053
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {p1}, Landroid/text/StaticLayout;->getText()Ljava/lang/CharSequence;
@@ -1405,14 +1552,17 @@
 .method private clearTexture()V
     .locals 1
 
+    .line 1150
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTitleTexture:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
+    .line 1151
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     const/4 v0, 0x0
 
+    .line 1152
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTitleTexture:Landroid/graphics/Bitmap;
 
     :cond_0
@@ -1426,6 +1576,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1061
     :try_start_0
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
@@ -1436,6 +1587,7 @@
 
     move-result-object v0
 
+    .line 1062
     :goto_0
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->text:Ljava/lang/CharSequence;
 
@@ -1443,30 +1595,36 @@
 
     float-to-int p2, p2
 
+    .line 1063
     invoke-static {v1, v2, p2}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->obtain(Ljava/lang/CharSequence;Landroid/text/TextPaint;I)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
     move-result-object p2
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
+    .line 1064
     invoke-virtual {p2, v1}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
     move-result-object p2
 
+    .line 1065
     invoke-virtual {p2, p3}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->setIsRtl(Z)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
     move-result-object p2
 
+    .line 1066
     invoke-virtual {p2, v0}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->setAlignment(Landroid/text/Layout$Alignment;)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
     move-result-object p2
 
     const/4 p3, 0x0
 
+    .line 1067
     invoke-virtual {p2, p3}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->setIncludePad(Z)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
     move-result-object p2
 
+    .line 1068
     invoke-virtual {p2, p1}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->setMaxLines(I)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
     move-result-object p1
@@ -1475,16 +1633,19 @@
 
     iget p3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->lineSpacingMultiplier:F
 
+    .line 1069
     invoke-virtual {p1, p2, p3}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->setLineSpacing(FF)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
     move-result-object p1
 
     iget p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->hyphenationFrequency:I
 
+    .line 1070
     invoke-virtual {p1, p0}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->setHyphenationFrequency(I)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
     move-result-object p0
 
+    .line 1071
     invoke-virtual {p0}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->build()Landroid/text/StaticLayout;
 
     move-result-object p0
@@ -1496,6 +1657,7 @@
     :catch_0
     move-exception p0
 
+    .line 1073
     invoke-virtual {p0}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
@@ -1510,6 +1672,7 @@
 
     const/4 p0, 0x0
 
+    .line 1076
     :goto_1
     invoke-static {p0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1525,14 +1688,17 @@
 
     move-object v0, p0
 
+    .line 874
     iget-object v1, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v1}, Landroid/text/TextPaint;->getAlpha()I
 
     move-result v1
 
+    .line 876
     invoke-virtual/range {p1 .. p3}, Landroid/graphics/Canvas;->translate(FF)V
 
+    .line 878
     iget-object v2, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget v3, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextBlend:F
@@ -1545,12 +1711,14 @@
 
     invoke-virtual {v2, v3}, Landroid/text/TextPaint;->setAlpha(I)V
 
+    .line 883
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1f
 
     if-lt v2, v3, :cond_0
 
+    .line 884
     iget-object v2, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget v5, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowRadius:F
@@ -1561,6 +1729,7 @@
 
     iget v8, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowColor:I
 
+    .line 888
     invoke-virtual {v2}, Landroid/text/TextPaint;->getAlpha()I
 
     move-result v9
@@ -1569,8 +1738,10 @@
 
     move-result v8
 
+    .line 884
     invoke-virtual {v2, v5, v6, v7, v8}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
+    .line 890
     :cond_0
     iget-object v2, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
@@ -1578,6 +1749,7 @@
 
     invoke-virtual {v2, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
+    .line 893
     iget-object v2, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget v5, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextBlend:F
@@ -1588,10 +1760,12 @@
 
     invoke-virtual {v2, v4}, Landroid/text/TextPaint;->setAlpha(I)V
 
+    .line 895
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v2, v3, :cond_1
 
+    .line 896
     iget-object v2, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget v4, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowRadius:F
@@ -1602,6 +1776,7 @@
 
     iget v7, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowColor:I
 
+    .line 900
     invoke-virtual {v2}, Landroid/text/TextPaint;->getAlpha()I
 
     move-result v8
@@ -1610,8 +1785,10 @@
 
     move-result v7
 
+    .line 896
     invoke-virtual {v2, v4, v5, v6, v7}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
+    .line 902
     :cond_1
     iget-object v2, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
@@ -1621,10 +1798,12 @@
 
     move-result v2
 
+    .line 903
     iget-object v6, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDrawCollapsed:Ljava/lang/CharSequence;
 
     const/4 v7, 0x0
 
+    .line 906
     invoke-interface {v6}, Ljava/lang/CharSequence;->length()I
 
     move-result v8
@@ -1639,12 +1818,15 @@
 
     move v10, v2
 
+    .line 903
     invoke-virtual/range {v5 .. v11}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
 
+    .line 912
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v5, v3, :cond_2
 
+    .line 913
     iget-object v3, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget v5, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentShadowRadius:F
@@ -1657,11 +1839,13 @@
 
     invoke-virtual {v3, v5, v6, v7, v8}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
+    .line 917
     :cond_2
     iget-boolean v3, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeEnabled:Z
 
     if-nez v3, :cond_4
 
+    .line 919
     iget-object v3, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDrawCollapsed:Ljava/lang/CharSequence;
 
     invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -1674,12 +1858,14 @@
 
     const-string/jumbo v5, "\u2026"
 
+    .line 920
     invoke-virtual {v3, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_3
 
+    .line 921
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -1693,14 +1879,17 @@
     :cond_3
     move-object v6, v3
 
+    .line 924
     iget-object v3, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v3, v1}, Landroid/text/TextPaint;->setAlpha(I)V
 
     const/4 v7, 0x0
 
+    .line 925
     iget-object v1, v0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
+    .line 928
     invoke-virtual {v1, v4}, Landroid/text/StaticLayout;->getLineEnd(I)I
 
     move-result v1
@@ -1721,6 +1910,7 @@
 
     move v10, v2
 
+    .line 925
     invoke-virtual/range {v5 .. v11}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;IIFFLandroid/graphics/Paint;)V
 
     :cond_4
@@ -1730,6 +1920,7 @@
 .method private ensureExpandedTexture()V
     .locals 3
 
+    .line 1095
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTitleTexture:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_2
@@ -1755,14 +1946,17 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1099
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateOffsets(F)V
 
+    .line 1100
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0}, Landroid/text/StaticLayout;->getWidth()I
 
     move-result v0
 
+    .line 1101
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v1}, Landroid/text/StaticLayout;->getHeight()I
@@ -1775,6 +1969,7 @@
 
     goto :goto_0
 
+    .line 1107
     :cond_1
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -1784,20 +1979,24 @@
 
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTitleTexture:Landroid/graphics/Bitmap;
 
+    .line 1108
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTitleTexture:Landroid/graphics/Bitmap;
 
     invoke-direct {v0, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 1109
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v1, v0}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
+    .line 1111
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->texturePaint:Landroid/graphics/Paint;
 
     if-nez v0, :cond_2
 
+    .line 1113
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x3
@@ -1841,6 +2040,7 @@
 
     goto :goto_1
 
+    .line 283
     :cond_1
     iget-boolean p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
@@ -1868,6 +2068,7 @@
     :goto_0
     return p1
 
+    .line 281
     :cond_3
     :goto_1
     iget-boolean p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
@@ -1904,6 +2105,7 @@
 
     div-float/2addr p1, p2
 
+    .line 278
     iget p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextWidth:F
 
     div-float/2addr p0, p2
@@ -1943,6 +2145,7 @@
 
     goto :goto_1
 
+    .line 295
     :cond_1
     iget-boolean p2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
@@ -1966,6 +2169,7 @@
     :goto_0
     return p0
 
+    .line 293
     :cond_3
     :goto_1
     iget-boolean p2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
@@ -1998,6 +2202,7 @@
 
     div-float/2addr p1, p2
 
+    .line 290
     iget p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextWidth:F
 
     div-float/2addr p0, p2
@@ -2016,17 +2221,20 @@
 
     return v0
 
+    .line 702
     :cond_0
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->state:[I
 
     if-eqz p0, :cond_1
 
+    .line 703
     invoke-virtual {p1, p0, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
     move-result p0
 
     return p0
 
+    .line 705
     :cond_1
     invoke-virtual {p1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
@@ -2038,6 +2246,7 @@
 .method private getCurrentExpandedTextColor()I
     .locals 1
 
+    .line 689
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextColor:Landroid/content/res/ColorStateList;
 
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->getCurrentColor(Landroid/content/res/ColorStateList;)I
@@ -2050,10 +2259,13 @@
 .method private getMultilineTextLayoutAlignment()Landroid/text/Layout$Alignment;
     .locals 2
 
+    .line 1080
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextGravity:I
 
+    .line 1083
     iget-boolean v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
+    .line 1081
     invoke-static {v0, v1}, Landroidx/core/view/GravityCompat;->getAbsoluteGravity(II)I
 
     move-result v0
@@ -2068,6 +2280,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 1090
     iget-boolean p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
     if-eqz p0, :cond_0
@@ -2082,6 +2295,7 @@
     :goto_0
     return-object p0
 
+    .line 1088
     :cond_1
     iget-boolean p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
@@ -2097,6 +2311,7 @@
     :goto_1
     return-object p0
 
+    .line 1086
     :cond_3
     sget-object p0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
@@ -2106,20 +2321,24 @@
 .method private getTextPaintCollapsed(Landroid/text/TextPaint;)V
     .locals 2
 
+    .line 344
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextSize:F
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
+    .line 345
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypeface:Landroid/graphics/Typeface;
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
+    .line 346
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
+    .line 347
     iget p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedLetterSpacing:F
 
     invoke-virtual {p1, p0}, Landroid/text/TextPaint;->setLetterSpacing(F)V
@@ -2131,20 +2350,24 @@
 .method private getTextPaintExpanded(Landroid/text/TextPaint;)V
     .locals 2
 
+    .line 336
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextSize:F
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
+    .line 337
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypeface:Landroid/graphics/Typeface;
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
+    .line 338
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
+    .line 339
     iget p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedLetterSpacing:F
 
     invoke-virtual {p1, p0}, Landroid/text/TextPaint;->setLetterSpacing(F)V
@@ -2156,10 +2379,12 @@
 .method private interpolateBounds(F)V
     .locals 4
 
+    .line 804
     iget-boolean v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeEnabled:Z
 
     if-eqz v0, :cond_1
 
+    .line 805
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentBounds:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->fadeModeThresholdFraction:F
@@ -2180,6 +2405,7 @@
 
     goto :goto_1
 
+    .line 807
     :cond_1
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentBounds:Landroid/graphics/RectF;
 
@@ -2197,12 +2423,14 @@
 
     iget-object v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->positionInterpolator:Landroid/animation/TimeInterpolator;
 
+    .line 808
     invoke-static {v1, v2, p1, v3}, Lcom/google/android/material/internal/CollapsingTextHelper;->lerp(FFFLandroid/animation/TimeInterpolator;)F
 
     move-result v1
 
     iput v1, v0, Landroid/graphics/RectF;->left:F
 
+    .line 809
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentBounds:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawY:F
@@ -2217,6 +2445,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->top:F
 
+    .line 810
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentBounds:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
@@ -2233,12 +2462,14 @@
 
     iget-object v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->positionInterpolator:Landroid/animation/TimeInterpolator;
 
+    .line 811
     invoke-static {v1, v2, p1, v3}, Lcom/google/android/material/internal/CollapsingTextHelper;->lerp(FFFLandroid/animation/TimeInterpolator;)F
 
     move-result v1
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
+    .line 812
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentBounds:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
@@ -2255,6 +2486,7 @@
 
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->positionInterpolator:Landroid/animation/TimeInterpolator;
 
+    .line 813
     invoke-static {v1, v2, p1, p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->lerp(FFFLandroid/animation/TimeInterpolator;)F
 
     move-result p0
@@ -2270,6 +2502,7 @@
 
     sub-float/2addr p0, p1
 
+    .line 1221
     invoke-static {p0}, Ljava/lang/Math;->abs(F)F
 
     move-result p0
@@ -2294,6 +2527,7 @@
 .method private isDefaultIsRtl()Z
     .locals 1
 
+    .line 943
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
@@ -2318,16 +2552,19 @@
 
     if-eqz p2, :cond_0
 
+    .line 948
     sget-object p0, Landroidx/core/text/TextDirectionHeuristicsCompat;->FIRSTSTRONG_RTL:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     goto :goto_0
 
+    .line 949
     :cond_0
     sget-object p0, Landroidx/core/text/TextDirectionHeuristicsCompat;->FIRSTSTRONG_LTR:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     :goto_0
     const/4 p2, 0x0
 
+    .line 950
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -2344,10 +2581,12 @@
 
     if-eqz p3, :cond_0
 
+    .line 1259
     invoke-interface {p3, p2}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
     move-result p2
 
+    .line 1261
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/google/android/material/animation/AnimationUtils;->lerp(FFF)F
 
@@ -2359,6 +2598,7 @@
 .method private measureTextWidth(Landroid/text/TextPaint;Ljava/lang/CharSequence;)F
     .locals 1
 
+    .line 800
     invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
 
     move-result p0
@@ -2375,6 +2615,7 @@
 .method private static rectEquals(Landroid/graphics/Rect;IIII)Z
     .locals 1
 
+    .line 1265
     iget v0, p0, Landroid/graphics/Rect;->left:I
 
     if-ne v0, p1, :cond_0
@@ -2405,8 +2646,10 @@
 .method private setCollapsedTextBlend(F)V
     .locals 0
 
+    .line 818
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextBlend:F
 
+    .line 819
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
@@ -2417,21 +2660,27 @@
 .method private setCollapsedTypefaceInternal(Landroid/graphics/Typeface;)Z
     .locals 1
 
+    .line 474
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedFontCallback:Lcom/google/android/material/resources/CancelableFontCallback;
 
     if-eqz v0, :cond_0
 
+    .line 475
     invoke-virtual {v0}, Lcom/google/android/material/resources/CancelableFontCallback;->cancel()V
 
+    .line 477
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypefaceDefault:Landroid/graphics/Typeface;
 
     if-eq v0, p1, :cond_2
 
+    .line 478
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypefaceDefault:Landroid/graphics/Typeface;
 
+    .line 479
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
+    .line 481
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2444,12 +2693,14 @@
 
     move-result-object v0
 
+    .line 480
     invoke-static {v0, p1}, Lcom/google/android/material/resources/TypefaceUtils;->maybeCopyWithFontWeightAdjustment(Landroid/content/res/Configuration;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypefaceBold:Landroid/graphics/Typeface;
 
+    .line 483
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypefaceBold:Landroid/graphics/Typeface;
 
     if-nez p1, :cond_1
@@ -2472,8 +2723,10 @@
 .method private setExpandedTextBlend(F)V
     .locals 0
 
+    .line 823
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextBlend:F
 
+    .line 824
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
@@ -2484,21 +2737,27 @@
 .method private setExpandedTypefaceInternal(Landroid/graphics/Typeface;)Z
     .locals 1
 
+    .line 493
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedFontCallback:Lcom/google/android/material/resources/CancelableFontCallback;
 
     if-eqz v0, :cond_0
 
+    .line 494
     invoke-virtual {v0}, Lcom/google/android/material/resources/CancelableFontCallback;->cancel()V
 
+    .line 496
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypefaceDefault:Landroid/graphics/Typeface;
 
     if-eq v0, p1, :cond_2
 
+    .line 497
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypefaceDefault:Landroid/graphics/Typeface;
 
+    .line 498
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
+    .line 500
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2511,12 +2770,14 @@
 
     move-result-object v0
 
+    .line 499
     invoke-static {v0, p1}, Lcom/google/android/material/resources/TypefaceUtils;->maybeCopyWithFontWeightAdjustment(Landroid/content/res/Configuration;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypefaceBold:Landroid/graphics/Typeface;
 
+    .line 502
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypefaceBold:Landroid/graphics/Typeface;
 
     if-nez p1, :cond_1
@@ -2539,8 +2800,10 @@
 .method private setInterpolatedTextSize(F)V
     .locals 1
 
+    .line 954
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateUsingTextSize(F)V
 
+    .line 957
     sget-boolean p1, Lcom/google/android/material/internal/CollapsingTextHelper;->USE_SCALING_TEXTURE:Z
 
     if-eqz p1, :cond_0
@@ -2563,12 +2826,15 @@
     :goto_0
     iput-boolean p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->useTexture:Z
 
+    .line 959
     iget-boolean p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->useTexture:Z
 
     if-eqz p1, :cond_1
 
+    .line 961
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->ensureExpandedTexture()V
 
+    .line 964
     :cond_1
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
@@ -2580,6 +2846,7 @@
 .method private shouldDrawMultiline()Z
     .locals 2
 
+    .line 870
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->maxLines:I
 
     const/4 v1, 0x1
@@ -2613,10 +2880,12 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 7
 
+    .line 828
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
+    .line 830
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDraw:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_5
@@ -2625,16 +2894,20 @@
 
     if-eqz v1, :cond_5
 
+    .line 831
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentTextSize:F
 
     invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setTextSize(F)V
 
+    .line 832
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawX:F
 
+    .line 833
     iget v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawY:F
 
+    .line 834
     iget-boolean v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->useTexture:Z
 
     const/4 v4, 0x0
@@ -2652,6 +2925,7 @@
     :cond_0
     move v3, v4
 
+    .line 846
     :goto_0
     iget v5, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->scale:F
 
@@ -2665,21 +2939,25 @@
 
     if-nez v6, :cond_1
 
+    .line 847
     invoke-virtual {p1, v5, v5, v1, v2}, Landroid/graphics/Canvas;->scale(FFFF)V
 
     :cond_1
     if-eqz v3, :cond_2
 
+    .line 852
     iget-object v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTitleTexture:Landroid/graphics/Bitmap;
 
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->texturePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v3, v1, v2, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 853
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
 
+    .line 857
     :cond_2
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->shouldDrawMultiline()Z
 
@@ -2699,6 +2977,7 @@
 
     if-lez v3, :cond_4
 
+    .line 859
     :cond_3
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->currentDrawX:F
 
@@ -2716,13 +2995,16 @@
 
     goto :goto_1
 
+    .line 861
     :cond_4
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
+    .line 862
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {p0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
+    .line 865
     :goto_1
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
@@ -2733,6 +3015,7 @@
 .method public getCollapsedTextActualBounds(Landroid/graphics/RectF;II)V
     .locals 1
 
+    .line 268
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->text:Ljava/lang/CharSequence;
 
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateIsRtl(Ljava/lang/CharSequence;)Z
@@ -2741,12 +3024,14 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
+    .line 269
     invoke-direct {p0, p2, p3}, Lcom/google/android/material/internal/CollapsingTextHelper;->getCollapsedTextLeftBound(II)F
 
     move-result v0
 
     iput v0, p1, Landroid/graphics/RectF;->left:F
 
+    .line 270
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -2755,12 +3040,14 @@
 
     iput v0, p1, Landroid/graphics/RectF;->top:F
 
+    .line 271
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/internal/CollapsingTextHelper;->getCollapsedTextRightBound(Landroid/graphics/RectF;II)F
 
     move-result p2
 
     iput p2, p1, Landroid/graphics/RectF;->right:F
 
+    .line 272
     iget-object p2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
     iget p2, p2, Landroid/graphics/Rect;->top:I
@@ -2781,6 +3068,7 @@
 .method public getCollapsedTextColor()Landroid/content/res/ColorStateList;
     .locals 0
 
+    .line 1229
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextColor:Landroid/content/res/ColorStateList;
 
     return-object p0
@@ -2789,10 +3077,12 @@
 .method public getCollapsedTextHeight()F
     .locals 1
 
+    .line 312
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->tmpPaint:Landroid/text/TextPaint;
 
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->getTextPaintCollapsed(Landroid/text/TextPaint;)V
 
+    .line 314
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->tmpPaint:Landroid/text/TextPaint;
 
     invoke-virtual {p0}, Landroid/text/TextPaint;->ascent()F
@@ -2807,6 +3097,7 @@
 .method public getCurrentCollapsedTextColor()I
     .locals 1
 
+    .line 694
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextColor:Landroid/content/res/ColorStateList;
 
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->getCurrentColor(Landroid/content/res/ColorStateList;)I
@@ -2819,10 +3110,12 @@
 .method public getExpandedTextHeight()F
     .locals 1
 
+    .line 300
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->tmpPaint:Landroid/text/TextPaint;
 
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->getTextPaintExpanded(Landroid/text/TextPaint;)V
 
+    .line 302
     iget-object p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->tmpPaint:Landroid/text/TextPaint;
 
     invoke-virtual {p0}, Landroid/text/TextPaint;->ascent()F
@@ -2837,6 +3130,7 @@
 .method public getExpansionFraction()F
     .locals 0
 
+    .line 572
     iget p0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedFraction:F
 
     return p0
@@ -2845,6 +3139,7 @@
 .method public final isStateful()Z
     .locals 1
 
+    .line 563
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextColor:Landroid/content/res/ColorStateList;
 
     if-eqz v0, :cond_0
@@ -2860,6 +3155,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 564
     invoke-virtual {p0}, Landroid/content/res/ColorStateList;->isStateful()Z
 
     move-result p0
@@ -2881,33 +3177,39 @@
 .method public maybeUpdateFontWeightAdjustment(Landroid/content/res/Configuration;)V
     .locals 2
 
+    .line 517
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1f
 
     if-lt v0, v1, :cond_4
 
+    .line 518
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypefaceDefault:Landroid/graphics/Typeface;
 
     if-eqz v0, :cond_0
 
+    .line 520
     invoke-static {p1, v0}, Lcom/google/android/material/resources/TypefaceUtils;->maybeCopyWithFontWeightAdjustment(Landroid/content/res/Configuration;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypefaceBold:Landroid/graphics/Typeface;
 
+    .line 523
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypefaceDefault:Landroid/graphics/Typeface;
 
     if-eqz v0, :cond_1
 
+    .line 525
     invoke-static {p1, v0}, Lcom/google/android/material/resources/TypefaceUtils;->maybeCopyWithFontWeightAdjustment(Landroid/content/res/Configuration;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypefaceBold:Landroid/graphics/Typeface;
 
+    .line 528
     :cond_1
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypefaceBold:Landroid/graphics/Typeface;
 
@@ -2921,6 +3223,7 @@
     :goto_0
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTypeface:Landroid/graphics/Typeface;
 
+    .line 530
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTypefaceBold:Landroid/graphics/Typeface;
 
     if-eqz p1, :cond_3
@@ -2935,6 +3238,7 @@
 
     const/4 p1, 0x1
 
+    .line 531
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate(Z)V
 
     :cond_4
@@ -2944,8 +3248,10 @@
 .method onBoundsChanged()V
     .locals 1
 
+    .line 352
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
+    .line 353
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -2954,6 +3260,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
+    .line 354
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v0
@@ -2962,6 +3269,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
+    .line 355
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -2970,6 +3278,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
+    .line 356
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v0
@@ -2994,6 +3303,7 @@
 
     const/4 v0, 0x0
 
+    .line 1118
     invoke-virtual {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate(Z)V
 
     return-void
@@ -3002,6 +3312,7 @@
 .method public recalculate(Z)V
     .locals 1
 
+    .line 1122
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
@@ -3021,9 +3332,11 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 1125
     :cond_1
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateBaseOffsets(Z)V
 
+    .line 1126
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateCurrentOffsets()V
 
     :cond_2
@@ -3033,6 +3346,7 @@
 .method public setCollapsedBounds(IIII)V
     .locals 1
 
+    .line 256
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
     invoke-static {v0, p1, p2, p3, p4}, Lcom/google/android/material/internal/CollapsingTextHelper;->rectEquals(Landroid/graphics/Rect;IIII)Z
@@ -3041,14 +3355,17 @@
 
     if-nez v0, :cond_0
 
+    .line 257
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
     const/4 p1, 0x1
 
+    .line 258
     iput-boolean p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->boundsChanged:Z
 
+    .line 259
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->onBoundsChanged()V
 
     :cond_0
@@ -3058,6 +3375,7 @@
 .method public setCollapsedBounds(Landroid/graphics/Rect;)V
     .locals 3
 
+    .line 264
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -3074,6 +3392,7 @@
 .method public setCollapsedTextAppearance(I)V
     .locals 3
 
+    .line 382
     new-instance v0, Lcom/google/android/material/resources/TextAppearance;
 
     iget-object v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
@@ -3084,18 +3403,21 @@
 
     invoke-direct {v0, v1, p1}, Lcom/google/android/material/resources/TextAppearance;-><init>(Landroid/content/Context;I)V
 
+    .line 384
     invoke-virtual {v0}, Lcom/google/android/material/resources/TextAppearance;->getTextColor()Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 385
     invoke-virtual {v0}, Lcom/google/android/material/resources/TextAppearance;->getTextColor()Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextColor:Landroid/content/res/ColorStateList;
 
+    .line 387
     :cond_0
     invoke-virtual {v0}, Lcom/google/android/material/resources/TextAppearance;->getTextSize()F
 
@@ -3107,44 +3429,54 @@
 
     if-eqz p1, :cond_1
 
+    .line 388
     invoke-virtual {v0}, Lcom/google/android/material/resources/TextAppearance;->getTextSize()F
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextSize:F
 
+    .line 390
     :cond_1
     iget-object p1, v0, Lcom/google/android/material/resources/TextAppearance;->shadowColor:Landroid/content/res/ColorStateList;
 
     if-eqz p1, :cond_2
 
+    .line 391
     iget-object p1, v0, Lcom/google/android/material/resources/TextAppearance;->shadowColor:Landroid/content/res/ColorStateList;
 
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedShadowColor:Landroid/content/res/ColorStateList;
 
+    .line 393
     :cond_2
     iget p1, v0, Lcom/google/android/material/resources/TextAppearance;->shadowDx:F
 
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedShadowDx:F
 
+    .line 394
     iget p1, v0, Lcom/google/android/material/resources/TextAppearance;->shadowDy:F
 
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedShadowDy:F
 
+    .line 395
     iget p1, v0, Lcom/google/android/material/resources/TextAppearance;->shadowRadius:F
 
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedShadowRadius:F
 
+    .line 396
     iget p1, v0, Lcom/google/android/material/resources/TextAppearance;->letterSpacing:F
 
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedLetterSpacing:F
 
+    .line 399
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedFontCallback:Lcom/google/android/material/resources/CancelableFontCallback;
 
     if-eqz p1, :cond_3
 
+    .line 400
     invoke-virtual {p1}, Lcom/google/android/material/resources/CancelableFontCallback;->cancel()V
 
+    .line 402
     :cond_3
     new-instance p1, Lcom/google/android/material/resources/CancelableFontCallback;
 
@@ -3152,6 +3484,7 @@
 
     invoke-direct {v1, p0}, Lcom/google/android/material/internal/CollapsingTextHelper$1;-><init>(Lcom/google/android/material/internal/CollapsingTextHelper;)V
 
+    .line 410
     invoke-virtual {v0}, Lcom/google/android/material/resources/TextAppearance;->getFallbackFont()Landroid/graphics/Typeface;
 
     move-result-object v2
@@ -3160,6 +3493,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedFontCallback:Lcom/google/android/material/resources/CancelableFontCallback;
 
+    .line 411
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -3170,6 +3504,7 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/material/resources/TextAppearance;->getFontAsync(Landroid/content/Context;Lcom/google/android/material/resources/TextAppearanceFontCallback;)V
 
+    .line 413
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     return-void
@@ -3178,12 +3513,15 @@
 .method public setCollapsedTextColor(Landroid/content/res/ColorStateList;)V
     .locals 1
 
+    .line 223
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextColor:Landroid/content/res/ColorStateList;
 
     if-eq v0, p1, :cond_0
 
+    .line 224
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextColor:Landroid/content/res/ColorStateList;
 
+    .line 225
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     :cond_0
@@ -3193,12 +3531,15 @@
 .method public setCollapsedTextGravity(I)V
     .locals 1
 
+    .line 371
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextGravity:I
 
     if-eq v0, p1, :cond_0
 
+    .line 372
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedTextGravity:I
 
+    .line 373
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     :cond_0
@@ -3208,12 +3549,14 @@
 .method public setCollapsedTypeface(Landroid/graphics/Typeface;)V
     .locals 0
 
+    .line 451
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setCollapsedTypefaceInternal(Landroid/graphics/Typeface;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 452
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     :cond_0
@@ -3223,6 +3566,7 @@
 .method public setExpandedBounds(IIII)V
     .locals 1
 
+    .line 244
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
     invoke-static {v0, p1, p2, p3, p4}, Lcom/google/android/material/internal/CollapsingTextHelper;->rectEquals(Landroid/graphics/Rect;IIII)Z
@@ -3231,14 +3575,17 @@
 
     if-nez v0, :cond_0
 
+    .line 245
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
     const/4 p1, 0x1
 
+    .line 246
     iput-boolean p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->boundsChanged:Z
 
+    .line 247
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->onBoundsChanged()V
 
     :cond_0
@@ -3248,6 +3595,7 @@
 .method public setExpandedBounds(Landroid/graphics/Rect;)V
     .locals 3
 
+    .line 252
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -3264,14 +3612,17 @@
 .method public setExpandedLetterSpacing(F)V
     .locals 1
 
+    .line 237
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedLetterSpacing:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
+    .line 238
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedLetterSpacing:F
 
+    .line 239
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     :cond_0
@@ -3281,12 +3632,15 @@
 .method public setExpandedTextColor(Landroid/content/res/ColorStateList;)V
     .locals 1
 
+    .line 230
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextColor:Landroid/content/res/ColorStateList;
 
     if-eq v0, p1, :cond_0
 
+    .line 231
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextColor:Landroid/content/res/ColorStateList;
 
+    .line 232
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     :cond_0
@@ -3296,12 +3650,15 @@
 .method public setExpandedTextGravity(I)V
     .locals 1
 
+    .line 360
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextGravity:I
 
     if-eq v0, p1, :cond_0
 
+    .line 361
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextGravity:I
 
+    .line 362
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     :cond_0
@@ -3311,14 +3668,17 @@
 .method public setExpandedTextSize(F)V
     .locals 1
 
+    .line 209
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextSize:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
+    .line 210
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextSize:F
 
+    .line 211
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     :cond_0
@@ -3332,18 +3692,22 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 543
     invoke-static {p1, v0, v1}, Landroidx/core/math/MathUtils;->clamp(FFF)F
 
     move-result p1
 
+    .line 545
     iget v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedFraction:F
 
     cmpl-float v0, p1, v0
 
     if-eqz v0, :cond_0
 
+    .line 546
     iput p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedFraction:F
 
+    .line 547
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateCurrentOffsets()V
 
     :cond_0
@@ -3353,8 +3717,10 @@
 .method public setPositionInterpolator(Landroid/animation/TimeInterpolator;)V
     .locals 0
 
+    .line 199
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->positionInterpolator:Landroid/animation/TimeInterpolator;
 
+    .line 200
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     return-void
@@ -3363,14 +3729,17 @@
 .method public final setState([I)Z
     .locals 0
 
+    .line 552
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->state:[I
 
+    .line 554
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->isStateful()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 555
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     const/4 p0, 0x1
@@ -3388,6 +3757,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1136
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->text:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -3396,15 +3766,19 @@
 
     if-nez v0, :cond_1
 
+    .line 1137
     :cond_0
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->text:Ljava/lang/CharSequence;
 
     const/4 p1, 0x0
 
+    .line 1138
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textToDraw:Ljava/lang/CharSequence;
 
+    .line 1139
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->clearTexture()V
 
+    .line 1140
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     :cond_1
@@ -3414,8 +3788,10 @@
 .method public setTextSizeInterpolator(Landroid/animation/TimeInterpolator;)V
     .locals 0
 
+    .line 194
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textSizeInterpolator:Landroid/animation/TimeInterpolator;
 
+    .line 195
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
     return-void
@@ -3424,10 +3800,12 @@
 .method public setTypefaces(Landroid/graphics/Typeface;)V
     .locals 1
 
+    .line 463
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setCollapsedTypefaceInternal(Landroid/graphics/Typeface;)Z
 
     move-result v0
 
+    .line 464
     invoke-direct {p0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setExpandedTypefaceInternal(Landroid/graphics/Typeface;)Z
 
     move-result p1
@@ -3436,6 +3814,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 466
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 

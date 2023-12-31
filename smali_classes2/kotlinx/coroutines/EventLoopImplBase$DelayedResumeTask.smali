@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/EventLoopImplBase$DelayedResumeTask;
 .super Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;
+.source "EventLoop.common.kt"
 
 
 # annotations
@@ -44,8 +45,10 @@
         }
     .end annotation
 
+    .line 485
     iput-object p1, p0, Lkotlinx/coroutines/EventLoopImplBase$DelayedResumeTask;->this$0:Lkotlinx/coroutines/EventLoopImplBase;
 
+    .line 488
     invoke-direct {p0, p2, p3}, Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;-><init>(J)V
 
     iput-object p4, p0, Lkotlinx/coroutines/EventLoopImplBase$DelayedResumeTask;->cont:Lkotlinx/coroutines/CancellableContinuation;
@@ -58,6 +61,7 @@
 .method public run()V
     .locals 2
 
+    .line 489
     iget-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase$DelayedResumeTask;->cont:Lkotlinx/coroutines/CancellableContinuation;
 
     iget-object p0, p0, Lkotlinx/coroutines/EventLoopImplBase$DelayedResumeTask;->this$0:Lkotlinx/coroutines/EventLoopImplBase;
@@ -72,6 +76,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 490
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

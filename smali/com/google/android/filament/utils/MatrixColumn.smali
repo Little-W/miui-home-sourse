@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/utils/MatrixColumn;
 .super Ljava/lang/Enum;
+.source "Matrix.kt"
 
 
 # annotations
@@ -93,6 +94,7 @@
         }
     .end annotation
 
+    .line 21
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

@@ -1,5 +1,6 @@
 .class final Lorg/brotli/dec/Transform;
 .super Ljava/lang/Object;
+.source "Transform.java"
 
 
 # static fields
@@ -22,6 +23,7 @@
 
     new-array v0, v0, [Lorg/brotli/dec/Transform;
 
+    .line 53
     new-instance v1, Lorg/brotli/dec/Transform;
 
     sget-object v2, Lorg/brotli/dec/WordTransformType;->IDENTITY:Lorg/brotli/dec/WordTransformType;
@@ -1340,16 +1342,20 @@
 .method constructor <init>(Ljava/lang/String;Lorg/brotli/dec/WordTransformType;Ljava/lang/String;)V
     .locals 0
 
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 40
     invoke-static {p1}, Lorg/brotli/dec/Transform;->readUniBytes(Ljava/lang/String;)[B
 
     move-result-object p1
 
     iput-object p1, p0, Lorg/brotli/dec/Transform;->prefix:[B
 
+    .line 41
     iput-object p2, p0, Lorg/brotli/dec/Transform;->type:Lorg/brotli/dec/WordTransformType;
 
+    .line 42
     invoke-static {p3}, Lorg/brotli/dec/Transform;->readUniBytes(Ljava/lang/String;)[B
 
     move-result-object p1
@@ -1362,6 +1368,7 @@
 .method static readUniBytes(Ljava/lang/String;)[B
     .locals 3
 
+    .line 46
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1370,11 +1377,13 @@
 
     const/4 v1, 0x0
 
+    .line 47
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_0
 
+    .line 48
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -1394,8 +1403,10 @@
 .method static transformDictionaryWord([BI[BIILorg/brotli/dec/Transform;)I
     .locals 7
 
+    .line 182
     iget-object v0, p5, Lorg/brotli/dec/Transform;->prefix:[B
 
+    .line 183
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -1411,6 +1422,7 @@
 
     add-int/lit8 v6, v3, 0x1
 
+    .line 187
     aget-byte v3, v0, v3
 
     aput-byte v3, p0, v4
@@ -1421,9 +1433,11 @@
 
     goto :goto_0
 
+    .line 191
     :cond_0
     iget-object v0, p5, Lorg/brotli/dec/Transform;->type:Lorg/brotli/dec/WordTransformType;
 
+    .line 192
     iget v1, v0, Lorg/brotli/dec/WordTransformType;->omitFirst:I
 
     if-le v1, p4, :cond_1
@@ -1435,6 +1449,7 @@
 
     sub-int/2addr p4, v1
 
+    .line 198
     iget v1, v0, Lorg/brotli/dec/WordTransformType;->omitLast:I
 
     sub-int/2addr p4, v1
@@ -1450,6 +1465,7 @@
 
     add-int/lit8 v5, v1, 0x1
 
+    .line 201
     aget-byte v1, p2, v1
 
     aput-byte v1, p0, v4
@@ -1462,6 +1478,7 @@
 
     goto :goto_1
 
+    .line 205
     :cond_2
     sget-object p2, Lorg/brotli/dec/WordTransformType;->UPPERCASE_ALL:Lorg/brotli/dec/WordTransformType;
 
@@ -1474,6 +1491,7 @@
     :cond_3
     sub-int p2, v4, p4
 
+    .line 207
     sget-object p3, Lorg/brotli/dec/WordTransformType;->UPPERCASE_FIRST:Lorg/brotli/dec/WordTransformType;
 
     if-ne v0, p3, :cond_4
@@ -1484,6 +1502,7 @@
     :goto_2
     if-lez p4, :cond_8
 
+    .line 211
     aget-byte p3, p0, p2
 
     and-int/lit16 p3, p3, 0xff
@@ -1500,6 +1519,7 @@
 
     if-gt p3, v0, :cond_5
 
+    .line 214
     aget-byte p3, p0, p2
 
     xor-int/lit8 p3, p3, 0x20
@@ -1522,6 +1542,7 @@
 
     add-int/lit8 p3, p2, 0x1
 
+    .line 219
     aget-byte v0, p0, p3
 
     xor-int/lit8 v0, v0, 0x20
@@ -1539,6 +1560,7 @@
     :cond_7
     add-int/lit8 p3, p2, 0x2
 
+    .line 223
     aget-byte v0, p0, p3
 
     xor-int/lit8 v0, v0, 0x5
@@ -1553,9 +1575,11 @@
 
     goto :goto_2
 
+    .line 231
     :cond_8
     iget-object p2, p5, Lorg/brotli/dec/Transform;->suffix:[B
 
+    .line 232
     array-length p3, p2
 
     :goto_3
@@ -1565,6 +1589,7 @@
 
     add-int/lit8 p5, v2, 0x1
 
+    .line 235
     aget-byte v0, p2, v2
 
     aput-byte v0, p0, v4

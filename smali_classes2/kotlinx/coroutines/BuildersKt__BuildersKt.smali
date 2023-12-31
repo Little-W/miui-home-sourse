@@ -1,5 +1,6 @@
 .class final synthetic Lkotlinx/coroutines/BuildersKt__BuildersKt;
 .super Ljava/lang/Object;
+.source "Builders.kt"
 
 
 # annotations
@@ -34,10 +35,12 @@
         }
     .end annotation
 
+    .line 42
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
+    .line 43
     sget-object v1, Lkotlin/coroutines/ContinuationInterceptor;->Key:Lkotlin/coroutines/ContinuationInterceptor$Key;
 
     check-cast v1, Lkotlin/coroutines/CoroutineContext$Key;
@@ -50,12 +53,14 @@
 
     if-nez v1, :cond_0
 
+    .line 48
     sget-object v1, Lkotlinx/coroutines/ThreadLocalEventLoop;->INSTANCE:Lkotlinx/coroutines/ThreadLocalEventLoop;
 
     invoke-virtual {v1}, Lkotlinx/coroutines/ThreadLocalEventLoop;->getEventLoop$kotlinx_coroutines_core()Lkotlinx/coroutines/EventLoop;
 
     move-result-object v1
 
+    .line 49
     sget-object v2, Lkotlinx/coroutines/GlobalScope;->INSTANCE:Lkotlinx/coroutines/GlobalScope;
 
     check-cast v2, Lkotlinx/coroutines/CoroutineScope;
@@ -74,6 +79,7 @@
 
     goto :goto_2
 
+    .line 53
     :cond_0
     instance-of v2, v1, Lkotlinx/coroutines/EventLoop;
 
@@ -104,6 +110,7 @@
 
     goto :goto_1
 
+    .line 54
     :cond_3
     sget-object v1, Lkotlinx/coroutines/ThreadLocalEventLoop;->INSTANCE:Lkotlinx/coroutines/ThreadLocalEventLoop;
 
@@ -111,6 +118,7 @@
 
     move-result-object v1
 
+    .line 55
     :goto_1
     sget-object v2, Lkotlinx/coroutines/GlobalScope;->INSTANCE:Lkotlinx/coroutines/GlobalScope;
 
@@ -120,15 +128,18 @@
 
     move-result-object p0
 
+    .line 57
     :goto_2
     new-instance v2, Lkotlinx/coroutines/BlockingCoroutine;
 
     invoke-direct {v2, p0, v0, v1}, Lkotlinx/coroutines/BlockingCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Thread;Lkotlinx/coroutines/EventLoop;)V
 
+    .line 58
     sget-object p0, Lkotlinx/coroutines/CoroutineStart;->DEFAULT:Lkotlinx/coroutines/CoroutineStart;
 
     invoke-virtual {v2, p0, v2, p1}, Lkotlinx/coroutines/BlockingCoroutine;->start(Lkotlinx/coroutines/CoroutineStart;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
+    .line 59
     invoke-virtual {v2}, Lkotlinx/coroutines/BlockingCoroutine;->joinBlocking()Ljava/lang/Object;
 
     move-result-object p0
@@ -148,6 +159,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 38
     sget-object p0, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
     check-cast p0, Lkotlin/coroutines/CoroutineContext;

@@ -1,5 +1,6 @@
 .class Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;
 .super Ljava/lang/Object;
+.source "WindowInsetsCompat.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 2134
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -38,6 +40,7 @@
 
     sput-object v0, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sViewAttachInfoField:Ljava/lang/reflect/Field;
 
+    .line 2135
     sget-object v0, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sViewAttachInfoField:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
@@ -46,34 +49,40 @@
 
     const-string v0, "android.view.View$AttachInfo"
 
+    .line 2136
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v2, "mStableInsets"
 
+    .line 2137
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
     sput-object v2, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sStableInsets:Ljava/lang/reflect/Field;
 
+    .line 2138
     sget-object v2, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sStableInsets:Ljava/lang/reflect/Field;
 
     invoke-virtual {v2, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const-string v2, "mContentInsets"
 
+    .line 2139
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     sput-object v0, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sContentInsets:Ljava/lang/reflect/Field;
 
+    .line 2140
     sget-object v0, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sContentInsets:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 2141
     sput-boolean v1, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sReflectionSucceeded:Z
     :try_end_0
     .catch Ljava/lang/ReflectiveOperationException; {:try_start_0 .. :try_end_0} :catch_0
@@ -83,6 +92,7 @@
     :catch_0
     move-exception v0
 
+    .line 2143
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,6 +122,7 @@
 .method public static getRootWindowInsets(Landroid/view/View;)Landroidx/core/view/WindowInsetsCompat;
     .locals 4
 
+    .line 2151
     sget-boolean v0, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sReflectionSucceeded:Z
 
     const/4 v1, 0x0
@@ -126,11 +137,13 @@
 
     goto :goto_0
 
+    .line 2155
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v0
 
+    .line 2157
     :try_start_0
     sget-object v2, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sViewAttachInfoField:Ljava/lang/reflect/Field;
 
@@ -140,6 +153,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2159
     sget-object v2, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sStableInsets:Ljava/lang/reflect/Field;
 
     invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -148,6 +162,7 @@
 
     check-cast v2, Landroid/graphics/Rect;
 
+    .line 2160
     sget-object v3, Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;->sContentInsets:Ljava/lang/reflect/Field;
 
     invoke-virtual {v3, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -160,10 +175,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 2162
     new-instance v3, Landroidx/core/view/WindowInsetsCompat$Builder;
 
     invoke-direct {v3}, Landroidx/core/view/WindowInsetsCompat$Builder;-><init>()V
 
+    .line 2163
     invoke-static {v2}, Landroidx/core/graphics/Insets;->of(Landroid/graphics/Rect;)Landroidx/core/graphics/Insets;
 
     move-result-object v2
@@ -172,6 +189,7 @@
 
     move-result-object v2
 
+    .line 2164
     invoke-static {v0}, Landroidx/core/graphics/Insets;->of(Landroid/graphics/Rect;)Landroidx/core/graphics/Insets;
 
     move-result-object v0
@@ -180,12 +198,15 @@
 
     move-result-object v0
 
+    .line 2165
     invoke-virtual {v0}, Landroidx/core/view/WindowInsetsCompat$Builder;->build()Landroidx/core/view/WindowInsetsCompat;
 
     move-result-object v0
 
+    .line 2169
     invoke-virtual {v0, v0}, Landroidx/core/view/WindowInsetsCompat;->setRootWindowInsets(Landroidx/core/view/WindowInsetsCompat;)V
 
+    .line 2170
     invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object p0
@@ -199,6 +220,7 @@
     :catch_0
     move-exception p0
 
+    .line 2175
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

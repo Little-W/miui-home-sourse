@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;
 .super Ljava/lang/Object;
+.source "IAppstoreHomeGuideService.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

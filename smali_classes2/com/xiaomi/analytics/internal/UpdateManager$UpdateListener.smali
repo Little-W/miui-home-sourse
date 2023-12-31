@@ -1,5 +1,6 @@
 .class interface abstract Lcom/xiaomi/analytics/internal/UpdateManager$UpdateListener;
 .super Ljava/lang/Object;
+.source "UpdateManager.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/filament/utils/GestureDetector$TouchPair;
 .super Ljava/lang/Object;
+.source "GestureDetector.kt"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 32
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     const/4 v1, 0x0
@@ -53,8 +55,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 33
     invoke-direct {p0}, Lcom/google/android/filament/utils/GestureDetector$TouchPair;-><init>()V
 
+    .line 34
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v0
@@ -63,6 +67,7 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 35
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     const/4 v2, 0x0
@@ -83,16 +88,19 @@
 
     iput-object v0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt0:Lcom/google/android/filament/utils/Float2;
 
+    .line 36
     iget-object v0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt0:Lcom/google/android/filament/utils/Float2;
 
     iput-object v0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt1:Lcom/google/android/filament/utils/Float2;
 
+    .line 37
     iget v0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->count:I
 
     add-int/2addr v0, v1
 
     iput v0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->count:I
 
+    .line 39
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -102,6 +110,7 @@
 
     if-lt v0, v2, :cond_1
 
+    .line 40
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getX(I)F
@@ -120,6 +129,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt1:Lcom/google/android/filament/utils/Float2;
 
+    .line 41
     iget p1, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->count:I
 
     add-int/2addr p1, v1
@@ -141,6 +151,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt0:Lcom/google/android/filament/utils/Float2;
@@ -281,6 +292,7 @@
 .method public final getCount()I
     .locals 0
 
+    .line 31
     iget p0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->count:I
 
     return p0
@@ -289,10 +301,12 @@
 .method public final getMidpoint()Lcom/google/android/filament/utils/Float2;
     .locals 4
 
+    .line 45
     iget-object v0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt0:Lcom/google/android/filament/utils/Float2;
 
     iget-object p0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt1:Lcom/google/android/filament/utils/Float2;
 
+    .line 160
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float2;->getX()F
 
     move-result v1
@@ -309,6 +323,7 @@
 
     add-float/2addr v1, v2
 
+    .line 162
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float2;->getY()F
 
     move-result v0
@@ -323,6 +338,7 @@
 
     add-float/2addr v0, p0
 
+    .line 159
     new-instance p0, Lcom/google/android/filament/utils/Float2;
 
     invoke-direct {p0, v1, v0}, Lcom/google/android/filament/utils/Float2;-><init>(FF)V
@@ -333,6 +349,7 @@
 .method public final getPt0()Lcom/google/android/filament/utils/Float2;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt0:Lcom/google/android/filament/utils/Float2;
 
     return-object p0
@@ -341,6 +358,7 @@
 .method public final getPt1()Lcom/google/android/filament/utils/Float2;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt1:Lcom/google/android/filament/utils/Float2;
 
     return-object p0
@@ -349,10 +367,12 @@
 .method public final getSeparation()F
     .locals 4
 
+    .line 44
     iget-object v0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt0:Lcom/google/android/filament/utils/Float2;
 
     iget-object p0, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt1:Lcom/google/android/filament/utils/Float2;
 
+    .line 157
     new-instance v1, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {v0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -377,6 +397,7 @@
 
     invoke-direct {v1, v2, v0}, Lcom/google/android/filament/utils/Float2;-><init>(FF)V
 
+    .line 158
     invoke-virtual {v1}, Lcom/google/android/filament/utils/Float2;->getX()F
 
     move-result p0
@@ -413,6 +434,7 @@
 .method public final getX()I
     .locals 0
 
+    .line 46
     invoke-virtual {p0}, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->getMidpoint()Lcom/google/android/filament/utils/Float2;
 
     move-result-object p0
@@ -429,6 +451,7 @@
 .method public final getY()I
     .locals 0
 
+    .line 47
     invoke-virtual {p0}, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->getMidpoint()Lcom/google/android/filament/utils/Float2;
 
     move-result-object p0
@@ -486,6 +509,7 @@
 .method public final setCount(I)V
     .locals 0
 
+    .line 31
     iput p1, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->count:I
 
     return-void
@@ -498,6 +522,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 31
     iput-object p1, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt0:Lcom/google/android/filament/utils/Float2;
 
     return-void
@@ -510,6 +535,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 31
     iput-object p1, p0, Lcom/google/android/filament/utils/GestureDetector$TouchPair;->pt1:Lcom/google/android/filament/utils/Float2;
 
     return-void

@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/data/InputStreamRewinder$Factory;
 .super Ljava/lang/Object;
+.source "InputStreamRewinder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataRewinder$Factory;
@@ -33,8 +34,10 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;)V
     .locals 0
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 46
     iput-object p1, p0, Lcom/bumptech/glide/load/data/InputStreamRewinder$Factory;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     return-void
@@ -55,6 +58,7 @@
         }
     .end annotation
 
+    .line 52
     new-instance v0, Lcom/bumptech/glide/load/data/InputStreamRewinder;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/data/InputStreamRewinder$Factory;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
@@ -67,6 +71,7 @@
 .method public bridge synthetic build(Ljava/lang/Object;)Lcom/bumptech/glide/load/data/DataRewinder;
     .locals 0
 
+    .line 42
     check-cast p1, Ljava/io/InputStream;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/data/InputStreamRewinder$Factory;->build(Ljava/io/InputStream;)Lcom/bumptech/glide/load/data/DataRewinder;
@@ -87,6 +92,7 @@
         }
     .end annotation
 
+    .line 58
     const-class p0, Ljava/io/InputStream;
 
     return-object p0

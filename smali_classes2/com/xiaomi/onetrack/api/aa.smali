@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/m;Ljava/lang/String;)V
     .locals 0
 
+    .line 713
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/aa;->b:Lcom/xiaomi/onetrack/api/m;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/aa;->a:Ljava/lang/String;
@@ -29,6 +30,7 @@
 .method public run()V
     .locals 2
 
+    .line 717
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/o;->a()Lcom/xiaomi/onetrack/util/o;
 
@@ -45,6 +47,7 @@
     :catch_0
     move-exception p0
 
+    .line 719
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$1;
 .super Ljava/lang/Object;
+.source "ReversibleTagGroup.java"
 
 # interfaces
 .implements Landroid/view/View$OnLongClickListener;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;Lcom/mi/globallauncher/view/ReversibleTagGroup;I)V
     .locals 0
 
+    .line 763
     iput-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$1;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$1;->val$this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -44,6 +46,7 @@
 .method public onLongClick(Landroid/view/View;)Z
     .locals 0
 
+    .line 766
     iget p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$1;->val$state:I
 
     const/4 p1, 0x2

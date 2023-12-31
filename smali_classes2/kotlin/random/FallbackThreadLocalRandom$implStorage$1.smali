@@ -1,5 +1,6 @@
 .class public final Lkotlin/random/FallbackThreadLocalRandom$implStorage$1;
 .super Ljava/lang/ThreadLocal;
+.source "PlatformRandom.kt"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
 .method public bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 51
     invoke-virtual {p0}, Lkotlin/random/FallbackThreadLocalRandom$implStorage$1;->initialValue()Ljava/util/Random;
 
     move-result-object p0
@@ -45,6 +48,7 @@
 .method protected initialValue()Ljava/util/Random;
     .locals 0
 
+    .line 53
     new-instance p0, Ljava/util/Random;
 
     invoke-direct {p0}, Ljava/util/Random;-><init>()V

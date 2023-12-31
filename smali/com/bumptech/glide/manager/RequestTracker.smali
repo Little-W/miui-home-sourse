@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/manager/RequestTracker;
 .super Ljava/lang/Object;
+.source "RequestTracker.java"
 
 
 # instance fields
@@ -30,18 +31,22 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
+    .line 30
     invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->requests:Ljava/util/Set;
 
+    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -60,6 +65,7 @@
 
     return v0
 
+    .line 75
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/manager/RequestTracker;->requests:Ljava/util/Set;
 
@@ -67,6 +73,7 @@
 
     move-result v1
 
+    .line 77
     iget-object p0, p0, Lcom/bumptech/glide/manager/RequestTracker;->pendingRequests:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -86,10 +93,12 @@
     :goto_0
     if-eqz v0, :cond_3
 
+    .line 79
     invoke-interface {p1}, Lcom/bumptech/glide/request/Request;->clear()V
 
     if-eqz p2, :cond_3
 
+    .line 81
     invoke-interface {p1}, Lcom/bumptech/glide/request/Request;->recycle()V
 
     :cond_3
@@ -103,6 +112,7 @@
 
     const/4 v0, 0x1
 
+    .line 66
     invoke-direct {p0, p1, v0}, Lcom/bumptech/glide/manager/RequestTracker;->clearRemoveAndMaybeRecycle(Lcom/bumptech/glide/request/Request;Z)Z
 
     move-result p0
@@ -113,6 +123,7 @@
 .method public clearRequests()V
     .locals 3
 
+    .line 140
     iget-object v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->requests:Ljava/util/Set;
 
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->getSnapshot(Ljava/util/Collection;)Ljava/util/List;
@@ -138,10 +149,12 @@
 
     const/4 v2, 0x0
 
+    .line 143
     invoke-direct {p0, v1, v2}, Lcom/bumptech/glide/manager/RequestTracker;->clearRemoveAndMaybeRecycle(Lcom/bumptech/glide/request/Request;Z)Z
 
     goto :goto_0
 
+    .line 145
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/manager/RequestTracker;->pendingRequests:Ljava/util/List;
 
@@ -155,8 +168,10 @@
 
     const/4 v0, 0x1
 
+    .line 98
     iput-boolean v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->isPaused:Z
 
+    .line 99
     iget-object v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->requests:Ljava/util/Set;
 
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->getSnapshot(Ljava/util/Collection;)Ljava/util/List;
@@ -181,14 +196,17 @@
 
     check-cast v1, Lcom/bumptech/glide/request/Request;
 
+    .line 100
     invoke-interface {v1}, Lcom/bumptech/glide/request/Request;->isRunning()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 101
     invoke-interface {v1}, Lcom/bumptech/glide/request/Request;->clear()V
 
+    .line 102
     iget-object v2, p0, Lcom/bumptech/glide/manager/RequestTracker;->pendingRequests:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -202,6 +220,7 @@
 .method public restartRequests()V
     .locals 3
 
+    .line 152
     iget-object v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->requests:Ljava/util/Set;
 
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->getSnapshot(Ljava/util/Collection;)Ljava/util/List;
@@ -226,6 +245,7 @@
 
     check-cast v1, Lcom/bumptech/glide/request/Request;
 
+    .line 153
     invoke-interface {v1}, Lcom/bumptech/glide/request/Request;->isComplete()Z
 
     move-result v2
@@ -238,16 +258,20 @@
 
     if-nez v2, :cond_0
 
+    .line 154
     invoke-interface {v1}, Lcom/bumptech/glide/request/Request;->clear()V
 
+    .line 155
     iget-boolean v2, p0, Lcom/bumptech/glide/manager/RequestTracker;->isPaused:Z
 
     if-nez v2, :cond_1
 
+    .line 156
     invoke-interface {v1}, Lcom/bumptech/glide/request/Request;->begin()V
 
     goto :goto_0
 
+    .line 159
     :cond_1
     iget-object v2, p0, Lcom/bumptech/glide/manager/RequestTracker;->pendingRequests:Ljava/util/List;
 
@@ -264,8 +288,10 @@
 
     const/4 v0, 0x0
 
+    .line 122
     iput-boolean v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->isPaused:Z
 
+    .line 123
     iget-object v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->requests:Ljava/util/Set;
 
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->getSnapshot(Ljava/util/Collection;)Ljava/util/List;
@@ -290,6 +316,7 @@
 
     check-cast v1, Lcom/bumptech/glide/request/Request;
 
+    .line 127
     invoke-interface {v1}, Lcom/bumptech/glide/request/Request;->isComplete()Z
 
     move-result v2
@@ -302,10 +329,12 @@
 
     if-nez v2, :cond_0
 
+    .line 128
     invoke-interface {v1}, Lcom/bumptech/glide/request/Request;->begin()V
 
     goto :goto_0
 
+    .line 131
     :cond_1
     iget-object p0, p0, Lcom/bumptech/glide/manager/RequestTracker;->pendingRequests:Ljava/util/List;
 
@@ -317,18 +346,22 @@
 .method public runRequest(Lcom/bumptech/glide/request/Request;)V
     .locals 2
 
+    .line 42
     iget-object v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->requests:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 43
     iget-boolean v0, p0, Lcom/bumptech/glide/manager/RequestTracker;->isPaused:Z
 
     if-nez v0, :cond_0
 
+    .line 44
     invoke-interface {p1}, Lcom/bumptech/glide/request/Request;->begin()V
 
     goto :goto_0
 
+    .line 46
     :cond_0
     invoke-interface {p1}, Lcom/bumptech/glide/request/Request;->clear()V
 
@@ -336,6 +369,7 @@
 
     const-string v1, "RequestTracker"
 
+    .line 47
     invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -344,8 +378,10 @@
 
     const-string v0, "Paused, delaying request"
 
+    .line 48
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 50
     :cond_1
     iget-object p0, p0, Lcom/bumptech/glide/manager/RequestTracker;->pendingRequests:Ljava/util/List;
 
@@ -358,6 +394,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 167
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

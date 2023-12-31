@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/crashlytics/internal/persistence/-$$Lambda$CrashlyticsReportPersistence$5ewmHYO883ri5BmwN_Gn2GLWEFU;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/io/FilenameFilter;

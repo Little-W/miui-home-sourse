@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_User$Builder;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User$Builder;
+.source "AutoValue_CrashlyticsReport_Session_User.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 52
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User$Builder;-><init>()V
 
     return-void
@@ -31,12 +33,14 @@
 .method public build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User;
     .locals 3
 
+    .line 65
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_User$Builder;->identifier:Ljava/lang/String;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,6 +55,7 @@
 
     move-result-object v1
 
+    .line 68
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -58,6 +63,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 71
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_User;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_User$Builder;->identifier:Ljava/lang/String;
@@ -68,6 +74,7 @@
 
     return-object v0
 
+    .line 69
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -95,10 +102,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 59
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_User$Builder;->identifier:Ljava/lang/String;
 
     return-object p0
 
+    .line 57
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

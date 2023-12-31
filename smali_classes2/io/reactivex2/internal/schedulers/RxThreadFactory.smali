@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/internal/schedulers/RxThreadFactory;
 .super Ljava/util/concurrent/atomic/AtomicLong;
+.source "RxThreadFactory.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -33,6 +34,7 @@
 
     const/4 v1, 0x0
 
+    .line 36
     invoke-direct {p0, p1, v0, v1}, Lio/reactivex2/internal/schedulers/RxThreadFactory;-><init>(Ljava/lang/String;IZ)V
 
     return-void
@@ -43,6 +45,7 @@
 
     const/4 v0, 0x0
 
+    .line 40
     invoke-direct {p0, p1, p2, v0}, Lio/reactivex2/internal/schedulers/RxThreadFactory;-><init>(Ljava/lang/String;IZ)V
 
     return-void
@@ -51,12 +54,16 @@
 .method public constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
 
+    .line 43
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
+    .line 44
     iput-object p1, p0, Lio/reactivex2/internal/schedulers/RxThreadFactory;->prefix:Ljava/lang/String;
 
+    .line 45
     iput p2, p0, Lio/reactivex2/internal/schedulers/RxThreadFactory;->priority:I
 
+    .line 46
     iput-boolean p3, p0, Lio/reactivex2/internal/schedulers/RxThreadFactory;->nonBlocking:Z
 
     return-void
@@ -67,6 +74,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
+    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lio/reactivex2/internal/schedulers/RxThreadFactory;->prefix:Ljava/lang/String;
@@ -83,10 +91,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 73
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 74
     iget-boolean v1, p0, Lio/reactivex2/internal/schedulers/RxThreadFactory;->nonBlocking:Z
 
     if-eqz v1, :cond_0
@@ -102,6 +112,7 @@
 
     invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
+    .line 75
     :goto_0
     iget p0, p0, Lio/reactivex2/internal/schedulers/RxThreadFactory;->priority:I
 
@@ -109,6 +120,7 @@
 
     const/4 p0, 0x1
 
+    .line 76
     invoke-virtual {v1, p0}, Ljava/lang/Thread;->setDaemon(Z)V
 
     return-object v1
@@ -117,6 +129,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 82
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

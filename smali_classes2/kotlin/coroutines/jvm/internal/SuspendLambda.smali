@@ -1,5 +1,6 @@
 .class public abstract Lkotlin/coroutines/jvm/internal/SuspendLambda;
 .super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "ContinuationImpl.kt"
 
 # interfaces
 .implements Lkotlin/jvm/internal/FunctionBase;
@@ -26,6 +27,7 @@
 
     const/4 v0, 0x0
 
+    .line 160
     invoke-direct {p0, p1, v0}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
@@ -42,6 +44,7 @@
         }
     .end annotation
 
+    .line 159
     invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;)V
 
     iput p1, p0, Lkotlin/coroutines/jvm/internal/SuspendLambda;->arity:I
@@ -54,6 +57,7 @@
 .method public getArity()I
     .locals 0
 
+    .line 157
     iget p0, p0, Lkotlin/coroutines/jvm/internal/SuspendLambda;->arity:I
 
     return p0
@@ -62,12 +66,14 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 163
     invoke-virtual {p0}, Lkotlin/coroutines/jvm/internal/SuspendLambda;->getCompletion()Lkotlin/coroutines/Continuation;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 164
     check-cast p0, Lkotlin/jvm/internal/FunctionBase;
 
     invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->renderLambdaToString(Lkotlin/jvm/internal/FunctionBase;)Ljava/lang/String;
@@ -80,6 +86,7 @@
 
     goto :goto_0
 
+    .line 166
     :cond_0
     invoke-super {p0}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->toString()Ljava/lang/String;
 

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;
 .super Ljava/lang/Object;
+.source "JsonElementSerializers.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -26,10 +27,12 @@
 .method constructor <init>(Lkotlin/jvm/functions/Function0;)V
     .locals 0
 
+    .line 218
     iput-object p1, p0, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;->$deferred:Lkotlin/jvm/functions/Function0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 220
     invoke-static {p1}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
     move-result-object p1
@@ -58,6 +61,7 @@
 .method public getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 232
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;->getOriginal()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -76,6 +80,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 230
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;->getOriginal()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -90,6 +95,7 @@
 .method public getElementName(I)Ljava/lang/String;
     .locals 0
 
+    .line 229
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;->getOriginal()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -104,6 +110,7 @@
 .method public getElementsCount()I
     .locals 0
 
+    .line 227
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;->getOriginal()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -118,6 +125,7 @@
 .method public getKind()Lkotlinx/serialization/descriptors/SerialKind;
     .locals 0
 
+    .line 225
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;->getOriginal()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -132,6 +140,7 @@
 .method public getSerialName()Ljava/lang/String;
     .locals 0
 
+    .line 223
     invoke-direct {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;->getOriginal()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -146,6 +155,7 @@
 .method public isNullable()Z
     .locals 0
 
+    .line 218
     invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor$DefaultImpls;->isNullable(Lkotlinx/serialization/descriptors/SerialDescriptor;)Z
 
     move-result p0

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;
 .super Ljava/lang/Object;
+.source "RemoteAnimationRunnerCompat.java"
 
 
 # virtual methods
@@ -24,6 +25,7 @@
 
     move-object v5, p2
 
+    .line 21
     invoke-interface/range {v0 .. v5}, Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;->onAnimationStart(I[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Ljava/lang/Runnable;)V
 
     return-void

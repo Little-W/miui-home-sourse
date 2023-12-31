@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;
 .super Lcom/market/sdk/ServiceProxy2$ProxyTask;
+.source "AppstoreUserGuideService.java"
 
 
 # annotations
@@ -33,6 +34,7 @@
 .method constructor <init>(Lcom/market/sdk/homeguide/AppstoreUserGuideService;ZLcom/market/sdk/homeguide/HomeUserGuideData;Lcom/market/sdk/homeguide/Callback;)V
     .locals 0
 
+    .line 58
     iput-object p1, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->this$0:Lcom/market/sdk/homeguide/AppstoreUserGuideService;
 
     iput-object p3, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$data:Lcom/market/sdk/homeguide/HomeUserGuideData;
@@ -47,6 +49,7 @@
 .method static synthetic access$000(Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;Z)V
     .locals 0
 
+    .line 58
     invoke-direct {p0, p1}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->notifyResult(Z)V
 
     return-void
@@ -55,10 +58,12 @@
 .method private notifyResult(Z)V
     .locals 0
 
+    .line 106
     iget-object p0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$callback:Lcom/market/sdk/homeguide/Callback;
 
     if-eqz p0, :cond_0
 
+    .line 107
     invoke-interface {p0, p1}, Lcom/market/sdk/homeguide/Callback;->onFinish(Z)V
 
     :cond_0
@@ -75,6 +80,7 @@
         }
     .end annotation
 
+    .line 58
     invoke-virtual {p0, p1}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->run(Landroid/os/IBinder;)Ljava/lang/Void;
 
     move-result-object p0
@@ -101,11 +107,13 @@
 
     const/4 v2, 0x1
 
+    .line 66
     :try_start_0
     invoke-static {p1}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;
 
     move-result-object v3
 
+    .line 68
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -120,12 +128,14 @@
 
     invoke-virtual {v4, v5, v6, v2}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
+    .line 71
     iget-object v4, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$data:Lcom/market/sdk/homeguide/HomeUserGuideData;
 
     invoke-interface {v3, v4}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;->ready(Lcom/market/sdk/homeguide/HomeUserGuideData;)Lcom/market/sdk/homeguide/HomeUserGuideResult;
 
     move-result-object v4
 
+    .line 72
     invoke-virtual {v4}, Lcom/market/sdk/homeguide/HomeUserGuideResult;->getErrorCode()I
 
     move-result v4
@@ -136,6 +146,7 @@
 
     if-eq v4, v5, :cond_3
 
+    .line 80
     iget-object v4, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$callback:Lcom/market/sdk/homeguide/Callback;
 
     if-eqz v4, :cond_1
@@ -158,12 +169,14 @@
     :goto_0
     if-nez v4, :cond_2
 
+    .line 82
     new-instance v4, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;
 
     invoke-direct {v4, p0, v0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;-><init>(Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;Landroid/os/Handler;)V
 
     invoke-interface {v3, v4}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;->show(Landroid/os/ResultReceiver;)V
 
+    .line 88
     new-instance v3, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$2;
 
     invoke-direct {v3, p0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$2;-><init>(Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;)V
@@ -172,6 +185,7 @@
 
     goto :goto_2
 
+    .line 95
     :cond_2
     invoke-virtual {p0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->unbind()V
     :try_end_0
@@ -179,6 +193,7 @@
 
     goto :goto_2
 
+    .line 75
     :cond_3
     :try_start_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -196,6 +211,7 @@
 
     goto :goto_1
 
+    .line 77
     :cond_4
     :try_start_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -209,11 +225,14 @@
     :catchall_1
     move-exception p1
 
+    .line 98
     :goto_1
     invoke-direct {p0, v2}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->notifyResult(Z)V
 
+    .line 99
     invoke-virtual {p0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->unbind()V
 
+    .line 100
     invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object p0

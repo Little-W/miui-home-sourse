@@ -1,5 +1,6 @@
 .class abstract Landroidx/recyclerview/widget/RemixRecyclerView;
 .super Landroidx/recyclerview/widget/RecyclerView;
+.source "RemixRecyclerView.java"
 
 
 # annotations
@@ -24,6 +25,7 @@
 
     const/4 v0, 0x0
 
+    .line 38
     invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RemixRecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -32,6 +34,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 42
     sget v0, Lmiuix/recyclerview/R$attr;->recyclerViewStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/recyclerview/widget/RemixRecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -42,14 +45,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 46
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, -0x1
 
+    .line 31
     iput p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
     const/4 p1, 0x1
 
+    .line 35
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     return-void
@@ -58,6 +64,7 @@
 .method static synthetic access$000(Landroidx/recyclerview/widget/RemixRecyclerView;)Z
     .locals 0
 
+    .line 27
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RemixRecyclerView;->awakenScrollBars()Z
 
     move-result p0
@@ -68,6 +75,7 @@
 .method static synthetic access$100(Landroidx/recyclerview/widget/RemixRecyclerView;)Z
     .locals 0
 
+    .line 27
     iget-boolean p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     return p0
@@ -76,6 +84,7 @@
 .method static synthetic access$200(Landroidx/recyclerview/widget/RemixRecyclerView;)Lmiuix/animation/utils/VelocityMonitor;
     .locals 0
 
+    .line 27
     iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     return-object p0
@@ -84,21 +93,25 @@
 .method private trackVelocity(Landroid/view/MotionEvent;)V
     .locals 3
 
+    .line 73
     iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     if-nez v0, :cond_0
 
+    .line 74
     new-instance v0, Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-direct {v0}, Lmiuix/animation/utils/VelocityMonitor;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
+    .line 76
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
+    .line 77
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v1
@@ -119,6 +132,7 @@
 
     goto :goto_1
 
+    .line 95
     :cond_1
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -137,6 +151,7 @@
     :cond_2
     const/4 v0, 0x0
 
+    .line 98
     :goto_0
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -144,10 +159,12 @@
 
     iput v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
+    .line 99
     invoke-direct {p0, p1, v1}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
 
     goto :goto_1
 
+    .line 86
     :cond_3
     iget v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
@@ -157,6 +174,7 @@
 
     if-gez v0, :cond_4
 
+    .line 88
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,16 +201,19 @@
 
     return-void
 
+    .line 92
     :cond_4
     invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
 
     goto :goto_1
 
+    .line 80
     :cond_5
     iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-virtual {v0}, Lmiuix/animation/utils/VelocityMonitor;->clear()V
 
+    .line 82
     :cond_6
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -200,6 +221,7 @@
 
     iput v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
+    .line 83
     invoke-direct {p0, p1, v1}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
 
     :cond_7
@@ -210,6 +232,7 @@
 .method private updateVelocity(Landroid/view/MotionEvent;I)V
     .locals 5
 
+    .line 106
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x1
@@ -222,6 +245,7 @@
 
     if-lt v0, v4, :cond_0
 
+    .line 107
     iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     new-array v0, v3, [D
@@ -246,6 +270,7 @@
 
     goto :goto_0
 
+    .line 109
     :cond_0
     iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
@@ -278,6 +303,7 @@
 .method public getSpringEnabled()Z
     .locals 0
 
+    .line 62
     iget-boolean p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     return p0
@@ -286,8 +312,10 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
+    .line 67
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RemixRecyclerView;->trackVelocity(Landroid/view/MotionEvent;)V
 
+    .line 68
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p0
@@ -298,8 +326,10 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
+    .line 115
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RemixRecyclerView;->trackVelocity(Landroid/view/MotionEvent;)V
 
+    .line 116
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p0
@@ -310,6 +340,7 @@
 .method public setOverScrollMode(I)V
     .locals 1
 
+    .line 51
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setOverScrollMode(I)V
 
     const/4 v0, 0x2
@@ -318,6 +349,7 @@
 
     const/4 p1, 0x0
 
+    .line 53
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     :cond_0
@@ -327,6 +359,7 @@
 .method public setSpringEnabled(Z)V
     .locals 0
 
+    .line 58
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     return-void

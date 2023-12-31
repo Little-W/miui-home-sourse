@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 .super Ljava/lang/Object;
+.source "EventStore.java"
 
 # interfaces
 .implements Ljava/io/Closeable;

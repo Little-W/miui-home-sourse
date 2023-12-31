@@ -1,5 +1,6 @@
 .class Lio/requery/android/database/sqlite/SQLiteDatabase$1;
 .super Ljava/lang/ThreadLocal;
+.source "SQLiteDatabase.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
     .locals 0
 
+    .line 107
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteDatabase$1;->this$0:Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -41,6 +43,7 @@
 .method protected initialValue()Lio/requery/android/database/sqlite/SQLiteSession;
     .locals 0
 
+    .line 110
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteDatabase$1;->this$0:Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteDatabase;->createSession()Lio/requery/android/database/sqlite/SQLiteSession;
@@ -53,6 +56,7 @@
 .method protected bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 107
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteDatabase$1;->initialValue()Lio/requery/android/database/sqlite/SQLiteSession;
 
     move-result-object p0

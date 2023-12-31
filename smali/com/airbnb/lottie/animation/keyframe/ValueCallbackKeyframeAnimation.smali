@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 .super Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
+.source "ValueCallbackKeyframeAnimation.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 
     const/4 v0, 0x0
 
+    .line 14
     invoke-direct {p0, p1, v0}, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;-><init>(Lcom/airbnb/lottie/value/LottieValueCallback;Ljava/lang/Object;)V
 
     return-void
@@ -54,14 +56,17 @@
         }
     .end annotation
 
+    .line 18
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;-><init>(Ljava/util/List;)V
 
+    .line 19
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
+    .line 20
     iput-object p2, p0, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->valueCallbackValue:Ljava/lang/Object;
 
     return-void
@@ -85,6 +90,7 @@
         }
     .end annotation
 
+    .line 43
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->valueCallback:Lcom/airbnb/lottie/value/LottieValueCallback;
 
     iget-object v4, p0, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->valueCallbackValue:Ljava/lang/Object;
@@ -124,6 +130,7 @@
         }
     .end annotation
 
+    .line 47
     invoke-virtual {p0}, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -134,10 +141,12 @@
 .method public notifyListeners()V
     .locals 1
 
+    .line 36
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->valueCallback:Lcom/airbnb/lottie/value/LottieValueCallback;
 
     if-eqz v0, :cond_0
 
+    .line 37
     invoke-super {p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->notifyListeners()V
 
     :cond_0
@@ -147,6 +156,7 @@
 .method public setProgress(F)V
     .locals 0
 
+    .line 24
     iput p1, p0, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->progress:F
 
     return-void

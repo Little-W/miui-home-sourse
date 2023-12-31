@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/MaterialInstance$FloatElement;
 .super Ljava/lang/Enum;
+.source "MaterialInstance.java"
 
 
 # annotations
@@ -41,6 +42,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
+    .line 44
     new-instance v0, Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     const/4 v1, 0x0
@@ -51,6 +53,7 @@
 
     sput-object v0, Lcom/google/android/filament/MaterialInstance$FloatElement;->FLOAT:Lcom/google/android/filament/MaterialInstance$FloatElement;
 
+    .line 45
     new-instance v0, Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     const/4 v2, 0x1
@@ -61,6 +64,7 @@
 
     sput-object v0, Lcom/google/android/filament/MaterialInstance$FloatElement;->FLOAT2:Lcom/google/android/filament/MaterialInstance$FloatElement;
 
+    .line 46
     new-instance v0, Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     const/4 v3, 0x2
@@ -71,6 +75,7 @@
 
     sput-object v0, Lcom/google/android/filament/MaterialInstance$FloatElement;->FLOAT3:Lcom/google/android/filament/MaterialInstance$FloatElement;
 
+    .line 47
     new-instance v0, Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     const/4 v4, 0x3
@@ -81,6 +86,7 @@
 
     sput-object v0, Lcom/google/android/filament/MaterialInstance$FloatElement;->FLOAT4:Lcom/google/android/filament/MaterialInstance$FloatElement;
 
+    .line 48
     new-instance v0, Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     const/4 v5, 0x4
@@ -91,6 +97,7 @@
 
     sput-object v0, Lcom/google/android/filament/MaterialInstance$FloatElement;->MAT3:Lcom/google/android/filament/MaterialInstance$FloatElement;
 
+    .line 49
     new-instance v0, Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     const/4 v6, 0x5
@@ -105,6 +112,7 @@
 
     new-array v0, v0, [Lcom/google/android/filament/MaterialInstance$FloatElement;
 
+    .line 43
     sget-object v7, Lcom/google/android/filament/MaterialInstance$FloatElement;->FLOAT:Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     aput-object v7, v0, v1
@@ -142,6 +150,7 @@
         }
     .end annotation
 
+    .line 43
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -150,6 +159,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/MaterialInstance$FloatElement;
     .locals 1
 
+    .line 43
     const-class v0, Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -164,6 +174,7 @@
 .method public static values()[Lcom/google/android/filament/MaterialInstance$FloatElement;
     .locals 1
 
+    .line 43
     sget-object v0, Lcom/google/android/filament/MaterialInstance$FloatElement;->$VALUES:[Lcom/google/android/filament/MaterialInstance$FloatElement;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/MaterialInstance$FloatElement;->clone()Ljava/lang/Object;

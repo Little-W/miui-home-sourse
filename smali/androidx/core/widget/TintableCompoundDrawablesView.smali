@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/core/widget/TintableCompoundDrawablesView;
 .super Ljava/lang/Object;
+.source "TintableCompoundDrawablesView.java"
 
 
 # virtual methods

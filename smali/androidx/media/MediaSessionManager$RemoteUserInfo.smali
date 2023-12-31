@@ -1,5 +1,6 @@
 .class public final Landroidx/media/MediaSessionManager$RemoteUserInfo;
 .super Ljava/lang/Object;
+.source "MediaSessionManager.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method public constructor <init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
     .locals 1
 
+    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 164
     new-instance v0, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
 
     invoke-direct {v0, p1}, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
@@ -35,14 +38,17 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 2
 
+    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 141
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
 
     if-lt v0, v1, :cond_0
 
+    .line 142
     new-instance v0, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
 
     invoke-direct {v0, p1, p2, p3}, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;-><init>(Ljava/lang/String;II)V
@@ -51,6 +57,7 @@
 
     goto :goto_0
 
+    .line 146
     :cond_0
     new-instance v0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
 
@@ -73,6 +80,7 @@
 
     return p0
 
+    .line 211
     :cond_0
     instance-of v0, p1, Landroidx/media/MediaSessionManager$RemoteUserInfo;
 
@@ -82,6 +90,7 @@
 
     return p0
 
+    .line 214
     :cond_1
     iget-object p0, p0, Landroidx/media/MediaSessionManager$RemoteUserInfo;->mImpl:Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;
 
@@ -99,6 +108,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 219
     iget-object p0, p0, Landroidx/media/MediaSessionManager$RemoteUserInfo;->mImpl:Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I

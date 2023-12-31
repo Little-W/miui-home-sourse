@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/flow/StateFlowImpl$collect$1;
 .super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "StateFlow.kt"
 
 
 # annotations

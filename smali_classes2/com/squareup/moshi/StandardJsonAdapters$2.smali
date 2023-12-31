@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/StandardJsonAdapters$2;
 .super Lcom/squareup/moshi/JsonAdapter;
+.source "StandardJsonAdapters.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 74
     invoke-direct {p0}, Lcom/squareup/moshi/JsonAdapter;-><init>()V
 
     return-void
@@ -40,6 +42,7 @@
         }
     .end annotation
 
+    .line 76
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->nextBoolean()Z
 
     move-result p0
@@ -59,6 +62,7 @@
         }
     .end annotation
 
+    .line 74
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/StandardJsonAdapters$2;->fromJson(Lcom/squareup/moshi/JsonReader;)Ljava/lang/Boolean;
 
     move-result-object p0

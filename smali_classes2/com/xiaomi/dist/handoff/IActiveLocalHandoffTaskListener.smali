@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
 .super Ljava/lang/Object;
+.source "IActiveLocalHandoffTaskListener.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

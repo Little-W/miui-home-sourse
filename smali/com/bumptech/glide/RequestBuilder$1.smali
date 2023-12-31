@@ -1,5 +1,6 @@
 .class synthetic Lcom/bumptech/glide/RequestBuilder$1;
 .super Ljava/lang/Object;
+.source "RequestBuilder.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
+    .line 858
     invoke-static {}, Lcom/bumptech/glide/Priority;->values()[Lcom/bumptech/glide/Priority;
 
     move-result-object v0
@@ -96,6 +98,7 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
+    .line 694
     :catch_3
     invoke-static {}, Landroid/widget/ImageView$ScaleType;->values()[Landroid/widget/ImageView$ScaleType;
 

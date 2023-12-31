@@ -1,5 +1,6 @@
 .class Landroidx/savedstate/SavedStateRegistry$1;
 .super Ljava/lang/Object;
+.source "SavedStateRegistry.java"
 
 # interfaces
 .implements Landroidx/lifecycle/GenericLifecycleObserver;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/savedstate/SavedStateRegistry;)V
     .locals 0
 
+    .line 197
     iput-object p1, p0, Landroidx/savedstate/SavedStateRegistry$1;->this$0:Landroidx/savedstate/SavedStateRegistry;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +38,12 @@
 .method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
+    .line 200
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_0
 
+    .line 201
     iget-object p0, p0, Landroidx/savedstate/SavedStateRegistry$1;->this$0:Landroidx/savedstate/SavedStateRegistry;
 
     const/4 p1, 0x1
@@ -48,11 +52,13 @@
 
     goto :goto_0
 
+    .line 202
     :cond_0
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_1
 
+    .line 203
     iget-object p0, p0, Landroidx/savedstate/SavedStateRegistry$1;->this$0:Landroidx/savedstate/SavedStateRegistry;
 
     const/4 p1, 0x0

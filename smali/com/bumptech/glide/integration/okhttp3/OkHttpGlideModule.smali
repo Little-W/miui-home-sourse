@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/integration/okhttp3/OkHttpGlideModule;
 .super Ljava/lang/Object;
+.source "OkHttpGlideModule.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/module/GlideModule;
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public registerComponents(Landroid/content/Context;Lcom/bumptech/glide/Glide;Lcom/bumptech/glide/Registry;)V
     .locals 0
 
+    .line 32
     const-class p0, Lcom/bumptech/glide/load/model/GlideUrl;
 
     const-class p1, Ljava/io/InputStream;

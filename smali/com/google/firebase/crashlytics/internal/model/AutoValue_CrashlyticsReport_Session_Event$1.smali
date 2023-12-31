@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event$1;
 .super Ljava/lang/Object;
+.source "AutoValue_CrashlyticsReport_Session_Event.java"
 
 
 # annotations

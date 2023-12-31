@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$ChooseFileCallback;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

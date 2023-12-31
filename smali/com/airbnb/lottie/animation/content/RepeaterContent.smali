@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/animation/content/RepeaterContent;
 .super Ljava/lang/Object;
+.source "RepeaterContent.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/animation/content/DrawingContent;
@@ -53,36 +54,44 @@
 .method public constructor <init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/Repeater;)V
     .locals 1
 
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 27
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->matrix:Landroid/graphics/Matrix;
 
+    .line 28
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->path:Landroid/graphics/Path;
 
+    .line 41
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
+    .line 42
     iput-object p2, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->layer:Lcom/airbnb/lottie/model/layer/BaseLayer;
 
+    .line 43
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/Repeater;->getName()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->name:Ljava/lang/String;
 
+    .line 44
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/Repeater;->isHidden()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->hidden:Z
 
+    .line 45
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/Repeater;->getCopies()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p1
@@ -93,14 +102,17 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->copies:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
+    .line 46
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->copies:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
+    .line 47
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->copies:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
+    .line 49
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/Repeater;->getOffset()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p1
@@ -111,14 +123,17 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->offset:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
+    .line 50
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->offset:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
+    .line 51
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->offset:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
+    .line 53
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/Repeater;->getTransform()Lcom/airbnb/lottie/model/animatable/AnimatableTransform;
 
     move-result-object p1
@@ -129,10 +144,12 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->transform:Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
 
+    .line 54
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->transform:Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
 
     invoke-virtual {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;->addAnimationsToLayer(Lcom/airbnb/lottie/model/layer/BaseLayer;)V
 
+    .line 55
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->transform:Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;->addListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
@@ -153,12 +170,14 @@
         }
     .end annotation
 
+    .line 72
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->contentGroup:Lcom/airbnb/lottie/animation/content/ContentGroup;
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 77
     :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/ListIterator;->hasPrevious()Z
@@ -175,11 +194,13 @@
 
     goto :goto_0
 
+    .line 79
     :cond_1
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
+    .line 80
     :goto_1
     invoke-interface {p1}, Ljava/util/ListIterator;->hasPrevious()Z
 
@@ -187,6 +208,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 81
     invoke-interface {p1}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
     move-result-object v0
@@ -195,13 +217,16 @@
 
     invoke-interface {v6, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 82
     invoke-interface {p1}, Ljava/util/ListIterator;->remove()V
 
     goto :goto_1
 
+    .line 84
     :cond_2
     invoke-static {v6}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
+    .line 85
     new-instance p1, Lcom/airbnb/lottie/animation/content/ContentGroup;
 
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
@@ -235,6 +260,7 @@
         }
     .end annotation
 
+    .line 139
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->transform:Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
 
     invoke-virtual {v0, p1, p2}, Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;->applyValueCallback(Ljava/lang/Object;Lcom/airbnb/lottie/value/LottieValueCallback;)Z
@@ -245,22 +271,26 @@
 
     return-void
 
+    .line 143
     :cond_0
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->REPEATER_COPIES:Ljava/lang/Float;
 
     if-ne p1, v0, :cond_1
 
+    .line 144
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->copies:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
+    .line 145
     :cond_1
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->REPEATER_OFFSET:Ljava/lang/Float;
 
     if-ne p1, v0, :cond_2
 
+    .line 146
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->offset:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
@@ -273,6 +303,7 @@
 .method public draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
     .locals 9
 
+    .line 109
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->copies:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -285,6 +316,7 @@
 
     move-result v0
 
+    .line 110
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->offset:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -297,6 +329,7 @@
 
     move-result v1
 
+    .line 112
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->transform:Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
 
     invoke-virtual {v2}, Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;->getStartOpacity()Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
@@ -317,6 +350,7 @@
 
     div-float/2addr v2, v3
 
+    .line 114
     iget-object v4, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->transform:Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
 
     invoke-virtual {v4}, Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;->getEndOpacity()Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
@@ -342,10 +376,12 @@
     :goto_0
     if-ltz v3, :cond_0
 
+    .line 116
     iget-object v5, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v5, p2}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
+    .line 117
     iget-object v5, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->matrix:Landroid/graphics/Matrix;
 
     iget-object v6, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->transform:Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
@@ -364,12 +400,14 @@
 
     div-float/2addr v7, v0
 
+    .line 118
     invoke-static {v2, v4, v7}, Lcom/airbnb/lottie/utils/MiscUtils;->lerp(FFF)F
 
     move-result v6
 
     mul-float/2addr v5, v6
 
+    .line 119
     iget-object v6, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->contentGroup:Lcom/airbnb/lottie/animation/content/ContentGroup;
 
     iget-object v7, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->matrix:Landroid/graphics/Matrix;
@@ -389,6 +427,7 @@
 .method public getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
     .locals 0
 
+    .line 124
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->contentGroup:Lcom/airbnb/lottie/animation/content/ContentGroup;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/airbnb/lottie/animation/content/ContentGroup;->getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
@@ -399,6 +438,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 89
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->name:Ljava/lang/String;
 
     return-object p0
@@ -407,16 +447,19 @@
 .method public getPath()Landroid/graphics/Path;
     .locals 6
 
+    .line 97
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->contentGroup:Lcom/airbnb/lottie/animation/content/ContentGroup;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/animation/content/ContentGroup;->getPath()Landroid/graphics/Path;
 
     move-result-object v0
 
+    .line 98
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
+    .line 99
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->copies:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -429,6 +472,7 @@
 
     move-result v1
 
+    .line 100
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->offset:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -448,6 +492,7 @@
     :goto_0
     if-ltz v1, :cond_0
 
+    .line 102
     iget-object v3, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->matrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->transform:Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
@@ -462,6 +507,7 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
+    .line 103
     iget-object v3, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->path:Landroid/graphics/Path;
 
     iget-object v4, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->matrix:Landroid/graphics/Matrix;
@@ -472,6 +518,7 @@
 
     goto :goto_0
 
+    .line 105
     :cond_0
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->path:Landroid/graphics/Path;
 
@@ -481,6 +528,7 @@
 .method public onValueChanged()V
     .locals 0
 
+    .line 128
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->invalidateSelf()V
@@ -503,6 +551,7 @@
         }
     .end annotation
 
+    .line 133
     invoke-static {p1, p2, p3, p4, p0}, Lcom/airbnb/lottie/utils/MiscUtils;->resolveKeyPath(Lcom/airbnb/lottie/model/KeyPath;ILjava/util/List;Lcom/airbnb/lottie/model/KeyPath;Lcom/airbnb/lottie/animation/content/KeyPathElementContent;)V
 
     return-void
@@ -522,6 +571,7 @@
         }
     .end annotation
 
+    .line 93
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RepeaterContent;->contentGroup:Lcom/airbnb/lottie/animation/content/ContentGroup;
 
     invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/animation/content/ContentGroup;->setContents(Ljava/util/List;Ljava/util/List;)V

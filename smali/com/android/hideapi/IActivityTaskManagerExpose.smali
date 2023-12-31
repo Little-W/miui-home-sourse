@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/IActivityTaskManagerExpose;
 .super Ljava/lang/Object;
+.source "IActivityTaskManagerExpose.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method private constructor <init>(Landroid/app/IActivityTaskManager;)V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     iput-object p1, p0, Lcom/android/hideapi/IActivityTaskManagerExpose;->instance:Landroid/app/IActivityTaskManager;
 
     return-void
@@ -20,6 +23,7 @@
 .method public static box(Landroid/app/IActivityTaskManager;)Lcom/android/hideapi/IActivityTaskManagerExpose;
     .locals 1
 
+    .line 22
     new-instance v0, Lcom/android/hideapi/IActivityTaskManagerExpose;
 
     invoke-direct {v0, p0}, Lcom/android/hideapi/IActivityTaskManagerExpose;-><init>(Landroid/app/IActivityTaskManager;)V
@@ -32,6 +36,7 @@
 .method public setPauseAdvanced([I)V
     .locals 5
 
+    .line 30
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,6 +59,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 31
     iget-object p0, p0, Lcom/android/hideapi/IActivityTaskManagerExpose;->instance:Landroid/app/IActivityTaskManager;
 
     sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
@@ -80,6 +86,7 @@
 .method public unSetPauseAdvanced(Z)V
     .locals 5
 
+    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,6 +105,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 36
     iget-object p0, p0, Lcom/android/hideapi/IActivityTaskManagerExpose;->instance:Landroid/app/IActivityTaskManager;
 
     sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;

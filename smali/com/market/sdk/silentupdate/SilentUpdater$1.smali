@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/silentupdate/SilentUpdater$1;
 .super Ljava/lang/Object;
+.source "SilentUpdater.java"
 
 # interfaces
 .implements Landroid/os/IBinder$DeathRecipient;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/market/sdk/silentupdate/SilentUpdater;)V
     .locals 0
 
+    .line 87
     iput-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$1;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public binderDied()V
     .locals 1
 
+    .line 90
     iget-object p0, p0, Lcom/market/sdk/silentupdate/SilentUpdater$1;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     const/4 v0, 0x0

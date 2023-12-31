@@ -1,5 +1,6 @@
 .class final Lcom/github/promeg/pinyinhelper/PinyinData;
 .super Ljava/lang/Object;
+.source "PinyinData.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 
     new-array v1, v0, [I
 
+    .line 17
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/github/promeg/pinyinhelper/PinyinData;->BIT_MASKS:[I
@@ -2470,6 +2472,7 @@
 
     aput-object v2, v1, v0
 
+    .line 27
     sput-object v1, Lcom/github/promeg/pinyinhelper/PinyinData;->PINYIN_TABLE:[Ljava/lang/String;
 
     return-void

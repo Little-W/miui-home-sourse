@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 .super Ljava/lang/Object;
+.source "IBranchSearchManager.java"
 
 
 # virtual methods

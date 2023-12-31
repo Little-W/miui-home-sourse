@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$EmptyModelLoader;
 .super Ljava/lang/Object;
+.source "MultiModelLoaderFactory.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoader;
@@ -30,6 +31,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 222
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

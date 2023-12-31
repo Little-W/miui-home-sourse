@@ -1,5 +1,6 @@
 .class public abstract Landroidx/customview/widget/ViewDragHelper$Callback;
 .super Ljava/lang/Object;
+.source "ViewDragHelper.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/InputMonitorCompat;
 .super Ljava/lang/Object;
+.source "InputMonitorCompat.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method private constructor <init>(Landroid/view/InputMonitor;)V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
 
     return-void
@@ -20,6 +23,7 @@
 .method public static fromBundle(Landroid/os/Bundle;Ljava/lang/String;)Lcom/android/systemui/shared/recents/system/InputMonitorCompat;
     .locals 1
 
+    .line 67
     new-instance v0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;
 
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -38,6 +42,7 @@
 .method public dispose()V
     .locals 0
 
+    .line 51
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
 
     invoke-static {p0}, Lmiui/view/InputMonitorExpose;->box(Ljava/lang/Object;)Lmiui/view/InputMonitorExpose;
@@ -52,6 +57,7 @@
 .method public getInputReceiver(Landroid/os/Looper;Landroid/view/Choreographer;Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;)Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver;
     .locals 1
 
+    .line 59
     new-instance v0, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver;
 
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
@@ -78,6 +84,7 @@
 .method public pilferPointers()V
     .locals 0
 
+    .line 44
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
 
     invoke-static {p0}, Lmiui/view/InputMonitorExpose;->box(Ljava/lang/Object;)Lmiui/view/InputMonitorExpose;

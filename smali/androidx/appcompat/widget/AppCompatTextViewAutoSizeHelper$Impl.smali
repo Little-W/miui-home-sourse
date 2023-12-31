@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper$Impl;
 .super Ljava/lang/Object;
+.source "AppCompatTextViewAutoSizeHelper.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
 
     const/4 p0, 0x0
 
+    .line 115
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/MapLikeDescriptor;
 .super Ljava/lang/Object;
+.source "CollectionDescriptors.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -25,6 +26,7 @@
 .method private constructor <init>(Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
     .locals 0
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->serialName:Ljava/lang/String;
@@ -35,6 +37,7 @@
 
     const/4 p1, 0x2
 
+    .line 55
     iput p1, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->elementsCount:I
 
     return-void
@@ -43,6 +46,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 49
     invoke-direct {p0, p1, p2, p3}, Lkotlinx/serialization/internal/MapLikeDescriptor;-><init>(Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
     return-void
@@ -53,6 +57,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
+    .line 80
     move-object v0, p0
 
     check-cast v0, Lkotlinx/serialization/internal/MapLikeDescriptor;
@@ -63,6 +68,7 @@
 
     return v1
 
+    .line 81
     :cond_0
     instance-of v0, p1, Lkotlinx/serialization/internal/MapLikeDescriptor;
 
@@ -72,6 +78,7 @@
 
     return v2
 
+    .line 82
     :cond_1
     invoke-virtual {p0}, Lkotlinx/serialization/internal/MapLikeDescriptor;->getSerialName()Ljava/lang/String;
 
@@ -93,6 +100,7 @@
 
     return v2
 
+    .line 83
     :cond_2
     iget-object v0, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->keyDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -108,6 +116,7 @@
 
     return v2
 
+    .line 84
     :cond_3
     iget-object p0, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->valueDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -144,16 +153,19 @@
     :goto_0
     if-eqz v1, :cond_3
 
+    .line 72
     rem-int/lit8 p1, p1, 0x2
 
     if-eqz p1, :cond_2
 
     if-ne p1, v0, :cond_1
 
+    .line 74
     iget-object p0, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->valueDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     goto :goto_1
 
+    .line 75
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -169,12 +181,14 @@
 
     throw p0
 
+    .line 73
     :cond_2
     iget-object p0, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->keyDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     :goto_1
     return-object p0
 
+    .line 71
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -224,6 +238,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 58
     invoke-static {p1}, Lkotlin/text/StringsKt;->toIntOrNull(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -263,6 +278,7 @@
 .method public getElementName(I)Ljava/lang/String;
     .locals 0
 
+    .line 56
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -273,6 +289,7 @@
 .method public getElementsCount()I
     .locals 0
 
+    .line 55
     iget p0, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->elementsCount:I
 
     return p0
@@ -281,6 +298,7 @@
 .method public getKind()Lkotlinx/serialization/descriptors/SerialKind;
     .locals 0
 
+    .line 54
     sget-object p0, Lkotlinx/serialization/descriptors/StructureKind$MAP;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$MAP;
 
     check-cast p0, Lkotlinx/serialization/descriptors/SerialKind;
@@ -291,6 +309,7 @@
 .method public getSerialName()Ljava/lang/String;
     .locals 0
 
+    .line 50
     iget-object p0, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->serialName:Ljava/lang/String;
 
     return-object p0
@@ -299,6 +318,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 89
     invoke-virtual {p0}, Lkotlinx/serialization/internal/MapLikeDescriptor;->getSerialName()Ljava/lang/String;
 
     move-result-object v0
@@ -309,6 +329,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 90
     iget-object v1, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->keyDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
@@ -319,6 +340,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 91
     iget-object p0, p0, Lkotlinx/serialization/internal/MapLikeDescriptor;->valueDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -333,6 +355,7 @@
 .method public isNullable()Z
     .locals 0
 
+    .line 49
     invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor$DefaultImpls;->isNullable(Lkotlinx/serialization/descriptors/SerialDescriptor;)Z
 
     move-result p0
@@ -343,6 +366,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

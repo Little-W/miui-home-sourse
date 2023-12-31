@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/JobImpl;
 .super Lkotlinx/coroutines/JobSupport;
+.source "JobSupport.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/CompletableJob;
@@ -15,10 +16,13 @@
 
     const/4 v0, 0x1
 
+    .line 1312
     invoke-direct {p0, v0}, Lkotlinx/coroutines/JobSupport;-><init>(Z)V
 
+    .line 1313
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/JobImpl;->initParentJobInternal$kotlinx_coroutines_core(Lkotlinx/coroutines/Job;)V
 
+    .line 1325
     invoke-direct {p0}, Lkotlinx/coroutines/JobImpl;->handlesException()Z
 
     move-result p1
@@ -31,6 +35,7 @@
 .method private final handlesException()Z
     .locals 3
 
+    .line 1332
     invoke-virtual {p0}, Lkotlinx/coroutines/JobImpl;->getParentHandle$kotlinx_coroutines_core()Lkotlinx/coroutines/ChildHandle;
 
     move-result-object p0
@@ -56,6 +61,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 1334
     :goto_0
     invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport;->getHandlesException$kotlinx_coroutines_core()Z
 
@@ -67,6 +73,7 @@
 
     return p0
 
+    .line 1335
     :cond_1
     invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport;->getParentHandle$kotlinx_coroutines_core()Lkotlinx/coroutines/ChildHandle;
 
@@ -100,6 +107,7 @@
 .method public getHandlesException$kotlinx_coroutines_core()Z
     .locals 0
 
+    .line 1325
     iget-boolean p0, p0, Lkotlinx/coroutines/JobImpl;->handlesException:Z
 
     return p0

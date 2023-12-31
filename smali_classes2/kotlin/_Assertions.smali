@@ -1,5 +1,6 @@
 .class public final Lkotlin/_Assertions;
 .super Ljava/lang/Object;
+.source "AssertionsJVM.kt"
 
 
 # static fields
@@ -12,12 +13,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 11
     new-instance v0, Lkotlin/_Assertions;
 
     invoke-direct {v0}, Lkotlin/_Assertions;-><init>()V
 
     sput-object v0, Lkotlin/_Assertions;->INSTANCE:Lkotlin/_Assertions;
 
+    .line 14
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -34,6 +37,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

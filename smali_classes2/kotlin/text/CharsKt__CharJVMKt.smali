@@ -1,5 +1,6 @@
 .class Lkotlin/text/CharsKt__CharJVMKt;
 .super Ljava/lang/Object;
+.source "CharJVM.kt"
 
 
 # direct methods
@@ -16,6 +17,7 @@
 
     return p0
 
+    .line 301
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -53,6 +55,7 @@
 .method public static final digitOf(CI)I
     .locals 0
 
+    .line 293
     invoke-static {p0, p1}, Ljava/lang/Character;->digit(II)I
 
     move-result p0
@@ -63,6 +66,7 @@
 .method public static final isWhitespace(C)Z
     .locals 1
 
+    .line 74
     invoke-static {p0}, Ljava/lang/Character;->isWhitespace(C)Z
 
     move-result v0

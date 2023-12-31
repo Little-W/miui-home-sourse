@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/utils/Utils;
 .super Ljava/lang/Object;
+.source "Utils.java"
 
 
 # static fields
@@ -36,6 +37,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 28
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sdcard/com.xiaomi.market.sdk/sdk_debug"
@@ -48,12 +50,14 @@
 
     sput-boolean v0, Lcom/market/sdk/utils/Utils;->DEBUG:Z
 
+    .line 30
     new-instance v0, Lcom/market/sdk/utils/Utils$1;
 
     invoke-direct {v0}, Lcom/market/sdk/utils/Utils$1;-><init>()V
 
     sput-object v0, Lcom/market/sdk/utils/Utils;->marketPkgName:Lcom/market/sdk/Singleton;
 
+    .line 41
     new-instance v0, Lcom/market/sdk/utils/Utils$2;
 
     invoke-direct {v0}, Lcom/market/sdk/utils/Utils$2;-><init>()V
@@ -66,6 +70,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -74,6 +79,7 @@
 .method static synthetic access$000()Lcom/market/sdk/Singleton;
     .locals 1
 
+    .line 26
     sget-object v0, Lcom/market/sdk/utils/Utils;->marketPkgName:Lcom/market/sdk/Singleton;
 
     return-object v0
@@ -84,6 +90,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 186
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -94,6 +101,7 @@
     :catch_0
     move-exception p0
 
+    .line 188
     invoke-virtual {p0}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -152,6 +160,7 @@
 
     div-double/2addr p0, v1
 
+    .line 96
     invoke-static {p0, p1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p0
@@ -181,6 +190,7 @@
 
     div-double/2addr p0, v1
 
+    .line 99
     invoke-static {p0, p1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p0
@@ -193,6 +203,7 @@
 
     goto :goto_0
 
+    .line 102
     :cond_3
     invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -205,6 +216,7 @@
 
     aput-object p0, p1, v4
 
+    .line 105
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -215,6 +227,7 @@
 .method public static getMarketPackageName()Ljava/lang/String;
     .locals 1
 
+    .line 64
     sget-object v0, Lcom/market/sdk/utils/Utils;->marketPkgName:Lcom/market/sdk/Singleton;
 
     invoke-virtual {v0}, Lcom/market/sdk/Singleton;->get()Ljava/lang/Object;
@@ -229,6 +242,7 @@
 .method public static getStringArray(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
     .locals 3
 
+    .line 168
     :try_start_0
     invoke-static {}, Lcom/market/sdk/MarketManager;->getContext()Landroid/content/Context;
 
@@ -240,6 +254,7 @@
 
     move-result-object v0
 
+    .line 169
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -250,6 +265,7 @@
 
     move-result p0
 
+    .line 171
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -265,6 +281,7 @@
     :catchall_0
     move-exception p0
 
+    .line 173
     invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -281,6 +298,7 @@
 .method public static getStringResources(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
+    .line 155
     :try_start_0
     invoke-static {}, Lcom/market/sdk/MarketManager;->getContext()Landroid/content/Context;
 
@@ -292,18 +310,21 @@
 
     sget-object v1, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
 
+    .line 156
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
 
     move-result-object v0
 
     const-string v1, "string"
 
+    .line 157
     sget-object v2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
+    .line 158
     invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -315,6 +336,7 @@
     :catchall_0
     move-exception p0
 
+    .line 160
     invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -331,12 +353,14 @@
 .method public static hasExternalStorage(Z)Z
     .locals 3
 
+    .line 137
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "mounted"
 
+    .line 138
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -350,6 +374,7 @@
     :cond_0
     const-string v1, "mounted_ro"
 
+    .line 140
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -371,18 +396,21 @@
 
     const-string v0, "connectivity"
 
+    .line 147
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/net/ConnectivityManager;
 
+    .line 148
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 149
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
 
     move-result p0
@@ -403,11 +431,13 @@
 .method public static isFirstBoot()Z
     .locals 2
 
+    .line 210
     :try_start_0
     invoke-static {}, Lcom/market/sdk/compat/ActivityThreadCompat;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
+    .line 211
     invoke-interface {v0}, Landroid/content/pm/IPackageManager;->isFirstBoot()Z
 
     move-result v0
@@ -419,6 +449,7 @@
     :catch_0
     move-exception v0
 
+    .line 213
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -435,6 +466,7 @@
 .method public static isInternationalBuild()Z
     .locals 2
 
+    .line 201
     :try_start_0
     sget-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
     :try_end_0
@@ -445,6 +477,7 @@
     :catchall_0
     move-exception v0
 
+    .line 203
     invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -461,6 +494,7 @@
 .method public static isMiuiMarketExisted(Landroid/content/Context;)Z
     .locals 0
 
+    .line 68
     sget-object p0, Lcom/market/sdk/utils/Utils;->isMiMarketExists:Lcom/market/sdk/Singleton;
 
     invoke-virtual {p0}, Lcom/market/sdk/Singleton;->get()Ljava/lang/Object;
@@ -484,6 +518,7 @@
     :try_start_0
     const-string v1, "android.os.SystemProperties"
 
+    .line 73
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -494,6 +529,7 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
+    .line 74
     const-class v5, Ljava/lang/String;
 
     aput-object v5, v4, v0
@@ -508,6 +544,7 @@
 
     aput-object v4, v3, v0
 
+    .line 75
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -516,6 +553,7 @@
 
     const-string v2, "tablet"
 
+    .line 76
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -527,6 +565,7 @@
     :catch_0
     move-exception v1
 
+    .line 78
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -550,18 +589,21 @@
     :cond_0
     const-string v1, "connectivity"
 
+    .line 124
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/net/ConnectivityManager;
 
+    .line 125
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 127
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
     move-result p0
@@ -577,6 +619,7 @@
 .method public static isScreenOff()Z
     .locals 2
 
+    .line 179
     invoke-static {}, Lcom/market/sdk/MarketManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -589,6 +632,7 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
+    .line 180
     invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v0
@@ -610,12 +654,14 @@
     :cond_0
     const-string v1, "connectivity"
 
+    .line 113
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/net/ConnectivityManager;
 
+    .line 114
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object p0
@@ -624,6 +670,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 116
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
     move-result p0
@@ -639,6 +686,7 @@
 .method public static isXSpace()Z
     .locals 4
 
+    .line 194
     invoke-static {}, Lcom/market/sdk/MarketManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -653,6 +701,7 @@
 
     move-result v0
 
+    .line 196
     invoke-static {}, Lcom/market/sdk/compat/UserHandleCompat;->myUserId()I
 
     move-result v1

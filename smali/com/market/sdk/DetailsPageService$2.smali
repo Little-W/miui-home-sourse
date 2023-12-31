@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/DetailsPageService$2;
 .super Ljava/lang/Object;
+.source "DetailsPageService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/market/sdk/DetailsPageService;Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 71
     iput-object p1, p0, Lcom/market/sdk/DetailsPageService$2;->this$0:Lcom/market/sdk/DetailsPageService;
 
     iput-object p2, p0, Lcom/market/sdk/DetailsPageService$2;->val$callback:Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 74
     iget-object v0, p0, Lcom/market/sdk/DetailsPageService$2;->this$0:Lcom/market/sdk/DetailsPageService;
 
     invoke-static {v0}, Lcom/market/sdk/DetailsPageService;->access$000(Lcom/market/sdk/DetailsPageService;)Lcom/xiaomi/market/IDetailsPageManager;
@@ -57,6 +60,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 75
     iget-object v0, p0, Lcom/market/sdk/DetailsPageService$2;->val$callback:Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;
 
     iget-object v1, p0, Lcom/market/sdk/DetailsPageService$2;->this$0:Lcom/market/sdk/DetailsPageService;
@@ -80,6 +84,7 @@
 
     const-string v0, "IDetailsPageManager is null"
 
+    .line 77
     invoke-static {p0, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0

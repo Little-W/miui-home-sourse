@@ -1,11 +1,13 @@
 .class public abstract Lkotlinx/coroutines/MainCoroutineDispatcher;
 .super Lkotlinx/coroutines/CoroutineDispatcher;
+.source "MainCoroutineDispatcher.kt"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Lkotlinx/coroutines/CoroutineDispatcher;-><init>()V
 
     return-void
@@ -19,6 +21,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 52
     invoke-virtual {p0}, Lkotlinx/coroutines/MainCoroutineDispatcher;->toStringInternalImpl()Ljava/lang/String;
 
     move-result-object v0
@@ -59,10 +62,12 @@
 .method protected final toStringInternalImpl()Ljava/lang/String;
     .locals 2
 
+    .line 61
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getMain()Lkotlinx/coroutines/MainCoroutineDispatcher;
 
     move-result-object v0
 
+    .line 62
     check-cast p0, Lkotlinx/coroutines/MainCoroutineDispatcher;
 
     if-ne p0, v0, :cond_0
@@ -74,6 +79,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 64
     :try_start_0
     invoke-virtual {v0}, Lkotlinx/coroutines/MainCoroutineDispatcher;->getImmediate()Lkotlinx/coroutines/MainCoroutineDispatcher;
 

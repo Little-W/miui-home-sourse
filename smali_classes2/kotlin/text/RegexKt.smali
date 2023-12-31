@@ -1,5 +1,6 @@
 .class public final Lkotlin/text/RegexKt;
 .super Ljava/lang/Object;
+.source "Regex.kt"
 
 
 # annotations
@@ -12,6 +13,7 @@
 .method public static final synthetic access$findNext(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Lkotlin/text/MatchResult;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lkotlin/text/RegexKt;->findNext(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Lkotlin/text/MatchResult;
 
     move-result-object p0
@@ -22,6 +24,7 @@
 .method public static final synthetic access$matchEntire(Ljava/util/regex/Matcher;Ljava/lang/CharSequence;)Lkotlin/text/MatchResult;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lkotlin/text/RegexKt;->matchEntire(Ljava/util/regex/Matcher;Ljava/lang/CharSequence;)Lkotlin/text/MatchResult;
 
     move-result-object p0
@@ -32,6 +35,7 @@
 .method public static final synthetic access$range(Ljava/util/regex/MatchResult;)Lkotlin/ranges/IntRange;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lkotlin/text/RegexKt;->range(Ljava/util/regex/MatchResult;)Lkotlin/ranges/IntRange;
 
     move-result-object p0
@@ -42,6 +46,7 @@
 .method public static final synthetic access$range(Ljava/util/regex/MatchResult;I)Lkotlin/ranges/IntRange;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lkotlin/text/RegexKt;->range(Ljava/util/regex/MatchResult;I)Lkotlin/ranges/IntRange;
 
     move-result-object p0
@@ -52,6 +57,7 @@
 .method public static final synthetic access$toInt(Ljava/lang/Iterable;)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lkotlin/text/RegexKt;->toInt(Ljava/lang/Iterable;)I
 
     move-result p0
@@ -62,6 +68,7 @@
 .method private static final findNext(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Lkotlin/text/MatchResult;
     .locals 0
 
+    .line 266
     invoke-virtual {p0, p1}, Ljava/util/regex/Matcher;->find(I)Z
 
     move-result p1
@@ -88,6 +95,7 @@
 .method private static final matchEntire(Ljava/util/regex/Matcher;Ljava/lang/CharSequence;)Lkotlin/text/MatchResult;
     .locals 1
 
+    .line 270
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
@@ -114,6 +122,7 @@
 .method private static final range(Ljava/util/regex/MatchResult;)Lkotlin/ranges/IntRange;
     .locals 1
 
+    .line 318
     invoke-interface {p0}, Ljava/util/regex/MatchResult;->start()I
 
     move-result v0
@@ -132,6 +141,7 @@
 .method private static final range(Ljava/util/regex/MatchResult;I)Lkotlin/ranges/IntRange;
     .locals 1
 
+    .line 319
     invoke-interface {p0, p1}, Ljava/util/regex/MatchResult;->start(I)I
 
     move-result v0
@@ -159,6 +169,7 @@
         }
     .end annotation
 
+    .line 322
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -178,6 +189,7 @@
 
     check-cast v1, Lkotlin/text/FlagEnum;
 
+    .line 19
     invoke-interface {v1}, Lkotlin/text/FlagEnum;->getValue()I
 
     move-result v1

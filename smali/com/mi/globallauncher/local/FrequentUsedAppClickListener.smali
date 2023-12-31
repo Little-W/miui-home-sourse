@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/local/FrequentUsedAppClickListener;
 .super Ljava/lang/Object;
+.source "FrequentUsedAppClickListener.java"
 
 
 # virtual methods

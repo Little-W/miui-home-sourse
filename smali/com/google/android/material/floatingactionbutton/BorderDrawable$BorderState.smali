@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/floatingactionbutton/BorderDrawable$BorderState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
+.source "BorderDrawable.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 268
     iget-object p0, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable$BorderState;->this$0:Lcom/google/android/material/floatingactionbutton/BorderDrawable;
 
     return-object p0

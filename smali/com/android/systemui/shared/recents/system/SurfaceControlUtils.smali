@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;
 .super Ljava/lang/Object;
+.source "SurfaceControlUtils.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,21 +22,25 @@
 
     if-eqz p0, :cond_3
 
+    .line 82
     :try_start_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SurfaceCompat;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_3
 
+    .line 83
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SurfaceCompat;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->lockHardwareCanvas()Landroid/graphics/Canvas;
 
     move-result-object v0
 
+    .line 84
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
+    .line 85
     new-instance v2, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
@@ -43,8 +49,10 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
+    .line 86
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
 
+    .line 87
     new-instance v2, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC:Landroid/graphics/PorterDuff$Mode;
@@ -59,6 +67,7 @@
 
     int-to-float p1, p1
 
+    .line 89
     invoke-virtual {v0}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v1
@@ -79,6 +88,7 @@
 
     invoke-virtual {v0, p1, v1, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 91
     :cond_0
     array-length p1, p3
 
@@ -91,20 +101,25 @@
 
     if-eqz v2, :cond_1
 
+    .line 93
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
+    .line 94
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    .line 95
     invoke-virtual {v2, p2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
+    .line 96
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 97
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     :cond_1
@@ -112,6 +127,7 @@
 
     goto :goto_0
 
+    .line 100
     :cond_2
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SurfaceCompat;->mSurface:Landroid/view/Surface;
 
@@ -126,6 +142,7 @@
 
     const-string p1, "scheduleDraw error"
 
+    .line 103
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -138,11 +155,13 @@
 
     if-eqz p0, :cond_2
 
+    .line 59
     :try_start_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SurfaceCompat;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_2
 
+    .line 60
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SurfaceCompat;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->lockHardwareCanvas()Landroid/graphics/Canvas;
@@ -151,12 +170,15 @@
 
     if-eqz p1, :cond_1
 
+    .line 62
     invoke-virtual {v0}, Landroid/graphics/Canvas;->save()I
 
+    .line 63
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
+    .line 64
     new-instance v2, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
@@ -165,8 +187,10 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
+    .line 65
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
 
+    .line 66
     new-instance v2, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC:Landroid/graphics/PorterDuff$Mode;
@@ -181,6 +205,7 @@
 
     int-to-float p2, p2
 
+    .line 68
     invoke-virtual {v0}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v1
@@ -201,11 +226,14 @@
 
     invoke-virtual {v0, p2, v1, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 70
     :cond_0
     invoke-virtual {p1, v0}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
+    .line 71
     invoke-virtual {v0}, Landroid/graphics/Canvas;->restore()V
 
+    .line 73
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SurfaceCompat;->mSurface:Landroid/view/Surface;
 
@@ -220,6 +248,7 @@
 
     const-string p1, "scheduleDraw error"
 
+    .line 76
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -232,10 +261,12 @@
 
     if-eqz p3, :cond_0
 
+    .line 44
     iget-object v0, p3, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_0
 
+    .line 45
     new-instance v0, Landroid/view/SurfaceControl$Builder;
 
     new-instance v1, Landroid/view/SurfaceSession;
@@ -244,36 +275,43 @@
 
     invoke-direct {v0, v1}, Landroid/view/SurfaceControl$Builder;-><init>(Landroid/view/SurfaceSession;)V
 
+    .line 46
     invoke-virtual {v0, p1, p2}, Landroid/view/SurfaceControl$Builder;->setBufferSize(II)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p1
 
+    .line 47
     invoke-virtual {p1, p0}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p0
 
     iget-object p1, p3, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
 
+    .line 48
     invoke-virtual {p0, p1}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p0
 
     const/4 p1, 0x1
 
+    .line 49
     invoke-virtual {p0, p1}, Landroid/view/SurfaceControl$Builder;->setFormat(I)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
+    .line 50
     invoke-virtual {p0, p1}, Landroid/view/SurfaceControl$Builder;->setOpaque(Z)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p0
 
+    .line 51
     invoke-virtual {p0}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object p0
 
+    .line 52
     new-instance p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;-><init>(Landroid/view/SurfaceControl;)V
@@ -291,10 +329,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 25
     iget-object v0, p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_0
 
+    .line 26
     new-instance v0, Landroid/view/SurfaceControl$Builder;
 
     new-instance v1, Landroid/view/SurfaceSession;
@@ -307,6 +347,7 @@
 
     move-result-object v0
 
+    .line 27
     invoke-virtual {v0}, Lmiui/view/SurfaceControlExpose$Builder;->setColorLayer()Lmiui/view/SurfaceControlExpose$Builder;
 
     move-result-object v0
@@ -317,20 +358,24 @@
 
     check-cast v0, Landroid/view/SurfaceControl$Builder;
 
+    .line 28
     invoke-virtual {v0, p0}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p0
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
 
+    .line 29
     invoke-virtual {p0, p1}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p0
 
+    .line 30
     invoke-virtual {p0}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object p0
 
+    .line 31
     new-instance p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;-><init>(Landroid/view/SurfaceControl;)V
@@ -348,6 +393,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 37
     invoke-virtual {p0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
     move-result-object v0
@@ -368,6 +414,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 38
     new-instance v0, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     invoke-virtual {p0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;

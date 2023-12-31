@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/FileLoader$Factory;
 .super Ljava/lang/Object;
+.source "FileLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoaderFactory;
@@ -50,8 +51,10 @@
         }
     .end annotation
 
+    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 116
     iput-object p1, p0, Lcom/bumptech/glide/load/model/FileLoader$Factory;->opener:Lcom/bumptech/glide/load/model/FileLoader$FileOpener;
 
     return-void
@@ -72,6 +75,7 @@
         }
     .end annotation
 
+    .line 122
     new-instance p1, Lcom/bumptech/glide/load/model/FileLoader;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/model/FileLoader$Factory;->opener:Lcom/bumptech/glide/load/model/FileLoader$FileOpener;

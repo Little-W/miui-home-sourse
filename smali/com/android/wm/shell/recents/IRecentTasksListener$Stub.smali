@@ -1,5 +1,6 @@
 .class public abstract Lcom/android/wm/shell/recents/IRecentTasksListener$Stub;
 .super Landroid/os/Binder;
+.source "IRecentTasksListener.java"
 
 # interfaces
 .implements Lcom/android/wm/shell/recents/IRecentTasksListener;
@@ -26,10 +27,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 22
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.android.wm.shell.recents.IRecentTasksListener"
 
+    .line 23
     invoke-virtual {p0, p0, v0}, Lcom/android/wm/shell/recents/IRecentTasksListener$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -47,12 +50,14 @@
     :cond_0
     const-string v0, "com.android.wm.shell.recents.IRecentTasksListener"
 
+    .line 30
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 31
     instance-of v1, v0, Lcom/android/wm/shell/recents/IRecentTasksListener;
 
     if-eqz v1, :cond_1
@@ -73,6 +78,7 @@
 .method public static getDefaultImpl()Lcom/android/wm/shell/recents/IRecentTasksListener;
     .locals 1
 
+    .line 69
     sget-object v0, Lcom/android/wm/shell/recents/IRecentTasksListener$Stub$Proxy;->sDefaultImpl:Lcom/android/wm/shell/recents/IRecentTasksListener;
 
     return-object v0
@@ -104,19 +110,23 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 52
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 48
     :cond_0
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 49
     invoke-virtual {p0}, Lcom/android/wm/shell/recents/IRecentTasksListener$Stub;->onRecentTasksChanged()V
 
     return v0
 
+    .line 43
     :cond_1
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

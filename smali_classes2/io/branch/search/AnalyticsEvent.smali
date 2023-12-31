@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/AnalyticsEvent;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields

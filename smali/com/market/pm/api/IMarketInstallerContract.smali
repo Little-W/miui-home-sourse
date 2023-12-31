@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/pm/api/IMarketInstallerContract;
 .super Ljava/lang/Object;
+.source "IMarketInstallerContract.java"
 
 # interfaces
 .implements Lcom/market/pm/api/IMarketInstallerCode;
@@ -25,6 +26,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 14
     sget-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0

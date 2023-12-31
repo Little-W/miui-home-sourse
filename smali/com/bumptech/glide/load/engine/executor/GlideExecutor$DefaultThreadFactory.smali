@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;
 .super Ljava/lang/Object;
+.source "GlideExecutor.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -30,12 +31,16 @@
 .method constructor <init>(Ljava/lang/String;Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;Z)V
     .locals 0
 
+    .line 425
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 426
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->name:Ljava/lang/String;
 
+    .line 427
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->uncaughtThrowableStrategy:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;
 
+    .line 428
     iput-boolean p3, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->preventNetworkOperations:Z
 
     return-void
@@ -48,6 +53,7 @@
 
     monitor-enter p0
 
+    .line 433
     :try_start_0
     new-instance v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1;
 
@@ -77,6 +83,7 @@
 
     invoke-direct {v0, p0, p1, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1;-><init>(Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;Ljava/lang/Runnable;Ljava/lang/String;)V
 
+    .line 452
     iget p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->threadNum:I
 
     add-int/lit8 p1, p1, 0x1
@@ -85,6 +92,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 453
     monitor-exit p0
 
     return-object v0

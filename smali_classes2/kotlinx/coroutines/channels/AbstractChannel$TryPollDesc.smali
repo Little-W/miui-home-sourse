@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/AbstractChannel$TryPollDesc;
 .super Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;
+.source "AbstractChannel.kt"
 
 
 # annotations
@@ -32,6 +33,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/internal/LockFreeLinkedListHead;)V
     .locals 0
 
+    .line 686
     check-cast p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     invoke-direct {p0, p1}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;-><init>(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)V
@@ -44,12 +46,14 @@
 .method protected failure(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
     .locals 0
 
+    .line 688
     instance-of p0, p1, Lkotlinx/coroutines/channels/Closed;
 
     if-eqz p0, :cond_0
 
     goto :goto_0
 
+    .line 689
     :cond_0
     instance-of p0, p1, Lkotlinx/coroutines/channels/Send;
 
@@ -69,18 +73,21 @@
 .method public onPrepare(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)Ljava/lang/Object;
     .locals 0
 
+    .line 695
     iget-object p0, p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->affected:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     if-eqz p0, :cond_5
 
     check-cast p0, Lkotlinx/coroutines/channels/Send;
 
+    .line 696
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/channels/Send;->tryResumeSend(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)Lkotlinx/coroutines/internal/Symbol;
 
     move-result-object p0
 
     if-eqz p0, :cond_4
 
+    .line 697
     sget-object p1, Lkotlinx/coroutines/internal/AtomicKt;->RETRY_ATOMIC:Ljava/lang/Object;
 
     if-ne p0, p1, :cond_0
@@ -89,6 +96,7 @@
 
     return-object p0
 
+    .line 698
     :cond_0
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
@@ -127,11 +135,13 @@
 
     return-object p0
 
+    .line 696
     :cond_4
     sget-object p0, Lkotlinx/coroutines/internal/LockFreeLinkedList_commonKt;->REMOVE_PREPARED:Ljava/lang/Object;
 
     return-object p0
 
+    .line 695
     :cond_5
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -147,6 +157,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 704
     check-cast p1, Lkotlinx/coroutines/channels/Send;
 
     invoke-virtual {p1}, Lkotlinx/coroutines/channels/Send;->undeliveredElement()V

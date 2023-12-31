@@ -1,5 +1,6 @@
 .class final Landroidx/recyclerview/widget/RecyclerView$3;
 .super Ljava/lang/Object;
+.source "RecyclerView.java"
 
 # interfaces
 .implements Landroid/view/animation/Interpolator;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 598
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

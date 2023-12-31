@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/View$TargetBufferFlags;
 .super Ljava/lang/Enum;
+.source "View.java"
 
 
 # annotations
@@ -85,6 +86,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
+    .line 466
     new-instance v0, Lcom/google/android/filament/View$TargetBufferFlags;
 
     const/4 v1, 0x0
@@ -97,6 +99,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR0:Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 470
     new-instance v0, Lcom/google/android/filament/View$TargetBufferFlags;
 
     const/4 v3, 0x2
@@ -107,6 +110,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR1:Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 474
     new-instance v0, Lcom/google/android/filament/View$TargetBufferFlags;
 
     const/4 v4, 0x4
@@ -117,6 +121,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR2:Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 478
     new-instance v0, Lcom/google/android/filament/View$TargetBufferFlags;
 
     const/4 v5, 0x3
@@ -129,6 +134,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR3:Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 482
     new-instance v0, Lcom/google/android/filament/View$TargetBufferFlags;
 
     const-string v6, "DEPTH"
@@ -139,6 +145,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->DEPTH:Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 486
     new-instance v0, Lcom/google/android/filament/View$TargetBufferFlags;
 
     const/4 v6, 0x5
@@ -155,6 +162,7 @@
 
     new-array v0, v0, [Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 462
     sget-object v7, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR0:Lcom/google/android/filament/View$TargetBufferFlags;
 
     aput-object v7, v0, v1
@@ -181,6 +189,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->$VALUES:[Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 491
     const-class v0, Lcom/google/android/filament/View$TargetBufferFlags;
 
     invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -189,6 +198,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->NONE:Ljava/util/EnumSet;
 
+    .line 496
     sget-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR0:Lcom/google/android/filament/View$TargetBufferFlags;
 
     sget-object v1, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR1:Lcom/google/android/filament/View$TargetBufferFlags;
@@ -197,12 +207,14 @@
 
     sget-object v3, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR3:Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 497
     invoke-static {v0, v1, v2, v3}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->ALL_COLOR:Ljava/util/EnumSet;
 
+    .line 501
     sget-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->DEPTH:Lcom/google/android/filament/View$TargetBufferFlags;
 
     sget-object v1, Lcom/google/android/filament/View$TargetBufferFlags;->STENCIL:Lcom/google/android/filament/View$TargetBufferFlags;
@@ -213,6 +225,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->DEPTH_STENCIL:Ljava/util/EnumSet;
 
+    .line 505
     sget-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->COLOR0:Lcom/google/android/filament/View$TargetBufferFlags;
 
     sget-object v1, Lcom/google/android/filament/View$TargetBufferFlags;->STENCIL:Lcom/google/android/filament/View$TargetBufferFlags;
@@ -234,8 +247,10 @@
         }
     .end annotation
 
+    .line 509
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 510
     iput p3, p0, Lcom/google/android/filament/View$TargetBufferFlags;->mFlags:I
 
     return-void
@@ -252,6 +267,7 @@
         }
     .end annotation
 
+    .line 515
     invoke-virtual {p0}, Ljava/util/EnumSet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -271,6 +287,7 @@
 
     check-cast v1, Lcom/google/android/filament/View$TargetBufferFlags;
 
+    .line 516
     iget v1, v1, Lcom/google/android/filament/View$TargetBufferFlags;->mFlags:I
 
     or-int/2addr v0, v1
@@ -284,6 +301,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/View$TargetBufferFlags;
     .locals 1
 
+    .line 462
     const-class v0, Lcom/google/android/filament/View$TargetBufferFlags;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -298,6 +316,7 @@
 .method public static values()[Lcom/google/android/filament/View$TargetBufferFlags;
     .locals 1
 
+    .line 462
     sget-object v0, Lcom/google/android/filament/View$TargetBufferFlags;->$VALUES:[Lcom/google/android/filament/View$TargetBufferFlags;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/View$TargetBufferFlags;->clone()Ljava/lang/Object;

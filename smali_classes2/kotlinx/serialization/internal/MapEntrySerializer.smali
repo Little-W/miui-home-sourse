@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/MapEntrySerializer;
 .super Lkotlinx/serialization/internal/KeyValueSerializer;
+.source "Tuples.kt"
 
 
 # annotations
@@ -51,8 +52,10 @@
 
     const/4 v0, 0x0
 
+    .line 72
     invoke-direct {p0, p1, p2, v0}, Lkotlinx/serialization/internal/KeyValueSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 78
     sget-object v0, Lkotlinx/serialization/descriptors/StructureKind$MAP;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$MAP;
 
     check-cast v0, Lkotlinx/serialization/descriptors/SerialKind;
@@ -83,6 +86,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 78
     iget-object p0, p0, Lkotlinx/serialization/internal/MapEntrySerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -91,6 +95,7 @@
 .method public bridge synthetic getKey(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 69
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/MapEntrySerializer;->getKey(Ljava/util/Map$Entry;)Ljava/lang/Object;
@@ -114,6 +119,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 83
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -124,6 +130,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 69
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/MapEntrySerializer;->getValue(Ljava/util/Map$Entry;)Ljava/lang/Object;
@@ -147,6 +154,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 84
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -157,6 +165,7 @@
 .method public bridge synthetic toResult(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 69
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/MapEntrySerializer;->toResult(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -174,6 +183,7 @@
         }
     .end annotation
 
+    .line 85
     new-instance p0, Lkotlinx/serialization/internal/MapEntrySerializer$MapEntry;
 
     invoke-direct {p0, p1, p2}, Lkotlinx/serialization/internal/MapEntrySerializer$MapEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V

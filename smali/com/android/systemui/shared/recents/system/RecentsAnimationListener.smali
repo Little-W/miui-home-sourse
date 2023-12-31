@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
 .super Ljava/lang/Object;
+.source "RecentsAnimationListener.java"
 
 
 # virtual methods

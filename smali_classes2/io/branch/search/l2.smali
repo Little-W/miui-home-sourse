@@ -1,5 +1,6 @@
 .class public Lio/branch/search/l2;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lio/branch/search/i2;

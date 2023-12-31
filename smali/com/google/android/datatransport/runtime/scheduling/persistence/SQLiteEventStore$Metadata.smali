@@ -1,5 +1,6 @@
 .class Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;
 .super Ljava/lang/Object;
+.source "SQLiteEventStore.java"
 
 
 # annotations
@@ -23,10 +24,13 @@
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 779
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 780
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;->key:Ljava/lang/String;
 
+    .line 781
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;->value:Ljava/lang/String;
 
     return-void
@@ -35,6 +39,7 @@
 .method synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$1;)V
     .locals 0
 
+    .line 775
     invoke-direct {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

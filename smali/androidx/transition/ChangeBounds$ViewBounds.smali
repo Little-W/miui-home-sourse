@@ -1,5 +1,6 @@
 .class Landroidx/transition/ChangeBounds$ViewBounds;
 .super Ljava/lang/Object;
+.source "ChangeBounds.java"
 
 
 # annotations
@@ -33,8 +34,10 @@
 .method constructor <init>(Landroid/view/View;)V
     .locals 0
 
+    .line 471
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 472
     iput-object p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mView:Landroid/view/View;
 
     return-void
@@ -43,6 +46,7 @@
 .method private setLeftTopRightBottom()V
     .locals 5
 
+    .line 494
     iget-object v0, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mView:Landroid/view/View;
 
     iget v1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mLeft:I
@@ -57,8 +61,10 @@
 
     const/4 v0, 0x0
 
+    .line 495
     iput v0, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mTopLeftCalls:I
 
+    .line 496
     iput v0, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mBottomRightCalls:I
 
     return-void
@@ -69,6 +75,7 @@
 .method setBottomRight(Landroid/graphics/PointF;)V
     .locals 1
 
+    .line 485
     iget v0, p1, Landroid/graphics/PointF;->x:F
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
@@ -77,6 +84,7 @@
 
     iput v0, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mRight:I
 
+    .line 486
     iget p1, p1, Landroid/graphics/PointF;->y:F
 
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
@@ -85,18 +93,21 @@
 
     iput p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mBottom:I
 
+    .line 487
     iget p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mBottomRightCalls:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mBottomRightCalls:I
 
+    .line 488
     iget p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mTopLeftCalls:I
 
     iget v0, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mBottomRightCalls:I
 
     if-ne p1, v0, :cond_0
 
+    .line 489
     invoke-direct {p0}, Landroidx/transition/ChangeBounds$ViewBounds;->setLeftTopRightBottom()V
 
     :cond_0
@@ -106,6 +117,7 @@
 .method setTopLeft(Landroid/graphics/PointF;)V
     .locals 1
 
+    .line 476
     iget v0, p1, Landroid/graphics/PointF;->x:F
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
@@ -114,6 +126,7 @@
 
     iput v0, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mLeft:I
 
+    .line 477
     iget p1, p1, Landroid/graphics/PointF;->y:F
 
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
@@ -122,18 +135,21 @@
 
     iput p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mTop:I
 
+    .line 478
     iget p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mTopLeftCalls:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mTopLeftCalls:I
 
+    .line 479
     iget p1, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mTopLeftCalls:I
 
     iget v0, p0, Landroidx/transition/ChangeBounds$ViewBounds;->mBottomRightCalls:I
 
     if-ne p1, v0, :cond_0
 
+    .line 480
     invoke-direct {p0}, Landroidx/transition/ChangeBounds$ViewBounds;->setLeftTopRightBottom()V
 
     :cond_0

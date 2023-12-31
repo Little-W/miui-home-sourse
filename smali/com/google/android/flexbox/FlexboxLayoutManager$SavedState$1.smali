@@ -1,5 +1,6 @@
 .class final Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState$1;
 .super Ljava/lang/Object;
+.source "FlexboxLayoutManager.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 3064
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;
     .locals 1
 
+    .line 3067
     new-instance p0, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;
 
     const/4 v0, 0x0
@@ -51,6 +54,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 3064
     invoke-virtual {p0, p1}, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;
 
     move-result-object p0
@@ -61,6 +65,7 @@
 .method public newArray(I)[Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;
     .locals 0
 
+    .line 3072
     new-array p0, p1, [Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;
 
     return-object p0
@@ -69,6 +74,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 3064
     invoke-virtual {p0, p1}, Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState$1;->newArray(I)[Lcom/google/android/flexbox/FlexboxLayoutManager$SavedState;
 
     move-result-object p0

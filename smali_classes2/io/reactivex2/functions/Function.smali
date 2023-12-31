@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/functions/Function;
 .super Ljava/lang/Object;
+.source "Function.java"
 
 
 # annotations

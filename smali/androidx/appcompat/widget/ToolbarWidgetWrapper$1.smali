@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;
 .super Ljava/lang/Object;
+.source "ToolbarWidgetWrapper.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -26,10 +27,12 @@
 .method constructor <init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;)V
     .locals 7
 
+    .line 182
     iput-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 183
     new-instance p1, Landroidx/appcompat/view/menu/ActionMenuItem;
 
     iget-object v0, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
@@ -66,6 +69,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
+    .line 187
     iget-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     iget-object p1, p1, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mWindowCallback:Landroid/view/Window$Callback;
@@ -78,6 +82,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 188
     iget-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     iget-object p1, p1, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mWindowCallback:Landroid/view/Window$Callback;

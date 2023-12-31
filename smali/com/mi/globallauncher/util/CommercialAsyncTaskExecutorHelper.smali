@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;
 .super Ljava/lang/Object;
+.source "CommercialAsyncTaskExecutorHelper.java"
 
 
 # static fields
@@ -28,6 +29,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
+    .line 16
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -38,6 +40,7 @@
 
     sput v0, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->CPU_COUNT:I
 
+    .line 17
     sget v0, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->CPU_COUNT:I
 
     add-int/lit8 v0, v0, -0x1
@@ -56,18 +59,21 @@
 
     sput v0, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->CORE_POOL_SIZE:I
 
+    .line 18
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     sput-object v0, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->sPoolWorkQueue:Ljava/util/concurrent/BlockingQueue;
 
+    .line 19
     new-instance v0, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper$1;
 
     invoke-direct {v0}, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper$1;-><init>()V
 
     sput-object v0, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->sThreadFactory:Ljava/util/concurrent/ThreadFactory;
 
+    .line 28
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget v3, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->CORE_POOL_SIZE:I
@@ -88,10 +94,13 @@
 
     const/4 v1, 0x0
 
+    .line 31
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
+    .line 32
     sput-object v0, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
 
+    .line 35
     invoke-static {}, Lorg/greenrobot/eventbus/EventBus;->builder()Lorg/greenrobot/eventbus/EventBusBuilder;
 
     move-result-object v0
@@ -114,6 +123,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -122,6 +132,7 @@
 .method public static getEventBus()Lorg/greenrobot/eventbus/EventBus;
     .locals 1
 
+    .line 38
     sget-object v0, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->sEventBus:Lorg/greenrobot/eventbus/EventBus;
 
     return-object v0

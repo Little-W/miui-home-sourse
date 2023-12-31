@@ -1,11 +1,13 @@
 .class Lcom/xiaomi/dist/handoff/system/MurmurHash3;
 .super Ljava/lang/Object;
+.source "MurmurHash3.java"
 
 
 # direct methods
 .method static hash([BI)I
     .locals 8
 
+    .line 22
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -25,6 +27,7 @@
 
     if-lt v0, v6, :cond_0
 
+    .line 25
     invoke-static {p0, p1, v6}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
     move-result-object v6
@@ -41,6 +44,7 @@
 
     mul-int/2addr v6, v5
 
+    .line 27
     invoke-static {v6, v4}, Ljava/lang/Integer;->rotateLeft(II)I
 
     move-result v4
@@ -51,6 +55,7 @@
 
     const/16 v3, 0xd
 
+    .line 30
     invoke-static {v2, v3}, Ljava/lang/Integer;->rotateLeft(II)I
 
     move-result v2
@@ -85,6 +90,7 @@
     :cond_1
     add-int/lit8 v0, p1, 0x2
 
+    .line 38
     aget-byte v0, p0, v0
 
     and-int/lit16 v0, v0, 0xff
@@ -96,6 +102,7 @@
     :cond_2
     add-int/lit8 v0, p1, 0x1
 
+    .line 40
     aget-byte v0, p0, v0
 
     and-int/lit16 v0, v0, 0xff
@@ -104,6 +111,7 @@
 
     xor-int/2addr v1, v0
 
+    .line 42
     :cond_3
     aget-byte p1, p0, p1
 
@@ -113,6 +121,7 @@
 
     mul-int/2addr p1, v5
 
+    .line 44
     invoke-static {p1, v4}, Ljava/lang/Integer;->rotateLeft(II)I
 
     move-result p1
@@ -121,6 +130,7 @@
 
     xor-int/2addr v2, p1
 
+    .line 48
     :goto_1
     array-length p0, p0
 

@@ -1,5 +1,6 @@
 .class Lcom/mi/google/gson/internal/bind/TypeAdapters$35$1;
 .super Lcom/mi/google/gson/TypeAdapter;
+.source "TypeAdapters.java"
 
 
 # annotations
@@ -30,6 +31,7 @@
 .method constructor <init>(Lcom/mi/google/gson/internal/bind/TypeAdapters$35;Ljava/lang/Class;)V
     .locals 0
 
+    .line 904
     iput-object p1, p0, Lcom/mi/google/gson/internal/bind/TypeAdapters$35$1;->this$0:Lcom/mi/google/gson/internal/bind/TypeAdapters$35;
 
     iput-object p2, p0, Lcom/mi/google/gson/internal/bind/TypeAdapters$35$1;->val$requestedType:Ljava/lang/Class;
@@ -57,6 +59,7 @@
         }
     .end annotation
 
+    .line 910
     iget-object v0, p0, Lcom/mi/google/gson/internal/bind/TypeAdapters$35$1;->this$0:Lcom/mi/google/gson/internal/bind/TypeAdapters$35;
 
     iget-object v0, v0, Lcom/mi/google/gson/internal/bind/TypeAdapters$35;->val$typeAdapter:Lcom/mi/google/gson/TypeAdapter;
@@ -67,6 +70,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 911
     iget-object v0, p0, Lcom/mi/google/gson/internal/bind/TypeAdapters$35$1;->val$requestedType:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -77,6 +81,7 @@
 
     goto :goto_0
 
+    .line 912
     :cond_0
     new-instance v0, Lcom/mi/google/gson/JsonSyntaxException;
 
@@ -100,6 +105,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 913
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -139,6 +145,7 @@
         }
     .end annotation
 
+    .line 906
     iget-object p0, p0, Lcom/mi/google/gson/internal/bind/TypeAdapters$35$1;->this$0:Lcom/mi/google/gson/internal/bind/TypeAdapters$35;
 
     iget-object p0, p0, Lcom/mi/google/gson/internal/bind/TypeAdapters$35;->val$typeAdapter:Lcom/mi/google/gson/TypeAdapter;

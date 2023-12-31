@@ -1,5 +1,6 @@
 .class public final Landroidx/fragment/R$animator;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Landroidx/lifecycle/ProcessLifecycleOwner$2;
 .super Ljava/lang/Object;
+.source "ProcessLifecycleOwner.java"
 
 # interfaces
 .implements Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
     .locals 0
 
+    .line 76
     iput-object p1, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +44,7 @@
 .method public onResume()V
     .locals 0
 
+    .line 88
     iget-object p0, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {p0}, Landroidx/lifecycle/ProcessLifecycleOwner;->activityResumed()V
@@ -52,6 +55,7 @@
 .method public onStart()V
     .locals 0
 
+    .line 83
     iget-object p0, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {p0}, Landroidx/lifecycle/ProcessLifecycleOwner;->activityStarted()V

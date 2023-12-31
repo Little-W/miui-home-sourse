@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/privacy/PrivacyInit$1;
 .super Landroid/database/ContentObserver;
+.source "PrivacyInit.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/privacy/PrivacyInit;Landroid/os/Handler;Landroid/app/Application;Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;)V
     .locals 0
 
+    .line 37
     iput-object p1, p0, Lcom/mi/globallauncher/privacy/PrivacyInit$1;->this$0:Lcom/mi/globallauncher/privacy/PrivacyInit;
 
     iput-object p3, p0, Lcom/mi/globallauncher/privacy/PrivacyInit$1;->val$application:Landroid/app/Application;
@@ -41,14 +43,17 @@
 .method public onChange(Z)V
     .locals 1
 
+    .line 40
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
     const-string p1, "ResetClient"
 
     const-string v0, "internationalInitMethod: onChange"
 
+    .line 41
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 42
     iget-object p1, p0, Lcom/mi/globallauncher/privacy/PrivacyInit$1;->this$0:Lcom/mi/globallauncher/privacy/PrivacyInit;
 
     iget-object v0, p0, Lcom/mi/globallauncher/privacy/PrivacyInit$1;->val$application:Landroid/app/Application;

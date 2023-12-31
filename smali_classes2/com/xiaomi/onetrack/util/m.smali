@@ -14,6 +14,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
 
     const/16 v0, 0x1000
 
+    .line 53
     invoke-static {p0, p1, v0}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/InputStream;Ljava/io/OutputStream;I)J
 
     move-result-wide p0
@@ -44,6 +46,7 @@
         }
     .end annotation
 
+    .line 60
     new-array p2, p2, [B
 
     const-wide/16 v0, 0x0
@@ -51,6 +54,7 @@
     :goto_0
     const/4 v2, -0x1
 
+    .line 61
     invoke-virtual {p0, p2}, Ljava/io/InputStream;->read([B)I
 
     move-result v3
@@ -59,6 +63,7 @@
 
     const/4 v2, 0x0
 
+    .line 62
     invoke-virtual {p1, p2, v2, v3}, Ljava/io/OutputStream;->write([BII)V
 
     int-to-long v2, v3
@@ -80,11 +85,13 @@
 
     return-object p0
 
+    .line 72
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 73
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -96,10 +103,12 @@
 
     and-int/lit16 v3, v3, 0xff
 
+    .line 74
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 75
     :goto_1
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -109,6 +118,7 @@
 
     if-ge v4, v5, :cond_1
 
+    .line 76
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,6 +135,7 @@
 
     goto :goto_1
 
+    .line 78
     :cond_1
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -132,6 +143,7 @@
 
     goto :goto_0
 
+    .line 80
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -145,6 +157,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 39
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -159,6 +172,7 @@
 
     const-string v1, "closeQuietly e"
 
+    .line 42
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -169,6 +183,7 @@
 .method public static a(Ljava/io/InputStream;)V
     .locals 0
 
+    .line 29
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
     return-void
@@ -177,6 +192,7 @@
 .method public static a(Ljava/io/OutputStream;)V
     .locals 0
 
+    .line 33
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
     return-void
@@ -187,6 +203,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 21
     :try_start_0
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->disconnect()V
     :try_end_0
@@ -201,6 +218,7 @@
 
     const-string v1, "close e"
 
+    .line 24
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -213,10 +231,12 @@
 
     if-eqz p0, :cond_0
 
+    .line 84
     instance-of v0, p0, Ljava/io/Closeable;
 
     if-eqz v0, :cond_0
 
+    .line 86
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -231,6 +251,7 @@
 
     const-string v1, "closeSafely e"
 
+    .line 88
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -246,12 +267,15 @@
         }
     .end annotation
 
+    .line 47
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 48
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
+    .line 49
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0

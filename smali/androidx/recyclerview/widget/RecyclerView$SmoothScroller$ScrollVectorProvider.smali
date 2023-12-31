@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;
 .super Ljava/lang/Object;
+.source "RecyclerView.java"
 
 
 # annotations

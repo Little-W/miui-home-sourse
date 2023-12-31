@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/google/gson/annotations/JsonAdapter;
 .super Ljava/lang/Object;
+.source "JsonAdapter.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -1,5 +1,6 @@
 .class public final Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 .super Ljava/lang/Object;
+.source "LocalHandoffTask.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -39,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 114
     new-instance v0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask$1;
 
     invoke-direct {v0}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask$1;-><init>()V
@@ -51,20 +53,28 @@
 .method public constructor <init>(IIILjava/lang/String;Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;ZJ)V
     .locals 0
 
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 40
     iput p1, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->handoffTaskId:I
 
+    .line 41
     iput p2, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->state:I
 
+    .line 42
     iput p3, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->appId:I
 
+    .line 43
     iput-object p5, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->toDevice:Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 
+    .line 44
     iput-object p4, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->description:Ljava/lang/String;
 
+    .line 45
     iput-boolean p6, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->supportAppLink:Z
 
+    .line 46
     iput-wide p7, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->lastActiveTime:J
 
     return-void
@@ -73,8 +83,10 @@
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 50
     invoke-virtual {p0, p1}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->readFromParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -104,6 +116,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 144
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -116,9 +129,11 @@
 
     goto :goto_1
 
+    .line 147
     :cond_1
     check-cast p1, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 148
     iget v2, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->handoffTaskId:I
 
     iget v3, p1, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->handoffTaskId:I
@@ -155,6 +170,7 @@
 
     iget-object v3, p1, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->description:Ljava/lang/String;
 
+    .line 150
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -187,6 +203,7 @@
 .method public getAppId()I
     .locals 0
 
+    .line 66
     iget p0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->appId:I
 
     return p0
@@ -195,6 +212,7 @@
 .method public getAppMeta()Lcom/xiaomi/dist/handoff/AppMeta;
     .locals 0
 
+    .line 87
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->appMeta:Lcom/xiaomi/dist/handoff/AppMeta;
 
     return-object p0
@@ -203,6 +221,7 @@
 .method public getDescription()Ljava/lang/String;
     .locals 0
 
+    .line 70
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->description:Ljava/lang/String;
 
     return-object p0
@@ -211,6 +230,7 @@
 .method public getHandoffTaskId()I
     .locals 0
 
+    .line 58
     iget p0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->handoffTaskId:I
 
     return p0
@@ -219,6 +239,7 @@
 .method public getLastActiveTime()J
     .locals 2
 
+    .line 83
     iget-wide v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->lastActiveTime:J
 
     return-wide v0
@@ -227,6 +248,7 @@
 .method public getToDevice()Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
     .locals 0
 
+    .line 75
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->toDevice:Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 
     return-object p0
@@ -239,6 +261,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 156
     iget v1, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->handoffTaskId:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -293,6 +316,7 @@
 
     iget-wide v1, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->lastActiveTime:J
 
+    .line 157
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -301,6 +325,7 @@
 
     aput-object p0, v0, v1
 
+    .line 156
     invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -311,6 +336,7 @@
 .method public isSupportAppLink()Z
     .locals 0
 
+    .line 79
     iget-boolean p0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->supportAppLink:Z
 
     return p0
@@ -319,24 +345,28 @@
 .method public readFromParcel(Landroid/os/Parcel;)V
     .locals 2
 
+    .line 91
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->handoffTaskId:I
 
+    .line 92
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->state:I
 
+    .line 93
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->appId:I
 
+    .line 94
     const-class v0, Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -351,6 +381,7 @@
 
     iput-object v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->toDevice:Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 
+    .line 95
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -367,6 +398,7 @@
     :goto_0
     iput-boolean v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->supportAppLink:Z
 
+    .line 96
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -379,6 +411,7 @@
 .method public setAppMeta(Lcom/xiaomi/dist/handoff/AppMeta;)V
     .locals 0
 
+    .line 54
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->appMeta:Lcom/xiaomi/dist/handoff/AppMeta;
 
     return-void
@@ -387,6 +420,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 128
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "HandoffSession{"
@@ -395,6 +429,7 @@
 
     const-string v1, "handoffTaskId=\'"
 
+    .line 129
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->handoffTaskId:I
@@ -407,6 +442,7 @@
 
     const-string v2, ", state=\'"
 
+    .line 130
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v2, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->state:I
@@ -417,6 +453,7 @@
 
     const-string v2, ", appId=\'"
 
+    .line 131
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v2, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->appId:I
@@ -427,6 +464,7 @@
 
     const-string v2, ", toDevice=\'"
 
+    .line 132
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->toDevice:Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
@@ -437,6 +475,7 @@
 
     const-string v2, ", supportAppLink=\'"
 
+    .line 133
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v2, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->supportAppLink:Z
@@ -447,6 +486,7 @@
 
     const-string v2, ", lastActiveTime=\'"
 
+    .line 134
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v2, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->lastActiveTime:J
@@ -457,8 +497,10 @@
 
     const/16 p0, 0x7d
 
+    .line 135
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 136
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -469,28 +511,34 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
+    .line 101
     iget v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->handoffTaskId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 102
     iget v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->state:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 103
     iget v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->appId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 104
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->toDevice:Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 105
     iget-boolean p2, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->supportAppLink:Z
 
     int-to-byte p2, p2
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 106
     iget-wide v0, p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->lastActiveTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V

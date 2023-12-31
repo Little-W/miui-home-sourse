@@ -1,5 +1,6 @@
 .class public Lcom/mi/google/gson/reflect/TypeToken;
 .super Ljava/lang/Object;
+.source "TypeToken.java"
 
 
 # annotations
@@ -32,8 +33,10 @@
 .method protected constructor <init>()V
     .locals 1
 
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 62
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -44,6 +47,7 @@
 
     iput-object v0, p0, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
+    .line 63
     iget-object v0, p0, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     invoke-static {v0}, Lcom/mi/google/gson/internal/$Gson$Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
@@ -52,6 +56,7 @@
 
     iput-object v0, p0, Lcom/mi/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
 
+    .line 64
     iget-object v0, p0, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -66,8 +71,10 @@
 .method constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 0
 
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 72
     invoke-static {p1}, Lcom/mi/google/gson/internal/$Gson$Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -80,6 +87,7 @@
 
     iput-object p1, p0, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
+    .line 73
     iget-object p1, p0, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     invoke-static {p1}, Lcom/mi/google/gson/internal/$Gson$Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
@@ -88,6 +96,7 @@
 
     iput-object p1, p0, Lcom/mi/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
 
+    .line 74
     iget-object p1, p0, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
@@ -113,6 +122,7 @@
         }
     .end annotation
 
+    .line 303
     new-instance v0, Lcom/mi/google/gson/reflect/TypeToken;
 
     invoke-direct {v0, p0}, Lcom/mi/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V
@@ -132,6 +142,7 @@
         }
     .end annotation
 
+    .line 296
     new-instance v0, Lcom/mi/google/gson/reflect/TypeToken;
 
     invoke-direct {v0, p0}, Lcom/mi/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V
@@ -150,16 +161,20 @@
         }
     .end annotation
 
+    .line 82
     invoke-virtual {p0}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
 
     move-result-object p0
 
+    .line 83
     instance-of v0, p0, Ljava/lang/Class;
 
     if-nez v0, :cond_0
 
+    .line 86
     check-cast p0, Ljava/lang/reflect/ParameterizedType;
 
+    .line 87
     invoke-interface {p0}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object p0
@@ -174,6 +189,7 @@
 
     return-object p0
 
+    .line 84
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -189,6 +205,7 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 284
     instance-of v0, p1, Lcom/mi/google/gson/reflect/TypeToken;
 
     if-eqz v0, :cond_0
@@ -199,6 +216,7 @@
 
     iget-object p1, p1, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
+    .line 285
     invoke-static {p0, p1}, Lcom/mi/google/gson/internal/$Gson$Types;->equals(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
 
     move-result p0
@@ -226,6 +244,7 @@
         }
     .end annotation
 
+    .line 94
     iget-object p0, p0, Lcom/mi/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
 
     return-object p0
@@ -234,6 +253,7 @@
 .method public final getType()Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 101
     iget-object p0, p0, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     return-object p0
@@ -242,6 +262,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 280
     iget p0, p0, Lcom/mi/google/gson/reflect/TypeToken;->hashCode:I
 
     return p0
@@ -250,6 +271,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
+    .line 289
     iget-object p0, p0, Lcom/mi/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     invoke-static {p0}, Lcom/mi/google/gson/internal/$Gson$Types;->typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;

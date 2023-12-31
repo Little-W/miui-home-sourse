@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/widget/ImmersionListPopupWindow$2;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

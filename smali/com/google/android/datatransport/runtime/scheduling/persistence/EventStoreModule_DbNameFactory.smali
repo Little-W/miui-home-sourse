@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_DbNameFactory;
 .super Ljava/lang/Object;
+.source "EventStoreModule_DbNameFactory.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
@@ -26,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +36,7 @@
 .method public static create()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_DbNameFactory;
     .locals 1
 
+    .line 18
     invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_DbNameFactory$InstanceHolder;->access$000()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_DbNameFactory;
 
     move-result-object v0
@@ -44,6 +47,7 @@
 .method public static dbName()Ljava/lang/String;
     .locals 2
 
+    .line 22
     invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule;->dbName()Ljava/lang/String;
 
     move-result-object v0
@@ -64,6 +68,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 7
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_DbNameFactory;->get()Ljava/lang/String;
 
     move-result-object p0
@@ -74,6 +79,7 @@
 .method public get()Ljava/lang/String;
     .locals 0
 
+    .line 14
     invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_DbNameFactory;->dbName()Ljava/lang/String;
 
     move-result-object p0

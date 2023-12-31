@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/TransformManager;
 .super Ljava/lang/Object;
+.source "TransformManager.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method constructor <init>(J)V
     .locals 0
 
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 58
     iput-wide p1, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     return-void
@@ -55,6 +58,7 @@
 .method public commitLocalTransformTransaction()V
     .locals 2
 
+    .line 231
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/TransformManager;->nCommitLocalTransformTransaction(J)V
@@ -65,6 +69,7 @@
 .method public create(I)I
     .locals 2
 
+    .line 97
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/TransformManager;->nCreate(JI)I
@@ -77,6 +82,7 @@
 .method public create(II[F)I
     .locals 2
 
+    .line 114
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/TransformManager;->nCreateArray(JII[F)I
@@ -89,6 +95,7 @@
 .method public destroy(I)V
     .locals 2
 
+    .line 127
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/TransformManager;->nDestroy(JI)V
@@ -99,6 +106,7 @@
 .method public getInstance(I)I
     .locals 2
 
+    .line 83
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/TransformManager;->nGetInstance(JI)I
@@ -111,6 +119,7 @@
 .method public getNativeObject()J
     .locals 2
 
+    .line 235
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     return-wide v0
@@ -119,10 +128,12 @@
 .method public getTransform(I[F)[F
     .locals 2
 
+    .line 175
     invoke-static {p2}, Lcom/google/android/filament/Asserts;->assertMat4f([F)[F
 
     move-result-object p2
 
+    .line 176
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/TransformManager;->nGetTransform(JI[F)V
@@ -133,10 +144,12 @@
 .method public getWorldTransform(I[F)[F
     .locals 2
 
+    .line 195
     invoke-static {p2}, Lcom/google/android/filament/Asserts;->assertMat4f([F)[F
 
     move-result-object p2
 
+    .line 196
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/TransformManager;->nGetWorldTransform(JI[F)V
@@ -147,6 +160,7 @@
 .method public hasComponent(I)Z
     .locals 2
 
+    .line 69
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/TransformManager;->nHasComponent(JI)Z
@@ -159,6 +173,7 @@
 .method public openLocalTransformTransaction()V
     .locals 2
 
+    .line 214
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/TransformManager;->nOpenLocalTransformTransaction(J)V
@@ -169,6 +184,7 @@
 .method public setParent(II)V
     .locals 2
 
+    .line 140
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/TransformManager;->nSetParent(JII)V
@@ -179,8 +195,10 @@
 .method public setTransform(I[F)V
     .locals 2
 
+    .line 156
     invoke-static {p2}, Lcom/google/android/filament/Asserts;->assertMat4fIn([F)V
 
+    .line 157
     iget-wide v0, p0, Lcom/google/android/filament/TransformManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/TransformManager;->nSetTransform(JI[F)V

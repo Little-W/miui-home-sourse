@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;
 .super Ljava/lang/Object;
+.source "AppCompatSpinner.java"
 
 # interfaces
 .implements Landroid/widget/ListAdapter;
@@ -27,14 +28,18 @@
 .method public constructor <init>(Landroid/widget/SpinnerAdapter;Landroid/content/res/Resources$Theme;)V
     .locals 1
 
+    .line 705
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 706
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
+    .line 708
     instance-of v0, p1, Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
+    .line 709
     move-object v0, p1
 
     check-cast v0, Landroid/widget/ListAdapter;
@@ -44,6 +49,7 @@
     :cond_0
     if-eqz p2, :cond_2
 
+    .line 713
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x17
@@ -54,31 +60,38 @@
 
     if-eqz p0, :cond_1
 
+    .line 715
     check-cast p1, Landroid/widget/ThemedSpinnerAdapter;
 
+    .line 717
     invoke-interface {p1}, Landroid/widget/ThemedSpinnerAdapter;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
 
     if-eq p0, p2, :cond_2
 
+    .line 718
     invoke-interface {p1, p2}, Landroid/widget/ThemedSpinnerAdapter;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
 
     goto :goto_0
 
+    .line 720
     :cond_1
     instance-of p0, p1, Landroidx/appcompat/widget/ThemedSpinnerAdapter;
 
     if-eqz p0, :cond_2
 
+    .line 721
     check-cast p1, Landroidx/appcompat/widget/ThemedSpinnerAdapter;
 
+    .line 722
     invoke-interface {p1}, Landroidx/appcompat/widget/ThemedSpinnerAdapter;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
 
     if-nez p0, :cond_2
 
+    .line 723
     invoke-interface {p1, p2}, Landroidx/appcompat/widget/ThemedSpinnerAdapter;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
 
     :cond_2
@@ -91,10 +104,12 @@
 .method public areAllItemsEnabled()Z
     .locals 0
 
+    .line 780
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mListAdapter:Landroid/widget/ListAdapter;
 
     if-eqz p0, :cond_0
 
+    .line 782
     invoke-interface {p0}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
 
     move-result p0
@@ -110,6 +125,7 @@
 .method public getCount()I
     .locals 0
 
+    .line 731
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-nez p0, :cond_0
@@ -130,6 +146,7 @@
 .method public getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 0
 
+    .line 751
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-nez p0, :cond_0
@@ -138,6 +155,7 @@
 
     goto :goto_0
 
+    .line 752
     :cond_0
     invoke-interface {p0, p1, p2, p3}, Landroid/widget/SpinnerAdapter;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -150,6 +168,7 @@
 .method public getItem(I)Ljava/lang/Object;
     .locals 0
 
+    .line 736
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-nez p0, :cond_0
@@ -170,6 +189,7 @@
 .method public getItemId(I)J
     .locals 0
 
+    .line 741
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-nez p0, :cond_0
@@ -198,6 +218,7 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 0
 
+    .line 746
     invoke-virtual {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p0
@@ -216,6 +237,7 @@
 .method public hasStableIds()Z
     .locals 0
 
+    .line 757
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-eqz p0, :cond_0
@@ -240,6 +262,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 814
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->getCount()I
 
     move-result p0
@@ -260,10 +283,12 @@
 .method public isEnabled(I)Z
     .locals 0
 
+    .line 794
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mListAdapter:Landroid/widget/ListAdapter;
 
     if-eqz p0, :cond_0
 
+    .line 796
     invoke-interface {p0, p1}, Landroid/widget/ListAdapter;->isEnabled(I)Z
 
     move-result p0
@@ -279,10 +304,12 @@
 .method public registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 0
 
+    .line 762
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-eqz p0, :cond_0
 
+    .line 763
     invoke-interface {p0, p1}, Landroid/widget/SpinnerAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
     :cond_0
@@ -292,10 +319,12 @@
 .method public unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 0
 
+    .line 769
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-eqz p0, :cond_0
 
+    .line 770
     invoke-interface {p0, p1}, Landroid/widget/SpinnerAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
     :cond_0

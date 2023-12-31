@@ -1,5 +1,6 @@
 .class public final Lcom/squareup/picasso/Request$Builder;
 .super Ljava/lang/Object;
+.source "Request.java"
 
 
 # annotations
@@ -61,12 +62,16 @@
 .method constructor <init>(Landroid/net/Uri;ILandroid/graphics/Bitmap$Config;)V
     .locals 0
 
+    .line 235
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 236
     iput-object p1, p0, Lcom/squareup/picasso/Request$Builder;->uri:Landroid/net/Uri;
 
+    .line 237
     iput p2, p0, Lcom/squareup/picasso/Request$Builder;->resourceId:I
 
+    .line 238
     iput-object p3, p0, Lcom/squareup/picasso/Request$Builder;->config:Landroid/graphics/Bitmap$Config;
 
     return-void
@@ -79,6 +84,7 @@
 
     move-object/from16 v0, p0
 
+    .line 492
     iget-boolean v1, v0, Lcom/squareup/picasso/Request$Builder;->centerInside:Z
 
     if-eqz v1, :cond_1
@@ -89,6 +95,7 @@
 
     goto :goto_0
 
+    .line 493
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -98,6 +105,7 @@
 
     throw v0
 
+    .line 495
     :cond_1
     :goto_0
     iget-boolean v1, v0, Lcom/squareup/picasso/Request$Builder;->centerCrop:Z
@@ -114,6 +122,7 @@
 
     goto :goto_1
 
+    .line 496
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -123,6 +132,7 @@
 
     throw v0
 
+    .line 499
     :cond_3
     :goto_1
     iget-boolean v1, v0, Lcom/squareup/picasso/Request$Builder;->centerInside:Z
@@ -139,6 +149,7 @@
 
     goto :goto_2
 
+    .line 500
     :cond_4
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -148,16 +159,19 @@
 
     throw v0
 
+    .line 503
     :cond_5
     :goto_2
     iget-object v1, v0, Lcom/squareup/picasso/Request$Builder;->priority:Lcom/squareup/picasso/Picasso$Priority;
 
     if-nez v1, :cond_6
 
+    .line 504
     sget-object v1, Lcom/squareup/picasso/Picasso$Priority;->NORMAL:Lcom/squareup/picasso/Picasso$Priority;
 
     iput-object v1, v0, Lcom/squareup/picasso/Request$Builder;->priority:Lcom/squareup/picasso/Picasso$Priority;
 
+    .line 506
     :cond_6
     new-instance v1, Lcom/squareup/picasso/Request;
 
@@ -217,18 +231,22 @@
 .method public centerCrop(I)Lcom/squareup/picasso/Request$Builder;
     .locals 1
 
+    .line 355
     iget-boolean v0, p0, Lcom/squareup/picasso/Request$Builder;->centerInside:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
+    .line 358
     iput-boolean v0, p0, Lcom/squareup/picasso/Request$Builder;->centerCrop:Z
 
+    .line 359
     iput p1, p0, Lcom/squareup/picasso/Request$Builder;->centerCropGravity:I
 
     return-object p0
 
+    .line 356
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -242,6 +260,7 @@
 .method hasImage()Z
     .locals 1
 
+    .line 264
     iget-object v0, p0, Lcom/squareup/picasso/Request$Builder;->uri:Landroid/net/Uri;
 
     if-nez v0, :cond_1
@@ -268,6 +287,7 @@
 .method hasSize()Z
     .locals 1
 
+    .line 268
     iget v0, p0, Lcom/squareup/picasso/Request$Builder;->targetWidth:I
 
     if-nez v0, :cond_1
@@ -304,6 +324,7 @@
 
     goto :goto_0
 
+    .line 324
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -313,14 +334,17 @@
 
     throw p0
 
+    .line 326
     :cond_1
     :goto_0
     iput p1, p0, Lcom/squareup/picasso/Request$Builder;->targetWidth:I
 
+    .line 327
     iput p2, p0, Lcom/squareup/picasso/Request$Builder;->targetHeight:I
 
     return-object p0
 
+    .line 321
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -330,6 +354,7 @@
 
     throw p0
 
+    .line 318
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -345,16 +370,19 @@
 
     if-eqz p1, :cond_2
 
+    .line 465
     invoke-interface {p1}, Lcom/squareup/picasso/Transformation;->key()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 468
     iget-object v0, p0, Lcom/squareup/picasso/Request$Builder;->transformations:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 469
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
@@ -363,6 +391,7 @@
 
     iput-object v0, p0, Lcom/squareup/picasso/Request$Builder;->transformations:Ljava/util/List;
 
+    .line 471
     :cond_0
     iget-object v0, p0, Lcom/squareup/picasso/Request$Builder;->transformations:Ljava/util/List;
 
@@ -370,6 +399,7 @@
 
     return-object p0
 
+    .line 466
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -379,6 +409,7 @@
 
     throw p0
 
+    .line 463
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

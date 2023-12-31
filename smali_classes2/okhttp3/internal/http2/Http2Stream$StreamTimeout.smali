@@ -1,5 +1,6 @@
 .class Lokhttp3/internal/http2/Http2Stream$StreamTimeout;
 .super Lokio/AsyncTimeout;
+.source "Http2Stream.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lokhttp3/internal/http2/Http2Stream;)V
     .locals 0
 
+    .line 665
     iput-object p1, p0, Lokhttp3/internal/http2/Http2Stream$StreamTimeout;->this$0:Lokhttp3/internal/http2/Http2Stream;
 
     invoke-direct {p0}, Lokio/AsyncTimeout;-><init>()V
@@ -38,6 +40,7 @@
         }
     .end annotation
 
+    .line 680
     invoke-virtual {p0}, Lokhttp3/internal/http2/Http2Stream$StreamTimeout;->exit()Z
 
     move-result v0
@@ -59,6 +62,7 @@
 .method protected newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
     .locals 1
 
+    .line 672
     new-instance p0, Ljava/net/SocketTimeoutException;
 
     const-string v0, "timeout"
@@ -67,6 +71,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 674
     invoke-virtual {p0, p1}, Ljava/net/SocketTimeoutException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     :cond_0
@@ -76,12 +81,14 @@
 .method protected timedOut()V
     .locals 2
 
+    .line 667
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Stream$StreamTimeout;->this$0:Lokhttp3/internal/http2/Http2Stream;
 
     sget-object v1, Lokhttp3/internal/http2/ErrorCode;->CANCEL:Lokhttp3/internal/http2/ErrorCode;
 
     invoke-virtual {v0, v1}, Lokhttp3/internal/http2/Http2Stream;->closeLater(Lokhttp3/internal/http2/ErrorCode;)V
 
+    .line 668
     iget-object p0, p0, Lokhttp3/internal/http2/Http2Stream$StreamTimeout;->this$0:Lokhttp3/internal/http2/Http2Stream;
 
     iget-object p0, p0, Lokhttp3/internal/http2/Http2Stream;->connection:Lokhttp3/internal/http2/Http2Connection;

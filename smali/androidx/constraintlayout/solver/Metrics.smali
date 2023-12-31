@@ -1,5 +1,6 @@
 .class public Landroidx/constraintlayout/solver/Metrics;
 .super Ljava/lang/Object;
+.source "Metrics.java"
 
 
 # instance fields
@@ -66,6 +67,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

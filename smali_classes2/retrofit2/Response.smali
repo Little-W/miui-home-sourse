@@ -1,5 +1,6 @@
 .class public final Lretrofit2/Response;
 .super Ljava/lang/Object;
+.source "Response.java"
 
 
 # annotations
@@ -54,12 +55,16 @@
         }
     .end annotation
 
+    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 95
     iput-object p1, p0, Lretrofit2/Response;->rawResponse:Lokhttp3/Response;
 
+    .line 96
     iput-object p2, p0, Lretrofit2/Response;->body:Ljava/lang/Object;
 
+    .line 97
     iput-object p3, p0, Lretrofit2/Response;->errorBody:Lokhttp3/ResponseBody;
 
     return-void
@@ -82,18 +87,22 @@
 
     const-string v0, "body == null"
 
+    .line 81
     invoke-static {p0, v0}, Lretrofit2/Utils;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "rawResponse == null"
 
+    .line 82
     invoke-static {p1, v0}, Lretrofit2/Utils;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 83
     invoke-virtual {p1}, Lokhttp3/Response;->isSuccessful()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 86
     new-instance v0, Lretrofit2/Response;
 
     const/4 v1, 0x0
@@ -102,6 +111,7 @@
 
     return-object v0
 
+    .line 84
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -132,14 +142,17 @@
 
     const-string v0, "rawResponse == null"
 
+    .line 58
     invoke-static {p1, v0}, Lretrofit2/Utils;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 59
     invoke-virtual {p1}, Lokhttp3/Response;->isSuccessful()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 62
     new-instance v0, Lretrofit2/Response;
 
     const/4 v1, 0x0
@@ -148,6 +161,7 @@
 
     return-object v0
 
+    .line 60
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -171,6 +185,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 127
     iget-object p0, p0, Lretrofit2/Response;->body:Ljava/lang/Object;
 
     return-object p0
@@ -179,6 +194,7 @@
 .method public code()I
     .locals 0
 
+    .line 107
     iget-object p0, p0, Lretrofit2/Response;->rawResponse:Lokhttp3/Response;
 
     invoke-virtual {p0}, Lokhttp3/Response;->code()I
@@ -191,6 +207,7 @@
 .method public isSuccessful()Z
     .locals 0
 
+    .line 122
     iget-object p0, p0, Lretrofit2/Response;->rawResponse:Lokhttp3/Response;
 
     invoke-virtual {p0}, Lokhttp3/Response;->isSuccessful()Z
@@ -203,6 +220,7 @@
 .method public message()Ljava/lang/String;
     .locals 0
 
+    .line 112
     iget-object p0, p0, Lretrofit2/Response;->rawResponse:Lokhttp3/Response;
 
     invoke-virtual {p0}, Lokhttp3/Response;->message()Ljava/lang/String;
@@ -215,6 +233,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 136
     iget-object p0, p0, Lretrofit2/Response;->rawResponse:Lokhttp3/Response;
 
     invoke-virtual {p0}, Lokhttp3/Response;->toString()Ljava/lang/String;

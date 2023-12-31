@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/utils/Schedulers$1;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -28,12 +29,14 @@
 .method constructor <init>(ILjava/lang/String;)V
     .locals 0
 
+    .line 58
     iput p1, p0, Lcom/xiaomi/dist/utils/Schedulers$1;->val$priority:I
 
     iput-object p2, p0, Lcom/xiaomi/dist/utils/Schedulers$1;->val$tag:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 59
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 p2, 0x0
@@ -50,6 +53,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
+    .line 63
     new-instance v0, Lcom/xiaomi/dist/utils/Schedulers$InnerThread;
 
     iget v1, p0, Lcom/xiaomi/dist/utils/Schedulers$1;->val$priority:I
@@ -60,6 +64,7 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
+    .line 64
     iget-object v1, p0, Lcom/xiaomi/dist/utils/Schedulers$1;->val$tag:Ljava/lang/String;
 
     const/4 v2, 0x0

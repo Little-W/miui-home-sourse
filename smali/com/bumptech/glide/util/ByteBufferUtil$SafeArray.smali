@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
 .super Ljava/lang/Object;
+.source "ByteBufferUtil.java"
 
 
 # annotations
@@ -25,12 +26,16 @@
 .method constructor <init>([BII)V
     .locals 0
 
+    .line 173
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 174
     iput-object p1, p0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->data:[B
 
+    .line 175
     iput p2, p0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->offset:I
 
+    .line 176
     iput p3, p0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->limit:I
 
     return-void

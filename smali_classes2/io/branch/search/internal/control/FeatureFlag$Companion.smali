@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/control/FeatureFlag$Companion;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

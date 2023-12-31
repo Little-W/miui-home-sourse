@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/util/pool/FactoryPools$Factory;
 .super Ljava/lang/Object;
+.source "FactoryPools.java"
 
 
 # annotations

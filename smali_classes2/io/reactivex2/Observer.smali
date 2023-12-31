@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/Observer;
 .super Ljava/lang/Object;
+.source "Observer.java"
 
 
 # annotations

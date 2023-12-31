@@ -1,5 +1,6 @@
 .class final Lokhttp3/Cache$CacheRequestImpl;
 .super Ljava/lang/Object;
+.source "Cache.java"
 
 # interfaces
 .implements Lokhttp3/internal/cache/CacheRequest;
@@ -32,20 +33,24 @@
 .method constructor <init>(Lokhttp3/Cache;Lokhttp3/internal/cache/DiskLruCache$Editor;)V
     .locals 2
 
+    .line 440
     iput-object p1, p0, Lokhttp3/Cache$CacheRequestImpl;->this$0:Lokhttp3/Cache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 441
     iput-object p2, p0, Lokhttp3/Cache$CacheRequestImpl;->editor:Lokhttp3/internal/cache/DiskLruCache$Editor;
 
     const/4 v0, 0x1
 
+    .line 442
     invoke-virtual {p2, v0}, Lokhttp3/internal/cache/DiskLruCache$Editor;->newSink(I)Lokio/Sink;
 
     move-result-object v0
 
     iput-object v0, p0, Lokhttp3/Cache$CacheRequestImpl;->cacheOut:Lokio/Sink;
 
+    .line 443
     new-instance v0, Lokhttp3/Cache$CacheRequestImpl$1;
 
     iget-object v1, p0, Lokhttp3/Cache$CacheRequestImpl;->cacheOut:Lokio/Sink;
@@ -62,15 +67,18 @@
 .method public abort()V
     .locals 4
 
+    .line 459
     iget-object v0, p0, Lokhttp3/Cache$CacheRequestImpl;->this$0:Lokhttp3/Cache;
 
     monitor-enter v0
 
+    .line 460
     :try_start_0
     iget-boolean v1, p0, Lokhttp3/Cache$CacheRequestImpl;->done:Z
 
     if-eqz v1, :cond_0
 
+    .line 461
     monitor-exit v0
 
     return-void
@@ -78,8 +86,10 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 463
     iput-boolean v1, p0, Lokhttp3/Cache$CacheRequestImpl;->done:Z
 
+    .line 464
     iget-object v2, p0, Lokhttp3/Cache$CacheRequestImpl;->this$0:Lokhttp3/Cache;
 
     iget v3, v2, Lokhttp3/Cache;->writeAbortCount:I
@@ -88,14 +98,17 @@
 
     iput v3, v2, Lokhttp3/Cache;->writeAbortCount:I
 
+    .line 465
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 466
     iget-object v0, p0, Lokhttp3/Cache$CacheRequestImpl;->cacheOut:Lokio/Sink;
 
     invoke-static {v0}, Lokhttp3/internal/Util;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 468
     :try_start_1
     iget-object p0, p0, Lokhttp3/Cache$CacheRequestImpl;->editor:Lokhttp3/internal/cache/DiskLruCache$Editor;
 
@@ -109,6 +122,7 @@
     :catchall_0
     move-exception p0
 
+    .line 465
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -120,6 +134,7 @@
 .method public body()Lokio/Sink;
     .locals 0
 
+    .line 474
     iget-object p0, p0, Lokhttp3/Cache$CacheRequestImpl;->body:Lokio/Sink;
 
     return-object p0

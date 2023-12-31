@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/ClearTextEndIconDelegate$1;
 .super Ljava/lang/Object;
+.source "ClearTextEndIconDelegate.java"
 
 # interfaces
 .implements Landroid/text/TextWatcher;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)V
     .locals 0
 
+    .line 46
     iput-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$1;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 0
 
+    .line 55
     iget-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$1;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     iget-object p1, p1, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
@@ -48,6 +51,7 @@
 
     return-void
 
+    .line 58
     :cond_0
     iget-object p0, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$1;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 

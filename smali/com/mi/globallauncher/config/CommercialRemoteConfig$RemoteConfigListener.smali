@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/config/CommercialRemoteConfig$RemoteConfigListener;
 .super Ljava/lang/Object;
+.source "CommercialRemoteConfig.java"
 
 
 # annotations

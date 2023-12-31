@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/internal/ViewUtils$4;
 .super Ljava/lang/Object;
+.source "ViewUtils.java"
 
 # interfaces
 .implements Landroid/view/View$OnAttachStateChangeListener;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 247
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,8 +32,10 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 0
 
+    .line 250
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
+    .line 251
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->requestApplyInsets(Landroid/view/View;)V
 
     return-void

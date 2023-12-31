@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;
 .super Lcom/airbnb/lottie/value/Keyframe;
+.source "PathKeyframe.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
         }
     .end annotation
 
+    .line 18
     iget-object v0, p2, Lcom/airbnb/lottie/value/Keyframe;->startValue:Ljava/lang/Object;
 
     move-object v3, v0
@@ -67,8 +69,10 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/airbnb/lottie/value/Keyframe;-><init>(Lcom/airbnb/lottie/LottieComposition;Ljava/lang/Object;Ljava/lang/Object;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;FLjava/lang/Float;)V
 
+    .line 20
     iput-object p2, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->pointKeyFrame:Lcom/airbnb/lottie/value/Keyframe;
 
+    .line 21
     invoke-virtual {p0}, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->createPath()V
 
     return-void
@@ -79,6 +83,7 @@
 .method public createPath()V
     .locals 4
 
+    .line 27
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->endValue:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -103,6 +108,7 @@
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
+    .line 28
     invoke-virtual {v0, v1, v2}, Landroid/graphics/PointF;->equals(FF)Z
 
     move-result v0
@@ -116,6 +122,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 29
     :goto_0
     iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->startValue:Ljava/lang/Object;
 
@@ -127,6 +134,7 @@
 
     if-nez v0, :cond_1
 
+    .line 30
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->startValue:Ljava/lang/Object;
 
     check-cast v0, Landroid/graphics/PointF;
@@ -156,6 +164,7 @@
 .method getPath()Landroid/graphics/Path;
     .locals 0
 
+    .line 38
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->path:Landroid/graphics/Path;
 
     return-object p0

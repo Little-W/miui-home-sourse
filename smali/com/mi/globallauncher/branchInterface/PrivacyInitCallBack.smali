@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;
 .super Ljava/lang/Object;
+.source "PrivacyInitCallBack.java"
 
 
 # virtual methods

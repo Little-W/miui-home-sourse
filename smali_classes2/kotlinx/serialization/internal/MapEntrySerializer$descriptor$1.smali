@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/MapEntrySerializer$descriptor$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Tuples.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -52,6 +53,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 69
     check-cast p1, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/MapEntrySerializer$descriptor$1;->invoke(Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;)V
@@ -68,6 +70,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 79
     iget-object v0, p0, Lkotlinx/serialization/internal/MapEntrySerializer$descriptor$1;->$keySerializer:Lkotlinx/serialization/KSerializer;
 
     invoke-interface {v0}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -88,6 +91,7 @@
 
     invoke-static/range {v1 .. v7}, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->element$default(Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;Ljava/util/List;ZILjava/lang/Object;)V
 
+    .line 80
     iget-object p0, p0, Lkotlinx/serialization/internal/MapEntrySerializer$descriptor$1;->$valueSerializer:Lkotlinx/serialization/KSerializer;
 
     invoke-interface {p0}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;

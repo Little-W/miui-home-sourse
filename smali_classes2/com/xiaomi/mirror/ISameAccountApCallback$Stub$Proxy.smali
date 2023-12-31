@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/ISameAccountApCallback$Stub$Proxy;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/xiaomi/mirror/ISameAccountApCallback;

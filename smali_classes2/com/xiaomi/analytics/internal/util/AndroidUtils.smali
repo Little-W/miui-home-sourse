@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/analytics/internal/util/AndroidUtils;
 .super Ljava/lang/Object;
+.source "AndroidUtils.java"
 
 
 # direct methods
@@ -8,12 +9,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 16
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 17
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -25,6 +28,7 @@
 .method public static getSignature(Landroid/content/Context;Ljava/io/File;)[Landroid/content/pm/Signature;
     .locals 1
 
+    .line 39
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -55,6 +59,7 @@
 .method public static getSignature(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
     .locals 1
 
+    .line 47
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -86,6 +91,7 @@
     :try_start_0
     const-string v1, "activity"
 
+    .line 24
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -94,18 +100,21 @@
 
     const/4 v2, 0x1
 
+    .line 25
     invoke-virtual {v1, v2}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 26
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 27
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -114,6 +123,7 @@
 
     iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
+    .line 28
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/BranchAppStoreSearchResult;
 .super Lio/branch/search/BranchBaseLinkSearchResult;
+.source "SourceFile"
 
 
 # annotations

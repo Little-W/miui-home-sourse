@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;
 .super Ljava/lang/Object;
+.source "AbstractPolymorphicSerializer.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -26,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,6 +43,7 @@
         }
     .end annotation
 
+    .line 71
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -51,10 +54,12 @@
 
     move-result-object v0
 
+    .line 72
     invoke-static {p0, p1, v0}, Lkotlinx/serialization/PolymorphicSerializerKt;->findPolymorphicSerializer(Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;Lkotlinx/serialization/encoding/CompositeDecoder;Ljava/lang/String;)Lkotlinx/serialization/DeserializationStrategy;
 
     move-result-object v4
 
+    .line 73
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v2
@@ -92,14 +97,17 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 39
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
 
+    .line 122
     invoke-interface {p1, v0}, Lkotlinx/serialization/encoding/Decoder;->beginStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/encoding/CompositeDecoder;
 
     move-result-object p1
 
+    .line 40
     :try_start_0
     new-instance v8, Lkotlin/jvm/internal/Ref$ObjectRef;
 
@@ -113,22 +121,26 @@
 
     iput-object v2, v8, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
+    .line 42
     invoke-interface {p1}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeSequentially()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 43
     invoke-direct {p0, p1}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->decodeSequentially(Lkotlinx/serialization/encoding/CompositeDecoder;)Ljava/lang/Object;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 126
     invoke-interface {p1, v0}, Lkotlinx/serialization/encoding/CompositeDecoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
     return-object p0
 
+    .line 47
     :cond_0
     :goto_0
     :try_start_1
@@ -150,8 +162,10 @@
 
     if-eq v3, v1, :cond_2
 
+    .line 59
     new-instance p0, Lkotlinx/serialization/SerializationException;
 
+    .line 60
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,6 +174,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 61
     iget-object v2, v8, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
@@ -178,18 +193,21 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 62
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 59
     invoke-direct {p0, v1}, Lkotlinx/serialization/SerializationException;-><init>(Ljava/lang/String;)V
 
     check-cast p0, Ljava/lang/Throwable;
 
     throw p0
 
+    .line 55
     :cond_2
     iget-object v1, v8, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
@@ -199,6 +217,7 @@
 
     iput-object v1, v8, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
+    .line 56
     iget-object v1, v8, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
@@ -207,6 +226,7 @@
 
     move-result-object v4
 
+    .line 57
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v2
@@ -228,6 +248,7 @@
     :cond_3
     const-string p0, "Cannot read polymorphic value before its type token"
 
+    .line 55
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -240,6 +261,7 @@
 
     throw v1
 
+    .line 52
     :cond_4
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -258,10 +280,12 @@
     :cond_5
     if-eqz v1, :cond_6
 
+    .line 126
     invoke-interface {p1, v0}, Lkotlinx/serialization/encoding/CompositeDecoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
     return-object v1
 
+    .line 67
     :cond_6
     :try_start_2
     new-instance p0, Ljava/lang/StringBuilder;
@@ -299,6 +323,7 @@
     :catchall_0
     move-exception p0
 
+    .line 126
     invoke-interface {p1, v0}, Lkotlinx/serialization/encoding/CompositeDecoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
     throw p0
@@ -321,6 +346,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 84
     invoke-interface {p1}, Lkotlinx/serialization/encoding/CompositeDecoder;->getSerializersModule()Lkotlinx/serialization/modules/SerializersModule;
 
     move-result-object p1
@@ -356,6 +382,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 96
     invoke-interface {p1}, Lkotlinx/serialization/encoding/Encoder;->getSerializersModule()Lkotlinx/serialization/modules/SerializersModule;
 
     move-result-object p1
@@ -399,18 +426,22 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 32
     invoke-static {p0, p1, p2}, Lkotlinx/serialization/PolymorphicSerializerKt;->findPolymorphicSerializer(Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)Lkotlinx/serialization/SerializationStrategy;
 
     move-result-object v0
 
+    .line 33
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v1
 
+    .line 115
     invoke-interface {p1, v1}, Lkotlinx/serialization/encoding/Encoder;->beginStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/encoding/CompositeEncoder;
 
     move-result-object p1
 
+    .line 34
     :try_start_0
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -428,6 +459,7 @@
 
     invoke-interface {p1, v2, v3, v4}, Lkotlinx/serialization/encoding/CompositeEncoder;->encodeStringElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILjava/lang/String;)V
 
+    .line 35
     invoke-virtual {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -440,10 +472,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 119
     invoke-interface {p1, v1}, Lkotlinx/serialization/encoding/CompositeEncoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
     return-void
 
+    .line 118
     :cond_0
     :try_start_1
     new-instance p0, Ljava/lang/NullPointerException;
@@ -459,6 +493,7 @@
     :catchall_0
     move-exception p0
 
+    .line 119
     invoke-interface {p1, v1}, Lkotlinx/serialization/encoding/CompositeEncoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
     throw p0

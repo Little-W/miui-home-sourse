@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/DrawableUtils$Api18Impl;
 .super Ljava/lang/Object;
+.source "DrawableUtils.java"
 
 
 # annotations
@@ -40,10 +41,12 @@
     :try_start_0
     const-string v3, "android.graphics.Insets"
 
+    .line 197
     invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v3
 
+    .line 198
     const-class v4, Landroid/graphics/drawable/Drawable;
 
     const-string v5, "getOpticalInsets"
@@ -61,6 +64,7 @@
     :try_start_1
     const-string v5, "left"
 
+    .line 199
     invoke-virtual {v3, v5}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v5
@@ -72,6 +76,7 @@
     :try_start_2
     const-string/jumbo v6, "top"
 
+    .line 200
     invoke-virtual {v3, v6}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v6
@@ -83,6 +88,7 @@
     :try_start_3
     const-string v7, "right"
 
+    .line 201
     invoke-virtual {v3, v7}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v7
@@ -94,6 +100,7 @@
     :try_start_4
     const-string v8, "bottom"
 
+    .line 202
     invoke-virtual {v3, v8}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v3
@@ -183,31 +190,43 @@
     :goto_5
     if-eqz v3, :cond_0
 
+    .line 213
     sput-object v4, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sGetOpticalInsets:Ljava/lang/reflect/Method;
 
+    .line 214
     sput-object v5, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sLeft:Ljava/lang/reflect/Field;
 
+    .line 215
     sput-object v6, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sTop:Ljava/lang/reflect/Field;
 
+    .line 216
     sput-object v7, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sRight:Ljava/lang/reflect/Field;
 
+    .line 217
     sput-object v8, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sBottom:Ljava/lang/reflect/Field;
 
+    .line 218
     sput-boolean v0, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sReflectionSuccessful:Z
 
     goto :goto_6
 
+    .line 220
     :cond_0
     sput-object v2, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sGetOpticalInsets:Ljava/lang/reflect/Method;
 
+    .line 221
     sput-object v2, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sLeft:Ljava/lang/reflect/Field;
 
+    .line 222
     sput-object v2, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sTop:Ljava/lang/reflect/Field;
 
+    .line 223
     sput-object v2, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sRight:Ljava/lang/reflect/Field;
 
+    .line 224
     sput-object v2, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sBottom:Ljava/lang/reflect/Field;
 
+    .line 225
     sput-boolean v1, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sReflectionSuccessful:Z
 
     :goto_6
@@ -217,6 +236,7 @@
 .method static getOpticalInsets(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
     .locals 5
 
+    .line 236
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -227,6 +247,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 238
     :try_start_0
     sget-object v0, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sGetOpticalInsets:Ljava/lang/reflect/Method;
 
@@ -240,28 +261,33 @@
 
     if-eqz p0, :cond_0
 
+    .line 240
     new-instance v0, Landroid/graphics/Rect;
 
     sget-object v1, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sLeft:Ljava/lang/reflect/Field;
 
+    .line 241
     invoke-virtual {v1, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v1
 
     sget-object v2, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sTop:Ljava/lang/reflect/Field;
 
+    .line 242
     invoke-virtual {v2, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v2
 
     sget-object v3, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sRight:Ljava/lang/reflect/Field;
 
+    .line 243
     invoke-virtual {v3, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v3
 
     sget-object v4, Landroidx/appcompat/widget/DrawableUtils$Api18Impl;->sBottom:Ljava/lang/reflect/Field;
 
+    .line 244
     invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result p0
@@ -273,6 +299,7 @@
 
     return-object v0
 
+    .line 253
     :catch_0
     :cond_0
     sget-object p0, Landroidx/appcompat/widget/DrawableUtils;->INSETS_NONE:Landroid/graphics/Rect;

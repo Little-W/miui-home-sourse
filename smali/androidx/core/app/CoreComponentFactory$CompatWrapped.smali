@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/core/app/CoreComponentFactory$CompatWrapped;
 .super Ljava/lang/Object;
+.source "CoreComponentFactory.java"
 
 
 # annotations

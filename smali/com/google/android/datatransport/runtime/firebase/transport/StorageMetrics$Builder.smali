@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;
 .super Ljava/lang/Object;
+.source "StorageMetrics.java"
 
 
 # annotations
@@ -23,12 +24,15 @@
 .method constructor <init>()V
     .locals 2
 
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 45
     iput-wide v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;->current_cache_size_bytes_:J
 
+    .line 46
     iput-wide v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;->max_cache_size_bytes_:J
 
     return-void
@@ -39,6 +43,7 @@
 .method public build()Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;
     .locals 5
 
+    .line 50
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;
 
     iget-wide v1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;->current_cache_size_bytes_:J
@@ -53,6 +58,7 @@
 .method public setCurrentCacheSizeBytes(J)Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;
     .locals 0
 
+    .line 54
     iput-wide p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;->current_cache_size_bytes_:J
 
     return-object p0
@@ -61,6 +67,7 @@
 .method public setMaxCacheSizeBytes(J)Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;
     .locals 0
 
+    .line 59
     iput-wide p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;->max_cache_size_bytes_:J
 
     return-object p0

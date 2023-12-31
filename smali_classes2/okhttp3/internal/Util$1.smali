@@ -1,5 +1,6 @@
 .class Lokhttp3/internal/Util$1;
 .super Ljava/lang/Object;
+.source "Util.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 81
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;
@@ -53,6 +56,7 @@
 .method public compare(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
+    .line 83
     invoke-virtual {p1, p2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result p0

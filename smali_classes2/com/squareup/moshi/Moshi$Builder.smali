@@ -1,5 +1,6 @@
 .class public final Lcom/squareup/moshi/Moshi$Builder;
 .super Ljava/lang/Object;
+.source "Moshi.java"
 
 
 # annotations
@@ -29,8 +30,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 151
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -45,6 +48,7 @@
 .method public build()Lcom/squareup/moshi/Moshi;
     .locals 1
 
+    .line 207
     new-instance v0, Lcom/squareup/moshi/Moshi;
 
     invoke-direct {v0, p0}, Lcom/squareup/moshi/Moshi;-><init>(Lcom/squareup/moshi/Moshi$Builder;)V

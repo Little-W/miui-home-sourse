@@ -1,5 +1,6 @@
 .class public final Lcom/google/firebase/components/ComponentRuntime$Builder;
 .super Ljava/lang/Object;
+.source "ComponentRuntime.java"
 
 
 # annotations
@@ -42,20 +43,24 @@
 .method constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 1
 
+    .line 340
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 337
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->lazyRegistrars:Ljava/util/List;
 
+    .line 338
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->additionalComponents:Ljava/util/List;
 
+    .line 341
     iput-object p1, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->defaultExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -80,6 +85,7 @@
         }
     .end annotation
 
+    .line 355
     iget-object v0, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->additionalComponents:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -90,6 +96,7 @@
 .method public addComponentRegistrar(Lcom/google/firebase/components/ComponentRegistrar;)Lcom/google/firebase/components/ComponentRuntime$Builder;
     .locals 2
 
+    .line 350
     iget-object v0, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->lazyRegistrars:Ljava/util/List;
 
     new-instance v1, Lcom/google/firebase/components/-$$Lambda$ComponentRuntime$Builder$PuZUk0ZoyoJafAUrHnbCxfAdM_4;
@@ -114,6 +121,7 @@
         }
     .end annotation
 
+    .line 345
     iget-object v0, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->lazyRegistrars:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
@@ -124,6 +132,7 @@
 .method public build()Lcom/google/firebase/components/ComponentRuntime;
     .locals 4
 
+    .line 360
     new-instance v0, Lcom/google/firebase/components/ComponentRuntime;
 
     iget-object v1, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->defaultExecutor:Ljava/util/concurrent/Executor;

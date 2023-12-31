@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/squareup/moshi/Json;
 .super Ljava/lang/Object;
+.source "Json.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

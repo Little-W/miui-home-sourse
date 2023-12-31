@@ -1,5 +1,6 @@
 .class final Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;
 .super Ljava/lang/Object;
+.source "GradientColorInflaterCompat.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(II)V
     .locals 3
 
+    .line 227
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
@@ -37,10 +39,12 @@
 
     aput p2, v1, p1
 
+    .line 228
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     new-array p1, v0, [F
 
+    .line 229
     fill-array-data p1, :array_0
 
     iput-object p1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -57,6 +61,7 @@
 .method constructor <init>(III)V
     .locals 3
 
+    .line 232
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
@@ -75,10 +80,12 @@
 
     aput p3, v1, p1
 
+    .line 233
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     new-array p1, v0, [F
 
+    .line 234
     fill-array-data p1, :array_0
 
     iput-object p1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -109,16 +116,20 @@
         }
     .end annotation
 
+    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 218
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
+    .line 219
     new-array v1, v0, [I
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
+    .line 220
     new-array v1, v0, [F
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -128,6 +139,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 222
     iget-object v2, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -142,6 +154,7 @@
 
     aput v3, v2, v1
 
+    .line 223
     iget-object v2, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
 
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;

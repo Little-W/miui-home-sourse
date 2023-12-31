@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/fsgesture/IFsGestureService;
 .super Ljava/lang/Object;
+.source "IFsGestureService.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

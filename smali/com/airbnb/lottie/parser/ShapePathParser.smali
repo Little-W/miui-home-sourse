@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/parser/ShapePathParser;
 .super Ljava/lang/Object;
+.source "ShapePathParser.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 
     const-string v3, "hd"
 
+    .line 13
     filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
@@ -47,6 +49,7 @@
 
     move-object v2, v1
 
+    .line 30
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -54,6 +57,7 @@
 
     if-eqz v4, :cond_4
 
+    .line 31
     sget-object v4, Lcom/airbnb/lottie/parser/ShapePathParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v4}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -74,10 +78,12 @@
 
     if-eq v4, v5, :cond_0
 
+    .line 45
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 42
     :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
@@ -85,6 +91,7 @@
 
     goto :goto_0
 
+    .line 39
     :cond_1
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseShapeData(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableShapeValue;
 
@@ -92,6 +99,7 @@
 
     goto :goto_0
 
+    .line 36
     :cond_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
@@ -99,6 +107,7 @@
 
     goto :goto_0
 
+    .line 33
     :cond_3
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -106,6 +115,7 @@
 
     goto :goto_0
 
+    .line 49
     :cond_4
     new-instance p0, Lcom/airbnb/lottie/model/content/ShapePath;
 

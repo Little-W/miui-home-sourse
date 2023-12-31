@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/engine/cache/DiskCacheAdapter;
 .super Ljava/lang/Object;
+.source "DiskCacheAdapter.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/cache/DiskCache;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

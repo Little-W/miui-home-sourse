@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchConfiguration$c;
 .super Landroid/os/AsyncTask;
+.source "SourceFile"
 
 
 # annotations

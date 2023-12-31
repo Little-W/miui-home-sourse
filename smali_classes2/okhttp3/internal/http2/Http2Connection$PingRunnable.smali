@@ -1,5 +1,6 @@
 .class final Lokhttp3/internal/http2/Http2Connection$PingRunnable;
 .super Lokhttp3/internal/NamedRunnable;
+.source "Http2Connection.java"
 
 
 # annotations
@@ -27,12 +28,14 @@
 .method constructor <init>(Lokhttp3/internal/http2/Http2Connection;ZII)V
     .locals 2
 
+    .line 379
     iput-object p1, p0, Lokhttp3/internal/http2/Http2Connection$PingRunnable;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 380
     iget-object p1, p1, Lokhttp3/internal/http2/Http2Connection;->hostname:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -59,10 +62,13 @@
 
     invoke-direct {p0, p1, v0}, Lokhttp3/internal/NamedRunnable;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 381
     iput-boolean p2, p0, Lokhttp3/internal/http2/Http2Connection$PingRunnable;->reply:Z
 
+    .line 382
     iput p3, p0, Lokhttp3/internal/http2/Http2Connection$PingRunnable;->payload1:I
 
+    .line 383
     iput p4, p0, Lokhttp3/internal/http2/Http2Connection$PingRunnable;->payload2:I
 
     return-void
@@ -73,6 +79,7 @@
 .method public execute()V
     .locals 3
 
+    .line 387
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$PingRunnable;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
     iget-boolean v1, p0, Lokhttp3/internal/http2/Http2Connection$PingRunnable;->reply:Z

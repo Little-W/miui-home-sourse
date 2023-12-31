@@ -1,17 +1,20 @@
 .class public final Lcom/xiaomi/dist/handoff/system/Log;
 .super Ljava/lang/Object;
+.source "Log.java"
 
 
 # direct methods
 .method private static convertTag(ILjava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 141
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1c
 
     if-lt p0, v0, :cond_0
 
+    .line 142
     invoke-static {}, Landroid/app/Application;->getProcessName()Ljava/lang/String;
 
     move-result-object p0
@@ -24,6 +27,7 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 144
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,6 +59,7 @@
     :cond_1
     const-string p0, ""
 
+    .line 145
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -80,6 +85,7 @@
 
     const/4 v0, 0x0
 
+    .line 62
     check-cast v0, [Ljava/lang/Object;
 
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/handoff/system/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -90,6 +96,7 @@
 .method public static varargs d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 67
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -101,6 +108,7 @@
 
     goto :goto_0
 
+    .line 69
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -129,6 +137,7 @@
 
     const/4 v0, 0x0
 
+    .line 112
     check-cast v0, Ljava/lang/Throwable;
 
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/handoff/system/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -139,6 +148,7 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 128
     invoke-static {p0, p1, p2}, Lcom/xiaomi/dist/handoff/system/Log;->printError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -149,6 +159,7 @@
 
     const/4 v0, 0x0
 
+    .line 35
     check-cast v0, [Ljava/lang/Object;
 
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -159,6 +170,7 @@
 .method public static varargs i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 46
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -170,6 +182,7 @@
 
     goto :goto_0
 
+    .line 49
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -204,6 +217,7 @@
 .method private static printDebug(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 74
     invoke-static {}, Lcom/xiaomi/dist/handoff/system/Log;->isDebug()Z
 
     move-result v0
@@ -212,6 +226,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 75
     invoke-static {v1, p0}, Lcom/xiaomi/dist/handoff/system/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -220,6 +235,7 @@
 
     return-void
 
+    .line 78
     :cond_0
     invoke-static {v1, p0}, Lcom/xiaomi/dist/handoff/system/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -233,6 +249,7 @@
 .method private static printError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 132
     invoke-static {}, Lcom/xiaomi/dist/handoff/system/Log;->isDebug()Z
 
     move-result v0
@@ -241,6 +258,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 133
     invoke-static {v1, p0}, Lcom/xiaomi/dist/handoff/system/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -249,6 +267,7 @@
 
     return-void
 
+    .line 136
     :cond_0
     invoke-static {v1, p0}, Lcom/xiaomi/dist/handoff/system/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -262,6 +281,7 @@
 .method private static printInfo(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 54
     invoke-static {}, Lcom/xiaomi/dist/handoff/system/Log;->isDebug()Z
 
     move-result v0
@@ -270,6 +290,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 55
     invoke-static {v1, p0}, Lcom/xiaomi/dist/handoff/system/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -278,6 +299,7 @@
 
     return-void
 
+    .line 58
     :cond_0
     invoke-static {v1, p0}, Lcom/xiaomi/dist/handoff/system/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -291,6 +313,7 @@
 .method private static printWarn(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
+    .line 102
     invoke-static {}, Lcom/xiaomi/dist/handoff/system/Log;->isDebug()Z
 
     move-result v0
@@ -301,6 +324,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 103
     invoke-static {v2, p0}, Lcom/xiaomi/dist/handoff/system/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -313,6 +337,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 104
     invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
@@ -323,10 +348,12 @@
 
     move-result-object p1
 
+    .line 103
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 107
     :cond_0
     invoke-static {v2, p0}, Lcom/xiaomi/dist/handoff/system/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -340,6 +367,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 108
     invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
@@ -350,6 +378,7 @@
 
     move-result-object p1
 
+    .line 107
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -360,6 +389,7 @@
 
     const/4 v0, 0x0
 
+    .line 90
     check-cast v0, Ljava/lang/Throwable;
 
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/handoff/system/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -370,6 +400,7 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 98
     invoke-static {p0, p1, p2}, Lcom/xiaomi/dist/handoff/system/Log;->printWarn(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void

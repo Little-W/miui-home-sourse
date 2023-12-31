@@ -1,5 +1,6 @@
 .class public Landroidx/room/util/TableInfo$Column;
 .super Ljava/lang/Object;
+.source "TableInfo.java"
 
 
 # annotations
@@ -29,16 +30,22 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZI)V
     .locals 0
 
+    .line 347
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 348
     iput-object p1, p0, Landroidx/room/util/TableInfo$Column;->name:Ljava/lang/String;
 
+    .line 349
     iput-object p2, p0, Landroidx/room/util/TableInfo$Column;->type:Ljava/lang/String;
 
+    .line 350
     iput-boolean p3, p0, Landroidx/room/util/TableInfo$Column;->notNull:Z
 
+    .line 351
     iput p4, p0, Landroidx/room/util/TableInfo$Column;->primaryKeyPosition:I
 
+    .line 352
     invoke-static {p2}, Landroidx/room/util/TableInfo$Column;->findAffinity(Ljava/lang/String;)I
 
     move-result p1
@@ -57,6 +64,7 @@
 
     return v0
 
+    .line 366
     :cond_0
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -66,6 +74,7 @@
 
     const-string v1, "INT"
 
+    .line 367
     invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -79,6 +88,7 @@
     :cond_1
     const-string v1, "CHAR"
 
+    .line 370
     invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -87,6 +97,7 @@
 
     const-string v1, "CLOB"
 
+    .line 371
     invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -95,6 +106,7 @@
 
     const-string v1, "TEXT"
 
+    .line 372
     invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -106,6 +118,7 @@
     :cond_2
     const-string v1, "BLOB"
 
+    .line 375
     invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -117,6 +130,7 @@
     :cond_3
     const-string v0, "REAL"
 
+    .line 378
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -125,6 +139,7 @@
 
     const-string v0, "FLOA"
 
+    .line 379
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -133,6 +148,7 @@
 
     const-string v0, "DOUB"
 
+    .line 380
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -175,6 +191,7 @@
 
     if-eqz p1, :cond_7
 
+    .line 391
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -187,15 +204,18 @@
 
     goto :goto_1
 
+    .line 393
     :cond_1
     check-cast p1, Landroidx/room/util/TableInfo$Column;
 
+    .line 394
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x14
 
     if-lt v2, v3, :cond_2
 
+    .line 395
     iget v2, p0, Landroidx/room/util/TableInfo$Column;->primaryKeyPosition:I
 
     iget v3, p1, Landroidx/room/util/TableInfo$Column;->primaryKeyPosition:I
@@ -204,6 +224,7 @@
 
     return v1
 
+    .line 397
     :cond_2
     invoke-virtual {p0}, Landroidx/room/util/TableInfo$Column;->isPrimaryKey()Z
 
@@ -217,6 +238,7 @@
 
     return v1
 
+    .line 400
     :cond_3
     iget-object v2, p0, Landroidx/room/util/TableInfo$Column;->name:Ljava/lang/String;
 
@@ -230,6 +252,7 @@
 
     return v1
 
+    .line 402
     :cond_4
     iget-boolean v2, p0, Landroidx/room/util/TableInfo$Column;->notNull:Z
 
@@ -239,6 +262,7 @@
 
     return v1
 
+    .line 403
     :cond_5
     iget p0, p0, Landroidx/room/util/TableInfo$Column;->affinity:I
 
@@ -262,6 +286,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 417
     iget-object v0, p0, Landroidx/room/util/TableInfo$Column;->name:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -270,12 +295,14 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 418
     iget v1, p0, Landroidx/room/util/TableInfo$Column;->affinity:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 419
     iget-boolean v1, p0, Landroidx/room/util/TableInfo$Column;->notNull:Z
 
     if-eqz v1, :cond_0
@@ -292,6 +319,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 420
     iget p0, p0, Landroidx/room/util/TableInfo$Column;->primaryKeyPosition:I
 
     add-int/2addr v0, p0
@@ -302,6 +330,7 @@
 .method public isPrimaryKey()Z
     .locals 0
 
+    .line 412
     iget p0, p0, Landroidx/room/util/TableInfo$Column;->primaryKeyPosition:I
 
     if-lez p0, :cond_0
@@ -320,6 +349,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 426
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

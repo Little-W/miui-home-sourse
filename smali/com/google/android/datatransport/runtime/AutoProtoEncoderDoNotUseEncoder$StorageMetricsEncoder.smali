@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$StorageMetricsEncoder;
 .super Ljava/lang/Object;
+.source "AutoProtoEncoderDoNotUseEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -37,6 +38,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 166
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$StorageMetricsEncoder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$StorageMetricsEncoder;-><init>()V
@@ -45,28 +47,34 @@
 
     const-string v0, "currentCacheSizeBytes"
 
+    .line 168
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->builder(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 169
     invoke-static {}, Lcom/google/firebase/encoders/proto/AtProtobuf;->builder()Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
+    .line 170
     invoke-virtual {v1, v2}, Lcom/google/firebase/encoders/proto/AtProtobuf;->tag(I)Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
+    .line 171
     invoke-virtual {v1}, Lcom/google/firebase/encoders/proto/AtProtobuf;->build()Lcom/google/firebase/encoders/proto/Protobuf;
 
     move-result-object v1
 
+    .line 169
     invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->withProperty(Ljava/lang/annotation/Annotation;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 172
     invoke-virtual {v0}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->build()Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -75,28 +83,34 @@
 
     const-string v0, "maxCacheSizeBytes"
 
+    .line 174
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->builder(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 175
     invoke-static {}, Lcom/google/firebase/encoders/proto/AtProtobuf;->builder()Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
+    .line 176
     invoke-virtual {v1, v2}, Lcom/google/firebase/encoders/proto/AtProtobuf;->tag(I)Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
+    .line 177
     invoke-virtual {v1}, Lcom/google/firebase/encoders/proto/AtProtobuf;->build()Lcom/google/firebase/encoders/proto/Protobuf;
 
     move-result-object v1
 
+    .line 175
     invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->withProperty(Ljava/lang/annotation/Annotation;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 178
     invoke-virtual {v0}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->build()Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -109,6 +123,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -124,6 +139,7 @@
         }
     .end annotation
 
+    .line 182
     sget-object p0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$StorageMetricsEncoder;->CURRENTCACHESIZEBYTES_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;->getCurrentCacheSizeBytes()J
@@ -132,6 +148,7 @@
 
     invoke-interface {p2, p0, v0, v1}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;J)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 183
     sget-object p0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$StorageMetricsEncoder;->MAXCACHESIZEBYTES_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;->getMaxCacheSizeBytes()J
@@ -151,6 +168,7 @@
         }
     .end annotation
 
+    .line 165
     check-cast p1, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

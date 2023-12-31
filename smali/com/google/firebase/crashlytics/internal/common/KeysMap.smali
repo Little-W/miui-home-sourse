@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/common/KeysMap;
 .super Ljava/lang/Object;
+.source "KeysMap.java"
 
 
 # instance fields
@@ -23,16 +24,20 @@
 .method public constructor <init>(II)V
     .locals 1
 
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 30
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/KeysMap;->keys:Ljava/util/Map;
 
+    .line 35
     iput p1, p0, Lcom/google/firebase/crashlytics/internal/common/KeysMap;->maxEntries:I
 
+    .line 36
     iput p2, p0, Lcom/google/firebase/crashlytics/internal/common/KeysMap;->maxEntryLength:I
 
     return-void
@@ -43,12 +48,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 88
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/common/KeysMap;->sanitizeAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 86
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -75,6 +82,7 @@
 
     monitor-enter p0
 
+    .line 42
     :try_start_0
     new-instance v0, Ljava/util/HashMap;
 
@@ -105,10 +113,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 94
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 95
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -119,6 +129,7 @@
 
     const/4 v0, 0x0
 
+    .line 96
     invoke-virtual {p1, v0, p0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p1
@@ -143,6 +154,7 @@
 
     const/4 v0, 0x0
 
+    .line 62
     :try_start_0
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -165,6 +177,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 63
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -175,6 +188,7 @@
 
     move-result-object v2
 
+    .line 65
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/common/KeysMap;->keys:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->size()I
@@ -200,6 +214,7 @@
 
     goto :goto_0
 
+    .line 66
     :cond_1
     :goto_1
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -208,6 +223,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 67
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/common/KeysMap;->keys:Ljava/util/Map;
 
     if-nez v1, :cond_2
@@ -229,6 +245,7 @@
     :cond_3
     if-lez v0, :cond_4
 
+    .line 73
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p1
@@ -255,10 +272,12 @@
 
     move-result-object v0
 
+    .line 74
     invoke-virtual {p1, v0}, Lcom/google/firebase/crashlytics/internal/Logger;->w(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 81
     :cond_4
     monitor-exit p0
 

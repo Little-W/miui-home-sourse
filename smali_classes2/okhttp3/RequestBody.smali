@@ -1,11 +1,13 @@
 .class public abstract Lokhttp3/RequestBody;
 .super Ljava/lang/Object;
+.source "RequestBody.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,18 +20,22 @@
         .end annotation
     .end param
 
+    .line 48
     sget-object v0, Lokhttp3/internal/Util;->UTF_8:Ljava/nio/charset/Charset;
 
     if-eqz p0, :cond_0
 
+    .line 50
     invoke-virtual {p0}, Lokhttp3/MediaType;->charset()Ljava/nio/charset/Charset;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 52
     sget-object v0, Lokhttp3/internal/Util;->UTF_8:Ljava/nio/charset/Charset;
 
+    .line 53
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,11 +54,13 @@
 
     move-result-object p0
 
+    .line 56
     :cond_0
     invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object p1
 
+    .line 57
     invoke-static {p0, p1}, Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;[B)Lokhttp3/RequestBody;
 
     move-result-object p0
@@ -67,6 +75,7 @@
         .end annotation
     .end param
 
+    .line 80
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -87,6 +96,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 87
     array-length v0, p1
 
     int-to-long v1, v0
@@ -97,12 +107,14 @@
 
     invoke-static/range {v1 .. v6}, Lokhttp3/internal/Util;->checkOffsetAndCount(JJJ)V
 
+    .line 88
     new-instance v0, Lokhttp3/RequestBody$2;
 
     invoke-direct {v0, p0, p3, p1, p2}, Lokhttp3/RequestBody$2;-><init>(Lokhttp3/MediaType;I[BI)V
 
     return-object v0
 
+    .line 86
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

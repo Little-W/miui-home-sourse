@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/SafeCollector;
 .super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "SafeCollector.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
@@ -65,6 +66,7 @@
         }
     .end annotation
 
+    .line 24
     sget-object v0, Lkotlinx/coroutines/flow/internal/NoOpContinuation;->INSTANCE:Lkotlinx/coroutines/flow/internal/NoOpContinuation;
 
     check-cast v0, Lkotlin/coroutines/Continuation;
@@ -79,6 +81,7 @@
 
     iput-object p2, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->collectContext:Lkotlin/coroutines/CoroutineContext;
 
+    .line 31
     iget-object p1, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->collectContext:Lkotlin/coroutines/CoroutineContext;
 
     const/4 p2, 0x0
@@ -117,17 +120,21 @@
         }
     .end annotation
 
+    .line 85
     instance-of v0, p2, Lkotlinx/coroutines/flow/internal/DownstreamExceptionElement;
 
     if-eqz v0, :cond_0
 
+    .line 86
     check-cast p2, Lkotlinx/coroutines/flow/internal/DownstreamExceptionElement;
 
     invoke-direct {p0, p2, p3}, Lkotlinx/coroutines/flow/internal/SafeCollector;->exceptionTransparencyViolated(Lkotlinx/coroutines/flow/internal/DownstreamExceptionElement;Ljava/lang/Object;)V
 
+    .line 88
     :cond_0
     invoke-static {p0, p1}, Lkotlinx/coroutines/flow/internal/SafeCollector_commonKt;->checkContext(Lkotlinx/coroutines/flow/internal/SafeCollector;Lkotlin/coroutines/CoroutineContext;)V
 
+    .line 89
     iput-object p1, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->lastEmissionContext:Lkotlin/coroutines/CoroutineContext;
 
     return-void
@@ -146,21 +153,27 @@
         }
     .end annotation
 
+    .line 69
     invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object v0
 
+    .line 70
     invoke-static {v0}, Lkotlinx/coroutines/JobKt;->ensureActive(Lkotlin/coroutines/CoroutineContext;)V
 
+    .line 72
     iget-object v1, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->lastEmissionContext:Lkotlin/coroutines/CoroutineContext;
 
     if-eq v1, v0, :cond_0
 
+    .line 74
     invoke-direct {p0, v0, v1, p2}, Lkotlinx/coroutines/flow/internal/SafeCollector;->checkContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/coroutines/CoroutineContext;Ljava/lang/Object;)V
 
+    .line 76
     :cond_0
     iput-object p1, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->completion:Lkotlin/coroutines/Continuation;
 
+    .line 77
     invoke-static {}, Lkotlinx/coroutines/flow/internal/SafeCollectorKt;->access$getEmitFun$p()Lkotlin/jvm/functions/Function3;
 
     move-result-object p1
@@ -190,6 +203,7 @@
 .method private final exceptionTransparencyViolated(Lkotlinx/coroutines/flow/internal/DownstreamExceptionElement;Ljava/lang/Object;)V
     .locals 1
 
+    .line 118
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -198,6 +212,7 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 120
     iget-object p1, p1, Lkotlinx/coroutines/flow/internal/DownstreamExceptionElement;->e:Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -216,10 +231,12 @@
 
     move-result-object p0
 
+    .line 123
     invoke-static {p0}, Lkotlin/text/StringsKt;->trimIndent(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 118
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -248,6 +265,7 @@
         }
     .end annotation
 
+    .line 59
     :try_start_0
     invoke-direct {p0, p2, p1}, Lkotlinx/coroutines/flow/internal/SafeCollector;->emit(Lkotlin/coroutines/Continuation;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -255,6 +273,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 57
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     move-result-object p1
@@ -280,6 +299,7 @@
     :catchall_0
     move-exception p1
 
+    .line 62
     new-instance p2, Lkotlinx/coroutines/flow/internal/DownstreamExceptionElement;
 
     invoke-direct {p2, p1}, Lkotlinx/coroutines/flow/internal/DownstreamExceptionElement;-><init>(Ljava/lang/Throwable;)V
@@ -288,12 +308,14 @@
 
     iput-object p2, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->lastEmissionContext:Lkotlin/coroutines/CoroutineContext;
 
+    .line 63
     throw p1
 .end method
 
 .method public getCallerFrame()Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
     .locals 1
 
+    .line 26
     iget-object p0, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->completion:Lkotlin/coroutines/Continuation;
 
     instance-of v0, p0, Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
@@ -311,6 +333,7 @@
 .method public getContext()Lkotlin/coroutines/CoroutineContext;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->completion:Lkotlin/coroutines/Continuation;
 
     if-eqz p0, :cond_0
@@ -343,6 +366,7 @@
 .method public invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
+    .line 40
     invoke-static {p1}, Lkotlin/Result;->exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object v0
@@ -357,6 +381,7 @@
 
     iput-object v1, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->lastEmissionContext:Lkotlin/coroutines/CoroutineContext;
 
+    .line 41
     :cond_0
     iget-object p0, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->completion:Lkotlin/coroutines/Continuation;
 
@@ -364,6 +389,7 @@
 
     invoke-interface {p0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
+    .line 42
     :cond_1
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
@@ -375,6 +401,7 @@
 .method public releaseIntercepted()V
     .locals 0
 
+    .line 47
     invoke-super {p0}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->releaseIntercepted()V
 
     return-void

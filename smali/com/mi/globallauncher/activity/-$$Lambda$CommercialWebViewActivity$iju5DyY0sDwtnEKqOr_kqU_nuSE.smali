@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/activity/-$$Lambda$CommercialWebViewActivity$iju5DyY0sDwtnEKqOr_kqU_nuSE;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnKeyListener;

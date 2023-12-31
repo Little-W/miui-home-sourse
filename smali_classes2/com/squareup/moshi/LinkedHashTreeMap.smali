@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/LinkedHashTreeMap;
 .super Ljava/util/AbstractMap;
+.source "LinkedHashTreeMap.java"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -103,6 +104,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 41
     new-instance v0, Lcom/squareup/moshi/LinkedHashTreeMap$1;
 
     invoke-direct {v0}, Lcom/squareup/moshi/LinkedHashTreeMap$1;-><init>()V
@@ -117,6 +119,7 @@
 
     const/4 v0, 0x0
 
+    .line 59
     invoke-direct {p0, v0}, Lcom/squareup/moshi/LinkedHashTreeMap;-><init>(Ljava/util/Comparator;)V
 
     return-void
@@ -132,24 +135,29 @@
         }
     .end annotation
 
+    .line 72
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 50
     iput v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->size:I
 
+    .line 51
     iput v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->modCount:I
 
     if-eqz p1, :cond_0
 
     goto :goto_0
 
+    .line 75
     :cond_0
     sget-object p1, Lcom/squareup/moshi/LinkedHashTreeMap;->NATURAL_ORDER:Ljava/util/Comparator;
 
     :goto_0
     iput-object p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->comparator:Ljava/util/Comparator;
 
+    .line 76
     new-instance p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     invoke-direct {p1}, Lcom/squareup/moshi/LinkedHashTreeMap$Node;-><init>()V
@@ -160,8 +168,10 @@
 
     new-array p1, p1, [Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 77
     iput-object p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->table:[Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 78
     iget-object p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->table:[Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     array-length v0, p1
@@ -182,6 +192,7 @@
 .method private doubleCapacity()V
     .locals 2
 
+    .line 558
     iget-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->table:[Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     invoke-static {v0}, Lcom/squareup/moshi/LinkedHashTreeMap;->doubleCapacity([Lcom/squareup/moshi/LinkedHashTreeMap$Node;)[Lcom/squareup/moshi/LinkedHashTreeMap$Node;
@@ -190,6 +201,7 @@
 
     iput-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->table:[Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 559
     iget-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->table:[Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     array-length v1, v0
@@ -223,20 +235,25 @@
         }
     .end annotation
 
+    .line 568
     array-length v0, p0
 
     mul-int/lit8 v1, v0, 0x2
 
+    .line 570
     new-array v1, v1, [Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 571
     new-instance v2, Lcom/squareup/moshi/LinkedHashTreeMap$AvlIterator;
 
     invoke-direct {v2}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlIterator;-><init>()V
 
+    .line 572
     new-instance v3, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;
 
     invoke-direct {v3}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;-><init>()V
 
+    .line 573
     new-instance v4, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;
 
     invoke-direct {v4}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;-><init>()V
@@ -248,12 +265,14 @@
     :goto_0
     if-ge v6, v0, :cond_7
 
+    .line 577
     aget-object v7, p0, v6
 
     if-nez v7, :cond_0
 
     goto :goto_4
 
+    .line 583
     :cond_0
     invoke-virtual {v2, v7}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlIterator;->reset(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
@@ -261,6 +280,7 @@
 
     move v9, v8
 
+    .line 586
     :goto_1
     invoke-virtual {v2}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlIterator;->next()Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
@@ -268,6 +288,7 @@
 
     if-eqz v10, :cond_2
 
+    .line 587
     iget v10, v10, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->hash:I
 
     and-int/2addr v10, v0
@@ -283,13 +304,17 @@
 
     goto :goto_1
 
+    .line 595
     :cond_2
     invoke-virtual {v3, v8}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;->reset(I)V
 
+    .line 596
     invoke-virtual {v4, v9}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;->reset(I)V
 
+    .line 597
     invoke-virtual {v2, v7}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlIterator;->reset(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 598
     :goto_2
     invoke-virtual {v2}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlIterator;->next()Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
@@ -297,16 +322,19 @@
 
     if-eqz v7, :cond_4
 
+    .line 599
     iget v10, v7, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->hash:I
 
     and-int/2addr v10, v0
 
     if-nez v10, :cond_3
 
+    .line 600
     invoke-virtual {v3, v7}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;->add(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
     goto :goto_2
 
+    .line 602
     :cond_3
     invoke-virtual {v4, v7}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;->add(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
@@ -317,6 +345,7 @@
 
     if-lez v8, :cond_5
 
+    .line 607
     invoke-virtual {v3}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;->root()Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     move-result-object v8
@@ -333,6 +362,7 @@
 
     if-lez v9, :cond_6
 
+    .line 608
     invoke-virtual {v4}, Lcom/squareup/moshi/LinkedHashTreeMap$AvlBuilder;->root()Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     move-result-object v7
@@ -356,6 +386,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 224
     invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -390,14 +421,17 @@
     :goto_0
     if-eqz p1, :cond_e
 
+    .line 340
     iget-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 341
     iget-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 342
     iget v3, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     goto :goto_1
@@ -408,6 +442,7 @@
     :goto_1
     if-eqz v1, :cond_1
 
+    .line 343
     iget v4, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     goto :goto_2
@@ -422,12 +457,15 @@
 
     if-ne v5, v6, :cond_6
 
+    .line 347
     iget-object v0, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 348
     iget-object v3, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-eqz v3, :cond_2
 
+    .line 349
     iget v3, v3, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     goto :goto_3
@@ -438,6 +476,7 @@
     :goto_3
     if-eqz v0, :cond_3
 
+    .line 350
     iget v2, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     :cond_3
@@ -453,13 +492,16 @@
 
     goto :goto_4
 
+    .line 357
     :cond_4
     invoke-direct {p0, v1}, Lcom/squareup/moshi/LinkedHashTreeMap;->rotateRight(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 358
     invoke-direct {p0, p1}, Lcom/squareup/moshi/LinkedHashTreeMap;->rotateLeft(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
     goto :goto_5
 
+    .line 354
     :cond_5
     :goto_4
     invoke-direct {p0, p1}, Lcom/squareup/moshi/LinkedHashTreeMap;->rotateLeft(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
@@ -476,12 +518,15 @@
 
     if-ne v5, v1, :cond_b
 
+    .line 365
     iget-object v1, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 366
     iget-object v3, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-eqz v3, :cond_7
 
+    .line 367
     iget v3, v3, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     goto :goto_6
@@ -492,6 +537,7 @@
     :goto_6
     if-eqz v1, :cond_8
 
+    .line 368
     iget v2, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     :cond_8
@@ -505,13 +551,16 @@
 
     goto :goto_7
 
+    .line 375
     :cond_9
     invoke-direct {p0, v0}, Lcom/squareup/moshi/LinkedHashTreeMap;->rotateLeft(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 376
     invoke-direct {p0, p1}, Lcom/squareup/moshi/LinkedHashTreeMap;->rotateRight(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
     goto :goto_8
 
+    .line 372
     :cond_a
     :goto_7
     invoke-direct {p0, p1}, Lcom/squareup/moshi/LinkedHashTreeMap;->rotateRight(Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
@@ -526,12 +575,14 @@
 
     add-int/lit8 v3, v3, 0x1
 
+    .line 383
     iput v3, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     if-eqz p2, :cond_d
 
     goto :goto_9
 
+    .line 390
     :cond_c
     invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
 
@@ -545,6 +596,7 @@
 
     goto :goto_9
 
+    .line 339
     :cond_d
     iget-object p1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
@@ -567,32 +619,39 @@
         }
     .end annotation
 
+    .line 312
     iget-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     const/4 v1, 0x0
 
+    .line 313
     iput-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-eqz p2, :cond_0
 
+    .line 315
     iput-object v0, p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     :cond_0
     if-eqz v0, :cond_2
 
+    .line 319
     iget-object p0, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-ne p0, p1, :cond_1
 
+    .line 320
     iput-object p2, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     goto :goto_0
 
+    .line 323
     :cond_1
     iput-object p2, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     goto :goto_0
 
+    .line 326
     :cond_2
     iget p1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->hash:I
 
@@ -604,6 +663,7 @@
 
     and-int/2addr p1, v0
 
+    .line 327
     aput-object p2, p0, p1
 
     :goto_0
@@ -620,31 +680,41 @@
         }
     .end annotation
 
+    .line 402
     iget-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 403
     iget-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 404
     iget-object v2, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 405
     iget-object v3, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 408
     iput-object v2, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-eqz v2, :cond_0
 
+    .line 410
     iput-object p1, v2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 413
     :cond_0
     invoke-direct {p0, p1, v1}, Lcom/squareup/moshi/LinkedHashTreeMap;->replaceInParent(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 416
     iput-object p1, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 417
     iput-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     const/4 p0, 0x0
 
     if-eqz v0, :cond_1
 
+    .line 420
     iget v0, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     goto :goto_0
@@ -655,6 +725,7 @@
     :goto_0
     if-eqz v2, :cond_2
 
+    .line 421
     iget v2, v2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     goto :goto_1
@@ -662,6 +733,7 @@
     :cond_2
     move v2, p0
 
+    .line 420
     :goto_1
     invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
 
@@ -671,12 +743,15 @@
 
     iput v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
+    .line 422
     iget p1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     if-eqz v3, :cond_3
 
+    .line 423
     iget p0, v3, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
+    .line 422
     :cond_3
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
@@ -699,31 +774,41 @@
         }
     .end annotation
 
+    .line 430
     iget-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 431
     iget-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 432
     iget-object v2, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 433
     iget-object v3, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 436
     iput-object v3, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-eqz v3, :cond_0
 
+    .line 438
     iput-object p1, v3, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 441
     :cond_0
     invoke-direct {p0, p1, v0}, Lcom/squareup/moshi/LinkedHashTreeMap;->replaceInParent(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 444
     iput-object p1, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 445
     iput-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     const/4 p0, 0x0
 
     if-eqz v1, :cond_1
 
+    .line 448
     iget v1, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     goto :goto_0
@@ -734,6 +819,7 @@
     :goto_0
     if-eqz v3, :cond_2
 
+    .line 449
     iget v3, v3, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     goto :goto_1
@@ -741,6 +827,7 @@
     :cond_2
     move v3, p0
 
+    .line 448
     :goto_1
     invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
 
@@ -750,12 +837,15 @@
 
     iput v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
+    .line 450
     iget p1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     if-eqz v2, :cond_3
 
+    .line 451
     iget p0, v2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
+    .line 450
     :cond_3
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
@@ -798,6 +888,7 @@
         }
     .end annotation
 
+    .line 859
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0, p0}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
@@ -810,6 +901,7 @@
 .method public clear()V
     .locals 3
 
+    .line 105
     iget-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->table:[Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     const/4 v1, 0x0
@@ -818,23 +910,29 @@
 
     const/4 v0, 0x0
 
+    .line 106
     iput v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->size:I
 
+    .line 107
     iget v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->modCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->modCount:I
 
+    .line 110
     iget-object p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->header:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 111
     iget-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->next:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     :goto_0
     if-eq v0, p0, :cond_0
 
+    .line 112
     iget-object v2, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->next:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 113
     iput-object v1, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->prev:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     iput-object v1, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->next:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
@@ -843,6 +941,7 @@
 
     goto :goto_0
 
+    .line 117
     :cond_0
     iput-object p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->prev:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
@@ -854,6 +953,7 @@
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 91
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/LinkedHashTreeMap;->findByObject(Ljava/lang/Object;)Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     move-result-object p0
@@ -882,12 +982,14 @@
         }
     .end annotation
 
+    .line 458
     iget-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->entrySet:Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
+    .line 459
     :cond_0
     new-instance v0, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;
 
@@ -909,10 +1011,13 @@
         }
     .end annotation
 
+    .line 132
     iget-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->comparator:Ljava/util/Comparator;
 
+    .line 133
     iget-object v1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->table:[Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 134
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
@@ -921,6 +1026,7 @@
 
     move-result v6
 
+    .line 135
     array-length v2, v1
 
     const/4 v9, 0x1
@@ -929,16 +1035,19 @@
 
     and-int/2addr v2, v6
 
+    .line 136
     aget-object v3, v1, v2
 
     const/4 v4, 0x0
 
     if-eqz v3, :cond_5
 
+    .line 142
     sget-object v5, Lcom/squareup/moshi/LinkedHashTreeMap;->NATURAL_ORDER:Ljava/util/Comparator;
 
     if-ne v0, v5, :cond_0
 
+    .line 143
     move-object v5, p1
 
     check-cast v5, Ljava/lang/Comparable;
@@ -951,6 +1060,7 @@
     :goto_0
     if-eqz v5, :cond_1
 
+    .line 148
     iget-object v7, v3, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
 
     invoke-interface {v5, v7}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
@@ -959,6 +1069,7 @@
 
     goto :goto_1
 
+    .line 149
     :cond_1
     iget-object v7, v3, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
 
@@ -974,6 +1085,7 @@
     :cond_2
     if-gez v7, :cond_3
 
+    .line 157
     iget-object v8, v3, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     goto :goto_2
@@ -1003,11 +1115,13 @@
 
     return-object v4
 
+    .line 172
     :cond_6
     iget-object v7, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->header:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-nez v10, :cond_9
 
+    .line 176
     sget-object p2, Lcom/squareup/moshi/LinkedHashTreeMap;->NATURAL_ORDER:Ljava/util/Comparator;
 
     if-ne v0, p2, :cond_8
@@ -1018,6 +1132,7 @@
 
     goto :goto_4
 
+    .line 177
     :cond_7
     new-instance p0, Ljava/lang/ClassCastException;
 
@@ -1047,6 +1162,7 @@
 
     throw p0
 
+    .line 179
     :cond_8
     :goto_4
     new-instance p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;
@@ -1061,10 +1177,12 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/squareup/moshi/LinkedHashTreeMap$Node;-><init>(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Ljava/lang/Object;ILcom/squareup/moshi/LinkedHashTreeMap$Node;Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 180
     aput-object p2, v1, v2
 
     goto :goto_6
 
+    .line 182
     :cond_9
     new-instance p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
@@ -1080,16 +1198,20 @@
 
     if-gez v11, :cond_a
 
+    .line 184
     iput-object p2, v10, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     goto :goto_5
 
+    .line 186
     :cond_a
     iput-object p2, v10, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 188
     :goto_5
     invoke-direct {p0, v10, v9}, Lcom/squareup/moshi/LinkedHashTreeMap;->rebalance(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Z)V
 
+    .line 191
     :goto_6
     iget p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->size:I
 
@@ -1101,8 +1223,10 @@
 
     if-le p1, v0, :cond_b
 
+    .line 192
     invoke-direct {p0}, Lcom/squareup/moshi/LinkedHashTreeMap;->doubleCapacity()V
 
+    .line 194
     :cond_b
     iget p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->modCount:I
 
@@ -1125,6 +1249,7 @@
         }
     .end annotation
 
+    .line 218
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -1135,6 +1260,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 219
     iget-object v1, v0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -1184,6 +1310,7 @@
 
     const/4 v1, 0x0
 
+    .line 202
     :try_start_0
     invoke-virtual {p0, p1, v1}, Lcom/squareup/moshi/LinkedHashTreeMap;->find(Ljava/lang/Object;Z)Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
@@ -1208,12 +1335,14 @@
         }
     .end annotation
 
+    .line 86
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/LinkedHashTreeMap;->findByObject(Ljava/lang/Object;)Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 87
     iget-object p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
     goto :goto_0
@@ -1235,12 +1364,14 @@
         }
     .end annotation
 
+    .line 463
     iget-object v0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->keySet:Lcom/squareup/moshi/LinkedHashTreeMap$KeySet;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
+    .line 464
     :cond_0
     new-instance v0, Lcom/squareup/moshi/LinkedHashTreeMap$KeySet;
 
@@ -1264,16 +1395,20 @@
 
     const/4 v0, 0x1
 
+    .line 98
     invoke-virtual {p0, p1, v0}, Lcom/squareup/moshi/LinkedHashTreeMap;->find(Ljava/lang/Object;Z)Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     move-result-object p0
 
+    .line 99
     iget-object p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
+    .line 100
     iput-object p2, p0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
     return-object p1
 
+    .line 96
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -1294,12 +1429,14 @@
         }
     .end annotation
 
+    .line 121
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/LinkedHashTreeMap;->removeInternalByKey(Ljava/lang/Object;)Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 122
     iget-object p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
     goto :goto_0
@@ -1325,27 +1462,33 @@
 
     if-eqz p2, :cond_0
 
+    .line 247
     iget-object p2, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->prev:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     iget-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->next:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     iput-object v1, p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->next:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 248
     iget-object p2, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->next:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     iget-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->prev:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     iput-object v1, p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->prev:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 249
     iput-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->prev:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     iput-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->next:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 252
     :cond_0
     iget-object p2, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 253
     iget-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 254
     iget-object v2, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     const/4 v3, 0x0
@@ -1354,6 +1497,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 266
     iget v2, p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
     iget v4, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
@@ -1371,19 +1515,25 @@
 
     move-result-object p2
 
+    .line 267
     :goto_0
     invoke-virtual {p0, p2, v3}, Lcom/squareup/moshi/LinkedHashTreeMap;->removeInternal(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Z)V
 
+    .line 270
     iget-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-eqz v1, :cond_2
 
+    .line 272
     iget v2, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
+    .line 273
     iput-object v1, p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 274
     iput-object p2, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 275
     iput-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     goto :goto_1
@@ -1391,19 +1541,25 @@
     :cond_2
     move v2, v3
 
+    .line 278
     :goto_1
     iget-object v1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     if-eqz v1, :cond_3
 
+    .line 280
     iget v3, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
+    .line 281
     iput-object v1, p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 282
     iput-object p2, v1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->parent:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 283
     iput-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
+    .line 285
     :cond_3
     invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
@@ -1413,6 +1569,7 @@
 
     iput v0, p2, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->height:I
 
+    .line 286
     invoke-direct {p0, p1, p2}, Lcom/squareup/moshi/LinkedHashTreeMap;->replaceInParent(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
     return-void
@@ -1420,8 +1577,10 @@
     :cond_4
     if-eqz p2, :cond_5
 
+    .line 289
     invoke-direct {p0, p1, p2}, Lcom/squareup/moshi/LinkedHashTreeMap;->replaceInParent(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 290
     iput-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->left:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     goto :goto_2
@@ -1429,24 +1588,30 @@
     :cond_5
     if-eqz v1, :cond_6
 
+    .line 292
     invoke-direct {p0, p1, v1}, Lcom/squareup/moshi/LinkedHashTreeMap;->replaceInParent(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 293
     iput-object v0, p1, Lcom/squareup/moshi/LinkedHashTreeMap$Node;->right:Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     goto :goto_2
 
+    .line 295
     :cond_6
     invoke-direct {p0, p1, v0}, Lcom/squareup/moshi/LinkedHashTreeMap;->replaceInParent(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Lcom/squareup/moshi/LinkedHashTreeMap$Node;)V
 
+    .line 298
     :goto_2
     invoke-direct {p0, v2, v3}, Lcom/squareup/moshi/LinkedHashTreeMap;->rebalance(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Z)V
 
+    .line 299
     iget p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->size:I
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->size:I
 
+    .line 300
     iget p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -1468,6 +1633,7 @@
         }
     .end annotation
 
+    .line 304
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/LinkedHashTreeMap;->findByObject(Ljava/lang/Object;)Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     move-result-object p1
@@ -1476,6 +1642,7 @@
 
     const/4 v0, 0x1
 
+    .line 306
     invoke-virtual {p0, p1, v0}, Lcom/squareup/moshi/LinkedHashTreeMap;->removeInternal(Lcom/squareup/moshi/LinkedHashTreeMap$Node;Z)V
 
     :cond_0
@@ -1485,6 +1652,7 @@
 .method public size()I
     .locals 0
 
+    .line 82
     iget p0, p0, Lcom/squareup/moshi/LinkedHashTreeMap;->size:I
 
     return p0

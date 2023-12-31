@@ -1,5 +1,6 @@
 .class final Lkotlin/collections/EmptyMap;
 .super Ljava/lang/Object;
+.source "Maps.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 14
     new-instance v0, Lkotlin/collections/EmptyMap;
 
     invoke-direct {v0}, Lkotlin/collections/EmptyMap;-><init>()V
@@ -28,6 +30,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +39,7 @@
 .method private final readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 31
     sget-object p0, Lkotlin/collections/EmptyMap;->INSTANCE:Lkotlin/collections/EmptyMap;
 
     return-object p0
@@ -66,6 +70,7 @@
 .method public final bridge containsValue(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 14
     instance-of v0, p1, Ljava/lang/Void;
 
     if-eqz v0, :cond_0
@@ -107,6 +112,7 @@
         }
     .end annotation
 
+    .line 14
     invoke-virtual {p0}, Lkotlin/collections/EmptyMap;->getEntries()Ljava/util/Set;
 
     move-result-object p0
@@ -117,6 +123,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 17
     instance-of p0, p1, Ljava/util/Map;
 
     if-eqz p0, :cond_0
@@ -143,6 +150,7 @@
 .method public final bridge get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 14
     invoke-virtual {p0, p1}, Lkotlin/collections/EmptyMap;->get(Ljava/lang/Object;)Ljava/lang/Void;
 
     move-result-object p0
@@ -169,6 +177,7 @@
         }
     .end annotation
 
+    .line 27
     sget-object p0, Lkotlin/collections/EmptySet;->INSTANCE:Lkotlin/collections/EmptySet;
 
     check-cast p0, Ljava/util/Set;
@@ -187,6 +196,7 @@
         }
     .end annotation
 
+    .line 28
     sget-object p0, Lkotlin/collections/EmptySet;->INSTANCE:Lkotlin/collections/EmptySet;
 
     check-cast p0, Ljava/util/Set;
@@ -205,6 +215,7 @@
 .method public getValues()Ljava/util/Collection;
     .locals 0
 
+    .line 29
     sget-object p0, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
 
     check-cast p0, Ljava/util/Collection;
@@ -239,6 +250,7 @@
         }
     .end annotation
 
+    .line 14
     invoke-virtual {p0}, Lkotlin/collections/EmptyMap;->getKeys()Ljava/util/Set;
 
     move-result-object p0
@@ -297,6 +309,7 @@
 .method public final bridge size()I
     .locals 0
 
+    .line 14
     invoke-virtual {p0}, Lkotlin/collections/EmptyMap;->getSize()I
 
     move-result p0
@@ -315,6 +328,7 @@
 .method public final bridge values()Ljava/util/Collection;
     .locals 0
 
+    .line 14
     invoke-virtual {p0}, Lkotlin/collections/EmptyMap;->getValues()Ljava/util/Collection;
 
     move-result-object p0

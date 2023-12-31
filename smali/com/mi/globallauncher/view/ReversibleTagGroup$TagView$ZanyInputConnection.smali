@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$ZanyInputConnection;
 .super Landroid/view/inputmethod/InputConnectionWrapper;
+.source "ReversibleTagGroup.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method public constructor <init>(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;Landroid/view/inputmethod/InputConnection;Z)V
     .locals 0
 
+    .line 1060
     iput-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$ZanyInputConnection;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
+    .line 1061
     invoke-direct {p0, p2, p3}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
 
     return-void
@@ -39,6 +42,7 @@
 
     if-nez p2, :cond_1
 
+    .line 1069
     new-instance p1, Landroid/view/KeyEvent;
 
     const/16 p2, 0x43
@@ -57,6 +61,7 @@
 
     invoke-direct {p1, v0, p2}, Landroid/view/KeyEvent;-><init>(II)V
 
+    .line 1070
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$ZanyInputConnection;->sendKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p0
@@ -71,6 +76,7 @@
     :goto_0
     return v0
 
+    .line 1072
     :cond_1
     invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingText(II)Z
 

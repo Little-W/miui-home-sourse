@@ -1,5 +1,6 @@
 .class public abstract Lcom/mi/google/gson/TypeAdapter;
 .super Ljava/lang/Object;
+.source "TypeAdapter.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +36,7 @@
         }
     .end annotation
 
+    .line 186
     new-instance v0, Lcom/mi/google/gson/TypeAdapter$1;
 
     invoke-direct {v0, p0}, Lcom/mi/google/gson/TypeAdapter$1;-><init>(Lcom/mi/google/gson/TypeAdapter;)V
@@ -66,13 +69,16 @@
         }
     .end annotation
 
+    .line 233
     :try_start_0
     new-instance v0, Lcom/mi/google/gson/internal/bind/JsonTreeWriter;
 
     invoke-direct {v0}, Lcom/mi/google/gson/internal/bind/JsonTreeWriter;-><init>()V
 
+    .line 234
     invoke-virtual {p0, v0, p1}, Lcom/mi/google/gson/TypeAdapter;->write(Lcom/mi/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
+    .line 235
     invoke-virtual {v0}, Lcom/mi/google/gson/internal/bind/JsonTreeWriter;->get()Lcom/mi/google/gson/JsonElement;
 
     move-result-object p0
@@ -84,6 +90,7 @@
     :catch_0
     move-exception p0
 
+    .line 237
     new-instance p1, Lcom/mi/google/gson/JsonIOException;
 
     invoke-direct {p1, p0}, Lcom/mi/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V

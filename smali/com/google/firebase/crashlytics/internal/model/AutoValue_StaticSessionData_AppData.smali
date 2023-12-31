@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;
 .super Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
+.source "AutoValue_StaticSessionData_AppData.java"
 
 
 # instance fields
@@ -22,32 +23,41 @@
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;-><init>()V
 
     if-eqz p1, :cond_3
 
+    .line 35
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->appIdentifier:Ljava/lang/String;
 
     if-eqz p2, :cond_2
 
+    .line 39
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->versionCode:Ljava/lang/String;
 
     if-eqz p3, :cond_1
 
+    .line 43
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->versionName:Ljava/lang/String;
 
     if-eqz p4, :cond_0
 
+    .line 47
     iput-object p4, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->installUuid:Ljava/lang/String;
 
+    .line 48
     iput p5, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->deliveryMechanism:I
 
+    .line 49
     iput-object p6, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->developmentPlatform:Ljava/lang/String;
 
+    .line 50
     iput-object p7, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->developmentPlatformVersion:Ljava/lang/String;
 
     return-void
 
+    .line 45
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -57,6 +67,7 @@
 
     throw p0
 
+    .line 41
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -66,6 +77,7 @@
 
     throw p0
 
+    .line 37
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -75,6 +87,7 @@
 
     throw p0
 
+    .line 33
     :cond_3
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -90,6 +103,7 @@
 .method public appIdentifier()Ljava/lang/String;
     .locals 0
 
+    .line 55
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->appIdentifier:Ljava/lang/String;
 
     return-object p0
@@ -98,6 +112,7 @@
 .method public deliveryMechanism()I
     .locals 0
 
+    .line 75
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->deliveryMechanism:I
 
     return p0
@@ -106,6 +121,7 @@
 .method public developmentPlatform()Ljava/lang/String;
     .locals 0
 
+    .line 81
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->developmentPlatform:Ljava/lang/String;
 
     return-object p0
@@ -114,6 +130,7 @@
 .method public developmentPlatformVersion()Ljava/lang/String;
     .locals 0
 
+    .line 87
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->developmentPlatformVersion:Ljava/lang/String;
 
     return-object p0
@@ -128,6 +145,7 @@
 
     return v0
 
+    .line 108
     :cond_0
     instance-of v1, p1, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
 
@@ -135,8 +153,10 @@
 
     if-eqz v1, :cond_4
 
+    .line 109
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;
 
+    .line 110
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->appIdentifier:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;->appIdentifier()Ljava/lang/String;
@@ -151,6 +171,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->versionCode:Ljava/lang/String;
 
+    .line 111
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;->versionCode()Ljava/lang/String;
 
     move-result-object v3
@@ -163,6 +184,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->versionName:Ljava/lang/String;
 
+    .line 112
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;->versionName()Ljava/lang/String;
 
     move-result-object v3
@@ -175,6 +197,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->installUuid:Ljava/lang/String;
 
+    .line 113
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;->installUuid()Ljava/lang/String;
 
     move-result-object v3
@@ -187,6 +210,7 @@
 
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->deliveryMechanism:I
 
+    .line 114
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;->deliveryMechanism()I
 
     move-result v3
@@ -197,6 +221,7 @@
 
     if-nez v1, :cond_1
 
+    .line 115
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;->developmentPlatform()Ljava/lang/String;
 
     move-result-object v1
@@ -221,6 +246,7 @@
 
     if-nez p0, :cond_2
 
+    .line 116
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/StaticSessionData$AppData;->developmentPlatformVersion()Ljava/lang/String;
 
     move-result-object p0
@@ -255,6 +281,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 125
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->appIdentifier:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -267,6 +294,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 127
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->versionCode:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -277,6 +305,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 129
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->versionName:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -287,6 +316,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 131
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->installUuid:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -297,12 +327,14 @@
 
     mul-int/2addr v0, v1
 
+    .line 133
     iget v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->deliveryMechanism:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 135
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->developmentPlatform:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -323,6 +355,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 137
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->developmentPlatformVersion:Ljava/lang/String;
 
     if-nez p0, :cond_1
@@ -343,6 +376,7 @@
 .method public installUuid()Ljava/lang/String;
     .locals 0
 
+    .line 70
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->installUuid:Ljava/lang/String;
 
     return-object p0
@@ -351,6 +385,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -425,6 +460,7 @@
 .method public versionCode()Ljava/lang/String;
     .locals 0
 
+    .line 60
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->versionCode:Ljava/lang/String;
 
     return-object p0
@@ -433,6 +469,7 @@
 .method public versionName()Ljava/lang/String;
     .locals 0
 
+    .line 65
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_StaticSessionData_AppData;->versionName:Ljava/lang/String;
 
     return-object p0

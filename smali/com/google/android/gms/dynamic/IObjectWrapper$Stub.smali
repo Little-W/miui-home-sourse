@@ -28,6 +28,7 @@
 
     const-string v0, "com.google.android.gms.dynamic.IObjectWrapper"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/gms/internal/common/zzb;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -45,18 +46,22 @@
     :cond_0
     const-string v0, "com.google.android.gms.dynamic.IObjectWrapper"
 
+    .line 5
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
+    .line 6
     instance-of v1, v0, Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     if-eqz v1, :cond_1
 
+    .line 7
     check-cast v0, Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     return-object v0
 
+    .line 8
     :cond_1
     new-instance v0, Lcom/google/android/gms/dynamic/IObjectWrapper$Stub$zza;
 

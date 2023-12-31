@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/RemoteMethodInvoker$1;
 .super Ljava/lang/Object;
+.source "RemoteMethodInvoker.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/market/sdk/RemoteMethodInvoker;Landroid/os/IBinder;)V
     .locals 0
 
+    .line 31
     iput-object p1, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
 
     iput-object p2, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->val$service:Landroid/os/IBinder;
@@ -40,18 +42,21 @@
 .method public run()V
     .locals 3
 
+    .line 34
     iget-object v0, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->val$service:Landroid/os/IBinder;
 
     invoke-static {v0}, Lcom/market/sdk/IMarketService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/market/sdk/IMarketService;
 
     move-result-object v0
 
+    .line 35
     iget-object v1, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lcom/market/sdk/RemoteMethodInvoker;->access$002(Lcom/market/sdk/RemoteMethodInvoker;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 37
     :try_start_0
     iget-object v1, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
 
@@ -66,6 +71,7 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 42
     :try_start_1
     iget-object v0, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
 
@@ -95,10 +101,12 @@
 
     const-string v2, "error while invoking market service methods"
 
+    .line 39
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 42
     :try_start_3
     iget-object v0, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
 
@@ -110,6 +118,7 @@
 
     goto :goto_0
 
+    .line 47
     :catch_1
     :goto_1
     iget-object p0, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
@@ -122,6 +131,7 @@
 
     return-void
 
+    .line 42
     :goto_2
     :try_start_4
     iget-object v1, p0, Lcom/market/sdk/RemoteMethodInvoker$1;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
@@ -136,6 +146,7 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
+    .line 46
     :catch_2
     throw v0
 .end method

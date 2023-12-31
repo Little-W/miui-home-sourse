@@ -1,5 +1,6 @@
 .class final Lcom/android/systemui/shared/recents/system/InputConsumerController$InputEventReceiver;
 .super Landroid/view/BatchedInputEventReceiver;
+.source "InputConsumerController.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method public constructor <init>(Lcom/android/systemui/shared/recents/system/InputConsumerController;Landroid/view/InputChannel;Landroid/os/Looper;)V
     .locals 0
 
+    .line 66
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/InputConsumerController$InputEventReceiver;->this$0:Lcom/android/systemui/shared/recents/system/InputConsumerController;
 
+    .line 67
     invoke-static {}, Landroid/view/Choreographer;->getSfInstance()Landroid/view/Choreographer;
 
     move-result-object p1
@@ -39,6 +42,7 @@
 
     const/4 v0, 0x0
 
+    .line 71
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/shared/recents/system/InputConsumerController$InputEventReceiver;->onInputEvent(Landroid/view/InputEvent;I)V
 
     return-void
@@ -49,6 +53,7 @@
 
     const/4 p2, 0x1
 
+    .line 77
     :try_start_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/InputConsumerController$InputEventReceiver;->this$0:Lcom/android/systemui/shared/recents/system/InputConsumerController;
 
@@ -62,10 +67,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 78
     move-object v0, p1
 
     check-cast v0, Landroid/view/MotionEvent;
 
+    .line 79
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/InputConsumerController$InputEventReceiver;->this$0:Lcom/android/systemui/shared/recents/system/InputConsumerController;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/InputConsumerController;->access$000(Lcom/android/systemui/shared/recents/system/InputConsumerController;)Lcom/android/systemui/shared/recents/system/InputConsumerController$TouchListener;
@@ -78,6 +85,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 82
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/shared/recents/system/InputConsumerController$InputEventReceiver;->finishInputEvent(Landroid/view/InputEvent;Z)V
 
@@ -88,5 +96,6 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/shared/recents/system/InputConsumerController$InputEventReceiver;->finishInputEvent(Landroid/view/InputEvent;Z)V
 
+    .line 83
     throw v0
 .end method

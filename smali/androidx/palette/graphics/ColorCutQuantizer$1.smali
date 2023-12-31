@@ -1,5 +1,6 @@
 .class final Landroidx/palette/graphics/ColorCutQuantizer$1;
 .super Ljava/lang/Object;
+.source "ColorCutQuantizer.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 454
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public compare(Landroidx/palette/graphics/ColorCutQuantizer$Vbox;Landroidx/palette/graphics/ColorCutQuantizer$Vbox;)I
     .locals 0
 
+    .line 457
     invoke-virtual {p2}, Landroidx/palette/graphics/ColorCutQuantizer$Vbox;->getVolume()I
 
     move-result p0
@@ -55,6 +58,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 454
     check-cast p1, Landroidx/palette/graphics/ColorCutQuantizer$Vbox;
 
     check-cast p2, Landroidx/palette/graphics/ColorCutQuantizer$Vbox;

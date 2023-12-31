@@ -24,8 +24,10 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -40,6 +42,7 @@
 .method synthetic constructor <init>(Lcom/google/android/gms/tasks/zzv;)V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Lcom/google/android/gms/tasks/Tasks$zza;-><init>()V
 
     return-void
@@ -55,6 +58,7 @@
         }
     .end annotation
 
+    .line 11
     iget-object p0, p0, Lcom/google/android/gms/tasks/Tasks$zza;->zzaf:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
@@ -67,6 +71,7 @@
 .method public final onCanceled()V
     .locals 0
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/gms/tasks/Tasks$zza;->zzaf:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -77,6 +82,7 @@
 .method public final onFailure(Ljava/lang/Exception;)V
     .locals 0
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/tasks/Tasks$zza;->zzaf:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -87,6 +93,7 @@
 .method public final onSuccess(Ljava/lang/Object;)V
     .locals 0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/gms/tasks/Tasks$zza;->zzaf:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V

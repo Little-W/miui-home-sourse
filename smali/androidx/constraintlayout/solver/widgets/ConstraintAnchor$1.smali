@@ -1,5 +1,6 @@
 .class synthetic Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$1;
 .super Ljava/lang/Object;
+.source "ConstraintAnchor.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 235
     invoke-static {}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->values()[Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
     move-result-object v0

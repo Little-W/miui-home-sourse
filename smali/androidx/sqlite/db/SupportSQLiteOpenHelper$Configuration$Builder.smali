@@ -1,5 +1,6 @@
 .class public Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;
 .super Ljava/lang/Object;
+.source "SupportSQLiteOpenHelper.java"
 
 
 # annotations
@@ -25,8 +26,10 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 354
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 355
     iput-object p1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mContext:Landroid/content/Context;
 
     return-void
@@ -37,14 +40,17 @@
 .method public build()Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;
     .locals 3
 
+    .line 343
     iget-object v0, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mCallback:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;
 
     if-eqz v0, :cond_1
 
+    .line 347
     iget-object v1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
+    .line 351
     new-instance v2, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;
 
     iget-object p0, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mName:Ljava/lang/String;
@@ -53,6 +59,7 @@
 
     return-object v2
 
+    .line 348
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -62,6 +69,7 @@
 
     throw p0
 
+    .line 344
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -75,6 +83,7 @@
 .method public callback(Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;)Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;
     .locals 0
 
+    .line 372
     iput-object p1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mCallback:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;
 
     return-object p0
@@ -83,6 +92,7 @@
 .method public name(Ljava/lang/String;)Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;
     .locals 0
 
+    .line 363
     iput-object p1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mName:Ljava/lang/String;
 
     return-object p0

@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;
 .super Ljava/util/concurrent/atomic/AtomicReference;
+.source "ObservableCreate.java"
 
 # interfaces
 .implements Lio/reactivex2/ObservableEmitter;
@@ -57,8 +58,10 @@
         }
     .end annotation
 
+    .line 55
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
+    .line 56
     iput-object p1, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->observer:Lio/reactivex2/Observer;
 
     return-void
@@ -69,6 +72,7 @@
 .method public dispose()V
     .locals 0
 
+    .line 121
     invoke-static {p0}, Lio/reactivex2/internal/disposables/DisposableHelper;->dispose(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
     return-void
@@ -77,6 +81,7 @@
 .method public isDisposed()Z
     .locals 0
 
+    .line 126
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -93,12 +98,14 @@
 .method public onComplete()V
     .locals 1
 
+    .line 95
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->isDisposed()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 97
     :try_start_0
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->observer:Lio/reactivex2/Observer;
 
@@ -106,6 +113,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 99
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->dispose()V
 
     goto :goto_0
@@ -115,6 +123,7 @@
 
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->dispose()V
 
+    .line 100
     throw v0
 
     :cond_0
@@ -125,12 +134,14 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 72
     invoke-virtual {p0, p1}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->tryOnError(Ljava/lang/Throwable;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
+    .line 73
     invoke-static {p1}, Lio/reactivex2/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
     :cond_0
@@ -147,6 +158,7 @@
 
     if-nez p1, :cond_0
 
+    .line 62
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "onNext called with null. Null values are generally not allowed in 2.x operators and sources."
@@ -157,6 +169,7 @@
 
     return-void
 
+    .line 65
     :cond_0
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->isDisposed()Z
 
@@ -164,6 +177,7 @@
 
     if-nez v0, :cond_1
 
+    .line 66
     iget-object p0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->observer:Lio/reactivex2/Observer;
 
     invoke-interface {p0, p1}, Lio/reactivex2/Observer;->onNext(Ljava/lang/Object;)V
@@ -182,6 +196,7 @@
         }
     .end annotation
 
+    .line 116
     new-instance v0, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;
 
     invoke-direct {v0, p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$SerializedEmitter;-><init>(Lio/reactivex2/ObservableEmitter;)V
@@ -192,6 +207,7 @@
 .method public setCancellable(Lio/reactivex2/functions/Cancellable;)V
     .locals 1
 
+    .line 111
     new-instance v0, Lio/reactivex2/internal/disposables/CancellableDisposable;
 
     invoke-direct {v0, p1}, Lio/reactivex2/internal/disposables/CancellableDisposable;-><init>(Lio/reactivex2/functions/Cancellable;)V
@@ -204,6 +220,7 @@
 .method public setDisposable(Lio/reactivex2/disposables/Disposable;)V
     .locals 0
 
+    .line 106
     invoke-static {p0, p1}, Lio/reactivex2/internal/disposables/DisposableHelper;->set(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex2/disposables/Disposable;)Z
 
     return-void
@@ -216,6 +233,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 131
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -250,12 +268,14 @@
 
     if-nez p1, :cond_0
 
+    .line 80
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
 
     invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
+    .line 82
     :cond_0
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->isDisposed()Z
 
@@ -263,6 +283,7 @@
 
     if-nez v0, :cond_1
 
+    .line 84
     :try_start_0
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->observer:Lio/reactivex2/Observer;
 
@@ -270,6 +291,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 86
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->dispose()V
 
     const/4 p0, 0x1
@@ -281,6 +303,7 @@
 
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate$CreateEmitter;->dispose()V
 
+    .line 87
     throw p1
 
     :cond_1

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/AppObserver$ForegroundListener;
 .super Ljava/lang/Object;
+.source "AppObserver.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/encoders/proto/LengthCountingOutputStream;
 .super Ljava/io/OutputStream;
+.source "LengthCountingOutputStream.java"
 
 
 # instance fields
@@ -10,10 +11,12 @@
 .method constructor <init>()V
     .locals 2
 
+    .line 21
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 22
     iput-wide v0, p0, Lcom/google/firebase/encoders/proto/LengthCountingOutputStream;->length:J
 
     return-void
@@ -24,6 +27,7 @@
 .method getLength()J
     .locals 2
 
+    .line 47
     iget-wide v0, p0, Lcom/google/firebase/encoders/proto/LengthCountingOutputStream;->length:J
 
     return-wide v0
@@ -32,6 +36,7 @@
 .method public write(I)V
     .locals 4
 
+    .line 26
     iget-wide v0, p0, Lcom/google/firebase/encoders/proto/LengthCountingOutputStream;->length:J
 
     const-wide/16 v2, 0x1
@@ -46,6 +51,7 @@
 .method public write([B)V
     .locals 4
 
+    .line 31
     iget-wide v0, p0, Lcom/google/firebase/encoders/proto/LengthCountingOutputStream;->length:J
 
     array-length p1, p1
@@ -64,6 +70,7 @@
 
     if-ltz p2, :cond_0
 
+    .line 36
     array-length v0, p1
 
     if-gt p2, v0, :cond_0
@@ -78,6 +85,7 @@
 
     if-ltz p2, :cond_0
 
+    .line 43
     iget-wide p1, p0, Lcom/google/firebase/encoders/proto/LengthCountingOutputStream;->length:J
 
     int-to-long v0, p3
@@ -88,6 +96,7 @@
 
     return-void
 
+    .line 41
     :cond_0
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 

@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;
 .super Ljava/lang/Object;
+.source "RemoteAnimationAdapterCompat.java"
 
 
 # static fields
@@ -16,8 +17,10 @@
 .method public constructor <init>(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;JJ)V
     .locals 7
 
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 69
     new-instance v6, Landroid/view/RemoteAnimationAdapter;
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->wrapRemoteAnimationRunner(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;)Landroid/view/IRemoteAnimationRunner$Stub;
@@ -34,6 +37,7 @@
 
     iput-object v6, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->mAnimationWrapped:Landroid/view/RemoteAnimationAdapter;
 
+    .line 71
     invoke-static {p1}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->buildRemoteTransition(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;)Lcom/android/systemui/shared/system/RemoteTransitionCompat;
 
     move-result-object p1
@@ -46,6 +50,7 @@
 .method static synthetic access$000(Landroid/window/TransitionInfo;)V
     .locals 0
 
+    .line 60
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->printLeash(Landroid/window/TransitionInfo;)V
 
     return-void
@@ -54,6 +59,7 @@
 .method static synthetic access$100(Landroid/window/TransitionInfo;)Z
     .locals 0
 
+    .line 60
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->isClosingType(Landroid/window/TransitionInfo;)Z
 
     move-result p0
@@ -64,6 +70,7 @@
 .method static synthetic access$200(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/window/TransitionInfo$Change;Landroid/view/SurfaceControl$Transaction;Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;)V
     .locals 0
 
+    .line 60
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->noNeedAnimFinishIt(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/window/TransitionInfo$Change;Landroid/view/SurfaceControl$Transaction;Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;)V
 
     return-void
@@ -72,6 +79,7 @@
 .method static synthetic access$300(ILjava/util/List;Z)Z
     .locals 0
 
+    .line 60
     invoke-static {p0, p1, p2}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->isOtherCase(ILjava/util/List;Z)Z
 
     move-result p0
@@ -82,12 +90,14 @@
 .method public static buildRemoteTransition(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;)Lcom/android/systemui/shared/system/RemoteTransitionCompat;
     .locals 1
 
+    .line 75
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidU()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 76
     new-instance v0, Lcom/android/systemui/shared/system/RemoteTransitionCompat;
 
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->wrapRemoteTransition(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;)Landroid/window/IRemoteTransition$Stub;
@@ -115,6 +125,7 @@
 
     move v1, v0
 
+    .line 636
     :goto_0
     invoke-virtual {p0}, Landroid/window/TransitionInfo;->getChanges()Ljava/util/List;
 
@@ -126,6 +137,7 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 637
     invoke-virtual {p0}, Landroid/window/TransitionInfo;->getChanges()Ljava/util/List;
 
     move-result-object v2
@@ -136,6 +148,7 @@
 
     check-cast v2, Landroid/window/TransitionInfo$Change;
 
+    .line 638
     invoke-virtual {v2}, Landroid/window/TransitionInfo$Change;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     move-result-object v3
@@ -144,15 +157,18 @@
 
     goto :goto_1
 
+    .line 642
     :cond_0
     invoke-static {v3}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getTopActivityTypeFromTaskInfo(Landroid/app/TaskInfo;)I
 
     move-result v3
 
+    .line 643
     invoke-virtual {v2}, Landroid/window/TransitionInfo$Change;->getMode()I
 
     move-result v2
 
+    .line 644
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,6 +238,7 @@
 
     move p0, v2
 
+    .line 580
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -229,6 +246,7 @@
 
     if-ge p0, p2, :cond_4
 
+    .line 581
     invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -254,6 +272,7 @@
     :goto_1
     const-string p0, "home mode TO_FRONT, isOtherCase true "
 
+    .line 583
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -265,6 +284,7 @@
 
     move p0, v2
 
+    .line 588
     :goto_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -272,6 +292,7 @@
 
     if-ge p0, v4, :cond_4
 
+    .line 589
     invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -288,6 +309,7 @@
 
     const-string p0, "home mode TO_BACK, isOtherCase true "
 
+    .line 590
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -308,20 +330,24 @@
 
     const-string v1, ", same task id, noNeedAnimFinish it"
 
+    .line 602
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
+    .line 603
     invoke-virtual {p4, v1, v1}, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;->setTransitionInfo(Landroid/os/IBinder;Landroid/window/TransitionInfo;)V
 
     const/4 v2, -0x1
 
+    .line 604
     invoke-virtual {p4, v2}, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;->setOpenTaskId(I)V
 
     const/high16 v2, 0x3f800000    # 1.0f
 
     const/4 v3, 0x1
 
+    .line 605
     :try_start_0
     new-instance v4, Landroid/view/SurfaceControl$Transaction;
 
@@ -329,6 +355,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 606
     :try_start_1
     invoke-virtual {p2}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
 
@@ -336,12 +363,14 @@
 
     invoke-virtual {v4, v5, v2}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
+    .line 607
     invoke-virtual {p2}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
 
     move-result-object v5
 
     invoke-virtual {v4, v5, v3}, Landroid/view/SurfaceControl$Transaction;->setVisibility(Landroid/view/SurfaceControl;Z)Landroid/view/SurfaceControl$Transaction;
 
+    .line 608
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v5
@@ -350,6 +379,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 609
     :try_start_2
     invoke-virtual {v4}, Landroid/view/SurfaceControl$Transaction;->close()V
     :try_end_2
@@ -360,6 +390,7 @@
     :catchall_0
     move-exception p0
 
+    .line 605
     :try_start_3
     invoke-virtual {v4}, Landroid/view/SurfaceControl$Transaction;->close()V
     :try_end_3
@@ -383,8 +414,10 @@
 
     const-string v4, "addToFinishTransaction fail"
 
+    .line 610
     invoke-static {v0, v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 612
     :goto_1
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/ConnectAnimHelper;->getInstance()Lcom/android/systemui/shared/recents/utilities/ConnectAnimHelper;
 
@@ -394,20 +427,25 @@
 
     move-result-object p0
 
+    .line 613
     new-instance v4, Landroid/util/ArrayMap;
 
     invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
 
+    .line 614
     new-instance v5, Lcom/android/systemui/shared/recents/system/TransitionInfoCompat;
 
     invoke-direct {v5, p1}, Lcom/android/systemui/shared/recents/system/TransitionInfoCompat;-><init>(Landroid/window/TransitionInfo;)V
 
+    .line 615
     new-instance p1, Landroid/window/WindowContainerTransaction;
 
     invoke-direct {p1}, Landroid/window/WindowContainerTransaction;-><init>()V
 
+    .line 616
     invoke-static {p2, p1}, Lcom/android/wm/shell/util/TransitionUtil;->reorderWindow(Landroid/window/TransitionInfo$Change;Landroid/window/WindowContainerTransaction;)V
 
+    .line 617
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -424,6 +462,7 @@
 
     invoke-static {v0, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 619
     invoke-virtual {v5}, Lcom/android/systemui/shared/recents/system/TransitionInfoCompat;->getWrapped()Landroid/window/TransitionInfo;
 
     move-result-object v5
@@ -432,39 +471,48 @@
 
     invoke-direct {v6}, Lcom/android/wm/shell/util/TransitionUtil$LeafTaskFilter;-><init>()V
 
+    .line 618
     invoke-static {v5, p3, v4, v6, v3}, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->wrap(Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Landroid/util/ArrayMap;Ljava/util/function/Predicate;Z)[Landroid/view/RemoteAnimationTarget;
 
     move-result-object v5
 
+    .line 620
     invoke-virtual {p2}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
 
     move-result-object v6
 
     invoke-virtual {p3, v6, v3}, Landroid/view/SurfaceControl$Transaction;->setVisibility(Landroid/view/SurfaceControl;Z)Landroid/view/SurfaceControl$Transaction;
 
+    .line 621
     invoke-virtual {p2}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
 
     move-result-object p2
 
     invoke-virtual {p3, p2, v2}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
+    .line 623
     invoke-virtual {p3, v3}, Landroid/view/SurfaceControl$Transaction;->apply(Z)V
 
+    .line 624
     invoke-virtual {v4}, Landroid/util/ArrayMap;->clear()V
 
     const/4 p2, 0x0
 
+    .line 625
     invoke-virtual {p4, p2, p1, v1}, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;->executeFinishCallback(ZLandroid/window/WindowContainerTransaction;Lcom/android/systemui/shared/recents/utilities/ShellTransitionCallback;)V
 
+    .line 627
     :try_start_5
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object p1
 
+    .line 628
     invoke-virtual {p1, p0}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->initIRecentsAnimationRunnerAtLeastS(Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)Lcom/android/systemui/shared/recents/IRecentsAnimationRunnerAtLeastS;
 
     move-result-object p0
 
+    .line 629
     invoke-interface {p0, v5}, Lcom/android/systemui/shared/recents/IRecentsAnimationRunnerAtLeastS;->onTasksAppeared([Landroid/view/RemoteAnimationTarget;)V
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_1
@@ -476,6 +524,7 @@
 
     const-string p1, "onTasksAppeared fail"
 
+    .line 631
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
@@ -485,6 +534,7 @@
 .method private static printLeash(Landroid/window/TransitionInfo;)V
     .locals 8
 
+    .line 654
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -503,6 +553,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 655
     invoke-virtual {p0}, Landroid/window/TransitionInfo;->getChanges()Ljava/util/List;
 
     move-result-object v0
@@ -515,6 +566,7 @@
 
     move v4, v3
 
+    .line 657
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -522,6 +574,7 @@
 
     if-ge v4, v5, :cond_1
 
+    .line 658
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -546,6 +599,7 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 659
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -558,6 +612,7 @@
 
     if-eqz v5, :cond_0
 
+    .line 661
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -579,6 +634,7 @@
 
     goto :goto_0
 
+    .line 665
     :cond_1
     invoke-virtual {p0}, Landroid/window/TransitionInfo;->getRootCount()I
 
@@ -587,6 +643,7 @@
     :goto_1
     if-ge v3, p0, :cond_2
 
+    .line 667
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -622,6 +679,7 @@
 .method private static wrapRemoteAnimationRunner(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;)Landroid/view/IRemoteAnimationRunner$Stub;
     .locals 1
 
+    .line 91
     new-instance v0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;-><init>(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;)V
@@ -632,6 +690,7 @@
 .method public static wrapRemoteTransition(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;)Landroid/window/IRemoteTransition$Stub;
     .locals 1
 
+    .line 162
     new-instance v0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$2;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$2;-><init>(Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;)V
@@ -644,6 +703,7 @@
 .method public getRemoteTransition()Lcom/android/systemui/shared/system/RemoteTransitionCompat;
     .locals 0
 
+    .line 87
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->mRemoteTransition:Lcom/android/systemui/shared/system/RemoteTransitionCompat;
 
     return-object p0
@@ -652,6 +712,7 @@
 .method public getWrapped()Landroid/view/RemoteAnimationAdapter;
     .locals 0
 
+    .line 83
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->mAnimationWrapped:Landroid/view/RemoteAnimationAdapter;
 
     return-object p0

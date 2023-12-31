@@ -1,5 +1,6 @@
 .class final Lkotlin/SafePublicationLazyImpl;
 .super Ljava/lang/Object;
+.source "LazyJVM.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -69,12 +70,15 @@
 
     sput-object v0, Lkotlin/SafePublicationLazyImpl;->Companion:Lkotlin/SafePublicationLazyImpl$Companion;
 
+    .line 125
     const-class v0, Lkotlin/SafePublicationLazyImpl;
 
+    .line 126
     const-class v1, Ljava/lang/Object;
 
     const-string v2, "_value"
 
+    .line 124
     invoke-static {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     move-result-object v0
@@ -98,14 +102,18 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 91
     iput-object p1, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/functions/Function0;
 
+    .line 92
     sget-object p1, Lkotlin/UNINITIALIZED_VALUE;->INSTANCE:Lkotlin/UNINITIALIZED_VALUE;
 
     iput-object p1, p0, Lkotlin/SafePublicationLazyImpl;->_value:Ljava/lang/Object;
 
+    .line 94
     sget-object p1, Lkotlin/UNINITIALIZED_VALUE;->INSTANCE:Lkotlin/UNINITIALIZED_VALUE;
 
     iput-object p1, p0, Lkotlin/SafePublicationLazyImpl;->final:Ljava/lang/Object;
@@ -116,6 +124,7 @@
 .method private final writeReplace()Ljava/lang/Object;
     .locals 1
 
+    .line 121
     new-instance v0, Lkotlin/InitializedLazyImpl;
 
     invoke-virtual {p0}, Lkotlin/SafePublicationLazyImpl;->getValue()Ljava/lang/Object;
@@ -137,23 +146,28 @@
         }
     .end annotation
 
+    .line 98
     iget-object v0, p0, Lkotlin/SafePublicationLazyImpl;->_value:Ljava/lang/Object;
 
+    .line 99
     sget-object v1, Lkotlin/UNINITIALIZED_VALUE;->INSTANCE:Lkotlin/UNINITIALIZED_VALUE;
 
     if-eq v0, v1, :cond_0
 
     return-object v0
 
+    .line 104
     :cond_0
     iget-object v0, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/functions/Function0;
 
     if-eqz v0, :cond_1
 
+    .line 107
     invoke-interface {v0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 108
     sget-object v1, Lkotlin/SafePublicationLazyImpl;->valueUpdater:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     sget-object v2, Lkotlin/UNINITIALIZED_VALUE;->INSTANCE:Lkotlin/UNINITIALIZED_VALUE;
@@ -166,12 +180,14 @@
 
     const/4 v1, 0x0
 
+    .line 109
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
     iput-object v1, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/functions/Function0;
 
     return-object v0
 
+    .line 114
     :cond_1
     iget-object p0, p0, Lkotlin/SafePublicationLazyImpl;->_value:Ljava/lang/Object;
 
@@ -181,6 +197,7 @@
 .method public isInitialized()Z
     .locals 1
 
+    .line 117
     iget-object p0, p0, Lkotlin/SafePublicationLazyImpl;->_value:Ljava/lang/Object;
 
     sget-object v0, Lkotlin/UNINITIALIZED_VALUE;->INSTANCE:Lkotlin/UNINITIALIZED_VALUE;
@@ -201,6 +218,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 119
     invoke-virtual {p0}, Lkotlin/SafePublicationLazyImpl;->isInitialized()Z
 
     move-result v0

@@ -1,5 +1,6 @@
 .class synthetic Lorg/brotli/dec/Decode$1;
 .super Ljava/lang/Object;
+.source "Decode.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 595
     invoke-static {}, Lorg/brotli/dec/RunningState;->values()[Lorg/brotli/dec/RunningState;
 
     move-result-object v0

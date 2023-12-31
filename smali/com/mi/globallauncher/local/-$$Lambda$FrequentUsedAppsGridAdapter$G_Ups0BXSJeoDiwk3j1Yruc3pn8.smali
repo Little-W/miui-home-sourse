@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/local/-$$Lambda$FrequentUsedAppsGridAdapter$G_Ups0BXSJeoDiwk3j1Yruc3pn8;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnLongClickListener;

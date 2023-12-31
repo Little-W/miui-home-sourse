@@ -1,5 +1,6 @@
 .class Landroidx/viewpager2/adapter/FragmentStateAdapter$2;
 .super Ljava/lang/Object;
+.source "FragmentStateAdapter.java"
 
 # interfaces
 .implements Landroidx/lifecycle/LifecycleEventObserver;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;Landroidx/viewpager2/adapter/FragmentViewHolder;)V
     .locals 0
 
+    .line 347
     iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
     iput-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->val$holder:Landroidx/viewpager2/adapter/FragmentViewHolder;
@@ -40,6 +42,7 @@
 .method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
+    .line 351
     iget-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
     invoke-virtual {p2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->shouldDelayFragmentTransactions()Z
@@ -50,6 +53,7 @@
 
     return-void
 
+    .line 354
     :cond_0
     invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
@@ -57,6 +61,7 @@
 
     invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
+    .line 355
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->val$holder:Landroidx/viewpager2/adapter/FragmentViewHolder;
 
     invoke-virtual {p1}, Landroidx/viewpager2/adapter/FragmentViewHolder;->getContainer()Landroid/widget/FrameLayout;
@@ -69,6 +74,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 356
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
     iget-object p0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->val$holder:Landroidx/viewpager2/adapter/FragmentViewHolder;

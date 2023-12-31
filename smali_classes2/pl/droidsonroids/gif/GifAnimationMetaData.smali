@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/gif/GifAnimationMetaData;
 .super Ljava/lang/Object;
+.source "GifAnimationMetaData.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -40,6 +41,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 307
     new-instance v0, Lpl/droidsonroids/gif/GifAnimationMetaData$1;
 
     invoke-direct {v0}, Lpl/droidsonroids/gif/GifAnimationMetaData$1;-><init>()V
@@ -57,6 +59,7 @@
         }
     .end annotation
 
+    .line 162
     invoke-static {p1, p2}, Lpl/droidsonroids/gif/GifInfoHandle;->openUri(Landroid/content/ContentResolver;Landroid/net/Uri;)Lpl/droidsonroids/gif/GifInfoHandle;
 
     move-result-object p1
@@ -74,6 +77,7 @@
         }
     .end annotation
 
+    .line 114
     new-instance v0, Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-direct {v0, p1}, Lpl/droidsonroids/gif/GifInfoHandle;-><init>(Landroid/content/res/AssetFileDescriptor;)V
@@ -91,6 +95,7 @@
         }
     .end annotation
 
+    .line 64
     invoke-virtual {p1, p2}, Landroid/content/res/AssetManager;->openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object p1
@@ -109,6 +114,7 @@
         }
     .end annotation
 
+    .line 52
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object p1
@@ -121,44 +127,52 @@
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
+    .line 297
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 298
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mLoopCount:I
 
+    .line 299
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mDuration:I
 
+    .line 300
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mHeight:I
 
+    .line 301
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mWidth:I
 
+    .line 302
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mImageCount:I
 
+    .line 303
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mMetadataBytesCount:J
 
+    .line 304
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -171,6 +185,7 @@
 .method synthetic constructor <init>(Landroid/os/Parcel;Lpl/droidsonroids/gif/GifAnimationMetaData$1;)V
     .locals 0
 
+    .line 31
     invoke-direct {p0, p1}, Lpl/droidsonroids/gif/GifAnimationMetaData;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -184,6 +199,7 @@
         }
     .end annotation
 
+    .line 89
     invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p1
@@ -201,6 +217,7 @@
         }
     .end annotation
 
+    .line 125
     new-instance v0, Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-direct {v0, p1}, Lpl/droidsonroids/gif/GifInfoHandle;-><init>(Ljava/io/FileDescriptor;)V
@@ -218,6 +235,7 @@
         }
     .end annotation
 
+    .line 102
     new-instance v0, Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-direct {v0, p1}, Lpl/droidsonroids/gif/GifInfoHandle;-><init>(Ljava/io/InputStream;)V
@@ -235,6 +253,7 @@
         }
     .end annotation
 
+    .line 78
     new-instance v0, Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-direct {v0, p1}, Lpl/droidsonroids/gif/GifInfoHandle;-><init>(Ljava/lang/String;)V
@@ -252,6 +271,7 @@
         }
     .end annotation
 
+    .line 149
     new-instance v0, Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-direct {v0, p1}, Lpl/droidsonroids/gif/GifInfoHandle;-><init>(Ljava/nio/ByteBuffer;)V
@@ -264,50 +284,59 @@
 .method private constructor <init>(Lpl/droidsonroids/gif/GifInfoHandle;)V
     .locals 2
 
+    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 166
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->getLoopCount()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mLoopCount:I
 
+    .line 167
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->getDuration()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mDuration:I
 
+    .line 168
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mWidth:I
 
+    .line 169
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mHeight:I
 
+    .line 170
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->getNumberOfFrames()I
 
     move-result v0
 
     iput v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mImageCount:I
 
+    .line 171
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->getMetadataByteCount()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mMetadataBytesCount:J
 
+    .line 172
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->getAllocationByteCount()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mPixelsBytesCount:J
 
+    .line 173
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifInfoHandle;->recycle()V
 
     return-void
@@ -321,6 +350,7 @@
         }
     .end annotation
 
+    .line 137
     new-instance v0, Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-direct {v0, p1}, Lpl/droidsonroids/gif/GifInfoHandle;-><init>([B)V
@@ -343,6 +373,7 @@
 .method public getAllocationByteCount()J
     .locals 2
 
+    .line 233
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mPixelsBytesCount:J
 
     return-wide v0
@@ -363,6 +394,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 252
     iget-object v0, p1, Lpl/droidsonroids/gif/GifDrawable;->mBuffer:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -371,12 +403,14 @@
 
     if-nez v0, :cond_1
 
+    .line 253
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
+    .line 254
     iget-object p1, p1, Lpl/droidsonroids/gif/GifDrawable;->mBuffer:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
@@ -385,6 +419,7 @@
 
     goto :goto_0
 
+    .line 256
     :cond_0
     invoke-virtual {p1}, Lpl/droidsonroids/gif/GifDrawable;->getFrameByteCount()I
 
@@ -392,6 +427,7 @@
 
     goto :goto_0
 
+    .line 259
     :cond_1
     iget p1, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mWidth:I
 
@@ -406,6 +442,7 @@
     :goto_0
     int-to-long v0, p1
 
+    .line 261
     iget-wide p0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mPixelsBytesCount:J
 
     int-to-long v2, p2
@@ -416,6 +453,7 @@
 
     return-wide p0
 
+    .line 247
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -451,6 +489,7 @@
 .method public getDuration()I
     .locals 0
 
+    .line 212
     iget p0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mDuration:I
 
     return p0
@@ -459,6 +498,7 @@
 .method public getHeight()I
     .locals 0
 
+    .line 187
     iget p0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mHeight:I
 
     return p0
@@ -467,6 +507,7 @@
 .method public getLoopCount()I
     .locals 0
 
+    .line 203
     iget p0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mLoopCount:I
 
     return p0
@@ -475,6 +516,7 @@
 .method public getMetadataAllocationByteCount()J
     .locals 2
 
+    .line 270
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mMetadataBytesCount:J
 
     return-wide v0
@@ -483,6 +525,7 @@
 .method public getNumberOfFrames()I
     .locals 0
 
+    .line 194
     iget p0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mImageCount:I
 
     return p0
@@ -491,6 +534,7 @@
 .method public getWidth()I
     .locals 0
 
+    .line 180
     iget p0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mWidth:I
 
     return p0
@@ -499,6 +543,7 @@
 .method public isAnimated()Z
     .locals 2
 
+    .line 219
     iget v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mImageCount:I
 
     const/4 v1, 0x1
@@ -521,6 +566,7 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
+    .line 276
     iget v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mLoopCount:I
 
     if-nez v0, :cond_0
@@ -534,6 +580,7 @@
 
     move-result-object v0
 
+    .line 277
     :goto_0
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -591,6 +638,7 @@
 
     move-result-object v0
 
+    .line 278
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifAnimationMetaData;->isAnimated()Z
 
     move-result p0
@@ -618,30 +666,37 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
+    .line 288
     iget p2, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mLoopCount:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 289
     iget p2, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mDuration:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 290
     iget p2, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mHeight:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 291
     iget p2, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mWidth:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 292
     iget p2, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mImageCount:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 293
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mMetadataBytesCount:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 294
     iget-wide v0, p0, Lpl/droidsonroids/gif/GifAnimationMetaData;->mPixelsBytesCount:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V

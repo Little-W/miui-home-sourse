@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/transformation/FabTransformationBehavior$FabTransformationSpec;
 .super Ljava/lang/Object;
+.source "FabTransformationBehavior.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method protected constructor <init>()V
     .locals 0
 
+    .line 788
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

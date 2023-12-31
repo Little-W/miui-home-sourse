@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/value/LottieValueCallback;
 .super Ljava/lang/Object;
+.source "LottieValueCallback.java"
 
 
 # annotations
@@ -45,8 +46,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
     new-instance v0, Lcom/airbnb/lottie/value/LottieFrameInfo;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/value/LottieFrameInfo;-><init>()V
@@ -55,6 +58,7 @@
 
     const/4 v0, 0x0
 
+    .line 33
     iput-object v0, p0, Lcom/airbnb/lottie/value/LottieValueCallback;->value:Ljava/lang/Object;
 
     return-void
@@ -68,8 +72,10 @@
         }
     .end annotation
 
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
     new-instance v0, Lcom/airbnb/lottie/value/LottieFrameInfo;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/value/LottieFrameInfo;-><init>()V
@@ -78,8 +84,10 @@
 
     const/4 v0, 0x0
 
+    .line 33
     iput-object v0, p0, Lcom/airbnb/lottie/value/LottieValueCallback;->value:Ljava/lang/Object;
 
+    .line 39
     iput-object p1, p0, Lcom/airbnb/lottie/value/LottieValueCallback;->value:Ljava/lang/Object;
 
     return-void
@@ -97,6 +105,7 @@
         }
     .end annotation
 
+    .line 52
     iget-object p0, p0, Lcom/airbnb/lottie/value/LottieValueCallback;->value:Ljava/lang/Object;
 
     return-object p0
@@ -110,6 +119,7 @@
         }
     .end annotation
 
+    .line 73
     iget-object v0, p0, Lcom/airbnb/lottie/value/LottieValueCallback;->frameInfo:Lcom/airbnb/lottie/value/LottieFrameInfo;
 
     move v1, p1
@@ -126,10 +136,12 @@
 
     move v7, p7
 
+    .line 74
     invoke-virtual/range {v0 .. v7}, Lcom/airbnb/lottie/value/LottieFrameInfo;->set(FFLjava/lang/Object;Ljava/lang/Object;FFF)Lcom/airbnb/lottie/value/LottieFrameInfo;
 
     move-result-object p1
 
+    .line 73
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/value/LottieValueCallback;->getValue(Lcom/airbnb/lottie/value/LottieFrameInfo;)Ljava/lang/Object;
 
     move-result-object p0
@@ -147,6 +159,7 @@
         }
     .end annotation
 
+    .line 88
     iput-object p1, p0, Lcom/airbnb/lottie/value/LottieValueCallback;->animation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     return-void

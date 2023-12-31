@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;
 .super Lcom/google/android/datatransport/runtime/backends/BackendResponse;
+.source "AutoValue_BackendResponse.java"
 
 
 # instance fields
@@ -12,16 +13,20 @@
 .method constructor <init>(Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;J)V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/backends/BackendResponse;-><init>()V
 
     if-eqz p1, :cond_0
 
+    .line 18
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;->status:Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
 
+    .line 19
     iput-wide p2, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;->nextRequestWaitMillis:J
 
     return-void
 
+    .line 16
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -43,6 +48,7 @@
 
     return v0
 
+    .line 45
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/runtime/backends/BackendResponse;
 
@@ -50,8 +56,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 46
     check-cast p1, Lcom/google/android/datatransport/runtime/backends/BackendResponse;
 
+    .line 47
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;->status:Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/BackendResponse;->getStatus()Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
@@ -66,6 +74,7 @@
 
     iget-wide v3, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;->nextRequestWaitMillis:J
 
+    .line 48
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/BackendResponse;->getNextRequestWaitMillis()J
 
     move-result-wide p0
@@ -89,6 +98,7 @@
 .method public getNextRequestWaitMillis()J
     .locals 2
 
+    .line 29
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;->nextRequestWaitMillis:J
 
     return-wide v0
@@ -97,6 +107,7 @@
 .method public getStatus()Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
     .locals 0
 
+    .line 24
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;->status:Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
 
     return-object p0
@@ -105,6 +116,7 @@
 .method public hashCode()I
     .locals 5
 
+    .line 57
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;->status:Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
 
     invoke-virtual {v0}, Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;->hashCode()I
@@ -117,6 +129,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 59
     iget-wide v1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;->nextRequestWaitMillis:J
 
     const/16 p0, 0x20
@@ -135,6 +148,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

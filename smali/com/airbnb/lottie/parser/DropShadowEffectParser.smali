@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/parser/DropShadowEffectParser;
 .super Ljava/lang/Object;
+.source "DropShadowEffectParser.java"
 
 
 # static fields
@@ -26,6 +27,7 @@
 
     const-string v0, "ef"
 
+    .line 14
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -40,6 +42,7 @@
 
     const-string/jumbo v1, "v"
 
+    .line 17
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -56,6 +59,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -69,10 +73,12 @@
         }
     .end annotation
 
+    .line 52
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->beginObject()V
 
     const-string v0, ""
 
+    .line 53
     :goto_0
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -80,6 +86,7 @@
 
     if-eqz v1, :cond_8
 
+    .line 54
     sget-object v1, Lcom/airbnb/lottie/parser/DropShadowEffectParser;->INNER_EFFECT_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p1, v1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -92,8 +99,10 @@
 
     if-eq v1, v2, :cond_0
 
+    .line 81
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
+    .line 82
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
@@ -101,6 +110,7 @@
     :cond_0
     const/4 v1, -0x1
 
+    .line 59
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -192,10 +202,12 @@
 
     if-eq v1, v4, :cond_2
 
+    .line 76
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 73
     :cond_2
     invoke-static {p1, p2}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
@@ -205,6 +217,7 @@
 
     goto :goto_0
 
+    .line 70
     :cond_3
     invoke-static {p1, p2}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
@@ -214,6 +227,7 @@
 
     goto :goto_0
 
+    .line 67
     :cond_4
     invoke-static {p1, p2, v7}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;Z)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
@@ -223,6 +237,7 @@
 
     goto :goto_0
 
+    .line 64
     :cond_5
     invoke-static {p1, p2, v7}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;Z)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
@@ -232,6 +247,7 @@
 
     goto :goto_0
 
+    .line 61
     :cond_6
     invoke-static {p1, p2}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseColor(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 
@@ -241,6 +257,7 @@
 
     goto/16 :goto_0
 
+    .line 56
     :cond_7
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -248,6 +265,7 @@
 
     goto/16 :goto_0
 
+    .line 85
     :cond_8
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endObject()V
 
@@ -275,6 +293,7 @@
         }
     .end annotation
 
+    .line 30
     :goto_0
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -282,6 +301,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 31
     sget-object v0, Lcom/airbnb/lottie/parser/DropShadowEffectParser;->DROP_SHADOW_EFFECT_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p1, v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -290,15 +310,19 @@
 
     if-eqz v0, :cond_0
 
+    .line 40
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
+    .line 41
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 33
     :cond_0
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->beginArray()V
 
+    .line 34
     :goto_1
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -306,15 +330,18 @@
 
     if-eqz v0, :cond_1
 
+    .line 35
     invoke-direct {p0, p1, p2}, Lcom/airbnb/lottie/parser/DropShadowEffectParser;->maybeParseInnerEffect(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)V
 
     goto :goto_1
 
+    .line 37
     :cond_1
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endArray()V
 
     goto :goto_0
 
+    .line 44
     :cond_2
     iget-object v2, p0, Lcom/airbnb/lottie/parser/DropShadowEffectParser;->color:Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 
@@ -336,6 +363,7 @@
 
     if-eqz v6, :cond_3
 
+    .line 45
     new-instance p0, Lcom/airbnb/lottie/parser/DropShadowEffect;
 
     move-object v1, p0

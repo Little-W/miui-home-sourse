@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/channels/RendezvousChannel;
 .super Lkotlinx/coroutines/channels/AbstractChannel;
+.source "RendezvousChannel.kt"
 
 
 # annotations
@@ -27,6 +28,7 @@
         }
     .end annotation
 
+    .line 18
     invoke-direct {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;-><init>(Lkotlin/jvm/functions/Function1;)V
 
     return-void

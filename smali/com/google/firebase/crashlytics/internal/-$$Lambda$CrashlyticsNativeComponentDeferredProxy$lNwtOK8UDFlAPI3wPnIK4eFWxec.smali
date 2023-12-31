@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/crashlytics/internal/-$$Lambda$CrashlyticsNativeComponentDeferredProxy$lNwtOK8UDFlAPI3wPnIK4eFWxec;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/inject/Deferred$DeferredHandler;

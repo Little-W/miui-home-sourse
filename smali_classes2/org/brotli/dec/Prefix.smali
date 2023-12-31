@@ -1,5 +1,6 @@
 .class final Lorg/brotli/dec/Prefix;
 .super Ljava/lang/Object;
+.source "Prefix.java"
 
 
 # static fields
@@ -28,12 +29,14 @@
 
     new-array v1, v0, [I
 
+    .line 19
     fill-array-data v1, :array_0
 
     sput-object v1, Lorg/brotli/dec/Prefix;->BLOCK_LENGTH_OFFSET:[I
 
     new-array v0, v0, [I
 
+    .line 24
     fill-array-data v0, :array_1
 
     sput-object v0, Lorg/brotli/dec/Prefix;->BLOCK_LENGTH_N_BITS:[I
@@ -42,24 +45,28 @@
 
     new-array v1, v0, [I
 
+    .line 28
     fill-array-data v1, :array_2
 
     sput-object v1, Lorg/brotli/dec/Prefix;->INSERT_LENGTH_OFFSET:[I
 
     new-array v1, v0, [I
 
+    .line 33
     fill-array-data v1, :array_3
 
     sput-object v1, Lorg/brotli/dec/Prefix;->INSERT_LENGTH_N_BITS:[I
 
     new-array v1, v0, [I
 
+    .line 37
     fill-array-data v1, :array_4
 
     sput-object v1, Lorg/brotli/dec/Prefix;->COPY_LENGTH_OFFSET:[I
 
     new-array v0, v0, [I
 
+    .line 42
     fill-array-data v0, :array_5
 
     sput-object v0, Lorg/brotli/dec/Prefix;->COPY_LENGTH_N_BITS:[I
@@ -68,12 +75,14 @@
 
     new-array v1, v0, [I
 
+    .line 46
     fill-array-data v1, :array_6
 
     sput-object v1, Lorg/brotli/dec/Prefix;->INSERT_RANGE_LUT:[I
 
     new-array v0, v0, [I
 
+    .line 50
     fill-array-data v0, :array_7
 
     sput-object v0, Lorg/brotli/dec/Prefix;->COPY_RANGE_LUT:[I

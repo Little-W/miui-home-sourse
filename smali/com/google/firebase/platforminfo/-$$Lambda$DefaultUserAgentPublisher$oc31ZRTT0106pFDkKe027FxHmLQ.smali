@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/platforminfo/-$$Lambda$DefaultUserAgentPublisher$oc31ZRTT0106pFDkKe027FxHmLQ;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/components/ComponentFactory;

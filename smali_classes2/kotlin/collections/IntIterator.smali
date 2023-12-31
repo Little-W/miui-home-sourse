@@ -1,5 +1,6 @@
 .class public abstract Lkotlin/collections/IntIterator;
 .super Ljava/lang/Object;
+.source "Iterators.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public final next()Ljava/lang/Integer;
     .locals 0
 
+    .line 36
     invoke-virtual {p0}, Lkotlin/collections/IntIterator;->nextInt()I
 
     move-result p0
@@ -44,6 +47,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 35
     invoke-virtual {p0}, Lkotlin/collections/IntIterator;->next()Ljava/lang/Integer;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/DebugKt;
 .super Ljava/lang/Object;
+.source "Debug.kt"
 
 
 # static fields
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
+    .line 67
     const-class v0, Lkotlinx/coroutines/CoroutineId;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -26,6 +28,7 @@
 
     const-string v0, "kotlinx.coroutines.debug"
 
+    .line 70
     invoke-static {v0}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -38,6 +41,7 @@
 
     goto :goto_0
 
+    .line 71
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -59,6 +63,7 @@
 
     const-string v3, "auto"
 
+    .line 72
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -73,6 +78,7 @@
     :cond_1
     const-string v3, "off"
 
+    .line 74
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -86,6 +92,7 @@
     :cond_2
     const-string v3, "on"
 
+    .line 73
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -106,9 +113,11 @@
     :goto_1
     move v0, v2
 
+    .line 70
     :goto_2
     sput-boolean v0, Lkotlinx/coroutines/DebugKt;->DEBUG:Z
 
+    .line 82
     sget-boolean v0, Lkotlinx/coroutines/DebugKt;->DEBUG:Z
 
     if-eqz v0, :cond_4
@@ -126,6 +135,7 @@
     :cond_4
     sput-boolean v1, Lkotlinx/coroutines/DebugKt;->RECOVER_STACK_TRACES:Z
 
+    .line 85
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v1, 0x0
@@ -136,6 +146,7 @@
 
     return-void
 
+    .line 75
     :cond_5
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -171,6 +182,7 @@
 .method public static final getASSERTIONS_ENABLED()Z
     .locals 1
 
+    .line 67
     sget-boolean v0, Lkotlinx/coroutines/DebugKt;->ASSERTIONS_ENABLED:Z
 
     return v0
@@ -179,6 +191,7 @@
 .method public static final getCOROUTINE_ID()Ljava/util/concurrent/atomic/AtomicLong;
     .locals 1
 
+    .line 85
     sget-object v0, Lkotlinx/coroutines/DebugKt;->COROUTINE_ID:Ljava/util/concurrent/atomic/AtomicLong;
 
     return-object v0
@@ -187,6 +200,7 @@
 .method public static final getDEBUG()Z
     .locals 1
 
+    .line 70
     sget-boolean v0, Lkotlinx/coroutines/DebugKt;->DEBUG:Z
 
     return v0
@@ -195,6 +209,7 @@
 .method public static final getRECOVER_STACK_TRACES()Z
     .locals 1
 
+    .line 81
     sget-boolean v0, Lkotlinx/coroutines/DebugKt;->RECOVER_STACK_TRACES:Z
 
     return v0

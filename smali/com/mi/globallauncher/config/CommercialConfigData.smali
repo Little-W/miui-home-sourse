@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/config/CommercialConfigData;
 .super Ljava/lang/Object;
+.source "CommercialConfigData.java"
 
 
 # instance fields
@@ -43,6 +44,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,6 +55,7 @@
 .method public getAppId()Ljava/lang/String;
     .locals 0
 
+    .line 23
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigData;->appId:Ljava/lang/String;
 
     return-object p0
@@ -61,6 +64,7 @@
 .method public getCount()Ljava/lang/Integer;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigData;->count:Ljava/lang/Integer;
 
     return-object p0
@@ -77,6 +81,7 @@
         }
     .end annotation
 
+    .line 39
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigData;->items:Ljava/util/List;
 
     return-object p0
@@ -85,6 +90,7 @@
 .method public setAppId(Ljava/lang/String;)V
     .locals 0
 
+    .line 27
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigData;->appId:Ljava/lang/String;
 
     return-void
@@ -93,6 +99,7 @@
 .method public setCount(Ljava/lang/Integer;)V
     .locals 0
 
+    .line 35
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigData;->count:Ljava/lang/Integer;
 
     return-void
@@ -109,6 +116,7 @@
         }
     .end annotation
 
+    .line 43
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigData;->items:Ljava/util/List;
 
     return-void

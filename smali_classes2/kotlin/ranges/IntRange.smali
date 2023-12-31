@@ -1,5 +1,6 @@
 .class public final Lkotlin/ranges/IntRange;
 .super Lkotlin/ranges/IntProgression;
+.source "Ranges.kt"
 
 
 # annotations
@@ -34,6 +35,7 @@
 
     sput-object v0, Lkotlin/ranges/IntRange;->Companion:Lkotlin/ranges/IntRange$Companion;
 
+    .line 58
     new-instance v0, Lkotlin/ranges/IntRange;
 
     const/4 v1, 0x1
@@ -52,6 +54,7 @@
 
     const/4 v0, 0x1
 
+    .line 39
     invoke-direct {p0, p1, p2, v0}, Lkotlin/ranges/IntProgression;-><init>(III)V
 
     return-void
@@ -60,6 +63,7 @@
 .method public static final synthetic access$getEMPTY$cp()Lkotlin/ranges/IntRange;
     .locals 1
 
+    .line 39
     sget-object v0, Lkotlin/ranges/IntRange;->EMPTY:Lkotlin/ranges/IntRange;
 
     return-object v0
@@ -70,6 +74,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 48
     instance-of v0, p1, Lkotlin/ranges/IntRange;
 
     if-eqz v0, :cond_2
@@ -128,6 +133,7 @@
 .method public getEndInclusive()Ljava/lang/Integer;
     .locals 0
 
+    .line 41
     invoke-virtual {p0}, Lkotlin/ranges/IntRange;->getLast()I
 
     move-result p0
@@ -142,6 +148,7 @@
 .method public getStart()Ljava/lang/Integer;
     .locals 0
 
+    .line 40
     invoke-virtual {p0}, Lkotlin/ranges/IntRange;->getFirst()I
 
     move-result p0
@@ -156,6 +163,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 52
     invoke-virtual {p0}, Lkotlin/ranges/IntRange;->isEmpty()Z
 
     move-result v0
@@ -186,6 +194,7 @@
 .method public isEmpty()Z
     .locals 1
 
+    .line 45
     invoke-virtual {p0}, Lkotlin/ranges/IntRange;->getFirst()I
 
     move-result v0
@@ -210,6 +219,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

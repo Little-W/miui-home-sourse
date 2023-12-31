@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +38,7 @@
         }
     .end annotation
 
+    .line 6
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "addOnCanceledListener is not implemented"
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "addOnCompleteListener is not implemented"
@@ -80,6 +83,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "addOnCompleteListener is not implemented"
@@ -153,6 +157,7 @@
         }
     .end annotation
 
+    .line 8
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "continueWith is not implemented"
@@ -177,6 +182,7 @@
         }
     .end annotation
 
+    .line 9
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "continueWith is not implemented"
@@ -203,6 +209,7 @@
         }
     .end annotation
 
+    .line 11
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "continueWithTask is not implemented"
@@ -246,6 +253,7 @@
         }
     .end annotation
 
+    .line 12
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "onSuccessTask is not implemented"
@@ -270,6 +278,7 @@
         }
     .end annotation
 
+    .line 13
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "onSuccessTask is not implemented"

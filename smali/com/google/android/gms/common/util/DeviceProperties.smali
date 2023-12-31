@@ -14,16 +14,19 @@
 .method public static isSidewinder(Landroid/content/Context;)Z
     .locals 1
 
+    .line 24
     sget-object v0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgq:Ljava/lang/Boolean;
 
     if-nez v0, :cond_1
 
+    .line 25
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastLollipop()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 26
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -43,6 +46,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 27
     :goto_0
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -50,6 +54,7 @@
 
     sput-object p0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgq:Ljava/lang/Boolean;
 
+    .line 28
     :cond_1
     sget-object p0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgq:Ljava/lang/Boolean;
 
@@ -63,6 +68,7 @@
 .method public static isUserBuild()Z
     .locals 2
 
+    .line 55
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string/jumbo v1, "user"
@@ -77,16 +83,19 @@
 .method public static isWearable(Landroid/content/Context;)Z
     .locals 1
 
+    .line 15
     sget-object v0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgp:Ljava/lang/Boolean;
 
     if-nez v0, :cond_1
 
+    .line 16
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastKitKatWatch()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 17
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -106,6 +115,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 18
     :goto_0
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -113,6 +123,7 @@
 
     sput-object p0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgp:Ljava/lang/Boolean;
 
+    .line 19
     :cond_1
     sget-object p0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgp:Ljava/lang/Boolean;
 
@@ -126,18 +137,21 @@
 .method public static isWearableWithoutPlayStore(Landroid/content/Context;)Z
     .locals 1
 
+    .line 20
     invoke-static {p0}, Lcom/google/android/gms/common/util/DeviceProperties;->isWearable(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 21
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastN()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 22
     invoke-static {p0}, Lcom/google/android/gms/common/util/DeviceProperties;->isSidewinder(Landroid/content/Context;)Z
 
     move-result p0
@@ -164,10 +178,12 @@
 .method public static zzf(Landroid/content/Context;)Z
     .locals 2
 
+    .line 36
     sget-object v0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgs:Ljava/lang/Boolean;
 
     if-nez v0, :cond_2
 
+    .line 38
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -180,6 +196,7 @@
 
     if-nez v0, :cond_1
 
+    .line 39
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -203,6 +220,7 @@
     :goto_0
     const/4 p0, 0x1
 
+    .line 40
     :goto_1
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -210,6 +228,7 @@
 
     sput-object p0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgs:Ljava/lang/Boolean;
 
+    .line 41
     :cond_2
     sget-object p0, Lcom/google/android/gms/common/util/DeviceProperties;->zzgs:Ljava/lang/Boolean;
 

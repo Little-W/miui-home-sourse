@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/firebase/crashlytics/internal/log/FileLogStore;
 .super Ljava/lang/Object;
+.source "FileLogStore.java"
 
 
 # virtual methods

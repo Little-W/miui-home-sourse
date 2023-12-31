@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/model/MediaStoreFileLoader$FilePathFetcher;
 .super Ljava/lang/Object;
+.source "MediaStoreFileLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataFetcher;
@@ -41,6 +42,7 @@
 
     const-string v0, "_data"
 
+    .line 43
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -53,10 +55,13 @@
 .method constructor <init>(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 0
 
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 51
     iput-object p1, p0, Lcom/bumptech/glide/load/model/MediaStoreFileLoader$FilePathFetcher;->context:Landroid/content/Context;
 
+    .line 52
     iput-object p2, p0, Lcom/bumptech/glide/load/model/MediaStoreFileLoader$FilePathFetcher;->uri:Landroid/net/Uri;
 
     return-void
@@ -87,6 +92,7 @@
         }
     .end annotation
 
+    .line 91
     const-class p0, Ljava/io/File;
 
     return-object p0
@@ -95,6 +101,7 @@
 .method public getDataSource()Lcom/bumptech/glide/load/DataSource;
     .locals 0
 
+    .line 97
     sget-object p0, Lcom/bumptech/glide/load/DataSource;->LOCAL:Lcom/bumptech/glide/load/DataSource;
 
     return-object p0
@@ -113,6 +120,7 @@
         }
     .end annotation
 
+    .line 57
     iget-object p1, p0, Lcom/bumptech/glide/load/model/MediaStoreFileLoader$FilePathFetcher;->context:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -137,6 +145,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 63
     :try_start_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -146,6 +155,7 @@
 
     const-string v0, "_data"
 
+    .line 64
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
@@ -156,6 +166,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 67
     :cond_0
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
@@ -168,6 +179,7 @@
 
     throw p0
 
+    .line 71
     :cond_1
     :goto_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -176,6 +188,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 72
     new-instance p1, Ljava/io/FileNotFoundException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -200,6 +213,7 @@
 
     goto :goto_1
 
+    .line 74
     :cond_2
     new-instance p0, Ljava/io/File;
 

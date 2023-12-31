@@ -1,5 +1,6 @@
 .class Lcom/google/android/filament/android/UiHelper$1;
 .super Ljava/lang/Object;
+.source "UiHelper.java"
 
 # interfaces
 .implements Landroid/view/SurfaceHolder$Callback;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/filament/android/UiHelper;)V
     .locals 0
 
+    .line 382
     iput-object p1, p0, Lcom/google/android/filament/android/UiHelper$1;->this$0:Lcom/google/android/filament/android/UiHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 0
 
+    .line 394
     iget-object p0, p0, Lcom/google/android/filament/android/UiHelper$1;->this$0:Lcom/google/android/filament/android/UiHelper;
 
     invoke-static {p0}, Lcom/google/android/filament/android/UiHelper;->access$000(Lcom/google/android/filament/android/UiHelper;)Lcom/google/android/filament/android/UiHelper$RendererCallback;
@@ -50,6 +53,7 @@
 .method public surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 0
 
+    .line 386
     iget-object p0, p0, Lcom/google/android/filament/android/UiHelper$1;->this$0:Lcom/google/android/filament/android/UiHelper;
 
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
@@ -64,6 +68,7 @@
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 0
 
+    .line 400
     iget-object p0, p0, Lcom/google/android/filament/android/UiHelper$1;->this$0:Lcom/google/android/filament/android/UiHelper;
 
     invoke-static {p0}, Lcom/google/android/filament/android/UiHelper;->access$200(Lcom/google/android/filament/android/UiHelper;)V

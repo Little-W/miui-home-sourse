@@ -6,6 +6,7 @@
 .method private static getChimeraLifecycleFragmentImpl(Lcom/google/android/gms/common/api/internal/LifecycleActivity;)Lcom/google/android/gms/common/api/internal/LifecycleFragment;
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Method not available in SDK."

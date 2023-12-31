@@ -1,5 +1,6 @@
 .class public Landroidx/lifecycle/MethodCallsLogger;
 .super Ljava/lang/Object;
+.source "MethodCallsLogger.java"
 
 
 # instance fields
@@ -19,8 +20,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -35,6 +38,7 @@
 .method public approveCall(Ljava/lang/String;I)Z
     .locals 4
 
+    .line 36
     iget-object v0, p0, Landroidx/lifecycle/MethodCallsLogger;->mCalledMethods:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -47,6 +51,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 37
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -65,6 +70,7 @@
 
     move v1, v3
 
+    .line 39
     :cond_1
     iget-object p0, p0, Landroidx/lifecycle/MethodCallsLogger;->mCalledMethods:Ljava/util/Map;
 

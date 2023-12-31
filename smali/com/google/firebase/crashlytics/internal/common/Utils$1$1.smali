@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/Utils$1$1;
 .super Ljava/lang/Object;
+.source "Utils.java"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/Continuation;
@@ -34,6 +35,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/Utils$1;)V
     .locals 0
 
+    .line 82
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/Utils$1$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/Utils$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +53,7 @@
         }
     .end annotation
 
+    .line 82
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/common/Utils$1$1;->then(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Void;
 
     move-result-object p0
@@ -75,12 +78,14 @@
         }
     .end annotation
 
+    .line 85
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 86
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/Utils$1$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/Utils$1;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/Utils$1;->val$tcs:Lcom/google/android/gms/tasks/TaskCompletionSource;
@@ -93,6 +98,7 @@
 
     goto :goto_0
 
+    .line 88
     :cond_0
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/Utils$1$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/Utils$1;
 

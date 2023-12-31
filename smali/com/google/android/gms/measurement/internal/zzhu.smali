@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzhu;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -15,6 +16,7 @@
 .method constructor <init>(Lcom/google/android/gms/measurement/internal/zzhb;Ljava/lang/Boolean;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzhu;->zzb:Lcom/google/android/gms/measurement/internal/zzhb;
 
     iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzhu;->zza:Ljava/lang/Boolean;
@@ -29,6 +31,7 @@
 .method public final run()V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzhu;->zzb:Lcom/google/android/gms/measurement/internal/zzhb;
 
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzhu;->zza:Ljava/lang/Boolean;

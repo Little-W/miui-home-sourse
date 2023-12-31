@@ -1,5 +1,6 @@
 .class Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;
 .super Ljava/lang/Object;
+.source "BodyObservable.java"
 
 # interfaces
 .implements Lio/reactivex/Observer;
@@ -52,8 +53,10 @@
         }
     .end annotation
 
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 42
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lio/reactivex/Observer;
 
     return-void
@@ -64,10 +67,12 @@
 .method public onComplete()V
     .locals 1
 
+    .line 65
     iget-boolean v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->terminated:Z
 
     if-nez v0, :cond_0
 
+    .line 66
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {p0}, Lio/reactivex/Observer;->onComplete()V
@@ -79,16 +84,19 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 71
     iget-boolean v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->terminated:Z
 
     if-nez v0, :cond_0
 
+    .line 72
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {p0, p1}, Lio/reactivex/Observer;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
+    .line 75
     :cond_0
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -96,8 +104,10 @@
 
     invoke-direct {p0, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
+    .line 78
     invoke-virtual {p0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
+    .line 79
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
     :goto_0
@@ -107,6 +117,7 @@
 .method public bridge synthetic onNext(Ljava/lang/Object;)V
     .locals 0
 
+    .line 37
     check-cast p1, Lretrofit2/Response;
 
     invoke-virtual {p0, p1}, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->onNext(Lretrofit2/Response;)V
@@ -124,12 +135,14 @@
         }
     .end annotation
 
+    .line 50
     invoke-virtual {p1}, Lretrofit2/Response;->isSuccessful()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 51
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lio/reactivex/Observer;
 
     invoke-virtual {p1}, Lretrofit2/Response;->body()Ljava/lang/Object;
@@ -143,12 +156,15 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 53
     iput-boolean v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->terminated:Z
 
+    .line 54
     new-instance v1, Lretrofit2/adapter/rxjava2/HttpException;
 
     invoke-direct {v1, p1}, Lretrofit2/adapter/rxjava2/HttpException;-><init>(Lretrofit2/Response;)V
 
+    .line 56
     :try_start_0
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lio/reactivex/Observer;
 
@@ -161,8 +177,10 @@
     :catchall_0
     move-exception p0
 
+    .line 58
     invoke-static {p0}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
+    .line 59
     new-instance p1, Lio/reactivex/exceptions/CompositeException;
 
     const/4 v2, 0x2
@@ -186,6 +204,7 @@
 .method public onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
+    .line 46
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {p0, p1}, Lio/reactivex/Observer;->onSubscribe(Lio/reactivex/disposables/Disposable;)V

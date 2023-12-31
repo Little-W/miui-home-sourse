@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/data/AssetFileDescriptorLocalUriFetcher;
 .super Lcom/bumptech/glide/load/data/LocalUriFetcher;
+.source "AssetFileDescriptorLocalUriFetcher.java"
 
 
 # annotations
@@ -16,6 +17,7 @@
 .method public constructor <init>(Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
+    .line 16
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/load/data/LocalUriFetcher;-><init>(Landroid/content/ContentResolver;Landroid/net/Uri;)V
 
     return-void
@@ -31,6 +33,7 @@
         }
     .end annotation
 
+    .line 31
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     return-void
@@ -44,6 +47,7 @@
         }
     .end annotation
 
+    .line 13
     check-cast p1, Landroid/content/res/AssetFileDescriptor;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/data/AssetFileDescriptorLocalUriFetcher;->close(Landroid/content/res/AssetFileDescriptor;)V
@@ -62,6 +66,7 @@
         }
     .end annotation
 
+    .line 37
     const-class p0, Landroid/content/res/AssetFileDescriptor;
 
     return-object p0
@@ -77,6 +82,7 @@
 
     const-string p0, "r"
 
+    .line 22
     invoke-virtual {p2, p1, p0}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object p0
@@ -85,6 +91,7 @@
 
     return-object p0
 
+    .line 24
     :cond_0
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -115,6 +122,7 @@
         }
     .end annotation
 
+    .line 13
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/data/AssetFileDescriptorLocalUriFetcher;->loadResource(Landroid/net/Uri;Landroid/content/ContentResolver;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class Lretrofit2/Retrofit$1;
 .super Ljava/lang/Object;
+.source "Retrofit.java"
 
 # interfaces
 .implements Ljava/lang/reflect/InvocationHandler;
@@ -28,12 +29,14 @@
 .method constructor <init>(Lretrofit2/Retrofit;Ljava/lang/Class;)V
     .locals 0
 
+    .line 134
     iput-object p1, p0, Lretrofit2/Retrofit$1;->this$0:Lretrofit2/Retrofit;
 
     iput-object p2, p0, Lretrofit2/Retrofit$1;->val$service:Ljava/lang/Class;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 135
     invoke-static {}, Lretrofit2/Platform;->get()Lretrofit2/Platform;
 
     move-result-object p1
@@ -57,6 +60,7 @@
         }
     .end annotation
 
+    .line 140
     invoke-virtual {p2}, Ljava/lang/reflect/Method;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -65,12 +69,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 141
     invoke-virtual {p2, p0, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 143
     :cond_0
     iget-object v0, p0, Lretrofit2/Retrofit$1;->platform:Lretrofit2/Platform;
 
@@ -80,6 +86,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 144
     iget-object v0, p0, Lretrofit2/Retrofit$1;->platform:Lretrofit2/Platform;
 
     iget-object p0, p0, Lretrofit2/Retrofit$1;->val$service:Ljava/lang/Class;
@@ -90,17 +97,21 @@
 
     return-object p0
 
+    .line 146
     :cond_1
     iget-object p0, p0, Lretrofit2/Retrofit$1;->this$0:Lretrofit2/Retrofit;
 
+    .line 147
     invoke-virtual {p0, p2}, Lretrofit2/Retrofit;->loadServiceMethod(Ljava/lang/reflect/Method;)Lretrofit2/ServiceMethod;
 
     move-result-object p0
 
+    .line 148
     new-instance p1, Lretrofit2/OkHttpCall;
 
     invoke-direct {p1, p0, p3}, Lretrofit2/OkHttpCall;-><init>(Lretrofit2/ServiceMethod;[Ljava/lang/Object;)V
 
+    .line 149
     invoke-virtual {p0, p1}, Lretrofit2/ServiceMethod;->adapt(Lretrofit2/Call;)Ljava/lang/Object;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;
 .super Ljava/util/concurrent/ThreadPoolExecutor;
+.source "ExecutorHelper.java"
 
 
 # annotations
@@ -49,14 +50,17 @@
         }
     .end annotation
 
+    .line 295
     invoke-direct/range {p0 .. p7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/RejectedExecutionHandler;)V
 
+    .line 297
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;->mWorkerInfoMap:Ljava/util/Map;
 
+    .line 298
     new-instance p1, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     const/4 p2, 0x1
@@ -73,6 +77,7 @@
 
     monitor-enter p0
 
+    .line 319
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;->mWorkerInfoMap:Ljava/util/Map;
 
@@ -88,6 +93,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 320
     iget-object v0, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;->mWorkerInfoMap:Ljava/util/Map;
 
     iget v1, p1, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor$WorkerInfo;->mTid:I
@@ -106,10 +112,12 @@
 
     if-eq v0, p1, :cond_0
 
+    .line 322
     monitor-exit p0
 
     return-void
 
+    .line 324
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;->mWorkerInfoMap:Ljava/util/Map;
@@ -122,12 +130,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 325
     iget-object p1, p1, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor$WorkerInfo;->mThread:Ljava/lang/Thread;
 
     invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 327
     :cond_1
     monitor-exit p0
 
@@ -148,11 +158,13 @@
 
     monitor-enter p0
 
+    .line 314
     :try_start_0
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result p1
 
+    .line 315
     iget-object p2, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;->mWorkerInfoMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -163,6 +175,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 316
     monitor-exit p0
 
     return-void
@@ -180,19 +193,23 @@
 
     monitor-enter p0
 
+    .line 303
     :try_start_0
     instance-of v0, p2, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutRunnable;
 
     if-eqz v0, :cond_0
 
+    .line 304
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result v0
 
+    .line 305
     new-instance v1, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor$WorkerInfo;
 
     invoke-direct {v1, p1, p2, v0}, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor$WorkerInfo;-><init>(Ljava/lang/Thread;Ljava/lang/Runnable;I)V
 
+    .line 306
     iget-object p1, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;->mWorkerInfoMap:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -201,12 +218,14 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 307
     check-cast p2, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutRunnable;
 
     invoke-interface {p2}, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutRunnable;->getTimeout()J
 
     move-result-wide p1
 
+    .line 308
     iget-object v0, p0, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     new-instance v2, Lcom/xiaomi/dist/utils/-$$Lambda$ExecutorHelper$TimeoutThreadPoolExecutor$k0nFhlnwF01lhMhYeGL3lQe9lE4;
@@ -219,6 +238,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 310
     :cond_0
     monitor-exit p0
 
@@ -235,6 +255,7 @@
 .method public synthetic lambda$beforeExecute$0$ExecutorHelper$TimeoutThreadPoolExecutor(Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor$WorkerInfo;)V
     .locals 0
 
+    .line 308
     invoke-direct {p0, p1}, Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor;->processTimeout(Lcom/xiaomi/dist/utils/ExecutorHelper$TimeoutThreadPoolExecutor$WorkerInfo;)V
 
     return-void

@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/DefaultSpecialEffectsController$5;
 .super Ljava/lang/Object;
+.source "DefaultSpecialEffectsController.java"
 
 # interfaces
 .implements Landroidx/core/os/CancellationSignal$OnCancelListener;
@@ -30,6 +31,7 @@
 .method constructor <init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Landroid/view/View;Landroid/view/ViewGroup;Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;)V
     .locals 0
 
+    .line 272
     iput-object p1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$5;->this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
     iput-object p2, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$5;->val$viewToAnimate:Landroid/view/View;
@@ -48,16 +50,19 @@
 .method public onCancel()V
     .locals 2
 
+    .line 275
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$5;->val$viewToAnimate:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
+    .line 276
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$5;->val$container:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$5;->val$viewToAnimate:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
 
+    .line 277
     iget-object p0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$5;->val$animationInfo:Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;
 
     invoke-virtual {p0}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->completeSpecialEffect()V

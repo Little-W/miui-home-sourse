@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/poco/-$$Lambda$PocoBranchSearchGuide$Nt8EluE91ymPrEoDJQLh48VLkZ0;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

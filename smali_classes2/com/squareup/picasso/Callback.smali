@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/squareup/picasso/Callback;
 .super Ljava/lang/Object;
+.source "Callback.java"
 
 
 # virtual methods

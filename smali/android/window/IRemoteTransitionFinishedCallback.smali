@@ -1,5 +1,6 @@
 .class public interface abstract Landroid/window/IRemoteTransitionFinishedCallback;
 .super Ljava/lang/Object;
+.source "IRemoteTransitionFinishedCallback.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

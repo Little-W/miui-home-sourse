@@ -1,5 +1,6 @@
 .class public final Lkotlin/KotlinVersion;
 .super Ljava/lang/Object;
+.source "KotlinVersion.kt"
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -50,6 +51,7 @@
 
     sput-object v0, Lkotlin/KotlinVersion;->Companion:Lkotlin/KotlinVersion$Companion;
 
+    .line 75
     invoke-static {}, Lkotlin/KotlinVersionCurrentValue;->get()Lkotlin/KotlinVersion;
 
     move-result-object v0
@@ -62,6 +64,7 @@
 .method public constructor <init>(III)V
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lkotlin/KotlinVersion;->major:I
@@ -70,6 +73,7 @@
 
     iput p3, p0, Lkotlin/KotlinVersion;->patch:I
 
+    .line 23
     iget p1, p0, Lkotlin/KotlinVersion;->major:I
 
     iget p2, p0, Lkotlin/KotlinVersion;->minor:I
@@ -132,6 +136,7 @@
 
     return p0
 
+    .line 27
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -157,6 +162,7 @@
 
     move-result-object p0
 
+    .line 26
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -175,6 +181,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 17
     check-cast p1, Lkotlin/KotlinVersion;
 
     invoke-virtual {p0, p1}, Lkotlin/KotlinVersion;->compareTo(Lkotlin/KotlinVersion;)I
@@ -191,6 +198,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 45
     iget p0, p0, Lkotlin/KotlinVersion;->version:I
 
     iget p1, p1, Lkotlin/KotlinVersion;->version:I
@@ -203,6 +211,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 38
     move-object v0, p0
 
     check-cast v0, Lkotlin/KotlinVersion;
@@ -213,6 +222,7 @@
 
     return v1
 
+    .line 39
     :cond_0
     instance-of v0, p1, Lkotlin/KotlinVersion;
 
@@ -227,6 +237,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 40
     iget p0, p0, Lkotlin/KotlinVersion;->version:I
 
     iget p1, p1, Lkotlin/KotlinVersion;->version:I
@@ -242,6 +253,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 43
     iget p0, p0, Lkotlin/KotlinVersion;->version:I
 
     return p0
@@ -250,6 +262,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

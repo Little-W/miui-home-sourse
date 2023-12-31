@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/dist/handoff/system/SystemPropertyUtil;
 .super Ljava/lang/Object;
+.source "SystemPropertyUtil.java"
 
 
 # static fields
@@ -15,6 +16,7 @@
     :try_start_0
     const-string v1, "android.os.SystemProperties"
 
+    .line 23
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -25,6 +27,7 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
+    .line 24
     const-class v5, Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -49,6 +52,7 @@
 
     aput-object v0, v3, v7
 
+    .line 25
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -64,6 +68,7 @@
     :catch_0
     move-exception v1
 
+    .line 27
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -73,6 +78,7 @@
 .method static isTablet()Z
     .locals 2
 
+    .line 13
     sget-object v0, Lcom/xiaomi/dist/handoff/system/SystemPropertyUtil;->mCharacteristics:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -81,12 +87,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 14
     invoke-static {}, Lcom/xiaomi/dist/handoff/system/SystemPropertyUtil;->getCharacteristics()Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/xiaomi/dist/handoff/system/SystemPropertyUtil;->mCharacteristics:Ljava/lang/String;
 
+    .line 16
     :cond_0
     sget-object v0, Lcom/xiaomi/dist/handoff/system/SystemPropertyUtil;->mCharacteristics:Ljava/lang/String;
 

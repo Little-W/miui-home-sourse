@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/DisposeOnCancel;
 .super Lkotlinx/coroutines/CancelHandler;
+.source "CancellableContinuation.kt"
 
 
 # instance fields
@@ -10,6 +11,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/DisposableHandle;)V
     .locals 0
 
+    .line 383
     invoke-direct {p0}, Lkotlinx/coroutines/CancelHandler;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/DisposeOnCancel;->handle:Lkotlinx/coroutines/DisposableHandle;
@@ -22,6 +24,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 383
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/DisposeOnCancel;->invoke(Ljava/lang/Throwable;)V
@@ -34,6 +37,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 384
     iget-object p0, p0, Lkotlinx/coroutines/DisposeOnCancel;->handle:Lkotlinx/coroutines/DisposableHandle;
 
     invoke-interface {p0}, Lkotlinx/coroutines/DisposableHandle;->dispose()V
@@ -44,6 +48,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 385
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

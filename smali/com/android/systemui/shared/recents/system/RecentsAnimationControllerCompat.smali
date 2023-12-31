@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;
 .super Ljava/lang/Object;
+.source "RecentsAnimationControllerCompat.java"
 
 
 # static fields
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +24,10 @@
 .method public constructor <init>(Landroid/view/IRecentsAnimationController;)V
     .locals 0
 
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
     return-void
@@ -34,6 +38,7 @@
 .method public cleanupScreenshot()V
     .locals 0
 
+    .line 129
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
     invoke-static {p0}, Lmiui/view/IRecentsAnimationControllerExpose;->box(Ljava/lang/Object;)Lmiui/view/IRecentsAnimationControllerExpose;
@@ -48,6 +53,7 @@
 .method public finish(ZZ)V
     .locals 3
 
+    .line 100
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidU()Z
 
     move-result v0
@@ -56,6 +62,7 @@
 
     if-nez p1, :cond_0
 
+    .line 101
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;->getInstance()Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;
 
     move-result-object v0
@@ -66,6 +73,7 @@
 
     invoke-virtual {v0, v1, v2, v2}, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;->executeFinishCallback(ZLandroid/window/WindowContainerTransaction;Lcom/android/systemui/shared/recents/utilities/ShellTransitionCallback;)V
 
+    .line 105
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
@@ -83,6 +91,7 @@
 
     const-string p2, "Failed to finish recents animation"
 
+    .line 107
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -92,6 +101,7 @@
 .method public finishForSosc(IZZZ)V
     .locals 10
 
+    .line 113
     :try_start_0
     const-class v0, Landroid/view/IRecentsAnimationController;
 
@@ -131,6 +141,7 @@
 
     new-array v5, p0, [Ljava/lang/Object;
 
+    .line 114
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -155,6 +166,7 @@
 
     aput-object p0, v5, v9
 
+    .line 113
     invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -168,6 +180,7 @@
 
     const-string p2, "Failed to finishForSosc recents animation"
 
+    .line 116
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -177,6 +190,7 @@
 .method public hideCurrentInputMethod()V
     .locals 2
 
+    .line 85
     :try_start_0
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidU()Z
 
@@ -184,6 +198,7 @@
 
     if-nez v0, :cond_0
 
+    .line 86
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
     invoke-interface {p0}, Landroid/view/IRecentsAnimationController;->hideCurrentInputMethod()V
@@ -199,6 +214,7 @@
 
     const-string v1, "Failed to set hide input method"
 
+    .line 89
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -209,6 +225,7 @@
 .method public screenshotTask(I)Lcom/android/systemui/shared/recents/model/ThumbnailData;
     .locals 7
 
+    .line 48
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidU()Z
 
     move-result v0
@@ -217,6 +234,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 49
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object p0
@@ -227,6 +245,7 @@
 
     goto :goto_0
 
+    .line 51
     :cond_0
     const-class v0, Landroid/view/IRecentsAnimationController;
 
@@ -244,6 +263,7 @@
 
     new-array v6, v1, [Ljava/lang/Object;
 
+    .line 52
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -256,15 +276,18 @@
 
     move-object v5, v6
 
+    .line 51
     invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 54
     :goto_0
     invoke-static {p0}, Lcom/android/systemui/shared/recents/utilities/Utilities;->createTaskSnapshotCompat(Ljava/lang/Object;)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
 
     move-result-object p0
 
+    .line 55
     new-instance p1, Lcom/android/systemui/shared/recents/model/ThumbnailData;
 
     invoke-interface {p0}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getTaskThumbnailInfo()Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
@@ -283,6 +306,7 @@
 .method public setAnimationTargetsBehindSystemBars(Z)V
     .locals 1
 
+    .line 68
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
@@ -299,6 +323,7 @@
 
     const-string v0, "Failed to set whether animation targets are behind system bars"
 
+    .line 70
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -308,6 +333,7 @@
 .method public setCancelWithDeferredScreenshot(Z)V
     .locals 1
 
+    .line 122
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
@@ -324,6 +350,7 @@
 
     const-string v0, "Failed to set cancel with deferred screenshot"
 
+    .line 124
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -333,6 +360,7 @@
 .method public setInputConsumerEnabled(Z)V
     .locals 1
 
+    .line 60
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
@@ -349,6 +377,7 @@
 
     const-string v0, "Failed to set input consumer enabled state"
 
+    .line 62
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -358,6 +387,7 @@
 .method public setSplitScreenMinimized(Z)V
     .locals 1
 
+    .line 76
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
@@ -374,6 +404,7 @@
 
     const-string v0, "Failed to set minimize dock"
 
+    .line 78
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

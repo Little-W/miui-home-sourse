@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$6;
 .super Ljava/lang/Object;
+.source "DropdownMenuEndIconDelegate.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
     .locals 0
 
+    .line 256
     iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$6;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
+    .line 259
     iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$6;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     iget-object p1, p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
@@ -46,6 +49,7 @@
 
     check-cast p1, Landroid/widget/AutoCompleteTextView;
 
+    .line 260
     iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$6;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-static {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->access$500(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/widget/AutoCompleteTextView;)V

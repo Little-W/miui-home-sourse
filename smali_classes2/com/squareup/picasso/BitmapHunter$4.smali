@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/BitmapHunter$4;
 .super Ljava/lang/Object;
+.source "BitmapHunter.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Ljava/lang/StringBuilder;)V
     .locals 0
 
+    .line 466
     iput-object p1, p0, Lcom/squareup/picasso/BitmapHunter$4;->val$builder:Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 468
     new-instance v0, Ljava/lang/NullPointerException;
 
     iget-object p0, p0, Lcom/squareup/picasso/BitmapHunter$4;->val$builder:Ljava/lang/StringBuilder;

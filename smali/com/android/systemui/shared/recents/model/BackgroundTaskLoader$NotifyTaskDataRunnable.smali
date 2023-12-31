@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader$NotifyTaskDataRunnable;
 .super Ljava/lang/Object;
+.source "RecentsTaskLoader.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -72,20 +73,24 @@
 .method public constructor <init>(Lcom/android/systemui/shared/recents/model/Task;Lcom/android/systemui/shared/recents/model/ThumbnailData;Landroid/graphics/drawable/Drawable;Lcom/android/systemui/shared/recents/model/ThumbnailData;Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
+    .line 285
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 286
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader$NotifyTaskDataRunnable;->mTaskWeakReference:Ljava/lang/ref/WeakReference;
 
+    .line 287
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader$NotifyTaskDataRunnable;->mThumbnailDataWeakReference:Ljava/lang/ref/WeakReference;
 
+    .line 288
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -94,6 +99,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 290
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p4}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -103,6 +109,7 @@
     :cond_0
     if-eqz p5, :cond_1
 
+    .line 293
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -118,6 +125,7 @@
 .method public run()V
     .locals 8
 
+    .line 299
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader$NotifyTaskDataRunnable;->mTaskWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -128,6 +136,7 @@
 
     check-cast v1, Lcom/android/systemui/shared/recents/model/Task;
 
+    .line 300
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader$NotifyTaskDataRunnable;->mIconWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -138,6 +147,7 @@
 
     check-cast v2, Landroid/graphics/drawable/Drawable;
 
+    .line 301
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader$NotifyTaskDataRunnable;->mThumbnailDataWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -146,6 +156,7 @@
 
     check-cast v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;
 
+    .line 302
     iget-object v3, p0, Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader$NotifyTaskDataRunnable;->mSecondThumbnailDataWeakReference:Ljava/lang/ref/WeakReference;
 
     if-eqz v1, :cond_1
@@ -154,6 +165,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 305
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader$NotifyTaskDataRunnable;->mSecondIconWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -164,6 +176,7 @@
 
     check-cast v5, Landroid/graphics/drawable/Drawable;
 
+    .line 306
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -172,6 +185,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 308
     iget-object v3, v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
 
     iget-object v4, v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
@@ -184,6 +198,7 @@
 
     goto :goto_0
 
+    .line 312
     :cond_0
     iget-object p0, v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
 

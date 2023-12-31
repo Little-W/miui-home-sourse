@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/timepicker/ClockHandView$1;
 .super Ljava/lang/Object;
+.source "ClockHandView.java"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/timepicker/ClockHandView;)V
     .locals 0
 
+    .line 142
     iput-object p1, p0, Lcom/google/android/material/timepicker/ClockHandView$1;->this$0:Lcom/google/android/material/timepicker/ClockHandView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
+    .line 145
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -46,6 +49,7 @@
 
     move-result p1
 
+    .line 146
     iget-object p0, p0, Lcom/google/android/material/timepicker/ClockHandView$1;->this$0:Lcom/google/android/material/timepicker/ClockHandView;
 
     const/4 v0, 0x1

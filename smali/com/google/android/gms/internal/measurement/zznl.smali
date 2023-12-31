@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zznl;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/internal/measurement/zzni;
@@ -41,10 +42,12 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 4
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzdm;
 
     const-string v1, "com.google.android.gms.measurement"
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/gms/internal/measurement/zzde;->zza(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -55,6 +58,7 @@
 
     const-string v2, "measurement.client.sessions.check_on_reset_and_enable2"
 
+    .line 6
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/measurement/zzdm;->zza(Ljava/lang/String;Z)Lcom/google/android/gms/internal/measurement/zzdh;
 
     move-result-object v2
@@ -63,6 +67,7 @@
 
     const-string v2, "measurement.client.sessions.check_on_startup"
 
+    .line 7
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/measurement/zzdm;->zza(Ljava/lang/String;Z)Lcom/google/android/gms/internal/measurement/zzdh;
 
     move-result-object v2
@@ -71,6 +76,7 @@
 
     const-string v2, "measurement.client.sessions.start_session_before_view_screen"
 
+    .line 8
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/measurement/zzdm;->zza(Ljava/lang/String;Z)Lcom/google/android/gms/internal/measurement/zzdh;
 
     move-result-object v0
@@ -83,6 +89,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -101,6 +108,7 @@
 .method public final zzb()Z
     .locals 0
 
+    .line 3
     sget-object p0, Lcom/google/android/gms/internal/measurement/zznl;->zza:Lcom/google/android/gms/internal/measurement/zzdh;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzdh;->zzc()Ljava/lang/Object;

@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;
 .super Ljava/lang/Object;
+.source "HeartBeatInfoStorage.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 44
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "dd/MM/yyyy z"
@@ -32,12 +34,14 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 2
 
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     const-string v1, "FirebaseAppHeartBeat"
 
+    .line 54
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -46,6 +50,7 @@
 
     const-string v1, "FirebaseAppHeartBeatStorage"
 
+    .line 56
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
@@ -62,17 +67,20 @@
 
     monitor-enter v0
 
+    .line 74
     :try_start_0
     sget-object v1, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->instance:Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;
 
     if-nez v1, :cond_0
 
+    .line 75
     new-instance v1, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;
 
     invoke-direct {v1, p0}, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->instance:Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;
 
+    .line 77
     :cond_0
     sget-object p0, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->instance:Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;
     :try_end_0
@@ -93,14 +101,17 @@
 .method static isSameDateUtc(JJ)Z
     .locals 1
 
+    .line 131
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p0, p1}, Ljava/util/Date;-><init>(J)V
 
+    .line 132
     new-instance p0, Ljava/util/Date;
 
     invoke-direct {p0, p2, p3}, Ljava/util/Date;-><init>(J)V
 
+    .line 133
     sget-object p1, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->FORMATTER:Ljava/text/SimpleDateFormat;
 
     invoke-virtual {p1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
@@ -132,6 +143,7 @@
     :try_start_0
     const-string v0, "fire-global"
 
+    .line 159
     invoke-virtual {p0, v0, p1, p2}, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->shouldSendSdkHeartBeat(Ljava/lang/String;J)Z
 
     move-result p1
@@ -155,6 +167,7 @@
 
     monitor-enter p0
 
+    .line 142
     :try_start_0
     iget-object v0, p0, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->sharedPreferences:Landroid/content/SharedPreferences;
 
@@ -166,6 +179,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 143
     iget-object v0, p0, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const-wide/16 v2, -0x1
@@ -180,6 +194,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 144
     iget-object v0, p0, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -194,6 +209,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 145
     monitor-exit p0
 
     return v1
@@ -201,10 +217,12 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 147
     monitor-exit p0
 
     return p1
 
+    .line 149
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->sharedPreferences:Landroid/content/SharedPreferences;
@@ -221,6 +239,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 150
     monitor-exit p0
 
     return v1

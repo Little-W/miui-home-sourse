@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;
 .super Ljava/lang/Object;
+.source "LdsBranchSearchResultViewHolder.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;Ljava/lang/String;Lio/branch/search/BranchLinkResult;)V
     .locals 0
 
+    .line 94
     iput-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;->this$0:Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;
 
     iput-object p2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;->val$packageName:Ljava/lang/String;
@@ -44,14 +46,17 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
+    .line 97
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;->val$packageName:Ljava/lang/String;
 
     invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackGpOrGetApps(Ljava/lang/String;)V
 
     const/4 p1, 0x5
 
+    .line 98
     invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchResultClick(I)V
 
+    .line 99
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSearchResultUtils()Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;
 
     move-result-object p1

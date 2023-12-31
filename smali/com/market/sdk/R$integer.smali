@@ -1,5 +1,6 @@
 .class public final Lcom/market/sdk/R$integer;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -71,6 +72,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 3148
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

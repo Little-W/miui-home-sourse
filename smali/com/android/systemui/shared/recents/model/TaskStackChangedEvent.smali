@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/model/TaskStackChangedEvent;
 .super Ljava/lang/Object;
+.source "TaskStackChangedEvent.java"
 
 
 # instance fields
@@ -26,14 +27,17 @@
         }
     .end annotation
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskStackChangedEvent;->mTaskIds:Ljava/util/Set;
 
+    .line 11
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -54,6 +58,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 13
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/TaskStackChangedEvent;->mTaskIds:Ljava/util/Set;
 
     invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->getMainTaskInfo()Landroid/app/ActivityManager$RecentTaskInfo;

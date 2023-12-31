@@ -1,5 +1,6 @@
 .class Landroidx/recyclerview/widget/DiffUtil$Snake;
 .super Ljava/lang/Object;
+.source "DiffUtil.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 442
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

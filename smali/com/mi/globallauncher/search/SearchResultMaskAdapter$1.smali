@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/globallauncher/search/SearchResultMaskAdapter$1;
 .super Ljava/lang/Object;
+.source "SearchResultMaskAdapter.java"
 
 
 # annotations

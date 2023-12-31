@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/functions/Functions$TruePredicate;
 .super Ljava/lang/Object;
+.source "Functions.java"
 
 # interfaces
 .implements Lio/reactivex2/functions/Predicate;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 713
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

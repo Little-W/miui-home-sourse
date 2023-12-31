@@ -1,5 +1,6 @@
 .class public interface abstract Lio/branch/search/ui/KBranchSearchEvents;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods

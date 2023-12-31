@@ -1,5 +1,6 @@
 .class Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader$1;
 .super Landroidx/emoji2/text/EmojiCompat$MetadataRepoLoaderCallback;
+.source "EmojiCompatInitializer.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>(Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader;Landroidx/emoji2/text/EmojiCompat$MetadataRepoLoaderCallback;Ljava/util/concurrent/ThreadPoolExecutor;)V
     .locals 0
 
+    .line 180
     iput-object p1, p0, Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader$1;->this$0:Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader;
 
     iput-object p2, p0, Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader$1;->val$loaderCallback:Landroidx/emoji2/text/EmojiCompat$MetadataRepoLoaderCallback;
@@ -41,6 +43,7 @@
 .method public onFailed(Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 195
     :try_start_0
     iget-object v0, p0, Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader$1;->val$loaderCallback:Landroidx/emoji2/text/EmojiCompat$MetadataRepoLoaderCallback;
 
@@ -48,6 +51,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 197
     iget-object p0, p0, Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader$1;->val$executor:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
@@ -61,12 +65,14 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
+    .line 198
     throw p1
 .end method
 
 .method public onLoaded(Landroidx/emoji2/text/MetadataRepo;)V
     .locals 1
 
+    .line 185
     :try_start_0
     iget-object v0, p0, Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader$1;->val$loaderCallback:Landroidx/emoji2/text/EmojiCompat$MetadataRepoLoaderCallback;
 
@@ -74,6 +80,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 187
     iget-object p0, p0, Landroidx/emoji2/text/EmojiCompatInitializer$BackgroundDefaultLoader$1;->val$executor:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
@@ -87,5 +94,6 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
+    .line 188
     throw p1
 .end method

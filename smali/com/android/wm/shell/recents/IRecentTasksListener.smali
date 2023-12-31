@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/wm/shell/recents/IRecentTasksListener;
 .super Ljava/lang/Object;
+.source "IRecentTasksListener.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/android/HandlerContext$scheduleResumeAfterDelay$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "HandlerDispatcher.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -52,6 +53,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 105
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/android/HandlerContext$scheduleResumeAfterDelay$1;->invoke(Ljava/lang/Throwable;)V
@@ -64,6 +66,7 @@
 .method public final invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 140
     iget-object p1, p0, Lkotlinx/coroutines/android/HandlerContext$scheduleResumeAfterDelay$1;->this$0:Lkotlinx/coroutines/android/HandlerContext;
 
     invoke-static {p1}, Lkotlinx/coroutines/android/HandlerContext;->access$getHandler$p(Lkotlinx/coroutines/android/HandlerContext;)Landroid/os/Handler;

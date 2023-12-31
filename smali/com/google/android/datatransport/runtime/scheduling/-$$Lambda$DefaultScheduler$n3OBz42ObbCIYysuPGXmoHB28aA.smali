@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/android/datatransport/runtime/scheduling/-$$Lambda$DefaultScheduler$n3OBz42ObbCIYysuPGXmoHB28aA;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard$CriticalSection;

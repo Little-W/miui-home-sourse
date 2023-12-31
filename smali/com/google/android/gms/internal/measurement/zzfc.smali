@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/gms/internal/measurement/zzfc;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -72,6 +73,7 @@
 
     new-array v0, v0, [Ljava/util/Map$Entry;
 
+    .line 48
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzfc;->zza:[Ljava/util/Map$Entry;
 
     return-void
@@ -80,6 +82,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -92,6 +95,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 5
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -106,6 +110,7 @@
         .end annotation
     .end param
 
+    .line 7
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzfc;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -129,6 +134,7 @@
         .end annotation
     .end param
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzfc;->values()Ljava/util/Collection;
 
     move-result-object p0
@@ -145,10 +151,12 @@
 .method public synthetic entrySet()Ljava/util/Set;
     .locals 1
 
+    .line 37
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfc;->zzb:Lcom/google/android/gms/internal/measurement/zzfg;
 
     if-nez v0, :cond_0
 
+    .line 38
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzfc;->zza()Lcom/google/android/gms/internal/measurement/zzfg;
 
     move-result-object v0
@@ -172,13 +180,16 @@
 
     return p0
 
+    .line 14
     :cond_0
     instance-of v0, p1, Ljava/util/Map;
 
     if-eqz v0, :cond_1
 
+    .line 15
     check-cast p1, Ljava/util/Map;
 
+    .line 16
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -231,6 +242,7 @@
         }
     .end annotation
 
+    .line 9
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzfc;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -246,6 +258,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 19
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzfc;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -262,6 +275,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzfc;->size()I
 
     move-result p0
@@ -281,10 +295,12 @@
 .method public synthetic keySet()Ljava/util/Set;
     .locals 1
 
+    .line 45
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfc;->zzc:Lcom/google/android/gms/internal/measurement/zzfg;
 
     if-nez v0, :cond_0
 
+    .line 46
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzfc;->zzb()Lcom/google/android/gms/internal/measurement/zzfg;
 
     move-result-object v0
@@ -306,6 +322,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -326,6 +343,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 4
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -346,6 +364,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 3
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -356,12 +375,14 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
+    .line 21
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
 
     if-ltz v0, :cond_2
 
+    .line 25
     new-instance v1, Ljava/lang/StringBuilder;
 
     int-to-long v2, v0
@@ -382,10 +403,12 @@
 
     const/16 v0, 0x7b
 
+    .line 26
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/4 v0, 0x1
 
+    .line 28
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -411,11 +434,13 @@
 
     const-string v0, ", "
 
+    .line 30
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 32
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -437,6 +462,7 @@
     :cond_1
     const/16 p0, 0x7d
 
+    .line 34
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -445,6 +471,7 @@
 
     return-object p0
 
+    .line 24
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -480,10 +507,12 @@
 .method public synthetic values()Ljava/util/Collection;
     .locals 1
 
+    .line 41
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfc;->zzd:Lcom/google/android/gms/internal/measurement/zzey;
 
     if-nez v0, :cond_0
 
+    .line 42
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzfc;->zzc()Lcom/google/android/gms/internal/measurement/zzey;
 
     move-result-object v0

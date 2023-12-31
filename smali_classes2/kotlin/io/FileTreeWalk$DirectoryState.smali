@@ -1,5 +1,6 @@
 .class abstract Lkotlin/io/FileTreeWalk$DirectoryState;
 .super Lkotlin/io/FileTreeWalk$WalkState;
+.source "FileTreeWalk.kt"
 
 
 # annotations
@@ -25,12 +26,15 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 59
     invoke-direct {p0, p1}, Lkotlin/io/FileTreeWalk$WalkState;-><init>(Ljava/io/File;)V
 
+    .line 61
     sget-boolean p0, Lkotlin/_Assertions;->ENABLED:Z
 
     if-eqz p0, :cond_1
 
+    .line 62
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result p0

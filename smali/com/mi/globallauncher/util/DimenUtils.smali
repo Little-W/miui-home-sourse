@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/util/DimenUtils;
 .super Ljava/lang/Object;
+.source "DimenUtils.java"
 
 
 # static fields
@@ -62,6 +63,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -94,6 +96,7 @@
 
     return p0
 
+    .line 52
     :cond_0
     invoke-static {p2}, Lcom/mi/globallauncher/util/DimenUtils;->getScaleFactorH(Landroid/util/DisplayMetrics;)F
 
@@ -107,6 +110,7 @@
 
     return p0
 
+    .line 50
     :cond_1
     iget p0, p2, Landroid/util/DisplayMetrics;->scaledDensity:F
 
@@ -115,11 +119,13 @@
 
     return p1
 
+    .line 48
     :cond_2
     iget p0, p2, Landroid/util/DisplayMetrics;->density:F
 
     goto :goto_0
 
+    .line 46
     :cond_3
     invoke-static {p0, p1, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
@@ -131,6 +137,7 @@
 .method public static dp2px(F)I
     .locals 2
 
+    .line 63
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -153,10 +160,12 @@
 .method public static dp2px(FLandroid/content/Context;)I
     .locals 1
 
+    .line 58
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
+    .line 59
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -167,6 +176,7 @@
 
     const/4 v0, 0x1
 
+    .line 58
     invoke-static {v0, p0, p1}, Lcom/mi/globallauncher/util/DimenUtils;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result p0
@@ -179,6 +189,7 @@
 .method public static getNavBarHeight(Landroid/content/Context;)I
     .locals 3
 
+    .line 169
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -189,12 +200,14 @@
 
     const-string v2, "android"
 
+    .line 170
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-lez v0, :cond_0
 
+    .line 173
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -210,10 +223,12 @@
 .method private static getScaleFactorH(Landroid/util/DisplayMetrics;)F
     .locals 2
 
+    .line 67
     sget-object v0, Lcom/mi/globallauncher/util/DimenUtils;->sScaleH:Ljava/lang/Float;
 
     if-nez v0, :cond_0
 
+    .line 68
     iget v0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     int-to-float v0, v0
@@ -236,6 +251,7 @@
 
     sput-object p0, Lcom/mi/globallauncher/util/DimenUtils;->sScaleH:Ljava/lang/Float;
 
+    .line 71
     :cond_0
     sget-object p0, Lcom/mi/globallauncher/util/DimenUtils;->sScaleH:Ljava/lang/Float;
 
@@ -249,10 +265,12 @@
 .method public static getStatusBarHeight(Landroid/app/Activity;)I
     .locals 1
 
+    .line 76
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
+    .line 77
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p0
@@ -263,6 +281,7 @@
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
+    .line 78
     iget p0, v0, Landroid/graphics/Rect;->top:I
 
     return p0
@@ -276,20 +295,24 @@
     :try_start_0
     const-string v1, "com.android.internal.R$dimen"
 
+    .line 156
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
+    .line 157
     invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v2
 
     const-string v3, "status_bar_height"
 
+    .line 158
     invoke-virtual {v1, v3}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
+    .line 159
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -302,6 +325,7 @@
 
     move-result v1
 
+    .line 160
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -310,6 +334,7 @@
 
     move-result v0
 
+    .line 161
     sput v0, Lcom/mi/globallauncher/util/DimenUtils;->sStatusHeight:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -319,6 +344,7 @@
     :catch_0
     move-exception p0
 
+    .line 163
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -328,6 +354,7 @@
 .method public static getStatusBarHeight2(Landroid/content/Context;)I
     .locals 3
 
+    .line 84
     sget v0, Lcom/mi/globallauncher/util/DimenUtils;->sStatusBarHeight:I
 
     const/4 v1, -0x1
@@ -340,20 +367,24 @@
     :try_start_0
     const-string v0, "com.android.internal.R$dimen"
 
+    .line 89
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 90
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v1
 
     const-string v2, "status_bar_height"
 
+    .line 91
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
+    .line 93
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -366,10 +397,12 @@
 
     move-result v0
 
+    .line 94
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
+    .line 95
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -383,8 +416,10 @@
     :catch_0
     move-exception p0
 
+    .line 97
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 99
     :goto_0
     sget p0, Lcom/mi/globallauncher/util/DimenUtils;->sStatusBarHeight:I
 

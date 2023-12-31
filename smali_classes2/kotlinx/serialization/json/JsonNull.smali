@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/JsonNull;
 .super Lkotlinx/serialization/json/JsonPrimitive;
+.source "JsonElement.kt"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 104
     new-instance v0, Lkotlinx/serialization/json/JsonNull;
 
     invoke-direct {v0}, Lkotlinx/serialization/json/JsonNull;-><init>()V
@@ -26,6 +28,7 @@
 
     const-string v0, "null"
 
+    .line 106
     sput-object v0, Lkotlinx/serialization/json/JsonNull;->content:Ljava/lang/String;
 
     return-void
@@ -36,6 +39,7 @@
 
     const/4 v0, 0x0
 
+    .line 104
     invoke-direct {p0, v0}, Lkotlinx/serialization/json/JsonPrimitive;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
@@ -46,6 +50,7 @@
 .method public getContent()Ljava/lang/String;
     .locals 0
 
+    .line 106
     sget-object p0, Lkotlinx/serialization/json/JsonNull;->content:Ljava/lang/String;
 
     return-object p0

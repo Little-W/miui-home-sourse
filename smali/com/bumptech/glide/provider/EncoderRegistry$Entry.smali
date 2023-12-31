@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/provider/EncoderRegistry$Entry;
 .super Ljava/lang/Object;
+.source "EncoderRegistry.java"
 
 
 # annotations
@@ -55,10 +56,13 @@
         }
     .end annotation
 
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 41
     iput-object p1, p0, Lcom/bumptech/glide/provider/EncoderRegistry$Entry;->dataClass:Ljava/lang/Class;
 
+    .line 42
     iput-object p2, p0, Lcom/bumptech/glide/provider/EncoderRegistry$Entry;->encoder:Lcom/bumptech/glide/load/Encoder;
 
     return-void
@@ -76,6 +80,7 @@
         }
     .end annotation
 
+    .line 46
     iget-object p0, p0, Lcom/bumptech/glide/provider/EncoderRegistry$Entry;->dataClass:Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z

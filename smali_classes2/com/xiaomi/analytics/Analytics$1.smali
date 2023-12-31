@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/Analytics$1;
 .super Ljava/lang/Object;
+.source "Analytics.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -37,6 +38,7 @@
 .method constructor <init>(Lcom/xiaomi/analytics/Analytics;ILjava/lang/String;)V
     .locals 0
 
+    .line 105
     iput-object p1, p0, Lcom/xiaomi/analytics/Analytics$1;->this$0:Lcom/xiaomi/analytics/Analytics;
 
     iput p2, p0, Lcom/xiaomi/analytics/Analytics$1;->val$timeout:I
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 105
     invoke-virtual {p0}, Lcom/xiaomi/analytics/Analytics$1;->call()Ljava/lang/String;
 
     move-result-object p0
@@ -73,10 +76,12 @@
         }
     .end annotation
 
+    .line 108
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 109
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -92,6 +97,7 @@
 
     if-gez v2, :cond_2
 
+    .line 110
     iget-object v2, p0, Lcom/xiaomi/analytics/Analytics$1;->this$0:Lcom/xiaomi/analytics/Analytics;
 
     invoke-static {v2}, Lcom/xiaomi/analytics/Analytics;->access$000(Lcom/xiaomi/analytics/Analytics;)Landroid/content/Context;
@@ -108,12 +114,14 @@
 
     if-eqz v2, :cond_1
 
+    .line 112
     iget-object v3, p0, Lcom/xiaomi/analytics/Analytics$1;->val$configKey:Ljava/lang/String;
 
     invoke-interface {v2, v3}, Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;->getClientExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 113
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -134,6 +142,7 @@
     :cond_1
     const-wide/16 v2, 0x3e8
 
+    .line 117
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
     goto :goto_0

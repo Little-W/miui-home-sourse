@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;
 .super Lio/reactivex2/internal/observers/BasicFuseableObserver;
+.source "ObservableFilter.java"
 
 
 # annotations
@@ -47,8 +48,10 @@
         }
     .end annotation
 
+    .line 37
     invoke-direct {p0, p1}, Lio/reactivex2/internal/observers/BasicFuseableObserver;-><init>(Lio/reactivex2/Observer;)V
 
+    .line 38
     iput-object p2, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->filter:Lio/reactivex2/functions/Predicate;
 
     return-void
@@ -64,10 +67,12 @@
         }
     .end annotation
 
+    .line 43
     iget v0, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->sourceMode:I
 
     if-nez v0, :cond_0
 
+    .line 46
     :try_start_0
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->filter:Lio/reactivex2/functions/Predicate;
 
@@ -79,6 +84,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 52
     iget-object p0, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->downstream:Lio/reactivex2/Observer;
 
     invoke-interface {p0, p1}, Lio/reactivex2/Observer;->onNext(Ljava/lang/Object;)V
@@ -88,10 +94,12 @@
     :catchall_0
     move-exception p1
 
+    .line 48
     invoke-virtual {p0, p1}, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->fail(Ljava/lang/Throwable;)V
 
     return-void
 
+    .line 55
     :cond_0
     iget-object p0, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->downstream:Lio/reactivex2/Observer;
 
@@ -118,6 +126,7 @@
         }
     .end annotation
 
+    .line 68
     :cond_0
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->qd:Lio/reactivex2/internal/fuseable/QueueDisposable;
 
@@ -127,6 +136,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 69
     iget-object v1, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->filter:Lio/reactivex2/functions/Predicate;
 
     invoke-interface {v1, v0}, Lio/reactivex2/functions/Predicate;->test(Ljava/lang/Object;)Z
@@ -142,6 +152,7 @@
 .method public requestFusion(I)I
     .locals 0
 
+    .line 61
     invoke-virtual {p0, p1}, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;->transitiveBoundaryFusion(I)I
 
     move-result p0

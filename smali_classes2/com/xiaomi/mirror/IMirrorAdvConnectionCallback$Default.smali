@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/IMirrorAdvConnectionCallback$Default;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/xiaomi/mirror/IMirrorAdvConnectionCallback;

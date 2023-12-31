@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/internal/ScopeCoroutine;
 .super Lkotlinx/coroutines/AbstractCoroutine;
+.source "Scopes.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
@@ -43,6 +44,7 @@
 
     const/4 v0, 0x1
 
+    .line 18
     invoke-direct {p0, p1, v0}, Lkotlinx/coroutines/AbstractCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Z)V
 
     iput-object p2, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
@@ -55,6 +57,7 @@
 .method protected afterCompletion(Ljava/lang/Object;)V
     .locals 2
 
+    .line 27
     iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
     invoke-static {v0}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->intercepted(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -79,6 +82,7 @@
 .method protected afterResume(Ljava/lang/Object;)V
     .locals 0
 
+    .line 32
     iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
     invoke-static {p1, p0}, Lkotlinx/coroutines/CompletionStateKt;->recoverResult(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -93,6 +97,7 @@
 .method public final getCallerFrame()Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
     .locals 0
 
+    .line 19
     iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
     check-cast p0, Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
@@ -103,6 +108,7 @@
 .method public final getParent$kotlinx_coroutines_core()Lkotlinx/coroutines/Job;
     .locals 1
 
+    .line 23
     iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->parentContext:Lkotlin/coroutines/CoroutineContext;
 
     sget-object v0, Lkotlinx/coroutines/Job;->Key:Lkotlinx/coroutines/Job$Key;

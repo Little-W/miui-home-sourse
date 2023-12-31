@@ -1,5 +1,6 @@
 .class abstract Lcom/google/android/gms/internal/measurement/zzei;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/util/Map$Entry;
@@ -24,6 +25,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,14 +40,17 @@
         .end annotation
     .end param
 
+    .line 3
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 4
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzei;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -60,6 +65,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzei;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -101,10 +107,12 @@
 .method public hashCode()I
     .locals 2
 
+    .line 9
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzei;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 10
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzei;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -117,6 +125,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -146,6 +155,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -156,6 +166,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 12
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzei;->getKey()Ljava/lang/Object;
 
     move-result-object v0

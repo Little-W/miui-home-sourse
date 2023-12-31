@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/view/BranchSearchGuide;
 .super Landroid/widget/RelativeLayout;
+.source "BranchSearchGuide.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomePressListener;
@@ -77,6 +78,7 @@
 
     const/4 v0, 0x0
 
+    .line 76
     invoke-direct {p0, p1, v0}, Lcom/mi/globallauncher/view/BranchSearchGuide;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -87,6 +89,7 @@
 
     const/4 v0, 0x0
 
+    .line 80
     invoke-direct {p0, p1, p2, v0}, Lcom/mi/globallauncher/view/BranchSearchGuide;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -95,6 +98,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 84
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -103,6 +107,7 @@
 .method static synthetic access$000(Landroid/app/Activity;IZ)V
     .locals 0
 
+    .line 40
     invoke-static {p0, p1, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->goToWebViewActivity(Landroid/app/Activity;IZ)V
 
     return-void
@@ -111,6 +116,7 @@
 .method public static getBranchSearchGuideView(Landroid/content/Context;)Lcom/mi/globallauncher/view/BranchSearchGuide;
     .locals 2
 
+    .line 150
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p0
@@ -173,6 +179,7 @@
 
     return-object p0
 
+    .line 375
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -186,6 +193,7 @@
 
     return-object p0
 
+    .line 372
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -203,20 +211,24 @@
 .method private static goToWebViewActivity(Landroid/app/Activity;IZ)V
     .locals 3
 
+    .line 346
     invoke-static {p1}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getBranchUrl(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 347
     invoke-static {p0, p1}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getBranchUrlTitle(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 348
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
+    .line 349
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -225,17 +237,21 @@
 
     const-string v2, "extra_title"
 
+    .line 350
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_0
     const-string p1, "extra_url"
 
+    .line 352
     invoke-virtual {v1, p1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "extra_ui_mode"
 
+    .line 353
     invoke-virtual {v1, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    .line 354
     invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     return-void
@@ -244,6 +260,7 @@
 .method private static guideViewNotShownOrShouldShowAgain()Z
     .locals 4
 
+    .line 124
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -254,6 +271,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 125
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -264,6 +282,7 @@
 
     if-nez v0, :cond_0
 
+    .line 126
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -304,6 +323,7 @@
 .method public static needToShowSearchGuide()Z
     .locals 1
 
+    .line 116
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -314,6 +334,7 @@
 
     if-nez v0, :cond_1
 
+    .line 117
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -324,6 +345,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 118
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -334,6 +356,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 119
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -344,6 +367,7 @@
 
     if-nez v0, :cond_0
 
+    .line 120
     invoke-static {}, Lcom/mi/globallauncher/view/BranchSearchGuide;->guideViewNotShownOrShouldShowAgain()Z
 
     move-result v0
@@ -368,22 +392,27 @@
 .method public static setMiTextLinkOpenWithWebView(Landroid/app/Activity;Landroid/widget/TextView;Z)V
     .locals 8
 
+    .line 309
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
+    .line 310
     instance-of v1, v0, Landroid/text/Spannable;
 
     if-eqz v1, :cond_4
 
+    .line 311
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v1, v0}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 312
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
+    .line 313
     const-class v2, Landroid/text/style/URLSpan;
 
     const/4 v3, 0x0
@@ -394,12 +423,14 @@
 
     check-cast v0, [Landroid/text/style/URLSpan;
 
+    .line 314
     array-length v2, v0
 
     if-nez v2, :cond_0
 
     return-void
 
+    .line 317
     :cond_0
     array-length v2, v0
 
@@ -408,16 +439,20 @@
 
     aget-object v4, v0, v3
 
+    .line 318
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v5
 
+    .line 319
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v6
 
+    .line 320
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
+    .line 321
     invoke-virtual {v4}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
 
     move-result-object v4
@@ -428,6 +463,7 @@
 
     goto :goto_1
 
+    .line 323
     :cond_1
     new-instance v7, Lcom/mi/globallauncher/view/BranchSearchGuide$2;
 
@@ -443,6 +479,7 @@
 
     goto :goto_0
 
+    .line 340
     :cond_3
     sget p2, Lcom/mi/globallauncher/R$color;->url_text_highlight:I
 
@@ -452,6 +489,7 @@
 
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setHighlightColor(I)V
 
+    .line 341
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_4
@@ -461,22 +499,27 @@
 .method public static setTextLinkOpenWithWebView(Landroid/app/Activity;Landroid/widget/TextView;Z)V
     .locals 8
 
+    .line 268
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
+    .line 269
     instance-of v1, v0, Landroid/text/Spannable;
 
     if-eqz v1, :cond_4
 
+    .line 270
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v1, v0}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 271
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
+    .line 272
     const-class v2, Landroid/text/style/URLSpan;
 
     const/4 v3, 0x0
@@ -487,12 +530,14 @@
 
     check-cast v0, [Landroid/text/style/URLSpan;
 
+    .line 273
     array-length v2, v0
 
     if-nez v2, :cond_0
 
     return-void
 
+    .line 276
     :cond_0
     array-length v2, v0
 
@@ -501,16 +546,20 @@
 
     aget-object v4, v0, v3
 
+    .line 277
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v5
 
+    .line 278
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v6
 
+    .line 279
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
+    .line 280
     invoke-virtual {v4}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
 
     move-result-object v4
@@ -521,6 +570,7 @@
 
     goto :goto_1
 
+    .line 282
     :cond_1
     new-instance v7, Lcom/mi/globallauncher/view/BranchSearchGuide$1;
 
@@ -536,6 +586,7 @@
 
     goto :goto_0
 
+    .line 303
     :cond_3
     sget p2, Lcom/mi/globallauncher/R$color;->url_text_highlight:I
 
@@ -545,6 +596,7 @@
 
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setHighlightColor(I)V
 
+    .line 304
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_4
@@ -556,8 +608,10 @@
 .method public initBranchSearchGuideView(ZLcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;I)V
     .locals 4
 
+    .line 154
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->branchGuideViewClickListener:Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;
 
+    .line 155
     sget p2, Lcom/mi/globallauncher/R$id;->search_guide_title:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -568,6 +622,7 @@
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
+    .line 156
     sget p2, Lcom/mi/globallauncher/R$id;->search_guide_desc:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -578,6 +633,7 @@
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
+    .line 157
     sget p2, Lcom/mi/globallauncher/R$id;->search_guide_close:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -588,6 +644,7 @@
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mCloseBtn:Landroid/widget/ImageView;
 
+    .line 158
     sget p2, Lcom/mi/globallauncher/R$id;->search_guide_feature:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -598,6 +655,7 @@
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature:Landroid/widget/TextView;
 
+    .line 159
     sget p2, Lcom/mi/globallauncher/R$id;->search_guide_feature2:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -608,6 +666,7 @@
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature2:Landroid/widget/TextView;
 
+    .line 160
     sget p2, Lcom/mi/globallauncher/R$id;->search_guide_feature3:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -618,6 +677,7 @@
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature3:Landroid/widget/TextView;
 
+    .line 161
     sget p2, Lcom/mi/globallauncher/R$id;->search_guide_btn:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -628,6 +688,7 @@
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mAgreeBtn:Landroid/widget/TextView;
 
+    .line 163
     sget p2, Lcom/mi/globallauncher/R$id;->view_stub_type1:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -638,6 +699,7 @@
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->viewStubType1:Landroid/view/ViewStub;
 
+    .line 164
     sget p2, Lcom/mi/globallauncher/R$id;->view_stub_type4:I
 
     invoke-virtual {p0, p2}, Lcom/mi/globallauncher/view/BranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -660,6 +722,7 @@
 
     goto/16 :goto_3
 
+    .line 176
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->viewStubType4:Landroid/view/ViewStub;
@@ -668,6 +731,7 @@
 
     move-result-object v2
 
+    .line 177
     sget v3, Lcom/mi/globallauncher/R$id;->type_four_step_one_tv:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -678,6 +742,7 @@
 
     iput-object v3, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneTv:Landroid/widget/TextView;
 
+    .line 178
     sget v3, Lcom/mi/globallauncher/R$id;->type_four_step_one_iv:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -688,6 +753,7 @@
 
     iput-object v3, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneIv:Landroid/widget/ImageView;
 
+    .line 179
     sget v3, Lcom/mi/globallauncher/R$id;->type_four_step_two_tv:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -698,6 +764,7 @@
 
     iput-object v3, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoTv:Landroid/widget/TextView;
 
+    .line 180
     sget v3, Lcom/mi/globallauncher/R$id;->type_four_step_two_iv:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -720,6 +787,7 @@
 
     goto :goto_1
 
+    .line 182
     :catch_0
     :try_start_1
     iget-object v2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->viewStubType4:Landroid/view/ViewStub;
@@ -730,6 +798,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 185
     :goto_0
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneTv:Landroid/widget/TextView;
 
@@ -745,6 +814,7 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 186
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoTv:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -759,12 +829,14 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 187
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneIv:Landroid/widget/ImageView;
 
     sget v2, Lcom/mi/globallauncher/R$drawable;->type_four_step_one:I
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 188
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoIv:Landroid/widget/ImageView;
 
     sget v2, Lcom/mi/globallauncher/R$drawable;->type_four_step_two:I
@@ -773,6 +845,7 @@
 
     goto/16 :goto_3
 
+    .line 190
     :cond_1
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneTv:Landroid/widget/TextView;
 
@@ -788,6 +861,7 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 191
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoTv:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -802,12 +876,14 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 192
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneIv:Landroid/widget/ImageView;
 
     sget v2, Lcom/mi/globallauncher/R$drawable;->type_four_step_one_dark_mode:I
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 193
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoIv:Landroid/widget/ImageView;
 
     sget v2, Lcom/mi/globallauncher/R$drawable;->type_four_step_two_dark_mode:I
@@ -819,6 +895,7 @@
     :goto_1
     if-eqz p1, :cond_2
 
+    .line 185
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneTv:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -833,6 +910,7 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 186
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoTv:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -847,12 +925,14 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 187
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneIv:Landroid/widget/ImageView;
 
     sget p3, Lcom/mi/globallauncher/R$drawable;->type_four_step_one:I
 
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 188
     iget-object p0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoIv:Landroid/widget/ImageView;
 
     sget p1, Lcom/mi/globallauncher/R$drawable;->type_four_step_two:I
@@ -861,6 +941,7 @@
 
     goto :goto_2
 
+    .line 190
     :cond_2
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneTv:Landroid/widget/TextView;
 
@@ -876,6 +957,7 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 191
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoTv:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -890,21 +972,25 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 192
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepOneIv:Landroid/widget/ImageView;
 
     sget p3, Lcom/mi/globallauncher/R$drawable;->type_four_step_one_dark_mode:I
 
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 193
     iget-object p0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->stepTwoIv:Landroid/widget/ImageView;
 
     sget p1, Lcom/mi/globallauncher/R$drawable;->type_four_step_two_dark_mode:I
 
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 195
     :goto_2
     throw p2
 
+    .line 168
     :cond_3
     :try_start_2
     iget-object v2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->viewStubType1:Landroid/view/ViewStub;
@@ -913,6 +999,7 @@
 
     move-result-object v2
 
+    .line 169
     sget v3, Lcom/mi/globallauncher/R$id;->search_guide_gif:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -927,6 +1014,7 @@
 
     goto :goto_3
 
+    .line 171
     :catch_1
     iget-object v2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->viewStubType1:Landroid/view/ViewStub;
 
@@ -935,6 +1023,7 @@
     :goto_3
     if-eqz p1, :cond_4
 
+    .line 200
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -949,6 +1038,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 201
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -963,6 +1053,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 202
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -977,6 +1068,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 203
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature2:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -991,6 +1083,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 204
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature3:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -1005,12 +1098,14 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 205
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mCloseBtn:Landroid/widget/ImageView;
 
     sget p2, Lcom/mi/globallauncher/R$drawable;->search_guide_close_btn:I
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 206
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1025,6 +1120,7 @@
 
     goto :goto_4
 
+    .line 208
     :cond_4
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
@@ -1040,6 +1136,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 209
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -1054,6 +1151,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 210
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -1068,6 +1166,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 211
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature2:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -1082,6 +1181,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 212
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature3:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -1096,12 +1196,14 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 213
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mCloseBtn:Landroid/widget/ImageView;
 
     sget p2, Lcom/mi/globallauncher/R$drawable;->search_guide_close_btn_dark:I
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 214
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1131,6 +1233,7 @@
 
     goto/16 :goto_5
 
+    .line 243
     :cond_5
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
@@ -1138,26 +1241,31 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 244
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->branch_guide_type_four_desc:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 245
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->branch_guide_type_four_main:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 246
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature2:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 247
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature3:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 248
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mAgreeBtn:Landroid/widget/TextView;
 
     sget p2, Lcom/mi/globallauncher/R$string;->got_it_botton:I
@@ -1166,6 +1274,7 @@
 
     goto :goto_5
 
+    .line 235
     :cond_6
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
@@ -1173,26 +1282,31 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 236
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->quick_finder_tip_title:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 237
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->quick_finder_feature_description:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 238
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature2:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 239
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature3:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 240
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mAgreeBtn:Landroid/widget/TextView;
 
     sget p2, Lcom/mi/globallauncher/R$string;->switch_on_button:I
@@ -1201,6 +1315,7 @@
 
     goto :goto_5
 
+    .line 227
     :cond_7
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
@@ -1208,26 +1323,31 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 228
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->branch_tip_title:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 229
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->branch_feature_description:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 230
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature2:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 231
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature3:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 232
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mAgreeBtn:Landroid/widget/TextView;
 
     sget p2, Lcom/mi/globallauncher/R$string;->got_it_botton:I
@@ -1236,6 +1356,7 @@
 
     goto :goto_5
 
+    .line 219
     :cond_8
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
@@ -1243,32 +1364,38 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 220
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->branch_guide_type_one_desc:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 221
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->branch_guide_type_one_main:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(I)V
 
+    .line 222
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature2:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 223
     iget-object p2, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mGuideFeature3:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 224
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mAgreeBtn:Landroid/widget/TextView;
 
     sget p2, Lcom/mi/globallauncher/R$string;->got_it_botton:I
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
 
+    .line 252
     :goto_5
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mAgreeBtn:Landroid/widget/TextView;
 
@@ -1278,10 +1405,12 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 258
     sget-object p1, Lcom/mi/globallauncher/view/-$$Lambda$BranchSearchGuide$ja6cqkpJk8ed92yIafgl3QiCMA8;->INSTANCE:Lcom/mi/globallauncher/view/-$$Lambda$BranchSearchGuide$ja6cqkpJk8ed92yIafgl3QiCMA8;
 
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/view/BranchSearchGuide;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 260
     iget-object p1, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->mCloseBtn:Landroid/widget/ImageView;
 
     new-instance p2, Lcom/mi/globallauncher/view/-$$Lambda$BranchSearchGuide$tKlWZzjsROfMswCCVBH811YvMxQ;
@@ -1296,12 +1425,15 @@
 .method public synthetic lambda$initBranchSearchGuideView$0$BranchSearchGuide(Landroid/view/View;)V
     .locals 0
 
+    .line 253
     iget-object p0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->branchGuideViewClickListener:Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;
 
     if-eqz p0, :cond_0
 
+    .line 254
     invoke-interface {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;->onAgreeBtnClicked()V
 
+    .line 256
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -1317,10 +1449,12 @@
 .method public synthetic lambda$initBranchSearchGuideView$2$BranchSearchGuide(Landroid/view/View;)V
     .locals 0
 
+    .line 261
     iget-object p0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->branchGuideViewClickListener:Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;
 
     if-eqz p0, :cond_0
 
+    .line 262
     invoke-interface {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;->onCloseBtnClicked()V
 
     :cond_0
@@ -1330,14 +1464,17 @@
 .method public onAgreeBtnClicked()V
     .locals 2
 
+    .line 139
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
 
     invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setBranchSearchGuideOpenClicked()V
 
+    .line 140
     invoke-static {}, Lio/branch/search/BranchSearch;->optInToTracking()V
 
+    .line 141
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p0
@@ -1350,6 +1487,7 @@
 
     if-nez p0, :cond_0
 
+    .line 142
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p0
@@ -1360,6 +1498,7 @@
 
     invoke-interface {p0, v0, v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setBranchInitSwitchOn(ZZ)V
 
+    .line 144
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
@@ -1371,6 +1510,7 @@
 
     if-nez p0, :cond_1
 
+    .line 145
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p0
@@ -1384,14 +1524,17 @@
 .method protected onAttachedToWindow()V
     .locals 2
 
+    .line 89
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
 
+    .line 90
     new-instance v0, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;
 
     invoke-direct {v0, p0}, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;-><init>(Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomePressListener;)V
 
     iput-object v0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->homeWatcherReceiver:Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;
 
+    .line 91
     iget-object v0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->homeWatcherReceiver:Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
@@ -1400,6 +1543,7 @@
 
     invoke-virtual {v0, v1}, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;->register(Landroid/content/Context;)V
 
+    .line 92
     invoke-static {}, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1410,6 +1554,7 @@
 
     if-nez v0, :cond_0
 
+    .line 93
     invoke-static {}, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1423,18 +1568,22 @@
 .method protected onDetachedFromWindow()V
     .locals 2
 
+    .line 99
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onDetachedFromWindow()V
 
+    .line 100
     iget-object v0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->homeWatcherReceiver:Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;
 
     if-eqz v0, :cond_0
 
+    .line 101
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;->unRegister(Landroid/content/Context;)V
 
+    .line 103
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
@@ -1446,6 +1595,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 104
     invoke-static {}, Lcom/mi/globallauncher/util/CommercialAsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1459,6 +1609,7 @@
 .method public onHide()V
     .locals 2
 
+    .line 130
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
@@ -1471,6 +1622,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 131
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
@@ -1481,6 +1633,7 @@
 
     goto :goto_0
 
+    .line 133
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -1490,6 +1643,7 @@
 
     invoke-interface {p0, v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setShouldShownBranchSearchGuide(Z)V
 
+    .line 134
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p0
@@ -1507,10 +1661,12 @@
 .method public onHomeKeyPressed()V
     .locals 0
 
+    .line 383
     iget-object p0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->branchGuideViewClickListener:Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;
 
     if-eqz p0, :cond_0
 
+    .line 384
     invoke-interface {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;->onCloseBtnClicked()V
 
     :cond_0
@@ -1523,10 +1679,12 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
+    .line 110
     iget-object p0, p0, Lcom/mi/globallauncher/view/BranchSearchGuide;->branchGuideViewClickListener:Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;
 
     if-eqz p0, :cond_0
 
+    .line 111
     invoke-interface {p0}, Lcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;->onCloseBtnClicked()V
 
     :cond_0

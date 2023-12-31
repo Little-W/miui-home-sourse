@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/StreamingJsonDecoder;
 .super Lkotlinx/serialization/encoding/AbstractDecoder;
+.source "StreamingJsonDecoder.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/json/JsonDecoder;
@@ -41,6 +42,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 24
     invoke-direct {p0}, Lkotlinx/serialization/encoding/AbstractDecoder;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->json:Lkotlinx/serialization/json/Json;
@@ -49,6 +51,7 @@
 
     iput-object p3, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
+    .line 26
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object p1
@@ -61,8 +64,10 @@
 
     const/4 p1, -0x1
 
+    .line 27
     iput p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
 
+    .line 28
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object p1
@@ -79,10 +84,12 @@
 .method private final coerceInputValue(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z
     .locals 2
 
+    .line 112
     invoke-interface {p1, p2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p1
 
+    .line 113
     iget-object p2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     iget-byte p2, p2, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
@@ -101,6 +108,7 @@
 
     return v0
 
+    .line 114
     :cond_0
     invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
@@ -116,6 +124,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 115
     iget-object p2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
@@ -128,6 +137,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 117
     invoke-interface {p1, p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementIndex(Ljava/lang/String;)I
 
     move-result p0
@@ -151,14 +161,17 @@
 
     if-eq p1, v1, :cond_1
 
+    .line 160
     iget v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
 
     if-eq v2, v0, :cond_1
 
+    .line 161
     iget-object v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     const/16 v3, 0x9
 
+    .line 248
     iget-byte v4, v2, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     if-ne v4, v3, :cond_0
@@ -168,6 +181,7 @@
     :cond_0
     iget-byte p0, v2, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
+    .line 161
     invoke-static {v2}, Lkotlinx/serialization/json/internal/JsonReader;->access$getTokenPosition$p(Lkotlinx/serialization/json/internal/JsonReader;)I
 
     move-result p0
@@ -182,6 +196,7 @@
 
     throw p0
 
+    .line 163
     :cond_1
     :goto_0
     iget-object v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
@@ -194,6 +209,7 @@
 
     if-nez v2, :cond_4
 
+    .line 164
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     if-eq p1, v1, :cond_2
@@ -203,6 +219,7 @@
     :cond_2
     const/4 v3, 0x0
 
+    .line 250
     :goto_1
     iget p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
@@ -213,6 +230,7 @@
     :cond_3
     const-string v0, "Unexpected trailing comma"
 
+    .line 164
     invoke-virtual {p0, v0, p1}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -221,6 +239,7 @@
 
     throw p0
 
+    .line 167
     :cond_4
     iget p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
 
@@ -243,16 +262,19 @@
 
     if-eq p1, v0, :cond_1
 
+    .line 93
     iget v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
 
     rem-int/lit8 v2, v2, 0x2
 
     if-ne v2, v1, :cond_1
 
+    .line 94
     iget-object v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     const/4 v3, 0x7
 
+    .line 237
     iget-byte v4, v2, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     if-ne v4, v3, :cond_0
@@ -262,6 +284,7 @@
     :cond_0
     iget-byte p0, v2, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
+    .line 94
     invoke-static {v2}, Lkotlinx/serialization/json/internal/JsonReader;->access$getTokenPosition$p(Lkotlinx/serialization/json/internal/JsonReader;)I
 
     move-result p0
@@ -276,6 +299,7 @@
 
     throw p0
 
+    .line 96
     :cond_1
     :goto_0
     iget v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
@@ -284,23 +308,28 @@
 
     if-nez v2, :cond_3
 
+    .line 97
     iget-object v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     const/4 v3, 0x5
 
+    .line 239
     iget-byte v4, v2, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     if-ne v4, v3, :cond_2
 
+    .line 98
     iget-object v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v2}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
     goto :goto_1
 
+    .line 239
     :cond_2
     iget-byte p0, v2, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
+    .line 97
     invoke-static {v2}, Lkotlinx/serialization/json/internal/JsonReader;->access$getTokenPosition$p(Lkotlinx/serialization/json/internal/JsonReader;)I
 
     move-result p0
@@ -315,6 +344,7 @@
 
     throw p0
 
+    .line 100
     :cond_3
     :goto_1
     iget-object v2, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
@@ -325,6 +355,7 @@
 
     if-nez v2, :cond_6
 
+    .line 101
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     if-eq p1, v0, :cond_4
@@ -334,6 +365,7 @@
     :cond_4
     const/4 v1, 0x0
 
+    .line 241
     :goto_2
     iget p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
@@ -346,6 +378,7 @@
     :cond_5
     const-string v0, "Unexpected trailing comma"
 
+    .line 101
     invoke-virtual {p0, v0, p1}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -354,6 +387,7 @@
 
     throw p0
 
+    .line 104
     :cond_6
     iget p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
 
@@ -382,6 +416,7 @@
 
     if-ne p1, v3, :cond_1
 
+    .line 124
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p1}, Lkotlinx/serialization/json/internal/JsonReader;->getCanBeginValue()Z
@@ -392,6 +427,7 @@
 
     goto :goto_0
 
+    .line 125
     :cond_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -403,6 +439,7 @@
 
     throw p0
 
+    .line 128
     :cond_1
     :goto_0
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
@@ -413,6 +450,7 @@
 
     if-eqz p1, :cond_8
 
+    .line 129
     iget p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
 
     const/4 v5, 0x1
@@ -423,22 +461,27 @@
 
     iget p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
 
+    .line 130
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->decodeString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 131
     iget-object v6, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     const/4 v7, 0x5
 
+    .line 244
     iget-byte v8, v6, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     if-ne v8, v7, :cond_7
 
+    .line 132
     iget-object v6, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v6}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
+    .line 133
     invoke-interface {p2, p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementIndex(Ljava/lang/String;)I
 
     move-result v6
@@ -447,6 +490,7 @@
 
     if-eq v6, v7, :cond_3
 
+    .line 135
     iget-object v5, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
 
     iget-boolean v5, v5, Lkotlinx/serialization/json/internal/JsonConf;->coerceInputValues:Z
@@ -470,6 +514,7 @@
     :goto_1
     if-eqz v5, :cond_5
 
+    .line 144
     iget-object v5, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
 
     iget-boolean v5, v5, Lkotlinx/serialization/json/internal/JsonConf;->ignoreUnknownKeys:Z
@@ -478,6 +523,7 @@
 
     goto :goto_2
 
+    .line 145
     :cond_4
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -507,22 +553,26 @@
 
     throw p0
 
+    .line 147
     :cond_5
     :goto_2
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p1}, Lkotlinx/serialization/json/internal/JsonReader;->skipElement()V
 
+    .line 150
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     iget-byte p1, p1, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     if-ne p1, v3, :cond_1
 
+    .line 151
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p1}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
+    .line 152
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p1}, Lkotlinx/serialization/json/internal/JsonReader;->getCanBeginValue()Z
@@ -546,9 +596,11 @@
 
     throw p0
 
+    .line 244
     :cond_7
     iget-byte p0, v6, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
+    .line 131
     invoke-static {v6}, Lkotlinx/serialization/json/internal/JsonReader;->access$getTokenPosition$p(Lkotlinx/serialization/json/internal/JsonReader;)I
 
     move-result p0
@@ -578,6 +630,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 37
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v0
@@ -586,27 +639,33 @@
 
     move-result-object v0
 
+    .line 38
     iget-char v1, v0, Lkotlinx/serialization/json/internal/WriteMode;->begin:C
 
     if-eqz v1, :cond_1
 
+    .line 39
     iget-object v1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     iget-byte v2, v0, Lkotlinx/serialization/json/internal/WriteMode;->beginTc:B
 
+    .line 229
     iget-byte v3, v1, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     if-ne v3, v2, :cond_0
 
+    .line 40
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p1}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
     goto :goto_0
 
+    .line 229
     :cond_0
     iget-byte p0, v1, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
+    .line 39
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -649,6 +708,7 @@
 
     throw p0
 
+    .line 42
     :cond_1
     :goto_0
     sget-object p1, Lkotlinx/serialization/json/internal/StreamingJsonDecoder$WhenMappings;->$EnumSwitchMapping$0:[I
@@ -671,12 +731,14 @@
 
     if-eq p1, v1, :cond_3
 
+    .line 48
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->mode:Lkotlinx/serialization/json/internal/WriteMode;
 
     if-ne p1, v0, :cond_2
 
     goto :goto_1
 
+    .line 49
     :cond_2
     new-instance p1, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;
 
@@ -690,20 +752,25 @@
 
     move-object p0, p1
 
+    .line 48
     :goto_1
     check-cast p0, Lkotlinx/serialization/encoding/CompositeDecoder;
 
     goto :goto_2
 
+    .line 43
     :cond_3
     new-instance p1, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;
 
+    .line 44
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v1
 
+    .line 46
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
+    .line 43
     invoke-direct {p1, v1, v0, p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;-><init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/internal/WriteMode;Lkotlinx/serialization/json/internal/JsonReader;)V
 
     move-object p0, p1
@@ -717,12 +784,14 @@
 .method public decodeBoolean()Z
     .locals 1
 
+    .line 176
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
 
     iget-boolean v0, v0, Lkotlinx/serialization/json/internal/JsonConf;->isLenient:Z
 
     if-eqz v0, :cond_0
 
+    .line 177
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -735,6 +804,7 @@
 
     goto :goto_0
 
+    .line 179
     :cond_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -753,6 +823,7 @@
 .method public decodeByte()B
     .locals 4
 
+    .line 187
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -768,6 +839,7 @@
 
     return p0
 
+    .line 256
     :catchall_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -809,6 +881,7 @@
 .method public decodeChar()C
     .locals 4
 
+    .line 206
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -826,6 +899,7 @@
 
     return p0
 
+    .line 280
     :catchall_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -871,6 +945,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 20
     invoke-static {p0, p1}, Lkotlinx/serialization/json/JsonDecoder$DefaultImpls;->decodeCollectionSize(Lkotlinx/serialization/json/JsonDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)I
 
     move-result p0
@@ -881,6 +956,7 @@
 .method public decodeDouble()D
     .locals 4
 
+    .line 200
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -896,6 +972,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 201
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v0
@@ -908,6 +985,7 @@
 
     if-nez v0, :cond_2
 
+    .line 202
     invoke-static {v2, v3}, Ljava/lang/Double;->isInfinite(D)Z
 
     move-result v0
@@ -927,6 +1005,7 @@
 
     goto :goto_0
 
+    .line 203
     :cond_1
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -948,6 +1027,7 @@
     :goto_0
     return-wide v2
 
+    .line 276
     :catchall_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -991,6 +1071,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 71
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     iget-byte v0, v0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
@@ -1005,6 +1086,7 @@
 
     if-ne v0, v4, :cond_2
 
+    .line 73
     iget-object v4, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     iget v5, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
@@ -1025,6 +1107,7 @@
 
     if-eqz v5, :cond_1
 
+    .line 74
     iget-object v4, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v4}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
@@ -1034,6 +1117,7 @@
     :cond_1
     const-string p0, "Unexpected leading comma"
 
+    .line 73
     invoke-virtual {v4, p0, v6}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -1042,6 +1126,7 @@
 
     throw p0
 
+    .line 76
     :cond_2
     :goto_1
     iget-object v4, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->mode:Lkotlinx/serialization/json/internal/WriteMode;
@@ -1064,12 +1149,14 @@
 
     if-eq v4, v5, :cond_3
 
+    .line 88
     invoke-direct {p0, v0, p1}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->decodeObjectIndex(BLkotlinx/serialization/descriptors/SerialDescriptor;)I
 
     move-result v1
 
     goto :goto_2
 
+    .line 80
     :cond_3
     iget p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->currentIndex:I
 
@@ -1092,6 +1179,7 @@
 
     goto :goto_2
 
+    .line 78
     :cond_5
     invoke-direct {p0, v0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->decodeMapIndex(B)I
 
@@ -1099,6 +1187,7 @@
 
     goto :goto_2
 
+    .line 77
     :cond_6
     invoke-direct {p0, v0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->decodeListIndex(B)I
 
@@ -1116,6 +1205,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 225
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->decodeString()Ljava/lang/String;
 
     move-result-object p0
@@ -1130,6 +1220,7 @@
 .method public decodeFloat()F
     .locals 4
 
+    .line 193
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -1145,6 +1236,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 194
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v2
@@ -1157,6 +1249,7 @@
 
     if-nez v2, :cond_2
 
+    .line 195
     invoke-static {v0}, Ljava/lang/Float;->isInfinite(F)Z
 
     move-result v2
@@ -1176,6 +1269,7 @@
 
     goto :goto_0
 
+    .line 196
     :cond_1
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -1197,6 +1291,7 @@
     :goto_0
     return v0
 
+    .line 272
     :catchall_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -1236,6 +1331,7 @@
 .method public decodeInt()I
     .locals 4
 
+    .line 189
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -1251,6 +1347,7 @@
 
     return p0
 
+    .line 264
     :catchall_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -1292,6 +1389,7 @@
 .method public decodeJsonElement()Lkotlinx/serialization/json/JsonElement;
     .locals 2
 
+    .line 30
     new-instance v0, Lkotlinx/serialization/json/internal/JsonParser;
 
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->getJson()Lkotlinx/serialization/json/Json;
@@ -1316,6 +1414,7 @@
 .method public decodeLong()J
     .locals 4
 
+    .line 190
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -1331,6 +1430,7 @@
 
     return-wide v0
 
+    .line 268
     :catchall_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -1372,6 +1472,7 @@
 .method public decodeNotNullMark()Z
     .locals 1
 
+    .line 61
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     iget-byte p0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
@@ -1394,14 +1495,17 @@
 .method public decodeNull()Ljava/lang/Void;
     .locals 3
 
+    .line 65
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
+    .line 233
     iget-byte v1, v0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     const/16 v2, 0xa
 
     if-ne v1, v2, :cond_0
 
+    .line 66
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
@@ -1410,9 +1514,11 @@
 
     return-object p0
 
+    .line 233
     :cond_0
     iget-byte p0, v0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
+    .line 65
     invoke-static {v0}, Lkotlinx/serialization/json/internal/JsonReader;->access$getTokenPosition$p(Lkotlinx/serialization/json/internal/JsonReader;)I
 
     move-result p0
@@ -1450,6 +1556,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 20
     invoke-static {p0, p1, p2, p3}, Lkotlinx/serialization/json/JsonDecoder$DefaultImpls;->decodeNullableSerializableElement(Lkotlinx/serialization/json/JsonDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1460,6 +1567,7 @@
 .method public decodeSequentially()Z
     .locals 0
 
+    .line 20
     invoke-static {p0}, Lkotlinx/serialization/json/JsonDecoder$DefaultImpls;->decodeSequentially(Lkotlinx/serialization/json/JsonDecoder;)Z
 
     move-result p0
@@ -1489,6 +1597,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 20
     invoke-static {p0, p1, p2, p3}, Lkotlinx/serialization/json/JsonDecoder$DefaultImpls;->decodeSerializableElement(Lkotlinx/serialization/json/JsonDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1512,6 +1621,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 33
     invoke-static {p0, p1}, Lkotlinx/serialization/json/internal/PolymorphicKt;->decodeSerializableValuePolymorphic(Lkotlinx/serialization/json/JsonDecoder;Lkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1522,6 +1632,7 @@
 .method public decodeShort()S
     .locals 4
 
+    .line 188
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {v0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -1537,6 +1648,7 @@
 
     return p0
 
+    .line 260
     :catchall_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -1578,12 +1690,14 @@
 .method public decodeString()Ljava/lang/String;
     .locals 1
 
+    .line 209
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
 
     iget-boolean v0, v0, Lkotlinx/serialization/json/internal/JsonConf;->isLenient:Z
 
     if-eqz v0, :cond_0
 
+    .line 210
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonReader;->takeString()Ljava/lang/String;
@@ -1592,6 +1706,7 @@
 
     goto :goto_0
 
+    .line 212
     :cond_0
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
@@ -1610,31 +1725,37 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 54
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->mode:Lkotlinx/serialization/json/internal/WriteMode;
 
     iget-char p1, p1, Lkotlinx/serialization/json/internal/WriteMode;->end:C
 
     if-eqz p1, :cond_1
 
+    .line 55
     iget-object p1, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     iget-object v0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->mode:Lkotlinx/serialization/json/internal/WriteMode;
 
     iget-byte v0, v0, Lkotlinx/serialization/json/internal/WriteMode;->endTc:B
 
+    .line 231
     iget-byte v1, p1, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     if-ne v1, v0, :cond_0
 
+    .line 56
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->reader:Lkotlinx/serialization/json/internal/JsonReader;
 
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
     goto :goto_0
 
+    .line 231
     :cond_0
     iget-byte v0, p1, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
+    .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1677,6 +1798,7 @@
 .method public getJson()Lkotlinx/serialization/json/Json;
     .locals 0
 
+    .line 21
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->json:Lkotlinx/serialization/json/Json;
 
     return-object p0
@@ -1685,6 +1807,7 @@
 .method public getSerializersModule()Lkotlinx/serialization/modules/SerializersModule;
     .locals 0
 
+    .line 26
     iget-object p0, p0, Lkotlinx/serialization/json/internal/StreamingJsonDecoder;->serializersModule:Lkotlinx/serialization/modules/SerializersModule;
 
     return-object p0

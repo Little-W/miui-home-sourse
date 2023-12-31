@@ -1,5 +1,6 @@
 .class public abstract Lcom/xiaomi/analytics/Action;
 .super Ljava/lang/Object;
+.source "Action.java"
 
 
 # static fields
@@ -34,36 +35,42 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 25
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/xiaomi/analytics/Action;->sKeywords:Ljava/util/Set;
 
+    .line 28
     sget-object v0, Lcom/xiaomi/analytics/Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_event_id_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 29
     sget-object v0, Lcom/xiaomi/analytics/Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_category_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 30
     sget-object v0, Lcom/xiaomi/analytics/Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_action_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 31
     sget-object v0, Lcom/xiaomi/analytics/Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_label_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 32
     sget-object v0, Lcom/xiaomi/analytics/Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_value_"
@@ -76,14 +83,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/analytics/Action;->mContent:Lorg/json/JSONObject;
 
+    .line 23
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -96,6 +106,7 @@
 .method private ensureKey(Ljava/lang/String;)V
     .locals 2
 
+    .line 118
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -112,6 +123,7 @@
 
     goto :goto_0
 
+    .line 119
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -147,12 +159,14 @@
 .method addContent(Ljava/lang/String;I)V
     .locals 1
 
+    .line 65
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 67
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/analytics/Action;->mContent:Lorg/json/JSONObject;
 
@@ -167,6 +181,7 @@
 
     const-string p1, "Action"
 
+    .line 69
     invoke-static {p1}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -183,12 +198,14 @@
 .method addContent(Ljava/lang/String;J)V
     .locals 1
 
+    .line 75
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 77
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/analytics/Action;->mContent:Lorg/json/JSONObject;
 
@@ -203,6 +220,7 @@
 
     const-string p1, "Action"
 
+    .line 79
     invoke-static {p1}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -219,12 +237,14 @@
 .method addContent(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 
+    .line 85
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 87
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/analytics/Action;->mContent:Lorg/json/JSONObject;
 
@@ -239,6 +259,7 @@
 
     const-string p1, "Action"
 
+    .line 89
     invoke-static {p1}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -257,10 +278,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 96
     invoke-virtual {p1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 97
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -268,6 +291,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 98
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -276,8 +300,10 @@
 
     move-result-object v1
 
+    .line 99
     invoke-direct {p0, v1}, Lcom/xiaomi/analytics/Action;->ensureKey(Ljava/lang/String;)V
 
+    .line 101
     :try_start_0
     iget-object v2, p0, Lcom/xiaomi/analytics/Action;->mContent:Lorg/json/JSONObject;
 
@@ -296,6 +322,7 @@
 
     const-string v2, "Action"
 
+    .line 103
     invoke-static {v2}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -315,6 +342,7 @@
 
     const-string v0, "_event_id_"
 
+    .line 36
     invoke-virtual {p0, v0, p1}, Lcom/xiaomi/analytics/Action;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object p0
@@ -323,6 +351,7 @@
 .method addExtra(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 111
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/analytics/Action;->mExtra:Lorg/json/JSONObject;
 
@@ -337,6 +366,7 @@
 
     const-string p1, "Action"
 
+    .line 113
     invoke-static {p1}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -352,8 +382,10 @@
 .method public addParam(Ljava/lang/String;I)Lcom/xiaomi/analytics/Action;
     .locals 0
 
+    .line 47
     invoke-direct {p0, p1}, Lcom/xiaomi/analytics/Action;->ensureKey(Ljava/lang/String;)V
 
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/analytics/Action;->addContent(Ljava/lang/String;I)V
 
     return-object p0
@@ -362,8 +394,10 @@
 .method public addParam(Ljava/lang/String;J)Lcom/xiaomi/analytics/Action;
     .locals 0
 
+    .line 53
     invoke-direct {p0, p1}, Lcom/xiaomi/analytics/Action;->ensureKey(Ljava/lang/String;)V
 
+    .line 54
     invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/analytics/Action;->addContent(Ljava/lang/String;J)V
 
     return-object p0
@@ -372,8 +406,10 @@
 .method public addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
     .locals 0
 
+    .line 59
     invoke-direct {p0, p1}, Lcom/xiaomi/analytics/Action;->ensureKey(Ljava/lang/String;)V
 
+    .line 60
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/analytics/Action;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object p0
@@ -382,8 +418,10 @@
 .method public addParam(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/xiaomi/analytics/Action;
     .locals 0
 
+    .line 41
     invoke-direct {p0, p1}, Lcom/xiaomi/analytics/Action;->ensureKey(Ljava/lang/String;)V
 
+    .line 42
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/analytics/Action;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object p0
@@ -392,6 +430,7 @@
 .method final getContent()Lorg/json/JSONObject;
     .locals 0
 
+    .line 124
     iget-object p0, p0, Lcom/xiaomi/analytics/Action;->mContent:Lorg/json/JSONObject;
 
     return-object p0
@@ -400,6 +439,7 @@
 .method final getExtra()Lorg/json/JSONObject;
     .locals 0
 
+    .line 128
     iget-object p0, p0, Lcom/xiaomi/analytics/Action;->mExtra:Lorg/json/JSONObject;
 
     return-object p0

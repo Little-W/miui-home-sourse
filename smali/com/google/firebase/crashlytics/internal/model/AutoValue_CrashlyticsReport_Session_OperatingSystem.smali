@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;
+.source "AutoValue_CrashlyticsReport_Session_OperatingSystem.java"
 
 
 # annotations
@@ -24,14 +25,19 @@
 .method private constructor <init>(ILjava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
+    .line 22
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;-><init>()V
 
+    .line 23
     iput p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->platform:I
 
+    .line 24
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->version:Ljava/lang/String;
 
+    .line 25
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->buildVersion:Ljava/lang/String;
 
+    .line 26
     iput-boolean p4, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->jailbroken:Z
 
     return-void
@@ -40,6 +46,7 @@
 .method synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;ZLcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem$1;)V
     .locals 0
 
+    .line 8
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;-><init>(ILjava/lang/String;Ljava/lang/String;Z)V
 
     return-void
@@ -56,6 +63,7 @@
 
     return v0
 
+    .line 66
     :cond_0
     instance-of v1, p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;
 
@@ -63,8 +71,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 67
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;
 
+    .line 68
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->platform:I
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->getPlatform()I
@@ -75,6 +85,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->version:Ljava/lang/String;
 
+    .line 69
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->getVersion()Ljava/lang/String;
 
     move-result-object v3
@@ -87,6 +98,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->buildVersion:Ljava/lang/String;
 
+    .line 70
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->getBuildVersion()Ljava/lang/String;
 
     move-result-object v3
@@ -99,6 +111,7 @@
 
     iget-boolean p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->jailbroken:Z
 
+    .line 71
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$OperatingSystem;->isJailbroken()Z
 
     move-result p1
@@ -120,6 +133,7 @@
 .method public getBuildVersion()Ljava/lang/String;
     .locals 0
 
+    .line 43
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->buildVersion:Ljava/lang/String;
 
     return-object p0
@@ -128,6 +142,7 @@
 .method public getPlatform()I
     .locals 0
 
+    .line 31
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->platform:I
 
     return p0
@@ -136,6 +151,7 @@
 .method public getVersion()Ljava/lang/String;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->version:Ljava/lang/String;
 
     return-object p0
@@ -144,6 +160,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 80
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->platform:I
 
     const v1, 0xf4243
@@ -152,6 +169,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 82
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->version:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -162,6 +180,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 84
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->buildVersion:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -172,6 +191,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 86
     iget-boolean p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->jailbroken:Z
 
     if-eqz p0, :cond_0
@@ -192,6 +212,7 @@
 .method public isJailbroken()Z
     .locals 0
 
+    .line 48
     iget-boolean p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_OperatingSystem;->jailbroken:Z
 
     return p0
@@ -200,6 +221,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/JsonDecoder$DefaultImpls;
 .super Ljava/lang/Object;
+.source "JsonDecoder.kt"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/google/gson/internal/bind/ObjectTypeAdapter$2;
 .super Ljava/lang/Object;
+.source "ObjectTypeAdapter.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 56
     invoke-static {}, Lcom/mi/google/gson/stream/JsonToken;->values()[Lcom/mi/google/gson/stream/JsonToken;
 
     move-result-object v0

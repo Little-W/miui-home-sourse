@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;
 .super Ljava/lang/Object;
+.source "SerialDescriptors.kt"
 
 
 # annotations
@@ -82,16 +83,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->serialName:Ljava/lang/String;
 
+    .line 213
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->annotations:Ljava/util/List;
 
+    .line 215
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -100,6 +104,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementNames:Ljava/util/List;
 
+    .line 216
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
@@ -108,6 +113,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->uniqueNames:Ljava/util/Set;
 
+    .line 217
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -116,6 +122,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementDescriptors:Ljava/util/List;
 
+    .line 218
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -124,6 +131,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementAnnotations:Ljava/util/List;
 
+    .line 219
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -142,6 +150,7 @@
 
     if-eqz p6, :cond_0
 
+    .line 242
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object p3
@@ -153,6 +162,7 @@
 
     const/4 p4, 0x0
 
+    .line 243
     :cond_1
     invoke-virtual {p0, p1, p2, p3, p4}, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->element(Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;Ljava/util/List;Z)V
 
@@ -187,6 +197,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 245
     iget-object v0, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->uniqueNames:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -195,24 +206,28 @@
 
     if-eqz v0, :cond_0
 
+    .line 246
     iget-object v0, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementNames:Ljava/util/List;
 
     check-cast v0, Ljava/util/Collection;
 
     invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 247
     iget-object p1, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementDescriptors:Ljava/util/List;
 
     check-cast p1, Ljava/util/Collection;
 
     invoke-interface {p1, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 248
     iget-object p1, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementAnnotations:Ljava/util/List;
 
     check-cast p1, Ljava/util/Collection;
 
     invoke-interface {p1, p3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 249
     iget-object p0, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementOptionality:Ljava/util/List;
 
     check-cast p0, Ljava/util/Collection;
@@ -225,6 +240,7 @@
 
     return-void
 
+    .line 245
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -268,6 +284,7 @@
         }
     .end annotation
 
+    .line 213
     iget-object p0, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->annotations:Ljava/util/List;
 
     return-object p0
@@ -285,6 +302,7 @@
         }
     .end annotation
 
+    .line 218
     iget-object p0, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementAnnotations:Ljava/util/List;
 
     return-object p0
@@ -301,6 +319,7 @@
         }
     .end annotation
 
+    .line 217
     iget-object p0, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementDescriptors:Ljava/util/List;
 
     return-object p0
@@ -317,6 +336,7 @@
         }
     .end annotation
 
+    .line 215
     iget-object p0, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementNames:Ljava/util/List;
 
     return-object p0
@@ -333,6 +353,7 @@
         }
     .end annotation
 
+    .line 219
     iget-object p0, p0, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->elementOptionality:Ljava/util/List;
 
     return-object p0

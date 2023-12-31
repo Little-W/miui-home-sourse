@@ -1,5 +1,6 @@
 .class public abstract Landroidx/fragment/app/FragmentHostCallback;
 .super Landroidx/fragment/app/FragmentContainer;
+.source "FragmentHostCallback.java"
 
 
 # annotations
@@ -29,18 +30,22 @@
 .method constructor <init>(Landroid/app/Activity;Landroid/content/Context;Landroid/os/Handler;I)V
     .locals 1
 
+    .line 95
     invoke-direct {p0}, Landroidx/fragment/app/FragmentContainer;-><init>()V
 
+    .line 81
     new-instance v0, Landroidx/fragment/app/FragmentManagerImpl;
 
     invoke-direct {v0}, Landroidx/fragment/app/FragmentManagerImpl;-><init>()V
 
     iput-object v0, p0, Landroidx/fragment/app/FragmentHostCallback;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
+    .line 96
     iput-object p1, p0, Landroidx/fragment/app/FragmentHostCallback;->mActivity:Landroid/app/Activity;
 
     const-string p1, "context == null"
 
+    .line 97
     invoke-static {p2, p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -51,6 +56,7 @@
 
     const-string p1, "handler == null"
 
+    .line 98
     invoke-static {p3, p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -59,6 +65,7 @@
 
     iput-object p1, p0, Landroidx/fragment/app/FragmentHostCallback;->mHandler:Landroid/os/Handler;
 
+    .line 99
     iput p4, p0, Landroidx/fragment/app/FragmentHostCallback;->mWindowAnimations:I
 
     return-void
@@ -67,6 +74,7 @@
 .method constructor <init>(Landroidx/fragment/app/FragmentActivity;)V
     .locals 2
 
+    .line 91
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -83,6 +91,7 @@
 .method getActivity()Landroid/app/Activity;
     .locals 0
 
+    .line 242
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mActivity:Landroid/app/Activity;
 
     return-object p0
@@ -91,6 +100,7 @@
 .method getContext()Landroid/content/Context;
     .locals 0
 
+    .line 247
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -99,6 +109,7 @@
 .method getHandler()Landroid/os/Handler;
     .locals 0
 
+    .line 252
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -123,6 +134,7 @@
 .method public onGetLayoutInflater()Landroid/view/LayoutInflater;
     .locals 0
 
+    .line 128
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -171,12 +183,14 @@
 
     if-ne p3, p1, :cond_0
 
+    .line 166
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p2, p4}, Landroidx/core/content/ContextCompat;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
 
     return-void
 
+    .line 163
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -206,6 +220,7 @@
 
     move-object v0, p0
 
+    .line 188
     iget-object v1, v0, Landroidx/fragment/app/FragmentHostCallback;->mActivity:Landroid/app/Activity;
 
     move-object v2, p2
@@ -226,6 +241,7 @@
 
     return-void
 
+    .line 185
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

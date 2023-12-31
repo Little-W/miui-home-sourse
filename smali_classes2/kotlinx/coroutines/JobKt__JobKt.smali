@@ -1,5 +1,6 @@
 .class final synthetic Lkotlinx/coroutines/JobKt__JobKt;
 .super Ljava/lang/Object;
+.source "Job.kt"
 
 
 # annotations
@@ -12,6 +13,7 @@
 .method public static final Job(Lkotlinx/coroutines/Job;)Lkotlinx/coroutines/CompletableJob;
     .locals 1
 
+    .line 389
     new-instance v0, Lkotlinx/coroutines/JobImpl;
 
     invoke-direct {v0, p0}, Lkotlinx/coroutines/JobImpl;-><init>(Lkotlinx/coroutines/Job;)V
@@ -30,6 +32,7 @@
 
     const/4 p0, 0x0
 
+    .line 389
     check-cast p0, Lkotlinx/coroutines/Job;
 
     :cond_0
@@ -43,6 +46,7 @@
 .method public static final cancel(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;)V
     .locals 1
 
+    .line 563
     sget-object v0, Lkotlinx/coroutines/Job;->Key:Lkotlinx/coroutines/Job$Key;
 
     check-cast v0, Lkotlin/coroutines/CoroutineContext$Key;
@@ -64,14 +68,17 @@
 .method public static final disposeOnCompletion(Lkotlinx/coroutines/Job;Lkotlinx/coroutines/DisposableHandle;)Lkotlinx/coroutines/DisposableHandle;
     .locals 1
 
+    .line 493
     new-instance v0, Lkotlinx/coroutines/DisposeOnCompletion;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/coroutines/DisposeOnCompletion;-><init>(Lkotlinx/coroutines/Job;Lkotlinx/coroutines/DisposableHandle;)V
 
     check-cast v0, Lkotlinx/coroutines/CompletionHandlerBase;
 
+    .line 682
     check-cast v0, Lkotlin/jvm/functions/Function1;
 
+    .line 493
     invoke-interface {p0, v0}, Lkotlinx/coroutines/Job;->invokeOnCompletion(Lkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/DisposableHandle;
 
     move-result-object p0
@@ -82,6 +89,7 @@
 .method public static final ensureActive(Lkotlin/coroutines/CoroutineContext;)V
     .locals 1
 
+    .line 603
     sget-object v0, Lkotlinx/coroutines/Job;->Key:Lkotlinx/coroutines/Job$Key;
 
     check-cast v0, Lkotlin/coroutines/CoroutineContext$Key;
@@ -103,6 +111,7 @@
 .method public static final ensureActive(Lkotlinx/coroutines/Job;)V
     .locals 1
 
+    .line 585
     invoke-interface {p0}, Lkotlinx/coroutines/Job;->isActive()Z
 
     move-result v0

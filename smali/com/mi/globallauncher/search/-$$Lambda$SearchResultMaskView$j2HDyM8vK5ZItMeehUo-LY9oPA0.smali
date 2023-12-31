@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/search/-$$Lambda$SearchResultMaskView$j2HDyM8vK5ZItMeehUo-LY9oPA0;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/mi/globallauncher/view/CustomListView$OnNoItemClickListener;

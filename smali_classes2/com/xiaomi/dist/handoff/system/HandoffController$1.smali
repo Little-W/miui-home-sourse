@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/handoff/system/HandoffController$1;
 .super Lcom/xiaomi/dist/handoff/IRelayCallBack$Stub;
+.source "HandoffController.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Lcom/xiaomi/dist/handoff/system/HandoffController;Lcom/xiaomi/dist/handoff/system/callback/TransferSessionToLocalCallback;)V
     .locals 0
 
+    .line 395
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$1;->this$0:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     iput-object p2, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$1;->val$callback:Lcom/xiaomi/dist/handoff/system/callback/TransferSessionToLocalCallback;
@@ -42,10 +44,12 @@
         }
     .end annotation
 
+    .line 405
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$1;->val$callback:Lcom/xiaomi/dist/handoff/system/callback/TransferSessionToLocalCallback;
 
     if-eqz p0, :cond_0
 
+    .line 406
     invoke-interface {p0, p1}, Lcom/xiaomi/dist/handoff/system/callback/TransferSessionToLocalCallback;->onComplete(I)V
 
     :cond_0
@@ -60,12 +64,14 @@
         }
     .end annotation
 
+    .line 398
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffController$1;->val$callback:Lcom/xiaomi/dist/handoff/system/callback/TransferSessionToLocalCallback;
 
     if-eqz p0, :cond_0
 
     const-string v0, "error"
 
+    .line 399
     invoke-interface {p0, p1, v0}, Lcom/xiaomi/dist/handoff/system/callback/TransferSessionToLocalCallback;->onError(ILjava/lang/String;)V
 
     :cond_0

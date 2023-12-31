@@ -1,5 +1,6 @@
 .class Landroidx/room/util/TableInfo$ForeignKeyWithSequence;
 .super Ljava/lang/Object;
+.source "TableInfo.java"
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -39,14 +40,19 @@
 .method constructor <init>(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 514
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 515
     iput p1, p0, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->mId:I
 
+    .line 516
     iput p2, p0, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->mSequence:I
 
+    .line 517
     iput-object p3, p0, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->mFrom:Ljava/lang/String;
 
+    .line 518
     iput-object p4, p0, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->mTo:Ljava/lang/String;
 
     return-void
@@ -57,6 +63,7 @@
 .method public compareTo(Landroidx/room/util/TableInfo$ForeignKeyWithSequence;)I
     .locals 2
 
+    .line 523
     iget v0, p0, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->mId:I
 
     iget v1, p1, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->mId:I
@@ -65,6 +72,7 @@
 
     if-nez v0, :cond_0
 
+    .line 525
     iget p0, p0, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->mSequence:I
 
     iget p1, p1, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->mSequence:I
@@ -80,6 +88,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 507
     check-cast p1, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;
 
     invoke-virtual {p0, p1}, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->compareTo(Landroidx/room/util/TableInfo$ForeignKeyWithSequence;)I

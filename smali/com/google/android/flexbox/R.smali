@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/flexbox/R;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations

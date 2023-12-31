@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/internal/CheckableGroup$1;
 .super Ljava/lang/Object;
+.source "CheckableGroup.java"
 
 # interfaces
 .implements Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener;
@@ -32,6 +33,7 @@
 .method constructor <init>(Lcom/google/android/material/internal/CheckableGroup;)V
     .locals 0
 
+    .line 79
     iput-object p1, p0, Lcom/google/android/material/internal/CheckableGroup$1;->this$0:Lcom/google/android/material/internal/CheckableGroup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +53,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 82
     iget-object p2, p0, Lcom/google/android/material/internal/CheckableGroup$1;->this$0:Lcom/google/android/material/internal/CheckableGroup;
 
     invoke-static {p2, p1}, Lcom/google/android/material/internal/CheckableGroup;->access$000(Lcom/google/android/material/internal/CheckableGroup;Lcom/google/android/material/internal/MaterialCheckable;)Z
@@ -74,6 +77,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 83
     :goto_0
     iget-object p0, p0, Lcom/google/android/material/internal/CheckableGroup$1;->this$0:Lcom/google/android/material/internal/CheckableGroup;
 
@@ -86,6 +90,7 @@
 .method public bridge synthetic onCheckedChanged(Ljava/lang/Object;Z)V
     .locals 0
 
+    .line 79
     check-cast p1, Lcom/google/android/material/internal/MaterialCheckable;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/material/internal/CheckableGroup$1;->onCheckedChanged(Lcom/google/android/material/internal/MaterialCheckable;Z)V

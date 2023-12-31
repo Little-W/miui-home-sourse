@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/data/FileDescriptorAssetPathFetcher;
 .super Lcom/bumptech/glide/load/data/AssetPathFetcher;
+.source "FileDescriptorAssetPathFetcher.java"
 
 
 # annotations
@@ -16,6 +17,7 @@
 .method public constructor <init>(Landroid/content/res/AssetManager;Ljava/lang/String;)V
     .locals 0
 
+    .line 13
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/load/data/AssetPathFetcher;-><init>(Landroid/content/res/AssetManager;Ljava/lang/String;)V
 
     return-void
@@ -31,6 +33,7 @@
         }
     .end annotation
 
+    .line 24
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
 
     return-void
@@ -44,6 +47,7 @@
         }
     .end annotation
 
+    .line 11
     check-cast p1, Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/data/FileDescriptorAssetPathFetcher;->close(Landroid/os/ParcelFileDescriptor;)V
@@ -62,6 +66,7 @@
         }
     .end annotation
 
+    .line 30
     const-class p0, Landroid/os/ParcelFileDescriptor;
 
     return-object p0
@@ -75,6 +80,7 @@
         }
     .end annotation
 
+    .line 19
     invoke-virtual {p1, p2}, Landroid/content/res/AssetManager;->openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object p0
@@ -94,6 +100,7 @@
         }
     .end annotation
 
+    .line 11
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/data/FileDescriptorAssetPathFetcher;->loadResource(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0

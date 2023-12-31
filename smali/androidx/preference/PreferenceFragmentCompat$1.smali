@@ -1,5 +1,6 @@
 .class Landroidx/preference/PreferenceFragmentCompat$1;
 .super Landroid/os/Handler;
+.source "PreferenceFragmentCompat.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Landroidx/preference/PreferenceFragmentCompat;)V
     .locals 0
 
+    .line 121
     iput-object p1, p0, Landroidx/preference/PreferenceFragmentCompat$1;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -33,6 +35,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
+    .line 124
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -41,6 +44,7 @@
 
     goto :goto_0
 
+    .line 126
     :cond_0
     iget-object p0, p0, Landroidx/preference/PreferenceFragmentCompat$1;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 

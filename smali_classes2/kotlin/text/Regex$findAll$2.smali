@@ -1,5 +1,6 @@
 .class final synthetic Lkotlin/text/Regex$findAll$2;
 .super Lkotlin/jvm/internal/FunctionReferenceImpl;
+.source "Regex.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -68,6 +69,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 83
     check-cast p1, Lkotlin/text/MatchResult;
 
     invoke-virtual {p0, p1}, Lkotlin/text/Regex$findAll$2;->invoke(Lkotlin/text/MatchResult;)Lkotlin/text/MatchResult;
@@ -84,6 +86,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 134
     invoke-interface {p1}, Lkotlin/text/MatchResult;->next()Lkotlin/text/MatchResult;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/internal/ExceptionsConstuctorKt$tryCopyException$4$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "ExceptionsConstuctor.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;

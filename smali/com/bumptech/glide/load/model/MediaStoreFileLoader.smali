@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/model/MediaStoreFileLoader;
 .super Ljava/lang/Object;
+.source "MediaStoreFileLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoader;
@@ -32,8 +33,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 28
     iput-object p1, p0, Lcom/bumptech/glide/load/model/MediaStoreFileLoader;->context:Landroid/content/Context;
 
     return-void
@@ -56,6 +59,7 @@
         }
     .end annotation
 
+    .line 34
     new-instance p2, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     new-instance p3, Lcom/bumptech/glide/signature/ObjectKey;
@@ -76,6 +80,7 @@
 .method public bridge synthetic buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
     .locals 0
 
+    .line 21
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/model/MediaStoreFileLoader;->buildLoadData(Landroid/net/Uri;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
@@ -88,6 +93,7 @@
 .method public handles(Landroid/net/Uri;)Z
     .locals 0
 
+    .line 39
     invoke-static {p1}, Lcom/bumptech/glide/load/data/mediastore/MediaStoreUtil;->isMediaStoreUri(Landroid/net/Uri;)Z
 
     move-result p0
@@ -98,6 +104,7 @@
 .method public bridge synthetic handles(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 21
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/MediaStoreFileLoader;->handles(Landroid/net/Uri;)Z

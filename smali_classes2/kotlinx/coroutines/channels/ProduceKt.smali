@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/ProduceKt;
 .super Ljava/lang/Object;
+.source "Produce.kt"
 
 
 # annotations
@@ -34,6 +35,7 @@
         }
     .end annotation
 
+    .line 99
     sget-object v3, Lkotlinx/coroutines/channels/BufferOverflow;->SUSPEND:Lkotlinx/coroutines/channels/BufferOverflow;
 
     sget-object v4, Lkotlinx/coroutines/CoroutineStart;->DEFAULT:Lkotlinx/coroutines/CoroutineStart;
@@ -91,25 +93,31 @@
 
     const/4 v1, 0x4
 
+    .line 132
     invoke-static {p2, p3, v0, v1, v0}, Lkotlinx/coroutines/channels/ChannelKt;->Channel$default(ILkotlinx/coroutines/channels/BufferOverflow;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lkotlinx/coroutines/channels/Channel;
 
     move-result-object p2
 
+    .line 133
     invoke-static {p0, p1}, Lkotlinx/coroutines/CoroutineContextKt;->newCoroutineContext(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;)Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p0
 
+    .line 134
     new-instance p1, Lkotlinx/coroutines/channels/ProducerCoroutine;
 
     invoke-direct {p1, p0, p2}, Lkotlinx/coroutines/channels/ProducerCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/channels/Channel;)V
 
     if-eqz p5, :cond_0
 
+    .line 135
     invoke-virtual {p1, p5}, Lkotlinx/coroutines/channels/ProducerCoroutine;->invokeOnCompletion(Lkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/DisposableHandle;
 
+    .line 136
     :cond_0
     invoke-virtual {p1, p4, p1, p6}, Lkotlinx/coroutines/channels/ProducerCoroutine;->start(Lkotlinx/coroutines/CoroutineStart;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
+    .line 137
     check-cast p1, Lkotlinx/coroutines/channels/ReceiveChannel;
 
     return-object p1
@@ -122,6 +130,7 @@
 
     if-eqz p5, :cond_0
 
+    .line 95
     sget-object p1, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
     check-cast p1, Lkotlin/coroutines/CoroutineContext;
@@ -133,6 +142,7 @@
 
     const/4 p2, 0x0
 
+    .line 96
     :cond_1
     invoke-static {p0, p1, p2, p3}, Lkotlinx/coroutines/channels/ProduceKt;->produce(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;ILkotlin/jvm/functions/Function2;)Lkotlinx/coroutines/channels/ReceiveChannel;
 

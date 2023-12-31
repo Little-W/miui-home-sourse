@@ -1,5 +1,6 @@
 .class public Lio/branch/search/y0$b;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/bumptech/glide/request/RequestListener;

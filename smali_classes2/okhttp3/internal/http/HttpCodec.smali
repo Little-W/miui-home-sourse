@@ -1,5 +1,6 @@
 .class public interface abstract Lokhttp3/internal/http/HttpCodec;
 .super Ljava/lang/Object;
+.source "HttpCodec.java"
 
 
 # virtual methods

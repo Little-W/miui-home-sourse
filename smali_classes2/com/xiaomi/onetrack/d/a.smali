@@ -18,6 +18,7 @@
 
     const-string v0, "AES"
 
+    .line 21
     :try_start_0
     invoke-static {v0}, Ljavax/crypto/KeyGenerator;->getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;
 
@@ -25,6 +26,7 @@
 
     sput-object v1, Lcom/xiaomi/onetrack/d/a;->d:Ljavax/crypto/KeyGenerator;
 
+    .line 22
     sget-object v1, Lcom/xiaomi/onetrack/d/a;->d:Ljavax/crypto/KeyGenerator;
 
     const/16 v2, 0x80
@@ -38,6 +40,7 @@
     :catch_0
     move-exception v1
 
+    .line 24
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -53,6 +56,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,6 +67,7 @@
 
     const-string v0, ""
 
+    .line 117
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -78,6 +83,7 @@
 
     move-result-object p0
 
+    .line 118
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p0
@@ -86,6 +92,7 @@
 
     move v2, v1
 
+    .line 119
     :goto_0
     array-length v3, p0
 
@@ -93,6 +100,7 @@
 
     move v3, v1
 
+    .line 120
     :goto_1
     array-length v4, p0
 
@@ -100,18 +108,22 @@
 
     if-ge v3, v4, :cond_1
 
+    .line 121
     aget-char v4, p0, v2
 
     aget-char v5, p0, v3
 
     if-ge v4, v5, :cond_0
 
+    .line 122
     aget-char v4, p0, v2
 
+    .line 123
     aget-char v5, p0, v3
 
     aput-char v5, p0, v2
 
+    .line 124
     aput-char v4, p0, v3
 
     :cond_0
@@ -124,6 +136,7 @@
 
     goto :goto_0
 
+    .line 128
     :cond_2
     new-instance v1, Ljava/lang/String;
 
@@ -137,6 +150,7 @@
 
     goto :goto_2
 
+    .line 130
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -163,6 +177,7 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 97
     invoke-static {p0, p1}, Lcom/xiaomi/onetrack/d/a;->e(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object p0
@@ -177,6 +192,7 @@
 .method public static a()[B
     .locals 1
 
+    .line 29
     sget-object v0, Lcom/xiaomi/onetrack/d/a;->d:Ljavax/crypto/KeyGenerator;
 
     invoke-virtual {v0}, Ljavax/crypto/KeyGenerator;->generateKey()Ljavax/crypto/SecretKey;
@@ -195,25 +211,30 @@
 
     const-string v0, "AES"
 
+    .line 50
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/onetrack/d/a;->b(Ljava/lang/String;)[B
 
     move-result-object p1
 
+    .line 51
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-direct {v1, p1, v0}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
     const-string p1, "AES/ECB/PKCS5Padding"
 
+    .line 52
     invoke-static {p1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object p1
 
     const/4 v2, 0x2
 
+    .line 53
     invoke-virtual {p1, v2, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
+    .line 54
     invoke-virtual {p1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object p0
@@ -225,6 +246,7 @@
     :catch_0
     move-exception p0
 
+    .line 56
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -243,6 +265,7 @@
 
     const-string v0, "AES"
 
+    .line 34
     :try_start_0
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -250,14 +273,17 @@
 
     const-string p1, "AES/ECB/PKCS5Padding"
 
+    .line 35
     invoke-static {p1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object p1
 
     const/4 v2, 0x1
 
+    .line 36
     invoke-virtual {p1, v2, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
+    .line 37
     invoke-virtual {p1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object p0
@@ -269,6 +295,7 @@
     :catch_0
     move-exception p0
 
+    .line 39
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -285,6 +312,7 @@
 .method public static b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 101
     invoke-static {p0, p1}, Lcom/xiaomi/onetrack/d/a;->e(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object p0
@@ -303,6 +331,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 77
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p0
@@ -320,6 +349,7 @@
 
     const-string v0, "AES"
 
+    .line 63
     :try_start_0
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -327,14 +357,17 @@
 
     const-string v2, "AES/ECB/PKCS5Padding"
 
+    .line 64
     invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v2
 
     const/4 v3, 0x2
 
+    .line 65
     invoke-virtual {v2, v3, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
+    .line 66
     invoke-virtual {v2, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object p0
@@ -348,8 +381,10 @@
 
     const-string v2, "decrypt exception:"
 
+    .line 68
     invoke-static {v0, v2, v1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 69
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -384,6 +419,7 @@
 .method public static c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 105
     invoke-static {p0}, Lcom/xiaomi/onetrack/d/a;->c(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -392,6 +428,7 @@
 
     move-result-object p0
 
+    .line 106
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, p0}, Ljava/lang/String;-><init>([B)V
@@ -404,6 +441,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 83
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -414,6 +452,7 @@
 
     goto :goto_1
 
+    .line 86
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -425,6 +464,7 @@
 
     const/4 v1, 0x0
 
+    .line 87
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -438,6 +478,7 @@
 
     add-int/lit8 v3, v2, 0x1
 
+    .line 88
     invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
@@ -450,6 +491,7 @@
 
     add-int/lit8 v2, v2, 0x2
 
+    .line 89
     invoke-virtual {p0, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
@@ -464,6 +506,7 @@
 
     int-to-byte v2, v4
 
+    .line 91
     aput-byte v2, v0, v1
 
     add-int/lit8 v1, v1, 0x1
@@ -485,6 +528,7 @@
 
     const/16 v0, 0xa
 
+    .line 110
     invoke-static {p0, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object p0
@@ -493,6 +537,7 @@
 
     move-result-object p0
 
+    .line 111
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, p0}, Ljava/lang/String;-><init>([B)V
@@ -503,6 +548,7 @@
 .method private static e(Ljava/lang/String;Ljava/lang/String;)[B
     .locals 0
 
+    .line 45
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;
 .super Ljava/lang/Exception;
+.source "StaticLayoutBuilderCompat.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 360
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

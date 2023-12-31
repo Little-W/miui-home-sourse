@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 .super Ljava/lang/Object;
+.source "Task.java"
 
 
 # annotations
@@ -72,40 +73,55 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 92
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isWorldCirculate:Z
 
+    .line 93
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isVtCamera:Z
 
     const-string v0, "AndroidPhone"
 
+    .line 94
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->worldCirculateDeviceName:Ljava/lang/String;
 
     const-string v0, ""
 
+    .line 95
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->worldCirculateOwnerName:Ljava/lang/String;
 
+    .line 117
     iput p1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
+    .line 118
     iput p2, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->stackId:I
 
+    .line 119
     iput p3, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->windowingMode:I
 
+    .line 120
     iput-object p4, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->baseIntent:Landroid/content/Intent;
 
+    .line 121
     iput p5, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
 
+    .line 122
     iput-wide p6, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->lastActiveTime:J
 
+    .line 123
     iput-boolean p8, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isThumbnailBlur:Z
 
+    .line 124
     iput-boolean p9, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isScreening:Z
 
+    .line 125
     iput-object p10, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->topActivity:Landroid/content/ComponentName;
 
+    .line 126
     sget-object p1, Lcom/android/systemui/shared/recents/model/Task;->VT_CAMERA_COMPONENT_NAME:Landroid/content/ComponentName;
 
     invoke-virtual {p1, p10}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
@@ -114,8 +130,10 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isVtCamera:Z
 
+    .line 127
     invoke-direct {p0, p11}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->updateWorldCirculateInfo(Lcom/android/systemui/shared/recents/utilities/WorldCirculate$WorldCirculateInfo;)V
 
+    .line 128
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->updateHashCode()V
 
     return-void
@@ -124,26 +142,33 @@
 .method public constructor <init>(Landroid/app/TaskInfo;Lcom/android/systemui/shared/recents/utilities/WorldCirculate$WorldCirculateInfo;)V
     .locals 3
 
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 92
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isWorldCirculate:Z
 
+    .line 93
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isVtCamera:Z
 
     const-string v1, "AndroidPhone"
 
+    .line 94
     iput-object v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->worldCirculateDeviceName:Ljava/lang/String;
 
     const-string v1, ""
 
+    .line 95
     iput-object v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->worldCirculateOwnerName:Ljava/lang/String;
 
+    .line 98
     iget v1, p1, Landroid/app/TaskInfo;->taskId:I
 
     iput v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
+    .line 99
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v1
@@ -160,6 +185,7 @@
     :goto_0
     iput v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->stackId:I
 
+    .line 100
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v1
@@ -170,26 +196,33 @@
 
     iput v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->windowingMode:I
 
+    .line 101
     iget-object v1, p1, Landroid/app/TaskInfo;->baseIntent:Landroid/content/Intent;
 
     iput-object v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->baseIntent:Landroid/content/Intent;
 
+    .line 102
     iget v1, p1, Landroid/app/TaskInfo;->userId:I
 
     iput v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
 
+    .line 103
     iget-wide v1, p1, Landroid/app/TaskInfo;->lastActiveTime:J
 
     iput-wide v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->lastActiveTime:J
 
+    .line 105
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isThumbnailBlur:Z
 
+    .line 106
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isScreening:Z
 
+    .line 107
     iget-object v0, p1, Landroid/app/TaskInfo;->topActivity:Landroid/content/ComponentName;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->topActivity:Landroid/content/ComponentName;
 
+    .line 108
     sget-object v0, Lcom/android/systemui/shared/recents/model/Task;->VT_CAMERA_COMPONENT_NAME:Landroid/content/ComponentName;
 
     iget-object p1, p1, Landroid/app/TaskInfo;->topActivity:Landroid/content/ComponentName;
@@ -200,8 +233,10 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isVtCamera:Z
 
+    .line 109
     invoke-direct {p0, p2}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->updateWorldCirculateInfo(Lcom/android/systemui/shared/recents/utilities/WorldCirculate$WorldCirculateInfo;)V
 
+    .line 110
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->updateHashCode()V
 
     return-void
@@ -214,6 +249,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 203
     iget v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -268,14 +304,17 @@
 
     if-eqz p1, :cond_0
 
+    .line 133
     iget-boolean v0, p1, Lcom/android/systemui/shared/recents/utilities/WorldCirculate$WorldCirculateInfo;->mIsWorldCirculate:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isWorldCirculate:Z
 
+    .line 134
     iget-object v0, p1, Lcom/android/systemui/shared/recents/utilities/WorldCirculate$WorldCirculateInfo;->mWorldCirculateDeviceName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->worldCirculateDeviceName:Ljava/lang/String;
 
+    .line 135
     iget-object p1, p1, Lcom/android/systemui/shared/recents/utilities/WorldCirculate$WorldCirculateInfo;->mWorldCirculateOwnerName:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->worldCirculateOwnerName:Ljava/lang/String;
@@ -289,6 +328,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 173
     instance-of v0, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     const/4 v1, 0x0
@@ -297,9 +337,11 @@
 
     return v1
 
+    .line 176
     :cond_0
     check-cast p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
+    .line 177
     iget v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
     iget v2, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -333,6 +375,7 @@
 .method public getComponent()Landroid/content/ComponentName;
     .locals 0
 
+    .line 149
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->baseIntent:Landroid/content/Intent;
 
     invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
@@ -345,12 +388,14 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 1
 
+    .line 153
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 154
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p0
@@ -370,18 +415,21 @@
 .method public getTopComponentOrBaseComponent()Landroid/content/ComponentName;
     .locals 3
 
+    .line 160
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
+    .line 162
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "com.android.settings"
 
+    .line 163
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -390,12 +438,14 @@
 
     const-string v2, "com.miui.securitycenter"
 
+    .line 164
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 165
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->topActivity:Landroid/content/ComponentName;
 
@@ -413,6 +463,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 183
     iget p0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->mHashCode:I
 
     return p0
@@ -421,6 +472,7 @@
 .method public setLastActiveTime(J)V
     .locals 0
 
+    .line 145
     iput-wide p1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->lastActiveTime:J
 
     return-void
@@ -429,8 +481,10 @@
 .method public setStackId(I)V
     .locals 0
 
+    .line 140
     iput p1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->stackId:I
 
+    .line 141
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->updateHashCode()V
 
     return-void
@@ -439,6 +493,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 188
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

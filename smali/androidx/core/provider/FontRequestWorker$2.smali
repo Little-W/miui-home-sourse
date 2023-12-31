@@ -1,5 +1,6 @@
 .class Landroidx/core/provider/FontRequestWorker$2;
 .super Ljava/lang/Object;
+.source "FontRequestWorker.java"
 
 # interfaces
 .implements Landroidx/core/util/Consumer;
@@ -33,6 +34,7 @@
 .method constructor <init>(Landroidx/core/provider/CallbackWithHandler;)V
     .locals 0
 
+    .line 171
     iput-object p1, p0, Landroidx/core/provider/FontRequestWorker$2;->val$callback:Landroidx/core/provider/CallbackWithHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,12 +49,14 @@
 
     if-nez p1, :cond_0
 
+    .line 175
     new-instance p1, Landroidx/core/provider/FontRequestWorker$TypefaceResult;
 
     const/4 v0, -0x3
 
     invoke-direct {p1, v0}, Landroidx/core/provider/FontRequestWorker$TypefaceResult;-><init>(I)V
 
+    .line 177
     :cond_0
     iget-object p0, p0, Landroidx/core/provider/FontRequestWorker$2;->val$callback:Landroidx/core/provider/CallbackWithHandler;
 
@@ -64,6 +68,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
+    .line 171
     check-cast p1, Landroidx/core/provider/FontRequestWorker$TypefaceResult;
 
     invoke-virtual {p0, p1}, Landroidx/core/provider/FontRequestWorker$2;->accept(Landroidx/core/provider/FontRequestWorker$TypefaceResult;)V

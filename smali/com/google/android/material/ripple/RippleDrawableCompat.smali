@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/ripple/RippleDrawableCompat;
 .super Landroid/graphics/drawable/Drawable;
+.source "RippleDrawableCompat.java"
 
 # interfaces
 .implements Landroidx/core/graphics/drawable/TintAwareDrawable;
@@ -22,8 +23,10 @@
 .method private constructor <init>(Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;)V
     .locals 0
 
+    .line 62
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
+    .line 63
     iput-object p1, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     return-void
@@ -32,6 +35,7 @@
 .method synthetic constructor <init>(Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;Lcom/google/android/material/ripple/RippleDrawableCompat$1;)V
     .locals 0
 
+    .line 47
     invoke-direct {p0, p1}, Lcom/google/android/material/ripple/RippleDrawableCompat;-><init>(Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;)V
 
     return-void
@@ -40,6 +44,7 @@
 .method public constructor <init>(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
     .locals 2
 
+    .line 58
     new-instance v0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     new-instance v1, Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -58,12 +63,14 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 1
 
+    .line 126
     iget-object v0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-boolean v0, v0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->shouldDrawDelegate:Z
 
     if-eqz v0, :cond_0
 
+    .line 127
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -77,6 +84,7 @@
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 0
 
+    .line 140
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     return-object p0
@@ -85,6 +93,7 @@
 .method public getOpacity()I
     .locals 0
 
+    .line 163
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -107,6 +116,7 @@
 .method public bridge synthetic mutate()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 46
     invoke-virtual {p0}, Lcom/google/android/material/ripple/RippleDrawableCompat;->mutate()Lcom/google/android/material/ripple/RippleDrawableCompat;
 
     move-result-object p0
@@ -117,12 +127,14 @@
 .method public mutate()Lcom/google/android/material/ripple/RippleDrawableCompat;
     .locals 2
 
+    .line 146
     new-instance v0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object v1, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     invoke-direct {v0, v1}, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;-><init>(Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;)V
 
+    .line 147
     iput-object v0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     return-object p0
@@ -131,8 +143,10 @@
 .method protected onBoundsChange(Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 133
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
+    .line 134
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -145,10 +159,12 @@
 .method protected onStateChange([I)Z
     .locals 3
 
+    .line 109
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onStateChange([I)Z
 
     move-result v0
 
+    .line 110
     iget-object v1, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object v1, v1, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -163,17 +179,20 @@
 
     move v0, v2
 
+    .line 113
     :cond_0
     invoke-static {p1}, Lcom/google/android/material/ripple/RippleUtils;->shouldDrawRippleCompat([I)Z
 
     move-result p1
 
+    .line 116
     iget-object v1, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-boolean v1, v1, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->shouldDrawDelegate:Z
 
     if-eq v1, p1, :cond_1
 
+    .line 117
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iput-boolean p1, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->shouldDrawDelegate:Z
@@ -187,6 +206,7 @@
 .method public setAlpha(I)V
     .locals 0
 
+    .line 153
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -199,6 +219,7 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 0
 
+    .line 158
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -211,6 +232,7 @@
 .method public setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
     .locals 0
 
+    .line 83
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -223,6 +245,7 @@
 .method public setTint(I)V
     .locals 0
 
+    .line 68
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -235,6 +258,7 @@
 .method public setTintList(Landroid/content/res/ColorStateList;)V
     .locals 0
 
+    .line 78
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -247,6 +271,7 @@
 .method public setTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 0
 
+    .line 73
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat;->drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;
 
     iget-object p0, p0, Lcom/google/android/material/ripple/RippleDrawableCompat$RippleDrawableCompatState;->delegate:Lcom/google/android/material/shape/MaterialShapeDrawable;

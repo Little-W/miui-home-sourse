@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;
 .super Ljava/lang/Object;
+.source "ResourceCacheGenerator.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;
@@ -76,14 +77,18 @@
         }
     .end annotation
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 24
     iput v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->resourceClassIndex:I
 
+    .line 36
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 37
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->cb:Lcom/bumptech/glide/load/engine/DataFetcherGenerator$FetcherReadyCallback;
 
     return-void
@@ -92,6 +97,7 @@
 .method private hasNextModelLoader()Z
     .locals 1
 
+    .line 107
     iget v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->modelLoaderIndex:I
 
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->modelLoaders:Ljava/util/List;
@@ -118,10 +124,12 @@
 .method public cancel()V
     .locals 0
 
+    .line 112
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->loadData:Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     if-eqz p0, :cond_0
 
+    .line 114
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;->fetcher:Lcom/bumptech/glide/load/data/DataFetcher;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/data/DataFetcher;->cancel()V
@@ -133,6 +141,7 @@
 .method public onDataReady(Ljava/lang/Object;)V
     .locals 6
 
+    .line 120
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->cb:Lcom/bumptech/glide/load/engine/DataFetcherGenerator$FetcherReadyCallback;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->sourceKey:Lcom/bumptech/glide/load/Key;
@@ -155,6 +164,7 @@
 .method public onLoadFailed(Ljava/lang/Exception;)V
     .locals 3
 
+    .line 126
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->cb:Lcom/bumptech/glide/load/engine/DataFetcherGenerator$FetcherReadyCallback;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->currentKey:Lcom/bumptech/glide/load/engine/ResourceCacheKey;
@@ -173,12 +183,14 @@
 .method public startNext()Z
     .locals 14
 
+    .line 44
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getCacheKeys()Ljava/util/List;
 
     move-result-object v0
 
+    .line 45
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -189,6 +201,7 @@
 
     return v2
 
+    .line 48
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
@@ -196,12 +209,14 @@
 
     move-result-object v1
 
+    .line 49
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
+    .line 50
     const-class v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
@@ -218,6 +233,7 @@
 
     return v2
 
+    .line 53
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -231,6 +247,7 @@
 
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 54
     invoke-virtual {v2}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getModelClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -243,6 +260,7 @@
 
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 55
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getTranscodeClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -257,6 +275,7 @@
 
     throw v0
 
+    .line 57
     :cond_2
     :goto_0
     iget-object v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->modelLoaders:Ljava/util/List;
@@ -276,18 +295,21 @@
     :cond_3
     const/4 v0, 0x0
 
+    .line 91
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->loadData:Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     :cond_4
     :goto_1
     if-nez v2, :cond_5
 
+    .line 93
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->hasNextModelLoader()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
+    .line 94
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->modelLoaders:Ljava/util/List;
 
     iget v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->modelLoaderIndex:I
@@ -302,10 +324,12 @@
 
     check-cast v0, Lcom/bumptech/glide/load/model/ModelLoader;
 
+    .line 95
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->cacheFile:Ljava/io/File;
 
     iget-object v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 96
     invoke-virtual {v3}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getWidth()I
 
     move-result v3
@@ -322,12 +346,14 @@
 
     move-result-object v6
 
+    .line 95
     invoke-interface {v0, v1, v3, v5, v6}, Lcom/bumptech/glide/load/model/ModelLoader;->buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->loadData:Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
+    .line 97
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->loadData:Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     if-eqz v0, :cond_4
@@ -348,6 +374,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 99
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->loadData:Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     iget-object v0, v0, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;->fetcher:Lcom/bumptech/glide/load/data/DataFetcher;
@@ -367,6 +394,7 @@
     :cond_5
     return v2
 
+    .line 58
     :cond_6
     :goto_2
     iget v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->resourceClassIndex:I
@@ -375,6 +403,7 @@
 
     iput v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->resourceClassIndex:I
 
+    .line 59
     iget v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->resourceClassIndex:I
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -383,12 +412,14 @@
 
     if-lt v3, v5, :cond_8
 
+    .line 60
     iget v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->sourceIdIndex:I
 
     add-int/2addr v3, v4
 
     iput v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->sourceIdIndex:I
 
+    .line 61
     iget v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->sourceIdIndex:I
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -399,9 +430,11 @@
 
     return v2
 
+    .line 64
     :cond_7
     iput v2, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->resourceClassIndex:I
 
+    .line 67
     :cond_8
     iget v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->sourceIdIndex:I
 
@@ -411,6 +444,7 @@
 
     check-cast v3, Lcom/bumptech/glide/load/Key;
 
+    .line 68
     iget v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->resourceClassIndex:I
 
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -421,40 +455,47 @@
 
     check-cast v11, Ljava/lang/Class;
 
+    .line 69
     iget-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
     invoke-virtual {v4, v11}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getTransformation(Ljava/lang/Class;)Lcom/bumptech/glide/load/Transformation;
 
     move-result-object v10
 
+    .line 73
     new-instance v13, Lcom/bumptech/glide/load/engine/ResourceCacheKey;
 
     iget-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 75
     invoke-virtual {v4}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getArrayPool()Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     move-result-object v5
 
     iget-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 77
     invoke-virtual {v4}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getSignature()Lcom/bumptech/glide/load/Key;
 
     move-result-object v7
 
     iget-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 78
     invoke-virtual {v4}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getWidth()I
 
     move-result v8
 
     iget-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 79
     invoke-virtual {v4}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getHeight()I
 
     move-result v9
 
     iget-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
+    .line 82
     invoke-virtual {v4}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getOptions()Lcom/bumptech/glide/load/Options;
 
     move-result-object v12
@@ -467,6 +508,7 @@
 
     iput-object v13, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->currentKey:Lcom/bumptech/glide/load/engine/ResourceCacheKey;
 
+    .line 83
     iget-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
     invoke-virtual {v4}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getDiskCache()Lcom/bumptech/glide/load/engine/cache/DiskCache;
@@ -481,12 +523,15 @@
 
     iput-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->cacheFile:Ljava/io/File;
 
+    .line 84
     iget-object v4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->cacheFile:Ljava/io/File;
 
     if-eqz v4, :cond_2
 
+    .line 85
     iput-object v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->sourceKey:Lcom/bumptech/glide/load/Key;
 
+    .line 86
     iget-object v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->helper:Lcom/bumptech/glide/load/engine/DecodeHelper;
 
     invoke-virtual {v3, v4}, Lcom/bumptech/glide/load/engine/DecodeHelper;->getModelLoaders(Ljava/io/File;)Ljava/util/List;
@@ -495,6 +540,7 @@
 
     iput-object v3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->modelLoaders:Ljava/util/List;
 
+    .line 87
     iput v2, p0, Lcom/bumptech/glide/load/engine/ResourceCacheGenerator;->modelLoaderIndex:I
 
     goto/16 :goto_0

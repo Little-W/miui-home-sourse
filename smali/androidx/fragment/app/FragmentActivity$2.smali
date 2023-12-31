@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/FragmentActivity$2;
 .super Ljava/lang/Object;
+.source "FragmentActivity.java"
 
 # interfaces
 .implements Landroidx/activity/contextaware/OnContextAvailableListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/fragment/app/FragmentActivity;)V
     .locals 0
 
+    .line 140
     iput-object p1, p0, Landroidx/fragment/app/FragmentActivity$2;->this$0:Landroidx/fragment/app/FragmentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onContextAvailable(Landroid/content/Context;)V
     .locals 1
 
+    .line 143
     iget-object p1, p0, Landroidx/fragment/app/FragmentActivity$2;->this$0:Landroidx/fragment/app/FragmentActivity;
 
     iget-object p1, p1, Landroidx/fragment/app/FragmentActivity;->mFragments:Landroidx/fragment/app/FragmentController;
@@ -44,6 +47,7 @@
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentController;->attachHost(Landroidx/fragment/app/Fragment;)V
 
+    .line 144
     iget-object p1, p0, Landroidx/fragment/app/FragmentActivity$2;->this$0:Landroidx/fragment/app/FragmentActivity;
 
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
@@ -52,16 +56,19 @@
 
     const-string v0, "android:support:fragments"
 
+    .line 145
     invoke-virtual {p1, v0}, Landroidx/savedstate/SavedStateRegistry;->consumeRestoredStateForKey(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 148
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
+    .line 149
     iget-object p0, p0, Landroidx/fragment/app/FragmentActivity$2;->this$0:Landroidx/fragment/app/FragmentActivity;
 
     iget-object p0, p0, Landroidx/fragment/app/FragmentActivity;->mFragments:Landroidx/fragment/app/FragmentController;

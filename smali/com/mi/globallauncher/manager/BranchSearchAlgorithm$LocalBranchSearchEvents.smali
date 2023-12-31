@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;
 .super Ljava/lang/Object;
+.source "BranchSearchAlgorithm.java"
 
 # interfaces
 .implements Lio/branch/search/IBranchSearchEvents;
@@ -32,8 +33,10 @@
 .method public constructor <init>(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)V
     .locals 1
 
+    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 86
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -46,6 +49,7 @@
 .method static synthetic lambda$onBranchSearchError$1(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)V
     .locals 1
 
+    .line 113
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$300(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
 
     move-result-object p0
@@ -60,6 +64,7 @@
 .method static synthetic lambda$onBranchSearchResult$0(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;Lio/branch/search/BranchSearchResult;)V
     .locals 0
 
+    .line 99
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$300(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
 
     move-result-object p0
@@ -74,10 +79,12 @@
 .method public onBranchSearchError(Lio/branch/search/BranchSearchError;)V
     .locals 2
 
+    .line 107
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;->mReference:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
+    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,6 +107,7 @@
 
     invoke-static {v0, p1}, Lcom/mi/globallauncher/util/CommercialLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 109
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;->mReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -110,12 +118,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 111
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$100(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 112
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$000(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Landroid/os/Handler;
 
     move-result-object p1
@@ -133,6 +143,7 @@
 .method public onBranchSearchResult(Lio/branch/search/BranchSearchResult;)V
     .locals 2
 
+    .line 91
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;->mReference:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
@@ -141,8 +152,10 @@
 
     const-string v1, "branch search result"
 
+    .line 92
     invoke-static {v0, v1}, Lcom/mi/globallauncher/util/CommercialLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 93
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;->mReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -153,16 +166,19 @@
 
     if-eqz p0, :cond_0
 
+    .line 95
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$100(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 96
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$200(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 97
     invoke-virtual {p1}, Lio/branch/search/BranchSearchResult;->getBranchSearchRequest()Lio/branch/search/BranchSearchRequest;
 
     move-result-object v1
@@ -171,12 +187,14 @@
 
     move-result-object v1
 
+    .line 96
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 98
     invoke-static {p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->access$000(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Landroid/os/Handler;
 
     move-result-object v0

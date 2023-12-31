@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy$1;
 .super Ljava/lang/Object;
+.source "CrashlyticsNativeComponentDeferredProxy.java"
 
 
 # annotations

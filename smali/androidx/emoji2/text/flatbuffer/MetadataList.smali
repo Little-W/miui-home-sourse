@@ -1,11 +1,13 @@
 .class public final Landroidx/emoji2/text/flatbuffer/MetadataList;
 .super Landroidx/emoji2/text/flatbuffer/Table;
+.source "MetadataList.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 28
     invoke-direct {p0}, Landroidx/emoji2/text/flatbuffer/Table;-><init>()V
 
     return-void
@@ -14,6 +16,7 @@
 .method public static getRootAsMetadataList(Ljava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 1
 
+    .line 30
     new-instance v0, Landroidx/emoji2/text/flatbuffer/MetadataList;
 
     invoke-direct {v0}, Landroidx/emoji2/text/flatbuffer/MetadataList;-><init>()V
@@ -28,6 +31,7 @@
 .method public static getRootAsMetadataList(Ljava/nio/ByteBuffer;Landroidx/emoji2/text/flatbuffer/MetadataList;)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 2
 
+    .line 31
     sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
@@ -58,6 +62,7 @@
 .method public __assign(ILjava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 0
 
+    .line 33
     invoke-virtual {p0, p1, p2}, Landroidx/emoji2/text/flatbuffer/MetadataList;->__init(ILjava/nio/ByteBuffer;)V
 
     return-object p0
@@ -66,6 +71,7 @@
 .method public __init(ILjava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 32
     invoke-virtual {p0, p1, p2}, Landroidx/emoji2/text/flatbuffer/MetadataList;->__reset(ILjava/nio/ByteBuffer;)V
 
     return-void
@@ -76,6 +82,7 @@
 
     const/4 v0, 0x6
 
+    .line 37
     invoke-virtual {p0, v0}, Landroidx/emoji2/text/flatbuffer/MetadataList;->__offset(I)I
 
     move-result v0
@@ -114,6 +121,7 @@
 
     const/4 v0, 0x6
 
+    .line 38
     invoke-virtual {p0, v0}, Landroidx/emoji2/text/flatbuffer/MetadataList;->__offset(I)I
 
     move-result v0
@@ -138,6 +146,7 @@
 
     const/4 v0, 0x4
 
+    .line 35
     invoke-virtual {p0, v0}, Landroidx/emoji2/text/flatbuffer/MetadataList;->__offset(I)I
 
     move-result v0

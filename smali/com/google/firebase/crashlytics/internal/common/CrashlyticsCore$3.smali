@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$3;
 .super Ljava/lang/Object;
+.source "CrashlyticsCore.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -33,6 +34,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;)V
     .locals 0
 
+    .line 421
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$3;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,6 +52,7 @@
         }
     .end annotation
 
+    .line 425
     :try_start_0
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$3;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
@@ -63,6 +66,7 @@
 
     if-nez p0, :cond_0
 
+    .line 427
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
@@ -71,6 +75,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->w(Ljava/lang/String;)V
 
+    .line 429
     :cond_0
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -83,16 +88,19 @@
     :catch_0
     move-exception p0
 
+    .line 431
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
 
     const-string v1, "Problem encountered deleting Crashlytics initialization marker."
 
+    .line 432
     invoke-virtual {v0, v1, p0}, Lcom/google/firebase/crashlytics/internal/Logger;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0
 
+    .line 433
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -108,6 +116,7 @@
         }
     .end annotation
 
+    .line 421
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$3;->call()Ljava/lang/Boolean;
 
     move-result-object p0

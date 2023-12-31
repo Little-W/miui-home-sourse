@@ -1,5 +1,6 @@
 .class final Lkotlin/text/StringsKt__StringsKt$rangesDelimitedBy$4;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Strings.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -94,6 +95,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1260
     iget-object v0, p0, Lkotlin/text/StringsKt__StringsKt$rangesDelimitedBy$4;->$delimitersList:Ljava/util/List;
 
     check-cast v0, Ljava/util/Collection;

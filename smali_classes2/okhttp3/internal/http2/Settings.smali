@@ -1,5 +1,6 @@
 .class public final Lokhttp3/internal/http2/Settings;
 .super Ljava/lang/Object;
+.source "Settings.java"
 
 
 # instance fields
@@ -12,12 +13,14 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0xa
 
     new-array v0, v0, [I
 
+    .line 51
     iput-object v0, p0, Lokhttp3/internal/http2/Settings;->values:[I
 
     return-void
@@ -30,8 +33,10 @@
 
     const/4 v0, 0x0
 
+    .line 54
     iput v0, p0, Lokhttp3/internal/http2/Settings;->set:I
 
+    .line 55
     iget-object p0, p0, Lokhttp3/internal/http2/Settings;->values:[I
 
     invoke-static {p0, v0}, Ljava/util/Arrays;->fill([II)V
@@ -42,6 +47,7 @@
 .method get(I)I
     .locals 0
 
+    .line 77
     iget-object p0, p0, Lokhttp3/internal/http2/Settings;->values:[I
 
     aget p0, p0, p1
@@ -52,6 +58,7 @@
 .method getHeaderTableSize()I
     .locals 1
 
+    .line 88
     iget v0, p0, Lokhttp3/internal/http2/Settings;->set:I
 
     and-int/lit8 v0, v0, 0x2
@@ -76,6 +83,7 @@
 .method getInitialWindowSize()I
     .locals 1
 
+    .line 114
     iget v0, p0, Lokhttp3/internal/http2/Settings;->set:I
 
     and-int/lit16 v0, v0, 0x80
@@ -100,6 +108,7 @@
 .method getMaxConcurrentStreams(I)I
     .locals 1
 
+    .line 99
     iget v0, p0, Lokhttp3/internal/http2/Settings;->set:I
 
     and-int/lit8 v0, v0, 0x10
@@ -119,6 +128,7 @@
 .method getMaxFrameSize(I)I
     .locals 1
 
+    .line 104
     iget v0, p0, Lokhttp3/internal/http2/Settings;->set:I
 
     and-int/lit8 v0, v0, 0x20
@@ -142,6 +152,7 @@
 
     shl-int p1, v0, p1
 
+    .line 72
     iget p0, p0, Lokhttp3/internal/http2/Settings;->set:I
 
     and-int/2addr p0, p1
@@ -167,6 +178,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 123
     invoke-virtual {p1, v0}, Lokhttp3/internal/http2/Settings;->isSet(I)Z
 
     move-result v1
@@ -175,6 +187,7 @@
 
     goto :goto_1
 
+    .line 124
     :cond_0
     invoke-virtual {p1, v0}, Lokhttp3/internal/http2/Settings;->get(I)I
 
@@ -196,6 +209,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 59
     iget-object v0, p0, Lokhttp3/internal/http2/Settings;->values:[I
 
     array-length v1, v0
@@ -209,12 +223,14 @@
 
     shl-int/2addr v1, p1
 
+    .line 64
     iget v2, p0, Lokhttp3/internal/http2/Settings;->set:I
 
     or-int/2addr v1, v2
 
     iput v1, p0, Lokhttp3/internal/http2/Settings;->set:I
 
+    .line 65
     aput p2, v0, p1
 
     :cond_1
@@ -225,6 +241,7 @@
 .method size()I
     .locals 0
 
+    .line 82
     iget p0, p0, Lokhttp3/internal/http2/Settings;->set:I
 
     invoke-static {p0}, Ljava/lang/Integer;->bitCount(I)I

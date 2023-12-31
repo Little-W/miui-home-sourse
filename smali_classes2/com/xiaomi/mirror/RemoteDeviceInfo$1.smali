@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/RemoteDeviceInfo$1;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

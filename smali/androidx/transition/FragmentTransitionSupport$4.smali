@@ -1,5 +1,6 @@
 .class Landroidx/transition/FragmentTransitionSupport$4;
 .super Landroidx/transition/Transition$EpicenterCallback;
+.source "FragmentTransitionSupport.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 301
     iput-object p1, p0, Landroidx/transition/FragmentTransitionSupport$4;->this$0:Landroidx/transition/FragmentTransitionSupport;
 
     iput-object p2, p0, Landroidx/transition/FragmentTransitionSupport$4;->val$epicenter:Landroid/graphics/Rect;

@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;
 .super Ljava/lang/Object;
+.source "SafeKeyGenerator.java"
 
 
 # annotations
@@ -37,8 +38,10 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
     new-instance v0, Lcom/bumptech/glide/util/LruCache;
 
     const-wide/16 v1, 0x3e8
@@ -47,6 +50,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;->loadIdToSafeHash:Lcom/bumptech/glide/util/LruCache;
 
+    .line 23
     new-instance v0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$1;
 
     invoke-direct {v0, p0}, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$1;-><init>(Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;)V
@@ -65,6 +69,7 @@
 .method private calculateHexStringDigest(Lcom/bumptech/glide/load/Key;)Ljava/lang/String;
     .locals 2
 
+    .line 50
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;->digestPool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {v0}, Landroidx/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -77,11 +82,13 @@
 
     check-cast v0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$PoolableDigestContainer;
 
+    .line 52
     :try_start_0
     iget-object v1, v0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$PoolableDigestContainer;->messageDigest:Ljava/security/MessageDigest;
 
     invoke-interface {p1, v1}, Lcom/bumptech/glide/load/Key;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
+    .line 54
     iget-object p1, v0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$PoolableDigestContainer;->messageDigest:Ljava/security/MessageDigest;
 
     invoke-virtual {p1}, Ljava/security/MessageDigest;->digest()[B
@@ -94,6 +101,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 56
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;->digestPool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {p0, v0}, Landroidx/core/util/Pools$Pool;->release(Ljava/lang/Object;)Z
@@ -115,10 +123,12 @@
 .method public getSafeKey(Lcom/bumptech/glide/load/Key;)Ljava/lang/String;
     .locals 3
 
+    .line 37
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;->loadIdToSafeHash:Lcom/bumptech/glide/util/LruCache;
 
     monitor-enter v0
 
+    .line 38
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;->loadIdToSafeHash:Lcom/bumptech/glide/util/LruCache;
 
@@ -128,26 +138,31 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 39
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     if-nez v1, :cond_0
 
+    .line 41
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;->calculateHexStringDigest(Lcom/bumptech/glide/load/Key;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 43
     :cond_0
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;->loadIdToSafeHash:Lcom/bumptech/glide/util/LruCache;
 
     monitor-enter v2
 
+    .line 44
     :try_start_1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;->loadIdToSafeHash:Lcom/bumptech/glide/util/LruCache;
 
     invoke-virtual {p0, p1, v1}, Lcom/bumptech/glide/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 45
     monitor-exit v2
 
     return-object v1
@@ -164,6 +179,7 @@
     :catchall_1
     move-exception p0
 
+    .line 39
     :try_start_2
     monitor-exit v0
     :try_end_2

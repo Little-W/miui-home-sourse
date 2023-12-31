@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/encoders/ObjectEncoderContext;
 .super Ljava/lang/Object;
+.source "ObjectEncoderContext.java"
 
 
 # virtual methods

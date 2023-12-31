@@ -63,8 +63,10 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -73,44 +75,52 @@
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 38
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 48
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->m:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 166
     new-instance v0, Lcom/xiaomi/onetrack/api/ServiceConnectionManager$1;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/onetrack/api/ServiceConnectionManager$1;-><init>(Lcom/xiaomi/onetrack/api/ar;)V
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->n:Landroid/content/ServiceConnection;
 
+    .line 216
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->o:Ljava/util/concurrent/CopyOnWriteArrayList;
 
+    .line 69
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->g:Landroid/content/Context;
 
+    .line 70
     new-instance v0, Landroid/os/HandlerThread;
 
     sget-object v1, Lcom/xiaomi/onetrack/api/ar;->l:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
+    .line 71
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
+    .line 72
     new-instance v1, Lcom/xiaomi/onetrack/api/ar$b;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -121,6 +131,7 @@
 
     iput-object v1, p0, Lcom/xiaomi/onetrack/api/ar;->j:Lcom/xiaomi/onetrack/api/ar$b;
 
+    .line 73
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->j:Lcom/xiaomi/onetrack/api/ar$b;
 
     const/4 v0, 0x2
@@ -133,6 +144,7 @@
 .method static synthetic a(Lcom/xiaomi/onetrack/api/ar;Lcom/miui/analytics/ITrack;)Lcom/miui/analytics/ITrack;
     .locals 0
 
+    .line 34
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/ar;->d:Lcom/miui/analytics/ITrack;
 
     return-object p1
@@ -141,12 +153,15 @@
 .method public static a()Lcom/xiaomi/onetrack/api/ar;
     .locals 1
 
+    .line 52
     sget-object v0, Lcom/xiaomi/onetrack/api/ar;->k:Lcom/xiaomi/onetrack/api/ar;
 
     if-nez v0, :cond_0
 
+    .line 53
     invoke-static {}, Lcom/xiaomi/onetrack/api/ar;->b()V
 
+    .line 55
     :cond_0
     sget-object v0, Lcom/xiaomi/onetrack/api/ar;->k:Lcom/xiaomi/onetrack/api/ar;
 
@@ -156,6 +171,7 @@
 .method static synthetic a(Lcom/xiaomi/onetrack/api/ar;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object p0
@@ -164,6 +180,7 @@
 .method static synthetic b(Lcom/xiaomi/onetrack/api/ar;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object p0
@@ -172,25 +189,30 @@
 .method public static b()V
     .locals 2
 
+    .line 59
     sget-object v0, Lcom/xiaomi/onetrack/api/ar;->k:Lcom/xiaomi/onetrack/api/ar;
 
     if-nez v0, :cond_1
 
+    .line 60
     const-class v0, Lcom/xiaomi/onetrack/api/ar;
 
     monitor-enter v0
 
+    .line 61
     :try_start_0
     sget-object v1, Lcom/xiaomi/onetrack/api/ar;->k:Lcom/xiaomi/onetrack/api/ar;
 
     if-nez v1, :cond_0
 
+    .line 62
     new-instance v1, Lcom/xiaomi/onetrack/api/ar;
 
     invoke-direct {v1}, Lcom/xiaomi/onetrack/api/ar;-><init>()V
 
     sput-object v1, Lcom/xiaomi/onetrack/api/ar;->k:Lcom/xiaomi/onetrack/api/ar;
 
+    .line 64
     :cond_0
     monitor-exit v0
 
@@ -215,14 +237,17 @@
 
     const/4 v0, 0x0
 
+    .line 102
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->d:Lcom/miui/analytics/ITrack;
 
+    .line 103
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 104
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
@@ -233,6 +258,7 @@
 .method static synthetic c(Lcom/xiaomi/onetrack/api/ar;)V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/ar;->g()V
 
     return-void
@@ -241,6 +267,7 @@
 .method static synthetic d(Lcom/xiaomi/onetrack/api/ar;)Lcom/miui/analytics/ITrack;
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->d:Lcom/miui/analytics/ITrack;
 
     return-object p0
@@ -249,6 +276,7 @@
 .method private d()V
     .locals 2
 
+    .line 117
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -269,10 +297,12 @@
 
     if-nez v0, :cond_0
 
+    .line 118
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/ar;->e()V
 
     goto :goto_1
 
+    .line 120
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -337,6 +367,7 @@
 
     const-string v0, "ServiceConnectManager"
 
+    .line 125
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/ar;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x1
@@ -345,6 +376,7 @@
 
     const/4 v1, 0x0
 
+    .line 127
     :try_start_0
     new-instance v3, Landroid/content/Intent;
 
@@ -354,8 +386,10 @@
 
     const-string v5, "com.miui.analytics.onetrack.OneTrackService"
 
+    .line 128
     invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 129
     iget-object v4, p0, Lcom/xiaomi/onetrack/api/ar;->g:Landroid/content/Context;
 
     iget-object v5, p0, Lcom/xiaomi/onetrack/api/ar;->n:Landroid/content/ServiceConnection;
@@ -366,12 +400,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 131
     iget-object v4, p0, Lcom/xiaomi/onetrack/api/ar;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v4, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     goto :goto_0
 
+    .line 133
     :cond_0
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/ar;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -379,6 +415,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 135
     :try_start_1
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/ar;->g:Landroid/content/Context;
 
@@ -393,6 +430,7 @@
     :catchall_0
     move-exception v2
 
+    .line 137
     :try_start_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -414,6 +452,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 140
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -446,15 +485,18 @@
     :catchall_1
     move-exception v2
 
+    .line 143
     :try_start_3
     iget-object v3, p0, Lcom/xiaomi/onetrack/api/ar;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 144
     iget-object v3, p0, Lcom/xiaomi/onetrack/api/ar;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 145
     iget-object v3, p0, Lcom/xiaomi/onetrack/api/ar;->g:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/xiaomi/onetrack/api/ar;->n:Landroid/content/ServiceConnection;
@@ -468,6 +510,7 @@
     :catchall_2
     move-exception v3
 
+    .line 147
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -488,6 +531,7 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 149
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -509,6 +553,7 @@
 
     invoke-static {v0, v2}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 151
     :goto_2
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -520,6 +565,7 @@
 .method static synthetic e(Lcom/xiaomi/onetrack/api/ar;)V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/ar;->c()V
 
     return-void
@@ -528,6 +574,7 @@
 .method static synthetic f(Lcom/xiaomi/onetrack/api/ar;)Landroid/content/ServiceConnection;
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->n:Landroid/content/ServiceConnection;
 
     return-object p0
@@ -538,6 +585,7 @@
 
     const-string v0, "ServiceConnectManager"
 
+    .line 156
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/ar;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -547,6 +595,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 157
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/ar;->g:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/ar;->n:Landroid/content/ServiceConnection;
@@ -560,6 +609,7 @@
     :catchall_0
     move-exception v1
 
+    .line 160
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -580,10 +630,12 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 162
     :cond_0
     :goto_0
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/ar;->c()V
 
+    .line 163
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -612,6 +664,7 @@
 .method static synthetic g(Lcom/xiaomi/onetrack/api/ar;)Landroid/content/Context;
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->g:Landroid/content/Context;
 
     return-object p0
@@ -620,6 +673,7 @@
 .method private g()V
     .locals 1
 
+    .line 225
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->o:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -639,6 +693,7 @@
 
     check-cast v0, Lcom/xiaomi/onetrack/api/ar$a;
 
+    .line 226
     invoke-interface {v0}, Lcom/xiaomi/onetrack/api/ar$a;->a()V
 
     goto :goto_0
@@ -650,6 +705,7 @@
 .method static synthetic h(Lcom/xiaomi/onetrack/api/ar;)V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/ar;->f()V
 
     return-void
@@ -658,6 +714,7 @@
 .method static synthetic i(Lcom/xiaomi/onetrack/api/ar;)V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/ar;->d()V
 
     return-void
@@ -674,6 +731,7 @@
 
     if-ne p1, v1, :cond_0
 
+    .line 236
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->j:Lcom/xiaomi/onetrack/api/ar$b;
 
     const-wide/16 v1, 0x1388
@@ -682,6 +740,7 @@
 
     goto :goto_0
 
+    .line 238
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/onetrack/api/ar;->j:Lcom/xiaomi/onetrack/api/ar$b;
 
@@ -691,6 +750,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 239
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->j:Lcom/xiaomi/onetrack/api/ar$b;
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/onetrack/api/ar$b;->removeMessages(I)V
@@ -703,6 +763,7 @@
 .method public a(Lcom/xiaomi/onetrack/api/ar$a;)V
     .locals 1
 
+    .line 219
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->o:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->contains(Ljava/lang/Object;)Z
@@ -711,6 +772,7 @@
 
     if-nez v0, :cond_0
 
+    .line 220
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->o:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -724,6 +786,7 @@
 
     const-string v0, "ServiceConnectManager"
 
+    .line 109
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -747,6 +810,7 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 110
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->d:Lcom/miui/analytics/ITrack;
 
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
@@ -762,6 +826,7 @@
     :catch_0
     move-exception p0
 
+    .line 112
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -789,6 +854,7 @@
 .method public a(Ljava/lang/String;Ljava/lang/String;Lcom/xiaomi/onetrack/Configuration;Z)Z
     .locals 2
 
+    .line 78
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -799,10 +865,12 @@
 
     if-nez v0, :cond_2
 
+    .line 79
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/ar;->d:Lcom/miui/analytics/ITrack;
 
     if-eqz v0, :cond_1
 
+    .line 81
     :try_start_0
     invoke-virtual {p3}, Lcom/xiaomi/onetrack/Configuration;->getAppId()Ljava/lang/String;
 
@@ -810,10 +878,12 @@
 
     if-eqz p4, :cond_0
 
+    .line 83
     invoke-virtual {p3}, Lcom/xiaomi/onetrack/Configuration;->getAdEventAppId()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 85
     :cond_0
     iget-object p3, p0, Lcom/xiaomi/onetrack/api/ar;->d:Lcom/miui/analytics/ITrack;
 
@@ -832,8 +902,10 @@
     :catchall_0
     move-exception p1
 
+    .line 87
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/ar;->f()V
 
+    .line 89
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -858,6 +930,7 @@
 
     goto :goto_0
 
+    .line 93
     :cond_1
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/ar;->j:Lcom/xiaomi/onetrack/api/ar$b;
 

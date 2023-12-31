@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/resource/bitmap/UnitBitmapDecoder;
 .super Ljava/lang/Object;
+.source "UnitBitmapDecoder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/ResourceDecoder;
@@ -27,6 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 24
     new-instance p0, Lcom/bumptech/glide/load/resource/bitmap/UnitBitmapDecoder$NonOwnedBitmapResource;
 
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/UnitBitmapDecoder$NonOwnedBitmapResource;-><init>(Landroid/graphics/Bitmap;)V
@@ -64,6 +67,7 @@
         }
     .end annotation
 
+    .line 14
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/UnitBitmapDecoder;->decode(Landroid/graphics/Bitmap;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/engine/Resource;
@@ -89,6 +93,7 @@
         }
     .end annotation
 
+    .line 14
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/UnitBitmapDecoder;->handles(Landroid/graphics/Bitmap;Lcom/bumptech/glide/load/Options;)Z

@@ -1,5 +1,6 @@
 .class public final enum Lcom/squareup/picasso/Picasso$LoadedFrom;
 .super Ljava/lang/Enum;
+.source "Picasso.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
+    .line 871
     new-instance v0, Lcom/squareup/picasso/Picasso$LoadedFrom;
 
     const/4 v1, 0x0
@@ -51,6 +53,7 @@
 
     sput-object v0, Lcom/squareup/picasso/Picasso$LoadedFrom;->MEMORY:Lcom/squareup/picasso/Picasso$LoadedFrom;
 
+    .line 872
     new-instance v0, Lcom/squareup/picasso/Picasso$LoadedFrom;
 
     const/4 v2, 0x1
@@ -63,6 +66,7 @@
 
     sput-object v0, Lcom/squareup/picasso/Picasso$LoadedFrom;->DISK:Lcom/squareup/picasso/Picasso$LoadedFrom;
 
+    .line 873
     new-instance v0, Lcom/squareup/picasso/Picasso$LoadedFrom;
 
     const/4 v3, 0x2
@@ -79,6 +83,7 @@
 
     new-array v0, v0, [Lcom/squareup/picasso/Picasso$LoadedFrom;
 
+    .line 870
     sget-object v4, Lcom/squareup/picasso/Picasso$LoadedFrom;->MEMORY:Lcom/squareup/picasso/Picasso$LoadedFrom;
 
     aput-object v4, v0, v1
@@ -104,8 +109,10 @@
         }
     .end annotation
 
+    .line 877
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 878
     iput p3, p0, Lcom/squareup/picasso/Picasso$LoadedFrom;->debugColor:I
 
     return-void
@@ -114,6 +121,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/squareup/picasso/Picasso$LoadedFrom;
     .locals 1
 
+    .line 870
     const-class v0, Lcom/squareup/picasso/Picasso$LoadedFrom;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -128,6 +136,7 @@
 .method public static values()[Lcom/squareup/picasso/Picasso$LoadedFrom;
     .locals 1
 
+    .line 870
     sget-object v0, Lcom/squareup/picasso/Picasso$LoadedFrom;->$VALUES:[Lcom/squareup/picasso/Picasso$LoadedFrom;
 
     invoke-virtual {v0}, [Lcom/squareup/picasso/Picasso$LoadedFrom;->clone()Ljava/lang/Object;

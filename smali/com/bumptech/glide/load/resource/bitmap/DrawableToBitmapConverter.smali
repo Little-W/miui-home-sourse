@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter;
 .super Ljava/lang/Object;
+.source "DrawableToBitmapConverter.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 18
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter$1;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter$1;-><init>()V
@@ -33,16 +35,19 @@
         }
     .end annotation
 
+    .line 31
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
+    .line 34
     instance-of v0, p1, Landroid/graphics/drawable/BitmapDrawable;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 35
     check-cast p1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -51,11 +56,13 @@
 
     goto :goto_0
 
+    .line 36
     :cond_0
     instance-of v0, p1, Landroid/graphics/drawable/Animatable;
 
     if-nez v0, :cond_1
 
+    .line 37
     invoke-static {p0, p1, p2, p3}, Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter;->drawToBitmap(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     move-result-object p1
@@ -72,9 +79,11 @@
 
     goto :goto_1
 
+    .line 42
     :cond_2
     sget-object p0, Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter;->NO_RECYCLE_BITMAP_POOL:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
+    .line 43
     :goto_1
     invoke-static {p1, p0}, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->obtain(Landroid/graphics/Bitmap;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;
 
@@ -98,18 +107,21 @@
 
     if-ne p2, v2, :cond_1
 
+    .line 49
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v5
 
     if-gtz v5, :cond_1
 
+    .line 50
     invoke-static {v4, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 51
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,18 +146,21 @@
     :cond_1
     if-ne p3, v2, :cond_3
 
+    .line 56
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v2
 
     if-gtz v2, :cond_3
 
+    .line 57
     invoke-static {v4, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
+    .line 58
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,6 +182,7 @@
     :cond_2
     return-object v3
 
+    .line 63
     :cond_3
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -178,6 +194,7 @@
 
     move-result p2
 
+    .line 64
     :cond_4
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -189,19 +206,23 @@
 
     move-result p3
 
+    .line 66
     :cond_5
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->getBitmapDrawableLock()Ljava/util/concurrent/locks/Lock;
 
     move-result-object v0
 
+    .line 67
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 68
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-interface {p0, p2, p3, v1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;->get(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
+    .line 70
     :try_start_0
     new-instance v1, Landroid/graphics/Canvas;
 
@@ -209,14 +230,18 @@
 
     const/4 v2, 0x0
 
+    .line 71
     invoke-virtual {p1, v2, v2, p2, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 72
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 73
     invoke-virtual {v1, v3}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 75
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object p0

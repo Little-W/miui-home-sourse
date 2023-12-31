@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/content/GradientColor;
 .super Ljava/lang/Object;
+.source "GradientColor.java"
 
 
 # instance fields
@@ -12,10 +13,13 @@
 .method public constructor <init>([F[I)V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 12
     iput-object p1, p0, Lcom/airbnb/lottie/model/content/GradientColor;->positions:[F
 
+    .line 13
     iput-object p2, p0, Lcom/airbnb/lottie/model/content/GradientColor;->colors:[I
 
     return-void
@@ -26,6 +30,7 @@
 .method public getColors()[I
     .locals 0
 
+    .line 21
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/GradientColor;->colors:[I
 
     return-object p0
@@ -34,6 +39,7 @@
 .method public getPositions()[F
     .locals 0
 
+    .line 17
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/GradientColor;->positions:[F
 
     return-object p0
@@ -42,6 +48,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 25
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/GradientColor;->colors:[I
 
     array-length p0, p0
@@ -52,6 +59,7 @@
 .method public lerp(Lcom/airbnb/lottie/model/content/GradientColor;Lcom/airbnb/lottie/model/content/GradientColor;F)V
     .locals 4
 
+    .line 29
     iget-object v0, p1, Lcom/airbnb/lottie/model/content/GradientColor;->colors:[I
 
     array-length v0, v0
@@ -64,6 +72,7 @@
 
     const/4 v0, 0x0
 
+    .line 34
     :goto_0
     iget-object v1, p1, Lcom/airbnb/lottie/model/content/GradientColor;->colors:[I
 
@@ -71,6 +80,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 35
     iget-object v1, p0, Lcom/airbnb/lottie/model/content/GradientColor;->positions:[F
 
     iget-object v2, p1, Lcom/airbnb/lottie/model/content/GradientColor;->positions:[F
@@ -87,6 +97,7 @@
 
     aput v2, v1, v0
 
+    .line 36
     iget-object v1, p0, Lcom/airbnb/lottie/model/content/GradientColor;->colors:[I
 
     iget-object v2, p1, Lcom/airbnb/lottie/model/content/GradientColor;->colors:[I
@@ -110,6 +121,7 @@
     :cond_0
     return-void
 
+    .line 30
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

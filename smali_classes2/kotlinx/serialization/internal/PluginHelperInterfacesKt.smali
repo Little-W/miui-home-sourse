@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/PluginHelperInterfacesKt;
 .super Ljava/lang/Object;
+.source "PluginHelperInterfaces.kt"
 
 
 # static fields
@@ -22,6 +23,7 @@
 
     new-array v0, v0, [Lkotlinx/serialization/KSerializer;
 
+    .line 13
     sput-object v0, Lkotlinx/serialization/internal/PluginHelperInterfacesKt;->EMPTY_SERIALIZER_ARRAY:[Lkotlinx/serialization/KSerializer;
 
     return-void

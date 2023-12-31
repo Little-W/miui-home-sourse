@@ -1,5 +1,6 @@
 .class Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;
 .super Lokio/ForwardingSource;
+.source "Http2Codec.java"
 
 
 # annotations
@@ -25,16 +26,20 @@
 .method constructor <init>(Lokhttp3/internal/http2/Http2Codec;Lokio/Source;)V
     .locals 0
 
+    .line 199
     iput-object p1, p0, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->this$0:Lokhttp3/internal/http2/Http2Codec;
 
+    .line 200
     invoke-direct {p0, p2}, Lokio/ForwardingSource;-><init>(Lokio/Source;)V
 
     const/4 p1, 0x0
 
+    .line 196
     iput-boolean p1, p0, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->completed:Z
 
     const-wide/16 p1, 0x0
 
+    .line 197
     iput-wide p1, p0, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->bytesRead:J
 
     return-void
@@ -43,6 +48,7 @@
 .method private endOfInput(Ljava/io/IOException;)V
     .locals 7
 
+    .line 222
     iget-boolean v0, p0, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->completed:Z
 
     if-eqz v0, :cond_0
@@ -52,8 +58,10 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 223
     iput-boolean v0, p0, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->completed:Z
 
+    .line 224
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->this$0:Lokhttp3/internal/http2/Http2Codec;
 
     iget-object v1, v0, Lokhttp3/internal/http2/Http2Codec;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
@@ -81,10 +89,12 @@
         }
     .end annotation
 
+    .line 217
     invoke-super {p0}, Lokio/ForwardingSource;->close()V
 
     const/4 v0, 0x0
 
+    .line 218
     invoke-direct {p0, v0}, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->endOfInput(Ljava/io/IOException;)V
 
     return-void
@@ -98,6 +108,7 @@
         }
     .end annotation
 
+    .line 205
     :try_start_0
     invoke-virtual {p0}, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->delegate()Lokio/Source;
 
@@ -113,6 +124,7 @@
 
     if-lez p3, :cond_0
 
+    .line 207
     iget-wide v0, p0, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->bytesRead:J
 
     add-long/2addr v0, p1
@@ -127,7 +139,9 @@
     :catch_0
     move-exception p1
 
+    .line 211
     invoke-direct {p0, p1}, Lokhttp3/internal/http2/Http2Codec$StreamFinishingSource;->endOfInput(Ljava/io/IOException;)V
 
+    .line 212
     throw p1
 .end method

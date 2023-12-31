@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;
 .super Ljava/lang/Object;
+.source "SecurityManagerWrapper.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 14
     new-instance v0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;
 
     invoke-direct {v0}, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;-><init>()V
@@ -28,14 +30,17 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 20
     invoke-static {}, Landroid/app/AppGlobals;->getInitialApplication()Landroid/app/Application;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mContext:Landroid/content/Context;
 
+    .line 21
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mContext:Landroid/content/Context;
 
     const-string v1, "security"
@@ -54,6 +59,7 @@
 .method public static getInstance()Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;
     .locals 1
 
+    .line 25
     sget-object v0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->sInstance:Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;
 
     return-object v0
@@ -64,6 +70,7 @@
 .method public isAccessLocked(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Z
     .locals 5
 
+    .line 30
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mSM:Lmiui/security/SecurityManager;
 
     const/4 v1, 0x0
@@ -86,6 +93,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 31
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mSM:Lmiui/security/SecurityManager;
 
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
@@ -104,6 +112,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 32
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -122,8 +131,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 35
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mSM:Lmiui/security/SecurityManager;
 
+    .line 36
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0

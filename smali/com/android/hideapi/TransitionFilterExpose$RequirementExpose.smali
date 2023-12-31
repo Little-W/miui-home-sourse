@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;
 .super Ljava/lang/Object;
+.source "TransitionFilterExpose.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method private constructor <init>(Landroid/window/TransitionFilter$Requirement;)V
     .locals 0
 
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 47
     iput-object p1, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     return-void
@@ -31,6 +34,7 @@
 .method public static newInstance()Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;
     .locals 3
 
+    .line 59
     const-class v0, Landroid/window/TransitionFilter$Requirement;
 
     const/4 v1, 0x0
@@ -45,6 +49,7 @@
 
     check-cast v0, Landroid/window/TransitionFilter$Requirement;
 
+    .line 60
     new-instance v1, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;
 
     invoke-direct {v1, v0}, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;-><init>(Landroid/window/TransitionFilter$Requirement;)V
@@ -57,6 +62,7 @@
 .method public setActivityType(I)V
     .locals 2
 
+    .line 64
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -75,6 +81,7 @@
 .method public setFlag(I)V
     .locals 2
 
+    .line 88
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -93,6 +100,7 @@
 .method public setModes([I)V
     .locals 2
 
+    .line 72
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     const-class v0, [I
@@ -107,6 +115,7 @@
 .method public setMustBeIndependent(Z)V
     .locals 2
 
+    .line 84
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
@@ -125,6 +134,7 @@
 .method public setNot(Z)V
     .locals 2
 
+    .line 80
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
@@ -143,6 +153,7 @@
 .method public setOrder(I)V
     .locals 2
 
+    .line 76
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -161,6 +172,7 @@
 .method public setTopActivity(Landroid/content/ComponentName;)V
     .locals 2
 
+    .line 68
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     const-class v0, Landroid/content/ComponentName;
@@ -175,6 +187,7 @@
 .method public unbox()Landroid/window/TransitionFilter$Requirement;
     .locals 0
 
+    .line 51
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose$RequirementExpose;->instance:Landroid/window/TransitionFilter$Requirement;
 
     return-object p0

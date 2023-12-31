@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;
 .super Ljava/lang/Object;
+.source "HttpGetRequest.java"
 
 
 # instance fields
@@ -42,12 +43,16 @@
         }
     .end annotation
 
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 38
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;->url:Ljava/lang/String;
 
+    .line 39
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;->queryParams:Ljava/util/Map;
 
+    .line 40
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -70,10 +75,12 @@
         }
     .end annotation
 
+    .line 116
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 117
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -82,12 +89,14 @@
 
     move-result-object p1
 
+    .line 118
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 120
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,6 +141,7 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 121
     :goto_1
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -139,12 +149,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 122
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 123
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -153,6 +165,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 124
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -187,10 +200,12 @@
 
     move-result-object v0
 
+    .line 123
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
+    .line 126
     :cond_2
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -213,10 +228,12 @@
         }
     .end annotation
 
+    .line 99
     invoke-direct {p0, p2}, Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;->createParamsString(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 101
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p2
@@ -228,6 +245,7 @@
     :cond_0
     const-string p2, "?"
 
+    .line 105
     invoke-virtual {p1, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -236,12 +254,14 @@
 
     const-string p2, "&"
 
+    .line 106
     invoke-virtual {p1, p2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -254,6 +274,7 @@
 
     move-result-object p0
 
+    .line 109
     :cond_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -269,6 +290,7 @@
 
     return-object p0
 
+    .line 111
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -295,6 +317,7 @@
         }
     .end annotation
 
+    .line 130
     new-instance p0, Ljava/io/BufferedReader;
 
     new-instance v0, Ljava/io/InputStreamReader;
@@ -309,10 +332,12 @@
 
     new-array p1, p1, [C
 
+    .line 133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 134
     :goto_0
     invoke-virtual {p0, p1}, Ljava/io/BufferedReader;->read([C)I
 
@@ -324,10 +349,12 @@
 
     const/4 v2, 0x0
 
+    .line 135
     invoke-virtual {v0, p1, v2, v1}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 137
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -348,6 +375,7 @@
 
     const/4 v0, 0x0
 
+    .line 62
     :try_start_0
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;->url:Ljava/lang/String;
 
@@ -357,6 +385,7 @@
 
     move-result-object v1
 
+    .line 64
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v2
@@ -377,6 +406,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/firebase/crashlytics/internal/Logger;->v(Ljava/lang/String;)V
 
+    .line 66
     new-instance v2, Ljava/net/URL;
 
     invoke-direct {v2, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
@@ -391,15 +421,19 @@
 
     const/16 v2, 0x2710
 
+    .line 67
     :try_start_1
     invoke-virtual {v1, v2}, Ljavax/net/ssl/HttpsURLConnection;->setReadTimeout(I)V
 
+    .line 68
     invoke-virtual {v1, v2}, Ljavax/net/ssl/HttpsURLConnection;->setConnectTimeout(I)V
 
     const-string v2, "GET"
 
+    .line 69
     invoke-virtual {v1, v2}, Ljavax/net/ssl/HttpsURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
+    .line 71
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;->headers:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -423,6 +457,7 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
+    .line 72
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -439,13 +474,16 @@
 
     goto :goto_0
 
+    .line 76
     :cond_0
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->connect()V
 
+    .line 77
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->getResponseCode()I
 
     move-result v2
 
+    .line 80
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v3
@@ -454,6 +492,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 83
     :try_start_2
     invoke-direct {p0, v3}, Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;->readStream(Ljava/io/InputStream;)Ljava/lang/String;
 
@@ -474,13 +513,16 @@
     :goto_1
     if-eqz v3, :cond_2
 
+    .line 88
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
 
     :cond_2
     if-eqz v1, :cond_3
 
+    .line 91
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
+    .line 95
     :cond_3
     new-instance p0, Lcom/google/firebase/crashlytics/internal/network/HttpResponse;
 
@@ -501,13 +543,16 @@
     :goto_2
     if-eqz v0, :cond_4
 
+    .line 88
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     :cond_4
     if-eqz v1, :cond_5
 
+    .line 91
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
+    .line 93
     :cond_5
     throw p0
 .end method
@@ -515,6 +560,7 @@
 .method public header(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;
     .locals 1
 
+    .line 48
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/network/HttpGetRequest;->headers:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

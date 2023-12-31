@@ -1,5 +1,6 @@
 .class final Lcom/google/android/libraries/gsa/launcherclient/d;
 .super Ljava/lang/Object;
+.source "EventLogArray.java"
 
 
 # instance fields
@@ -94,6 +95,7 @@
 
     iput p3, p0, Lcom/google/android/libraries/gsa/launcherclient/d;->c:F
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1

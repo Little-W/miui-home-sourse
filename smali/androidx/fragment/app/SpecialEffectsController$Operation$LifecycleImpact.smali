@@ -1,5 +1,6 @@
 .class final enum Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 .super Ljava/lang/Enum;
+.source "SpecialEffectsController.java"
 
 
 # annotations
@@ -35,6 +36,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
+    .line 488
     new-instance v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     const/4 v1, 0x0
@@ -45,6 +47,7 @@
 
     sput-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->NONE:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
+    .line 492
     new-instance v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     const/4 v2, 0x1
@@ -55,6 +58,7 @@
 
     sput-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->ADDING:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
+    .line 496
     new-instance v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     const/4 v3, 0x2
@@ -69,6 +73,7 @@
 
     new-array v0, v0, [Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
+    .line 484
     sget-object v4, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->NONE:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     aput-object v4, v0, v1
@@ -94,6 +99,7 @@
         }
     .end annotation
 
+    .line 484
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -102,6 +108,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
     .locals 1
 
+    .line 484
     const-class v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -116,6 +123,7 @@
 .method public static values()[Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
     .locals 1
 
+    .line 484
     sget-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->$VALUES:[Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     invoke-virtual {v0}, [Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->clone()Ljava/lang/Object;

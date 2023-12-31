@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/gltfio/FilamentAsset;
 .super Ljava/lang/Object;
+.source "FilamentAsset.java"
 
 
 # instance fields
@@ -14,14 +15,18 @@
 .method constructor <init>(Lcom/google/android/filament/Engine;J)V
     .locals 0
 
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 53
     iput-object p1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mEngine:Lcom/google/android/filament/Engine;
 
+    .line 54
     iput-wide p2, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     const/4 p1, 0x0
 
+    .line 55
     iput-object p1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mAnimator:Lcom/google/android/filament/gltfio/Animator;
 
     return-void
@@ -92,6 +97,7 @@
 .method clearNativeObject()V
     .locals 2
 
+    .line 224
     iget-object v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mAnimator:Lcom/google/android/filament/gltfio/Animator;
 
     if-eqz v0, :cond_0
@@ -101,6 +107,7 @@
     :cond_0
     const-wide/16 v0, 0x0
 
+    .line 225
     iput-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     return-void
@@ -109,12 +116,14 @@
 .method public getAnimator()Lcom/google/android/filament/gltfio/Animator;
     .locals 3
 
+    .line 197
     iget-object v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mAnimator:Lcom/google/android/filament/gltfio/Animator;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
+    .line 200
     :cond_0
     new-instance v0, Lcom/google/android/filament/gltfio/Animator;
 
@@ -130,6 +139,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mAnimator:Lcom/google/android/filament/gltfio/Animator;
 
+    .line 201
     iget-object p0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mAnimator:Lcom/google/android/filament/gltfio/Animator;
 
     return-object p0
@@ -142,10 +152,12 @@
 
     new-array v0, v0, [F
 
+    .line 178
     iget-wide v1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v1, v2, v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetBoundingBox(J[F)V
 
+    .line 179
     new-instance p0, Lcom/google/android/filament/Box;
 
     const/4 v1, 0x0
@@ -182,6 +194,7 @@
 .method public getCameraEntities()[I
     .locals 3
 
+    .line 132
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetCameraEntityCount(J)I
@@ -190,6 +203,7 @@
 
     new-array v0, v0, [I
 
+    .line 133
     iget-wide v1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v1, v2, v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetCameraEntities(J[I)V
@@ -200,6 +214,7 @@
 .method public getEntities()[I
     .locals 3
 
+    .line 101
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetEntityCount(J)I
@@ -208,6 +223,7 @@
 
     new-array v0, v0, [I
 
+    .line 102
     iget-wide v1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v1, v2, v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetEntities(J[I)V
@@ -218,6 +234,7 @@
 .method public getEntitiesByName(Ljava/lang/String;)[I
     .locals 3
 
+    .line 148
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     const/4 v2, 0x0
@@ -228,6 +245,7 @@
 
     new-array v0, v0, [I
 
+    .line 149
     iget-wide v1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v1, v2, p1, v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetEntitiesByName(JLjava/lang/String;[I)I
@@ -238,6 +256,7 @@
 .method public getEntitiesByPrefix(Ljava/lang/String;)[I
     .locals 3
 
+    .line 157
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     const/4 v2, 0x0
@@ -248,6 +267,7 @@
 
     new-array v0, v0, [I
 
+    .line 158
     iget-wide v1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v1, v2, p1, v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetEntitiesByPrefix(JLjava/lang/String;[I)I
@@ -258,6 +278,7 @@
 .method public getFirstEntityByName(Ljava/lang/String;)I
     .locals 2
 
+    .line 141
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetFirstEntityByName(JLjava/lang/String;)I
@@ -270,6 +291,7 @@
 .method public getLightEntities()[I
     .locals 3
 
+    .line 110
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetLightEntityCount(J)I
@@ -278,6 +300,7 @@
 
     new-array v0, v0, [I
 
+    .line 111
     iget-wide v1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v1, v2, v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetLightEntities(J[I)V
@@ -288,16 +311,20 @@
 .method public getMaterialInstances()[Lcom/google/android/filament/MaterialInstance;
     .locals 8
 
+    .line 163
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetMaterialInstanceCount(J)I
 
     move-result v0
 
+    .line 164
     new-array v1, v0, [Lcom/google/android/filament/MaterialInstance;
 
+    .line 165
     new-array v2, v0, [J
 
+    .line 166
     iget-wide v3, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v3, v4, v2}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetMaterialInstances(J[J)V
@@ -307,6 +334,7 @@
     :goto_0
     if-ge v3, v0, :cond_0
 
+    .line 168
     new-instance v4, Lcom/google/android/filament/MaterialInstance;
 
     iget-object v5, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mEngine:Lcom/google/android/filament/Engine;
@@ -328,6 +356,7 @@
 .method public getName(I)Ljava/lang/String;
     .locals 2
 
+    .line 186
     invoke-virtual {p0}, Lcom/google/android/filament/gltfio/FilamentAsset;->getNativeObject()J
 
     move-result-wide v0
@@ -342,6 +371,7 @@
 .method getNativeObject()J
     .locals 2
 
+    .line 59
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     return-wide v0
@@ -350,6 +380,7 @@
 .method public getResourceUris()[Ljava/lang/String;
     .locals 3
 
+    .line 208
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetResourceUriCount(J)I
@@ -358,6 +389,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 209
     iget-wide v1, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v1, v2, v0}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetResourceUris(J[Ljava/lang/String;)V
@@ -368,6 +400,7 @@
 .method public getRoot()I
     .locals 2
 
+    .line 66
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nGetRoot(J)I
@@ -380,6 +413,7 @@
 .method public popRenderable()I
     .locals 2
 
+    .line 81
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nPopRenderable(J)I
@@ -392,6 +426,7 @@
 .method public popRenderables([I)I
     .locals 2
 
+    .line 91
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nPopRenderables(J[I)I
@@ -404,6 +439,7 @@
 .method public releaseSourceData()V
     .locals 2
 
+    .line 220
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/FilamentAsset;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/FilamentAsset;->nReleaseSourceData(J)V

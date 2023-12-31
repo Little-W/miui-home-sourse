@@ -1,5 +1,6 @@
 .class public final Lio/reactivex/internal/schedulers/SchedulerPoolFactory;
 .super Ljava/lang/Object;
+.source "SchedulerPoolFactory.java"
 
 
 # annotations
@@ -41,24 +42,28 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 48
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->PURGE_THREAD:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 53
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->POOLS:Ljava/util/Map;
 
+    .line 95
     invoke-static {}, Ljava/lang/System;->getProperties()Ljava/util/Properties;
 
     move-result-object v0
 
     const-string v1, "rx2.purge-enabled"
 
+    .line 97
     invoke-virtual {v0, v1}, Ljava/util/Properties;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
@@ -67,6 +72,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 98
     invoke-static {v1}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
 
     move-result v1
@@ -81,12 +87,14 @@
 
     const-string v2, "rx2.purge-period-seconds"
 
+    .line 101
     invoke-virtual {v0, v2}, Ljava/util/Properties;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 102
     invoke-static {v2, v3}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -95,11 +103,14 @@
 
     move-result v3
 
+    .line 105
     :cond_1
     sput-boolean v1, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->PURGE_ENABLED:Z
 
+    .line 106
     sput v3, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->PURGE_PERIOD_SECONDS:I
 
+    .line 108
     invoke-static {}, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->start()V
 
     return-void
@@ -110,10 +121,12 @@
 
     const/4 v0, 0x1
 
+    .line 117
     invoke-static {v0, p0}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object p0
 
+    .line 118
     sget-boolean v0, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->PURGE_ENABLED:Z
 
     if-eqz v0, :cond_0
@@ -122,10 +135,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 119
     move-object v0, p0
 
     check-cast v0, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
+    .line 120
     sget-object v1, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->POOLS:Ljava/util/Map;
 
     invoke-interface {v1, v0, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -137,12 +152,14 @@
 .method public static start()V
     .locals 11
 
+    .line 60
     sget-boolean v0, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->PURGE_ENABLED:Z
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 64
     :cond_0
     :goto_0
     sget-object v0, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->PURGE_THREAD:Ljava/util/concurrent/atomic/AtomicReference;
@@ -155,6 +172,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 65
     invoke-interface {v0}, Ljava/util/concurrent/ScheduledExecutorService;->isShutdown()Z
 
     move-result v1
@@ -166,6 +184,7 @@
     :cond_1
     const/4 v1, 0x1
 
+    .line 68
     new-instance v2, Lio/reactivex/internal/schedulers/RxThreadFactory;
 
     const-string v3, "RxSchedulerPurge"
@@ -176,6 +195,7 @@
 
     move-result-object v4
 
+    .line 69
     sget-object v1, Lio/reactivex/internal/schedulers/SchedulerPoolFactory;->PURGE_THREAD:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v1, v0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -184,6 +204,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 71
     new-instance v5, Lio/reactivex/internal/schedulers/SchedulerPoolFactory$ScheduledTask;
 
     invoke-direct {v5}, Lio/reactivex/internal/schedulers/SchedulerPoolFactory$ScheduledTask;-><init>()V
@@ -200,6 +221,7 @@
 
     return-void
 
+    .line 75
     :cond_2
     invoke-interface {v4}, Ljava/util/concurrent/ScheduledExecutorService;->shutdownNow()Ljava/util/List;
 

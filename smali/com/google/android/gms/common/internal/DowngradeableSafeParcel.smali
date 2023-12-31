@@ -21,6 +21,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 14
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -29,8 +30,10 @@
 
     const/4 v0, 0x0
 
+    .line 15
     sput-object v0, Lcom/google/android/gms/common/internal/DowngradeableSafeParcel;->zzdd:Ljava/lang/ClassLoader;
 
+    .line 16
     sput-object v0, Lcom/google/android/gms/common/internal/DowngradeableSafeParcel;->zzde:Ljava/lang/Integer;
 
     return-void
@@ -39,10 +42,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/gms/common/internal/DowngradeableSafeParcel;->zzdf:Z
 
     return-void

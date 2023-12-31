@@ -1,5 +1,6 @@
 .class final Landroidx/core/view/ContentInfoCompat$Compat31Impl;
 .super Ljava/lang/Object;
+.source "ContentInfoCompat.java"
 
 # interfaces
 .implements Landroidx/core/view/ContentInfoCompat$Compat;
@@ -24,8 +25,10 @@
 .method constructor <init>(Landroid/view/ContentInfo;)V
     .locals 0
 
+    .line 443
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 444
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -42,6 +45,7 @@
 .method public getClip()Landroid/content/ClipData;
     .locals 0
 
+    .line 456
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
     invoke-virtual {p0}, Landroid/view/ContentInfo;->getClip()Landroid/content/ClipData;
@@ -54,6 +58,7 @@
 .method public getFlags()I
     .locals 0
 
+    .line 468
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
     invoke-virtual {p0}, Landroid/view/ContentInfo;->getFlags()I
@@ -66,6 +71,7 @@
 .method public getSource()I
     .locals 0
 
+    .line 462
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
     invoke-virtual {p0}, Landroid/view/ContentInfo;->getSource()I
@@ -78,6 +84,7 @@
 .method public getWrapped()Landroid/view/ContentInfo;
     .locals 0
 
+    .line 450
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
     return-object p0
@@ -86,6 +93,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 486
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class final Landroidx/emoji2/text/EmojiProcessor$CodepointIndexFinder;
 .super Ljava/lang/Object;
+.source "EmojiProcessor.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method static findIndexBackward(Ljava/lang/CharSequence;II)I
     .locals 5
 
+    .line 678
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -57,6 +59,7 @@
     :cond_3
     return v0
 
+    .line 699
     :cond_4
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -64,6 +67,7 @@
 
     if-eqz v2, :cond_6
 
+    .line 701
     invoke-static {v3}, Ljava/lang/Character;->isHighSurrogate(C)Z
 
     move-result v2
@@ -77,6 +81,7 @@
 
     goto :goto_0
 
+    .line 708
     :cond_6
     invoke-static {v3}, Ljava/lang/Character;->isSurrogate(C)Z
 
@@ -88,6 +93,7 @@
 
     goto :goto_1
 
+    .line 712
     :cond_7
     invoke-static {v3}, Ljava/lang/Character;->isHighSurrogate(C)Z
 
@@ -110,6 +116,7 @@
 .method static findIndexForward(Ljava/lang/CharSequence;II)I
     .locals 6
 
+    .line 734
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -148,6 +155,7 @@
     :cond_3
     return v0
 
+    .line 755
     :cond_4
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -155,6 +163,7 @@
 
     if-eqz v3, :cond_6
 
+    .line 757
     invoke-static {v4}, Ljava/lang/Character;->isLowSurrogate(C)Z
 
     move-result v3
@@ -170,6 +179,7 @@
 
     goto :goto_0
 
+    .line 765
     :cond_6
     invoke-static {v4}, Ljava/lang/Character;->isSurrogate(C)Z
 
@@ -183,6 +193,7 @@
 
     goto :goto_1
 
+    .line 770
     :cond_7
     invoke-static {v4}, Ljava/lang/Character;->isLowSurrogate(C)Z
 

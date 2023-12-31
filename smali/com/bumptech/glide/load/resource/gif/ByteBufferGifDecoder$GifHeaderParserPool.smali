@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder$GifHeaderParserPool;
 .super Ljava/lang/Object;
+.source "ByteBufferGifDecoder.java"
 
 
 # annotations
@@ -29,10 +30,12 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 153
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->createQueue(I)Ljava/util/Queue;
 
     move-result-object v0
@@ -49,6 +52,7 @@
 
     monitor-enter p0
 
+    .line 156
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder$GifHeaderParserPool;->pool:Ljava/util/Queue;
 
@@ -60,10 +64,12 @@
 
     if-nez v0, :cond_0
 
+    .line 158
     new-instance v0, Lcom/bumptech/glide/gifdecoder/GifHeaderParser;
 
     invoke-direct {v0}, Lcom/bumptech/glide/gifdecoder/GifHeaderParser;-><init>()V
 
+    .line 160
     :cond_0
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/gifdecoder/GifHeaderParser;->setData(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/gifdecoder/GifHeaderParser;
 
@@ -88,15 +94,18 @@
 
     monitor-enter p0
 
+    .line 164
     :try_start_0
     invoke-virtual {p1}, Lcom/bumptech/glide/gifdecoder/GifHeaderParser;->clear()V
 
+    .line 165
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder$GifHeaderParserPool;->pool:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 166
     monitor-exit p0
 
     return-void

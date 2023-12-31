@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/MarketService$4;
 .super Ljava/lang/Object;
+.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketService;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 89
     iput-object p1, p0, Lcom/market/sdk/MarketService$4;->this$0:Lcom/market/sdk/MarketService;
 
     iput-object p2, p0, Lcom/market/sdk/MarketService$4;->val$type:Ljava/lang/String;
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 92
     iget-object v0, p0, Lcom/market/sdk/MarketService$4;->this$0:Lcom/market/sdk/MarketService;
 
     invoke-static {v0}, Lcom/market/sdk/MarketService;->access$000(Lcom/market/sdk/MarketService;)Lcom/market/sdk/IMarketService;

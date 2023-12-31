@@ -1,11 +1,13 @@
 .class public final Lcom/bumptech/glide/load/data/mediastore/MediaStoreUtil;
 .super Ljava/lang/Object;
+.source "MediaStoreUtil.java"
 
 
 # direct methods
 .method public static isMediaStoreImageUri(Landroid/net/Uri;)Z
     .locals 1
 
+    .line 33
     invoke-static {p0}, Lcom/bumptech/glide/load/data/mediastore/MediaStoreUtil;->isMediaStoreUri(Landroid/net/Uri;)Z
 
     move-result v0
@@ -34,6 +36,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 20
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
@@ -46,6 +49,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 21
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object p0
@@ -72,6 +76,7 @@
 .method public static isMediaStoreVideoUri(Landroid/net/Uri;)Z
     .locals 1
 
+    .line 29
     invoke-static {p0}, Lcom/bumptech/glide/load/data/mediastore/MediaStoreUtil;->isMediaStoreUri(Landroid/net/Uri;)Z
 
     move-result v0
@@ -126,6 +131,7 @@
 .method private static isVideoUri(Landroid/net/Uri;)Z
     .locals 1
 
+    .line 25
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object p0

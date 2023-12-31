@@ -1,5 +1,6 @@
 .class final Lkotlin/text/MatcherMatchResult;
 .super Ljava/lang/Object;
+.source "Regex.kt"
 
 # interfaces
 .implements Lkotlin/text/MatchResult;
@@ -25,12 +26,14 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 273
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/text/MatcherMatchResult;->matcher:Ljava/util/regex/Matcher;
 
     iput-object p2, p0, Lkotlin/text/MatcherMatchResult;->input:Ljava/lang/CharSequence;
 
+    .line 280
     new-instance p1, Lkotlin/text/MatcherMatchResult$groups$1;
 
     invoke-direct {p1, p0}, Lkotlin/text/MatcherMatchResult$groups$1;-><init>(Lkotlin/text/MatcherMatchResult;)V
@@ -45,6 +48,7 @@
 .method public static final synthetic access$getMatchResult$p(Lkotlin/text/MatcherMatchResult;)Ljava/util/regex/MatchResult;
     .locals 0
 
+    .line 273
     invoke-direct {p0}, Lkotlin/text/MatcherMatchResult;->getMatchResult()Ljava/util/regex/MatchResult;
 
     move-result-object p0
@@ -55,6 +59,7 @@
 .method private final getMatchResult()Ljava/util/regex/MatchResult;
     .locals 0
 
+    .line 274
     iget-object p0, p0, Lkotlin/text/MatcherMatchResult;->matcher:Ljava/util/regex/Matcher;
 
     check-cast p0, Ljava/util/regex/MatchResult;
@@ -67,6 +72,7 @@
 .method public getRange()Lkotlin/ranges/IntRange;
     .locals 0
 
+    .line 276
     invoke-direct {p0}, Lkotlin/text/MatcherMatchResult;->getMatchResult()Ljava/util/regex/MatchResult;
 
     move-result-object p0
@@ -81,6 +87,7 @@
 .method public next()Lkotlin/text/MatchResult;
     .locals 3
 
+    .line 312
     invoke-direct {p0}, Lkotlin/text/MatcherMatchResult;->getMatchResult()Ljava/util/regex/MatchResult;
 
     move-result-object v0
@@ -117,6 +124,7 @@
     :goto_0
     add-int/2addr v0, v1
 
+    .line 313
     iget-object v1, p0, Lkotlin/text/MatcherMatchResult;->input:Ljava/lang/CharSequence;
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I

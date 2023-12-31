@@ -1,5 +1,6 @@
 .class public Landroidx/transition/ChangeBounds;
 .super Landroidx/transition/Transition;
+.source "ChangeBounds.java"
 
 
 # annotations
@@ -104,12 +105,14 @@
 
     const-string v4, "android:changeBounds:windowY"
 
+    .line 61
     filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Landroidx/transition/ChangeBounds;->sTransitionProperties:[Ljava/lang/String;
 
+    .line 69
     new-instance v0, Landroidx/transition/ChangeBounds$1;
 
     const-class v1, Landroid/graphics/PointF;
@@ -120,6 +123,7 @@
 
     sput-object v0, Landroidx/transition/ChangeBounds;->DRAWABLE_ORIGIN_PROPERTY:Landroid/util/Property;
 
+    .line 87
     new-instance v0, Landroidx/transition/ChangeBounds$2;
 
     const-class v1, Landroid/graphics/PointF;
@@ -130,6 +134,7 @@
 
     sput-object v0, Landroidx/transition/ChangeBounds;->TOP_LEFT_PROPERTY:Landroid/util/Property;
 
+    .line 100
     new-instance v0, Landroidx/transition/ChangeBounds$3;
 
     const-class v1, Landroid/graphics/PointF;
@@ -140,6 +145,7 @@
 
     sput-object v0, Landroidx/transition/ChangeBounds;->BOTTOM_RIGHT_PROPERTY:Landroid/util/Property;
 
+    .line 113
     new-instance v0, Landroidx/transition/ChangeBounds$4;
 
     const-class v1, Landroid/graphics/PointF;
@@ -148,6 +154,7 @@
 
     sput-object v0, Landroidx/transition/ChangeBounds;->BOTTOM_RIGHT_ONLY_PROPERTY:Landroid/util/Property;
 
+    .line 130
     new-instance v0, Landroidx/transition/ChangeBounds$5;
 
     const-class v1, Landroid/graphics/PointF;
@@ -156,6 +163,7 @@
 
     sput-object v0, Landroidx/transition/ChangeBounds;->TOP_LEFT_ONLY_PROPERTY:Landroid/util/Property;
 
+    .line 147
     new-instance v0, Landroidx/transition/ChangeBounds$6;
 
     const-class v1, Landroid/graphics/PointF;
@@ -166,6 +174,7 @@
 
     sput-object v0, Landroidx/transition/ChangeBounds;->POSITION_PROPERTY:Landroid/util/Property;
 
+    .line 168
     new-instance v0, Landroidx/transition/RectEvaluator;
 
     invoke-direct {v0}, Landroidx/transition/RectEvaluator;-><init>()V
@@ -178,18 +187,22 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 170
     invoke-direct {p0}, Landroidx/transition/Transition;-><init>()V
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
+    .line 164
     iput-object v0, p0, Landroidx/transition/ChangeBounds;->mTempLocation:[I
 
     const/4 v0, 0x0
 
+    .line 165
     iput-boolean v0, p0, Landroidx/transition/ChangeBounds;->mResizeClip:Z
 
+    .line 166
     iput-boolean v0, p0, Landroidx/transition/ChangeBounds;->mReparent:Z
 
     return-void
@@ -198,8 +211,10 @@
 .method private captureValues(Landroidx/transition/TransitionValues;)V
     .locals 7
 
+    .line 220
     iget-object v0, p1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
+    .line 222
     invoke-static {v0}, Landroidx/core/view/ViewCompat;->isLaidOut(Landroid/view/View;)Z
 
     move-result v1
@@ -218,6 +233,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 223
     :cond_0
     iget-object v1, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
@@ -231,6 +247,7 @@
 
     move-result v4
 
+    .line 224
     invoke-virtual {v0}, Landroid/view/View;->getRight()I
 
     move-result v5
@@ -243,8 +260,10 @@
 
     const-string v3, "android:changeBounds:bounds"
 
+    .line 223
     invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 225
     iget-object v1, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object v2, p1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
@@ -257,16 +276,19 @@
 
     invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 226
     iget-boolean v1, p0, Landroidx/transition/ChangeBounds;->mReparent:Z
 
     if-eqz v1, :cond_1
 
+    .line 227
     iget-object v1, p1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
     iget-object v2, p0, Landroidx/transition/ChangeBounds;->mTempLocation:[I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->getLocationInWindow([I)V
 
+    .line 228
     iget-object v1, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object v2, p0, Landroidx/transition/ChangeBounds;->mTempLocation:[I
@@ -283,6 +305,7 @@
 
     invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 229
     iget-object v1, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object v2, p0, Landroidx/transition/ChangeBounds;->mTempLocation:[I
@@ -299,11 +322,13 @@
 
     invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 231
     :cond_1
     iget-boolean p0, p0, Landroidx/transition/ChangeBounds;->mResizeClip:Z
 
     if-eqz p0, :cond_2
 
+    .line 232
     iget-object p0, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-static {v0}, Landroidx/core/view/ViewCompat;->getClipBounds(Landroid/view/View;)Landroid/graphics/Rect;
@@ -321,12 +346,14 @@
 .method private parentMatches(Landroid/view/View;Landroid/view/View;)Z
     .locals 2
 
+    .line 249
     iget-boolean v0, p0, Landroidx/transition/ChangeBounds;->mReparent:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_2
 
+    .line 250
     invoke-virtual {p0, p1, v1}, Landroidx/transition/ChangeBounds;->getMatchedTransitionValues(Landroid/view/View;Z)Landroidx/transition/TransitionValues;
 
     move-result-object p0
@@ -344,6 +371,7 @@
 
     goto :goto_0
 
+    .line 254
     :cond_1
     iget-object p0, p0, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
@@ -359,6 +387,7 @@
 .method public captureEndValues(Landroidx/transition/TransitionValues;)V
     .locals 0
 
+    .line 244
     invoke-direct {p0, p1}, Landroidx/transition/ChangeBounds;->captureValues(Landroidx/transition/TransitionValues;)V
 
     return-void
@@ -367,6 +396,7 @@
 .method public captureStartValues(Landroidx/transition/TransitionValues;)V
     .locals 0
 
+    .line 239
     invoke-direct {p0, p1}, Landroidx/transition/ChangeBounds;->captureValues(Landroidx/transition/TransitionValues;)V
 
     return-void
@@ -387,19 +417,23 @@
 
     goto/16 :goto_c
 
+    .line 267
     :cond_0
     iget-object v3, v0, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
+    .line 268
     iget-object v4, v1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v5, "android:changeBounds:parent"
 
+    .line 269
     invoke-interface {v3, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/view/ViewGroup;
 
+    .line 270
     invoke-interface {v4, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -412,15 +446,18 @@
 
     goto/16 :goto_b
 
+    .line 274
     :cond_1
     iget-object v9, v1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
+    .line 275
     invoke-direct {v8, v3, v4}, Landroidx/transition/ChangeBounds;->parentMatches(Landroid/view/View;Landroid/view/View;)Z
 
     move-result v3
 
     if-eqz v3, :cond_17
 
+    .line 276
     iget-object v3, v0, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v5, "android:changeBounds:bounds"
@@ -431,6 +468,7 @@
 
     check-cast v3, Landroid/graphics/Rect;
 
+    .line 277
     iget-object v6, v1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v6, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -439,20 +477,28 @@
 
     check-cast v5, Landroid/graphics/Rect;
 
+    .line 278
     iget v6, v3, Landroid/graphics/Rect;->left:I
 
+    .line 279
     iget v7, v5, Landroid/graphics/Rect;->left:I
 
+    .line 280
     iget v11, v3, Landroid/graphics/Rect;->top:I
 
+    .line 281
     iget v12, v5, Landroid/graphics/Rect;->top:I
 
+    .line 282
     iget v13, v3, Landroid/graphics/Rect;->right:I
 
+    .line 283
     iget v14, v5, Landroid/graphics/Rect;->right:I
 
+    .line 284
     iget v3, v3, Landroid/graphics/Rect;->bottom:I
 
+    .line 285
     iget v15, v5, Landroid/graphics/Rect;->bottom:I
 
     sub-int v5, v13, v6
@@ -463,6 +509,7 @@
 
     sub-int v4, v15, v12
 
+    .line 290
     iget-object v0, v0, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     move-object/from16 v16, v9
@@ -475,6 +522,7 @@
 
     check-cast v0, Landroid/graphics/Rect;
 
+    .line 291
     iget-object v1, v1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v1, v9}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -527,6 +575,7 @@
     :goto_2
     if-eqz v0, :cond_9
 
+    .line 297
     invoke-virtual {v0, v9}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result v17
@@ -546,6 +595,7 @@
 
     move-object/from16 p1, v9
 
+    .line 303
     iget-boolean v9, v8, Landroidx/transition/ChangeBounds;->mResizeClip:Z
 
     move-object/from16 p2, v0
@@ -556,6 +606,7 @@
 
     move-object/from16 v9, v16
 
+    .line 304
     invoke-static {v9, v6, v11, v13, v3}, Landroidx/transition/ViewUtils;->setLeftTopRightBottom(Landroid/view/View;IIII)V
 
     if-ne v1, v0, :cond_d
@@ -564,6 +615,7 @@
 
     if-ne v2, v4, :cond_c
 
+    .line 308
     invoke-virtual/range {p0 .. p0}, Landroidx/transition/ChangeBounds;->getPathMotion()Landroidx/transition/PathMotion;
 
     move-result-object v0
@@ -580,6 +632,7 @@
 
     move-result-object v0
 
+    .line 310
     sget-object v1, Landroidx/transition/ChangeBounds;->POSITION_PROPERTY:Landroid/util/Property;
 
     invoke-static {v9, v1, v0}, Landroidx/transition/ObjectAnimatorUtils;->ofPointF(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
@@ -588,11 +641,13 @@
 
     goto/16 :goto_9
 
+    .line 313
     :cond_c
     new-instance v1, Landroidx/transition/ChangeBounds$ViewBounds;
 
     invoke-direct {v1, v9}, Landroidx/transition/ChangeBounds$ViewBounds;-><init>(Landroid/view/View;)V
 
+    .line 314
     invoke-virtual/range {p0 .. p0}, Landroidx/transition/ChangeBounds;->getPathMotion()Landroidx/transition/PathMotion;
 
     move-result-object v2
@@ -609,12 +664,15 @@
 
     move-result-object v2
 
+    .line 316
     sget-object v4, Landroidx/transition/ChangeBounds;->TOP_LEFT_PROPERTY:Landroid/util/Property;
 
+    .line 317
     invoke-static {v1, v4, v2}, Landroidx/transition/ObjectAnimatorUtils;->ofPointF(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
+    .line 319
     invoke-virtual/range {p0 .. p0}, Landroidx/transition/ChangeBounds;->getPathMotion()Landroidx/transition/PathMotion;
 
     move-result-object v4
@@ -631,12 +689,14 @@
 
     move-result-object v3
 
+    .line 321
     sget-object v4, Landroidx/transition/ChangeBounds;->BOTTOM_RIGHT_PROPERTY:Landroid/util/Property;
 
     invoke-static {v1, v4, v3}, Landroidx/transition/ObjectAnimatorUtils;->ofPointF(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
+    .line 323
     new-instance v4, Landroid/animation/AnimatorSet;
 
     invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
@@ -651,8 +711,10 @@
 
     aput-object v3, v0, v2
 
+    .line 324
     invoke-virtual {v4, v0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
+    .line 326
     new-instance v0, Landroidx/transition/ChangeBounds$7;
 
     invoke-direct {v0, v8, v1}, Landroidx/transition/ChangeBounds$7;-><init>(Landroidx/transition/ChangeBounds;Landroidx/transition/ChangeBounds$ViewBounds;)V
@@ -670,6 +732,7 @@
 
     goto :goto_3
 
+    .line 339
     :cond_e
     invoke-virtual/range {p0 .. p0}, Landroidx/transition/ChangeBounds;->getPathMotion()Landroidx/transition/PathMotion;
 
@@ -687,6 +750,7 @@
 
     move-result-object v0
 
+    .line 341
     sget-object v1, Landroidx/transition/ChangeBounds;->BOTTOM_RIGHT_ONLY_PROPERTY:Landroid/util/Property;
 
     invoke-static {v9, v1, v0}, Landroidx/transition/ObjectAnimatorUtils;->ofPointF(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
@@ -695,6 +759,7 @@
 
     goto/16 :goto_9
 
+    .line 334
     :cond_f
     :goto_3
     invoke-virtual/range {p0 .. p0}, Landroidx/transition/ChangeBounds;->getPathMotion()Landroidx/transition/PathMotion;
@@ -713,6 +778,7 @@
 
     move-result-object v0
 
+    .line 336
     sget-object v1, Landroidx/transition/ChangeBounds;->TOP_LEFT_ONLY_PROPERTY:Landroid/util/Property;
 
     invoke-static {v9, v1, v0}, Landroidx/transition/ObjectAnimatorUtils;->ofPointF(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
@@ -724,10 +790,12 @@
     :cond_10
     move-object/from16 v9, v16
 
+    .line 345
     invoke-static {v5, v10}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
+    .line 346
     invoke-static {v2, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v3
@@ -736,6 +804,7 @@
 
     add-int/2addr v3, v11
 
+    .line 348
     invoke-static {v9, v6, v11, v1, v3}, Landroidx/transition/ViewUtils;->setLeftTopRightBottom(Landroid/view/View;IIII)V
 
     if-ne v6, v7, :cond_12
@@ -749,6 +818,7 @@
 
     goto :goto_5
 
+    .line 353
     :cond_12
     :goto_4
     invoke-virtual/range {p0 .. p0}, Landroidx/transition/ChangeBounds;->getPathMotion()Landroidx/transition/PathMotion;
@@ -767,6 +837,7 @@
 
     move-result-object v1
 
+    .line 355
     sget-object v3, Landroidx/transition/ChangeBounds;->POSITION_PROPERTY:Landroid/util/Property;
 
     invoke-static {v9, v3, v1}, Landroidx/transition/ObjectAnimatorUtils;->ofPointF(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
@@ -778,6 +849,7 @@
     :goto_5
     if-nez p2, :cond_13
 
+    .line 360
     new-instance v1, Landroid/graphics/Rect;
 
     const/4 v3, 0x0
@@ -794,6 +866,7 @@
     :goto_6
     if-nez p1, :cond_14
 
+    .line 363
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2, v3, v3, v10, v4}, Landroid/graphics/Rect;-><init>(IIII)V
@@ -803,6 +876,7 @@
     :cond_14
     move-object/from16 v2, p1
 
+    .line 366
     :goto_7
     invoke-virtual {v1, v2}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
@@ -810,8 +884,10 @@
 
     if-nez v4, :cond_15
 
+    .line 367
     invoke-static {v9, v1}, Landroidx/core/view/ViewCompat;->setClipBounds(Landroid/view/View;Landroid/graphics/Rect;)V
 
+    .line 368
     sget-object v4, Landroidx/transition/ChangeBounds;->sRectEvaluator:Landroidx/transition/RectEvaluator;
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -828,6 +904,7 @@
 
     move-result-object v10
 
+    .line 370
     new-instance v13, Landroidx/transition/ChangeBounds$8;
 
     move-object v0, v13
@@ -855,11 +932,13 @@
     :cond_15
     const/4 v10, 0x0
 
+    .line 388
     :goto_8
     invoke-static {v11, v10}, Landroidx/transition/TransitionUtils;->mergeAnimators(Landroid/animation/Animator;Landroid/animation/Animator;)Landroid/animation/Animator;
 
     move-result-object v0
 
+    .line 391
     :goto_9
     invoke-virtual {v9}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -869,6 +948,7 @@
 
     if-eqz v1, :cond_16
 
+    .line 392
     invoke-virtual {v9}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
@@ -877,17 +957,21 @@
 
     const/4 v2, 0x1
 
+    .line 393
     invoke-static {v1, v2}, Landroidx/transition/ViewGroupUtils;->suppressLayout(Landroid/view/ViewGroup;Z)V
 
+    .line 394
     new-instance v2, Landroidx/transition/ChangeBounds$9;
 
     invoke-direct {v2, v8, v1}, Landroidx/transition/ChangeBounds$9;-><init>(Landroidx/transition/ChangeBounds;Landroid/view/ViewGroup;)V
 
+    .line 421
     invoke-virtual {v8, v2}, Landroidx/transition/ChangeBounds;->addListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
 
     :cond_16
     return-object v0
 
+    .line 426
     :cond_17
     iget-object v2, v0, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
@@ -903,6 +987,7 @@
 
     move-result v2
 
+    .line 427
     iget-object v0, v0, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v4, "android:changeBounds:windowY"
@@ -917,6 +1002,7 @@
 
     move-result v0
 
+    .line 428
     iget-object v5, v1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v5, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -929,6 +1015,7 @@
 
     move-result v3
 
+    .line 429
     iget-object v1, v1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -952,6 +1039,7 @@
 
     return-object v0
 
+    .line 432
     :cond_19
     :goto_a
     iget-object v4, v8, Landroidx/transition/ChangeBounds;->mTempLocation:[I
@@ -960,6 +1048,7 @@
 
     invoke-virtual {v5, v4}, Landroid/view/ViewGroup;->getLocationInWindow([I)V
 
+    .line 433
     invoke-virtual {v9}, Landroid/view/View;->getWidth()I
 
     move-result v4
@@ -974,30 +1063,37 @@
 
     move-result-object v4
 
+    .line 435
     new-instance v6, Landroid/graphics/Canvas;
 
     invoke-direct {v6, v4}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 436
     invoke-virtual {v9, v6}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
+    .line 437
     new-instance v6, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {v6, v4}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 439
     invoke-static {v9}, Landroidx/transition/ViewUtils;->getTransitionAlpha(Landroid/view/View;)F
 
     move-result v7
 
     const/4 v4, 0x0
 
+    .line 440
     invoke-static {v9, v4}, Landroidx/transition/ViewUtils;->setTransitionAlpha(Landroid/view/View;F)V
 
+    .line 441
     invoke-static/range {p1 .. p1}, Landroidx/transition/ViewUtils;->getOverlay(Landroid/view/View;)Landroidx/transition/ViewOverlayImpl;
 
     move-result-object v4
 
     invoke-interface {v4, v6}, Landroidx/transition/ViewOverlayImpl;->add(Landroid/graphics/drawable/Drawable;)V
 
+    .line 442
     invoke-virtual/range {p0 .. p0}, Landroidx/transition/ChangeBounds;->getPathMotion()Landroidx/transition/PathMotion;
 
     move-result-object v4
@@ -1036,6 +1132,7 @@
 
     move-result-object v0
 
+    .line 445
     sget-object v1, Landroidx/transition/ChangeBounds;->DRAWABLE_ORIGIN_PROPERTY:Landroid/util/Property;
 
     invoke-static {v1, v0}, Landroidx/transition/PropertyValuesHolderUtils;->ofPointF(Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/PropertyValuesHolder;
@@ -1046,10 +1143,12 @@
 
     aput-object v0, v1, v11
 
+    .line 447
     invoke-static {v6, v1}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
 
     move-result-object v10
 
+    .line 448
     new-instance v11, Landroidx/transition/ChangeBounds$10;
 
     move-object v0, v11
@@ -1086,6 +1185,7 @@
 .method public getTransitionProperties()[Ljava/lang/String;
     .locals 0
 
+    .line 188
     sget-object p0, Landroidx/transition/ChangeBounds;->sTransitionProperties:[Ljava/lang/String;
 
     return-object p0

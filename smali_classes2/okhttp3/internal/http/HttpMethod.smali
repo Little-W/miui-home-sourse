@@ -1,5 +1,6 @@
 .class public final Lokhttp3/internal/http/HttpMethod;
 .super Ljava/lang/Object;
+.source "HttpMethod.java"
 
 
 # direct methods
@@ -8,6 +9,7 @@
 
     const-string v0, "POST"
 
+    .line 20
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -16,6 +18,7 @@
 
     const-string v0, "PATCH"
 
+    .line 21
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -24,6 +27,7 @@
 
     const-string v0, "PUT"
 
+    .line 22
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -32,6 +36,7 @@
 
     const-string v0, "DELETE"
 
+    .line 23
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -40,6 +45,7 @@
 
     const-string v0, "MOVE"
 
+    .line 24
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -66,6 +72,7 @@
 
     const-string v0, "GET"
 
+    .line 36
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -96,6 +103,7 @@
 
     const-string v0, "PROPFIND"
 
+    .line 45
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -110,6 +118,7 @@
 
     const-string v0, "PROPFIND"
 
+    .line 40
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -122,6 +131,7 @@
 
     const-string v0, "POST"
 
+    .line 28
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -130,6 +140,7 @@
 
     const-string v0, "PUT"
 
+    .line 29
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -138,6 +149,7 @@
 
     const-string v0, "PATCH"
 
+    .line 30
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -146,6 +158,7 @@
 
     const-string v0, "PROPPATCH"
 
+    .line 31
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -154,6 +167,7 @@
 
     const-string v0, "REPORT"
 
+    .line 32
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0

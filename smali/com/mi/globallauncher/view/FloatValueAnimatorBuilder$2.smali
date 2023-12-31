@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$2;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "FloatValueAnimatorBuilder.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder;)V
     .locals 0
 
+    .line 88
     iput-object p1, p0, Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$2;->this$0:Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -33,6 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
+    .line 91
     iget-object p0, p0, Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$2;->this$0:Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder;
 
     iget-object p0, p0, Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder;->endListener:Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$EndListener;

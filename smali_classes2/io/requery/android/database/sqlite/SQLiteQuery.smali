@@ -1,5 +1,6 @@
 .class public final Lio/requery/android/database/sqlite/SQLiteQuery;
 .super Lio/requery/android/database/sqlite/SQLiteProgram;
+.source "SQLiteQuery.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method constructor <init>(Lio/requery/android/database/sqlite/SQLiteDatabase;Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
     .locals 0
 
+    .line 41
     invoke-direct {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteProgram;-><init>(Lio/requery/android/database/sqlite/SQLiteDatabase;Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
 
+    .line 42
     iput-object p4, p0, Lio/requery/android/database/sqlite/SQLiteQuery;->mCancellationSignal:Landroidx/core/os/CancellationSignal;
 
     return-void
@@ -22,13 +25,16 @@
 .method fillWindow(Lio/requery/android/database/CursorWindow;IIZ)I
     .locals 9
 
+    .line 61
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteQuery;->acquireReference()V
 
+    .line 63
     :try_start_0
     invoke-virtual {p1}, Lio/requery/android/database/CursorWindow;->acquireReference()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 65
     :try_start_1
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteQuery;->getSession()Lio/requery/android/database/sqlite/SQLiteSession;
 
@@ -42,6 +48,7 @@
 
     move-result-object v2
 
+    .line 66
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteQuery;->getConnectionFlags()I
 
     move-result v7
@@ -56,6 +63,7 @@
 
     move v6, p4
 
+    .line 65
     invoke-virtual/range {v0 .. v8}, Lio/requery/android/database/sqlite/SQLiteSession;->executeForCursorWindow(Ljava/lang/String;[Ljava/lang/Object;Lio/requery/android/database/CursorWindow;IIZILandroidx/core/os/CancellationSignal;)I
 
     move-result p2
@@ -64,11 +72,13 @@
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 75
     :try_start_2
     invoke-virtual {p1}, Lio/requery/android/database/CursorWindow;->releaseReference()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 78
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteQuery;->releaseReference()V
 
     return p2
@@ -84,6 +94,7 @@
     :try_start_3
     const-string p3, "SQLiteQuery"
 
+    .line 72
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,21 +125,26 @@
 
     invoke-static {p3, p4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 73
     throw p2
 
     :catch_1
     move-exception p2
 
+    .line 69
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteQuery;->onCorruption()V
 
+    .line 70
     throw p2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 75
     :goto_0
     :try_start_4
     invoke-virtual {p1}, Lio/requery/android/database/CursorWindow;->releaseReference()V
 
+    .line 76
     throw p2
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -136,14 +152,17 @@
     :catchall_1
     move-exception p1
 
+    .line 78
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteQuery;->releaseReference()V
 
+    .line 79
     throw p1
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 84
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

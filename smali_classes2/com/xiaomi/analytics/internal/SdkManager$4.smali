@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/internal/SdkManager$4;
 .super Landroid/content/BroadcastReceiver;
+.source "SdkManager.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method constructor <init>(Lcom/xiaomi/analytics/internal/SdkManager;)V
     .locals 0
 
+    .line 380
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/SdkManager$4;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -51,6 +53,7 @@
 
     return-void
 
+    .line 387
     :cond_0
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -59,12 +62,14 @@
 
     const-string v0, "android.intent.action.SCREEN_OFF"
 
+    .line 388
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 389
     iget-object p2, p0, Lcom/xiaomi/analytics/internal/SdkManager$4;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -73,12 +78,14 @@
 
     invoke-static {p2, v0, v1}, Lcom/xiaomi/analytics/internal/SdkManager;->access$1702(Lcom/xiaomi/analytics/internal/SdkManager;J)J
 
+    .line 390
     iget-object p2, p0, Lcom/xiaomi/analytics/internal/SdkManager$4;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     const/4 v0, 0x1
 
     invoke-static {p2, v0}, Lcom/xiaomi/analytics/internal/SdkManager;->access$1802(Lcom/xiaomi/analytics/internal/SdkManager;Z)Z
 
+    .line 391
     iget-object p2, p0, Lcom/xiaomi/analytics/internal/SdkManager$4;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     invoke-static {p2}, Lcom/xiaomi/analytics/internal/SdkManager;->access$1300(Lcom/xiaomi/analytics/internal/SdkManager;)Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;
@@ -87,6 +94,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 392
     iget-object p2, p0, Lcom/xiaomi/analytics/internal/SdkManager$4;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     iget-object v0, p0, Lcom/xiaomi/analytics/internal/SdkManager$4;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
@@ -101,6 +109,7 @@
 
     goto :goto_0
 
+    .line 394
     :cond_1
     iget-object p2, p0, Lcom/xiaomi/analytics/internal/SdkManager$4;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
@@ -118,6 +127,7 @@
 
     const-string p2, "pending dex is null, unregister"
 
+    .line 395
     invoke-static {p1, p2}, Lcom/xiaomi/analytics/internal/util/ALog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -125,18 +135,21 @@
     :cond_2
     const-string v0, "android.intent.action.SCREEN_ON"
 
+    .line 397
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
+    .line 398
     iget-object p2, p0, Lcom/xiaomi/analytics/internal/SdkManager$4;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     const/4 v0, 0x0
 
     invoke-static {p2, v0}, Lcom/xiaomi/analytics/internal/SdkManager;->access$1802(Lcom/xiaomi/analytics/internal/SdkManager;Z)Z
 
+    .line 400
     :cond_3
     :goto_0
     new-instance p2, Ljava/lang/StringBuilder;
@@ -170,6 +183,7 @@
 
     const-string p2, "mScreenReceiver onReceive e"
 
+    .line 402
     invoke-static {p1, p2, p0}, Lcom/xiaomi/analytics/internal/util/ALog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1

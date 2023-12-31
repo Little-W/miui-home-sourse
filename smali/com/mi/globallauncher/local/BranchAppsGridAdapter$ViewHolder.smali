@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;
 .super Ljava/lang/Object;
+.source "BranchAppsGridAdapter.java"
 
 
 # annotations
@@ -31,18 +32,22 @@
 .method public constructor <init>(Lcom/mi/globallauncher/local/BranchAppsGridAdapter;Landroid/view/View;)V
     .locals 0
 
+    .line 89
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchAppsGridAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 90
     iput-object p2, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
+    .line 91
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->context:Landroid/content/Context;
 
+    .line 92
     sget p1, Lcom/mi/globallauncher/R$id;->item_container:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -53,6 +58,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->container:Landroid/widget/RelativeLayout;
 
+    .line 93
     sget p1, Lcom/mi/globallauncher/R$id;->item_icon:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -63,6 +69,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->imageView:Landroid/widget/ImageView;
 
+    .line 94
     sget p1, Lcom/mi/globallauncher/R$id;->item_name:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -81,6 +88,7 @@
 .method public synthetic lambda$updateView$0$BranchAppsGridAdapter$ViewHolder(Lio/branch/search/BranchLocalLinkResult;Landroid/view/View;)V
     .locals 0
 
+    .line 115
     iget-object p0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->context:Landroid/content/Context;
 
     invoke-virtual {p1, p0}, Lio/branch/search/BranchLocalLinkResult;->open(Landroid/content/Context;)Lio/branch/search/BranchSearchError;
@@ -91,6 +99,7 @@
 .method public updateView(I)V
     .locals 3
 
+    .line 98
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchAppsGridAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/local/BranchAppsGridAdapter;->access$000(Lcom/mi/globallauncher/local/BranchAppsGridAdapter;)Ljava/util/List;
@@ -113,6 +122,7 @@
 
     goto :goto_1
 
+    .line 101
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchAppsGridAdapter;
 
@@ -126,6 +136,7 @@
 
     check-cast p1, Lio/branch/search/BranchLocalLinkResult;
 
+    .line 102
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -138,10 +149,12 @@
 
     if-nez v0, :cond_2
 
+    .line 103
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v0}, Lio/branch/search/BranchLocalLinkResult;->loadImageDrawable(Landroid/widget/ImageView;)V
 
+    .line 108
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Lio/branch/search/BranchLocalLinkResult;->getName()Ljava/lang/String;
@@ -150,6 +163,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 109
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchAppsGridAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/local/BranchAppsGridAdapter;->access$100(Lcom/mi/globallauncher/local/BranchAppsGridAdapter;)Z
@@ -158,6 +172,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 110
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -174,6 +189,7 @@
 
     goto :goto_0
 
+    .line 112
     :cond_1
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
@@ -189,6 +205,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 114
     :goto_0
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchAppsGridAdapter$ViewHolder;->container:Landroid/widget/RelativeLayout;
 

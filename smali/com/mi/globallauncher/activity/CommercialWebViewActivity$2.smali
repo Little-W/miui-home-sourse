@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/activity/CommercialWebViewActivity$2;
 .super Landroid/webkit/WebChromeClient;
+.source "CommercialWebViewActivity.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/activity/CommercialWebViewActivity;)V
     .locals 0
 
+    .line 194
     iput-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$2;->this$0:Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
@@ -33,6 +35,7 @@
 .method public onProgressChanged(Landroid/webkit/WebView;I)V
     .locals 0
 
+    .line 197
     invoke-super {p0, p1, p2}, Landroid/webkit/WebChromeClient;->onProgressChanged(Landroid/webkit/WebView;I)V
 
     return-void
@@ -41,6 +44,7 @@
 .method public onReceivedTitle(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 0
 
+    .line 202
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$2;->this$0:Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 
     invoke-static {p1}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->access$100(Lcom/mi/globallauncher/activity/CommercialWebViewActivity;)Ljava/lang/String;
@@ -53,12 +57,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 203
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$2;->this$0:Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 
     invoke-virtual {p1, p2}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->setTitle(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
+    .line 205
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$2;->this$0:Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 
@@ -68,6 +74,7 @@
 
     invoke-virtual {p1, p2}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 207
     :goto_0
     iget-object p0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$2;->this$0:Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 

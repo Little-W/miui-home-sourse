@@ -1,5 +1,6 @@
 .class interface abstract Lorg/greenrobot/eventbus/Poster;
 .super Ljava/lang/Object;
+.source "Poster.java"
 
 
 # virtual methods

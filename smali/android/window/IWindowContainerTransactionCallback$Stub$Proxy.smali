@@ -1,5 +1,6 @@
 .class Landroid/window/IWindowContainerTransactionCallback$Stub$Proxy;
 .super Ljava/lang/Object;
+.source "IWindowContainerTransactionCallback.java"
 
 # interfaces
 .implements Landroid/window/IWindowContainerTransactionCallback;
@@ -24,8 +25,10 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 108
     iput-object p1, p0, Landroid/window/IWindowContainerTransactionCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -36,6 +39,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
+    .line 112
     iget-object p0, p0, Landroid/window/IWindowContainerTransactionCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0
@@ -49,6 +53,7 @@
         }
     .end annotation
 
+    .line 121
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -56,8 +61,10 @@
     :try_start_0
     const-string v1, "android.window.IWindowContainerTransactionCallback"
 
+    .line 123
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 124
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 p1, 0x0
@@ -66,10 +73,12 @@
 
     if-eqz p2, :cond_0
 
+    .line 126
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 128
     :try_start_1
     const-class v2, Landroid/view/SurfaceControl$Transaction;
 
@@ -95,6 +104,7 @@
 
     aput-object v0, v3, p1
 
+    .line 129
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -116,13 +126,16 @@
 
     const-string/jumbo v2, "writeToParcel fail"
 
+    .line 131
     invoke-static {p2, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
+    .line 134
     :cond_0
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 136
     :goto_0
     iget-object p0, p0, Landroid/window/IWindowContainerTransactionCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -132,6 +145,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 139
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -141,5 +155,6 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 140
     throw p0
 .end method

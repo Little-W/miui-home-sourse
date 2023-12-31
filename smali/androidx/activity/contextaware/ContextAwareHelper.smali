@@ -1,5 +1,6 @@
 .class public final Landroidx/activity/contextaware/ContextAwareHelper;
 .super Ljava/lang/Object;
+.source "ContextAwareHelper.java"
 
 
 # instance fields
@@ -20,8 +21,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 42
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
@@ -36,14 +39,17 @@
 .method public addOnContextAvailableListener(Landroidx/activity/contextaware/OnContextAvailableListener;)V
     .locals 1
 
+    .line 73
     iget-object v0, p0, Landroidx/activity/contextaware/ContextAwareHelper;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
+    .line 74
     iget-object v0, p0, Landroidx/activity/contextaware/ContextAwareHelper;->mContext:Landroid/content/Context;
 
     invoke-interface {p1, v0}, Landroidx/activity/contextaware/OnContextAvailableListener;->onContextAvailable(Landroid/content/Context;)V
 
+    .line 76
     :cond_0
     iget-object p0, p0, Landroidx/activity/contextaware/ContextAwareHelper;->mListeners:Ljava/util/Set;
 
@@ -57,6 +63,7 @@
 
     const/4 v0, 0x0
 
+    .line 108
     iput-object v0, p0, Landroidx/activity/contextaware/ContextAwareHelper;->mContext:Landroid/content/Context;
 
     return-void
@@ -65,8 +72,10 @@
 .method public dispatchOnContextAvailable(Landroid/content/Context;)V
     .locals 1
 
+    .line 97
     iput-object p1, p0, Landroidx/activity/contextaware/ContextAwareHelper;->mContext:Landroid/content/Context;
 
+    .line 98
     iget-object p0, p0, Landroidx/activity/contextaware/ContextAwareHelper;->mListeners:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -86,6 +95,7 @@
 
     check-cast v0, Landroidx/activity/contextaware/OnContextAvailableListener;
 
+    .line 99
     invoke-interface {v0, p1}, Landroidx/activity/contextaware/OnContextAvailableListener;->onContextAvailable(Landroid/content/Context;)V
 
     goto :goto_0

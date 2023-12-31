@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/content/CircleShape;
 .super Ljava/lang/Object;
+.source "CircleShape.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/model/content/ContentModel;
@@ -42,16 +43,22 @@
         }
     .end annotation
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 21
     iput-object p1, p0, Lcom/airbnb/lottie/model/content/CircleShape;->name:Ljava/lang/String;
 
+    .line 22
     iput-object p2, p0, Lcom/airbnb/lottie/model/content/CircleShape;->position:Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
+    .line 23
     iput-object p3, p0, Lcom/airbnb/lottie/model/content/CircleShape;->size:Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
+    .line 24
     iput-boolean p4, p0, Lcom/airbnb/lottie/model/content/CircleShape;->isReversed:Z
 
+    .line 25
     iput-boolean p5, p0, Lcom/airbnb/lottie/model/content/CircleShape;->hidden:Z
 
     return-void
@@ -62,6 +69,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 33
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/CircleShape;->name:Ljava/lang/String;
 
     return-object p0
@@ -79,6 +87,7 @@
         }
     .end annotation
 
+    .line 37
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/CircleShape;->position:Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
     return-object p0
@@ -87,6 +96,7 @@
 .method public getSize()Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
     .locals 0
 
+    .line 41
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/CircleShape;->size:Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
     return-object p0
@@ -95,6 +105,7 @@
 .method public isHidden()Z
     .locals 0
 
+    .line 49
     iget-boolean p0, p0, Lcom/airbnb/lottie/model/content/CircleShape;->hidden:Z
 
     return p0
@@ -103,6 +114,7 @@
 .method public isReversed()Z
     .locals 0
 
+    .line 45
     iget-boolean p0, p0, Lcom/airbnb/lottie/model/content/CircleShape;->isReversed:Z
 
     return p0
@@ -111,6 +123,7 @@
 .method public toContent(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;)Lcom/airbnb/lottie/animation/content/Content;
     .locals 1
 
+    .line 29
     new-instance v0, Lcom/airbnb/lottie/animation/content/EllipseContent;
 
     invoke-direct {v0, p1, p2, p0}, Lcom/airbnb/lottie/animation/content/EllipseContent;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/CircleShape;)V

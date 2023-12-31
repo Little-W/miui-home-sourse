@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/descriptors/SerialDescriptorsKt;
 .super Ljava/lang/Object;
+.source "SerialDescriptors.kt"
 
 
 # annotations
@@ -20,6 +21,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 87
     move-object v0, p0
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -32,12 +34,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 88
     invoke-static {p0, p1}, Lkotlinx/serialization/internal/PrimitivesKt;->PrimitiveDescriptorSafe(Ljava/lang/String;Lkotlinx/serialization/descriptors/PrimitiveKind;)Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
 
     return-object p0
 
+    .line 87
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -83,6 +87,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 56
     move-object v0, p0
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -95,20 +100,25 @@
 
     if-eqz v0, :cond_0
 
+    .line 57
     new-instance v6, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;
 
     invoke-direct {v6, p0}, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 58
     invoke-interface {p2, v6}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 59
     new-instance p2, Lkotlinx/serialization/descriptors/SerialDescriptorImpl;
 
+    .line 61
     sget-object v0, Lkotlinx/serialization/descriptors/StructureKind$CLASS;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$CLASS;
 
     move-object v3, v0
 
     check-cast v3, Lkotlinx/serialization/descriptors/SerialKind;
 
+    .line 62
     invoke-virtual {v6}, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->getElementNames$kotlinx_serialization_core()Ljava/util/List;
 
     move-result-object v0
@@ -117,6 +127,7 @@
 
     move-result v4
 
+    .line 63
     invoke-static {p1}, Lkotlin/collections/ArraysKt;->toList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v5
@@ -125,12 +136,14 @@
 
     move-object v2, p0
 
+    .line 59
     invoke-direct/range {v1 .. v6}, Lkotlinx/serialization/descriptors/SerialDescriptorImpl;-><init>(Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialKind;ILjava/util/List;Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;)V
 
     check-cast p2, Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p2
 
+    .line 56
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -181,6 +194,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 106
     move-object v0, p0
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -193,6 +207,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 107
     sget-object v0, Lkotlinx/serialization/descriptors/StructureKind$CLASS;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$CLASS;
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -203,12 +218,15 @@
 
     if-eqz v0, :cond_0
 
+    .line 108
     new-instance v6, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;
 
     invoke-direct {v6, p0}, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 109
     invoke-interface {p3, v6}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 110
     new-instance p3, Lkotlinx/serialization/descriptors/SerialDescriptorImpl;
 
     invoke-virtual {v6}, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;->getElementNames$kotlinx_serialization_core()Ljava/util/List;
@@ -235,6 +253,7 @@
 
     return-object p3
 
+    .line 107
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -250,6 +269,7 @@
 
     throw p0
 
+    .line 106
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -273,6 +293,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 104
     sget-object p3, Lkotlinx/serialization/descriptors/SerialDescriptorsKt$buildSerialDescriptor$1;->INSTANCE:Lkotlinx/serialization/descriptors/SerialDescriptorsKt$buildSerialDescriptor$1;
 
     check-cast p3, Lkotlin/jvm/functions/Function1;

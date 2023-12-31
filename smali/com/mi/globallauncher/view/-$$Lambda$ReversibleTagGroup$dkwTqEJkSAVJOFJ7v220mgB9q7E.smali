@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/view/-$$Lambda$ReversibleTagGroup$dkwTqEJkSAVJOFJ7v220mgB9q7E;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

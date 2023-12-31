@@ -1,5 +1,6 @@
 .class public final Lkotlin/io/ByteStreamsKt;
 .super Ljava/lang/Object;
+.source "IOStreams.kt"
 
 
 # direct methods
@@ -14,8 +15,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 105
     new-array p2, p2, [B
 
+    .line 106
     invoke-virtual {p0, p2}, Ljava/io/InputStream;->read([B)I
 
     move-result v0
@@ -27,12 +30,14 @@
 
     const/4 v3, 0x0
 
+    .line 108
     invoke-virtual {p1, p2, v3, v0}, Ljava/io/OutputStream;->write([BII)V
 
     int-to-long v3, v0
 
     add-long/2addr v1, v3
 
+    .line 110
     invoke-virtual {p0, p2}, Ljava/io/InputStream;->read([B)I
 
     move-result v0
@@ -52,6 +57,7 @@
 
     const/16 p2, 0x2000
 
+    .line 103
     :cond_0
     invoke-static {p0, p1, p2}, Lkotlin/io/ByteStreamsKt;->copyTo(Ljava/io/InputStream;Ljava/io/OutputStream;I)J
 
@@ -67,6 +73,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 135
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->available()I
@@ -81,6 +88,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
+    .line 136
     move-object v1, v0
 
     check-cast v1, Ljava/io/OutputStream;
@@ -93,6 +101,7 @@
 
     invoke-static {p0, v1, v2, v3, v4}, Lkotlin/io/ByteStreamsKt;->copyTo$default(Ljava/io/InputStream;Ljava/io/OutputStream;IILjava/lang/Object;)J
 
+    .line 137
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0

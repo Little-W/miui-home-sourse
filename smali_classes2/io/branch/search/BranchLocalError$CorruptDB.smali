@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/BranchLocalError$CorruptDB;
 .super Lio/branch/search/BranchLocalError$InvalidDB;
+.source "SourceFile"
 
 
 # annotations

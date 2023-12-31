@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/c/l;Ljava/lang/String;)V
     .locals 0
 
+    .line 180
     iput-object p1, p0, Lcom/xiaomi/onetrack/c/n;->b:Lcom/xiaomi/onetrack/c/l;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/c/n;->a:Ljava/lang/String;
@@ -29,6 +30,7 @@
 .method public run()V
     .locals 5
 
+    .line 184
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/n;->a:Ljava/lang/String;
 
@@ -38,12 +40,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 185
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
+    .line 186
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -63,16 +67,19 @@
 
     const-string v2, "eventName"
 
+    .line 187
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "data"
 
+    .line 188
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 189
     invoke-static {}, Lcom/xiaomi/onetrack/api/ar;->a()Lcom/xiaomi/onetrack/api/ar;
 
     move-result-object v3
@@ -83,6 +90,7 @@
 
     goto :goto_0
 
+    .line 192
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/n;->b:Lcom/xiaomi/onetrack/c/l;
 
@@ -97,6 +105,7 @@
     :catch_0
     move-exception p0
 
+    .line 194
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

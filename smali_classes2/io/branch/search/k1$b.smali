@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/k1$b;
 .super Lkotlin/coroutines/jvm/internal/RestrictedSuspendLambda;
+.source "SourceFile"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;

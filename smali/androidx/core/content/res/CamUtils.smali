@@ -1,5 +1,6 @@
 .class final Landroidx/core/content/res/CamUtils;
 .super Ljava/lang/Object;
+.source "CamUtils.java"
 
 
 # static fields
@@ -22,6 +23,7 @@
 
     new-array v2, v0, [F
 
+    .line 52
     fill-array-data v2, :array_0
 
     const/4 v3, 0x0
@@ -50,6 +52,7 @@
 
     new-array v2, v0, [F
 
+    .line 59
     fill-array-data v2, :array_3
 
     aput-object v2, v1, v3
@@ -70,6 +73,7 @@
 
     new-array v1, v0, [F
 
+    .line 67
     fill-array-data v1, :array_6
 
     sput-object v1, Landroidx/core/content/res/CamUtils;->WHITE_POINT_D65:[F
@@ -78,6 +82,7 @@
 
     new-array v2, v0, [F
 
+    .line 73
     fill-array-data v2, :array_7
 
     aput-object v2, v1, v3
@@ -279,6 +284,7 @@
 
     div-float v5, v1, v3
 
+    .line 101
     :goto_4
     sget-object v0, Landroidx/core/content/res/CamUtils;->WHITE_POINT_D65:[F
 
@@ -312,6 +318,7 @@
 .method static lStarFromInt(I)F
     .locals 0
 
+    .line 111
     invoke-static {p0}, Landroidx/core/content/res/CamUtils;->yFromInt(I)F
 
     move-result p0
@@ -345,6 +352,7 @@
     :cond_0
     float-to-double v0, p0
 
+    .line 121
     invoke-static {v0, v1}, Ljava/lang/Math;->cbrt(D)D
 
     move-result-wide v0
@@ -413,6 +421,7 @@
 
     const-wide v4, 0x4003333340000000L    # 2.4000000953674316
 
+    .line 163
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
@@ -425,6 +434,7 @@
 .method static xyzFromInt(I)[F
     .locals 9
 
+    .line 137
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -433,6 +443,7 @@
 
     move-result v0
 
+    .line 138
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
@@ -441,6 +452,7 @@
 
     move-result v1
 
+    .line 139
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result p0
@@ -449,10 +461,12 @@
 
     move-result p0
 
+    .line 141
     sget-object v2, Landroidx/core/content/res/CamUtils;->SRGB_TO_XYZ:[[F
 
     const/4 v3, 0x0
 
+    .line 142
     aget-object v4, v2, v3
 
     aget v4, v4, v3
@@ -479,6 +493,7 @@
 
     add-float/2addr v4, v5
 
+    .line 143
     aget-object v5, v2, v6
 
     aget v5, v5, v3
@@ -501,6 +516,7 @@
 
     add-float/2addr v5, v8
 
+    .line 144
     aget-object v8, v2, v7
 
     aget v8, v8, v3
@@ -539,6 +555,7 @@
 .method static yFromInt(I)F
     .locals 6
 
+    .line 127
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -547,6 +564,7 @@
 
     move-result v0
 
+    .line 128
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
@@ -555,6 +573,7 @@
 
     move-result v1
 
+    .line 129
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result p0
@@ -563,10 +582,12 @@
 
     move-result p0
 
+    .line 130
     sget-object v2, Landroidx/core/content/res/CamUtils;->SRGB_TO_XYZ:[[F
 
     const/4 v3, 0x1
 
+    .line 131
     aget-object v4, v2, v3
 
     const/4 v5, 0x0
@@ -619,6 +640,7 @@
 
     const-wide/high16 v4, 0x4008000000000000L    # 3.0
 
+    .line 151
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2

@@ -1,5 +1,6 @@
 .class public abstract Lcom/market/sdk/IMarketService$Stub;
 .super Landroid/os/Binder;
+.source "IMarketService.java"
 
 # interfaces
 .implements Lcom/market/sdk/IMarketService;
@@ -62,10 +63,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 13
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.market.sdk.IMarketService"
 
+    .line 14
     invoke-virtual {p0, p0, v0}, Lcom/market/sdk/IMarketService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -83,20 +86,24 @@
     :cond_0
     const-string v0, "com.market.sdk.IMarketService"
 
+    .line 25
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 26
     instance-of v1, v0, Lcom/market/sdk/IMarketService;
 
     if-eqz v1, :cond_1
 
+    .line 27
     check-cast v0, Lcom/market/sdk/IMarketService;
 
     return-object v0
 
+    .line 29
     :cond_1
     new-instance v0, Lcom/market/sdk/IMarketService$Stub$Proxy;
 
@@ -135,21 +142,25 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 272
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 258
     :pswitch_0
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 260
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 261
     sget-object p1, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -160,22 +171,27 @@
 
     check-cast v3, Landroid/os/ResultReceiver;
 
+    .line 266
     :cond_0
     invoke-virtual {p0, v3}, Lcom/market/sdk/IMarketService$Stub;->getDesktopFolderConfig(Landroid/os/ResultReceiver;)V
 
+    .line 267
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 237
     :pswitch_1
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 239
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 240
     sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -189,6 +205,7 @@
     :cond_1
     move-object p1, v3
 
+    .line 246
     :goto_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -196,6 +213,7 @@
 
     if-eqz p4, :cond_2
 
+    .line 247
     sget-object p4, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -206,34 +224,42 @@
 
     check-cast v3, Landroid/os/ResultReceiver;
 
+    .line 252
     :cond_2
     invoke-virtual {p0, p1, v3}, Lcom/market/sdk/IMarketService$Stub;->loadDesktopRecommendInfoV3(Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
 
+    .line 253
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 216
     :pswitch_2
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 218
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v5
 
+    .line 220
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v7
 
+    .line 222
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object p1
 
+    .line 224
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p4
 
     if-eqz p4, :cond_3
 
+    .line 225
     sget-object p4, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -251,27 +277,34 @@
 
     move-object v8, p1
 
+    .line 230
     invoke-virtual/range {v4 .. v9}, Lcom/market/sdk/IMarketService$Stub;->loadDesktopRecommendInfoV2(JLjava/lang/String;Ljava/util/List;Landroid/os/ResultReceiver;)V
 
+    .line 231
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 232
     invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     return v1
 
+    .line 200
     :pswitch_3
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 202
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object p1
 
+    .line 204
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p4
 
     if-eqz p4, :cond_4
 
+    .line 205
     sget-object p4, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -282,22 +315,27 @@
 
     check-cast v3, Landroid/os/ResultReceiver;
 
+    .line 210
     :cond_4
     invoke-virtual {p0, p1, v3}, Lcom/market/sdk/IMarketService$Stub;->getCategoryV2([Ljava/lang/String;Landroid/os/ResultReceiver;)V
 
+    .line 211
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 186
     :pswitch_4
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 188
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_5
 
+    .line 189
     sget-object p1, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -308,88 +346,113 @@
 
     check-cast v3, Landroid/os/ResultReceiver;
 
+    .line 194
     :cond_5
     invoke-virtual {p0, v3}, Lcom/market/sdk/IMarketService$Stub;->getWhiteSetV2(Landroid/os/ResultReceiver;)V
 
+    .line 195
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 176
     :pswitch_5
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 178
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object p1
 
+    .line 179
     invoke-virtual {p0, p1}, Lcom/market/sdk/IMarketService$Stub;->getCategory([Ljava/lang/String;)I
 
     move-result p0
 
+    .line 180
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 181
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     return v1
 
+    .line 168
     :pswitch_6
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 169
     invoke-virtual {p0}, Lcom/market/sdk/IMarketService$Stub;->getEnableSettings()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 170
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 171
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
+    .line 160
     :pswitch_7
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 161
     invoke-virtual {p0}, Lcom/market/sdk/IMarketService$Stub;->getWhiteSet()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 162
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 163
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
+    .line 150
     :pswitch_8
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 152
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 153
     invoke-virtual {p0, p1}, Lcom/market/sdk/IMarketService$Stub;->isInWhiteSetForApkCheck(Ljava/lang/String;)Z
 
     move-result p0
 
+    .line 154
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 155
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     return v1
 
+    .line 134
     :pswitch_9
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 136
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v3
 
+    .line 138
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 140
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object p1
 
+    .line 142
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -402,29 +465,37 @@
 
     move-object v6, p1
 
+    .line 143
     invoke-virtual/range {v2 .. v7}, Lcom/market/sdk/IMarketService$Stub;->loadDesktopRecommendInfo(JLjava/lang/String;Ljava/util/List;Lcom/market/sdk/IDesktopRecommendResponse;)V
 
+    .line 144
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 145
     invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     return v1
 
+    .line 119
     :pswitch_a
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 121
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 123
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p4
 
+    .line 125
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 127
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -433,23 +504,29 @@
 
     move-result-object p2
 
+    .line 128
     invoke-virtual {p0, p1, p4, v0, p2}, Lcom/market/sdk/IMarketService$Stub;->loadImage(Ljava/lang/String;IILcom/market/sdk/IImageCallback;)V
 
+    .line 129
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 106
     :pswitch_b
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 108
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 110
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p4
 
+    .line 112
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -458,53 +535,68 @@
 
     move-result-object p2
 
+    .line 113
     invoke-virtual {p0, p1, p4, p2}, Lcom/market/sdk/IMarketService$Stub;->loadIcon(Ljava/lang/String;Ljava/lang/String;Lcom/market/sdk/IImageCallback;)V
 
+    .line 114
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 95
     :pswitch_c
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 97
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 99
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 100
     invoke-virtual {p0, p1, p2}, Lcom/market/sdk/IMarketService$Stub;->recordStaticsCountEvent(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 101
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 87
     :pswitch_d
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 88
     invoke-virtual {p0}, Lcom/market/sdk/IMarketService$Stub;->allowConnectToNetwork()Z
 
     move-result p0
 
+    .line 89
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 90
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     return v1
 
+    .line 67
     :pswitch_e
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 69
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 71
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p4
 
+    .line 73
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
@@ -518,38 +610,47 @@
     :cond_6
     move p2, v0
 
+    .line 74
     :goto_1
     invoke-virtual {p0, p1, p4, p2}, Lcom/market/sdk/IMarketService$Stub;->getApkCheckInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
 
     move-result-object p0
 
+    .line 75
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     if-eqz p0, :cond_7
 
+    .line 77
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 78
     invoke-virtual {p0, p3, v1}, Lcom/market/sdk/ApkVerifyInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_2
 
+    .line 81
     :cond_7
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     :goto_2
     return v1
 
+    .line 47
     :pswitch_f
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 49
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 51
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p4
 
+    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
@@ -563,27 +664,33 @@
     :cond_8
     move p2, v0
 
+    .line 54
     :goto_3
     invoke-virtual {p0, p1, p4, p2}, Lcom/market/sdk/IMarketService$Stub;->getVerifyInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
 
     move-result-object p0
 
+    .line 55
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     if-eqz p0, :cond_9
 
+    .line 57
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 58
     invoke-virtual {p0, p3, v1}, Lcom/market/sdk/ApkVerifyInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_4
 
+    .line 61
     :cond_9
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     :goto_4
     return v1
 
+    .line 42
     :cond_a
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

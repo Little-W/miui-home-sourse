@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/sqlite/db/SupportSQLiteStatement;
 .super Ljava/lang/Object;
+.source "SupportSQLiteStatement.java"
 
 # interfaces
 .implements Landroidx/sqlite/db/SupportSQLiteProgram;

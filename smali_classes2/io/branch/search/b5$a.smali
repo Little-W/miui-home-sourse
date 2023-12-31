@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/b5$a;
 .super Lkotlin/coroutines/AbstractCoroutineContextElement;
+.source "SourceFile"
 
 # interfaces
 .implements Lkotlinx/coroutines/CoroutineExceptionHandler;

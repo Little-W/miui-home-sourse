@@ -20,10 +20,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 58
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.samsung.android.deviceidservice.IDeviceIdService"
 
+    .line 59
     invoke-virtual {p0, p0, v0}, Lcom/xiaomi/onetrack/util/oaid/a/f$b;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -43,6 +45,7 @@
     :cond_0
     const-string v0, "com.samsung.android.deviceidservice.IDeviceIdService"
 
+    .line 66
     invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
@@ -51,6 +54,7 @@
 
     return-object p0
 
+    .line 70
     :cond_1
     new-instance p0, Lcom/xiaomi/onetrack/util/oaid/a/f$a;
 

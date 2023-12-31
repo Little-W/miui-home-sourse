@@ -1,5 +1,6 @@
 .class interface abstract Lcom/xiaomi/dist/utils/Schedulers$ISchedulerProvider;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 
 # annotations

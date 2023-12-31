@@ -11,6 +11,7 @@
 
     const-string v0, "com.google.android.gms.common.internal.IGoogleCertificatesApi"
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/common/zza;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
     return-void
@@ -26,24 +27,30 @@
         }
     .end annotation
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/gms/internal/common/zza;->zza()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 4
     invoke-static {v0, p1}, Lcom/google/android/gms/internal/common/zzc;->zza(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
+    .line 5
     invoke-static {v0, p2}, Lcom/google/android/gms/internal/common/zzc;->zza(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
     const/4 p1, 0x5
 
+    .line 6
     invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/common/zza;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
 
     move-result-object p0
 
+    .line 7
     invoke-static {p0}, Lcom/google/android/gms/internal/common/zzc;->zza(Landroid/os/Parcel;)Z
 
     move-result p1
 
+    .line 8
     invoke-virtual {p0}, Landroid/os/Parcel;->recycle()V
 
     return p1

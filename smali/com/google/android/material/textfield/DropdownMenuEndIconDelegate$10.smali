@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$10;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "DropdownMenuEndIconDelegate.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
     .locals 0
 
+    .line 509
     iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$10;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -33,6 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
+    .line 512
     iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$10;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     iget-object p1, p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
@@ -45,6 +48,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/material/internal/CheckableImageButton;->setChecked(Z)V
 
+    .line 513
     iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$10;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-static {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->access$1600(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Landroid/animation/ValueAnimator;

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$ProtoEncoderDoNotUseEncoder;
 .super Ljava/lang/Object;
+.source "AutoProtoEncoderDoNotUseEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -35,6 +36,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 38
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$ProtoEncoderDoNotUseEncoder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$ProtoEncoderDoNotUseEncoder;-><init>()V
@@ -43,6 +45,7 @@
 
     const-string v0, "clientMetrics"
 
+    .line 40
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -55,6 +58,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,6 +74,7 @@
         }
     .end annotation
 
+    .line 44
     sget-object p0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$ProtoEncoderDoNotUseEncoder;->CLIENTMETRICS_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/ProtoEncoderDoNotUse;->getClientMetrics()Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
@@ -89,6 +94,7 @@
         }
     .end annotation
 
+    .line 37
     check-cast p1, Lcom/google/android/datatransport/runtime/ProtoEncoderDoNotUse;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

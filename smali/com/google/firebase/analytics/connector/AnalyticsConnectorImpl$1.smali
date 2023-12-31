@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/analytics/connector/AnalyticsConnectorImpl$1;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-api@@18.0.0"
 
 # interfaces
 .implements Lcom/google/firebase/analytics/connector/AnalyticsConnector$AnalyticsConnectorHandle;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/google/firebase/analytics/connector/AnalyticsConnectorImpl;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/firebase/analytics/connector/AnalyticsConnectorImpl$1;->zzb:Lcom/google/firebase/analytics/connector/AnalyticsConnectorImpl;
 
     iput-object p2, p0, Lcom/google/firebase/analytics/connector/AnalyticsConnectorImpl$1;->zza:Ljava/lang/String;

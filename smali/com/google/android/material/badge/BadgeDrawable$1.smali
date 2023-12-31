@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/badge/BadgeDrawable$1;
 .super Ljava/lang/Object;
+.source "BadgeDrawable.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/google/android/material/badge/BadgeDrawable;Landroid/view/View;Landroid/widget/FrameLayout;)V
     .locals 0
 
+    .line 371
     iput-object p1, p0, Lcom/google/android/material/badge/BadgeDrawable$1;->this$0:Lcom/google/android/material/badge/BadgeDrawable;
 
     iput-object p2, p0, Lcom/google/android/material/badge/BadgeDrawable$1;->val$anchorView:Landroid/view/View;
@@ -44,6 +46,7 @@
 .method public run()V
     .locals 2
 
+    .line 374
     iget-object v0, p0, Lcom/google/android/material/badge/BadgeDrawable$1;->this$0:Lcom/google/android/material/badge/BadgeDrawable;
 
     iget-object v1, p0, Lcom/google/android/material/badge/BadgeDrawable$1;->val$anchorView:Landroid/view/View;

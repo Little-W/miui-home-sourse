@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/JobSupport$Finishing;
 .super Ljava/lang/Object;
+.source "JobSupport.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/Incomplete;
@@ -34,16 +35,20 @@
 .method public constructor <init>(Lkotlinx/coroutines/NodeList;ZLjava/lang/Throwable;)V
     .locals 0
 
+    .line 1075
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/JobSupport$Finishing;->list:Lkotlinx/coroutines/NodeList;
 
+    .line 1076
     iput p2, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_isCompleting:I
 
+    .line 1081
     iput-object p3, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_rootCause:Ljava/lang/Object;
 
     const/4 p1, 0x0
 
+    .line 1086
     iput-object p1, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_exceptionsHolder:Ljava/lang/Object;
 
     return-void
@@ -60,6 +65,7 @@
         }
     .end annotation
 
+    .line 1135
     new-instance p0, Ljava/util/ArrayList;
 
     const/4 v0, 0x4
@@ -72,6 +78,7 @@
 .method private final getExceptionsHolder()Ljava/lang/Object;
     .locals 0
 
+    .line 1088
     iget-object p0, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_exceptionsHolder:Ljava/lang/Object;
 
     return-object p0
@@ -80,6 +87,7 @@
 .method private final setExceptionsHolder(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1089
     iput-object p1, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_exceptionsHolder:Ljava/lang/Object;
 
     return-void
@@ -90,12 +98,14 @@
 .method public final addExceptionLocked(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 1114
     invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->getRootCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 1116
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/JobSupport$Finishing;->setRootCause(Ljava/lang/Throwable;)V
 
     return-void
@@ -105,6 +115,7 @@
 
     return-void
 
+    .line 1120
     :cond_1
     invoke-direct {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->getExceptionsHolder()Ljava/lang/Object;
 
@@ -112,10 +123,12 @@
 
     if-nez v0, :cond_2
 
+    .line 1121
     invoke-direct {p0, p1}, Lkotlinx/coroutines/JobSupport$Finishing;->setExceptionsHolder(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 1122
     :cond_2
     instance-of v1, v0, Ljava/lang/Throwable;
 
@@ -125,21 +138,27 @@
 
     return-void
 
+    .line 1124
     :cond_3
     invoke-direct {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->allocateList()Ljava/util/ArrayList;
 
     move-result-object v1
 
+    .line 1125
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 1126
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 1128
     sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
+    .line 1124
     invoke-direct {p0, v1}, Lkotlinx/coroutines/JobSupport$Finishing;->setExceptionsHolder(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 1130
     :cond_4
     instance-of p0, v0, Ljava/util/ArrayList;
 
@@ -152,6 +171,7 @@
     :goto_0
     return-void
 
+    .line 1131
     :cond_5
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -183,6 +203,7 @@
 .method public getList()Lkotlinx/coroutines/NodeList;
     .locals 0
 
+    .line 1072
     iget-object p0, p0, Lkotlinx/coroutines/JobSupport$Finishing;->list:Lkotlinx/coroutines/NodeList;
 
     return-object p0
@@ -191,6 +212,7 @@
 .method public final getRootCause()Ljava/lang/Throwable;
     .locals 0
 
+    .line 1083
     iget-object p0, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_rootCause:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Throwable;
@@ -201,6 +223,7 @@
 .method public isActive()Z
     .locals 0
 
+    .line 1094
     invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->getRootCause()Ljava/lang/Throwable;
 
     move-result-object p0
@@ -221,6 +244,7 @@
 .method public final isCancelling()Z
     .locals 0
 
+    .line 1093
     invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->getRootCause()Ljava/lang/Throwable;
 
     move-result-object p0
@@ -241,6 +265,7 @@
 .method public final isCompleting()Z
     .locals 0
 
+    .line 1078
     iget p0, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_isCompleting:I
 
     return p0
@@ -249,6 +274,7 @@
 .method public final isSealed()Z
     .locals 1
 
+    .line 1092
     invoke-direct {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->getExceptionsHolder()Ljava/lang/Object;
 
     move-result-object p0
@@ -283,18 +309,21 @@
         }
     .end annotation
 
+    .line 1099
     invoke-direct {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->getExceptionsHolder()Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 1100
     invoke-direct {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->allocateList()Ljava/util/ArrayList;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 1101
     :cond_0
     instance-of v1, v0, Ljava/lang/Throwable;
 
@@ -310,6 +339,7 @@
 
     goto :goto_0
 
+    .line 1102
     :cond_1
     instance-of v1, v0, Ljava/util/ArrayList;
 
@@ -317,6 +347,7 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
+    .line 1105
     :goto_0
     invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport$Finishing;->getRootCause()Ljava/lang/Throwable;
 
@@ -326,11 +357,13 @@
 
     const/4 v2, 0x0
 
+    .line 1106
     invoke-virtual {v0, v2, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     :cond_2
     if-eqz p1, :cond_3
 
+    .line 1107
     invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -341,6 +374,7 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 1108
     :cond_3
     invoke-static {}, Lkotlinx/coroutines/JobSupportKt;->access$getSEALED$p()Lkotlinx/coroutines/internal/Symbol;
 
@@ -348,10 +382,12 @@
 
     invoke-direct {p0, p1}, Lkotlinx/coroutines/JobSupport$Finishing;->setExceptionsHolder(Ljava/lang/Object;)V
 
+    .line 1109
     check-cast v0, Ljava/util/List;
 
     return-object v0
 
+    .line 1103
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -383,6 +419,7 @@
 .method public final setCompleting(Z)V
     .locals 0
 
+    .line 1079
     iput p1, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_isCompleting:I
 
     return-void
@@ -391,6 +428,7 @@
 .method public final setRootCause(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1084
     iput-object p1, p0, Lkotlinx/coroutines/JobSupport$Finishing;->_rootCause:Ljava/lang/Object;
 
     return-void
@@ -399,6 +437,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1138
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

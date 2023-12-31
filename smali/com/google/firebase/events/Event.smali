@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/events/Event;
 .super Ljava/lang/Object;
+.source "Event.java"
 
 
 # annotations
@@ -41,6 +42,7 @@
         }
     .end annotation
 
+    .line 42
     iget-object p0, p0, Lcom/google/firebase/events/Event;->payload:Ljava/lang/Object;
 
     return-object p0
@@ -56,6 +58,7 @@
         }
     .end annotation
 
+    .line 37
     iget-object p0, p0, Lcom/google/firebase/events/Event;->type:Ljava/lang/Class;
 
     return-object p0
@@ -68,6 +71,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 47
     iget-object v1, p0, Lcom/google/firebase/events/Event;->type:Ljava/lang/Class;
 
     const/4 v2, 0x0

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/u3$b$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;

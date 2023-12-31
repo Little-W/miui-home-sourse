@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/ScalarKt;
 .super Ljava/lang/Object;
+.source "Scalar.kt"
 
 
 # annotations
@@ -93,6 +94,7 @@
 
     float-to-double p0, p1
 
+    .line 43
     invoke-static {v0, v1, p0, p1}, Ljava/lang/StrictMath;->pow(DD)D
 
     move-result-wide p0

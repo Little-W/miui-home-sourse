@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/DisposableFutureHandle;
 .super Ljava/lang/Object;
+.source "Executors.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/DisposableHandle;
@@ -27,6 +28,7 @@
         }
     .end annotation
 
+    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/DisposableFutureHandle;->future:Ljava/util/concurrent/Future;
@@ -39,6 +41,7 @@
 .method public dispose()V
     .locals 1
 
+    .line 171
     iget-object p0, p0, Lkotlinx/coroutines/DisposableFutureHandle;->future:Ljava/util/concurrent/Future;
 
     const/4 v0, 0x0
@@ -51,6 +54,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 173
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

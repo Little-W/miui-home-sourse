@@ -1,5 +1,6 @@
 .class public Lkotlin/internal/PlatformImplementations;
 .super Ljava/lang/Object;
+.source "PlatformImplementations.kt"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +38,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 32
     sget-object p0, Lkotlin/internal/PlatformImplementations$ReflectThrowable;->addSuppressed:Ljava/lang/reflect/Method;
 
     if-eqz p0, :cond_0
@@ -57,6 +60,7 @@
 .method public defaultPlatformRandom()Lkotlin/random/Random;
     .locals 0
 
+    .line 45
     new-instance p0, Lkotlin/random/FallbackThreadLocalRandom;
 
     invoke-direct {p0}, Lkotlin/random/FallbackThreadLocalRandom;-><init>()V

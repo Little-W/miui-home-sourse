@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/silentupdate/UpdateResultReceiver;
 .super Landroid/content/BroadcastReceiver;
+.source "UpdateResultReceiver.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 19
     new-instance v0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;
 
     invoke-direct {v0}, Lcom/market/sdk/silentupdate/UpdateResultReceiver;-><init>()V
@@ -37,6 +39,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 18
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -53,6 +56,7 @@
 .method public static get()Lcom/market/sdk/silentupdate/UpdateResultReceiver;
     .locals 1
 
+    .line 24
     sget-object v0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->sReceiver:Lcom/market/sdk/silentupdate/UpdateResultReceiver;
 
     return-object v0
@@ -63,10 +67,12 @@
 
     const-string v0, "packageName"
 
+    .line 45
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 46
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -79,6 +85,7 @@
 
     return-void
 
+    .line 49
     :cond_0
     iget-object p1, p0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->callback:Lcom/market/sdk/silentupdate/UpdateResultReceiver$Callback;
 
@@ -92,6 +99,7 @@
 
     goto :goto_0
 
+    .line 53
     :cond_1
     iget-object p0, p0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->callback:Lcom/market/sdk/silentupdate/UpdateResultReceiver$Callback;
 
@@ -119,14 +127,17 @@
 .method public register(Lcom/market/sdk/silentupdate/UpdateResultReceiver$Callback;)V
     .locals 2
 
+    .line 28
     iput-object p1, p0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->callback:Lcom/market/sdk/silentupdate/UpdateResultReceiver$Callback;
 
+    .line 29
     iget-boolean p1, p0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->registered:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
+    .line 32
     :cond_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
@@ -142,6 +153,7 @@
 
     const/4 p1, 0x1
 
+    .line 34
     iput-boolean p1, p0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->registered:Z
 
     return-void
@@ -152,8 +164,10 @@
 
     const/4 v0, 0x0
 
+    .line 38
     iput-object v0, p0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->callback:Lcom/market/sdk/silentupdate/UpdateResultReceiver$Callback;
 
+    .line 39
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -162,6 +176,7 @@
 
     const/4 v0, 0x0
 
+    .line 40
     iput-boolean v0, p0, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->registered:Z
 
     return-void

@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zzoj;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/internal/measurement/zzog;
@@ -31,10 +32,12 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 5
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzdm;
 
     const-string v1, "com.google.android.gms.measurement"
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/gms/internal/measurement/zzde;->zza(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -45,6 +48,7 @@
 
     const-string v2, "measurement.sdk.screen.manual_screen_view_logging"
 
+    .line 7
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/measurement/zzdm;->zza(Ljava/lang/String;Z)Lcom/google/android/gms/internal/measurement/zzdh;
 
     move-result-object v2
@@ -53,6 +57,7 @@
 
     const-string v2, "measurement.sdk.screen.disabling_automatic_reporting"
 
+    .line 8
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/measurement/zzdm;->zza(Ljava/lang/String;Z)Lcom/google/android/gms/internal/measurement/zzdh;
 
     move-result-object v0
@@ -65,6 +70,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -83,6 +89,7 @@
 .method public final zzb()Z
     .locals 0
 
+    .line 3
     sget-object p0, Lcom/google/android/gms/internal/measurement/zzoj;->zza:Lcom/google/android/gms/internal/measurement/zzdh;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzdh;->zzc()Ljava/lang/Object;
@@ -101,6 +108,7 @@
 .method public final zzc()Z
     .locals 0
 
+    .line 4
     sget-object p0, Lcom/google/android/gms/internal/measurement/zzoj;->zzb:Lcom/google/android/gms/internal/measurement/zzdh;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzdh;->zzc()Ljava/lang/Object;

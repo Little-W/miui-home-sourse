@@ -1,5 +1,6 @@
 .class public Lcom/mi/mibridge/MiBridge;
 .super Ljava/lang/Object;
+.source ""
 
 
 # static fields

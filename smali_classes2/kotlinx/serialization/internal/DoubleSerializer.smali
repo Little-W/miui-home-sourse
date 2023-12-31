@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/DoubleSerializer;
 .super Ljava/lang/Object;
+.source "Primitives.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -26,12 +27,14 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 123
     new-instance v0, Lkotlinx/serialization/internal/DoubleSerializer;
 
     invoke-direct {v0}, Lkotlinx/serialization/internal/DoubleSerializer;-><init>()V
 
     sput-object v0, Lkotlinx/serialization/internal/DoubleSerializer;->INSTANCE:Lkotlinx/serialization/internal/DoubleSerializer;
 
+    .line 124
     new-instance v0, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;
 
     sget-object v1, Lkotlinx/serialization/descriptors/PrimitiveKind$DOUBLE;->INSTANCE:Lkotlinx/serialization/descriptors/PrimitiveKind$DOUBLE;
@@ -52,6 +55,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,6 +70,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 126
     invoke-interface {p1}, Lkotlinx/serialization/encoding/Decoder;->decodeDouble()D
 
     move-result-wide p0
@@ -80,6 +85,7 @@
 .method public bridge synthetic deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
     .locals 0
 
+    .line 123
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/DoubleSerializer;->deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Double;
 
     move-result-object p0
@@ -90,6 +96,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 124
     sget-object p0, Lkotlinx/serialization/internal/DoubleSerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -102,6 +109,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 125
     invoke-interface {p1, p2, p3}, Lkotlinx/serialization/encoding/Encoder;->encodeDouble(D)V
 
     return-void
@@ -110,6 +118,7 @@
 .method public bridge synthetic serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
     .locals 2
 
+    .line 123
     check-cast p2, Ljava/lang/Number;
 
     invoke-virtual {p2}, Ljava/lang/Number;->doubleValue()D

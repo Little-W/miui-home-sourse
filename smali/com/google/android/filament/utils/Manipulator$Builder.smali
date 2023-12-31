@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/utils/Manipulator$Builder;
 .super Ljava/lang/Object;
+.source "Manipulator.java"
 
 
 # annotations
@@ -29,14 +30,17 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 66
     invoke-static {}, Lcom/google/android/filament/utils/Manipulator;->access$000()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
+    .line 67
     new-instance v0, Lcom/google/android/filament/utils/Manipulator$Builder$BuilderFinalizer;
 
     iget-wide v1, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
@@ -53,6 +57,7 @@
 .method public build(Lcom/google/android/filament/utils/Manipulator$Mode;)Lcom/google/android/filament/utils/Manipulator;
     .locals 2
 
+    .line 285
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Manipulator$Mode;->ordinal()I
@@ -69,6 +74,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 288
     new-instance v0, Lcom/google/android/filament/utils/Manipulator;
 
     const/4 v1, 0x0
@@ -77,6 +83,7 @@
 
     return-object v0
 
+    .line 287
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -90,6 +97,7 @@
 .method public farPlane(F)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 169
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/utils/Manipulator;->access$900(JF)V
@@ -100,6 +108,7 @@
 .method public flightMaxMoveSpeed(F)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 223
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/utils/Manipulator;->access$1400(JF)V
@@ -110,6 +119,7 @@
 .method public flightMoveDamping(F)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 258
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/utils/Manipulator;->access$1700(JF)V
@@ -120,6 +130,7 @@
 .method public flightPanSpeed(FF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 245
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->access$1600(JFF)V
@@ -130,6 +141,7 @@
 .method public flightSpeedSteps(I)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 234
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/utils/Manipulator;->access$1500(JI)V
@@ -140,6 +152,7 @@
 .method public flightStartOrientation(FF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 212
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->access$1300(JFF)V
@@ -150,6 +163,7 @@
 .method public flightStartPosition(FFF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 202
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->access$1200(JFFF)V
@@ -160,6 +174,7 @@
 .method public fovDegrees(F)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 158
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/utils/Manipulator;->access$800(JF)V
@@ -170,6 +185,7 @@
 .method public fovDirection(Lcom/google/android/filament/utils/Manipulator$Fov;)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 146
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Manipulator$Fov;->ordinal()I
@@ -184,6 +200,7 @@
 .method public groundPlane(FFFF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 6
 
+    .line 271
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     move v2, p1
@@ -202,6 +219,7 @@
 .method public mapExtent(FF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 181
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->access$1000(JFF)V
@@ -212,6 +230,7 @@
 .method public mapMinDistance(F)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 192
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/utils/Manipulator;->access$1100(JF)V
@@ -222,6 +241,7 @@
 .method public orbitHomePosition(FFF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 122
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->access$500(JFFF)V
@@ -232,6 +252,7 @@
 .method public orbitSpeed(FF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 134
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->access$600(JFF)V
@@ -242,6 +263,7 @@
 .method public targetPosition(FFF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 88
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->access$200(JFFF)V
@@ -252,6 +274,7 @@
 .method public upVector(FFF)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 99
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->access$300(JFFF)V
@@ -262,6 +285,7 @@
 .method public viewport(II)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 77
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->access$100(JII)V
@@ -272,6 +296,7 @@
 .method public zoomSpeed(F)Lcom/google/android/filament/utils/Manipulator$Builder;
     .locals 2
 
+    .line 110
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/utils/Manipulator;->access$400(JF)V

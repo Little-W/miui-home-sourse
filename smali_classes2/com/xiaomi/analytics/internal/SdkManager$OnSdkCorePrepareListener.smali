@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/analytics/internal/SdkManager$OnSdkCorePrepareListener;
 .super Ljava/lang/Object;
+.source "SdkManager.java"
 
 
 # annotations

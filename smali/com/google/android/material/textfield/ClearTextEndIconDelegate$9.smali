@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/ClearTextEndIconDelegate$9;
 .super Ljava/lang/Object;
+.source "ClearTextEndIconDelegate.java"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)V
     .locals 0
 
+    .line 207
     iput-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$9;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
+    .line 210
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -46,12 +49,14 @@
 
     move-result p1
 
+    .line 211
     iget-object v0, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$9;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     iget-object v0, v0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/internal/CheckableImageButton;->setScaleX(F)V
 
+    .line 212
     iget-object p0, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$9;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     iget-object p0, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/ImageResolver$FromLink;
 .super Lio/branch/search/internal/ui/ImageResolver;
+.source "SourceFile"
 
 
 # annotations

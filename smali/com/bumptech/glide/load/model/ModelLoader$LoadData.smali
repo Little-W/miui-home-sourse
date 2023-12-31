@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 .super Ljava/lang/Object;
+.source "ModelLoader.java"
 
 
 # annotations
@@ -57,6 +58,7 @@
         }
     .end annotation
 
+    .line 51
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -80,8 +82,10 @@
         }
     .end annotation
 
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 56
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -90,6 +94,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;->sourceKey:Lcom/bumptech/glide/load/Key;
 
+    .line 57
     invoke-static {p2}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -98,6 +103,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;->alternateKeys:Ljava/util/List;
 
+    .line 58
     invoke-static {p3}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

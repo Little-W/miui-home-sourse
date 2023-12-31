@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/utils/Manipulator;
 .super Ljava/lang/Object;
+.source "Manipulator.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method private constructor <init>(J)V
     .locals 0
 
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 38
     iput-wide p1, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     return-void
@@ -31,6 +34,7 @@
 .method synthetic constructor <init>(JLcom/google/android/filament/utils/Manipulator$1;)V
     .locals 0
 
+    .line 34
     invoke-direct {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;-><init>(J)V
 
     return-void
@@ -39,6 +43,7 @@
 .method static synthetic access$000()J
     .locals 2
 
+    .line 34
     invoke-static {}, Lcom/google/android/filament/utils/Manipulator;->nCreateBuilder()J
 
     move-result-wide v0
@@ -49,6 +54,7 @@
 .method static synthetic access$100(JII)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nBuilderViewport(JII)V
 
     return-void
@@ -57,6 +63,7 @@
 .method static synthetic access$1000(JFF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nBuilderMapExtent(JFF)V
 
     return-void
@@ -65,6 +72,7 @@
 .method static synthetic access$1100(JF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nBuilderMapMinDistance(JF)V
 
     return-void
@@ -73,6 +81,7 @@
 .method static synthetic access$1200(JFFF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/filament/utils/Manipulator;->nFlightStartPosition(JFFF)V
 
     return-void
@@ -81,6 +90,7 @@
 .method static synthetic access$1300(JFF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nFlightStartOrientation(JFF)V
 
     return-void
@@ -89,6 +99,7 @@
 .method static synthetic access$1400(JF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nFlightMaxMoveSpeed(JF)V
 
     return-void
@@ -97,6 +108,7 @@
 .method static synthetic access$1500(JI)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nFlightSpeedSteps(JI)V
 
     return-void
@@ -105,6 +117,7 @@
 .method static synthetic access$1600(JFF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nFlightPanSpeed(JFF)V
 
     return-void
@@ -113,6 +126,7 @@
 .method static synthetic access$1700(JF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nFlightMoveDamping(JF)V
 
     return-void
@@ -121,6 +135,7 @@
 .method static synthetic access$1800(JFFFF)V
     .locals 0
 
+    .line 34
     invoke-static/range {p0 .. p5}, Lcom/google/android/filament/utils/Manipulator;->nBuilderGroundPlane(JFFFF)V
 
     return-void
@@ -129,6 +144,7 @@
 .method static synthetic access$1900(JI)J
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nBuilderBuild(JI)J
 
     move-result-wide p0
@@ -139,6 +155,7 @@
 .method static synthetic access$200(JFFF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/filament/utils/Manipulator;->nBuilderTargetPosition(JFFF)V
 
     return-void
@@ -147,6 +164,7 @@
 .method static synthetic access$2100(J)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1}, Lcom/google/android/filament/utils/Manipulator;->nDestroyBuilder(J)V
 
     return-void
@@ -155,6 +173,7 @@
 .method static synthetic access$300(JFFF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/filament/utils/Manipulator;->nBuilderUpVector(JFFF)V
 
     return-void
@@ -163,6 +182,7 @@
 .method static synthetic access$400(JF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nBuilderZoomSpeed(JF)V
 
     return-void
@@ -171,6 +191,7 @@
 .method static synthetic access$500(JFFF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/filament/utils/Manipulator;->nBuilderOrbitHomePosition(JFFF)V
 
     return-void
@@ -179,6 +200,7 @@
 .method static synthetic access$600(JFF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nBuilderOrbitSpeed(JFF)V
 
     return-void
@@ -187,6 +209,7 @@
 .method static synthetic access$700(JI)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nBuilderFovDirection(JI)V
 
     return-void
@@ -195,6 +218,7 @@
 .method static synthetic access$800(JF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nBuilderFovDegrees(JF)V
 
     return-void
@@ -203,6 +227,7 @@
 .method static synthetic access$900(JF)V
     .locals 0
 
+    .line 34
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nBuilderFarPlane(JF)V
 
     return-void
@@ -324,11 +349,13 @@
 .method public finalize()V
     .locals 2
 
+    .line 313
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 316
     :catchall_0
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
@@ -340,6 +367,7 @@
 .method public getCurrentBookmark()Lcom/google/android/filament/utils/Bookmark;
     .locals 3
 
+    .line 442
     new-instance v0, Lcom/google/android/filament/utils/Bookmark;
 
     iget-wide v1, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
@@ -356,6 +384,7 @@
 .method public getHomeBookmark()Lcom/google/android/filament/utils/Bookmark;
     .locals 3
 
+    .line 451
     new-instance v0, Lcom/google/android/filament/utils/Bookmark;
 
     iget-wide v1, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
@@ -372,6 +401,7 @@
 .method public getLookAt([D[D[D)V
     .locals 2
 
+    .line 349
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nGetLookAtDouble(J[D[D[D)V
@@ -382,6 +412,7 @@
 .method public getLookAt([F[F[F)V
     .locals 2
 
+    .line 342
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nGetLookAtFloat(J[F[F[F)V
@@ -392,6 +423,7 @@
 .method public getMode()Lcom/google/android/filament/utils/Manipulator$Mode;
     .locals 3
 
+    .line 323
     invoke-static {}, Lcom/google/android/filament/utils/Manipulator$Mode;->values()[Lcom/google/android/filament/utils/Manipulator$Mode;
 
     move-result-object v0
@@ -410,6 +442,7 @@
 .method public grabBegin(IIZ)V
     .locals 2
 
+    .line 374
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nGrabBegin(JIIZ)V
@@ -420,6 +453,7 @@
 .method public grabEnd()V
     .locals 2
 
+    .line 390
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/utils/Manipulator;->nGrabEnd(J)V
@@ -430,6 +464,7 @@
 .method public grabUpdate(II)V
     .locals 2
 
+    .line 383
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nGrabUpdate(JII)V
@@ -440,6 +475,7 @@
 .method public jumpToBookmark(Lcom/google/android/filament/utils/Bookmark;)V
     .locals 2
 
+    .line 461
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bookmark;->getNativeObject()J
@@ -454,6 +490,7 @@
 .method public keyDown(Lcom/google/android/filament/utils/Manipulator$Key;)V
     .locals 2
 
+    .line 400
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Manipulator$Key;->ordinal()I
@@ -468,6 +505,7 @@
 .method public keyUp(Lcom/google/android/filament/utils/Manipulator$Key;)V
     .locals 2
 
+    .line 409
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Manipulator$Key;->ordinal()I
@@ -486,6 +524,7 @@
 
     new-array v0, v0, [F
 
+    .line 358
     iget-wide v1, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v1, v2, p1, p2, v0}, Lcom/google/android/filament/utils/Manipulator;->nRaycast(JII[F)V
@@ -496,6 +535,7 @@
 .method public scroll(IIF)V
     .locals 2
 
+    .line 422
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/utils/Manipulator;->nScroll(JIIF)V
@@ -506,6 +546,7 @@
 .method public setViewport(II)V
     .locals 2
 
+    .line 332
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/utils/Manipulator;->nSetViewport(JII)V
@@ -516,6 +557,7 @@
 .method public update(F)V
     .locals 2
 
+    .line 433
     iget-wide v0, p0, Lcom/google/android/filament/utils/Manipulator;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/utils/Manipulator;->nUpdate(JF)V

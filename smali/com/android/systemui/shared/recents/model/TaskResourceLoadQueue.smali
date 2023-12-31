@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/model/TaskResourceLoadQueue;
 .super Ljava/lang/Object;
+.source "RecentsTaskLoader.java"
 
 
 # instance fields
@@ -18,8 +19,10 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 51
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
@@ -34,22 +37,27 @@
 .method addTask(Lcom/android/systemui/shared/recents/model/Task;)V
     .locals 1
 
+    .line 66
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskResourceLoadQueue;->containsTaskObject(Lcom/android/systemui/shared/recents/model/Task;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 67
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskResourceLoadQueue;->mQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
+    .line 69
     :cond_0
     monitor-enter p0
 
+    .line 70
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 71
     monitor-exit p0
 
     return-void
@@ -67,6 +75,7 @@
 .method clearTasks()V
     .locals 0
 
+    .line 89
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskResourceLoadQueue;->mQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
@@ -79,6 +88,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 55
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskResourceLoadQueue;->mQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
@@ -115,6 +125,7 @@
 .method isEmpty()Z
     .locals 0
 
+    .line 94
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskResourceLoadQueue;->mQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
@@ -127,6 +138,7 @@
 .method nextTask()Lcom/android/systemui/shared/recents/model/Task;
     .locals 0
 
+    .line 79
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskResourceLoadQueue;->mQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
@@ -141,6 +153,7 @@
 .method removeTask(Lcom/android/systemui/shared/recents/model/Task;)V
     .locals 0
 
+    .line 84
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskResourceLoadQueue;->mQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->remove(Ljava/lang/Object;)Z

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/appbar/AppBarLayout$2;
 .super Ljava/lang/Object;
+.source "AppBarLayout.java"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/google/android/material/appbar/AppBarLayout;Lcom/google/android/material/shape/MaterialShapeDrawable;)V
     .locals 0
 
+    .line 937
     iput-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout;
 
     iput-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$2;->val$background:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -40,6 +42,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
+    .line 940
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -50,10 +53,12 @@
 
     move-result p1
 
+    .line 941
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$2;->val$background:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setElevation(F)V
 
+    .line 942
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout;
 
     invoke-static {v0}, Lcom/google/android/material/appbar/AppBarLayout;->access$000(Lcom/google/android/material/appbar/AppBarLayout;)Landroid/graphics/drawable/Drawable;
@@ -64,6 +69,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 943
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout;
 
     invoke-static {v0}, Lcom/google/android/material/appbar/AppBarLayout;->access$000(Lcom/google/android/material/appbar/AppBarLayout;)Landroid/graphics/drawable/Drawable;
@@ -74,6 +80,7 @@
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setElevation(F)V
 
+    .line 945
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -98,6 +105,7 @@
 
     check-cast v1, Lcom/google/android/material/appbar/AppBarLayout$LiftOnScrollListener;
 
+    .line 946
     iget-object v2, p0, Lcom/google/android/material/appbar/AppBarLayout$2;->val$background:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-virtual {v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getResolvedTintColor()I

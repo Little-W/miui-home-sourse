@@ -26,6 +26,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/b/h;Ljava/lang/String;)V
     .locals 0
 
+    .line 130
     iput-object p1, p0, Lcom/xiaomi/onetrack/b/k;->b:Lcom/xiaomi/onetrack/b/h;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/b/k;->a:Ljava/lang/String;
@@ -54,6 +55,7 @@
     :try_start_0
     const-string v6, "app_id=?"
 
+    .line 136
     iget-object v3, p0, Lcom/xiaomi/onetrack/b/k;->b:Lcom/xiaomi/onetrack/b/h;
 
     invoke-static {v3}, Lcom/xiaomi/onetrack/b/h;->a(Lcom/xiaomi/onetrack/b/h;)Lcom/xiaomi/onetrack/b/g;
@@ -74,6 +76,7 @@
 
     const/4 v8, 0x0
 
+    .line 137
     iget-object p0, p0, Lcom/xiaomi/onetrack/b/k;->a:Ljava/lang/String;
 
     aput-object p0, v7, v8
@@ -94,60 +97,71 @@
     :try_start_1
     const-string v3, "app_id"
 
+    .line 140
     invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
     const-string v4, "cloud_data"
 
+    .line 141
     invoke-interface {p0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
     const-string v5, "data_hash"
 
+    .line 142
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v5
 
     const-string v6, "timestamp"
 
+    .line 143
     invoke-interface {p0, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v6
 
+    .line 145
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v7
 
     if-eqz v7, :cond_2
 
+    .line 146
     new-instance v7, Lcom/xiaomi/onetrack/b/l;
 
     invoke-direct {v7}, Lcom/xiaomi/onetrack/b/l;-><init>()V
 
+    .line 147
     invoke-interface {p0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v7, Lcom/xiaomi/onetrack/b/l;->a:Ljava/lang/String;
 
+    .line 148
     invoke-interface {p0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 149
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
+    .line 150
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     iput-object v4, v7, Lcom/xiaomi/onetrack/b/l;->e:Lorg/json/JSONObject;
 
+    .line 152
     :cond_0
     iget-object v3, v7, Lcom/xiaomi/onetrack/b/l;->e:Lorg/json/JSONObject;
 
@@ -159,12 +173,14 @@
 
     iput-wide v3, v7, Lcom/xiaomi/onetrack/b/l;->b:J
 
+    .line 153
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v7, Lcom/xiaomi/onetrack/b/l;->d:Ljava/lang/String;
 
+    .line 154
     invoke-interface {p0, v6}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v3
@@ -176,6 +192,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 162
     :try_start_2
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_2
@@ -183,6 +200,7 @@
 
     goto :goto_0
 
+    .line 164
     :catch_0
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -216,6 +234,7 @@
 
     move-object p0, v2
 
+    .line 158
     :goto_1
     :try_start_3
     invoke-virtual {v3}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -228,6 +247,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 162
     :goto_2
     :try_start_4
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
@@ -236,6 +256,7 @@
 
     goto :goto_3
 
+    .line 164
     :catch_3
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -249,6 +270,7 @@
     :goto_4
     if-eqz p0, :cond_4
 
+    .line 162
     :try_start_5
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_5
@@ -256,9 +278,11 @@
 
     goto :goto_5
 
+    .line 164
     :catch_4
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 167
     :cond_4
     :goto_5
     throw v2
@@ -272,6 +296,7 @@
         }
     .end annotation
 
+    .line 130
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/b/k;->a()Lcom/xiaomi/onetrack/b/l;
 
     move-result-object p0

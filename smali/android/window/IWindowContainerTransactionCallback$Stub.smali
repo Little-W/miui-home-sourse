@@ -1,5 +1,6 @@
 .class public abstract Landroid/window/IWindowContainerTransactionCallback$Stub;
 .super Landroid/os/Binder;
+.source "IWindowContainerTransactionCallback.java"
 
 # interfaces
 .implements Landroid/window/IWindowContainerTransactionCallback;
@@ -30,10 +31,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 37
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "android.window.IWindowContainerTransactionCallback"
 
+    .line 38
     invoke-virtual {p0, p0, v0}, Landroid/window/IWindowContainerTransactionCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -51,20 +54,24 @@
     :cond_0
     const-string v0, "android.window.IWindowContainerTransactionCallback"
 
+    .line 49
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 50
     instance-of v1, v0, Landroid/window/IWindowContainerTransactionCallback;
 
     if-eqz v1, :cond_1
 
+    .line 51
     check-cast v0, Landroid/window/IWindowContainerTransactionCallback;
 
     return-object v0
 
+    .line 53
     :cond_1
     new-instance v0, Landroid/window/IWindowContainerTransactionCallback$Stub$Proxy;
 
@@ -78,6 +85,7 @@
 
     const/4 p0, 0x0
 
+    .line 93
     :try_start_0
     const-class v0, Landroid/view/SurfaceControl$Transaction;
 
@@ -87,12 +95,14 @@
 
     move-result-object v0
 
+    .line 94
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/os/Parcelable$Creator;
 
+    .line 96
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object p1
@@ -110,6 +120,7 @@
 
     const-string v1, "get CREATOR fail"
 
+    .line 99
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object p0
@@ -141,6 +152,7 @@
 
     if-gt p1, v2, :cond_0
 
+    .line 63
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_0
@@ -150,25 +162,30 @@
 
     if-eq p1, v0, :cond_1
 
+    .line 86
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 78
     :cond_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 80
     invoke-direct {p0, p2}, Landroid/window/IWindowContainerTransactionCallback$Stub;->getSurfaceControlTransaction(Landroid/os/Parcel;)Landroid/view/SurfaceControl$Transaction;
 
     move-result-object p2
 
+    .line 81
     invoke-virtual {p0, p1, p2}, Landroid/window/IWindowContainerTransactionCallback$Stub;->onTransactionReady(ILandroid/view/SurfaceControl$Transaction;)V
 
     return v0
 
+    .line 69
     :cond_2
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

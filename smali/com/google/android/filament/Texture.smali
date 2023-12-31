@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/Texture;
 .super Ljava/lang/Object;
+.source "Texture.java"
 
 
 # annotations
@@ -32,8 +33,10 @@
 .method constructor <init>(J)V
     .locals 0
 
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 77
     iput-wide p1, p0, Lcom/google/android/filament/Texture;->mNativeObject:J
 
     return-void
@@ -42,8 +45,10 @@
 .method public constructor <init>(Lcom/google/android/filament/Engine;J)V
     .locals 0
 
+    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 81
     iput-wide p2, p0, Lcom/google/android/filament/Texture;->mNativeObject:J
 
     return-void
@@ -52,6 +57,7 @@
 .method static synthetic access$000()J
     .locals 2
 
+    .line 73
     invoke-static {}, Lcom/google/android/filament/Texture;->nCreateBuilder()J
 
     move-result-wide v0
@@ -62,6 +68,7 @@
 .method static synthetic access$100(JI)V
     .locals 0
 
+    .line 73
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/Texture;->nBuilderWidth(JI)V
 
     return-void
@@ -70,6 +77,7 @@
 .method static synthetic access$1000(J)V
     .locals 0
 
+    .line 73
     invoke-static {p0, p1}, Lcom/google/android/filament/Texture;->nDestroyBuilder(J)V
 
     return-void
@@ -78,6 +86,7 @@
 .method static synthetic access$200(JI)V
     .locals 0
 
+    .line 73
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/Texture;->nBuilderHeight(JI)V
 
     return-void
@@ -86,6 +95,7 @@
 .method static synthetic access$300(JI)V
     .locals 0
 
+    .line 73
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/Texture;->nBuilderDepth(JI)V
 
     return-void
@@ -94,6 +104,7 @@
 .method static synthetic access$400(JI)V
     .locals 0
 
+    .line 73
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/Texture;->nBuilderLevels(JI)V
 
     return-void
@@ -102,6 +113,7 @@
 .method static synthetic access$500(JI)V
     .locals 0
 
+    .line 73
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/Texture;->nBuilderSampler(JI)V
 
     return-void
@@ -110,6 +122,7 @@
 .method static synthetic access$600(JI)V
     .locals 0
 
+    .line 73
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/Texture;->nBuilderFormat(JI)V
 
     return-void
@@ -118,6 +131,7 @@
 .method static synthetic access$700(JI)V
     .locals 0
 
+    .line 73
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/Texture;->nBuilderUsage(JI)V
 
     return-void
@@ -126,6 +140,7 @@
 .method static synthetic access$800(JIIII)V
     .locals 0
 
+    .line 73
     invoke-static/range {p0 .. p5}, Lcom/google/android/filament/Texture;->nBuilderSwizzle(JIIII)V
 
     return-void
@@ -134,6 +149,7 @@
 .method static synthetic access$900(JJ)J
     .locals 0
 
+    .line 73
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/Texture;->nBuilderBuild(JJ)J
 
     move-result-wide p0
@@ -144,6 +160,7 @@
 .method public static isTextureFormatSupported(Lcom/google/android/filament/Engine;Lcom/google/android/filament/Texture$InternalFormat;)Z
     .locals 2
 
+    .line 560
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -247,6 +264,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1082
     iput-wide v0, p0, Lcom/google/android/filament/Texture;->mNativeObject:J
 
     return-void
@@ -255,6 +273,7 @@
 .method public generateMipmaps(Lcom/google/android/filament/Engine;)V
     .locals 2
 
+    .line 995
     invoke-virtual {p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v0
@@ -279,18 +298,22 @@
 
     const/4 v3, 0x0
 
+    .line 1050
     invoke-virtual {v0, v3}, Lcom/google/android/filament/Texture;->getWidth(I)I
 
     move-result v8
 
+    .line 1051
     invoke-virtual {v0, v3}, Lcom/google/android/filament/Texture;->getHeight(I)I
 
     move-result v9
 
     if-eqz v2, :cond_0
 
+    .line 1055
     iget v3, v2, Lcom/google/android/filament/Texture$PrefilterOptions;->sampleCount:I
 
+    .line 1056
     iget-boolean v2, v2, Lcom/google/android/filament/Texture$PrefilterOptions;->mirror:Z
 
     move/from16 v22, v2
@@ -308,6 +331,7 @@
 
     move/from16 v22, v3
 
+    .line 1059
     :goto_0
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
@@ -321,6 +345,7 @@
 
     iget-object v0, v1, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
+    .line 1061
     invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
 
     move-result v11
@@ -331,6 +356,7 @@
 
     iget-object v0, v1, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
+    .line 1062
     invoke-virtual {v0}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
     move-result v14
@@ -343,6 +369,7 @@
 
     iget-object v0, v1, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->format:Lcom/google/android/filament/Texture$Format;
 
+    .line 1063
     invoke-virtual {v0}, Lcom/google/android/filament/Texture$Format;->ordinal()I
 
     move-result v17
@@ -357,6 +384,7 @@
 
     move-object/from16 v18, p3
 
+    .line 1059
     invoke-static/range {v4 .. v22}, Lcom/google/android/filament/Texture;->nGeneratePrefilterMipmap(JJIILjava/nio/Buffer;IIIIIII[ILjava/lang/Object;Ljava/lang/Runnable;IZ)I
 
     move-result v0
@@ -365,6 +393,7 @@
 
     return-void
 
+    .line 1068
     :cond_1
     new-instance v0, Ljava/nio/BufferOverflowException;
 
@@ -376,6 +405,7 @@
 .method public getDepth(I)I
     .locals 2
 
+    .line 758
     invoke-virtual {p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v0
@@ -390,6 +420,7 @@
 .method public getFormat()Lcom/google/android/filament/Texture$InternalFormat;
     .locals 3
 
+    .line 781
     invoke-static {}, Lcom/google/android/filament/Texture$InternalFormat;->values()[Lcom/google/android/filament/Texture$InternalFormat;
 
     move-result-object v0
@@ -410,6 +441,7 @@
 .method public getHeight(I)I
     .locals 2
 
+    .line 749
     invoke-virtual {p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v0
@@ -424,6 +456,7 @@
 .method public getLevels()I
     .locals 2
 
+    .line 765
     invoke-virtual {p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v0
@@ -438,6 +471,7 @@
 .method public getNativeObject()J
     .locals 4
 
+    .line 1075
     iget-wide v0, p0, Lcom/google/android/filament/Texture;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -448,6 +482,7 @@
 
     return-wide v0
 
+    .line 1076
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -461,6 +496,7 @@
 .method public getTarget()Lcom/google/android/filament/Texture$Sampler;
     .locals 3
 
+    .line 773
     invoke-static {}, Lcom/google/android/filament/Texture$Sampler;->values()[Lcom/google/android/filament/Texture$Sampler;
 
     move-result-object v0
@@ -481,6 +517,7 @@
 .method public getWidth(I)I
     .locals 2
 
+    .line 740
     invoke-virtual {p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v0
@@ -495,6 +532,7 @@
 .method public setExternalImage(Lcom/google/android/filament/Engine;J)V
     .locals 6
 
+    .line 946
     invoke-virtual {p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v0
@@ -513,20 +551,24 @@
 .method public setExternalStream(Lcom/google/android/filament/Engine;Lcom/google/android/filament/Stream;)V
     .locals 6
 
+    .line 975
     invoke-virtual {p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v0
 
+    .line 976
     invoke-virtual {p2}, Lcom/google/android/filament/Stream;->getNativeObject()J
 
     move-result-wide v4
 
+    .line 977
     invoke-static {v0, v1, v4, v5}, Lcom/google/android/filament/Texture;->nIsStreamValidForTexture(JJ)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 981
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v2
@@ -535,6 +577,7 @@
 
     return-void
 
+    .line 978
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -550,12 +593,14 @@
 
     move-object/from16 v0, p7
 
+    .line 851
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
     sget-object v2, Lcom/google/android/filament/Texture$Type;->COMPRESSED:Lcom/google/android/filament/Texture$Type;
 
     if-ne v1, v2, :cond_0
 
+    .line 852
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v3
@@ -568,6 +613,7 @@
 
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
+    .line 854
     invoke-virtual {v1}, Ljava/nio/Buffer;->remaining()I
 
     move-result v13
@@ -578,6 +624,7 @@
 
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
+    .line 855
     invoke-virtual {v1}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
     move-result v16
@@ -592,6 +639,7 @@
 
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->compressedFormat:Lcom/google/android/filament/Texture$CompressedFormat;
 
+    .line 856
     invoke-virtual {v1}, Lcom/google/android/filament/Texture$CompressedFormat;->ordinal()I
 
     move-result v19
@@ -614,12 +662,14 @@
 
     move/from16 v11, p6
 
+    .line 852
     invoke-static/range {v3 .. v21}, Lcom/google/android/filament/Texture;->nSetImageCompressed(JJIIIIILjava/nio/Buffer;IIIIIIILjava/lang/Object;Ljava/lang/Runnable;)I
 
     move-result v0
 
     goto :goto_0
 
+    .line 859
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
@@ -633,6 +683,7 @@
 
     iget-object v5, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
+    .line 861
     invoke-virtual {v5}, Ljava/nio/Buffer;->remaining()I
 
     move-result v11
@@ -643,6 +694,7 @@
 
     iget-object v5, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
+    .line 862
     invoke-virtual {v5}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
     move-result v14
@@ -655,6 +707,7 @@
 
     iget-object v5, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->format:Lcom/google/android/filament/Texture$Format;
 
+    .line 863
     invoke-virtual {v5}, Lcom/google/android/filament/Texture$Format;->ordinal()I
 
     move-result v17
@@ -677,6 +730,7 @@
 
     move/from16 v9, p6
 
+    .line 859
     invoke-static/range {v1 .. v19}, Lcom/google/android/filament/Texture;->nSetImage(JJIIIIILjava/nio/Buffer;IIIIIIILjava/lang/Object;Ljava/lang/Runnable;)I
 
     move-result v0
@@ -686,6 +740,7 @@
 
     return-void
 
+    .line 867
     :cond_1
     new-instance v0, Ljava/nio/BufferOverflowException;
 
@@ -697,6 +752,7 @@
 .method public setImage(Lcom/google/android/filament/Engine;ILcom/google/android/filament/Texture$PixelBufferDescriptor;)V
     .locals 8
 
+    .line 815
     invoke-virtual {p0, p2}, Lcom/google/android/filament/Texture;->getWidth(I)I
 
     move-result v5
@@ -727,12 +783,14 @@
 
     move-object/from16 v0, p3
 
+    .line 902
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
     sget-object v2, Lcom/google/android/filament/Texture$Type;->COMPRESSED:Lcom/google/android/filament/Texture$Type;
 
     if-ne v1, v2, :cond_0
 
+    .line 903
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
     move-result-wide v3
@@ -745,6 +803,7 @@
 
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
+    .line 904
     invoke-virtual {v1}, Ljava/nio/Buffer;->remaining()I
 
     move-result v9
@@ -755,6 +814,7 @@
 
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
+    .line 905
     invoke-virtual {v1}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
     move-result v12
@@ -765,6 +825,7 @@
 
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->compressedFormat:Lcom/google/android/filament/Texture$CompressedFormat;
 
+    .line 906
     invoke-virtual {v1}, Lcom/google/android/filament/Texture$CompressedFormat;->ordinal()I
 
     move-result v15
@@ -781,12 +842,14 @@
 
     move-object/from16 v18, v0
 
+    .line 903
     invoke-static/range {v3 .. v18}, Lcom/google/android/filament/Texture;->nSetImageCubemapCompressed(JJILjava/nio/Buffer;IIIIIII[ILjava/lang/Object;Ljava/lang/Runnable;)I
 
     move-result v0
 
     goto :goto_0
 
+    .line 909
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/Texture;->getNativeObject()J
 
@@ -800,6 +863,7 @@
 
     iget-object v5, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
+    .line 910
     invoke-virtual {v5}, Ljava/nio/Buffer;->remaining()I
 
     move-result v7
@@ -810,6 +874,7 @@
 
     iget-object v5, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
+    .line 911
     invoke-virtual {v5}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
     move-result v10
@@ -820,6 +885,7 @@
 
     iget-object v5, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->format:Lcom/google/android/filament/Texture$Format;
 
+    .line 912
     invoke-virtual {v5}, Lcom/google/android/filament/Texture$Format;->ordinal()I
 
     move-result v13
@@ -834,6 +900,7 @@
 
     move-object/from16 v16, v0
 
+    .line 909
     invoke-static/range {v1 .. v16}, Lcom/google/android/filament/Texture;->nSetImageCubemap(JJILjava/nio/Buffer;IIIIIII[ILjava/lang/Object;Ljava/lang/Runnable;)I
 
     move-result v0
@@ -843,6 +910,7 @@
 
     return-void
 
+    .line 916
     :cond_1
     new-instance v0, Ljava/nio/BufferOverflowException;
 

@@ -16,6 +16,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lkotlinx/serialization/SerializersKt__SerializersKt;->serializer(Lkotlin/reflect/KType;)Lkotlinx/serialization/KSerializer;
 
     move-result-object p0
@@ -37,6 +38,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lkotlinx/serialization/SerializersKt__SerializersKt;->serializer(Lkotlinx/serialization/modules/SerializersModule;Lkotlin/reflect/KType;)Lkotlinx/serialization/KSerializer;
 
     move-result-object p0
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lkotlinx/serialization/SerializersKt__SerializersKt;->serializerOrNull(Lkotlin/reflect/KClass;)Lkotlinx/serialization/KSerializer;
 
     move-result-object p0

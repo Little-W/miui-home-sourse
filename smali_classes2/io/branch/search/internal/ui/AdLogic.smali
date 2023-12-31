@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/internal/ui/AdLogic;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

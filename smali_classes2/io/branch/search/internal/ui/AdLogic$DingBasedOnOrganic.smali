@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/AdLogic$DingBasedOnOrganic;
 .super Lio/branch/search/internal/ui/AdLogic;
+.source "SourceFile"
 
 
 # annotations

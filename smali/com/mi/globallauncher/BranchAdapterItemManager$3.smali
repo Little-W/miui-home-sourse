@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/BranchAdapterItemManager$3;
 .super Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
+.source "BranchAdapterItemManager.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 71
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
 .method public areItemsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
     .locals 0
 
+    .line 74
     iget p0, p0, Lcom/mi/globallauncher/BranchAdapterItemManager$3;->viewType:I
 
     iget p1, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I

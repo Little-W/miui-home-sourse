@@ -1,5 +1,6 @@
 .class public Lio/branch/search/internal/interfaces/LocalInterface$a;
 .super Landroid/content/pm/LauncherApps$Callback;
+.source "SourceFile"
 
 
 # annotations

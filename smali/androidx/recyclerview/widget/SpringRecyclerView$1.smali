@@ -1,5 +1,6 @@
 .class Landroidx/recyclerview/widget/SpringRecyclerView$1;
 .super Lmiuix/spring/view/SpringHelper;
+.source "SpringRecyclerView.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/SpringRecyclerView;)V
     .locals 0
 
+    .line 210
     iput-object p1, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-direct {p0}, Lmiuix/spring/view/SpringHelper;-><init>()V
@@ -33,6 +35,7 @@
 .method protected canScrollHorizontally()Z
     .locals 1
 
+    .line 213
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/SpringRecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -63,6 +66,7 @@
 .method protected canScrollVertically()Z
     .locals 1
 
+    .line 218
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/SpringRecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -93,6 +97,7 @@
 .method protected dispatchNestedPreScroll(II[I[II)Z
     .locals 6
 
+    .line 245
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$300(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -109,10 +114,12 @@
 
     if-nez v0, :cond_0
 
+    .line 246
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$302(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 249
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
@@ -128,10 +135,12 @@
 
     if-nez v0, :cond_1
 
+    .line 250
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$402(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 253
     :cond_1
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
@@ -165,6 +174,7 @@
 
     move v10, p4
 
+    .line 258
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$500(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;
@@ -187,6 +197,7 @@
 
     invoke-virtual/range {v1 .. v8}, Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;->super_dispatchNestedScroll(IIII[II[I)V
 
+    .line 260
     invoke-virtual {p0}, Landroidx/recyclerview/widget/SpringRecyclerView$1;->springAvailable()Z
 
     move-result v1
@@ -203,6 +214,7 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 261
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$300(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -219,6 +231,7 @@
 
     if-eqz v9, :cond_0
 
+    .line 262
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$700(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;
@@ -227,6 +240,7 @@
 
     invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->notifyHorizontalEdgeReached(I)V
 
+    .line 264
     :cond_0
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
@@ -244,6 +258,7 @@
 
     if-eqz v10, :cond_1
 
+    .line 265
     iget-object v0, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$700(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;
@@ -259,6 +274,7 @@
 .method protected getHeight()I
     .locals 0
 
+    .line 223
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/SpringRecyclerView;->getHeight()I
@@ -271,6 +287,7 @@
 .method protected getWidth()I
     .locals 0
 
+    .line 228
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/SpringRecyclerView;->getWidth()I
@@ -283,6 +300,7 @@
 .method protected springAvailable()Z
     .locals 0
 
+    .line 233
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {p0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$200(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -295,6 +313,7 @@
 .method protected vibrate()V
     .locals 1
 
+    .line 239
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_SCROLL_EDGE:I

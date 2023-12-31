@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/util/ContentLengthInputStream;
 .super Ljava/io/FilterInputStream;
+.source "ContentLengthInputStream.java"
 
 
 # instance fields
@@ -12,8 +13,10 @@
 .method private constructor <init>(Ljava/io/InputStream;J)V
     .locals 0
 
+    .line 48
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
+    .line 49
     iput-wide p2, p0, Lcom/bumptech/glide/util/ContentLengthInputStream;->contentLength:J
 
     return-void
@@ -29,6 +32,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 77
     iget v0, p0, Lcom/bumptech/glide/util/ContentLengthInputStream;->readSoFar:I
 
     add-int/2addr v0, p1
@@ -37,6 +41,7 @@
 
     goto :goto_0
 
+    .line 78
     :cond_0
     iget-wide v0, p0, Lcom/bumptech/glide/util/ContentLengthInputStream;->contentLength:J
 
@@ -55,6 +60,7 @@
     :goto_0
     return p1
 
+    .line 79
     :cond_1
     new-instance p1, Ljava/io/IOException;
 
@@ -90,6 +96,7 @@
 .method public static obtain(Ljava/io/InputStream;J)Ljava/io/InputStream;
     .locals 1
 
+    .line 30
     new-instance v0, Lcom/bumptech/glide/util/ContentLengthInputStream;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/bumptech/glide/util/ContentLengthInputStream;-><init>(Ljava/io/InputStream;J)V
@@ -109,6 +116,7 @@
 
     monitor-enter p0
 
+    .line 54
     :try_start_0
     iget-wide v0, p0, Lcom/bumptech/glide/util/ContentLengthInputStream;->contentLength:J
 
@@ -156,6 +164,7 @@
 
     monitor-enter p0
 
+    .line 59
     :try_start_0
     invoke-super {p0}, Ljava/io/FilterInputStream;->read()I
 
@@ -170,11 +179,13 @@
     :cond_0
     const/4 v1, -0x1
 
+    .line 60
     :goto_0
     invoke-direct {p0, v1}, Lcom/bumptech/glide/util/ContentLengthInputStream;->checkReadSoFarOrThrow(I)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 61
     monitor-exit p0
 
     return v0
@@ -195,6 +206,7 @@
         }
     .end annotation
 
+    .line 66
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -216,6 +228,7 @@
 
     monitor-enter p0
 
+    .line 72
     :try_start_0
     invoke-super {p0, p1, p2, p3}, Ljava/io/FilterInputStream;->read([BII)I
 

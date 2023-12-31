@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlin/collections/Grouping;
 .super Ljava/lang/Object;
+.source "Grouping.kt"
 
 
 # annotations

@@ -1,11 +1,13 @@
 .class public Lcom/google/android/material/resources/TypefaceUtils;
 .super Ljava/lang/Object;
+.source "TypefaceUtils.java"
 
 
 # direct methods
 .method public static maybeCopyWithFontWeightAdjustment(Landroid/content/Context;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
     .locals 0
 
+    .line 45
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -24,6 +26,7 @@
 .method public static maybeCopyWithFontWeightAdjustment(Landroid/content/res/Configuration;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
     .locals 2
 
+    .line 52
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1f
@@ -40,6 +43,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 57
     invoke-virtual {p1}, Landroid/graphics/Typeface;->getWeight()I
 
     move-result v0
@@ -52,10 +56,12 @@
 
     const/16 v1, 0x3e8
 
+    .line 56
     invoke-static {v0, p0, v1}, Landroidx/core/math/MathUtils;->clamp(III)I
 
     move-result p0
 
+    .line 60
     invoke-virtual {p1}, Landroid/graphics/Typeface;->isItalic()Z
 
     move-result v0

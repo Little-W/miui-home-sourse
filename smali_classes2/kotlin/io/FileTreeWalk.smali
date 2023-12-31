@@ -1,5 +1,6 @@
 .class public final Lkotlin/io/FileTreeWalk;
 .super Ljava/lang/Object;
+.source "FileTreeWalk.kt"
 
 # interfaces
 .implements Lkotlin/sequences/Sequence;
@@ -96,6 +97,7 @@
 
     move-object v3, p2
 
+    .line 46
     invoke-direct/range {v1 .. v9}, Lkotlin/io/FileTreeWalk;-><init>(Ljava/io/File;Lkotlin/io/FileWalkDirection;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
@@ -128,6 +130,7 @@
         }
     .end annotation
 
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/io/FileTreeWalk;->start:Ljava/io/File;
@@ -152,6 +155,7 @@
 
     if-eqz p8, :cond_0
 
+    .line 39
     sget-object p2, Lkotlin/io/FileWalkDirection;->TOP_DOWN:Lkotlin/io/FileWalkDirection;
 
     :cond_0
@@ -176,6 +180,7 @@
 
     move-object v5, p5
 
+    .line 43
     invoke-direct/range {v0 .. v6}, Lkotlin/io/FileTreeWalk;-><init>(Ljava/io/File;Lkotlin/io/FileWalkDirection;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;I)V
 
     return-void
@@ -184,6 +189,7 @@
 .method public static final synthetic access$getDirection$p(Lkotlin/io/FileTreeWalk;)Lkotlin/io/FileWalkDirection;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlin/io/FileTreeWalk;->direction:Lkotlin/io/FileWalkDirection;
 
     return-object p0
@@ -192,6 +198,7 @@
 .method public static final synthetic access$getMaxDepth$p(Lkotlin/io/FileTreeWalk;)I
     .locals 0
 
+    .line 37
     iget p0, p0, Lkotlin/io/FileTreeWalk;->maxDepth:I
 
     return p0
@@ -200,6 +207,7 @@
 .method public static final synthetic access$getOnEnter$p(Lkotlin/io/FileTreeWalk;)Lkotlin/jvm/functions/Function1;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlin/io/FileTreeWalk;->onEnter:Lkotlin/jvm/functions/Function1;
 
     return-object p0
@@ -208,6 +216,7 @@
 .method public static final synthetic access$getOnFail$p(Lkotlin/io/FileTreeWalk;)Lkotlin/jvm/functions/Function2;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlin/io/FileTreeWalk;->onFail:Lkotlin/jvm/functions/Function2;
 
     return-object p0
@@ -216,6 +225,7 @@
 .method public static final synthetic access$getOnLeave$p(Lkotlin/io/FileTreeWalk;)Lkotlin/jvm/functions/Function1;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlin/io/FileTreeWalk;->onLeave:Lkotlin/jvm/functions/Function1;
 
     return-object p0
@@ -224,6 +234,7 @@
 .method public static final synthetic access$getStart$p(Lkotlin/io/FileTreeWalk;)Ljava/io/File;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlin/io/FileTreeWalk;->start:Ljava/io/File;
 
     return-object p0
@@ -242,6 +253,7 @@
         }
     .end annotation
 
+    .line 50
     new-instance v0, Lkotlin/io/FileTreeWalk$FileTreeWalkIterator;
 
     invoke-direct {v0, p0}, Lkotlin/io/FileTreeWalk$FileTreeWalkIterator;-><init>(Lkotlin/io/FileTreeWalk;)V

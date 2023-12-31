@@ -1,5 +1,6 @@
 .class public final Lkotlin/internal/PlatformImplementationsKt;
 .super Ljava/lang/Object;
+.source "PlatformImplementations.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 11
 
+    .line 51
     invoke-static {}, Lkotlin/internal/PlatformImplementationsKt;->getJavaVersion()I
 
     move-result v0
@@ -31,6 +33,7 @@
     :try_start_0
     const-string v6, "kotlin.internal.jdk8.JDK8PlatformImplementations"
 
+    .line 54
     invoke-static {v6}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v6
@@ -117,6 +120,7 @@
     :try_start_3
     const-string v6, "kotlin.internal.JRE8PlatformImplementations"
 
+    .line 57
     invoke-static {v6}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v6
@@ -208,6 +212,7 @@
     :try_start_6
     const-string v0, "kotlin.internal.jdk7.JDK7PlatformImplementations"
 
+    .line 63
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -296,6 +301,7 @@
     :try_start_9
     const-string v0, "kotlin.internal.JRE7PlatformImplementations"
 
+    .line 66
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -380,12 +386,14 @@
     :try_end_b
     .catch Ljava/lang/ClassNotFoundException; {:try_start_b .. :try_end_b} :catch_7
 
+    .line 70
     :catch_7
     :cond_5
     new-instance v6, Lkotlin/internal/PlatformImplementations;
 
     invoke-direct {v6}, Lkotlin/internal/PlatformImplementations;-><init>()V
 
+    .line 50
     :goto_4
     sput-object v6, Lkotlin/internal/PlatformImplementationsKt;->IMPLEMENTATIONS:Lkotlin/internal/PlatformImplementations;
 
@@ -397,6 +405,7 @@
 
     const-string v0, "java.specification.version"
 
+    .line 86
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -405,6 +414,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 87
     move-object v8, v0
 
     check-cast v8, Ljava/lang/CharSequence;
@@ -429,6 +439,7 @@
 
     if-gez v9, :cond_0
 
+    .line 89
     :try_start_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -456,12 +467,14 @@
 
     move v4, v11
 
+    .line 91
     invoke-static/range {v2 .. v7}, Lkotlin/text/StringsKt;->indexOf$default(Ljava/lang/CharSequence;CIZILjava/lang/Object;)I
 
     move-result v2
 
     if-gez v2, :cond_1
 
+    .line 92
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -473,6 +486,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 94
     invoke-virtual {v0, v3, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
@@ -483,12 +497,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 95
     invoke-virtual {v0, v11, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 97
     :try_start_1
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -507,6 +523,7 @@
     :catch_1
     return v1
 
+    .line 95
     :cond_2
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -514,6 +531,7 @@
 
     throw v0
 
+    .line 94
     :cond_3
     new-instance v0, Ljava/lang/NullPointerException;
 

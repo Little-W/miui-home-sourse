@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/airbnb/lottie/animation/content/DrawingContent;
 .super Ljava/lang/Object;
+.source "DrawingContent.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/animation/content/Content;

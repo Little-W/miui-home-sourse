@@ -20,6 +20,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,14 +29,17 @@
 .method public static a()V
     .locals 5
 
+    .line 14
     sget-object v0, Lcom/xiaomi/onetrack/c/a;->c:Landroid/os/Handler;
 
     if-nez v0, :cond_1
 
+    .line 15
     const-class v0, Lcom/xiaomi/onetrack/c/a;
 
     monitor-enter v0
 
+    .line 16
     :try_start_0
     sget-object v1, Lcom/xiaomi/onetrack/c/a;->c:Landroid/os/Handler;
 
@@ -43,6 +47,7 @@
 
     const-string v1, "BroadcastExecutor"
 
+    .line 17
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,14 +72,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 18
     new-instance v1, Landroid/os/HandlerThread;
 
     sget-object v2, Lcom/xiaomi/onetrack/c/a;->b:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
+    .line 19
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
+    .line 20
     new-instance v2, Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -85,6 +93,7 @@
 
     sput-object v2, Lcom/xiaomi/onetrack/c/a;->c:Landroid/os/Handler;
 
+    .line 22
     :cond_0
     monitor-exit v0
 
@@ -107,6 +116,7 @@
 .method public static a(Ljava/lang/Runnable;)V
     .locals 3
 
+    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -133,8 +143,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 28
     invoke-static {}, Lcom/xiaomi/onetrack/c/a;->a()V
 
+    .line 29
     sget-object v0, Lcom/xiaomi/onetrack/c/a;->c:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z

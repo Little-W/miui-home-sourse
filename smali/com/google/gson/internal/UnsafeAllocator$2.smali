@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/UnsafeAllocator$2;
 .super Lcom/google/gson/internal/UnsafeAllocator;
+.source "UnsafeAllocator.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Ljava/lang/reflect/Method;I)V
     .locals 0
 
+    .line 69
     iput-object p1, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$newInstance:Ljava/lang/reflect/Method;
 
     iput p2, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$constructorId:I
@@ -52,8 +54,10 @@
         }
     .end annotation
 
+    .line 73
     invoke-static {p1}, Lcom/google/gson/internal/UnsafeAllocator$2;->assertInstantiable(Ljava/lang/Class;)V
 
+    .line 74
     iget-object v0, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$newInstance:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x2

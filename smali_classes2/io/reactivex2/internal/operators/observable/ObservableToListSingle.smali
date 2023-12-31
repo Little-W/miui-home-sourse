@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/internal/operators/observable/ObservableToListSingle;
 .super Lio/reactivex2/Single;
+.source "ObservableToListSingle.java"
 
 
 # annotations
@@ -53,10 +54,13 @@
         }
     .end annotation
 
+    .line 38
     invoke-direct {p0}, Lio/reactivex2/Single;-><init>()V
 
+    .line 39
     iput-object p1, p0, Lio/reactivex2/internal/operators/observable/ObservableToListSingle;->source:Lio/reactivex2/ObservableSource;
 
+    .line 40
     invoke-static {p2}, Lio/reactivex2/internal/functions/Functions;->createArrayList(I)Ljava/util/concurrent/Callable;
 
     move-result-object p1
@@ -78,6 +82,7 @@
         }
     .end annotation
 
+    .line 52
     :try_start_0
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableToListSingle;->collectionSupplier:Ljava/util/concurrent/Callable;
 
@@ -95,6 +100,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 58
     iget-object p0, p0, Lio/reactivex2/internal/operators/observable/ObservableToListSingle;->source:Lio/reactivex2/ObservableSource;
 
     new-instance v1, Lio/reactivex2/internal/operators/observable/ObservableToListSingle$ToListObserver;
@@ -108,8 +114,10 @@
     :catchall_0
     move-exception p0
 
+    .line 54
     invoke-static {p0}, Lio/reactivex2/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
+    .line 55
     invoke-static {p0, p1}, Lio/reactivex2/internal/disposables/EmptyDisposable;->error(Ljava/lang/Throwable;Lio/reactivex2/SingleObserver;)V
 
     return-void

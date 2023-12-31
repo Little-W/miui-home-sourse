@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;
 .super Ljava/lang/Object;
+.source "CachedSettingsIo.java"
 
 
 # instance fields
@@ -10,10 +11,12 @@
 .method public constructor <init>(Lcom/google/firebase/crashlytics/internal/persistence/FileStore;)V
     .locals 1
 
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "com.crashlytics.settings.json"
 
+    .line 35
     invoke-virtual {p1, v0}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->getCommonFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p1
@@ -26,6 +29,7 @@
 .method private getSettingsFile()Ljava/io/File;
     .locals 0
 
+    .line 39
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;->cachedSettingsFile:Ljava/io/File;
 
     return-object p0
@@ -38,6 +42,7 @@
 
     const-string v0, "Error while closing settings cache file."
 
+    .line 47
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v1
@@ -48,17 +53,20 @@
 
     const/4 v1, 0x0
 
+    .line 53
     :try_start_0
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;->getSettingsFile()Ljava/io/File;
 
     move-result-object p0
 
+    .line 55
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 56
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -66,11 +74,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 57
     :try_start_1
     invoke-static {v2}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->streamToString(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 59
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
@@ -87,6 +97,7 @@
 
     goto :goto_1
 
+    .line 61
     :cond_0
     :try_start_2
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
@@ -102,6 +113,7 @@
 
     move-object v3, v1
 
+    .line 66
     :goto_0
     invoke-static {v1, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
@@ -119,6 +131,7 @@
 
     move-object v2, v1
 
+    .line 64
     :goto_1
     :try_start_3
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
@@ -131,6 +144,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 66
     invoke-static {v2, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
     :goto_2
@@ -144,6 +158,7 @@
     :goto_3
     invoke-static {v1, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
+    .line 67
     throw p0
 .end method
 
@@ -152,6 +167,7 @@
 
     const-string v0, "Failed to close settings writer."
 
+    .line 80
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v1
@@ -167,8 +183,10 @@
     :try_start_0
     const-string v2, "expires_at"
 
+    .line 86
     invoke-virtual {p3, v2, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
+    .line 88
     new-instance p1, Ljava/io/FileWriter;
 
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/settings/CachedSettingsIo;->getSettingsFile()Ljava/io/File;
@@ -180,6 +198,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 89
     :try_start_1
     invoke-virtual {p3}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -187,11 +206,13 @@
 
     invoke-virtual {p1, p0}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
+    .line 90
     invoke-virtual {p1}, Ljava/io/FileWriter;->flush()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 94
     invoke-static {p1, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
     goto :goto_2
@@ -218,6 +239,7 @@
     :catch_1
     move-exception p0
 
+    .line 92
     :goto_0
     :try_start_2
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
@@ -230,6 +252,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 94
     invoke-static {v1, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
     goto :goto_2
@@ -237,6 +260,7 @@
     :goto_1
     invoke-static {v1, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
+    .line 95
     throw p0
 
     :cond_0

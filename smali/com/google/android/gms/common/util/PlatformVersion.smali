@@ -14,6 +14,7 @@
 .method public static isAtLeastJellyBeanMR2()Z
     .locals 2
 
+    .line 9
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
@@ -33,6 +34,7 @@
 .method public static isAtLeastKitKat()Z
     .locals 2
 
+    .line 10
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -52,6 +54,7 @@
 .method public static isAtLeastKitKatWatch()Z
     .locals 2
 
+    .line 11
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x14
@@ -71,6 +74,7 @@
 .method public static isAtLeastLollipop()Z
     .locals 2
 
+    .line 12
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -90,6 +94,7 @@
 .method public static isAtLeastN()Z
     .locals 2
 
+    .line 15
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -109,6 +114,7 @@
 .method public static isAtLeastO()Z
     .locals 2
 
+    .line 16
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a

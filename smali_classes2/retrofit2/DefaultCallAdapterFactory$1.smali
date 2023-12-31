@@ -1,5 +1,6 @@
 .class Lretrofit2/DefaultCallAdapterFactory$1;
 .super Ljava/lang/Object;
+.source "DefaultCallAdapterFactory.java"
 
 # interfaces
 .implements Lretrofit2/CallAdapter;
@@ -36,6 +37,7 @@
 .method constructor <init>(Lretrofit2/DefaultCallAdapterFactory;Ljava/lang/reflect/Type;)V
     .locals 0
 
+    .line 36
     iput-object p1, p0, Lretrofit2/DefaultCallAdapterFactory$1;->this$0:Lretrofit2/DefaultCallAdapterFactory;
 
     iput-object p2, p0, Lretrofit2/DefaultCallAdapterFactory$1;->val$responseType:Ljava/lang/reflect/Type;
@@ -50,6 +52,7 @@
 .method public bridge synthetic adapt(Lretrofit2/Call;)Ljava/lang/Object;
     .locals 0
 
+    .line 36
     invoke-virtual {p0, p1}, Lretrofit2/DefaultCallAdapterFactory$1;->adapt(Lretrofit2/Call;)Lretrofit2/Call;
 
     move-result-object p0
@@ -77,6 +80,7 @@
 .method public responseType()Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 38
     iget-object p0, p0, Lretrofit2/DefaultCallAdapterFactory$1;->val$responseType:Ljava/lang/reflect/Type;
 
     return-object p0

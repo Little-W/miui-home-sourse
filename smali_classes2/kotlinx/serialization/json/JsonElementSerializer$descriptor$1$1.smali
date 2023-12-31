@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/json/JsonElementSerializer$descriptor$1$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "JsonElementSerializers.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -57,6 +58,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 30
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonElementSerializer$descriptor$1$1;->invoke()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -67,6 +69,7 @@
 .method public final invoke()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 34
     sget-object p0, Lkotlinx/serialization/json/JsonPrimitiveSerializer;->INSTANCE:Lkotlinx/serialization/json/JsonPrimitiveSerializer;
 
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonPrimitiveSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/View$DepthOfFieldOptions;
 .super Ljava/lang/Object;
+.source "View.java"
 
 
 # annotations
@@ -27,22 +28,27 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 332
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x41200000    # 10.0f
 
+    .line 335
     iput v0, p0, Lcom/google/android/filament/View$DepthOfFieldOptions;->focusDistance:F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 338
     iput v0, p0, Lcom/google/android/filament/View$DepthOfFieldOptions;->blurScale:F
 
     const v0, 0x3c23d70a    # 0.01f
 
+    .line 341
     iput v0, p0, Lcom/google/android/filament/View$DepthOfFieldOptions;->maxApertureDiameter:F
 
     const/4 v0, 0x0
 
+    .line 344
     iput-boolean v0, p0, Lcom/google/android/filament/View$DepthOfFieldOptions;->enabled:Z
 
     return-void

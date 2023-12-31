@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/encrypt/okhttp/EncryptInterceptor$ExceptionReporter;
 .super Ljava/lang/Object;
+.source "EncryptInterceptor.java"
 
 
 # annotations

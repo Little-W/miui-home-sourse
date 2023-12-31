@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/WindowConfiguration;
 .super Ljava/lang/Object;
+.source "WindowConfiguration.java"
 
 
 # static fields
@@ -42,6 +43,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

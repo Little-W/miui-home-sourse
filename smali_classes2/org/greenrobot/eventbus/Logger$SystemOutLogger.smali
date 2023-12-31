@@ -1,5 +1,6 @@
 .class public Lorg/greenrobot/eventbus/Logger$SystemOutLogger;
 .super Ljava/lang/Object;
+.source "Logger.java"
 
 # interfaces
 .implements Lorg/greenrobot/eventbus/Logger;
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public log(Ljava/util/logging/Level;Ljava/lang/String;)V
     .locals 2
 
+    .line 108
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -60,6 +63,7 @@
 .method public log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 113
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -84,6 +88,7 @@
 
     invoke-virtual {p0, p1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 114
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {p3, p0}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintStream;)V

@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/DefaultSpecialEffectsController$6;
 .super Ljava/lang/Object;
+.source "DefaultSpecialEffectsController.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -32,6 +33,7 @@
 .method constructor <init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/fragment/app/SpecialEffectsController$Operation;ZLandroidx/collection/ArrayMap;)V
     .locals 0
 
+    .line 454
     iput-object p1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$6;->this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
     iput-object p2, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$6;->val$lastIn:Landroidx/fragment/app/SpecialEffectsController$Operation;
@@ -52,8 +54,10 @@
 .method public run()V
     .locals 4
 
+    .line 457
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$6;->val$lastIn:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
+    .line 458
     invoke-virtual {v0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -70,6 +74,7 @@
 
     const/4 v3, 0x0
 
+    .line 457
     invoke-static {v0, v1, v2, p0, v3}, Landroidx/fragment/app/FragmentTransition;->callSharedElementStartEnd(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/ArrayMap;Z)V
 
     return-void

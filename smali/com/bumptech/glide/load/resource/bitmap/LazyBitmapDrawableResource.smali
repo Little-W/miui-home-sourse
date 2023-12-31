@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;
 .super Ljava/lang/Object;
+.source "LazyBitmapDrawableResource.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/Initializable;
@@ -45,8 +46,10 @@
         }
     .end annotation
 
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 61
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -55,6 +58,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->resources:Landroid/content/res/Resources;
 
+    .line 62
     invoke-static {p2}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -87,6 +91,7 @@
 
     return-object p0
 
+    .line 55
     :cond_0
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;
 
@@ -100,6 +105,7 @@
 .method public get()Landroid/graphics/drawable/BitmapDrawable;
     .locals 2
 
+    .line 74
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->resources:Landroid/content/res/Resources;
@@ -120,6 +126,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 19
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->get()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object p0
@@ -138,6 +145,7 @@
         }
     .end annotation
 
+    .line 68
     const-class p0, Landroid/graphics/drawable/BitmapDrawable;
 
     return-object p0
@@ -146,6 +154,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 79
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->bitmapResource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Resource;->getSize()I
@@ -158,12 +167,14 @@
 .method public initialize()V
     .locals 1
 
+    .line 89
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->bitmapResource:Lcom/bumptech/glide/load/engine/Resource;
 
     instance-of v0, p0, Lcom/bumptech/glide/load/engine/Initializable;
 
     if-eqz v0, :cond_0
 
+    .line 90
     check-cast p0, Lcom/bumptech/glide/load/engine/Initializable;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Initializable;->initialize()V
@@ -175,6 +186,7 @@
 .method public recycle()V
     .locals 0
 
+    .line 84
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->bitmapResource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V

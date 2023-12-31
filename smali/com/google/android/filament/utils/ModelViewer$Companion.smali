@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/ModelViewer$Companion;
 .super Ljava/lang/Object;
+.source "ModelViewer.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 346
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 346
     invoke-direct {p0}, Lcom/google/android/filament/utils/ModelViewer$Companion;-><init>()V
 
     return-void

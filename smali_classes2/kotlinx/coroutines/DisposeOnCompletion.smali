@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/DisposeOnCompletion;
 .super Lkotlinx/coroutines/JobNode;
+.source "JobSupport.kt"
 
 
 # annotations
@@ -20,6 +21,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/Job;Lkotlinx/coroutines/DisposableHandle;)V
     .locals 0
 
+    .line 1420
     invoke-direct {p0, p1}, Lkotlinx/coroutines/JobNode;-><init>(Lkotlinx/coroutines/Job;)V
 
     iput-object p2, p0, Lkotlinx/coroutines/DisposeOnCompletion;->handle:Lkotlinx/coroutines/DisposableHandle;
@@ -32,6 +34,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1417
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/DisposeOnCompletion;->invoke(Ljava/lang/Throwable;)V
@@ -44,6 +47,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1421
     iget-object p0, p0, Lkotlinx/coroutines/DisposeOnCompletion;->handle:Lkotlinx/coroutines/DisposableHandle;
 
     invoke-interface {p0}, Lkotlinx/coroutines/DisposableHandle;->dispose()V
@@ -54,6 +58,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1422
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

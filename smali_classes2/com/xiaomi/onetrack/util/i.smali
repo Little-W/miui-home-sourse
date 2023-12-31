@@ -12,6 +12,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
+    .line 15
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -26,6 +27,7 @@
 
     sput v0, Lcom/xiaomi/onetrack/util/i;->b:I
 
+    .line 25
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget v4, Lcom/xiaomi/onetrack/util/i;->b:I
@@ -46,6 +48,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/util/i;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 
+    .line 31
     sget-object v0, Lcom/xiaomi/onetrack/util/i;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
@@ -56,6 +59,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,6 +68,7 @@
 .method public static a(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 36
     :try_start_0
     sget-object v0, Lcom/xiaomi/onetrack/util/i;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$LogEventDroppedEncoder;
 .super Ljava/lang/Object;
+.source "AutoProtoEncoderDoNotUseEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -37,6 +38,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 129
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$LogEventDroppedEncoder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$LogEventDroppedEncoder;-><init>()V
@@ -45,28 +47,34 @@
 
     const-string v0, "eventsDroppedCount"
 
+    .line 131
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->builder(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 132
     invoke-static {}, Lcom/google/firebase/encoders/proto/AtProtobuf;->builder()Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
+    .line 133
     invoke-virtual {v1, v2}, Lcom/google/firebase/encoders/proto/AtProtobuf;->tag(I)Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
+    .line 134
     invoke-virtual {v1}, Lcom/google/firebase/encoders/proto/AtProtobuf;->build()Lcom/google/firebase/encoders/proto/Protobuf;
 
     move-result-object v1
 
+    .line 132
     invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->withProperty(Ljava/lang/annotation/Annotation;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 135
     invoke-virtual {v0}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->build()Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -75,28 +83,34 @@
 
     const-string v0, "reason"
 
+    .line 137
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->builder(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 138
     invoke-static {}, Lcom/google/firebase/encoders/proto/AtProtobuf;->builder()Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
+    .line 139
     invoke-virtual {v1, v2}, Lcom/google/firebase/encoders/proto/AtProtobuf;->tag(I)Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
+    .line 140
     invoke-virtual {v1}, Lcom/google/firebase/encoders/proto/AtProtobuf;->build()Lcom/google/firebase/encoders/proto/Protobuf;
 
     move-result-object v1
 
+    .line 138
     invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->withProperty(Ljava/lang/annotation/Annotation;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 141
     invoke-virtual {v0}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->build()Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -109,6 +123,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -124,6 +139,7 @@
         }
     .end annotation
 
+    .line 145
     sget-object p0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$LogEventDroppedEncoder;->EVENTSDROPPEDCOUNT_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;->getEventsDroppedCount()J
@@ -132,6 +148,7 @@
 
     invoke-interface {p2, p0, v0, v1}, Lcom/google/firebase/encoders/ObjectEncoderContext;->add(Lcom/google/firebase/encoders/FieldDescriptor;J)Lcom/google/firebase/encoders/ObjectEncoderContext;
 
+    .line 146
     sget-object p0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$LogEventDroppedEncoder;->REASON_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;->getReason()Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
@@ -151,6 +168,7 @@
         }
     .end annotation
 
+    .line 128
     check-cast p1, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

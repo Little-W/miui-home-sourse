@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;
 .super Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+.source "BranchLinearAndGridAdapter.java"
 
 
 # annotations
@@ -31,12 +32,16 @@
 .method public constructor <init>(Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;Landroid/view/View;)V
     .locals 0
 
+    .line 110
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
+    .line 111
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
+    .line 112
     iput-object p2, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->itemView:Landroid/view/View;
 
+    .line 113
     sget p1, Lcom/mi/globallauncher/R$id;->item_container:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -47,6 +52,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->container:Landroid/widget/RelativeLayout;
 
+    .line 114
     sget p1, Lcom/mi/globallauncher/R$id;->item_icon:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -57,6 +63,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->imageView:Landroid/widget/ImageView;
 
+    .line 115
     sget p1, Lcom/mi/globallauncher/R$id;->item_name:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -67,6 +74,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->textView:Landroid/widget/TextView;
 
+    .line 116
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -83,8 +91,10 @@
 
     const/4 p2, 0x5
 
+    .line 127
     invoke-static {p2}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchResultClick(I)V
 
+    .line 128
     iget-object p2, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
     invoke-static {p2}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->access$200(Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;)Z
@@ -95,8 +105,10 @@
 
     const/4 p2, 0x3
 
+    .line 129
     invoke-static {p2}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackLocalAppsClick(I)V
 
+    .line 131
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSearchResultUtils()Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;
 
@@ -112,6 +124,7 @@
 .method public updateView(Lio/branch/search/BranchLinkResult;)V
     .locals 2
 
+    .line 120
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,6 +157,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 122
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->access$000(Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;)Ljava/util/List;
@@ -166,6 +180,7 @@
 
     goto :goto_0
 
+    .line 125
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->context:Landroid/content/Context;
 
@@ -175,6 +190,7 @@
 
     if-nez v0, :cond_2
 
+    .line 126
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->container:Landroid/widget/RelativeLayout;
 
     new-instance v1, Lcom/mi/globallauncher/local/-$$Lambda$BranchLinearAndGridAdapter$BranchGridViewHolder$rdiN7y9ojj2IbdEVUXFljpGOIbY;
@@ -183,6 +199,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 133
     invoke-static {}, Lcom/squareup/picasso/Picasso;->get()Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
@@ -197,6 +214,7 @@
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->place_holder:I
 
+    .line 134
     invoke-virtual {v0, v1}, Lcom/squareup/picasso/RequestCreator;->placeholder(I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object v0
@@ -205,14 +223,17 @@
 
     invoke-direct {v1}, Lcom/mi/globallauncher/util/RoundTransform;-><init>()V
 
+    .line 135
     invoke-virtual {v0, v1}, Lcom/squareup/picasso/RequestCreator;->transform(Lcom/squareup/picasso/Transformation;)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->imageView:Landroid/widget/ImageView;
 
+    .line 136
     invoke-virtual {v0, v1}, Lcom/squareup/picasso/RequestCreator;->into(Landroid/widget/ImageView;)V
 
+    .line 137
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Lio/branch/search/BranchLinkResult;->getName()Ljava/lang/String;
@@ -221,6 +242,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 138
     iget-object p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
     invoke-static {p1}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->access$100(Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;)Z
@@ -229,6 +251,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 139
     iget-object p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->textView:Landroid/widget/TextView;
 
     iget-object p0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->context:Landroid/content/Context;
@@ -243,6 +266,7 @@
 
     goto :goto_0
 
+    .line 141
     :cond_1
     iget-object p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;->textView:Landroid/widget/TextView;
 

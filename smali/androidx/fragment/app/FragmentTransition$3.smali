@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/FragmentTransition$3;
 .super Ljava/lang/Object;
+.source "FragmentTransition.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -28,6 +29,7 @@
 .method constructor <init>(Landroidx/fragment/app/FragmentTransition$Callback;Landroidx/fragment/app/Fragment;Landroidx/core/os/CancellationSignal;)V
     .locals 0
 
+    .line 396
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransition$3;->val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransition$3;->val$outFragment:Landroidx/fragment/app/Fragment;
@@ -44,6 +46,7 @@
 .method public run()V
     .locals 2
 
+    .line 399
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$3;->val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
 
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$3;->val$outFragment:Landroidx/fragment/app/Fragment;

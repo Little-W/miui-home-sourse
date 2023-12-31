@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;
 .super Ljava/lang/Object;
+.source "HandoffControllerManager.java"
 
 
 # instance fields
@@ -35,42 +36,51 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 2
 
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     new-array v1, v0, [Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 36
     iput-object v1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     new-array v0, v0, [Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 38
     iput-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 42
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 43
     invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mTaskListenerMap:Ljava/util/Map;
 
+    .line 147
     new-instance v0, Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$w-WxA92rbIT0qx63GLLoo941pEY;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$w-WxA92rbIT0qx63GLLoo941pEY;-><init>(Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;)V
 
     iput-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mInnerCallback:Lcom/xiaomi/dist/handoff/system/TaskListenerInner;
 
+    .line 48
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mContext:Landroid/content/Context;
 
+    .line 49
     invoke-static {}, Lcom/xiaomi/dist/handoff/system/MiuiRelayController;->getInstance()Lcom/xiaomi/dist/handoff/system/MiuiRelayController;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayController:Lcom/xiaomi/dist/handoff/system/MiuiRelayController;
 
+    .line 50
     new-instance v0, Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     invoke-direct {v0, p1}, Lcom/xiaomi/dist/handoff/system/HandoffController;-><init>(Landroid/content/Context;)V
@@ -87,8 +97,10 @@
 
     const-string v1, "getAllHandoffTask"
 
+    .line 188
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 189
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
@@ -99,10 +111,12 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 190
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
+    .line 191
     :cond_0
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -111,27 +125,32 @@
 
     if-eqz v3, :cond_2
 
+    .line 192
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 193
     invoke-virtual {v3}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getAppMeta()Lcom/xiaomi/dist/handoff/AppMeta;
 
     move-result-object v4
 
     if-nez v4, :cond_1
 
+    .line 195
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
+    .line 198
     :cond_1
     invoke-virtual {v4}, Lcom/xiaomi/dist/handoff/AppMeta;->getAndroidPackageName()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 199
     iget-object v5, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mContext:Landroid/content/Context;
 
     invoke-static {v5, v4}, Lcom/xiaomi/dist/handoff/system/PackageReceiver;->checkPackageInstalled(Landroid/content/Context;Ljava/lang/String;)Z
@@ -140,6 +159,7 @@
 
     if-nez v4, :cond_0
 
+    .line 200
     invoke-virtual {v3}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->isSupportAppLink()Z
 
     move-result v3
@@ -152,6 +172,7 @@
 
     if-nez v3, :cond_0
 
+    .line 201
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -159,6 +180,7 @@
     :cond_2
     const/4 v2, 0x0
 
+    .line 205
     iget-object v3, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     array-length v4, v3
@@ -167,6 +189,7 @@
 
     if-lez v4, :cond_3
 
+    .line 206
     aget-object v2, v3, v5
 
     invoke-virtual {v2}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getToDevice()Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
@@ -177,6 +200,7 @@
 
     move-result-object v2
 
+    .line 208
     :cond_3
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -186,6 +210,7 @@
 
     const/4 v3, 0x2
 
+    .line 209
     invoke-static {}, Lcom/xiaomi/mirror/synergy/MiuiSynergySdk;->getInstance()Lcom/xiaomi/mirror/synergy/MiuiSynergySdk;
 
     move-result-object v4
@@ -200,12 +225,15 @@
 
     const-string v2, "miui relay show mirror"
 
+    .line 210
     invoke-static {v0, v2}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 211
     sget-object v0, Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$KYDkrqUIsyGrT7BYBUvSJJJDdIU;->INSTANCE:Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$KYDkrqUIsyGrT7BYBUvSJJJDdIU;
 
     invoke-interface {v1, v0}, Ljava/util/List;->sort(Ljava/util/Comparator;)V
 
+    .line 213
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -216,6 +244,7 @@
 
     goto :goto_1
 
+    .line 215
     :cond_4
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
@@ -225,6 +254,7 @@
 
     invoke-interface {v1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 216
     sget-object p0, Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$PmgCbFLJsDrOsahNmxwCl_4qRe4;->INSTANCE:Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$PmgCbFLJsDrOsahNmxwCl_4qRe4;
 
     invoke-interface {v1, p0}, Ljava/util/List;->sort(Ljava/util/Comparator;)V
@@ -232,6 +262,7 @@
     :goto_1
     new-array p0, v5, [Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 219
     invoke-interface {v1, p0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -248,8 +279,10 @@
 
     const-string v1, "getProtocolTypeByTaskId"
 
+    .line 223
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 225
     iget-object v1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     array-length v2, v1
@@ -265,6 +298,7 @@
 
     aget-object v6, v1, v4
 
+    .line 226
     invoke-virtual {v6}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getHandoffTaskId()I
 
     move-result v6
@@ -283,6 +317,7 @@
     :cond_1
     const/4 v1, -0x1
 
+    .line 231
     :goto_1
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
@@ -295,6 +330,7 @@
 
     aget-object v6, p0, v4
 
+    .line 232
     invoke-virtual {v6}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getHandoffTaskId()I
 
     move-result v6
@@ -314,6 +350,7 @@
     :goto_3
     new-array p0, v5, [Ljava/lang/Object;
 
+    .line 237
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -330,6 +367,7 @@
 .method static synthetic lambda$getAllHandoffTask$4(Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)I
     .locals 2
 
+    .line 212
     invoke-virtual {p1}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getLastActiveTime()J
 
     move-result-wide v0
@@ -348,6 +386,7 @@
 .method static synthetic lambda$getAllHandoffTask$5(Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)I
     .locals 2
 
+    .line 217
     invoke-virtual {p1}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getLastActiveTime()J
 
     move-result-wide v0
@@ -366,6 +405,7 @@
 .method static synthetic lambda$reportLocalHandoffTaskUpdate$3(Lcom/xiaomi/dist/handoff/system/callback/ActiveLocalHandoffTaskListener;[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)V
     .locals 0
 
+    .line 181
     invoke-interface {p0, p1}, Lcom/xiaomi/dist/handoff/system/callback/ActiveLocalHandoffTaskListener;->onLocalHandoffTaskUpdate([Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)V
 
     return-void
@@ -378,8 +418,10 @@
 
     const-string v1, "mergeTasks"
 
+    .line 247
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 249
     iget-object v1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     array-length v2, v1
@@ -390,13 +432,16 @@
 
     const-string p0, "mergeTasks, result=false"
 
+    .line 250
     invoke-static {v0, p0}, Lcom/xiaomi/dist/handoff/system/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
+    .line 253
     :cond_0
     aget-object v1, v1, v3
 
+    .line 254
     iget-object v2, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     array-length v4, v2
@@ -412,6 +457,7 @@
 
     aget-object v8, v2, v5
 
+    .line 255
     invoke-virtual {v8}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getAppId()I
 
     move-result v9
@@ -422,6 +468,7 @@
 
     if-ne v9, v10, :cond_1
 
+    .line 256
     invoke-virtual {v8}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getToDevice()Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 
     move-result-object v8
@@ -430,6 +477,7 @@
 
     move-result-object v8
 
+    .line 257
     invoke-virtual {v1}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->getToDevice()Lcom/xiaomi/dist/handoff/parcel/DeviceSummary;
 
     move-result-object v9
@@ -438,6 +486,7 @@
 
     move-result-object v9
 
+    .line 256
     invoke-static {v8, v9}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v8
@@ -446,6 +495,7 @@
 
     new-array v6, v3, [Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 258
     iput-object v6, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     move v6, v7
@@ -458,6 +508,7 @@
     :cond_2
     new-array p0, v7, [Ljava/lang/Object;
 
+    .line 262
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -478,6 +529,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 173
     invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -492,10 +544,12 @@
 
     invoke-static {v1, v2, v0}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 174
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mTaskListenerMap:Ljava/util/Map;
 
     monitor-enter v0
 
+    .line 175
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mTaskListenerMap:Ljava/util/Map;
 
@@ -520,12 +574,14 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 176
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/xiaomi/dist/handoff/system/callback/ActiveLocalHandoffTaskListener;
 
+    .line 177
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -534,10 +590,12 @@
 
     if-nez v1, :cond_0
 
+    .line 179
     invoke-interface {v2, p1}, Lcom/xiaomi/dist/handoff/system/callback/ActiveLocalHandoffTaskListener;->onLocalHandoffTaskUpdate([Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)V
 
     goto :goto_0
 
+    .line 181
     :cond_0
     new-instance v3, Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$Ko75JuRLfS4GdCMNexys19WcYuI;
 
@@ -547,6 +605,7 @@
 
     goto :goto_0
 
+    .line 184
     :cond_1
     monitor-exit v0
 
@@ -571,8 +630,10 @@
 
     const-string v1, "close"
 
+    .line 143
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 144
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffController:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     invoke-virtual {p0}, Lcom/xiaomi/dist/handoff/system/HandoffController;->close()V
@@ -587,12 +648,14 @@
 
     const-string v1, "TaskListenerInner.onLocalHandoffTaskUpdate"
 
+    .line 148
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
+    .line 150
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     array-length v0, v0
@@ -605,12 +668,14 @@
 
     return-void
 
+    .line 153
     :cond_0
     iput-object p2, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     :cond_1
     if-nez p1, :cond_3
 
+    .line 156
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     array-length v0, v0
@@ -623,9 +688,11 @@
 
     return-void
 
+    .line 159
     :cond_2
     iput-object p2, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 161
     :cond_3
     invoke-direct {p0}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mergeTasks()Z
 
@@ -637,11 +704,13 @@
 
     return-void
 
+    .line 164
     :cond_4
     invoke-direct {p0}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->getAllHandoffTask()[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     move-result-object p1
 
+    .line 165
     iget-object p2, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mAllTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     invoke-static {p1, p2}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
@@ -652,9 +721,11 @@
 
     return-void
 
+    .line 168
     :cond_5
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mAllTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 169
     invoke-direct {p0, p1}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->reportLocalHandoffTaskUpdate([Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)V
 
     return-void
@@ -671,6 +742,7 @@
 
     const/4 v3, 0x0
 
+    .line 57
     :try_start_0
     iget-object v4, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffController:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
@@ -698,12 +770,15 @@
 
     aput-object v4, v5, v3
 
+    .line 59
     invoke-static {v1, v0, v5}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     new-array v4, v3, [Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 60
     iput-object v4, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 63
     :goto_0
     :try_start_1
     iget-object v4, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayController:Lcom/xiaomi/dist/handoff/system/MiuiRelayController;
@@ -732,15 +807,19 @@
 
     aput-object v4, v5, v3
 
+    .line 65
     invoke-static {v1, v0, v5}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     new-array v0, v3, [Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 66
     iput-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 68
     :goto_1
     invoke-direct {p0}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mergeTasks()Z
 
+    .line 69
     new-instance v0, Lcom/xiaomi/dist/handoff/system/result/HandoffResultDescriptor;
 
     invoke-direct {p0}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->getAllHandoffTask()[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
@@ -769,12 +848,15 @@
 
     const-string v1, "onPackageRemoved, packageName=%s"
 
+    .line 82
     invoke-static {p1, v1, v0}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 83
     invoke-direct {p0}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->getAllHandoffTask()[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     move-result-object p1
 
+    .line 84
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mAllTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
@@ -785,9 +867,11 @@
 
     return-void
 
+    .line 87
     :cond_0
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mAllTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 88
     invoke-direct {p0, p1}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->reportLocalHandoffTaskUpdate([Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)V
 
     return-void
@@ -810,16 +894,20 @@
 
     const-string v1, "handleQueryActiveLocalHandoffTask"
 
+    .line 54
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 55
     new-instance v0, Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$xRBTXvoEoMOQO9WwD4UlViZMbtg;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$xRBTXvoEoMOQO9WwD4UlViZMbtg;-><init>(Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;)V
 
+    .line 72
     invoke-static {}, Lcom/xiaomi/dist/utils/Schedulers;->computation()Ljava/util/concurrent/Executor;
 
     move-result-object p0
 
+    .line 55
     invoke-static {v0, p0}, Ljava/util/concurrent/CompletableFuture;->supplyAsync(Ljava/util/function/Supplier;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
 
     move-result-object p0
@@ -834,18 +922,22 @@
 
     const-string v1, "handleRegisterLocalHandoffSessionListener"
 
+    .line 77
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 78
     iget-object v1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mTaskListenerMap:Ljava/util/Map;
 
     invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 79
     iget-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffController:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     iget-object p2, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mInnerCallback:Lcom/xiaomi/dist/handoff/system/TaskListenerInner;
 
     invoke-virtual {p1, p2}, Lcom/xiaomi/dist/handoff/system/HandoffController;->registerLocalHandoffSessionListener(Lcom/xiaomi/dist/handoff/system/TaskListenerInner;)V
 
+    .line 80
     iget-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayController:Lcom/xiaomi/dist/handoff/system/MiuiRelayController;
 
     iget-object p2, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mContext:Landroid/content/Context;
@@ -854,6 +946,7 @@
 
     invoke-virtual {p1, p2, v1}, Lcom/xiaomi/dist/handoff/system/MiuiRelayController;->registerLocalHandoffSessionListener(Landroid/content/Context;Lcom/xiaomi/dist/handoff/system/TaskListenerInner;)V
 
+    .line 81
     iget-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mContext:Landroid/content/Context;
 
     new-instance p2, Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffControllerManager$FCalM_cxzbbehmMnn86sgvN0zfk;
@@ -868,8 +961,10 @@
 
     const-string p1, "update handoff tasks after register"
 
+    .line 90
     invoke-static {v0, p1}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 91
     iget-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mAllTasks:[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     invoke-direct {p0, p1}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->reportLocalHandoffTaskUpdate([Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)V
@@ -884,8 +979,10 @@
 
     const-string v1, "handleStartTransferSessionToLocal"
 
+    .line 108
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 109
     invoke-direct {p0, p1}, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->getProtocolTypeByTaskId(I)I
 
     move-result v0
@@ -894,6 +991,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 111
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffController:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/dist/handoff/system/HandoffController;->startTransferSessionToLocal(ILcom/xiaomi/dist/handoff/system/callback/TransferSessionToLocalCallback;)V
@@ -903,6 +1001,7 @@
     :cond_0
     if-nez v0, :cond_1
 
+    .line 113
     iget-object v0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mMiuiRelayController:Lcom/xiaomi/dist/handoff/system/MiuiRelayController;
 
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mContext:Landroid/content/Context;
@@ -916,6 +1015,7 @@
 
     const-string p1, "handoff task not found"
 
+    .line 115
     invoke-interface {p2, p0, p1}, Lcom/xiaomi/dist/handoff/system/callback/TransferSessionToLocalCallback;->onError(ILjava/lang/String;)V
 
     :goto_0
@@ -929,12 +1029,15 @@
 
     const-string v1, "handleUnregisterLocalHandoffSessionListener"
 
+    .line 95
     invoke-static {v0, v1}, Lcom/xiaomi/dist/handoff/system/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 96
     iget-object v1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mTaskListenerMap:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 97
     iget-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mTaskListenerMap:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -947,10 +1050,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 98
     iget-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mHandoffController:Lcom/xiaomi/dist/handoff/system/HandoffController;
 
     invoke-virtual {p1}, Lcom/xiaomi/dist/handoff/system/HandoffController;->unregisterLocalHandoffSessionListener()V
 
+    .line 101
     :cond_0
     :try_start_0
     iget-object p1, p0, Lcom/xiaomi/dist/handoff/system/HandoffControllerManager;->mContext:Landroid/content/Context;
@@ -968,6 +1073,7 @@
 
     const-string p1, "unregister package receiver error"
 
+    .line 103
     invoke-static {v0, p1, p0}, Lcom/xiaomi/dist/handoff/system/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0

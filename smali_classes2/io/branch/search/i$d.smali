@@ -1,5 +1,6 @@
 .class public Lio/branch/search/i$d;
 .super Lio/branch/search/i$c;
+.source "SourceFile"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/ResourceRequestHandler;
 .super Lcom/squareup/picasso/RequestHandler;
+.source "ResourceRequestHandler.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Lcom/squareup/picasso/RequestHandler;-><init>()V
 
+    .line 31
     iput-object p1, p0, Lcom/squareup/picasso/ResourceRequestHandler;->context:Landroid/content/Context;
 
     return-void
@@ -20,24 +23,29 @@
 .method private static decodeResource(Landroid/content/res/Resources;ILcom/squareup/picasso/Request;)Landroid/graphics/Bitmap;
     .locals 3
 
+    .line 49
     invoke-static {p2}, Lcom/squareup/picasso/ResourceRequestHandler;->createBitmapOptions(Lcom/squareup/picasso/Request;)Landroid/graphics/BitmapFactory$Options;
 
     move-result-object v0
 
+    .line 50
     invoke-static {v0}, Lcom/squareup/picasso/ResourceRequestHandler;->requiresInSampleSize(Landroid/graphics/BitmapFactory$Options;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 51
     invoke-static {p0, p1, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
+    .line 52
     iget v1, p2, Lcom/squareup/picasso/Request;->targetWidth:I
 
     iget v2, p2, Lcom/squareup/picasso/Request;->targetHeight:I
 
     invoke-static {v1, v2, v0, p2}, Lcom/squareup/picasso/ResourceRequestHandler;->calculateInSampleSize(IILandroid/graphics/BitmapFactory$Options;Lcom/squareup/picasso/Request;)V
 
+    .line 54
     :cond_0
     invoke-static {p0, p1, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -51,6 +59,7 @@
 .method public canHandleRequest(Lcom/squareup/picasso/Request;)Z
     .locals 0
 
+    .line 35
     iget p0, p1, Lcom/squareup/picasso/Request;->resourceId:I
 
     if-eqz p0, :cond_0
@@ -59,6 +68,7 @@
 
     return p0
 
+    .line 39
     :cond_0
     iget-object p0, p1, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
@@ -83,16 +93,19 @@
         }
     .end annotation
 
+    .line 43
     iget-object p0, p0, Lcom/squareup/picasso/ResourceRequestHandler;->context:Landroid/content/Context;
 
     invoke-static {p0, p1}, Lcom/squareup/picasso/Utils;->getResources(Landroid/content/Context;Lcom/squareup/picasso/Request;)Landroid/content/res/Resources;
 
     move-result-object p0
 
+    .line 44
     invoke-static {p0, p1}, Lcom/squareup/picasso/Utils;->getResourceId(Landroid/content/res/Resources;Lcom/squareup/picasso/Request;)I
 
     move-result p2
 
+    .line 45
     new-instance v0, Lcom/squareup/picasso/RequestHandler$Result;
 
     invoke-static {p0, p2, p1}, Lcom/squareup/picasso/ResourceRequestHandler;->decodeResource(Landroid/content/res/Resources;ILcom/squareup/picasso/Request;)Landroid/graphics/Bitmap;

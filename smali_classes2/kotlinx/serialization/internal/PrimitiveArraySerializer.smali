@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/PrimitiveArraySerializer;
 .super Lkotlinx/serialization/internal/ListLikeSerializer;
+.source "CollectionSerializers.kt"
 
 
 # annotations
@@ -39,8 +40,10 @@
 
     const/4 v0, 0x0
 
+    .line 146
     invoke-direct {p0, p1, v0}, Lkotlinx/serialization/internal/ListLikeSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 147
     new-instance v0, Lkotlinx/serialization/internal/PrimitiveArrayDescriptor;
 
     invoke-interface {p1}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -61,6 +64,7 @@
 .method public bridge synthetic builder()Ljava/lang/Object;
     .locals 0
 
+    .line 143
     invoke-virtual {p0}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->builder()Lkotlinx/serialization/internal/PrimitiveArrayBuilder;
 
     move-result-object p0
@@ -76,6 +80,7 @@
         }
     .end annotation
 
+    .line 159
     invoke-virtual {p0}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->empty()Ljava/lang/Object;
 
     move-result-object v0
@@ -92,6 +97,7 @@
 .method public bridge synthetic builderSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 143
     check-cast p1, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->builderSize(Lkotlinx/serialization/internal/PrimitiveArrayBuilder;)I
@@ -113,6 +119,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 149
     invoke-virtual {p1}, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;->getPosition$kotlinx_serialization_core()I
 
     move-result p0
@@ -123,6 +130,7 @@
 .method public bridge synthetic checkCapacity(Ljava/lang/Object;I)V
     .locals 0
 
+    .line 143
     check-cast p1, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;
 
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->checkCapacity(Lkotlinx/serialization/internal/PrimitiveArrayBuilder;I)V
@@ -142,6 +150,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 151
     invoke-virtual {p1, p2}, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;->ensureCapacity$kotlinx_serialization_core(I)V
 
     return-void
@@ -157,6 +166,7 @@
         }
     .end annotation
 
+    .line 154
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "This method lead to boxing and must not be used, use writeContents instead"
@@ -188,6 +198,7 @@
 
     const/4 v0, 0x0
 
+    .line 179
     invoke-virtual {p0, p1, v0}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->merge(Lkotlinx/serialization/encoding/Decoder;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -206,6 +217,7 @@
 .method public final getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 147
     iget-object p0, p0, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -214,6 +226,7 @@
 .method public bridge synthetic insert(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 143
     check-cast p1, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;
 
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->insert(Lkotlinx/serialization/internal/PrimitiveArrayBuilder;ILjava/lang/Object;)V
@@ -233,6 +246,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 157
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "This method lead to boxing and must not be used, use Builder.append instead"
@@ -262,18 +276,22 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 173
     invoke-virtual {p0, p2}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->collectionSize(Ljava/lang/Object;)I
 
     move-result v0
 
+    .line 174
     iget-object v1, p0, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     invoke-interface {p1, v1, v0}, Lkotlinx/serialization/encoding/Encoder;->beginCollection(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Lkotlinx/serialization/encoding/CompositeEncoder;
 
     move-result-object p1
 
+    .line 175
     invoke-virtual {p0, p1, p2, v0}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->writeContent(Lkotlinx/serialization/encoding/CompositeEncoder;Ljava/lang/Object;I)V
 
+    .line 176
     iget-object p0, p0, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     invoke-interface {p1, p0}, Lkotlinx/serialization/encoding/CompositeEncoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
@@ -284,6 +302,7 @@
 .method public bridge synthetic toResult(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 143
     check-cast p1, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/PrimitiveArraySerializer;->toResult(Lkotlinx/serialization/internal/PrimitiveArrayBuilder;)Ljava/lang/Object;
@@ -305,6 +324,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 150
     invoke-virtual {p1}, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;->build$kotlinx_serialization_core()Ljava/lang/Object;
 
     move-result-object p0

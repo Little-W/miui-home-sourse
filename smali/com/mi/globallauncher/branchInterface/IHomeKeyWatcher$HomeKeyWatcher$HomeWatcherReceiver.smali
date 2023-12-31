@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomeWatcherReceiver;
 .super Landroid/content/BroadcastReceiver;
+.source "IHomeKeyWatcher.java"
 
 
 # annotations
@@ -35,8 +36,10 @@
 .method public constructor <init>(Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomePressListener;)V
     .locals 0
 
+    .line 40
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 41
     iput-object p1, p0, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomeWatcherReceiver;->listener:Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomePressListener;
 
     return-void
@@ -53,6 +56,7 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
+    .line 46
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -64,6 +68,7 @@
     :cond_0
     const-string v0, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
+    .line 50
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -72,12 +77,14 @@
 
     const-string p1, "reason"
 
+    .line 51
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "homekey"
 
+    .line 52
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -92,6 +99,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 53
     :cond_1
     iget-object p0, p0, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomeWatcherReceiver;->listener:Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomePressListener;
 

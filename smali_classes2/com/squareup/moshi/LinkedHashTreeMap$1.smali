@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/LinkedHashTreeMap$1;
 .super Ljava/lang/Object;
+.source "LinkedHashTreeMap.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public compare(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
     .locals 0
 
+    .line 43
     invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
     move-result p0
@@ -49,6 +52,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 41
     check-cast p1, Ljava/lang/Comparable;
 
     check-cast p2, Ljava/lang/Comparable;

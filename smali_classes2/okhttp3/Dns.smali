@@ -1,5 +1,6 @@
 .class public interface abstract Lokhttp3/Dns;
 .super Ljava/lang/Object;
+.source "Dns.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 36
     new-instance v0, Lokhttp3/Dns$1;
 
     invoke-direct {v0}, Lokhttp3/Dns$1;-><init>()V

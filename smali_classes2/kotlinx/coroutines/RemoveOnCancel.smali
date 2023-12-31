@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/RemoveOnCancel;
 .super Lkotlinx/coroutines/BeforeResumeCancelHandler;
+.source "CancellableContinuation.kt"
 
 
 # instance fields
@@ -10,6 +11,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)V
     .locals 0
 
+    .line 378
     invoke-direct {p0}, Lkotlinx/coroutines/BeforeResumeCancelHandler;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/RemoveOnCancel;->node:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -22,6 +24,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 378
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/RemoveOnCancel;->invoke(Ljava/lang/Throwable;)V
@@ -34,6 +37,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 379
     iget-object p0, p0, Lkotlinx/coroutines/RemoveOnCancel;->node:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->remove()Z
@@ -44,6 +48,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 380
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

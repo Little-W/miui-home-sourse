@@ -20,6 +20,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +31,7 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 5
 
+    .line 7
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I
 
     move-result p0
@@ -38,6 +40,7 @@
 
     move-object v1, v0
 
+    .line 10
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -45,10 +48,12 @@
 
     if-ge v2, p0, :cond_2
 
+    .line 11
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I
 
     move-result v2
 
+    .line 12
     invoke-static {v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I
 
     move-result v3
@@ -61,13 +66,16 @@
 
     if-eq v3, v4, :cond_0
 
+    .line 19
     invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
+    .line 16
     :cond_0
     sget-object v1, Lcom/google/android/gms/common/Feature;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 17
     invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createTypedArray(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -76,6 +84,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_1
     invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createBundle(Landroid/os/Parcel;I)Landroid/os/Bundle;
 
@@ -83,9 +92,11 @@
 
     goto :goto_0
 
+    .line 21
     :cond_2
     invoke-static {p1, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V
 
+    .line 22
     new-instance p0, Lcom/google/android/gms/common/internal/zzb;
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/gms/common/internal/zzb;-><init>(Landroid/os/Bundle;[Lcom/google/android/gms/common/Feature;)V
@@ -96,6 +107,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 4
     new-array p0, p1, [Lcom/google/android/gms/common/internal/zzb;
 
     return-object p0

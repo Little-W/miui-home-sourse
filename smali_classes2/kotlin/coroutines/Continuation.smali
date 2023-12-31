@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlin/coroutines/Continuation;
 .super Ljava/lang/Object;
+.source "Continuation.kt"
 
 
 # annotations

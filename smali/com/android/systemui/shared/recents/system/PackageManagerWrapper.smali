@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;
 .super Ljava/lang/Object;
+.source "PackageManagerWrapper.java"
 
 
 # static fields
@@ -14,12 +15,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 36
     new-instance v0, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;
 
     invoke-direct {v0}, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;-><init>()V
 
     sput-object v0, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->sInstance:Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;
 
+    .line 38
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
@@ -32,6 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +44,7 @@
 .method public static getInstance()Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;
     .locals 1
 
+    .line 44
     sget-object v0, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->sInstance:Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;
 
     return-object v0
@@ -52,6 +57,7 @@
 
     const/4 p0, 0x0
 
+    .line 52
     :try_start_0
     sget-boolean v0, Lcom/miui/launcher/utils/SdkVersion;->ATLEAST_T:Z
 
@@ -61,6 +67,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 54
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
@@ -71,11 +78,13 @@
 
     return-object p0
 
+    .line 57
     :cond_0
     sget-object p1, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
     if-eqz p1, :cond_1
 
+    .line 58
     sget-object p1, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
     invoke-interface {p1, p2, v1, p3}, Landroid/content/pm/IPackageManager;->getActivityInfo(Landroid/content/ComponentName;II)Landroid/content/pm/ActivityInfo;
@@ -90,6 +99,7 @@
     :catch_0
     move-exception p1
 
+    .line 62
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object p0
@@ -107,6 +117,7 @@
         }
     .end annotation
 
+    .line 74
     :try_start_0
     sget-object p0, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -121,6 +132,7 @@
     :catch_0
     move-exception p0
 
+    .line 76
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     const/4 p0, 0x0

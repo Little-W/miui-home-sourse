@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/material/shape/AbsoluteCornerSize;
 .super Ljava/lang/Object;
+.source "AbsoluteCornerSize.java"
 
 # interfaces
 .implements Lcom/google/android/material/shape/CornerSize;
@@ -13,8 +14,10 @@
 .method public constructor <init>(F)V
     .locals 0
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
     iput p1, p0, Lcom/google/android/material/shape/AbsoluteCornerSize;->size:F
 
     return-void
@@ -31,6 +34,7 @@
 
     return v0
 
+    .line 49
     :cond_0
     instance-of v1, p1, Lcom/google/android/material/shape/AbsoluteCornerSize;
 
@@ -40,9 +44,11 @@
 
     return v2
 
+    .line 52
     :cond_1
     check-cast p1, Lcom/google/android/material/shape/AbsoluteCornerSize;
 
+    .line 53
     iget p0, p0, Lcom/google/android/material/shape/AbsoluteCornerSize;->size:F
 
     iget p1, p1, Lcom/google/android/material/shape/AbsoluteCornerSize;->size:F
@@ -63,6 +69,7 @@
 .method public getCornerSize(Landroid/graphics/RectF;)F
     .locals 0
 
+    .line 34
     iget p0, p0, Lcom/google/android/material/shape/AbsoluteCornerSize;->size:F
 
     return p0
@@ -75,6 +82,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 58
     iget p0, p0, Lcom/google/android/material/shape/AbsoluteCornerSize;->size:F
 
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -85,6 +93,7 @@
 
     aput-object p0, v0, v1
 
+    .line 59
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result p0

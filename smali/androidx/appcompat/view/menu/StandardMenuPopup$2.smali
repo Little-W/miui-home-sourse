@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/view/menu/StandardMenuPopup$2;
 .super Ljava/lang/Object;
+.source "StandardMenuPopup.java"
 
 # interfaces
 .implements Landroid/view/View$OnAttachStateChangeListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/appcompat/view/menu/StandardMenuPopup;)V
     .locals 0
 
+    .line 80
     iput-object p1, p0, Landroidx/appcompat/view/menu/StandardMenuPopup$2;->this$0:Landroidx/appcompat/view/menu/StandardMenuPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +44,14 @@
 .method public onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 2
 
+    .line 87
     iget-object v0, p0, Landroidx/appcompat/view/menu/StandardMenuPopup$2;->this$0:Landroidx/appcompat/view/menu/StandardMenuPopup;
 
     iget-object v0, v0, Landroidx/appcompat/view/menu/StandardMenuPopup;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     if-eqz v0, :cond_1
 
+    .line 88
     iget-object v0, p0, Landroidx/appcompat/view/menu/StandardMenuPopup$2;->this$0:Landroidx/appcompat/view/menu/StandardMenuPopup;
 
     iget-object v0, v0, Landroidx/appcompat/view/menu/StandardMenuPopup;->mTreeObserver:Landroid/view/ViewTreeObserver;
@@ -66,6 +70,7 @@
 
     iput-object v1, v0, Landroidx/appcompat/view/menu/StandardMenuPopup;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
+    .line 89
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/StandardMenuPopup$2;->this$0:Landroidx/appcompat/view/menu/StandardMenuPopup;
 
@@ -77,6 +82,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
+    .line 91
     :cond_1
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 

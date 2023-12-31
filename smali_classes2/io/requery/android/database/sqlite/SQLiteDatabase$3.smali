@@ -1,5 +1,6 @@
 .class Lio/requery/android/database/sqlite/SQLiteDatabase$3;
 .super Ljava/lang/Object;
+.source "SQLiteDatabase.java"
 
 # interfaces
 .implements Landroid/os/CancellationSignal$OnCancelListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lio/requery/android/database/sqlite/SQLiteDatabase;Landroidx/core/os/CancellationSignal;)V
     .locals 0
 
+    .line 1360
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteDatabase$3;->this$0:Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     iput-object p2, p0, Lio/requery/android/database/sqlite/SQLiteDatabase$3;->val$supportCancellationSignal:Landroidx/core/os/CancellationSignal;
@@ -40,6 +42,7 @@
 .method public onCancel()V
     .locals 0
 
+    .line 1363
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteDatabase$3;->val$supportCancellationSignal:Landroidx/core/os/CancellationSignal;
 
     invoke-virtual {p0}, Landroidx/core/os/CancellationSignal;->cancel()V

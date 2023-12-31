@@ -16,8 +16,10 @@
 .method public constructor <init>(Lcom/xiaomi/onetrack/OneTrack;)V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15
     iput-object p1, p0, Lcom/xiaomi/onetrack/AppWebViewInterface;->b:Lcom/xiaomi/onetrack/OneTrack;
 
     return-void
@@ -30,6 +32,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
+    .line 20
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,6 +51,7 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 21
     iget-object v0, p0, Lcom/xiaomi/onetrack/AppWebViewInterface;->b:Lcom/xiaomi/onetrack/OneTrack;
 
     const/4 v2, 0x0
@@ -56,10 +60,12 @@
 
     const-string p0, "mOneTrack is null, return false"
 
+    .line 22
     invoke-static {v1, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
+    .line 26
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -69,10 +75,12 @@
 
     const-string p0, "h5 data is empty, return false"
 
+    .line 27
     invoke-static {v1, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
+    .line 31
     :cond_1
     iget-object p0, p0, Lcom/xiaomi/onetrack/AppWebViewInterface;->b:Lcom/xiaomi/onetrack/OneTrack;
 

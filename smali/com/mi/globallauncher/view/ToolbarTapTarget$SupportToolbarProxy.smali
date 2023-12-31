@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;
 .super Ljava/lang/Object;
+.source "ToolbarTapTarget.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/view/ToolbarTapTarget$ToolbarProxy;
@@ -24,8 +25,10 @@
 .method constructor <init>(Landroidx/appcompat/widget/Toolbar;)V
     .locals 0
 
+    .line 173
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 174
     iput-object p1, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     return-void
@@ -46,6 +49,7 @@
         }
     .end annotation
 
+    .line 189
     iget-object p0, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/appcompat/widget/Toolbar;->findViewsWithText(Ljava/util/ArrayList;Ljava/lang/CharSequence;I)V
@@ -56,6 +60,7 @@
 .method public getChildAt(I)Landroid/view/View;
     .locals 0
 
+    .line 209
     iget-object p0, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->getChildAt(I)Landroid/view/View;
@@ -68,6 +73,7 @@
 .method public getChildCount()I
     .locals 0
 
+    .line 204
     iget-object p0, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getChildCount()I
@@ -80,6 +86,7 @@
 .method public getNavigationContentDescription()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 179
     iget-object p0, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getNavigationContentDescription()Ljava/lang/CharSequence;
@@ -92,6 +99,7 @@
 .method public getNavigationIcon()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 194
     iget-object p0, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
@@ -104,6 +112,7 @@
 .method public getOverflowIcon()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 199
     iget-object p0, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getOverflowIcon()Landroid/graphics/drawable/Drawable;
@@ -116,6 +125,7 @@
 .method public internalToolbar()Ljava/lang/Object;
     .locals 0
 
+    .line 214
     iget-object p0, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     return-object p0
@@ -124,6 +134,7 @@
 .method public setNavigationContentDescription(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 184
     iget-object p0, p0, Lcom/mi/globallauncher/view/ToolbarTapTarget$SupportToolbarProxy;->toolbar:Landroidx/appcompat/widget/Toolbar;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setNavigationContentDescription(Ljava/lang/CharSequence;)V

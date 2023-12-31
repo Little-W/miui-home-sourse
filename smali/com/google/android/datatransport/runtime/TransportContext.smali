@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/runtime/TransportContext;
 .super Ljava/lang/Object;
+.source "TransportContext.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method public static builder()Lcom/google/android/datatransport/runtime/TransportContext$Builder;
     .locals 2
 
+    .line 67
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext$Builder;-><init>()V
@@ -49,6 +52,7 @@
 .method public shouldUploadClientHealthMetrics()Z
     .locals 0
 
+    .line 42
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object p0
@@ -73,6 +77,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 60
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object v1
@@ -81,6 +86,7 @@
 
     aput-object v1, v0, v2
 
+    .line 61
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object v1
@@ -89,6 +95,7 @@
 
     aput-object v1, v0, v2
 
+    .line 62
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object v1
@@ -115,6 +122,7 @@
 
     const-string p0, "TransportContext(%s, %s, %s)"
 
+    .line 58
     invoke-static {p0, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -125,10 +133,12 @@
 .method public withPriority(Lcom/google/android/datatransport/Priority;)Lcom/google/android/datatransport/runtime/TransportContext;
     .locals 2
 
+    .line 77
     invoke-static {}, Lcom/google/android/datatransport/runtime/TransportContext;->builder()Lcom/google/android/datatransport/runtime/TransportContext$Builder;
 
     move-result-object v0
 
+    .line 78
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object v1
@@ -137,10 +147,12 @@
 
     move-result-object v0
 
+    .line 79
     invoke-virtual {v0, p1}, Lcom/google/android/datatransport/runtime/TransportContext$Builder;->setPriority(Lcom/google/android/datatransport/Priority;)Lcom/google/android/datatransport/runtime/TransportContext$Builder;
 
     move-result-object p1
 
+    .line 80
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object p0
@@ -149,6 +161,7 @@
 
     move-result-object p0
 
+    .line 81
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportContext$Builder;->build()Lcom/google/android/datatransport/runtime/TransportContext;
 
     move-result-object p0

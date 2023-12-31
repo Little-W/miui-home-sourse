@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/EngineJob;
 .super Ljava/lang/Object;
+.source "EngineJob.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/DecodeJob$Callback;
@@ -115,6 +116,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 27
     new-instance v0, Lcom/bumptech/glide/load/engine/EngineJob$EngineResourceFactory;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/EngineJob$EngineResourceFactory;-><init>()V
@@ -140,6 +142,7 @@
         }
     .end annotation
 
+    .line 78
     sget-object v7, Lcom/bumptech/glide/load/engine/EngineJob;->DEFAULT_FACTORY:Lcom/bumptech/glide/load/engine/EngineJob$EngineResourceFactory;
 
     move-object v0, p0
@@ -179,38 +182,49 @@
         }
     .end annotation
 
+    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
     new-instance v0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
+    .line 33
     invoke-static {}, Lcom/bumptech/glide/util/pool/StateVerifier;->newInstance()Lcom/bumptech/glide/util/pool/StateVerifier;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
+    .line 41
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->pendingCallbacks:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 97
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->diskCacheExecutor:Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
+    .line 98
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/EngineJob;->sourceExecutor:Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
+    .line 99
     iput-object p3, p0, Lcom/bumptech/glide/load/engine/EngineJob;->sourceUnlimitedExecutor:Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
+    .line 100
     iput-object p4, p0, Lcom/bumptech/glide/load/engine/EngineJob;->animationExecutor:Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
+    .line 101
     iput-object p5, p0, Lcom/bumptech/glide/load/engine/EngineJob;->listener:Lcom/bumptech/glide/load/engine/EngineJobListener;
 
+    .line 102
     iput-object p6, p0, Lcom/bumptech/glide/load/engine/EngineJob;->pool:Landroidx/core/util/Pools$Pool;
 
+    .line 103
     iput-object p7, p0, Lcom/bumptech/glide/load/engine/EngineJob;->engineResourceFactory:Lcom/bumptech/glide/load/engine/EngineJob$EngineResourceFactory;
 
     return-void
@@ -219,10 +233,12 @@
 .method private getActiveSourceExecutor()Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
     .locals 1
 
+    .line 188
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->useUnlimitedSourceGeneratorPool:Z
 
     if-eqz v0, :cond_0
 
+    .line 189
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->sourceUnlimitedExecutor:Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
     goto :goto_0
@@ -246,6 +262,7 @@
 .method private isDone()Z
     .locals 1
 
+    .line 209
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasLoadFailed:Z
 
     if-nez v0, :cond_1
@@ -278,51 +295,66 @@
 
     monitor-enter p0
 
+    .line 281
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->key:Lcom/bumptech/glide/load/Key;
 
     if-eqz v0, :cond_0
 
+    .line 284
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->clear()V
 
     const/4 v0, 0x0
 
+    .line 285
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 286
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->engineResource:Lcom/bumptech/glide/load/engine/EngineResource;
 
+    .line 287
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     const/4 v1, 0x0
 
+    .line 288
     iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasLoadFailed:Z
 
+    .line 289
     iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->isCancelled:Z
 
+    .line 290
     iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasResource:Z
 
+    .line 291
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/EngineJob;->decodeJob:Lcom/bumptech/glide/load/engine/DecodeJob;
 
     invoke-virtual {v2, v1}, Lcom/bumptech/glide/load/engine/DecodeJob;->release(Z)V
 
+    .line 292
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->decodeJob:Lcom/bumptech/glide/load/engine/DecodeJob;
 
+    .line 293
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->exception:Lcom/bumptech/glide/load/engine/GlideException;
 
+    .line 294
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->dataSource:Lcom/bumptech/glide/load/DataSource;
 
+    .line 295
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->pool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {v0, p0}, Landroidx/core/util/Pools$Pool;->release(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 296
     monitor-exit p0
 
     return-void
 
+    .line 282
     :cond_0
     :try_start_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -348,23 +380,28 @@
 
     monitor-enter p0
 
+    .line 130
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
+    .line 131
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     invoke-virtual {v0, p1, p2}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->add(Lcom/bumptech/glide/request/ResourceCallback;Ljava/util/concurrent/Executor;)V
 
+    .line 132
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasResource:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
+    .line 135
     invoke-virtual {p0, v1}, Lcom/bumptech/glide/load/engine/EngineJob;->incrementPendingCallbacks(I)V
 
+    .line 136
     new-instance v0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;
 
     invoke-direct {v0, p0, p1}, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;-><init>(Lcom/bumptech/glide/load/engine/EngineJob;Lcom/bumptech/glide/request/ResourceCallback;)V
@@ -373,13 +410,16 @@
 
     goto :goto_1
 
+    .line 137
     :cond_0
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasLoadFailed:Z
 
     if-eqz v0, :cond_1
 
+    .line 138
     invoke-virtual {p0, v1}, Lcom/bumptech/glide/load/engine/EngineJob;->incrementPendingCallbacks(I)V
 
+    .line 139
     new-instance v0, Lcom/bumptech/glide/load/engine/EngineJob$CallLoadFailed;
 
     invoke-direct {v0, p0, p1}, Lcom/bumptech/glide/load/engine/EngineJob$CallLoadFailed;-><init>(Lcom/bumptech/glide/load/engine/EngineJob;Lcom/bumptech/glide/request/ResourceCallback;)V
@@ -388,6 +428,7 @@
 
     goto :goto_1
 
+    .line 141
     :cond_1
     iget-boolean p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->isCancelled:Z
 
@@ -405,6 +446,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 143
     :goto_1
     monitor-exit p0
 
@@ -423,6 +465,7 @@
 
     monitor-enter p0
 
+    .line 165
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->exception:Lcom/bumptech/glide/load/engine/GlideException;
 
@@ -430,6 +473,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 169
     monitor-exit p0
 
     return-void
@@ -437,6 +481,7 @@
     :catchall_0
     move-exception p1
 
+    .line 167
     :try_start_1
     new-instance v0, Lcom/bumptech/glide/load/engine/CallbackException;
 
@@ -459,6 +504,7 @@
 
     monitor-enter p0
 
+    .line 152
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->engineResource:Lcom/bumptech/glide/load/engine/EngineResource;
 
@@ -468,6 +514,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 156
     monitor-exit p0
 
     return-void
@@ -475,6 +522,7 @@
     :catchall_0
     move-exception p1
 
+    .line 154
     :try_start_1
     new-instance v0, Lcom/bumptech/glide/load/engine/CallbackException;
 
@@ -495,6 +543,7 @@
 .method cancel()V
     .locals 2
 
+    .line 194
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->isDone()Z
 
     move-result v0
@@ -506,12 +555,15 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 198
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->isCancelled:Z
 
+    .line 199
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->decodeJob:Lcom/bumptech/glide/load/engine/DecodeJob;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/load/engine/DecodeJob;->cancel()V
 
+    .line 200
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->listener:Lcom/bumptech/glide/load/engine/EngineJobListener;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->key:Lcom/bumptech/glide/load/Key;
@@ -526,11 +578,13 @@
 
     monitor-enter p0
 
+    .line 267
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
+    .line 268
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->isDone()Z
 
     move-result v0
@@ -539,6 +593,7 @@
 
     invoke-static {v0, v1}, Lcom/bumptech/glide/util/Preconditions;->checkArgument(ZLjava/lang/String;)V
 
+    .line 269
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->pendingCallbacks:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -557,23 +612,28 @@
     :goto_0
     const-string v2, "Can\'t decrement below 0"
 
+    .line 270
     invoke-static {v1, v2}, Lcom/bumptech/glide/util/Preconditions;->checkArgument(ZLjava/lang/String;)V
 
     if-nez v0, :cond_2
 
+    .line 272
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->engineResource:Lcom/bumptech/glide/load/engine/EngineResource;
 
     if-eqz v0, :cond_1
 
+    .line 273
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->engineResource:Lcom/bumptech/glide/load/engine/EngineResource;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/load/engine/EngineResource;->release()V
 
+    .line 276
     :cond_1
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 278
     :cond_2
     monitor-exit p0
 
@@ -590,6 +650,7 @@
 .method public getVerifier()Lcom/bumptech/glide/util/pool/StateVerifier;
     .locals 0
 
+    .line 361
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     return-object p0
@@ -600,6 +661,7 @@
 
     monitor-enter p0
 
+    .line 258
     :try_start_0
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->isDone()Z
 
@@ -609,6 +671,7 @@
 
     invoke-static {v0, v1}, Lcom/bumptech/glide/util/Preconditions;->checkArgument(ZLjava/lang/String;)V
 
+    .line 259
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->pendingCallbacks:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndAdd(I)I
@@ -621,12 +684,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 260
     iget-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->engineResource:Lcom/bumptech/glide/load/engine/EngineResource;
 
     invoke-virtual {p1}, Lcom/bumptech/glide/load/engine/EngineResource;->acquire()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 262
     :cond_0
     monitor-exit p0
 
@@ -654,19 +719,25 @@
 
     monitor-enter p0
 
+    .line 113
     :try_start_0
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 114
     iput-boolean p2, p0, Lcom/bumptech/glide/load/engine/EngineJob;->isCacheable:Z
 
+    .line 115
     iput-boolean p3, p0, Lcom/bumptech/glide/load/engine/EngineJob;->useUnlimitedSourceGeneratorPool:Z
 
+    .line 116
     iput-boolean p4, p0, Lcom/bumptech/glide/load/engine/EngineJob;->useAnimationPool:Z
 
+    .line 117
     iput-boolean p5, p0, Lcom/bumptech/glide/load/engine/EngineJob;->onlyRetrieveFromCache:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 118
     monitor-exit p0
 
     return-object p0
@@ -682,23 +753,29 @@
 .method notifyCallbacksOfException()V
     .locals 4
 
+    .line 330
     monitor-enter p0
 
+    .line 331
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
+    .line 332
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->isCancelled:Z
 
     if-eqz v0, :cond_0
 
+    .line 333
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->release()V
 
+    .line 334
     monitor-exit p0
 
     return-void
 
+    .line 335
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
@@ -708,22 +785,27 @@
 
     if-nez v0, :cond_3
 
+    .line 337
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasLoadFailed:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
+    .line 340
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasLoadFailed:Z
 
+    .line 342
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 344
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     invoke-virtual {v2}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->copy()Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     move-result-object v2
 
+    .line 347
     invoke-virtual {v2}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->size()I
 
     move-result v3
@@ -732,16 +814,19 @@
 
     invoke-virtual {p0, v3}, Lcom/bumptech/glide/load/engine/EngineJob;->incrementPendingCallbacks(I)V
 
+    .line 348
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 350
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->listener:Lcom/bumptech/glide/load/engine/EngineJobListener;
 
     const/4 v3, 0x0
 
     invoke-interface {v0, p0, v1, v3}, Lcom/bumptech/glide/load/engine/EngineJobListener;->onEngineJobComplete(Lcom/bumptech/glide/load/engine/EngineJob;Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/EngineResource;)V
 
+    .line 352
     invoke-virtual {v2}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -759,6 +844,7 @@
 
     check-cast v1, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;
 
+    .line 353
     iget-object v2, v1, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;->executor:Ljava/util/concurrent/Executor;
 
     new-instance v3, Lcom/bumptech/glide/load/engine/EngineJob$CallLoadFailed;
@@ -771,11 +857,13 @@
 
     goto :goto_0
 
+    .line 355
     :cond_1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->decrementPendingCallbacks()V
 
     return-void
 
+    .line 338
     :cond_2
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -786,6 +874,7 @@
 
     throw v0
 
+    .line 336
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -798,6 +887,7 @@
     :catchall_0
     move-exception v0
 
+    .line 348
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -808,27 +898,34 @@
 .method notifyCallbacksOfResult()V
     .locals 4
 
+    .line 221
     monitor-enter p0
 
+    .line 222
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
+    .line 223
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->isCancelled:Z
 
     if-eqz v0, :cond_0
 
+    .line 226
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
 
+    .line 227
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->release()V
 
+    .line 228
     monitor-exit p0
 
     return-void
 
+    .line 229
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
@@ -838,10 +935,12 @@
 
     if-nez v0, :cond_3
 
+    .line 231
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasResource:Z
 
     if-nez v0, :cond_2
 
+    .line 234
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->engineResourceFactory:Lcom/bumptech/glide/load/engine/EngineJob$EngineResourceFactory;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->resource:Lcom/bumptech/glide/load/engine/Resource;
@@ -856,14 +955,17 @@
 
     const/4 v0, 0x1
 
+    .line 239
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasResource:Z
 
+    .line 240
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     invoke-virtual {v1}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->copy()Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     move-result-object v1
 
+    .line 241
     invoke-virtual {v1}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->size()I
 
     move-result v2
@@ -872,18 +974,23 @@
 
     invoke-virtual {p0, v2}, Lcom/bumptech/glide/load/engine/EngineJob;->incrementPendingCallbacks(I)V
 
+    .line 243
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 244
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/EngineJob;->engineResource:Lcom/bumptech/glide/load/engine/EngineResource;
 
+    .line 245
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 247
     iget-object v3, p0, Lcom/bumptech/glide/load/engine/EngineJob;->listener:Lcom/bumptech/glide/load/engine/EngineJobListener;
 
     invoke-interface {v3, p0, v0, v2}, Lcom/bumptech/glide/load/engine/EngineJobListener;->onEngineJobComplete(Lcom/bumptech/glide/load/engine/EngineJob;Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/EngineResource;)V
 
+    .line 249
     invoke-virtual {v1}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -901,6 +1008,7 @@
 
     check-cast v1, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;
 
+    .line 250
     iget-object v2, v1, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;->executor:Ljava/util/concurrent/Executor;
 
     new-instance v3, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;
@@ -913,11 +1021,13 @@
 
     goto :goto_0
 
+    .line 252
     :cond_1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->decrementPendingCallbacks()V
 
     return-void
 
+    .line 232
     :cond_2
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -928,6 +1038,7 @@
 
     throw v0
 
+    .line 230
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -940,6 +1051,7 @@
     :catchall_0
     move-exception v0
 
+    .line 245
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -950,15 +1062,19 @@
 .method public onLoadFailed(Lcom/bumptech/glide/load/engine/GlideException;)V
     .locals 0
 
+    .line 309
     monitor-enter p0
 
+    .line 310
     :try_start_0
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->exception:Lcom/bumptech/glide/load/engine/GlideException;
 
+    .line 311
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 312
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->notifyCallbacksOfException()V
 
     return-void
@@ -966,6 +1082,7 @@
     :catchall_0
     move-exception p1
 
+    .line 311
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -986,17 +1103,22 @@
         }
     .end annotation
 
+    .line 300
     monitor-enter p0
 
+    .line 301
     :try_start_0
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
+    .line 302
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/EngineJob;->dataSource:Lcom/bumptech/glide/load/DataSource;
 
+    .line 303
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 304
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->notifyCallbacksOfResult()V
 
     return-void
@@ -1004,6 +1126,7 @@
     :catchall_0
     move-exception p1
 
+    .line 303
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -1015,6 +1138,7 @@
 .method onlyRetrieveFromCache()Z
     .locals 0
 
+    .line 184
     iget-boolean p0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->onlyRetrieveFromCache:Z
 
     return p0
@@ -1025,15 +1149,18 @@
 
     monitor-enter p0
 
+    .line 172
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
+    .line 173
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->remove(Lcom/bumptech/glide/request/ResourceCallback;)V
 
+    .line 174
     iget-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->cbs:Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     invoke-virtual {p1}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->isEmpty()Z
@@ -1042,8 +1169,10 @@
 
     if-eqz p1, :cond_2
 
+    .line 175
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->cancel()V
 
+    .line 176
     iget-boolean p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->hasResource:Z
 
     if-nez p1, :cond_1
@@ -1066,6 +1195,7 @@
     :goto_1
     if-eqz p1, :cond_2
 
+    .line 177
     iget-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->pendingCallbacks:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -1074,10 +1204,12 @@
 
     if-nez p1, :cond_2
 
+    .line 178
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 181
     :cond_2
     monitor-exit p0
 
@@ -1101,6 +1233,7 @@
         }
     .end annotation
 
+    .line 319
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->getActiveSourceExecutor()Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
     move-result-object p0
@@ -1122,29 +1255,35 @@
 
     monitor-enter p0
 
+    .line 122
     :try_start_0
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob;->decodeJob:Lcom/bumptech/glide/load/engine/DecodeJob;
 
+    .line 123
     invoke-virtual {p1}, Lcom/bumptech/glide/load/engine/DecodeJob;->willDecodeFromCache()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 124
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob;->diskCacheExecutor:Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
     goto :goto_0
 
+    .line 125
     :cond_0
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->getActiveSourceExecutor()Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
     move-result-object v0
 
+    .line 126
     :goto_0
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 127
     monitor-exit p0
 
     return-void

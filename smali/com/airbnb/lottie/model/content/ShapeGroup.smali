@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/content/ShapeGroup;
 .super Ljava/lang/Object;
+.source "ShapeGroup.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/model/content/ContentModel;
@@ -34,12 +35,16 @@
         }
     .end annotation
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 17
     iput-object p1, p0, Lcom/airbnb/lottie/model/content/ShapeGroup;->name:Ljava/lang/String;
 
+    .line 18
     iput-object p2, p0, Lcom/airbnb/lottie/model/content/ShapeGroup;->items:Ljava/util/List;
 
+    .line 19
     iput-boolean p3, p0, Lcom/airbnb/lottie/model/content/ShapeGroup;->hidden:Z
 
     return-void
@@ -58,6 +63,7 @@
         }
     .end annotation
 
+    .line 27
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/ShapeGroup;->items:Ljava/util/List;
 
     return-object p0
@@ -66,6 +72,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 23
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/ShapeGroup;->name:Ljava/lang/String;
 
     return-object p0
@@ -74,6 +81,7 @@
 .method public isHidden()Z
     .locals 0
 
+    .line 31
     iget-boolean p0, p0, Lcom/airbnb/lottie/model/content/ShapeGroup;->hidden:Z
 
     return p0
@@ -82,6 +90,7 @@
 .method public toContent(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;)Lcom/airbnb/lottie/animation/content/Content;
     .locals 1
 
+    .line 35
     new-instance v0, Lcom/airbnb/lottie/animation/content/ContentGroup;
 
     invoke-direct {v0, p1, p2, p0}, Lcom/airbnb/lottie/animation/content/ContentGroup;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/ShapeGroup;)V
@@ -92,6 +101,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

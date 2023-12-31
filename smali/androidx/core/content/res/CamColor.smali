@@ -1,5 +1,6 @@
 .class Landroidx/core/content/res/CamColor;
 .super Ljava/lang/Object;
+.source "CamColor.java"
 
 
 # instance fields
@@ -26,24 +27,34 @@
 .method constructor <init>(FFFFFFFFF)V
     .locals 0
 
+    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 129
     iput p1, p0, Landroidx/core/content/res/CamColor;->mHue:F
 
+    .line 130
     iput p2, p0, Landroidx/core/content/res/CamColor;->mChroma:F
 
+    .line 131
     iput p3, p0, Landroidx/core/content/res/CamColor;->mJ:F
 
+    .line 132
     iput p4, p0, Landroidx/core/content/res/CamColor;->mQ:F
 
+    .line 133
     iput p5, p0, Landroidx/core/content/res/CamColor;->mM:F
 
+    .line 134
     iput p6, p0, Landroidx/core/content/res/CamColor;->mS:F
 
+    .line 135
     iput p7, p0, Landroidx/core/content/res/CamColor;->mJstar:F
 
+    .line 136
     iput p8, p0, Landroidx/core/content/res/CamColor;->mAstar:F
 
+    .line 137
     iput p9, p0, Landroidx/core/content/res/CamColor;->mBstar:F
 
     return-void
@@ -71,6 +82,7 @@
     :goto_0
     sub-float v6, v0, v2
 
+    .line 490
     invoke-static {v6}, Ljava/lang/Math;->abs(F)F
 
     move-result v6
@@ -89,20 +101,24 @@
 
     add-float/2addr v6, v0
 
+    .line 493
     invoke-static {v6, p1, p0}, Landroidx/core/content/res/CamColor;->fromJch(FFF)Landroidx/core/content/res/CamColor;
 
     move-result-object v7
 
+    .line 497
     invoke-virtual {v7}, Landroidx/core/content/res/CamColor;->viewedInSrgb()I
 
     move-result v7
 
+    .line 498
     invoke-static {v7}, Landroidx/core/content/res/CamUtils;->lStarFromInt(I)F
 
     move-result v8
 
     sub-float v9, p2, v8
 
+    .line 499
     invoke-static {v9}, Ljava/lang/Math;->abs(F)F
 
     move-result v9
@@ -113,10 +129,12 @@
 
     if-gez v10, :cond_0
 
+    .line 507
     invoke-static {v7}, Landroidx/core/content/res/CamColor;->fromColor(I)Landroidx/core/content/res/CamColor;
 
     move-result-object v7
 
+    .line 509
     invoke-virtual {v7}, Landroidx/core/content/res/CamColor;->getJ()F
 
     move-result v10
@@ -129,6 +147,7 @@
 
     move-result-object v10
 
+    .line 508
     invoke-virtual {v7, v10}, Landroidx/core/content/res/CamColor;->distance(Landroidx/core/content/res/CamColor;)F
 
     move-result v10
@@ -178,6 +197,7 @@
 .method static fromColor(I)Landroidx/core/content/res/CamColor;
     .locals 1
 
+    .line 160
     sget-object v0, Landroidx/core/content/res/ViewingConditions;->DEFAULT:Landroidx/core/content/res/ViewingConditions;
 
     invoke-static {p0, v0}, Landroidx/core/content/res/CamColor;->fromColorInViewingConditions(ILandroidx/core/content/res/ViewingConditions;)Landroidx/core/content/res/CamColor;
@@ -190,14 +210,17 @@
 .method static fromColorInViewingConditions(ILandroidx/core/content/res/ViewingConditions;)Landroidx/core/content/res/CamColor;
     .locals 23
 
+    .line 171
     invoke-static/range {p0 .. p0}, Landroidx/core/content/res/CamUtils;->xyzFromInt(I)[F
 
     move-result-object v0
 
+    .line 174
     sget-object v1, Landroidx/core/content/res/CamUtils;->XYZ_TO_CAM16RGB:[[F
 
     const/4 v2, 0x0
 
+    .line 175
     aget v3, v0, v2
 
     aget-object v4, v1, v2
@@ -230,6 +253,7 @@
 
     add-float/2addr v3, v6
 
+    .line 176
     aget v6, v0, v2
 
     aget-object v7, v1, v4
@@ -258,6 +282,7 @@
 
     add-float/2addr v6, v7
 
+    .line 177
     aget v7, v0, v2
 
     aget-object v8, v1, v5
@@ -286,6 +311,7 @@
 
     add-float/2addr v7, v0
 
+    .line 180
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getRgbD()[F
 
     move-result-object v0
@@ -294,6 +320,7 @@
 
     mul-float/2addr v0, v3
 
+    .line 181
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getRgbD()[F
 
     move-result-object v1
@@ -302,6 +329,7 @@
 
     mul-float/2addr v1, v6
 
+    .line 182
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getRgbD()[F
 
     move-result-object v2
@@ -310,6 +338,7 @@
 
     mul-float/2addr v2, v7
 
+    .line 185
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getFl()F
 
     move-result v3
@@ -334,6 +363,7 @@
 
     double-to-float v3, v3
 
+    .line 186
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getFl()F
 
     move-result v4
@@ -354,6 +384,7 @@
 
     double-to-float v4, v9
 
+    .line 187
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getFl()F
 
     move-result v9
@@ -374,6 +405,7 @@
 
     double-to-float v7, v7
 
+    .line 188
     invoke-static {v0}, Ljava/lang/Math;->signum(F)F
 
     move-result v0
@@ -390,6 +422,7 @@
 
     div-float/2addr v0, v3
 
+    .line 189
     invoke-static {v1}, Ljava/lang/Math;->signum(F)F
 
     move-result v1
@@ -402,6 +435,7 @@
 
     div-float/2addr v1, v4
 
+    .line 190
     invoke-static {v2}, Ljava/lang/Math;->signum(F)F
 
     move-result v2
@@ -484,6 +518,7 @@
 
     float-to-double v9, v3
 
+    .line 202
     invoke-static {v1, v2, v9, v10}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v1
@@ -528,12 +563,14 @@
 
     div-float/2addr v7, v2
 
+    .line 211
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getNbb()F
 
     move-result v1
 
     mul-float/2addr v0, v1
 
+    .line 214
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getAw()F
 
     move-result v1
@@ -542,6 +579,7 @@
 
     float-to-double v0, v0
 
+    .line 215
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getC()F
 
     move-result v2
@@ -554,6 +592,7 @@
 
     float-to-double v5, v2
 
+    .line 214
     invoke-static {v0, v1, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -564,6 +603,7 @@
 
     mul-float/2addr v0, v1
 
+    .line 218
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getC()F
 
     move-result v2
@@ -576,6 +616,7 @@
 
     float-to-double v11, v1
 
+    .line 219
     invoke-static {v11, v12}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v11
@@ -584,6 +625,7 @@
 
     mul-float/2addr v2, v1
 
+    .line 220
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getAw()F
 
     move-result v1
@@ -592,6 +634,7 @@
 
     mul-float/2addr v2, v1
 
+    .line 221
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getFlRoot()F
 
     move-result v1
@@ -630,6 +673,7 @@
 
     add-double/2addr v9, v11
 
+    .line 225
     invoke-static {v9, v10}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v9
@@ -646,6 +690,7 @@
 
     mul-float/2addr v2, v6
 
+    .line 226
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getNc()F
 
     move-result v6
@@ -666,6 +711,7 @@
 
     float-to-double v3, v3
 
+    .line 227
     invoke-static {v3, v4}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v3
@@ -684,6 +730,7 @@
 
     const-wide v8, 0x3fd28f5c28f5c28fL    # 0.29
 
+    .line 228
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getN()F
 
     move-result v6
@@ -708,6 +755,7 @@
 
     const-wide v10, 0x3feccccccccccccdL    # 0.9
 
+    .line 229
     invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v8
@@ -722,6 +770,7 @@
 
     div-double/2addr v8, v10
 
+    .line 231
     invoke-static {v8, v9}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v8
@@ -730,6 +779,7 @@
 
     mul-float v15, v3, v2
 
+    .line 232
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getFlRoot()F
 
     move-result v2
@@ -738,12 +788,14 @@
 
     const/high16 v2, 0x42480000    # 50.0f
 
+    .line 233
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getC()F
 
     move-result v4
 
     mul-float/2addr v3, v4
 
+    .line 234
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getAw()F
 
     move-result v4
@@ -754,6 +806,7 @@
 
     float-to-double v3, v3
 
+    .line 233
     invoke-static {v3, v4}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v3
@@ -786,6 +839,7 @@
 
     float-to-double v3, v3
 
+    .line 238
     invoke-static {v3, v4}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v3
@@ -796,6 +850,7 @@
 
     float-to-double v4, v7
 
+    .line 239
     invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v6
@@ -804,6 +859,7 @@
 
     mul-float v21, v3, v2
 
+    .line 240
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v4
@@ -812,6 +868,7 @@
 
     mul-float v22, v3, v2
 
+    .line 242
     new-instance v2, Landroidx/core/content/res/CamColor;
 
     move-object v13, v2
@@ -828,6 +885,7 @@
 .method private static fromJch(FFF)Landroidx/core/content/res/CamColor;
     .locals 1
 
+    .line 253
     sget-object v0, Landroidx/core/content/res/ViewingConditions;->DEFAULT:Landroidx/core/content/res/ViewingConditions;
 
     invoke-static {p0, p1, p2, v0}, Landroidx/core/content/res/CamColor;->fromJchInFrame(FFFLandroidx/core/content/res/ViewingConditions;)Landroidx/core/content/res/CamColor;
@@ -842,6 +900,7 @@
 
     move v3, p0
 
+    .line 266
     invoke-virtual/range {p3 .. p3}, Landroidx/core/content/res/ViewingConditions;->getC()F
 
     move-result v0
@@ -856,6 +915,7 @@
 
     div-double/2addr v4, v6
 
+    .line 267
     invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v6
@@ -864,6 +924,7 @@
 
     mul-float/2addr v0, v2
 
+    .line 268
     invoke-virtual/range {p3 .. p3}, Landroidx/core/content/res/ViewingConditions;->getAw()F
 
     move-result v2
@@ -872,18 +933,21 @@
 
     mul-float/2addr v0, v2
 
+    .line 269
     invoke-virtual/range {p3 .. p3}, Landroidx/core/content/res/ViewingConditions;->getFlRoot()F
 
     move-result v2
 
     mul-float v6, v0, v2
 
+    .line 270
     invoke-virtual/range {p3 .. p3}, Landroidx/core/content/res/ViewingConditions;->getFlRoot()F
 
     move-result v0
 
     mul-float v7, p1, v0
 
+    .line 271
     invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v4
@@ -892,12 +956,14 @@
 
     div-float v0, p1, v0
 
+    .line 272
     invoke-virtual/range {p3 .. p3}, Landroidx/core/content/res/ViewingConditions;->getC()F
 
     move-result v2
 
     mul-float/2addr v0, v2
 
+    .line 273
     invoke-virtual/range {p3 .. p3}, Landroidx/core/content/res/ViewingConditions;->getAw()F
 
     move-result v2
@@ -908,6 +974,7 @@
 
     float-to-double v0, v0
 
+    .line 272
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -950,6 +1017,7 @@
 
     add-double/2addr v1, v4
 
+    .line 277
     invoke-static {v1, v2}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v1
@@ -962,6 +1030,7 @@
 
     float-to-double v4, v0
 
+    .line 278
     invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v10
@@ -970,6 +1039,7 @@
 
     mul-float v10, v1, v0
 
+    .line 279
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v4
@@ -978,6 +1048,7 @@
 
     mul-float v11, v1, v0
 
+    .line 280
     new-instance v12, Landroidx/core/content/res/CamColor;
 
     move-object v0, v12
@@ -1006,6 +1077,7 @@
 .method static toColor(FFF)I
     .locals 1
 
+    .line 149
     sget-object v0, Landroidx/core/content/res/ViewingConditions;->DEFAULT:Landroidx/core/content/res/ViewingConditions;
 
     invoke-static {p0, p1, p2, v0}, Landroidx/core/content/res/CamColor;->toColor(FFFLandroidx/core/content/res/ViewingConditions;)I
@@ -1026,6 +1098,7 @@
 
     if-ltz v0, :cond_7
 
+    .line 414
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result v0
@@ -1066,6 +1139,7 @@
     :cond_1
     const/high16 v1, 0x43b40000    # 360.0f
 
+    .line 418
     invoke-static {v1, p0}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -1082,6 +1156,7 @@
     :goto_1
     sub-float v4, v0, p1
 
+    .line 431
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result v4
@@ -1092,6 +1167,7 @@
 
     if-ltz v4, :cond_5
 
+    .line 434
     invoke-static {p0, v1, p2}, Landroidx/core/content/res/CamColor;->findCamByJ(FFF)Landroidx/core/content/res/CamColor;
 
     move-result-object v4
@@ -1102,6 +1178,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 438
     invoke-virtual {v4, p3}, Landroidx/core/content/res/CamColor;->viewed(Landroidx/core/content/res/ViewingConditions;)I
 
     move-result p0
@@ -1137,12 +1214,14 @@
     :cond_5
     if-nez v2, :cond_6
 
+    .line 468
     invoke-static {p2}, Landroidx/core/content/res/CamUtils;->intFromLStar(F)I
 
     move-result p0
 
     return p0
 
+    .line 471
     :cond_6
     invoke-virtual {v2, p3}, Landroidx/core/content/res/CamColor;->viewed(Landroidx/core/content/res/ViewingConditions;)I
 
@@ -1150,6 +1229,7 @@
 
     return p0
 
+    .line 415
     :cond_7
     :goto_3
     invoke-static {p2}, Landroidx/core/content/res/CamUtils;->intFromLStar(F)I
@@ -1164,6 +1244,7 @@
 .method distance(Landroidx/core/content/res/CamColor;)F
     .locals 3
 
+    .line 290
     invoke-virtual {p0}, Landroidx/core/content/res/CamColor;->getJStar()F
 
     move-result v0
@@ -1174,6 +1255,7 @@
 
     sub-float/2addr v0, v1
 
+    .line 291
     invoke-virtual {p0}, Landroidx/core/content/res/CamColor;->getAStar()F
 
     move-result v1
@@ -1184,6 +1266,7 @@
 
     sub-float/2addr v1, v2
 
+    .line 292
     invoke-virtual {p0}, Landroidx/core/content/res/CamColor;->getBStar()F
 
     move-result p0
@@ -1206,12 +1289,14 @@
 
     float-to-double p0, v0
 
+    .line 293
     invoke-static {p0, p1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide p0
 
     const-wide v0, 0x3fe428f5c28f5c29L    # 0.63
 
+    .line 294
     invoke-static {p0, p1, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide p0
@@ -1228,6 +1313,7 @@
 .method getAStar()F
     .locals 0
 
+    .line 116
     iget p0, p0, Landroidx/core/content/res/CamColor;->mAstar:F
 
     return p0
@@ -1236,6 +1322,7 @@
 .method getBStar()F
     .locals 0
 
+    .line 123
     iget p0, p0, Landroidx/core/content/res/CamColor;->mBstar:F
 
     return p0
@@ -1244,6 +1331,7 @@
 .method getChroma()F
     .locals 0
 
+    .line 63
     iget p0, p0, Landroidx/core/content/res/CamColor;->mChroma:F
 
     return p0
@@ -1252,6 +1340,7 @@
 .method getHue()F
     .locals 0
 
+    .line 57
     iget p0, p0, Landroidx/core/content/res/CamColor;->mHue:F
 
     return p0
@@ -1260,6 +1349,7 @@
 .method getJ()F
     .locals 0
 
+    .line 69
     iget p0, p0, Landroidx/core/content/res/CamColor;->mJ:F
 
     return p0
@@ -1268,6 +1358,7 @@
 .method getJStar()F
     .locals 0
 
+    .line 109
     iget p0, p0, Landroidx/core/content/res/CamColor;->mJstar:F
 
     return p0
@@ -1276,6 +1367,7 @@
 .method viewed(Landroidx/core/content/res/ViewingConditions;)I
     .locals 15
 
+    .line 308
     invoke-virtual {p0}, Landroidx/core/content/res/CamColor;->getChroma()F
 
     move-result v0
@@ -1302,6 +1394,7 @@
 
     goto :goto_0
 
+    .line 310
     :cond_0
     invoke-virtual {p0}, Landroidx/core/content/res/CamColor;->getChroma()F
 
@@ -1336,6 +1429,7 @@
 
     const-wide v8, 0x3fd28f5c28f5c28fL    # 0.29
 
+    .line 313
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getN()F
 
     move-result v10
@@ -1350,6 +1444,7 @@
 
     const-wide v8, 0x3fe75c28f5c28f5cL    # 0.73
 
+    .line 312
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -1364,6 +1459,7 @@
 
     double-to-float v0, v0
 
+    .line 314
     invoke-virtual {p0}, Landroidx/core/content/res/CamColor;->getHue()F
 
     move-result v1
@@ -1384,6 +1480,7 @@
 
     add-double/2addr v9, v7
 
+    .line 316
     invoke-static {v9, v10}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v9
@@ -1396,6 +1493,7 @@
 
     mul-float/2addr v1, v6
 
+    .line 317
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getAw()F
 
     move-result v6
@@ -1410,6 +1508,7 @@
 
     const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
+    .line 318
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getC()F
 
     move-result v11
@@ -1426,6 +1525,7 @@
 
     div-double/2addr v4, v11
 
+    .line 317
     invoke-static {v9, v10, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v4
@@ -1438,6 +1538,7 @@
 
     mul-float/2addr v1, v4
 
+    .line 320
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getNc()F
 
     move-result v4
@@ -1450,18 +1551,21 @@
 
     mul-float/2addr v1, v4
 
+    .line 321
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getNbb()F
 
     move-result v4
 
     div-float/2addr v6, v4
 
+    .line 323
     invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v4
 
     double-to-float v4, v4
 
+    .line 324
     invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v7
@@ -1550,6 +1654,7 @@
 
     div-float/2addr v6, v1
 
+    .line 334
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -1578,6 +1683,7 @@
 
     double-to-float v1, v7
 
+    .line 335
     invoke-static {v0}, Ljava/lang/Math;->signum(F)F
 
     move-result v0
@@ -1604,6 +1710,7 @@
 
     mul-float/2addr v0, v1
 
+    .line 337
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -1628,6 +1735,7 @@
 
     double-to-float v1, v9
 
+    .line 338
     invoke-static {v4}, Ljava/lang/Math;->signum(F)F
 
     move-result v4
@@ -1652,6 +1760,7 @@
 
     mul-float/2addr v4, v1
 
+    .line 340
     invoke-static {v6}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -1678,6 +1787,7 @@
 
     double-to-float v1, v1
 
+    .line 341
     invoke-static {v6}, Ljava/lang/Math;->signum(F)F
 
     move-result v2
@@ -1702,6 +1812,7 @@
 
     mul-float/2addr v2, v1
 
+    .line 343
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getRgbD()[F
 
     move-result-object v1
@@ -1712,6 +1823,7 @@
 
     div-float/2addr v0, v1
 
+    .line 344
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getRgbD()[F
 
     move-result-object v1
@@ -1722,6 +1834,7 @@
 
     div-float/2addr v4, v1
 
+    .line 345
     invoke-virtual/range {p1 .. p1}, Landroidx/core/content/res/ViewingConditions;->getRgbD()[F
 
     move-result-object v1
@@ -1732,8 +1845,10 @@
 
     div-float/2addr v2, v1
 
+    .line 348
     sget-object v1, Landroidx/core/content/res/CamUtils;->CAM16RGB_TO_XYZ:[[F
 
+    .line 349
     aget-object v7, v1, v3
 
     aget v7, v7, v3
@@ -1756,6 +1871,7 @@
 
     add-float/2addr v7, v8
 
+    .line 350
     aget-object v8, v1, v5
 
     aget v8, v8, v3
@@ -1778,6 +1894,7 @@
 
     add-float/2addr v8, v9
 
+    .line 351
     aget-object v9, v1, v6
 
     aget v3, v9, v3
@@ -1806,6 +1923,7 @@
 
     float-to-double v5, v0
 
+    .line 353
     invoke-static/range {v1 .. v6}, Landroidx/core/graphics/ColorUtils;->XYZToColor(DDD)I
 
     move-result v0
@@ -1816,6 +1934,7 @@
 .method viewedInSrgb()I
     .locals 1
 
+    .line 301
     sget-object v0, Landroidx/core/content/res/ViewingConditions;->DEFAULT:Landroidx/core/content/res/ViewingConditions;
 
     invoke-virtual {p0, v0}, Landroidx/core/content/res/CamColor;->viewed(Landroidx/core/content/res/ViewingConditions;)I

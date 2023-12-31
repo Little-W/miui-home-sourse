@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;
 .super Ljava/lang/Object;
+.source "DecodeJob.java"
 
 
 # annotations
@@ -48,6 +49,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 663
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,10 +62,13 @@
 
     const/4 v0, 0x0
 
+    .line 689
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 690
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->encoder:Lcom/bumptech/glide/load/ResourceEncoder;
 
+    .line 691
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->toEncode:Lcom/bumptech/glide/load/engine/LockedResource;
 
     return-void
@@ -74,8 +79,10 @@
 
     const-string v0, "DecodeJob.encode"
 
+    .line 674
     invoke-static {v0}, Lcom/bumptech/glide/util/pool/GlideTrace;->beginSection(Ljava/lang/String;)V
 
+    .line 676
     :try_start_0
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/DecodeJob$DiskCacheProvider;->getDiskCache()Lcom/bumptech/glide/load/engine/cache/DiskCache;
 
@@ -95,10 +102,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 679
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->toEncode:Lcom/bumptech/glide/load/engine/LockedResource;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/LockedResource;->unlock()V
 
+    .line 680
     invoke-static {}, Lcom/bumptech/glide/util/pool/GlideTrace;->endSection()V
 
     return-void
@@ -106,10 +115,12 @@
     :catchall_0
     move-exception p1
 
+    .line 679
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->toEncode:Lcom/bumptech/glide/load/engine/LockedResource;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/LockedResource;->unlock()V
 
+    .line 680
     invoke-static {}, Lcom/bumptech/glide/util/pool/GlideTrace;->endSection()V
 
     throw p1
@@ -118,6 +129,7 @@
 .method hasResourceToEncode()Z
     .locals 0
 
+    .line 685
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->toEncode:Lcom/bumptech/glide/load/engine/LockedResource;
 
     if-eqz p0, :cond_0
@@ -148,10 +160,13 @@
         }
     .end annotation
 
+    .line 668
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 669
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->encoder:Lcom/bumptech/glide/load/ResourceEncoder;
 
+    .line 670
     iput-object p3, p0, Lcom/bumptech/glide/load/engine/DecodeJob$DeferredEncodeManager;->toEncode:Lcom/bumptech/glide/load/engine/LockedResource;
 
     return-void

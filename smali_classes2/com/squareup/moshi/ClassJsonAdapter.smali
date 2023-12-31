@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/ClassJsonAdapter;
 .super Lcom/squareup/moshi/JsonAdapter;
+.source "ClassJsonAdapter.java"
 
 
 # annotations
@@ -51,6 +52,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 45
     new-instance v0, Lcom/squareup/moshi/ClassJsonAdapter$1;
 
     invoke-direct {v0}, Lcom/squareup/moshi/ClassJsonAdapter$1;-><init>()V
@@ -74,10 +76,13 @@
         }
     .end annotation
 
+    .line 133
     invoke-direct {p0}, Lcom/squareup/moshi/JsonAdapter;-><init>()V
 
+    .line 134
     iput-object p1, p0, Lcom/squareup/moshi/ClassJsonAdapter;->classFactory:Lcom/squareup/moshi/ClassFactory;
 
+    .line 135
     invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object p1
@@ -96,6 +101,7 @@
 
     iput-object p1, p0, Lcom/squareup/moshi/ClassJsonAdapter;->fieldsArray:[Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;
 
+    .line 137
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p1
@@ -112,6 +118,7 @@
 
     check-cast p1, [Ljava/lang/String;
 
+    .line 136
     invoke-static {p1}, Lcom/squareup/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/squareup/moshi/JsonReader$Options;
 
     move-result-object p1
@@ -131,12 +138,14 @@
         }
     .end annotation
 
+    .line 121
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "android."
 
+    .line 122
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -145,6 +154,7 @@
 
     const-string v0, "java."
 
+    .line 123
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -153,6 +163,7 @@
 
     const-string v0, "javax."
 
+    .line 124
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -161,6 +172,7 @@
 
     const-string v0, "kotlin."
 
+    .line 125
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -169,6 +181,7 @@
 
     const-string v0, "scala."
 
+    .line 126
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -208,6 +221,7 @@
         }
     .end annotation
 
+    .line 143
     :try_start_0
     iget-object v0, p0, Lcom/squareup/moshi/ClassJsonAdapter;->classFactory:Lcom/squareup/moshi/ClassFactory;
 
@@ -219,9 +233,11 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 156
     :try_start_1
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->beginObject()V
 
+    .line 157
     :goto_0
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->hasNext()Z
 
@@ -229,6 +245,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 158
     iget-object v1, p0, Lcom/squareup/moshi/ClassJsonAdapter;->options:Lcom/squareup/moshi/JsonReader$Options;
 
     invoke-virtual {p1, v1}, Lcom/squareup/moshi/JsonReader;->selectName(Lcom/squareup/moshi/JsonReader$Options;)I
@@ -239,21 +256,26 @@
 
     if-eq v1, v2, :cond_0
 
+    .line 161
     iget-object v2, p0, Lcom/squareup/moshi/ClassJsonAdapter;->fieldsArray:[Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;
 
     aget-object v1, v2, v1
 
+    .line 167
     invoke-virtual {v1, p1, v0}, Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;->read(Lcom/squareup/moshi/JsonReader;Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 163
     :cond_0
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->nextName()Ljava/lang/String;
 
+    .line 164
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 169
     :cond_1
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->endObject()V
     :try_end_1
@@ -261,6 +283,7 @@
 
     return-object v0
 
+    .line 172
     :catch_0
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -268,6 +291,7 @@
 
     throw p0
 
+    .line 152
     :catch_1
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -278,14 +302,17 @@
     :catch_2
     move-exception p0
 
+    .line 147
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getTargetException()Ljava/lang/Throwable;
 
     move-result-object p0
 
+    .line 148
     instance-of p1, p0, Ljava/lang/RuntimeException;
 
     if-nez p1, :cond_3
 
+    .line 149
     instance-of p1, p0, Ljava/lang/Error;
 
     if-eqz p1, :cond_2
@@ -294,6 +321,7 @@
 
     throw p0
 
+    .line 150
     :cond_2
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -301,6 +329,7 @@
 
     throw p1
 
+    .line 148
     :cond_3
     check-cast p0, Ljava/lang/RuntimeException;
 
@@ -309,6 +338,7 @@
     :catch_3
     move-exception p0
 
+    .line 145
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -319,6 +349,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 190
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

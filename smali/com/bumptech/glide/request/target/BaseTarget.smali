@@ -1,5 +1,6 @@
 .class public abstract Lcom/bumptech/glide/request/target/BaseTarget;
 .super Ljava/lang/Object;
+.source "BaseTarget.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/request/target/Target;
@@ -29,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public getRequest()Lcom/bumptech/glide/request/Request;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/bumptech/glide/request/target/BaseTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-object p0
@@ -83,6 +86,7 @@
 .method public setRequest(Lcom/bumptech/glide/request/Request;)V
     .locals 0
 
+    .line 34
     iput-object p1, p0, Lcom/bumptech/glide/request/target/BaseTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-void

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/encoders/ValueEncoder;
 .super Ljava/lang/Object;
+.source "ValueEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/Encoder;

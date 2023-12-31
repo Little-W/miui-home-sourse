@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/libraries/gsa/launcherclient/AnimationType;
 .super Ljava/lang/Enum;
+.source "AnimationType.java"
 
 
 # annotations
@@ -34,6 +35,7 @@
 
     const-string v2, "NONE"
 
+    .line 1
     invoke-direct {v0, v2, v1, v1}, Lcom/google/android/libraries/gsa/launcherclient/AnimationType;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/libraries/gsa/launcherclient/AnimationType;->NONE:Lcom/google/android/libraries/gsa/launcherclient/AnimationType;
@@ -44,6 +46,7 @@
 
     const-string v3, "SLIDE"
 
+    .line 2
     invoke-direct {v0, v3, v2, v2}, Lcom/google/android/libraries/gsa/launcherclient/AnimationType;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/libraries/gsa/launcherclient/AnimationType;->SLIDE:Lcom/google/android/libraries/gsa/launcherclient/AnimationType;
@@ -56,6 +59,7 @@
 
     const-string v5, "FADE"
 
+    .line 3
     invoke-direct {v0, v5, v4, v3}, Lcom/google/android/libraries/gsa/launcherclient/AnimationType;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/libraries/gsa/launcherclient/AnimationType;->FADE:Lcom/google/android/libraries/gsa/launcherclient/AnimationType;
@@ -85,6 +89,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/google/android/libraries/gsa/launcherclient/AnimationType;->a:I

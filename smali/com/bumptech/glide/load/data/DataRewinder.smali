@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/load/data/DataRewinder;
 .super Ljava/lang/Object;
+.source "DataRewinder.java"
 
 
 # annotations

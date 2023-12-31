@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/sdk/IGetAppsCallback;
 .super Ljava/lang/Object;
+.source "IGetAppsCallback.java"
 
 
 # virtual methods

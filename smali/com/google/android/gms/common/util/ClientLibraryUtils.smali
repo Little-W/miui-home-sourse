@@ -8,10 +8,12 @@
 
     const-string v0, "com.google.android.gms"
 
+    .line 17
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     const/4 v0, 0x0
 
+    .line 18
     :try_start_0
     invoke-static {p0}, Lcom/google/android/gms/common/wrappers/Wrappers;->packageManager(Landroid/content/Context;)Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;
 
@@ -21,6 +23,7 @@
 
     move-result-object p0
 
+    .line 19
     iget p0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState$1;
 .super Ljava/lang/Object;
+.source "AppBarLayout.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 2146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
     .locals 1
 
+    .line 2156
     new-instance p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
 
     const/4 v0, 0x0
@@ -51,6 +54,7 @@
 .method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
     .locals 0
 
+    .line 2150
     new-instance p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
@@ -61,6 +65,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 2146
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
 
     move-result-object p0
@@ -71,6 +76,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 0
 
+    .line 2146
     invoke-virtual {p0, p1, p2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
 
     move-result-object p0
@@ -81,6 +87,7 @@
 .method public newArray(I)[Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
     .locals 0
 
+    .line 2162
     new-array p0, p1, [Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
 
     return-object p0
@@ -89,6 +96,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 2146
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState$1;->newArray(I)[Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
 
     move-result-object p0

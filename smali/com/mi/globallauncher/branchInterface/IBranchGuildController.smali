@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/IBranchGuildController;
 .super Ljava/lang/Object;
+.source "IBranchGuildController.java"
 
 
 # virtual methods

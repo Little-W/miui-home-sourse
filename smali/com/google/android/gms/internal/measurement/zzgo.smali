@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzgo;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # instance fields
@@ -16,8 +17,10 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzhl;->zza()Lcom/google/android/gms/internal/measurement/zzhl;
 
     move-result-object v0
@@ -30,14 +33,17 @@
 .method constructor <init>(Lcom/google/android/gms/internal/measurement/zzhl;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_0
 
+    .line 7
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzgo;->zzd:Lcom/google/android/gms/internal/measurement/zzhl;
 
     return-void
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

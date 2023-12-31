@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/KeyValueSerializer;
 .super Ljava/lang/Object;
+.source "Tuples.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -55,6 +56,7 @@
         }
     .end annotation
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/internal/KeyValueSerializer;->keySerializer:Lkotlinx/serialization/KSerializer;
@@ -67,6 +69,7 @@
 .method public synthetic constructor <init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 20
     invoke-direct {p0, p1, p2}, Lkotlinx/serialization/internal/KeyValueSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;)V
 
     return-void
@@ -88,6 +91,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 37
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -96,12 +100,14 @@
 
     move-result-object p1
 
+    .line 38
     invoke-interface {p1}, Lkotlinx/serialization/encoding/CompositeDecoder;->decodeSequentially()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 39
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v2
@@ -126,6 +132,7 @@
 
     move-result-object v0
 
+    .line 40
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v2
@@ -144,17 +151,20 @@
 
     move-result-object p1
 
+    .line 41
     invoke-virtual {p0, v0, p1}, Lkotlinx/serialization/internal/KeyValueSerializer;->toResult(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 44
     :cond_0
     invoke-static {}, Lkotlinx/serialization/internal/TuplesKt;->access$getNULL$p()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 45
     invoke-static {}, Lkotlinx/serialization/internal/TuplesKt;->access$getNULL$p()Ljava/lang/Object;
 
     move-result-object v1
@@ -162,6 +172,7 @@
     :goto_0
     move-object v8, v1
 
+    .line 47
     :goto_1
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -181,6 +192,7 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 55
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v2
@@ -207,6 +219,7 @@
 
     goto :goto_0
 
+    .line 57
     :cond_1
     new-instance p0, Lkotlinx/serialization/SerializationException;
 
@@ -230,6 +243,7 @@
 
     throw p0
 
+    .line 52
     :cond_2
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -257,6 +271,7 @@
 
     goto :goto_1
 
+    .line 60
     :cond_3
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -264,24 +279,28 @@
 
     invoke-interface {p1, v1}, Lkotlinx/serialization/encoding/CompositeDecoder;->endStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
+    .line 61
     invoke-static {}, Lkotlinx/serialization/internal/TuplesKt;->access$getNULL$p()Ljava/lang/Object;
 
     move-result-object p1
 
     if-eq v0, p1, :cond_5
 
+    .line 62
     invoke-static {}, Lkotlinx/serialization/internal/TuplesKt;->access$getNULL$p()Ljava/lang/Object;
 
     move-result-object p1
 
     if-eq v8, p1, :cond_4
 
+    .line 64
     invoke-virtual {p0, v0, v8}, Lkotlinx/serialization/internal/KeyValueSerializer;->toResult(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 62
     :cond_4
     new-instance p0, Lkotlinx/serialization/SerializationException;
 
@@ -293,6 +312,7 @@
 
     throw p0
 
+    .line 61
     :cond_5
     new-instance p0, Lkotlinx/serialization/SerializationException;
 
@@ -335,6 +355,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 30
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -343,6 +364,7 @@
 
     move-result-object p1
 
+    .line 31
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -359,6 +381,7 @@
 
     invoke-interface {p1, v0, v3, v1, v2}, Lkotlinx/serialization/encoding/CompositeEncoder;->encodeSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)V
 
+    .line 32
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -375,6 +398,7 @@
 
     invoke-interface {p1, v0, v2, v1, p2}, Lkotlinx/serialization/encoding/CompositeEncoder;->encodeSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)V
 
+    .line 33
     invoke-virtual {p0}, Lkotlinx/serialization/internal/KeyValueSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0

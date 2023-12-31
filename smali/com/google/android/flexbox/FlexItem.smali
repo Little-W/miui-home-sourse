@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/android/flexbox/FlexItem;
 .super Ljava/lang/Object;
+.source "FlexItem.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;

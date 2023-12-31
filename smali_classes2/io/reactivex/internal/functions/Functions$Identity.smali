@@ -1,5 +1,6 @@
 .class final Lio/reactivex/internal/functions/Functions$Identity;
 .super Ljava/lang/Object;
+.source "Functions.java"
 
 # interfaces
 .implements Lio/reactivex/functions/Function;
@@ -30,6 +31,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 652
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

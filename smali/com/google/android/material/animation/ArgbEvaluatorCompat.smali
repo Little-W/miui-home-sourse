@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/animation/ArgbEvaluatorCompat;
 .super Ljava/lang/Object;
+.source "ArgbEvaluatorCompat.java"
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -24,6 +25,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 29
     new-instance v0, Lcom/google/android/material/animation/ArgbEvaluatorCompat;
 
     invoke-direct {v0}, Lcom/google/android/material/animation/ArgbEvaluatorCompat;-><init>()V
@@ -36,6 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +47,7 @@
 .method public static getInstance()Lcom/google/android/material/animation/ArgbEvaluatorCompat;
     .locals 1
 
+    .line 40
     sget-object v0, Lcom/google/android/material/animation/ArgbEvaluatorCompat;->instance:Lcom/google/android/material/animation/ArgbEvaluatorCompat;
 
     return-object v0
@@ -54,6 +58,7 @@
 .method public evaluate(FLjava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
     .locals 10
 
+    .line 58
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -90,6 +95,7 @@
 
     div-float/2addr p0, v0
 
+    .line 64
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result p3
@@ -128,6 +134,7 @@
 
     const-wide v8, 0x400199999999999aL    # 2.2
 
+    .line 71
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -136,6 +143,7 @@
 
     float-to-double v6, v2
 
+    .line 72
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -144,6 +152,7 @@
 
     float-to-double v6, p0
 
+    .line 73
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -152,6 +161,7 @@
 
     float-to-double v6, v4
 
+    .line 75
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -160,6 +170,7 @@
 
     float-to-double v5, v5
 
+    .line 76
     invoke-static {v5, v6, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -168,6 +179,7 @@
 
     float-to-double v6, p3
 
+    .line 77
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -204,6 +216,7 @@
 
     const-wide v5, 0x3fdd1745d1745d17L    # 0.45454545454545453
 
+    .line 87
     invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v3
@@ -214,6 +227,7 @@
 
     float-to-double v1, v2
 
+    .line 88
     invoke-static {v1, v2, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -224,6 +238,7 @@
 
     float-to-double v1, p0
 
+    .line 89
     invoke-static {v1, v2, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -232,6 +247,7 @@
 
     mul-float/2addr p0, v0
 
+    .line 91
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result p2
@@ -270,6 +286,7 @@
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 28
     check-cast p2, Ljava/lang/Integer;
 
     check-cast p3, Ljava/lang/Integer;

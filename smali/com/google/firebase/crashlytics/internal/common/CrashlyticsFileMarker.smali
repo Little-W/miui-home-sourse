@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsFileMarker;
 .super Ljava/lang/Object;
+.source "CrashlyticsFileMarker.java"
 
 
 # instance fields
@@ -12,10 +13,13 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/persistence/FileStore;)V
     .locals 0
 
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 39
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsFileMarker;->markerName:Ljava/lang/String;
 
+    .line 40
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsFileMarker;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
     return-void
@@ -24,6 +28,7 @@
 .method private getMarkerFile()Ljava/io/File;
     .locals 1
 
+    .line 78
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsFileMarker;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsFileMarker;->markerName:Ljava/lang/String;
@@ -40,6 +45,7 @@
 .method public create()Z
     .locals 4
 
+    .line 51
     :try_start_0
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsFileMarker;->getMarkerFile()Ljava/io/File;
 
@@ -56,6 +62,7 @@
     :catch_0
     move-exception v0
 
+    .line 53
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v1
@@ -87,6 +94,7 @@
 .method public isPresent()Z
     .locals 0
 
+    .line 64
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsFileMarker;->getMarkerFile()Ljava/io/File;
 
     move-result-object p0
@@ -101,6 +109,7 @@
 .method public remove()Z
     .locals 0
 
+    .line 74
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsFileMarker;->getMarkerFile()Ljava/io/File;
 
     move-result-object p0

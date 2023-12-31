@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/ui/Image$Companion;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

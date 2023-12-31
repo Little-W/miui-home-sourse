@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/gif/GifIOException;
 .super Ljava/io/IOException;
+.source "GifIOException.java"
 
 
 # static fields
@@ -16,14 +17,17 @@
 .method constructor <init>(ILjava/lang/String;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/io/IOException;-><init>()V
 
+    .line 31
     invoke-static {p1}, Lpl/droidsonroids/gif/GifError;->fromCode(I)Lpl/droidsonroids/gif/GifError;
 
     move-result-object p1
 
     iput-object p1, p0, Lpl/droidsonroids/gif/GifIOException;->reason:Lpl/droidsonroids/gif/GifError;
 
+    .line 32
     iput-object p2, p0, Lpl/droidsonroids/gif/GifIOException;->mErrnoMessage:Ljava/lang/String;
 
     return-void
@@ -32,6 +36,7 @@
 .method static fromCode(I)Lpl/droidsonroids/gif/GifIOException;
     .locals 2
 
+    .line 36
     sget-object v0, Lpl/droidsonroids/gif/GifError;->NO_ERROR:Lpl/droidsonroids/gif/GifError;
 
     iget v0, v0, Lpl/droidsonroids/gif/GifError;->errorCode:I
@@ -42,6 +47,7 @@
 
     return-object v1
 
+    .line 39
     :cond_0
     new-instance v0, Lpl/droidsonroids/gif/GifIOException;
 
@@ -55,10 +61,12 @@
 .method public getMessage()Ljava/lang/String;
     .locals 2
 
+    .line 24
     iget-object v0, p0, Lpl/droidsonroids/gif/GifIOException;->mErrnoMessage:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
+    .line 25
     iget-object p0, p0, Lpl/droidsonroids/gif/GifIOException;->reason:Lpl/droidsonroids/gif/GifError;
 
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifError;->getFormattedDescription()Ljava/lang/String;
@@ -67,6 +75,7 @@
 
     return-object p0
 
+    .line 27
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

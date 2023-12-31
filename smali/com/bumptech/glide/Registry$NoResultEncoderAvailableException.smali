@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/Registry$NoResultEncoderAvailableException;
 .super Lcom/bumptech/glide/Registry$MissingComponentException;
+.source "Registry.java"
 
 
 # annotations
@@ -24,6 +25,7 @@
         }
     .end annotation
 
+    .line 626
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

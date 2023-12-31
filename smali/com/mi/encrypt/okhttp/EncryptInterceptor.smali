@@ -1,5 +1,6 @@
 .class public abstract Lcom/mi/encrypt/okhttp/EncryptInterceptor;
 .super Ljava/lang/Object;
+.source "EncryptInterceptor.java"
 
 # interfaces
 .implements Lokhttp3/Interceptor;
@@ -35,20 +36,24 @@
 .method constructor <init>(Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;)V
     .locals 1
 
+    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 88
     invoke-static {p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;->access$000(Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->mIsDefaultEncrypt:Z
 
+    .line 89
     invoke-static {p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;->access$100(Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->mEncryptDomainList:Ljava/util/List;
 
+    .line 90
     invoke-static {p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;->access$200(Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;)Lcom/mi/encrypt/okhttp/EncryptInterceptor$ExceptionReporter;
 
     move-result-object p1
@@ -68,6 +73,7 @@
 
     if-nez p3, :cond_3
 
+    .line 309
     invoke-virtual {p2}, Lokhttp3/Request;->headers()Lokhttp3/Headers;
 
     move-result-object p0
@@ -80,12 +86,14 @@
 
     const-string v0, "X-MI-XFLAG"
 
+    .line 311
     invoke-interface {p0, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 312
     invoke-virtual {p2}, Lokhttp3/Request;->newBuilder()Lokhttp3/Request$Builder;
 
     move-result-object p3
@@ -97,6 +105,7 @@
     :cond_0
     const-string v0, "X-MI-XKEY"
 
+    .line 314
     invoke-interface {p0, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -107,21 +116,25 @@
 
     goto :goto_0
 
+    .line 315
     :cond_1
     invoke-virtual {p2}, Lokhttp3/Request;->newBuilder()Lokhttp3/Request$Builder;
 
     move-result-object p3
 
+    .line 316
     :goto_0
     invoke-virtual {p3, v0}, Lokhttp3/Request$Builder;->removeHeader(Ljava/lang/String;)Lokhttp3/Request$Builder;
 
     :cond_2
     if-eqz p3, :cond_3
 
+    .line 319
     invoke-virtual {p3}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 
     move-result-object p2
 
+    .line 323
     :cond_3
     invoke-interface {p1, p2}, Lokhttp3/Interceptor$Chain;->proceed(Lokhttp3/Request;)Lokhttp3/Response;
 
@@ -133,6 +146,7 @@
 .method private checkIsNeedDecrypt(Lokhttp3/Response;)Z
     .locals 1
 
+    .line 368
     invoke-direct {p0, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->getResponseDecryptFlag(Lokhttp3/Response;)I
 
     move-result p0
@@ -141,6 +155,7 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 369
     invoke-static {p1}, Lokhttp3/internal/http/HttpHeaders;->hasBody(Lokhttp3/Response;)Z
 
     move-result p0
@@ -158,6 +173,7 @@
 .method private checkIsNeedEncrypt(Lokhttp3/Request;)Z
     .locals 3
 
+    .line 334
     invoke-virtual {p1}, Lokhttp3/Request;->isHttps()Z
 
     move-result v0
@@ -168,6 +184,7 @@
 
     return v1
 
+    .line 339
     :cond_0
     invoke-virtual {p1}, Lokhttp3/Request;->method()Ljava/lang/String;
 
@@ -181,6 +198,7 @@
 
     if-nez v0, :cond_1
 
+    .line 340
     invoke-virtual {p1}, Lokhttp3/Request;->method()Ljava/lang/String;
 
     move-result-object v0
@@ -195,6 +213,7 @@
 
     return v1
 
+    .line 344
     :cond_1
     invoke-virtual {p0, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->getRequestEncryptFlag(Lokhttp3/Request;)I
 
@@ -211,6 +230,7 @@
 
     if-ne v0, v2, :cond_3
 
+    .line 354
     invoke-virtual {p0, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->checkRequestNeedEncrypt(Lokhttp3/Request;)Z
 
     move-result p0
@@ -227,6 +247,7 @@
 .method private encryptFlagStringToInt(Ljava/lang/String;)I
     .locals 1
 
+    .line 475
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -237,6 +258,7 @@
 
     return v0
 
+    .line 479
     :cond_0
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -276,6 +298,7 @@
 
     const/4 v1, 0x0
 
+    .line 229
     :try_start_0
     invoke-virtual {p2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -283,28 +306,34 @@
 
     const-string v3, "Content-Type"
 
+    .line 230
     invoke-virtual {p2, v3}, Lokhttp3/Response;->header(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 231
     invoke-virtual {v2}, Lokhttp3/ResponseBody;->contentLength()J
 
     move-result-wide v4
 
+    .line 237
     invoke-virtual {v2}, Lokhttp3/ResponseBody;->source()Lokio/BufferedSource;
 
     move-result-object v6
 
     const-wide v7, 0x7fffffffffffffffL
 
+    .line 238
     invoke-interface {v6, v7, v8}, Lokio/BufferedSource;->request(J)Z
 
+    .line 239
     invoke-interface {v6}, Lokio/BufferedSource;->buffer()Lokio/Buffer;
 
     move-result-object v6
 
     const-string v7, "gzip"
 
+    .line 241
     invoke-virtual {p2, v0}, Lokhttp3/Response;->header(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
@@ -319,6 +348,7 @@
 
     if-eqz v7, :cond_0
 
+    .line 242
     :try_start_1
     new-instance v4, Lokio/GzipSource;
 
@@ -328,6 +358,7 @@
 
     invoke-direct {v4, v5}, Lokio/GzipSource;-><init>(Lokio/Source;)V
 
+    .line 245
     new-instance v5, Lokhttp3/internal/http/RealResponseBody;
 
     const-wide/16 v6, -0x1
@@ -338,6 +369,7 @@
 
     invoke-direct {v5, v3, v6, v7, v4}, Lokhttp3/internal/http/RealResponseBody;-><init>(Ljava/lang/String;JLokio/BufferedSource;)V
 
+    .line 246
     invoke-virtual {p2}, Lokhttp3/Response;->headers()Lokhttp3/Headers;
 
     move-result-object v3
@@ -364,6 +396,7 @@
 
     goto :goto_0
 
+    .line 248
     :cond_0
     new-instance v0, Lokhttp3/internal/http/RealResponseBody;
 
@@ -375,6 +408,7 @@
 
     move-object v3, v1
 
+    .line 251
     :goto_0
     invoke-virtual {v0}, Lokhttp3/ResponseBody;->bytes()[B
 
@@ -382,6 +416,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 252
     :try_start_2
     invoke-static {}, Lcom/mi/encrypt/EncryptHelper;->getInstance()Lcom/mi/encrypt/EncryptHelper;
 
@@ -391,14 +426,17 @@
 
     move-result-object v4
 
+    .line 254
     invoke-virtual {p2}, Lokhttp3/Response;->newBuilder()Lokhttp3/Response$Builder;
 
     move-result-object v5
 
     if-eqz v3, :cond_1
 
+    .line 256
     invoke-virtual {v5, v3}, Lokhttp3/Response$Builder;->headers(Lokhttp3/Headers;)Lokhttp3/Response$Builder;
 
+    .line 258
     :cond_1
     invoke-virtual {v2}, Lokhttp3/ResponseBody;->contentType()Lokhttp3/MediaType;
 
@@ -408,8 +446,10 @@
 
     move-result-object v2
 
+    .line 259
     invoke-direct {p0, v1, p2, v0, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->wrapperReportMessage(Ljava/lang/Exception;Lokhttp3/Response;[BLcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)V
 
+    .line 261
     invoke-virtual {v2}, Lokhttp3/ResponseBody;->contentLength()J
 
     move-result-wide v3
@@ -422,10 +462,12 @@
 
     move-result-object v1
 
+    .line 262
     invoke-virtual {v1, v2}, Lokhttp3/Response$Builder;->body(Lokhttp3/ResponseBody;)Lokhttp3/Response$Builder;
 
     move-result-object v1
 
+    .line 263
     invoke-virtual {v1}, Lokhttp3/Response$Builder;->build()Lokhttp3/Response;
 
     move-result-object p0
@@ -448,9 +490,11 @@
     :catch_1
     move-exception v0
 
+    .line 265
     :goto_1
     invoke-direct {p0, v0, p2, v1, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->wrapperReportMessage(Ljava/lang/Exception;Lokhttp3/Response;[BLcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)V
 
+    .line 266
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object p2
@@ -459,6 +503,7 @@
 .method private generateEncryptedRequest(Lokhttp3/Request;Ljava/security/interfaces/RSAPublicKey;)Lokhttp3/Request;
     .locals 4
 
+    .line 167
     :try_start_0
     invoke-static {}, Lcom/mi/encrypt/EncryptHelper;->getInstance()Lcom/mi/encrypt/EncryptHelper;
 
@@ -468,6 +513,7 @@
 
     move-result-object p2
 
+    .line 168
     invoke-static {}, Lcom/mi/encrypt/EncryptHelper;->getInstance()Lcom/mi/encrypt/EncryptHelper;
 
     move-result-object v0
@@ -476,12 +522,14 @@
 
     move-result-object v0
 
+    .line 169
     invoke-virtual {p0, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->generateEncryptedRequestInner(Lokhttp3/Request;)Lokhttp3/Request$Builder;
 
     move-result-object v1
 
     const-string v2, "X-MI-XKEY"
 
+    .line 170
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -494,12 +542,14 @@
 
     move-result-object p2
 
+    .line 171
     invoke-virtual {v1, v2, p2}, Lokhttp3/Request$Builder;->header(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
 
     move-result-object p2
 
     const-string v0, "X-MI-XFLAG"
 
+    .line 172
     invoke-virtual {p0, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->getRequestEncryptFlag(Lokhttp3/Request;)I
 
     move-result p0
@@ -512,6 +562,7 @@
 
     move-result-object p0
 
+    .line 173
     invoke-virtual {p0}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 
     move-result-object p0
@@ -523,6 +574,7 @@
     :catch_0
     move-exception p0
 
+    .line 175
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -535,6 +587,7 @@
 
     const/4 p0, 0x0
 
+    .line 415
     :try_start_0
     invoke-interface {p1}, Lokhttp3/Connection;->socket()Ljava/net/Socket;
 
@@ -542,22 +595,26 @@
 
     check-cast p1, Ljavax/net/ssl/SSLSocket;
 
+    .line 416
     invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
 
     move-result-object p1
 
+    .line 417
     invoke-interface {p1}, Ljavax/net/ssl/SSLSession;->getPeerCertificates()[Ljava/security/cert/Certificate;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
+    .line 418
     aget-object v0, p1, v0
 
     invoke-virtual {v0}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v0
 
+    .line 419
     new-instance v1, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;
 
     check-cast v0, Ljava/security/interfaces/RSAPublicKey;
@@ -571,6 +628,7 @@
     :catch_0
     move-exception p1
 
+    .line 421
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object p0
@@ -581,10 +639,12 @@
 
     const-string v0, "X-MI-XFLAG"
 
+    .line 469
     invoke-virtual {p1, v0}, Lokhttp3/Response;->header(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 470
     invoke-direct {p0, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->encryptFlagStringToInt(Ljava/lang/String;)I
 
     move-result p0
@@ -595,6 +655,7 @@
 .method private isInEncryptDomainList(Ljava/lang/String;)Z
     .locals 3
 
+    .line 451
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -618,6 +679,7 @@
     :cond_0
     move v0, v1
 
+    .line 454
     :goto_0
     iget-object v2, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->mEncryptDomainList:Ljava/util/List;
 
@@ -627,6 +689,7 @@
 
     if-ge v0, v2, :cond_2
 
+    .line 455
     iget-object v2, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->mEncryptDomainList:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -658,6 +721,7 @@
 .method private wrapperReportMessage(Ljava/lang/Exception;Lokhttp3/Response;[BLcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)V
     .locals 6
 
+    .line 272
     iget-object v0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->mExceptionReporter:Lcom/mi/encrypt/okhttp/EncryptInterceptor$ExceptionReporter;
 
     if-eqz v0, :cond_4
@@ -674,28 +738,33 @@
 
     goto/16 :goto_2
 
+    .line 275
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 276
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     if-eqz p1, :cond_1
 
+    .line 278
     invoke-virtual {p1}, Ljava/lang/Exception;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object p1
 
     const/4 v2, 0x0
 
+    .line 279
     :goto_0
     array-length v3, p1
 
     if-ge v2, v3, :cond_1
 
+    .line 280
     aget-object v3, p1, v2
 
     invoke-virtual {v3}, Ljava/lang/StackTraceElement;->toString()Ljava/lang/String;
@@ -712,6 +781,7 @@
 
     goto :goto_0
 
+    .line 283
     :cond_1
     invoke-virtual {p2}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
@@ -725,6 +795,7 @@
 
     move-result-object p1
 
+    .line 284
     invoke-virtual {p2}, Lokhttp3/Response;->headers()Lokhttp3/Headers;
 
     move-result-object v2
@@ -744,11 +815,13 @@
     :cond_2
     const-string v2, ""
 
+    .line 285
     :goto_1
     invoke-virtual {p2}, Lokhttp3/Response;->toString()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 287
     invoke-static {}, Lcom/mi/encrypt/EncryptHelper;->getInstance()Lcom/mi/encrypt/EncryptHelper;
 
     move-result-object v3
@@ -767,6 +840,7 @@
 
     invoke-interface {v0, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 288
     invoke-static {}, Lcom/mi/encrypt/EncryptHelper;->getInstance()Lcom/mi/encrypt/EncryptHelper;
 
     move-result-object v3
@@ -783,6 +857,7 @@
 
     invoke-interface {v0, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 289
     invoke-static {}, Lcom/mi/encrypt/EncryptHelper;->getInstance()Lcom/mi/encrypt/EncryptHelper;
 
     move-result-object v3
@@ -799,6 +874,7 @@
 
     invoke-interface {v0, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 290
     invoke-static {}, Lcom/mi/encrypt/EncryptHelper;->getInstance()Lcom/mi/encrypt/EncryptHelper;
 
     move-result-object v3
@@ -811,6 +887,7 @@
 
     invoke-interface {v0, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 291
     invoke-static {p4}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->access$300(Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)Ljava/security/interfaces/RSAPublicKey;
 
     move-result-object v3
@@ -823,6 +900,7 @@
 
     invoke-interface {v0, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 292
     invoke-static {p4}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->access$400(Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)Ljava/lang/String;
 
     move-result-object p4
@@ -833,16 +911,20 @@
 
     const-string p4, "H_RequestHeaders"
 
+    .line 293
     invoke-interface {v0, p4, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p1, "H_ResponseHeaders"
 
+    .line 294
     invoke-interface {v0, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p1, "H_Response"
 
+    .line 295
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 296
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -853,6 +935,7 @@
 
     if-eqz p3, :cond_3
 
+    .line 298
     invoke-static {p3, v4}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object p1
@@ -861,11 +944,13 @@
 
     invoke-interface {v0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 301
     :cond_3
     iget-object p0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->mExceptionReporter:Lcom/mi/encrypt/okhttp/EncryptInterceptor$ExceptionReporter;
 
     if-eqz p0, :cond_4
 
+    .line 302
     invoke-interface {p0, v0}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$ExceptionReporter;->callbackException(Ljava/util/Map;)V
 
     :cond_4
@@ -894,10 +979,12 @@
 
     const-string v0, "X-MI-XFLAG"
 
+    .line 438
     invoke-virtual {p1, v0}, Lokhttp3/Request;->header(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 439
     invoke-direct {p0, v0}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->encryptFlagStringToInt(Ljava/lang/String;)I
 
     move-result v0
@@ -906,6 +993,7 @@
 
     return v0
 
+    .line 443
     :cond_0
     invoke-virtual {p1}, Lokhttp3/Request;->url()Lokhttp3/HttpUrl;
 
@@ -915,6 +1003,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 444
     invoke-virtual {p1}, Lokhttp3/HttpUrl;->host()Ljava/lang/String;
 
     move-result-object p1
@@ -927,6 +1016,7 @@
 
     return v0
 
+    .line 447
     :cond_1
     iget-boolean p0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->mIsDefaultEncrypt:Z
 
@@ -949,18 +1039,22 @@
         }
     .end annotation
 
+    .line 183
     invoke-interface {p1}, Lokhttp3/Interceptor$Chain;->request()Lokhttp3/Request;
 
     move-result-object v0
 
+    .line 184
     invoke-static {}, Lcom/mi/encrypt/VersionUtils;->getSdkVersion()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 185
     invoke-virtual {v0}, Lokhttp3/Request;->newBuilder()Lokhttp3/Request$Builder;
 
     move-result-object v0
 
+    .line 186
     invoke-virtual {p0}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->getProtocolVersion()Ljava/lang/String;
 
     move-result-object v2
@@ -973,14 +1067,17 @@
 
     const-string v2, "X-MI-XVERSION"
 
+    .line 187
     invoke-virtual {v0, v2, v1}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
 
     move-result-object v0
 
+    .line 188
     invoke-virtual {v0}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 
     move-result-object v0
 
+    .line 189
     invoke-direct {p0, v0}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->checkIsNeedEncrypt(Lokhttp3/Request;)Z
 
     move-result v1
@@ -989,12 +1086,14 @@
 
     if-nez v1, :cond_0
 
+    .line 190
     invoke-direct {p0, p1, v0, v2}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->chainProceed(Lokhttp3/Interceptor$Chain;Lokhttp3/Request;Z)Lokhttp3/Response;
 
     move-result-object p0
 
     return-object p0
 
+    .line 194
     :cond_0
     invoke-interface {p1}, Lokhttp3/Interceptor$Chain;->connection()Lokhttp3/Connection;
 
@@ -1006,6 +1105,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 197
     invoke-static {v1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->access$300(Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)Ljava/security/interfaces/RSAPublicKey;
 
     move-result-object v3
@@ -1014,6 +1114,7 @@
 
     goto :goto_0
 
+    .line 202
     :cond_1
     invoke-static {v1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->access$300(Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)Ljava/security/interfaces/RSAPublicKey;
 
@@ -1025,6 +1126,7 @@
 
     if-nez v3, :cond_2
 
+    .line 206
     invoke-direct {p0, p1, v0, v2}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->chainProceed(Lokhttp3/Interceptor$Chain;Lokhttp3/Request;Z)Lokhttp3/Response;
 
     move-result-object p0
@@ -1034,16 +1136,19 @@
     :cond_2
     const/4 v0, 0x1
 
+    .line 210
     invoke-direct {p0, p1, v3, v0}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->chainProceed(Lokhttp3/Interceptor$Chain;Lokhttp3/Request;Z)Lokhttp3/Response;
 
     move-result-object p1
 
+    .line 212
     invoke-direct {p0, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->checkIsNeedDecrypt(Lokhttp3/Response;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 213
     invoke-direct {p0, v1, p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->generateDecryptedResponse(Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;Lokhttp3/Response;)Lokhttp3/Response;
 
     move-result-object p0
@@ -1055,6 +1160,7 @@
     :cond_3
     return-object p1
 
+    .line 198
     :cond_4
     :goto_0
     invoke-direct {p0, p1, v0, v2}, Lcom/mi/encrypt/okhttp/EncryptInterceptor;->chainProceed(Lokhttp3/Interceptor$Chain;Lokhttp3/Request;Z)Lokhttp3/Response;

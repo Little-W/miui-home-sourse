@@ -1,11 +1,13 @@
 .class public Lcom/android/hideapi/ActivityTaskManagerExpose;
 .super Ljava/lang/Object;
+.source "ActivityTaskManagerExpose.java"
 
 
 # direct methods
 .method public static getService()Lcom/android/hideapi/IActivityTaskManagerExpose;
     .locals 5
 
+    .line 24
     const-class v0, Landroid/app/ActivityTaskManager;
 
     const-class v1, Landroid/app/IActivityTaskManager;
@@ -24,6 +26,7 @@
 
     check-cast v0, Landroid/app/IActivityTaskManager;
 
+    .line 25
     invoke-static {v0}, Lcom/android/hideapi/IActivityTaskManagerExpose;->box(Landroid/app/IActivityTaskManager;)Lcom/android/hideapi/IActivityTaskManagerExpose;
 
     move-result-object v0

@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/functions/Functions$MaxRequestSubscription;
 .super Ljava/lang/Object;
+.source "Functions.java"
 
 # interfaces
 .implements Lio/reactivex2/functions/Consumer;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 742
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +46,7 @@
         }
     .end annotation
 
+    .line 742
     check-cast p1, Lorg/reactivestreams2/Subscription;
 
     invoke-virtual {p0, p1}, Lio/reactivex2/internal/functions/Functions$MaxRequestSubscription;->accept(Lorg/reactivestreams2/Subscription;)V
@@ -61,6 +64,7 @@
 
     const-wide v0, 0x7fffffffffffffffL
 
+    .line 745
     invoke-interface {p1, v0, v1}, Lorg/reactivestreams2/Subscription;->request(J)V
 
     return-void

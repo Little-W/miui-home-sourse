@@ -1,5 +1,6 @@
 .class abstract Lcom/google/android/datatransport/runtime/SendRequest;
 .super Ljava/lang/Object;
+.source "SendRequest.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method public static builder()Lcom/google/android/datatransport/runtime/SendRequest$Builder;
     .locals 1
 
+    .line 39
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest$Builder;-><init>()V
@@ -47,6 +50,7 @@
 .method public getPayload()[B
     .locals 1
 
+    .line 35
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/SendRequest;->getTransformer()Lcom/google/android/datatransport/Transformer;
 
     move-result-object v0

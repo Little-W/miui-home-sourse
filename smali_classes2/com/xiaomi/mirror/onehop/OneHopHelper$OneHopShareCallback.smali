@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/mirror/onehop/OneHopHelper$OneHopShareCallback;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

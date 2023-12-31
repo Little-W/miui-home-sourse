@@ -1,5 +1,6 @@
 .class final Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 .super Ljava/lang/Object;
+.source "SQLiteConnection.java"
 
 
 # annotations
@@ -35,6 +36,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1301
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +45,7 @@
 .method synthetic constructor <init>(Lio/requery/android/database/sqlite/SQLiteConnection$1;)V
     .locals 0
 
+    .line 1301
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;-><init>()V
 
     return-void

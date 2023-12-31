@@ -1,5 +1,6 @@
 .class public abstract Lcom/squareup/moshi/JsonAdapter;
 .super Ljava/lang/Object;
+.source "JsonAdapter.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,6 +70,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 39
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
@@ -102,6 +105,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 35
     invoke-static {p1}, Lcom/squareup/moshi/JsonReader;->of(Lokio/BufferedSource;)Lcom/squareup/moshi/JsonReader;
 
     move-result-object p1
@@ -123,6 +127,7 @@
         }
     .end annotation
 
+    .line 123
     new-instance v0, Lcom/squareup/moshi/JsonAdapter$2;
 
     invoke-direct {v0, p0, p0}, Lcom/squareup/moshi/JsonAdapter$2;-><init>(Lcom/squareup/moshi/JsonAdapter;Lcom/squareup/moshi/JsonAdapter;)V

@@ -10,8 +10,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     return-void
@@ -22,6 +24,7 @@
 .method public checkCallingOrSelfPermission(Ljava/lang/String;)I
     .locals 0
 
+    .line 22
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
@@ -39,6 +42,7 @@
         }
     .end annotation
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -60,6 +64,7 @@
         }
     .end annotation
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -76,6 +81,7 @@
 .method public final getPackagesForUid(I)[Ljava/lang/String;
     .locals 0
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -92,6 +98,7 @@
 .method public isCallerInstantApp()Z
     .locals 2
 
+    .line 28
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -102,6 +109,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 29
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/google/android/gms/common/wrappers/InstantApps;->isInstantApp(Landroid/content/Context;)Z
@@ -110,6 +118,7 @@
 
     return p0
 
+    .line 30
     :cond_0
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastO()Z
 
@@ -117,6 +126,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 31
     iget-object v0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -133,6 +143,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 34
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -159,6 +170,7 @@
         }
     .end annotation
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -177,6 +189,7 @@
 .method public final zzb(ILjava/lang/String;)Z
     .locals 3
 
+    .line 8
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastKitKat()Z
 
     move-result v0
@@ -187,17 +200,20 @@
 
     if-eqz v0, :cond_0
 
+    .line 9
     :try_start_0
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
     const-string v0, "appops"
 
+    .line 10
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/AppOpsManager;
 
+    .line 11
     invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->checkPackage(ILjava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
@@ -207,6 +223,7 @@
     :catch_0
     return v2
 
+    .line 15
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->zzhx:Landroid/content/Context;
 
@@ -224,11 +241,13 @@
 
     move p1, v2
 
+    .line 17
     :goto_0
     array-length v0, p0
 
     if-ge p1, v0, :cond_2
 
+    .line 18
     aget-object v0, p0, p1
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

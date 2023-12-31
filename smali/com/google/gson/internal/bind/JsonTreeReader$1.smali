@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/bind/JsonTreeReader$1;
 .super Ljava/io/Reader;
+.source "JsonTreeReader.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 39
     invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
     return-void
@@ -32,6 +34,7 @@
         }
     .end annotation
 
+    .line 44
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -47,6 +50,7 @@
         }
     .end annotation
 
+    .line 41
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V

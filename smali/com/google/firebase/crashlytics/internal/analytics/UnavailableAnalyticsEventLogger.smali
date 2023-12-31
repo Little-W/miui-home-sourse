@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/analytics/UnavailableAnalyticsEventLogger;
 .super Ljava/lang/Object;
+.source "UnavailableAnalyticsEventLogger.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/analytics/AnalyticsEventLogger;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +21,7 @@
 .method public logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 27
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p0

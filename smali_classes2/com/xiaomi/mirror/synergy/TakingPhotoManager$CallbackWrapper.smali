@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/synergy/TakingPhotoManager$CallbackWrapper;
 .super Lcom/xiaomi/mirror/IMirrorTakePhotoCallback$Stub;
+.source "SourceFile"
 
 
 # annotations

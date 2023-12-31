@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchDeepViewFragment$PercentImageView;
 .super Landroid/widget/ImageView;
+.source "SourceFile"
 
 
 # annotations

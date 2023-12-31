@@ -20,6 +20,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,10 +29,12 @@
 .method public static a(I)I
     .locals 3
 
+    .line 34
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->b:Z
 
     if-eqz v0, :cond_0
 
+    .line 35
     sget-object p0, Lcom/xiaomi/onetrack/b/n;->a:Ljava/lang/String;
 
     const-string v0, "debug upload mode, send events immediately"
@@ -42,6 +45,7 @@
 
     return p0
 
+    .line 41
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/b/e;->c()Ljava/util/Map;
@@ -50,6 +54,7 @@
 
     add-int/lit8 p0, p0, 0x1
 
+    .line 43
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -71,6 +76,7 @@
     :catch_0
     const p0, 0xea60
 
+    .line 47
     :goto_0
     sget-object v0, Lcom/xiaomi/onetrack/b/n;->a:Ljava/lang/String;
 
@@ -100,11 +106,13 @@
 
     monitor-enter v0
 
+    .line 52
     :try_start_0
     sput-boolean p0, Lcom/xiaomi/onetrack/b/n;->b:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 53
     monitor-exit v0
 
     return-void
@@ -122,6 +130,7 @@
 
     const/4 v0, 0x0
 
+    .line 22
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/d/f;->a()Lcom/xiaomi/onetrack/d/f;
 
@@ -131,6 +140,7 @@
 
     move-result-object v1
 
+    .line 23
     aget-object v2, v1, v0
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -156,6 +166,7 @@
     :cond_0
     move v1, v0
 
+    .line 24
     :goto_0
     sget-object v2, Lcom/xiaomi/onetrack/b/n;->a:Ljava/lang/String;
 
@@ -176,6 +187,7 @@
     :catch_0
     move-exception v1
 
+    .line 27
     sget-object v2, Lcom/xiaomi/onetrack/b/n;->a:Ljava/lang/String;
 
     const-string v3, "ConfigProvider.available"
@@ -190,6 +202,7 @@
 .method public static b(Z)V
     .locals 0
 
+    .line 60
     sput-boolean p0, Lcom/xiaomi/onetrack/b/n;->c:Z
 
     return-void
@@ -202,6 +215,7 @@
 
     monitor-enter v0
 
+    .line 56
     :try_start_0
     sget-boolean v1, Lcom/xiaomi/onetrack/b/n;->b:Z
     :try_end_0
@@ -222,6 +236,7 @@
 .method public static c()Z
     .locals 1
 
+    .line 64
     sget-boolean v0, Lcom/xiaomi/onetrack/b/n;->c:Z
 
     return v0

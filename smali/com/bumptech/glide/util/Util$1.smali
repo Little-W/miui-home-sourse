@@ -1,5 +1,6 @@
 .class synthetic Lcom/bumptech/glide/util/Util$1;
 .super Ljava/lang/Object;
+.source "Util.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 106
     invoke-static {}, Landroid/graphics/Bitmap$Config;->values()[Landroid/graphics/Bitmap$Config;
 
     move-result-object v0

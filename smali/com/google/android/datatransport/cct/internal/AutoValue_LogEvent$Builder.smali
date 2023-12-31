@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;
 .super Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
+.source "AutoValue_LogEvent.java"
 
 
 # annotations
@@ -33,6 +34,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 142
     invoke-direct {p0}, Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;-><init>()V
 
     return-void
@@ -43,12 +45,14 @@
 .method public build()Lcom/google/android/datatransport/cct/internal/LogEvent;
     .locals 14
 
+    .line 182
     iget-object v0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->eventTimeMs:Ljava/lang/Long;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 183
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,11 +67,13 @@
 
     move-result-object v1
 
+    .line 185
     :cond_0
     iget-object v0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->eventUptimeMs:Ljava/lang/Long;
 
     if-nez v0, :cond_1
 
+    .line 186
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,11 +88,13 @@
 
     move-result-object v1
 
+    .line 188
     :cond_1
     iget-object v0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->timezoneOffsetSeconds:Ljava/lang/Long;
 
     if-nez v0, :cond_2
 
+    .line 189
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,6 +109,7 @@
 
     move-result-object v1
 
+    .line 191
     :cond_2
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -108,10 +117,12 @@
 
     if-eqz v0, :cond_3
 
+    .line 194
     new-instance v0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent;
 
     iget-object v1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->eventTimeMs:Ljava/lang/Long;
 
+    .line 195
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v3
@@ -120,6 +131,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->eventUptimeMs:Ljava/lang/Long;
 
+    .line 197
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v6
@@ -130,6 +142,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->timezoneOffsetSeconds:Ljava/lang/Long;
 
+    .line 200
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v10
@@ -144,6 +157,7 @@
 
     return-object v0
 
+    .line 192
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -169,6 +183,7 @@
 .method public setEventCode(Ljava/lang/Integer;)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 0
 
+    .line 151
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->eventCode:Ljava/lang/Integer;
 
     return-object p0
@@ -177,6 +192,7 @@
 .method public setEventTimeMs(J)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 0
 
+    .line 146
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -189,6 +205,7 @@
 .method public setEventUptimeMs(J)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 0
 
+    .line 156
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -201,6 +218,7 @@
 .method public setNetworkConnectionInfo(Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 0
 
+    .line 176
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->networkConnectionInfo:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;
 
     return-object p0
@@ -209,6 +227,7 @@
 .method setSourceExtension([B)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 0
 
+    .line 161
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->sourceExtension:[B
 
     return-object p0
@@ -217,6 +236,7 @@
 .method setSourceExtensionJsonProto3(Ljava/lang/String;)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 0
 
+    .line 166
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogEvent$Builder;->sourceExtensionJsonProto3:Ljava/lang/String;
 
     return-object p0
@@ -225,6 +245,7 @@
 .method public setTimezoneOffsetSeconds(J)Lcom/google/android/datatransport/cct/internal/LogEvent$Builder;
     .locals 0
 
+    .line 171
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1

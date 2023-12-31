@@ -1,5 +1,6 @@
 .class final Lretrofit2/Utils$GenericArrayTypeImpl;
 .super Ljava/lang/Object;
+.source "Utils.java"
 
 # interfaces
 .implements Ljava/lang/reflect/GenericArrayType;
@@ -24,8 +25,10 @@
 .method constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 0
 
+    .line 421
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 422
     iput-object p1, p0, Lretrofit2/Utils$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
     return-void
@@ -36,12 +39,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 430
     instance-of v0, p1, Ljava/lang/reflect/GenericArrayType;
 
     if-eqz v0, :cond_0
 
     check-cast p1, Ljava/lang/reflect/GenericArrayType;
 
+    .line 431
     invoke-static {p0, p1}, Lretrofit2/Utils;->equals(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
 
     move-result p0
@@ -62,6 +67,7 @@
 .method public getGenericComponentType()Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 426
     iget-object p0, p0, Lretrofit2/Utils$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
     return-object p0
@@ -70,6 +76,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 435
     iget-object p0, p0, Lretrofit2/Utils$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -82,6 +89,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 439
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

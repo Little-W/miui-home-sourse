@@ -1,5 +1,6 @@
 .class public abstract Lkotlin/collections/AbstractCollection;
 .super Ljava/lang/Object;
+.source "AbstractCollection.kt"
 
 # interfaces
 .implements Ljava/util/Collection;
@@ -26,6 +27,7 @@
 .method protected constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -84,6 +86,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 43
     instance-of v0, p0, Ljava/util/Collection;
 
     const/4 v1, 0x0
@@ -102,6 +105,7 @@
 
     goto :goto_0
 
+    .line 44
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -118,6 +122,7 @@
 
     move-result-object v0
 
+    .line 19
     invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -147,8 +152,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 22
     check-cast p1, Ljava/lang/Iterable;
 
+    .line 46
     move-object v0, p1
 
     check-cast v0, Ljava/util/Collection;
@@ -163,6 +170,7 @@
 
     goto :goto_0
 
+    .line 47
     :cond_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -179,6 +187,7 @@
 
     move-result-object v0
 
+    .line 22
     invoke-virtual {p0, v0}, Lkotlin/collections/AbstractCollection;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -198,6 +207,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 24
     invoke-virtual {p0}, Lkotlin/collections/AbstractCollection;->size()I
 
     move-result p0
@@ -272,6 +282,7 @@
 .method public final bridge size()I
     .locals 0
 
+    .line 15
     invoke-virtual {p0}, Lkotlin/collections/AbstractCollection;->getSize()I
 
     move-result p0
@@ -282,6 +293,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 34
     check-cast p0, Ljava/util/Collection;
 
     invoke-static {p0}, Lkotlin/jvm/internal/CollectionToArray;->toArray(Ljava/util/Collection;)[Ljava/lang/Object;
@@ -305,6 +317,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 40
     check-cast p0, Ljava/util/Collection;
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/CollectionToArray;->toArray(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
@@ -330,6 +343,7 @@
 
     const-string v0, ", "
 
+    .line 26
     move-object v2, v0
 
     check-cast v2, Ljava/lang/CharSequence;

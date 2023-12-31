@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CLSUUID;
 .super Ljava/lang/Object;
+.source "CLSUUID.java"
 
 
 # static fields
@@ -12,6 +13,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 32
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v1, 0x0
@@ -26,18 +28,23 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/IdManager;)V
     .locals 7
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0xa
 
     new-array v0, v0, [B
 
+    .line 39
     invoke-direct {p0, v0}, Lcom/google/firebase/crashlytics/internal/common/CLSUUID;->populateTime([B)V
 
+    .line 40
     invoke-direct {p0, v0}, Lcom/google/firebase/crashlytics/internal/common/CLSUUID;->populateSequenceNumber([B)V
 
+    .line 41
     invoke-direct {p0, v0}, Lcom/google/firebase/crashlytics/internal/common/CLSUUID;->populatePID([B)V
 
+    .line 46
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/common/IdManager;->getCrashlyticsInstallId()Ljava/lang/String;
 
     move-result-object p0
@@ -46,10 +53,12 @@
 
     move-result-object p0
 
+    .line 47
     invoke-static {v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->hexify([B)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 49
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const/4 v1, 0x4
@@ -60,6 +69,7 @@
 
     const/4 v3, 0x0
 
+    .line 53
     invoke-virtual {p1, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
@@ -68,6 +78,7 @@
 
     const/16 v4, 0x10
 
+    .line 54
     invoke-virtual {p1, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
@@ -78,6 +89,7 @@
 
     const/16 v5, 0x14
 
+    .line 55
     invoke-virtual {p1, v4, v5}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -86,6 +98,7 @@
 
     aput-object p1, v1, v4
 
+    .line 56
     invoke-virtual {p0, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -96,12 +109,14 @@
 
     const-string p0, "%s%s%s%s"
 
+    .line 50
     invoke-static {v0, p0, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
+    .line 57
     invoke-virtual {p0, p1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object p0
@@ -116,22 +131,27 @@
 
     const/4 v0, 0x4
 
+    .line 90
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     long-to-int p0, p0
 
+    .line 91
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
+    .line 92
     sget-object p0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
     const/4 p0, 0x0
 
+    .line 93
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 95
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
@@ -144,6 +164,7 @@
 
     const/4 v0, 0x2
 
+    .line 99
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -152,16 +173,20 @@
 
     int-to-short p0, p0
 
+    .line 100
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 101
     sget-object p0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
     const/4 p0, 0x0
 
+    .line 102
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 104
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
@@ -172,6 +197,7 @@
 .method private populatePID([B)V
     .locals 2
 
+    .line 83
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result p0
@@ -180,6 +206,7 @@
 
     move-result-object p0
 
+    .line 84
     invoke-virtual {p0}, Ljava/lang/Integer;->shortValue()S
 
     move-result p0
@@ -192,6 +219,7 @@
 
     const/4 v0, 0x0
 
+    .line 85
     aget-byte v0, p0, v0
 
     const/16 v1, 0x8
@@ -200,6 +228,7 @@
 
     const/4 v0, 0x1
 
+    .line 86
     aget-byte p0, p0, v0
 
     const/16 v0, 0x9
@@ -212,6 +241,7 @@
 .method private populateSequenceNumber([B)V
     .locals 2
 
+    .line 77
     sget-object p0, Lcom/google/firebase/crashlytics/internal/common/CLSUUID;->_sequenceNumber:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
@@ -224,6 +254,7 @@
 
     const/4 v0, 0x0
 
+    .line 78
     aget-byte v0, p0, v0
 
     const/4 v1, 0x6
@@ -232,6 +263,7 @@
 
     const/4 v0, 0x1
 
+    .line 79
     aget-byte p0, p0, v0
 
     const/4 v0, 0x7
@@ -244,58 +276,70 @@
 .method private populateTime([B)V
     .locals 6
 
+    .line 61
     new-instance p0, Ljava/util/Date;
 
     invoke-direct {p0}, Ljava/util/Date;-><init>()V
 
+    .line 62
     invoke-virtual {p0}, Ljava/util/Date;->getTime()J
 
     move-result-wide v0
 
     const-wide/16 v2, 0x3e8
 
+    .line 63
     div-long v4, v0, v2
 
+    .line 64
     rem-long/2addr v0, v2
 
+    .line 65
     invoke-static {v4, v5}, Lcom/google/firebase/crashlytics/internal/common/CLSUUID;->convertLongToFourByteBuffer(J)[B
 
     move-result-object p0
 
     const/4 v2, 0x0
 
+    .line 66
     aget-byte v3, p0, v2
 
     aput-byte v3, p1, v2
 
     const/4 v3, 0x1
 
+    .line 67
     aget-byte v4, p0, v3
 
     aput-byte v4, p1, v3
 
     const/4 v4, 0x2
 
+    .line 68
     aget-byte v5, p0, v4
 
     aput-byte v5, p1, v4
 
     const/4 v4, 0x3
 
+    .line 69
     aget-byte p0, p0, v4
 
     aput-byte p0, p1, v4
 
+    .line 71
     invoke-static {v0, v1}, Lcom/google/firebase/crashlytics/internal/common/CLSUUID;->convertLongToTwoByteBuffer(J)[B
 
     move-result-object p0
 
+    .line 72
     aget-byte v0, p0, v2
 
     const/4 v1, 0x4
 
     aput-byte v0, p1, v1
 
+    .line 73
     aget-byte p0, p0, v3
 
     const/4 v0, 0x5
@@ -310,6 +354,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 108
     sget-object p0, Lcom/google/firebase/crashlytics/internal/common/CLSUUID;->_clsId:Ljava/lang/String;
 
     return-object p0

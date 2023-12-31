@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/MissingFieldException;
 .super Lkotlinx/serialization/SerializationException;
+.source "SerializationException.kt"
 
 
 # direct methods
@@ -10,6 +11,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

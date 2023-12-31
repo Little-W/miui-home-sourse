@@ -1,5 +1,6 @@
 .class public interface abstract Landroid/window/IWindowContainerTransactionCallback;
 .super Ljava/lang/Object;
+.source "IWindowContainerTransactionCallback.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

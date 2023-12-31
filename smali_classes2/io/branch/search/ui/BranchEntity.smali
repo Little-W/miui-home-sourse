@@ -1,5 +1,6 @@
 .class public interface abstract Lio/branch/search/ui/BranchEntity;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;

@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/utils/-$$Lambda$Schedulers$xpjMPW2UhDHKrhARqnmVgRvA7wA;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/function/Supplier;

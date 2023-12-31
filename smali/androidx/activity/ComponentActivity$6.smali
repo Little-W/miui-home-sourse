@@ -1,5 +1,6 @@
 .class Landroidx/activity/ComponentActivity$6;
 .super Ljava/lang/Object;
+.source "ComponentActivity.java"
 
 # interfaces
 .implements Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/activity/ComponentActivity;)V
     .locals 0
 
+    .line 271
     iput-object p1, p0, Landroidx/activity/ComponentActivity$6;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +38,12 @@
 .method public saveState()Landroid/os/Bundle;
     .locals 1
 
+    .line 276
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 277
     iget-object p0, p0, Landroidx/activity/ComponentActivity$6;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-static {p0}, Landroidx/activity/ComponentActivity;->access$100(Landroidx/activity/ComponentActivity;)Landroidx/activity/result/ActivityResultRegistry;

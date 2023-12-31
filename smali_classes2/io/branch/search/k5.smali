@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/k5;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lio/branch/search/x4;

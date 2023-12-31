@@ -1,5 +1,6 @@
 .class Lkotlin/text/StringsKt__StringNumberConversionsJVMKt;
 .super Lkotlin/text/StringsKt__StringBuilderKt;
+.source "StringNumberConversionsJVM.kt"
 
 
 # annotations
@@ -18,6 +19,7 @@
 
     const/4 v0, 0x0
 
+    .line 290
     :try_start_0
     sget-object v1, Lkotlin/text/ScreenFloatValueRegEx;->value:Lkotlin/text/Regex;
 
@@ -31,6 +33,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 156
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v1

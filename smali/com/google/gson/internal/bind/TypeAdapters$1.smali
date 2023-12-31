@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/bind/TypeAdapters$1;
 .super Lcom/google/gson/TypeAdapter;
+.source "TypeAdapters.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 69
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -40,6 +42,7 @@
         }
     .end annotation
 
+    .line 77
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Attempted to deserialize a java.lang.Class. Forgot to register a type adapter?"
@@ -57,6 +60,7 @@
         }
     .end annotation
 
+    .line 69
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$1;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Class;
 
     move-result-object p0
@@ -72,6 +76,7 @@
         }
     .end annotation
 
+    .line 72
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -82,6 +87,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 73
     invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p2
@@ -109,6 +115,7 @@
         }
     .end annotation
 
+    .line 69
     check-cast p2, Ljava/lang/Class;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$1;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Class;)V

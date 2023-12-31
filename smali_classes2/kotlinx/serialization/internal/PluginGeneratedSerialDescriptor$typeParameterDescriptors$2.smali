@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$typeParameterDescriptors$2;
 .super Lkotlin/jvm/internal/Lambda;
+.source "PluginGeneratedSerialDescriptor.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -52,6 +53,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 17
     invoke-virtual {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$typeParameterDescriptors$2;->invoke()[Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -62,6 +64,7 @@
 .method public final invoke()[Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 4
 
+    .line 41
     iget-object p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$typeParameterDescriptors$2;->this$0:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
 
     invoke-static {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->access$getGeneratedSerializer$p(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)Lkotlinx/serialization/internal/GeneratedSerializer;
@@ -76,6 +79,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 133
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p0
@@ -84,6 +88,7 @@
 
     check-cast v0, Ljava/util/Collection;
 
+    .line 134
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -93,6 +98,7 @@
 
     aget-object v3, p0, v2
 
+    .line 41
     invoke-interface {v3}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v3
@@ -103,6 +109,7 @@
 
     goto :goto_0
 
+    .line 136
     :cond_0
     check-cast v0, Ljava/util/List;
 
@@ -111,6 +118,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 41
     :goto_1
     invoke-static {v0}, Lkotlinx/serialization/internal/Platform_commonKt;->compactArray(Ljava/util/List;)[Lkotlinx/serialization/descriptors/SerialDescriptor;
 

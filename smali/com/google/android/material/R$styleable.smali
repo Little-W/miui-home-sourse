@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/material/R$styleable;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -3457,6 +3458,7 @@
 
     new-array v0, v0, [I
 
+    .line 4200
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/material/R$styleable;->ActionBar:[I
@@ -3471,6 +3473,7 @@
 
     aput v3, v1, v2
 
+    .line 4257
     sput-object v1, Lcom/google/android/material/R$styleable;->ActionBarLayout:[I
 
     new-array v1, v0, [I
@@ -3479,16 +3482,19 @@
 
     aput v3, v1, v2
 
+    .line 4259
     sput-object v1, Lcom/google/android/material/R$styleable;->ActionMenuItemView:[I
 
     new-array v1, v2, [I
 
+    .line 4261
     sput-object v1, Lcom/google/android/material/R$styleable;->ActionMenuView:[I
 
     const/16 v1, 0xd
 
     new-array v3, v1, [I
 
+    .line 4262
     fill-array-data v3, :array_1
 
     sput-object v3, Lcom/google/android/material/R$styleable;->ActionMode:[I
@@ -3497,6 +3503,7 @@
 
     new-array v4, v3, [I
 
+    .line 4276
     fill-array-data v4, :array_2
 
     sput-object v4, Lcom/google/android/material/R$styleable;->ActivityChooserView:[I
@@ -3505,6 +3512,7 @@
 
     new-array v5, v4, [I
 
+    .line 4279
     fill-array-data v5, :array_3
 
     sput-object v5, Lcom/google/android/material/R$styleable;->AlertDialog:[I
@@ -3513,12 +3521,14 @@
 
     new-array v6, v5, [I
 
+    .line 4291
     fill-array-data v6, :array_4
 
     sput-object v6, Lcom/google/android/material/R$styleable;->AnimatedStateListDrawableCompat:[I
 
     new-array v6, v3, [I
 
+    .line 4298
     fill-array-data v6, :array_5
 
     sput-object v6, Lcom/google/android/material/R$styleable;->AnimatedStateListDrawableItem:[I
@@ -3527,6 +3537,7 @@
 
     new-array v7, v6, [I
 
+    .line 4301
     fill-array-data v7, :array_6
 
     sput-object v7, Lcom/google/android/material/R$styleable;->AnimatedStateListDrawableTransition:[I
@@ -3535,12 +3546,14 @@
 
     new-array v8, v7, [I
 
+    .line 4306
     fill-array-data v8, :array_7
 
     sput-object v8, Lcom/google/android/material/R$styleable;->AppBarLayout:[I
 
     new-array v8, v6, [I
 
+    .line 4315
     fill-array-data v8, :array_8
 
     sput-object v8, Lcom/google/android/material/R$styleable;->AppBarLayoutStates:[I
@@ -3549,18 +3562,21 @@
 
     new-array v9, v8, [I
 
+    .line 4320
     fill-array-data v9, :array_9
 
     sput-object v9, Lcom/google/android/material/R$styleable;->AppBarLayout_Layout:[I
 
     new-array v9, v6, [I
 
+    .line 4324
     fill-array-data v9, :array_a
 
     sput-object v9, Lcom/google/android/material/R$styleable;->AppCompatImageView:[I
 
     new-array v9, v6, [I
 
+    .line 4329
     fill-array-data v9, :array_b
 
     sput-object v9, Lcom/google/android/material/R$styleable;->AppCompatSeekBar:[I
@@ -3569,6 +3585,7 @@
 
     new-array v10, v9, [I
 
+    .line 4334
     fill-array-data v10, :array_c
 
     sput-object v10, Lcom/google/android/material/R$styleable;->AppCompatTextHelper:[I
@@ -3577,6 +3594,7 @@
 
     new-array v11, v10, [I
 
+    .line 4342
     fill-array-data v11, :array_d
 
     sput-object v11, Lcom/google/android/material/R$styleable;->AppCompatTextView:[I
@@ -3585,6 +3603,7 @@
 
     new-array v11, v11, [I
 
+    .line 4365
     fill-array-data v11, :array_e
 
     sput-object v11, Lcom/google/android/material/R$styleable;->AppCompatTheme:[I
@@ -3593,6 +3612,7 @@
 
     new-array v12, v11, [I
 
+    .line 4493
     fill-array-data v12, :array_f
 
     sput-object v12, Lcom/google/android/material/R$styleable;->Badge:[I
@@ -3601,24 +3621,28 @@
 
     new-array v13, v12, [I
 
+    .line 4506
     fill-array-data v13, :array_10
 
     sput-object v13, Lcom/google/android/material/R$styleable;->BaseProgressIndicator:[I
 
     new-array v13, v11, [I
 
+    .line 4516
     fill-array-data v13, :array_11
 
     sput-object v13, Lcom/google/android/material/R$styleable;->BottomAppBar:[I
 
     new-array v13, v3, [I
 
+    .line 4529
     fill-array-data v13, :array_12
 
     sput-object v13, Lcom/google/android/material/R$styleable;->BottomNavigationView:[I
 
     new-array v13, v10, [I
 
+    .line 4532
     fill-array-data v13, :array_13
 
     sput-object v13, Lcom/google/android/material/R$styleable;->BottomSheetBehavior_Layout:[I
@@ -3629,10 +3653,12 @@
 
     aput v14, v13, v2
 
+    .line 4555
     sput-object v13, Lcom/google/android/material/R$styleable;->ButtonBarLayout:[I
 
     new-array v13, v1, [I
 
+    .line 4557
     fill-array-data v13, :array_14
 
     sput-object v13, Lcom/google/android/material/R$styleable;->CardView:[I
@@ -3641,30 +3667,35 @@
 
     new-array v13, v13, [I
 
+    .line 4571
     fill-array-data v13, :array_15
 
     sput-object v13, Lcom/google/android/material/R$styleable;->Chip:[I
 
     new-array v13, v9, [I
 
+    .line 4614
     fill-array-data v13, :array_16
 
     sput-object v13, Lcom/google/android/material/R$styleable;->ChipGroup:[I
 
     new-array v13, v8, [I
 
+    .line 4622
     fill-array-data v13, :array_17
 
     sput-object v13, Lcom/google/android/material/R$styleable;->CircularProgressIndicator:[I
 
     new-array v13, v3, [I
 
+    .line 4626
     fill-array-data v13, :array_18
 
     sput-object v13, Lcom/google/android/material/R$styleable;->ClockFaceView:[I
 
     new-array v13, v8, [I
 
+    .line 4629
     fill-array-data v13, :array_19
 
     sput-object v13, Lcom/google/android/material/R$styleable;->ClockHandView:[I
@@ -3673,12 +3704,14 @@
 
     new-array v13, v13, [I
 
+    .line 4633
     fill-array-data v13, :array_1a
 
     sput-object v13, Lcom/google/android/material/R$styleable;->CollapsingToolbarLayout:[I
 
     new-array v13, v3, [I
 
+    .line 4657
     fill-array-data v13, :array_1b
 
     sput-object v13, Lcom/google/android/material/R$styleable;->CollapsingToolbarLayout_Layout:[I
@@ -3687,12 +3720,14 @@
 
     new-array v14, v13, [I
 
+    .line 4660
     fill-array-data v14, :array_1c
 
     sput-object v14, Lcom/google/android/material/R$styleable;->ColorStateListItem:[I
 
     new-array v14, v6, [I
 
+    .line 4666
     fill-array-data v14, :array_1d
 
     sput-object v14, Lcom/google/android/material/R$styleable;->CompoundButton:[I
@@ -3701,6 +3736,7 @@
 
     new-array v14, v14, [I
 
+    .line 4671
     fill-array-data v14, :array_1e
 
     sput-object v14, Lcom/google/android/material/R$styleable;->Constraint:[I
@@ -3709,12 +3745,14 @@
 
     new-array v14, v14, [I
 
+    .line 4781
     fill-array-data v14, :array_1f
 
     sput-object v14, Lcom/google/android/material/R$styleable;->ConstraintLayout_Layout:[I
 
     new-array v14, v3, [I
 
+    .line 4872
     fill-array-data v14, :array_20
 
     sput-object v14, Lcom/google/android/material/R$styleable;->ConstraintLayout_placeholder:[I
@@ -3723,30 +3761,35 @@
 
     new-array v14, v14, [I
 
+    .line 4875
     fill-array-data v14, :array_21
 
     sput-object v14, Lcom/google/android/material/R$styleable;->ConstraintSet:[I
 
     new-array v14, v3, [I
 
+    .line 4987
     fill-array-data v14, :array_22
 
     sput-object v14, Lcom/google/android/material/R$styleable;->CoordinatorLayout:[I
 
     new-array v14, v9, [I
 
+    .line 4990
     fill-array-data v14, :array_23
 
     sput-object v14, Lcom/google/android/material/R$styleable;->CoordinatorLayout_Layout:[I
 
     new-array v14, v12, [I
 
+    .line 4998
     fill-array-data v14, :array_24
 
     sput-object v14, Lcom/google/android/material/R$styleable;->CustomAttribute:[I
 
     new-array v14, v7, [I
 
+    .line 5008
     fill-array-data v14, :array_25
 
     sput-object v14, Lcom/google/android/material/R$styleable;->DrawerArrowToggle:[I
@@ -3757,16 +3800,19 @@
 
     aput v15, v14, v2
 
+    .line 5017
     sput-object v14, Lcom/google/android/material/R$styleable;->DrawerLayout:[I
 
     new-array v14, v5, [I
 
+    .line 5019
     fill-array-data v14, :array_26
 
     sput-object v14, Lcom/google/android/material/R$styleable;->ExtendedFloatingActionButton:[I
 
     new-array v14, v3, [I
 
+    .line 5026
     fill-array-data v14, :array_27
 
     sput-object v14, Lcom/google/android/material/R$styleable;->ExtendedFloatingActionButton_Behavior_Layout:[I
@@ -3775,6 +3821,7 @@
 
     new-array v14, v14, [I
 
+    .line 5029
     fill-array-data v14, :array_28
 
     sput-object v14, Lcom/google/android/material/R$styleable;->FloatingActionButton:[I
@@ -3785,16 +3832,19 @@
 
     aput v15, v14, v2
 
+    .line 5049
     sput-object v14, Lcom/google/android/material/R$styleable;->FloatingActionButton_Behavior_Layout:[I
 
     new-array v14, v8, [I
 
+    .line 5051
     fill-array-data v14, :array_29
 
     sput-object v14, Lcom/google/android/material/R$styleable;->FlowLayout:[I
 
     new-array v14, v9, [I
 
+    .line 5055
     fill-array-data v14, :array_2a
 
     sput-object v14, Lcom/google/android/material/R$styleable;->FontFamily:[I
@@ -3803,48 +3853,56 @@
 
     new-array v15, v14, [I
 
+    .line 5063
     fill-array-data v15, :array_2b
 
     sput-object v15, Lcom/google/android/material/R$styleable;->FontFamilyFont:[I
 
     new-array v15, v8, [I
 
+    .line 5074
     fill-array-data v15, :array_2c
 
     sput-object v15, Lcom/google/android/material/R$styleable;->ForegroundLinearLayout:[I
 
     new-array v15, v8, [I
 
+    .line 5078
     fill-array-data v15, :array_2d
 
     sput-object v15, Lcom/google/android/material/R$styleable;->Fragment:[I
 
     new-array v15, v3, [I
 
+    .line 5082
     fill-array-data v15, :array_2e
 
     sput-object v15, Lcom/google/android/material/R$styleable;->FragmentContainerView:[I
 
     new-array v15, v11, [I
 
+    .line 5085
     fill-array-data v15, :array_2f
 
     sput-object v15, Lcom/google/android/material/R$styleable;->GradientColor:[I
 
     new-array v15, v3, [I
 
+    .line 5098
     fill-array-data v15, :array_30
 
     sput-object v15, Lcom/google/android/material/R$styleable;->GradientColorItem:[I
 
     new-array v15, v12, [I
 
+    .line 5101
     fill-array-data v15, :array_31
 
     sput-object v15, Lcom/google/android/material/R$styleable;->ImageFilterView:[I
 
     new-array v9, v9, [I
 
+    .line 5111
     fill-array-data v9, :array_32
 
     sput-object v9, Lcom/google/android/material/R$styleable;->Insets:[I
@@ -3853,6 +3911,7 @@
 
     new-array v9, v9, [I
 
+    .line 5119
     fill-array-data v9, :array_33
 
     sput-object v9, Lcom/google/android/material/R$styleable;->KeyAttribute:[I
@@ -3861,12 +3920,14 @@
 
     new-array v9, v9, [I
 
+    .line 5138
     fill-array-data v9, :array_34
 
     sput-object v9, Lcom/google/android/material/R$styleable;->KeyCycle:[I
 
     new-array v9, v11, [I
 
+    .line 5159
     fill-array-data v9, :array_35
 
     sput-object v9, Lcom/google/android/material/R$styleable;->KeyPosition:[I
@@ -3875,12 +3936,14 @@
 
     new-array v9, v9, [I
 
+    .line 5172
     fill-array-data v9, :array_36
 
     sput-object v9, Lcom/google/android/material/R$styleable;->KeyTimeCycle:[I
 
     new-array v9, v14, [I
 
+    .line 5193
     fill-array-data v9, :array_37
 
     sput-object v9, Lcom/google/android/material/R$styleable;->KeyTrigger:[I
@@ -3889,48 +3952,56 @@
 
     new-array v9, v9, [I
 
+    .line 5204
     fill-array-data v9, :array_38
 
     sput-object v9, Lcom/google/android/material/R$styleable;->Layout:[I
 
     new-array v9, v12, [I
 
+    .line 5272
     fill-array-data v9, :array_39
 
     sput-object v9, Lcom/google/android/material/R$styleable;->LinearLayoutCompat:[I
 
     new-array v9, v6, [I
 
+    .line 5282
     fill-array-data v9, :array_3a
 
     sput-object v9, Lcom/google/android/material/R$styleable;->LinearLayoutCompat_Layout:[I
 
     new-array v9, v3, [I
 
+    .line 5287
     fill-array-data v9, :array_3b
 
     sput-object v9, Lcom/google/android/material/R$styleable;->LinearProgressIndicator:[I
 
     new-array v9, v3, [I
 
+    .line 5290
     fill-array-data v9, :array_3c
 
     sput-object v9, Lcom/google/android/material/R$styleable;->ListPopupWindow:[I
 
     new-array v6, v6, [I
 
+    .line 5293
     fill-array-data v6, :array_3d
 
     sput-object v6, Lcom/google/android/material/R$styleable;->MaterialAlertDialog:[I
 
     new-array v6, v5, [I
 
+    .line 5298
     fill-array-data v6, :array_3e
 
     sput-object v6, Lcom/google/android/material/R$styleable;->MaterialAlertDialogTheme:[I
 
     new-array v6, v8, [I
 
+    .line 5305
     fill-array-data v6, :array_3f
 
     sput-object v6, Lcom/google/android/material/R$styleable;->MaterialAutoCompleteTextView:[I
@@ -3939,84 +4010,98 @@
 
     new-array v6, v6, [I
 
+    .line 5309
     fill-array-data v6, :array_40
 
     sput-object v6, Lcom/google/android/material/R$styleable;->MaterialButton:[I
 
     new-array v6, v8, [I
 
+    .line 5331
     fill-array-data v6, :array_41
 
     sput-object v6, Lcom/google/android/material/R$styleable;->MaterialButtonToggleGroup:[I
 
     new-array v6, v14, [I
 
+    .line 5335
     fill-array-data v6, :array_42
 
     sput-object v6, Lcom/google/android/material/R$styleable;->MaterialCalendar:[I
 
     new-array v6, v14, [I
 
+    .line 5346
     fill-array-data v6, :array_43
 
     sput-object v6, Lcom/google/android/material/R$styleable;->MaterialCalendarItem:[I
 
     new-array v1, v1, [I
 
+    .line 5357
     fill-array-data v1, :array_44
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialCardView:[I
 
     new-array v1, v8, [I
 
+    .line 5371
     fill-array-data v1, :array_45
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialCheckBox:[I
 
     new-array v1, v13, [I
 
+    .line 5375
     fill-array-data v1, :array_46
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialDivider:[I
 
     new-array v1, v3, [I
 
+    .line 5381
     fill-array-data v1, :array_47
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialRadioButton:[I
 
     new-array v1, v3, [I
 
+    .line 5384
     fill-array-data v1, :array_48
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialShape:[I
 
     new-array v1, v8, [I
 
+    .line 5387
     fill-array-data v1, :array_49
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialTextAppearance:[I
 
     new-array v1, v8, [I
 
+    .line 5391
     fill-array-data v1, :array_4a
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialTextView:[I
 
     new-array v1, v3, [I
 
+    .line 5395
     fill-array-data v1, :array_4b
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialTimePicker:[I
 
     new-array v1, v13, [I
 
+    .line 5398
     fill-array-data v1, :array_4c
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MaterialToolbar:[I
 
     new-array v1, v5, [I
 
+    .line 5404
     fill-array-data v1, :array_4d
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MenuGroup:[I
@@ -4025,54 +4110,63 @@
 
     new-array v1, v1, [I
 
+    .line 5411
     fill-array-data v1, :array_4e
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MenuItem:[I
 
     new-array v1, v12, [I
 
+    .line 5435
     fill-array-data v1, :array_4f
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MenuView:[I
 
     new-array v1, v5, [I
 
+    .line 5445
     fill-array-data v1, :array_50
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MockView:[I
 
     new-array v1, v5, [I
 
+    .line 5452
     fill-array-data v1, :array_51
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Motion:[I
 
     new-array v1, v3, [I
 
+    .line 5459
     fill-array-data v1, :array_52
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MotionHelper:[I
 
     new-array v1, v5, [I
 
+    .line 5462
     fill-array-data v1, :array_53
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MotionLayout:[I
 
     new-array v1, v3, [I
 
+    .line 5469
     fill-array-data v1, :array_54
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MotionScene:[I
 
     new-array v1, v8, [I
 
+    .line 5472
     fill-array-data v1, :array_55
 
     sput-object v1, Lcom/google/android/material/R$styleable;->MotionTelltales:[I
 
     new-array v1, v13, [I
 
+    .line 5476
     fill-array-data v1, :array_56
 
     sput-object v1, Lcom/google/android/material/R$styleable;->NavigationBarActiveIndicator:[I
@@ -4081,12 +4175,14 @@
 
     new-array v1, v1, [I
 
+    .line 5482
     fill-array-data v1, :array_57
 
     sput-object v1, Lcom/google/android/material/R$styleable;->NavigationBarView:[I
 
     new-array v1, v13, [I
 
+    .line 5497
     fill-array-data v1, :array_58
 
     sput-object v1, Lcom/google/android/material/R$styleable;->NavigationRailView:[I
@@ -4095,24 +4191,28 @@
 
     new-array v1, v1, [I
 
+    .line 5503
     fill-array-data v1, :array_59
 
     sput-object v1, Lcom/google/android/material/R$styleable;->NavigationView:[I
 
     new-array v1, v3, [I
 
+    .line 5539
     fill-array-data v1, :array_5a
 
     sput-object v1, Lcom/google/android/material/R$styleable;->OnClick:[I
 
     new-array v1, v11, [I
 
+    .line 5542
     fill-array-data v1, :array_5b
 
     sput-object v1, Lcom/google/android/material/R$styleable;->OnSwipe:[I
 
     new-array v1, v8, [I
 
+    .line 5555
     fill-array-data v1, :array_5c
 
     sput-object v1, Lcom/google/android/material/R$styleable;->PopupWindow:[I
@@ -4123,10 +4223,12 @@
 
     aput v6, v1, v2
 
+    .line 5559
     sput-object v1, Lcom/google/android/material/R$styleable;->PopupWindowBackgroundState:[I
 
     new-array v1, v13, [I
 
+    .line 5561
     fill-array-data v1, :array_5d
 
     sput-object v1, Lcom/google/android/material/R$styleable;->PropertySet:[I
@@ -4137,22 +4239,26 @@
 
     aput v6, v1, v2
 
+    .line 5567
     sput-object v1, Lcom/google/android/material/R$styleable;->RadialViewGroup:[I
 
     new-array v1, v3, [I
 
+    .line 5569
     fill-array-data v1, :array_5e
 
     sput-object v1, Lcom/google/android/material/R$styleable;->RangeSlider:[I
 
     new-array v1, v3, [I
 
+    .line 5572
     fill-array-data v1, :array_5f
 
     sput-object v1, Lcom/google/android/material/R$styleable;->RecycleListView:[I
 
     new-array v1, v11, [I
 
+    .line 5575
     fill-array-data v1, :array_60
 
     sput-object v1, Lcom/google/android/material/R$styleable;->RecyclerView:[I
@@ -4163,6 +4269,7 @@
 
     aput v6, v1, v2
 
+    .line 5588
     sput-object v1, Lcom/google/android/material/R$styleable;->ScrimInsetsFrameLayout:[I
 
     new-array v1, v0, [I
@@ -4171,60 +4278,70 @@
 
     aput v6, v1, v2
 
+    .line 5590
     sput-object v1, Lcom/google/android/material/R$styleable;->ScrollingViewBehavior_Layout:[I
 
     const/16 v1, 0x11
 
     new-array v1, v1, [I
 
+    .line 5592
     fill-array-data v1, :array_61
 
     sput-object v1, Lcom/google/android/material/R$styleable;->SearchView:[I
 
     new-array v1, v14, [I
 
+    .line 5610
     fill-array-data v1, :array_62
 
     sput-object v1, Lcom/google/android/material/R$styleable;->ShapeAppearance:[I
 
     new-array v1, v4, [I
 
+    .line 5621
     fill-array-data v1, :array_63
 
     sput-object v1, Lcom/google/android/material/R$styleable;->ShapeableImageView:[I
 
     new-array v1, v10, [I
 
+    .line 5633
     fill-array-data v1, :array_64
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Slider:[I
 
     new-array v1, v8, [I
 
+    .line 5656
     fill-array-data v1, :array_65
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Snackbar:[I
 
     new-array v1, v7, [I
 
+    .line 5660
     fill-array-data v1, :array_66
 
     sput-object v1, Lcom/google/android/material/R$styleable;->SnackbarLayout:[I
 
     new-array v1, v7, [I
 
+    .line 5669
     fill-array-data v1, :array_67
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Spinner:[I
 
     new-array v1, v3, [I
 
+    .line 5678
     fill-array-data v1, :array_68
 
     sput-object v1, Lcom/google/android/material/R$styleable;->State:[I
 
     new-array v1, v5, [I
 
+    .line 5681
     fill-array-data v1, :array_69
 
     sput-object v1, Lcom/google/android/material/R$styleable;->StateListDrawable:[I
@@ -4235,6 +4352,7 @@
 
     aput v3, v1, v2
 
+    .line 5688
     sput-object v1, Lcom/google/android/material/R$styleable;->StateListDrawableItem:[I
 
     new-array v1, v0, [I
@@ -4243,12 +4361,14 @@
 
     aput v3, v1, v2
 
+    .line 5690
     sput-object v1, Lcom/google/android/material/R$styleable;->StateSet:[I
 
     const/16 v1, 0xe
 
     new-array v1, v1, [I
 
+    .line 5692
     fill-array-data v1, :array_6a
 
     sput-object v1, Lcom/google/android/material/R$styleable;->SwitchCompat:[I
@@ -4259,10 +4379,12 @@
 
     aput v3, v1, v2
 
+    .line 5707
     sput-object v1, Lcom/google/android/material/R$styleable;->SwitchMaterial:[I
 
     new-array v1, v8, [I
 
+    .line 5709
     fill-array-data v1, :array_6b
 
     sput-object v1, Lcom/google/android/material/R$styleable;->TabItem:[I
@@ -4271,6 +4393,7 @@
 
     new-array v1, v1, [I
 
+    .line 5713
     fill-array-data v1, :array_6c
 
     sput-object v1, Lcom/google/android/material/R$styleable;->TabLayout:[I
@@ -4279,6 +4402,7 @@
 
     new-array v1, v1, [I
 
+    .line 5740
     fill-array-data v1, :array_6d
 
     sput-object v1, Lcom/google/android/material/R$styleable;->TextAppearance:[I
@@ -4289,18 +4413,21 @@
 
     aput v3, v1, v2
 
+    .line 5757
     sput-object v1, Lcom/google/android/material/R$styleable;->TextInputEditText:[I
 
     const/16 v1, 0x43
 
     new-array v1, v1, [I
 
+    .line 5759
     fill-array-data v1, :array_6e
 
     sput-object v1, Lcom/google/android/material/R$styleable;->TextInputLayout:[I
 
     new-array v1, v8, [I
 
+    .line 5827
     fill-array-data v1, :array_6f
 
     sput-object v1, Lcom/google/android/material/R$styleable;->ThemeEnforcement:[I
@@ -4309,42 +4436,49 @@
 
     new-array v1, v1, [I
 
+    .line 5831
     fill-array-data v1, :array_70
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Toolbar:[I
 
     new-array v1, v7, [I
 
+    .line 5862
     fill-array-data v1, :array_71
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Tooltip:[I
 
     new-array v1, v4, [I
 
+    .line 5871
     fill-array-data v1, :array_72
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Transform:[I
 
     new-array v1, v4, [I
 
+    .line 5883
     fill-array-data v1, :array_73
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Transition:[I
 
     new-array v1, v13, [I
 
+    .line 5895
     fill-array-data v1, :array_74
 
     sput-object v1, Lcom/google/android/material/R$styleable;->Variant:[I
 
     new-array v1, v13, [I
 
+    .line 5901
     fill-array-data v1, :array_75
 
     sput-object v1, Lcom/google/android/material/R$styleable;->View:[I
 
     new-array v1, v8, [I
 
+    .line 5907
     fill-array-data v1, :array_76
 
     sput-object v1, Lcom/google/android/material/R$styleable;->ViewBackgroundHelper:[I
@@ -4355,10 +4489,12 @@
 
     aput v1, v0, v2
 
+    .line 5911
     sput-object v0, Lcom/google/android/material/R$styleable;->ViewPager2:[I
 
     new-array v0, v8, [I
 
+    .line 5913
     fill-array-data v0, :array_77
 
     sput-object v0, Lcom/google/android/material/R$styleable;->ViewStubCompat:[I

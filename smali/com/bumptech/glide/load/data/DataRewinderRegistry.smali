@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/data/DataRewinderRegistry;
 .super Ljava/lang/Object;
+.source "DataRewinderRegistry.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 14
     new-instance v0, Lcom/bumptech/glide/load/data/DataRewinderRegistry$1;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/data/DataRewinderRegistry$1;-><init>()V
@@ -51,8 +53,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -78,9 +82,11 @@
 
     monitor-enter p0
 
+    .line 36
     :try_start_0
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 37
     iget-object v0, p0, Lcom/bumptech/glide/load/data/DataRewinderRegistry;->rewinders:Ljava/util/Map;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -95,6 +101,7 @@
 
     if-nez v0, :cond_1
 
+    .line 39
     iget-object v1, p0, Lcom/bumptech/glide/load/data/DataRewinderRegistry;->rewinders:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -118,6 +125,7 @@
 
     check-cast v2, Lcom/bumptech/glide/load/data/DataRewinder$Factory;
 
+    .line 40
     invoke-interface {v2}, Lcom/bumptech/glide/load/data/DataRewinder$Factory;->getDataClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -137,8 +145,10 @@
     :cond_1
     if-nez v0, :cond_2
 
+    .line 48
     sget-object v0, Lcom/bumptech/glide/load/data/DataRewinderRegistry;->DEFAULT_FACTORY:Lcom/bumptech/glide/load/data/DataRewinder$Factory;
 
+    .line 50
     :cond_2
     invoke-interface {v0, p1}, Lcom/bumptech/glide/load/data/DataRewinder$Factory;->build(Ljava/lang/Object;)Lcom/bumptech/glide/load/data/DataRewinder;
 
@@ -170,6 +180,7 @@
 
     monitor-enter p0
 
+    .line 30
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/data/DataRewinderRegistry;->rewinders:Ljava/util/Map;
 
@@ -181,6 +192,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 31
     monitor-exit p0
 
     return-void

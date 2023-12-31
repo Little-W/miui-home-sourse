@@ -1,5 +1,6 @@
 .class Landroidx/transition/WindowIdApi14;
 .super Ljava/lang/Object;
+.source "WindowIdApi14.java"
 
 # interfaces
 .implements Landroidx/transition/WindowIdImpl;
@@ -13,8 +14,10 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
     iput-object p1, p0, Landroidx/transition/WindowIdApi14;->mToken:Landroid/os/IBinder;
 
     return-void
@@ -25,6 +28,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 31
     instance-of v0, p1, Landroidx/transition/WindowIdApi14;
 
     if-eqz v0, :cond_0
@@ -55,6 +59,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 36
     iget-object p0, p0, Landroidx/transition/WindowIdApi14;->mToken:Landroid/os/IBinder;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I

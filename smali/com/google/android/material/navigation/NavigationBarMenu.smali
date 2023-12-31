@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/material/navigation/NavigationBarMenu;
 .super Landroidx/appcompat/view/menu/MenuBuilder;
+.source "NavigationBarMenu.java"
 
 
 # instance fields
@@ -19,6 +20,7 @@
 .method protected addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 3
 
+    .line 65
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenu;->size()I
 
     move-result v0
@@ -31,27 +33,33 @@
 
     if-gt v0, v2, :cond_1
 
+    .line 76
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenu;->stopDispatchingItemsChanged()V
 
+    .line 77
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/view/menu/MenuBuilder;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object p1
 
+    .line 78
     instance-of p2, p1, Landroidx/appcompat/view/menu/MenuItemImpl;
 
     if-eqz p2, :cond_0
 
+    .line 79
     move-object p2, p1
 
     check-cast p2, Landroidx/appcompat/view/menu/MenuItemImpl;
 
     invoke-virtual {p2, v1}, Landroidx/appcompat/view/menu/MenuItemImpl;->setExclusiveCheckable(Z)V
 
+    .line 81
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenu;->startDispatchingItemsChanged()V
 
     return-object p1
 
+    .line 66
     :cond_1
     iget-object p1, p0, Lcom/google/android/material/navigation/NavigationBarMenu;->viewClass:Ljava/lang/Class;
 
@@ -59,6 +67,7 @@
 
     move-result-object p1
 
+    .line 67
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -101,6 +110,7 @@
 .method public addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
     .locals 0
 
+    .line 57
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -109,6 +119,7 @@
 
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarMenu;->viewClass:Ljava/lang/Class;
 
+    .line 58
     invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p0

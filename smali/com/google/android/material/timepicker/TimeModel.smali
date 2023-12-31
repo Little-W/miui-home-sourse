@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/timepicker/TimeModel;
 .super Ljava/lang/Object;
+.source "TimeModel.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -37,6 +38,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 159
     new-instance v0, Lcom/google/android/material/timepicker/TimeModel$1;
 
     invoke-direct {v0}, Lcom/google/android/material/timepicker/TimeModel$1;-><init>()V
@@ -51,6 +53,7 @@
 
     const/4 v0, 0x0
 
+    .line 52
     invoke-direct {p0, v0}, Lcom/google/android/material/timepicker/TimeModel;-><init>(I)V
 
     return-void
@@ -63,6 +66,7 @@
 
     const/16 v1, 0xa
 
+    .line 56
     invoke-direct {p0, v0, v0, v1, p1}, Lcom/google/android/material/timepicker/TimeModel;-><init>(IIII)V
 
     return-void
@@ -71,22 +75,29 @@
 .method public constructor <init>(IIII)V
     .locals 0
 
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 60
     iput p1, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
+    .line 61
     iput p2, p0, Lcom/google/android/material/timepicker/TimeModel;->minute:I
 
+    .line 62
     iput p3, p0, Lcom/google/android/material/timepicker/TimeModel;->selection:I
 
+    .line 63
     iput p4, p0, Lcom/google/android/material/timepicker/TimeModel;->format:I
 
+    .line 64
     invoke-static {p1}, Lcom/google/android/material/timepicker/TimeModel;->getPeriod(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/timepicker/TimeModel;->period:I
 
+    .line 65
     new-instance p1, Lcom/google/android/material/timepicker/MaxInputValidator;
 
     const/16 p2, 0x3b
@@ -95,6 +106,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/timepicker/TimeModel;->minuteInputValidator:Lcom/google/android/material/timepicker/MaxInputValidator;
 
+    .line 66
     new-instance p1, Lcom/google/android/material/timepicker/MaxInputValidator;
 
     const/4 p2, 0x1
@@ -119,6 +131,7 @@
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
+    .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -145,6 +158,7 @@
 
     const-string v0, "%02d"
 
+    .line 183
     invoke-static {p0, p1, v0}, Lcom/google/android/material/timepicker/TimeModel;->formatText(Landroid/content/res/Resources;Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -155,6 +169,7 @@
 .method public static formatText(Landroid/content/res/Resources;Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 188
     invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p0
@@ -165,6 +180,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 190
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -181,6 +197,7 @@
 
     aput-object p1, v0, v1
 
+    .line 187
     invoke-static {p0, p2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -225,6 +242,7 @@
 
     return v0
 
+    .line 134
     :cond_0
     instance-of v1, p1, Lcom/google/android/material/timepicker/TimeModel;
 
@@ -234,9 +252,11 @@
 
     return v2
 
+    .line 138
     :cond_1
     check-cast p1, Lcom/google/android/material/timepicker/TimeModel;
 
+    .line 139
     iget v1, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
     iget v3, p1, Lcom/google/android/material/timepicker/TimeModel;->hour:I
@@ -273,18 +293,21 @@
 .method public getHourForDisplay()I
     .locals 4
 
+    .line 99
     iget v0, p0, Lcom/google/android/material/timepicker/TimeModel;->format:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 100
     iget p0, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
     rem-int/lit8 p0, p0, 0x18
 
     return p0
 
+    .line 103
     :cond_0
     iget v0, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
@@ -296,6 +319,7 @@
 
     return v3
 
+    .line 107
     :cond_1
     iget p0, p0, Lcom/google/android/material/timepicker/TimeModel;->period:I
 
@@ -310,6 +334,7 @@
 .method public getHourInputValidator()Lcom/google/android/material/timepicker/MaxInputValidator;
     .locals 0
 
+    .line 119
     iget-object p0, p0, Lcom/google/android/material/timepicker/TimeModel;->hourInputValidator:Lcom/google/android/material/timepicker/MaxInputValidator;
 
     return-object p0
@@ -318,6 +343,7 @@
 .method public getMinuteInputValidator()Lcom/google/android/material/timepicker/MaxInputValidator;
     .locals 0
 
+    .line 115
     iget-object p0, p0, Lcom/google/android/material/timepicker/TimeModel;->minuteInputValidator:Lcom/google/android/material/timepicker/MaxInputValidator;
 
     return-object p0
@@ -330,6 +356,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 124
     iget v1, p0, Lcom/google/android/material/timepicker/TimeModel;->format:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -370,6 +397,7 @@
 
     aput-object p0, v0, v1
 
+    .line 125
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result p0
@@ -380,12 +408,14 @@
 .method public setHour(I)V
     .locals 3
 
+    .line 86
     iget v0, p0, Lcom/google/android/material/timepicker/TimeModel;->format:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 87
     iput p1, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
     return-void
@@ -393,6 +423,7 @@
     :cond_0
     const/16 v0, 0xc
 
+    .line 91
     rem-int/2addr p1, v0
 
     iget v2, p0, Lcom/google/android/material/timepicker/TimeModel;->period:I
@@ -415,6 +446,7 @@
 .method public setMinute(I)V
     .locals 0
 
+    .line 95
     rem-int/lit8 p1, p1, 0x3c
 
     iput p1, p0, Lcom/google/android/material/timepicker/TimeModel;->minute:I
@@ -425,12 +457,15 @@
 .method public setPeriod(I)V
     .locals 3
 
+    .line 172
     iget v0, p0, Lcom/google/android/material/timepicker/TimeModel;->period:I
 
     if-eq p1, v0, :cond_1
 
+    .line 173
     iput p1, p0, Lcom/google/android/material/timepicker/TimeModel;->period:I
 
+    .line 174
     iget v0, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
     const/16 v1, 0xc
@@ -443,10 +478,12 @@
 
     add-int/2addr v0, v1
 
+    .line 175
     iput v0, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
     goto :goto_0
 
+    .line 176
     :cond_0
     iget v0, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
@@ -456,6 +493,7 @@
 
     sub-int/2addr v0, v1
 
+    .line 177
     iput v0, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
     :cond_1
@@ -466,18 +504,22 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 152
     iget p2, p0, Lcom/google/android/material/timepicker/TimeModel;->hour:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 153
     iget p2, p0, Lcom/google/android/material/timepicker/TimeModel;->minute:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 154
     iget p2, p0, Lcom/google/android/material/timepicker/TimeModel;->selection:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 155
     iget p0, p0, Lcom/google/android/material/timepicker/TimeModel;->format:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

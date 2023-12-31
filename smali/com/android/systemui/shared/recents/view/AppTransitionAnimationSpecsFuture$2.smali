@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture$2;
 .super Landroid/view/IAppTransitionAnimationSpecsFuture$Stub;
+.source "AppTransitionAnimationSpecsFuture.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;)V
     .locals 0
 
+    .line 44
     iput-object p1, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture$2;->this$0:Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;
 
     invoke-direct {p0}, Landroid/view/IAppTransitionAnimationSpecsFuture$Stub;-><init>()V
@@ -40,6 +42,7 @@
 
     const/4 v0, 0x0
 
+    .line 48
     :try_start_0
     iget-object v1, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture$2;->this$0:Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;
 
@@ -53,6 +56,7 @@
 
     if-nez v1, :cond_0
 
+    .line 49
     iget-object v1, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture$2;->this$0:Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;->access$100(Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;)Landroid/os/Handler;
@@ -67,6 +71,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 51
     :cond_0
     iget-object v1, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture$2;->this$0:Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;
 
@@ -80,6 +85,7 @@
 
     check-cast v1, Ljava/util/List;
 
+    .line 55
     iget-object p0, p0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture$2;->this$0:Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;
 
     invoke-static {p0, v0}, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;->access$002(Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecsFuture;Ljava/util/concurrent/FutureTask;)Ljava/util/concurrent/FutureTask;
@@ -88,6 +94,7 @@
 
     return-object v0
 
+    .line 60
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -97,6 +104,7 @@
 
     const/4 v2, 0x0
 
+    .line 61
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -104,6 +112,7 @@
 
     if-ge v2, v3, :cond_2
 
+    .line 62
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3

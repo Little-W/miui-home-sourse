@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/IOverviewProxy;
 .super Ljava/lang/Object;
+.source "IOverviewProxy.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

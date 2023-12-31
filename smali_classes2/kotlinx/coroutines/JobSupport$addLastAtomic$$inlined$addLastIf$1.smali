@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/JobSupport$addLastAtomic$$inlined$addLastIf$1;
 .super Lkotlinx/coroutines/internal/LockFreeLinkedListNode$CondAddOp;
+.source "LockFreeLinkedList.kt"
 
 
 # annotations
@@ -35,6 +36,7 @@
 
     iput-object p4, p0, Lkotlinx/coroutines/JobSupport$addLastAtomic$$inlined$addLastIf$1;->$expect$inlined:Ljava/lang/Object;
 
+    .line 87
     invoke-direct {p0, p2}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$CondAddOp;-><init>(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)V
 
     return-void
@@ -45,6 +47,7 @@
 .method public bridge synthetic prepare(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 87
     check-cast p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/JobSupport$addLastAtomic$$inlined$addLastIf$1;->prepare(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
@@ -57,6 +60,7 @@
 .method public prepare(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
     .locals 0
 
+    .line 668
     iget-object p1, p0, Lkotlinx/coroutines/JobSupport$addLastAtomic$$inlined$addLastIf$1;->this$0:Lkotlinx/coroutines/JobSupport;
 
     invoke-virtual {p1}, Lkotlinx/coroutines/JobSupport;->getState$kotlinx_coroutines_core()Ljava/lang/Object;

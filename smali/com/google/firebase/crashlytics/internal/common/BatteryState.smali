@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/BatteryState;
 .super Ljava/lang/Object;
+.source "BatteryState.java"
 
 
 # instance fields
@@ -12,10 +13,13 @@
 .method private constructor <init>(Ljava/lang/Float;Z)V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     iput-boolean p2, p0, Lcom/google/firebase/crashlytics/internal/common/BatteryState;->powerConnected:Z
 
+    .line 34
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/BatteryState;->level:Ljava/lang/Float;
 
     return-void
@@ -28,6 +32,7 @@
 
     const/4 v1, 0x0
 
+    .line 71
     :try_start_0
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -35,16 +40,19 @@
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 72
     invoke-virtual {p0, v0, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 74
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/common/BatteryState;->isPowerConnected(Landroid/content/Intent;)Z
 
     move-result v1
 
+    .line 75
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/common/BatteryState;->getLevel(Landroid/content/Intent;)Ljava/lang/Float;
 
     move-result-object p0
@@ -58,6 +66,7 @@
     :catch_0
     move-exception p0
 
+    .line 79
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v2
@@ -66,6 +75,7 @@
 
     invoke-virtual {v2, v3, p0}, Lcom/google/firebase/crashlytics/internal/Logger;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 82
     :cond_0
     :goto_0
     new-instance p0, Lcom/google/firebase/crashlytics/internal/common/BatteryState;
@@ -82,12 +92,14 @@
 
     const-string v1, "level"
 
+    .line 108
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
     const-string v2, "scale"
 
+    .line 109
     invoke-virtual {p0, v2, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
@@ -105,6 +117,7 @@
 
     div-float/2addr v0, p0
 
+    .line 113
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
@@ -125,6 +138,7 @@
 
     const-string v1, "status"
 
+    .line 92
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
@@ -156,6 +170,7 @@
 .method public getBatteryLevel()Ljava/lang/Float;
     .locals 0
 
+    .line 46
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/BatteryState;->level:Ljava/lang/Float;
 
     return-object p0
@@ -164,6 +179,7 @@
 .method public getBatteryVelocity()I
     .locals 4
 
+    .line 56
     iget-boolean v0, p0, Lcom/google/firebase/crashlytics/internal/common/BatteryState;->powerConnected:Z
 
     if-eqz v0, :cond_2
@@ -174,6 +190,7 @@
 
     goto :goto_0
 
+    .line 58
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 

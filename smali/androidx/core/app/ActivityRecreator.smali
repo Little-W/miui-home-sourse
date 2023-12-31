@@ -1,5 +1,6 @@
 .class final Landroidx/core/app/ActivityRecreator;
 .super Ljava/lang/Object;
+.source "ActivityRecreator.java"
 
 
 # annotations
@@ -37,6 +38,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 91
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -47,24 +49,28 @@
 
     sput-object v0, Landroidx/core/app/ActivityRecreator;->mainHandler:Landroid/os/Handler;
 
+    .line 94
     invoke-static {}, Landroidx/core/app/ActivityRecreator;->getActivityThreadClass()Ljava/lang/Class;
 
     move-result-object v0
 
     sput-object v0, Landroidx/core/app/ActivityRecreator;->activityThreadClass:Ljava/lang/Class;
 
+    .line 95
     invoke-static {}, Landroidx/core/app/ActivityRecreator;->getMainThreadField()Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     sput-object v0, Landroidx/core/app/ActivityRecreator;->mainThreadField:Ljava/lang/reflect/Field;
 
+    .line 96
     invoke-static {}, Landroidx/core/app/ActivityRecreator;->getTokenField()Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     sput-object v0, Landroidx/core/app/ActivityRecreator;->tokenField:Ljava/lang/reflect/Field;
 
+    .line 97
     sget-object v0, Landroidx/core/app/ActivityRecreator;->activityThreadClass:Ljava/lang/Class;
 
     invoke-static {v0}, Landroidx/core/app/ActivityRecreator;->getPerformStopActivity3Params(Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -73,6 +79,7 @@
 
     sput-object v0, Landroidx/core/app/ActivityRecreator;->performStopActivity3ParamsMethod:Ljava/lang/reflect/Method;
 
+    .line 98
     sget-object v0, Landroidx/core/app/ActivityRecreator;->activityThreadClass:Ljava/lang/Class;
 
     invoke-static {v0}, Landroidx/core/app/ActivityRecreator;->getPerformStopActivity2Params(Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -81,6 +88,7 @@
 
     sput-object v0, Landroidx/core/app/ActivityRecreator;->performStopActivity2ParamsMethod:Ljava/lang/reflect/Method;
 
+    .line 99
     sget-object v0, Landroidx/core/app/ActivityRecreator;->activityThreadClass:Ljava/lang/Class;
 
     invoke-static {v0}, Landroidx/core/app/ActivityRecreator;->getRequestRelaunchActivityMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -105,6 +113,7 @@
     :try_start_0
     const-string v0, "android.app.ActivityThread"
 
+    .line 378
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -122,6 +131,7 @@
 .method private static getMainThreadField()Ljava/lang/reflect/Field;
     .locals 2
 
+    .line 358
     :try_start_0
     const-class v0, Landroid/app/Activity;
 
@@ -133,6 +143,7 @@
 
     const/4 v1, 0x1
 
+    .line 359
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -172,6 +183,7 @@
 
     const/4 v3, 0x0
 
+    .line 320
     const-class v4, Landroid/os/IBinder;
 
     aput-object v4, v2, v3
@@ -186,6 +198,7 @@
 
     move-result-object p0
 
+    .line 322
     invoke-virtual {p0, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -223,6 +236,7 @@
 
     const/4 v3, 0x0
 
+    .line 306
     const-class v4, Landroid/os/IBinder;
 
     aput-object v4, v2, v3
@@ -243,6 +257,7 @@
 
     move-result-object p0
 
+    .line 308
     invoke-virtual {p0, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -264,6 +279,7 @@
         }
     .end annotation
 
+    .line 334
     invoke-static {}, Landroidx/core/app/ActivityRecreator;->needsRelaunchCall()Z
 
     move-result v0
@@ -286,6 +302,7 @@
 
     const/4 v3, 0x0
 
+    .line 338
     const-class v4, Landroid/os/IBinder;
 
     aput-object v4, v2, v3
@@ -342,6 +359,7 @@
 
     move-result-object p0
 
+    .line 349
     invoke-virtual {p0, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -357,6 +375,7 @@
 .method private static getTokenField()Ljava/lang/reflect/Field;
     .locals 2
 
+    .line 368
     :try_start_0
     const-class v0, Landroid/app/Activity;
 
@@ -368,6 +387,7 @@
 
     const/4 v1, 0x1
 
+    .line 369
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -383,6 +403,7 @@
 .method private static needsRelaunchCall()Z
     .locals 2
 
+    .line 330
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -415,6 +436,7 @@
 
     const/4 v0, 0x0
 
+    .line 257
     :try_start_0
     sget-object v1, Landroidx/core/app/ActivityRecreator;->tokenField:Ljava/lang/reflect/Field;
 
@@ -424,6 +446,7 @@
 
     if-ne v1, p0, :cond_1
 
+    .line 259
     invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
@@ -432,6 +455,7 @@
 
     goto :goto_0
 
+    .line 265
     :cond_0
     sget-object p0, Landroidx/core/app/ActivityRecreator;->mainThreadField:Ljava/lang/reflect/Field;
 
@@ -439,6 +463,7 @@
 
     move-result-object p0
 
+    .line 269
     sget-object p1, Landroidx/core/app/ActivityRecreator;->mainHandler:Landroid/os/Handler;
 
     new-instance p2, Landroidx/core/app/ActivityRecreator$3;
@@ -464,6 +489,7 @@
 
     const-string p2, "Exception while fetching field values"
 
+    .line 296
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -472,6 +498,7 @@
 .method static recreate(Landroid/app/Activity;)Z
     .locals 9
 
+    .line 109
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x1
@@ -480,10 +507,12 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 110
     invoke-virtual {p0}, Landroid/app/Activity;->recreate()V
 
     return v1
 
+    .line 115
     :cond_0
     invoke-static {}, Landroidx/core/app/ActivityRecreator;->needsRelaunchCall()Z
 
@@ -499,6 +528,7 @@
 
     return v2
 
+    .line 120
     :cond_1
     sget-object v0, Landroidx/core/app/ActivityRecreator;->performStopActivity2ParamsMethod:Ljava/lang/reflect/Method;
 
@@ -510,6 +540,7 @@
 
     return v2
 
+    .line 124
     :cond_2
     :try_start_0
     sget-object v0, Landroidx/core/app/ActivityRecreator;->tokenField:Ljava/lang/reflect/Field;
@@ -522,6 +553,7 @@
 
     return v2
 
+    .line 128
     :cond_3
     sget-object v3, Landroidx/core/app/ActivityRecreator;->mainThreadField:Ljava/lang/reflect/Field;
 
@@ -533,17 +565,21 @@
 
     return v2
 
+    .line 133
     :cond_4
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v4
 
+    .line 134
     new-instance v5, Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;
 
     invoke-direct {v5, p0}, Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;-><init>(Landroid/app/Activity;)V
 
+    .line 135
     invoke-virtual {v4, v5}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
+    .line 143
     sget-object v6, Landroidx/core/app/ActivityRecreator;->mainHandler:Landroid/os/Handler;
 
     new-instance v7, Landroidx/core/app/ActivityRecreator$1;
@@ -554,6 +590,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 151
     :try_start_1
     invoke-static {}, Landroidx/core/app/ActivityRecreator;->needsRelaunchCall()Z
 
@@ -561,6 +598,7 @@
 
     if-eqz v6, :cond_5
 
+    .line 152
     sget-object p0, Landroidx/core/app/ActivityRecreator;->requestRelaunchActivityMethod:Ljava/lang/reflect/Method;
 
     const/16 v6, 0x9
@@ -579,6 +617,7 @@
 
     const/4 v7, 0x3
 
+    .line 153
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -617,15 +656,18 @@
 
     aput-object v7, v6, v0
 
+    .line 152
     invoke-virtual {p0, v3, v6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 155
     :cond_5
     invoke-virtual {p0}, Landroid/app/Activity;->recreate()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 159
     :goto_0
     :try_start_2
     sget-object p0, Landroidx/core/app/ActivityRecreator;->mainHandler:Landroid/os/Handler;
@@ -649,6 +691,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 169
     throw p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1

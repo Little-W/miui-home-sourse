@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zzjd;
 .super Ljava/util/LinkedHashMap;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # annotations
@@ -28,14 +29,17 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 68
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzjd;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/measurement/zzjd;-><init>()V
 
+    .line 69
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzjd;->zzb:Lcom/google/android/gms/internal/measurement/zzjd;
 
     const/4 v1, 0x0
 
+    .line 70
     iput-boolean v1, v0, Lcom/google/android/gms/internal/measurement/zzjd;->zza:Z
 
     return-void
@@ -44,10 +48,12 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/gms/internal/measurement/zzjd;->zza:Z
 
     return-void
@@ -63,10 +69,12 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0, p1}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
 
     const/4 p1, 0x1
 
+    .line 5
     iput-boolean p1, p0, Lcom/google/android/gms/internal/measurement/zzjd;->zza:Z
 
     return-void
@@ -75,10 +83,12 @@
 .method private static zza(Ljava/lang/Object;)I
     .locals 1
 
+    .line 46
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_0
 
+    .line 47
     check-cast p0, [B
 
     invoke-static {p0}, Lcom/google/android/gms/internal/measurement/zzia;->zzc([B)I
@@ -87,17 +97,20 @@
 
     return p0
 
+    .line 48
     :cond_0
     instance-of v0, p0, Lcom/google/android/gms/internal/measurement/zzid;
 
     if-nez v0, :cond_1
 
+    .line 50
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
 
     return p0
 
+    .line 49
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -120,6 +133,7 @@
         }
     .end annotation
 
+    .line 7
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzjd;->zzb:Lcom/google/android/gms/internal/measurement/zzjd;
 
     return-object v0
@@ -128,12 +142,14 @@
 .method private final zze()V
     .locals 0
 
+    .line 64
     iget-boolean p0, p0, Lcom/google/android/gms/internal/measurement/zzjd;->zza:Z
 
     if-eqz p0, :cond_0
 
     return-void
 
+    .line 66
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -147,8 +163,10 @@
 .method public final clear()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzjd;->zze()V
 
+    .line 14
     invoke-super {p0}, Ljava/util/LinkedHashMap;->clear()V
 
     return-void
@@ -165,6 +183,7 @@
         }
     .end annotation
 
+    .line 12
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzjd;->isEmpty()Z
 
     move-result v0
@@ -188,6 +207,7 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
+    .line 30
     instance-of v0, p1, Ljava/util/Map;
 
     const/4 v1, 0x0
@@ -200,6 +220,7 @@
 
     if-eq p0, p1, :cond_4
 
+    .line 32
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v2
@@ -215,6 +236,7 @@
 
     goto :goto_2
 
+    .line 34
     :cond_0
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -237,6 +259,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 35
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -249,6 +272,7 @@
 
     goto :goto_0
 
+    .line 37
     :cond_2
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -262,6 +286,7 @@
 
     move-result-object v2
 
+    .line 38
     instance-of v4, v3, [B
 
     if-eqz v4, :cond_3
@@ -270,6 +295,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 39
     check-cast v3, [B
 
     check-cast v2, [B
@@ -280,6 +306,7 @@
 
     goto :goto_1
 
+    .line 40
     :cond_3
     invoke-virtual {v3, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -305,6 +332,7 @@
 .method public final hashCode()I
     .locals 3
 
+    .line 53
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -328,6 +356,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 55
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -362,12 +391,16 @@
         }
     .end annotation
 
+    .line 16
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzjd;->zze()V
 
+    .line 17
     invoke-static {p1}, Lcom/google/android/gms/internal/measurement/zzia;->zza(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 18
     invoke-static {p2}, Lcom/google/android/gms/internal/measurement/zzia;->zza(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 19
     invoke-super {p0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -385,8 +418,10 @@
         }
     .end annotation
 
+    .line 20
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzjd;->zze()V
 
+    .line 22
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -406,8 +441,10 @@
 
     move-result-object v1
 
+    .line 23
     invoke-static {v1}, Lcom/google/android/gms/internal/measurement/zzia;->zza(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 24
     invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -416,6 +453,7 @@
 
     goto :goto_0
 
+    .line 26
     :cond_0
     invoke-super {p0, p1}, Ljava/util/LinkedHashMap;->putAll(Ljava/util/Map;)V
 
@@ -432,8 +470,10 @@
         }
     .end annotation
 
+    .line 28
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzjd;->zze()V
 
+    .line 29
     invoke-super {p0, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -451,14 +491,17 @@
         }
     .end annotation
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzjd;->zze()V
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/android/gms/internal/measurement/zzjd;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 10
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzjd;->putAll(Ljava/util/Map;)V
 
     :cond_0
@@ -475,6 +518,7 @@
         }
     .end annotation
 
+    .line 59
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzjd;->isEmpty()Z
 
     move-result v0
@@ -500,6 +544,7 @@
 
     const/4 v0, 0x0
 
+    .line 60
     iput-boolean v0, p0, Lcom/google/android/gms/internal/measurement/zzjd;->zza:Z
 
     return-void
@@ -508,6 +553,7 @@
 .method public final zzd()Z
     .locals 0
 
+    .line 62
     iget-boolean p0, p0, Lcom/google/android/gms/internal/measurement/zzjd;->zza:Z
 
     return p0

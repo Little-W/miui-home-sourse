@@ -16,12 +16,14 @@
 
     new-array v1, v0, [C
 
+    .line 27
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/google/android/gms/common/util/Hex;->zzgy:[C
 
     new-array v0, v0, [C
 
+    .line 28
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/android/gms/common/util/Hex;->zzgz:[C
@@ -74,6 +76,7 @@
 .method public static bytesToStringLowercase([B)Ljava/lang/String;
     .locals 7
 
+    .line 11
     array-length v0, p0
 
     shl-int/lit8 v0, v0, 0x1
@@ -84,17 +87,20 @@
 
     move v2, v1
 
+    .line 13
     :goto_0
     array-length v3, p0
 
     if-ge v1, v3, :cond_0
 
+    .line 14
     aget-byte v3, p0, v1
 
     and-int/lit16 v3, v3, 0xff
 
     add-int/lit8 v4, v2, 0x1
 
+    .line 15
     sget-object v5, Lcom/google/android/gms/common/util/Hex;->zzgz:[C
 
     ushr-int/lit8 v6, v3, 0x4
@@ -107,6 +113,7 @@
 
     and-int/lit8 v3, v3, 0xf
 
+    .line 16
     aget-char v3, v5, v3
 
     aput-char v3, v0, v4
@@ -115,6 +122,7 @@
 
     goto :goto_0
 
+    .line 18
     :cond_0
     new-instance p0, Ljava/lang/String;
 
@@ -126,8 +134,10 @@
 .method public static bytesToStringUppercase([BZ)Ljava/lang/String;
     .locals 5
 
+    .line 3
     array-length v0, p0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     shl-int/lit8 v2, v0, 0x1
@@ -145,12 +155,14 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 6
     aget-byte v3, p0, v2
 
     and-int/lit16 v3, v3, 0xff
 
     if-eqz v3, :cond_1
 
+    .line 7
     :cond_0
     sget-object v3, Lcom/google/android/gms/common/util/Hex;->zzgy:[C
 
@@ -164,6 +176,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 8
     sget-object v3, Lcom/google/android/gms/common/util/Hex;->zzgy:[C
 
     aget-byte v4, p0, v2
@@ -178,6 +191,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

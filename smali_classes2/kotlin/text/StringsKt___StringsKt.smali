@@ -1,5 +1,6 @@
 .class Lkotlin/text/StringsKt___StringsKt;
 .super Lkotlin/text/StringsKt___StringsJvmKt;
+.source "_Strings.kt"
 
 
 # annotations
@@ -28,6 +29,7 @@
 
     const/4 v0, 0x1
 
+    .line 2102
     invoke-static {p0, p1, p1, v0}, Lkotlin/text/StringsKt;->windowed(Ljava/lang/CharSequence;IIZ)Ljava/util/List;
 
     move-result-object p0
@@ -54,6 +56,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 308
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -72,6 +75,7 @@
 
     return-object p0
 
+    .line 307
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -111,6 +115,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 238
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -123,12 +128,14 @@
 
     const/4 v0, 0x0
 
+    .line 240
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p0
 
     return p0
 
+    .line 241
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -140,6 +147,7 @@
 
     throw p0
 
+    .line 239
     :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -169,6 +177,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2214
     sget-object v0, Lkotlin/text/StringsKt___StringsKt$windowed$1;->INSTANCE:Lkotlin/text/StringsKt___StringsKt$windowed$1;
 
     check-cast v0, Lkotlin/jvm/functions/Function1;
@@ -206,12 +215,15 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2236
     invoke-static {p1, p2}, Lkotlin/collections/SlidingWindowKt;->checkWindowSizeStep(II)V
 
+    .line 2237
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
+    .line 2238
     div-int v1, v0, p2
 
     rem-int v2, v0, p2
@@ -230,6 +242,7 @@
     :goto_0
     add-int/2addr v1, v2
 
+    .line 2239
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(I)V
@@ -253,6 +266,7 @@
 
     move v1, v0
 
+    .line 2244
     :cond_3
     invoke-interface {p0, v3, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -268,6 +282,7 @@
 
     goto :goto_1
 
+    .line 2247
     :cond_4
     :goto_2
     check-cast v2, Ljava/util/List;

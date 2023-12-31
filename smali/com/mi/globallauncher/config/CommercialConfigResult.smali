@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/config/CommercialConfigResult;
 .super Ljava/lang/Object;
+.source "CommercialConfigResult.java"
 
 
 # instance fields
@@ -26,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +38,7 @@
 .method public getData()Lcom/mi/globallauncher/config/CommercialConfigData;
     .locals 0
 
+    .line 27
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigResult;->data:Lcom/mi/globallauncher/config/CommercialConfigData;
 
     return-object p0
@@ -44,6 +47,7 @@
 .method public getHead()Lcom/mi/globallauncher/config/CommercialHead;
     .locals 0
 
+    .line 19
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigResult;->head:Lcom/mi/globallauncher/config/CommercialHead;
 
     return-object p0
@@ -52,6 +56,7 @@
 .method public setData(Lcom/mi/globallauncher/config/CommercialConfigData;)V
     .locals 0
 
+    .line 31
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigResult;->data:Lcom/mi/globallauncher/config/CommercialConfigData;
 
     return-void
@@ -60,6 +65,7 @@
 .method public setHead(Lcom/mi/globallauncher/config/CommercialHead;)V
     .locals 0
 
+    .line 23
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigResult;->head:Lcom/mi/globallauncher/config/CommercialHead;
 
     return-void

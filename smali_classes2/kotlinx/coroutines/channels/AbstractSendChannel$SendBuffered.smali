@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/AbstractSendChannel$SendBuffered;
 .super Lkotlinx/coroutines/channels/Send;
+.source "AbstractChannel.kt"
 
 
 # annotations
@@ -45,6 +46,7 @@
         }
     .end annotation
 
+    .line 476
     invoke-direct {p0}, Lkotlinx/coroutines/channels/Send;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/AbstractSendChannel$SendBuffered;->element:Ljava/lang/Object;
@@ -63,6 +65,7 @@
 .method public getPollResult()Ljava/lang/Object;
     .locals 0
 
+    .line 477
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel$SendBuffered;->element:Ljava/lang/Object;
 
     return-object p0
@@ -84,6 +87,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 481
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,6 +124,7 @@
 .method public tryResumeSend(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)Lkotlinx/coroutines/internal/Symbol;
     .locals 0
 
+    .line 478
     sget-object p0, Lkotlinx/coroutines/CancellableContinuationImplKt;->RESUME_TOKEN:Lkotlinx/coroutines/internal/Symbol;
 
     if-eqz p1, :cond_0

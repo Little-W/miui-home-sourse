@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/CollectionJsonAdapter$1;
 .super Ljava/lang/Object;
+.source "CollectionJsonAdapter.java"
 
 # interfaces
 .implements Lcom/squareup/moshi/JsonAdapter$Factory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,10 +49,12 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 33
     invoke-static {p1}, Lcom/squareup/moshi/Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 34
     invoke-interface {p2}, Ljava/util/Set;->isEmpty()Z
 
     move-result p2
@@ -61,6 +65,7 @@
 
     return-object v0
 
+    .line 35
     :cond_0
     const-class p2, Ljava/util/List;
 
@@ -72,11 +77,13 @@
 
     goto :goto_0
 
+    .line 37
     :cond_1
     const-class p2, Ljava/util/Set;
 
     if-ne p0, p2, :cond_2
 
+    .line 38
     invoke-static {p1, p3}, Lcom/squareup/moshi/CollectionJsonAdapter;->newLinkedHashSetAdapter(Ljava/lang/reflect/Type;Lcom/squareup/moshi/Moshi;)Lcom/squareup/moshi/JsonAdapter;
 
     move-result-object p0
@@ -90,6 +97,7 @@
     :cond_2
     return-object v0
 
+    .line 36
     :cond_3
     :goto_0
     invoke-static {p1, p3}, Lcom/squareup/moshi/CollectionJsonAdapter;->newArrayListAdapter(Ljava/lang/reflect/Type;Lcom/squareup/moshi/Moshi;)Lcom/squareup/moshi/JsonAdapter;

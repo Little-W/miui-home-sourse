@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;
 .super Ljava/lang/Object;
+.source "LogEventDropped.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 8
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;-><init>()V
@@ -41,10 +43,13 @@
 .method constructor <init>(JLcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;)V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15
     iput-wide p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;->events_dropped_count_:J
 
+    .line 16
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;->reason_:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     return-void
@@ -53,6 +58,7 @@
 .method public static newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;
     .locals 1
 
+    .line 20
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;-><init>()V
@@ -65,6 +71,7 @@
 .method public getEventsDroppedCount()J
     .locals 2
 
+    .line 27
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;->events_dropped_count_:J
 
     return-wide v0
@@ -73,6 +80,7 @@
 .method public getReason()Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;->reason_:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     return-object p0

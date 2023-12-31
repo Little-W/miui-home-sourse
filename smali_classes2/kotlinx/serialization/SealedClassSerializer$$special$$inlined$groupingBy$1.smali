@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/SealedClassSerializer$$special$$inlined$groupingBy$1;
 .super Ljava/lang/Object;
+.source "_Collections.kt"
 
 # interfaces
 .implements Lkotlin/collections/Grouping;
@@ -45,6 +46,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/SealedClassSerializer$$special$$inlined$groupingBy$1;->$this_groupingBy:Ljava/lang/Iterable;
 
+    .line 1484
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,8 +69,10 @@
         }
     .end annotation
 
+    .line 1486
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3498
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -101,6 +105,7 @@
         }
     .end annotation
 
+    .line 1485
     iget-object p0, p0, Lkotlinx/serialization/SealedClassSerializer$$special$$inlined$groupingBy$1;->$this_groupingBy:Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;

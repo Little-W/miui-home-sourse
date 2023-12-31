@@ -1,5 +1,6 @@
 .class public final Landroidx/appcompat/resources/R$styleable;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -71,6 +72,7 @@
 
     new-array v1, v0, [I
 
+    .line 20
     fill-array-data v1, :array_0
 
     sput-object v1, Landroidx/appcompat/resources/R$styleable;->AnimatedStateListDrawableCompat:[I
@@ -79,6 +81,7 @@
 
     new-array v1, v1, [I
 
+    .line 27
     fill-array-data v1, :array_1
 
     sput-object v1, Landroidx/appcompat/resources/R$styleable;->AnimatedStateListDrawableItem:[I
@@ -87,12 +90,14 @@
 
     new-array v1, v1, [I
 
+    .line 30
     fill-array-data v1, :array_2
 
     sput-object v1, Landroidx/appcompat/resources/R$styleable;->AnimatedStateListDrawableTransition:[I
 
     new-array v0, v0, [I
 
+    .line 35
     fill-array-data v0, :array_3
 
     sput-object v0, Landroidx/appcompat/resources/R$styleable;->StateListDrawable:[I
@@ -107,6 +112,7 @@
 
     aput v2, v0, v1
 
+    .line 42
     sput-object v0, Landroidx/appcompat/resources/R$styleable;->StateListDrawableItem:[I
 
     return-void

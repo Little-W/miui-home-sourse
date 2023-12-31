@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;
 .super Ljava/lang/Object;
+.source "BitmapResource.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/Initializable;
@@ -28,10 +29,12 @@
 .method public constructor <init>(Landroid/graphics/Bitmap;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V
     .locals 1
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Bitmap must not be null"
 
+    .line 37
     invoke-static {p1, v0}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -42,6 +45,7 @@
 
     const-string p1, "BitmapPool must not be null"
 
+    .line 38
     invoke-static {p2, p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -62,6 +66,7 @@
 
     return-object p0
 
+    .line 32
     :cond_0
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;
 
@@ -75,6 +80,7 @@
 .method public get()Landroid/graphics/Bitmap;
     .locals 0
 
+    .line 50
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmap:Landroid/graphics/Bitmap;
 
     return-object p0
@@ -83,6 +89,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 15
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->get()Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -101,6 +108,7 @@
         }
     .end annotation
 
+    .line 44
     const-class p0, Landroid/graphics/Bitmap;
 
     return-object p0
@@ -109,6 +117,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 55
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-static {p0}, Lcom/bumptech/glide/util/Util;->getBitmapByteSize(Landroid/graphics/Bitmap;)I
@@ -121,6 +130,7 @@
 .method public initialize()V
     .locals 0
 
+    .line 65
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->prepareToDraw()V
@@ -131,6 +141,7 @@
 .method public recycle()V
     .locals 1
 
+    .line 60
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmap:Landroid/graphics/Bitmap;

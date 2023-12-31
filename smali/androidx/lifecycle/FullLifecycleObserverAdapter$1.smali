@@ -1,5 +1,6 @@
 .class synthetic Landroidx/lifecycle/FullLifecycleObserverAdapter$1;
 .super Ljava/lang/Object;
+.source "FullLifecycleObserverAdapter.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 34
     invoke-static {}, Landroidx/lifecycle/Lifecycle$Event;->values()[Landroidx/lifecycle/Lifecycle$Event;
 
     move-result-object v0

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/ThreadPoolDispatcherKt;
 .super Ljava/lang/Object;
+.source "ThreadPoolDispatcher.kt"
 
 
 # annotations
@@ -24,6 +25,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 64
     new-instance v0, Lkotlinx/coroutines/ThreadPoolDispatcher;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/coroutines/ThreadPoolDispatcher;-><init>(ILjava/lang/String;)V
@@ -32,6 +34,7 @@
 
     return-object v0
 
+    .line 63
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 

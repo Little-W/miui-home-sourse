@@ -1,5 +1,6 @@
 .class final Lkotlin/sequences/SequenceBuilderIterator;
 .super Lkotlin/sequences/SequenceScope;
+.source "SequenceBuilder.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -59,6 +60,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 115
     invoke-direct {p0}, Lkotlin/sequences/SequenceScope;-><init>()V
 
     return-void
@@ -67,6 +69,7 @@
 .method private final exceptionalState()Ljava/lang/Throwable;
     .locals 3
 
+    .line 166
     iget v0, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
     const/4 v1, 0x4
@@ -77,6 +80,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 169
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -101,6 +105,7 @@
 
     goto :goto_0
 
+    .line 168
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -114,6 +119,7 @@
 
     goto :goto_0
 
+    .line 167
     :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -135,6 +141,7 @@
         }
     .end annotation
 
+    .line 163
     invoke-virtual {p0}, Lkotlin/sequences/SequenceBuilderIterator;->hasNext()Z
 
     move-result v0
@@ -162,6 +169,7 @@
 .method public getContext()Lkotlin/coroutines/CoroutineContext;
     .locals 0
 
+    .line 199
     sget-object p0, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
     check-cast p0, Lkotlin/coroutines/CoroutineContext;
@@ -172,6 +180,7 @@
 .method public hasNext()Z
     .locals 4
 
+    .line 123
     :goto_0
     iget v0, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
@@ -199,6 +208,7 @@
 
     return p0
 
+    .line 134
     :cond_0
     invoke-direct {p0}, Lkotlin/sequences/SequenceBuilderIterator;->exceptionalState()Ljava/lang/Throwable;
 
@@ -209,6 +219,7 @@
     :cond_1
     return v3
 
+    .line 126
     :cond_2
     iget-object v0, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextIterator:Ljava/util/Iterator;
 
@@ -220,10 +231,12 @@
 
     if-eqz v0, :cond_3
 
+    .line 127
     iput v2, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
     return v3
 
+    .line 130
     :cond_3
     move-object v0, v1
 
@@ -234,16 +247,20 @@
     :cond_4
     const/4 v0, 0x5
 
+    .line 137
     iput v0, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
+    .line 138
     iget-object v0, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextStep:Lkotlin/coroutines/Continuation;
 
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
+    .line 139
     check-cast v1, Lkotlin/coroutines/Continuation;
 
     iput-object v1, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextStep:Lkotlin/coroutines/Continuation;
 
+    .line 140
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     sget-object v2, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
@@ -265,6 +282,7 @@
         }
     .end annotation
 
+    .line 145
     iget v0, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
     if-eqz v0, :cond_2
@@ -283,16 +301,20 @@
 
     const/4 v0, 0x0
 
+    .line 152
     iput v0, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
+    .line 154
     iget-object v0, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextValue:Ljava/lang/Object;
 
     const/4 v1, 0x0
 
+    .line 155
     iput-object v1, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextValue:Ljava/lang/Object;
 
     return-object v0
 
+    .line 158
     :cond_0
     invoke-direct {p0}, Lkotlin/sequences/SequenceBuilderIterator;->exceptionalState()Ljava/lang/Throwable;
 
@@ -300,9 +322,11 @@
 
     throw p0
 
+    .line 148
     :cond_1
     iput v1, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
+    .line 149
     iget-object p0, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextIterator:Ljava/util/Iterator;
 
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
@@ -313,6 +337,7 @@
 
     return-object p0
 
+    .line 146
     :cond_2
     invoke-direct {p0}, Lkotlin/sequences/SequenceBuilderIterator;->nextNotReady()Ljava/lang/Object;
 
@@ -336,10 +361,12 @@
 .method public resumeWith(Ljava/lang/Object;)V
     .locals 0
 
+    .line 194
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     const/4 p1, 0x4
 
+    .line 195
     iput p1, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
     return-void
@@ -357,6 +384,7 @@
         }
     .end annotation
 
+    .line 119
     iput-object p1, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextStep:Lkotlin/coroutines/Continuation;
 
     return-void
@@ -375,18 +403,23 @@
         }
     .end annotation
 
+    .line 174
     iput-object p1, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextValue:Ljava/lang/Object;
 
     const/4 p1, 0x3
 
+    .line 175
     iput p1, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
+    .line 177
     iput-object p2, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextStep:Lkotlin/coroutines/Continuation;
 
+    .line 178
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 176
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     move-result-object p1
@@ -425,6 +458,7 @@
         }
     .end annotation
 
+    .line 183
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -435,19 +469,24 @@
 
     return-object p0
 
+    .line 184
     :cond_0
     iput-object p1, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextIterator:Ljava/util/Iterator;
 
     const/4 p1, 0x2
 
+    .line 185
     iput p1, p0, Lkotlin/sequences/SequenceBuilderIterator;->state:I
 
+    .line 187
     iput-object p2, p0, Lkotlin/sequences/SequenceBuilderIterator;->nextStep:Lkotlin/coroutines/Continuation;
 
+    .line 188
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 186
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     move-result-object p1

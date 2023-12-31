@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/AbstractPolymorphicSerializerKt;
 .super Ljava/lang/Object;
+.source "AbstractPolymorphicSerializer.kt"
 
 
 # direct methods
@@ -19,6 +20,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 101
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -41,10 +43,12 @@
 
     move-result-object p1
 
+    .line 102
     new-instance v0, Lkotlinx/serialization/SerializationException;
 
     if-nez p0, :cond_0
 
+    .line 104
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,6 +65,7 @@
 
     goto :goto_0
 
+    .line 106
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -90,6 +95,7 @@
 
     move-result-object p0
 
+    .line 102
     :goto_0
     invoke-direct {v0, p0}, Lkotlinx/serialization/SerializationException;-><init>(Ljava/lang/String;)V
 
@@ -119,6 +125,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 113
     invoke-interface {p0}, Lkotlin/reflect/KClass;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0

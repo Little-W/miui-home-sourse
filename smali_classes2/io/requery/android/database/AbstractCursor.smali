@@ -1,5 +1,6 @@
 .class public abstract Lio/requery/android/database/AbstractCursor;
 .super Ljava/lang/Object;
+.source "AbstractCursor.java"
 
 # interfaces
 .implements Landroid/database/Cursor;
@@ -43,32 +44,38 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserverLock:Ljava/lang/Object;
 
+    .line 55
     new-instance v0, Landroid/database/DataSetObservable;
 
     invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
 
     iput-object v0, p0, Lio/requery/android/database/AbstractCursor;->mDataSetObservable:Landroid/database/DataSetObservable;
 
+    .line 56
     new-instance v0, Landroid/database/ContentObservable;
 
     invoke-direct {v0}, Landroid/database/ContentObservable;-><init>()V
 
     iput-object v0, p0, Lio/requery/android/database/AbstractCursor;->mContentObservable:Landroid/database/ContentObservable;
 
+    .line 58
     sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     iput-object v0, p0, Lio/requery/android/database/AbstractCursor;->mExtras:Landroid/os/Bundle;
 
     const/4 v0, -0x1
 
+    .line 148
     iput v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     return-void
@@ -79,6 +86,7 @@
 .method protected checkPosition()V
     .locals 2
 
+    .line 381
     iget v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     const/4 v1, -0x1
@@ -95,6 +103,7 @@
 
     return-void
 
+    .line 382
     :cond_0
     new-instance v0, Landroid/database/CursorIndexOutOfBoundsException;
 
@@ -114,12 +123,15 @@
 
     const/4 v0, 0x1
 
+    .line 125
     iput-boolean v0, p0, Lio/requery/android/database/AbstractCursor;->mClosed:Z
 
+    .line 126
     iget-object v0, p0, Lio/requery/android/database/AbstractCursor;->mContentObservable:Landroid/database/ContentObservable;
 
     invoke-virtual {v0}, Landroid/database/ContentObservable;->unregisterAll()V
 
+    .line 127
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->onDeactivateOrClose()V
 
     return-void
@@ -128,6 +140,7 @@
 .method public copyStringToBuffer(ILandroid/database/CharArrayBuffer;)V
     .locals 3
 
+    .line 133
     invoke-virtual {p0, p1}, Lio/requery/android/database/AbstractCursor;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -136,10 +149,12 @@
 
     if-eqz p0, :cond_2
 
+    .line 135
     iget-object v0, p2, Landroid/database/CharArrayBuffer;->data:[C
 
     if-eqz v0, :cond_1
 
+    .line 136
     array-length v1, v0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -150,6 +165,7 @@
 
     goto :goto_0
 
+    .line 139
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -159,6 +175,7 @@
 
     goto :goto_1
 
+    .line 137
     :cond_1
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
@@ -167,6 +184,7 @@
 
     iput-object p1, p2, Landroid/database/CharArrayBuffer;->data:[C
 
+    .line 141
     :goto_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -176,6 +194,7 @@
 
     goto :goto_2
 
+    .line 143
     :cond_2
     iput p1, p2, Landroid/database/CharArrayBuffer;->sizeCopied:I
 
@@ -186,6 +205,7 @@
 .method public deactivate()V
     .locals 0
 
+    .line 96
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->onDeactivateOrClose()V
 
     return-void
@@ -194,6 +214,7 @@
 .method protected finalize()V
     .locals 2
 
+    .line 389
     iget-object v0, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_0
@@ -202,10 +223,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 390
     iget-object v1, p0, Lio/requery/android/database/AbstractCursor;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-virtual {v1, v0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
+    .line 393
     :cond_0
     :try_start_0
     iget-boolean v0, p0, Lio/requery/android/database/AbstractCursor;->mClosed:Z
@@ -224,6 +247,7 @@
 .method public getBlob(I)[B
     .locals 0
 
+    .line 86
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "getBlob is not supported"
@@ -236,6 +260,7 @@
 .method public getColumnCount()I
     .locals 0
 
+    .line 91
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->getColumnNames()[Ljava/lang/String;
 
     move-result-object p0
@@ -250,6 +275,7 @@
 
     const/16 v0, 0x2e
 
+    .line 251
     invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v0
@@ -258,10 +284,12 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 253
     new-instance v2, Ljava/lang/Exception;
 
     invoke-direct {v2}, Ljava/lang/Exception;-><init>()V
 
+    .line 254
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -282,15 +310,18 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 255
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 258
     :cond_0
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->getColumnNames()[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 259
     array-length v0, p0
 
     const/4 v2, 0x0
@@ -298,6 +329,7 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
+    .line 261
     aget-object v3, p0, v2
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -320,6 +352,7 @@
 .method public getColumnIndexOrThrow(Ljava/lang/String;)I
     .locals 2
 
+    .line 270
     invoke-virtual {p0, p1}, Lio/requery/android/database/AbstractCursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p0
@@ -328,6 +361,7 @@
 
     return p0
 
+    .line 272
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -357,6 +391,7 @@
 .method public getColumnName(I)Ljava/lang/String;
     .locals 0
 
+    .line 279
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->getColumnNames()[Ljava/lang/String;
 
     move-result-object p0
@@ -378,6 +413,7 @@
 .method public getExtras()Landroid/os/Bundle;
     .locals 0
 
+    .line 365
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor;->mExtras:Landroid/os/Bundle;
 
     return-object p0
@@ -395,10 +431,12 @@
 .method public getNotificationUri()Landroid/net/Uri;
     .locals 1
 
+    .line 348
     iget-object v0, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserverLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 349
     :try_start_0
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor;->mNotifyUri:Landroid/net/Uri;
 
@@ -409,6 +447,7 @@
     :catchall_0
     move-exception p0
 
+    .line 350
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -419,6 +458,7 @@
 .method public final getPosition()I
     .locals 0
 
+    .line 153
     iget p0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     return p0
@@ -444,6 +484,7 @@
 .method public final isAfterLast()Z
     .locals 1
 
+    .line 245
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->getCount()I
 
     move-result v0
@@ -476,6 +517,7 @@
 .method public final isBeforeFirst()Z
     .locals 1
 
+    .line 240
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->getCount()I
 
     move-result v0
@@ -506,6 +548,7 @@
 .method public isClosed()Z
     .locals 0
 
+    .line 120
     iget-boolean p0, p0, Lio/requery/android/database/AbstractCursor;->mClosed:Z
 
     return p0
@@ -514,6 +557,7 @@
 .method public final isFirst()Z
     .locals 1
 
+    .line 229
     iget v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     if-nez v0, :cond_0
@@ -538,10 +582,12 @@
 .method public final isLast()Z
     .locals 2
 
+    .line 234
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->getCount()I
 
     move-result v0
 
+    .line 235
     iget p0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     add-int/lit8 v1, v0, -0x1
@@ -567,6 +613,7 @@
 .method public final move(I)Z
     .locals 1
 
+    .line 204
     iget v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     add-int/2addr v0, p1
@@ -583,6 +630,7 @@
 
     const/4 v0, 0x0
 
+    .line 209
     invoke-virtual {p0, v0}, Lio/requery/android/database/AbstractCursor;->moveToPosition(I)Z
 
     move-result p0
@@ -593,6 +641,7 @@
 .method public final moveToLast()Z
     .locals 1
 
+    .line 214
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->getCount()I
 
     move-result v0
@@ -609,6 +658,7 @@
 .method public final moveToNext()Z
     .locals 1
 
+    .line 219
     iget v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     add-int/lit8 v0, v0, 0x1
@@ -623,6 +673,7 @@
 .method public final moveToPosition(I)Z
     .locals 2
 
+    .line 159
     invoke-virtual {p0}, Lio/requery/android/database/AbstractCursor;->getCount()I
 
     move-result v0
@@ -631,6 +682,7 @@
 
     if-lt p1, v0, :cond_0
 
+    .line 161
     iput v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     return v1
@@ -640,10 +692,12 @@
 
     if-gez p1, :cond_1
 
+    .line 167
     iput v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     return v1
 
+    .line 172
     :cond_1
     iget v1, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
@@ -653,6 +707,7 @@
 
     return p0
 
+    .line 176
     :cond_2
     invoke-virtual {p0, v1, p1}, Lio/requery/android/database/AbstractCursor;->onMove(II)Z
 
@@ -660,10 +715,12 @@
 
     if-nez v1, :cond_3
 
+    .line 178
     iput v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     goto :goto_0
 
+    .line 180
     :cond_3
     iput p1, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
@@ -674,6 +731,7 @@
 .method public final moveToPrevious()Z
     .locals 1
 
+    .line 224
     iget v0, p0, Lio/requery/android/database/AbstractCursor;->mPos:I
 
     add-int/lit8 v0, v0, -0x1
@@ -688,10 +746,12 @@
 .method protected onChange(Z)V
     .locals 3
 
+    .line 313
     iget-object v0, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserverLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 314
     :try_start_0
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -699,6 +759,7 @@
 
     if-lt v1, v2, :cond_0
 
+    .line 315
     iget-object v1, p0, Lio/requery/android/database/AbstractCursor;->mContentObservable:Landroid/database/ContentObservable;
 
     const/4 v2, 0x0
@@ -707,11 +768,13 @@
 
     goto :goto_0
 
+    .line 317
     :cond_0
     iget-object v1, p0, Lio/requery/android/database/AbstractCursor;->mContentObservable:Landroid/database/ContentObservable;
 
     invoke-virtual {v1, p1}, Landroid/database/ContentObservable;->dispatchChange(Z)V
 
+    .line 319
     :goto_0
     iget-object v1, p0, Lio/requery/android/database/AbstractCursor;->mNotifyUri:Landroid/net/Uri;
 
@@ -719,6 +782,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 320
     iget-object p1, p0, Lio/requery/android/database/AbstractCursor;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lio/requery/android/database/AbstractCursor;->mNotifyUri:Landroid/net/Uri;
@@ -727,6 +791,7 @@
 
     invoke-virtual {p1, v1, p0}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
+    .line 322
     :cond_1
     monitor-exit v0
 
@@ -745,18 +810,22 @@
 .method protected onDeactivateOrClose()V
     .locals 2
 
+    .line 101
     iget-object v0, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_0
 
+    .line 102
     iget-object v1, p0, Lio/requery/android/database/AbstractCursor;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-virtual {v1, v0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     const/4 v0, 0x0
 
+    .line 103
     iput-boolean v0, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserverRegistered:Z
 
+    .line 105
     :cond_0
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor;->mDataSetObservable:Landroid/database/DataSetObservable;
 
@@ -771,6 +840,7 @@
 .method public registerContentObserver(Landroid/database/ContentObserver;)V
     .locals 0
 
+    .line 284
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor;->mContentObservable:Landroid/database/ContentObservable;
 
     invoke-virtual {p0, p1}, Landroid/database/ContentObservable;->registerObserver(Landroid/database/ContentObserver;)V
@@ -781,6 +851,7 @@
 .method public registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 0
 
+    .line 297
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {p0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
@@ -791,6 +862,7 @@
 .method public requery()Z
     .locals 4
 
+    .line 110
     iget-object v0, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserver:Landroid/database/ContentObserver;
 
     const/4 v1, 0x1
@@ -801,14 +873,17 @@
 
     if-nez v2, :cond_0
 
+    .line 111
     iget-object v2, p0, Lio/requery/android/database/AbstractCursor;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v3, p0, Lio/requery/android/database/AbstractCursor;->mNotifyUri:Landroid/net/Uri;
 
     invoke-virtual {v2, v3, v1, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
+    .line 112
     iput-boolean v1, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserverRegistered:Z
 
+    .line 114
     :cond_0
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor;->mDataSetObservable:Landroid/database/DataSetObservable;
 
@@ -820,6 +895,7 @@
 .method public respond(Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 0
 
+    .line 370
     sget-object p0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     return-object p0
@@ -830,6 +906,7 @@
 
     if-nez p1, :cond_0
 
+    .line 360
     sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     :cond_0
@@ -841,25 +918,31 @@
 .method public setNotificationUri(Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 3
 
+    .line 334
     iget-object v0, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserverLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 335
     :try_start_0
     iput-object p2, p0, Lio/requery/android/database/AbstractCursor;->mNotifyUri:Landroid/net/Uri;
 
+    .line 336
     iput-object p1, p0, Lio/requery/android/database/AbstractCursor;->mContentResolver:Landroid/content/ContentResolver;
 
+    .line 337
     iget-object p1, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserver:Landroid/database/ContentObserver;
 
     if-eqz p1, :cond_0
 
+    .line 338
     iget-object p1, p0, Lio/requery/android/database/AbstractCursor;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object p2, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {p1, p2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
+    .line 340
     :cond_0
     new-instance p1, Lio/requery/android/database/AbstractCursor$SelfContentObserver;
 
@@ -867,6 +950,7 @@
 
     iput-object p1, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserver:Landroid/database/ContentObserver;
 
+    .line 341
     iget-object p1, p0, Lio/requery/android/database/AbstractCursor;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object p2, p0, Lio/requery/android/database/AbstractCursor;->mNotifyUri:Landroid/net/Uri;
@@ -877,8 +961,10 @@
 
     invoke-virtual {p1, p2, v2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
+    .line 342
     iput-boolean v2, p0, Lio/requery/android/database/AbstractCursor;->mSelfObserverRegistered:Z
 
+    .line 343
     monitor-exit v0
 
     return-void
@@ -896,10 +982,12 @@
 .method public unregisterContentObserver(Landroid/database/ContentObserver;)V
     .locals 1
 
+    .line 290
     iget-boolean v0, p0, Lio/requery/android/database/AbstractCursor;->mClosed:Z
 
     if-nez v0, :cond_0
 
+    .line 291
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor;->mContentObservable:Landroid/database/ContentObservable;
 
     invoke-virtual {p0, p1}, Landroid/database/ContentObservable;->unregisterObserver(Ljava/lang/Object;)V
@@ -911,6 +999,7 @@
 .method public unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 0
 
+    .line 302
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {p0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V

@@ -1,5 +1,6 @@
 .class public Landroidx/emoji2/text/FontRequestEmojiCompatConfig;
 .super Landroidx/emoji2/text/EmojiCompat$Config;
+.source "FontRequestEmojiCompatConfig.java"
 
 
 # annotations
@@ -20,6 +21,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 442
     new-instance v0, Landroidx/emoji2/text/FontRequestEmojiCompatConfig$FontProviderHelper;
 
     invoke-direct {v0}, Landroidx/emoji2/text/FontRequestEmojiCompatConfig$FontProviderHelper;-><init>()V
@@ -32,6 +34,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/core/provider/FontRequest;)V
     .locals 2
 
+    .line 122
     new-instance v0, Landroidx/emoji2/text/FontRequestEmojiCompatConfig$FontRequestMetadataLoader;
 
     sget-object v1, Landroidx/emoji2/text/FontRequestEmojiCompatConfig;->DEFAULT_FONTS_CONTRACT:Landroidx/emoji2/text/FontRequestEmojiCompatConfig$FontProviderHelper;
@@ -48,6 +51,7 @@
 .method public setLoadingExecutor(Ljava/util/concurrent/Executor;)Landroidx/emoji2/text/FontRequestEmojiCompatConfig;
     .locals 1
 
+    .line 148
     invoke-virtual {p0}, Landroidx/emoji2/text/FontRequestEmojiCompatConfig;->getMetadataRepoLoader()Landroidx/emoji2/text/EmojiCompat$MetadataRepoLoader;
 
     move-result-object v0

@@ -1,5 +1,6 @@
 .class public final Lio/reactivex/android/schedulers/AndroidSchedulers;
 .super Ljava/lang/Object;
+.source "AndroidSchedulers.java"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 32
     new-instance v0, Lio/reactivex/android/schedulers/AndroidSchedulers$1;
 
     invoke-direct {v0}, Lio/reactivex/android/schedulers/AndroidSchedulers$1;-><init>()V
@@ -34,6 +36,7 @@
 .method public static mainThread()Lio/reactivex/Scheduler;
     .locals 1
 
+    .line 41
     sget-object v0, Lio/reactivex/android/schedulers/AndroidSchedulers;->MAIN_THREAD:Lio/reactivex/Scheduler;
 
     invoke-static {v0}, Lio/reactivex/android/plugins/RxAndroidPlugins;->onMainThreadScheduler(Lio/reactivex/Scheduler;)Lio/reactivex/Scheduler;

@@ -9,6 +9,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     return-void
@@ -25,18 +26,22 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->getTimeMillis()J
 
     move-result-wide v0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->getEventType()I
 
     move-result v2
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->zzu()J
 
     move-result-wide v3
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->zzv()Ljava/lang/String;
 
     move-result-object p0

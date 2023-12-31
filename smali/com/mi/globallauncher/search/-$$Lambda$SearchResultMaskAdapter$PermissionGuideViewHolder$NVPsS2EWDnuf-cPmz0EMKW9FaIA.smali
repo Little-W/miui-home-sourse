@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/search/-$$Lambda$SearchResultMaskAdapter$PermissionGuideViewHolder$NVPsS2EWDnuf-cPmz0EMKW9FaIA;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

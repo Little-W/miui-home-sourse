@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;
 .super Ljava/lang/Object;
+.source "ForwardingListener.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/appcompat/widget/ForwardingListener;)V
     .locals 0
 
+    .line 316
     iput-object p1, p0, Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;->this$0:Landroidx/appcompat/widget/ForwardingListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 321
     iget-object p0, p0, Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;->this$0:Landroidx/appcompat/widget/ForwardingListener;
 
     iget-object p0, p0, Landroidx/appcompat/widget/ForwardingListener;->mSrc:Landroid/view/View;
@@ -48,6 +51,7 @@
 
     const/4 v0, 0x1
 
+    .line 323
     invoke-interface {p0, v0}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
     :cond_0

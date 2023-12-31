@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/config/CommercialConfigItem;
 .super Ljava/lang/Object;
+.source "CommercialConfigItem.java"
 
 
 # instance fields
@@ -35,6 +36,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,6 +47,7 @@
 .method public getCid()Ljava/lang/String;
     .locals 0
 
+    .line 22
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigItem;->cid:Ljava/lang/String;
 
     return-object p0
@@ -53,6 +56,7 @@
 .method public getContent()Lcom/mi/globallauncher/config/CommercialConfigContent;
     .locals 0
 
+    .line 38
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigItem;->content:Lcom/mi/globallauncher/config/CommercialConfigContent;
 
     return-object p0
@@ -61,6 +65,7 @@
 .method public getRule()Lcom/mi/globallauncher/config/CommercialConfigItemRule;
     .locals 0
 
+    .line 30
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigItem;->rule:Lcom/mi/globallauncher/config/CommercialConfigItemRule;
 
     return-object p0
@@ -69,6 +74,7 @@
 .method public setCid(Ljava/lang/String;)V
     .locals 0
 
+    .line 26
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigItem;->cid:Ljava/lang/String;
 
     return-void
@@ -77,6 +83,7 @@
 .method public setContent(Lcom/mi/globallauncher/config/CommercialConfigContent;)V
     .locals 0
 
+    .line 42
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigItem;->content:Lcom/mi/globallauncher/config/CommercialConfigContent;
 
     return-void
@@ -85,6 +92,7 @@
 .method public setRule(Lcom/mi/globallauncher/config/CommercialConfigItemRule;)V
     .locals 0
 
+    .line 34
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigItem;->rule:Lcom/mi/globallauncher/config/CommercialConfigItemRule;
 
     return-void

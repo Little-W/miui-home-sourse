@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo$Builder;
 .super Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$Builder;
+.source "AutoValue_NetworkConnectionInfo.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 67
     invoke-direct {p0}, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$Builder;-><init>()V
 
     return-void
@@ -33,6 +35,7 @@
 .method public build()Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;
     .locals 3
 
+    .line 81
     new-instance v0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;
 
     iget-object v1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo$Builder;->networkType:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
@@ -49,6 +52,7 @@
 .method public setMobileSubtype(Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;)Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$Builder;
     .locals 0
 
+    .line 76
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo$Builder;->mobileSubtype:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;
 
     return-object p0
@@ -57,6 +61,7 @@
 .method public setNetworkType(Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;)Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$Builder;
     .locals 0
 
+    .line 71
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo$Builder;->networkType:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
 
     return-object p0

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/SubscribedFlowCollector;
 .super Ljava/lang/Object;
+.source "Share.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -121,6 +122,7 @@
 
     move-result-object v1
 
+    .line 404
     iget v2, v0, Lkotlinx/coroutines/flow/SubscribedFlowCollector$onSubscription$1;->label:I
 
     const/4 v3, 0x2
@@ -145,6 +147,7 @@
 
     goto :goto_2
 
+    .line 412
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -154,6 +157,7 @@
 
     throw p0
 
+    .line 404
     :cond_2
     iget-object p0, v0, Lkotlinx/coroutines/flow/SubscribedFlowCollector$onSubscription$1;->L$1:Ljava/lang/Object;
 
@@ -180,16 +184,20 @@
     :cond_3
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
+    .line 405
     iget-object p1, p0, Lkotlinx/coroutines/flow/SubscribedFlowCollector;->collector:Lkotlinx/coroutines/flow/FlowCollector;
 
+    .line 415
     invoke-interface {v0}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object v2
 
+    .line 405
     new-instance v5, Lkotlinx/coroutines/flow/internal/SafeCollector;
 
     invoke-direct {v5, p1, v2}, Lkotlinx/coroutines/flow/internal/SafeCollector;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/CoroutineContext;)V
 
+    .line 407
     :try_start_1
     iget-object p1, p0, Lkotlinx/coroutines/flow/SubscribedFlowCollector;->action:Lkotlin/jvm/functions/Function2;
 
@@ -214,9 +222,11 @@
 
     move-object p0, v5
 
+    .line 409
     :goto_1
     invoke-virtual {p0}, Lkotlinx/coroutines/flow/internal/SafeCollector;->releaseIntercepted()V
 
+    .line 411
     iget-object p1, v2, Lkotlinx/coroutines/flow/SubscribedFlowCollector;->collector:Lkotlinx/coroutines/flow/FlowCollector;
 
     instance-of v4, p1, Lkotlinx/coroutines/flow/SubscribedFlowCollector;
@@ -239,6 +249,7 @@
 
     return-object v1
 
+    .line 412
     :cond_5
     :goto_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -248,6 +259,7 @@
     :catchall_1
     move-exception p1
 
+    .line 409
     :goto_3
     invoke-virtual {v5}, Lkotlinx/coroutines/flow/internal/SafeCollector;->releaseIntercepted()V
 

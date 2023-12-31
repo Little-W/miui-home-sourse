@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/TimeoutKt$withTimeoutOrNull$1;
 .super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "Timeout.kt"
 
 
 # annotations

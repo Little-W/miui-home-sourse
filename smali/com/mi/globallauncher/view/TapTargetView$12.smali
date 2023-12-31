@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/TapTargetView$12;
 .super Landroid/view/ViewOutlineProvider;
+.source "TapTargetView.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/TapTargetView;)V
     .locals 0
 
+    .line 649
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$12;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -33,6 +35,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 5
 
+    .line 653
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$12;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->outerCircleCenter:[I
@@ -41,6 +44,7 @@
 
     return-void
 
+    .line 654
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$12;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
@@ -112,6 +116,7 @@
 
     invoke-virtual {p2, p1, v1, v3, v2}, Landroid/graphics/Outline;->setOval(IIII)V
 
+    .line 657
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$12;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->outerCircleAlpha:I
@@ -124,12 +129,14 @@
 
     invoke-virtual {p2, p1}, Landroid/graphics/Outline;->setAlpha(F)V
 
+    .line 658
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x16
 
     if-lt p1, v1, :cond_1
 
+    .line 659
     iget-object p0, p0, Lcom/mi/globallauncher/view/TapTargetView$12;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget p0, p0, Lcom/mi/globallauncher/view/TapTargetView;->SHADOW_DIM:I

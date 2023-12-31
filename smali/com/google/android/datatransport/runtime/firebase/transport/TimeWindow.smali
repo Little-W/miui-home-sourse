@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
 .super Ljava/lang/Object;
+.source "TimeWindow.java"
 
 
 # annotations
@@ -24,6 +25,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 6
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;-><init>()V
@@ -40,10 +42,13 @@
 .method constructor <init>(JJ)V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
     iput-wide p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;->start_ms_:J
 
+    .line 14
     iput-wide p3, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;->end_ms_:J
 
     return-void
@@ -52,6 +57,7 @@
 .method public static newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;
     .locals 1
 
+    .line 18
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;-><init>()V
@@ -64,6 +70,7 @@
 .method public getEndMs()J
     .locals 2
 
+    .line 32
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;->end_ms_:J
 
     return-wide v0
@@ -72,6 +79,7 @@
 .method public getStartMs()J
     .locals 2
 
+    .line 25
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;->start_ms_:J
 
     return-wide v0

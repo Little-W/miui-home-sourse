@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/animation/DrawableAlphaProperty;
 .super Landroid/util/Property;
+.source "DrawableAlphaProperty.java"
 
 
 # annotations
@@ -43,6 +44,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 36
     new-instance v0, Lcom/google/android/material/animation/DrawableAlphaProperty;
 
     invoke-direct {v0}, Lcom/google/android/material/animation/DrawableAlphaProperty;-><init>()V
@@ -55,12 +57,14 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 42
     const-class v0, Ljava/lang/Integer;
 
     const-string v1, "drawableAlphaCompat"
 
     invoke-direct {p0, v0, v1}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
+    .line 39
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
@@ -75,12 +79,14 @@
 .method public get(Landroid/graphics/drawable/Drawable;)Ljava/lang/Integer;
     .locals 2
 
+    .line 48
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
+    .line 49
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
     move-result p0
@@ -91,6 +97,7 @@
 
     return-object p0
 
+    .line 51
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/animation/DrawableAlphaProperty;->alphaCache:Ljava/util/WeakHashMap;
 
@@ -100,6 +107,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 52
     iget-object p0, p0, Lcom/google/android/material/animation/DrawableAlphaProperty;->alphaCache:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -113,6 +121,7 @@
     :cond_1
     const/16 p0, 0xff
 
+    .line 54
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -123,6 +132,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 30
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/animation/DrawableAlphaProperty;->get(Landroid/graphics/drawable/Drawable;)Ljava/lang/Integer;
@@ -135,16 +145,19 @@
 .method public set(Landroid/graphics/drawable/Drawable;Ljava/lang/Integer;)V
     .locals 2
 
+    .line 59
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-ge v0, v1, :cond_0
 
+    .line 60
     iget-object p0, p0, Lcom/google/android/material/animation/DrawableAlphaProperty;->alphaCache:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 63
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
@@ -158,6 +171,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 30
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     check-cast p2, Ljava/lang/Integer;

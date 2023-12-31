@@ -1,5 +1,6 @@
 .class final Lorg/brotli/dec/State;
 .super Ljava/lang/Object;
+.source "State.java"
 
 
 # instance fields
@@ -112,12 +113,15 @@
 .method constructor <init>()V
     .locals 3
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 17
     sget-object v0, Lorg/brotli/dec/RunningState;->UNINITIALIZED:Lorg/brotli/dec/RunningState;
 
     iput-object v0, p0, Lorg/brotli/dec/State;->runningState:Lorg/brotli/dec/RunningState;
 
+    .line 19
     new-instance v0, Lorg/brotli/dec/BitReader;
 
     invoke-direct {v0}, Lorg/brotli/dec/BitReader;-><init>()V
@@ -128,24 +132,29 @@
 
     new-array v1, v0, [I
 
+    .line 21
     iput-object v1, p0, Lorg/brotli/dec/State;->blockTypeTrees:[I
 
     new-array v0, v0, [I
 
+    .line 22
     iput-object v0, p0, Lorg/brotli/dec/State;->blockLenTrees:[I
 
+    .line 30
     new-instance v0, Lorg/brotli/dec/HuffmanTreeGroup;
 
     invoke-direct {v0}, Lorg/brotli/dec/HuffmanTreeGroup;-><init>()V
 
     iput-object v0, p0, Lorg/brotli/dec/State;->hGroup0:Lorg/brotli/dec/HuffmanTreeGroup;
 
+    .line 31
     new-instance v0, Lorg/brotli/dec/HuffmanTreeGroup;
 
     invoke-direct {v0}, Lorg/brotli/dec/HuffmanTreeGroup;-><init>()V
 
     iput-object v0, p0, Lorg/brotli/dec/State;->hGroup1:Lorg/brotli/dec/HuffmanTreeGroup;
 
+    .line 32
     new-instance v0, Lorg/brotli/dec/HuffmanTreeGroup;
 
     invoke-direct {v0}, Lorg/brotli/dec/HuffmanTreeGroup;-><init>()V
@@ -156,48 +165,61 @@
 
     new-array v1, v0, [I
 
+    .line 33
     iput-object v1, p0, Lorg/brotli/dec/State;->blockLength:[I
 
     new-array v0, v0, [I
 
+    .line 34
     iput-object v0, p0, Lorg/brotli/dec/State;->numBlockTypes:[I
 
     const/4 v0, 0x6
 
     new-array v0, v0, [I
 
+    .line 35
     iput-object v0, p0, Lorg/brotli/dec/State;->blockTypeRb:[I
 
     const/4 v0, 0x4
 
     new-array v0, v0, [I
 
+    .line 36
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lorg/brotli/dec/State;->distRb:[I
 
     const/4 v0, 0x0
 
+    .line 37
     iput v0, p0, Lorg/brotli/dec/State;->pos:I
 
+    .line 38
     iput v0, p0, Lorg/brotli/dec/State;->maxDistance:I
 
+    .line 39
     iput v0, p0, Lorg/brotli/dec/State;->distRbIdx:I
 
+    .line 40
     iput-boolean v0, p0, Lorg/brotli/dec/State;->trivialLiteralContext:Z
 
+    .line 41
     iput v0, p0, Lorg/brotli/dec/State;->literalTreeIndex:I
 
+    .line 62
     iput v0, p0, Lorg/brotli/dec/State;->ringBufferSize:I
 
     const-wide/16 v1, 0x0
 
+    .line 63
     iput-wide v1, p0, Lorg/brotli/dec/State;->expectedTotalSize:J
 
     new-array v1, v0, [B
 
+    .line 64
     iput-object v1, p0, Lorg/brotli/dec/State;->customDictionary:[B
 
+    .line 65
     iput v0, p0, Lorg/brotli/dec/State;->bytesToIgnore:I
 
     return-void
@@ -221,12 +243,14 @@
         }
     .end annotation
 
+    .line 111
     iget-object v0, p0, Lorg/brotli/dec/State;->runningState:Lorg/brotli/dec/RunningState;
 
     sget-object v1, Lorg/brotli/dec/RunningState;->UNINITIALIZED:Lorg/brotli/dec/RunningState;
 
     if-eq v0, v1, :cond_1
 
+    .line 114
     iget-object v0, p0, Lorg/brotli/dec/State;->runningState:Lorg/brotli/dec/RunningState;
 
     sget-object v1, Lorg/brotli/dec/RunningState;->CLOSED:Lorg/brotli/dec/RunningState;
@@ -235,17 +259,20 @@
 
     return-void
 
+    .line 117
     :cond_0
     sget-object v0, Lorg/brotli/dec/RunningState;->CLOSED:Lorg/brotli/dec/RunningState;
 
     iput-object v0, p0, Lorg/brotli/dec/State;->runningState:Lorg/brotli/dec/RunningState;
 
+    .line 118
     iget-object p0, p0, Lorg/brotli/dec/State;->br:Lorg/brotli/dec/BitReader;
 
     invoke-static {p0}, Lorg/brotli/dec/BitReader;->close(Lorg/brotli/dec/BitReader;)V
 
     return-void
 
+    .line 112
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -261,6 +288,7 @@
 
     const/4 v0, 0x1
 
+    .line 76
     invoke-static {p0, v0}, Lorg/brotli/dec/BitReader;->readBits(Lorg/brotli/dec/BitReader;I)I
 
     move-result v0
@@ -274,6 +302,7 @@
     :cond_0
     const/4 v0, 0x3
 
+    .line 79
     invoke-static {p0, v0}, Lorg/brotli/dec/BitReader;->readBits(Lorg/brotli/dec/BitReader;I)I
 
     move-result v1
@@ -286,6 +315,7 @@
 
     return v1
 
+    .line 83
     :cond_1
     invoke-static {p0, v0}, Lorg/brotli/dec/BitReader;->readBits(Lorg/brotli/dec/BitReader;I)I
 
@@ -304,16 +334,19 @@
 .method static setInput(Lorg/brotli/dec/State;Ljava/io/InputStream;)V
     .locals 2
 
+    .line 97
     iget-object v0, p0, Lorg/brotli/dec/State;->runningState:Lorg/brotli/dec/RunningState;
 
     sget-object v1, Lorg/brotli/dec/RunningState;->UNINITIALIZED:Lorg/brotli/dec/RunningState;
 
     if-ne v0, v1, :cond_1
 
+    .line 100
     iget-object v0, p0, Lorg/brotli/dec/State;->br:Lorg/brotli/dec/BitReader;
 
     invoke-static {v0, p1}, Lorg/brotli/dec/BitReader;->init(Lorg/brotli/dec/BitReader;Ljava/io/InputStream;)V
 
+    .line 101
     iget-object p1, p0, Lorg/brotli/dec/State;->br:Lorg/brotli/dec/BitReader;
 
     invoke-static {p1}, Lorg/brotli/dec/State;->decodeWindowBits(Lorg/brotli/dec/BitReader;)I
@@ -328,20 +361,24 @@
 
     shl-int p1, v0, p1
 
+    .line 105
     iput p1, p0, Lorg/brotli/dec/State;->maxRingBufferSize:I
 
+    .line 106
     iget p1, p0, Lorg/brotli/dec/State;->maxRingBufferSize:I
 
     add-int/lit8 p1, p1, -0x10
 
     iput p1, p0, Lorg/brotli/dec/State;->maxBackwardDistance:I
 
+    .line 107
     sget-object p1, Lorg/brotli/dec/RunningState;->BLOCK_START:Lorg/brotli/dec/RunningState;
 
     iput-object p1, p0, Lorg/brotli/dec/State;->runningState:Lorg/brotli/dec/RunningState;
 
     return-void
 
+    .line 103
     :cond_0
     new-instance p0, Lorg/brotli/dec/BrotliRuntimeException;
 
@@ -351,6 +388,7 @@
 
     throw p0
 
+    .line 98
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

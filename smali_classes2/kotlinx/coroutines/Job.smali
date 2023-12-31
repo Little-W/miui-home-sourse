@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/Job;
 .super Ljava/lang/Object;
+.source "Job.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/CoroutineContext$Element;

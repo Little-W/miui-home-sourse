@@ -1,5 +1,6 @@
 .class Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;
 .super Ljava/lang/Object;
+.source "ClassJsonAdapter.java"
 
 
 # annotations
@@ -50,12 +51,16 @@
         }
     .end annotation
 
+    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 199
     iput-object p1, p0, Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;->name:Ljava/lang/String;
 
+    .line 200
     iput-object p2, p0, Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;->field:Ljava/lang/reflect/Field;
 
+    .line 201
     iput-object p3, p0, Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;->adapter:Lcom/squareup/moshi/JsonAdapter;
 
     return-void
@@ -72,12 +77,14 @@
         }
     .end annotation
 
+    .line 205
     iget-object v0, p0, Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;->adapter:Lcom/squareup/moshi/JsonAdapter;
 
     invoke-virtual {v0, p1}, Lcom/squareup/moshi/JsonAdapter;->fromJson(Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 206
     iget-object p0, p0, Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {p0, p2, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V

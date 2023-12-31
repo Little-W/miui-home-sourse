@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/gif/GifDrawable;
 .super Landroid/graphics/drawable/Drawable;
+.source "GifDrawable.java"
 
 # interfaces
 .implements Landroid/graphics/drawable/Animatable;
@@ -65,14 +66,17 @@
 .method private cancelPendingRenderTask()V
     .locals 2
 
+    .line 386
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mRenderTaskSchedule:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
+    .line 387
     invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
+    .line 389
     :cond_0
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mInvalidationHandler:Lpl/droidsonroids/gif/InvalidationHandler;
 
@@ -86,6 +90,7 @@
 .method private scheduleNextRender()V
     .locals 8
 
+    .line 797
     iget-boolean v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRenderingTriggeredOnDraw:Z
 
     if-eqz v0, :cond_0
@@ -104,6 +109,7 @@
 
     const-wide/16 v4, 0x0
 
+    .line 798
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
@@ -114,14 +120,17 @@
 
     move-result-wide v0
 
+    .line 799
     iput-wide v2, p0, Lpl/droidsonroids/gif/GifDrawable;->mNextFrameRenderTime:J
 
+    .line 800
     iget-object v2, p0, Lpl/droidsonroids/gif/GifDrawable;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     iget-object v3, p0, Lpl/droidsonroids/gif/GifDrawable;->mRenderTask:Lpl/droidsonroids/gif/RenderTask;
 
     invoke-virtual {v2, v3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->remove(Ljava/lang/Runnable;)Z
 
+    .line 801
     iget-object v2, p0, Lpl/droidsonroids/gif/GifDrawable;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     iget-object v3, p0, Lpl/droidsonroids/gif/GifDrawable;->mRenderTask:Lpl/droidsonroids/gif/RenderTask;
@@ -147,6 +156,7 @@
 
     goto :goto_0
 
+    .line 873
     :cond_0
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->getState()[I
 
@@ -158,6 +168,7 @@
 
     move-result p0
 
+    .line 874
     new-instance p1, Landroid/graphics/PorterDuffColorFilter;
 
     invoke-direct {p1, p0, p2}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
@@ -184,6 +195,7 @@
 .method public canSeekBackward()Z
     .locals 1
 
+    .line 656
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->getNumberOfFrames()I
 
     move-result p0
@@ -204,6 +216,7 @@
 .method public canSeekForward()Z
     .locals 1
 
+    .line 666
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->getNumberOfFrames()I
 
     move-result p0
@@ -224,6 +237,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 5
 
+    .line 779
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
     if-eqz v0, :cond_0
@@ -236,6 +250,7 @@
 
     if-nez v0, :cond_0
 
+    .line 780
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lpl/droidsonroids/gif/GifDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
@@ -249,11 +264,13 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 785
     :goto_0
     iget-object v1, p0, Lpl/droidsonroids/gif/GifDrawable;->mTransform:Lpl/droidsonroids/gif/transforms/Transform;
 
     if-nez v1, :cond_1
 
+    .line 786
     iget-object v1, p0, Lpl/droidsonroids/gif/GifDrawable;->mBuffer:Landroid/graphics/Bitmap;
 
     iget-object v2, p0, Lpl/droidsonroids/gif/GifDrawable;->mSrcRect:Landroid/graphics/Rect;
@@ -266,6 +283,7 @@
 
     goto :goto_1
 
+    .line 788
     :cond_1
     iget-object v2, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
@@ -276,6 +294,7 @@
     :goto_1
     if-eqz v0, :cond_2
 
+    .line 791
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
     const/4 p1, 0x0
@@ -289,6 +308,7 @@
 .method public getAlpha()I
     .locals 0
 
+    .line 815
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Landroid/graphics/Paint;->getAlpha()I
@@ -317,6 +337,7 @@
 .method public getColorFilter()Landroid/graphics/ColorFilter;
     .locals 0
 
+    .line 854
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Landroid/graphics/Paint;->getColorFilter()Landroid/graphics/ColorFilter;
@@ -329,6 +350,7 @@
 .method public getCurrentFrameIndex()I
     .locals 0
 
+    .line 943
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentFrameIndex()I
@@ -341,6 +363,7 @@
 .method public getCurrentLoop()I
     .locals 1
 
+    .line 953
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {v0}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentLoop()I
@@ -349,6 +372,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 954
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifInfoHandle;->getLoopCount()I
@@ -370,6 +394,7 @@
 .method public getCurrentPosition()I
     .locals 0
 
+    .line 512
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifInfoHandle;->getCurrentPosition()I
@@ -382,6 +407,7 @@
 .method public getDuration()I
     .locals 0
 
+    .line 501
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifInfoHandle;->getDuration()I
@@ -394,6 +420,7 @@
 .method public getFrameByteCount()I
     .locals 1
 
+    .line 689
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mBuffer:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getRowBytes()I
@@ -414,6 +441,7 @@
 .method public getIntrinsicHeight()I
     .locals 0
 
+    .line 294
     iget p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mScaledHeight:I
 
     return p0
@@ -422,6 +450,7 @@
 .method public getIntrinsicWidth()I
     .locals 0
 
+    .line 299
     iget p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mScaledWidth:I
 
     return p0
@@ -430,6 +459,7 @@
 .method public getNumberOfFrames()I
     .locals 0
 
+    .line 440
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifInfoHandle;->getNumberOfFrames()I
@@ -442,6 +472,7 @@
 .method public getOpacity()I
     .locals 1
 
+    .line 320
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {v0}, Lpl/droidsonroids/gif/GifInfoHandle;->isOpaque()Z
@@ -477,8 +508,10 @@
 .method public invalidateSelf()V
     .locals 0
 
+    .line 288
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
+    .line 289
     invoke-direct {p0}, Lpl/droidsonroids/gif/GifDrawable;->scheduleNextRender()V
 
     return-void
@@ -487,6 +520,7 @@
 .method public isPlaying()Z
     .locals 0
 
+    .line 625
     iget-boolean p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRunning:Z
 
     return p0
@@ -495,6 +529,7 @@
 .method public isRecycled()Z
     .locals 0
 
+    .line 283
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifInfoHandle;->isRecycled()Z
@@ -507,6 +542,7 @@
 .method public isRunning()Z
     .locals 0
 
+    .line 394
     iget-boolean p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRunning:Z
 
     return p0
@@ -515,6 +551,7 @@
 .method public isStateful()Z
     .locals 1
 
+    .line 902
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
     move-result v0
@@ -549,14 +586,17 @@
 .method protected onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
 
+    .line 765
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mDstRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    .line 766
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mTransform:Lpl/droidsonroids/gif/transforms/Transform;
 
     if-eqz p0, :cond_0
 
+    .line 767
     invoke-interface {p0, p1}, Lpl/droidsonroids/gif/transforms/Transform;->onBoundsChange(Landroid/graphics/Rect;)V
 
     :cond_0
@@ -566,6 +606,7 @@
 .method protected onStateChange([I)Z
     .locals 1
 
+    .line 893
     iget-object p1, p0, Lpl/droidsonroids/gif/GifDrawable;->mTint:Landroid/content/res/ColorStateList;
 
     if-eqz p1, :cond_0
@@ -574,6 +615,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 894
     invoke-direct {p0, p1, v0}, Lpl/droidsonroids/gif/GifDrawable;->updateTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object p1
@@ -593,6 +635,7 @@
 .method public pause()V
     .locals 0
 
+    .line 488
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->stop()V
 
     return-void
@@ -601,6 +644,7 @@
 .method public reset()V
     .locals 2
 
+    .line 358
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     new-instance v1, Lpl/droidsonroids/gif/GifDrawable$1;
@@ -617,6 +661,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 532
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     new-instance v1, Lpl/droidsonroids/gif/GifDrawable$2;
@@ -627,6 +672,7 @@
 
     return-void
 
+    .line 530
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -640,6 +686,7 @@
 .method public setAlpha(I)V
     .locals 0
 
+    .line 304
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
@@ -650,6 +697,7 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 0
 
+    .line 309
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
@@ -662,10 +710,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 828
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setDither(Z)V
 
+    .line 829
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->invalidateSelf()V
 
     return-void
@@ -674,10 +724,12 @@
 .method public setFilterBitmap(Z)V
     .locals 1
 
+    .line 820
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
+    .line 821
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->invalidateSelf()V
 
     return-void
@@ -686,8 +738,10 @@
 .method public setTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
 
+    .line 879
     iput-object p1, p0, Lpl/droidsonroids/gif/GifDrawable;->mTint:Landroid/content/res/ColorStateList;
 
+    .line 880
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
     invoke-direct {p0, p1, v0}, Lpl/droidsonroids/gif/GifDrawable;->updateTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
@@ -696,6 +750,7 @@
 
     iput-object p1, p0, Lpl/droidsonroids/gif/GifDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
+    .line 881
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->invalidateSelf()V
 
     return-void
@@ -704,8 +759,10 @@
 .method public setTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
+    .line 886
     iput-object p1, p0, Lpl/droidsonroids/gif/GifDrawable;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 887
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mTint:Landroid/content/res/ColorStateList;
 
     invoke-direct {p0, v0, p1}, Lpl/droidsonroids/gif/GifDrawable;->updateTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
@@ -714,6 +771,7 @@
 
     iput-object p1, p0, Lpl/droidsonroids/gif/GifDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
+    .line 888
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->invalidateSelf()V
 
     return-void
@@ -722,10 +780,12 @@
 .method public setVisible(ZZ)Z
     .locals 2
 
+    .line 921
     invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     move-result v0
 
+    .line 922
     iget-boolean v1, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRenderingTriggeredOnDraw:Z
 
     if-nez v1, :cond_2
@@ -734,11 +794,13 @@
 
     if-eqz p2, :cond_0
 
+    .line 925
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->reset()V
 
     :cond_0
     if-eqz v0, :cond_2
 
+    .line 928
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->start()V
 
     goto :goto_0
@@ -746,6 +808,7 @@
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 931
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifDrawable;->stop()V
 
     :cond_2
@@ -756,13 +819,16 @@
 .method public start()V
     .locals 2
 
+    .line 332
     monitor-enter p0
 
+    .line 333
     :try_start_0
     iget-boolean v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRunning:Z
 
     if-eqz v0, :cond_0
 
+    .line 334
     monitor-exit p0
 
     return-void
@@ -770,18 +836,22 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 336
     iput-boolean v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRunning:Z
 
+    .line 337
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 338
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {v0}, Lpl/droidsonroids/gif/GifInfoHandle;->restoreRemainder()J
 
     move-result-wide v0
 
+    .line 339
     invoke-virtual {p0, v0, v1}, Lpl/droidsonroids/gif/GifDrawable;->startAnimation(J)V
 
     return-void
@@ -789,6 +859,7 @@
     :catchall_0
     move-exception v0
 
+    .line 337
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -800,14 +871,17 @@
 .method startAnimation(J)V
     .locals 4
 
+    .line 343
     iget-boolean v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRenderingTriggeredOnDraw:Z
 
     const-wide/16 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 344
     iput-wide v1, p0, Lpl/droidsonroids/gif/GifDrawable;->mNextFrameRenderTime:J
 
+    .line 345
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mInvalidationHandler:Lpl/droidsonroids/gif/InvalidationHandler;
 
     const/4 p1, -0x1
@@ -816,9 +890,11 @@
 
     goto :goto_0
 
+    .line 347
     :cond_0
     invoke-direct {p0}, Lpl/droidsonroids/gif/GifDrawable;->cancelPendingRenderTask()V
 
+    .line 348
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     iget-object v3, p0, Lpl/droidsonroids/gif/GifDrawable;->mRenderTask:Lpl/droidsonroids/gif/RenderTask;
@@ -842,13 +918,16 @@
 .method public stop()V
     .locals 1
 
+    .line 374
     monitor-enter p0
 
+    .line 375
     :try_start_0
     iget-boolean v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRunning:Z
 
     if-nez v0, :cond_0
 
+    .line 376
     monitor-exit p0
 
     return-void
@@ -856,14 +935,18 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 378
     iput-boolean v0, p0, Lpl/droidsonroids/gif/GifDrawable;->mIsRunning:Z
 
+    .line 379
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 381
     invoke-direct {p0}, Lpl/droidsonroids/gif/GifDrawable;->cancelPendingRenderTask()V
 
+    .line 382
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
     invoke-virtual {p0}, Lpl/droidsonroids/gif/GifInfoHandle;->saveRemainder()V
@@ -873,6 +956,7 @@
     :catchall_0
     move-exception v0
 
+    .line 379
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -884,6 +968,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 432
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v1, 0x4
@@ -892,6 +977,7 @@
 
     iget-object v2, p0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
 
+    .line 433
     invoke-virtual {v2}, Lpl/droidsonroids/gif/GifInfoHandle;->getWidth()I
 
     move-result v2
@@ -948,6 +1034,7 @@
 
     const-string p0, "GIF: size: %dx%d, frames: %d, error: %d"
 
+    .line 432
     invoke-static {v0, p0, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

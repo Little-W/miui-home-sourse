@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/TaggedDecoder;
 .super Ljava/lang/Object;
+.source "Tagged.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/encoding/CompositeDecoder;
@@ -36,8 +37,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 281
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -59,21 +62,26 @@
         }
     .end annotation
 
+    .line 272
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->pushTag(Ljava/lang/Object;)V
 
+    .line 273
     invoke-interface {p2}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 274
     iget-boolean p2, p0, Lkotlinx/serialization/internal/TaggedDecoder;->flag:Z
 
     if-nez p2, :cond_0
 
+    .line 275
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     :cond_0
     const/4 p2, 0x0
 
+    .line 277
     iput-boolean p2, p0, Lkotlinx/serialization/internal/TaggedDecoder;->flag:Z
 
     return-object p1
@@ -88,6 +96,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 217
     check-cast p0, Lkotlinx/serialization/encoding/CompositeDecoder;
 
     return-object p0
@@ -96,6 +105,7 @@
 .method public final decodeBoolean()Z
     .locals 1
 
+    .line 205
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -114,6 +124,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 224
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -128,6 +139,7 @@
 .method public final decodeByte()B
     .locals 1
 
+    .line 206
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -146,6 +158,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 227
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -160,6 +173,7 @@
 .method public final decodeChar()C
     .locals 1
 
+    .line 212
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -178,6 +192,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 245
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -196,6 +211,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 165
     invoke-static {p0, p1}, Lkotlinx/serialization/encoding/CompositeDecoder$DefaultImpls;->decodeCollectionSize(Lkotlinx/serialization/encoding/CompositeDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)I
 
     move-result p0
@@ -206,6 +222,7 @@
 .method public final decodeDouble()D
     .locals 2
 
+    .line 211
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -224,6 +241,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 242
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -242,6 +260,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 215
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -256,6 +275,7 @@
 .method public final decodeFloat()F
     .locals 1
 
+    .line 210
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -274,6 +294,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 239
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -288,6 +309,7 @@
 .method public final decodeInt()I
     .locals 1
 
+    .line 208
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -306,6 +328,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 233
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -320,6 +343,7 @@
 .method public final decodeLong()J
     .locals 2
 
+    .line 209
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -338,6 +362,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 236
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -352,12 +377,14 @@
 .method public decodeNotNullMark()Z
     .locals 1
 
+    .line 199
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->getCurrentTagOrNull()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 200
     invoke-virtual {p0, v0}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedNotNullMark(Ljava/lang/Object;)Z
 
     move-result p0
@@ -400,6 +427,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 165
     invoke-static {p0, p1, p2, p3}, Lkotlinx/serialization/encoding/CompositeDecoder$DefaultImpls;->decodeNullableSerializableElement(Lkotlinx/serialization/encoding/CompositeDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -429,6 +457,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 264
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -449,6 +478,7 @@
 .method public decodeSequentially()Z
     .locals 0
 
+    .line 165
     invoke-static {p0}, Lkotlinx/serialization/encoding/CompositeDecoder$DefaultImpls;->decodeSequentially(Lkotlinx/serialization/encoding/CompositeDecoder;)Z
 
     move-result p0
@@ -478,6 +508,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 165
     invoke-static {p0, p1, p2, p3}, Lkotlinx/serialization/encoding/CompositeDecoder$DefaultImpls;->decodeSerializableElement(Lkotlinx/serialization/encoding/CompositeDecoder;Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -507,6 +538,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 256
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -540,6 +572,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 165
     invoke-static {p0, p1}, Lkotlinx/serialization/encoding/Decoder$DefaultImpls;->decodeSerializableValue(Lkotlinx/serialization/encoding/Decoder;Lkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -563,6 +596,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 191
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeSerializableValue(Lkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -573,6 +607,7 @@
 .method public final decodeShort()S
     .locals 1
 
+    .line 207
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -591,6 +626,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 230
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -605,6 +641,7 @@
 .method public final decodeString()Ljava/lang/String;
     .locals 1
 
+    .line 213
     invoke-virtual {p0}, Lkotlinx/serialization/internal/TaggedDecoder;->popTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -623,6 +660,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 248
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/TaggedDecoder;->getTag(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -642,6 +680,7 @@
         }
     .end annotation
 
+    .line 178
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -674,6 +713,7 @@
         }
     .end annotation
 
+    .line 179
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -706,6 +746,7 @@
         }
     .end annotation
 
+    .line 185
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -738,6 +779,7 @@
         }
     .end annotation
 
+    .line 184
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -776,6 +818,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 188
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -808,6 +851,7 @@
         }
     .end annotation
 
+    .line 183
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -840,6 +884,7 @@
         }
     .end annotation
 
+    .line 181
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -872,6 +917,7 @@
         }
     .end annotation
 
+    .line 182
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -917,6 +963,7 @@
         }
     .end annotation
 
+    .line 180
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -950,6 +997,7 @@
         }
     .end annotation
 
+    .line 186
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeTaggedValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -979,6 +1027,7 @@
         }
     .end annotation
 
+    .line 173
     new-instance p1, Lkotlinx/serialization/SerializationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1028,6 +1077,7 @@
         }
     .end annotation
 
+    .line 285
     iget-object p0, p0, Lkotlinx/serialization/internal/TaggedDecoder;->tagStack:Ljava/util/ArrayList;
 
     check-cast p0, Ljava/util/List;
@@ -1042,6 +1092,7 @@
 .method public getSerializersModule()Lkotlinx/serialization/modules/SerializersModule;
     .locals 0
 
+    .line 167
     invoke-static {}, Lkotlinx/serialization/modules/SerializersModuleKt;->getEmptySerializersModule()Lkotlinx/serialization/modules/SerializersModule;
 
     move-result-object p0
@@ -1067,6 +1118,7 @@
         }
     .end annotation
 
+    .line 298
     iget-object v0, p0, Lkotlinx/serialization/internal/TaggedDecoder;->tagStack:Ljava/util/ArrayList;
 
     move-object v1, v0
@@ -1083,6 +1135,7 @@
 
     const/4 v1, 0x1
 
+    .line 299
     iput-boolean v1, p0, Lkotlinx/serialization/internal/TaggedDecoder;->flag:Z
 
     return-object v0
@@ -1096,6 +1149,7 @@
         }
     .end annotation
 
+    .line 288
     iget-object p0, p0, Lkotlinx/serialization/internal/TaggedDecoder;->tagStack:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z

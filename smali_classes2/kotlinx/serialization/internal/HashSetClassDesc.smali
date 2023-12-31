@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/HashSetClassDesc;
 .super Lkotlinx/serialization/internal/ListLikeDescriptor;
+.source "CollectionDescriptors.kt"
 
 
 # direct methods
@@ -12,6 +13,7 @@
 
     const/4 v0, 0x0
 
+    .line 129
     invoke-direct {p0, p1, v0}, Lkotlinx/serialization/internal/ListLikeDescriptor;-><init>(Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void

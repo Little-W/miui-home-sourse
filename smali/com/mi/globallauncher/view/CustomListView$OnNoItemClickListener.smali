@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/view/CustomListView$OnNoItemClickListener;
 .super Ljava/lang/Object;
+.source "CustomListView.java"
 
 
 # annotations

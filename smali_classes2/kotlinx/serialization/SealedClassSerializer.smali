@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/SealedClassSerializer;
 .super Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;
+.source "SealedSerializer.kt"
 
 
 # annotations
@@ -86,10 +87,12 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 77
     invoke-direct {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;-><init>()V
 
     iput-object p2, p0, Lkotlinx/serialization/SealedClassSerializer;->baseClass:Lkotlin/reflect/KClass;
 
+    .line 79
     sget-object p2, Lkotlinx/serialization/descriptors/PolymorphicKind$SEALED;->INSTANCE:Lkotlinx/serialization/descriptors/PolymorphicKind$SEALED;
 
     check-cast p2, Lkotlinx/serialization/descriptors/SerialKind;
@@ -110,12 +113,14 @@
 
     iput-object p1, p0, Lkotlinx/serialization/SealedClassSerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
+    .line 96
     array-length p1, p3
 
     array-length p2, p4
 
     if-ne p1, p2, :cond_4
 
+    .line 100
     invoke-static {p3, p4}, Lkotlin/collections/ArraysKt;->zip([Ljava/lang/Object;[Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -128,6 +133,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/SealedClassSerializer;->class2Serializer:Ljava/util/Map;
 
+    .line 101
     iget-object p1, p0, Lkotlinx/serialization/SealedClassSerializer;->class2Serializer:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -136,18 +142,21 @@
 
     check-cast p1, Ljava/lang/Iterable;
 
+    .line 124
     new-instance p2, Lkotlinx/serialization/SealedClassSerializer$$special$$inlined$groupingBy$1;
 
     invoke-direct {p2, p1}, Lkotlinx/serialization/SealedClassSerializer$$special$$inlined$groupingBy$1;-><init>(Ljava/lang/Iterable;)V
 
     check-cast p2, Lkotlin/collections/Grouping;
 
+    .line 125
     new-instance p1, Ljava/util/LinkedHashMap;
 
     invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
 
     check-cast p1, Ljava/util/Map;
 
+    .line 126
     invoke-interface {p2}, Lkotlin/collections/Grouping;->sourceIterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -163,16 +172,19 @@
 
     move-result-object p4
 
+    .line 127
     invoke-interface {p2, p4}, Lkotlin/collections/Grouping;->keyOf(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 128
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
+    .line 129
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
@@ -188,10 +200,12 @@
 
     if-nez v1, :cond_1
 
+    .line 110
     invoke-interface {p1, v0, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 106
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -221,6 +235,7 @@
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 107
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -249,6 +264,7 @@
 
     move-result-object p0
 
+    .line 105
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -261,6 +277,7 @@
 
     throw p1
 
+    .line 132
     :cond_2
     new-instance p2, Ljava/util/LinkedHashMap;
 
@@ -276,12 +293,14 @@
 
     check-cast p2, Ljava/util/Map;
 
+    .line 133
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Iterable;
 
+    .line 134
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -297,12 +316,15 @@
 
     move-result-object p3
 
+    .line 135
     check-cast p3, Ljava/util/Map$Entry;
 
+    .line 133
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p4
 
+    .line 111
     invoke-interface {p3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p3
@@ -319,11 +341,13 @@
 
     goto :goto_1
 
+    .line 132
     :cond_3
     iput-object p2, p0, Lkotlinx/serialization/SealedClassSerializer;->serialName2Serializer:Ljava/util/Map;
 
     return-void
 
+    .line 97
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -379,6 +403,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 115
     iget-object v0, p0, Lkotlinx/serialization/SealedClassSerializer;->serialName2Serializer:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -422,6 +447,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 119
     iget-object v0, p0, Lkotlinx/serialization/SealedClassSerializer;->class2Serializer:Ljava/util/Map;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -456,6 +482,7 @@
 
     goto :goto_1
 
+    .line 123
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -482,6 +509,7 @@
         }
     .end annotation
 
+    .line 74
     iget-object p0, p0, Lkotlinx/serialization/SealedClassSerializer;->baseClass:Lkotlin/reflect/KClass;
 
     return-object p0
@@ -490,6 +518,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 79
     iget-object p0, p0, Lkotlinx/serialization/SealedClassSerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0

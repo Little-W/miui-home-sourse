@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/IRecentsAnimationRunnerAtLeastS;
 .super Ljava/lang/Object;
+.source "IRecentsAnimationRunnerAtLeastS.java"
 
 # interfaces
 .implements Landroid/view/IRecentsAnimationRunner;

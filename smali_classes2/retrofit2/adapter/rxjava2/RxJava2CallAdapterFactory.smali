@@ -1,5 +1,6 @@
 .class public final Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;
 .super Lretrofit2/CallAdapter$Factory;
+.source "RxJava2CallAdapterFactory.java"
 
 
 # instance fields
@@ -19,10 +20,13 @@
         .end annotation
     .end param
 
+    .line 88
     invoke-direct {p0}, Lretrofit2/CallAdapter$Factory;-><init>()V
 
+    .line 89
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->scheduler:Lio/reactivex/Scheduler;
 
+    .line 90
     iput-boolean p2, p0, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->isAsync:Z
 
     return-void
@@ -31,6 +35,7 @@
 .method public static create()Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;
     .locals 3
 
+    .line 64
     new-instance v0, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;
 
     const/4 v1, 0x0
@@ -59,14 +64,17 @@
         }
     .end annotation
 
+    .line 95
     invoke-static {p1}, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object p2
 
+    .line 97
     const-class p3, Lio/reactivex/Completable;
 
     if-ne p2, p3, :cond_0
 
+    .line 100
     new-instance p1, Lretrofit2/adapter/rxjava2/RxJava2CallAdapter;
 
     const-class v1, Ljava/lang/Void;
@@ -93,6 +101,7 @@
 
     return-object p1
 
+    .line 104
     :cond_0
     const-class p3, Lio/reactivex/Flowable;
 
@@ -109,6 +118,7 @@
     :cond_1
     move v8, v1
 
+    .line 105
     :goto_0
     const-class p3, Lio/reactivex/Single;
 
@@ -121,6 +131,7 @@
     :cond_2
     move v9, v1
 
+    .line 106
     :goto_1
     const-class p3, Lio/reactivex/Maybe;
 
@@ -133,6 +144,7 @@
     :cond_3
     move v10, v1
 
+    .line 107
     :goto_2
     const-class p3, Lio/reactivex/Observable;
 
@@ -148,6 +160,7 @@
 
     return-object p0
 
+    .line 114
     :cond_4
     instance-of p2, p1, Ljava/lang/reflect/ParameterizedType;
 
@@ -176,6 +189,7 @@
     :cond_7
     const-string p0, "Flowable"
 
+    .line 118
     :goto_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -209,6 +223,7 @@
 
     throw p1
 
+    .line 122
     :cond_8
     check-cast p1, Ljava/lang/reflect/ParameterizedType;
 
@@ -216,18 +231,22 @@
 
     move-result-object p1
 
+    .line 123
     invoke-static {p1}, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object p2
 
+    .line 124
     const-class p3, Lretrofit2/Response;
 
     if-ne p2, p3, :cond_a
 
+    .line 125
     instance-of p2, p1, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz p2, :cond_9
 
+    .line 129
     check-cast p1, Ljava/lang/reflect/ParameterizedType;
 
     invoke-static {v1, p1}, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
@@ -242,6 +261,7 @@
 
     goto :goto_4
 
+    .line 126
     :cond_9
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -251,15 +271,18 @@
 
     throw p0
 
+    .line 130
     :cond_a
     const-class p3, Lretrofit2/adapter/rxjava2/Result;
 
     if-ne p2, p3, :cond_c
 
+    .line 131
     instance-of p2, p1, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz p2, :cond_b
 
+    .line 135
     check-cast p1, Ljava/lang/reflect/ParameterizedType;
 
     invoke-static {v1, p1}, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
@@ -274,6 +297,7 @@
 
     goto :goto_4
 
+    .line 132
     :cond_b
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -290,6 +314,7 @@
 
     move v6, v1
 
+    .line 142
     :goto_4
     new-instance p1, Lretrofit2/adapter/rxjava2/RxJava2CallAdapter;
 

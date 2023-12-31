@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;
+.source "AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame.java"
 
 
 # annotations
@@ -26,16 +27,22 @@
 .method private constructor <init>(JLjava/lang/String;Ljava/lang/String;JI)V
     .locals 0
 
+    .line 26
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;-><init>()V
 
+    .line 27
     iput-wide p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->pc:J
 
+    .line 28
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->symbol:Ljava/lang/String;
 
+    .line 29
     iput-object p4, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->file:Ljava/lang/String;
 
+    .line 30
     iput-wide p5, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->offset:J
 
+    .line 31
     iput p7, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->importance:I
 
     return-void
@@ -44,6 +51,7 @@
 .method synthetic constructor <init>(JLjava/lang/String;Ljava/lang/String;JILcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame$1;)V
     .locals 0
 
+    .line 9
     invoke-direct/range {p0 .. p7}, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;-><init>(JLjava/lang/String;Ljava/lang/String;JI)V
 
     return-void
@@ -60,6 +68,7 @@
 
     return v0
 
+    .line 77
     :cond_0
     instance-of v1, p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;
 
@@ -67,8 +76,10 @@
 
     if-eqz v1, :cond_3
 
+    .line 78
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;
 
+    .line 79
     iget-wide v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->pc:J
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;->getPc()J
@@ -81,6 +92,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->symbol:Ljava/lang/String;
 
+    .line 80
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;->getSymbol()Ljava/lang/String;
 
     move-result-object v3
@@ -95,6 +107,7 @@
 
     if-nez v1, :cond_1
 
+    .line 81
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;->getFile()Ljava/lang/String;
 
     move-result-object v1
@@ -117,6 +130,7 @@
     :goto_0
     iget-wide v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->offset:J
 
+    .line 82
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;->getOffset()J
 
     move-result-wide v5
@@ -127,6 +141,7 @@
 
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->importance:I
 
+    .line 83
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application$Execution$Thread$Frame;->getImportance()I
 
     move-result p1
@@ -148,6 +163,7 @@
 .method public getFile()Ljava/lang/String;
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->file:Ljava/lang/String;
 
     return-object p0
@@ -156,6 +172,7 @@
 .method public getImportance()I
     .locals 0
 
+    .line 58
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->importance:I
 
     return p0
@@ -164,6 +181,7 @@
 .method public getOffset()J
     .locals 2
 
+    .line 53
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->offset:J
 
     return-wide v0
@@ -172,6 +190,7 @@
 .method public getPc()J
     .locals 2
 
+    .line 36
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->pc:J
 
     return-wide v0
@@ -180,6 +199,7 @@
 .method public getSymbol()Ljava/lang/String;
     .locals 0
 
+    .line 42
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->symbol:Ljava/lang/String;
 
     return-object p0
@@ -188,6 +208,7 @@
 .method public hashCode()I
     .locals 7
 
+    .line 92
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->pc:J
 
     const/16 v2, 0x20
@@ -204,6 +225,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 94
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->symbol:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
@@ -214,6 +236,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 96
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->file:Ljava/lang/String;
 
     if-nez v3, :cond_0
@@ -232,6 +255,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 98
     iget-wide v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->offset:J
 
     ushr-long v5, v3, v2
@@ -244,6 +268,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 100
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->importance:I
 
     xor-int/2addr p0, v0
@@ -254,6 +279,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 63
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

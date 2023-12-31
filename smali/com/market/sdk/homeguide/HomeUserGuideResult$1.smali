@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/homeguide/HomeUserGuideResult$1;
 .super Ljava/lang/Object;
+.source "HomeUserGuideResult.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/market/sdk/homeguide/HomeUserGuideResult;
     .locals 0
 
+    .line 38
     new-instance p0, Lcom/market/sdk/homeguide/HomeUserGuideResult;
 
     invoke-direct {p0, p1}, Lcom/market/sdk/homeguide/HomeUserGuideResult;-><init>(Landroid/os/Parcel;)V
@@ -49,6 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 35
     invoke-virtual {p0, p1}, Lcom/market/sdk/homeguide/HomeUserGuideResult$1;->createFromParcel(Landroid/os/Parcel;)Lcom/market/sdk/homeguide/HomeUserGuideResult;
 
     move-result-object p0
@@ -59,6 +63,7 @@
 .method public newArray(I)[Lcom/market/sdk/homeguide/HomeUserGuideResult;
     .locals 0
 
+    .line 43
     new-array p0, p1, [Lcom/market/sdk/homeguide/HomeUserGuideResult;
 
     return-object p0
@@ -67,6 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 35
     invoke-virtual {p0, p1}, Lcom/market/sdk/homeguide/HomeUserGuideResult$1;->newArray(I)[Lcom/market/sdk/homeguide/HomeUserGuideResult;
 
     move-result-object p0

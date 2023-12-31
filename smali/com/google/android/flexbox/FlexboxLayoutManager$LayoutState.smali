@@ -1,5 +1,6 @@
 .class Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;
 .super Ljava/lang/Object;
+.source "FlexboxLayoutManager.java"
 
 
 # annotations
@@ -39,12 +40,15 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 2949
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2989
     iput v0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mItemDirection:I
 
+    .line 2991
     iput v0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mLayoutDirection:I
 
     return-void
@@ -53,6 +57,7 @@
 .method synthetic constructor <init>(Lcom/google/android/flexbox/FlexboxLayoutManager$1;)V
     .locals 0
 
+    .line 2949
     invoke-direct {p0}, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;-><init>()V
 
     return-void
@@ -61,6 +66,7 @@
 .method static synthetic access$1000(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 0
 
+    .line 2949
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mOffset:I
 
     return p0
@@ -69,6 +75,7 @@
 .method static synthetic access$1002(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;I)I
     .locals 0
 
+    .line 2949
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mOffset:I
 
     return p1
@@ -77,6 +84,7 @@
 .method static synthetic access$1100(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)Z
     .locals 0
 
+    .line 2949
     iget-boolean p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mInfinite:Z
 
     return p0
@@ -85,6 +93,7 @@
 .method static synthetic access$1102(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;Z)Z
     .locals 0
 
+    .line 2949
     iput-boolean p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mInfinite:Z
 
     return p1
@@ -93,6 +102,7 @@
 .method static synthetic access$1200(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 0
 
+    .line 2949
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mAvailable:I
 
     return p0
@@ -101,6 +111,7 @@
 .method static synthetic access$1202(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;I)I
     .locals 0
 
+    .line 2949
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mAvailable:I
 
     return p1
@@ -109,6 +120,7 @@
 .method static synthetic access$1500(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 0
 
+    .line 2949
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mFlexLinePosition:I
 
     return p0
@@ -117,6 +129,7 @@
 .method static synthetic access$1502(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;I)I
     .locals 0
 
+    .line 2949
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mFlexLinePosition:I
 
     return p1
@@ -125,6 +138,7 @@
 .method static synthetic access$1508(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 2
 
+    .line 2949
     iget v0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mFlexLinePosition:I
 
     add-int/lit8 v1, v0, 0x1
@@ -137,6 +151,7 @@
 .method static synthetic access$1510(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 2
 
+    .line 2949
     iget v0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mFlexLinePosition:I
 
     add-int/lit8 v1, v0, -0x1
@@ -149,6 +164,7 @@
 .method static synthetic access$2000(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 0
 
+    .line 2949
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mScrollingOffset:I
 
     return p0
@@ -157,6 +173,7 @@
 .method static synthetic access$2002(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;I)I
     .locals 0
 
+    .line 2949
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mScrollingOffset:I
 
     return p1
@@ -165,6 +182,7 @@
 .method static synthetic access$2100(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;Landroidx/recyclerview/widget/RecyclerView$State;Ljava/util/List;)Z
     .locals 0
 
+    .line 2949
     invoke-direct {p0, p1, p2}, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->hasMore(Landroidx/recyclerview/widget/RecyclerView$State;Ljava/util/List;)Z
 
     move-result p0
@@ -175,6 +193,7 @@
 .method static synthetic access$2200(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 0
 
+    .line 2949
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mPosition:I
 
     return p0
@@ -183,6 +202,7 @@
 .method static synthetic access$2202(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;I)I
     .locals 0
 
+    .line 2949
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mPosition:I
 
     return p1
@@ -191,6 +211,7 @@
 .method static synthetic access$2300(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 0
 
+    .line 2949
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mLayoutDirection:I
 
     return p0
@@ -199,6 +220,7 @@
 .method static synthetic access$2302(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;I)I
     .locals 0
 
+    .line 2949
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mLayoutDirection:I
 
     return p1
@@ -207,6 +229,7 @@
 .method static synthetic access$2500(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)I
     .locals 0
 
+    .line 2949
     iget p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mItemDirection:I
 
     return p0
@@ -215,6 +238,7 @@
 .method static synthetic access$2502(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;I)I
     .locals 0
 
+    .line 2949
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mItemDirection:I
 
     return p1
@@ -223,6 +247,7 @@
 .method static synthetic access$2702(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;I)I
     .locals 0
 
+    .line 2949
     iput p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mLastScrollDelta:I
 
     return p1
@@ -231,6 +256,7 @@
 .method static synthetic access$500(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;)Z
     .locals 0
 
+    .line 2949
     iget-boolean p0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mShouldRecycle:Z
 
     return p0
@@ -239,6 +265,7 @@
 .method static synthetic access$502(Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;Z)Z
     .locals 0
 
+    .line 2949
     iput-boolean p1, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mShouldRecycle:Z
 
     return p1
@@ -256,6 +283,7 @@
         }
     .end annotation
 
+    .line 2999
     iget v0, p0, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutState;->mPosition:I
 
     if-ltz v0, :cond_0
@@ -270,6 +298,7 @@
 
     if-ltz p0, :cond_0
 
+    .line 3000
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p1
@@ -292,6 +321,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 3005
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

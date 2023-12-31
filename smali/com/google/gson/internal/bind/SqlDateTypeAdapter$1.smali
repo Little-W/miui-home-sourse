@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/bind/SqlDateTypeAdapter$1;
 .super Ljava/lang/Object;
+.source "SqlDateTypeAdapter.java"
 
 # interfaces
 .implements Lcom/google/gson/TypeAdapterFactory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +44,7 @@
         }
     .end annotation
 
+    .line 42
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p0
@@ -50,6 +53,7 @@
 
     if-ne p0, p1, :cond_0
 
+    .line 43
     new-instance p0, Lcom/google/gson/internal/bind/SqlDateTypeAdapter;
 
     invoke-direct {p0}, Lcom/google/gson/internal/bind/SqlDateTypeAdapter;-><init>()V

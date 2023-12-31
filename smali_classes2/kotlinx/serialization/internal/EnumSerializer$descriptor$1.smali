@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/EnumSerializer$descriptor$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Enums.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -56,6 +57,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 55
     check-cast p1, Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/EnumSerializer$descriptor$1;->invoke(Lkotlinx/serialization/descriptors/ClassSerialDescriptorBuilder;)V
@@ -76,12 +78,14 @@
 
     invoke-static {v9, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 61
     iget-object v1, v0, Lkotlinx/serialization/internal/EnumSerializer$descriptor$1;->this$0:Lkotlinx/serialization/internal/EnumSerializer;
 
     invoke-static {v1}, Lkotlinx/serialization/internal/EnumSerializer;->access$getValues$p(Lkotlinx/serialization/internal/EnumSerializer;)[Ljava/lang/Enum;
 
     move-result-object v1
 
+    .line 87
     array-length v10, v1
 
     const/4 v11, 0x0
@@ -93,6 +97,7 @@
 
     aget-object v2, v1, v12
 
+    .line 62
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,6 +120,7 @@
 
     move-result-object v13
 
+    .line 63
     sget-object v3, Lkotlinx/serialization/descriptors/StructureKind$OBJECT;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$OBJECT;
 
     move-object v14, v3
@@ -133,6 +139,7 @@
 
     move-result-object v4
 
+    .line 64
     invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v3

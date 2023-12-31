@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;
 .super Ljava/lang/Object;
+.source "DataUrlLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataFetcher;
@@ -60,10 +61,13 @@
         }
     .end annotation
 
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 73
     iput-object p1, p0, Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;->dataUri:Ljava/lang/String;
 
+    .line 74
     iput-object p2, p0, Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;->reader:Lcom/bumptech/glide/load/model/DataUrlLoader$DataDecoder;
 
     return-void
@@ -80,6 +84,7 @@
 .method public cleanup()V
     .locals 1
 
+    .line 90
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;->reader:Lcom/bumptech/glide/load/model/DataUrlLoader$DataDecoder;
 
@@ -103,6 +108,7 @@
         }
     .end annotation
 
+    .line 104
     iget-object p0, p0, Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;->reader:Lcom/bumptech/glide/load/model/DataUrlLoader$DataDecoder;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/model/DataUrlLoader$DataDecoder;->getDataClass()Ljava/lang/Class;
@@ -115,6 +121,7 @@
 .method public getDataSource()Lcom/bumptech/glide/load/DataSource;
     .locals 0
 
+    .line 110
     sget-object p0, Lcom/bumptech/glide/load/DataSource;->LOCAL:Lcom/bumptech/glide/load/DataSource;
 
     return-object p0
@@ -131,6 +138,7 @@
         }
     .end annotation
 
+    .line 80
     :try_start_0
     iget-object p1, p0, Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;->reader:Lcom/bumptech/glide/load/model/DataUrlLoader$DataDecoder;
 
@@ -142,6 +150,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;->data:Ljava/lang/Object;
 
+    .line 81
     iget-object p0, p0, Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;->data:Ljava/lang/Object;
 
     invoke-interface {p2, p0}, Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;->onDataReady(Ljava/lang/Object;)V
@@ -153,6 +162,7 @@
     :catch_0
     move-exception p0
 
+    .line 83
     invoke-interface {p2, p0}, Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;->onLoadFailed(Ljava/lang/Exception;)V
 
     :goto_0

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/JobCancellationException;
 .super Ljava/util/concurrent/CancellationException;
+.source "Exceptions.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/CopyableThrowable;
@@ -24,12 +25,14 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Lkotlinx/coroutines/Job;)V
     .locals 0
 
+    .line 33
     invoke-direct {p0, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
     iput-object p3, p0, Lkotlinx/coroutines/JobCancellationException;->job:Lkotlinx/coroutines/Job;
 
     if-eqz p2, :cond_0
 
+    .line 36
     invoke-virtual {p0, p2}, Lkotlinx/coroutines/JobCancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     :cond_0
@@ -41,6 +44,7 @@
 .method public bridge synthetic createCopy()Ljava/lang/Throwable;
     .locals 0
 
+    .line 29
     invoke-virtual {p0}, Lkotlinx/coroutines/JobCancellationException;->createCopy()Lkotlinx/coroutines/JobCancellationException;
 
     move-result-object p0
@@ -53,12 +57,14 @@
 .method public createCopy()Lkotlinx/coroutines/JobCancellationException;
     .locals 3
 
+    .line 54
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 55
     new-instance v0, Lkotlinx/coroutines/JobCancellationException;
 
     invoke-virtual {p0}, Lkotlinx/coroutines/JobCancellationException;->getMessage()Ljava/lang/String;
@@ -86,6 +92,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 68
     move-object v0, p0
 
     check-cast v0, Lkotlinx/coroutines/JobCancellationException;
@@ -154,12 +161,14 @@
 .method public fillInStackTrace()Ljava/lang/Throwable;
     .locals 1
 
+    .line 40
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 41
     invoke-super {p0}, Ljava/util/concurrent/CancellationException;->fillInStackTrace()Ljava/lang/Throwable;
 
     move-result-object p0
@@ -171,8 +180,10 @@
 
     new-array v0, v0, [Ljava/lang/StackTraceElement;
 
+    .line 44
     invoke-virtual {p0, v0}, Lkotlinx/coroutines/JobCancellationException;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
+    .line 50
     check-cast p0, Ljava/lang/Throwable;
 
     return-object p0
@@ -181,6 +192,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 70
     invoke-virtual {p0}, Lkotlinx/coroutines/JobCancellationException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -227,6 +239,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

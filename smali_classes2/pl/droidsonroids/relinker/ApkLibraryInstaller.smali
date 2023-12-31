@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/relinker/ApkLibraryInstaller;
 .super Ljava/lang/Object;
+.source "ApkLibraryInstaller.java"
 
 # interfaces
 .implements Lpl/droidsonroids/relinker/ReLinker$LibraryInstaller;
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,6 +29,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 212
     :try_start_0
     invoke-interface {p1}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -51,6 +54,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 194
     :goto_0
     invoke-virtual {p1, p0}, Ljava/io/InputStream;->read([B)I
 
@@ -60,6 +64,7 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 201
     invoke-virtual {p2}, Ljava/io/OutputStream;->flush()V
 
     return-wide v0
@@ -67,6 +72,7 @@
     :cond_0
     const/4 v3, 0x0
 
+    .line 198
     invoke-virtual {p2, p0, v3, v2}, Ljava/io/OutputStream;->write([BII)V
 
     int-to-long v2, v2
@@ -81,6 +87,7 @@
 
     move-object/from16 v0, p2
 
+    .line 67
     invoke-direct/range {p0 .. p1}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->sourceDirectories(Landroid/content/Context;)[Ljava/lang/String;
 
     move-result-object v1
@@ -111,6 +118,7 @@
 
     if-ge v8, v10, :cond_0
 
+    .line 71
     :try_start_0
     new-instance v8, Ljava/util/zip/ZipFile;
 
@@ -149,6 +157,7 @@
 
     if-ge v8, v10, :cond_4
 
+    .line 86
     array-length v8, v0
 
     move v12, v4
@@ -158,6 +167,7 @@
 
     aget-object v13, v0, v12
 
+    .line 87
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -196,14 +206,17 @@
 
     move-object/from16 v10, p4
 
+    .line 90
     invoke-virtual {v10, v4, v15}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 92
     invoke-virtual {v6, v14}, Ljava/util/zip/ZipFile;->getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
 
     move-result-object v4
 
     if-eqz v4, :cond_2
 
+    .line 95
     new-instance v0, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;
 
     invoke-direct {v0, v6, v4}, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;-><init>(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)V
@@ -235,6 +248,7 @@
 
     move-object/from16 v10, p4
 
+    .line 101
     :try_start_1
     invoke-virtual {v6}, Ljava/util/zip/ZipFile;->close()V
     :try_end_1
@@ -255,10 +269,12 @@
 .method private sourceDirectories(Landroid/content/Context;)[Ljava/lang/String;
     .locals 3
 
+    .line 37
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
+    .line 39
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v0, 0x0
@@ -279,6 +295,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 42
     iget-object p1, p0, Landroid/content/pm/ApplicationInfo;->splitSourceDirs:[Ljava/lang/String;
 
     array-length p1, p1
@@ -287,10 +304,12 @@
 
     new-array p1, p1, [Ljava/lang/String;
 
+    .line 43
     iget-object v2, p0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     aput-object v2, p1, v0
 
+    .line 44
     iget-object v2, p0, Landroid/content/pm/ApplicationInfo;->splitSourceDirs:[Ljava/lang/String;
 
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->splitSourceDirs:[Ljava/lang/String;
@@ -304,6 +323,7 @@
     :cond_0
     new-array p1, v1, [Ljava/lang/String;
 
+    .line 47
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     aput-object p0, p1, v0
@@ -318,6 +338,7 @@
 
     const/4 v0, 0x0
 
+    .line 125
     :try_start_0
     invoke-direct {p0, p1, p2, p3, p5}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->findAPKWithLibrary(Landroid/content/Context;[Ljava/lang/String;Ljava/lang/String;Lpl/droidsonroids/relinker/ReLinkerInstance;)Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;
 
@@ -347,10 +368,12 @@
 
     aput-object p3, v4, p2
 
+    .line 133
     invoke-virtual {p5, v1, v4}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
+    .line 135
     :try_start_2
     invoke-virtual {p4}, Ljava/io/File;->exists()Z
 
@@ -369,6 +392,7 @@
 
     goto/16 :goto_5
 
+    .line 146
     :cond_0
     :try_start_3
     iget-object v1, p1, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;->zipFile:Ljava/util/zip/ZipFile;
@@ -383,6 +407,7 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 147
     :try_start_4
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -392,17 +417,20 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 148
     :try_start_5
     invoke-direct {p0, v1, v4}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
     move-result-wide v5
 
+    .line 149
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v7
 
     invoke-virtual {v7}, Ljava/io/FileDescriptor;->sync()V
 
+    .line 150
     invoke-virtual {p4}, Ljava/io/File;->length()J
 
     move-result-wide v7
@@ -415,34 +443,43 @@
 
     if-eqz v5, :cond_1
 
+    .line 161
     :try_start_6
     invoke-direct {p0, v1}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->closeSilently(Ljava/io/Closeable;)V
 
+    .line 162
     :goto_1
     invoke-direct {p0, v4}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->closeSilently(Ljava/io/Closeable;)V
 
     goto :goto_5
 
+    .line 161
     :cond_1
     invoke-direct {p0, v1}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->closeSilently(Ljava/io/Closeable;)V
 
+    .line 162
     invoke-direct {p0, v4}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->closeSilently(Ljava/io/Closeable;)V
 
+    .line 166
     invoke-virtual {p4, v3, p2}, Ljava/io/File;->setReadable(ZZ)Z
 
+    .line 167
     invoke-virtual {p4, v3, p2}, Ljava/io/File;->setExecutable(ZZ)Z
 
+    .line 168
     invoke-virtual {p4, v3}, Ljava/io/File;->setWritable(Z)Z
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
     if-eqz p1, :cond_2
 
+    .line 175
     :try_start_7
     iget-object p0, p1, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;->zipFile:Ljava/util/zip/ZipFile;
 
     if-eqz p0, :cond_2
 
+    .line 176
     iget-object p0, p1, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;->zipFile:Ljava/util/zip/ZipFile;
 
     invoke-virtual {p0}, Ljava/util/zip/ZipFile;->close()V
@@ -480,12 +517,15 @@
 
     move-object v1, v0
 
+    .line 161
     :goto_2
     :try_start_8
     invoke-direct {p0, v1}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->closeSilently(Ljava/io/Closeable;)V
 
+    .line 162
     invoke-direct {p0, v0}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->closeSilently(Ljava/io/Closeable;)V
 
+    .line 163
     throw p2
 
     :catch_3
@@ -493,6 +533,7 @@
 
     move-object v4, v1
 
+    .line 161
     :catch_4
     :goto_3
     invoke-direct {p0, v1}, Lpl/droidsonroids/relinker/ApkLibraryInstaller;->closeSilently(Ljava/io/Closeable;)V
@@ -519,17 +560,20 @@
     :cond_3
     const-string p0, "FATAL! Couldn\'t extract the library from the APK!"
 
+    .line 172
     invoke-virtual {p5, p0}, Lpl/droidsonroids/relinker/ReLinkerInstance;->log(Ljava/lang/String;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
     if-eqz p1, :cond_4
 
+    .line 175
     :try_start_9
     iget-object p0, p1, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;->zipFile:Ljava/util/zip/ZipFile;
 
     if-eqz p0, :cond_4
 
+    .line 176
     iget-object p0, p1, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;->zipFile:Ljava/util/zip/ZipFile;
 
     invoke-virtual {p0}, Ljava/util/zip/ZipFile;->close()V
@@ -540,6 +584,7 @@
     :cond_4
     return-void
 
+    .line 128
     :cond_5
     :try_start_a
     new-instance p0, Lpl/droidsonroids/relinker/MissingLibraryException;
@@ -563,17 +608,20 @@
     :goto_6
     if-eqz p1, :cond_6
 
+    .line 175
     :try_start_b
     iget-object p2, p1, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;->zipFile:Ljava/util/zip/ZipFile;
 
     if-eqz p2, :cond_6
 
+    .line 176
     iget-object p1, p1, Lpl/droidsonroids/relinker/ApkLibraryInstaller$ZipFileInZipEntry;->zipFile:Ljava/util/zip/ZipFile;
 
     invoke-virtual {p1}, Ljava/util/zip/ZipFile;->close()V
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_9
 
+    .line 179
     :catch_9
     :cond_6
     throw p0

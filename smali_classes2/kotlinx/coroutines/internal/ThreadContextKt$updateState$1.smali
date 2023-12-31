@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/internal/ThreadContextKt$updateState$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "ThreadContext.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -73,10 +74,12 @@
 .method public final invoke(Lkotlinx/coroutines/internal/ThreadState;Lkotlin/coroutines/CoroutineContext$Element;)Lkotlinx/coroutines/internal/ThreadState;
     .locals 0
 
+    .line 44
     instance-of p0, p2, Lkotlinx/coroutines/ThreadContextElement;
 
     if-eqz p0, :cond_0
 
+    .line 45
     check-cast p2, Lkotlinx/coroutines/ThreadContextElement;
 
     invoke-virtual {p1}, Lkotlinx/coroutines/internal/ThreadState;->getContext()Lkotlin/coroutines/CoroutineContext;

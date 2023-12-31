@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;
 .super Ljava/lang/Object;
+.source "SettingsJsonParser.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;)V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 28
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;->currentTimeProvider:Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;
 
     return-void
@@ -24,12 +27,14 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 42
     new-instance p0, Lcom/google/firebase/crashlytics/internal/settings/DefaultSettingsJsonTransform;
 
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/settings/DefaultSettingsJsonTransform;-><init>()V
 
     return-object p0
 
+    .line 40
     :cond_0
     new-instance p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsV3JsonTransform;
 
@@ -50,14 +55,17 @@
 
     const-string v0, "settings_version"
 
+    .line 32
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
+    .line 33
     invoke-static {v0}, Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;->getJsonTransformForVersion(I)Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonTransform;
 
     move-result-object v0
 
+    .line 34
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonParser;->currentTimeProvider:Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;
 
     invoke-interface {v0, p0, p1}, Lcom/google/firebase/crashlytics/internal/settings/SettingsJsonTransform;->buildFromJson(Lcom/google/firebase/crashlytics/internal/common/CurrentTimeProvider;Lorg/json/JSONObject;)Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;

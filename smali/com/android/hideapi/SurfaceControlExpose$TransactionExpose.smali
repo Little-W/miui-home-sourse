@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;
 .super Ljava/lang/Object;
+.source "SurfaceControlExpose.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method private constructor <init>(Landroid/view/SurfaceControl$Transaction;)V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 35
     iput-object p1, p0, Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;->instance:Landroid/view/SurfaceControl$Transaction;
 
     return-void
@@ -31,6 +34,7 @@
 .method public static box(Landroid/view/SurfaceControl$Transaction;)Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;
     .locals 1
 
+    .line 43
     new-instance v0, Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;
 
     invoke-direct {v0, p0}, Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;-><init>(Landroid/view/SurfaceControl$Transaction;)V
@@ -43,6 +47,7 @@
 .method public remove(Landroid/view/SurfaceControl;)Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;
     .locals 6
 
+    .line 47
     iget-object v0, p0, Lcom/android/hideapi/SurfaceControlExpose$TransactionExpose;->instance:Landroid/view/SurfaceControl$Transaction;
 
     const-class v1, Landroid/view/SurfaceControl$Transaction;

@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/crashlytics/-$$Lambda$CrashlyticsRegistrar$aBuXIXlTYD2Kajd_VBsZ-5OANwA;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/components/ComponentFactory;

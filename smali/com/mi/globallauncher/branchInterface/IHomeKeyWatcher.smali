@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher;
 .super Ljava/lang/Object;
+.source "IHomeKeyWatcher.java"
 
 
 # annotations

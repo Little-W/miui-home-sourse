@@ -1,11 +1,13 @@
 .class public Lcom/market/sdk/utils/CollectionUtils;
 .super Ljava/lang/Object;
+.source "CollectionUtils.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,10 +27,12 @@
         }
     .end annotation
 
+    .line 30
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newConconrrentHashMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
 
+    .line 31
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -50,10 +54,12 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 32
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 33
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -75,12 +81,14 @@
         }
     .end annotation
 
+    .line 19
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     if-eqz p0, :cond_0
 
+    .line 21
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -102,12 +110,14 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 22
     invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
+    .line 23
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -128,6 +138,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 71
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result p0
@@ -161,6 +172,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 75
     invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
 
     move-result p0
@@ -194,6 +206,7 @@
         }
     .end annotation
 
+    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -215,6 +228,7 @@
         }
     .end annotation
 
+    .line 43
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -234,6 +248,7 @@
         }
     .end annotation
 
+    .line 63
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
@@ -253,6 +268,7 @@
         }
     .end annotation
 
+    .line 59
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
@@ -274,6 +290,7 @@
         }
     .end annotation
 
+    .line 39
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -293,6 +310,7 @@
         }
     .end annotation
 
+    .line 67
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -312,6 +330,7 @@
         }
     .end annotation
 
+    .line 55
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
@@ -331,6 +350,7 @@
         }
     .end annotation
 
+    .line 51
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V

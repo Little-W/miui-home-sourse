@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/measurement/internal/zzfj;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # instance fields
@@ -18,10 +19,12 @@
 .method private constructor <init>(Lcom/google/android/gms/measurement/internal/zzfc;Ljava/lang/String;J)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
     const-wide/16 v0, 0x0
@@ -37,9 +40,11 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 3
     :goto_0
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(Z)V
 
+    .line 4
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -52,6 +57,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zza:Ljava/lang/String;
 
+    .line 5
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -64,6 +70,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzb:Ljava/lang/String;
 
+    .line 6
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -76,6 +83,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzc:Ljava/lang/String;
 
+    .line 7
     iput-wide p3, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzd:J
 
     return-void
@@ -84,6 +92,7 @@
 .method synthetic constructor <init>(Lcom/google/android/gms/measurement/internal/zzfc;Ljava/lang/String;JLcom/google/android/gms/measurement/internal/zzff;)V
     .locals 0
 
+    .line 59
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/gms/measurement/internal/zzfj;-><init>(Lcom/google/android/gms/measurement/internal/zzfc;Ljava/lang/String;J)V
 
     return-void
@@ -92,10 +101,12 @@
 .method private final zzb()V
     .locals 4
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzc()V
 
+    .line 10
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzl()Lcom/google/android/gms/common/util/Clock;
@@ -106,6 +117,7 @@
 
     move-result-wide v0
 
+    .line 11
     iget-object v2, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v2}, Lcom/google/android/gms/measurement/internal/zzfc;->zzf()Landroid/content/SharedPreferences;
@@ -116,18 +128,22 @@
 
     move-result-object v2
 
+    .line 12
     iget-object v3, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzb:Ljava/lang/String;
 
     invoke-interface {v2, v3}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 13
     iget-object v3, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzc:Ljava/lang/String;
 
     invoke-interface {v2, v3}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 14
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zza:Ljava/lang/String;
 
     invoke-interface {v2, p0, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
+    .line 15
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
@@ -136,6 +152,7 @@
 .method private final zzc()J
     .locals 3
 
+    .line 58
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzfc;->zzf()Landroid/content/SharedPreferences;
@@ -167,14 +184,17 @@
         }
     .end annotation
 
+    .line 38
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzc()V
 
+    .line 40
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzc()V
 
+    .line 41
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzfj;->zzc()J
 
     move-result-wide v0
@@ -185,12 +205,14 @@
 
     if-nez v4, :cond_0
 
+    .line 43
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzfj;->zzb()V
 
     move-wide v0, v2
 
     goto :goto_0
 
+    .line 45
     :cond_0
     iget-object v4, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
@@ -208,6 +230,7 @@
 
     move-result-wide v0
 
+    .line 47
     :goto_0
     iget-wide v4, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzd:J
 
@@ -228,10 +251,12 @@
 
     if-lez v0, :cond_2
 
+    .line 50
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzfj;->zzb()V
 
     return-object v7
 
+    .line 52
     :cond_2
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
@@ -245,6 +270,7 @@
 
     move-result-object v0
 
+    .line 53
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v1}, Lcom/google/android/gms/measurement/internal/zzfc;->zzf()Landroid/content/SharedPreferences;
@@ -257,6 +283,7 @@
 
     move-result-wide v4
 
+    .line 54
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzfj;->zzb()V
 
     if-eqz v0, :cond_4
@@ -267,6 +294,7 @@
 
     goto :goto_1
 
+    .line 57
     :cond_3
     new-instance p0, Landroid/util/Pair;
 
@@ -278,6 +306,7 @@
 
     return-object p0
 
+    .line 56
     :cond_4
     :goto_1
     sget-object p0, Lcom/google/android/gms/measurement/internal/zzfc;->zza:Landroid/util/Pair;
@@ -288,10 +317,12 @@
 .method public final zza(Ljava/lang/String;J)V
     .locals 7
 
+    .line 17
     iget-object p2, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {p2}, Lcom/google/android/gms/measurement/internal/zzgr;->zzc()V
 
+    .line 18
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzfj;->zzc()J
 
     move-result-wide p2
@@ -302,6 +333,7 @@
 
     if-nez p2, :cond_0
 
+    .line 20
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzfj;->zzb()V
 
     :cond_0
@@ -309,6 +341,7 @@
 
     const-string p1, ""
 
+    .line 23
     :cond_1
     iget-object p2, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
@@ -328,6 +361,7 @@
 
     if-gtz v0, :cond_2
 
+    .line 25
     iget-object p2, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {p2}, Lcom/google/android/gms/measurement/internal/zzfc;->zzf()Landroid/content/SharedPreferences;
@@ -338,18 +372,22 @@
 
     move-result-object p2
 
+    .line 26
     iget-object p3, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzc:Ljava/lang/String;
 
     invoke-interface {p2, p3, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 27
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzb:Ljava/lang/String;
 
     invoke-interface {p2, p0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
+    .line 28
     invoke-interface {p2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
 
+    .line 30
     :cond_2
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
@@ -371,6 +409,7 @@
 
     add-long/2addr p2, v1
 
+    .line 31
     div-long/2addr v5, p2
 
     cmp-long v0, v3, v5
@@ -384,6 +423,7 @@
     :cond_3
     const/4 v0, 0x0
 
+    .line 32
     :goto_0
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
@@ -397,15 +437,18 @@
 
     if-eqz v0, :cond_4
 
+    .line 34
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzc:Ljava/lang/String;
 
     invoke-interface {v1, v0, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 35
     :cond_4
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzfj;->zzb:Ljava/lang/String;
 
     invoke-interface {v1, p0, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
+    .line 36
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void

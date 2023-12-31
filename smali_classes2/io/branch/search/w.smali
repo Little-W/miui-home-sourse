@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/w;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/io/Closeable;

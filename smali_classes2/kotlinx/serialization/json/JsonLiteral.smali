@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/JsonLiteral;
 .super Lkotlinx/serialization/json/JsonPrimitive;
+.source "JsonElement.kt"
 
 
 # annotations
@@ -24,10 +25,12 @@
 
     const/4 v0, 0x0
 
+    .line 76
     invoke-direct {p0, v0}, Lkotlinx/serialization/json/JsonPrimitive;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-boolean p2, p0, Lkotlinx/serialization/json/JsonLiteral;->isString:Z
 
+    .line 77
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -42,6 +45,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
+    .line 85
     move-object v0, p0
 
     check-cast v0, Lkotlinx/serialization/json/JsonLiteral;
@@ -57,6 +61,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 86
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -83,9 +88,11 @@
 
     goto :goto_0
 
+    .line 87
     :cond_1
     check-cast p1, Lkotlinx/serialization/json/JsonLiteral;
 
+    .line 88
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonLiteral;->isString()Z
 
     move-result v2
@@ -98,6 +105,7 @@
 
     return v0
 
+    .line 89
     :cond_2
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonLiteral;->getContent()Ljava/lang/String;
 
@@ -128,6 +136,7 @@
 .method public getContent()Ljava/lang/String;
     .locals 0
 
+    .line 77
     iget-object p0, p0, Lkotlinx/serialization/json/JsonLiteral;->content:Ljava/lang/String;
 
     return-object p0
@@ -136,6 +145,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 94
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonLiteral;->isString()Z
 
     move-result v0
@@ -150,6 +160,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 95
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonLiteral;->getContent()Ljava/lang/String;
 
     move-result-object p0
@@ -166,6 +177,7 @@
 .method public isString()Z
     .locals 0
 
+    .line 75
     iget-boolean p0, p0, Lkotlinx/serialization/json/JsonLiteral;->isString:Z
 
     return p0
@@ -174,6 +186,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 80
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonLiteral;->isString()Z
 
     move-result v0
@@ -200,6 +213,7 @@
 
     goto :goto_0
 
+    .line 81
     :cond_0
     invoke-virtual {p0}, Lkotlinx/serialization/json/JsonLiteral;->getContent()Ljava/lang/String;
 

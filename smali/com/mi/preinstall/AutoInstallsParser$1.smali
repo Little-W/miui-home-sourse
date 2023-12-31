@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/preinstall/AutoInstallsParser$1;
 .super Ljava/lang/Object;
+.source "AutoInstallsParser.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/measurement/api/AppMeasurementSdk$OnEventListener;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-sdk-api@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/measurement/internal/zzgz;

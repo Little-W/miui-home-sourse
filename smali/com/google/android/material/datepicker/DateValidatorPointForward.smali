@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/datepicker/DateValidatorPointForward;
 .super Ljava/lang/Object;
+.source "DateValidatorPointForward.java"
 
 # interfaces
 .implements Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
@@ -25,6 +26,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 57
     new-instance v0, Lcom/google/android/material/datepicker/DateValidatorPointForward$1;
 
     invoke-direct {v0}, Lcom/google/android/material/datepicker/DateValidatorPointForward$1;-><init>()V
@@ -37,8 +39,10 @@
 .method private constructor <init>(J)V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 35
     iput-wide p1, p0, Lcom/google/android/material/datepicker/DateValidatorPointForward;->point:J
 
     return-void
@@ -47,6 +51,7 @@
 .method synthetic constructor <init>(JLcom/google/android/material/datepicker/DateValidatorPointForward$1;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/datepicker/DateValidatorPointForward;-><init>(J)V
 
     return-void
@@ -55,6 +60,7 @@
 .method public static from(J)Lcom/google/android/material/datepicker/DateValidatorPointForward;
     .locals 1
 
+    .line 44
     new-instance v0, Lcom/google/android/material/datepicker/DateValidatorPointForward;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/material/datepicker/DateValidatorPointForward;-><init>(J)V
@@ -81,6 +87,7 @@
 
     return v0
 
+    .line 92
     :cond_0
     instance-of v1, p1, Lcom/google/android/material/datepicker/DateValidatorPointForward;
 
@@ -90,9 +97,11 @@
 
     return v2
 
+    .line 95
     :cond_1
     check-cast p1, Lcom/google/android/material/datepicker/DateValidatorPointForward;
 
+    .line 96
     iget-wide v3, p0, Lcom/google/android/material/datepicker/DateValidatorPointForward;->point:J
 
     iget-wide p0, p1, Lcom/google/android/material/datepicker/DateValidatorPointForward;->point:J
@@ -117,6 +126,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 101
     iget-wide v1, p0, Lcom/google/android/material/datepicker/DateValidatorPointForward;->point:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -127,6 +137,7 @@
 
     aput-object p0, v0, v1
 
+    .line 102
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result p0
@@ -137,6 +148,7 @@
 .method public isValid(J)Z
     .locals 2
 
+    .line 74
     iget-wide v0, p0, Lcom/google/android/material/datepicker/DateValidatorPointForward;->point:J
 
     cmp-long p0, p1, v0
@@ -157,6 +169,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
+    .line 84
     iget-wide v0, p0, Lcom/google/android/material/datepicker/DateValidatorPointForward;->point:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V

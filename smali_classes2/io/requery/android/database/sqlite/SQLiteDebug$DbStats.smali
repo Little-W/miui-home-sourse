@@ -1,5 +1,6 @@
 .class public Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;
 .super Ljava/lang/Object;
+.source "SQLiteDebug.java"
 
 
 # annotations
@@ -29,24 +30,30 @@
 .method public constructor <init>(Ljava/lang/String;JJIIII)V
     .locals 4
 
+    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 139
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;->dbName:Ljava/lang/String;
 
     const-wide/16 v0, 0x400
 
+    .line 140
     div-long v2, p4, v0
 
     iput-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;->pageSize:J
 
     mul-long/2addr p2, p4
 
+    .line 141
     div-long/2addr p2, v0
 
     iput-wide p2, p0, Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;->dbSize:J
 
+    .line 142
     iput p6, p0, Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;->lookaside:I
 
+    .line 143
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

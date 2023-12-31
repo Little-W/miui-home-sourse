@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/poco/-$$Lambda$PocoBranchSearchGuideDialogUtil$guB8BVZ9OwyeUNKHZI_a4HpsUd4;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnDismissListener;

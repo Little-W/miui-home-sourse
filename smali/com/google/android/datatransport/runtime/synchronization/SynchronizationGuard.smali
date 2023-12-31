@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;
 .super Ljava/lang/Object;
+.source "SynchronizationGuard.java"
 
 
 # annotations

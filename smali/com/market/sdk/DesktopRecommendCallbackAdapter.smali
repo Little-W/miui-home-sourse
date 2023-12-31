@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/DesktopRecommendCallbackAdapter;
 .super Landroid/os/ResultReceiver;
+.source "DesktopRecommendCallbackAdapter.java"
 
 
 # annotations
@@ -28,8 +29,10 @@
 
     const/4 v0, 0x0
 
+    .line 19
     invoke-direct {p0, v0}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
+    .line 20
     iput-object p1, p0, Lcom/market/sdk/DesktopRecommendCallbackAdapter;->mAdaptee:Lcom/market/sdk/DesktopRecommendCallback;
 
     return-void
@@ -40,6 +43,7 @@
 .method protected onReceiveResult(ILandroid/os/Bundle;)V
     .locals 0
 
+    .line 25
     invoke-super {p0, p1, p2}, Landroid/os/ResultReceiver;->onReceiveResult(ILandroid/os/Bundle;)V
 
     if-eqz p1, :cond_1
@@ -50,6 +54,7 @@
 
     goto :goto_0
 
+    .line 33
     :cond_0
     iget-object p0, p0, Lcom/market/sdk/DesktopRecommendCallbackAdapter;->mAdaptee:Lcom/market/sdk/DesktopRecommendCallback;
 
@@ -60,10 +65,12 @@
     :cond_1
     const-string p1, "json"
 
+    .line 28
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 29
     iget-object p0, p0, Lcom/market/sdk/DesktopRecommendCallbackAdapter;->mAdaptee:Lcom/market/sdk/DesktopRecommendCallback;
 
     invoke-static {p1}, Lcom/market/sdk/DesktopRecommendInfo;->restore(Ljava/lang/String;)Lcom/market/sdk/DesktopRecommendInfo;

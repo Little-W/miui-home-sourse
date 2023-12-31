@@ -1,5 +1,6 @@
 .class public Lio/requery/android/database/AbstractCursor$SelfContentObserver;
 .super Landroid/database/ContentObserver;
+.source "AbstractCursor.java"
 
 
 # annotations
@@ -31,8 +32,10 @@
 
     const/4 v0, 0x0
 
+    .line 404
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
+    .line 405
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -55,6 +58,7 @@
 .method public onChange(Z)V
     .locals 0
 
+    .line 415
     iget-object p0, p0, Lio/requery/android/database/AbstractCursor$SelfContentObserver;->mCursor:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,6 +71,7 @@
 
     const/4 p1, 0x0
 
+    .line 417
     invoke-virtual {p0, p1}, Lio/requery/android/database/AbstractCursor;->onChange(Z)V
 
     :cond_0

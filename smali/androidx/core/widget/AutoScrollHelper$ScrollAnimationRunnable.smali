@@ -1,5 +1,6 @@
 .class Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;
 .super Ljava/lang/Object;
+.source "AutoScrollHelper.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/core/widget/AutoScrollHelper;)V
     .locals 0
 
+    .line 695
     iput-object p1, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 3
 
+    .line 700
     iget-object v0, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
     iget-boolean v0, v0, Landroidx/core/widget/AutoScrollHelper;->mAnimating:Z
@@ -44,6 +47,7 @@
 
     return-void
 
+    .line 704
     :cond_0
     iget-object v0, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
@@ -53,19 +57,23 @@
 
     if-eqz v0, :cond_1
 
+    .line 705
     iget-object v0, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
     iput-boolean v1, v0, Landroidx/core/widget/AutoScrollHelper;->mNeedsReset:Z
 
+    .line 706
     iget-object v0, v0, Landroidx/core/widget/AutoScrollHelper;->mScroller:Landroidx/core/widget/AutoScrollHelper$ClampedScroller;
 
     invoke-virtual {v0}, Landroidx/core/widget/AutoScrollHelper$ClampedScroller;->start()V
 
+    .line 709
     :cond_1
     iget-object v0, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
     iget-object v0, v0, Landroidx/core/widget/AutoScrollHelper;->mScroller:Landroidx/core/widget/AutoScrollHelper$ClampedScroller;
 
+    .line 710
     invoke-virtual {v0}, Landroidx/core/widget/AutoScrollHelper$ClampedScroller;->isFinished()Z
 
     move-result v2
@@ -82,6 +90,7 @@
 
     goto :goto_0
 
+    .line 715
     :cond_2
     iget-object v2, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
@@ -89,27 +98,34 @@
 
     if-eqz v2, :cond_3
 
+    .line 716
     iget-object v2, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
     iput-boolean v1, v2, Landroidx/core/widget/AutoScrollHelper;->mNeedsCancel:Z
 
+    .line 717
     invoke-virtual {v2}, Landroidx/core/widget/AutoScrollHelper;->cancelTargetTouch()V
 
+    .line 720
     :cond_3
     invoke-virtual {v0}, Landroidx/core/widget/AutoScrollHelper$ClampedScroller;->computeScrollDelta()V
 
+    .line 722
     invoke-virtual {v0}, Landroidx/core/widget/AutoScrollHelper$ClampedScroller;->getDeltaX()I
 
     move-result v1
 
+    .line 723
     invoke-virtual {v0}, Landroidx/core/widget/AutoScrollHelper$ClampedScroller;->getDeltaY()I
 
     move-result v0
 
+    .line 724
     iget-object v2, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
     invoke-virtual {v2, v1, v0}, Landroidx/core/widget/AutoScrollHelper;->scrollTargetBy(II)V
 
+    .line 727
     iget-object v0, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;
 
     iget-object v0, v0, Landroidx/core/widget/AutoScrollHelper;->mTarget:Landroid/view/View;
@@ -118,6 +134,7 @@
 
     return-void
 
+    .line 711
     :cond_4
     :goto_0
     iget-object p0, p0, Landroidx/core/widget/AutoScrollHelper$ScrollAnimationRunnable;->this$0:Landroidx/core/widget/AutoScrollHelper;

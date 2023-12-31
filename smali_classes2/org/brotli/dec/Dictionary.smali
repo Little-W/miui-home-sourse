@@ -1,5 +1,6 @@
 .class final Lorg/brotli/dec/Dictionary;
 .super Ljava/lang/Object;
+.source "Dictionary.java"
 
 
 # annotations
@@ -27,12 +28,14 @@
 
     new-array v1, v0, [I
 
+    .line 69
     fill-array-data v1, :array_0
 
     sput-object v1, Lorg/brotli/dec/Dictionary;->OFFSETS_BY_LENGTH:[I
 
     new-array v0, v0, [I
 
+    .line 74
     fill-array-data v0, :array_1
 
     sput-object v0, Lorg/brotli/dec/Dictionary;->SIZE_BITS_BY_LENGTH:[I
@@ -103,6 +106,7 @@
 .method static getData()[B
     .locals 1
 
+    .line 66
     invoke-static {}, Lorg/brotli/dec/Dictionary$DataHolder;->access$300()[B
 
     move-result-object v0

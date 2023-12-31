@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/ImageManager$IconLoadTask$1;
 .super Lcom/market/sdk/RemoteMethodInvoker;
+.source "ImageManager.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lcom/market/sdk/ImageManager$IconLoadTask;)V
     .locals 0
 
+    .line 81
     iput-object p1, p0, Lcom/market/sdk/ImageManager$IconLoadTask$1;->this$0:Lcom/market/sdk/ImageManager$IconLoadTask;
 
     invoke-direct {p0}, Lcom/market/sdk/RemoteMethodInvoker;-><init>()V
@@ -46,6 +48,7 @@
         }
     .end annotation
 
+    .line 81
     invoke-virtual {p0, p1}, Lcom/market/sdk/ImageManager$IconLoadTask$1;->innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Void;
 
     move-result-object p0
@@ -61,6 +64,7 @@
         }
     .end annotation
 
+    .line 85
     iget-object v0, p0, Lcom/market/sdk/ImageManager$IconLoadTask$1;->this$0:Lcom/market/sdk/ImageManager$IconLoadTask;
 
     invoke-static {v0}, Lcom/market/sdk/ImageManager$IconLoadTask;->access$000(Lcom/market/sdk/ImageManager$IconLoadTask;)Ljava/lang/String;

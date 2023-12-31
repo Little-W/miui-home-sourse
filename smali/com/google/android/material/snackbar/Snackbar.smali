@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/snackbar/Snackbar;
 .super Lcom/google/android/material/snackbar/BaseTransientBottomBar;
+.source "Snackbar.java"
 
 
 # annotations
@@ -32,6 +33,7 @@
 
     new-array v1, v0, [I
 
+    .line 70
     sget v2, Lcom/google/android/material/R$attr;->snackbarButtonStyle:I
 
     const/4 v3, 0x0
@@ -44,6 +46,7 @@
 
     new-array v1, v1, [I
 
+    .line 71
     sget v2, Lcom/google/android/material/R$attr;->snackbarButtonStyle:I
 
     aput v2, v1, v3

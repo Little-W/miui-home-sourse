@@ -1,5 +1,6 @@
 .class final Lretrofit2/adapter/rxjava2/CallExecuteObservable$CallDisposable;
 .super Ljava/lang/Object;
+.source "CallExecuteObservable.java"
 
 # interfaces
 .implements Lio/reactivex/disposables/Disposable;
@@ -40,8 +41,10 @@
         }
     .end annotation
 
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 70
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/CallExecuteObservable$CallDisposable;->call:Lretrofit2/Call;
 
     return-void
@@ -54,8 +57,10 @@
 
     const/4 v0, 0x1
 
+    .line 74
     iput-boolean v0, p0, Lretrofit2/adapter/rxjava2/CallExecuteObservable$CallDisposable;->disposed:Z
 
+    .line 75
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/CallExecuteObservable$CallDisposable;->call:Lretrofit2/Call;
 
     invoke-interface {p0}, Lretrofit2/Call;->cancel()V
@@ -66,6 +71,7 @@
 .method public isDisposed()Z
     .locals 0
 
+    .line 79
     iget-boolean p0, p0, Lretrofit2/adapter/rxjava2/CallExecuteObservable$CallDisposable;->disposed:Z
 
     return p0

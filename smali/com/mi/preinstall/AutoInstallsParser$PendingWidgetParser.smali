@@ -1,5 +1,6 @@
 .class Lcom/mi/preinstall/AutoInstallsParser$PendingWidgetParser;
 .super Ljava/lang/Object;
+.source "AutoInstallsParser.java"
 
 # interfaces
 .implements Lcom/mi/preinstall/AutoInstallsParser$TagParser;
@@ -24,6 +25,7 @@
 .method private constructor <init>(Lcom/mi/preinstall/AutoInstallsParser;)V
     .locals 0
 
+    .line 162
     iput-object p1, p0, Lcom/mi/preinstall/AutoInstallsParser$PendingWidgetParser;->this$0:Lcom/mi/preinstall/AutoInstallsParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,6 +36,7 @@
 .method synthetic constructor <init>(Lcom/mi/preinstall/AutoInstallsParser;Lcom/mi/preinstall/AutoInstallsParser$1;)V
     .locals 0
 
+    .line 162
     invoke-direct {p0, p1}, Lcom/mi/preinstall/AutoInstallsParser$PendingWidgetParser;-><init>(Lcom/mi/preinstall/AutoInstallsParser;)V
 
     return-void
@@ -63,10 +66,12 @@
 
     const-string v0, "packageName"
 
+    .line 166
     invoke-static {p1, v0}, Lcom/mi/preinstall/AutoInstallsParser;->access$200(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 167
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -87,6 +92,7 @@
 
     const/4 p0, 0x0
 
+    .line 168
     invoke-virtual {p2, p1, p0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0

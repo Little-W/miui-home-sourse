@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,6 +39,7 @@
 .method public static a()J
     .locals 2
 
+    .line 33
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -48,6 +50,7 @@
 .method public static a(J)Z
     .locals 11
 
+    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,10 +73,12 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 42
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
+    .line 43
     invoke-static {}, Lcom/xiaomi/onetrack/util/ac;->a()J
 
     move-result-wide v2
@@ -84,20 +89,25 @@
 
     const/16 v3, 0xb
 
+    .line 44
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xc
 
+    .line 45
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xd
 
+    .line 46
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xe
 
+    .line 47
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
+    .line 48
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v3
@@ -106,6 +116,7 @@
 
     add-long v7, v3, v5
 
+    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,6 +149,7 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,6 +199,7 @@
 .method public static a(JI)Z
     .locals 4
 
+    .line 77
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -201,6 +214,7 @@
 
     int-to-long v0, p2
 
+    .line 79
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -229,6 +243,7 @@
 .method public static a(JJ)Z
     .locals 2
 
+    .line 37
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -257,6 +272,7 @@
 .method public static b()J
     .locals 3
 
+    .line 98
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->b()Ljava/lang/String;
 
@@ -274,6 +290,7 @@
 
     goto :goto_0
 
+    .line 100
     :catch_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -284,20 +301,25 @@
 
     const/4 v2, 0x0
 
+    .line 102
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v1, 0xc
 
+    .line 103
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v1, 0xd
 
+    .line 104
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v1, 0xe
 
+    .line 105
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
+    .line 106
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
@@ -308,6 +330,7 @@
 .method public static b(J)Z
     .locals 11
 
+    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -330,10 +353,12 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 61
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
+    .line 62
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -344,20 +369,25 @@
 
     const/16 v3, 0xb
 
+    .line 63
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xc
 
+    .line 64
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xd
 
+    .line 65
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xe
 
+    .line 66
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
+    .line 67
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v3
@@ -366,6 +396,7 @@
 
     add-long v7, v3, v5
 
+    .line 70
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,6 +429,7 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -447,23 +479,28 @@
 .method public static c(J)Ljava/lang/String;
     .locals 1
 
+    .line 85
     :try_start_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
+    .line 86
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
+    .line 87
     new-instance p0, Ljava/text/SimpleDateFormat;
 
     const-string p1, "HH:mm:ss yy-MM-dd"
 
     invoke-direct {p0, p1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
+    .line 88
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object p1
 
+    .line 89
     invoke-virtual {p0, p1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p0
@@ -483,6 +520,7 @@
 
     const-string v0, "GMT+8"
 
+    .line 111
     invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object v1
@@ -491,6 +529,7 @@
 
     move-result-object v1
 
+    .line 113
     invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object v0
@@ -499,10 +538,12 @@
 
     move-result-object v0
 
+    .line 114
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     const/4 p0, 0x1
 
+    .line 116
     invoke-virtual {v0, p0}, Ljava/util/Calendar;->get(I)I
 
     move-result p1
@@ -515,6 +556,7 @@
 
     const/4 p1, 0x2
 
+    .line 117
     invoke-virtual {v0, p1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
@@ -527,6 +569,7 @@
 
     const/4 p1, 0x5
 
+    .line 118
     invoke-virtual {v0, p1}, Ljava/util/Calendar;->get(I)I
 
     move-result v0

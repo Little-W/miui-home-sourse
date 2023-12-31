@@ -1,5 +1,6 @@
 .class public final Lretrofit2/adapter/rxjava2/Result;
 .super Ljava/lang/Object;
+.source "Result.java"
 
 
 # annotations
@@ -53,10 +54,13 @@
         }
     .end annotation
 
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 40
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/Result;->response:Lretrofit2/Response;
 
+    .line 41
     iput-object p2, p0, Lretrofit2/adapter/rxjava2/Result;->error:Ljava/lang/Throwable;
 
     return-void
@@ -78,6 +82,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 27
     new-instance v0, Lretrofit2/adapter/rxjava2/Result;
 
     const/4 v1, 0x0
@@ -86,6 +91,7 @@
 
     return-object v0
 
+    .line 26
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -112,6 +118,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 33
     new-instance v0, Lretrofit2/adapter/rxjava2/Result;
 
     const/4 v1, 0x0
@@ -120,6 +127,7 @@
 
     return-object v0
 
+    .line 32
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

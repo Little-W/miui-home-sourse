@@ -1,5 +1,6 @@
 .class public final Landroidx/fragment/R$styleable;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -119,6 +120,7 @@
 
     new-array v0, v0, [I
 
+    .line 205
     fill-array-data v0, :array_0
 
     sput-object v0, Landroidx/fragment/R$styleable;->ColorStateListItem:[I
@@ -127,6 +129,7 @@
 
     new-array v0, v0, [I
 
+    .line 211
     fill-array-data v0, :array_1
 
     sput-object v0, Landroidx/fragment/R$styleable;->FontFamily:[I
@@ -135,6 +138,7 @@
 
     new-array v0, v0, [I
 
+    .line 219
     fill-array-data v0, :array_2
 
     sput-object v0, Landroidx/fragment/R$styleable;->FontFamilyFont:[I
@@ -143,6 +147,7 @@
 
     new-array v0, v0, [I
 
+    .line 230
     fill-array-data v0, :array_3
 
     sput-object v0, Landroidx/fragment/R$styleable;->Fragment:[I
@@ -151,6 +156,7 @@
 
     new-array v1, v0, [I
 
+    .line 234
     fill-array-data v1, :array_4
 
     sput-object v1, Landroidx/fragment/R$styleable;->FragmentContainerView:[I
@@ -159,12 +165,14 @@
 
     new-array v1, v1, [I
 
+    .line 237
     fill-array-data v1, :array_5
 
     sput-object v1, Landroidx/fragment/R$styleable;->GradientColor:[I
 
     new-array v0, v0, [I
 
+    .line 250
     fill-array-data v0, :array_6
 
     sput-object v0, Landroidx/fragment/R$styleable;->GradientColorItem:[I

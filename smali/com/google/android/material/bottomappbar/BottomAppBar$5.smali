@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomappbar/BottomAppBar$5;
 .super Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;
+.source "BottomAppBar.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;I)V
     .locals 0
 
+    .line 699
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
     iput p2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->val$targetMode:I
@@ -37,6 +39,7 @@
 .method public onHidden(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
     .locals 2
 
+    .line 702
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
     iget v1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->val$targetMode:I
@@ -47,6 +50,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setTranslationX(F)V
 
+    .line 703
     new-instance v0, Lcom/google/android/material/bottomappbar/BottomAppBar$5$1;
 
     invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomAppBar$5$1;-><init>(Lcom/google/android/material/bottomappbar/BottomAppBar$5;)V

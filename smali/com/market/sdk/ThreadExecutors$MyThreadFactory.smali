@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/ThreadExecutors$MyThreadFactory;
 .super Ljava/lang/Object;
+.source "ThreadExecutors.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -34,6 +35,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 18
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -48,8 +50,10 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 2
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 20
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -58,12 +62,14 @@
 
     iput-object v0, p0, Lcom/market/sdk/ThreadExecutors$MyThreadFactory;->mThreadNumber:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 25
     invoke-static {}, Ljava/lang/System;->getSecurityManager()Ljava/lang/SecurityManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 26
     invoke-virtual {v0}, Ljava/lang/SecurityManager;->getThreadGroup()Ljava/lang/ThreadGroup;
 
     move-result-object v0
@@ -82,6 +88,7 @@
     :goto_0
     iput-object v0, p0, Lcom/market/sdk/ThreadExecutors$MyThreadFactory;->mGroup:Ljava/lang/ThreadGroup;
 
+    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,6 +119,7 @@
 
     iput-object p1, p0, Lcom/market/sdk/ThreadExecutors$MyThreadFactory;->mNamePrefix:Ljava/lang/String;
 
+    .line 28
     iput p2, p0, Lcom/market/sdk/ThreadExecutors$MyThreadFactory;->mPriority:I
 
     return-void
@@ -122,6 +130,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 7
 
+    .line 32
     new-instance v6, Ljava/lang/Thread;
 
     iget-object v1, p0, Lcom/market/sdk/ThreadExecutors$MyThreadFactory;->mGroup:Ljava/lang/ThreadGroup;
@@ -154,6 +163,7 @@
 
     invoke-direct/range {v0 .. v5}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;J)V
 
+    .line 33
     invoke-virtual {v6}, Ljava/lang/Thread;->isDaemon()Z
 
     move-result p1
@@ -162,8 +172,10 @@
 
     const/4 p1, 0x0
 
+    .line 34
     invoke-virtual {v6, p1}, Ljava/lang/Thread;->setDaemon(Z)V
 
+    .line 35
     :cond_0
     invoke-virtual {v6}, Ljava/lang/Thread;->getPriority()I
 
@@ -173,6 +185,7 @@
 
     if-eq p1, p0, :cond_1
 
+    .line 36
     invoke-virtual {v6, p0}, Ljava/lang/Thread;->setPriority(I)V
 
     :cond_1

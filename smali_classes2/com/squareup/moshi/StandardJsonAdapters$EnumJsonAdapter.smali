@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;
 .super Lcom/squareup/moshi/JsonAdapter;
+.source "StandardJsonAdapters.java"
 
 
 # annotations
@@ -57,10 +58,13 @@
         }
     .end annotation
 
+    .line 222
     invoke-direct {p0}, Lcom/squareup/moshi/JsonAdapter;-><init>()V
 
+    .line 223
     iput-object p1, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->enumType:Ljava/lang/Class;
 
+    .line 225
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
@@ -70,6 +74,7 @@
 
     iput-object v0, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->constants:[Ljava/lang/Enum;
 
+    .line 226
     iget-object v0, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->constants:[Ljava/lang/Enum;
 
     array-length v0, v0
@@ -80,6 +85,7 @@
 
     const/4 v0, 0x0
 
+    .line 227
     :goto_0
     iget-object v1, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->constants:[Ljava/lang/Enum;
 
@@ -87,10 +93,12 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 228
     iget-object v1, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->constants:[Ljava/lang/Enum;
 
     aget-object v1, v1, v0
 
+    .line 229
     invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v2
@@ -109,6 +117,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 230
     invoke-interface {v2}, Lcom/squareup/moshi/Json;->name()Ljava/lang/String;
 
     move-result-object v1
@@ -120,6 +129,7 @@
 
     move-result-object v1
 
+    .line 231
     :goto_1
     iget-object v2, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->nameStrings:[Ljava/lang/String;
 
@@ -129,6 +139,7 @@
 
     goto :goto_0
 
+    .line 233
     :cond_1
     iget-object v0, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->nameStrings:[Ljava/lang/String;
 
@@ -145,6 +156,7 @@
     :catch_0
     move-exception p0
 
+    .line 235
     new-instance v0, Ljava/lang/AssertionError;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -188,6 +200,7 @@
         }
     .end annotation
 
+    .line 240
     iget-object v0, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->options:Lcom/squareup/moshi/JsonReader$Options;
 
     invoke-virtual {p1, v0}, Lcom/squareup/moshi/JsonReader;->selectString(Lcom/squareup/moshi/JsonReader$Options;)I
@@ -198,17 +211,20 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 241
     iget-object p0, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->constants:[Ljava/lang/Enum;
 
     aget-object p0, p0, v0
 
     return-object p0
 
+    .line 244
     :cond_0
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 245
     new-instance v1, Lcom/squareup/moshi/JsonDataException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -221,6 +237,7 @@
 
     iget-object p0, p0, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->nameStrings:[Ljava/lang/String;
 
+    .line 246
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -237,6 +254,7 @@
 
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 247
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -260,6 +278,7 @@
         }
     .end annotation
 
+    .line 216
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/StandardJsonAdapters$EnumJsonAdapter;->fromJson(Lcom/squareup/moshi/JsonReader;)Ljava/lang/Enum;
 
     move-result-object p0
@@ -270,6 +289,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 255
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/GlobalScope;
 .super Ljava/lang/Object;
+.source "CoroutineScope.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/CoroutineScope;
@@ -13,6 +14,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 146
     new-instance v0, Lkotlinx/coroutines/GlobalScope;
 
     invoke-direct {v0}, Lkotlinx/coroutines/GlobalScope;-><init>()V
@@ -25,6 +27,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +38,7 @@
 .method public getCoroutineContext()Lkotlin/coroutines/CoroutineContext;
     .locals 0
 
+    .line 151
     sget-object p0, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
     check-cast p0, Lkotlin/coroutines/CoroutineContext;

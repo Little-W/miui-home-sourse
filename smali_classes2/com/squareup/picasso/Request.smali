@@ -1,5 +1,6 @@
 .class public final Lcom/squareup/picasso/Request;
 .super Ljava/lang/Object;
+.source "Request.java"
 
 
 # annotations
@@ -68,6 +69,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 34
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x5
@@ -100,28 +102,34 @@
 
     move-object v0, p0
 
+    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     move-object v1, p1
 
+    .line 101
     iput-object v1, v0, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
     move v1, p2
 
+    .line 102
     iput v1, v0, Lcom/squareup/picasso/Request;->resourceId:I
 
     move-object v1, p3
 
+    .line 103
     iput-object v1, v0, Lcom/squareup/picasso/Request;->stableKey:Ljava/lang/String;
 
     if-nez p4, :cond_0
 
     const/4 v1, 0x0
 
+    .line 105
     iput-object v1, v0, Lcom/squareup/picasso/Request;->transformations:Ljava/util/List;
 
     goto :goto_0
 
+    .line 107
     :cond_0
     invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -132,54 +140,67 @@
     :goto_0
     move v1, p5
 
+    .line 109
     iput v1, v0, Lcom/squareup/picasso/Request;->targetWidth:I
 
     move v1, p6
 
+    .line 110
     iput v1, v0, Lcom/squareup/picasso/Request;->targetHeight:I
 
     move v1, p7
 
+    .line 111
     iput-boolean v1, v0, Lcom/squareup/picasso/Request;->centerCrop:Z
 
     move v1, p8
 
+    .line 112
     iput-boolean v1, v0, Lcom/squareup/picasso/Request;->centerInside:Z
 
     move v1, p9
 
+    .line 113
     iput v1, v0, Lcom/squareup/picasso/Request;->centerCropGravity:I
 
     move v1, p10
 
+    .line 114
     iput-boolean v1, v0, Lcom/squareup/picasso/Request;->onlyScaleDown:Z
 
     move v1, p11
 
+    .line 115
     iput v1, v0, Lcom/squareup/picasso/Request;->rotationDegrees:F
 
     move v1, p12
 
+    .line 116
     iput v1, v0, Lcom/squareup/picasso/Request;->rotationPivotX:F
 
     move v1, p13
 
+    .line 117
     iput v1, v0, Lcom/squareup/picasso/Request;->rotationPivotY:F
 
     move/from16 v1, p14
 
+    .line 118
     iput-boolean v1, v0, Lcom/squareup/picasso/Request;->hasRotationPivot:Z
 
     move/from16 v1, p15
 
+    .line 119
     iput-boolean v1, v0, Lcom/squareup/picasso/Request;->purgeable:Z
 
     move-object/from16 v1, p16
 
+    .line 120
     iput-object v1, v0, Lcom/squareup/picasso/Request;->config:Landroid/graphics/Bitmap$Config;
 
     move-object/from16 v1, p17
 
+    .line 121
     iput-object v1, v0, Lcom/squareup/picasso/Request;->priority:Lcom/squareup/picasso/Picasso$Priority;
 
     return-void
@@ -188,6 +209,7 @@
 .method synthetic constructor <init>(Landroid/net/Uri;ILjava/lang/String;Ljava/util/List;IIZZIZFFFZZLandroid/graphics/Bitmap$Config;Lcom/squareup/picasso/Picasso$Priority;Lcom/squareup/picasso/Request$1;)V
     .locals 0
 
+    .line 33
     invoke-direct/range {p0 .. p17}, Lcom/squareup/picasso/Request;-><init>(Landroid/net/Uri;ILjava/lang/String;Ljava/util/List;IIZZIZFFFZZLandroid/graphics/Bitmap$Config;Lcom/squareup/picasso/Picasso$Priority;)V
 
     return-void
@@ -198,10 +220,12 @@
 .method getName()Ljava/lang/String;
     .locals 1
 
+    .line 179
     iget-object v0, p0, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
     if-eqz v0, :cond_0
 
+    .line 180
     invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -212,6 +236,7 @@
 
     return-object p0
 
+    .line 182
     :cond_0
     iget p0, p0, Lcom/squareup/picasso/Request;->resourceId:I
 
@@ -225,6 +250,7 @@
 .method hasCustomTransformations()Z
     .locals 0
 
+    .line 198
     iget-object p0, p0, Lcom/squareup/picasso/Request;->transformations:Ljava/util/List;
 
     if-eqz p0, :cond_0
@@ -243,6 +269,7 @@
 .method public hasSize()Z
     .locals 1
 
+    .line 186
     iget v0, p0, Lcom/squareup/picasso/Request;->targetWidth:I
 
     if-nez v0, :cond_1
@@ -269,6 +296,7 @@
 .method logId()Ljava/lang/String;
     .locals 4
 
+    .line 167
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -277,6 +305,7 @@
 
     sub-long/2addr v0, v2
 
+    .line 168
     sget-wide v2, Lcom/squareup/picasso/Request;->TOO_LONG_LOG:J
 
     cmp-long v2, v0, v2
@@ -285,6 +314,7 @@
 
     if-lez v2, :cond_0
 
+    .line 169
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -315,6 +345,7 @@
 
     return-object p0
 
+    .line 171
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -350,6 +381,7 @@
 .method needsMatrixTransform()Z
     .locals 1
 
+    .line 194
     invoke-virtual {p0}, Lcom/squareup/picasso/Request;->hasSize()Z
 
     move-result v0
@@ -382,6 +414,7 @@
 .method needsTransformation()Z
     .locals 1
 
+    .line 190
     invoke-virtual {p0}, Lcom/squareup/picasso/Request;->needsMatrixTransform()Z
 
     move-result v0
@@ -412,6 +445,7 @@
 .method plainId()Ljava/lang/String;
     .locals 2
 
+    .line 175
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -438,25 +472,30 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
+    .line 125
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Request{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 126
     iget v1, p0, Lcom/squareup/picasso/Request;->resourceId:I
 
     if-lez v1, :cond_0
 
+    .line 127
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 129
     :cond_0
     iget-object v1, p0, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
+    .line 131
     :goto_0
     iget-object v1, p0, Lcom/squareup/picasso/Request;->transformations:Ljava/util/List;
 
@@ -470,6 +509,7 @@
 
     if-nez v1, :cond_1
 
+    .line 132
     iget-object v1, p0, Lcom/squareup/picasso/Request;->transformations:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -489,6 +529,7 @@
 
     check-cast v3, Lcom/squareup/picasso/Transformation;
 
+    .line 133
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-interface {v3}, Lcom/squareup/picasso/Transformation;->key()Ljava/lang/String;
@@ -499,6 +540,7 @@
 
     goto :goto_1
 
+    .line 136
     :cond_1
     iget-object v1, p0, Lcom/squareup/picasso/Request;->stableKey:Ljava/lang/String;
 
@@ -508,6 +550,7 @@
 
     const-string v1, " stableKey("
 
+    .line 137
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/squareup/picasso/Request;->stableKey:Ljava/lang/String;
@@ -516,6 +559,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 139
     :cond_2
     iget v1, p0, Lcom/squareup/picasso/Request;->targetWidth:I
 
@@ -525,6 +569,7 @@
 
     const-string v1, " resize("
 
+    .line 140
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/squareup/picasso/Request;->targetWidth:I
@@ -539,6 +584,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 142
     :cond_3
     iget-boolean v1, p0, Lcom/squareup/picasso/Request;->centerCrop:Z
 
@@ -546,8 +592,10 @@
 
     const-string v1, " centerCrop"
 
+    .line 143
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 145
     :cond_4
     iget-boolean v1, p0, Lcom/squareup/picasso/Request;->centerInside:Z
 
@@ -555,8 +603,10 @@
 
     const-string v1, " centerInside"
 
+    .line 146
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 148
     :cond_5
     iget v1, p0, Lcom/squareup/picasso/Request;->rotationDegrees:F
 
@@ -568,18 +618,21 @@
 
     const-string v1, " rotation("
 
+    .line 149
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/squareup/picasso/Request;->rotationDegrees:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    .line 150
     iget-boolean v1, p0, Lcom/squareup/picasso/Request;->hasRotationPivot:Z
 
     if-eqz v1, :cond_6
 
     const-string v1, " @ "
 
+    .line 151
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/squareup/picasso/Request;->rotationPivotX:F
@@ -592,9 +645,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    .line 153
     :cond_6
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 155
     :cond_7
     iget-boolean v1, p0, Lcom/squareup/picasso/Request;->purgeable:Z
 
@@ -602,13 +657,16 @@
 
     const-string v1, " purgeable"
 
+    .line 156
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 158
     :cond_8
     iget-object v1, p0, Lcom/squareup/picasso/Request;->config:Landroid/graphics/Bitmap$Config;
 
     if-eqz v1, :cond_9
 
+    .line 159
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/squareup/picasso/Request;->config:Landroid/graphics/Bitmap$Config;
@@ -618,8 +676,10 @@
     :cond_9
     const/16 p0, 0x7d
 
+    .line 161
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 163
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

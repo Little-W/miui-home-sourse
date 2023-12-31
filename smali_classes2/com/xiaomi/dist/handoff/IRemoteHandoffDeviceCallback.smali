@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback;
 .super Ljava/lang/Object;
+.source "IRemoteHandoffDeviceCallback.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

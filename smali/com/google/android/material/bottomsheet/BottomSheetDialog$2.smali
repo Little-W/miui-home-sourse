@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomsheet/BottomSheetDialog$2;
 .super Ljava/lang/Object;
+.source "BottomSheetDialog.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetDialog;)V
     .locals 0
 
+    .line 322
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
+    .line 325
     iget-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialog;
 
     iget-boolean p1, p1, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->cancelable:Z
@@ -58,6 +61,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 326
     iget-object p0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialog;
 
     invoke-virtual {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->cancel()V

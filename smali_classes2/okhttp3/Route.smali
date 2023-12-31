@@ -1,5 +1,6 @@
 .class public final Lokhttp3/Route;
 .super Ljava/lang/Object;
+.source "Route.java"
 
 
 # instance fields
@@ -14,6 +15,7 @@
 .method public constructor <init>(Lokhttp3/Address;Ljava/net/Proxy;Ljava/net/InetSocketAddress;)V
     .locals 0
 
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_2
@@ -22,14 +24,18 @@
 
     if-eqz p3, :cond_0
 
+    .line 52
     iput-object p1, p0, Lokhttp3/Route;->address:Lokhttp3/Address;
 
+    .line 53
     iput-object p2, p0, Lokhttp3/Route;->proxy:Ljava/net/Proxy;
 
+    .line 54
     iput-object p3, p0, Lokhttp3/Route;->inetSocketAddress:Ljava/net/InetSocketAddress;
 
     return-void
 
+    .line 50
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -39,6 +45,7 @@
 
     throw p0
 
+    .line 47
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -48,6 +55,7 @@
 
     throw p0
 
+    .line 44
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -63,6 +71,7 @@
 .method public address()Lokhttp3/Address;
     .locals 0
 
+    .line 58
     iget-object p0, p0, Lokhttp3/Route;->address:Lokhttp3/Address;
 
     return-object p0
@@ -75,6 +84,7 @@
         .end annotation
     .end param
 
+    .line 84
     instance-of v0, p1, Lokhttp3/Route;
 
     if-eqz v0, :cond_0
@@ -85,6 +95,7 @@
 
     iget-object v1, p0, Lokhttp3/Route;->address:Lokhttp3/Address;
 
+    .line 85
     invoke-virtual {v0, v1}, Lokhttp3/Address;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -95,6 +106,7 @@
 
     iget-object v1, p0, Lokhttp3/Route;->proxy:Ljava/net/Proxy;
 
+    .line 86
     invoke-virtual {v0, v1}, Ljava/net/Proxy;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -105,6 +117,7 @@
 
     iget-object p0, p0, Lokhttp3/Route;->inetSocketAddress:Ljava/net/InetSocketAddress;
 
+    .line 87
     invoke-virtual {p1, p0}, Ljava/net/InetSocketAddress;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -125,6 +138,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 92
     iget-object v0, p0, Lokhttp3/Route;->address:Lokhttp3/Address;
 
     invoke-virtual {v0}, Lokhttp3/Address;->hashCode()I
@@ -137,6 +151,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 93
     iget-object v0, p0, Lokhttp3/Route;->proxy:Ljava/net/Proxy;
 
     invoke-virtual {v0}, Ljava/net/Proxy;->hashCode()I
@@ -147,6 +162,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 94
     iget-object p0, p0, Lokhttp3/Route;->inetSocketAddress:Ljava/net/InetSocketAddress;
 
     invoke-virtual {p0}, Ljava/net/InetSocketAddress;->hashCode()I
@@ -161,6 +177,7 @@
 .method public proxy()Ljava/net/Proxy;
     .locals 0
 
+    .line 68
     iget-object p0, p0, Lokhttp3/Route;->proxy:Ljava/net/Proxy;
 
     return-object p0
@@ -169,6 +186,7 @@
 .method public requiresTunnel()Z
     .locals 1
 
+    .line 80
     iget-object v0, p0, Lokhttp3/Route;->address:Lokhttp3/Address;
 
     iget-object v0, v0, Lokhttp3/Address;->sslSocketFactory:Ljavax/net/ssl/SSLSocketFactory;
@@ -199,6 +217,7 @@
 .method public socketAddress()Ljava/net/InetSocketAddress;
     .locals 0
 
+    .line 72
     iget-object p0, p0, Lokhttp3/Route;->inetSocketAddress:Ljava/net/InetSocketAddress;
 
     return-object p0
@@ -207,6 +226,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 99
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

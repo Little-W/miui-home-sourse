@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/shape/ShapePath$PathArcOperation;
 .super Lcom/google/android/material/shape/ShapePath$PathOperation;
+.source "ShapePath.java"
 
 
 # annotations
@@ -53,6 +54,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 527
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
@@ -65,14 +67,19 @@
 .method public constructor <init>(FFFF)V
     .locals 0
 
+    .line 560
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathOperation;-><init>()V
 
+    .line 561
     invoke-direct {p0, p1}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->setLeft(F)V
 
+    .line 562
     invoke-direct {p0, p2}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->setTop(F)V
 
+    .line 563
     invoke-direct {p0, p3}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->setRight(F)V
 
+    .line 564
     invoke-direct {p0, p4}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->setBottom(F)V
 
     return-void
@@ -81,6 +88,7 @@
 .method static synthetic access$1000(Lcom/google/android/material/shape/ShapePath$PathArcOperation;)F
     .locals 0
 
+    .line 526
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->getLeft()F
 
     move-result p0
@@ -91,6 +99,7 @@
 .method static synthetic access$1100(Lcom/google/android/material/shape/ShapePath$PathArcOperation;)F
     .locals 0
 
+    .line 526
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->getTop()F
 
     move-result p0
@@ -101,6 +110,7 @@
 .method static synthetic access$1200(Lcom/google/android/material/shape/ShapePath$PathArcOperation;)F
     .locals 0
 
+    .line 526
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->getRight()F
 
     move-result p0
@@ -111,6 +121,7 @@
 .method static synthetic access$1300(Lcom/google/android/material/shape/ShapePath$PathArcOperation;)F
     .locals 0
 
+    .line 526
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->getBottom()F
 
     move-result p0
@@ -121,6 +132,7 @@
 .method static synthetic access$600(Lcom/google/android/material/shape/ShapePath$PathArcOperation;F)V
     .locals 0
 
+    .line 526
     invoke-direct {p0, p1}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->setStartAngle(F)V
 
     return-void
@@ -129,6 +141,7 @@
 .method static synthetic access$700(Lcom/google/android/material/shape/ShapePath$PathArcOperation;F)V
     .locals 0
 
+    .line 526
     invoke-direct {p0, p1}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->setSweepAngle(F)V
 
     return-void
@@ -137,6 +150,7 @@
 .method static synthetic access$800(Lcom/google/android/material/shape/ShapePath$PathArcOperation;)F
     .locals 0
 
+    .line 526
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->getStartAngle()F
 
     move-result p0
@@ -147,6 +161,7 @@
 .method static synthetic access$900(Lcom/google/android/material/shape/ShapePath$PathArcOperation;)F
     .locals 0
 
+    .line 526
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->getSweepAngle()F
 
     move-result p0
@@ -157,6 +172,7 @@
 .method private getBottom()F
     .locals 0
 
+    .line 590
     iget p0, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->bottom:F
 
     return p0
@@ -165,6 +181,7 @@
 .method private getLeft()F
     .locals 0
 
+    .line 578
     iget p0, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->left:F
 
     return p0
@@ -173,6 +190,7 @@
 .method private getRight()F
     .locals 0
 
+    .line 586
     iget p0, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->right:F
 
     return p0
@@ -181,6 +199,7 @@
 .method private getStartAngle()F
     .locals 0
 
+    .line 610
     iget p0, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->startAngle:F
 
     return p0
@@ -189,6 +208,7 @@
 .method private getSweepAngle()F
     .locals 0
 
+    .line 614
     iget p0, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->sweepAngle:F
 
     return p0
@@ -197,6 +217,7 @@
 .method private getTop()F
     .locals 0
 
+    .line 582
     iget p0, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->top:F
 
     return p0
@@ -205,6 +226,7 @@
 .method private setBottom(F)V
     .locals 0
 
+    .line 606
     iput p1, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->bottom:F
 
     return-void
@@ -213,6 +235,7 @@
 .method private setLeft(F)V
     .locals 0
 
+    .line 594
     iput p1, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->left:F
 
     return-void
@@ -221,6 +244,7 @@
 .method private setRight(F)V
     .locals 0
 
+    .line 602
     iput p1, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->right:F
 
     return-void
@@ -229,6 +253,7 @@
 .method private setStartAngle(F)V
     .locals 0
 
+    .line 618
     iput p1, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->startAngle:F
 
     return-void
@@ -237,6 +262,7 @@
 .method private setSweepAngle(F)V
     .locals 0
 
+    .line 622
     iput p1, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->sweepAngle:F
 
     return-void
@@ -245,6 +271,7 @@
 .method private setTop(F)V
     .locals 0
 
+    .line 598
     iput p1, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->top:F
 
     return-void
@@ -255,12 +282,16 @@
 .method public applyToPath(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
     .locals 5
 
+    .line 569
     iget-object v0, p0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->matrix:Landroid/graphics/Matrix;
 
+    .line 570
     invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
 
+    .line 571
     invoke-virtual {p2, v0}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
+    .line 572
     sget-object v0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->rectF:Landroid/graphics/RectF;
 
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->getLeft()F
@@ -281,6 +312,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
+    .line 573
     sget-object v0, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->rectF:Landroid/graphics/RectF;
 
     invoke-direct {p0}, Lcom/google/android/material/shape/ShapePath$PathArcOperation;->getStartAngle()F
@@ -295,6 +327,7 @@
 
     invoke-virtual {p2, v0, v1, p0, v2}, Landroid/graphics/Path;->arcTo(Landroid/graphics/RectF;FFZ)V
 
+    .line 574
     invoke-virtual {p2, p1}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
     return-void

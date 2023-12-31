@@ -1,5 +1,6 @@
 .class Landroid/support/v4/media/session/PlaybackStateCompatApi21;
 .super Ljava/lang/Object;
+.source "PlaybackStateCompatApi21.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method public static getActions(Ljava/lang/Object;)J
     .locals 2
 
+    .line 45
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getActions()J
@@ -34,6 +37,7 @@
 .method public static getActiveQueueItemId(Ljava/lang/Object;)J
     .locals 2
 
+    .line 61
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getActiveQueueItemId()J
@@ -46,6 +50,7 @@
 .method public static getBufferedPosition(Ljava/lang/Object;)J
     .locals 2
 
+    .line 37
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getBufferedPosition()J
@@ -68,6 +73,7 @@
         }
     .end annotation
 
+    .line 57
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getCustomActions()Ljava/util/List;
@@ -80,6 +86,7 @@
 .method public static getErrorMessage(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 49
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getErrorMessage()Ljava/lang/CharSequence;
@@ -92,6 +99,7 @@
 .method public static getLastPositionUpdateTime(Ljava/lang/Object;)J
     .locals 2
 
+    .line 53
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getLastPositionUpdateTime()J
@@ -104,6 +112,7 @@
 .method public static getPlaybackSpeed(Ljava/lang/Object;)F
     .locals 0
 
+    .line 41
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getPlaybackSpeed()F
@@ -116,6 +125,7 @@
 .method public static getPosition(Ljava/lang/Object;)J
     .locals 2
 
+    .line 33
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getPosition()J
@@ -128,6 +138,7 @@
 .method public static getState(Ljava/lang/Object;)I
     .locals 0
 
+    .line 29
     check-cast p0, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getState()I
@@ -151,6 +162,7 @@
         }
     .end annotation
 
+    .line 68
     new-instance v7, Landroid/media/session/PlaybackState$Builder;
 
     invoke-direct {v7}, Landroid/media/session/PlaybackState$Builder;-><init>()V
@@ -165,20 +177,25 @@
 
     move-wide/from16 v5, p9
 
+    .line 69
     invoke-virtual/range {v0 .. v6}, Landroid/media/session/PlaybackState$Builder;->setState(IJFJ)Landroid/media/session/PlaybackState$Builder;
 
     move-wide v0, p3
 
+    .line 70
     invoke-virtual {v7, p3, p4}, Landroid/media/session/PlaybackState$Builder;->setBufferedPosition(J)Landroid/media/session/PlaybackState$Builder;
 
     move-wide v0, p6
 
+    .line 71
     invoke-virtual {v7, p6, p7}, Landroid/media/session/PlaybackState$Builder;->setActions(J)Landroid/media/session/PlaybackState$Builder;
 
     move-object/from16 v0, p8
 
+    .line 72
     invoke-virtual {v7, v0}, Landroid/media/session/PlaybackState$Builder;->setErrorMessage(Ljava/lang/CharSequence;)Landroid/media/session/PlaybackState$Builder;
 
+    .line 73
     invoke-interface/range {p11 .. p11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -194,6 +211,7 @@
 
     move-result-object v1
 
+    .line 74
     check-cast v1, Landroid/media/session/PlaybackState$CustomAction;
 
     invoke-virtual {v7, v1}, Landroid/media/session/PlaybackState$Builder;->addCustomAction(Landroid/media/session/PlaybackState$CustomAction;)Landroid/media/session/PlaybackState$Builder;
@@ -203,8 +221,10 @@
     :cond_0
     move-wide/from16 v1, p12
 
+    .line 76
     invoke-virtual {v7, v1, v2}, Landroid/media/session/PlaybackState$Builder;->setActiveQueueItemId(J)Landroid/media/session/PlaybackState$Builder;
 
+    .line 77
     invoke-virtual {v7}, Landroid/media/session/PlaybackState$Builder;->build()Landroid/media/session/PlaybackState;
 
     move-result-object v0

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/BranchError$u;
 .super Lio/branch/search/BranchError;
+.source "SourceFile"
 
 
 # annotations

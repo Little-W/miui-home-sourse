@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/manager/LifecycleListener;
 .super Ljava/lang/Object;
+.source "LifecycleListener.java"
 
 
 # virtual methods

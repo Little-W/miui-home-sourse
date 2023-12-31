@@ -1,5 +1,6 @@
 .class public final Lio/requery/android/database/sqlite/SQLiteDebug;
 .super Ljava/lang/Object;
+.source "SQLiteDebug.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 
     const-string v1, "SQLiteLog"
 
+    .line 40
     invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
@@ -37,6 +39,7 @@
 
     const-string v1, "SQLiteStatements"
 
+    .line 48
     invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
@@ -45,6 +48,7 @@
 
     const-string v1, "SQLiteTime"
 
+    .line 57
     invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -57,6 +61,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -65,6 +70,7 @@
 .method public static dump(Landroid/util/Printer;[Ljava/lang/String;)V
     .locals 5
 
+    .line 165
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -78,6 +84,7 @@
 
     const-string v4, "-v"
 
+    .line 166
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -91,6 +98,7 @@
 
     goto :goto_0
 
+    .line 171
     :cond_1
     invoke-static {p0, v2}, Lio/requery/android/database/sqlite/SQLiteDatabase;->dumpAll(Landroid/util/Printer;Z)V
 
@@ -100,12 +108,15 @@
 .method public static getDatabaseInfo()Lio/requery/android/database/sqlite/SQLiteDebug$PagerStats;
     .locals 2
 
+    .line 152
     new-instance v0, Lio/requery/android/database/sqlite/SQLiteDebug$PagerStats;
 
     invoke-direct {v0}, Lio/requery/android/database/sqlite/SQLiteDebug$PagerStats;-><init>()V
 
+    .line 153
     invoke-static {v0}, Lio/requery/android/database/sqlite/SQLiteDebug;->nativeGetPagerStats(Lio/requery/android/database/sqlite/SQLiteDebug$PagerStats;)V
 
+    .line 154
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteDatabase;->getDbStats()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -125,10 +136,12 @@
 
     const-string v1, "-1"
 
+    .line 83
     invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 82
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0

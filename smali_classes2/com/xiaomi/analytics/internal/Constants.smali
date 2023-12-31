@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/analytics/internal/Constants;
 .super Ljava/lang/Object;
+.source "Constants.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 7
     new-instance v0, Lcom/xiaomi/analytics/internal/Version;
 
     const-string v1, "1.9.3"
@@ -24,6 +26,7 @@
 
     sput-object v0, Lcom/xiaomi/analytics/internal/Constants;->API_VER:Lcom/xiaomi/analytics/internal/Version;
 
+    .line 9
     new-instance v0, Lcom/xiaomi/analytics/internal/Version;
 
     const-string v1, "1.3.0"
@@ -32,12 +35,14 @@
 
     sput-object v0, Lcom/xiaomi/analytics/internal/Constants;->MIN_CORE_VER:Lcom/xiaomi/analytics/internal/Version;
 
+    .line 16
     sget v0, Lcom/xiaomi/analytics/internal/util/TimeUtils;->ONE_SECOND_IN_MS:I
 
     mul-int/lit8 v0, v0, 0x1e
 
     sput v0, Lcom/xiaomi/analytics/internal/Constants;->CONNECT_TIME_OUT_MILLIS:I
 
+    .line 17
     sget v0, Lcom/xiaomi/analytics/internal/util/TimeUtils;->ONE_MINUTE_IN_MS:I
 
     sput v0, Lcom/xiaomi/analytics/internal/Constants;->READ_TIME_OUT_MILLIS:I

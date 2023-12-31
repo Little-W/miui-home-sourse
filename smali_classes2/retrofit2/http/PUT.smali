@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lretrofit2/http/PUT;
 .super Ljava/lang/Object;
+.source "PUT.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -1,5 +1,6 @@
 .class public interface abstract Lio/branch/search/BranchConfiguration$d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

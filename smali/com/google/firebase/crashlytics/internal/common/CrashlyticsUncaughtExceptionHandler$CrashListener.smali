@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/firebase/crashlytics/internal/common/CrashlyticsUncaughtExceptionHandler$CrashListener;
 .super Ljava/lang/Object;
+.source "CrashlyticsUncaughtExceptionHandler.java"
 
 
 # annotations

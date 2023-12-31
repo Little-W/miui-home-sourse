@@ -1,5 +1,6 @@
 .class public Landroidx/media/AudioAttributesCompat;
 .super Ljava/lang/Object;
+.source "AudioAttributesCompat.java"
 
 # interfaces
 .implements Landroidx/versionedparcelable/VersionedParcelable;
@@ -19,12 +20,14 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 175
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroidx/media/AudioAttributesCompat;->SUPPRESSIBLE_USAGES:Landroid/util/SparseIntArray;
 
+    .line 176
     sget-object v0, Landroidx/media/AudioAttributesCompat;->SUPPRESSIBLE_USAGES:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x1
@@ -33,6 +36,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
 
+    .line 177
     sget-object v0, Landroidx/media/AudioAttributesCompat;->SUPPRESSIBLE_USAGES:Landroid/util/SparseIntArray;
 
     const/4 v2, 0x2
@@ -41,24 +45,28 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/util/SparseIntArray;->put(II)V
 
+    .line 178
     sget-object v0, Landroidx/media/AudioAttributesCompat;->SUPPRESSIBLE_USAGES:Landroid/util/SparseIntArray;
 
     const/4 v3, 0x7
 
     invoke-virtual {v0, v3, v2}, Landroid/util/SparseIntArray;->put(II)V
 
+    .line 179
     sget-object v0, Landroidx/media/AudioAttributesCompat;->SUPPRESSIBLE_USAGES:Landroid/util/SparseIntArray;
 
     const/16 v2, 0x8
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
 
+    .line 181
     sget-object v0, Landroidx/media/AudioAttributesCompat;->SUPPRESSIBLE_USAGES:Landroid/util/SparseIntArray;
 
     const/16 v2, 0x9
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
 
+    .line 183
     sget-object v0, Landroidx/media/AudioAttributesCompat;->SUPPRESSIBLE_USAGES:Landroid/util/SparseIntArray;
 
     const/16 v2, 0xa
@@ -69,6 +77,7 @@
 
     new-array v0, v0, [I
 
+    .line 186
     fill-array-data v0, :array_0
 
     sput-object v0, Landroidx/media/AudioAttributesCompat;->SDK_USAGES:[I
@@ -99,6 +108,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 252
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -196,6 +206,7 @@
     :cond_5
     return p1
 
+    .line 756
     :cond_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -248,6 +259,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 649
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -372,6 +384,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 766
     instance-of v0, p1, Landroidx/media/AudioAttributesCompat;
 
     const/4 v1, 0x0
@@ -380,13 +393,16 @@
 
     return v1
 
+    .line 769
     :cond_0
     check-cast p1, Landroidx/media/AudioAttributesCompat;
 
+    .line 770
     iget-object p0, p0, Landroidx/media/AudioAttributesCompat;->mImpl:Landroidx/media/AudioAttributesImpl;
 
     if-nez p0, :cond_2
 
+    .line 771
     iget-object p0, p1, Landroidx/media/AudioAttributesCompat;->mImpl:Landroidx/media/AudioAttributesImpl;
 
     if-nez p0, :cond_1
@@ -396,6 +412,7 @@
     :cond_1
     return v1
 
+    .line 773
     :cond_2
     iget-object p1, p1, Landroidx/media/AudioAttributesCompat;->mImpl:Landroidx/media/AudioAttributesImpl;
 
@@ -409,6 +426,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 606
     iget-object p0, p0, Landroidx/media/AudioAttributesCompat;->mImpl:Landroidx/media/AudioAttributesImpl;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -421,6 +439,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 611
     iget-object p0, p0, Landroidx/media/AudioAttributesCompat;->mImpl:Landroidx/media/AudioAttributesImpl;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/internal/DataCollectionConfigStorage;
 .super Ljava/lang/Object;
+.source "DataCollectionConfigStorage.java"
 
 
 # instance fields
@@ -16,14 +17,17 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/google/firebase/events/Publisher;)V
     .locals 2
 
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     invoke-static {p1}, Lcom/google/firebase/internal/DataCollectionConfigStorage;->directBootSafe(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->deviceProtectedContext:Landroid/content/Context;
 
+    .line 44
     iget-object p1, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->deviceProtectedContext:Landroid/content/Context;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -42,14 +46,17 @@
 
     const/4 v0, 0x0
 
+    .line 45
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->sharedPreferences:Landroid/content/SharedPreferences;
 
+    .line 47
     iput-object p3, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->publisher:Lcom/google/firebase/events/Publisher;
 
+    .line 48
     invoke-direct {p0}, Lcom/google/firebase/internal/DataCollectionConfigStorage;->readAutoDataCollectionEnabled()Z
 
     move-result p1
@@ -62,6 +69,7 @@
 .method private static directBootSafe(Landroid/content/Context;)Landroid/content/Context;
     .locals 2
 
+    .line 52
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -70,6 +78,7 @@
 
     return-object p0
 
+    .line 55
     :cond_0
     invoke-static {p0}, Landroidx/core/content/ContextCompat;->createDeviceProtectedStorageContext(Landroid/content/Context;)Landroid/content/Context;
 
@@ -81,6 +90,7 @@
 .method private readAutoDataCollectionEnabled()Z
     .locals 2
 
+    .line 102
     iget-object v0, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v1, "firebase_data_collection_default_enabled"
@@ -91,6 +101,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 103
     iget-object p0, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const/4 v0, 0x1
@@ -101,6 +112,7 @@
 
     return p0
 
+    .line 105
     :cond_0
     invoke-direct {p0}, Lcom/google/firebase/internal/DataCollectionConfigStorage;->readManifestDataCollectionEnabled()Z
 
@@ -114,6 +126,7 @@
 
     const-string v0, "firebase_data_collection_default_enabled"
 
+    .line 84
     :try_start_0
     iget-object v1, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->deviceProtectedContext:Landroid/content/Context;
 
@@ -123,32 +136,38 @@
 
     if-eqz v1, :cond_0
 
+    .line 86
     iget-object p0, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->deviceProtectedContext:Landroid/content/Context;
 
+    .line 88
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
 
     const/16 v2, 0x80
 
+    .line 87
     invoke-virtual {v1, p0, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 89
     iget-object v1, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz v1, :cond_0
 
     iget-object v1, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
+    .line 91
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 92
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -173,6 +192,7 @@
 
     monitor-enter p0
 
+    .line 59
     :try_start_0
     iget-boolean v0, p0, Lcom/google/firebase/internal/DataCollectionConfigStorage;->dataCollectionDefaultEnabled:Z
     :try_end_0

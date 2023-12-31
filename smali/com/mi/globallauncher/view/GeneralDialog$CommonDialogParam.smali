@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;
 .super Ljava/lang/Object;
+.source "GeneralDialog.java"
 
 
 # annotations
@@ -53,24 +54,32 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 315
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x50
 
+    .line 318
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->gravity:I
 
     const/4 v0, -0x1
 
+    .line 319
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->positiveButtonText:I
 
+    .line 322
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->negativeButtonText:I
 
+    .line 326
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->positiveButtonTextColor:I
 
+    .line 329
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->negativeButtonTextColor:I
 
+    .line 332
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->title:I
 
+    .line 337
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->customView:I
 
     return-void
@@ -79,6 +88,7 @@
 .method synthetic constructor <init>(Lcom/mi/globallauncher/view/GeneralDialog$1;)V
     .locals 0
 
+    .line 315
     invoke-direct {p0}, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;-><init>()V
 
     return-void
@@ -89,6 +99,7 @@
 .method public hasAnimation()Z
     .locals 1
 
+    .line 360
     iget p0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->animation:I
 
     const/4 v0, -0x1
@@ -109,6 +120,7 @@
 .method hasNegativeButton()Z
     .locals 1
 
+    .line 352
     iget p0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->negativeButtonText:I
 
     const/4 v0, -0x1
@@ -129,6 +141,7 @@
 .method hasPositiveButton()Z
     .locals 1
 
+    .line 348
     iget p0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->positiveButtonText:I
 
     const/4 v0, -0x1
@@ -149,6 +162,7 @@
 .method public isCustomView()Z
     .locals 1
 
+    .line 356
     iget p0, p0, Lcom/mi/globallauncher/view/GeneralDialog$CommonDialogParam;->customView:I
 
     const/4 v0, -0x1

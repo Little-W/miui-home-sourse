@@ -1,5 +1,6 @@
 .class Lcom/google/android/filament/VertexBuffer$Builder$BuilderFinalizer;
 .super Ljava/lang/Object;
+.source "VertexBuffer.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(J)V
     .locals 0
 
+    .line 313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/google/android/filament/VertexBuffer$Builder$BuilderFinalizer;->mNativeObject:J
@@ -33,11 +35,13 @@
 .method public finalize()V
     .locals 2
 
+    .line 318
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 321
     :catchall_0
     iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder$BuilderFinalizer;->mNativeObject:J
 

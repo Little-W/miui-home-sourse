@@ -1,5 +1,6 @@
 .class public Landroidx/core/widget/ListViewAutoScrollHelper;
 .super Landroidx/core/widget/AutoScrollHelper;
+.source "ListViewAutoScrollHelper.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method public constructor <init>(Landroid/widget/ListView;)V
     .locals 0
 
+    .line 33
     invoke-direct {p0, p1}, Landroidx/core/widget/AutoScrollHelper;-><init>(Landroid/view/View;)V
 
+    .line 35
     iput-object p1, p0, Landroidx/core/widget/ListViewAutoScrollHelper;->mTarget:Landroid/widget/ListView;
 
     return-void
@@ -30,8 +33,10 @@
 .method public canTargetScrollVertically(I)Z
     .locals 6
 
+    .line 51
     iget-object p0, p0, Landroidx/core/widget/ListViewAutoScrollHelper;->mTarget:Landroid/widget/ListView;
 
+    .line 52
     invoke-virtual {p0}, Landroid/widget/ListView;->getCount()I
 
     move-result v0
@@ -42,11 +47,13 @@
 
     return v1
 
+    .line 57
     :cond_0
     invoke-virtual {p0}, Landroid/widget/ListView;->getChildCount()I
 
     move-result v2
 
+    .line 58
     invoke-virtual {p0}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
     move-result v3
@@ -61,10 +68,12 @@
 
     sub-int/2addr v2, v5
 
+    .line 64
     invoke-virtual {p0, v2}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
+    .line 65
     invoke-virtual {p1}, Landroid/view/View;->getBottom()I
 
     move-result p1
@@ -82,10 +91,12 @@
 
     if-gtz v3, :cond_2
 
+    .line 72
     invoke-virtual {p0, v1}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object p0
 
+    .line 73
     invoke-virtual {p0}, Landroid/view/View;->getTop()I
 
     move-result p0
@@ -104,6 +115,7 @@
 .method public scrollTargetBy(II)V
     .locals 0
 
+    .line 40
     iget-object p0, p0, Landroidx/core/widget/ListViewAutoScrollHelper;->mTarget:Landroid/widget/ListView;
 
     invoke-static {p0, p2}, Landroidx/core/widget/ListViewCompat;->scrollListBy(Landroid/widget/ListView;I)V

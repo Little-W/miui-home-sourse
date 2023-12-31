@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/CoroutineContextKt;
 .super Ljava/lang/Object;
+.source "CoroutineContext.kt"
 
 
 # static fields
@@ -12,6 +13,7 @@
 
     const-string v0, "kotlinx.coroutines.scheduler"
 
+    .line 14
     invoke-static {v0}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -20,6 +22,7 @@
 
     goto :goto_0
 
+    .line 15
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -37,6 +40,7 @@
 
     const-string v1, "off"
 
+    .line 17
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -50,6 +54,7 @@
     :cond_1
     const-string v1, "on"
 
+    .line 16
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -70,11 +75,13 @@
     :goto_0
     const/4 v0, 0x1
 
+    .line 14
     :goto_1
     sput-boolean v0, Lkotlinx/coroutines/CoroutineContextKt;->useCoroutinesScheduler:Z
 
     return-void
 
+    .line 18
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -110,6 +117,7 @@
 .method public static final createDefaultDispatcher()Lkotlinx/coroutines/CoroutineDispatcher;
     .locals 1
 
+    .line 23
     sget-boolean v0, Lkotlinx/coroutines/CoroutineContextKt;->useCoroutinesScheduler:Z
 
     if-eqz v0, :cond_0
@@ -130,6 +138,7 @@
 .method public static final getCoroutineName(Lkotlin/coroutines/CoroutineContext;)Ljava/lang/String;
     .locals 4
 
+    .line 52
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getDEBUG()Z
 
     move-result v0
@@ -140,6 +149,7 @@
 
     return-object v1
 
+    .line 53
     :cond_0
     sget-object v0, Lkotlinx/coroutines/CoroutineId;->Key:Lkotlinx/coroutines/CoroutineId$Key;
 
@@ -153,6 +163,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 54
     sget-object v1, Lkotlinx/coroutines/CoroutineName;->Key:Lkotlinx/coroutines/CoroutineName$Key;
 
     check-cast v1, Lkotlin/coroutines/CoroutineContext$Key;
@@ -176,6 +187,7 @@
     :cond_1
     const-string p0, "coroutine"
 
+    .line 55
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -206,6 +218,7 @@
 .method public static final newCoroutineContext(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;)Lkotlin/coroutines/CoroutineContext;
     .locals 2
 
+    .line 33
     invoke-interface {p0}, Lkotlinx/coroutines/CoroutineScope;->getCoroutineContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p0
@@ -214,6 +227,7 @@
 
     move-result-object p0
 
+    .line 34
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getDEBUG()Z
 
     move-result p1
@@ -243,6 +257,7 @@
     :cond_0
     move-object p1, p0
 
+    .line 35
     :goto_0
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getDefault()Lkotlinx/coroutines/CoroutineDispatcher;
 
@@ -260,6 +275,7 @@
 
     if-nez p0, :cond_1
 
+    .line 36
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getDefault()Lkotlinx/coroutines/CoroutineDispatcher;
 
     move-result-object p0

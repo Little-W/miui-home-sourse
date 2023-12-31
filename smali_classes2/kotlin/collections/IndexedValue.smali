@@ -1,5 +1,6 @@
 .class public final Lkotlin/collections/IndexedValue;
 .super Ljava/lang/Object;
+.source "IndexedValue.kt"
 
 
 # annotations
@@ -34,6 +35,7 @@
         }
     .end annotation
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lkotlin/collections/IndexedValue;->index:I
@@ -89,6 +91,7 @@
 .method public final getIndex()I
     .locals 0
 
+    .line 14
     iget p0, p0, Lkotlin/collections/IndexedValue;->index:I
 
     return p0
@@ -102,6 +105,7 @@
         }
     .end annotation
 
+    .line 14
     iget-object p0, p0, Lkotlin/collections/IndexedValue;->value:Ljava/lang/Object;
 
     return-object p0

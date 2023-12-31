@@ -1,5 +1,6 @@
 .class public Lio/branch/search/x0;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoader;

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
 .super Ljava/lang/Object;
+.source "NavigationMenuPresenter.java"
 
 # interfaces
 .implements Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuItem;
@@ -26,8 +27,10 @@
 .method constructor <init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
     .locals 0
 
+    .line 837
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 838
     iput-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->menuItem:Landroidx/appcompat/view/menu/MenuItemImpl;
 
     return-void
@@ -38,6 +41,7 @@
 .method public getMenuItem()Landroidx/appcompat/view/menu/MenuItemImpl;
     .locals 0
 
+    .line 842
     iget-object p0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->menuItem:Landroidx/appcompat/view/menu/MenuItemImpl;
 
     return-object p0

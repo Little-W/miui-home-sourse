@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/sdk/XiaomiUpdateListener;
 .super Ljava/lang/Object;
+.source "XiaomiUpdateListener.java"
 
 
 # virtual methods

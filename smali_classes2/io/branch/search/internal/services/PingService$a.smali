@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/services/PingService$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

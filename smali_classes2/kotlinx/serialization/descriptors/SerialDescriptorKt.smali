@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/descriptors/SerialDescriptorKt;
 .super Ljava/lang/Object;
+.source "SerialDescriptor.kt"
 
 
 # direct methods
@@ -20,6 +21,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 272
     new-instance v0, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;
 
     invoke-direct {v0, p0}, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;-><init>(Lkotlinx/serialization/descriptors/SerialDescriptor;)V

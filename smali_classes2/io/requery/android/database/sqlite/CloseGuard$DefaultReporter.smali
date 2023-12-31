@@ -1,5 +1,6 @@
 .class final Lio/requery/android/database/sqlite/CloseGuard$DefaultReporter;
 .super Ljava/lang/Object;
+.source "CloseGuard.java"
 
 # interfaces
 .implements Lio/requery/android/database/sqlite/CloseGuard$Reporter;
@@ -20,6 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 229
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +30,7 @@
 .method synthetic constructor <init>(Lio/requery/android/database/sqlite/CloseGuard$1;)V
     .locals 0
 
+    .line 229
     invoke-direct {p0}, Lio/requery/android/database/sqlite/CloseGuard$DefaultReporter;-><init>()V
 
     return-void
@@ -40,6 +43,7 @@
 
     const-string p0, "SQLite"
 
+    .line 231
     invoke-static {p0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void

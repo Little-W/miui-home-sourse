@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/MapEntrySerializer$MapEntry;
 .super Ljava/lang/Object;
+.source "Tuples.kt"
 
 # interfaces
 .implements Ljava/util/Map$Entry;
@@ -56,6 +57,7 @@
         }
     .end annotation
 
+    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/internal/MapEntrySerializer$MapEntry;->key:Ljava/lang/Object;
@@ -128,6 +130,7 @@
         }
     .end annotation
 
+    .line 73
     iget-object p0, p0, Lkotlinx/serialization/internal/MapEntrySerializer$MapEntry;->key:Ljava/lang/Object;
 
     return-object p0
@@ -141,6 +144,7 @@
         }
     .end annotation
 
+    .line 73
     iget-object p0, p0, Lkotlinx/serialization/internal/MapEntrySerializer$MapEntry;->value:Ljava/lang/Object;
 
     return-object p0

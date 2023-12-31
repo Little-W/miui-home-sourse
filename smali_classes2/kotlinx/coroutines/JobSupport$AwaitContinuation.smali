@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/JobSupport$AwaitContinuation;
 .super Lkotlinx/coroutines/CancellableContinuationImpl;
+.source "JobSupport.kt"
 
 
 # annotations
@@ -46,6 +47,7 @@
 
     const/4 v0, 0x1
 
+    .line 1161
     invoke-direct {p0, p1, v0}, Lkotlinx/coroutines/CancellableContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;I)V
 
     iput-object p2, p0, Lkotlinx/coroutines/JobSupport$AwaitContinuation;->job:Lkotlinx/coroutines/JobSupport;
@@ -58,12 +60,14 @@
 .method public getContinuationCancellationCause(Lkotlinx/coroutines/Job;)Ljava/lang/Throwable;
     .locals 1
 
+    .line 1163
     iget-object p0, p0, Lkotlinx/coroutines/JobSupport$AwaitContinuation;->job:Lkotlinx/coroutines/JobSupport;
 
     invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 1168
     instance-of v0, p0, Lkotlinx/coroutines/JobSupport$Finishing;
 
     if-eqz v0, :cond_0
@@ -80,6 +84,7 @@
 
     return-object v0
 
+    .line 1169
     :cond_0
     instance-of v0, p0, Lkotlinx/coroutines/CompletedExceptionally;
 
@@ -91,6 +96,7 @@
 
     return-object p0
 
+    .line 1170
     :cond_1
     invoke-interface {p1}, Lkotlinx/coroutines/Job;->getCancellationException()Ljava/util/concurrent/CancellationException;
 

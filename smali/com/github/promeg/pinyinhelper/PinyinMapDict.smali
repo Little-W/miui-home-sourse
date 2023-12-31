@@ -1,5 +1,6 @@
 .class public abstract Lcom/github/promeg/pinyinhelper/PinyinMapDict;
 .super Ljava/lang/Object;
+.source "PinyinMapDict.java"
 
 # interfaces
 .implements Lcom/github/promeg/pinyinhelper/PinyinDict;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +34,7 @@
 .method public toPinyin(Ljava/lang/String;)[Ljava/lang/String;
     .locals 1
 
+    .line 29
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/PinyinMapDict;->mapping()Ljava/util/Map;
 
     move-result-object v0
@@ -68,6 +71,7 @@
         }
     .end annotation
 
+    .line 24
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/PinyinMapDict;->mapping()Ljava/util/Map;
 
     move-result-object v0

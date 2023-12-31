@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;
 .super Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;
+.source "AutoValue_CrashlyticsReportWithSessionId.java"
 
 
 # instance fields
@@ -14,22 +15,27 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;Ljava/lang/String;Ljava/io/File;)V
     .locals 0
 
+    .line 20
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;-><init>()V
 
     if-eqz p1, :cond_2
 
+    .line 24
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->report:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
 
     if-eqz p2, :cond_1
 
+    .line 28
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->sessionId:Ljava/lang/String;
 
     if-eqz p3, :cond_0
 
+    .line 32
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->reportFile:Ljava/io/File;
 
     return-void
 
+    .line 30
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -39,6 +45,7 @@
 
     throw p0
 
+    .line 26
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -48,6 +55,7 @@
 
     throw p0
 
+    .line 22
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -69,6 +77,7 @@
 
     return v0
 
+    .line 64
     :cond_0
     instance-of v1, p1, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;
 
@@ -76,8 +85,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 65
     check-cast p1, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;
 
+    .line 66
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->report:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;->getReport()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
@@ -92,6 +103,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->sessionId:Ljava/lang/String;
 
+    .line 67
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;->getSessionId()Ljava/lang/String;
 
     move-result-object v3
@@ -104,6 +116,7 @@
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->reportFile:Ljava/io/File;
 
+    .line 68
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;->getReportFile()Ljava/io/File;
 
     move-result-object p1
@@ -129,6 +142,7 @@
 .method public getReport()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->report:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
 
     return-object p0
@@ -137,6 +151,7 @@
 .method public getReportFile()Ljava/io/File;
     .locals 0
 
+    .line 47
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->reportFile:Ljava/io/File;
 
     return-object p0
@@ -145,6 +160,7 @@
 .method public getSessionId()Ljava/lang/String;
     .locals 0
 
+    .line 42
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->sessionId:Ljava/lang/String;
 
     return-object p0
@@ -153,6 +169,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 77
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->report:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -165,6 +182,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 79
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->sessionId:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -175,6 +193,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 81
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/AutoValue_CrashlyticsReportWithSessionId;->reportFile:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->hashCode()I
@@ -189,6 +208,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

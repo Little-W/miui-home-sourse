@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/filament/TextureSampler$1;
 .super Ljava/lang/Object;
+.source "TextureSampler.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 328
     invoke-static {}, Lcom/google/android/filament/TextureSampler$MagFilter;->values()[Lcom/google/android/filament/TextureSampler$MagFilter;
 
     move-result-object v0

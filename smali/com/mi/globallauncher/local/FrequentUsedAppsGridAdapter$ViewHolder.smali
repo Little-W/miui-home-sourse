@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;
 .super Ljava/lang/Object;
+.source "FrequentUsedAppsGridAdapter.java"
 
 
 # annotations
@@ -27,10 +28,12 @@
 .method public constructor <init>(Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;Landroid/view/View;)V
     .locals 0
 
+    .line 96
     iput-object p1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 97
     sget p1, Lcom/mi/globallauncher/R$id;->item_container:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -41,6 +44,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->container:Landroid/widget/RelativeLayout;
 
+    .line 98
     sget p1, Lcom/mi/globallauncher/R$id;->item_icon:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -51,6 +55,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->imageView:Landroid/widget/ImageView;
 
+    .line 99
     sget p1, Lcom/mi/globallauncher/R$id;->item_name:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -61,6 +66,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
+    .line 100
     iget-object p0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -91,6 +97,7 @@
 .method public updateView(I)V
     .locals 2
 
+    .line 104
     iget-object v0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;->access$000(Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;)Ljava/util/List;
@@ -113,6 +120,7 @@
 
     goto/16 :goto_0
 
+    .line 107
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;
 
@@ -126,6 +134,7 @@
 
     check-cast p1, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;
 
+    .line 108
     iget-object v0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
@@ -140,6 +149,7 @@
 
     int-to-float v0, v0
 
+    .line 109
     iget-object v1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;
 
     invoke-static {v1}, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;->access$100(Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;)F
@@ -150,6 +160,7 @@
 
     float-to-int v0, v0
 
+    .line 110
     iget-object v1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -158,6 +169,7 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
+    .line 111
     iget-object v1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -166,10 +178,12 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
+    .line 112
     iget-object v0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->requestLayout()V
 
+    .line 113
     iget-object v0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->container:Landroid/widget/RelativeLayout;
 
     invoke-virtual {p1}, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;->getOriginalData()Ljava/lang/Object;
@@ -178,6 +192,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setTag(Ljava/lang/Object;)V
 
+    .line 114
     iget-object v0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;->getAppIcon()Landroid/graphics/drawable/Drawable;
@@ -186,6 +201,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 115
     iget-object v0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;->getAppTitle()Ljava/lang/String;
@@ -194,12 +210,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 116
     invoke-virtual {p1}, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;->isNewInstall()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 117
     iget-object p1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
     iget-object v0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;
@@ -222,6 +240,7 @@
 
     invoke-virtual {p1, v0, v1, v1, v1}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
+    .line 119
     :cond_1
     iget-object p1, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter;
 
@@ -231,6 +250,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 120
     iget-object p0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -247,6 +267,7 @@
 
     goto :goto_0
 
+    .line 122
     :cond_2
     iget-object p0, p0, Lcom/mi/globallauncher/local/FrequentUsedAppsGridAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 

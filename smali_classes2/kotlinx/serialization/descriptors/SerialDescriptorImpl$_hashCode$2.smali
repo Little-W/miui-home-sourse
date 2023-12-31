@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/descriptors/SerialDescriptorImpl$_hashCode$2;
 .super Lkotlin/jvm/internal/Lambda;
+.source "SerialDescriptors.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -47,6 +48,7 @@
 .method public final invoke()I
     .locals 1
 
+    .line 283
     iget-object p0, p0, Lkotlinx/serialization/descriptors/SerialDescriptorImpl$_hashCode$2;->this$0:Lkotlinx/serialization/descriptors/SerialDescriptorImpl;
 
     invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptorImpl;->access$getTypeParametersDescriptors$p(Lkotlinx/serialization/descriptors/SerialDescriptorImpl;)[Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -63,6 +65,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 267
     invoke-virtual {p0}, Lkotlinx/serialization/descriptors/SerialDescriptorImpl$_hashCode$2;->invoke()I
 
     move-result p0

@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/TransitionFilterExpose;
 .super Ljava/lang/Object;
+.source "TransitionFilterExpose.java"
 
 
 # annotations
@@ -18,8 +19,10 @@
 .method private constructor <init>(Landroid/window/TransitionFilter;)V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     iput-object p1, p0, Lcom/android/hideapi/TransitionFilterExpose;->instance:Landroid/window/TransitionFilter;
 
     return-void
@@ -28,6 +31,7 @@
 .method public static box(Landroid/window/TransitionFilter;)Lcom/android/hideapi/TransitionFilterExpose;
     .locals 1
 
+    .line 22
     new-instance v0, Lcom/android/hideapi/TransitionFilterExpose;
 
     invoke-direct {v0, p0}, Lcom/android/hideapi/TransitionFilterExpose;-><init>(Landroid/window/TransitionFilter;)V
@@ -46,6 +50,7 @@
         }
     .end annotation
 
+    .line 39
     const-class v0, Landroid/window/TransitionFilter;
 
     const-class v1, Landroid/os/Parcelable$Creator;
@@ -64,6 +69,7 @@
 .method public static newInstance()Lcom/android/hideapi/TransitionFilterExpose;
     .locals 3
 
+    .line 26
     const-class v0, Landroid/window/TransitionFilter;
 
     const/4 v1, 0x0
@@ -78,6 +84,7 @@
 
     check-cast v0, Landroid/window/TransitionFilter;
 
+    .line 27
     new-instance v1, Lcom/android/hideapi/TransitionFilterExpose;
 
     invoke-direct {v1, v0}, Lcom/android/hideapi/TransitionFilterExpose;-><init>(Landroid/window/TransitionFilter;)V
@@ -90,6 +97,7 @@
 .method public setNotFlags(I)V
     .locals 2
 
+    .line 31
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose;->instance:Landroid/window/TransitionFilter;
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -108,6 +116,7 @@
 .method public setRequirements([Landroid/window/TransitionFilter$Requirement;)V
     .locals 2
 
+    .line 35
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose;->instance:Landroid/window/TransitionFilter;
 
     const-class v0, [Landroid/window/TransitionFilter$Requirement;
@@ -122,6 +131,7 @@
 .method public unbox()Landroid/window/TransitionFilter;
     .locals 0
 
+    .line 18
     iget-object p0, p0, Lcom/android/hideapi/TransitionFilterExpose;->instance:Landroid/window/TransitionFilter;
 
     return-object p0

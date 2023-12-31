@@ -1,5 +1,6 @@
 .class public Lnet/lucode/hackware/magicindicator/FragmentContainerHelper;
 .super Ljava/lang/Object;
+.source "FragmentContainerHelper.java"
 
 
 # direct methods
@@ -17,6 +18,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 67
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -25,6 +27,7 @@
 
     if-gt p1, v0, :cond_0
 
+    .line 68
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -33,6 +36,7 @@
 
     return-object p0
 
+    .line 70
     :cond_0
     new-instance v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;
 
@@ -42,6 +46,7 @@
 
     const/4 v1, 0x0
 
+    .line 75
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -50,6 +55,7 @@
 
     goto :goto_0
 
+    .line 77
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -59,6 +65,7 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 78
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -71,6 +78,7 @@
 
     check-cast p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;
 
+    .line 80
     :goto_0
     iget v1, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mLeft:I
 
@@ -84,10 +92,12 @@
 
     iput v1, v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mLeft:I
 
+    .line 81
     iget v1, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mTop:I
 
     iput v1, v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mTop:I
 
+    .line 82
     iget v1, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mRight:I
 
     invoke-virtual {p0}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->width()I
@@ -100,10 +110,12 @@
 
     iput v1, v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mRight:I
 
+    .line 83
     iget v1, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mBottom:I
 
     iput v1, v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mBottom:I
 
+    .line 84
     iget v1, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mContentLeft:I
 
     invoke-virtual {p0}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->width()I
@@ -116,10 +128,12 @@
 
     iput v1, v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mContentLeft:I
 
+    .line 85
     iget v1, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mContentTop:I
 
     iput v1, v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mContentTop:I
 
+    .line 86
     iget v1, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mContentRight:I
 
     invoke-virtual {p0}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->width()I
@@ -132,6 +146,7 @@
 
     iput v1, v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mContentRight:I
 
+    .line 87
     iget p0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mContentBottom:I
 
     iput p0, v0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mContentBottom:I

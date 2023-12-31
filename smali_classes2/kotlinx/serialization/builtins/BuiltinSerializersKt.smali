@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/builtins/BuiltinSerializersKt;
 .super Ljava/lang/Object;
+.source "BuiltinSerializers.kt"
 
 
 # direct methods
@@ -27,6 +28,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 170
     new-instance v0, Lkotlinx/serialization/internal/ReferenceArraySerializer;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/serialization/internal/ReferenceArraySerializer;-><init>(Lkotlin/reflect/KClass;Lkotlinx/serialization/KSerializer;)V
@@ -46,6 +48,7 @@
         }
     .end annotation
 
+    .line 140
     sget-object v0, Lkotlinx/serialization/internal/BooleanArraySerializer;->INSTANCE:Lkotlinx/serialization/internal/BooleanArraySerializer;
 
     check-cast v0, Lkotlinx/serialization/KSerializer;
@@ -63,6 +66,7 @@
         }
     .end annotation
 
+    .line 74
     sget-object v0, Lkotlinx/serialization/internal/ByteArraySerializer;->INSTANCE:Lkotlinx/serialization/internal/ByteArraySerializer;
 
     check-cast v0, Lkotlinx/serialization/KSerializer;
@@ -80,6 +84,7 @@
         }
     .end annotation
 
+    .line 63
     sget-object v0, Lkotlinx/serialization/internal/CharArraySerializer;->INSTANCE:Lkotlinx/serialization/internal/CharArraySerializer;
 
     check-cast v0, Lkotlinx/serialization/KSerializer;
@@ -97,6 +102,7 @@
         }
     .end annotation
 
+    .line 129
     sget-object v0, Lkotlinx/serialization/internal/DoubleArraySerializer;->INSTANCE:Lkotlinx/serialization/internal/DoubleArraySerializer;
 
     check-cast v0, Lkotlinx/serialization/KSerializer;
@@ -114,6 +120,7 @@
         }
     .end annotation
 
+    .line 118
     sget-object v0, Lkotlinx/serialization/internal/FloatArraySerializer;->INSTANCE:Lkotlinx/serialization/internal/FloatArraySerializer;
 
     check-cast v0, Lkotlinx/serialization/KSerializer;
@@ -131,6 +138,7 @@
         }
     .end annotation
 
+    .line 96
     sget-object v0, Lkotlinx/serialization/internal/IntArraySerializer;->INSTANCE:Lkotlinx/serialization/internal/IntArraySerializer;
 
     check-cast v0, Lkotlinx/serialization/KSerializer;
@@ -157,6 +165,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 176
     new-instance v0, Lkotlinx/serialization/internal/ArrayListSerializer;
 
     invoke-direct {v0, p0}, Lkotlinx/serialization/internal/ArrayListSerializer;-><init>(Lkotlinx/serialization/KSerializer;)V
@@ -176,6 +185,7 @@
         }
     .end annotation
 
+    .line 107
     sget-object v0, Lkotlinx/serialization/internal/LongArraySerializer;->INSTANCE:Lkotlinx/serialization/internal/LongArraySerializer;
 
     check-cast v0, Lkotlinx/serialization/KSerializer;
@@ -210,6 +220,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 41
     new-instance v0, Lkotlinx/serialization/internal/MapEntrySerializer;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/serialization/internal/MapEntrySerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;)V
@@ -246,6 +257,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 191
     new-instance v0, Lkotlinx/serialization/internal/LinkedHashMapSerializer;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/serialization/internal/LinkedHashMapSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;)V
@@ -282,6 +294,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 30
     new-instance v0, Lkotlinx/serialization/internal/PairSerializer;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/serialization/internal/PairSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;)V
@@ -301,6 +314,7 @@
         }
     .end annotation
 
+    .line 85
     sget-object v0, Lkotlinx/serialization/internal/ShortArraySerializer;->INSTANCE:Lkotlinx/serialization/internal/ShortArraySerializer;
 
     check-cast v0, Lkotlinx/serialization/KSerializer;
@@ -343,6 +357,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 51
     new-instance v0, Lkotlinx/serialization/internal/TripleSerializer;
 
     invoke-direct {v0, p0, p1, p2}, Lkotlinx/serialization/internal/TripleSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;)V
@@ -370,6 +385,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 20
     invoke-interface {p0}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -412,6 +428,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 146
     sget-object p0, Lkotlinx/serialization/internal/UnitSerializer;->INSTANCE:Lkotlinx/serialization/internal/UnitSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -436,6 +453,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 134
     sget-object p0, Lkotlinx/serialization/internal/BooleanSerializer;->INSTANCE:Lkotlinx/serialization/internal/BooleanSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -460,6 +478,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 68
     sget-object p0, Lkotlinx/serialization/internal/ByteSerializer;->INSTANCE:Lkotlinx/serialization/internal/ByteSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -484,6 +503,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 56
     sget-object p0, Lkotlinx/serialization/internal/CharSerializer;->INSTANCE:Lkotlinx/serialization/internal/CharSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -508,6 +528,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 123
     sget-object p0, Lkotlinx/serialization/internal/DoubleSerializer;->INSTANCE:Lkotlinx/serialization/internal/DoubleSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -532,6 +553,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 112
     sget-object p0, Lkotlinx/serialization/internal/FloatSerializer;->INSTANCE:Lkotlinx/serialization/internal/FloatSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -556,6 +578,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 90
     sget-object p0, Lkotlinx/serialization/internal/IntSerializer;->INSTANCE:Lkotlinx/serialization/internal/IntSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -580,6 +603,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 101
     sget-object p0, Lkotlinx/serialization/internal/LongSerializer;->INSTANCE:Lkotlinx/serialization/internal/LongSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -604,6 +628,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 79
     sget-object p0, Lkotlinx/serialization/internal/ShortSerializer;->INSTANCE:Lkotlinx/serialization/internal/ShortSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -628,6 +653,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 151
     sget-object p0, Lkotlinx/serialization/internal/StringSerializer;->INSTANCE:Lkotlinx/serialization/internal/StringSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;

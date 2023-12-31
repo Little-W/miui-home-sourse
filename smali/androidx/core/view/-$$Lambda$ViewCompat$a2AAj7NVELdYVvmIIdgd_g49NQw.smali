@@ -1,5 +1,6 @@
 .class public final synthetic Landroidx/core/view/-$$Lambda$ViewCompat$a2AAj7NVELdYVvmIIdgd_g49NQw;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroidx/core/view/OnReceiveContentViewBehavior;

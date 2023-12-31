@@ -1,5 +1,6 @@
 .class public final enum Lcom/market/sdk/DetailPageRequest$PageType;
 .super Ljava/lang/Enum;
+.source "DetailPageRequest.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
+    .line 25
     new-instance v0, Lcom/market/sdk/DetailPageRequest$PageType;
 
     const/4 v1, 0x0
@@ -51,6 +53,7 @@
 
     sput-object v0, Lcom/market/sdk/DetailPageRequest$PageType;->DETAILS:Lcom/market/sdk/DetailPageRequest$PageType;
 
+    .line 26
     new-instance v0, Lcom/market/sdk/DetailPageRequest$PageType;
 
     const/4 v2, 0x1
@@ -63,6 +66,7 @@
 
     sput-object v0, Lcom/market/sdk/DetailPageRequest$PageType;->CARD:Lcom/market/sdk/DetailPageRequest$PageType;
 
+    .line 27
     new-instance v0, Lcom/market/sdk/DetailPageRequest$PageType;
 
     const/4 v3, 0x2
@@ -79,6 +83,7 @@
 
     new-array v0, v0, [Lcom/market/sdk/DetailPageRequest$PageType;
 
+    .line 24
     sget-object v4, Lcom/market/sdk/DetailPageRequest$PageType;->DETAILS:Lcom/market/sdk/DetailPageRequest$PageType;
 
     aput-object v4, v0, v1
@@ -106,8 +111,10 @@
         }
     .end annotation
 
+    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 32
     iput-object p3, p0, Lcom/market/sdk/DetailPageRequest$PageType;->data:Ljava/lang/String;
 
     return-void
@@ -116,6 +123,7 @@
 .method static synthetic access$000(Lcom/market/sdk/DetailPageRequest$PageType;)Ljava/lang/String;
     .locals 0
 
+    .line 24
     iget-object p0, p0, Lcom/market/sdk/DetailPageRequest$PageType;->data:Ljava/lang/String;
 
     return-object p0
@@ -124,6 +132,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/market/sdk/DetailPageRequest$PageType;
     .locals 1
 
+    .line 24
     const-class v0, Lcom/market/sdk/DetailPageRequest$PageType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -138,6 +147,7 @@
 .method public static values()[Lcom/market/sdk/DetailPageRequest$PageType;
     .locals 1
 
+    .line 24
     sget-object v0, Lcom/market/sdk/DetailPageRequest$PageType;->$VALUES:[Lcom/market/sdk/DetailPageRequest$PageType;
 
     invoke-virtual {v0}, [Lcom/market/sdk/DetailPageRequest$PageType;->clone()Ljava/lang/Object;

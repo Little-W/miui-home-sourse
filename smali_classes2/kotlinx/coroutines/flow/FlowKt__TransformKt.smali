@@ -1,5 +1,6 @@
 .class final synthetic Lkotlinx/coroutines/flow/FlowKt__TransformKt;
 .super Ljava/lang/Object;
+.source "Transform.kt"
 
 
 # annotations
@@ -31,6 +32,7 @@
         }
     .end annotation
 
+    .line 142
     new-instance v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function2;)V

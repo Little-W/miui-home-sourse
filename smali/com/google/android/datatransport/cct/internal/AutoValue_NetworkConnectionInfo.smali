@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;
 .super Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;
+.source "AutoValue_NetworkConnectionInfo.java"
 
 
 # annotations
@@ -20,10 +21,13 @@
 .method private constructor <init>(Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;)V
     .locals 0
 
+    .line 16
     invoke-direct {p0}, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;-><init>()V
 
+    .line 17
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;->networkType:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
 
+    .line 18
     iput-object p2, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;->mobileSubtype:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;
 
     return-void
@@ -32,6 +36,7 @@
 .method synthetic constructor <init>(Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo$1;)V
     .locals 0
 
+    .line 8
     invoke-direct {p0, p1, p2}, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;-><init>(Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;)V
 
     return-void
@@ -48,6 +53,7 @@
 
     return v0
 
+    .line 46
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;
 
@@ -55,8 +61,10 @@
 
     if-eqz v1, :cond_4
 
+    .line 47
     check-cast p1, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;
 
+    .line 48
     iget-object v1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;->networkType:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
 
     if-nez v1, :cond_1
@@ -85,6 +93,7 @@
 
     if-nez p0, :cond_2
 
+    .line 49
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo;->getMobileSubtype()Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;
 
     move-result-object p0
@@ -119,6 +128,7 @@
 .method public getMobileSubtype()Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;
     .locals 0
 
+    .line 30
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;->mobileSubtype:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;
 
     return-object p0
@@ -127,6 +137,7 @@
 .method public getNetworkType()Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
     .locals 0
 
+    .line 24
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;->networkType:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
 
     return-object p0
@@ -135,6 +146,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 58
     iget-object v0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;->networkType:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
 
     const/4 v1, 0x0
@@ -157,6 +169,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 60
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo;->mobileSubtype:Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$MobileSubtype;
 
     if-nez p0, :cond_1
@@ -177,6 +190,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

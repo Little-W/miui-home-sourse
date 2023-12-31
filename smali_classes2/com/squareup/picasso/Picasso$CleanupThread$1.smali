@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/Picasso$CleanupThread$1;
 .super Ljava/lang/Object;
+.source "Picasso.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/squareup/picasso/Picasso$CleanupThread;Ljava/lang/Exception;)V
     .locals 0
 
+    .line 643
     iput-object p1, p0, Lcom/squareup/picasso/Picasso$CleanupThread$1;->this$0:Lcom/squareup/picasso/Picasso$CleanupThread;
 
     iput-object p2, p0, Lcom/squareup/picasso/Picasso$CleanupThread$1;->val$e:Ljava/lang/Exception;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 645
     new-instance v0, Ljava/lang/RuntimeException;
 
     iget-object p0, p0, Lcom/squareup/picasso/Picasso$CleanupThread$1;->val$e:Ljava/lang/Exception;

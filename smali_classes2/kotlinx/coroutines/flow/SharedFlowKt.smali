@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/SharedFlowKt;
 .super Ljava/lang/Object;
+.source "SharedFlow.kt"
 
 
 # annotations
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 641
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "NO_VALUE"
@@ -73,6 +75,7 @@
 
     if-gtz p1, :cond_3
 
+    .line 210
     sget-object v2, Lkotlinx/coroutines/channels/BufferOverflow;->SUSPEND:Lkotlinx/coroutines/channels/BufferOverflow;
 
     if-ne p2, v2, :cond_2
@@ -92,6 +95,7 @@
 
     const p1, 0x7fffffff
 
+    .line 215
     :cond_4
     new-instance v0, Lkotlinx/coroutines/flow/SharedFlowImpl;
 
@@ -101,6 +105,7 @@
 
     return-object v0
 
+    .line 211
     :cond_5
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -116,6 +121,7 @@
 
     move-result-object p0
 
+    .line 210
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -128,6 +134,7 @@
 
     throw p1
 
+    .line 209
     :cond_6
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -155,6 +162,7 @@
 
     throw p1
 
+    .line 208
     :cond_7
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -206,6 +214,7 @@
 
     if-eqz p3, :cond_2
 
+    .line 206
     sget-object p2, Lkotlinx/coroutines/channels/BufferOverflow;->SUSPEND:Lkotlinx/coroutines/channels/BufferOverflow;
 
     :cond_2
@@ -219,6 +228,7 @@
 .method public static final synthetic access$getBufferAt([Ljava/lang/Object;J)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lkotlinx/coroutines/flow/SharedFlowKt;->getBufferAt([Ljava/lang/Object;J)Ljava/lang/Object;
 
     move-result-object p0
@@ -229,6 +239,7 @@
 .method public static final synthetic access$setBufferAt([Ljava/lang/Object;JLjava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2, p3}, Lkotlinx/coroutines/flow/SharedFlowKt;->setBufferAt([Ljava/lang/Object;JLjava/lang/Object;)V
 
     return-void
@@ -239,6 +250,7 @@
 
     long-to-int p1, p1
 
+    .line 643
     array-length p2, p0
 
     add-int/lit8 p2, p2, -0x1
@@ -255,6 +267,7 @@
 
     long-to-int p1, p1
 
+    .line 644
     array-length p2, p0
 
     add-int/lit8 p2, p2, -0x1

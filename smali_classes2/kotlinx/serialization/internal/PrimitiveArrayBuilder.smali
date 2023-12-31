@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/PrimitiveArrayBuilder;
 .super Ljava/lang/Object;
+.source "CollectionSerializers.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +33,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 132
     invoke-virtual {p0}, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;->getPosition$kotlinx_serialization_core()I
 
     move-result p1
@@ -42,6 +45,7 @@
 
     return-void
 
+    .line 0
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/ClearTextEndIconDelegate$3;
 .super Ljava/lang/Object;
+.source "ClearTextEndIconDelegate.java"
 
 # interfaces
 .implements Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)V
     .locals 0
 
+    .line 69
     iput-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$3;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +38,12 @@
 .method public onEditTextAttached(Lcom/google/android/material/textfield/TextInputLayout;)V
     .locals 2
 
+    .line 72
     invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
     move-result-object v0
 
+    .line 73
     iget-object v1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$3;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-static {v1}, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->access$000(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)Z
@@ -48,6 +52,7 @@
 
     invoke-virtual {p1, v1}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconVisible(Z)V
 
+    .line 74
     iget-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$3;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-static {p1}, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->access$200(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)Landroid/view/View$OnFocusChangeListener;
@@ -56,6 +61,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
+    .line 75
     iget-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$3;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     iget-object p1, p1, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
@@ -68,6 +74,7 @@
 
     invoke-virtual {p1, v1}, Lcom/google/android/material/internal/CheckableImageButton;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
+    .line 77
     iget-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$3;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-static {p1}, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->access$300(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)Landroid/text/TextWatcher;
@@ -76,6 +83,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
+    .line 78
     iget-object p0, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$3;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-static {p0}, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->access$300(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)Landroid/text/TextWatcher;

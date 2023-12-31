@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;
 .super Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;
+.source "AutoValue_AndroidClientInfo.java"
 
 
 # annotations
@@ -40,30 +41,43 @@
 .method private constructor <init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 46
     invoke-direct {p0}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;-><init>()V
 
+    .line 47
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->sdkVersion:Ljava/lang/Integer;
 
+    .line 48
     iput-object p2, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->model:Ljava/lang/String;
 
+    .line 49
     iput-object p3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->hardware:Ljava/lang/String;
 
+    .line 50
     iput-object p4, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->device:Ljava/lang/String;
 
+    .line 51
     iput-object p5, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->product:Ljava/lang/String;
 
+    .line 52
     iput-object p6, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->osBuild:Ljava/lang/String;
 
+    .line 53
     iput-object p7, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->manufacturer:Ljava/lang/String;
 
+    .line 54
     iput-object p8, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->fingerprint:Ljava/lang/String;
 
+    .line 55
     iput-object p9, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->locale:Ljava/lang/String;
 
+    .line 56
     iput-object p10, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->country:Ljava/lang/String;
 
+    .line 57
     iput-object p11, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->mccMnc:Ljava/lang/String;
 
+    .line 58
     iput-object p12, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->applicationBuild:Ljava/lang/String;
 
     return-void
@@ -72,6 +86,7 @@
 .method synthetic constructor <init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo$1;)V
     .locals 0
 
+    .line 8
     invoke-direct/range {p0 .. p12}, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -88,6 +103,7 @@
 
     return v0
 
+    .line 156
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;
 
@@ -95,8 +111,10 @@
 
     if-eqz v1, :cond_e
 
+    .line 157
     check-cast p1, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;
 
+    .line 158
     iget-object v1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->sdkVersion:Ljava/lang/Integer;
 
     if-nez v1, :cond_1
@@ -125,6 +143,7 @@
 
     if-nez v1, :cond_2
 
+    .line 159
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getModel()Ljava/lang/String;
 
     move-result-object v1
@@ -149,6 +168,7 @@
 
     if-nez v1, :cond_3
 
+    .line 160
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getHardware()Ljava/lang/String;
 
     move-result-object v1
@@ -173,6 +193,7 @@
 
     if-nez v1, :cond_4
 
+    .line 161
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getDevice()Ljava/lang/String;
 
     move-result-object v1
@@ -197,6 +218,7 @@
 
     if-nez v1, :cond_5
 
+    .line 162
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getProduct()Ljava/lang/String;
 
     move-result-object v1
@@ -221,6 +243,7 @@
 
     if-nez v1, :cond_6
 
+    .line 163
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getOsBuild()Ljava/lang/String;
 
     move-result-object v1
@@ -245,6 +268,7 @@
 
     if-nez v1, :cond_7
 
+    .line 164
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getManufacturer()Ljava/lang/String;
 
     move-result-object v1
@@ -269,6 +293,7 @@
 
     if-nez v1, :cond_8
 
+    .line 165
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getFingerprint()Ljava/lang/String;
 
     move-result-object v1
@@ -293,6 +318,7 @@
 
     if-nez v1, :cond_9
 
+    .line 166
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getLocale()Ljava/lang/String;
 
     move-result-object v1
@@ -317,6 +343,7 @@
 
     if-nez v1, :cond_a
 
+    .line 167
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getCountry()Ljava/lang/String;
 
     move-result-object v1
@@ -341,6 +368,7 @@
 
     if-nez v1, :cond_b
 
+    .line 168
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getMccMnc()Ljava/lang/String;
 
     move-result-object v1
@@ -365,6 +393,7 @@
 
     if-nez p0, :cond_c
 
+    .line 169
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;->getApplicationBuild()Ljava/lang/String;
 
     move-result-object p0
@@ -399,6 +428,7 @@
 .method public getApplicationBuild()Ljava/lang/String;
     .locals 0
 
+    .line 130
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->applicationBuild:Ljava/lang/String;
 
     return-object p0
@@ -407,6 +437,7 @@
 .method public getCountry()Ljava/lang/String;
     .locals 0
 
+    .line 118
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->country:Ljava/lang/String;
 
     return-object p0
@@ -415,6 +446,7 @@
 .method public getDevice()Ljava/lang/String;
     .locals 0
 
+    .line 82
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->device:Ljava/lang/String;
 
     return-object p0
@@ -423,6 +455,7 @@
 .method public getFingerprint()Ljava/lang/String;
     .locals 0
 
+    .line 106
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->fingerprint:Ljava/lang/String;
 
     return-object p0
@@ -431,6 +464,7 @@
 .method public getHardware()Ljava/lang/String;
     .locals 0
 
+    .line 76
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->hardware:Ljava/lang/String;
 
     return-object p0
@@ -439,6 +473,7 @@
 .method public getLocale()Ljava/lang/String;
     .locals 0
 
+    .line 112
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->locale:Ljava/lang/String;
 
     return-object p0
@@ -447,6 +482,7 @@
 .method public getManufacturer()Ljava/lang/String;
     .locals 0
 
+    .line 100
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->manufacturer:Ljava/lang/String;
 
     return-object p0
@@ -455,6 +491,7 @@
 .method public getMccMnc()Ljava/lang/String;
     .locals 0
 
+    .line 124
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->mccMnc:Ljava/lang/String;
 
     return-object p0
@@ -463,6 +500,7 @@
 .method public getModel()Ljava/lang/String;
     .locals 0
 
+    .line 70
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->model:Ljava/lang/String;
 
     return-object p0
@@ -471,6 +509,7 @@
 .method public getOsBuild()Ljava/lang/String;
     .locals 0
 
+    .line 94
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->osBuild:Ljava/lang/String;
 
     return-object p0
@@ -479,6 +518,7 @@
 .method public getProduct()Ljava/lang/String;
     .locals 0
 
+    .line 88
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->product:Ljava/lang/String;
 
     return-object p0
@@ -487,6 +527,7 @@
 .method public getSdkVersion()Ljava/lang/Integer;
     .locals 0
 
+    .line 64
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->sdkVersion:Ljava/lang/Integer;
 
     return-object p0
@@ -495,6 +536,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 178
     iget-object v0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->sdkVersion:Ljava/lang/Integer;
 
     const/4 v1, 0x0
@@ -517,6 +559,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 180
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->model:Ljava/lang/String;
 
     if-nez v3, :cond_1
@@ -535,6 +578,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 182
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->hardware:Ljava/lang/String;
 
     if-nez v3, :cond_2
@@ -553,6 +597,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 184
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->device:Ljava/lang/String;
 
     if-nez v3, :cond_3
@@ -571,6 +616,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 186
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->product:Ljava/lang/String;
 
     if-nez v3, :cond_4
@@ -589,6 +635,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 188
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->osBuild:Ljava/lang/String;
 
     if-nez v3, :cond_5
@@ -607,6 +654,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 190
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->manufacturer:Ljava/lang/String;
 
     if-nez v3, :cond_6
@@ -625,6 +673,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 192
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->fingerprint:Ljava/lang/String;
 
     if-nez v3, :cond_7
@@ -643,6 +692,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 194
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->locale:Ljava/lang/String;
 
     if-nez v3, :cond_8
@@ -661,6 +711,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 196
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->country:Ljava/lang/String;
 
     if-nez v3, :cond_9
@@ -679,6 +730,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 198
     iget-object v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->mccMnc:Ljava/lang/String;
 
     if-nez v3, :cond_a
@@ -697,6 +749,7 @@
 
     mul-int/2addr v0, v2
 
+    .line 200
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_AndroidClientInfo;->applicationBuild:Ljava/lang/String;
 
     if-nez p0, :cond_b
@@ -717,6 +770,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 135
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

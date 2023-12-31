@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/-$$Lambda$FirebaseCommonRegistrar$pGT1R--cP4RapBpOq2V73IRqI1I;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;

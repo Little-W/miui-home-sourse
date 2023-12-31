@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$1;
 .super Ljava/lang/Object;
+.source "ExecutorUtils.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -26,6 +27,7 @@
 .method constructor <init>(Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicLong;)V
     .locals 0
 
+    .line 55
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$1;->val$threadNameTemplate:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$1;->val$count:Ljava/util/concurrent/atomic/AtomicLong;
@@ -40,6 +42,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
+    .line 59
     invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v0
@@ -48,10 +51,12 @@
 
     invoke-direct {v1, p0, p1}, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$1$1;-><init>(Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$1;Ljava/lang/Runnable;)V
 
+    .line 60
     invoke-interface {v0, v1}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
     move-result-object p1
 
+    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/material/shape/ShapeAppearanceModel$CornerSizeUnaryOperator;
 .super Ljava/lang/Object;
+.source "ShapeAppearanceModel.java"
 
 
 # annotations

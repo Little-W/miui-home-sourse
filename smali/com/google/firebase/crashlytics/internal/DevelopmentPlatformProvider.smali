@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;
 .super Ljava/lang/Object;
+.source "DevelopmentPlatformProvider.java"
 
 
 # instance fields
@@ -12,12 +13,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "com.google.firebase.crashlytics.unity_version"
 
     const-string v1, "string"
 
+    .line 33
     invoke-static {p1, v0, v1}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->getResourcesIdentifier(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -26,8 +29,10 @@
 
     const-string v1, "Unity"
 
+    .line 35
     iput-object v1, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->developmentPlatform:Ljava/lang/String;
 
+    .line 36
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -38,6 +43,7 @@
 
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->developmentPlatformVersion:Ljava/lang/String;
 
+    .line 37
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p1
@@ -65,8 +71,10 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 41
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->developmentPlatform:Ljava/lang/String;
 
+    .line 42
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->developmentPlatformVersion:Ljava/lang/String;
 
     return-void
@@ -77,6 +85,7 @@
 .method public getDevelopmentPlatform()Ljava/lang/String;
     .locals 0
 
+    .line 52
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->developmentPlatform:Ljava/lang/String;
 
     return-object p0
@@ -85,6 +94,7 @@
 .method public getDevelopmentPlatformVersion()Ljava/lang/String;
     .locals 0
 
+    .line 62
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->developmentPlatformVersion:Ljava/lang/String;
 
     return-object p0

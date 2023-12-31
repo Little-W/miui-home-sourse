@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/ClassJsonAdapter$1;
 .super Ljava/lang/Object;
+.source "ClassJsonAdapter.java"
 
 # interfaces
 .implements Lcom/squareup/moshi/JsonAdapter$Factory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,14 +41,17 @@
         }
     .end annotation
 
+    .line 83
     invoke-static {p2}, Lcom/squareup/moshi/Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 84
     invoke-static {v0}, Lcom/squareup/moshi/ClassJsonAdapter;->isPlatformType(Ljava/lang/Class;)Z
 
     move-result v1
 
+    .line 85
     invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v2
@@ -60,6 +65,7 @@
 
     aget-object v5, v2, v4
 
+    .line 86
     invoke-virtual {v5}, Ljava/lang/reflect/Field;->getModifiers()I
 
     move-result v6
@@ -72,6 +78,7 @@
 
     goto :goto_2
 
+    .line 89
     :cond_0
     invoke-virtual {v5}, Ljava/lang/reflect/Field;->getGenericType()Ljava/lang/reflect/Type;
 
@@ -81,18 +88,22 @@
 
     move-result-object v6
 
+    .line 90
     invoke-static {v5}, Lcom/squareup/moshi/Util;->jsonAnnotations(Ljava/lang/reflect/AnnotatedElement;)Ljava/util/Set;
 
     move-result-object v7
 
+    .line 91
     invoke-virtual {p1, v6, v7}, Lcom/squareup/moshi/Moshi;->adapter(Ljava/lang/reflect/Type;Ljava/util/Set;)Lcom/squareup/moshi/JsonAdapter;
 
     move-result-object v6
 
     const/4 v7, 0x1
 
+    .line 94
     invoke-virtual {v5, v7}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 97
     const-class v7, Lcom/squareup/moshi/Json;
 
     invoke-virtual {v5, v7}, Ljava/lang/reflect/Field;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -103,6 +114,7 @@
 
     if-eqz v7, :cond_1
 
+    .line 98
     invoke-interface {v7}, Lcom/squareup/moshi/Json;->name()Ljava/lang/String;
 
     move-result-object v7
@@ -114,11 +126,13 @@
 
     move-result-object v7
 
+    .line 99
     :goto_1
     new-instance v8, Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;
 
     invoke-direct {v8, v7, v5, v6}, Lcom/squareup/moshi/ClassJsonAdapter$FieldBinding;-><init>(Ljava/lang/String;Ljava/lang/reflect/Field;Lcom/squareup/moshi/JsonAdapter;)V
 
+    .line 100
     invoke-interface {p3, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -132,6 +146,7 @@
 
     goto :goto_0
 
+    .line 102
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -174,6 +189,7 @@
 .method private includeField(ZI)Z
     .locals 1
 
+    .line 111
     invoke-static {p2}, Ljava/lang/reflect/Modifier;->isStatic(I)Z
 
     move-result p0
@@ -190,6 +206,7 @@
 
     goto :goto_0
 
+    .line 112
     :cond_0
     invoke-static {p2}, Ljava/lang/reflect/Modifier;->isPublic(I)Z
 
@@ -235,10 +252,12 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 48
     invoke-static {p1}, Lcom/squareup/moshi/Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 49
     invoke-virtual {v0}, Ljava/lang/Class;->isInterface()Z
 
     move-result v1
@@ -255,6 +274,7 @@
 
     goto/16 :goto_2
 
+    .line 50
     :cond_0
     invoke-static {v0}, Lcom/squareup/moshi/ClassJsonAdapter;->isPlatformType(Ljava/lang/Class;)Z
 
@@ -270,6 +290,7 @@
 
     goto :goto_0
 
+    .line 51
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -301,6 +322,7 @@
 
     throw p0
 
+    .line 57
     :cond_2
     :goto_0
     invoke-interface {p2}, Ljava/util/Set;->isEmpty()Z
@@ -311,6 +333,7 @@
 
     return-object v2
 
+    .line 59
     :cond_3
     invoke-virtual {v0}, Ljava/lang/Class;->getEnclosingClass()Ljava/lang/Class;
 
@@ -328,6 +351,7 @@
 
     if-nez p2, :cond_5
 
+    .line 60
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p0
@@ -338,6 +362,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 61
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -348,6 +373,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 62
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p2
@@ -362,6 +388,7 @@
 
     throw p0
 
+    .line 64
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -373,6 +400,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 65
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p2
@@ -387,6 +415,7 @@
 
     throw p0
 
+    .line 68
     :cond_5
     invoke-virtual {v0}, Ljava/lang/Class;->getModifiers()I
 
@@ -398,27 +427,33 @@
 
     if-nez p2, :cond_7
 
+    .line 72
     invoke-static {v0}, Lcom/squareup/moshi/ClassFactory;->get(Ljava/lang/Class;)Lcom/squareup/moshi/ClassFactory;
 
     move-result-object p2
 
+    .line 73
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
+    .line 74
     :goto_1
     const-class v1, Ljava/lang/Object;
 
     if-eq p1, v1, :cond_6
 
+    .line 75
     invoke-direct {p0, p3, p1, v0}, Lcom/squareup/moshi/ClassJsonAdapter$1;->createFieldBindings(Lcom/squareup/moshi/Moshi;Ljava/lang/reflect/Type;Ljava/util/Map;)V
 
+    .line 74
     invoke-static {p1}, Lcom/squareup/moshi/Types;->getGenericSuperclass(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
     move-result-object p1
 
     goto :goto_1
 
+    .line 77
     :cond_6
     new-instance p0, Lcom/squareup/moshi/ClassJsonAdapter;
 
@@ -430,6 +465,7 @@
 
     return-object p0
 
+    .line 69
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

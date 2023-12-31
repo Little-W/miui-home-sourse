@@ -1,5 +1,6 @@
 .class final Lokhttp3/internal/platform/Jdk9Platform;
 .super Lokhttp3/internal/platform/Platform;
+.source "Jdk9Platform.java"
 
 
 # instance fields
@@ -12,10 +13,13 @@
 .method constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
     .locals 0
 
+    .line 37
     invoke-direct {p0}, Lokhttp3/internal/platform/Platform;-><init>()V
 
+    .line 38
     iput-object p1, p0, Lokhttp3/internal/platform/Jdk9Platform;->setProtocolMethod:Ljava/lang/reflect/Method;
 
+    .line 39
     iput-object p2, p0, Lokhttp3/internal/platform/Jdk9Platform;->getProtocolMethod:Ljava/lang/reflect/Method;
 
     return-void
@@ -24,6 +28,7 @@
 .method public static buildIfSupported()Lokhttp3/internal/platform/Jdk9Platform;
     .locals 5
 
+    .line 96
     :try_start_0
     const-class v0, Ljavax/net/ssl/SSLParameters;
 
@@ -39,10 +44,12 @@
 
     aput-object v3, v2, v4
 
+    .line 97
     invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
+    .line 98
     const-class v1, Ljavax/net/ssl/SSLSocket;
 
     const-string v2, "getApplicationProtocol"
@@ -53,6 +60,7 @@
 
     move-result-object v1
 
+    .line 100
     new-instance v2, Lokhttp3/internal/platform/Jdk9Platform;
 
     invoke-direct {v2, v0, v1}, Lokhttp3/internal/platform/Jdk9Platform;-><init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
@@ -82,15 +90,18 @@
         }
     .end annotation
 
+    .line 46
     :try_start_0
     invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSSLParameters()Ljavax/net/ssl/SSLParameters;
 
     move-result-object p2
 
+    .line 48
     invoke-static {p3}, Lokhttp3/internal/platform/Jdk9Platform;->alpnProtocolNames(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p3
 
+    .line 50
     iget-object p0, p0, Lokhttp3/internal/platform/Jdk9Platform;->setProtocolMethod:Ljava/lang/reflect/Method;
 
     const/4 v0, 0x1
@@ -99,6 +110,7 @@
 
     const/4 v1, 0x0
 
+    .line 51
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v2
@@ -111,8 +123,10 @@
 
     aput-object p3, v0, v1
 
+    .line 50
     invoke-virtual {p0, p2, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 53
     invoke-virtual {p1, p2}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
@@ -125,6 +139,7 @@
 
     const-string p1, "unable to set ssl parameters"
 
+    .line 55
     invoke-static {p1, p0}, Lokhttp3/internal/Util;->assertionError(Ljava/lang/String;Ljava/lang/Exception;)Ljava/lang/AssertionError;
 
     move-result-object p0
@@ -141,6 +156,7 @@
 
     const/4 v1, 0x0
 
+    .line 62
     :try_start_0
     iget-object p0, p0, Lokhttp3/internal/platform/Jdk9Platform;->getProtocolMethod:Ljava/lang/reflect/Method;
 
@@ -158,6 +174,7 @@
 
     const-string p1, ""
 
+    .line 66
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -179,6 +196,7 @@
     :catch_0
     move-exception p0
 
+    .line 80
     invoke-static {v0, p0}, Lokhttp3/internal/Util;->assertionError(Ljava/lang/String;Ljava/lang/Exception;)Ljava/lang/AssertionError;
 
     move-result-object p0
@@ -188,6 +206,7 @@
     :catch_1
     move-exception p0
 
+    .line 72
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
@@ -198,6 +217,7 @@
 
     return-object v1
 
+    .line 78
     :cond_2
     invoke-static {v0, p0}, Lokhttp3/internal/Util;->assertionError(Ljava/lang/String;Ljava/lang/Exception;)Ljava/lang/AssertionError;
 

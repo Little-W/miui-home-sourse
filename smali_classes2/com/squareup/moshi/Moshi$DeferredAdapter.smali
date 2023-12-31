@@ -1,5 +1,6 @@
 .class Lcom/squareup/moshi/Moshi$DeferredAdapter;
 .super Lcom/squareup/moshi/JsonAdapter;
+.source "Moshi.java"
 
 
 # annotations
@@ -46,8 +47,10 @@
 .method constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 223
     invoke-direct {p0}, Lcom/squareup/moshi/JsonAdapter;-><init>()V
 
+    .line 224
     iput-object p1, p0, Lcom/squareup/moshi/Moshi$DeferredAdapter;->cacheKey:Ljava/lang/Object;
 
     return-void
@@ -71,16 +74,19 @@
         }
     .end annotation
 
+    .line 233
     iget-object p0, p0, Lcom/squareup/moshi/Moshi$DeferredAdapter;->delegate:Lcom/squareup/moshi/JsonAdapter;
 
     if-eqz p0, :cond_0
 
+    .line 234
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/JsonAdapter;->fromJson(Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 233
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -101,10 +107,12 @@
         }
     .end annotation
 
+    .line 228
     iput-object p1, p0, Lcom/squareup/moshi/Moshi$DeferredAdapter;->delegate:Lcom/squareup/moshi/JsonAdapter;
 
     const/4 p1, 0x0
 
+    .line 229
     iput-object p1, p0, Lcom/squareup/moshi/Moshi$DeferredAdapter;->cacheKey:Ljava/lang/Object;
 
     return-void

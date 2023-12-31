@@ -1,5 +1,6 @@
 .class public final Lokio/Options;
 .super Ljava/util/AbstractList;
+.source "Options.java"
 
 # interfaces
 .implements Ljava/util/RandomAccess;
@@ -26,10 +27,13 @@
 .method private constructor <init>([Lokio/ByteString;[I)V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 31
     iput-object p1, p0, Lokio/Options;->byteStrings:[Lokio/ByteString;
 
+    .line 32
     iput-object p2, p0, Lokio/Options;->trie:[I
 
     return-void
@@ -70,6 +74,7 @@
     :goto_0
     if-ge v3, v11, :cond_1
 
+    .line 125
     invoke-interface {v10, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -93,6 +98,7 @@
 
     throw v0
 
+    .line 128
     :cond_1
     invoke-interface/range {p4 .. p5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -102,6 +108,7 @@
 
     add-int/lit8 v4, v11, -0x1
 
+    .line 129
     invoke-interface {v10, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -110,12 +117,14 @@
 
     const/4 v5, -0x1
 
+    .line 133
     invoke-virtual {v3}, Lokio/ByteString;->size()I
 
     move-result v6
 
     if-ne v1, v6, :cond_2
 
+    .line 134
     invoke-interface {v12, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -128,6 +137,7 @@
 
     add-int/lit8 v2, v2, 0x1
 
+    .line 136
     invoke-interface {v10, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -137,6 +147,7 @@
     :cond_2
     move v6, v2
 
+    .line 139
     invoke-virtual {v3, v1}, Lokio/ByteString;->getByte(I)B
 
     move-result v2
@@ -158,6 +169,7 @@
 
     add-int/lit8 v4, v2, -0x1
 
+    .line 143
     invoke-interface {v10, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -168,6 +180,7 @@
 
     move-result v4
 
+    .line 144
     invoke-interface {v10, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -187,6 +200,7 @@
 
     goto :goto_1
 
+    .line 150
     :cond_4
     invoke-static/range {p2 .. p2}, Lokio/Options;->intCount(Lokio/Buffer;)I
 
@@ -204,8 +218,10 @@
 
     add-long/2addr v13, v7
 
+    .line 152
     invoke-virtual {v0, v3}, Lokio/Buffer;->writeInt(I)Lokio/Buffer;
 
+    .line 153
     invoke-virtual {v0, v5}, Lokio/Buffer;->writeInt(I)Lokio/Buffer;
 
     move v2, v6
@@ -213,6 +229,7 @@
     :goto_2
     if-ge v2, v11, :cond_7
 
+    .line 156
     invoke-interface {v10, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -227,6 +244,7 @@
 
     add-int/lit8 v4, v2, -0x1
 
+    .line 157
     invoke-interface {v10, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -242,6 +260,7 @@
     :cond_5
     and-int/lit16 v3, v3, 0xff
 
+    .line 158
     invoke-virtual {v0, v3}, Lokio/Buffer;->writeInt(I)Lokio/Buffer;
 
     :cond_6
@@ -249,6 +268,7 @@
 
     goto :goto_2
 
+    .line 162
     :cond_7
     new-instance v9, Lokio/Buffer;
 
@@ -259,6 +279,7 @@
     :goto_3
     if-ge v7, v11, :cond_b
 
+    .line 165
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -276,6 +297,7 @@
     :goto_4
     if-ge v4, v11, :cond_9
 
+    .line 168
     invoke-interface {v10, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -305,6 +327,7 @@
 
     add-int/lit8 v2, v1, 0x1
 
+    .line 175
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -317,6 +340,7 @@
 
     if-ne v2, v3, :cond_a
 
+    .line 177
     invoke-interface {v12, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -335,6 +359,7 @@
 
     goto :goto_6
 
+    .line 180
     :cond_a
     invoke-static {v9}, Lokio/Options;->intCount(Lokio/Buffer;)I
 
@@ -366,6 +391,7 @@
 
     move-object/from16 v9, p7
 
+    .line 181
     invoke-static/range {v2 .. v9}, Lokio/Options;->buildTrieRecursive(JLokio/Buffer;ILjava/util/List;IILjava/util/List;)V
 
     :goto_6
@@ -378,6 +404,7 @@
     :cond_b
     move-object/from16 p0, v9
 
+    .line 194
     invoke-virtual/range {p0 .. p0}, Lokio/Buffer;->size()J
 
     move-result-wide v1
@@ -391,6 +418,7 @@
     :cond_c
     const/4 v2, 0x0
 
+    .line 199
     invoke-virtual {v3}, Lokio/ByteString;->size()I
 
     move-result v7
@@ -410,6 +438,7 @@
     :goto_7
     if-ge v2, v7, :cond_d
 
+    .line 200
     invoke-virtual {v3, v2}, Lokio/ByteString;->getByte(I)B
 
     move-result v14
@@ -426,6 +455,7 @@
 
     goto :goto_7
 
+    .line 208
     :cond_d
     invoke-static/range {p2 .. p2}, Lokio/Options;->intCount(Lokio/Buffer;)I
 
@@ -447,8 +477,10 @@
 
     neg-int v2, v13
 
+    .line 210
     invoke-virtual {v0, v2}, Lokio/Buffer;->writeInt(I)Lokio/Buffer;
 
+    .line 211
     invoke-virtual {v0, v5}, Lokio/Buffer;->writeInt(I)Lokio/Buffer;
 
     move v2, v1
@@ -458,6 +490,7 @@
 
     if-ge v2, v4, :cond_e
 
+    .line 214
     invoke-virtual {v3, v2}, Lokio/ByteString;->getByte(I)B
 
     move-result v4
@@ -475,6 +508,7 @@
 
     if-ne v1, v11, :cond_10
 
+    .line 219
     invoke-interface {v10, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -487,6 +521,7 @@
 
     if-ne v4, v1, :cond_f
 
+    .line 222
     invoke-interface {v12, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -501,6 +536,7 @@
 
     goto :goto_9
 
+    .line 220
     :cond_f
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -508,11 +544,13 @@
 
     throw v0
 
+    .line 225
     :cond_10
     new-instance v9, Lokio/Buffer;
 
     invoke-direct {v9}, Lokio/Buffer;-><init>()V
 
+    .line 226
     invoke-static {v9}, Lokio/Options;->intCount(Lokio/Buffer;)I
 
     move-result v1
@@ -539,8 +577,10 @@
 
     move-object/from16 v8, p7
 
+    .line 227
     invoke-static/range {v1 .. v8}, Lokio/Options;->buildTrieRecursive(JLokio/Buffer;ILjava/util/List;IILjava/util/List;)V
 
+    .line 235
     invoke-virtual {v9}, Lokio/Buffer;->size()J
 
     move-result-wide v1
@@ -550,6 +590,7 @@
     :goto_9
     return-void
 
+    .line 123
     :cond_11
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -561,6 +602,7 @@
 .method private static intCount(Lokio/Buffer;)I
     .locals 4
 
+    .line 249
     invoke-virtual {p0}, Lokio/Buffer;->size()J
 
     move-result-wide v0
@@ -577,12 +619,14 @@
 .method public static varargs of([Lokio/ByteString;)Lokio/Options;
     .locals 10
 
+    .line 36
     array-length v0, p0
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
+    .line 38
     new-instance p0, Lokio/Options;
 
     new-array v0, v1, [Lokio/ByteString;
@@ -597,6 +641,7 @@
 
     return-object p0
 
+    .line 43
     :cond_0
     new-instance v6, Ljava/util/ArrayList;
 
@@ -606,14 +651,17 @@
 
     invoke-direct {v6, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 44
     invoke-static {v6}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
+    .line 45
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
     move v0, v1
 
+    .line 46
     :goto_0
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -623,6 +671,7 @@
 
     const/4 v2, -0x1
 
+    .line 47
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -636,6 +685,7 @@
     :cond_1
     move v0, v1
 
+    .line 49
     :goto_1
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -643,12 +693,14 @@
 
     if-ge v0, v2, :cond_2
 
+    .line 50
     aget-object v2, p0, v0
 
     invoke-static {v6, v2}, Ljava/util/Collections;->binarySearch(Ljava/util/List;Ljava/lang/Object;)I
 
     move-result v2
 
+    .line 51
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -659,6 +711,7 @@
 
     goto :goto_1
 
+    .line 53
     :cond_2
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -674,6 +727,7 @@
 
     move v0, v1
 
+    .line 60
     :goto_2
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -681,6 +735,7 @@
 
     if-ge v0, v2, :cond_7
 
+    .line 61
     invoke-interface {v6, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -691,6 +746,7 @@
 
     move v4, v3
 
+    .line 62
     :goto_3
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -698,12 +754,14 @@
 
     if-ge v4, v5, :cond_6
 
+    .line 63
     invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lokio/ByteString;
 
+    .line 64
     invoke-virtual {v5, v2}, Lokio/ByteString;->startsWith(Lokio/ByteString;)Z
 
     move-result v7
@@ -712,6 +770,7 @@
 
     goto :goto_4
 
+    .line 65
     :cond_3
     invoke-virtual {v5}, Lokio/ByteString;->size()I
 
@@ -723,6 +782,7 @@
 
     if-eq v7, v8, :cond_5
 
+    .line 68
     invoke-interface {v9, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -745,8 +805,10 @@
 
     if-le v5, v7, :cond_4
 
+    .line 69
     invoke-interface {v6, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 70
     invoke-interface {v9, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     goto :goto_3
@@ -756,6 +818,7 @@
 
     goto :goto_3
 
+    .line 66
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -783,6 +846,7 @@
 
     goto :goto_2
 
+    .line 77
     :cond_7
     new-instance v0, Lokio/Buffer;
 
@@ -794,6 +858,7 @@
 
     const/4 v7, 0x0
 
+    .line 78
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v8
@@ -802,17 +867,20 @@
 
     invoke-static/range {v2 .. v9}, Lokio/Options;->buildTrieRecursive(JLokio/Buffer;ILjava/util/List;IILjava/util/List;)V
 
+    .line 80
     invoke-static {v0}, Lokio/Options;->intCount(Lokio/Buffer;)I
 
     move-result v2
 
     new-array v2, v2, [I
 
+    .line 81
     :goto_5
     array-length v3, v2
 
     if-ge v1, v3, :cond_8
 
+    .line 82
     invoke-virtual {v0}, Lokio/Buffer;->readInt()I
 
     move-result v3
@@ -823,6 +891,7 @@
 
     goto :goto_5
 
+    .line 84
     :cond_8
     invoke-virtual {v0}, Lokio/Buffer;->exhausted()Z
 
@@ -830,6 +899,7 @@
 
     if-eqz v0, :cond_9
 
+    .line 88
     new-instance v0, Lokio/Options;
 
     invoke-virtual {p0}, [Lokio/ByteString;->clone()Ljava/lang/Object;
@@ -842,6 +912,7 @@
 
     return-object v0
 
+    .line 85
     :cond_9
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -849,6 +920,7 @@
 
     throw p0
 
+    .line 54
     :cond_a
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -872,6 +944,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 26
     invoke-virtual {p0, p1}, Lokio/Options;->get(I)Lokio/ByteString;
 
     move-result-object p0
@@ -882,6 +955,7 @@
 .method public get(I)Lokio/ByteString;
     .locals 0
 
+    .line 241
     iget-object p0, p0, Lokio/Options;->byteStrings:[Lokio/ByteString;
 
     aget-object p0, p0, p1
@@ -892,6 +966,7 @@
 .method public final size()I
     .locals 0
 
+    .line 245
     iget-object p0, p0, Lokio/Options;->byteStrings:[Lokio/ByteString;
 
     array-length p0, p0

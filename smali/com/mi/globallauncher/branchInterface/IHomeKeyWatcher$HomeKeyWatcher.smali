@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;
 .super Ljava/lang/Object;
+.source "IHomeKeyWatcher.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher;
@@ -31,8 +32,10 @@
 .method public constructor <init>(Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomePressListener;)V
     .locals 1
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     new-instance v0, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomeWatcherReceiver;
 
     invoke-direct {v0, p1}, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomeWatcherReceiver;-><init>(Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomePressListener;)V
@@ -49,14 +52,17 @@
 
     if-eqz p1, :cond_0
 
+    .line 20
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
+    .line 21
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 22
     iget-object p0, p0, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;->mHomeWatcherReceiver:Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomeWatcherReceiver;
 
     invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
@@ -70,6 +76,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 29
     iget-object p0, p0, Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;->mHomeWatcherReceiver:Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher$HomeWatcherReceiver;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V

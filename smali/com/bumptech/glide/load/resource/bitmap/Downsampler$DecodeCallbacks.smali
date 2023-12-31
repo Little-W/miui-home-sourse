@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;
 .super Ljava/lang/Object;
+.source "Downsampler.java"
 
 
 # annotations

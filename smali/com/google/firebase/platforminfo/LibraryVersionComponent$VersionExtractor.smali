@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;
 .super Ljava/lang/Object;
+.source "LibraryVersionComponent.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Lkotlin/collections/CollectionsKt__CollectionsJVMKt;
 .super Ljava/lang/Object;
+.source "CollectionsJVM.kt"
 
 
 # annotations
@@ -26,6 +27,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 93
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -40,6 +42,7 @@
 
     goto :goto_0
 
+    .line 97
     :cond_0
     array-length p1, p0
 
@@ -69,6 +72,7 @@
         }
     .end annotation
 
+    .line 20
     invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0

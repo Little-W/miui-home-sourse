@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/manager/-$$Lambda$BranchSettingManager$QZcaMiHGlCySe6V9Mp13NlcuRM0;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnDismissListener;

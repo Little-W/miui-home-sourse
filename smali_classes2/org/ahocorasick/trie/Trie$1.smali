@@ -1,5 +1,6 @@
 .class synthetic Lorg/ahocorasick/trie/Trie$1;
 .super Ljava/lang/Object;
+.source "Trie.java"
 
 
 # annotations

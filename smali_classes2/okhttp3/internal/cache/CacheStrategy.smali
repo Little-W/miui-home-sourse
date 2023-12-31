@@ -1,5 +1,6 @@
 .class public final Lokhttp3/internal/cache/CacheStrategy;
 .super Ljava/lang/Object;
+.source "CacheStrategy.java"
 
 
 # annotations
@@ -26,10 +27,13 @@
 .method constructor <init>(Lokhttp3/Request;Lokhttp3/Response;)V
     .locals 0
 
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 58
     iput-object p1, p0, Lokhttp3/internal/cache/CacheStrategy;->networkRequest:Lokhttp3/Request;
 
+    .line 59
     iput-object p2, p0, Lokhttp3/internal/cache/CacheStrategy;->cacheResponse:Lokhttp3/Response;
 
     return-void
@@ -38,6 +42,7 @@
 .method public static isCacheable(Lokhttp3/Response;Lokhttp3/Request;)Z
     .locals 3
 
+    .line 66
     invoke-virtual {p0}, Lokhttp3/Response;->code()I
 
     move-result v0
@@ -92,12 +97,14 @@
     :pswitch_0
     const-string v0, "Expires"
 
+    .line 86
     invoke-virtual {p0, v0}, Lokhttp3/Response;->header(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
+    .line 87
     invoke-virtual {p0}, Lokhttp3/Response;->cacheControl()Lokhttp3/CacheControl;
 
     move-result-object v0
@@ -110,6 +117,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 88
     invoke-virtual {p0}, Lokhttp3/Response;->cacheControl()Lokhttp3/CacheControl;
 
     move-result-object v0
@@ -120,6 +128,7 @@
 
     if-nez v0, :cond_2
 
+    .line 89
     invoke-virtual {p0}, Lokhttp3/Response;->cacheControl()Lokhttp3/CacheControl;
 
     move-result-object v0
@@ -136,6 +145,7 @@
     :goto_0
     return v2
 
+    .line 100
     :cond_2
     :goto_1
     :pswitch_1

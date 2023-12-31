@@ -6,6 +6,7 @@
 .method public static isMainThread()Z
     .locals 2
 
+    .line 1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0

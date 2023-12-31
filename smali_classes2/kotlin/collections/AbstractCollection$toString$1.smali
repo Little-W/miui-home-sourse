@@ -1,5 +1,6 @@
 .class final Lkotlin/collections/AbstractCollection$toString$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "AbstractCollection.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -54,6 +55,7 @@
         }
     .end annotation
 
+    .line 27
     iget-object p0, p0, Lkotlin/collections/AbstractCollection$toString$1;->this$0:Lkotlin/collections/AbstractCollection;
 
     if-ne p1, p0, :cond_0
@@ -76,6 +78,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 15
     invoke-virtual {p0, p1}, Lkotlin/collections/AbstractCollection$toString$1;->invoke(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object p0

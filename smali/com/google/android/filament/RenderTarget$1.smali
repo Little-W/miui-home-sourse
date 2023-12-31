@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/filament/RenderTarget$1;
 .super Ljava/lang/Object;
+.source "RenderTarget.java"
 
 
 # annotations

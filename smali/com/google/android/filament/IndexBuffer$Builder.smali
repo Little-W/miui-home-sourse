@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/IndexBuffer$Builder;
 .super Ljava/lang/Object;
+.source "IndexBuffer.java"
 
 
 # annotations
@@ -30,14 +31,17 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 62
     invoke-static {}, Lcom/google/android/filament/IndexBuffer;->access$000()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/filament/IndexBuffer$Builder;->mNativeBuilder:J
 
+    .line 63
     new-instance v0, Lcom/google/android/filament/IndexBuffer$Builder$BuilderFinalizer;
 
     iget-wide v1, p0, Lcom/google/android/filament/IndexBuffer$Builder;->mNativeBuilder:J
@@ -54,6 +58,7 @@
 .method public bufferType(Lcom/google/android/filament/IndexBuffer$Builder$IndexType;)Lcom/google/android/filament/IndexBuffer$Builder;
     .locals 2
 
+    .line 88
     iget-wide v0, p0, Lcom/google/android/filament/IndexBuffer$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/IndexBuffer$Builder$IndexType;->ordinal()I
@@ -68,6 +73,7 @@
 .method public build(Lcom/google/android/filament/Engine;)Lcom/google/android/filament/IndexBuffer;
     .locals 2
 
+    .line 107
     iget-wide v0, p0, Lcom/google/android/filament/IndexBuffer$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
@@ -84,6 +90,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 110
     new-instance v0, Lcom/google/android/filament/IndexBuffer;
 
     const/4 v1, 0x0
@@ -92,6 +99,7 @@
 
     return-object v0
 
+    .line 109
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -105,6 +113,7 @@
 .method public indexCount(I)Lcom/google/android/filament/IndexBuffer$Builder;
     .locals 2
 
+    .line 75
     iget-wide v0, p0, Lcom/google/android/filament/IndexBuffer$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/IndexBuffer;->access$100(JI)V

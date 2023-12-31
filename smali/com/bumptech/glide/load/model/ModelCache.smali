@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/ModelCache;
 .super Ljava/lang/Object;
+.source "ModelCache.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 
     const-wide/16 v0, 0xfa
 
+    .line 27
     invoke-direct {p0, v0, v1}, Lcom/bumptech/glide/load/model/ModelCache;-><init>(J)V
 
     return-void
@@ -47,8 +49,10 @@
 .method public constructor <init>(J)V
     .locals 1
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     new-instance v0, Lcom/bumptech/glide/load/model/ModelCache$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/bumptech/glide/load/model/ModelCache$1;-><init>(Lcom/bumptech/glide/load/model/ModelCache;J)V
@@ -68,16 +72,19 @@
         }
     .end annotation
 
+    .line 49
     invoke-static {p1, p2, p3}, Lcom/bumptech/glide/load/model/ModelCache$ModelKey;->get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;
 
     move-result-object p1
 
+    .line 50
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ModelCache;->cache:Lcom/bumptech/glide/util/LruCache;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 51
     invoke-virtual {p1}, Lcom/bumptech/glide/load/model/ModelCache$ModelKey;->release()V
 
     return-object p0
@@ -91,10 +98,12 @@
         }
     .end annotation
 
+    .line 64
     invoke-static {p1, p2, p3}, Lcom/bumptech/glide/load/model/ModelCache$ModelKey;->get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;
 
     move-result-object p1
 
+    .line 65
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ModelCache;->cache:Lcom/bumptech/glide/util/LruCache;
 
     invoke-virtual {p0, p1, p4}, Lcom/bumptech/glide/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

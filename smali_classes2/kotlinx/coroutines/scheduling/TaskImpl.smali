@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/scheduling/TaskImpl;
 .super Lkotlinx/coroutines/scheduling/Task;
+.source "Tasks.kt"
 
 
 # instance fields
@@ -10,6 +11,7 @@
 .method public constructor <init>(Ljava/lang/Runnable;JLkotlinx/coroutines/scheduling/TaskContext;)V
     .locals 0
 
+    .line 95
     invoke-direct {p0, p2, p3, p4}, Lkotlinx/coroutines/scheduling/Task;-><init>(JLkotlinx/coroutines/scheduling/TaskContext;)V
 
     iput-object p1, p0, Lkotlinx/coroutines/scheduling/TaskImpl;->block:Ljava/lang/Runnable;
@@ -22,6 +24,7 @@
 .method public run()V
     .locals 1
 
+    .line 98
     :try_start_0
     iget-object v0, p0, Lkotlinx/coroutines/scheduling/TaskImpl;->block:Ljava/lang/Runnable;
 
@@ -29,6 +32,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 100
     iget-object p0, p0, Lkotlinx/coroutines/scheduling/TaskImpl;->taskContext:Lkotlinx/coroutines/scheduling/TaskContext;
 
     invoke-interface {p0}, Lkotlinx/coroutines/scheduling/TaskContext;->afterTask()V
@@ -48,6 +52,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

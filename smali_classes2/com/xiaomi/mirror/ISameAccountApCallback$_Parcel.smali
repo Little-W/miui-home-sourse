@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/ISameAccountApCallback$_Parcel;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

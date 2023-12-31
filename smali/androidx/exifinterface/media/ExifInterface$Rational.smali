@@ -1,5 +1,6 @@
 .class Landroidx/exifinterface/media/ExifInterface$Rational;
 .super Ljava/lang/Object;
+.source "ExifInterface.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(JJ)V
     .locals 3
 
+    .line 2915
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
@@ -31,17 +33,21 @@
 
     if-nez v2, :cond_0
 
+    .line 2918
     iput-wide v0, p0, Landroidx/exifinterface/media/ExifInterface$Rational;->numerator:J
 
     const-wide/16 p1, 0x1
 
+    .line 2919
     iput-wide p1, p0, Landroidx/exifinterface/media/ExifInterface$Rational;->denominator:J
 
     return-void
 
+    .line 2922
     :cond_0
     iput-wide p1, p0, Landroidx/exifinterface/media/ExifInterface$Rational;->numerator:J
 
+    .line 2923
     iput-wide p3, p0, Landroidx/exifinterface/media/ExifInterface$Rational;->denominator:J
 
     return-void
@@ -52,6 +58,7 @@
 .method public calculate()D
     .locals 4
 
+    .line 2932
     iget-wide v0, p0, Landroidx/exifinterface/media/ExifInterface$Rational;->numerator:J
 
     long-to-double v0, v0
@@ -68,6 +75,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 2928
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

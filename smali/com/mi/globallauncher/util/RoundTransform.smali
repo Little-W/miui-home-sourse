@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/util/RoundTransform;
 .super Ljava/lang/Object;
+.source "RoundTransform.java"
 
 # interfaces
 .implements Lcom/squareup/picasso/Transformation;
@@ -13,10 +14,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x41e00000    # 28.0f
 
+    .line 16
     iput v0, p0, Lcom/mi/globallauncher/util/RoundTransform;->radiusDp:F
 
     return-void
@@ -25,12 +28,15 @@
 .method public constructor <init>(F)V
     .locals 1
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x41e00000    # 28.0f
 
+    .line 16
     iput v0, p0, Lcom/mi/globallauncher/util/RoundTransform;->radiusDp:F
 
+    .line 22
     iput p1, p0, Lcom/mi/globallauncher/util/RoundTransform;->radiusDp:F
 
     return-void
@@ -49,14 +55,17 @@
 .method public transform(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 8
 
+    .line 27
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
+    .line 28
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
+    .line 29
     iget p0, p0, Lcom/mi/globallauncher/util/RoundTransform;->radiusDp:F
 
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
@@ -71,10 +80,12 @@
 
     move-result p0
 
+    .line 30
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
+    .line 32
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -89,26 +100,32 @@
 
     move-result-object v3
 
+    .line 34
     new-instance v4, Landroid/graphics/Canvas;
 
     invoke-direct {v4, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 35
     new-instance v5, Landroid/graphics/Paint;
 
     invoke-direct {v5}, Landroid/graphics/Paint;-><init>()V
 
     const/4 v6, 0x1
 
+    .line 36
     invoke-virtual {v5, v6}, Landroid/graphics/Paint;->setFlags(I)V
 
     sub-int/2addr v0, v2
 
+    .line 38
     div-int/lit8 v0, v0, 0x2
 
     sub-int/2addr v1, v2
 
+    .line 39
     div-int/lit8 v1, v1, 0x2
 
+    .line 40
     new-instance v6, Landroid/graphics/RectF;
 
     new-instance v7, Landroid/graphics/Rect;
@@ -119,12 +136,15 @@
 
     int-to-float p0, p0
 
+    .line 43
     invoke-virtual {v4, v6, p0, p0, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
+    .line 45
     new-instance p0, Landroid/graphics/Paint;
 
     invoke-direct {p0}, Landroid/graphics/Paint;-><init>()V
 
+    .line 46
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -135,8 +155,10 @@
 
     const/4 v0, 0x0
 
+    .line 47
     invoke-virtual {v4, p1, v0, v0, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 48
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
     return-object v3

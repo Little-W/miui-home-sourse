@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/value/ScaleXY;
 .super Ljava/lang/Object;
+.source "ScaleXY.java"
 
 
 # instance fields
@@ -14,6 +15,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 13
     invoke-direct {p0, v0, v0}, Lcom/airbnb/lottie/value/ScaleXY;-><init>(FF)V
 
     return-void
@@ -22,10 +24,13 @@
 .method public constructor <init>(FF)V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
     iput p1, p0, Lcom/airbnb/lottie/value/ScaleXY;->scaleX:F
 
+    .line 9
     iput p2, p0, Lcom/airbnb/lottie/value/ScaleXY;->scaleY:F
 
     return-void
@@ -36,6 +41,7 @@
 .method public equals(FF)Z
     .locals 1
 
+    .line 30
     iget v0, p0, Lcom/airbnb/lottie/value/ScaleXY;->scaleX:F
 
     cmpl-float p1, v0, p1
@@ -62,6 +68,7 @@
 .method public getScaleX()F
     .locals 0
 
+    .line 17
     iget p0, p0, Lcom/airbnb/lottie/value/ScaleXY;->scaleX:F
 
     return p0
@@ -70,6 +77,7 @@
 .method public getScaleY()F
     .locals 0
 
+    .line 21
     iget p0, p0, Lcom/airbnb/lottie/value/ScaleXY;->scaleY:F
 
     return p0
@@ -78,8 +86,10 @@
 .method public set(FF)V
     .locals 0
 
+    .line 25
     iput p1, p0, Lcom/airbnb/lottie/value/ScaleXY;->scaleX:F
 
+    .line 26
     iput p2, p0, Lcom/airbnb/lottie/value/ScaleXY;->scaleY:F
 
     return-void
@@ -88,6 +98,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

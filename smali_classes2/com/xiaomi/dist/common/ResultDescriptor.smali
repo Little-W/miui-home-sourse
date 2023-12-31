@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/dist/common/ResultDescriptor;
 .super Ljava/lang/Object;
+.source "ResultDescriptor.java"
 
 
 # annotations

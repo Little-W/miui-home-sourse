@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/functions/Functions$EmptyRunnable;
 .super Ljava/lang/Object;
+.source "Functions.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 664
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

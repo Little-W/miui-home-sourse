@@ -1,5 +1,6 @@
 .class public abstract Lokhttp3/EventListener;
 .super Ljava/lang/Object;
+.source "EventListener.java"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 53
     new-instance v0, Lokhttp3/EventListener$1;
 
     invoke-direct {v0}, Lokhttp3/EventListener$1;-><init>()V
@@ -30,6 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,6 +41,7 @@
 .method static factory(Lokhttp3/EventListener;)Lokhttp3/EventListener$Factory;
     .locals 1
 
+    .line 57
     new-instance v0, Lokhttp3/EventListener$2;
 
     invoke-direct {v0, p0}, Lokhttp3/EventListener$2;-><init>(Lokhttp3/EventListener;)V

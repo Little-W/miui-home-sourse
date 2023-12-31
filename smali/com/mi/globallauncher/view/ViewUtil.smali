@@ -1,11 +1,13 @@
 .class Lcom/mi/globallauncher/view/ViewUtil;
 .super Ljava/lang/Object;
+.source "ViewUtil.java"
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -14,6 +16,7 @@
 .method private static isLaidOut(Landroid/view/View;)Z
     .locals 1
 
+    .line 31
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->isLaidOut(Landroid/view/View;)Z
 
     move-result v0
@@ -46,21 +49,25 @@
 .method static onLaidOut(Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 2
 
+    .line 36
     invoke-static {p0}, Lcom/mi/globallauncher/view/ViewUtil;->isLaidOut(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 37
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void
 
+    .line 41
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
+    .line 42
     new-instance v1, Lcom/mi/globallauncher/view/ViewUtil$1;
 
     invoke-direct {v1, v0, p0, p1}, Lcom/mi/globallauncher/view/ViewUtil$1;-><init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Ljava/lang/Runnable;)V
@@ -73,16 +80,19 @@
 .method static removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
     .locals 2
 
+    .line 63
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
+    .line 64
     invoke-virtual {p0, p1}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     goto :goto_0
 
+    .line 66
     :cond_0
     invoke-virtual {p0, p1}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
@@ -99,6 +109,7 @@
 
     goto :goto_0
 
+    .line 76
     :cond_0
     :try_start_0
     invoke-interface {p0, p1}, Landroid/view/ViewManager;->removeView(Landroid/view/View;)V

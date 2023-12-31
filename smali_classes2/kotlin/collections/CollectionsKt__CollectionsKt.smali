@@ -1,5 +1,6 @@
 .class Lkotlin/collections/CollectionsKt__CollectionsKt;
 .super Lkotlin/collections/CollectionsKt__CollectionsJVMKt;
+.source "Collections.kt"
 
 
 # annotations
@@ -25,6 +26,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 55
     new-instance v0, Lkotlin/collections/ArrayAsCollection;
 
     const/4 v1, 0x0
@@ -48,6 +50,7 @@
         }
     .end annotation
 
+    .line 71
     sget-object v0, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
 
     check-cast v0, Ljava/util/List;
@@ -70,6 +73,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 213
     new-instance v0, Lkotlin/ranges/IntRange;
 
     invoke-interface {p0}, Ljava/util/Collection;->size()I
@@ -101,6 +105,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 221
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -126,6 +131,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 77
     array-length v0, p0
 
     if-lez v0, :cond_0
@@ -161,6 +167,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 107
     array-length v0, p0
 
     if-nez v0, :cond_0
@@ -212,6 +219,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 289
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -227,6 +235,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 291
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -237,6 +246,7 @@
 
     goto :goto_0
 
+    .line 290
     :cond_1
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
@@ -249,6 +259,7 @@
 .method public static final throwIndexOverflow()V
     .locals 2
 
+    .line 461
     new-instance v0, Ljava/lang/ArithmeticException;
 
     const-string v1, "Index overflow has happened."

@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/components/Component$Builder;
 .super Ljava/lang/Object;
+.source "Component.java"
 
 
 # annotations
@@ -83,14 +84,17 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 230
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 222
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/components/Component$Builder;->providedInterfaces:Ljava/util/Set;
 
+    .line 223
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -99,10 +103,13 @@
 
     const/4 v0, 0x0
 
+    .line 224
     iput v0, p0, Lcom/google/firebase/components/Component$Builder;->instantiation:I
 
+    .line 225
     iput v0, p0, Lcom/google/firebase/components/Component$Builder;->type:I
 
+    .line 227
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
@@ -111,12 +118,15 @@
 
     const-string v1, "Null interface"
 
+    .line 231
     invoke-static {p1, v1}, Lcom/google/firebase/components/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 232
     iget-object v2, p0, Lcom/google/firebase/components/Component$Builder;->providedInterfaces:Ljava/util/Set;
 
     invoke-interface {v2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 233
     array-length p1, p2
 
     :goto_0
@@ -124,12 +134,14 @@
 
     aget-object v2, p2, v0
 
+    .line 234
     invoke-static {v2, v1}, Lcom/google/firebase/components/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 236
     :cond_0
     iget-object p0, p0, Lcom/google/firebase/components/Component$Builder;->providedInterfaces:Ljava/util/Set;
 
@@ -141,6 +153,7 @@
 .method synthetic constructor <init>(Ljava/lang/Class;[Ljava/lang/Class;Lcom/google/firebase/components/Component$1;)V
     .locals 0
 
+    .line 221
     invoke-direct {p0, p1, p2}, Lcom/google/firebase/components/Component$Builder;-><init>(Ljava/lang/Class;[Ljava/lang/Class;)V
 
     return-void
@@ -149,6 +162,7 @@
 .method static synthetic access$100(Lcom/google/firebase/components/Component$Builder;)Lcom/google/firebase/components/Component$Builder;
     .locals 0
 
+    .line 221
     invoke-direct {p0}, Lcom/google/firebase/components/Component$Builder;->intoSet()Lcom/google/firebase/components/Component$Builder;
 
     move-result-object p0
@@ -168,6 +182,7 @@
 
     const/4 v0, 0x1
 
+    .line 283
     iput v0, p0, Lcom/google/firebase/components/Component$Builder;->type:I
 
     return-object p0
@@ -183,6 +198,7 @@
         }
     .end annotation
 
+    .line 264
     iget v0, p0, Lcom/google/firebase/components/Component$Builder;->instantiation:I
 
     if-nez v0, :cond_0
@@ -199,6 +215,7 @@
 
     invoke-static {v0, v1}, Lcom/google/firebase/components/Preconditions;->checkState(ZLjava/lang/String;)V
 
+    .line 266
     iput p1, p0, Lcom/google/firebase/components/Component$Builder;->instantiation:I
 
     return-object p0
@@ -214,8 +231,10 @@
         }
     .end annotation
 
+    .line 271
     iget-object p0, p0, Lcom/google/firebase/components/Component$Builder;->providedInterfaces:Ljava/util/Set;
 
+    .line 272
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -224,6 +243,7 @@
 
     const-string p1, "Components are not allowed to depend on interfaces they themselves provide."
 
+    .line 271
     invoke-static {p0, p1}, Lcom/google/firebase/components/Preconditions;->checkArgument(ZLjava/lang/String;)V
 
     return-void
@@ -245,14 +265,17 @@
 
     const-string v0, "Null dependency"
 
+    .line 241
     invoke-static {p1, v0}, Lcom/google/firebase/components/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 242
     invoke-virtual {p1}, Lcom/google/firebase/components/Dependency;->getInterface()Ljava/lang/Class;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/google/firebase/components/Component$Builder;->validateInterface(Ljava/lang/Class;)V
 
+    .line 243
     iget-object v0, p0, Lcom/google/firebase/components/Component$Builder;->dependencies:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -270,6 +293,7 @@
         }
     .end annotation
 
+    .line 289
     iget-object v0, p0, Lcom/google/firebase/components/Component$Builder;->factory:Lcom/google/firebase/components/ComponentFactory;
 
     if-eqz v0, :cond_0
@@ -286,6 +310,7 @@
 
     invoke-static {v0, v1}, Lcom/google/firebase/components/Preconditions;->checkState(ZLjava/lang/String;)V
 
+    .line 290
     new-instance v0, Lcom/google/firebase/components/Component;
 
     new-instance v3, Ljava/util/HashSet;
@@ -329,6 +354,7 @@
 
     const/4 v0, 0x2
 
+    .line 254
     invoke-direct {p0, v0}, Lcom/google/firebase/components/Component$Builder;->setInstantiation(I)Lcom/google/firebase/components/Component$Builder;
 
     move-result-object p0
@@ -350,6 +376,7 @@
 
     const-string v0, "Null factory"
 
+    .line 278
     invoke-static {p1, v0}, Lcom/google/firebase/components/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1

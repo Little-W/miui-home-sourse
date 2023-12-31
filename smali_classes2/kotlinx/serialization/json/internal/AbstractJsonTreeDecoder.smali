@@ -1,5 +1,6 @@
 .class abstract Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;
 .super Lkotlinx/serialization/internal/NamedValueDecoder;
+.source "TreeJsonDecoder.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/json/JsonDecoder;
@@ -23,12 +24,14 @@
 .method private constructor <init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/JsonElement;)V
     .locals 0
 
+    .line 38
     invoke-direct {p0}, Lkotlinx/serialization/internal/NamedValueDecoder;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->json:Lkotlinx/serialization/json/Json;
 
     iput-object p2, p0, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->value:Lkotlinx/serialization/json/JsonElement;
 
+    .line 44
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object p1
@@ -45,6 +48,7 @@
 .method public synthetic constructor <init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/JsonElement;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 35
     invoke-direct {p0, p1, p2}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;-><init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/JsonElement;)V
 
     return-void
@@ -53,6 +57,7 @@
 .method public static final synthetic access$currentObject(Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;)Lkotlinx/serialization/json/JsonElement;
     .locals 0
 
+    .line 35
     invoke-direct {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->currentObject()Lkotlinx/serialization/json/JsonElement;
 
     move-result-object p0
@@ -63,6 +68,7 @@
 .method private final currentObject()Lkotlinx/serialization/json/JsonElement;
     .locals 1
 
+    .line 46
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getCurrentTagOrNull()Ljava/lang/Object;
 
     move-result-object v0
@@ -97,14 +103,17 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 57
     invoke-direct {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->currentObject()Lkotlinx/serialization/json/JsonElement;
 
     move-result-object v0
 
+    .line 58
     invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
     move-result-object v1
 
+    .line 59
     sget-object v2, Lkotlinx/serialization/descriptors/StructureKind$LIST;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$LIST;
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -135,18 +144,22 @@
 
     move-result-object p0
 
+    .line 276
     instance-of v2, v0, Lkotlinx/serialization/json/JsonArray;
 
     if-eqz v2, :cond_1
 
+    .line 282
     check-cast v0, Lkotlinx/serialization/json/JsonArray;
 
+    .line 59
     invoke-direct {v1, p0, v0}, Lkotlinx/serialization/json/internal/JsonTreeListDecoder;-><init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/JsonArray;)V
 
     check-cast v1, Lkotlinx/serialization/encoding/CompositeDecoder;
 
     goto/16 :goto_3
 
+    .line 279
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -186,6 +199,7 @@
 
     move-result-object p0
 
+    .line 277
     invoke-static {v6, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -194,6 +208,7 @@
 
     throw p0
 
+    .line 60
     :cond_2
     sget-object v2, Lkotlinx/serialization/descriptors/StructureKind$MAP;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$MAP;
 
@@ -209,14 +224,17 @@
 
     const/4 v2, 0x0
 
+    .line 283
     invoke-interface {p1, v2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v2
 
+    .line 284
     invoke-interface {v2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
     move-result-object v7
 
+    .line 285
     instance-of v8, v7, Lkotlinx/serialization/descriptors/PrimitiveKind;
 
     if-nez v8, :cond_6
@@ -231,6 +249,7 @@
 
     goto :goto_1
 
+    .line 294
     :cond_3
     invoke-virtual {v1}, Lkotlinx/serialization/json/Json;->getConfiguration$kotlinx_serialization_json()Lkotlinx/serialization/json/internal/JsonConf;
 
@@ -240,22 +259,27 @@
 
     if-eqz v1, :cond_5
 
+    .line 63
     new-instance v1, Lkotlinx/serialization/json/internal/JsonTreeListDecoder;
 
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object p0
 
+    .line 296
     instance-of v2, v0, Lkotlinx/serialization/json/JsonArray;
 
     if-eqz v2, :cond_4
 
+    .line 302
     check-cast v0, Lkotlinx/serialization/json/JsonArray;
 
+    .line 63
     invoke-direct {v1, p0, v0}, Lkotlinx/serialization/json/internal/JsonTreeListDecoder;-><init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/JsonArray;)V
 
     goto :goto_2
 
+    .line 299
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -295,6 +319,7 @@
 
     move-result-object p0
 
+    .line 297
     invoke-static {v6, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -303,6 +328,7 @@
 
     throw p0
 
+    .line 303
     :cond_5
     invoke-static {v2}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->InvalidKeyKindException(Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/json/internal/JsonEncodingException;
 
@@ -312,6 +338,7 @@
 
     throw p0
 
+    .line 62
     :cond_6
     :goto_1
     new-instance v1, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;
@@ -320,19 +347,24 @@
 
     move-result-object p0
 
+    .line 287
     instance-of v2, v0, Lkotlinx/serialization/json/JsonObject;
 
     if-eqz v2, :cond_7
 
+    .line 293
     check-cast v0, Lkotlinx/serialization/json/JsonObject;
 
+    .line 62
     invoke-direct {v1, p0, v0}, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;-><init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/JsonObject;)V
 
+    .line 285
     :goto_2
     check-cast v1, Lkotlinx/serialization/encoding/CompositeDecoder;
 
     goto :goto_3
 
+    .line 290
     :cond_7
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -372,6 +404,7 @@
 
     move-result-object p0
 
+    .line 288
     invoke-static {v6, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -380,6 +413,7 @@
 
     throw p0
 
+    .line 65
     :cond_8
     new-instance v7, Lkotlinx/serialization/json/internal/JsonTreeDecoder;
 
@@ -387,10 +421,12 @@
 
     move-result-object v1
 
+    .line 304
     instance-of p0, v0, Lkotlinx/serialization/json/JsonObject;
 
     if-eqz p0, :cond_9
 
+    .line 310
     move-object v2, v0
 
     check-cast v2, Lkotlinx/serialization/json/JsonObject;
@@ -405,6 +441,7 @@
 
     move-object v0, v7
 
+    .line 65
     invoke-direct/range {v0 .. v6}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;-><init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/JsonObject;Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object v1, v7
@@ -414,6 +451,7 @@
     :goto_3
     return-object v1
 
+    .line 307
     :cond_9
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -453,6 +491,7 @@
 
     move-result-object p0
 
+    .line 305
     invoke-static {v6, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -482,6 +521,7 @@
 .method public decodeJsonElement()Lkotlinx/serialization/json/JsonElement;
     .locals 0
 
+    .line 48
     invoke-direct {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->currentObject()Lkotlinx/serialization/json/JsonElement;
 
     move-result-object p0
@@ -492,6 +532,7 @@
 .method public decodeNotNullMark()Z
     .locals 0
 
+    .line 73
     invoke-direct {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->currentObject()Lkotlinx/serialization/json/JsonElement;
 
     move-result-object p0
@@ -519,6 +560,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 51
     invoke-static {p0, p1}, Lkotlinx/serialization/json/internal/PolymorphicKt;->decodeSerializableValuePolymorphic(Lkotlinx/serialization/json/JsonDecoder;Lkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
 
     move-result-object p0
@@ -529,6 +571,7 @@
 .method public bridge synthetic decodeTaggedBoolean(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedBoolean(Ljava/lang/String;)Z
@@ -545,10 +588,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 93
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object v0
 
+    .line 94
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v1
@@ -563,10 +608,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 95
     move-object v1, v0
 
     check-cast v1, Lkotlinx/serialization/json/JsonLiteral;
 
+    .line 96
     invoke-virtual {v1}, Lkotlinx/serialization/json/JsonLiteral;->isString()Z
 
     move-result v1
@@ -578,6 +625,7 @@
     :cond_0
     const/4 v0, -0x1
 
+    .line 97
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -604,6 +652,7 @@
 
     move-result-object p0
 
+    .line 96
     invoke-static {v0, p1, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;Ljava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -612,6 +661,7 @@
 
     throw p0
 
+    .line 95
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -621,6 +671,7 @@
 
     throw p0
 
+    .line 100
     :cond_2
     :goto_0
     invoke-static {v0}, Lkotlinx/serialization/json/JsonElementKt;->getBoolean(Lkotlinx/serialization/json/JsonPrimitive;)Z
@@ -633,6 +684,7 @@
 .method public bridge synthetic decodeTaggedByte(Ljava/lang/Object;)B
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedByte(Ljava/lang/String;)B
@@ -649,6 +701,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 103
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object p1
@@ -667,6 +720,7 @@
     :catchall_0
     const/4 p1, -0x1
 
+    .line 314
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -707,6 +761,7 @@
 .method public bridge synthetic decodeTaggedChar(Ljava/lang/Object;)C
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedChar(Ljava/lang/String;)C
@@ -723,6 +778,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 122
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object p1
@@ -745,6 +801,7 @@
     :catchall_0
     const/4 p1, -0x1
 
+    .line 338
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -785,6 +842,7 @@
 .method public bridge synthetic decodeTaggedDouble(Ljava/lang/Object;)D
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedDouble(Ljava/lang/String;)D
@@ -801,6 +859,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 116
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object v0
@@ -812,6 +871,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 117
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v2
@@ -824,6 +884,7 @@
 
     if-nez v2, :cond_2
 
+    .line 118
     invoke-static {v0, v1}, Ljava/lang/Double;->isInfinite(D)Z
 
     move-result v2
@@ -848,6 +909,7 @@
 
     goto :goto_1
 
+    .line 119
     :cond_1
     invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -878,6 +940,7 @@
     :catchall_0
     const/4 p1, -0x1
 
+    .line 334
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -918,6 +981,7 @@
 .method public bridge synthetic decodeTaggedEnum(Ljava/lang/Object;Lkotlinx/serialization/descriptors/SerialDescriptor;)I
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedEnum(Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;)I
@@ -938,6 +1002,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 86
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object p0
@@ -956,6 +1021,7 @@
 .method public bridge synthetic decodeTaggedFloat(Ljava/lang/Object;)F
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedFloat(Ljava/lang/String;)F
@@ -972,6 +1038,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 109
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object v0
@@ -983,6 +1050,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 110
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v1
@@ -995,6 +1063,7 @@
 
     if-nez v1, :cond_2
 
+    .line 111
     invoke-static {v0}, Ljava/lang/Float;->isInfinite(F)Z
 
     move-result v1
@@ -1019,6 +1088,7 @@
 
     goto :goto_1
 
+    .line 112
     :cond_1
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -1049,6 +1119,7 @@
     :catchall_0
     const/4 p1, -0x1
 
+    .line 330
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1089,6 +1160,7 @@
 .method public bridge synthetic decodeTaggedInt(Ljava/lang/Object;)I
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedInt(Ljava/lang/String;)I
@@ -1105,6 +1177,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 105
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object p1
@@ -1121,6 +1194,7 @@
     :catchall_0
     const/4 p1, -0x1
 
+    .line 322
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1161,6 +1235,7 @@
 .method public bridge synthetic decodeTaggedLong(Ljava/lang/Object;)J
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedLong(Ljava/lang/String;)J
@@ -1177,6 +1252,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 106
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object p1
@@ -1193,6 +1269,7 @@
     :catchall_0
     const/4 p1, -0x1
 
+    .line 326
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1233,6 +1310,7 @@
 .method public bridge synthetic decodeTaggedNotNullMark(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedNotNullMark(Ljava/lang/String;)Z
@@ -1249,6 +1327,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 90
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->currentElement(Ljava/lang/String;)Lkotlinx/serialization/json/JsonElement;
 
     move-result-object p0
@@ -1271,6 +1350,7 @@
 .method public bridge synthetic decodeTaggedShort(Ljava/lang/Object;)S
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedShort(Ljava/lang/String;)S
@@ -1287,6 +1367,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 104
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object p1
@@ -1305,6 +1386,7 @@
     :catchall_0
     const/4 p1, -0x1
 
+    .line 318
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1345,6 +1427,7 @@
 .method public bridge synthetic decodeTaggedString(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
+    .line 35
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->decodeTaggedString(Ljava/lang/String;)Ljava/lang/String;
@@ -1361,10 +1444,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 133
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getValue(Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
 
     move-result-object v0
 
+    .line 134
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object v1
@@ -1379,10 +1464,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 135
     move-object v1, v0
 
     check-cast v1, Lkotlinx/serialization/json/JsonLiteral;
 
+    .line 136
     invoke-virtual {v1}, Lkotlinx/serialization/json/JsonLiteral;->isString()Z
 
     move-result v1
@@ -1394,6 +1481,7 @@
     :cond_0
     const/4 v0, -0x1
 
+    .line 137
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1420,6 +1508,7 @@
 
     move-result-object p0
 
+    .line 136
     invoke-static {v0, p1, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;Ljava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -1428,6 +1517,7 @@
 
     throw p0
 
+    .line 135
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -1437,6 +1527,7 @@
 
     throw p0
 
+    .line 140
     :cond_2
     :goto_0
     invoke-virtual {v0}, Lkotlinx/serialization/json/JsonPrimitive;->getContent()Ljava/lang/String;
@@ -1459,6 +1550,7 @@
 .method public getJson()Lkotlinx/serialization/json/Json;
     .locals 0
 
+    .line 36
     iget-object p0, p0, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->json:Lkotlinx/serialization/json/Json;
 
     return-object p0
@@ -1467,6 +1559,7 @@
 .method public getSerializersModule()Lkotlinx/serialization/modules/SerializersModule;
     .locals 0
 
+    .line 41
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->getJson()Lkotlinx/serialization/json/Json;
 
     move-result-object p0
@@ -1481,6 +1574,7 @@
 .method public getValue()Lkotlinx/serialization/json/JsonElement;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->value:Lkotlinx/serialization/json/JsonElement;
 
     return-object p0
@@ -1493,10 +1587,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 76
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->currentElement(Ljava/lang/String;)Lkotlinx/serialization/json/JsonElement;
 
     move-result-object v0
 
+    .line 77
     instance-of v1, v0, Lkotlinx/serialization/json/JsonPrimitive;
 
     if-nez v1, :cond_0
@@ -1518,6 +1614,7 @@
     :cond_1
     const/4 v1, -0x1
 
+    .line 79
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1546,6 +1643,7 @@
 
     move-result-object p0
 
+    .line 77
     invoke-static {v1, p1, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;Ljava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0

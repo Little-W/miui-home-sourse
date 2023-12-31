@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/EventLoop;
 .super Lkotlinx/coroutines/CoroutineDispatcher;
+.source "EventLoop.common.kt"
 
 
 # annotations
@@ -28,6 +29,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Lkotlinx/coroutines/CoroutineDispatcher;-><init>()V
 
     return-void
@@ -44,11 +46,13 @@
 
     const/4 p1, 0x0
 
+    .line 108
     :cond_0
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/EventLoop;->decrementUseCount(Z)V
 
     return-void
 
+    .line 0
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -86,11 +90,13 @@
 
     const/4 p1, 0x0
 
+    .line 103
     :cond_0
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/EventLoop;->incrementUseCount(Z)V
 
     return-void
 
+    .line 0
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -106,6 +112,7 @@
 .method public final decrementUseCount(Z)V
     .locals 4
 
+    .line 109
     iget-wide v0, p0, Lkotlinx/coroutines/EventLoop;->useCount:J
 
     invoke-direct {p0, p1}, Lkotlinx/coroutines/EventLoop;->delta(Z)J
@@ -116,6 +123,7 @@
 
     iput-wide v0, p0, Lkotlinx/coroutines/EventLoop;->useCount:J
 
+    .line 110
     iget-wide v0, p0, Lkotlinx/coroutines/EventLoop;->useCount:J
 
     const-wide/16 v2, 0x0
@@ -126,6 +134,7 @@
 
     return-void
 
+    .line 111
     :cond_0
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
@@ -160,12 +169,14 @@
 
     throw p0
 
+    .line 112
     :cond_3
     :goto_1
     iget-boolean p1, p0, Lkotlinx/coroutines/EventLoop;->shared:Z
 
     if-eqz p1, :cond_4
 
+    .line 114
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoop;->shutdown()V
 
     :cond_4
@@ -182,12 +193,14 @@
         }
     .end annotation
 
+    .line 85
     iget-object v0, p0, Lkotlinx/coroutines/EventLoop;->unconfinedQueue:Lkotlinx/coroutines/internal/ArrayQueue;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
+    .line 86
     :cond_0
     new-instance v0, Lkotlinx/coroutines/internal/ArrayQueue;
 
@@ -195,6 +208,7 @@
 
     iput-object v0, p0, Lkotlinx/coroutines/EventLoop;->unconfinedQueue:Lkotlinx/coroutines/internal/ArrayQueue;
 
+    .line 87
     :goto_0
     invoke-virtual {v0, p1}, Lkotlinx/coroutines/internal/ArrayQueue;->addLast(Ljava/lang/Object;)V
 
@@ -204,12 +218,14 @@
 .method protected getNextTime()J
     .locals 2
 
+    .line 62
     iget-object p0, p0, Lkotlinx/coroutines/EventLoop;->unconfinedQueue:Lkotlinx/coroutines/internal/ArrayQueue;
 
     const-wide v0, 0x7fffffffffffffffL
 
     if-eqz p0, :cond_1
 
+    .line 63
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/ArrayQueue;->isEmpty()Z
 
     move-result p0
@@ -229,6 +245,7 @@
 .method public final incrementUseCount(Z)V
     .locals 4
 
+    .line 104
     iget-wide v0, p0, Lkotlinx/coroutines/EventLoop;->useCount:J
 
     invoke-direct {p0, p1}, Lkotlinx/coroutines/EventLoop;->delta(Z)J
@@ -243,6 +260,7 @@
 
     const/4 p1, 0x1
 
+    .line 105
     iput-boolean p1, p0, Lkotlinx/coroutines/EventLoop;->shared:Z
 
     :cond_0
@@ -252,6 +270,7 @@
 .method protected isEmpty()Z
     .locals 0
 
+    .line 58
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoop;->isUnconfinedQueueEmpty()Z
 
     move-result p0
@@ -262,6 +281,7 @@
 .method public final isUnconfinedLoopActive()Z
     .locals 5
 
+    .line 94
     iget-wide v0, p0, Lkotlinx/coroutines/EventLoop;->useCount:J
 
     const/4 v2, 0x1
@@ -286,6 +306,7 @@
 .method public final isUnconfinedQueueEmpty()Z
     .locals 0
 
+    .line 98
     iget-object p0, p0, Lkotlinx/coroutines/EventLoop;->unconfinedQueue:Lkotlinx/coroutines/internal/ArrayQueue;
 
     if-eqz p0, :cond_0
@@ -306,6 +327,7 @@
 .method public processNextEvent()J
     .locals 2
 
+    .line 54
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoop;->processUnconfinedEvent()Z
 
     move-result p0
@@ -325,12 +347,14 @@
 .method public final processUnconfinedEvent()Z
     .locals 1
 
+    .line 67
     iget-object p0, p0, Lkotlinx/coroutines/EventLoop;->unconfinedQueue:Lkotlinx/coroutines/internal/ArrayQueue;
 
     const/4 v0, 0x0
 
     if-eqz p0, :cond_0
 
+    .line 68
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/ArrayQueue;->removeFirstOrNull()Ljava/lang/Object;
 
     move-result-object p0
@@ -339,6 +363,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 69
     invoke-virtual {p0}, Lkotlinx/coroutines/DispatchedTask;->run()V
 
     const/4 p0, 0x1

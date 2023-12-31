@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzfd;
 .super Lcom/google/android/gms/internal/measurement/zzfb;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # annotations
@@ -23,12 +24,15 @@
 .method constructor <init>(Lcom/google/android/gms/internal/measurement/zzfb;II)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzc:Lcom/google/android/gms/internal/measurement/zzfb;
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzfb;-><init>()V
 
+    .line 2
     iput p2, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zza:I
 
+    .line 3
     iput p3, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzb:I
 
     return-void
@@ -44,10 +48,12 @@
         }
     .end annotation
 
+    .line 9
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzb:I
 
     invoke-static {p1, v0}, Lcom/google/android/gms/internal/measurement/zzeb;->zza(II)I
 
+    .line 10
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzc:Lcom/google/android/gms/internal/measurement/zzfb;
 
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zza:I
@@ -64,6 +70,7 @@
 .method public final size()I
     .locals 0
 
+    .line 5
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzb:I
 
     return p0
@@ -72,6 +79,7 @@
 .method public final synthetic subList(II)Ljava/util/List;
     .locals 0
 
+    .line 14
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/measurement/zzfb;->zza(II)Lcom/google/android/gms/internal/measurement/zzfb;
 
     move-result-object p0
@@ -89,10 +97,12 @@
         }
     .end annotation
 
+    .line 11
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzb:I
 
     invoke-static {p1, p2, v0}, Lcom/google/android/gms/internal/measurement/zzeb;->zza(III)V
 
+    .line 12
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzc:Lcom/google/android/gms/internal/measurement/zzfb;
 
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zza:I
@@ -113,6 +123,7 @@
 .method final zzb()[Ljava/lang/Object;
     .locals 0
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzc:Lcom/google/android/gms/internal/measurement/zzfb;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzey;->zzb()[Ljava/lang/Object;
@@ -125,6 +136,7 @@
 .method final zzc()I
     .locals 1
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzc:Lcom/google/android/gms/internal/measurement/zzfb;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzey;->zzc()I
@@ -141,6 +153,7 @@
 .method final zzd()I
     .locals 2
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzfd;->zzc:Lcom/google/android/gms/internal/measurement/zzfb;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzey;->zzc()I

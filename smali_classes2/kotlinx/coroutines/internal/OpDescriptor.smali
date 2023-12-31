@@ -1,11 +1,13 @@
 .class public abstract Lkotlinx/coroutines/internal/OpDescriptor;
 .super Ljava/lang/Object;
+.source "Atomic.kt"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,6 +28,7 @@
 .method public final isEarlierThan(Lkotlinx/coroutines/internal/OpDescriptor;)Z
     .locals 3
 
+    .line 35
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/OpDescriptor;->getAtomicOp()Lkotlinx/coroutines/internal/AtomicOp;
 
     move-result-object p0
@@ -34,12 +37,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 36
     invoke-virtual {p1}, Lkotlinx/coroutines/internal/OpDescriptor;->getAtomicOp()Lkotlinx/coroutines/internal/AtomicOp;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 37
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/AtomicOp;->getOpSequence()J
 
     move-result-wide v1
@@ -64,6 +69,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

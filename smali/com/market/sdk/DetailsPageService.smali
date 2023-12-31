@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/DetailsPageService;
 .super Lcom/market/ServiceProxy;
+.source "DetailsPageService.java"
 
 # interfaces
 .implements Lcom/xiaomi/market/IDetailsPageManager;
@@ -19,6 +20,7 @@
 .method private constructor <init>(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
+    .line 35
     invoke-direct {p0, p1, p2}, Lcom/market/ServiceProxy;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -27,6 +29,7 @@
 .method static synthetic access$000(Lcom/market/sdk/DetailsPageService;)Lcom/xiaomi/market/IDetailsPageManager;
     .locals 0
 
+    .line 20
     iget-object p0, p0, Lcom/market/sdk/DetailsPageService;->manager:Lcom/xiaomi/market/IDetailsPageManager;
 
     return-object p0
@@ -35,10 +38,12 @@
 .method static openConnect()Lcom/market/sdk/DetailsPageService;
     .locals 4
 
+    .line 29
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
+    .line 30
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.xiaomi.market"
@@ -49,6 +54,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
+    .line 31
     new-instance v1, Lcom/market/sdk/DetailsPageService;
 
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
@@ -73,6 +79,7 @@
 .method public onConnected(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 45
     invoke-static {p1}, Lcom/xiaomi/market/IDetailsPageManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/xiaomi/market/IDetailsPageManager;
 
     move-result-object p1
@@ -96,6 +103,7 @@
         }
     .end annotation
 
+    .line 71
     new-instance v0, Lcom/market/sdk/DetailsPageService$2;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/market/sdk/DetailsPageService$2;-><init>(Lcom/market/sdk/DetailsPageService;Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;Landroid/os/Bundle;)V
@@ -115,10 +123,12 @@
         }
     .end annotation
 
+    .line 55
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
+    .line 56
     new-instance v1, Lcom/market/sdk/DetailsPageService$1;
 
     invoke-direct {v1, p0, v0, p1}, Lcom/market/sdk/DetailsPageService$1;-><init>(Lcom/market/sdk/DetailsPageService;Lcom/market/sdk/compat/FutureTaskCompat;Landroid/os/Bundle;)V
@@ -127,8 +137,10 @@
 
     invoke-virtual {p0, v1, p1}, Lcom/market/sdk/DetailsPageService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
+    .line 66
     invoke-virtual {p0}, Lcom/market/sdk/DetailsPageService;->waitForCompletion()V
 
+    .line 67
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
     move-result p0

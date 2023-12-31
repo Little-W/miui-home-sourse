@@ -1,5 +1,6 @@
 .class public final Lio/requery/android/database/sqlite/SQLiteSession;
 .super Ljava/lang/Object;
+.source "SQLiteSession.java"
 
 
 # annotations
@@ -38,14 +39,17 @@
 .method public constructor <init>(Lio/requery/android/database/sqlite/SQLiteConnectionPool;)V
     .locals 0
 
+    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_0
 
+    .line 241
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnectionPool:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
     return-void
 
+    .line 238
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -59,10 +63,12 @@
 .method private acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
     .locals 1
 
+    .line 904
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
     if-nez v0, :cond_0
 
+    .line 906
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnectionPool:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
     invoke-virtual {v0, p1, p2, p3}, Lio/requery/android/database/sqlite/SQLiteConnectionPool;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)Lio/requery/android/database/sqlite/SQLiteConnection;
@@ -71,8 +77,10 @@
 
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
+    .line 908
     iput p2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnectionFlags:I
 
+    .line 910
     :cond_0
     iget p1, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnectionUseCount:I
 
@@ -88,8 +96,10 @@
 
     if-eqz p4, :cond_0
 
+    .line 316
     invoke-virtual {p4}, Landroidx/core/os/CancellationSignal;->throwIfCanceled()V
 
+    .line 319
     :cond_0
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
@@ -97,8 +107,10 @@
 
     if-nez v0, :cond_1
 
+    .line 320
     invoke-direct {p0, v1, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 325
     :cond_1
     :try_start_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
@@ -113,6 +125,7 @@
 
     if-eq p1, p3, :cond_2
 
+    .line 337
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
     const-string v0, "BEGIN;"
@@ -121,6 +134,7 @@
 
     goto :goto_0
 
+    .line 333
     :cond_2
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -130,6 +144,7 @@
 
     goto :goto_0
 
+    .line 329
     :cond_3
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -143,6 +158,7 @@
     :goto_0
     if-eqz p2, :cond_6
 
+    .line 345
     :try_start_1
     invoke-interface {p2}, Landroid/database/sqlite/SQLiteTransactionListener;->onBegin()V
     :try_end_1
@@ -154,38 +170,46 @@
     :catch_0
     move-exception p1
 
+    .line 347
     :try_start_2
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     if-nez p2, :cond_5
 
+    .line 348
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
     const-string p3, "ROLLBACK;"
 
     invoke-virtual {p2, p3, v1, p4}, Lio/requery/android/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
 
+    .line 350
     :cond_5
     throw p1
 
+    .line 355
     :cond_6
     :goto_1
     invoke-direct {p0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteSession;->obtainTransaction(ILandroid/database/sqlite/SQLiteTransactionListener;)Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     move-result-object p1
 
+    .line 356
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     iput-object p2, p1, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mParent:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
+    .line 357
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 359
     iget-object p1, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     if-nez p1, :cond_7
 
+    .line 360
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     :cond_7
@@ -194,12 +218,15 @@
     :catchall_0
     move-exception p1
 
+    .line 359
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     if-nez p2, :cond_8
 
+    .line 360
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 362
     :cond_8
     throw p1
 .end method
@@ -209,11 +236,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 416
     invoke-virtual {p1}, Landroidx/core/os/CancellationSignal;->throwIfCanceled()V
 
+    .line 419
     :cond_0
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
+    .line 420
     iget-boolean v1, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mMarkedSuccessful:Z
 
     const/4 v2, 0x1
@@ -236,6 +266,7 @@
     :cond_2
     move p2, v3
 
+    .line 423
     :goto_0
     iget-object v1, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mListener:Landroid/database/sqlite/SQLiteTransactionListener;
 
@@ -245,11 +276,13 @@
 
     if-eqz p2, :cond_3
 
+    .line 427
     :try_start_0
     invoke-interface {v1}, Landroid/database/sqlite/SQLiteTransactionListener;->onCommit()V
 
     goto :goto_1
 
+    .line 429
     :cond_3
     invoke-interface {v1}, Landroid/database/sqlite/SQLiteTransactionListener;->onRollback()V
     :try_end_0
@@ -270,19 +303,23 @@
     :goto_1
     move-object v1, v4
 
+    .line 437
     :goto_2
     iget-object v3, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mParent:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     iput-object v3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
+    .line 438
     invoke-direct {p0, v0}, Lio/requery/android/database/sqlite/SQLiteSession;->recycleTransaction(Lio/requery/android/database/sqlite/SQLiteSession$Transaction;)V
 
+    .line 440
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz v0, :cond_5
 
     if-nez p2, :cond_7
 
+    .line 442
     iput-boolean v2, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mChildFailed:Z
 
     goto :goto_4
@@ -290,6 +327,7 @@
     :cond_5
     if-eqz p2, :cond_6
 
+    .line 447
     :try_start_1
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -299,6 +337,7 @@
 
     goto :goto_3
 
+    .line 449
     :cond_6
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -308,6 +347,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 452
     :goto_3
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
@@ -317,14 +357,17 @@
 
     return-void
 
+    .line 457
     :cond_8
     throw v1
 
     :catchall_0
     move-exception p1
 
+    .line 452
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 453
     throw p1
 .end method
 
@@ -333,8 +376,10 @@
 
     if-eqz p4, :cond_0
 
+    .line 880
     invoke-virtual {p4}, Landroidx/core/os/CancellationSignal;->throwIfCanceled()V
 
+    .line 883
     :cond_0
     invoke-static {p1}, Lio/requery/android/database/sqlite/SQLiteStatementType;->getSqlStatementType(Ljava/lang/String;)I
 
@@ -358,14 +403,17 @@
 
     return p0
 
+    .line 896
     :cond_1
     invoke-virtual {p0, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->endTransaction(Landroidx/core/os/CancellationSignal;)V
 
     return v0
 
+    .line 891
     :cond_2
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->setTransactionSuccessful()V
 
+    .line 892
     invoke-virtual {p0, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->endTransaction(Landroidx/core/os/CancellationSignal;)V
 
     return v0
@@ -375,6 +423,7 @@
 
     const/4 p2, 0x0
 
+    .line 886
     invoke-virtual {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->beginTransaction(ILandroid/database/sqlite/SQLiteTransactionListener;ILandroidx/core/os/CancellationSignal;)V
 
     return v0
@@ -383,34 +432,42 @@
 .method private obtainTransaction(ILandroid/database/sqlite/SQLiteTransactionListener;)Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
     .locals 3
 
+    .line 948
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionPool:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 950
     iget-object v2, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mParent:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     iput-object v2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionPool:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
+    .line 951
     iput-object v1, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mParent:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     const/4 p0, 0x0
 
+    .line 952
     iput-boolean p0, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mMarkedSuccessful:Z
 
+    .line 953
     iput-boolean p0, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mChildFailed:Z
 
     goto :goto_0
 
+    .line 955
     :cond_0
     new-instance v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     invoke-direct {v0, v1}, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;-><init>(Lio/requery/android/database/sqlite/SQLiteSession$1;)V
 
+    .line 957
     :goto_0
     iput p1, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mMode:I
 
+    .line 958
     iput-object p2, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mListener:Landroid/database/sqlite/SQLiteTransactionListener;
 
     return-object v0
@@ -419,14 +476,17 @@
 .method private recycleTransaction(Lio/requery/android/database/sqlite/SQLiteSession$Transaction;)V
     .locals 1
 
+    .line 963
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionPool:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     iput-object v0, p1, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mParent:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     const/4 v0, 0x0
 
+    .line 964
     iput-object v0, p1, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mListener:Landroid/database/sqlite/SQLiteTransactionListener;
 
+    .line 965
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionPool:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     return-void
@@ -435,6 +495,7 @@
 .method private releaseConnection()V
     .locals 3
 
+    .line 916
     iget v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnectionUseCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -445,6 +506,7 @@
 
     const/4 v0, 0x0
 
+    .line 918
     :try_start_0
     iget-object v1, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnectionPool:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
@@ -454,6 +516,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 920
     iput-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
     goto :goto_0
@@ -463,6 +526,7 @@
 
     iput-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
+    .line 921
     throw v1
 
     :cond_0
@@ -473,6 +537,7 @@
 .method private throwIfNestedTransaction()V
     .locals 1
 
+    .line 941
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->hasNestedTransaction()Z
 
     move-result p0
@@ -481,6 +546,7 @@
 
     return-void
 
+    .line 942
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -494,12 +560,14 @@
 .method private throwIfNoTransaction()V
     .locals 1
 
+    .line 926
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz p0, :cond_0
 
     return-void
 
+    .line 927
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -513,6 +581,7 @@
 .method private throwIfTransactionMarkedSuccessful()V
     .locals 1
 
+    .line 933
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz p0, :cond_1
@@ -523,6 +592,7 @@
 
     goto :goto_0
 
+    .line 934
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -542,8 +612,10 @@
 
     if-eqz p3, :cond_0
 
+    .line 537
     invoke-virtual {p3}, Landroidx/core/os/CancellationSignal;->throwIfCanceled()V
 
+    .line 540
     :cond_0
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnectionPool:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
@@ -561,19 +633,23 @@
 
     return p0
 
+    .line 544
     :cond_1
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     iget v0, v0, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mMode:I
 
+    .line 545
     iget-object v1, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     iget-object v1, v1, Lio/requery/android/database/sqlite/SQLiteSession$Transaction;->mListener:Landroid/database/sqlite/SQLiteTransactionListener;
 
+    .line 546
     iget v2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnectionFlags:I
 
     const/4 v3, 0x1
 
+    .line 547
     invoke-direct {p0, p3, v3}, Lio/requery/android/database/sqlite/SQLiteSession;->endTransactionUnchecked(Landroidx/core/os/CancellationSignal;Z)V
 
     const-wide/16 v4, 0x0
@@ -582,11 +658,13 @@
 
     if-lez v4, :cond_2
 
+    .line 551
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 557
     :catch_0
     :cond_2
     invoke-direct {p0, v0, v1, v2, p3}, Lio/requery/android/database/sqlite/SQLiteSession;->beginTransactionUnchecked(ILandroid/database/sqlite/SQLiteTransactionListener;ILandroidx/core/os/CancellationSignal;)V
@@ -599,8 +677,10 @@
 .method public beginTransaction(ILandroid/database/sqlite/SQLiteTransactionListener;ILandroidx/core/os/CancellationSignal;)V
     .locals 0
 
+    .line 307
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->throwIfTransactionMarkedSuccessful()V
 
+    .line 308
     invoke-direct {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->beginTransactionUnchecked(ILandroid/database/sqlite/SQLiteTransactionListener;ILandroidx/core/os/CancellationSignal;)V
 
     return-void
@@ -609,10 +689,12 @@
 .method public endTransaction(Landroidx/core/os/CancellationSignal;)V
     .locals 1
 
+    .line 408
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->throwIfNoTransaction()V
 
     const/4 v0, 0x0
 
+    .line 411
     invoke-direct {p0, p1, v0}, Lio/requery/android/database/sqlite/SQLiteSession;->endTransactionUnchecked(Landroidx/core/os/CancellationSignal;Z)V
 
     return-void
@@ -623,6 +705,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 623
     invoke-direct {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroidx/core/os/CancellationSignal;)Z
 
     move-result v0
@@ -631,9 +714,11 @@
 
     return-void
 
+    .line 627
     :cond_0
     invoke-direct {p0, p1, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 629
     :try_start_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -641,6 +726,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 631
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     return-void
@@ -650,8 +736,10 @@
 
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 632
     throw p1
 
+    .line 620
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -667,6 +755,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 724
     invoke-direct {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroidx/core/os/CancellationSignal;)Z
 
     move-result v0
@@ -677,9 +766,11 @@
 
     return-object p0
 
+    .line 728
     :cond_0
     invoke-direct {p0, p1, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 730
     :try_start_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -689,6 +780,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 733
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     return-object p1
@@ -698,8 +790,10 @@
 
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 734
     throw p1
 
+    .line 721
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -715,6 +809,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 758
     invoke-direct {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroidx/core/os/CancellationSignal;)Z
 
     move-result v0
@@ -725,9 +820,11 @@
 
     return p0
 
+    .line 762
     :cond_0
     invoke-direct {p0, p1, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 764
     :try_start_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -737,6 +834,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 767
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     return p1
@@ -746,8 +844,10 @@
 
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 768
     throw p1
 
+    .line 755
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -775,21 +875,25 @@
 
     move-object v4, p2
 
+    .line 841
     invoke-direct {p0, p1, p2, v2, v9}, Lio/requery/android/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroidx/core/os/CancellationSignal;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 842
     invoke-virtual {p3}, Lio/requery/android/database/CursorWindow;->clear()V
 
     const/4 v0, 0x0
 
     return v0
 
+    .line 846
     :cond_0
     invoke-direct {p0, p1, v2, v9}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 848
     :try_start_0
     iget-object v2, v1, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -813,6 +917,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 852
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     return v0
@@ -822,8 +927,10 @@
 
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 853
     throw v0
 
+    .line 838
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -833,6 +940,7 @@
 
     throw v0
 
+    .line 835
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -848,6 +956,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 792
     invoke-direct {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroidx/core/os/CancellationSignal;)Z
 
     move-result v0
@@ -858,9 +967,11 @@
 
     return-wide p0
 
+    .line 796
     :cond_0
     invoke-direct {p0, p1, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 798
     :try_start_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -870,6 +981,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 801
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     return-wide p1
@@ -879,8 +991,10 @@
 
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 802
     throw p1
 
+    .line 789
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -896,6 +1010,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 656
     invoke-direct {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroidx/core/os/CancellationSignal;)Z
 
     move-result v0
@@ -906,9 +1021,11 @@
 
     return-wide p0
 
+    .line 660
     :cond_0
     invoke-direct {p0, p1, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 662
     :try_start_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -918,6 +1035,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 664
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     return-wide p1
@@ -927,8 +1045,10 @@
 
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 665
     throw p1
 
+    .line 653
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -944,6 +1064,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 689
     invoke-direct {p0, p1, p2, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroidx/core/os/CancellationSignal;)Z
 
     move-result v0
@@ -954,9 +1075,11 @@
 
     return-object p0
 
+    .line 693
     :cond_0
     invoke-direct {p0, p1, p3, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 695
     :try_start_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -966,6 +1089,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 697
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     return-object p1
@@ -975,8 +1099,10 @@
 
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 698
     throw p1
 
+    .line 686
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -990,6 +1116,7 @@
 .method public hasConnection()Z
     .locals 0
 
+    .line 268
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
     if-eqz p0, :cond_0
@@ -1008,6 +1135,7 @@
 .method public hasNestedTransaction()Z
     .locals 0
 
+    .line 259
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz p0, :cond_0
@@ -1030,6 +1158,7 @@
 .method public hasTransaction()Z
     .locals 0
 
+    .line 250
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz p0, :cond_0
@@ -1052,11 +1181,14 @@
 
     if-eqz p3, :cond_0
 
+    .line 593
     invoke-virtual {p3}, Landroidx/core/os/CancellationSignal;->throwIfCanceled()V
 
+    .line 596
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lio/requery/android/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroidx/core/os/CancellationSignal;)V
 
+    .line 598
     :try_start_0
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mConnection:Lio/requery/android/database/sqlite/SQLiteConnection;
 
@@ -1064,6 +1196,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 600
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
     return-void
@@ -1073,8 +1206,10 @@
 
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->releaseConnection()V
 
+    .line 601
     throw p1
 
+    .line 589
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1088,10 +1223,13 @@
 .method public setTransactionSuccessful()V
     .locals 1
 
+    .line 381
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->throwIfNoTransaction()V
 
+    .line 382
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->throwIfTransactionMarkedSuccessful()V
 
+    .line 384
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
     const/4 v0, 0x1
@@ -1108,14 +1246,18 @@
 
     if-eqz p3, :cond_0
 
+    .line 515
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->throwIfNoTransaction()V
 
+    .line 516
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->throwIfTransactionMarkedSuccessful()V
 
+    .line 517
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteSession;->throwIfNestedTransaction()V
 
     goto :goto_0
 
+    .line 519
     :cond_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
 
@@ -1133,6 +1275,7 @@
 
     goto :goto_1
 
+    .line 526
     :cond_1
     :goto_0
     iget-object p3, p0, Lio/requery/android/database/sqlite/SQLiteSession;->mTransactionStack:Lio/requery/android/database/sqlite/SQLiteSession$Transaction;
@@ -1143,6 +1286,7 @@
 
     return v0
 
+    .line 530
     :cond_2
     invoke-direct {p0, p1, p2, p4}, Lio/requery/android/database/sqlite/SQLiteSession;->yieldTransactionUnchecked(JLandroidx/core/os/CancellationSignal;)Z
 

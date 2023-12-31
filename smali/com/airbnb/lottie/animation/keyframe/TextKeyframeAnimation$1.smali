@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;
 .super Lcom/airbnb/lottie/value/LottieValueCallback;
+.source "TextKeyframeAnimation.java"
 
 
 # annotations
@@ -35,6 +36,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation;Lcom/airbnb/lottie/value/LottieFrameInfo;Lcom/airbnb/lottie/value/LottieValueCallback;Lcom/airbnb/lottie/model/DocumentData;)V
     .locals 0
 
+    .line 32
     iput-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;->this$0:Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation;
 
     iput-object p2, p0, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;->val$stringFrameInfo:Lcom/airbnb/lottie/value/LottieFrameInfo;
@@ -62,6 +64,7 @@
         }
     .end annotation
 
+    .line 35
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;->val$stringFrameInfo:Lcom/airbnb/lottie/value/LottieFrameInfo;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/value/LottieFrameInfo;->getStartFrame()F
@@ -80,6 +83,7 @@
 
     iget-object v3, v3, Lcom/airbnb/lottie/model/DocumentData;->text:Ljava/lang/String;
 
+    .line 36
     invoke-virtual {p1}, Lcom/airbnb/lottie/value/LottieFrameInfo;->getEndValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -96,12 +100,15 @@
 
     move-result v6
 
+    .line 37
     invoke-virtual {p1}, Lcom/airbnb/lottie/value/LottieFrameInfo;->getOverallProgress()F
 
     move-result v7
 
+    .line 35
     invoke-virtual/range {v0 .. v7}, Lcom/airbnb/lottie/value/LottieFrameInfo;->set(FFLjava/lang/Object;Ljava/lang/Object;FFF)Lcom/airbnb/lottie/value/LottieFrameInfo;
 
+    .line 38
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;->val$valueCallback:Lcom/airbnb/lottie/value/LottieValueCallback;
 
     iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;->val$stringFrameInfo:Lcom/airbnb/lottie/value/LottieFrameInfo;
@@ -114,6 +121,7 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 39
     invoke-virtual {p1}, Lcom/airbnb/lottie/value/LottieFrameInfo;->getInterpolatedKeyframeProgress()F
 
     move-result v0
@@ -138,6 +146,7 @@
     :goto_0
     check-cast p1, Lcom/airbnb/lottie/model/DocumentData;
 
+    .line 40
     iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;->val$documentData:Lcom/airbnb/lottie/model/DocumentData;
 
     iget-object v3, p1, Lcom/airbnb/lottie/model/DocumentData;->fontName:Ljava/lang/String;
@@ -162,6 +171,7 @@
 
     invoke-virtual/range {v1 .. v12}, Lcom/airbnb/lottie/model/DocumentData;->set(Ljava/lang/String;Ljava/lang/String;FLcom/airbnb/lottie/model/DocumentData$Justification;IFFIIFZ)V
 
+    .line 43
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;->val$documentData:Lcom/airbnb/lottie/model/DocumentData;
 
     return-object p0
@@ -170,6 +180,7 @@
 .method public bridge synthetic getValue(Lcom/airbnb/lottie/value/LottieFrameInfo;)Ljava/lang/Object;
     .locals 0
 
+    .line 32
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation$1;->getValue(Lcom/airbnb/lottie/value/LottieFrameInfo;)Lcom/airbnb/lottie/model/DocumentData;
 
     move-result-object p0

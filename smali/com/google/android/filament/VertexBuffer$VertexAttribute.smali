@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 .super Ljava/lang/Enum;
+.source "VertexBuffer.java"
 
 
 # annotations
@@ -61,6 +62,7 @@
 .method static constructor <clinit>()V
     .locals 16
 
+    .line 61
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/4 v1, 0x0
@@ -71,6 +73,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->POSITION:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 62
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/4 v2, 0x1
@@ -81,6 +84,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->TANGENTS:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 63
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/4 v3, 0x2
@@ -91,6 +95,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->COLOR:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 64
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/4 v4, 0x3
@@ -101,6 +106,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->UV0:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 65
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/4 v5, 0x4
@@ -111,6 +117,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->UV1:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 66
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/4 v6, 0x5
@@ -121,6 +128,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->BONE_INDICES:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 67
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/4 v7, 0x6
@@ -131,6 +139,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->BONE_WEIGHTS:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 68
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/4 v8, 0x7
@@ -141,6 +150,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->UNUSED:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 69
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/16 v9, 0x8
@@ -151,6 +161,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->CUSTOM0:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 70
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/16 v10, 0x9
@@ -161,6 +172,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->CUSTOM1:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 71
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/16 v11, 0xa
@@ -171,6 +183,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->CUSTOM2:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 72
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/16 v12, 0xb
@@ -181,6 +194,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->CUSTOM3:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 73
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/16 v13, 0xc
@@ -191,6 +205,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->CUSTOM4:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 74
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/16 v14, 0xd
@@ -201,6 +216,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->CUSTOM5:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 75
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const/16 v15, 0xe
@@ -211,6 +227,7 @@
 
     sput-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->CUSTOM6:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 76
     new-instance v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     const-string v14, "CUSTOM7"
@@ -225,6 +242,7 @@
 
     new-array v0, v0, [Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
+    .line 60
     sget-object v14, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->POSITION:Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     aput-object v14, v0, v1
@@ -308,6 +326,7 @@
         }
     .end annotation
 
+    .line 60
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -316,6 +335,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/VertexBuffer$VertexAttribute;
     .locals 1
 
+    .line 60
     const-class v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -330,6 +350,7 @@
 .method public static values()[Lcom/google/android/filament/VertexBuffer$VertexAttribute;
     .locals 1
 
+    .line 60
     sget-object v0, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->$VALUES:[Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/VertexBuffer$VertexAttribute;->clone()Ljava/lang/Object;

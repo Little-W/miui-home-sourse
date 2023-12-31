@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/LottieCompositionCache;
 .super Ljava/lang/Object;
+.source "LottieCompositionCache.java"
 
 
 # static fields
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 13
     new-instance v0, Lcom/airbnb/lottie/model/LottieCompositionCache;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/model/LottieCompositionCache;-><init>()V
@@ -35,8 +37,10 @@
 .method constructor <init>()V
     .locals 2
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 19
     new-instance v0, Landroidx/collection/LruCache;
 
     const/16 v1, 0x14
@@ -51,6 +55,7 @@
 .method public static getInstance()Lcom/airbnb/lottie/model/LottieCompositionCache;
     .locals 1
 
+    .line 16
     sget-object v0, Lcom/airbnb/lottie/model/LottieCompositionCache;->INSTANCE:Lcom/airbnb/lottie/model/LottieCompositionCache;
 
     return-object v0
@@ -67,6 +72,7 @@
 
     return-object p0
 
+    .line 29
     :cond_0
     iget-object p0, p0, Lcom/airbnb/lottie/model/LottieCompositionCache;->cache:Landroidx/collection/LruCache;
 
@@ -86,6 +92,7 @@
 
     return-void
 
+    .line 36
     :cond_0
     iget-object p0, p0, Lcom/airbnb/lottie/model/LottieCompositionCache;->cache:Landroidx/collection/LruCache;
 

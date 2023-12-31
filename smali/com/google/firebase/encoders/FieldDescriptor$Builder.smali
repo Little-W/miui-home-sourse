@@ -1,5 +1,6 @@
 .class public final Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 .super Ljava/lang/Object;
+.source "FieldDescriptor.java"
 
 
 # annotations
@@ -33,12 +34,15 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 1
 
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 110
     iput-object v0, p0, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->properties:Ljava/util/Map;
 
+    .line 113
     iput-object p1, p0, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->name:Ljava/lang/String;
 
     return-void
@@ -49,20 +53,24 @@
 .method public build()Lcom/google/firebase/encoders/FieldDescriptor;
     .locals 3
 
+    .line 127
     new-instance v0, Lcom/google/firebase/encoders/FieldDescriptor;
 
     iget-object v1, p0, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->name:Ljava/lang/String;
 
+    .line 129
     iget-object p0, p0, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->properties:Ljava/util/Map;
 
     if-nez p0, :cond_0
 
+    .line 130
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 131
     :cond_0
     new-instance v2, Ljava/util/HashMap;
 
@@ -91,16 +99,19 @@
         }
     .end annotation
 
+    .line 118
     iget-object v0, p0, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->properties:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
+    .line 119
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->properties:Ljava/util/Map;
 
+    .line 121
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->properties:Ljava/util/Map;
 

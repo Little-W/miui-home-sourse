@@ -1,5 +1,6 @@
 .class abstract Lcom/google/android/gms/internal/measurement/zzga;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # static fields
@@ -14,6 +15,7 @@
 
     new-array v0, v0, [Ljava/lang/Throwable;
 
+    .line 2
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzga;->zza:[Ljava/lang/Throwable;
 
     return-void
@@ -22,6 +24,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

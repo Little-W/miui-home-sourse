@@ -1,5 +1,6 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableSingleMaybe;
 .super Lio/reactivex/Maybe;
+.source "ObservableSingleMaybe.java"
 
 
 # annotations
@@ -36,8 +37,10 @@
         }
     .end annotation
 
+    .line 25
     invoke-direct {p0}, Lio/reactivex/Maybe;-><init>()V
 
+    .line 26
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSingleMaybe;->source:Lio/reactivex/ObservableSource;
 
     return-void

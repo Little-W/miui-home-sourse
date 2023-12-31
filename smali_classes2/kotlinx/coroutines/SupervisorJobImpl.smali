@@ -1,11 +1,13 @@
 .class final Lkotlinx/coroutines/SupervisorJobImpl;
 .super Lkotlinx/coroutines/JobImpl;
+.source "Supervisor.kt"
 
 
 # direct methods
 .method public constructor <init>(Lkotlinx/coroutines/Job;)V
     .locals 0
 
+    .line 61
     invoke-direct {p0, p1}, Lkotlinx/coroutines/JobImpl;-><init>(Lkotlinx/coroutines/Job;)V
 
     return-void

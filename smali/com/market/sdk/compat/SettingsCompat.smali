@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/compat/SettingsCompat;
 .super Ljava/lang/Object;
+.source "SettingsCompat.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,6 +20,7 @@
 .method public static getSecureIntForUser(Landroid/content/Context;Ljava/lang/String;II)I
     .locals 10
 
+    .line 14
     const-class v0, Landroid/provider/Settings$Secure;
 
     const-class v1, Landroid/provider/Settings$Secure;
@@ -52,12 +55,14 @@
 
     aput-object v5, v4, v9
 
+    .line 15
     invoke-static {v2, v4}, Lcom/market/sdk/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v2
 
     new-array v3, v3, [Ljava/lang/Object;
 
+    .line 16
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -80,6 +85,7 @@
 
     const-string p0, "getIntForUser"
 
+    .line 14
     invoke-static {v0, v1, p0, v2, v3}, Lcom/market/sdk/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -88,6 +94,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 17
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result v6

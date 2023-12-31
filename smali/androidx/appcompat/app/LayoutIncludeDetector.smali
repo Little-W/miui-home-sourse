@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/app/LayoutIncludeDetector;
 .super Ljava/lang/Object;
+.source "LayoutIncludeDetector.java"
 
 
 # instance fields
@@ -19,8 +20,10 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 38
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
@@ -37,6 +40,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 108
     :try_start_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
@@ -46,6 +50,7 @@
 
     if-eq v1, v2, :cond_1
 
+    .line 109
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result p0
@@ -80,6 +85,7 @@
         }
     .end annotation
 
+    .line 95
     :goto_0
     invoke-interface {p0}, Ljava/util/Deque;->isEmpty()Z
 
@@ -87,6 +93,7 @@
 
     if-nez v0, :cond_1
 
+    .line 96
     invoke-interface {p0}, Ljava/util/Deque;->peek()Ljava/lang/Object;
 
     move-result-object v0
@@ -99,12 +106,14 @@
 
     check-cast v0, Lorg/xmlpull/v1/XmlPullParser;
 
+    .line 97
     invoke-static {v0}, Landroidx/appcompat/app/LayoutIncludeDetector;->isParserOutdated(Lorg/xmlpull/v1/XmlPullParser;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 98
     invoke-interface {p0}, Ljava/util/Deque;->pop()Ljava/lang/Object;
 
     goto :goto_0
@@ -125,6 +134,7 @@
 
     if-eq p0, p1, :cond_0
 
+    .line 75
     :try_start_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
@@ -136,6 +146,7 @@
 
     const-string p0, "include"
 
+    .line 78
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -160,12 +171,15 @@
 .method detect(Landroid/util/AttributeSet;)Z
     .locals 3
 
+    .line 45
     instance-of v0, p1, Lorg/xmlpull/v1/XmlPullParser;
 
     if-eqz v0, :cond_0
 
+    .line 46
     check-cast p1, Lorg/xmlpull/v1/XmlPullParser;
 
+    .line 47
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
@@ -174,12 +188,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 51
     iget-object v0, p0, Landroidx/appcompat/app/LayoutIncludeDetector;->mXmlParserStack:Ljava/util/Deque;
 
     invoke-static {v0}, Landroidx/appcompat/app/LayoutIncludeDetector;->popOutdatedAttrHolders(Ljava/util/Deque;)Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v0
 
+    .line 53
     iget-object p0, p0, Landroidx/appcompat/app/LayoutIncludeDetector;->mXmlParserStack:Ljava/util/Deque;
 
     new-instance v2, Ljava/lang/ref/WeakReference;
@@ -188,6 +204,7 @@
 
     invoke-interface {p0, v2}, Ljava/util/Deque;->push(Ljava/lang/Object;)V
 
+    .line 56
     invoke-static {p1, v0}, Landroidx/appcompat/app/LayoutIncludeDetector;->shouldInheritContext(Lorg/xmlpull/v1/XmlPullParser;Lorg/xmlpull/v1/XmlPullParser;)Z
 
     move-result p0

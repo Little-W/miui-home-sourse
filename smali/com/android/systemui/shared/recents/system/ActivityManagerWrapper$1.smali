@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;
 .super Ljava/lang/Object;
+.source "ActivityManagerWrapper.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Ljava/lang/String;)V
     .locals 0
 
+    .line 172
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;->val$reason:Ljava/lang/String;
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 2
 
+    .line 176
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -60,6 +63,7 @@
 
     const-string v1, "Failed to close system windows"
 
+    .line 178
     invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

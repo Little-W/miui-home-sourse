@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/EnumSerializer;
 .super Ljava/lang/Object;
+.source "Enums.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -49,10 +50,12 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p2, p0, Lkotlinx/serialization/internal/EnumSerializer;->values:[Ljava/lang/Enum;
 
+    .line 60
     sget-object p2, Lkotlinx/serialization/descriptors/SerialKind$ENUM;->INSTANCE:Lkotlinx/serialization/descriptors/SerialKind$ENUM;
 
     check-cast p2, Lkotlinx/serialization/descriptors/SerialKind;
@@ -79,6 +82,7 @@
 .method public static final synthetic access$getValues$p(Lkotlinx/serialization/internal/EnumSerializer;)[Ljava/lang/Enum;
     .locals 0
 
+    .line 55
     iget-object p0, p0, Lkotlinx/serialization/internal/EnumSerializer;->values:[Ljava/lang/Enum;
 
     return-object p0
@@ -100,6 +104,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 77
     invoke-virtual {p0}, Lkotlinx/serialization/internal/EnumSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -108,6 +113,7 @@
 
     move-result p1
 
+    .line 78
     iget-object v0, p0, Lkotlinx/serialization/internal/EnumSerializer;->values:[Ljava/lang/Enum;
 
     array-length v0, v0
@@ -130,12 +136,14 @@
     :goto_1
     if-eqz v0, :cond_2
 
+    .line 81
     iget-object p0, p0, Lkotlinx/serialization/internal/EnumSerializer;->values:[Ljava/lang/Enum;
 
     aget-object p0, p0, p1
 
     return-object p0
 
+    .line 79
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -171,6 +179,7 @@
 
     move-result-object p0
 
+    .line 78
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -187,6 +196,7 @@
 .method public bridge synthetic deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
     .locals 0
 
+    .line 55
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/EnumSerializer;->deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Enum;
 
     move-result-object p0
@@ -197,6 +207,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 60
     iget-object p0, p0, Lkotlinx/serialization/internal/EnumSerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -220,6 +231,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 69
     iget-object v0, p0, Lkotlinx/serialization/internal/EnumSerializer;->values:[Ljava/lang/Enum;
 
     invoke-static {v0, p2}, Lkotlin/collections/ArraysKt;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I
@@ -240,6 +252,7 @@
     :goto_0
     if-eqz v1, :cond_1
 
+    .line 73
     invoke-virtual {p0}, Lkotlinx/serialization/internal/EnumSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -248,6 +261,7 @@
 
     return-void
 
+    .line 71
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -289,6 +303,7 @@
 
     move-result-object p0
 
+    .line 70
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -305,6 +320,7 @@
 .method public bridge synthetic serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
     .locals 0
 
+    .line 55
     check-cast p2, Ljava/lang/Enum;
 
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/EnumSerializer;->serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Enum;)V
@@ -315,6 +331,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 84
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

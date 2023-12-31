@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 .super Ljava/lang/Object;
+.source "ICommercialPreference.java"
 
 
 # virtual methods

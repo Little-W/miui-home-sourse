@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/installations/remote/RequestLimiter;
 .super Ljava/lang/Object;
+.source "RequestLimiter.java"
 
 
 # static fields
@@ -20,20 +21,24 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 28
     sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x18
 
+    .line 29
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/google/firebase/installations/remote/RequestLimiter;->MAXIMUM_BACKOFF_DURATION_FOR_CONFIGURATION_ERRORS:J
 
+    .line 30
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x1e
 
+    .line 31
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v0
@@ -46,8 +51,10 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 47
     invoke-static {}, Lcom/google/firebase/installations/Utils;->getInstance()Lcom/google/firebase/installations/Utils;
 
     move-result-object v0
@@ -62,6 +69,7 @@
 
     monitor-enter p0
 
+    .line 68
     :try_start_0
     invoke-static {p1}, Lcom/google/firebase/installations/remote/RequestLimiter;->isRetryableError(I)Z
 
@@ -69,6 +77,7 @@
 
     if-nez p1, :cond_0
 
+    .line 69
     sget-wide v0, Lcom/google/firebase/installations/remote/RequestLimiter;->MAXIMUM_BACKOFF_DURATION_FOR_CONFIGURATION_ERRORS:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -80,11 +89,13 @@
     :cond_0
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
+    .line 73
     :try_start_1
     iget p1, p0, Lcom/google/firebase/installations/remote/RequestLimiter;->attemptCount:I
 
     int-to-double v2, p1
 
+    .line 75
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -103,6 +114,7 @@
 
     long-to-double v2, v2
 
+    .line 74
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide v0
@@ -111,6 +123,7 @@
 
     double-to-long v0, v0
 
+    .line 73
     monitor-exit p0
 
     return-wide v0
@@ -195,11 +208,13 @@
 
     const/4 v0, 0x0
 
+    .line 63
     :try_start_0
     iput v0, p0, Lcom/google/firebase/installations/remote/RequestLimiter;->attemptCount:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 64
     monitor-exit p0
 
     return-void
@@ -219,6 +234,7 @@
 
     monitor-enter p0
 
+    .line 99
     :try_start_0
     iget v0, p0, Lcom/google/firebase/installations/remote/RequestLimiter;->attemptCount:I
 
@@ -267,6 +283,7 @@
 
     monitor-enter p0
 
+    .line 53
     :try_start_0
     invoke-static {p1}, Lcom/google/firebase/installations/remote/RequestLimiter;->isSuccessfulOrRequiresNewFidCreation(I)Z
 
@@ -274,14 +291,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 54
     invoke-direct {p0}, Lcom/google/firebase/installations/remote/RequestLimiter;->resetBackoffStrategy()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 55
     monitor-exit p0
 
     return-void
 
+    .line 57
     :cond_0
     :try_start_1
     iget v0, p0, Lcom/google/firebase/installations/remote/RequestLimiter;->attemptCount:I
@@ -290,10 +310,12 @@
 
     iput v0, p0, Lcom/google/firebase/installations/remote/RequestLimiter;->attemptCount:I
 
+    .line 58
     invoke-direct {p0, p1}, Lcom/google/firebase/installations/remote/RequestLimiter;->getBackoffDuration(I)J
 
     move-result-wide v0
 
+    .line 59
     iget-object p1, p0, Lcom/google/firebase/installations/remote/RequestLimiter;->utils:Lcom/google/firebase/installations/Utils;
 
     invoke-virtual {p1}, Lcom/google/firebase/installations/Utils;->currentTimeInMillis()J
@@ -306,6 +328,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 60
     monitor-exit p0
 
     return-void

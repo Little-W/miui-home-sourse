@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/channels/SendElement;
 .super Lkotlinx/coroutines/channels/Send;
+.source "AbstractChannel.kt"
 
 
 # annotations
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1068
     invoke-direct {p0}, Lkotlinx/coroutines/channels/Send;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/SendElement;->pollResult:Ljava/lang/Object;
@@ -64,6 +66,7 @@
 .method public completeResumeSend()V
     .locals 1
 
+    .line 1077
     iget-object p0, p0, Lkotlinx/coroutines/channels/SendElement;->cont:Lkotlinx/coroutines/CancellableContinuation;
 
     sget-object v0, Lkotlinx/coroutines/CancellableContinuationImplKt;->RESUME_TOKEN:Lkotlinx/coroutines/internal/Symbol;
@@ -81,6 +84,7 @@
         }
     .end annotation
 
+    .line 1066
     iget-object p0, p0, Lkotlinx/coroutines/channels/SendElement;->pollResult:Ljava/lang/Object;
 
     return-object p0
@@ -96,6 +100,7 @@
         }
     .end annotation
 
+    .line 1078
     iget-object p0, p0, Lkotlinx/coroutines/channels/SendElement;->cont:Lkotlinx/coroutines/CancellableContinuation;
 
     check-cast p0, Lkotlin/coroutines/Continuation;
@@ -122,6 +127,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1079
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,6 +172,7 @@
 .method public tryResumeSend(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)Lkotlinx/coroutines/internal/Symbol;
     .locals 3
 
+    .line 1070
     iget-object p0, p0, Lkotlinx/coroutines/channels/SendElement;->cont:Lkotlinx/coroutines/CancellableContinuation;
 
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -188,6 +195,7 @@
 
     if-eqz p0, :cond_5
 
+    .line 1071
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result v0
@@ -223,8 +231,10 @@
     :goto_2
     if-eqz p1, :cond_4
 
+    .line 1073
     invoke-virtual {p1}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->finishPrepare()V
 
+    .line 1074
     :cond_4
     sget-object p0, Lkotlinx/coroutines/CancellableContinuationImplKt;->RESUME_TOKEN:Lkotlinx/coroutines/internal/Symbol;
 

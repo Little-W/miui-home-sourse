@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzkn;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/measurement/internal/zzez;
@@ -15,6 +16,7 @@
 .method constructor <init>(Lcom/google/android/gms/measurement/internal/zzkl;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzkn;->zzb:Lcom/google/android/gms/measurement/internal/zzkl;
 
     iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzkn;->zza:Ljava/lang/String;
@@ -43,6 +45,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/gms/measurement/internal/zzkn;->zzb:Lcom/google/android/gms/measurement/internal/zzkl;
 
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzkn;->zza:Ljava/lang/String;

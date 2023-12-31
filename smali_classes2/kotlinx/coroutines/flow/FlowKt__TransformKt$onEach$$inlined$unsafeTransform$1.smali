@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 .super Ljava/lang/Object;
+.source "SafeCollector.common.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/Flow;
@@ -42,6 +43,7 @@
 
     iput-object p2, p0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;->$action$inlined:Lkotlin/jvm/functions/Function2;
 
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,8 +54,10 @@
 .method public collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 2
 
+    .line 113
     iget-object v0, p0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
 
+    .line 114
     new-instance v1, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2;
 
     invoke-direct {v1, p1, p0}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;)V
@@ -72,6 +76,7 @@
 
     return-object p0
 
+    .line 109
     :cond_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 

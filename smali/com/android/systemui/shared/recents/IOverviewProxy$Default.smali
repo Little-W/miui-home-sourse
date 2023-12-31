@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/IOverviewProxy$Default;
 .super Ljava/lang/Object;
+.source "IOverviewProxy.java"
 
 # interfaces
 .implements Lcom/android/systemui/shared/recents/IOverviewProxy;
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

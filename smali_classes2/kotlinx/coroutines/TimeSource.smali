@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/TimeSource;
 .super Ljava/lang/Object;
+.source "TimeSource.kt"
 
 
 # virtual methods

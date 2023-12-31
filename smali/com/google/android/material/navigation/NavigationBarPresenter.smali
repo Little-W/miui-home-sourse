@@ -1,5 +1,6 @@
 .class public Lcom/google/android/material/navigation/NavigationBarPresenter;
 .super Ljava/lang/Object;
+.source "NavigationBarPresenter.java"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter;
@@ -51,6 +52,7 @@
 .method public getId()I
     .locals 0
 
+    .line 110
     iget p0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->id:I
 
     return p0
@@ -59,8 +61,10 @@
 .method public initForMenu(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;)V
     .locals 0
 
+    .line 56
     iput-object p2, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menu:Landroidx/appcompat/view/menu/MenuBuilder;
 
+    .line 57
     iget-object p1, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menuView:Lcom/google/android/material/navigation/NavigationBarMenuView;
 
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -79,10 +83,12 @@
 .method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 2
 
+    .line 125
     instance-of v0, p1, Lcom/google/android/material/navigation/NavigationBarPresenter$SavedState;
 
     if-eqz v0, :cond_0
 
+    .line 126
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menuView:Lcom/google/android/material/navigation/NavigationBarMenuView;
 
     check-cast p1, Lcom/google/android/material/navigation/NavigationBarPresenter$SavedState;
@@ -91,18 +97,22 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/navigation/NavigationBarMenuView;->tryRestoreSelectedItemId(I)V
 
+    .line 127
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menuView:Lcom/google/android/material/navigation/NavigationBarMenuView;
 
+    .line 129
     invoke-virtual {v0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iget-object p1, p1, Lcom/google/android/material/navigation/NavigationBarPresenter$SavedState;->badgeSavedStates:Lcom/google/android/material/internal/ParcelableSparseArray;
 
+    .line 128
     invoke-static {v0, p1}, Lcom/google/android/material/badge/BadgeUtils;->createBadgeDrawablesFromSavedStates(Landroid/content/Context;Lcom/google/android/material/internal/ParcelableSparseArray;)Landroid/util/SparseArray;
 
     move-result-object p1
 
+    .line 130
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menuView:Lcom/google/android/material/navigation/NavigationBarMenuView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/navigation/NavigationBarMenuView;->restoreBadgeDrawables(Landroid/util/SparseArray;)V
@@ -114,10 +124,12 @@
 .method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
+    .line 116
     new-instance v0, Lcom/google/android/material/navigation/NavigationBarPresenter$SavedState;
 
     invoke-direct {v0}, Lcom/google/android/material/navigation/NavigationBarPresenter$SavedState;-><init>()V
 
+    .line 117
     iget-object v1, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menuView:Lcom/google/android/material/navigation/NavigationBarMenuView;
 
     invoke-virtual {v1}, Lcom/google/android/material/navigation/NavigationBarMenuView;->getSelectedItemId()I
@@ -126,8 +138,10 @@
 
     iput v1, v0, Lcom/google/android/material/navigation/NavigationBarPresenter$SavedState;->selectedItemId:I
 
+    .line 118
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menuView:Lcom/google/android/material/navigation/NavigationBarMenuView;
 
+    .line 119
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->getBadgeDrawables()Landroid/util/SparseArray;
 
     move-result-object p0
@@ -158,6 +172,7 @@
 .method public setUpdateSuspended(Z)V
     .locals 0
 
+    .line 135
     iput-boolean p1, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->updateSuspended:Z
 
     return-void
@@ -166,6 +181,7 @@
 .method public updateMenuView(Z)V
     .locals 1
 
+    .line 68
     iget-boolean v0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->updateSuspended:Z
 
     if-eqz v0, :cond_0
@@ -175,12 +191,14 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 72
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menuView:Lcom/google/android/material/navigation/NavigationBarMenuView;
 
     invoke-virtual {p0}, Lcom/google/android/material/navigation/NavigationBarMenuView;->buildMenuView()V
 
     goto :goto_0
 
+    .line 74
     :cond_1
     iget-object p0, p0, Lcom/google/android/material/navigation/NavigationBarPresenter;->menuView:Lcom/google/android/material/navigation/NavigationBarMenuView;
 

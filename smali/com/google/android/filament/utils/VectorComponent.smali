@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/utils/VectorComponent;
 .super Ljava/lang/Enum;
+.source "Vector.kt"
 
 
 # annotations
@@ -205,6 +206,7 @@
         }
     .end annotation
 
+    .line 26
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

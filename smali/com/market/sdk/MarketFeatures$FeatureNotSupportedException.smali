@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/MarketFeatures$FeatureNotSupportedException;
 .super Ljava/lang/Exception;
+.source "MarketFeatures.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method public constructor <init>(Lcom/market/sdk/MarketFeatures;)V
     .locals 0
 
+    .line 97
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
+    .line 98
     iput-object p1, p0, Lcom/market/sdk/MarketFeatures$FeatureNotSupportedException;->mFeature:Lcom/market/sdk/MarketFeatures;
 
     return-void
@@ -33,6 +36,7 @@
 .method public getMessage()Ljava/lang/String;
     .locals 2
 
+    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/RenderableManager;
 .super Ljava/lang/Object;
+.source "RenderableManager.java"
 
 
 # annotations
@@ -23,8 +24,10 @@
 .method constructor <init>(J)V
     .locals 0
 
+    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 64
     iput-wide p1, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     return-void
@@ -33,6 +36,7 @@
 .method static synthetic access$000(I)J
     .locals 2
 
+    .line 59
     invoke-static {p0}, Lcom/google/android/filament/RenderableManager;->nCreateBuilder(I)J
 
     move-result-wide v0
@@ -43,6 +47,7 @@
 .method static synthetic access$100(JIIJJIIII)V
     .locals 0
 
+    .line 59
     invoke-static/range {p0 .. p11}, Lcom/google/android/filament/RenderableManager;->nBuilderGeometry(JIIJJIIII)V
 
     return-void
@@ -51,6 +56,7 @@
 .method static synthetic access$1000(JZ)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/RenderableManager;->nBuilderCastShadows(JZ)V
 
     return-void
@@ -59,6 +65,7 @@
 .method static synthetic access$1100(JZ)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/RenderableManager;->nBuilderReceiveShadows(JZ)V
 
     return-void
@@ -67,6 +74,7 @@
 .method static synthetic access$1200(JZ)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/RenderableManager;->nBuilderScreenSpaceContactShadows(JZ)V
 
     return-void
@@ -75,6 +83,7 @@
 .method static synthetic access$1300(JI)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/RenderableManager;->nBuilderSkinning(JI)V
 
     return-void
@@ -83,6 +92,7 @@
 .method static synthetic access$1400(JILjava/nio/Buffer;I)I
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/filament/RenderableManager;->nBuilderSkinningBones(JILjava/nio/Buffer;I)I
 
     move-result p0
@@ -93,6 +103,7 @@
 .method static synthetic access$1500(JZ)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/RenderableManager;->nBuilderMorphing(JZ)V
 
     return-void
@@ -101,6 +112,7 @@
 .method static synthetic access$1600(JJI)Z
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/filament/RenderableManager;->nBuilderBuild(JJI)Z
 
     move-result p0
@@ -111,6 +123,7 @@
 .method static synthetic access$1700(J)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1}, Lcom/google/android/filament/RenderableManager;->nDestroyBuilder(J)V
 
     return-void
@@ -119,6 +132,7 @@
 .method static synthetic access$200(JIIJJII)V
     .locals 0
 
+    .line 59
     invoke-static/range {p0 .. p9}, Lcom/google/android/filament/RenderableManager;->nBuilderGeometry(JIIJJII)V
 
     return-void
@@ -127,6 +141,7 @@
 .method static synthetic access$300(JIIJJ)V
     .locals 0
 
+    .line 59
     invoke-static/range {p0 .. p7}, Lcom/google/android/filament/RenderableManager;->nBuilderGeometry(JIIJJ)V
 
     return-void
@@ -135,6 +150,7 @@
 .method static synthetic access$400(JIJ)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/filament/RenderableManager;->nBuilderMaterial(JIJ)V
 
     return-void
@@ -143,6 +159,7 @@
 .method static synthetic access$500(JII)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/RenderableManager;->nBuilderBlendOrder(JII)V
 
     return-void
@@ -151,6 +168,7 @@
 .method static synthetic access$600(JFFFFFF)V
     .locals 0
 
+    .line 59
     invoke-static/range {p0 .. p7}, Lcom/google/android/filament/RenderableManager;->nBuilderBoundingBox(JFFFFFF)V
 
     return-void
@@ -159,6 +177,7 @@
 .method static synthetic access$700(JII)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/RenderableManager;->nBuilderLayerMask(JII)V
 
     return-void
@@ -167,6 +186,7 @@
 .method static synthetic access$800(JI)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/RenderableManager;->nBuilderPriority(JI)V
 
     return-void
@@ -175,6 +195,7 @@
 .method static synthetic access$900(JZ)V
     .locals 0
 
+    .line 59
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/RenderableManager;->nBuilderCulling(JZ)V
 
     return-void
@@ -311,6 +332,7 @@
 .method public destroy(I)V
     .locals 2
 
+    .line 86
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/RenderableManager;->nDestroy(JI)V
@@ -323,10 +345,12 @@
 
     if-nez p2, :cond_0
 
+    .line 519
     new-instance p2, Lcom/google/android/filament/Box;
 
     invoke-direct {p2}, Lcom/google/android/filament/Box;-><init>()V
 
+    .line 520
     :cond_0
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
@@ -354,24 +378,28 @@
         }
     .end annotation
 
+    .line 611
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/RenderableManager;->nGetEnabledAttributesAt(JII)I
 
     move-result p0
 
+    .line 612
     const-class p1, Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
 
     move-result-object p1
 
+    .line 613
     invoke-static {}, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->values()[Lcom/google/android/filament/VertexBuffer$VertexAttribute;
 
     move-result-object p2
 
     const/4 v0, 0x0
 
+    .line 614
     :goto_0
     array-length v1, p2
 
@@ -385,6 +413,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 616
     aget-object v1, p2, v0
 
     invoke-interface {p1, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -394,6 +423,7 @@
 
     goto :goto_0
 
+    .line 619
     :cond_1
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -405,6 +435,7 @@
 .method public getInstance(I)I
     .locals 2
 
+    .line 79
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/RenderableManager;->nGetInstance(JI)I
@@ -417,12 +448,14 @@
 .method public getMaterialInstanceAt(II)Lcom/google/android/filament/MaterialInstance;
     .locals 2
 
+    .line 555
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/RenderableManager;->nGetMaterialInstanceAt(JII)J
 
     move-result-wide p0
 
+    .line 556
     new-instance p2, Lcom/google/android/filament/MaterialInstance;
 
     invoke-direct {p2, p0, p1}, Lcom/google/android/filament/MaterialInstance;-><init>(J)V
@@ -433,6 +466,7 @@
 .method public getNativeObject()J
     .locals 2
 
+    .line 624
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     return-wide v0
@@ -441,6 +475,7 @@
 .method public getPrimitiveCount(I)I
     .locals 2
 
+    .line 529
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/RenderableManager;->nGetPrimitiveCount(JI)I
@@ -453,6 +488,7 @@
 .method public hasComponent(I)Z
     .locals 2
 
+    .line 71
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/RenderableManager;->nHasComponent(JI)Z
@@ -465,6 +501,7 @@
 .method public isShadowCaster(I)Z
     .locals 2
 
+    .line 499
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/RenderableManager;->nIsShadowCaster(JI)Z
@@ -477,6 +514,7 @@
 .method public isShadowReceiver(I)Z
     .locals 2
 
+    .line 508
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/RenderableManager;->nIsShadowReceiver(JI)Z
@@ -489,8 +527,10 @@
 .method public setAxisAlignedBoundingBox(ILcom/google/android/filament/Box;)V
     .locals 9
 
+    .line 431
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
+    .line 432
     invoke-virtual {p2}, Lcom/google/android/filament/Box;->getCenter()[F
 
     move-result-object p0
@@ -515,6 +555,7 @@
 
     aget v5, v5, v6
 
+    .line 433
     invoke-virtual {p2}, Lcom/google/android/filament/Box;->getHalfExtent()[F
 
     move-result-object v7
@@ -543,6 +584,7 @@
 
     move v8, p2
 
+    .line 431
     invoke-static/range {v0 .. v8}, Lcom/google/android/filament/RenderableManager;->nSetAxisAlignedBoundingBox(JIFFFFFF)V
 
     return-void
@@ -551,6 +593,7 @@
 .method public setBlendOrderAt(III)V
     .locals 2
 
+    .line 604
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/RenderableManager;->nSetBlendOrderAt(JIII)V
@@ -561,6 +604,7 @@
 .method public setBonesAsMatrices(ILjava/nio/Buffer;II)V
     .locals 7
 
+    .line 385
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-virtual {p2}, Ljava/nio/Buffer;->remaining()I
@@ -583,6 +627,7 @@
 
     return-void
 
+    .line 387
     :cond_0
     new-instance p0, Ljava/nio/BufferOverflowException;
 
@@ -594,6 +639,7 @@
 .method public setBonesAsQuaternions(ILjava/nio/Buffer;II)V
     .locals 7
 
+    .line 404
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-virtual {p2}, Ljava/nio/Buffer;->remaining()I
@@ -616,6 +662,7 @@
 
     return-void
 
+    .line 406
     :cond_0
     new-instance p0, Ljava/nio/BufferOverflowException;
 
@@ -627,6 +674,7 @@
 .method public setCastShadows(IZ)V
     .locals 2
 
+    .line 471
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/RenderableManager;->nSetCastShadows(JIZ)V
@@ -637,6 +685,7 @@
 .method public setCulling(IZ)V
     .locals 2
 
+    .line 462
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/RenderableManager;->nSetCulling(JIZ)V
@@ -647,6 +696,7 @@
 .method public setGeometryAt(IILcom/google/android/filament/RenderableManager$PrimitiveType;II)V
     .locals 7
 
+    .line 590
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-virtual {p3}, Lcom/google/android/filament/RenderableManager$PrimitiveType;->getValue()I
@@ -671,6 +721,7 @@
 
     move-object v0, p0
 
+    .line 579
     iget-wide v0, v0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-virtual {p3}, Lcom/google/android/filament/RenderableManager$PrimitiveType;->getValue()I
@@ -685,6 +736,7 @@
 
     move-result-wide v7
 
+    .line 580
     invoke-virtual/range {p5 .. p5}, Lcom/google/android/filament/IndexBuffer;->getIndexCount()I
 
     move-result v10
@@ -695,6 +747,7 @@
 
     move v3, p2
 
+    .line 579
     invoke-static/range {v0 .. v10}, Lcom/google/android/filament/RenderableManager;->nSetGeometryAt(JIIIJJII)V
 
     return-void
@@ -705,6 +758,7 @@
 
     move-object v0, p0
 
+    .line 568
     iget-wide v0, v0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-virtual {p3}, Lcom/google/android/filament/RenderableManager$PrimitiveType;->getValue()I
@@ -735,6 +789,7 @@
 .method public setLayerMask(III)V
     .locals 2
 
+    .line 444
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/google/android/filament/RenderableManager;->nSetLayerMask(JIII)V
@@ -745,6 +800,7 @@
 .method public setMaterialInstanceAt(IILcom/google/android/filament/MaterialInstance;)V
     .locals 8
 
+    .line 539
     invoke-virtual {p3}, Lcom/google/android/filament/MaterialInstance;->getMaterial()Lcom/google/android/filament/Material;
 
     move-result-object v0
@@ -753,6 +809,7 @@
 
     move-result v0
 
+    .line 540
     iget-wide v1, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v1, v2, p1, p2}, Lcom/google/android/filament/RenderableManager;->nGetEnabledAttributesAt(JII)I
@@ -763,6 +820,7 @@
 
     if-eq v1, v0, :cond_0
 
+    .line 542
     invoke-static {}, Lcom/google/android/filament/Platform;->get()Lcom/google/android/filament/Platform;
 
     move-result-object v0
@@ -787,6 +845,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 544
     invoke-virtual {p0, p1, p2}, Lcom/google/android/filament/RenderableManager;->getEnabledAttributesAt(II)Ljava/util/Set;
 
     move-result-object v2
@@ -797,6 +856,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 545
     invoke-virtual {p3}, Lcom/google/android/filament/MaterialInstance;->getMaterial()Lcom/google/android/filament/Material;
 
     move-result-object v2
@@ -811,8 +871,10 @@
 
     move-result-object v1
 
+    .line 542
     invoke-virtual {v0, v1}, Lcom/google/android/filament/Platform;->warn(Ljava/lang/String;)V
 
+    .line 547
     :cond_0
     iget-wide v2, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
@@ -832,6 +894,7 @@
 .method public setMorphWeights(I[F)V
     .locals 2
 
+    .line 421
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/RenderableManager;->nSetMorphWeights(JI[F)V
@@ -842,6 +905,7 @@
 .method public setPriority(II)V
     .locals 2
 
+    .line 453
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/RenderableManager;->nSetPriority(JII)V
@@ -852,6 +916,7 @@
 .method public setReceiveShadows(IZ)V
     .locals 2
 
+    .line 480
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/RenderableManager;->nSetReceiveShadows(JIZ)V
@@ -862,6 +927,7 @@
 .method public setScreenSpaceContactShadows(IZ)V
     .locals 2
 
+    .line 490
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager;->mNativeObject:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/RenderableManager;->nSetScreenSpaceContactShadows(JIZ)V

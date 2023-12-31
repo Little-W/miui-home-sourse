@@ -1,5 +1,6 @@
 .class Lokhttp3/internal/platform/JdkWithJettyBootPlatform;
 .super Lokhttp3/internal/platform/Platform;
+.source "JdkWithJettyBootPlatform.java"
 
 
 # annotations
@@ -52,16 +53,22 @@
         }
     .end annotation
 
+    .line 41
     invoke-direct {p0}, Lokhttp3/internal/platform/Platform;-><init>()V
 
+    .line 42
     iput-object p1, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->putMethod:Ljava/lang/reflect/Method;
 
+    .line 43
     iput-object p2, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->getMethod:Ljava/lang/reflect/Method;
 
+    .line 44
     iput-object p3, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->removeMethod:Ljava/lang/reflect/Method;
 
+    .line 45
     iput-object p4, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->clientProviderClass:Ljava/lang/Class;
 
+    .line 46
     iput-object p5, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->serverProviderClass:Ljava/lang/Class;
 
     return-void
@@ -73,10 +80,12 @@
     :try_start_0
     const-string v0, "org.eclipse.jetty.alpn.ALPN"
 
+    .line 89
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
+    .line 90
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,6 +104,7 @@
 
     move-result-object v2
 
+    .line 91
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,6 +123,7 @@
 
     move-result-object v8
 
+    .line 92
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,6 +148,7 @@
 
     new-array v3, v3, [Ljava/lang/Class;
 
+    .line 93
     const-class v4, Ljavax/net/ssl/SSLSocket;
 
     const/4 v5, 0x0
@@ -155,6 +167,7 @@
 
     new-array v3, v4, [Ljava/lang/Class;
 
+    .line 94
     const-class v6, Ljavax/net/ssl/SSLSocket;
 
     aput-object v6, v3, v5
@@ -167,6 +180,7 @@
 
     new-array v3, v4, [Ljava/lang/Class;
 
+    .line 95
     const-class v4, Ljavax/net/ssl/SSLSocket;
 
     aput-object v4, v3, v5
@@ -175,6 +189,7 @@
 
     move-result-object v7
 
+    .line 96
     new-instance v1, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;
 
     move-object v4, v1
@@ -199,6 +214,7 @@
 .method public afterHandshake(Ljavax/net/ssl/SSLSocket;)V
     .locals 3
 
+    .line 64
     :try_start_0
     iget-object p0, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->removeMethod:Ljava/lang/reflect/Method;
 
@@ -224,6 +240,7 @@
 
     const-string p1, "unable to remove alpn"
 
+    .line 66
     invoke-static {p1, p0}, Lokhttp3/internal/Util;->assertionError(Ljava/lang/String;Ljava/lang/Exception;)Ljava/lang/AssertionError;
 
     move-result-object p0
@@ -244,10 +261,12 @@
         }
     .end annotation
 
+    .line 51
     invoke-static {p3}, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->alpnProtocolNames(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
+    .line 54
     :try_start_0
     const-class p3, Lokhttp3/internal/platform/Platform;
 
@@ -279,6 +298,7 @@
 
     move-result-object p2
 
+    .line 56
     iget-object p0, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->putMethod:Ljava/lang/reflect/Method;
 
     const/4 p3, 0x0
@@ -301,6 +321,7 @@
 
     const-string p1, "unable to set alpn"
 
+    .line 58
     invoke-static {p1, p0}, Lokhttp3/internal/Util;->assertionError(Ljava/lang/String;Ljava/lang/Exception;)Ljava/lang/AssertionError;
 
     move-result-object p0
@@ -313,6 +334,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 72
     :try_start_0
     iget-object p0, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform;->getMethod:Ljava/lang/reflect/Method;
 
@@ -326,6 +348,7 @@
 
     const/4 p1, 0x0
 
+    .line 73
     invoke-virtual {p0, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -336,6 +359,7 @@
 
     check-cast p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform$JettyNegoProvider;
 
+    .line 74
     iget-boolean v0, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform$JettyNegoProvider;->unsupported:Z
 
     if-nez v0, :cond_0
@@ -344,6 +368,7 @@
 
     if-nez v0, :cond_0
 
+    .line 75
     invoke-static {}, Lokhttp3/internal/platform/Platform;->get()Lokhttp3/internal/platform/Platform;
 
     move-result-object p0
@@ -356,6 +381,7 @@
 
     return-object p1
 
+    .line 79
     :cond_0
     iget-boolean v0, p0, Lokhttp3/internal/platform/JdkWithJettyBootPlatform$JettyNegoProvider;->unsupported:Z
 
@@ -377,6 +403,7 @@
 
     const-string p1, "unable to get selected protocol"
 
+    .line 81
     invoke-static {p1, p0}, Lokhttp3/internal/Util;->assertionError(Ljava/lang/String;Ljava/lang/Exception;)Ljava/lang/AssertionError;
 
     move-result-object p0

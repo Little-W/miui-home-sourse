@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/android/systemui/shared/recents/sosc/-$$Lambda$SoscSplitScreenController$Cu_0HQ5KemNrLSQYuT_59A4zekM;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/util/function/IntFunction;

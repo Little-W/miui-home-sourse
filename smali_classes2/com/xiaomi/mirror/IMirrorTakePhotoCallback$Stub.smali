@@ -1,5 +1,6 @@
 .class public abstract Lcom/xiaomi/mirror/IMirrorTakePhotoCallback$Stub;
 .super Landroid/os/Binder;
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/xiaomi/mirror/IMirrorTakePhotoCallback;

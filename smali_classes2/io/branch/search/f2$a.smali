@@ -1,5 +1,6 @@
 .class public Lio/branch/search/f2$a;
 .super Lio/requery/android/database/sqlite/SQLiteOpenHelper;
+.source "SourceFile"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/snackbar/BaseTransientBottomBar$14;
 .super Ljava/lang/Object;
+.source "BaseTransientBottomBar.java"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -28,12 +29,14 @@
 .method constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;I)V
     .locals 0
 
+    .line 973
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$14;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
     iput p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$14;->val$translationYBottom:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 974
     iget p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$14;->val$translationYBottom:I
 
     iput p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$14;->previousAnimatedIntValue:I
@@ -46,6 +49,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
+    .line 978
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -56,12 +60,14 @@
 
     move-result p1
 
+    .line 979
     invoke-static {}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->access$1500()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 982
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$14;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
     iget-object v0, v0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
@@ -74,6 +80,7 @@
 
     goto :goto_0
 
+    .line 985
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$14;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
@@ -83,6 +90,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;->setTranslationY(F)V
 
+    .line 987
     :goto_0
     iput p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$14;->previousAnimatedIntValue:I
 

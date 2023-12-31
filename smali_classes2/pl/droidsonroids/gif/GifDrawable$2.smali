@@ -1,5 +1,6 @@
 .class Lpl/droidsonroids/gif/GifDrawable$2;
 .super Lpl/droidsonroids/gif/SafeRunnable;
+.source "GifDrawable.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Lpl/droidsonroids/gif/GifDrawable;Lpl/droidsonroids/gif/GifDrawable;I)V
     .locals 0
 
+    .line 532
     iput-object p1, p0, Lpl/droidsonroids/gif/GifDrawable$2;->this$0:Lpl/droidsonroids/gif/GifDrawable;
 
     iput p3, p0, Lpl/droidsonroids/gif/GifDrawable$2;->val$position:I
@@ -37,6 +39,7 @@
 .method public doWork()V
     .locals 3
 
+    .line 535
     iget-object v0, p0, Lpl/droidsonroids/gif/GifDrawable$2;->this$0:Lpl/droidsonroids/gif/GifDrawable;
 
     iget-object v0, v0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
@@ -49,6 +52,7 @@
 
     invoke-virtual {v0, v1, v2}, Lpl/droidsonroids/gif/GifInfoHandle;->seekToTime(ILandroid/graphics/Bitmap;)V
 
+    .line 536
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable$2;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mInvalidationHandler:Lpl/droidsonroids/gif/InvalidationHandler;

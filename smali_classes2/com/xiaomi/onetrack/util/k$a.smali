@@ -21,6 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
 .method synthetic constructor <init>(Lcom/xiaomi/onetrack/util/l;)V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Lcom/xiaomi/onetrack/util/k$a;-><init>()V
 
     return-void

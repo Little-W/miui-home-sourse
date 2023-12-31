@@ -1,5 +1,6 @@
 .class synthetic Lcom/airbnb/lottie/model/layer/TextLayer$3;
 .super Ljava/lang/Object;
+.source "TextLayer.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 345
     invoke-static {}, Lcom/airbnb/lottie/model/DocumentData$Justification;->values()[Lcom/airbnb/lottie/model/DocumentData$Justification;
 
     move-result-object v0

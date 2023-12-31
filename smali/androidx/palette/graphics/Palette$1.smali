@@ -1,5 +1,6 @@
 .class final Landroidx/palette/graphics/Palette$1;
 .super Ljava/lang/Object;
+.source "Palette.java"
 
 # interfaces
 .implements Landroidx/palette/graphics/Palette$Filter;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 956
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 
     const/4 p0, 0x2
 
+    .line 969
     aget p0, p1, p0
 
     const p1, 0x3d4ccccd    # 0.05f
@@ -54,6 +57,7 @@
 
     const/4 p0, 0x0
 
+    .line 983
     aget v0, p1, p0
 
     const/high16 v1, 0x41200000    # 10.0f
@@ -91,6 +95,7 @@
 
     const/4 p0, 0x2
 
+    .line 976
     aget p0, p1, p0
 
     const p1, 0x3f733333    # 0.95f
@@ -115,6 +120,7 @@
 .method public isAllowed(I[F)Z
     .locals 0
 
+    .line 962
     invoke-direct {p0, p2}, Landroidx/palette/graphics/Palette$1;->isWhite([F)Z
 
     move-result p1

@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/animation/content/RoundedCornersContent;
 .super Ljava/lang/Object;
+.source "RoundedCornersContent.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/animation/content/ShapeModifierContent;
@@ -29,16 +30,20 @@
 .method public constructor <init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/RoundedCorners;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
+    .line 32
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/RoundedCorners;->getName()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->name:Ljava/lang/String;
 
+    .line 33
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/RoundedCorners;->getCornerRadius()Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
     move-result-object p1
@@ -49,10 +54,12 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->roundedCorners:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
+    .line 34
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->roundedCorners:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
+    .line 35
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->roundedCorners:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
@@ -63,6 +70,7 @@
 .method private static floorDiv(II)I
     .locals 2
 
+    .line 218
     div-int v0, p0, p1
 
     xor-int v1, p0, p1
@@ -82,6 +90,7 @@
 .method private static floorMod(II)I
     .locals 1
 
+    .line 211
     invoke-static {p0, p1}, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->floorDiv(II)I
 
     move-result v0
@@ -96,14 +105,17 @@
 .method private getShapeData(Lcom/airbnb/lottie/model/content/ShapeData;)Lcom/airbnb/lottie/model/content/ShapeData;
     .locals 10
 
+    .line 179
     invoke-virtual {p1}, Lcom/airbnb/lottie/model/content/ShapeData;->getCurves()Ljava/util/List;
 
     move-result-object v0
 
+    .line 180
     invoke-virtual {p1}, Lcom/airbnb/lottie/model/content/ShapeData;->isClosed()Z
 
     move-result v1
 
+    .line 182
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -119,6 +131,7 @@
     :goto_0
     if-ltz v2, :cond_4
 
+    .line 183
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -127,6 +140,7 @@
 
     add-int/lit8 v7, v2, -0x1
 
+    .line 184
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v8
@@ -145,6 +159,7 @@
 
     if-nez v1, :cond_0
 
+    .line 185
     invoke-virtual {p1}, Lcom/airbnb/lottie/model/content/ShapeData;->getInitialPoint()Landroid/graphics/PointF;
 
     move-result-object v8
@@ -165,16 +180,19 @@
 
     goto :goto_2
 
+    .line 186
     :cond_1
     invoke-virtual {v7}, Lcom/airbnb/lottie/model/CubicCurveData;->getControlPoint2()Landroid/graphics/PointF;
 
     move-result-object v7
 
+    .line 187
     :goto_2
     invoke-virtual {v6}, Lcom/airbnb/lottie/model/CubicCurveData;->getControlPoint1()Landroid/graphics/PointF;
 
     move-result-object v6
 
+    .line 189
     invoke-virtual {p1}, Lcom/airbnb/lottie/model/content/ShapeData;->isClosed()Z
 
     move-result v9
@@ -198,6 +216,7 @@
     :cond_2
     move v9, v4
 
+    .line 190
     :goto_3
     invoke-virtual {v7, v8}, Landroid/graphics/PointF;->equals(Ljava/lang/Object;)Z
 
@@ -225,6 +244,7 @@
 
     goto :goto_0
 
+    .line 196
     :cond_4
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->shapeData:Lcom/airbnb/lottie/model/content/ShapeData;
 
@@ -240,6 +260,7 @@
 
     if-eq p1, v5, :cond_7
 
+    .line 197
     :cond_5
     new-instance p1, Ljava/util/ArrayList;
 
@@ -250,6 +271,7 @@
     :goto_5
     if-ge v0, v5, :cond_6
 
+    .line 199
     new-instance v2, Lcom/airbnb/lottie/model/CubicCurveData;
 
     invoke-direct {v2}, Lcom/airbnb/lottie/model/CubicCurveData;-><init>()V
@@ -260,6 +282,7 @@
 
     goto :goto_5
 
+    .line 201
     :cond_6
     new-instance v0, Lcom/airbnb/lottie/model/content/ShapeData;
 
@@ -273,11 +296,13 @@
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->shapeData:Lcom/airbnb/lottie/model/content/ShapeData;
 
+    .line 203
     :cond_7
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->shapeData:Lcom/airbnb/lottie/model/content/ShapeData;
 
     invoke-virtual {p1, v1}, Lcom/airbnb/lottie/model/content/ShapeData;->setClosed(Z)V
 
+    .line 204
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->shapeData:Lcom/airbnb/lottie/model/content/ShapeData;
 
     return-object p0
@@ -288,6 +313,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 39
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->name:Ljava/lang/String;
 
     return-object p0
@@ -305,6 +331,7 @@
         }
     .end annotation
 
+    .line 51
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->roundedCorners:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     return-object p0
@@ -313,10 +340,12 @@
 .method public modifyShape(Lcom/airbnb/lottie/model/content/ShapeData;)Lcom/airbnb/lottie/model/content/ShapeData;
     .locals 18
 
+    .line 75
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/model/content/ShapeData;->getCurves()Ljava/util/List;
 
     move-result-object v0
 
+    .line 76
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -330,6 +359,7 @@
     :cond_0
     move-object/from16 v1, p0
 
+    .line 79
     iget-object v2, v1, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->roundedCorners:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -350,11 +380,13 @@
 
     return-object p1
 
+    .line 84
     :cond_1
     invoke-direct/range {p0 .. p1}, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->getShapeData(Lcom/airbnb/lottie/model/content/ShapeData;)Lcom/airbnb/lottie/model/content/ShapeData;
 
     move-result-object v1
 
+    .line 85
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/model/content/ShapeData;->getInitialPoint()Landroid/graphics/PointF;
 
     move-result-object v3
@@ -369,10 +401,12 @@
 
     invoke-virtual {v1, v3, v4}, Lcom/airbnb/lottie/model/content/ShapeData;->setInitialPoint(FF)V
 
+    .line 86
     invoke-virtual {v1}, Lcom/airbnb/lottie/model/content/ShapeData;->getCurves()Ljava/util/List;
 
     move-result-object v3
 
+    .line 88
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/model/content/ShapeData;->isClosed()Z
 
     move-result v4
@@ -381,6 +415,7 @@
 
     const/4 v7, 0x0
 
+    .line 104
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -388,6 +423,7 @@
 
     if-ge v6, v8, :cond_7
 
+    .line 105
     invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -396,6 +432,7 @@
 
     add-int/lit8 v9, v6, -0x1
 
+    .line 106
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v10
@@ -412,6 +449,7 @@
 
     add-int/lit8 v10, v6, -0x2
 
+    .line 107
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v11
@@ -430,6 +468,7 @@
 
     if-nez v4, :cond_2
 
+    .line 108
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/model/content/ShapeData;->getInitialPoint()Landroid/graphics/PointF;
 
     move-result-object v11
@@ -450,24 +489,29 @@
 
     goto :goto_2
 
+    .line 109
     :cond_3
     invoke-virtual {v9}, Lcom/airbnb/lottie/model/CubicCurveData;->getControlPoint2()Landroid/graphics/PointF;
 
     move-result-object v12
 
+    .line 110
     :goto_2
     invoke-virtual {v8}, Lcom/airbnb/lottie/model/CubicCurveData;->getControlPoint1()Landroid/graphics/PointF;
 
     move-result-object v13
 
+    .line 111
     invoke-virtual {v10}, Lcom/airbnb/lottie/model/CubicCurveData;->getVertex()Landroid/graphics/PointF;
 
     move-result-object v10
 
+    .line 112
     invoke-virtual {v8}, Lcom/airbnb/lottie/model/CubicCurveData;->getVertex()Landroid/graphics/PointF;
 
     move-result-object v14
 
+    .line 115
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/model/content/ShapeData;->isClosed()Z
 
     move-result v15
@@ -493,6 +537,7 @@
     :cond_4
     const/4 v15, 0x0
 
+    .line 116
     :goto_3
     invoke-virtual {v12, v11}, Landroid/graphics/PointF;->equals(Ljava/lang/Object;)Z
 
@@ -508,24 +553,28 @@
 
     if-nez v15, :cond_6
 
+    .line 118
     iget v8, v11, Landroid/graphics/PointF;->x:F
 
     iget v9, v10, Landroid/graphics/PointF;->x:F
 
     sub-float/2addr v8, v9
 
+    .line 119
     iget v9, v11, Landroid/graphics/PointF;->y:F
 
     iget v12, v10, Landroid/graphics/PointF;->y:F
 
     sub-float/2addr v9, v12
 
+    .line 120
     iget v12, v14, Landroid/graphics/PointF;->x:F
 
     iget v13, v11, Landroid/graphics/PointF;->x:F
 
     sub-float/2addr v12, v13
 
+    .line 121
     iget v13, v14, Landroid/graphics/PointF;->y:F
 
     iget v15, v11, Landroid/graphics/PointF;->y:F
@@ -538,6 +587,7 @@
 
     float-to-double v8, v9
 
+    .line 123
     invoke-static {v5, v6, v8, v9}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide v5
@@ -548,6 +598,7 @@
 
     float-to-double v12, v13
 
+    .line 124
     invoke-static {v8, v9, v12, v13}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide v8
@@ -558,16 +609,19 @@
 
     const/high16 v8, 0x3f000000    # 0.5f
 
+    .line 126
     invoke-static {v5, v8}, Ljava/lang/Math;->min(FF)F
 
     move-result v5
 
     div-float v6, v2, v6
 
+    .line 127
     invoke-static {v6, v8}, Ljava/lang/Math;->min(FF)F
 
     move-result v6
 
+    .line 130
     iget v8, v11, Landroid/graphics/PointF;->x:F
 
     iget v9, v10, Landroid/graphics/PointF;->x:F
@@ -580,6 +634,7 @@
 
     add-float/2addr v8, v9
 
+    .line 131
     iget v9, v11, Landroid/graphics/PointF;->y:F
 
     iget v10, v10, Landroid/graphics/PointF;->y:F
@@ -592,6 +647,7 @@
 
     add-float/2addr v9, v10
 
+    .line 132
     iget v5, v11, Landroid/graphics/PointF;->x:F
 
     iget v10, v14, Landroid/graphics/PointF;->x:F
@@ -604,6 +660,7 @@
 
     add-float/2addr v5, v10
 
+    .line 133
     iget v10, v11, Landroid/graphics/PointF;->y:F
 
     iget v12, v14, Landroid/graphics/PointF;->y:F
@@ -616,6 +673,7 @@
 
     add-float/2addr v10, v12
 
+    .line 136
     iget v6, v11, Landroid/graphics/PointF;->x:F
 
     sub-float v6, v8, v6
@@ -626,6 +684,7 @@
 
     sub-float v6, v8, v6
 
+    .line 137
     iget v13, v11, Landroid/graphics/PointF;->y:F
 
     sub-float v13, v9, v13
@@ -634,6 +693,7 @@
 
     sub-float v13, v9, v13
 
+    .line 138
     iget v14, v11, Landroid/graphics/PointF;->x:F
 
     sub-float v14, v5, v14
@@ -642,6 +702,7 @@
 
     sub-float v14, v5, v14
 
+    .line 139
     iget v11, v11, Landroid/graphics/PointF;->y:F
 
     sub-float v11, v10, v11
@@ -654,6 +715,7 @@
 
     move-object/from16 v17, v0
 
+    .line 143
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
@@ -668,35 +730,44 @@
 
     check-cast v0, Lcom/airbnb/lottie/model/CubicCurveData;
 
+    .line 144
     invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, Lcom/airbnb/lottie/model/CubicCurveData;
 
+    .line 145
     invoke-virtual {v0, v8, v9}, Lcom/airbnb/lottie/model/CubicCurveData;->setControlPoint2(FF)V
 
+    .line 146
     invoke-virtual {v0, v8, v9}, Lcom/airbnb/lottie/model/CubicCurveData;->setVertex(FF)V
 
     if-nez v15, :cond_5
 
+    .line 148
     invoke-virtual {v1, v8, v9}, Lcom/airbnb/lottie/model/content/ShapeData;->setInitialPoint(FF)V
 
+    .line 150
     :cond_5
     invoke-virtual {v12, v6, v13}, Lcom/airbnb/lottie/model/CubicCurveData;->setControlPoint1(FF)V
 
     add-int/lit8 v7, v7, 0x1
 
+    .line 154
     invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/airbnb/lottie/model/CubicCurveData;
 
+    .line 155
     invoke-virtual {v12, v14, v11}, Lcom/airbnb/lottie/model/CubicCurveData;->setControlPoint2(FF)V
 
+    .line 156
     invoke-virtual {v12, v5, v10}, Lcom/airbnb/lottie/model/CubicCurveData;->setVertex(FF)V
 
+    .line 157
     invoke-virtual {v0, v5, v10}, Lcom/airbnb/lottie/model/CubicCurveData;->setControlPoint1(FF)V
 
     add-int/lit8 v7, v7, 0x1
@@ -710,6 +781,7 @@
 
     add-int/lit8 v0, v7, -0x1
 
+    .line 162
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v5
@@ -724,12 +796,14 @@
 
     check-cast v0, Lcom/airbnb/lottie/model/CubicCurveData;
 
+    .line 163
     invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/airbnb/lottie/model/CubicCurveData;
 
+    .line 164
     invoke-virtual {v9}, Lcom/airbnb/lottie/model/CubicCurveData;->getVertex()Landroid/graphics/PointF;
 
     move-result-object v6
@@ -744,6 +818,7 @@
 
     invoke-virtual {v0, v6, v10}, Lcom/airbnb/lottie/model/CubicCurveData;->setControlPoint2(FF)V
 
+    .line 165
     invoke-virtual {v9}, Lcom/airbnb/lottie/model/CubicCurveData;->getVertex()Landroid/graphics/PointF;
 
     move-result-object v6
@@ -758,6 +833,7 @@
 
     invoke-virtual {v0, v6, v9}, Lcom/airbnb/lottie/model/CubicCurveData;->setVertex(FF)V
 
+    .line 166
     invoke-virtual {v8}, Lcom/airbnb/lottie/model/CubicCurveData;->getVertex()Landroid/graphics/PointF;
 
     move-result-object v0
@@ -788,6 +864,7 @@
 .method public onValueChanged()V
     .locals 0
 
+    .line 43
     iget-object p0, p0, Lcom/airbnb/lottie/animation/content/RoundedCornersContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->invalidateSelf()V

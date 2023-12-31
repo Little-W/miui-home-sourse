@@ -35,18 +35,22 @@
     :cond_0
     const-string v0, "com.google.android.gms.common.internal.IAccountAccessor"
 
+    .line 5
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
+    .line 6
     instance-of v1, v0, Lcom/google/android/gms/common/internal/IAccountAccessor;
 
     if-eqz v1, :cond_1
 
+    .line 7
     check-cast v0, Lcom/google/android/gms/common/internal/IAccountAccessor;
 
     return-object v0
 
+    .line 8
     :cond_1
     new-instance v0, Lcom/google/android/gms/common/internal/IAccountAccessor$Stub$zza;
 
@@ -69,12 +73,15 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 10
     invoke-virtual {p0}, Lcom/google/android/gms/common/internal/IAccountAccessor$Stub;->getAccount()Landroid/accounts/Account;
 
     move-result-object p0
 
+    .line 11
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 12
     invoke-static {p3, p0}, Lcom/google/android/gms/internal/common/zzc;->zzb(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
     const/4 p0, 0x1

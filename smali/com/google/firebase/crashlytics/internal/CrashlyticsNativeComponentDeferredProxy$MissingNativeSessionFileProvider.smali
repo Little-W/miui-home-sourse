@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy$MissingNativeSessionFileProvider;
 .super Ljava/lang/Object;
+.source "CrashlyticsNativeComponentDeferredProxy.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/NativeSessionFileProvider;
@@ -20,6 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +30,7 @@
 .method synthetic constructor <init>(Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy$1;)V
     .locals 0
 
+    .line 81
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponentDeferredProxy$MissingNativeSessionFileProvider;-><init>()V
 
     return-void

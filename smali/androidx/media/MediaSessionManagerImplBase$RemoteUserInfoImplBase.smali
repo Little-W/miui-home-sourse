@@ -1,5 +1,6 @@
 .class Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
 .super Ljava/lang/Object;
+.source "MediaSessionManagerImplBase.java"
 
 # interfaces
 .implements Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;
@@ -28,12 +29,16 @@
 .method constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 126
     iput-object p1, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
 
+    .line 127
     iput p2, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPid:I
 
+    .line 128
     iput p3, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mUid:I
 
     return-void
@@ -50,6 +55,7 @@
 
     return v0
 
+    .line 151
     :cond_0
     instance-of v1, p1, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
 
@@ -59,9 +65,11 @@
 
     return v2
 
+    .line 154
     :cond_1
     check-cast p1, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
 
+    .line 155
     iget-object v1, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
 
     iget-object v3, p1, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
@@ -100,6 +108,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 162
     iget-object v1, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
 
     const/4 v2, 0x0

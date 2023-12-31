@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzep;
 .super Landroid/database/sqlite/SQLiteOpenHelper;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # instance fields
@@ -10,12 +11,14 @@
 .method constructor <init>(Lcom/google/android/gms/measurement/internal/zzem;Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzep;->zza:Lcom/google/android/gms/measurement/internal/zzem;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-direct {p0, p2, p3, p1, v0}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     return-void
@@ -31,6 +34,7 @@
         }
     .end annotation
 
+    .line 4
     :try_start_0
     invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -41,6 +45,7 @@
 
     return-object p0
 
+    .line 7
     :catch_0
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzep;->zza:Lcom/google/android/gms/measurement/internal/zzem;
 
@@ -58,6 +63,7 @@
 
     const-string v0, "google_app_measurement_local.db"
 
+    .line 10
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzep;->zza:Lcom/google/android/gms/measurement/internal/zzem;
 
     invoke-virtual {v1}, Lcom/google/android/gms/measurement/internal/zzgr;->zzm()Landroid/content/Context;
@@ -74,6 +80,7 @@
 
     if-nez v1, :cond_0
 
+    .line 11
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzep;->zza:Lcom/google/android/gms/measurement/internal/zzem;
 
     invoke-virtual {v1}, Lcom/google/android/gms/measurement/internal/zzgr;->zzq()Lcom/google/android/gms/measurement/internal/zzeq;
@@ -88,6 +95,7 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/google/android/gms/measurement/internal/zzes;->zza(Ljava/lang/String;Ljava/lang/Object;)V
 
+    .line 12
     :cond_0
     :try_start_1
     invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
@@ -101,18 +109,21 @@
     :catch_1
     move-exception v0
 
+    .line 14
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzep;->zza:Lcom/google/android/gms/measurement/internal/zzem;
 
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzq()Lcom/google/android/gms/measurement/internal/zzeq;
 
     move-result-object p0
 
+    .line 15
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzeq;->zze()Lcom/google/android/gms/measurement/internal/zzes;
 
     move-result-object p0
 
     const-string v1, "Failed to open local database. Events will bypass local storage"
 
+    .line 16
     invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/measurement/internal/zzes;->zza(Ljava/lang/String;Ljava/lang/Object;)V
 
     const/4 p0, 0x0
@@ -122,12 +133,14 @@
     :catch_2
     move-exception p0
 
+    .line 5
     throw p0
 .end method
 
 .method public final onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 0
 
+    .line 22
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzep;->zza:Lcom/google/android/gms/measurement/internal/zzem;
 
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzq()Lcom/google/android/gms/measurement/internal/zzeq;
@@ -148,8 +161,10 @@
 .method public final onOpen(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 6
 
+    .line 18
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzep;->zza:Lcom/google/android/gms/measurement/internal/zzem;
 
+    .line 19
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzq()Lcom/google/android/gms/measurement/internal/zzeq;
 
     move-result-object v0
@@ -164,6 +179,7 @@
 
     move-object v1, p1
 
+    .line 20
     invoke-static/range {v0 .. v5}, Lcom/google/android/gms/measurement/internal/zzaj;->zza(Lcom/google/android/gms/measurement/internal/zzeq;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
     return-void

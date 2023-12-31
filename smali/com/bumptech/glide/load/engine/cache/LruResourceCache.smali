@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/engine/cache/LruResourceCache;
 .super Lcom/bumptech/glide/util/LruCache;
+.source "LruResourceCache.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/cache/MemoryCache;
@@ -25,6 +26,7 @@
 .method public constructor <init>(J)V
     .locals 0
 
+    .line 22
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/util/LruCache;-><init>(J)V
 
     return-void
@@ -46,12 +48,14 @@
 
     const/4 p1, 0x0
 
+    .line 40
     invoke-super {p0, p1}, Lcom/bumptech/glide/util/LruCache;->getSize(Ljava/lang/Object;)I
 
     move-result p0
 
     return p0
 
+    .line 42
     :cond_0
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/Resource;->getSize()I
 
@@ -63,6 +67,7 @@
 .method protected bridge synthetic getSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 13
     check-cast p1, Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/cache/LruResourceCache;->getSize(Lcom/bumptech/glide/load/engine/Resource;)I
@@ -83,12 +88,14 @@
         }
     .end annotation
 
+    .line 32
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/cache/LruResourceCache;->listener:Lcom/bumptech/glide/load/engine/cache/MemoryCache$ResourceRemovedListener;
 
     if-eqz p0, :cond_0
 
     if-eqz p2, :cond_0
 
+    .line 33
     invoke-interface {p0, p2}, Lcom/bumptech/glide/load/engine/cache/MemoryCache$ResourceRemovedListener;->onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V
 
     :cond_0
@@ -98,6 +105,7 @@
 .method protected bridge synthetic onItemEvicted(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 13
     check-cast p1, Lcom/bumptech/glide/load/Key;
 
     check-cast p2, Lcom/bumptech/glide/load/engine/Resource;
@@ -110,6 +118,7 @@
 .method public bridge synthetic put(Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;
     .locals 0
 
+    .line 13
     invoke-super {p0, p1, p2}, Lcom/bumptech/glide/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -122,6 +131,7 @@
 .method public bridge synthetic remove(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/load/engine/Resource;
     .locals 0
 
+    .line 13
     invoke-super {p0, p1}, Lcom/bumptech/glide/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -134,6 +144,7 @@
 .method public setResourceRemovedListener(Lcom/bumptech/glide/load/engine/cache/MemoryCache$ResourceRemovedListener;)V
     .locals 0
 
+    .line 27
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/cache/LruResourceCache;->listener:Lcom/bumptech/glide/load/engine/cache/MemoryCache$ResourceRemovedListener;
 
     return-void
@@ -146,6 +157,7 @@
 
     if-lt p1, v0, :cond_0
 
+    .line 52
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/cache/LruResourceCache;->clearMemory()V
 
     goto :goto_0
@@ -159,6 +171,7 @@
 
     if-ne p1, v0, :cond_2
 
+    .line 58
     :cond_1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/cache/LruResourceCache;->getMaxSize()J
 

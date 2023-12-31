@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/installations/-$$Lambda$FirebaseInstallations$pfXbx9QCGkMrm_6XDXgf1nv3q8c;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/SelectAwaitOnCompletion;
 .super Lkotlinx/coroutines/JobNode;
+.source "JobSupport.kt"
 
 
 # annotations
@@ -59,6 +60,7 @@
         }
     .end annotation
 
+    .line 1441
     check-cast p1, Lkotlinx/coroutines/Job;
 
     invoke-direct {p0, p1}, Lkotlinx/coroutines/JobNode;-><init>(Lkotlinx/coroutines/Job;)V
@@ -75,6 +77,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1437
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/SelectAwaitOnCompletion;->invoke(Ljava/lang/Throwable;)V
@@ -87,6 +90,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 1443
     iget-object p1, p0, Lkotlinx/coroutines/SelectAwaitOnCompletion;->select:Lkotlinx/coroutines/selects/SelectInstance;
 
     invoke-interface {p1}, Lkotlinx/coroutines/selects/SelectInstance;->trySelect()Z
@@ -95,6 +99,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1444
     iget-object p1, p0, Lkotlinx/coroutines/SelectAwaitOnCompletion;->job:Lkotlinx/coroutines/Job;
 
     check-cast p1, Lkotlinx/coroutines/JobSupport;
@@ -112,6 +117,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1446
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

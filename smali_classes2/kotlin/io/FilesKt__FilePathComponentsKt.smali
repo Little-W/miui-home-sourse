@@ -1,5 +1,6 @@
 .class Lkotlin/io/FilesKt__FilePathComponentsKt;
 .super Ljava/lang/Object;
+.source "FilePathComponents.kt"
 
 
 # annotations
@@ -12,6 +13,7 @@
 .method private static final getRootLength$FilesKt__FilePathComponentsKt(Ljava/lang/String;)I
     .locals 8
 
+    .line 28
     move-object v6, p0
 
     check-cast v6, Ljava/lang/CharSequence;
@@ -36,6 +38,7 @@
 
     if-nez v0, :cond_2
 
+    .line 30
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -50,6 +53,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 34
     sget-char v1, Ljava/io/File;->separatorChar:C
 
     const/4 v2, 0x2
@@ -68,6 +72,7 @@
 
     if-ltz v0, :cond_1
 
+    .line 36
     sget-char v1, Ljava/io/File;->separatorChar:C
 
     add-int/lit8 v2, v0, 0x1
@@ -90,6 +95,7 @@
 
     return v0
 
+    .line 40
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -107,6 +113,7 @@
 
     add-int/lit8 v2, v0, -0x1
 
+    .line 46
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -128,12 +135,14 @@
 
     const/4 v2, 0x0
 
+    .line 51
     invoke-static {v6, v1, v3, v0, v2}, Lkotlin/text/StringsKt;->endsWith$default(Ljava/lang/CharSequence;CZILjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
+    .line 52
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -151,6 +160,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 85
     invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p0

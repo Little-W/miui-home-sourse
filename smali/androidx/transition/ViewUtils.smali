@@ -1,5 +1,6 @@
 .class Landroidx/transition/ViewUtils;
 .super Ljava/lang/Object;
+.source "ViewUtils.java"
 
 
 # static fields
@@ -32,12 +33,14 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 38
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-lt v0, v1, :cond_0
 
+    .line 39
     new-instance v0, Landroidx/transition/ViewUtilsApi29;
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi29;-><init>()V
@@ -46,6 +49,7 @@
 
     goto :goto_0
 
+    .line 40
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -53,6 +57,7 @@
 
     if-lt v0, v1, :cond_1
 
+    .line 41
     new-instance v0, Landroidx/transition/ViewUtilsApi23;
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi23;-><init>()V
@@ -61,6 +66,7 @@
 
     goto :goto_0
 
+    .line 42
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -68,6 +74,7 @@
 
     if-lt v0, v1, :cond_2
 
+    .line 43
     new-instance v0, Landroidx/transition/ViewUtilsApi22;
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi22;-><init>()V
@@ -76,6 +83,7 @@
 
     goto :goto_0
 
+    .line 44
     :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -83,6 +91,7 @@
 
     if-lt v0, v1, :cond_3
 
+    .line 45
     new-instance v0, Landroidx/transition/ViewUtilsApi21;
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi21;-><init>()V
@@ -91,6 +100,7 @@
 
     goto :goto_0
 
+    .line 46
     :cond_3
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -98,6 +108,7 @@
 
     if-lt v0, v1, :cond_4
 
+    .line 47
     new-instance v0, Landroidx/transition/ViewUtilsApi19;
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi19;-><init>()V
@@ -106,6 +117,7 @@
 
     goto :goto_0
 
+    .line 49
     :cond_4
     new-instance v0, Landroidx/transition/ViewUtilsBase;
 
@@ -113,6 +125,7 @@
 
     sput-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
+    .line 56
     :goto_0
     new-instance v0, Landroidx/transition/ViewUtils$1;
 
@@ -124,6 +137,7 @@
 
     sput-object v0, Landroidx/transition/ViewUtils;->TRANSITION_ALPHA:Landroid/util/Property;
 
+    .line 71
     new-instance v0, Landroidx/transition/ViewUtils$2;
 
     const-class v1, Landroid/graphics/Rect;
@@ -140,6 +154,7 @@
 .method static clearNonTransitionAlpha(Landroid/view/View;)V
     .locals 1
 
+    .line 128
     sget-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
     invoke-virtual {v0, p0}, Landroidx/transition/ViewUtilsBase;->clearNonTransitionAlpha(Landroid/view/View;)V
@@ -150,18 +165,21 @@
 .method static getOverlay(Landroid/view/View;)Landroidx/transition/ViewOverlayImpl;
     .locals 2
 
+    .line 90
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
 
     if-lt v0, v1, :cond_0
 
+    .line 91
     new-instance v0, Landroidx/transition/ViewOverlayApi18;
 
     invoke-direct {v0, p0}, Landroidx/transition/ViewOverlayApi18;-><init>(Landroid/view/View;)V
 
     return-object v0
 
+    .line 93
     :cond_0
     invoke-static {p0}, Landroidx/transition/ViewOverlayApi14;->createFrom(Landroid/view/View;)Landroidx/transition/ViewOverlayApi14;
 
@@ -173,6 +191,7 @@
 .method static getTransitionAlpha(Landroid/view/View;)F
     .locals 1
 
+    .line 111
     sget-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
     invoke-virtual {v0, p0}, Landroidx/transition/ViewUtilsBase;->getTransitionAlpha(Landroid/view/View;)F
@@ -185,18 +204,21 @@
 .method static getWindowId(Landroid/view/View;)Landroidx/transition/WindowIdImpl;
     .locals 2
 
+    .line 100
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
 
     if-lt v0, v1, :cond_0
 
+    .line 101
     new-instance v0, Landroidx/transition/WindowIdApi18;
 
     invoke-direct {v0, p0}, Landroidx/transition/WindowIdApi18;-><init>(Landroid/view/View;)V
 
     return-object v0
 
+    .line 103
     :cond_0
     new-instance v0, Landroidx/transition/WindowIdApi14;
 
@@ -212,6 +234,7 @@
 .method static saveNonTransitionAlpha(Landroid/view/View;)V
     .locals 1
 
+    .line 119
     sget-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
     invoke-virtual {v0, p0}, Landroidx/transition/ViewUtilsBase;->saveNonTransitionAlpha(Landroid/view/View;)V
@@ -222,6 +245,7 @@
 .method static setLeftTopRightBottom(Landroid/view/View;IIII)V
     .locals 6
 
+    .line 199
     sget-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
     move-object v1, p0
@@ -242,6 +266,7 @@
 .method static setTransitionAlpha(Landroid/view/View;F)V
     .locals 1
 
+    .line 107
     sget-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
     invoke-virtual {v0, p0, p1}, Landroidx/transition/ViewUtilsBase;->setTransitionAlpha(Landroid/view/View;F)V
@@ -252,6 +277,7 @@
 .method static setTransitionVisibility(Landroid/view/View;I)V
     .locals 1
 
+    .line 145
     sget-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
     invoke-virtual {v0, p0, p1}, Landroidx/transition/ViewUtilsBase;->setTransitionVisibility(Landroid/view/View;I)V
@@ -262,6 +288,7 @@
 .method static transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 1
 
+    .line 161
     sget-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
     invoke-virtual {v0, p0, p1}, Landroidx/transition/ViewUtilsBase;->transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
@@ -272,6 +299,7 @@
 .method static transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 1
 
+    .line 177
     sget-object v0, Landroidx/transition/ViewUtils;->IMPL:Landroidx/transition/ViewUtilsBase;
 
     invoke-virtual {v0, p0, p1}, Landroidx/transition/ViewUtilsBase;->transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V

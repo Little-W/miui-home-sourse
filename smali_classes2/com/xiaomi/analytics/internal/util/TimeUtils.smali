@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/analytics/internal/util/TimeUtils;
 .super Ljava/lang/Object;
+.source "TimeUtils.java"
 
 
 # static fields
@@ -26,6 +27,7 @@
 .method public static expired(JJ)Z
     .locals 2
 
+    .line 12
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

@@ -1,5 +1,6 @@
 .class interface abstract Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayAdapterInterface;
 .super Ljava/lang/Object;
+.source "ArrayAdapterInterface.java"
 
 
 # annotations

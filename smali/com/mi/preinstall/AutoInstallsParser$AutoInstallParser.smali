@@ -1,5 +1,6 @@
 .class Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;
 .super Ljava/lang/Object;
+.source "AutoInstallsParser.java"
 
 # interfaces
 .implements Lcom/mi/preinstall/AutoInstallsParser$TagParser;
@@ -24,6 +25,7 @@
 .method private constructor <init>(Lcom/mi/preinstall/AutoInstallsParser;)V
     .locals 0
 
+    .line 150
     iput-object p1, p0, Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;->this$0:Lcom/mi/preinstall/AutoInstallsParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,6 +36,7 @@
 .method synthetic constructor <init>(Lcom/mi/preinstall/AutoInstallsParser;Lcom/mi/preinstall/AutoInstallsParser$1;)V
     .locals 0
 
+    .line 150
     invoke-direct {p0, p1}, Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;-><init>(Lcom/mi/preinstall/AutoInstallsParser;)V
 
     return-void
@@ -63,22 +66,26 @@
 
     const-string p0, "packageName"
 
+    .line 154
     invoke-static {p1, p0}, Lcom/mi/preinstall/AutoInstallsParser;->access$200(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "miuiFolder"
 
+    .line 155
     invoke-static {p1, v0}, Lcom/mi/preinstall/AutoInstallsParser;->access$200(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 156
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 157
     invoke-virtual {p2, p0, p1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0

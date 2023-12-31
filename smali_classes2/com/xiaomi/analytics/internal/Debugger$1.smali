@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/internal/Debugger$1;
 .super Landroid/content/BroadcastReceiver;
+.source "Debugger.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method constructor <init>(Lcom/xiaomi/analytics/internal/Debugger;)V
     .locals 0
 
+    .line 57
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/Debugger$1;->this$0:Lcom/xiaomi/analytics/internal/Debugger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -49,6 +51,7 @@
 
     return-void
 
+    .line 64
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -56,6 +59,7 @@
 
     const-string p1, "Debugger"
 
+    .line 65
     invoke-static {p1}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -78,6 +82,7 @@
 
     const-string p1, "com.xiaomi.analytics.intent.DEBUG_ON"
 
+    .line 66
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -86,6 +91,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 67
     sput-boolean p2, Lcom/xiaomi/analytics/internal/util/ALog;->sEnable:Z
 
     goto :goto_0
@@ -93,6 +99,7 @@
     :cond_1
     const-string p1, "com.xiaomi.analytics.intent.DEBUG_OFF"
 
+    .line 68
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -101,6 +108,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 69
     sput-boolean v0, Lcom/xiaomi/analytics/internal/util/ALog;->sEnable:Z
 
     goto :goto_0
@@ -108,12 +116,14 @@
     :cond_2
     const-string p1, "com.xiaomi.analytics.intent.STAGING_ON"
 
+    .line 70
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
+    .line 71
     sput-boolean p2, Lcom/xiaomi/analytics/internal/Debugger;->sUseStaging:Z
 
     goto :goto_0
@@ -121,12 +131,14 @@
     :cond_3
     const-string p1, "com.xiaomi.analytics.intent.STAGING_OFF"
 
+    .line 72
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_4
 
+    .line 73
     sput-boolean v0, Lcom/xiaomi/analytics/internal/Debugger;->sUseStaging:Z
 
     :cond_4

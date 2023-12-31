@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/ExecutionModule_ExecutorFactory$InstanceHolder;
 .super Ljava/lang/Object;
+.source "ExecutionModule_ExecutorFactory.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 27
     new-instance v0, Lcom/google/android/datatransport/runtime/ExecutionModule_ExecutorFactory;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/ExecutionModule_ExecutorFactory;-><init>()V
@@ -33,6 +35,7 @@
 .method static synthetic access$000()Lcom/google/android/datatransport/runtime/ExecutionModule_ExecutorFactory;
     .locals 1
 
+    .line 26
     sget-object v0, Lcom/google/android/datatransport/runtime/ExecutionModule_ExecutorFactory$InstanceHolder;->INSTANCE:Lcom/google/android/datatransport/runtime/ExecutionModule_ExecutorFactory;
 
     return-object v0

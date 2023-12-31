@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzgi;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement@@18.0.0"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -17,6 +18,7 @@
 .method constructor <init>(Lcom/google/android/gms/measurement/internal/zzfz;Lcom/google/android/gms/measurement/internal/zzaq;Lcom/google/android/gms/measurement/internal/zzn;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzgi;->zzc:Lcom/google/android/gms/measurement/internal/zzfz;
 
     iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzgi;->zza:Lcom/google/android/gms/measurement/internal/zzaq;
@@ -33,16 +35,19 @@
 .method public final run()V
     .locals 3
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzgi;->zzc:Lcom/google/android/gms/measurement/internal/zzfz;
 
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzgi;->zza:Lcom/google/android/gms/measurement/internal/zzaq;
 
     iget-object v2, p0, Lcom/google/android/gms/measurement/internal/zzgi;->zzb:Lcom/google/android/gms/measurement/internal/zzn;
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/measurement/internal/zzfz;->zzb(Lcom/google/android/gms/measurement/internal/zzaq;Lcom/google/android/gms/measurement/internal/zzn;)Lcom/google/android/gms/measurement/internal/zzaq;
 
     move-result-object v0
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzgi;->zzc:Lcom/google/android/gms/measurement/internal/zzfz;
 
     invoke-static {v1}, Lcom/google/android/gms/measurement/internal/zzfz;->zza(Lcom/google/android/gms/measurement/internal/zzfz;)Lcom/google/android/gms/measurement/internal/zzkl;
@@ -51,6 +56,7 @@
 
     invoke-virtual {v1}, Lcom/google/android/gms/measurement/internal/zzkl;->zzr()V
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzgi;->zzc:Lcom/google/android/gms/measurement/internal/zzfz;
 
     invoke-static {v1}, Lcom/google/android/gms/measurement/internal/zzfz;->zza(Lcom/google/android/gms/measurement/internal/zzfz;)Lcom/google/android/gms/measurement/internal/zzkl;

@@ -1,5 +1,6 @@
 .class public final enum Lio/branch/search/q3;
 .super Ljava/lang/Enum;
+.source "SourceFile"
 
 
 # annotations

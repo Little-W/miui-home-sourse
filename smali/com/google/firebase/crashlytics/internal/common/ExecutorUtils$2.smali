@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$2;
 .super Lcom/google/firebase/crashlytics/internal/common/BackgroundPriorityRunnable;
+.source "ExecutorUtils.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method constructor <init>(Ljava/lang/String;Ljava/util/concurrent/ExecutorService;JLjava/util/concurrent/TimeUnit;)V
     .locals 0
 
+    .line 99
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$2;->val$serviceName:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$2;->val$service:Ljava/util/concurrent/ExecutorService;
@@ -45,6 +47,7 @@
 .method public onRun()V
     .locals 5
 
+    .line 103
     :try_start_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -68,10 +71,12 @@
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->d(Ljava/lang/String;)V
 
+    .line 104
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$2;->val$service:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
+    .line 105
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$2;->val$service:Ljava/util/concurrent/ExecutorService;
 
     iget-wide v1, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$2;->val$terminationTimeout:J
@@ -84,6 +89,7 @@
 
     if-nez v0, :cond_0
 
+    .line 106
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v0
@@ -104,8 +110,10 @@
 
     move-result-object v1
 
+    .line 107
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->d(Ljava/lang/String;)V
 
+    .line 111
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$2;->val$service:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
@@ -114,6 +122,7 @@
 
     goto :goto_0
 
+    .line 114
     :catch_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -133,12 +142,15 @@
 
     const-string v3, "Interrupted while waiting for %s to shut down. Requesting immediate shutdown."
 
+    .line 116
     invoke-static {v1, v3, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 115
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/Logger;->d(Ljava/lang/String;)V
 
+    .line 121
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/ExecutorUtils$2;->val$service:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/market/IDetailsPageManager;
 .super Ljava/lang/Object;
+.source "IDetailsPageManager.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

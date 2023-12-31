@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager$Migration;
 .super Ljava/lang/Object;
+.source "SchemaManager.java"
 
 
 # annotations

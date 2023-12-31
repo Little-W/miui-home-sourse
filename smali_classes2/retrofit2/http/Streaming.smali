@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lretrofit2/http/Streaming;
 .super Ljava/lang/Object;
+.source "Streaming.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

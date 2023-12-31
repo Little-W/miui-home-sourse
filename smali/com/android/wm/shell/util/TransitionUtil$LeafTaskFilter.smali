@@ -1,5 +1,6 @@
 .class public Lcom/android/wm/shell/util/TransitionUtil$LeafTaskFilter;
 .super Ljava/lang/Object;
+.source "TransitionUtil.java"
 
 # interfaces
 .implements Ljava/util/function/Predicate;
@@ -33,8 +34,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 190
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
@@ -49,6 +52,7 @@
 .method public test(Landroid/window/TransitionInfo$Change;)Z
     .locals 4
 
+    .line 194
     invoke-static {p1}, Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;->box(Landroid/window/TransitionInfo$Change;)Lcom/android/hideapi/TransitionInfoExpose$ChangeExpose;
 
     move-result-object p1
@@ -63,6 +67,7 @@
 
     return v0
 
+    .line 197
     :cond_0
     iget-object v1, p0, Lcom/android/wm/shell/util/TransitionUtil$LeafTaskFilter;->mChildTaskTargets:Landroid/util/SparseBooleanArray;
 
@@ -72,6 +77,7 @@
 
     move-result v1
 
+    .line 198
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v2
@@ -84,6 +90,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 199
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v2
@@ -92,6 +99,7 @@
 
     move-result v2
 
+    .line 200
     iget-object p0, p0, Lcom/android/wm/shell/util/TransitionUtil$LeafTaskFilter;->mChildTaskTargets:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, v2, v3}, Landroid/util/SparseBooleanArray;->put(IZ)V
@@ -101,6 +109,7 @@
 
     return v0
 
+    .line 208
     :cond_2
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
@@ -121,6 +130,7 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 189
     check-cast p1, Landroid/window/TransitionInfo$Change;
 
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/util/TransitionUtil$LeafTaskFilter;->test(Landroid/window/TransitionInfo$Change;)Z

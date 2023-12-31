@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/material/math/MathUtils;
 .super Ljava/lang/Object;
+.source "MathUtils.java"
 
 
 # direct methods
@@ -14,6 +15,7 @@
 
     float-to-double p2, p3
 
+    .line 30
     invoke-static {p0, p1, p2, p3}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide p0
@@ -26,22 +28,27 @@
 .method public static distanceToFurthestCorner(FFFFFF)F
     .locals 1
 
+    .line 66
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/material/math/MathUtils;->dist(FFFF)F
 
     move-result v0
 
+    .line 67
     invoke-static {p0, p1, p4, p3}, Lcom/google/android/material/math/MathUtils;->dist(FFFF)F
 
     move-result p3
 
+    .line 68
     invoke-static {p0, p1, p4, p5}, Lcom/google/android/material/math/MathUtils;->dist(FFFF)F
 
     move-result p4
 
+    .line 69
     invoke-static {p0, p1, p2, p5}, Lcom/google/android/material/math/MathUtils;->dist(FFFF)F
 
     move-result p0
 
+    .line 65
     invoke-static {v0, p3, p4, p0}, Lcom/google/android/material/math/MathUtils;->max(FFFF)F
 
     move-result p0

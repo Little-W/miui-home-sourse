@@ -1,5 +1,6 @@
 .class abstract Lcom/google/firebase/components/AbstractComponentContainer;
 .super Ljava/lang/Object;
+.source "AbstractComponentContainer.java"
 
 # interfaces
 .implements Lcom/google/firebase/components/ComponentContainer;
@@ -9,6 +10,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +30,7 @@
         }
     .end annotation
 
+    .line 23
     invoke-virtual {p0, p1}, Lcom/google/firebase/components/AbstractComponentContainer;->getProvider(Ljava/lang/Class;)Lcom/google/firebase/inject/Provider;
 
     move-result-object p0
@@ -38,6 +41,7 @@
 
     return-object p0
 
+    .line 27
     :cond_0
     invoke-interface {p0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
 
@@ -60,6 +64,7 @@
         }
     .end annotation
 
+    .line 32
     invoke-virtual {p0, p1}, Lcom/google/firebase/components/AbstractComponentContainer;->setOfProvider(Ljava/lang/Class;)Lcom/google/firebase/inject/Provider;
 
     move-result-object p0

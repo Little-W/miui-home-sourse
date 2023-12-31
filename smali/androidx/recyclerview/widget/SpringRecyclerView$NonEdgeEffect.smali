@@ -1,5 +1,6 @@
 .class Landroidx/recyclerview/widget/SpringRecyclerView$NonEdgeEffect;
 .super Landroid/widget/EdgeEffect;
+.source "SpringRecyclerView.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 327
     invoke-direct {p0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
 
     return-void

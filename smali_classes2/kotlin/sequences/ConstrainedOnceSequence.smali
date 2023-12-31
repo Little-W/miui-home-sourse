@@ -1,5 +1,6 @@
 .class public final Lkotlin/sequences/ConstrainedOnceSequence;
 .super Ljava/lang/Object;
+.source "SequencesJVM.kt"
 
 # interfaces
 .implements Lkotlin/sequences/Sequence;
@@ -45,8 +46,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 20
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
@@ -68,6 +71,7 @@
         }
     .end annotation
 
+    .line 23
     iget-object p0, p0, Lkotlin/sequences/ConstrainedOnceSequence;->sequenceRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v0, 0x0
@@ -80,12 +84,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 24
     invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
     return-object p0
 
+    .line 23
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

@@ -1,5 +1,6 @@
 .class Landroidx/core/widget/EdgeEffectCompat$Api31Impl;
 .super Ljava/lang/Object;
+.source "EdgeEffectCompat.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public static create(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
     .locals 1
 
+    .line 306
     :try_start_0
     new-instance v0, Landroid/widget/EdgeEffect;
 
@@ -26,6 +28,7 @@
 
     return-object v0
 
+    .line 308
     :catchall_0
     new-instance p1, Landroid/widget/EdgeEffect;
 
@@ -37,6 +40,7 @@
 .method public static getDistance(Landroid/widget/EdgeEffect;)F
     .locals 0
 
+    .line 329
     :try_start_0
     invoke-virtual {p0}, Landroid/widget/EdgeEffect;->getDistance()F
 
@@ -55,6 +59,7 @@
 .method public static onPullDistance(Landroid/widget/EdgeEffect;FF)F
     .locals 0
 
+    .line 319
     :try_start_0
     invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPullDistance(FF)F
 
@@ -64,6 +69,7 @@
 
     return p0
 
+    .line 321
     :catchall_0
     invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
 

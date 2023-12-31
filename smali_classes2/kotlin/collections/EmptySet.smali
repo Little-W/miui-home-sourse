@@ -1,5 +1,6 @@
 .class public final Lkotlin/collections/EmptySet;
 .super Ljava/lang/Object;
+.source "Sets.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 14
     new-instance v0, Lkotlin/collections/EmptySet;
 
     invoke-direct {v0}, Lkotlin/collections/EmptySet;-><init>()V
@@ -28,6 +30,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +39,7 @@
 .method private final readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 28
     sget-object p0, Lkotlin/collections/EmptySet;->INSTANCE:Lkotlin/collections/EmptySet;
 
     return-object p0
@@ -94,6 +98,7 @@
 .method public final bridge contains(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 14
     instance-of v0, p1, Ljava/lang/Void;
 
     if-eqz v0, :cond_0
@@ -131,6 +136,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 24
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result p0
@@ -141,6 +147,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 17
     instance-of p0, p1, Ljava/util/Set;
 
     if-eqz p0, :cond_0
@@ -191,6 +198,7 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 26
     sget-object p0, Lkotlin/collections/EmptyIterator;->INSTANCE:Lkotlin/collections/EmptyIterator;
 
     check-cast p0, Ljava/util/Iterator;
@@ -237,6 +245,7 @@
 .method public final bridge size()I
     .locals 0
 
+    .line 14
     invoke-virtual {p0}, Lkotlin/collections/EmptySet;->getSize()I
 
     move-result p0

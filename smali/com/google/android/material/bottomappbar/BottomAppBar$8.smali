@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomappbar/BottomAppBar$8;
 .super Ljava/lang/Object;
+.source "BottomAppBar.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -30,6 +31,7 @@
 .method constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
     .locals 0
 
+    .line 882
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
 
     iput-object p2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$actionMenuView:Landroidx/appcompat/widget/ActionMenuView;
@@ -48,6 +50,7 @@
 .method public run()V
     .locals 3
 
+    .line 885
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$actionMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
@@ -56,12 +59,14 @@
 
     iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$8;->val$fabAttached:Z
 
+    .line 886
     invoke-virtual {v1, v0, v2, p0}, Lcom/google/android/material/bottomappbar/BottomAppBar;->getActionMenuViewTranslationX(Landroidx/appcompat/widget/ActionMenuView;IZ)I
 
     move-result p0
 
     int-to-float p0, p0
 
+    .line 885
     invoke-virtual {v0, p0}, Landroidx/appcompat/widget/ActionMenuView;->setTranslationX(F)V
 
     return-void

@@ -1,5 +1,6 @@
 .class public Landroid/window/WindowContainerTransaction$Change;
 .super Ljava/lang/Object;
+.source "WindowContainerTransaction.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -32,6 +33,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 819
     new-instance v0, Landroid/window/WindowContainerTransaction$Change$1;
 
     invoke-direct {v0}, Landroid/window/WindowContainerTransaction$Change$1;-><init>()V
@@ -44,8 +46,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 710
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 711
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -60,6 +64,7 @@
 .method public describeContents()I
     .locals 1
 
+    .line 816
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -72,6 +77,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 806
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -84,6 +90,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 811
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"

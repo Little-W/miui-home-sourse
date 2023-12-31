@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzkk;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -38,12 +39,14 @@
 .method private constructor <init>(Lcom/google/android/gms/internal/measurement/zzkc;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzd:Lcom/google/android/gms/internal/measurement/zzkc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zza:I
 
     return-void
@@ -52,6 +55,7 @@
 .method synthetic constructor <init>(Lcom/google/android/gms/internal/measurement/zzkc;Lcom/google/android/gms/internal/measurement/zzkf;)V
     .locals 0
 
+    .line 23
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/measurement/zzkk;-><init>(Lcom/google/android/gms/internal/measurement/zzkc;)V
 
     return-void
@@ -68,10 +72,12 @@
         }
     .end annotation
 
+    .line 14
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzc:Ljava/util/Iterator;
 
     if-nez v0, :cond_0
 
+    .line 15
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzd:Lcom/google/android/gms/internal/measurement/zzkc;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzkc;->zzc(Lcom/google/android/gms/internal/measurement/zzkc;)Ljava/util/Map;
@@ -88,6 +94,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzc:Ljava/util/Iterator;
 
+    .line 16
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzc:Ljava/util/Iterator;
 
@@ -99,6 +106,7 @@
 .method public final hasNext()Z
     .locals 3
 
+    .line 3
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zza:I
 
     const/4 v1, 0x1
@@ -119,6 +127,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzd:Lcom/google/android/gms/internal/measurement/zzkc;
 
+    .line 4
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzkc;->zzc(Lcom/google/android/gms/internal/measurement/zzkc;)Ljava/util/Map;
 
     move-result-object v0
@@ -156,8 +165,10 @@
 
     const/4 v0, 0x1
 
+    .line 18
     iput-boolean v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzb:Z
 
+    .line 19
     iget v1, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zza:I
 
     add-int/2addr v1, v0
@@ -176,6 +187,7 @@
 
     if-ge v1, v0, :cond_0
 
+    .line 20
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzd:Lcom/google/android/gms/internal/measurement/zzkc;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzkc;->zzb(Lcom/google/android/gms/internal/measurement/zzkc;)Ljava/util/List;
@@ -192,6 +204,7 @@
 
     return-object p0
 
+    .line 21
     :cond_0
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzkk;->zza()Ljava/util/Iterator;
 
@@ -209,18 +222,22 @@
 .method public final remove()V
     .locals 3
 
+    .line 6
     iget-boolean v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzb:Z
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
+    .line 8
     iput-boolean v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzb:Z
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzd:Lcom/google/android/gms/internal/measurement/zzkc;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/measurement/zzkc;->zza(Lcom/google/android/gms/internal/measurement/zzkc;)V
 
+    .line 10
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zza:I
 
     iget-object v1, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzd:Lcom/google/android/gms/internal/measurement/zzkc;
@@ -235,6 +252,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zzd:Lcom/google/android/gms/internal/measurement/zzkc;
 
     iget v1, p0, Lcom/google/android/gms/internal/measurement/zzkk;->zza:I
@@ -247,6 +265,7 @@
 
     return-void
 
+    .line 12
     :cond_0
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzkk;->zza()Ljava/util/Iterator;
 
@@ -256,6 +275,7 @@
 
     return-void
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

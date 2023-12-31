@@ -1,5 +1,6 @@
 .class public final Lkotlin/collections/AbstractList$Companion;
 .super Ljava/lang/Object;
+.source "AbstractList.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 105
     invoke-direct {p0}, Lkotlin/collections/AbstractList$Companion;-><init>()V
 
     return-void
@@ -45,6 +48,7 @@
 
     return-void
 
+    .line 132
     :cond_0
     new-instance p3, Ljava/lang/IllegalArgumentException;
 
@@ -72,6 +76,7 @@
 
     throw p3
 
+    .line 129
     :cond_1
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -115,6 +120,7 @@
 
     return-void
 
+    .line 108
     :cond_0
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -154,6 +160,7 @@
 
     return-void
 
+    .line 114
     :cond_0
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -197,6 +204,7 @@
 
     return-void
 
+    .line 123
     :cond_0
     new-instance p3, Ljava/lang/IllegalArgumentException;
 
@@ -224,6 +232,7 @@
 
     throw p3
 
+    .line 120
     :cond_1
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -278,6 +287,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 145
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result p0
@@ -292,11 +302,13 @@
 
     return v1
 
+    .line 147
     :cond_0
     invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 148
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -314,10 +326,12 @@
 
     move-result-object p2
 
+    .line 149
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 150
     invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
@@ -346,6 +360,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 138
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -367,6 +382,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 139
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0

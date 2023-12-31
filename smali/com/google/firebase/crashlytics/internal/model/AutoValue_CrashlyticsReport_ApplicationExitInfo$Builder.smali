@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
+.source "AutoValue_CrashlyticsReport_ApplicationExitInfo.java"
 
 
 # annotations
@@ -35,6 +36,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 158
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;-><init>()V
 
     return-void
@@ -45,12 +47,14 @@
 .method public build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo;
     .locals 15
 
+    .line 206
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->pid:Ljava/lang/Integer;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 207
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -65,11 +69,13 @@
 
     move-result-object v1
 
+    .line 209
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->processName:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
+    .line 210
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,11 +90,13 @@
 
     move-result-object v1
 
+    .line 212
     :cond_1
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->reasonCode:Ljava/lang/Integer;
 
     if-nez v0, :cond_2
 
+    .line 213
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,11 +111,13 @@
 
     move-result-object v1
 
+    .line 215
     :cond_2
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->importance:Ljava/lang/Integer;
 
     if-nez v0, :cond_3
 
+    .line 216
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,11 +132,13 @@
 
     move-result-object v1
 
+    .line 218
     :cond_3
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->pss:Ljava/lang/Long;
 
     if-nez v0, :cond_4
 
+    .line 219
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,11 +153,13 @@
 
     move-result-object v1
 
+    .line 221
     :cond_4
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->rss:Ljava/lang/Long;
 
     if-nez v0, :cond_5
 
+    .line 222
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,11 +174,13 @@
 
     move-result-object v1
 
+    .line 224
     :cond_5
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->timestamp:Ljava/lang/Long;
 
     if-nez v0, :cond_6
 
+    .line 225
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,6 +195,7 @@
 
     move-result-object v1
 
+    .line 227
     :cond_6
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -186,10 +203,12 @@
 
     if-eqz v0, :cond_7
 
+    .line 230
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo;
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->pid:Ljava/lang/Integer;
 
+    .line 231
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -198,30 +217,35 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->reasonCode:Ljava/lang/Integer;
 
+    .line 233
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->importance:Ljava/lang/Integer;
 
+    .line 234
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->pss:Ljava/lang/Long;
 
+    .line 235
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v7
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->rss:Ljava/lang/Long;
 
+    .line 236
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v9
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->timestamp:Ljava/lang/Long;
 
+    .line 237
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v11
@@ -236,6 +260,7 @@
 
     return-object v0
 
+    .line 228
     :cond_7
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -261,6 +286,7 @@
 .method public setImportance(I)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
     .locals 0
 
+    .line 180
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -273,6 +299,7 @@
 .method public setPid(I)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
     .locals 0
 
+    .line 162
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -287,10 +314,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 170
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->processName:Ljava/lang/String;
 
     return-object p0
 
+    .line 168
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -304,6 +333,7 @@
 .method public setPss(J)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
     .locals 0
 
+    .line 185
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -316,6 +346,7 @@
 .method public setReasonCode(I)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
     .locals 0
 
+    .line 175
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -328,6 +359,7 @@
 .method public setRss(J)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
     .locals 0
 
+    .line 190
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -340,6 +372,7 @@
 .method public setTimestamp(J)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
     .locals 0
 
+    .line 195
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -352,6 +385,7 @@
 .method public setTraceFile(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$ApplicationExitInfo$Builder;
     .locals 0
 
+    .line 200
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_ApplicationExitInfo$Builder;->traceFile:Ljava/lang/String;
 
     return-object p0

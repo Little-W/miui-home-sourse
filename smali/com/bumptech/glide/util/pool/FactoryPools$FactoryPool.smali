@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/util/pool/FactoryPools$FactoryPool;
 .super Ljava/lang/Object;
+.source "FactoryPools.java"
 
 # interfaces
 .implements Landroidx/core/util/Pools$Pool;
@@ -71,12 +72,16 @@
         }
     .end annotation
 
+    .line 149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 150
     iput-object p1, p0, Lcom/bumptech/glide/util/pool/FactoryPools$FactoryPool;->pool:Landroidx/core/util/Pools$Pool;
 
+    .line 151
     iput-object p2, p0, Lcom/bumptech/glide/util/pool/FactoryPools$FactoryPool;->factory:Lcom/bumptech/glide/util/pool/FactoryPools$Factory;
 
+    .line 152
     iput-object p3, p0, Lcom/bumptech/glide/util/pool/FactoryPools$FactoryPool;->resetter:Lcom/bumptech/glide/util/pool/FactoryPools$Resetter;
 
     return-void
@@ -92,6 +97,7 @@
         }
     .end annotation
 
+    .line 157
     iget-object v0, p0, Lcom/bumptech/glide/util/pool/FactoryPools$FactoryPool;->pool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {v0}, Landroidx/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -100,6 +106,7 @@
 
     if-nez v0, :cond_0
 
+    .line 159
     iget-object p0, p0, Lcom/bumptech/glide/util/pool/FactoryPools$FactoryPool;->factory:Lcom/bumptech/glide/util/pool/FactoryPools$Factory;
 
     invoke-interface {p0}, Lcom/bumptech/glide/util/pool/FactoryPools$Factory;->create()Ljava/lang/Object;
@@ -110,12 +117,14 @@
 
     const-string v1, "FactoryPools"
 
+    .line 160
     invoke-static {v1, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 161
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,11 +145,13 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 164
     :cond_0
     instance-of p0, v0, Lcom/bumptech/glide/util/pool/FactoryPools$Poolable;
 
     if-eqz p0, :cond_1
 
+    .line 165
     move-object p0, v0
 
     check-cast p0, Lcom/bumptech/glide/util/pool/FactoryPools$Poolable;
@@ -165,10 +176,12 @@
         }
     .end annotation
 
+    .line 172
     instance-of v0, p1, Lcom/bumptech/glide/util/pool/FactoryPools$Poolable;
 
     if-eqz v0, :cond_0
 
+    .line 173
     move-object v0, p1
 
     check-cast v0, Lcom/bumptech/glide/util/pool/FactoryPools$Poolable;
@@ -181,11 +194,13 @@
 
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/util/pool/StateVerifier;->setRecycled(Z)V
 
+    .line 175
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/util/pool/FactoryPools$FactoryPool;->resetter:Lcom/bumptech/glide/util/pool/FactoryPools$Resetter;
 
     invoke-interface {v0, p1}, Lcom/bumptech/glide/util/pool/FactoryPools$Resetter;->reset(Ljava/lang/Object;)V
 
+    .line 176
     iget-object p0, p0, Lcom/bumptech/glide/util/pool/FactoryPools$FactoryPool;->pool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {p0, p1}, Landroidx/core/util/Pools$Pool;->release(Ljava/lang/Object;)Z

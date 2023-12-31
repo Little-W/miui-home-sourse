@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;
 .super Lkotlinx/serialization/json/internal/JsonTreeDecoder;
+.source "TreeJsonDecoder.kt"
 
 
 # instance fields
@@ -46,10 +47,12 @@
 
     move-object v3, p2
 
+    .line 215
     invoke-direct/range {v1 .. v7}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;-><init>(Lkotlinx/serialization/json/Json;Lkotlinx/serialization/json/JsonObject;Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p2, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->value:Lkotlinx/serialization/json/JsonObject;
 
+    .line 216
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->getValue()Lkotlinx/serialization/json/JsonObject;
 
     move-result-object p1
@@ -66,6 +69,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->keys:Ljava/util/List;
 
+    .line 217
     iget-object p1, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->keys:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -78,6 +82,7 @@
 
     const/4 p1, -0x1
 
+    .line 218
     iput p1, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->position:I
 
     return-void
@@ -92,6 +97,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 234
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->position:I
 
     rem-int/lit8 v0, v0, 0x2
@@ -128,6 +134,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 226
     iget p1, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->position:I
 
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->size:I
@@ -138,8 +145,10 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 227
     iput p1, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->position:I
 
+    .line 228
     iget p0, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->position:I
 
     return p0
@@ -157,8 +166,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 221
     div-int/lit8 p2, p2, 0x2
 
+    .line 222
     iget-object p0, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->keys:Ljava/util/List;
 
     invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -183,6 +194,7 @@
 .method public bridge synthetic getValue()Lkotlinx/serialization/json/JsonElement;
     .locals 0
 
+    .line 215
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->getValue()Lkotlinx/serialization/json/JsonObject;
 
     move-result-object p0
@@ -195,6 +207,7 @@
 .method public getValue()Lkotlinx/serialization/json/JsonObject;
     .locals 0
 
+    .line 215
     iget-object p0, p0, Lkotlinx/serialization/json/internal/JsonTreeMapDecoder;->value:Lkotlinx/serialization/json/JsonObject;
 
     return-object p0

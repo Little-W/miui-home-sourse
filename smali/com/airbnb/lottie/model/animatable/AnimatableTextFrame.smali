@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/animatable/AnimatableTextFrame;
 .super Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;
+.source "AnimatableTextFrame.java"
 
 
 # annotations
@@ -26,6 +27,7 @@
         }
     .end annotation
 
+    .line 12
     invoke-direct {p0, p1}, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;-><init>(Ljava/util/List;)V
 
     return-void
@@ -36,6 +38,7 @@
 .method public bridge synthetic createAnimation()Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
     .locals 0
 
+    .line 9
     invoke-virtual {p0}, Lcom/airbnb/lottie/model/animatable/AnimatableTextFrame;->createAnimation()Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation;
 
     move-result-object p0
@@ -46,6 +49,7 @@
 .method public createAnimation()Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation;
     .locals 1
 
+    .line 16
     new-instance v0, Lcom/airbnb/lottie/animation/keyframe/TextKeyframeAnimation;
 
     iget-object p0, p0, Lcom/airbnb/lottie/model/animatable/AnimatableTextFrame;->keyframes:Ljava/util/List;
@@ -58,6 +62,7 @@
 .method public bridge synthetic getKeyframes()Ljava/util/List;
     .locals 0
 
+    .line 9
     invoke-super {p0}, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->getKeyframes()Ljava/util/List;
 
     move-result-object p0
@@ -68,6 +73,7 @@
 .method public bridge synthetic isStatic()Z
     .locals 0
 
+    .line 9
     invoke-super {p0}, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->isStatic()Z
 
     move-result p0
@@ -78,6 +84,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 9
     invoke-super {p0}, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->toString()Ljava/lang/String;
 
     move-result-object p0

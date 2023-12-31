@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;
 .super Ljava/lang/Object;
+.source "DiskLruCache.java"
 
 
 # annotations
@@ -29,16 +30,21 @@
 .method private constructor <init>(Lcom/bumptech/glide/disklrucache/DiskLruCache;Ljava/lang/String;J[Ljava/io/File;[J)V
     .locals 0
 
+    .line 674
     iput-object p1, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 675
     iput-object p2, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->key:Ljava/lang/String;
 
+    .line 676
     iput-wide p3, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->sequenceNumber:J
 
+    .line 677
     iput-object p5, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->files:[Ljava/io/File;
 
+    .line 678
     iput-object p6, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->lengths:[J
 
     return-void
@@ -47,6 +53,7 @@
 .method synthetic constructor <init>(Lcom/bumptech/glide/disklrucache/DiskLruCache;Ljava/lang/String;J[Ljava/io/File;[JLcom/bumptech/glide/disklrucache/DiskLruCache$1;)V
     .locals 0
 
+    .line 668
     invoke-direct/range {p0 .. p6}, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;-><init>(Lcom/bumptech/glide/disklrucache/DiskLruCache;Ljava/lang/String;J[Ljava/io/File;[J)V
 
     return-void
@@ -57,6 +64,7 @@
 .method public getFile(I)Ljava/io/File;
     .locals 0
 
+    .line 691
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->files:[Ljava/io/File;
 
     aget-object p0, p0, p1

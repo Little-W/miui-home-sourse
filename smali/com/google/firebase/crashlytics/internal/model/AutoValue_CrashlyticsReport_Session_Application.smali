@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;
+.source "AutoValue_CrashlyticsReport_Session_Application.java"
 
 
 # annotations
@@ -30,20 +31,28 @@
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;-><init>()V
 
+    .line 33
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->identifier:Ljava/lang/String;
 
+    .line 34
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->version:Ljava/lang/String;
 
+    .line 35
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->displayVersion:Ljava/lang/String;
 
+    .line 36
     iput-object p4, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->organization:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;
 
+    .line 37
     iput-object p5, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->installationUuid:Ljava/lang/String;
 
+    .line 38
     iput-object p6, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->developmentPlatform:Ljava/lang/String;
 
+    .line 39
     iput-object p7, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->developmentPlatformVersion:Ljava/lang/String;
 
     return-void
@@ -52,6 +61,7 @@
 .method synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application$1;)V
     .locals 0
 
+    .line 9
     invoke-direct/range {p0 .. p7}, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -68,6 +78,7 @@
 
     return v0
 
+    .line 102
     :cond_0
     instance-of v1, p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;
 
@@ -75,8 +86,10 @@
 
     if-eqz v1, :cond_7
 
+    .line 103
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;
 
+    .line 104
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->identifier:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;->getIdentifier()Ljava/lang/String;
@@ -91,6 +104,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->version:Ljava/lang/String;
 
+    .line 105
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;->getVersion()Ljava/lang/String;
 
     move-result-object v3
@@ -105,6 +119,7 @@
 
     if-nez v1, :cond_1
 
+    .line 106
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;->getDisplayVersion()Ljava/lang/String;
 
     move-result-object v1
@@ -129,6 +144,7 @@
 
     if-nez v1, :cond_2
 
+    .line 107
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;->getOrganization()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;
 
     move-result-object v1
@@ -153,6 +169,7 @@
 
     if-nez v1, :cond_3
 
+    .line 108
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;->getInstallationUuid()Ljava/lang/String;
 
     move-result-object v1
@@ -177,6 +194,7 @@
 
     if-nez v1, :cond_4
 
+    .line 109
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;->getDevelopmentPlatform()Ljava/lang/String;
 
     move-result-object v1
@@ -201,6 +219,7 @@
 
     if-nez p0, :cond_5
 
+    .line 110
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application;->getDevelopmentPlatformVersion()Ljava/lang/String;
 
     move-result-object p0
@@ -235,6 +254,7 @@
 .method public getDevelopmentPlatform()Ljava/lang/String;
     .locals 0
 
+    .line 75
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->developmentPlatform:Ljava/lang/String;
 
     return-object p0
@@ -243,6 +263,7 @@
 .method public getDevelopmentPlatformVersion()Ljava/lang/String;
     .locals 0
 
+    .line 81
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->developmentPlatformVersion:Ljava/lang/String;
 
     return-object p0
@@ -251,6 +272,7 @@
 .method public getDisplayVersion()Ljava/lang/String;
     .locals 0
 
+    .line 57
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->displayVersion:Ljava/lang/String;
 
     return-object p0
@@ -259,6 +281,7 @@
 .method public getIdentifier()Ljava/lang/String;
     .locals 0
 
+    .line 45
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->identifier:Ljava/lang/String;
 
     return-object p0
@@ -267,6 +290,7 @@
 .method public getInstallationUuid()Ljava/lang/String;
     .locals 0
 
+    .line 69
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->installationUuid:Ljava/lang/String;
 
     return-object p0
@@ -275,6 +299,7 @@
 .method public getOrganization()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;
     .locals 0
 
+    .line 63
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->organization:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;
 
     return-object p0
@@ -283,6 +308,7 @@
 .method public getVersion()Ljava/lang/String;
     .locals 0
 
+    .line 51
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->version:Ljava/lang/String;
 
     return-object p0
@@ -291,6 +317,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 119
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->identifier:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -303,6 +330,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 121
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->version:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -313,6 +341,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 123
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->displayVersion:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -333,6 +362,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 125
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->organization:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;
 
     if-nez v2, :cond_1
@@ -351,6 +381,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 127
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->installationUuid:Ljava/lang/String;
 
     if-nez v2, :cond_2
@@ -369,6 +400,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 129
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->developmentPlatform:Ljava/lang/String;
 
     if-nez v2, :cond_3
@@ -387,6 +419,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 131
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application;->developmentPlatformVersion:Ljava/lang/String;
 
     if-nez p0, :cond_4
@@ -407,6 +440,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,11 +1,13 @@
 .class public final Lkotlinx/serialization/UnknownFieldException;
 .super Lkotlinx/serialization/SerializationException;
+.source "SerializationException.kt"
 
 
 # direct methods
 .method public constructor <init>(I)V
     .locals 2
 
+    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzjw;
 .super Lcom/google/android/gms/internal/measurement/zzgj;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 # interfaces
 .implements Ljava/util/RandomAccess;
@@ -46,6 +47,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 58
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzjw;
 
     const/4 v1, 0x0
@@ -54,6 +56,7 @@
 
     invoke-direct {v0, v2, v1}, Lcom/google/android/gms/internal/measurement/zzjw;-><init>([Ljava/lang/Object;I)V
 
+    .line 59
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzjw;->zza:Lcom/google/android/gms/internal/measurement/zzjw;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzgj;->i_()V
@@ -70,6 +73,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-direct {p0, v0, v1}, Lcom/google/android/gms/internal/measurement/zzjw;-><init>([Ljava/lang/Object;I)V
 
     return-void
@@ -83,10 +87,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzgj;-><init>()V
 
+    .line 5
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
+    .line 6
     iput p2, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     return-void
@@ -97,12 +104,14 @@
 
     if-ltz p1, :cond_0
 
+    .line 48
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     if-ge p1, v0, :cond_0
 
     return-void
 
+    .line 49
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -118,6 +127,7 @@
 .method private final zzc(I)Ljava/lang/String;
     .locals 2
 
+    .line 51
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -157,6 +167,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzjw;->zza:Lcom/google/android/gms/internal/measurement/zzjw;
 
     return-object v0
@@ -172,14 +183,17 @@
         }
     .end annotation
 
+    .line 16
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzgj;->zzc()V
 
     if-ltz p1, :cond_1
 
+    .line 17
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     if-gt p1, v0, :cond_1
 
+    .line 19
     iget-object v1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
     array-length v2, v1
@@ -190,6 +204,7 @@
 
     sub-int/2addr v0, p1
 
+    .line 20
     invoke-static {v1, p1, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     goto :goto_0
@@ -197,16 +212,20 @@
     :cond_0
     mul-int/lit8 v0, v0, 0x3
 
+    .line 21
     div-int/lit8 v0, v0, 0x2
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 22
     new-array v0, v0, [Ljava/lang/Object;
 
     const/4 v2, 0x0
 
+    .line 24
     invoke-static {v1, v2, v0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 25
     iget-object v1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
     add-int/lit8 v2, p1, 0x1
@@ -217,19 +236,23 @@
 
     invoke-static {v1, p1, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 26
     iput-object v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
+    .line 27
     :goto_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
     aput-object p2, v0, p1
 
+    .line 28
     iget p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
+    .line 29
     iget p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -238,6 +261,7 @@
 
     return-void
 
+    .line 18
     :cond_1
     new-instance p2, Ljava/lang/IndexOutOfBoundsException;
 
@@ -258,8 +282,10 @@
         }
     .end annotation
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzgj;->zzc()V
 
+    .line 9
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     iget-object v1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
@@ -272,16 +298,20 @@
 
     mul-int/lit8 v0, v0, 0x3
 
+    .line 10
     div-int/lit8 v0, v0, 0x2
 
     add-int/2addr v0, v3
 
+    .line 11
     invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 12
     iput-object v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
+    .line 13
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
@@ -293,6 +323,7 @@
 
     aput-object p1, v0, v1
 
+    .line 14
     iget p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->modCount:I
 
     add-int/2addr p1, v3
@@ -310,8 +341,10 @@
         }
     .end annotation
 
+    .line 31
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/measurement/zzjw;->zzb(I)V
 
+    .line 32
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
     aget-object p0, p0, p1
@@ -327,14 +360,18 @@
         }
     .end annotation
 
+    .line 33
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzgj;->zzc()V
 
+    .line 34
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/measurement/zzjw;->zzb(I)V
 
+    .line 35
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
     aget-object v1, v0, p1
 
+    .line 36
     iget v2, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     add-int/lit8 v3, v2, -0x1
@@ -347,8 +384,10 @@
 
     add-int/lit8 v2, v2, -0x1
 
+    .line 37
     invoke-static {v0, v3, v0, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 38
     :cond_0
     iget p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
@@ -356,6 +395,7 @@
 
     iput p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
+    .line 39
     iget p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -373,16 +413,21 @@
         }
     .end annotation
 
+    .line 41
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzgj;->zzc()V
 
+    .line 42
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/measurement/zzjw;->zzb(I)V
 
+    .line 43
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
     aget-object v1, v0, p1
 
+    .line 44
     aput-object p2, v0, p1
 
+    .line 45
     iget p1, p0, Lcom/google/android/gms/internal/measurement/zzjw;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -395,6 +440,7 @@
 .method public final size()I
     .locals 0
 
+    .line 47
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     return p0
@@ -403,16 +449,19 @@
 .method public final synthetic zza(I)Lcom/google/android/gms/internal/measurement/zzig;
     .locals 1
 
+    .line 53
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
 
     if-lt p1, v0, :cond_0
 
+    .line 55
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzb:[Ljava/lang/Object;
 
     invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 56
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzjw;
 
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzjw;->zzc:I
@@ -421,6 +470,7 @@
 
     return-object v0
 
+    .line 54
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

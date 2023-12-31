@@ -1,5 +1,6 @@
 .class public Lcom/market/internal/DesktopRecommendManager;
 .super Ljava/lang/Object;
+.source "DesktopRecommendManager.java"
 
 
 # annotations
@@ -26,6 +27,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 20
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -38,6 +40,7 @@
 .method static synthetic access$000()Ljava/util/Set;
     .locals 1
 
+    .line 18
     sget-object v0, Lcom/market/internal/DesktopRecommendManager;->sLoadingRequest:Ljava/util/Set;
 
     return-object v0
@@ -57,10 +60,12 @@
         }
     .end annotation
 
+    .line 24
     sget-object v0, Lcom/market/internal/DesktopRecommendManager;->sLoadingRequest:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 25
     :try_start_0
     sget-object v1, Lcom/market/internal/DesktopRecommendManager;->sLoadingRequest:Ljava/util/Set;
 
@@ -74,6 +79,7 @@
 
     if-nez v1, :cond_0
 
+    .line 26
     sget-object v1, Lcom/market/internal/DesktopRecommendManager;->sLoadingRequest:Ljava/util/Set;
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -82,6 +88,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 27
     new-instance v1, Lcom/market/internal/DesktopRecommendManager$1;
 
     move-object v3, v1
@@ -96,8 +103,10 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/market/internal/DesktopRecommendManager$1;-><init>(JLcom/market/sdk/DesktopRecommendCallback;Ljava/lang/String;Ljava/util/List;)V
 
+    .line 40
     invoke-virtual {v1}, Lcom/market/internal/DesktopRecommendManager$1;->invokeAsync()V
 
+    .line 42
     :cond_0
     monitor-exit v0
 

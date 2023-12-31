@@ -1,5 +1,6 @@
 .class public final Lkotlin/coroutines/EmptyCoroutineContext;
 .super Ljava/lang/Object;
+.source "CoroutineContextImpl.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 95
     new-instance v0, Lkotlin/coroutines/EmptyCoroutineContext;
 
     invoke-direct {v0}, Lkotlin/coroutines/EmptyCoroutineContext;-><init>()V
@@ -28,6 +30,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +39,7 @@
 .method private final readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 97
     sget-object p0, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
     return-object p0
@@ -108,6 +112,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 102
     check-cast p0, Lkotlin/coroutines/CoroutineContext;
 
     return-object p0

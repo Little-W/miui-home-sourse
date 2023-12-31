@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/ClearTextEndIconDelegate$6;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "ClearTextEndIconDelegate.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/ClearTextEndIconDelegate;)V
     .locals 0
 
+    .line 170
     iput-object p1, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$6;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -33,6 +35,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
+    .line 173
     iget-object p0, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate$6;->this$0:Lcom/google/android/material/textfield/ClearTextEndIconDelegate;
 
     iget-object p0, p0, Lcom/google/android/material/textfield/ClearTextEndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;

@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/textured/TextureType;
 .super Ljava/lang/Enum;
+.source "TextureLoader.kt"
 
 
 # annotations
@@ -79,6 +80,7 @@
         }
     .end annotation
 
+    .line 30
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/services/ScheduledQueryService;
 .super Landroid/app/job/JobService;
+.source "SourceFile"
 
 
 # instance fields

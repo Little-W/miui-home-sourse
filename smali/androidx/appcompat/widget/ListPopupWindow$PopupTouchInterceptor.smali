@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/ListPopupWindow$PopupTouchInterceptor;
 .super Ljava/lang/Object;
+.source "ListPopupWindow.java"
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
     .locals 0
 
+    .line 1387
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupTouchInterceptor;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,16 +38,19 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
+    .line 1392
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
 
+    .line 1393
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     float-to-int v0, v0
 
+    .line 1394
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p2
@@ -54,6 +59,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1396
     iget-object v1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupTouchInterceptor;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     iget-object v1, v1, Landroidx/appcompat/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
@@ -64,6 +70,7 @@
 
     iget-object v1, v1, Landroidx/appcompat/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
 
+    .line 1397
     invoke-virtual {v1}, Landroid/widget/PopupWindow;->isShowing()Z
 
     move-result v1
@@ -76,6 +83,7 @@
 
     iget-object v1, v1, Landroidx/appcompat/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
 
+    .line 1398
     invoke-virtual {v1}, Landroid/widget/PopupWindow;->getWidth()I
 
     move-result v1
@@ -94,6 +102,7 @@
 
     if-ge p2, v0, :cond_0
 
+    .line 1399
     iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupTouchInterceptor;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->mHandler:Landroid/os/Handler;
@@ -113,6 +122,7 @@
 
     if-ne p1, p2, :cond_1
 
+    .line 1401
     iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupTouchInterceptor;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->mHandler:Landroid/os/Handler;

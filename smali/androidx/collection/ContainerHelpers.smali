@@ -1,5 +1,6 @@
 .class Landroidx/collection/ContainerHelpers;
 .super Ljava/lang/Object;
+.source "ContainerHelpers.java"
 
 
 # static fields
@@ -18,14 +19,17 @@
 
     new-array v1, v0, [I
 
+    .line 20
     sput-object v1, Landroidx/collection/ContainerHelpers;->EMPTY_INTS:[I
 
     new-array v1, v0, [J
 
+    .line 21
     sput-object v1, Landroidx/collection/ContainerHelpers;->EMPTY_LONGS:[J
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 22
     sput-object v0, Landroidx/collection/ContainerHelpers;->EMPTY_OBJECTS:[Ljava/lang/Object;
 
     return-void
@@ -45,6 +49,7 @@
 
     ushr-int/lit8 v1, v1, 0x1
 
+    .line 51
     aget v2, p0, v1
 
     if-ge v2, p2, :cond_0
@@ -87,6 +92,7 @@
 
     ushr-int/lit8 v1, v1, 0x1
 
+    .line 70
     aget-wide v2, p0, v1
 
     cmp-long v2, v2, p2
@@ -124,6 +130,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 41
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -179,6 +186,7 @@
 
     mul-int/lit8 p0, p0, 0x4
 
+    .line 25
     invoke-static {p0}, Landroidx/collection/ContainerHelpers;->idealByteArraySize(I)I
 
     move-result p0
@@ -193,6 +201,7 @@
 
     mul-int/lit8 p0, p0, 0x8
 
+    .line 29
     invoke-static {p0}, Landroidx/collection/ContainerHelpers;->idealByteArraySize(I)I
 
     move-result p0

@@ -1,5 +1,6 @@
 .class public interface abstract Lorg/ahocorasick/interval/Intervalable;
 .super Ljava/lang/Object;
+.source "Intervalable.java"
 
 # interfaces
 .implements Ljava/lang/Comparable;

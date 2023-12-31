@@ -1,5 +1,6 @@
 .class public abstract Lkotlin/coroutines/AbstractCoroutineContextKey;
 .super Ljava/lang/Object;
+.source "CoroutineContextImpl.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/CoroutineContext$Key;
@@ -62,10 +63,12 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p2, p0, Lkotlin/coroutines/AbstractCoroutineContextKey;->safeCast:Lkotlin/jvm/functions/Function1;
 
+    .line 52
     instance-of p2, p1, Lkotlin/coroutines/AbstractCoroutineContextKey;
 
     if-eqz p2, :cond_0
@@ -96,6 +99,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 55
     move-object v0, p0
 
     check-cast v0, Lkotlin/coroutines/AbstractCoroutineContextKey;
@@ -135,6 +139,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 54
     iget-object p0, p0, Lkotlin/coroutines/AbstractCoroutineContextKey;->safeCast:Lkotlin/jvm/functions/Function1;
 
     invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;

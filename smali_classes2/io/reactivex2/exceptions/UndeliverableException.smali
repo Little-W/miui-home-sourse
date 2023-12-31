@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/exceptions/UndeliverableException;
 .super Ljava/lang/IllegalStateException;
+.source "UndeliverableException.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 31
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

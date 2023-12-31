@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/privacy/PrivacyInit$2;
 .super Ljava/lang/Object;
+.source "PrivacyInit.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$ConfigCallback;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/privacy/PrivacyInit;Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;)V
     .locals 0
 
+    .line 63
     iput-object p1, p0, Lcom/mi/globallauncher/privacy/PrivacyInit$2;->this$0:Lcom/mi/globallauncher/privacy/PrivacyInit;
 
     iput-object p2, p0, Lcom/mi/globallauncher/privacy/PrivacyInit$2;->val$privacyInitCallBack:Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;
@@ -40,6 +42,7 @@
 .method public onConfigFailed()V
     .locals 0
 
+    .line 72
     iget-object p0, p0, Lcom/mi/globallauncher/privacy/PrivacyInit$2;->val$privacyInitCallBack:Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;
 
     invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;->onConfigFailed()V
@@ -50,6 +53,7 @@
 .method public onConfigSucceed()V
     .locals 2
 
+    .line 66
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -58,6 +62,7 @@
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setCloudConfigReceived(Z)V
 
+    .line 67
     iget-object p0, p0, Lcom/mi/globallauncher/privacy/PrivacyInit$2;->val$privacyInitCallBack:Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;
 
     invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;->onConfigSucceed()V

@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/internal/AtomicDesc;
 .super Ljava/lang/Object;
+.source "Atomic.kt"
 
 
 # instance fields
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,6 +48,7 @@
         }
     .end annotation
 
+    .line 110
     iget-object p0, p0, Lkotlinx/coroutines/internal/AtomicDesc;->atomicOp:Lkotlinx/coroutines/internal/AtomicOp;
 
     if-nez p0, :cond_0
@@ -79,6 +82,7 @@
         }
     .end annotation
 
+    .line 110
     iput-object p1, p0, Lkotlinx/coroutines/internal/AtomicDesc;->atomicOp:Lkotlinx/coroutines/internal/AtomicOp;
 
     return-void

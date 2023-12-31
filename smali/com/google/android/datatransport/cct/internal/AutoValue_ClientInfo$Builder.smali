@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoValue_ClientInfo$Builder;
 .super Lcom/google/android/datatransport/cct/internal/ClientInfo$Builder;
+.source "AutoValue_ClientInfo.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 67
     invoke-direct {p0}, Lcom/google/android/datatransport/cct/internal/ClientInfo$Builder;-><init>()V
 
     return-void
@@ -33,6 +35,7 @@
 .method public build()Lcom/google/android/datatransport/cct/internal/ClientInfo;
     .locals 3
 
+    .line 81
     new-instance v0, Lcom/google/android/datatransport/cct/internal/AutoValue_ClientInfo;
 
     iget-object v1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_ClientInfo$Builder;->clientType:Lcom/google/android/datatransport/cct/internal/ClientInfo$ClientType;
@@ -49,6 +52,7 @@
 .method public setAndroidClientInfo(Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;)Lcom/google/android/datatransport/cct/internal/ClientInfo$Builder;
     .locals 0
 
+    .line 76
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_ClientInfo$Builder;->androidClientInfo:Lcom/google/android/datatransport/cct/internal/AndroidClientInfo;
 
     return-object p0
@@ -57,6 +61,7 @@
 .method public setClientType(Lcom/google/android/datatransport/cct/internal/ClientInfo$ClientType;)Lcom/google/android/datatransport/cct/internal/ClientInfo$Builder;
     .locals 0
 
+    .line 71
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_ClientInfo$Builder;->clientType:Lcom/google/android/datatransport/cct/internal/ClientInfo$ClientType;
 
     return-object p0

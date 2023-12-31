@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/utils/Manipulator$Fov;
 .super Ljava/lang/Enum;
+.source "Manipulator.java"
 
 
 # annotations
@@ -33,6 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 43
     new-instance v0, Lcom/google/android/filament/utils/Manipulator$Fov;
 
     const/4 v1, 0x0
@@ -78,6 +80,7 @@
         }
     .end annotation
 
+    .line 43
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -86,6 +89,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/utils/Manipulator$Fov;
     .locals 1
 
+    .line 43
     const-class v0, Lcom/google/android/filament/utils/Manipulator$Fov;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -100,6 +104,7 @@
 .method public static values()[Lcom/google/android/filament/utils/Manipulator$Fov;
     .locals 1
 
+    .line 43
     sget-object v0, Lcom/google/android/filament/utils/Manipulator$Fov;->$VALUES:[Lcom/google/android/filament/utils/Manipulator$Fov;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/utils/Manipulator$Fov;->clone()Ljava/lang/Object;

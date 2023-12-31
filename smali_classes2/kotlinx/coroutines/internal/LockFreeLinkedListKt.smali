@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/LockFreeLinkedListKt;
 .super Ljava/lang/Object;
+.source "LockFreeLinkedList.kt"
 
 
 # static fields
@@ -12,6 +13,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 23
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "CONDITION_FALSE"
@@ -20,6 +22,7 @@
 
     sput-object v0, Lkotlinx/coroutines/internal/LockFreeLinkedListKt;->CONDITION_FALSE:Ljava/lang/Object;
 
+    .line 26
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "LIST_EMPTY"
@@ -34,6 +37,7 @@
 .method public static final getCONDITION_FALSE()Ljava/lang/Object;
     .locals 1
 
+    .line 23
     sget-object v0, Lkotlinx/coroutines/internal/LockFreeLinkedListKt;->CONDITION_FALSE:Ljava/lang/Object;
 
     return-object v0
@@ -42,6 +46,7 @@
 .method public static final getLIST_EMPTY()Ljava/lang/Object;
     .locals 1
 
+    .line 26
     sget-object v0, Lkotlinx/coroutines/internal/LockFreeLinkedListKt;->LIST_EMPTY:Ljava/lang/Object;
 
     return-object v0
@@ -50,6 +55,7 @@
 .method public static final unwrap(Ljava/lang/Object;)Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
     .locals 1
 
+    .line 627
     instance-of v0, p0, Lkotlinx/coroutines/internal/Removed;
 
     if-nez v0, :cond_0

@@ -1,5 +1,6 @@
 .class synthetic Lcom/squareup/moshi/JsonReader$1;
 .super Ljava/lang/Object;
+.source "JsonReader.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 405
     invoke-static {}, Lcom/squareup/moshi/JsonReader$Token;->values()[Lcom/squareup/moshi/JsonReader$Token;
 
     move-result-object v0

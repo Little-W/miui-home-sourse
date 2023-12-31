@@ -24,6 +24,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/CrashAnalysis;)V
     .locals 0
 
+    .line 293
     iput-object p1, p0, Lcom/xiaomi/onetrack/CrashAnalysis$2;->a:Lcom/xiaomi/onetrack/CrashAnalysis;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +37,7 @@
 .method public compare(Ljava/io/File;Ljava/io/File;)I
     .locals 2
 
+    .line 296
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide p0
@@ -54,6 +56,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 293
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;

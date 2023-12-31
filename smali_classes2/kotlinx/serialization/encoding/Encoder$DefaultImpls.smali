@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/encoding/Encoder$DefaultImpls;
 .super Ljava/lang/Object;
+.source "Encoding.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 251
     invoke-interface {p0, p1}, Lkotlinx/serialization/encoding/Encoder;->beginStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/encoding/CompositeEncoder;
 
     move-result-object p0
@@ -51,6 +53,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 268
     invoke-interface {p1}, Lkotlinx/serialization/SerializationStrategy;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v0
@@ -61,6 +64,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 271
     invoke-interface {p0, p1, p2}, Lkotlinx/serialization/encoding/Encoder;->encodeSerializableValue(Lkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)V
 
     return-void
@@ -68,13 +72,16 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 276
     invoke-interface {p0}, Lkotlinx/serialization/encoding/Encoder;->encodeNull()V
 
     goto :goto_0
 
+    .line 278
     :cond_1
     invoke-interface {p0}, Lkotlinx/serialization/encoding/Encoder;->encodeNotNullMark()V
 
+    .line 279
     invoke-interface {p0, p1, p2}, Lkotlinx/serialization/encoding/Encoder;->encodeSerializableValue(Lkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)V
 
     :goto_0
@@ -98,6 +105,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 259
     invoke-interface {p1, p0, p2}, Lkotlinx/serialization/SerializationStrategy;->serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 
     return-void

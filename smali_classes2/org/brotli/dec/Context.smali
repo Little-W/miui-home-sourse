@@ -1,5 +1,6 @@
 .class final Lorg/brotli/dec/Context;
 .super Ljava/lang/Object;
+.source "Context.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 
     new-array v0, v0, [I
 
+    .line 14
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/brotli/dec/Context;->LOOKUP:[I
@@ -24,6 +26,7 @@
 
     new-array v0, v0, [I
 
+    .line 152
     fill-array-data v0, :array_1
 
     sput-object v0, Lorg/brotli/dec/Context;->LOOKUP_OFFSETS:[I

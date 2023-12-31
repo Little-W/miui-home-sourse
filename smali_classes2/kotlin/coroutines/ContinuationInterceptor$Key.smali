@@ -1,5 +1,6 @@
 .class public final Lkotlin/coroutines/ContinuationInterceptor$Key;
 .super Ljava/lang/Object;
+.source "ContinuationInterceptor.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/CoroutineContext$Key;
@@ -33,6 +34,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 24
     new-instance v0, Lkotlin/coroutines/ContinuationInterceptor$Key;
 
     invoke-direct {v0}, Lkotlin/coroutines/ContinuationInterceptor$Key;-><init>()V
@@ -45,6 +47,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

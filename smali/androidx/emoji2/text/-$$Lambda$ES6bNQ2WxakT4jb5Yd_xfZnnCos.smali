@@ -1,5 +1,6 @@
 .class public final synthetic Landroidx/emoji2/text/-$$Lambda$ES6bNQ2WxakT4jb5Yd_xfZnnCos;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

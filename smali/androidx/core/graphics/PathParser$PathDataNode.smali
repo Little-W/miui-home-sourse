@@ -1,5 +1,6 @@
 .class public Landroidx/core/graphics/PathParser$PathDataNode;
 .super Ljava/lang/Object;
+.source "PathParser.java"
 
 
 # annotations
@@ -23,10 +24,13 @@
 .method constructor <init>(C[F)V
     .locals 0
 
+    .line 352
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 353
     iput-char p1, p0, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
 
+    .line 354
     iput-object p2, p0, Landroidx/core/graphics/PathParser$PathDataNode;->mParams:[F
 
     return-void
@@ -35,12 +39,15 @@
 .method constructor <init>(Landroidx/core/graphics/PathParser$PathDataNode;)V
     .locals 2
 
+    .line 357
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 358
     iget-char v0, p1, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
 
     iput-char v0, p0, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
 
+    .line 359
     iget-object p1, p1, Landroidx/core/graphics/PathParser$PathDataNode;->mParams:[F
 
     array-length v0, p1
@@ -67,26 +74,32 @@
 
     const/4 v13, 0x0
 
+    .line 399
     aget v0, p1, v13
 
     const/4 v14, 0x1
 
+    .line 400
     aget v1, p1, v14
 
     const/4 v15, 0x2
 
+    .line 401
     aget v2, p1, v15
 
     const/16 v16, 0x3
 
+    .line 402
     aget v3, p1, v16
 
     const/16 v17, 0x4
 
+    .line 403
     aget v4, p1, v17
 
     const/16 v18, 0x5
 
+    .line 404
     aget v5, p1, v18
 
     sparse-switch v11, :sswitch_data_0
@@ -97,9 +110,11 @@
 
     goto :goto_2
 
+    .line 411
     :sswitch_1
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/Path;->close()V
 
+    .line 419
     invoke-virtual {v10, v4, v5}, Landroid/graphics/Path;->moveTo(FF)V
 
     move v0, v4
@@ -146,6 +161,7 @@
 
     move/from16 v0, p2
 
+    .line 451
     :goto_3
     array-length v1, v12
 
@@ -259,6 +275,7 @@
     :goto_6
     add-int/lit8 v1, v9, 0x0
 
+    .line 579
     aget v2, v12, v1
 
     add-int/lit8 v3, v9, 0x1
@@ -271,10 +288,12 @@
 
     add-float/2addr v0, v7
 
+    .line 583
     aget v1, v12, v1
 
     add-float/2addr v8, v1
 
+    .line 584
     aget v1, v12, v3
 
     add-float/2addr v7, v1
@@ -318,6 +337,7 @@
     :goto_8
     add-int/lit8 v13, v9, 0x0
 
+    .line 533
     aget v3, v12, v13
 
     add-int/lit8 v14, v9, 0x1
@@ -336,18 +356,22 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->rCubicTo(FFFFFF)V
 
+    .line 537
     aget v0, v12, v13
 
     add-float/2addr v0, v8
 
+    .line 538
     aget v1, v12, v14
 
     add-float/2addr v1, v7
 
+    .line 539
     aget v2, v12, v15
 
     add-float/2addr v8, v2
 
+    .line 540
     aget v2, v12, v22
 
     goto/16 :goto_b
@@ -355,18 +379,21 @@
     :cond_6
     add-int/lit8 v0, v9, 0x0
 
+    .line 454
     aget v1, v12, v0
 
     add-float/2addr v8, v1
 
     add-int/lit8 v1, v9, 0x1
 
+    .line 455
     aget v4, v12, v1
 
     add-float/2addr v7, v4
 
     if-lez v9, :cond_7
 
+    .line 460
     aget v0, v12, v0
 
     aget v1, v12, v1
@@ -375,6 +402,7 @@
 
     goto :goto_4
 
+    .line 462
     :cond_7
     aget v0, v12, v0
 
@@ -387,6 +415,7 @@
     :cond_8
     add-int/lit8 v0, v9, 0x0
 
+    .line 482
     aget v1, v12, v0
 
     add-int/lit8 v4, v9, 0x1
@@ -395,10 +424,12 @@
 
     invoke-virtual {v10, v1, v5}, Landroid/graphics/Path;->rLineTo(FF)V
 
+    .line 483
     aget v0, v12, v0
 
     add-float/2addr v8, v0
 
+    .line 484
     aget v0, v12, v4
 
     :goto_9
@@ -429,6 +460,7 @@
     :cond_b
     add-int/lit8 v0, v9, 0x0
 
+    .line 594
     aget v1, v12, v0
 
     add-int/lit8 v2, v9, 0x1
@@ -437,8 +469,10 @@
 
     invoke-virtual {v10, v8, v7, v1, v3}, Landroid/graphics/Path;->quadTo(FFFF)V
 
+    .line 598
     aget v0, v12, v0
 
+    .line 599
     aget v1, v12, v2
 
     move v3, v7
@@ -480,6 +514,7 @@
 
     add-int/lit8 v7, v9, 0x0
 
+    .line 550
     aget v3, v12, v7
 
     add-int/lit8 v8, v9, 0x1
@@ -498,12 +533,16 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
+    .line 552
     aget v0, v12, v7
 
+    .line 553
     aget v1, v12, v8
 
+    .line 554
     aget v8, v12, v13
 
+    .line 555
     aget v7, v12, v14
 
     goto/16 :goto_c
@@ -511,14 +550,17 @@
     :cond_f
     add-int/lit8 v0, v9, 0x0
 
+    .line 468
     aget v8, v12, v0
 
     add-int/lit8 v1, v9, 0x1
 
+    .line 469
     aget v7, v12, v1
 
     if-lez v9, :cond_10
 
+    .line 474
     aget v0, v12, v0
 
     aget v1, v12, v1
@@ -527,6 +569,7 @@
 
     goto/16 :goto_4
 
+    .line 476
     :cond_10
     aget v0, v12, v0
 
@@ -544,6 +587,7 @@
     :cond_11
     add-int/lit8 v0, v9, 0x0
 
+    .line 487
     aget v1, v12, v0
 
     add-int/lit8 v4, v9, 0x1
@@ -552,8 +596,10 @@
 
     invoke-virtual {v10, v1, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
+    .line 488
     aget v8, v12, v0
 
+    .line 489
     aget v7, v12, v4
 
     goto/16 :goto_4
@@ -561,12 +607,14 @@
     :cond_12
     add-int/lit8 v0, v9, 0x0
 
+    .line 500
     aget v1, v12, v0
 
     const/4 v4, 0x0
 
     invoke-virtual {v10, v4, v1}, Landroid/graphics/Path;->rLineTo(FF)V
 
+    .line 501
     aget v0, v12, v0
 
     goto/16 :goto_9
@@ -574,6 +622,7 @@
     :cond_13
     add-int/lit8 v0, v9, 0x0
 
+    .line 558
     aget v1, v12, v0
 
     add-int/lit8 v2, v9, 0x1
@@ -590,18 +639,22 @@
 
     invoke-virtual {v10, v1, v3, v5, v13}, Landroid/graphics/Path;->rQuadTo(FFFF)V
 
+    .line 559
     aget v0, v12, v0
 
     add-float/2addr v0, v8
 
+    .line 560
     aget v1, v12, v2
 
     add-float/2addr v1, v7
 
+    .line 561
     aget v2, v12, v4
 
     add-float/2addr v8, v2
 
+    .line 562
     aget v2, v12, v6
 
     goto :goto_b
@@ -609,12 +662,14 @@
     :cond_14
     add-int/lit8 v0, v9, 0x0
 
+    .line 492
     aget v1, v12, v0
 
     const/4 v4, 0x0
 
     invoke-virtual {v10, v1, v4}, Landroid/graphics/Path;->rLineTo(FF)V
 
+    .line 493
     aget v0, v12, v0
 
     add-float/2addr v8, v0
@@ -624,6 +679,7 @@
     :cond_15
     add-int/lit8 v0, v9, 0x0
 
+    .line 508
     aget v1, v12, v0
 
     add-int/lit8 v0, v9, 0x1
@@ -650,18 +706,22 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->rCubicTo(FFFFFF)V
 
+    .line 511
     aget v0, v12, v13
 
     add-float/2addr v0, v8
 
+    .line 512
     aget v1, v12, v14
 
     add-float/2addr v1, v7
 
+    .line 513
     aget v2, v12, v15
 
     add-float/2addr v8, v2
 
+    .line 514
     aget v2, v12, v22
 
     :goto_b
@@ -677,6 +737,7 @@
     :cond_16
     add-int/lit8 v13, v9, 0x5
 
+    .line 603
     aget v0, v12, v13
 
     add-float v3, v0, v8
@@ -753,10 +814,12 @@
 
     invoke-static/range {v0 .. v9}, Landroidx/core/graphics/PathParser$PathDataNode;->drawArc(Landroid/graphics/Path;FFFFFFFZZ)V
 
+    .line 613
     aget v0, v12, v13
 
     add-float v8, v15, v0
 
+    .line 614
     aget v0, v12, v14
 
     add-float v7, v11, v0
@@ -770,10 +833,12 @@
 
     add-int/lit8 v9, v22, 0x0
 
+    .line 504
     aget v0, v12, v9
 
     invoke-virtual {v10, v15, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
+    .line 505
     aget v7, v12, v9
 
     goto/16 :goto_12
@@ -783,6 +848,7 @@
 
     add-int/lit8 v9, v22, 0x0
 
+    .line 565
     aget v0, v12, v9
 
     add-int/lit8 v1, v22, 0x1
@@ -799,12 +865,16 @@
 
     invoke-virtual {v10, v0, v2, v4, v6}, Landroid/graphics/Path;->quadTo(FFFF)V
 
+    .line 566
     aget v0, v12, v9
 
+    .line 567
     aget v1, v12, v1
 
+    .line 568
     aget v8, v12, v3
 
+    .line 569
     aget v7, v12, v5
 
     move v2, v0
@@ -820,10 +890,12 @@
 
     add-int/lit8 v9, v22, 0x0
 
+    .line 496
     aget v0, v12, v9
 
     invoke-virtual {v10, v0, v11}, Landroid/graphics/Path;->lineTo(FF)V
 
+    .line 497
     aget v8, v12, v9
 
     goto/16 :goto_12
@@ -833,6 +905,7 @@
 
     add-int/lit8 v9, v22, 0x0
 
+    .line 518
     aget v1, v12, v9
 
     add-int/lit8 v9, v22, 0x1
@@ -859,12 +932,16 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
+    .line 520
     aget v8, v12, v8
 
+    .line 521
     aget v0, v12, v11
 
+    .line 522
     aget v1, v12, v9
 
+    .line 523
     aget v2, v12, v7
 
     move v7, v0
@@ -884,6 +961,7 @@
 
     add-int/lit8 v13, v22, 0x5
 
+    .line 619
     aget v3, v12, v13
 
     add-int/lit8 v14, v22, 0x6
@@ -944,8 +1022,10 @@
 
     invoke-static/range {v0 .. v9}, Landroidx/core/graphics/PathParser$PathDataNode;->drawArc(Landroid/graphics/Path;FFFFFFFZZ)V
 
+    .line 629
     aget v8, v12, v13
 
+    .line 630
     aget v7, v12, v14
 
     :goto_11
@@ -975,20 +1055,26 @@
 
     move v0, v13
 
+    .line 637
     aput v15, p1, v0
 
     const/4 v0, 0x1
 
+    .line 638
     aput v11, p1, v0
 
     const/4 v0, 0x2
 
+    .line 639
     aput v2, p1, v0
 
+    .line 640
     aput v3, p1, v16
 
+    .line 641
     aput v20, p1, v17
 
+    .line 642
     aput v21, p1, v18
 
     return-void
@@ -1031,6 +1117,7 @@
 
     div-double/2addr v4, v6
 
+    .line 750
     invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v4
@@ -1041,18 +1128,22 @@
 
     double-to-int v4, v4
 
+    .line 753
     invoke-static/range {p13 .. p14}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v5
 
+    .line 754
     invoke-static/range {p13 .. p14}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v7
 
+    .line 755
     invoke-static/range {p15 .. p16}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v9
 
+    .line 756
     invoke-static/range {p15 .. p16}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v11
@@ -1102,10 +1193,12 @@
 
     add-double v31, v17, v9
 
+    .line 763
     invoke-static/range {v31 .. v32}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v33
 
+    .line 764
     invoke-static/range {v31 .. v32}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v35
@@ -1148,10 +1241,12 @@
 
     div-double v35, v17, v35
 
+    .line 769
     invoke-static/range {v35 .. v36}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide v35
 
+    .line 771
     invoke-static/range {v17 .. v18}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v17
@@ -1210,6 +1305,7 @@
 
     move-object/from16 v14, p0
 
+    .line 778
     invoke-virtual {v14, v10, v10}, Landroid/graphics/Path;->rLineTo(FF)V
 
     double-to-float v4, v4
@@ -1238,6 +1334,7 @@
 
     move/from16 v47, v9
 
+    .line 780
     invoke-virtual/range {v41 .. v47}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
     add-int/lit8 v11, v11, 0x1
@@ -1289,14 +1386,17 @@
 
     float-to-double v4, v7
 
+    .line 657
     invoke-static {v4, v5}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v19
 
+    .line 659
     invoke-static/range {v19 .. v20}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v4
 
+    .line 660
     invoke-static/range {v19 .. v20}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v10
@@ -1397,6 +1497,7 @@
 
     const-string v0, " Points are coincident"
 
+    .line 676
     invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1414,6 +1515,7 @@
 
     if-gez v12, :cond_1
 
+    .line 681
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1430,6 +1532,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 682
     invoke-static {v10, v11}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v1
@@ -1460,10 +1563,12 @@
 
     move/from16 v9, p9
 
+    .line 683
     invoke-static/range {v0 .. v9}, Landroidx/core/graphics/PathParser$PathDataNode;->drawArc(Landroid/graphics/Path;FFFFFFFZZ)V
 
     return-void
 
+    .line 687
     :cond_1
     invoke-static/range {v35 .. v36}, Ljava/lang/Math;->sqrt(D)D
 
@@ -1495,6 +1600,7 @@
 
     sub-double v10, v15, v29
 
+    .line 700
     invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v23
@@ -1503,6 +1609,7 @@
 
     sub-double v1, v1, v29
 
+    .line 702
     invoke-static {v6, v7, v1, v2}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v0
@@ -1570,6 +1677,7 @@
 
     move-wide/from16 v23, v0
 
+    .line 719
     invoke-static/range {v6 .. v24}, Landroidx/core/graphics/PathParser$PathDataNode;->arcToBezier(Landroid/graphics/Path;DDDDDDDDD)V
 
     return-void
@@ -1586,11 +1694,13 @@
 
     const/4 v2, 0x0
 
+    .line 371
     :goto_0
     array-length v3, p0
 
     if-ge v2, v3, :cond_0
 
+    .line 372
     aget-object v3, p0, v2
 
     iget-char v3, v3, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
@@ -1601,6 +1711,7 @@
 
     invoke-static {p1, v0, v1, v3, v4}, Landroidx/core/graphics/PathParser$PathDataNode;->addCommand(Landroid/graphics/Path;[FCC[F)V
 
+    .line 373
     aget-object v1, p0, v2
 
     iget-char v1, v1, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
@@ -1618,12 +1729,14 @@
 .method public interpolatePathDataNode(Landroidx/core/graphics/PathParser$PathDataNode;Landroidx/core/graphics/PathParser$PathDataNode;F)V
     .locals 4
 
+    .line 388
     iget-char v0, p1, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
 
     iput-char v0, p0, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
 
     const/4 v0, 0x0
 
+    .line 389
     :goto_0
     iget-object v1, p1, Landroidx/core/graphics/PathParser$PathDataNode;->mParams:[F
 
@@ -1631,6 +1744,7 @@
 
     if-ge v0, v2, :cond_0
 
+    .line 390
     iget-object v2, p0, Landroidx/core/graphics/PathParser$PathDataNode;->mParams:[F
 
     aget v1, v1, v0

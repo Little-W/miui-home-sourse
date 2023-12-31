@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;
 .super Ljava/lang/Object;
+.source "SpscLinkedArrayQueue.java"
 
 # interfaces
 .implements Lio/reactivex2/internal/fuseable/SimplePlainQueue;
@@ -66,6 +67,7 @@
 
     const/16 v1, 0x1000
 
+    .line 33
     invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -76,6 +78,7 @@
 
     sput v0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->MAX_LOOK_AHEAD_STEP:I
 
+    .line 46
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -88,14 +91,17 @@
 .method public constructor <init>(I)V
     .locals 3
 
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
     iput-object v0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerIndex:Ljava/util/concurrent/atomic/AtomicLong;
 
+    .line 44
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
@@ -104,6 +110,7 @@
 
     const/16 v0, 0x8
 
+    .line 49
     invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -114,30 +121,38 @@
 
     add-int/lit8 v0, p1, -0x1
 
+    .line 51
     new-instance v1, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     add-int/lit8 v2, p1, 0x1
 
     invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
 
+    .line 52
     iput-object v1, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerBuffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
+    .line 53
     iput v0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerMask:I
 
+    .line 54
     invoke-direct {p0, p1}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->adjustLookAheadStep(I)V
 
+    .line 55
     iput-object v1, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->consumerBuffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
+    .line 56
     iput v0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->consumerMask:I
 
     add-int/lit8 v0, v0, -0x1
 
     int-to-long v0, v0
 
+    .line 57
     iput-wide v0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerLookAhead:J
 
     const-wide/16 v0, 0x0
 
+    .line 58
     invoke-direct {p0, v0, v1}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soProducerIndex(J)V
 
     return-void
@@ -146,6 +161,7 @@
 .method private adjustLookAheadStep(I)V
     .locals 1
 
+    .line 213
     div-int/lit8 p1, p1, 0x4
 
     sget v0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->MAX_LOOK_AHEAD_STEP:I
@@ -172,6 +188,7 @@
 
     and-int/2addr p0, p2
 
+    .line 241
     invoke-static {p0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->calcDirectOffset(I)I
 
     move-result p0
@@ -182,6 +199,7 @@
 .method private lpConsumerIndex()J
     .locals 2
 
+    .line 229
     iget-object p0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->consumerIndex:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
@@ -194,6 +212,7 @@
 .method private lpProducerIndex()J
     .locals 2
 
+    .line 225
     iget-object p0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerIndex:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
@@ -206,6 +225,7 @@
 .method private lvConsumerIndex()J
     .locals 2
 
+    .line 221
     iget-object p0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->consumerIndex:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
@@ -229,6 +249,7 @@
         }
     .end annotation
 
+    .line 251
     invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -250,10 +271,12 @@
         }
     .end annotation
 
+    .line 119
     invoke-static {p2}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->calcDirectOffset(I)I
 
     move-result p0
 
+    .line 120
     invoke-static {p1, p0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->lvElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
 
     move-result-object p2
@@ -262,6 +285,7 @@
 
     const/4 v0, 0x0
 
+    .line 121
     invoke-static {p1, p0, v0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
 
     return-object p2
@@ -270,6 +294,7 @@
 .method private lvProducerIndex()J
     .locals 2
 
+    .line 217
     iget-object p0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerIndex:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
@@ -290,12 +315,15 @@
         }
     .end annotation
 
+    .line 153
     iput-object p1, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->consumerBuffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
+    .line 154
     invoke-static {p2, p3, p4}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->calcWrappedOffset(JI)I
 
     move-result p4
 
+    .line 155
     invoke-static {p1, p4}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->lvElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -304,12 +332,14 @@
 
     const/4 v1, 0x0
 
+    .line 157
     invoke-static {p1, p4, v1}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
 
     const-wide/16 v1, 0x1
 
     add-long/2addr p2, v1
 
+    .line 158
     invoke-direct {p0, p2, p3}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soConsumerIndex(J)V
 
     :cond_0
@@ -327,14 +357,17 @@
         }
     .end annotation
 
+    .line 102
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
 
     move-result v0
 
+    .line 103
     new-instance v1, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
 
+    .line 104
     iput-object v1, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerBuffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     add-long/2addr p6, p2
@@ -343,18 +376,23 @@
 
     sub-long/2addr p6, v2
 
+    .line 105
     iput-wide p6, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerLookAhead:J
 
+    .line 106
     invoke-static {v1, p4, p5}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
 
+    .line 107
     invoke-direct {p0, p1, v1}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soNext(Ljava/util/concurrent/atomic/AtomicReferenceArray;Ljava/util/concurrent/atomic/AtomicReferenceArray;)V
 
+    .line 108
     sget-object p5, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->HAS_NEXT:Ljava/lang/Object;
 
     invoke-static {p1, p4, p5}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
 
     add-long/2addr p2, v2
 
+    .line 110
     invoke-direct {p0, p2, p3}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soProducerIndex(J)V
 
     return-void
@@ -363,6 +401,7 @@
 .method private soConsumerIndex(J)V
     .locals 0
 
+    .line 237
     iget-object p0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->consumerIndex:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
@@ -383,6 +422,7 @@
         }
     .end annotation
 
+    .line 247
     invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
 
     return-void
@@ -402,6 +442,7 @@
         }
     .end annotation
 
+    .line 114
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
 
     move-result p0
@@ -420,6 +461,7 @@
 .method private soProducerIndex(J)V
     .locals 0
 
+    .line 233
     iget-object p0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerIndex:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
@@ -438,12 +480,14 @@
         }
     .end annotation
 
+    .line 95
     invoke-static {p1, p5, p2}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
 
     const-wide/16 p1, 0x1
 
     add-long/2addr p3, p1
 
+    .line 96
     invoke-direct {p0, p3, p4}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soProducerIndex(J)V
 
     const/4 p0, 0x1
@@ -456,6 +500,7 @@
 .method public clear()V
     .locals 1
 
+    .line 186
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->poll()Ljava/lang/Object;
@@ -479,6 +524,7 @@
 .method public isEmpty()Z
     .locals 4
 
+    .line 209
     invoke-direct {p0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->lvProducerIndex()J
 
     move-result-wide v0
@@ -512,18 +558,23 @@
 
     if-eqz p1, :cond_3
 
+    .line 72
     iget-object v1, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerBuffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
+    .line 73
     invoke-direct {p0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->lpProducerIndex()J
 
     move-result-wide v3
 
+    .line 74
     iget v0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerMask:I
 
+    .line 75
     invoke-static {v3, v4, v0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->calcWrappedOffset(JI)I
 
     move-result v5
 
+    .line 76
     iget-wide v6, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerLookAhead:J
 
     cmp-long v2, v3, v6
@@ -534,12 +585,14 @@
 
     move-object v2, p1
 
+    .line 77
     invoke-direct/range {v0 .. v5}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->writeToQueue(Ljava/util/concurrent/atomic/AtomicReferenceArray;Ljava/lang/Object;JI)Z
 
     move-result p0
 
     return p0
 
+    .line 79
     :cond_0
     iget v2, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerLookAheadStep:I
 
@@ -547,10 +600,12 @@
 
     add-long/2addr v6, v3
 
+    .line 81
     invoke-static {v6, v7, v0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->calcWrappedOffset(JI)I
 
     move-result v2
 
+    .line 82
     invoke-static {v1, v2}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->lvElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
 
     move-result-object v2
@@ -561,12 +616,14 @@
 
     sub-long/2addr v6, v8
 
+    .line 83
     iput-wide v6, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->producerLookAhead:J
 
     move-object v0, p0
 
     move-object v2, p1
 
+    .line 84
     invoke-direct/range {v0 .. v5}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->writeToQueue(Ljava/util/concurrent/atomic/AtomicReferenceArray;Ljava/lang/Object;JI)Z
 
     move-result p0
@@ -576,6 +633,7 @@
     :cond_1
     add-long/2addr v8, v3
 
+    .line 85
     invoke-static {v8, v9, v0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->calcWrappedOffset(JI)I
 
     move-result v2
@@ -590,6 +648,7 @@
 
     move-object v2, p1
 
+    .line 86
     invoke-direct/range {v0 .. v5}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->writeToQueue(Ljava/util/concurrent/atomic/AtomicReferenceArray;Ljava/lang/Object;JI)Z
 
     move-result p0
@@ -607,12 +666,14 @@
 
     move-object v5, p1
 
+    .line 88
     invoke-direct/range {v0 .. v7}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->resize(Ljava/util/concurrent/atomic/AtomicReferenceArray;JILjava/lang/Object;J)V
 
     const/4 p0, 0x1
 
     return p0
 
+    .line 69
     :cond_3
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -631,22 +692,28 @@
         }
     .end annotation
 
+    .line 134
     iget-object v0, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->consumerBuffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
+    .line 135
     invoke-direct {p0}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->lpConsumerIndex()J
 
     move-result-wide v1
 
+    .line 136
     iget v3, p0, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->consumerMask:I
 
+    .line 137
     invoke-static {v1, v2, v3}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->calcWrappedOffset(JI)I
 
     move-result v4
 
+    .line 138
     invoke-static {v0, v4}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->lvElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
 
     move-result-object v5
 
+    .line 139
     sget-object v6, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->HAS_NEXT:Ljava/lang/Object;
 
     if-ne v5, v6, :cond_0
@@ -665,12 +732,14 @@
 
     if-nez v6, :cond_1
 
+    .line 141
     invoke-static {v0, v4, v7}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
 
     const-wide/16 v3, 0x1
 
     add-long/2addr v1, v3
 
+    .line 142
     invoke-direct {p0, v1, v2}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->soConsumerIndex(J)V
 
     return-object v5
@@ -680,6 +749,7 @@
 
     add-int/lit8 v4, v3, 0x1
 
+    .line 145
     invoke-direct {p0, v0, v4}, Lio/reactivex2/internal/queue/SpscLinkedArrayQueue;->lvNextBufferAndUnlink(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     move-result-object v0

@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/gms/internal/measurement/zzgi;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/internal/measurement/zzji;
@@ -23,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +33,7 @@
 .method private final zza(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 22
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -96,6 +99,7 @@
         }
     .end annotation
 
+    .line 24
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzgi;->zzt()Lcom/google/android/gms/internal/measurement/zzgi;
 
     move-result-object p0
@@ -144,17 +148,20 @@
 
     const/4 p2, 0x0
 
+    .line 3
     :try_start_0
     invoke-static {p1, p2, p3, p2}, Lcom/google/android/gms/internal/measurement/zzhb;->zza([BIIZ)Lcom/google/android/gms/internal/measurement/zzhb;
 
     move-result-object p1
 
+    .line 6
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzhl;->zza()Lcom/google/android/gms/internal/measurement/zzhl;
 
     move-result-object p3
 
     invoke-virtual {p0, p1, p3}, Lcom/google/android/gms/internal/measurement/zzgi;->zza(Lcom/google/android/gms/internal/measurement/zzhb;Lcom/google/android/gms/internal/measurement/zzhl;)Lcom/google/android/gms/internal/measurement/zzgi;
 
+    .line 7
     invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/measurement/zzhb;->zza(I)V
     :try_end_0
     .catch Lcom/google/android/gms/internal/measurement/zzij; {:try_start_0 .. :try_end_0} :catch_1
@@ -165,6 +172,7 @@
     :catch_0
     move-exception p1
 
+    .line 11
     new-instance p2, Ljava/lang/RuntimeException;
 
     const-string p3, "byte array"
@@ -180,6 +188,7 @@
     :catch_1
     move-exception p0
 
+    .line 9
     throw p0
 .end method
 
@@ -201,13 +210,16 @@
 
     const/4 p2, 0x0
 
+    .line 13
     :try_start_0
     invoke-static {p1, p2, p3, p2}, Lcom/google/android/gms/internal/measurement/zzhb;->zza([BIIZ)Lcom/google/android/gms/internal/measurement/zzhb;
 
     move-result-object p1
 
+    .line 15
     invoke-virtual {p0, p1, p4}, Lcom/google/android/gms/internal/measurement/zzgi;->zza(Lcom/google/android/gms/internal/measurement/zzhb;Lcom/google/android/gms/internal/measurement/zzhl;)Lcom/google/android/gms/internal/measurement/zzgi;
 
+    .line 16
     invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/measurement/zzhb;->zza(I)V
     :try_end_0
     .catch Lcom/google/android/gms/internal/measurement/zzij; {:try_start_0 .. :try_end_0} :catch_1
@@ -218,6 +230,7 @@
     :catch_0
     move-exception p1
 
+    .line 20
     new-instance p2, Ljava/lang/RuntimeException;
 
     const-string p3, "byte array"
@@ -233,12 +246,14 @@
     :catch_1
     move-exception p0
 
+    .line 18
     throw p0
 .end method
 
 .method public final synthetic zza(Lcom/google/android/gms/internal/measurement/zzjj;)Lcom/google/android/gms/internal/measurement/zzji;
     .locals 1
 
+    .line 26
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzgi;->zzbv()Lcom/google/android/gms/internal/measurement/zzjj;
 
     move-result-object v0
@@ -253,6 +268,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 28
     check-cast p1, Lcom/google/android/gms/internal/measurement/zzgg;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzgi;->zza(Lcom/google/android/gms/internal/measurement/zzgg;)Lcom/google/android/gms/internal/measurement/zzgi;
@@ -261,6 +277,7 @@
 
     return-object p0
 
+    .line 27
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -279,6 +296,7 @@
         }
     .end annotation
 
+    .line 34
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -298,6 +316,7 @@
         }
     .end annotation
 
+    .line 31
     array-length v0, p1
 
     const/4 v1, 0x0

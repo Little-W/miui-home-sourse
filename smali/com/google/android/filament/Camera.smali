@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/Camera;
 .super Ljava/lang/Object;
+.source "Camera.java"
 
 
 # annotations
@@ -19,8 +20,10 @@
 .method constructor <init>(J)V
     .locals 0
 
+    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 151
     iput-wide p1, p0, Lcom/google/android/filament/Camera;->mNativeObject:J
 
     return-void
@@ -99,6 +102,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 582
     iput-wide v0, p0, Lcom/google/android/filament/Camera;->mNativeObject:J
 
     return-void
@@ -107,6 +111,7 @@
 .method public getAperture()F
     .locals 2
 
+    .line 557
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -121,6 +126,7 @@
 .method public getCullingFar()F
     .locals 2
 
+    .line 361
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -135,10 +141,12 @@
 .method public getCullingProjectionMatrix([D)[D
     .locals 2
 
+    .line 392
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertMat4d([D)[D
 
     move-result-object p1
 
+    .line 393
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -151,10 +159,12 @@
 .method public getForwardVector([F)[F
     .locals 2
 
+    .line 500
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertFloat3([F)[F
 
     move-result-object p1
 
+    .line 501
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -167,10 +177,12 @@
 .method public getLeftVector([F)[F
     .locals 2
 
+    .line 468
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertFloat3([F)[F
 
     move-result-object p1
 
+    .line 469
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -183,10 +195,12 @@
 .method public getModelMatrix([F)[F
     .locals 2
 
+    .line 422
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertMat4f([F)[F
 
     move-result-object p1
 
+    .line 423
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -199,6 +213,7 @@
 .method public getNativeObject()J
     .locals 4
 
+    .line 575
     iget-wide v0, p0, Lcom/google/android/filament/Camera;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -209,6 +224,7 @@
 
     return-wide v0
 
+    .line 576
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -222,6 +238,7 @@
 .method public getNear()F
     .locals 2
 
+    .line 354
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -236,10 +253,12 @@
 .method public getPosition([F)[F
     .locals 2
 
+    .line 452
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertFloat3([F)[F
 
     move-result-object p1
 
+    .line 453
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -252,10 +271,12 @@
 .method public getProjectionMatrix([D)[D
     .locals 2
 
+    .line 376
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertMat4d([D)[D
 
     move-result-object p1
 
+    .line 377
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -268,10 +289,12 @@
 .method public getScaling([D)[D
     .locals 2
 
+    .line 406
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertDouble4([D)[D
 
     move-result-object p1
 
+    .line 407
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -284,6 +307,7 @@
 .method public getSensitivity()F
     .locals 2
 
+    .line 571
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -298,6 +322,7 @@
 .method public getShutterSpeed()F
     .locals 2
 
+    .line 564
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -312,10 +337,12 @@
 .method public getUpVector([F)[F
     .locals 2
 
+    .line 484
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertFloat3([F)[F
 
     move-result-object p1
 
+    .line 485
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -328,10 +355,12 @@
 .method public getViewMatrix([F)[F
     .locals 2
 
+    .line 437
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertMat4f([F)[F
 
     move-result-object p1
 
+    .line 438
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -362,6 +391,7 @@
 
     move-wide/from16 v18, p17
 
+    .line 347
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -374,8 +404,10 @@
 .method public setCustomProjection([DDD)V
     .locals 7
 
+    .line 275
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertMat4dIn([D)V
 
+    .line 276
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -404,6 +436,7 @@
 
     const v1, 0x3f99999a    # 1.2f
 
+    .line 550
     invoke-virtual {p0, v0, v1, p1}, Lcom/google/android/filament/Camera;->setExposure(FFF)V
 
     return-void
@@ -412,6 +445,7 @@
 .method public setExposure(FFF)V
     .locals 2
 
+    .line 532
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -424,6 +458,7 @@
 .method public setLensProjection(DDDD)V
     .locals 10
 
+    .line 251
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -444,8 +479,10 @@
 .method public setModelMatrix([F)V
     .locals 2
 
+    .line 328
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertMat4fIn([F)V
 
+    .line 329
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -458,6 +495,7 @@
 .method public setProjection(DDDDLcom/google/android/filament/Camera$Fov;)V
     .locals 11
 
+    .line 225
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -482,6 +520,7 @@
 .method public setProjection(Lcom/google/android/filament/Camera$Projection;DDDDDD)V
     .locals 15
 
+    .line 192
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0
@@ -510,8 +549,10 @@
 .method public setScaling([D)V
     .locals 2
 
+    .line 308
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertDouble4In([D)V
 
+    .line 309
     invoke-virtual {p0}, Lcom/google/android/filament/Camera;->getNativeObject()J
 
     move-result-wide v0

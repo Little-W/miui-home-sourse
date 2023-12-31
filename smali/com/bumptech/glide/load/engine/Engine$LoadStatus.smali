@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 .super Ljava/lang/Object;
+.source "Engine.java"
 
 
 # annotations
@@ -40,12 +41,15 @@
         }
     .end annotation
 
+    .line 348
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/Engine$LoadStatus;->this$0:Lcom/bumptech/glide/load/engine/Engine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 349
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/Engine$LoadStatus;->cb:Lcom/bumptech/glide/request/ResourceCallback;
 
+    .line 350
     iput-object p3, p0, Lcom/bumptech/glide/load/engine/Engine$LoadStatus;->engineJob:Lcom/bumptech/glide/load/engine/EngineJob;
 
     return-void
@@ -56,10 +60,12 @@
 .method public cancel()V
     .locals 2
 
+    .line 358
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/Engine$LoadStatus;->this$0:Lcom/bumptech/glide/load/engine/Engine;
 
     monitor-enter v0
 
+    .line 359
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/Engine$LoadStatus;->engineJob:Lcom/bumptech/glide/load/engine/EngineJob;
 
@@ -67,6 +73,7 @@
 
     invoke-virtual {v1, p0}, Lcom/bumptech/glide/load/engine/EngineJob;->removeCallback(Lcom/bumptech/glide/request/ResourceCallback;)V
 
+    .line 360
     monitor-exit v0
 
     return-void

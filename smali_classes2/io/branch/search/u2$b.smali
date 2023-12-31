@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/u2$b;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Comparator;

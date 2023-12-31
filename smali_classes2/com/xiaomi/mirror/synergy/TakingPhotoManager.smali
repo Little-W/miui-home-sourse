@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/synergy/TakingPhotoManager;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/IBinder$DeathRecipient;

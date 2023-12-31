@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/internal/ViewOverlayApi18;
 .super Ljava/lang/Object;
+.source "ViewOverlayApi18.java"
 
 # interfaces
 .implements Lcom/google/android/material/internal/ViewOverlayImpl;
@@ -13,8 +14,10 @@
 .method constructor <init>(Landroid/view/View;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     invoke-virtual {p1}, Landroid/view/View;->getOverlay()Landroid/view/ViewOverlay;
 
     move-result-object p1
@@ -29,6 +32,7 @@
 .method public add(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 36
     iget-object p0, p0, Lcom/google/android/material/internal/ViewOverlayApi18;->viewOverlay:Landroid/view/ViewOverlay;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewOverlay;->add(Landroid/graphics/drawable/Drawable;)V
@@ -39,6 +43,7 @@
 .method public remove(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 41
     iget-object p0, p0, Lcom/google/android/material/internal/ViewOverlayApi18;->viewOverlay:Landroid/view/ViewOverlay;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V

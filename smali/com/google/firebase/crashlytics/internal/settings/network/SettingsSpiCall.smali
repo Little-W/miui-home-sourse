@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/crashlytics/internal/settings/network/SettingsSpiCall;
 .super Ljava/lang/Object;
+.source "SettingsSpiCall.java"
 
 
 # virtual methods

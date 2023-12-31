@@ -1,5 +1,6 @@
 .class public final Landroidx/lifecycle/SavedStateHandle;
 .super Ljava/lang/Object;
+.source "SavedStateHandle.java"
 
 
 # static fields
@@ -51,6 +52,7 @@
 
     new-array v0, v0, [Ljava/lang/Class;
 
+    .line 376
     sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     const/4 v2, 0x0
@@ -213,6 +215,7 @@
 
     aput-object v1, v0, v3
 
+    .line 407
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v1, v2, :cond_0
@@ -231,6 +234,7 @@
 
     const/16 v1, 0x1c
 
+    .line 408
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v3, v2, :cond_1
@@ -253,26 +257,31 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 58
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/SavedStateHandle;->mSavedStateProviders:Ljava/util/Map;
 
+    .line 59
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/SavedStateHandle;->mLiveDatas:Ljava/util/Map;
 
+    .line 64
     new-instance v0, Landroidx/lifecycle/SavedStateHandle$1;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/SavedStateHandle$1;-><init>(Landroidx/lifecycle/SavedStateHandle;)V
 
     iput-object v0, p0, Landroidx/lifecycle/SavedStateHandle;->mSavedStateProvider:Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
 
+    .line 105
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -303,26 +312,31 @@
         }
     .end annotation
 
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 58
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/SavedStateHandle;->mSavedStateProviders:Ljava/util/Map;
 
+    .line 59
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/SavedStateHandle;->mLiveDatas:Ljava/util/Map;
 
+    .line 64
     new-instance v0, Landroidx/lifecycle/SavedStateHandle$1;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/SavedStateHandle$1;-><init>(Landroidx/lifecycle/SavedStateHandle;)V
 
     iput-object v0, p0, Landroidx/lifecycle/SavedStateHandle;->mSavedStateProvider:Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
 
+    .line 98
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
@@ -349,12 +363,14 @@
 
     if-nez p1, :cond_0
 
+    .line 111
     new-instance p0, Landroidx/lifecycle/SavedStateHandle;
 
     invoke-direct {p0}, Landroidx/lifecycle/SavedStateHandle;-><init>()V
 
     return-object p0
 
+    .line 114
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
@@ -362,6 +378,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 116
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -383,6 +400,7 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 117
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -394,6 +412,7 @@
     :cond_1
     if-nez p0, :cond_2
 
+    .line 122
     new-instance p0, Landroidx/lifecycle/SavedStateHandle;
 
     invoke-direct {p0, v0}, Landroidx/lifecycle/SavedStateHandle;-><init>(Ljava/util/Map;)V
@@ -403,12 +422,14 @@
     :cond_2
     const-string p1, "keys"
 
+    .line 125
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p1
 
     const-string/jumbo v1, "values"
 
+    .line 126
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -417,6 +438,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 127
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -429,6 +451,7 @@
 
     const/4 v1, 0x0
 
+    .line 130
     :goto_1
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -436,6 +459,7 @@
 
     if-ge v1, v2, :cond_3
 
+    .line 131
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -452,6 +476,7 @@
 
     goto :goto_1
 
+    .line 133
     :cond_3
     new-instance p0, Landroidx/lifecycle/SavedStateHandle;
 
@@ -459,6 +484,7 @@
 
     return-object p0
 
+    .line 128
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -484,6 +510,7 @@
 
     return-void
 
+    .line 266
     :cond_0
     sget-object v0, Landroidx/lifecycle/SavedStateHandle;->ACCEPTABLE_CLASSES:[Ljava/lang/Class;
 
@@ -496,6 +523,7 @@
 
     aget-object v3, v0, v2
 
+    .line 267
     invoke-virtual {v3, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v3
@@ -509,6 +537,7 @@
 
     goto :goto_0
 
+    .line 271
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -544,6 +573,7 @@
 .method savedStateProvider()Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
     .locals 0
 
+    .line 138
     iget-object p0, p0, Landroidx/lifecycle/SavedStateHandle;->mSavedStateProvider:Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
 
     return-object p0
@@ -572,8 +602,10 @@
         }
     .end annotation
 
+    .line 251
     invoke-static {p2}, Landroidx/lifecycle/SavedStateHandle;->validateValue(Ljava/lang/Object;)V
 
+    .line 253
     iget-object v0, p0, Landroidx/lifecycle/SavedStateHandle;->mLiveDatas:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -584,10 +616,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 256
     invoke-virtual {v0, p2}, Landroidx/lifecycle/MutableLiveData;->setValue(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 258
     :cond_0
     iget-object p0, p0, Landroidx/lifecycle/SavedStateHandle;->mRegular:Ljava/util/Map;
 

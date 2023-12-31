@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1;
 .super Ljava/lang/Thread;
+.source "GlideExecutor.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;Ljava/lang/Runnable;Ljava/lang/String;)V
     .locals 0
 
+    .line 433
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1;->this$0:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;
 
     invoke-direct {p0, p2, p3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
@@ -35,32 +37,40 @@
 
     const/16 v0, 0x9
 
+    .line 437
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
+    .line 438
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1;->this$0:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;
 
     iget-boolean v0, v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->preventNetworkOperations:Z
 
     if-eqz v0, :cond_0
 
+    .line 439
     new-instance v0, Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     invoke-direct {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;-><init>()V
 
+    .line 441
     invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->detectNetwork()Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     move-result-object v0
 
+    .line 442
     invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->penaltyDeath()Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     move-result-object v0
 
+    .line 443
     invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->build()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
+    .line 439
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
+    .line 446
     :cond_0
     :try_start_0
     invoke-super {p0}, Ljava/lang/Thread;->run()V
@@ -72,6 +82,7 @@
     :catchall_0
     move-exception v0
 
+    .line 448
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1;->this$0:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->uncaughtThrowableStrategy:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;

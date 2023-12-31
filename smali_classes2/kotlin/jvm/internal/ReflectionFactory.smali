@@ -1,11 +1,13 @@
 .class public Lkotlin/jvm/internal/ReflectionFactory;
 .super Ljava/lang/Object;
+.source "ReflectionFactory.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method public getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
     .locals 0
 
+    .line 30
     new-instance p0, Lkotlin/jvm/internal/ClassReference;
 
     invoke-direct {p0, p1}, Lkotlin/jvm/internal/ClassReference;-><init>(Ljava/lang/Class;)V
@@ -32,6 +35,7 @@
 .method public getOrCreateKotlinPackage(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/reflect/KDeclarationContainer;
     .locals 0
 
+    .line 26
     new-instance p0, Lkotlin/jvm/internal/PackageReference;
 
     invoke-direct {p0, p1, p2}, Lkotlin/jvm/internal/PackageReference;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
@@ -42,6 +46,7 @@
 .method public renderLambdaToString(Lkotlin/jvm/internal/FunctionBase;)Ljava/lang/String;
     .locals 0
 
+    .line 44
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -60,6 +65,7 @@
 
     const-string p1, "kotlin.jvm.functions."
 
+    .line 45
     invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -79,6 +85,7 @@
 .method public renderLambdaToString(Lkotlin/jvm/internal/Lambda;)Ljava/lang/String;
     .locals 0
 
+    .line 39
     invoke-virtual {p0, p1}, Lkotlin/jvm/internal/ReflectionFactory;->renderLambdaToString(Lkotlin/jvm/internal/FunctionBase;)Ljava/lang/String;
 
     move-result-object p0
@@ -99,6 +106,7 @@
         }
     .end annotation
 
+    .line 84
     new-instance p0, Lkotlin/jvm/internal/TypeReference;
 
     invoke-direct {p0, p1, p2, p3}, Lkotlin/jvm/internal/TypeReference;-><init>(Lkotlin/reflect/KClassifier;Ljava/util/List;Z)V

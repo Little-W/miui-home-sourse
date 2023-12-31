@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/EventLoopImplBase;
 .super Lkotlinx/coroutines/EventLoopImplPlatform;
+.source "EventLoop.common.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/Delay;
@@ -66,16 +67,20 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 179
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoopImplPlatform;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 181
     iput-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_queue:Ljava/lang/Object;
 
+    .line 184
     iput-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
 
     const/4 v0, 0x0
 
+    .line 186
     iput v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_isCompleted:I
 
     return-void
@@ -84,6 +89,7 @@
 .method public static final synthetic access$isCompleted$p(Lkotlinx/coroutines/EventLoopImplBase;)Z
     .locals 0
 
+    .line 179
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoopImplBase;->isCompleted()Z
 
     move-result p0
@@ -94,6 +100,7 @@
 .method private final closeQueue()V
     .locals 4
 
+    .line 337
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result v0
@@ -117,12 +124,14 @@
 
     throw p0
 
+    .line 545
     :cond_1
     :goto_0
     iget-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_queue:Ljava/lang/Object;
 
     if-nez v0, :cond_2
 
+    .line 340
     sget-object v0, Lkotlinx/coroutines/EventLoopImplBase;->_queue$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     const/4 v1, 0x0
@@ -139,17 +148,20 @@
 
     return-void
 
+    .line 341
     :cond_2
     instance-of v1, v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
     if-eqz v1, :cond_3
 
+    .line 342
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->close()Z
 
     return-void
 
+    .line 346
     :cond_3
     invoke-static {}, Lkotlinx/coroutines/EventLoop_commonKt;->access$getCLOSED_EMPTY$p()Lkotlinx/coroutines/internal/Symbol;
 
@@ -159,6 +171,7 @@
 
     return-void
 
+    .line 349
     :cond_4
     new-instance v1, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
@@ -170,12 +183,14 @@
 
     if-eqz v0, :cond_5
 
+    .line 350
     move-object v2, v0
 
     check-cast v2, Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->addLast(Ljava/lang/Object;)I
 
+    .line 351
     sget-object v2, Lkotlinx/coroutines/EventLoopImplBase;->_queue$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     invoke-virtual {v2, p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -186,6 +201,7 @@
 
     return-void
 
+    .line 350
     :cond_5
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -199,6 +215,7 @@
 .method private final dequeue()Ljava/lang/Runnable;
     .locals 4
 
+    .line 542
     :cond_0
     :goto_0
     iget-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_queue:Ljava/lang/Object;
@@ -209,6 +226,7 @@
 
     return-object v1
 
+    .line 323
     :cond_1
     instance-of v2, v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
@@ -216,6 +234,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 324
     move-object v1, v0
 
     check-cast v1, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
@@ -224,6 +243,7 @@
 
     move-result-object v2
 
+    .line 325
     sget-object v3, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->REMOVE_FROZEN:Lkotlinx/coroutines/internal/Symbol;
 
     if-eq v2, v3, :cond_2
@@ -232,6 +252,7 @@
 
     return-object v2
 
+    .line 326
     :cond_2
     sget-object v2, Lkotlinx/coroutines/EventLoopImplBase;->_queue$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -243,6 +264,7 @@
 
     goto :goto_0
 
+    .line 324
     :cond_3
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -252,6 +274,7 @@
 
     throw p0
 
+    .line 329
     :cond_4
     invoke-static {}, Lkotlinx/coroutines/EventLoop_commonKt;->access$getCLOSED_EMPTY$p()Lkotlinx/coroutines/internal/Symbol;
 
@@ -261,6 +284,7 @@
 
     return-object v1
 
+    .line 330
     :cond_5
     sget-object v2, Lkotlinx/coroutines/EventLoopImplBase;->_queue$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -289,10 +313,12 @@
 .method private final enqueueImpl(Ljava/lang/Runnable;)Z
     .locals 5
 
+    .line 540
     :cond_0
     :goto_0
     iget-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_queue:Ljava/lang/Object;
 
+    .line 294
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoopImplBase;->isCompleted()Z
 
     move-result v1
@@ -308,6 +334,7 @@
 
     if-nez v0, :cond_2
 
+    .line 296
     sget-object v0, Lkotlinx/coroutines/EventLoopImplBase;->_queue$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     const/4 v2, 0x0
@@ -320,6 +347,7 @@
 
     return v1
 
+    .line 297
     :cond_2
     instance-of v3, v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
@@ -327,6 +355,7 @@
 
     if-eqz v0, :cond_6
 
+    .line 298
     move-object v3, v0
 
     check-cast v3, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
@@ -348,6 +377,7 @@
     :cond_3
     return v2
 
+    .line 301
     :cond_4
     sget-object v1, Lkotlinx/coroutines/EventLoopImplBase;->_queue$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -362,6 +392,7 @@
     :cond_5
     return v1
 
+    .line 298
     :cond_6
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -371,6 +402,7 @@
 
     throw p0
 
+    .line 305
     :cond_7
     invoke-static {}, Lkotlinx/coroutines/EventLoop_commonKt;->access$getCLOSED_EMPTY$p()Lkotlinx/coroutines/internal/Symbol;
 
@@ -380,6 +412,7 @@
 
     return v2
 
+    .line 308
     :cond_8
     new-instance v2, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
@@ -389,14 +422,17 @@
 
     if-eqz v0, :cond_9
 
+    .line 309
     move-object v3, v0
 
     check-cast v3, Ljava/lang/Runnable;
 
     invoke-virtual {v2, v3}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->addLast(Ljava/lang/Object;)I
 
+    .line 310
     invoke-virtual {v2, p1}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->addLast(Ljava/lang/Object;)I
 
+    .line 311
     sget-object v3, Lkotlinx/coroutines/EventLoopImplBase;->_queue$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     invoke-virtual {v3, p0, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -407,6 +443,7 @@
 
     return v1
 
+    .line 309
     :cond_9
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -420,6 +457,7 @@
 .method private final isCompleted()Z
     .locals 0
 
+    .line 188
     iget p0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_isCompleted:I
 
     return p0
@@ -428,6 +466,7 @@
 .method private final rescheduleAllDelayed()V
     .locals 3
 
+    .line 387
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0
@@ -445,6 +484,7 @@
 
     move-result-wide v0
 
+    .line 396
     :goto_0
     iget-object v2, p0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
 
@@ -460,6 +500,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 397
     invoke-virtual {p0, v0, v1, v2}, Lkotlinx/coroutines/EventLoopImplBase;->reschedule(JLkotlinx/coroutines/EventLoopImplBase$DelayedTask;)V
 
     goto :goto_0
@@ -471,6 +512,7 @@
 .method private final scheduleImpl(JLkotlinx/coroutines/EventLoopImplBase$DelayedTask;)I
     .locals 4
 
+    .line 371
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoopImplBase;->isCompleted()Z
 
     move-result v0
@@ -481,6 +523,7 @@
 
     return p0
 
+    .line 372
     :cond_0
     iget-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
 
@@ -495,6 +538,7 @@
 
     check-cast v0, Lkotlinx/coroutines/EventLoopImplBase;
 
+    .line 373
     sget-object v1, Lkotlinx/coroutines/EventLoopImplBase;->_delayed$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     const/4 v2, 0x0
@@ -505,12 +549,14 @@
 
     invoke-virtual {v1, v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 374
     iget-object v0, v0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
 
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     check-cast v0, Lkotlinx/coroutines/EventLoopImplBase$DelayedTaskQueue;
 
+    .line 376
     :goto_0
     invoke-virtual {p3, p1, p2, v0, p0}, Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;->scheduleTask(JLkotlinx/coroutines/EventLoopImplBase$DelayedTaskQueue;Lkotlinx/coroutines/EventLoopImplBase;)I
 
@@ -522,6 +568,7 @@
 .method private final setCompleted(Z)V
     .locals 0
 
+    .line 189
     iput p1, p0, Lkotlinx/coroutines/EventLoopImplBase;->_isCompleted:I
 
     return-void
@@ -530,6 +577,7 @@
 .method private final shouldUnpark(Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;)Z
     .locals 0
 
+    .line 368
     iget-object p0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
 
     check-cast p0, Lkotlinx/coroutines/EventLoopImplBase$DelayedTaskQueue;
@@ -566,6 +614,7 @@
 .method public final dispatch(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 280
     invoke-virtual {p0, p2}, Lkotlinx/coroutines/EventLoopImplBase;->enqueue(Ljava/lang/Runnable;)V
 
     return-void
@@ -574,16 +623,19 @@
 .method public final enqueue(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 283
     invoke-direct {p0, p1}, Lkotlinx/coroutines/EventLoopImplBase;->enqueueImpl(Ljava/lang/Runnable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 285
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoopImplBase;->unpark()V
 
     goto :goto_0
 
+    .line 287
     :cond_0
     sget-object p0, Lkotlinx/coroutines/DefaultExecutor;->INSTANCE:Lkotlinx/coroutines/DefaultExecutor;
 
@@ -596,6 +648,7 @@
 .method protected getNextTime()J
     .locals 6
 
+    .line 204
     invoke-super {p0}, Lkotlinx/coroutines/EventLoopImplPlatform;->getNextTime()J
 
     move-result-wide v0
@@ -608,6 +661,7 @@
 
     return-wide v2
 
+    .line 205
     :cond_0
     iget-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_queue:Ljava/lang/Object;
 
@@ -617,6 +671,7 @@
 
     goto :goto_0
 
+    .line 208
     :cond_1
     instance-of v1, v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
@@ -632,6 +687,7 @@
 
     return-wide v2
 
+    .line 212
     :cond_2
     :goto_0
     iget-object p0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
@@ -648,6 +704,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 213
     iget-wide v0, p0, Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;->nanoTime:J
 
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
@@ -679,6 +736,7 @@
     :cond_4
     return-wide v4
 
+    .line 209
     :cond_5
     invoke-static {}, Lkotlinx/coroutines/EventLoop_commonKt;->access$getCLOSED_EMPTY$p()Lkotlinx/coroutines/internal/Symbol;
 
@@ -695,6 +753,7 @@
 .method public invokeOnTimeout(JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
     .locals 0
 
+    .line 179
     invoke-static {p0, p1, p2, p3, p4}, Lkotlinx/coroutines/Delay$DefaultImpls;->invokeOnTimeout(Lkotlinx/coroutines/Delay;JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
 
     move-result-object p0
@@ -705,6 +764,7 @@
 .method protected isEmpty()Z
     .locals 3
 
+    .line 192
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoopImplBase;->isUnconfinedQueueEmpty()Z
 
     move-result v0
@@ -715,6 +775,7 @@
 
     return v1
 
+    .line 193
     :cond_0
     iget-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
 
@@ -722,6 +783,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 194
     invoke-virtual {v0}, Lkotlinx/coroutines/EventLoopImplBase$DelayedTaskQueue;->isEmpty()Z
 
     move-result v0
@@ -730,6 +792,7 @@
 
     return v1
 
+    .line 195
     :cond_1
     iget-object p0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_queue:Ljava/lang/Object;
 
@@ -739,6 +802,7 @@
 
     goto :goto_0
 
+    .line 197
     :cond_2
     instance-of v2, p0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
@@ -755,6 +819,7 @@
 
     goto :goto_0
 
+    .line 198
     :cond_4
     invoke-static {}, Lkotlinx/coroutines/EventLoop_commonKt;->access$getCLOSED_EMPTY$p()Lkotlinx/coroutines/internal/Symbol;
 
@@ -769,6 +834,7 @@
 .method public processNextEvent()J
     .locals 10
 
+    .line 254
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoopImplBase;->processUnconfinedEvent()Z
 
     move-result v0
@@ -779,6 +845,7 @@
 
     return-wide v1
 
+    .line 256
     :cond_0
     iget-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
 
@@ -786,12 +853,14 @@
 
     if-eqz v0, :cond_5
 
+    .line 257
     invoke-virtual {v0}, Lkotlinx/coroutines/EventLoopImplBase$DelayedTaskQueue;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_5
 
+    .line 258
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v3
@@ -809,13 +878,16 @@
 
     move-result-wide v3
 
+    .line 263
     :goto_0
     move-object v5, v0
 
     check-cast v5, Lkotlinx/coroutines/internal/ThreadSafeHeap;
 
+    .line 531
     monitor-enter v5
 
+    .line 532
     :try_start_0
     invoke-virtual {v5}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->firstImpl()Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
 
@@ -825,8 +897,10 @@
 
     if-eqz v6, :cond_4
 
+    .line 533
     check-cast v6, Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;
 
+    .line 264
     invoke-virtual {v6, v3, v4}, Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;->timeToExecute(J)Z
 
     move-result v8
@@ -835,6 +909,7 @@
 
     if-eqz v8, :cond_2
 
+    .line 265
     check-cast v6, Ljava/lang/Runnable;
 
     invoke-direct {p0, v6}, Lkotlinx/coroutines/EventLoopImplBase;->enqueueImpl(Ljava/lang/Runnable;)Z
@@ -849,6 +924,7 @@
     :goto_1
     if-eqz v6, :cond_3
 
+    .line 534
     invoke-virtual {v5, v9}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->removeAtImpl(I)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
 
     move-result-object v6
@@ -857,14 +933,17 @@
 
     move-object v7, v6
 
+    .line 533
     :cond_3
     monitor-exit v5
 
     goto :goto_2
 
+    .line 532
     :cond_4
     monitor-exit v5
 
+    .line 538
     :goto_2
     check-cast v7, Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;
 
@@ -875,10 +954,12 @@
     :catchall_0
     move-exception p0
 
+    .line 533
     monitor-exit v5
 
     throw p0
 
+    .line 272
     :cond_5
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoopImplBase;->dequeue()Ljava/lang/Runnable;
 
@@ -886,10 +967,12 @@
 
     if-eqz v0, :cond_6
 
+    .line 274
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     return-wide v1
 
+    .line 277
     :cond_6
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoopImplBase;->getNextTime()J
 
@@ -903,8 +986,10 @@
 
     const/4 v0, 0x0
 
+    .line 381
     iput-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_queue:Ljava/lang/Object;
 
+    .line 382
     iput-object v0, p0, Lkotlinx/coroutines/EventLoopImplBase;->_delayed:Ljava/lang/Object;
 
     return-void
@@ -913,6 +998,7 @@
 .method public final schedule(JLkotlinx/coroutines/EventLoopImplBase$DelayedTask;)V
     .locals 2
 
+    .line 360
     invoke-direct {p0, p1, p2, p3}, Lkotlinx/coroutines/EventLoopImplBase;->scheduleImpl(JLkotlinx/coroutines/EventLoopImplBase$DelayedTask;)I
 
     move-result v0
@@ -929,6 +1015,7 @@
 
     goto :goto_0
 
+    .line 364
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -944,11 +1031,13 @@
 
     throw p0
 
+    .line 362
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/coroutines/EventLoopImplBase;->reschedule(JLkotlinx/coroutines/EventLoopImplBase$DelayedTask;)V
 
     goto :goto_0
 
+    .line 361
     :cond_2
     invoke-direct {p0, p3}, Lkotlinx/coroutines/EventLoopImplBase;->shouldUnpark(Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;)Z
 
@@ -966,6 +1055,7 @@
 .method protected final scheduleInvokeOnTimeout(JLjava/lang/Runnable;)Lkotlinx/coroutines/DisposableHandle;
     .locals 3
 
+    .line 241
     invoke-static {p1, p2}, Lkotlinx/coroutines/EventLoop_commonKt;->delayToNanos(J)J
 
     move-result-wide p1
@@ -976,6 +1066,7 @@
 
     if-gez v0, :cond_1
 
+    .line 243
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0
@@ -993,6 +1084,7 @@
 
     move-result-wide v0
 
+    .line 244
     :goto_0
     new-instance v2, Lkotlinx/coroutines/EventLoopImplBase$DelayedRunnableTask;
 
@@ -1000,16 +1092,19 @@
 
     invoke-direct {v2, p1, p2, p3}, Lkotlinx/coroutines/EventLoopImplBase$DelayedRunnableTask;-><init>(JLjava/lang/Runnable;)V
 
+    .line 245
     move-object p1, v2
 
     check-cast p1, Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;
 
     invoke-virtual {p0, v0, v1, p1}, Lkotlinx/coroutines/EventLoopImplBase;->schedule(JLkotlinx/coroutines/EventLoopImplBase$DelayedTask;)V
 
+    .line 244
     check-cast v2, Lkotlinx/coroutines/DisposableHandle;
 
     goto :goto_1
 
+    .line 248
     :cond_1
     sget-object p0, Lkotlinx/coroutines/NonDisposableHandle;->INSTANCE:Lkotlinx/coroutines/NonDisposableHandle;
 
@@ -1033,6 +1128,7 @@
         }
     .end annotation
 
+    .line 230
     invoke-static {p1, p2}, Lkotlinx/coroutines/EventLoop_commonKt;->delayToNanos(J)J
 
     move-result-wide p1
@@ -1043,6 +1139,7 @@
 
     if-gez v0, :cond_1
 
+    .line 232
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0
@@ -1060,6 +1157,7 @@
 
     move-result-wide v0
 
+    .line 233
     :goto_0
     new-instance v2, Lkotlinx/coroutines/EventLoopImplBase$DelayedResumeTask;
 
@@ -1067,12 +1165,14 @@
 
     invoke-direct {v2, p0, p1, p2, p3}, Lkotlinx/coroutines/EventLoopImplBase$DelayedResumeTask;-><init>(Lkotlinx/coroutines/EventLoopImplBase;JLkotlinx/coroutines/CancellableContinuation;)V
 
+    .line 234
     move-object p1, v2
 
     check-cast p1, Lkotlinx/coroutines/DisposableHandle;
 
     invoke-static {p3, p1}, Lkotlinx/coroutines/CancellableContinuationKt;->disposeOnCancellation(Lkotlinx/coroutines/CancellableContinuation;Lkotlinx/coroutines/DisposableHandle;)V
 
+    .line 235
     check-cast v2, Lkotlinx/coroutines/EventLoopImplBase$DelayedTask;
 
     invoke-virtual {p0, v0, v1, v2}, Lkotlinx/coroutines/EventLoopImplBase;->schedule(JLkotlinx/coroutines/EventLoopImplBase$DelayedTask;)V
@@ -1084,16 +1184,20 @@
 .method protected shutdown()V
     .locals 4
 
+    .line 218
     sget-object v0, Lkotlinx/coroutines/ThreadLocalEventLoop;->INSTANCE:Lkotlinx/coroutines/ThreadLocalEventLoop;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/ThreadLocalEventLoop;->resetEventLoop$kotlinx_coroutines_core()V
 
     const/4 v0, 0x1
 
+    .line 221
     invoke-direct {p0, v0}, Lkotlinx/coroutines/EventLoopImplBase;->setCompleted(Z)V
 
+    .line 222
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoopImplBase;->closeQueue()V
 
+    .line 224
     :goto_0
     invoke-virtual {p0}, Lkotlinx/coroutines/EventLoopImplBase;->processNextEvent()J
 
@@ -1107,6 +1211,7 @@
 
     goto :goto_0
 
+    .line 226
     :cond_0
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoopImplBase;->rescheduleAllDelayed()V
 

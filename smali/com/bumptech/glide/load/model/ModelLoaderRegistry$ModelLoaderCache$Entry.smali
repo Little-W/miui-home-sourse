@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/model/ModelLoaderRegistry$ModelLoaderCache$Entry;
 .super Ljava/lang/Object;
+.source "ModelLoaderRegistry.java"
 
 
 # annotations
@@ -46,8 +47,10 @@
         }
     .end annotation
 
+    .line 146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 147
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ModelLoaderRegistry$ModelLoaderCache$Entry;->loaders:Ljava/util/List;
 
     return-void

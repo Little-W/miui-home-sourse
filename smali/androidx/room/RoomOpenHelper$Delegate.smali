@@ -1,5 +1,6 @@
 .class public abstract Landroidx/room/RoomOpenHelper$Delegate;
 .super Ljava/lang/Object;
+.source "RoomOpenHelper.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 170
     iput p1, p0, Landroidx/room/RoomOpenHelper$Delegate;->version:I
 
     return-void

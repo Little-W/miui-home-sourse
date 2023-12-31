@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/NodeList;
 .super Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
+.source "JobSupport.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/Incomplete;
@@ -15,6 +16,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1355
     invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;-><init>()V
 
     return-void
@@ -31,22 +33,28 @@
 .method public final getString(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
+    .line 1359
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "List{"
 
+    .line 1360
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1361
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, "}["
 
+    .line 1362
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1364
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
+    .line 1491
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;->getNext()Ljava/lang/Object;
 
     move-result-object p1
@@ -59,6 +67,7 @@
 
     move v2, v1
 
+    .line 1492
     :goto_0
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -68,6 +77,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 1493
     instance-of v3, p1, Lkotlinx/coroutines/JobNode;
 
     if-eqz v3, :cond_1
@@ -85,11 +95,14 @@
     :cond_0
     const-string v4, ", "
 
+    .line 1365
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1366
     :goto_1
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
+    .line 1494
     :cond_1
     invoke-virtual {p1}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getNextNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
@@ -100,8 +113,10 @@
     :cond_2
     const-string p0, "]"
 
+    .line 1368
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1359
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -112,6 +127,7 @@
 
     return-object p0
 
+    .line 1491
     :cond_3
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -133,6 +149,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 1372
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getDEBUG()Z
 
     move-result v0

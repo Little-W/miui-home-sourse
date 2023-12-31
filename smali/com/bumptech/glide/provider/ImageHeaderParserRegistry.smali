@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/provider/ImageHeaderParserRegistry;
 .super Ljava/lang/Object;
+.source "ImageHeaderParserRegistry.java"
 
 
 # instance fields
@@ -18,8 +19,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 12
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -36,6 +39,7 @@
 
     monitor-enter p0
 
+    .line 20
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/provider/ImageHeaderParserRegistry;->parsers:Ljava/util/List;
 
@@ -43,6 +47,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 21
     monitor-exit p0
 
     return-void
@@ -68,6 +73,7 @@
 
     monitor-enter p0
 
+    .line 16
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/provider/ImageHeaderParserRegistry;->parsers:Ljava/util/List;
     :try_end_0

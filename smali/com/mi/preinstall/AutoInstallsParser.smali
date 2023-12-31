@@ -1,5 +1,6 @@
 .class public Lcom/mi/preinstall/AutoInstallsParser;
 .super Ljava/lang/Object;
+.source "AutoInstallsParser.java"
 
 
 # annotations
@@ -40,14 +41,19 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;)V
     .locals 0
 
+    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 92
     iput-object p1, p0, Lcom/mi/preinstall/AutoInstallsParser;->mContext:Landroid/content/Context;
 
+    .line 93
     iput-object p4, p0, Lcom/mi/preinstall/AutoInstallsParser;->mRootTag:Ljava/lang/String;
 
+    .line 94
     iput-object p2, p0, Lcom/mi/preinstall/AutoInstallsParser;->mSourceRes:Landroid/content/res/Resources;
 
+    .line 95
     iput p3, p0, Lcom/mi/preinstall/AutoInstallsParser;->mLayoutId:I
 
     return-void
@@ -56,6 +62,7 @@
 .method static synthetic access$200(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 16
     invoke-static {p0, p1}, Lcom/mi/preinstall/AutoInstallsParser;->getAttributeValue(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -66,6 +73,7 @@
 .method static synthetic access$300(Lcom/mi/preinstall/AutoInstallsParser;)Landroid/content/Context;
     .locals 0
 
+    .line 16
     iget-object p0, p0, Lcom/mi/preinstall/AutoInstallsParser;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -74,6 +82,7 @@
 .method static synthetic access$400(Lcom/mi/preinstall/AutoInstallsParser;)Landroid/util/ArrayMap;
     .locals 0
 
+    .line 16
     invoke-direct {p0}, Lcom/mi/preinstall/AutoInstallsParser;->getFolderElementsMap()Landroid/util/ArrayMap;
 
     move-result-object p0
@@ -90,6 +99,7 @@
         }
     .end annotation
 
+    .line 206
     :goto_0
     invoke-interface {p0}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -108,6 +118,7 @@
     :cond_0
     if-ne v0, v1, :cond_2
 
+    .line 213
     invoke-interface {p0}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -120,6 +131,7 @@
 
     return-void
 
+    .line 214
     :cond_1
     new-instance v0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -151,6 +163,7 @@
 
     throw v0
 
+    .line 210
     :cond_2
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -164,6 +177,7 @@
 .method public static get(Landroid/content/Context;)Lcom/mi/preinstall/AutoInstallsParser;
     .locals 2
 
+    .line 48
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -180,12 +194,14 @@
 
     const-string v0, "not found pai config apk"
 
+    .line 50
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 53
     :cond_0
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -209,12 +225,14 @@
 
     const-string/jumbo v1, "xml"
 
+    .line 57
     invoke-virtual {p2, v0, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 60
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -237,6 +255,7 @@
 
     return-object p0
 
+    .line 64
     :cond_0
     new-instance p1, Lcom/mi/preinstall/AutoInstallsParser;
 
@@ -252,6 +271,7 @@
 
     const/4 v0, 0x0
 
+    .line 219
     invoke-interface {p0, v0, p1}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -262,6 +282,7 @@
 .method public static getBgConfigParser(Landroid/content/Context;)Lcom/mi/preinstall/AutoInstallsParser;
     .locals 2
 
+    .line 69
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -278,12 +299,14 @@
 
     const-string v0, "not found pai config apk"
 
+    .line 71
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 74
     :cond_0
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -307,12 +330,14 @@
 
     const-string/jumbo v1, "xml"
 
+    .line 80
     invoke-virtual {p2, v0, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 83
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -335,6 +360,7 @@
 
     return-object p0
 
+    .line 87
     :cond_0
     new-instance p1, Lcom/mi/preinstall/AutoInstallsParser;
 
@@ -357,10 +383,12 @@
         }
     .end annotation
 
+    .line 131
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
+    .line 132
     new-instance v1, Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;
 
     const/4 v2, 0x0
@@ -371,6 +399,7 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 133
     new-instance v1, Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;
 
     invoke-direct {v1, p0, v2}, Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;-><init>(Lcom/mi/preinstall/AutoInstallsParser;Lcom/mi/preinstall/AutoInstallsParser$1;)V
@@ -394,10 +423,12 @@
         }
     .end annotation
 
+    .line 138
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
+    .line 139
     new-instance v1, Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;
 
     const/4 v2, 0x0
@@ -408,6 +439,7 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 140
     new-instance v1, Lcom/mi/preinstall/AutoInstallsParser$FolderParser;
 
     invoke-direct {v1, p0}, Lcom/mi/preinstall/AutoInstallsParser$FolderParser;-><init>(Lcom/mi/preinstall/AutoInstallsParser;)V
@@ -416,6 +448,7 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 141
     new-instance v1, Lcom/mi/preinstall/AutoInstallsParser$PendingWidgetParser;
 
     invoke-direct {v1, p0, v2}, Lcom/mi/preinstall/AutoInstallsParser$PendingWidgetParser;-><init>(Lcom/mi/preinstall/AutoInstallsParser;Lcom/mi/preinstall/AutoInstallsParser$1;)V
@@ -424,6 +457,7 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 142
     new-instance v1, Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;
 
     invoke-direct {v1, p0, v2}, Lcom/mi/preinstall/AutoInstallsParser$AutoInstallParser;-><init>(Lcom/mi/preinstall/AutoInstallsParser;Lcom/mi/preinstall/AutoInstallsParser$1;)V
@@ -453,6 +487,7 @@
 
     monitor-enter v0
 
+    .line 223
     :try_start_0
     sget-object v1, Lcom/mi/preinstall/AutoInstallsParser;->mPAIPackageMap:Landroid/util/ArrayMap;
 
@@ -466,6 +501,7 @@
 
     return-object p0
 
+    .line 225
     :cond_0
     :try_start_1
     invoke-static {p0}, Lcom/mi/preinstall/AutoInstallsParser;->get(Landroid/content/Context;)Lcom/mi/preinstall/AutoInstallsParser;
@@ -474,12 +510,14 @@
 
     if-eqz v1, :cond_2
 
+    .line 227
     invoke-virtual {v1}, Lcom/mi/preinstall/AutoInstallsParser;->parseLayout()Landroid/util/ArrayMap;
 
     move-result-object v1
 
     const-string v2, "AutoInstallsParser"
 
+    .line 228
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -498,6 +536,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 230
     invoke-virtual {v1}, Landroid/util/ArrayMap;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -519,16 +558,19 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 231
     sget-object v3, Lcom/mi/preinstall/AutoInstallsParser;->mPAIPackageMap:Landroid/util/ArrayMap;
 
     if-nez v3, :cond_1
 
+    .line 232
     new-instance v3, Landroid/util/ArrayMap;
 
     invoke-direct {v3}, Landroid/util/ArrayMap;-><init>()V
 
     sput-object v3, Lcom/mi/preinstall/AutoInstallsParser;->mPAIPackageMap:Landroid/util/ArrayMap;
 
+    .line 234
     :cond_1
     sget-object v3, Lcom/mi/preinstall/AutoInstallsParser;->mPAIPackageMap:Landroid/util/ArrayMap;
 
@@ -555,10 +597,12 @@
 
     const-string v3, "getPAIPackageList: "
 
+    .line 239
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 243
     :cond_2
     :try_start_3
     invoke-static {p0}, Lcom/mi/preinstall/AutoInstallsParser;->getBgConfigParser(Landroid/content/Context;)Lcom/mi/preinstall/AutoInstallsParser;
@@ -567,12 +611,14 @@
 
     if-eqz p0, :cond_4
 
+    .line 245
     invoke-virtual {p0}, Lcom/mi/preinstall/AutoInstallsParser;->parseLayout()Landroid/util/ArrayMap;
 
     move-result-object p0
 
     const-string v1, "AutoInstallsParser"
 
+    .line 246
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -591,6 +637,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 248
     invoke-virtual {p0}, Landroid/util/ArrayMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -612,16 +659,19 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 249
     sget-object v2, Lcom/mi/preinstall/AutoInstallsParser;->mPAIPackageMap:Landroid/util/ArrayMap;
 
     if-nez v2, :cond_3
 
+    .line 250
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
     sput-object v2, Lcom/mi/preinstall/AutoInstallsParser;->mPAIPackageMap:Landroid/util/ArrayMap;
 
+    .line 252
     :cond_3
     sget-object v2, Lcom/mi/preinstall/AutoInstallsParser;->mPAIPackageMap:Landroid/util/ArrayMap;
 
@@ -648,8 +698,10 @@
 
     const-string v2, "getPAIPackageList: "
 
+    .line 257
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 259
     :cond_4
     sget-object p0, Lcom/mi/preinstall/AutoInstallsParser;->mPAIPackageMap:Landroid/util/ArrayMap;
     :try_end_4
@@ -674,6 +726,7 @@
 
     monitor-enter v0
 
+    .line 278
     :try_start_0
     invoke-static {p0}, Lcom/mi/preinstall/AutoInstallsParser;->getPAIPackageMap(Landroid/content/Context;)Landroid/util/ArrayMap;
 
@@ -681,6 +734,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 279
     invoke-virtual {p0}, Landroid/util/ArrayMap;->isEmpty()Z
 
     move-result v1
@@ -689,6 +743,7 @@
 
     goto :goto_0
 
+    .line 282
     :cond_0
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -706,6 +761,7 @@
     :goto_0
     const/4 p0, 0x0
 
+    .line 280
     monitor-exit v0
 
     return-object p0
@@ -728,6 +784,7 @@
     :try_start_0
     const-string v1, "AutoInstallsParser"
 
+    .line 266
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -744,12 +801,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 267
     invoke-static {p0}, Lcom/mi/preinstall/AutoInstallsParser;->getPAIPackageMap(Landroid/content/Context;)Landroid/util/ArrayMap;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 268
     invoke-virtual {p0}, Landroid/util/ArrayMap;->isEmpty()Z
 
     move-result v1
@@ -758,6 +817,7 @@
 
     goto :goto_0
 
+    .line 271
     :cond_0
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -773,6 +833,7 @@
     :goto_0
     const/4 p0, 0x0
 
+    .line 269
     monitor-exit v0
 
     return p0
@@ -809,10 +870,12 @@
         }
     .end annotation
 
+    .line 122
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 123
     invoke-virtual {p2, p0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -823,6 +886,7 @@
 
     return-void
 
+    .line 127
     :cond_0
     invoke-interface {p0, p1, p3}, Lcom/mi/preinstall/AutoInstallsParser$TagParser;->parseAndAdd(Landroid/content/res/XmlResourceParser;Landroid/util/ArrayMap;)V
 
@@ -843,10 +907,12 @@
         }
     .end annotation
 
+    .line 99
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
+    .line 101
     :try_start_0
     iget-object v1, p0, Lcom/mi/preinstall/AutoInstallsParser;->mSourceRes:Landroid/content/res/Resources;
 
@@ -856,18 +922,22 @@
 
     move-result-object v1
 
+    .line 102
     iget-object v2, p0, Lcom/mi/preinstall/AutoInstallsParser;->mRootTag:Ljava/lang/String;
 
     invoke-static {v1, v2}, Lcom/mi/preinstall/AutoInstallsParser;->beginDocument(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)V
 
+    .line 103
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v2
 
+    .line 105
     invoke-direct {p0}, Lcom/mi/preinstall/AutoInstallsParser;->getLayoutElementsMap()Landroid/util/ArrayMap;
 
     move-result-object v3
 
+    .line 106
     :goto_0
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -877,6 +947,7 @@
 
     if-ne v4, v5, :cond_0
 
+    .line 107
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v5
@@ -894,6 +965,7 @@
 
     goto :goto_0
 
+    .line 111
     :cond_1
     invoke-direct {p0, v1, v3, v0}, Lcom/mi/preinstall/AutoInstallsParser;->parseAndAddNode(Landroid/content/res/XmlResourceParser;Landroid/util/ArrayMap;Landroid/util/ArrayMap;)V
     :try_end_0
@@ -907,6 +979,7 @@
     :catch_0
     move-exception p0
 
+    .line 115
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object v0

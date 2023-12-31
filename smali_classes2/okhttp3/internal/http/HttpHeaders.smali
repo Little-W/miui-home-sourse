@@ -1,5 +1,6 @@
 .class public final Lokhttp3/internal/http/HttpHeaders;
 .super Ljava/lang/Object;
+.source "HttpHeaders.java"
 
 
 # static fields
@@ -14,6 +15,7 @@
 
     const-string v0, "\"\\"
 
+    .line 44
     invoke-static {v0}, Lokio/ByteString;->encodeUtf8(Ljava/lang/String;)Lokio/ByteString;
 
     move-result-object v0
@@ -22,6 +24,7 @@
 
     const-string v0, "\t ,="
 
+    .line 45
     invoke-static {v0}, Lokio/ByteString;->encodeUtf8(Ljava/lang/String;)Lokio/ByteString;
 
     move-result-object v0
@@ -36,6 +39,7 @@
 
     const-string v0, "Content-Length"
 
+    .line 55
     invoke-virtual {p0, v0}, Lokhttp3/Headers;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -50,6 +54,7 @@
 .method public static contentLength(Lokhttp3/Response;)J
     .locals 2
 
+    .line 51
     invoke-virtual {p0}, Lokhttp3/Response;->headers()Lokhttp3/Headers;
 
     move-result-object p0
@@ -64,6 +69,7 @@
 .method public static hasBody(Lokhttp3/Response;)Z
     .locals 8
 
+    .line 324
     invoke-virtual {p0}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
     move-result-object v0
@@ -84,6 +90,7 @@
 
     return v1
 
+    .line 328
     :cond_0
     invoke-virtual {p0}, Lokhttp3/Response;->code()I
 
@@ -110,6 +117,7 @@
 
     return v3
 
+    .line 337
     :cond_2
     invoke-static {p0}, Lokhttp3/internal/http/HttpHeaders;->contentLength(Lokhttp3/Response;)J
 
@@ -123,6 +131,7 @@
 
     const-string v0, "Transfer-Encoding"
 
+    .line 338
     invoke-virtual {p0, v0}, Lokhttp3/Response;->header(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -148,6 +157,7 @@
 .method public static hasVaryAll(Lokhttp3/Headers;)Z
     .locals 1
 
+    .line 90
     invoke-static {p0}, Lokhttp3/internal/http/HttpHeaders;->varyFields(Lokhttp3/Headers;)Ljava/util/Set;
 
     move-result-object p0
@@ -164,6 +174,7 @@
 .method public static hasVaryAll(Lokhttp3/Response;)Z
     .locals 0
 
+    .line 83
     invoke-virtual {p0}, Lokhttp3/Response;->headers()Lokhttp3/Headers;
 
     move-result-object p0
@@ -178,6 +189,7 @@
 .method public static parseSeconds(Ljava/lang/String;I)I
     .locals 2
 
+    .line 378
     :try_start_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -218,17 +230,20 @@
 .method public static receiveHeaders(Lokhttp3/CookieJar;Lokhttp3/HttpUrl;Lokhttp3/Headers;)V
     .locals 1
 
+    .line 313
     sget-object v0, Lokhttp3/CookieJar;->NO_COOKIES:Lokhttp3/CookieJar;
 
     if-ne p0, v0, :cond_0
 
     return-void
 
+    .line 315
     :cond_0
     invoke-static {p1, p2}, Lokhttp3/Cookie;->parseAll(Lokhttp3/HttpUrl;Lokhttp3/Headers;)Ljava/util/List;
 
     move-result-object p2
 
+    .line 316
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -237,6 +252,7 @@
 
     return-void
 
+    .line 318
     :cond_1
     invoke-interface {p0, p1, p2}, Lokhttp3/CookieJar;->saveFromResponse(Lokhttp3/HttpUrl;Ljava/util/List;)V
 
@@ -246,6 +262,7 @@
 .method public static skipUntil(Ljava/lang/String;ILjava/lang/String;)I
     .locals 2
 
+    .line 350
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -253,6 +270,7 @@
 
     if-ge p1, v0, :cond_1
 
+    .line 351
     invoke-virtual {p0, p1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -280,6 +298,7 @@
 .method public static skipWhitespace(Ljava/lang/String;I)I
     .locals 2
 
+    .line 363
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -287,6 +306,7 @@
 
     if-ge p1, v0, :cond_1
 
+    .line 364
     invoke-virtual {p0, p1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -320,6 +340,7 @@
 
     return-wide v0
 
+    .line 61
     :cond_0
     :try_start_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -345,10 +366,12 @@
         }
     .end annotation
 
+    .line 101
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v0
 
+    .line 102
     invoke-virtual {p0}, Lokhttp3/Headers;->size()I
 
     move-result v1
@@ -362,6 +385,7 @@
     :goto_0
     if-ge v0, v1, :cond_3
 
+    .line 103
     invoke-virtual {p0, v0}, Lokhttp3/Headers;->name(I)Ljava/lang/String;
 
     move-result-object v4
@@ -376,17 +400,20 @@
 
     goto :goto_2
 
+    .line 105
     :cond_0
     invoke-virtual {p0, v0}, Lokhttp3/Headers;->value(I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 106
     invoke-interface {v3}, Ljava/util/Set;->isEmpty()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
+    .line 107
     new-instance v3, Ljava/util/TreeSet;
 
     sget-object v5, Ljava/lang/String;->CASE_INSENSITIVE_ORDER:Ljava/util/Comparator;
@@ -396,6 +423,7 @@
     :cond_1
     const-string v5, ","
 
+    .line 109
     invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
@@ -409,6 +437,7 @@
 
     aget-object v7, v4, v6
 
+    .line 110
     invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v7
@@ -442,6 +471,7 @@
         }
     .end annotation
 
+    .line 94
     invoke-virtual {p0}, Lokhttp3/Response;->headers()Lokhttp3/Headers;
 
     move-result-object p0
@@ -456,10 +486,12 @@
 .method public static varyHeaders(Lokhttp3/Headers;Lokhttp3/Headers;)Lokhttp3/Headers;
     .locals 5
 
+    .line 134
     invoke-static {p1}, Lokhttp3/internal/http/HttpHeaders;->varyFields(Lokhttp3/Headers;)Ljava/util/Set;
 
     move-result-object p1
 
+    .line 135
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
@@ -476,6 +508,7 @@
 
     return-object p0
 
+    .line 137
     :cond_0
     new-instance v0, Lokhttp3/Headers$Builder;
 
@@ -483,6 +516,7 @@
 
     const/4 v1, 0x0
 
+    .line 138
     invoke-virtual {p0}, Lokhttp3/Headers;->size()I
 
     move-result v2
@@ -490,16 +524,19 @@
     :goto_0
     if-ge v1, v2, :cond_2
 
+    .line 139
     invoke-virtual {p0, v1}, Lokhttp3/Headers;->name(I)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 140
     invoke-interface {p1, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
+    .line 141
     invoke-virtual {p0, v1}, Lokhttp3/Headers;->value(I)Ljava/lang/String;
 
     move-result-object v4
@@ -511,6 +548,7 @@
 
     goto :goto_0
 
+    .line 144
     :cond_2
     invoke-virtual {v0}, Lokhttp3/Headers$Builder;->build()Lokhttp3/Headers;
 
@@ -522,6 +560,7 @@
 .method public static varyHeaders(Lokhttp3/Response;)Lokhttp3/Headers;
     .locals 1
 
+    .line 124
     invoke-virtual {p0}, Lokhttp3/Response;->networkResponse()Lokhttp3/Response;
 
     move-result-object v0
@@ -534,10 +573,12 @@
 
     move-result-object v0
 
+    .line 125
     invoke-virtual {p0}, Lokhttp3/Response;->headers()Lokhttp3/Headers;
 
     move-result-object p0
 
+    .line 126
     invoke-static {v0, p0}, Lokhttp3/internal/http/HttpHeaders;->varyHeaders(Lokhttp3/Headers;Lokhttp3/Headers;)Lokhttp3/Headers;
 
     move-result-object p0
@@ -548,6 +589,7 @@
 .method public static varyMatches(Lokhttp3/Response;Lokhttp3/Headers;Lokhttp3/Request;)Z
     .locals 2
 
+    .line 73
     invoke-static {p0}, Lokhttp3/internal/http/HttpHeaders;->varyFields(Lokhttp3/Response;)Ljava/util/Set;
 
     move-result-object p0
@@ -569,6 +611,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 74
     invoke-virtual {p1, v0}, Lokhttp3/Headers;->values(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1

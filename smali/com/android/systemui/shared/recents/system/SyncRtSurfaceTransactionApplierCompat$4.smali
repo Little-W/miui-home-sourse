@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$4;
 .super Ljava/lang/Object;
+.source "SyncRtSurfaceTransactionApplierCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 198
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$4;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$4;->val$afterApplyCallback:Ljava/lang/Runnable;
@@ -44,10 +46,12 @@
 .method public run()V
     .locals 1
 
+    .line 201
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$4;->val$afterApplyCallback:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
+    .line 202
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$4;->val$oldCallback:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V

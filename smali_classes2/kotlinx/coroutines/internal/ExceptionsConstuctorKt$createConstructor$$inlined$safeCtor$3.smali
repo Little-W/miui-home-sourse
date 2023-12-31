@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/ExceptionsConstuctorKt$createConstructor$$inlined$safeCtor$3;
 .super Lkotlin/jvm/internal/Lambda;
+.source "ExceptionsConstuctor.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -64,9 +65,11 @@
 .method public final invoke(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 3
 
+    .line 72
     :try_start_0
     sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
+    .line 84
     iget-object p0, p0, Lkotlinx/coroutines/internal/ExceptionsConstuctorKt$createConstructor$$inlined$safeCtor$3;->$constructor$inlined:Ljava/lang/reflect/Constructor;
 
     const/4 v0, 0x1
@@ -91,12 +94,14 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
+    .line 72
     invoke-static {p0}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 84
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -111,6 +116,7 @@
     :catchall_0
     move-exception p0
 
+    .line 72
     sget-object p1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
     invoke-static {p0}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;

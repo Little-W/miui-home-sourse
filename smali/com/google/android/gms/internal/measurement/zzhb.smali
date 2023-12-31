@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/gms/internal/measurement/zzhb;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # instance fields
@@ -18,18 +19,22 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x64
 
+    .line 8
     iput v0, p0, Lcom/google/android/gms/internal/measurement/zzhb;->zzb:I
 
     const v0, 0x7fffffff
 
+    .line 9
     iput v0, p0, Lcom/google/android/gms/internal/measurement/zzhb;->zzd:I
 
     const/4 v0, 0x0
 
+    .line 10
     iput-boolean v0, p0, Lcom/google/android/gms/internal/measurement/zzhb;->zze:Z
 
     return-void
@@ -38,6 +43,7 @@
 .method synthetic constructor <init>(Lcom/google/android/gms/internal/measurement/zzhe;)V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzhb;-><init>()V
 
     return-void
@@ -64,6 +70,7 @@
 .method static zza([BIIZ)Lcom/google/android/gms/internal/measurement/zzhb;
     .locals 6
 
+    .line 1
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzhd;
 
     const/4 v2, 0x0
@@ -80,6 +87,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/measurement/zzhd;-><init>([BIIZLcom/google/android/gms/internal/measurement/zzhe;)V
 
+    .line 2
     :try_start_0
     invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/measurement/zzhb;->zzc(I)I
     :try_end_0
@@ -90,6 +98,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V

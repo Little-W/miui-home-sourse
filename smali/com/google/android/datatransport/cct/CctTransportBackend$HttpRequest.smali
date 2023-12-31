@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;
 .super Ljava/lang/Object;
+.source "CctTransportBackend.java"
 
 
 # annotations
@@ -25,12 +26,16 @@
 .method constructor <init>(Ljava/net/URL;Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;Ljava/lang/String;)V
     .locals 0
 
+    .line 425
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 426
     iput-object p1, p0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;->url:Ljava/net/URL;
 
+    .line 427
     iput-object p2, p0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;->requestBody:Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;
 
+    .line 428
     iput-object p3, p0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;->apiKey:Ljava/lang/String;
 
     return-void
@@ -41,6 +46,7 @@
 .method withUrl(Ljava/net/URL;)Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;
     .locals 2
 
+    .line 432
     new-instance v0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;
 
     iget-object v1, p0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;->requestBody:Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;

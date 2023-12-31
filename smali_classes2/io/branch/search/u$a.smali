@@ -1,5 +1,6 @@
 .class public Lio/branch/search/u$a;
 .super Ljava/util/HashMap;
+.source "SourceFile"
 
 
 # annotations

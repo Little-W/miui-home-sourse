@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/analytics/internal/util/IOUtil;
 .super Ljava/lang/Object;
+.source "IOUtil.java"
 
 
 # direct methods
@@ -8,10 +9,12 @@
 
     if-eqz p0, :cond_0
 
+    .line 52
     instance-of v0, p0, Ljava/io/Closeable;
 
     if-eqz v0, :cond_0
 
+    .line 54
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -24,6 +27,7 @@
 
     const-string v0, "IOUtil"
 
+    .line 56
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -47,6 +51,7 @@
 
     const/16 v0, 0x400
 
+    .line 21
     invoke-static {p0, v0}, Lcom/xiaomi/analytics/internal/util/IOUtil;->inputStream2ByteArray(Ljava/io/InputStream;I)[B
 
     move-result-object p0
@@ -75,13 +80,16 @@
 
     move p1, v0
 
+    .line 32
     :cond_1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 35
     new-array p1, p1, [B
 
+    .line 40
     :goto_0
     invoke-virtual {p0, p1}, Ljava/io/InputStream;->read([B)I
 
@@ -93,15 +101,19 @@
 
     const/4 v2, 0x0
 
+    .line 41
     invoke-virtual {v0, p1, v2, v1}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_0
 
+    .line 44
     :cond_2
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
 
+    .line 45
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
+    .line 48
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/datepicker/MaterialCalendar$6;
 .super Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+.source "MaterialCalendar.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/MonthsPagerAdapter;Lcom/google/android/material/button/MaterialButton;)V
     .locals 0
 
+    .line 395
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$6;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     iput-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar$6;->val$monthsPagerAdapter:Lcom/google/android/material/datepicker/MonthsPagerAdapter;
@@ -43,18 +45,21 @@
 
     if-nez p2, :cond_1
 
+    .line 411
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$6;->val$monthDropSelect:Lcom/google/android/material/button/MaterialButton;
 
     invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButton;->getText()Ljava/lang/CharSequence;
 
     move-result-object p0
 
+    .line 412
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x10
 
     if-lt p2, v0, :cond_0
 
+    .line 413
     invoke-virtual {p1, p0}, Landroidx/recyclerview/widget/RecyclerView;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
     goto :goto_0
@@ -62,6 +67,7 @@
     :cond_0
     const/16 p0, 0x800
 
+    .line 415
     invoke-virtual {p1, p0}, Landroidx/recyclerview/widget/RecyclerView;->sendAccessibilityEvent(I)V
 
     :cond_1
@@ -74,6 +80,7 @@
 
     if-gez p2, :cond_0
 
+    .line 400
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$6;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -86,6 +93,7 @@
 
     goto :goto_0
 
+    .line 402
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$6;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
@@ -97,6 +105,7 @@
 
     move-result p1
 
+    .line 404
     :goto_0
     iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar$6;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
@@ -108,6 +117,7 @@
 
     invoke-static {p2, p3}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$602(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/Month;)Lcom/google/android/material/datepicker/Month;
 
+    .line 405
     iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar$6;->val$monthDropSelect:Lcom/google/android/material/button/MaterialButton;
 
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$6;->val$monthsPagerAdapter:Lcom/google/android/material/datepicker/MonthsPagerAdapter;

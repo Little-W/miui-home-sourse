@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/SafeCollector_commonKt;
 .super Ljava/lang/Object;
+.source "SafeCollector.common.kt"
 
 
 # direct methods
@@ -17,6 +18,7 @@
 
     const/4 v0, 0x0
 
+    .line 25
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -37,12 +39,14 @@
 
     move-result v0
 
+    .line 83
     iget v1, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->collectContextSize:I
 
     if-ne v0, v1, :cond_0
 
     return-void
 
+    .line 85
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -56,6 +60,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 86
     iget-object p0, p0, Lkotlinx/coroutines/flow/internal/SafeCollector;->collectContext:Lkotlin/coroutines/CoroutineContext;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -68,6 +73,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 87
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p0, ".\n"
@@ -82,6 +88,7 @@
 
     move-result-object p0
 
+    .line 84
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -110,6 +117,7 @@
 
     return-object p0
 
+    .line 96
     :cond_1
     instance-of v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;
 
@@ -117,6 +125,7 @@
 
     return-object p0
 
+    .line 97
     :cond_2
     check-cast p0, Lkotlinx/coroutines/internal/ScopeCoroutine;
 

@@ -1,5 +1,6 @@
 .class public interface abstract Lio/requery/android/database/sqlite/CloseGuard$Reporter;
 .super Ljava/lang/Object;
+.source "CloseGuard.java"
 
 
 # annotations

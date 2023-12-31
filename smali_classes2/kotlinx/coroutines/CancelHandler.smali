@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/CancelHandler;
 .super Lkotlinx/coroutines/CancelHandlerBase;
+.source "CancellableContinuationImpl.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/NotCompleted;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 524
     invoke-direct {p0}, Lkotlinx/coroutines/CancelHandlerBase;-><init>()V
 
     return-void

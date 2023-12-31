@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchDeepViewFragment$d;
 .super Landroid/graphics/drawable/Drawable;
+.source "SourceFile"
 
 
 # annotations

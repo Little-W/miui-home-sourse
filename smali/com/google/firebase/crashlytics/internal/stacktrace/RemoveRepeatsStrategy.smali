@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/stacktrace/RemoveRepeatsStrategy;
 .super Ljava/lang/Object;
+.source "RemoveRepeatsStrategy.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/stacktrace/StackTraceTrimmingStrategy;
@@ -15,6 +16,7 @@
 
     const/4 v0, 0x1
 
+    .line 26
     invoke-direct {p0, v0}, Lcom/google/firebase/crashlytics/internal/stacktrace/RemoveRepeatsStrategy;-><init>(I)V
 
     return-void
@@ -23,8 +25,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     iput p1, p0, Lcom/google/firebase/crashlytics/internal/stacktrace/RemoveRepeatsStrategy;->maxRepetitions:I
 
     return-void
@@ -37,6 +41,7 @@
 
     add-int v1, p2, v0
 
+    .line 100
     array-length v2, p0
 
     const/4 v3, 0x0
@@ -53,6 +58,7 @@
 
     add-int v2, p1, v1
 
+    .line 105
     aget-object v2, p0, v2
 
     add-int v4, p2, v1
@@ -81,10 +87,12 @@
 .method private static trimRepeats([Ljava/lang/StackTraceElement;I)[Ljava/lang/StackTraceElement;
     .locals 10
 
+    .line 61
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 64
     array-length v1, p0
 
     new-array v1, v1, [Ljava/lang/StackTraceElement;
@@ -99,13 +107,16 @@
 
     move v6, v3
 
+    .line 68
     :goto_0
     array-length v7, p0
 
     if-ge v4, v7, :cond_3
 
+    .line 70
     aget-object v7, p0, v4
 
+    .line 71
     invoke-interface {v0, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
@@ -114,6 +125,7 @@
 
     if-eqz v8, :cond_2
 
+    .line 72
     invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
 
     move-result v9
@@ -126,6 +138,7 @@
 
     goto :goto_1
 
+    .line 79
     :cond_0
     invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
 
@@ -135,6 +148,7 @@
 
     if-ge v6, p1, :cond_1
 
+    .line 81
     invoke-static {p0, v4, v1, v5, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     add-int/2addr v5, v8
@@ -148,6 +162,7 @@
 
     goto :goto_2
 
+    .line 75
     :cond_2
     :goto_1
     aget-object v6, p0, v4
@@ -160,6 +175,7 @@
 
     move v8, v4
 
+    .line 87
     :goto_2
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -171,9 +187,11 @@
 
     goto :goto_0
 
+    .line 91
     :cond_3
     new-array p0, v5, [Ljava/lang/StackTraceElement;
 
+    .line 92
     array-length p1, p0
 
     invoke-static {v1, v2, p0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
@@ -186,12 +204,14 @@
 .method public getTrimmedStackTrace([Ljava/lang/StackTraceElement;)[Ljava/lang/StackTraceElement;
     .locals 2
 
+    .line 42
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/stacktrace/RemoveRepeatsStrategy;->maxRepetitions:I
 
     invoke-static {p1, p0}, Lcom/google/firebase/crashlytics/internal/stacktrace/RemoveRepeatsStrategy;->trimRepeats([Ljava/lang/StackTraceElement;I)[Ljava/lang/StackTraceElement;
 
     move-result-object p0
 
+    .line 43
     array-length v0, p0
 
     array-length v1, p1

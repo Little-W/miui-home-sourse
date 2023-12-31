@@ -1,5 +1,6 @@
 .class Landroidx/customview/widget/ExploreByTouchHelper$MyNodeProvider;
 .super Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
+.source "ExploreByTouchHelper.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Landroidx/customview/widget/ExploreByTouchHelper;)V
     .locals 0
 
+    .line 1245
     iput-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper$MyNodeProvider;->this$0:Landroidx/customview/widget/ExploreByTouchHelper;
 
     invoke-direct {p0}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;-><init>()V
@@ -33,12 +35,15 @@
 .method public createAccessibilityNodeInfo(I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
     .locals 0
 
+    .line 1252
     iget-object p0, p0, Landroidx/customview/widget/ExploreByTouchHelper$MyNodeProvider;->this$0:Landroidx/customview/widget/ExploreByTouchHelper;
 
+    .line 1253
     invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->obtainAccessibilityNodeInfo(I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object p0
 
+    .line 1254
     invoke-static {p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->obtain(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object p0
@@ -53,6 +58,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1265
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper$MyNodeProvider;->this$0:Landroidx/customview/widget/ExploreByTouchHelper;
 
     iget p1, p1, Landroidx/customview/widget/ExploreByTouchHelper;->mAccessibilityFocusedVirtualViewId:I
@@ -73,6 +79,7 @@
 
     return-object p0
 
+    .line 1269
     :cond_1
     invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper$MyNodeProvider;->createAccessibilityNodeInfo(I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
@@ -84,6 +91,7 @@
 .method public performAction(IILandroid/os/Bundle;)Z
     .locals 0
 
+    .line 1259
     iget-object p0, p0, Landroidx/customview/widget/ExploreByTouchHelper$MyNodeProvider;->this$0:Landroidx/customview/widget/ExploreByTouchHelper;
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/customview/widget/ExploreByTouchHelper;->performAction(IILandroid/os/Bundle;)Z

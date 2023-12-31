@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;
 .super Ljava/lang/ref/WeakReference;
+.source "ActiveResources.java"
 
 
 # annotations
@@ -52,8 +53,10 @@
         }
     .end annotation
 
+    .line 180
     invoke-direct {p0, p2, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
+    .line 181
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -62,6 +65,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 183
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/EngineResource;->isCacheable()Z
 
     move-result p1
@@ -70,6 +74,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 184
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/EngineResource;->getResource()Lcom/bumptech/glide/load/engine/Resource;
 
     move-result-object p1
@@ -88,6 +93,7 @@
     :goto_0
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
+    .line 185
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/EngineResource;->isCacheable()Z
 
     move-result p1
@@ -104,8 +110,10 @@
 
     const/4 v0, 0x0
 
+    .line 189
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
+    .line 190
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;->clear()V
 
     return-void

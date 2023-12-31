@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/FragmentAnim$2;
 .super Ljava/lang/Object;
+.source "FragmentAnim.java"
 
 # interfaces
 .implements Landroid/view/animation/Animation$AnimationListener;
@@ -30,6 +31,7 @@
 .method constructor <init>(Landroid/view/ViewGroup;Landroidx/fragment/app/Fragment;Landroidx/fragment/app/FragmentTransition$Callback;Landroidx/core/os/CancellationSignal;)V
     .locals 0
 
+    .line 166
     iput-object p1, p0, Landroidx/fragment/app/FragmentAnim$2;->val$container:Landroid/view/ViewGroup;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentAnim$2;->val$fragment:Landroidx/fragment/app/Fragment;
@@ -48,6 +50,7 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
+    .line 176
     iget-object p1, p0, Landroidx/fragment/app/FragmentAnim$2;->val$container:Landroid/view/ViewGroup;
 
     new-instance v0, Landroidx/fragment/app/FragmentAnim$2$1;

@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/analytics/internal/util/SystemProperties;
 .super Ljava/lang/Object;
+.source "SystemProperties.java"
 
 
 # direct methods
@@ -9,6 +10,7 @@
     :try_start_0
     const-string v0, "android.os.SystemProperties"
 
+    .line 10
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -31,6 +33,7 @@
 
     aput-object v4, v3, v6
 
+    .line 11
     invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -43,6 +46,7 @@
 
     aput-object p1, v2, v6
 
+    .line 12
     invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -58,6 +62,7 @@
 
     const-string v0, "SystemProperties"
 
+    .line 15
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

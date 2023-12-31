@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/gms/internal/measurement/zzfw;
 .super Lcom/google/android/gms/internal/measurement/zzfx;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/util/ListIterator;
@@ -23,6 +24,7 @@
 .method protected constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzfx;-><init>()V
 
     return-void
@@ -41,6 +43,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -59,6 +62,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 3
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

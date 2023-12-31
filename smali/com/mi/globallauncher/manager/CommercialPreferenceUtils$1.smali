@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/globallauncher/manager/CommercialPreferenceUtils$1;
 .super Ljava/lang/Object;
+.source "CommercialPreferenceUtils.java"
 
 
 # annotations

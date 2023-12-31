@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/core/widget/TintableCompoundButton;
 .super Ljava/lang/Object;
+.source "TintableCompoundButton.java"
 
 
 # virtual methods

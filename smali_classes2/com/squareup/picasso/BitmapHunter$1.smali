@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/BitmapHunter$1;
 .super Ljava/lang/ThreadLocal;
+.source "BitmapHunter.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 64
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
 .method protected bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 64
     invoke-virtual {p0}, Lcom/squareup/picasso/BitmapHunter$1;->initialValue()Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -45,6 +48,7 @@
 .method protected initialValue()Ljava/lang/StringBuilder;
     .locals 1
 
+    .line 66
     new-instance p0, Ljava/lang/StringBuilder;
 
     const-string v0, "Picasso-"

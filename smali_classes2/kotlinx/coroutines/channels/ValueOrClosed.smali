@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/ValueOrClosed;
 .super Ljava/lang/Object;
+.source "Channel.kt"
 
 
 # annotations
@@ -46,6 +47,7 @@
 .method private synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 335
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/ValueOrClosed;->holder:Ljava/lang/Object;
@@ -119,6 +121,7 @@
 .method public static toString-impl(Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
 
+    .line 398
     instance-of v0, p0, Lkotlinx/coroutines/channels/ValueOrClosed$Closed;
 
     if-eqz v0, :cond_0
@@ -129,6 +132,7 @@
 
     goto :goto_0
 
+    .line 399
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -157,6 +161,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlinx/coroutines/channels/ValueOrClosed;->holder:Ljava/lang/Object;
 
     invoke-static {p0, p1}, Lkotlinx/coroutines/channels/ValueOrClosed;->equals-impl(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -169,6 +174,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlinx/coroutines/channels/ValueOrClosed;->holder:Ljava/lang/Object;
 
     invoke-static {p0}, Lkotlinx/coroutines/channels/ValueOrClosed;->hashCode-impl(Ljava/lang/Object;)I
@@ -181,6 +187,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lkotlinx/coroutines/channels/ValueOrClosed;->holder:Ljava/lang/Object;
 
     invoke-static {p0}, Lkotlinx/coroutines/channels/ValueOrClosed;->toString-impl(Ljava/lang/Object;)Ljava/lang/String;

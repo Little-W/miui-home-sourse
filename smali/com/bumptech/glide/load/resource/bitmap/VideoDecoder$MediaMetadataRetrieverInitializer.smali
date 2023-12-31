@@ -1,5 +1,6 @@
 .class interface abstract Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$MediaMetadataRetrieverInitializer;
 .super Ljava/lang/Object;
+.source "VideoDecoder.java"
 
 
 # annotations

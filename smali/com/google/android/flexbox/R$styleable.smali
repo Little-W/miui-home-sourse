@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/flexbox/R$styleable;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -71,6 +72,7 @@
 
     new-array v0, v0, [I
 
+    .line 61
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/flexbox/R$styleable;->FlexboxLayout:[I
@@ -79,6 +81,7 @@
 
     new-array v0, v0, [I
 
+    .line 74
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/android/flexbox/R$styleable;->FlexboxLayout_Layout:[I

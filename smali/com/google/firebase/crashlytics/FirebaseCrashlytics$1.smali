@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/FirebaseCrashlytics$1;
 .super Ljava/lang/Object;
+.source "FirebaseCrashlytics.java"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/Continuation;
@@ -30,6 +31,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 139
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,12 +57,14 @@
         }
     .end annotation
 
+    .line 142
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
+    .line 143
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p0

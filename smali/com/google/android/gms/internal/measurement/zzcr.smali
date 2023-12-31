@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/internal/measurement/zzcr;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # static fields
@@ -14,6 +15,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 38
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzcr;->zza()Z
 
     move-result v0
@@ -24,6 +26,7 @@
 
     const/4 v0, 0x0
 
+    .line 39
     sput-boolean v0, Lcom/google/android/gms/internal/measurement/zzcr;->zzc:Z
 
     return-void
@@ -32,6 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +44,7 @@
 .method public static zza()Z
     .locals 2
 
+    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -59,6 +64,7 @@
 .method public static zza(Landroid/content/Context;)Z
     .locals 1
 
+    .line 3
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzcr;->zza()Z
 
     move-result v0
@@ -101,10 +107,12 @@
 
     if-gt v1, v2, :cond_3
 
+    .line 7
     sget-object v2, Lcom/google/android/gms/internal/measurement/zzcr;->zza:Landroid/os/UserManager;
 
     if-nez v2, :cond_0
 
+    .line 8
     const-class v2, Landroid/os/UserManager;
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -115,6 +123,7 @@
 
     sput-object v2, Lcom/google/android/gms/internal/measurement/zzcr;->zza:Landroid/os/UserManager;
 
+    .line 9
     :cond_0
     sget-object v2, Lcom/google/android/gms/internal/measurement/zzcr;->zza:Landroid/os/UserManager;
 
@@ -122,6 +131,7 @@
 
     return v0
 
+    .line 15
     :cond_1
     :try_start_0
     invoke-virtual {v2}, Landroid/os/UserManager;->isUserUnlocked()Z
@@ -130,6 +140,7 @@
 
     if-nez v5, :cond_2
 
+    .line 16
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v5
@@ -154,8 +165,10 @@
 
     const-string v5, "Failed to check if user is unlocked."
 
+    .line 19
     invoke-static {v4, v5, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 20
     sput-object v3, Lcom/google/android/gms/internal/measurement/zzcr;->zza:Landroid/os/UserManager;
 
     add-int/lit8 v1, v1, 0x1
@@ -166,6 +179,7 @@
     :goto_1
     if-eqz v4, :cond_4
 
+    .line 23
     sput-object v3, Lcom/google/android/gms/internal/measurement/zzcr;->zza:Landroid/os/UserManager;
 
     :cond_4
@@ -175,6 +189,7 @@
 .method private static zzc(Landroid/content/Context;)Z
     .locals 3
 
+    .line 25
     sget-boolean v0, Lcom/google/android/gms/internal/measurement/zzcr;->zzb:Z
 
     const/4 v1, 0x1
@@ -183,20 +198,24 @@
 
     return v1
 
+    .line 28
     :cond_0
     const-class v0, Lcom/google/android/gms/internal/measurement/zzcr;
 
     monitor-enter v0
 
+    .line 29
     :try_start_0
     sget-boolean v2, Lcom/google/android/gms/internal/measurement/zzcr;->zzb:Z
 
     if-eqz v2, :cond_1
 
+    .line 31
     monitor-exit v0
 
     return v1
 
+    .line 33
     :cond_1
     invoke-static {p0}, Lcom/google/android/gms/internal/measurement/zzcr;->zzb(Landroid/content/Context;)Z
 
@@ -204,8 +223,10 @@
 
     if-eqz p0, :cond_2
 
+    .line 35
     sput-boolean p0, Lcom/google/android/gms/internal/measurement/zzcr;->zzb:Z
 
+    .line 36
     :cond_2
     monitor-exit v0
 

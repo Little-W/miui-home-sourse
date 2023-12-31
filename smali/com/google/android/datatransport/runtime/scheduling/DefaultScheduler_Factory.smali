@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;
 .super Ljava/lang/Object;
+.source "DefaultScheduler_Factory.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
@@ -92,16 +93,22 @@
         }
     .end annotation
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->executorProvider:Ljavax/inject/Provider;
 
+    .line 32
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->backendRegistryProvider:Ljavax/inject/Provider;
 
+    .line 33
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->workSchedulerProvider:Ljavax/inject/Provider;
 
+    .line 34
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->eventStoreProvider:Ljavax/inject/Provider;
 
+    .line 35
     iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->guardProvider:Ljavax/inject/Provider;
 
     return-void
@@ -131,6 +138,7 @@
         }
     .end annotation
 
+    .line 47
     new-instance v6, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;
 
     move-object v0, v6
@@ -153,6 +161,7 @@
 .method public static newInstance(Ljava/util/concurrent/Executor;Lcom/google/android/datatransport/runtime/backends/BackendRegistry;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;)Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;
     .locals 7
 
+    .line 52
     new-instance v6, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;
 
     move-object v0, v6
@@ -177,6 +186,7 @@
 .method public get()Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;
     .locals 4
 
+    .line 40
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->executorProvider:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -227,6 +237,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 12
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->get()Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/AwaitKt$awaitAll$2;
 .super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "Await.kt"
 
 
 # annotations

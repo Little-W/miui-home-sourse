@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/gltfio/ResourceLoader;
 .super Ljava/lang/Object;
+.source "ResourceLoader.java"
 
 
 # instance fields
@@ -10,14 +11,17 @@
 .method public constructor <init>(Lcom/google/android/filament/Engine;)V
     .locals 2
 
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 47
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
 
     const/4 p1, 0x0
 
+    .line 48
     invoke-static {v0, v1, p1, p1}, Lcom/google/android/filament/gltfio/ResourceLoader;->nCreateResourceLoader(JZZ)J
 
     move-result-wide v0
@@ -30,12 +34,15 @@
 .method public constructor <init>(Lcom/google/android/filament/Engine;ZZ)V
     .locals 2
 
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 62
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
 
+    .line 63
     invoke-static {v0, v1, p2, p3}, Lcom/google/android/filament/gltfio/ResourceLoader;->nCreateResourceLoader(JZZ)J
 
     move-result-wide p1
@@ -74,6 +81,7 @@
 .method public addResourceData(Ljava/lang/String;Ljava/nio/Buffer;)Lcom/google/android/filament/gltfio/ResourceLoader;
     .locals 3
 
+    .line 93
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/ResourceLoader;->mNativeObject:J
 
     invoke-virtual {p2}, Ljava/nio/Buffer;->remaining()I
@@ -88,6 +96,7 @@
 .method public asyncBeginLoad(Lcom/google/android/filament/gltfio/FilamentAsset;)Z
     .locals 2
 
+    .line 128
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/ResourceLoader;->mNativeObject:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->getNativeObject()J
@@ -104,6 +113,7 @@
 .method public asyncGetLoadProgress()F
     .locals 2
 
+    .line 135
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/ResourceLoader;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/ResourceLoader;->nAsyncGetLoadProgress(J)F
@@ -116,6 +126,7 @@
 .method public asyncUpdateLoad()V
     .locals 2
 
+    .line 146
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/ResourceLoader;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/ResourceLoader;->nAsyncUpdateLoad(J)V
@@ -126,6 +137,7 @@
 .method public destroy()V
     .locals 2
 
+    .line 71
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/ResourceLoader;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/ResourceLoader;->nDestroyResourceLoader(J)V
@@ -136,6 +148,7 @@
 .method public hasResourceData(Ljava/lang/String;)Z
     .locals 2
 
+    .line 101
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/ResourceLoader;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/gltfio/ResourceLoader;->nHasResourceData(JLjava/lang/String;)Z
@@ -148,6 +161,7 @@
 .method public loadResources(Lcom/google/android/filament/gltfio/FilamentAsset;)Lcom/google/android/filament/gltfio/ResourceLoader;
     .locals 4
 
+    .line 115
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/ResourceLoader;->mNativeObject:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->getNativeObject()J

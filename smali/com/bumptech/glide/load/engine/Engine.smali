@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/engine/Engine;
 .super Ljava/lang/Object;
+.source "Engine.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/EngineJobListener;
@@ -48,6 +49,7 @@
 
     const/4 v1, 0x2
 
+    .line 35
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -64,10 +66,13 @@
 
     move-object v7, p1
 
+    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 83
     iput-object v7, v6, Lcom/bumptech/glide/load/engine/Engine;->cache:Lcom/bumptech/glide/load/engine/cache/MemoryCache;
 
+    .line 84
     new-instance v0, Lcom/bumptech/glide/load/engine/Engine$LazyDiskCacheProvider;
 
     move-object v1, p2
@@ -78,6 +83,7 @@
 
     if-nez p9, :cond_0
 
+    .line 87
     new-instance v0, Lcom/bumptech/glide/load/engine/ActiveResources;
 
     move/from16 v1, p13
@@ -89,13 +95,16 @@
     :cond_0
     move-object/from16 v0, p9
 
+    .line 89
     :goto_0
     iput-object v0, v6, Lcom/bumptech/glide/load/engine/Engine;->activeResources:Lcom/bumptech/glide/load/engine/ActiveResources;
 
+    .line 90
     invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/engine/ActiveResources;->setListener(Lcom/bumptech/glide/load/engine/EngineResource$ResourceListener;)V
 
     if-nez p8, :cond_1
 
+    .line 93
     new-instance v0, Lcom/bumptech/glide/load/engine/EngineKeyFactory;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/EngineKeyFactory;-><init>()V
@@ -105,11 +114,13 @@
     :cond_1
     move-object/from16 v0, p8
 
+    .line 95
     :goto_1
     iput-object v0, v6, Lcom/bumptech/glide/load/engine/Engine;->keyFactory:Lcom/bumptech/glide/load/engine/EngineKeyFactory;
 
     if-nez p7, :cond_2
 
+    .line 98
     new-instance v0, Lcom/bumptech/glide/load/engine/Jobs;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/Jobs;-><init>()V
@@ -119,11 +130,13 @@
     :cond_2
     move-object/from16 v0, p7
 
+    .line 100
     :goto_2
     iput-object v0, v6, Lcom/bumptech/glide/load/engine/Engine;->jobs:Lcom/bumptech/glide/load/engine/Jobs;
 
     if-nez p10, :cond_3
 
+    .line 103
     new-instance v8, Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;
 
     move-object v0, v8
@@ -145,11 +158,13 @@
     :cond_3
     move-object/from16 v8, p10
 
+    .line 107
     :goto_3
     iput-object v8, v6, Lcom/bumptech/glide/load/engine/Engine;->engineJobFactory:Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;
 
     if-nez p11, :cond_4
 
+    .line 110
     new-instance v0, Lcom/bumptech/glide/load/engine/Engine$DecodeJobFactory;
 
     iget-object v1, v6, Lcom/bumptech/glide/load/engine/Engine;->diskCacheProvider:Lcom/bumptech/glide/load/engine/Engine$LazyDiskCacheProvider;
@@ -161,11 +176,13 @@
     :cond_4
     move-object/from16 v0, p11
 
+    .line 112
     :goto_4
     iput-object v0, v6, Lcom/bumptech/glide/load/engine/Engine;->decodeJobFactory:Lcom/bumptech/glide/load/engine/Engine$DecodeJobFactory;
 
     if-nez p12, :cond_5
 
+    .line 115
     new-instance v0, Lcom/bumptech/glide/load/engine/ResourceRecycler;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/ResourceRecycler;-><init>()V
@@ -175,9 +192,11 @@
     :cond_5
     move-object/from16 v0, p12
 
+    .line 117
     :goto_5
     iput-object v0, v6, Lcom/bumptech/glide/load/engine/Engine;->resourceRecycler:Lcom/bumptech/glide/load/engine/ResourceRecycler;
 
+    .line 119
     invoke-interface {p1, p0}, Lcom/bumptech/glide/load/engine/cache/MemoryCache;->setResourceRemovedListener(Lcom/bumptech/glide/load/engine/cache/MemoryCache$ResourceRemovedListener;)V
 
     return-void
@@ -214,6 +233,7 @@
 
     move/from16 v13, p7
 
+    .line 53
     invoke-direct/range {v0 .. v13}, Lcom/bumptech/glide/load/engine/Engine;-><init>(Lcom/bumptech/glide/load/engine/cache/MemoryCache;Lcom/bumptech/glide/load/engine/cache/DiskCache$Factory;Lcom/bumptech/glide/load/engine/executor/GlideExecutor;Lcom/bumptech/glide/load/engine/executor/GlideExecutor;Lcom/bumptech/glide/load/engine/executor/GlideExecutor;Lcom/bumptech/glide/load/engine/executor/GlideExecutor;Lcom/bumptech/glide/load/engine/Jobs;Lcom/bumptech/glide/load/engine/EngineKeyFactory;Lcom/bumptech/glide/load/engine/ActiveResources;Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;Lcom/bumptech/glide/load/engine/Engine$DecodeJobFactory;Lcom/bumptech/glide/load/engine/ResourceRecycler;Z)V
 
     return-void
@@ -231,6 +251,7 @@
         }
     .end annotation
 
+    .line 270
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/Engine;->cache:Lcom/bumptech/glide/load/engine/cache/MemoryCache;
 
     invoke-interface {p0, p1}, Lcom/bumptech/glide/load/engine/cache/MemoryCache;->remove(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/load/engine/Resource;
@@ -243,15 +264,18 @@
 
     goto :goto_0
 
+    .line 275
     :cond_0
     instance-of p1, p0, Lcom/bumptech/glide/load/engine/EngineResource;
 
     if-eqz p1, :cond_1
 
+    .line 277
     check-cast p0, Lcom/bumptech/glide/load/engine/EngineResource;
 
     goto :goto_0
 
+    .line 279
     :cond_1
     new-instance p1, Lcom/bumptech/glide/load/engine/EngineResource;
 
@@ -283,6 +307,7 @@
 
     return-object p0
 
+    .line 248
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/Engine;->activeResources:Lcom/bumptech/glide/load/engine/ActiveResources;
 
@@ -292,6 +317,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 250
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/EngineResource;->acquire()V
 
     :cond_1
@@ -316,6 +342,7 @@
 
     return-object p0
 
+    .line 261
     :cond_0
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/engine/Engine;->getEngineResourceFromCache(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/load/engine/EngineResource;
 
@@ -323,8 +350,10 @@
 
     if-eqz p2, :cond_1
 
+    .line 263
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/EngineResource;->acquire()V
 
+    .line 264
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/Engine;->activeResources:Lcom/bumptech/glide/load/engine/ActiveResources;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/engine/ActiveResources;->activate(Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/EngineResource;)V
@@ -336,6 +365,7 @@
 .method private static logWithTimeAndKey(Ljava/lang/String;JLcom/bumptech/glide/load/Key;)V
     .locals 1
 
+    .line 240
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -374,6 +404,7 @@
 .method public clearDiskCache()V
     .locals 0
 
+    .line 329
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/Engine;->diskCacheProvider:Lcom/bumptech/glide/load/engine/Engine$LazyDiskCacheProvider;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/Engine$LazyDiskCacheProvider;->getDiskCache()Lcom/bumptech/glide/load/engine/cache/DiskCache;
@@ -426,6 +457,7 @@
 
     monitor-enter p0
 
+    .line 169
     :try_start_0
     sget-boolean v2, Lcom/bumptech/glide/load/engine/Engine;->VERBOSE_IS_LOGGABLE:Z
 
@@ -443,6 +475,7 @@
     :goto_0
     move-wide v10, v2
 
+    .line 171
     iget-object v12, v1, Lcom/bumptech/glide/load/engine/Engine;->keyFactory:Lcom/bumptech/glide/load/engine/EngineKeyFactory;
 
     move-object/from16 v13, p2
@@ -465,6 +498,7 @@
 
     move-result-object v12
 
+    .line 174
     invoke-direct {v1, v12, v0}, Lcom/bumptech/glide/load/engine/Engine;->loadFromActiveResources(Lcom/bumptech/glide/load/Key;Z)Lcom/bumptech/glide/load/engine/EngineResource;
 
     move-result-object v2
@@ -473,25 +507,30 @@
 
     if-eqz v2, :cond_2
 
+    .line 176
     sget-object v0, Lcom/bumptech/glide/load/DataSource;->MEMORY_CACHE:Lcom/bumptech/glide/load/DataSource;
 
     invoke-interface {v8, v2, v0}, Lcom/bumptech/glide/request/ResourceCallback;->onResourceReady(Lcom/bumptech/glide/load/engine/Resource;Lcom/bumptech/glide/load/DataSource;)V
 
+    .line 177
     sget-boolean v0, Lcom/bumptech/glide/load/engine/Engine;->VERBOSE_IS_LOGGABLE:Z
 
     if-eqz v0, :cond_1
 
     const-string v0, "Loaded resource from active resources"
 
+    .line 178
     invoke-static {v0, v10, v11, v12}, Lcom/bumptech/glide/load/engine/Engine;->logWithTimeAndKey(Ljava/lang/String;JLcom/bumptech/glide/load/Key;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 180
     :cond_1
     monitor-exit p0
 
     return-object v3
 
+    .line 183
     :cond_2
     :try_start_1
     invoke-direct {v1, v12, v0}, Lcom/bumptech/glide/load/engine/Engine;->loadFromCache(Lcom/bumptech/glide/load/Key;Z)Lcom/bumptech/glide/load/engine/EngineResource;
@@ -500,25 +539,30 @@
 
     if-eqz v2, :cond_4
 
+    .line 185
     sget-object v0, Lcom/bumptech/glide/load/DataSource;->MEMORY_CACHE:Lcom/bumptech/glide/load/DataSource;
 
     invoke-interface {v8, v2, v0}, Lcom/bumptech/glide/request/ResourceCallback;->onResourceReady(Lcom/bumptech/glide/load/engine/Resource;Lcom/bumptech/glide/load/DataSource;)V
 
+    .line 186
     sget-boolean v0, Lcom/bumptech/glide/load/engine/Engine;->VERBOSE_IS_LOGGABLE:Z
 
     if-eqz v0, :cond_3
 
     const-string v0, "Loaded resource from cache"
 
+    .line 187
     invoke-static {v0, v10, v11, v12}, Lcom/bumptech/glide/load/engine/Engine;->logWithTimeAndKey(Ljava/lang/String;JLcom/bumptech/glide/load/Key;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 189
     :cond_3
     monitor-exit p0
 
     return-object v3
 
+    .line 192
     :cond_4
     :try_start_2
     iget-object v2, v1, Lcom/bumptech/glide/load/engine/Engine;->jobs:Lcom/bumptech/glide/load/engine/Jobs;
@@ -531,16 +575,20 @@
 
     if-eqz v2, :cond_6
 
+    .line 194
     invoke-virtual {v2, v8, v9}, Lcom/bumptech/glide/load/engine/EngineJob;->addCallback(Lcom/bumptech/glide/request/ResourceCallback;Ljava/util/concurrent/Executor;)V
 
+    .line 195
     sget-boolean v0, Lcom/bumptech/glide/load/engine/Engine;->VERBOSE_IS_LOGGABLE:Z
 
     if-eqz v0, :cond_5
 
     const-string v0, "Added to existing load"
 
+    .line 196
     invoke-static {v0, v10, v11, v12}, Lcom/bumptech/glide/load/engine/Engine;->logWithTimeAndKey(Ljava/lang/String;JLcom/bumptech/glide/load/Key;)V
 
+    .line 198
     :cond_5
     new-instance v0, Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
@@ -552,6 +600,7 @@
 
     return-object v0
 
+    .line 201
     :cond_6
     :try_start_3
     iget-object v2, v1, Lcom/bumptech/glide/load/engine/Engine;->engineJobFactory:Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;
@@ -566,10 +615,12 @@
 
     move/from16 v7, p17
 
+    .line 202
     invoke-virtual/range {v2 .. v7}, Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;->build(Lcom/bumptech/glide/load/Key;ZZZZ)Lcom/bumptech/glide/load/engine/EngineJob;
 
     move-result-object v0
 
+    .line 209
     iget-object v13, v1, Lcom/bumptech/glide/load/engine/Engine;->decodeJobFactory:Lcom/bumptech/glide/load/engine/Engine$DecodeJobFactory;
 
     move-object/from16 v14, p1
@@ -604,26 +655,33 @@
 
     move-object/from16 v29, v0
 
+    .line 210
     invoke-virtual/range {v13 .. v29}, Lcom/bumptech/glide/load/engine/Engine$DecodeJobFactory;->build(Lcom/bumptech/glide/GlideContext;Ljava/lang/Object;Lcom/bumptech/glide/load/engine/EngineKey;Lcom/bumptech/glide/load/Key;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/DiskCacheStrategy;Ljava/util/Map;ZZZLcom/bumptech/glide/load/Options;Lcom/bumptech/glide/load/engine/DecodeJob$Callback;)Lcom/bumptech/glide/load/engine/DecodeJob;
 
     move-result-object v2
 
+    .line 228
     iget-object v3, v1, Lcom/bumptech/glide/load/engine/Engine;->jobs:Lcom/bumptech/glide/load/engine/Jobs;
 
     invoke-virtual {v3, v12, v0}, Lcom/bumptech/glide/load/engine/Jobs;->put(Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/EngineJob;)V
 
+    .line 230
     invoke-virtual {v0, v8, v9}, Lcom/bumptech/glide/load/engine/EngineJob;->addCallback(Lcom/bumptech/glide/request/ResourceCallback;Ljava/util/concurrent/Executor;)V
 
+    .line 231
     invoke-virtual {v0, v2}, Lcom/bumptech/glide/load/engine/EngineJob;->start(Lcom/bumptech/glide/load/engine/DecodeJob;)V
 
+    .line 233
     sget-boolean v2, Lcom/bumptech/glide/load/engine/Engine;->VERBOSE_IS_LOGGABLE:Z
 
     if-eqz v2, :cond_7
 
     const-string v2, "Started new load"
 
+    .line 234
     invoke-static {v2, v10, v11, v12}, Lcom/bumptech/glide/load/engine/Engine;->logWithTimeAndKey(Ljava/lang/String;JLcom/bumptech/glide/load/Key;)V
 
+    .line 236
     :cond_7
     new-instance v2, Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
@@ -657,6 +715,7 @@
 
     monitor-enter p0
 
+    .line 310
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/Engine;->jobs:Lcom/bumptech/glide/load/engine/Jobs;
 
@@ -664,6 +723,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 311
     monitor-exit p0
 
     return-void
@@ -693,19 +753,23 @@
 
     if-eqz p3, :cond_0
 
+    .line 298
     :try_start_0
     invoke-virtual {p3, p2, p0}, Lcom/bumptech/glide/load/engine/EngineResource;->setResourceListener(Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/EngineResource$ResourceListener;)V
 
+    .line 300
     invoke-virtual {p3}, Lcom/bumptech/glide/load/engine/EngineResource;->isCacheable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 301
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/Engine;->activeResources:Lcom/bumptech/glide/load/engine/ActiveResources;
 
     invoke-virtual {v0, p2, p3}, Lcom/bumptech/glide/load/engine/ActiveResources;->activate(Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/EngineResource;)V
 
+    .line 305
     :cond_0
     iget-object p3, p0, Lcom/bumptech/glide/load/engine/Engine;->jobs:Lcom/bumptech/glide/load/engine/Jobs;
 
@@ -713,6 +777,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 306
     monitor-exit p0
 
     return-void
@@ -738,23 +803,27 @@
 
     monitor-enter p0
 
+    .line 320
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/Engine;->activeResources:Lcom/bumptech/glide/load/engine/ActiveResources;
 
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/engine/ActiveResources;->deactivate(Lcom/bumptech/glide/load/Key;)V
 
+    .line 321
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/EngineResource;->isCacheable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 322
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/Engine;->cache:Lcom/bumptech/glide/load/engine/cache/MemoryCache;
 
     invoke-interface {v0, p1, p2}, Lcom/bumptech/glide/load/engine/cache/MemoryCache;->put(Lcom/bumptech/glide/load/Key;Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;
 
     goto :goto_0
 
+    .line 324
     :cond_0
     iget-object p1, p0, Lcom/bumptech/glide/load/engine/Engine;->resourceRecycler:Lcom/bumptech/glide/load/engine/ResourceRecycler;
 
@@ -762,6 +831,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 326
     :goto_0
     monitor-exit p0
 
@@ -785,6 +855,7 @@
         }
     .end annotation
 
+    .line 315
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/Engine;->resourceRecycler:Lcom/bumptech/glide/load/engine/ResourceRecycler;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/ResourceRecycler;->recycle(Lcom/bumptech/glide/load/engine/Resource;)V
@@ -802,16 +873,19 @@
         }
     .end annotation
 
+    .line 285
     instance-of p0, p1, Lcom/bumptech/glide/load/engine/EngineResource;
 
     if-eqz p0, :cond_0
 
+    .line 286
     check-cast p1, Lcom/bumptech/glide/load/engine/EngineResource;
 
     invoke-virtual {p1}, Lcom/bumptech/glide/load/engine/EngineResource;->release()V
 
     return-void
 
+    .line 288
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

@@ -1,5 +1,6 @@
 .class public Lorg/greenrobot/eventbus/MainThreadSupport$AndroidHandlerMainThreadSupport;
 .super Ljava/lang/Object;
+.source "MainThreadSupport.java"
 
 # interfaces
 .implements Lorg/greenrobot/eventbus/MainThreadSupport;
@@ -24,8 +25,10 @@
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     iput-object p1, p0, Lorg/greenrobot/eventbus/MainThreadSupport$AndroidHandlerMainThreadSupport;->looper:Landroid/os/Looper;
 
     return-void
@@ -36,6 +39,7 @@
 .method public createPoster(Lorg/greenrobot/eventbus/EventBus;)Lorg/greenrobot/eventbus/Poster;
     .locals 2
 
+    .line 44
     new-instance v0, Lorg/greenrobot/eventbus/HandlerPoster;
 
     iget-object p0, p0, Lorg/greenrobot/eventbus/MainThreadSupport$AndroidHandlerMainThreadSupport;->looper:Landroid/os/Looper;
@@ -50,6 +54,7 @@
 .method public isMainThread()Z
     .locals 1
 
+    .line 39
     iget-object p0, p0, Lorg/greenrobot/eventbus/MainThreadSupport$AndroidHandlerMainThreadSupport;->looper:Landroid/os/Looper;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/p1$b;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lokhttp3/Callback;

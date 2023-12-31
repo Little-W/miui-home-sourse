@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/Picasso$1;
 .super Landroid/os/Handler;
+.source "Picasso.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
+    .line 114
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -27,6 +29,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
+    .line 116
     iget p0, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x3
@@ -43,10 +46,12 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 135
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Ljava/util/List;
 
+    .line 137
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -54,12 +59,14 @@
     :goto_0
     if-ge v1, p1, :cond_4
 
+    .line 138
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/squareup/picasso/Action;
 
+    .line 139
     iget-object v2, v0, Lcom/squareup/picasso/Action;->picasso:Lcom/squareup/picasso/Picasso;
 
     invoke-virtual {v2, v0}, Lcom/squareup/picasso/Picasso;->resumeAction(Lcom/squareup/picasso/Action;)V
@@ -68,6 +75,7 @@
 
     goto :goto_0
 
+    .line 143
     :cond_0
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -91,11 +99,13 @@
 
     throw p0
 
+    .line 118
     :cond_1
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Ljava/util/List;
 
+    .line 120
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -103,12 +113,14 @@
     :goto_1
     if-ge v1, p1, :cond_4
 
+    .line 121
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/squareup/picasso/BitmapHunter;
 
+    .line 122
     iget-object v2, v0, Lcom/squareup/picasso/BitmapHunter;->picasso:Lcom/squareup/picasso/Picasso;
 
     invoke-virtual {v2, v0}, Lcom/squareup/picasso/Picasso;->complete(Lcom/squareup/picasso/BitmapHunter;)V
@@ -117,11 +129,13 @@
 
     goto :goto_1
 
+    .line 127
     :cond_2
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Lcom/squareup/picasso/Action;
 
+    .line 128
     invoke-virtual {p0}, Lcom/squareup/picasso/Action;->getPicasso()Lcom/squareup/picasso/Picasso;
 
     move-result-object p1
@@ -130,6 +144,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 129
     iget-object p1, p0, Lcom/squareup/picasso/Action;->request:Lcom/squareup/picasso/Request;
 
     invoke-virtual {p1}, Lcom/squareup/picasso/Request;->logId()Ljava/lang/String;
@@ -144,6 +159,7 @@
 
     invoke-static {v0, v1, p1, v2}, Lcom/squareup/picasso/Utils;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 131
     :cond_3
     iget-object p1, p0, Lcom/squareup/picasso/Action;->picasso:Lcom/squareup/picasso/Picasso;
 

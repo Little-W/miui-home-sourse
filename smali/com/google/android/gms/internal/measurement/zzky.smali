@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzky;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 # interfaces
 .implements Ljava/security/PrivilegedExceptionAction;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,8 +37,10 @@
         }
     .end annotation
 
+    .line 2
     const-class p0, Lsun/misc/Unsafe;
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -54,18 +58,22 @@
 
     const/4 v5, 0x1
 
+    .line 4
     invoke-virtual {v4, v5}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 5
     invoke-virtual {v4, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {p0, v3}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 7
     invoke-virtual {p0, v3}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

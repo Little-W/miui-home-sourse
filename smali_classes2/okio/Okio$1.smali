@@ -1,5 +1,6 @@
 .class final Lokio/Okio$1;
 .super Ljava/lang/Object;
+.source "Okio.java"
 
 # interfaces
 .implements Lokio/Sink;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lokio/Timeout;Ljava/io/OutputStream;)V
     .locals 0
 
+    .line 72
     iput-object p1, p0, Lokio/Okio$1;->val$timeout:Lokio/Timeout;
 
     iput-object p2, p0, Lokio/Okio$1;->val$out:Ljava/io/OutputStream;
@@ -45,6 +47,7 @@
         }
     .end annotation
 
+    .line 97
     iget-object p0, p0, Lokio/Okio$1;->val$out:Ljava/io/OutputStream;
 
     invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
@@ -60,6 +63,7 @@
         }
     .end annotation
 
+    .line 93
     iget-object p0, p0, Lokio/Okio$1;->val$out:Ljava/io/OutputStream;
 
     invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
@@ -70,6 +74,7 @@
 .method public timeout()Lokio/Timeout;
     .locals 0
 
+    .line 101
     iget-object p0, p0, Lokio/Okio$1;->val$timeout:Lokio/Timeout;
 
     return-object p0
@@ -78,6 +83,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,6 +115,7 @@
         }
     .end annotation
 
+    .line 74
     iget-wide v0, p1, Lokio/Buffer;->size:J
 
     const-wide/16 v2, 0x0
@@ -125,12 +132,15 @@
 
     if-lez v0, :cond_1
 
+    .line 76
     iget-object v0, p0, Lokio/Okio$1;->val$timeout:Lokio/Timeout;
 
     invoke-virtual {v0}, Lokio/Timeout;->throwIfReached()V
 
+    .line 77
     iget-object v0, p1, Lokio/Buffer;->head:Lokio/Segment;
 
+    .line 78
     iget v1, v0, Lokio/Segment;->limit:I
 
     iget v2, v0, Lokio/Segment;->pos:I
@@ -145,6 +155,7 @@
 
     long-to-int v1, v1
 
+    .line 79
     iget-object v2, p0, Lokio/Okio$1;->val$out:Ljava/io/OutputStream;
 
     iget-object v3, v0, Lokio/Segment;->data:[B
@@ -153,6 +164,7 @@
 
     invoke-virtual {v2, v3, v4, v1}, Ljava/io/OutputStream;->write([BII)V
 
+    .line 81
     iget v2, v0, Lokio/Segment;->pos:I
 
     add-int/2addr v2, v1
@@ -163,24 +175,28 @@
 
     sub-long/2addr p2, v1
 
+    .line 83
     iget-wide v3, p1, Lokio/Buffer;->size:J
 
     sub-long/2addr v3, v1
 
     iput-wide v3, p1, Lokio/Buffer;->size:J
 
+    .line 85
     iget v1, v0, Lokio/Segment;->pos:I
 
     iget v2, v0, Lokio/Segment;->limit:I
 
     if-ne v1, v2, :cond_0
 
+    .line 86
     invoke-virtual {v0}, Lokio/Segment;->pop()Lokio/Segment;
 
     move-result-object v1
 
     iput-object v1, p1, Lokio/Buffer;->head:Lokio/Segment;
 
+    .line 87
     invoke-static {v0}, Lokio/SegmentPool;->recycle(Lokio/Segment;)V
 
     goto :goto_0

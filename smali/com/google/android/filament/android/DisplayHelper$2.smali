@@ -1,5 +1,6 @@
 .class Lcom/google/android/filament/android/DisplayHelper$2;
 .super Ljava/lang/Object;
+.source "DisplayHelper.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/filament/android/DisplayHelper;)V
     .locals 0
 
+    .line 110
     iput-object p1, p0, Lcom/google/android/filament/android/DisplayHelper$2;->this$0:Lcom/google/android/filament/android/DisplayHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 0
 
+    .line 113
     iget-object p0, p0, Lcom/google/android/filament/android/DisplayHelper$2;->this$0:Lcom/google/android/filament/android/DisplayHelper;
 
     invoke-static {p0}, Lcom/google/android/filament/android/DisplayHelper;->access$000(Lcom/google/android/filament/android/DisplayHelper;)V

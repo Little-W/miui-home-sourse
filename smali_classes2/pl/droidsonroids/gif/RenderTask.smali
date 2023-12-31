@@ -1,11 +1,13 @@
 .class Lpl/droidsonroids/gif/RenderTask;
 .super Lpl/droidsonroids/gif/SafeRunnable;
+.source "RenderTask.java"
 
 
 # virtual methods
 .method public doWork()V
     .locals 7
 
+    .line 17
     iget-object v0, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     iget-object v0, v0, Lpl/droidsonroids/gif/GifDrawable;->mNativeInfoHandle:Lpl/droidsonroids/gif/GifInfoHandle;
@@ -24,6 +26,7 @@
 
     if-ltz v4, :cond_1
 
+    .line 19
     iget-object v4, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -34,6 +37,7 @@
 
     iput-wide v5, v4, Lpl/droidsonroids/gif/GifDrawable;->mNextFrameRenderTime:J
 
+    .line 20
     iget-object v4, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     invoke-virtual {v4}, Lpl/droidsonroids/gif/GifDrawable;->isVisible()Z
@@ -54,12 +58,14 @@
 
     if-nez v4, :cond_0
 
+    .line 21
     iget-object v4, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     iget-object v4, v4, Lpl/droidsonroids/gif/GifDrawable;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     invoke-virtual {v4, p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->remove(Ljava/lang/Runnable;)Z
 
+    .line 22
     iget-object v4, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     iget-object v5, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
@@ -74,6 +80,7 @@
 
     iput-object v0, v4, Lpl/droidsonroids/gif/GifDrawable;->mRenderTaskSchedule:Ljava/util/concurrent/ScheduledFuture;
 
+    .line 24
     :cond_0
     iget-object v0, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
@@ -103,6 +110,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 25
     iget-object v0, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     iget-object v0, v0, Lpl/droidsonroids/gif/GifDrawable;->mInvalidationHandler:Lpl/droidsonroids/gif/InvalidationHandler;
@@ -121,6 +129,7 @@
 
     goto :goto_0
 
+    .line 28
     :cond_1
     iget-object v0, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
@@ -128,12 +137,14 @@
 
     iput-wide v4, v0, Lpl/droidsonroids/gif/GifDrawable;->mNextFrameRenderTime:J
 
+    .line 29
     iget-object v0, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lpl/droidsonroids/gif/GifDrawable;->mIsRunning:Z
 
+    .line 31
     :cond_2
     :goto_0
     iget-object v0, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
@@ -156,6 +167,7 @@
 
     if-nez v0, :cond_3
 
+    .line 32
     iget-object p0, p0, Lpl/droidsonroids/gif/RenderTask;->mGifDrawable:Lpl/droidsonroids/gif/GifDrawable;
 
     iget-object p0, p0, Lpl/droidsonroids/gif/GifDrawable;->mInvalidationHandler:Lpl/droidsonroids/gif/InvalidationHandler;

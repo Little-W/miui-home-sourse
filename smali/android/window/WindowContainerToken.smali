@@ -1,5 +1,6 @@
 .class public final Landroid/window/WindowContainerToken;
 .super Ljava/lang/Object;
+.source "WindowContainerToken.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 47
     new-instance v0, Landroid/window/WindowContainerToken$1;
 
     invoke-direct {v0}, Landroid/window/WindowContainerToken$1;-><init>()V
@@ -33,6 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +46,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 1
 
+    .line 39
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -55,6 +59,7 @@
 .method public describeContents()I
     .locals 1
 
+    .line 62
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -67,6 +72,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 73
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"
@@ -79,6 +85,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 67
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -91,6 +98,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 44
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"

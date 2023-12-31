@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/datepicker/MaterialCalendar$8;
 .super Ljava/lang/Object;
+.source "MaterialCalendar.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/MonthsPagerAdapter;)V
     .locals 0
 
+    .line 430
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$8;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     iput-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar$8;->val$monthsPagerAdapter:Lcom/google/android/material/datepicker/MonthsPagerAdapter;
@@ -40,6 +42,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
+    .line 433
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$8;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -52,6 +55,7 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 434
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$8;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-static {v0}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroidx/recyclerview/widget/RecyclerView;
@@ -68,6 +72,7 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 435
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$8;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$8;->val$monthsPagerAdapter:Lcom/google/android/material/datepicker/MonthsPagerAdapter;

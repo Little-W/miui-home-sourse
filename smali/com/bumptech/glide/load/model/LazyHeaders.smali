@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/model/LazyHeaders;
 .super Ljava/lang/Object;
+.source "LazyHeaders.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/Headers;
@@ -53,8 +54,10 @@
         }
     .end annotation
 
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 27
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
@@ -76,10 +79,12 @@
         }
     .end annotation
 
+    .line 58
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 59
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -89,24 +94,29 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 61
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/bumptech/glide/load/model/LazyHeaderFactory;
 
+    .line 62
     invoke-interface {v2}, Lcom/bumptech/glide/load/model/LazyHeaderFactory;->buildHeader()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 63
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 64
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 65
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -117,6 +127,7 @@
 
     const/16 v2, 0x2c
 
+    .line 66
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -124,6 +135,7 @@
 
     goto :goto_0
 
+    .line 70
     :cond_1
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -144,10 +156,12 @@
         }
     .end annotation
 
+    .line 44
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 46
     iget-object v1, p0, Lcom/bumptech/glide/load/model/LazyHeaders;->headers:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -172,6 +186,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 47
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -182,12 +197,14 @@
 
     move-result-object v3
 
+    .line 48
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
+    .line 49
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -205,12 +222,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 82
     instance-of v0, p1, Lcom/bumptech/glide/load/model/LazyHeaders;
 
     if-eqz v0, :cond_0
 
+    .line 83
     check-cast p1, Lcom/bumptech/glide/load/model/LazyHeaders;
 
+    .line 84
     iget-object p0, p0, Lcom/bumptech/glide/load/model/LazyHeaders;->headers:Ljava/util/Map;
 
     iget-object p1, p1, Lcom/bumptech/glide/load/model/LazyHeaders;->headers:Ljava/util/Map;
@@ -239,17 +259,21 @@
         }
     .end annotation
 
+    .line 32
     iget-object v0, p0, Lcom/bumptech/glide/load/model/LazyHeaders;->combinedHeaders:Ljava/util/Map;
 
     if-nez v0, :cond_1
 
+    .line 33
     monitor-enter p0
 
+    .line 34
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/model/LazyHeaders;->combinedHeaders:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
+    .line 35
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/LazyHeaders;->generateHeaders()Ljava/util/Map;
 
     move-result-object v0
@@ -260,6 +284,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/model/LazyHeaders;->combinedHeaders:Ljava/util/Map;
 
+    .line 37
     :cond_0
     monitor-exit p0
 
@@ -274,6 +299,7 @@
 
     throw v0
 
+    .line 40
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/bumptech/glide/load/model/LazyHeaders;->combinedHeaders:Ljava/util/Map;
@@ -284,6 +310,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 91
     iget-object p0, p0, Lcom/bumptech/glide/load/model/LazyHeaders;->headers:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->hashCode()I
@@ -296,6 +323,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 75
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

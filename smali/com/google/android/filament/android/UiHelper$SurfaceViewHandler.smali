@@ -1,5 +1,6 @@
 .class Lcom/google/android/filament/android/UiHelper$SurfaceViewHandler;
 .super Ljava/lang/Object;
+.source "UiHelper.java"
 
 # interfaces
 .implements Lcom/google/android/filament/android/UiHelper$RenderSurface;
@@ -24,8 +25,10 @@
 .method constructor <init>(Landroid/view/SurfaceView;)V
     .locals 0
 
+    .line 180
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 181
     iput-object p1, p0, Lcom/google/android/filament/android/UiHelper$SurfaceViewHandler;->mSurfaceView:Landroid/view/SurfaceView;
 
     return-void
@@ -42,6 +45,7 @@
 .method public resize(II)V
     .locals 0
 
+    .line 186
     iget-object p0, p0, Lcom/google/android/filament/android/UiHelper$SurfaceViewHandler;->mSurfaceView:Landroid/view/SurfaceView;
 
     invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;

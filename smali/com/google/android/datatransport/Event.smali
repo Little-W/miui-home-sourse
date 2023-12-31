@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/Event;
 .super Ljava/lang/Object;
+.source "Event.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +36,7 @@
         }
     .end annotation
 
+    .line 50
     new-instance v0, Lcom/google/android/datatransport/AutoValue_Event;
 
     sget-object v1, Lcom/google/android/datatransport/Priority;->HIGHEST:Lcom/google/android/datatransport/Priority;

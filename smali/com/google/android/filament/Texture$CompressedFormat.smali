@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/Texture$CompressedFormat;
 .super Ljava/lang/Enum;
+.source "Texture.java"
 
 
 # annotations
@@ -57,6 +58,7 @@
 .method static constructor <clinit>()V
     .locals 16
 
+    .line 230
     new-instance v0, Lcom/google/android/filament/Texture$CompressedFormat;
 
     const/4 v1, 0x0
@@ -97,6 +99,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$CompressedFormat;->EAC_RG11_SIGNED:Lcom/google/android/filament/Texture$CompressedFormat;
 
+    .line 231
     new-instance v0, Lcom/google/android/filament/Texture$CompressedFormat;
 
     const/4 v5, 0x4
@@ -117,6 +120,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$CompressedFormat;->ETC2_SRGB8:Lcom/google/android/filament/Texture$CompressedFormat;
 
+    .line 232
     new-instance v0, Lcom/google/android/filament/Texture$CompressedFormat;
 
     const/4 v7, 0x6
@@ -137,6 +141,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$CompressedFormat;->ETC2_SRGB8_A1:Lcom/google/android/filament/Texture$CompressedFormat;
 
+    .line 233
     new-instance v0, Lcom/google/android/filament/Texture$CompressedFormat;
 
     const/16 v9, 0x8
@@ -157,6 +162,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$CompressedFormat;->ETC2_EAC_SRGBA8:Lcom/google/android/filament/Texture$CompressedFormat;
 
+    .line 236
     new-instance v0, Lcom/google/android/filament/Texture$CompressedFormat;
 
     const/16 v11, 0xa
@@ -201,6 +207,7 @@
 
     new-array v0, v0, [Lcom/google/android/filament/Texture$CompressedFormat;
 
+    .line 228
     sget-object v15, Lcom/google/android/filament/Texture$CompressedFormat;->EAC_R11:Lcom/google/android/filament/Texture$CompressedFormat;
 
     aput-object v15, v0, v1
@@ -270,6 +277,7 @@
         }
     .end annotation
 
+    .line 228
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -278,6 +286,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Texture$CompressedFormat;
     .locals 1
 
+    .line 228
     const-class v0, Lcom/google/android/filament/Texture$CompressedFormat;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -292,6 +301,7 @@
 .method public static values()[Lcom/google/android/filament/Texture$CompressedFormat;
     .locals 1
 
+    .line 228
     sget-object v0, Lcom/google/android/filament/Texture$CompressedFormat;->$VALUES:[Lcom/google/android/filament/Texture$CompressedFormat;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Texture$CompressedFormat;->clone()Ljava/lang/Object;

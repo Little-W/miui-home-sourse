@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/Colors;
 .super Ljava/lang/Object;
+.source "Colors.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +31,7 @@
 
     new-array v0, v0, [F
 
+    .line 215
     invoke-static {p0, v0}, Lcom/google/android/filament/Colors;->nCct(F[F)V
 
     return-object v0
@@ -41,6 +44,7 @@
 
     new-array v0, v0, [F
 
+    .line 232
     invoke-static {p0, v0}, Lcom/google/android/filament/Colors;->nIlluminantD(F[F)V
 
     return-object v0
@@ -55,6 +59,7 @@
 .method public static toLinear(Lcom/google/android/filament/Colors$Conversion;[F)[F
     .locals 6
 
+    .line 186
     sget-object v0, Lcom/google/android/filament/Colors$1;->$SwitchMap$com$google$android$filament$Colors$Conversion:[I
 
     invoke-virtual {p0}, Lcom/google/android/filament/Colors$Conversion;->ordinal()I
@@ -81,6 +86,7 @@
     :goto_0
     if-ge v1, v0, :cond_3
 
+    .line 195
     aget p0, p1, v1
 
     float-to-double v2, p0
@@ -101,6 +107,7 @@
     :goto_1
     if-ge v1, v0, :cond_3
 
+    .line 189
     aget p0, p1, v1
 
     const v2, 0x3d25aee6    # 0.04045f
@@ -109,6 +116,7 @@
 
     if-gtz p0, :cond_2
 
+    .line 190
     aget p0, p1, v1
 
     const v2, 0x414eb852    # 12.92f
@@ -169,6 +177,7 @@
 
     aput p3, v0, p1
 
+    .line 108
     invoke-static {p0, v0}, Lcom/google/android/filament/Colors;->toLinear(Lcom/google/android/filament/Colors$RgbType;[F)[F
 
     move-result-object p0
@@ -179,6 +188,7 @@
 .method public static toLinear(Lcom/google/android/filament/Colors$RgbType;[F)[F
     .locals 1
 
+    .line 123
     sget-object v0, Lcom/google/android/filament/Colors$RgbType;->LINEAR:Lcom/google/android/filament/Colors$RgbType;
 
     if-ne p0, v0, :cond_0
@@ -219,6 +229,7 @@
 
     aput p4, v0, p1
 
+    .line 141
     invoke-static {p0, v0}, Lcom/google/android/filament/Colors;->toLinear(Lcom/google/android/filament/Colors$RgbaType;[F)[F
 
     move-result-object p0
@@ -229,6 +240,7 @@
 .method public static toLinear(Lcom/google/android/filament/Colors$RgbaType;[F)[F
     .locals 4
 
+    .line 156
     sget-object v0, Lcom/google/android/filament/Colors$1;->$SwitchMap$com$google$android$filament$Colors$RgbaType:[I
 
     invoke-virtual {p0}, Lcom/google/android/filament/Colors$RgbaType;->ordinal()I
@@ -256,6 +268,7 @@
     :cond_0
     return-object p1
 
+    .line 167
     :cond_1
     sget-object p0, Lcom/google/android/filament/Colors$Conversion;->ACCURATE:Lcom/google/android/filament/Colors$Conversion;
 
@@ -265,28 +278,33 @@
 
     return-object p0
 
+    .line 158
     :cond_2
     sget-object p0, Lcom/google/android/filament/Colors$Conversion;->ACCURATE:Lcom/google/android/filament/Colors$Conversion;
 
     invoke-static {p0, p1}, Lcom/google/android/filament/Colors;->toLinear(Lcom/google/android/filament/Colors$Conversion;[F)[F
 
+    .line 161
     :cond_3
     aget p0, p1, v0
 
     const/4 v0, 0x0
 
+    .line 162
     aget v3, p1, v0
 
     mul-float/2addr v3, p0
 
     aput v3, p1, v0
 
+    .line 163
     aget v0, p1, v2
 
     mul-float/2addr v0, p0
 
     aput v0, p1, v2
 
+    .line 164
     aget v0, p1, v1
 
     mul-float/2addr v0, p0

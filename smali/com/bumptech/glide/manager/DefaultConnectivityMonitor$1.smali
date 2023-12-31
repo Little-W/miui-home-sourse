@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;
 .super Landroid/content/BroadcastReceiver;
+.source "DefaultConnectivityMonitor.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method constructor <init>(Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;)V
     .locals 0
 
+    .line 26
     iput-object p1, p0, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->this$0:Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,10 +47,12 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
+    .line 29
     iget-object p2, p0, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->this$0:Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;
 
     iget-boolean p2, p2, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->isConnected:Z
 
+    .line 30
     iget-object v0, p0, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->this$0:Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;
 
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->isConnected(Landroid/content/Context;)Z
@@ -57,6 +61,7 @@
 
     iput-boolean p1, v0, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->isConnected:Z
 
+    .line 31
     iget-object p1, p0, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->this$0:Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;
 
     iget-boolean p1, p1, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->isConnected:Z
@@ -67,12 +72,14 @@
 
     const-string p2, "ConnectivityMonitor"
 
+    .line 32
     invoke-static {p2, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 33
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,6 +100,7 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 36
     :cond_0
     iget-object p1, p0, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->this$0:Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;
 

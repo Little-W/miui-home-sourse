@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/model/Headers$1;
 .super Ljava/lang/Object;
+.source "Headers.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/Headers;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
         }
     .end annotation
 
+    .line 22
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0

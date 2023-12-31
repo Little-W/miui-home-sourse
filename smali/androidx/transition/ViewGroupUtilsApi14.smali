@@ -1,5 +1,6 @@
 .class Landroidx/transition/ViewGroupUtilsApi14;
 .super Ljava/lang/Object;
+.source "ViewGroupUtilsApi14.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 .method private static cancelLayoutTransition(Landroid/animation/LayoutTransition;)V
     .locals 7
 
+    .line 109
     sget-boolean v0, Landroidx/transition/ViewGroupUtilsApi14;->sCancelMethodFetched:Z
 
     const-string v1, "Failed to access cancel method by reflection"
@@ -30,6 +32,7 @@
 
     const/4 v0, 0x1
 
+    .line 111
     :try_start_0
     const-class v4, Landroid/animation/LayoutTransition;
 
@@ -43,6 +46,7 @@
 
     sput-object v4, Landroidx/transition/ViewGroupUtilsApi14;->sCancelMethod:Ljava/lang/reflect/Method;
 
+    .line 112
     sget-object v4, Landroidx/transition/ViewGroupUtilsApi14;->sCancelMethod:Ljava/lang/reflect/Method;
 
     invoke-virtual {v4, v0}, Ljava/lang/reflect/Method;->setAccessible(Z)V
@@ -51,12 +55,15 @@
 
     goto :goto_0
 
+    .line 114
     :catch_0
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 116
     :goto_0
     sput-boolean v0, Landroidx/transition/ViewGroupUtilsApi14;->sCancelMethodFetched:Z
 
+    .line 118
     :cond_0
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sCancelMethod:Ljava/lang/reflect/Method;
 
@@ -65,6 +72,7 @@
     :try_start_1
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 120
     invoke-virtual {v0, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
@@ -75,10 +83,12 @@
     :catch_1
     const-string p0, "Failed to invoke cancel method by reflection"
 
+    .line 124
     invoke-static {v3, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
+    .line 122
     :catch_2
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -90,6 +100,7 @@
 .method static suppressLayout(Landroid/view/ViewGroup;Z)V
     .locals 5
 
+    .line 45
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
     const/4 v1, 0x1
@@ -100,32 +111,38 @@
 
     if-nez v0, :cond_0
 
+    .line 46
     new-instance v0, Landroidx/transition/ViewGroupUtilsApi14$1;
 
     invoke-direct {v0}, Landroidx/transition/ViewGroupUtilsApi14$1;-><init>()V
 
     sput-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
+    .line 52
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
     const/4 v4, 0x2
 
     invoke-virtual {v0, v4, v3}, Landroid/animation/LayoutTransition;->setAnimator(ILandroid/animation/Animator;)V
 
+    .line 53
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/LayoutTransition;->setAnimator(ILandroid/animation/Animator;)V
 
+    .line 54
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
     invoke-virtual {v0, v1, v3}, Landroid/animation/LayoutTransition;->setAnimator(ILandroid/animation/Animator;)V
 
+    .line 55
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
     const/4 v4, 0x3
 
     invoke-virtual {v0, v4, v3}, Landroid/animation/LayoutTransition;->setAnimator(ILandroid/animation/Animator;)V
 
+    .line 56
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
     const/4 v4, 0x4
@@ -135,29 +152,35 @@
     :cond_0
     if-eqz p1, :cond_3
 
+    .line 60
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getLayoutTransition()Landroid/animation/LayoutTransition;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
+    .line 62
     invoke-virtual {p1}, Landroid/animation/LayoutTransition;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 63
     invoke-static {p1}, Landroidx/transition/ViewGroupUtilsApi14;->cancelLayoutTransition(Landroid/animation/LayoutTransition;)V
 
+    .line 65
     :cond_1
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
     if-eq p1, v0, :cond_2
 
+    .line 66
     sget v0, Landroidx/transition/R$id;->transition_layout_save:I
 
     invoke-virtual {p0, v0, p1}, Landroid/view/ViewGroup;->setTag(ILjava/lang/Object;)V
 
+    .line 70
     :cond_2
     sget-object p1, Landroidx/transition/ViewGroupUtilsApi14;->sEmptyLayoutTransition:Landroid/animation/LayoutTransition;
 
@@ -165,15 +188,18 @@
 
     goto :goto_4
 
+    .line 73
     :cond_3
     invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->setLayoutTransition(Landroid/animation/LayoutTransition;)V
 
+    .line 75
     sget-boolean p1, Landroidx/transition/ViewGroupUtilsApi14;->sLayoutSuppressedFieldFetched:Z
 
     const-string v0, "ViewGroupUtilsApi14"
 
     if-nez p1, :cond_4
 
+    .line 77
     :try_start_0
     const-class p1, Landroid/view/ViewGroup;
 
@@ -185,6 +211,7 @@
 
     sput-object p1, Landroidx/transition/ViewGroupUtilsApi14;->sLayoutSuppressedField:Ljava/lang/reflect/Field;
 
+    .line 78
     sget-object p1, Landroidx/transition/ViewGroupUtilsApi14;->sLayoutSuppressedField:Ljava/lang/reflect/Field;
 
     invoke-virtual {p1, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -196,16 +223,20 @@
     :catch_0
     const-string p1, "Failed to access mLayoutSuppressed field by reflection"
 
+    .line 80
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 82
     :goto_0
     sput-boolean v1, Landroidx/transition/ViewGroupUtilsApi14;->sLayoutSuppressedFieldFetched:Z
 
+    .line 85
     :cond_4
     sget-object p1, Landroidx/transition/ViewGroupUtilsApi14;->sLayoutSuppressedField:Ljava/lang/reflect/Field;
 
     if-eqz p1, :cond_6
 
+    .line 87
     :try_start_1
     invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->getBoolean(Ljava/lang/Object;)Z
 
@@ -215,6 +246,7 @@
 
     if-eqz p1, :cond_5
 
+    .line 89
     :try_start_2
     sget-object v1, Landroidx/transition/ViewGroupUtilsApi14;->sLayoutSuppressedField:Ljava/lang/reflect/Field;
 
@@ -239,17 +271,21 @@
     :goto_2
     const-string p1, "Failed to get mLayoutSuppressed field by reflection"
 
+    .line 92
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
     :goto_3
     if-eqz v2, :cond_7
 
+    .line 96
     invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
+    .line 99
     :cond_7
     sget p1, Landroidx/transition/R$id;->transition_layout_save:I
 
+    .line 100
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -258,10 +294,12 @@
 
     if-eqz p1, :cond_8
 
+    .line 102
     sget v0, Landroidx/transition/R$id;->transition_layout_save:I
 
     invoke-virtual {p0, v0, v3}, Landroid/view/ViewGroup;->setTag(ILjava/lang/Object;)V
 
+    .line 103
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setLayoutTransition(Landroid/animation/LayoutTransition;)V
 
     :cond_8

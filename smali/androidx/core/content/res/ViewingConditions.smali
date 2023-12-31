@@ -1,5 +1,6 @@
 .class final Landroidx/core/content/res/ViewingConditions;
 .super Ljava/lang/Object;
+.source "ViewingConditions.java"
 
 
 # static fields
@@ -32,10 +33,12 @@
 .method static constructor <clinit>()V
     .locals 6
 
+    .line 53
     sget-object v0, Landroidx/core/content/res/CamUtils;->WHITE_POINT_D65:[F
 
     const/high16 v1, 0x42480000    # 50.0f
 
+    .line 56
     invoke-static {v1}, Landroidx/core/content/res/CamUtils;->yFromLStar(F)F
 
     move-result v2
@@ -56,6 +59,7 @@
 
     const/4 v4, 0x0
 
+    .line 54
     invoke-static {v0, v2, v1, v3, v4}, Landroidx/core/content/res/ViewingConditions;->make([FFFFZ)Landroidx/core/content/res/ViewingConditions;
 
     move-result-object v0
@@ -68,26 +72,37 @@
 .method private constructor <init>(FFFFFF[FFFF)V
     .locals 0
 
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 113
     iput p1, p0, Landroidx/core/content/res/ViewingConditions;->mN:F
 
+    .line 114
     iput p2, p0, Landroidx/core/content/res/ViewingConditions;->mAw:F
 
+    .line 115
     iput p3, p0, Landroidx/core/content/res/ViewingConditions;->mNbb:F
 
+    .line 116
     iput p4, p0, Landroidx/core/content/res/ViewingConditions;->mNcb:F
 
+    .line 117
     iput p5, p0, Landroidx/core/content/res/ViewingConditions;->mC:F
 
+    .line 118
     iput p6, p0, Landroidx/core/content/res/ViewingConditions;->mNc:F
 
+    .line 119
     iput-object p7, p0, Landroidx/core/content/res/ViewingConditions;->mRgbD:[F
 
+    .line 120
     iput p8, p0, Landroidx/core/content/res/ViewingConditions;->mFl:F
 
+    .line 121
     iput p9, p0, Landroidx/core/content/res/ViewingConditions;->mFlRoot:F
 
+    .line 122
     iput p10, p0, Landroidx/core/content/res/ViewingConditions;->mZ:F
 
     return-void
@@ -98,10 +113,12 @@
 
     move/from16 v0, p1
 
+    .line 130
     sget-object v1, Landroidx/core/content/res/CamUtils;->XYZ_TO_CAM16RGB:[[F
 
     const/4 v2, 0x0
 
+    .line 132
     aget v3, p0, v2
 
     aget-object v4, v1, v2
@@ -134,6 +151,7 @@
 
     add-float/2addr v3, v6
 
+    .line 133
     aget v6, p0, v2
 
     aget-object v7, v1, v4
@@ -162,6 +180,7 @@
 
     add-float/2addr v6, v7
 
+    .line 134
     aget v7, p0, v2
 
     aget-object v8, v1, v5
@@ -216,6 +235,7 @@
 
     mul-float/2addr v10, v1
 
+    .line 139
     invoke-static {v11, v9, v10}, Landroidx/core/content/res/CamUtils;->lerp(FFF)F
 
     move-result v1
@@ -259,6 +279,7 @@
 
     float-to-double v10, v10
 
+    .line 142
     invoke-static {v10, v11}, Ljava/lang/Math;->exp(D)D
 
     move-result-wide v10
@@ -361,6 +382,7 @@
 
     mul-double/2addr v0, v12
 
+    .line 165
     invoke-static {v0, v1}, Ljava/lang/Math;->cbrt(D)D
 
     move-result-wide v0
@@ -371,6 +393,7 @@
 
     add-float v0, v11, v9
 
+    .line 169
     invoke-static/range {p2 .. p2}, Landroidx/core/content/res/CamUtils;->yFromLStar(F)F
 
     move-result v1
@@ -385,6 +408,7 @@
 
     move/from16 v16, v6
 
+    .line 173
     invoke-static {v12, v13}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v5
@@ -397,6 +421,7 @@
 
     const-wide v5, 0x3fc999999999999aL    # 0.2
 
+    .line 176
     invoke-static {v12, v13, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -407,6 +432,7 @@
 
     new-array v5, v10, [F
 
+    .line 181
     aget v6, v14, v2
 
     mul-float/2addr v6, v0
@@ -439,6 +465,7 @@
 
     div-double v12, v12, v17
 
+    .line 182
     invoke-static {v12, v13, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v12
@@ -471,6 +498,7 @@
 
     new-array v3, v3, [F
 
+    .line 185
     aget v6, v5, v2
 
     const/high16 v7, 0x43c80000    # 400.0f
@@ -515,6 +543,7 @@
 
     const/high16 v5, 0x40000000    # 2.0f
 
+    .line 189
     aget v2, v3, v2
 
     mul-float/2addr v2, v5
@@ -533,6 +562,7 @@
 
     mul-float v12, v2, v1
 
+    .line 191
     new-instance v2, Landroidx/core/content/res/ViewingConditions;
 
     float-to-double v3, v0
@@ -571,6 +601,7 @@
 .method getAw()F
     .locals 0
 
+    .line 71
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mAw:F
 
     return p0
@@ -579,6 +610,7 @@
 .method getC()F
     .locals 0
 
+    .line 87
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mC:F
 
     return p0
@@ -587,6 +619,7 @@
 .method getFl()F
     .locals 0
 
+    .line 100
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mFl:F
 
     return p0
@@ -595,6 +628,7 @@
 .method getFlRoot()F
     .locals 0
 
+    .line 104
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mFlRoot:F
 
     return p0
@@ -603,6 +637,7 @@
 .method getN()F
     .locals 0
 
+    .line 75
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mN:F
 
     return p0
@@ -611,6 +646,7 @@
 .method getNbb()F
     .locals 0
 
+    .line 79
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mNbb:F
 
     return p0
@@ -619,6 +655,7 @@
 .method getNc()F
     .locals 0
 
+    .line 91
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mNc:F
 
     return p0
@@ -627,6 +664,7 @@
 .method getNcb()F
     .locals 0
 
+    .line 83
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mNcb:F
 
     return p0
@@ -635,6 +673,7 @@
 .method getRgbD()[F
     .locals 0
 
+    .line 96
     iget-object p0, p0, Landroidx/core/content/res/ViewingConditions;->mRgbD:[F
 
     return-object p0
@@ -643,6 +682,7 @@
 .method getZ()F
     .locals 0
 
+    .line 108
     iget p0, p0, Landroidx/core/content/res/ViewingConditions;->mZ:F
 
     return p0

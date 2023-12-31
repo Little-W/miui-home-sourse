@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzkh;
 .super Lcom/google/android/gms/internal/measurement/zzkn;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method private constructor <init>(Lcom/google/android/gms/internal/measurement/zzkc;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzkh;->zza:Lcom/google/android/gms/internal/measurement/zzkc;
 
     const/4 v0, 0x0
@@ -30,6 +32,7 @@
 .method synthetic constructor <init>(Lcom/google/android/gms/internal/measurement/zzkc;Lcom/google/android/gms/internal/measurement/zzkf;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/measurement/zzkh;-><init>(Lcom/google/android/gms/internal/measurement/zzkc;)V
 
     return-void
@@ -48,6 +51,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzke;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzkh;->zza:Lcom/google/android/gms/internal/measurement/zzkc;

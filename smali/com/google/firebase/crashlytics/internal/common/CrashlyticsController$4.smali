@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;
 .super Ljava/lang/Object;
+.source "CrashlyticsController.java"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/SuccessContinuation;
@@ -36,6 +37,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;Lcom/google/android/gms/tasks/Task;)V
     .locals 0
 
+    .line 324
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->val$appSettingsDataTask:Lcom/google/android/gms/tasks/Task;
@@ -66,6 +68,7 @@
         }
     .end annotation
 
+    .line 329
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
     invoke-static {v0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;->access$700(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;)Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;
@@ -91,6 +94,7 @@
         }
     .end annotation
 
+    .line 324
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->then(Ljava/lang/Boolean;)Lcom/google/android/gms/tasks/Task;

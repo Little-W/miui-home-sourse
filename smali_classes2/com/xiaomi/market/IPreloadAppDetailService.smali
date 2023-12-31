@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/market/IPreloadAppDetailService;
 .super Ljava/lang/Object;
+.source "IPreloadAppDetailService.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

@@ -1,5 +1,6 @@
 .class public interface abstract Lokhttp3/Authenticator;
 .super Ljava/lang/Object;
+.source "Authenticator.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 100
     new-instance v0, Lokhttp3/Authenticator$1;
 
     invoke-direct {v0}, Lokhttp3/Authenticator$1;-><init>()V

@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/utils/Connection$MemoryResetableOutputStream;
 .super Lcom/market/sdk/utils/Connection$ResetableOutputStream;
+.source "Connection.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method public constructor <init>(Lcom/market/sdk/utils/Connection;Ljava/io/ByteArrayOutputStream;)V
     .locals 0
 
+    .line 526
     iput-object p1, p0, Lcom/market/sdk/utils/Connection$MemoryResetableOutputStream;->this$0:Lcom/market/sdk/utils/Connection;
 
+    .line 527
     invoke-direct {p0, p1, p2}, Lcom/market/sdk/utils/Connection$ResetableOutputStream;-><init>(Lcom/market/sdk/utils/Connection;Ljava/io/OutputStream;)V
 
     return-void
@@ -33,6 +36,7 @@
 .method public reset()V
     .locals 0
 
+    .line 532
     iget-object p0, p0, Lcom/market/sdk/utils/Connection$MemoryResetableOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     check-cast p0, Ljava/io/ByteArrayOutputStream;

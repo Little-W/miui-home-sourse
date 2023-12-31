@@ -1,5 +1,6 @@
 .class abstract Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 .super Ljava/lang/Object;
+.source "ViewPager2.java"
 
 
 # annotations
@@ -59,6 +60,7 @@
 .method onGetAccessibilityClassName()Ljava/lang/String;
     .locals 1
 
+    .line 1230
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Not implemented."
@@ -77,6 +79,7 @@
 .method onPerformAccessibilityAction(ILandroid/os/Bundle;)Z
     .locals 0
 
+    .line 1262
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Not implemented."

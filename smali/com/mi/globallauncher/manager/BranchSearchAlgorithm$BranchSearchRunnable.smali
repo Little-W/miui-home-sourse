@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;
 .super Ljava/lang/Object;
+.source "BranchSearchAlgorithm.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,10 +27,12 @@
 .method public constructor <init>(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;Ljava/lang/String;)V
     .locals 0
 
+    .line 147
     iput-object p1, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;->this$0:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 148
     iput-object p2, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;->query:Ljava/lang/String;
 
     return-void
@@ -40,6 +43,7 @@
 .method public run()V
     .locals 2
 
+    .line 153
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;->query:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -64,6 +68,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 154
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -74,12 +79,14 @@
 
     if-nez v0, :cond_0
 
+    .line 157
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;->query:Ljava/lang/String;
 
     invoke-static {v0}, Lio/branch/search/BranchSearchRequest;->create(Ljava/lang/String;)Lio/branch/search/BranchSearchRequest;
 
     move-result-object v0
 
+    .line 158
     invoke-static {}, Lio/branch/search/BranchSearch;->getInstance()Lio/branch/search/BranchSearch;
 
     move-result-object v1
@@ -97,12 +104,14 @@
     :cond_0
     if-ne v0, v1, :cond_1
 
+    .line 161
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;->query:Ljava/lang/String;
 
     invoke-static {v0}, Lio/branch/search/BranchCompositeSearchRequest;->create(Ljava/lang/String;)Lio/branch/search/BranchCompositeSearchRequest;
 
     move-result-object v0
 
+    .line 162
     invoke-static {}, Lio/branch/search/BranchSearch;->getInstance()Lio/branch/search/BranchSearch;
 
     move-result-object v1

@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ReversibleTagGroup$InternalTagClickListener;
 .super Ljava/lang/Object;
+.source "ReversibleTagGroup.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/ReversibleTagGroup;)V
     .locals 0
 
+    .line 645
     iput-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$InternalTagClickListener;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,8 +38,10 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
+    .line 648
     check-cast p1, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
+    .line 649
     iget-object v0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$InternalTagClickListener;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     invoke-static {v0}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->access$200(Lcom/mi/globallauncher/view/ReversibleTagGroup;)Z
@@ -46,6 +50,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 650
     invoke-static {p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->access$000(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;)I
 
     move-result v0
@@ -56,6 +61,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 652
     iget-object p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$InternalTagClickListener;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->getCheckedTag()Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
@@ -64,10 +70,12 @@
 
     if-eqz p0, :cond_4
 
+    .line 654
     invoke-virtual {p0, v2}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->setChecked(Z)V
 
     goto :goto_0
 
+    .line 658
     :cond_0
     invoke-static {p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->access$100(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;)Z
 
@@ -75,12 +83,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 659
     iget-object p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$InternalTagClickListener;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->deleteTag(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;)V
 
     goto :goto_0
 
+    .line 663
     :cond_1
     iget-object p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$InternalTagClickListener;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
@@ -90,15 +100,18 @@
 
     if-eqz p0, :cond_2
 
+    .line 665
     invoke-virtual {p0, v2}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->setChecked(Z)V
 
     :cond_2
     const/4 p0, 0x1
 
+    .line 667
     invoke-virtual {p1, p0}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->setChecked(Z)V
 
     goto :goto_0
 
+    .line 671
     :cond_3
     iget-object v0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$InternalTagClickListener;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
@@ -108,6 +121,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 672
     iget-object p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$InternalTagClickListener;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     invoke-static {p0}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->access$300(Lcom/mi/globallauncher/view/ReversibleTagGroup;)Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagClickListener;

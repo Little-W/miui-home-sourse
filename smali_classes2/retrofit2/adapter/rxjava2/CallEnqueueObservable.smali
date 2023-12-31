@@ -1,5 +1,6 @@
 .class final Lretrofit2/adapter/rxjava2/CallEnqueueObservable;
 .super Lio/reactivex/Observable;
+.source "CallEnqueueObservable.java"
 
 
 # annotations
@@ -43,8 +44,10 @@
         }
     .end annotation
 
+    .line 31
     invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
+    .line 32
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable;->originalCall:Lretrofit2/Call;
 
     return-void
@@ -64,18 +67,22 @@
         }
     .end annotation
 
+    .line 37
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable;->originalCall:Lretrofit2/Call;
 
     invoke-interface {p0}, Lretrofit2/Call;->clone()Lretrofit2/Call;
 
     move-result-object p0
 
+    .line 38
     new-instance v0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;
 
     invoke-direct {v0, p0, p1}, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;-><init>(Lretrofit2/Call;Lio/reactivex/Observer;)V
 
+    .line 39
     invoke-interface {p1, v0}, Lio/reactivex/Observer;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 40
     invoke-interface {p0, v0}, Lretrofit2/Call;->enqueue(Lretrofit2/Callback;)V
 
     return-void

@@ -1,5 +1,6 @@
 .class public abstract Lcom/bumptech/glide/module/LibraryGlideModule;
 .super Ljava/lang/Object;
+.source "LibraryGlideModule.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/module/RegistersComponents;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

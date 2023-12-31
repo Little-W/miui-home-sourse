@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$BranchGuideViewClickListener;
 .super Ljava/lang/Object;
+.source "PocoBranchSearchGuide.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final Lcom/market/sdk/utils/Constants$Update;
 .super Ljava/lang/Object;
+.source "Constants.java"
 
 # interfaces
 .implements Lcom/market/sdk/utils/Constants$BaseColumns;
@@ -60,6 +61,7 @@
 
     const-string/jumbo v7, "update_download.apk_path"
 
+    .line 204
     filled-new-array/range {v0 .. v7}, [Ljava/lang/String;
 
     move-result-object v0
@@ -72,6 +74,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

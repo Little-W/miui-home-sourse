@@ -1,5 +1,6 @@
 .class public Landroidx/constraintlayout/widget/ConstraintSet$Motion;
 .super Ljava/lang/Object;
+.source "ConstraintSet.java"
 
 
 # annotations
@@ -37,12 +38,14 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 1198
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mapToConstant:Landroid/util/SparseIntArray;
 
+    .line 1207
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mapToConstant:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->Motion_motionPathRotate:I
@@ -51,6 +54,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 1208
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mapToConstant:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->Motion_pathMotionArc:I
@@ -59,6 +63,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 1209
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mapToConstant:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->Motion_transitionEasing:I
@@ -67,6 +72,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 1210
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mapToConstant:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->Motion_drawPath:I
@@ -75,6 +81,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 1211
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mapToConstant:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->Motion_animate_relativeTo:I
@@ -83,6 +90,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 1212
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mapToConstant:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->Motion_motionStagger:I
@@ -97,28 +105,36 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 1180
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mApply:Z
 
     const/4 v1, -0x1
 
+    .line 1181
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mAnimateRelativeTo:I
 
     const/4 v2, 0x0
 
+    .line 1182
     iput-object v2, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mTransitionEasing:Ljava/lang/String;
 
+    .line 1183
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathMotionArc:I
 
+    .line 1184
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mDrawPath:I
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
+    .line 1185
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mMotionStagger:F
 
+    .line 1186
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathRotate:F
 
     return-void
@@ -129,30 +145,37 @@
 .method public copyFrom(Landroidx/constraintlayout/widget/ConstraintSet$Motion;)V
     .locals 1
 
+    .line 1189
     iget-boolean v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mApply:Z
 
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mApply:Z
 
+    .line 1190
     iget v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mAnimateRelativeTo:I
 
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mAnimateRelativeTo:I
 
+    .line 1191
     iget-object v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mTransitionEasing:Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mTransitionEasing:Ljava/lang/String;
 
+    .line 1192
     iget v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathMotionArc:I
 
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathMotionArc:I
 
+    .line 1193
     iget v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mDrawPath:I
 
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mDrawPath:I
 
+    .line 1194
     iget v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathRotate:F
 
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathRotate:F
 
+    .line 1195
     iget p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mMotionStagger:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mMotionStagger:F
@@ -163,6 +186,7 @@
 .method fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 5
 
+    .line 1216
     sget-object v0, Landroidx/constraintlayout/widget/R$styleable;->Motion:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -171,8 +195,10 @@
 
     const/4 p2, 0x1
 
+    .line 1217
     iput-boolean p2, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mApply:Z
 
+    .line 1218
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
     move-result p2
@@ -184,10 +210,12 @@
     :goto_0
     if-ge v1, p2, :cond_1
 
+    .line 1220
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v2
 
+    .line 1222
     sget-object v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mapToConstant:Landroid/util/SparseIntArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseIntArray;->get(I)I
@@ -198,6 +226,7 @@
 
     goto :goto_1
 
+    .line 1244
     :pswitch_0
     iget v3, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mMotionStagger:F
 
@@ -209,6 +238,7 @@
 
     goto :goto_1
 
+    .line 1241
     :pswitch_1
     iget v3, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mAnimateRelativeTo:I
 
@@ -220,6 +250,7 @@
 
     goto :goto_1
 
+    .line 1238
     :pswitch_2
     invoke-virtual {p1, v2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -229,17 +260,20 @@
 
     goto :goto_1
 
+    .line 1230
     :pswitch_3
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v3
 
+    .line 1231
     iget v3, v3, Landroid/util/TypedValue;->type:I
 
     const/4 v4, 0x3
 
     if-ne v3, v4, :cond_0
 
+    .line 1232
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -248,6 +282,7 @@
 
     goto :goto_1
 
+    .line 1234
     :cond_0
     sget-object v3, Landroidx/constraintlayout/motion/utils/Easing;->NAMED_EASING:[Ljava/lang/String;
 
@@ -261,6 +296,7 @@
 
     goto :goto_1
 
+    .line 1227
     :pswitch_4
     iget v3, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathMotionArc:I
 
@@ -272,6 +308,7 @@
 
     goto :goto_1
 
+    .line 1224
     :pswitch_5
     iget v3, p0, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathRotate:F
 
@@ -286,6 +323,7 @@
 
     goto :goto_0
 
+    .line 1248
     :cond_1
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 

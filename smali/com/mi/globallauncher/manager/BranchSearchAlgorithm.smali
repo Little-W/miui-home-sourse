@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;
 .super Ljava/lang/Object;
+.source "BranchSearchAlgorithm.java"
 
 
 # annotations
@@ -42,20 +43,24 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 35
     new-instance v0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;
 
     invoke-direct {v0, p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;-><init>(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)V
 
     iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mLocalBranchSearchEvents:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;
 
+    .line 36
     new-instance v0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEventszLDS;
 
     invoke-direct {v0, p0}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEventszLDS;-><init>(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)V
 
     iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->branchSearchEventszLDS:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEventszLDS;
 
+    .line 42
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -68,6 +73,7 @@
 .method static synthetic access$000(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Landroid/os/Handler;
     .locals 0
 
+    .line 25
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mResultHandler:Landroid/os/Handler;
 
     return-object p0
@@ -76,6 +82,7 @@
 .method static synthetic access$100(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Z
     .locals 0
 
+    .line 25
     iget-boolean p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mInterruptActiveRequests:Z
 
     return p0
@@ -84,6 +91,7 @@
 .method static synthetic access$200(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Ljava/lang/String;
     .locals 0
 
+    .line 25
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mLastQuery:Ljava/lang/String;
 
     return-object p0
@@ -92,6 +100,7 @@
 .method static synthetic access$300(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
     .locals 0
 
+    .line 25
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mCallback:Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
 
     return-object p0
@@ -100,6 +109,7 @@
 .method static synthetic access$400(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;
     .locals 0
 
+    .line 25
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mLocalBranchSearchEvents:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEvents;
 
     return-object p0
@@ -108,6 +118,7 @@
 .method static synthetic access$500(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;)Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEventszLDS;
     .locals 0
 
+    .line 25
     iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->branchSearchEventszLDS:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$LocalBranchSearchEventszLDS;
 
     return-object p0
@@ -116,6 +127,7 @@
 .method private getAutoSuggest(Ljava/lang/String;)V
     .locals 2
 
+    .line 169
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -138,11 +150,13 @@
 
     goto :goto_0
 
+    .line 170
     :cond_0
     invoke-static {p1}, Lio/branch/search/BranchAutoSuggestRequest;->create(Ljava/lang/String;)Lio/branch/search/BranchAutoSuggestRequest;
 
     move-result-object p1
 
+    .line 171
     invoke-static {}, Lio/branch/search/BranchSearch;->getInstance()Lio/branch/search/BranchSearch;
 
     move-result-object v0
@@ -163,16 +177,20 @@
 .method public doUniSearch(Ljava/lang/String;Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;)V
     .locals 4
 
+    .line 121
     iput-object p1, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mLastQuery:Ljava/lang/String;
 
+    .line 122
     iput-object p2, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mCallback:Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
 
     const-string p2, "BranchSearchAlgorithm"
 
     const-string v0, "do uni search"
 
+    .line 123
     invoke-static {p2, v0}, Lcom/mi/globallauncher/util/CommercialLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 124
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p2
@@ -185,11 +203,13 @@
 
     return-void
 
+    .line 125
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 127
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p2
@@ -200,8 +220,10 @@
 
     if-eqz p2, :cond_1
 
+    .line 128
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->getAutoSuggest(Ljava/lang/String;)V
 
+    .line 130
     :cond_1
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -211,6 +233,7 @@
 
     move-result p2
 
+    .line 131
     new-instance v2, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;
 
     invoke-direct {v2, p0, p1}, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;-><init>(Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;Ljava/lang/String;)V
@@ -219,6 +242,7 @@
 
     if-nez p2, :cond_3
 
+    .line 133
     iget-wide p1, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mLastBranchQueryStamp:J
 
     sub-long p1, v0, p1
@@ -229,12 +253,14 @@
 
     if-gez p1, :cond_2
 
+    .line 134
     iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mResultHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mBranchSearchRunnable:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    .line 136
     :cond_2
     iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mResultHandler:Landroid/os/Handler;
 
@@ -249,12 +275,14 @@
 
     if-ne p2, p1, :cond_4
 
+    .line 138
     iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mResultHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mBranchSearchRunnable:Lcom/mi/globallauncher/manager/BranchSearchAlgorithm$BranchSearchRunnable;
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 140
     :cond_4
     :goto_0
     iput-wide v0, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mLastBranchQueryStamp:J
@@ -265,6 +293,7 @@
 .method public setInterruptActiveRequests(Z)V
     .locals 0
 
+    .line 191
     iput-boolean p1, p0, Lcom/mi/globallauncher/manager/BranchSearchAlgorithm;->mInterruptActiveRequests:Z
 
     return-void

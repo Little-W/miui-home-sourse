@@ -1,5 +1,6 @@
 .class public Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;
 .super Ljava/lang/Object;
+.source "SchedulerConfig.java"
 
 
 # annotations
@@ -32,8 +33,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 109
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -48,6 +51,7 @@
 .method public addConfig(Lcom/google/android/datatransport/Priority;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$ConfigValue;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;
     .locals 1
 
+    .line 117
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;->values:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -58,10 +62,12 @@
 .method public build()Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
     .locals 2
 
+    .line 122
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     if-eqz v0, :cond_1
 
+    .line 126
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;->values:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -80,14 +86,17 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 130
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;->values:Ljava/util/Map;
 
+    .line 131
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;->values:Ljava/util/Map;
 
+    .line 132
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-static {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;->create(Lcom/google/android/datatransport/runtime/time/Clock;Ljava/util/Map;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
@@ -96,6 +105,7 @@
 
     return-object p0
 
+    .line 127
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -105,6 +115,7 @@
 
     throw p0
 
+    .line 123
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -118,6 +129,7 @@
 .method public setClock(Lcom/google/android/datatransport/runtime/time/Clock;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;
     .locals 0
 
+    .line 112
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$Builder;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     return-object p0

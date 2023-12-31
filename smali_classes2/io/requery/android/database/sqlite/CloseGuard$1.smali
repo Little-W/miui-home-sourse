@@ -1,5 +1,6 @@
 .class synthetic Lio/requery/android/database/sqlite/CloseGuard$1;
 .super Ljava/lang/Object;
+.source "CloseGuard.java"
 
 
 # annotations

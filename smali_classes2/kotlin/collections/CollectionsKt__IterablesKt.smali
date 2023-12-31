@@ -1,5 +1,6 @@
 .class Lkotlin/collections/CollectionsKt__IterablesKt;
 .super Lkotlin/collections/CollectionsKt__CollectionsKt;
+.source "Iterables.kt"
 
 
 # direct methods
@@ -19,6 +20,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 39
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0

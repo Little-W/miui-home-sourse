@@ -13,6 +13,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/c/c;)V
     .locals 0
 
+    .line 283
     iput-object p1, p0, Lcom/xiaomi/onetrack/c/g;->a:Lcom/xiaomi/onetrack/c/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,6 +26,7 @@
 .method public run()V
     .locals 14
 
+    .line 286
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/g;->a:Lcom/xiaomi/onetrack/c/c;
 
     invoke-static {v0}, Lcom/xiaomi/onetrack/c/c;->a(Lcom/xiaomi/onetrack/c/c;)Lcom/xiaomi/onetrack/c/c$a;
@@ -35,6 +37,7 @@
 
     return-void
 
+    .line 289
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/g;->a:Lcom/xiaomi/onetrack/c/c;
 
@@ -46,6 +49,7 @@
 
     const/4 v1, 0x0
 
+    .line 292
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/onetrack/c/g;->a:Lcom/xiaomi/onetrack/c/c;
 
@@ -57,10 +61,12 @@
 
     move-result-object p0
 
+    .line 293
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
 
+    .line 294
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -69,6 +75,7 @@
 
     const/4 v3, 0x6
 
+    .line 295
     invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
@@ -81,16 +88,20 @@
 
     const/4 v10, 0x0
 
+    .line 297
     invoke-virtual {v2, v3, v10}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xc
 
+    .line 298
     invoke-virtual {v2, v3, v10}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xd
 
+    .line 299
     invoke-virtual {v2, v3, v10}, Ljava/util/Calendar;->set(II)V
 
+    .line 300
     invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v2
@@ -101,6 +112,7 @@
 
     new-array v13, v12, [Ljava/lang/String;
 
+    .line 303
     invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v2
@@ -111,6 +123,7 @@
 
     const-string v2, "timestamp"
 
+    .line 304
     filled-new-array {v2}, [Ljava/lang/String;
 
     move-result-object v4
@@ -131,6 +144,7 @@
 
     move-result-object v1
 
+    .line 311
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
     move-result v2
@@ -139,12 +153,14 @@
 
     const-string v2, "events"
 
+    .line 314
     invoke-virtual {p0, v2, v11, v13}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
 
     const-string v2, "EventManager"
 
+    .line 315
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,6 +177,7 @@
 
     invoke-static {v2, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 318
     :cond_1
     invoke-static {}, Lcom/xiaomi/onetrack/c/c;->a()Lcom/xiaomi/onetrack/c/c;
 
@@ -178,11 +195,13 @@
 
     move v10, v12
 
+    .line 319
     :cond_2
     invoke-static {v10}, Lcom/xiaomi/onetrack/b/n;->a(Z)V
 
     const-string p0, "EventManager"
 
+    .line 320
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,6 +223,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 325
     :goto_0
     :try_start_1
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
@@ -223,6 +243,7 @@
     :try_start_2
     const-string v2, "EventManager"
 
+    .line 322
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,6 +266,7 @@
 
     goto :goto_0
 
+    .line 328
     :cond_3
     :goto_1
     :try_start_3
@@ -255,14 +277,17 @@
     :goto_2
     if-eqz v1, :cond_4
 
+    .line 325
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
+    .line 327
     :cond_4
     throw p0
 
     :catchall_1
     move-exception p0
 
+    .line 328
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1

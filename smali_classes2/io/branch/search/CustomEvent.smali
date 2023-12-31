@@ -1,5 +1,6 @@
 .class public Lio/branch/search/CustomEvent;
 .super Lio/branch/search/AnalyticsEvent;
+.source "SourceFile"
 
 
 # direct methods

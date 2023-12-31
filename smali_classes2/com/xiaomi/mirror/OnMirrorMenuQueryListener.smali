@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/mirror/OnMirrorMenuQueryListener;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods

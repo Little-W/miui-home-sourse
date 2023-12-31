@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;
 .super Ljava/lang/Object;
+.source "BaseTransientBottomBar.java"
 
 # interfaces
 .implements Landroid/view/View$OnAttachStateChangeListener;
@@ -43,6 +44,7 @@
 .method private unanchorIfNoTransientBottomBar()Z
     .locals 1
 
+    .line 1434
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->transientBottomBar:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -51,6 +53,7 @@
 
     if-nez v0, :cond_0
 
+    .line 1435
     invoke-virtual {p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->unanchor()V
 
     const/4 p0, 0x1
@@ -68,6 +71,7 @@
 .method getAnchorView()Landroid/view/View;
     .locals 0
 
+    .line 1430
     iget-object p0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->anchorView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -82,6 +86,7 @@
 .method public onGlobalLayout()V
     .locals 1
 
+    .line 1421
     invoke-direct {p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->unanchorIfNoTransientBottomBar()Z
 
     move-result v0
@@ -90,6 +95,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->transientBottomBar:Ljava/lang/ref/WeakReference;
 
+    .line 1422
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -104,6 +110,7 @@
 
     goto :goto_0
 
+    .line 1425
     :cond_0
     iget-object p0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->transientBottomBar:Ljava/lang/ref/WeakReference;
 
@@ -123,6 +130,7 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 1
 
+    .line 1405
     invoke-direct {p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->unanchorIfNoTransientBottomBar()Z
 
     move-result v0
@@ -131,6 +139,7 @@
 
     return-void
 
+    .line 1408
     :cond_0
     invoke-static {p1, p0}, Lcom/google/android/material/internal/ViewUtils;->addOnGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
@@ -140,6 +149,7 @@
 .method public onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 1
 
+    .line 1413
     invoke-direct {p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->unanchorIfNoTransientBottomBar()Z
 
     move-result v0
@@ -148,6 +158,7 @@
 
     return-void
 
+    .line 1416
     :cond_0
     invoke-static {p1, p0}, Lcom/google/android/material/internal/ViewUtils;->removeOnGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
@@ -157,6 +168,7 @@
 .method unanchor()V
     .locals 1
 
+    .line 1442
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->anchorView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -165,6 +177,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1443
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->anchorView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -175,6 +188,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
+    .line 1444
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->anchorView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -185,11 +199,13 @@
 
     invoke-static {v0, p0}, Lcom/google/android/material/internal/ViewUtils;->removeOnGlobalLayoutListener(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
+    .line 1446
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->anchorView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
 
+    .line 1447
     iget-object p0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Anchor;->transientBottomBar:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->clear()V

@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVU;
 .super Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;
+.source "TaskSnapshotCompatVU.java"
 
 # interfaces
 .implements Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
@@ -9,6 +10,7 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 12
     invoke-direct {p0, p1}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;-><init>(Ljava/lang/Object;)V
 
     return-void
@@ -17,6 +19,7 @@
 .method public static create(I)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
     .locals 1
 
+    .line 16
     new-instance v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVU;
 
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVU;->getTaskSnapshotInstance(I)Ljava/lang/Object;
@@ -33,6 +36,7 @@
 
     const-string v0, "android.window.TaskSnapshot"
 
+    .line 20
     invoke-static {v0}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
@@ -43,10 +47,12 @@
 
     return-object v0
 
+    .line 26
     :cond_0
     :try_start_0
     const-class v1, Landroid/app/IActivityTaskManager;
 
+    .line 27
     invoke-static {}, Lmiui/app/ActivityTaskManagerExpose;->getService()Lmiui/app/IActivityTaskManagerExpose;
 
     move-result-object v2
@@ -81,6 +87,7 @@
 
     new-array v7, v5, [Ljava/lang/Object;
 
+    .line 31
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -103,6 +110,7 @@
 
     move-object v6, v7
 
+    .line 26
     invoke-static/range {v1 .. v6}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

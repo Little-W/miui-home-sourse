@@ -1,5 +1,6 @@
 .class public final Lcom/xiaomi/dist/utils/Log;
 .super Ljava/lang/Object;
+.source "Log.java"
 
 
 # static fields
@@ -14,6 +15,7 @@
 
     const/4 v1, 0x2
 
+    .line 11
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -26,12 +28,14 @@
 .method private static convertTag(ILjava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 139
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1c
 
     if-lt p0, v0, :cond_0
 
+    .line 140
     invoke-static {}, Landroid/app/Application;->getProcessName()Ljava/lang/String;
 
     move-result-object p0
@@ -44,6 +48,7 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,6 +80,7 @@
     :cond_1
     const-string p0, ""
 
+    .line 143
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -100,6 +106,7 @@
 
     const/4 v0, 0x0
 
+    .line 60
     check-cast v0, [Ljava/lang/Object;
 
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -110,6 +117,7 @@
 .method public static varargs d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 65
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -121,6 +129,7 @@
 
     goto :goto_0
 
+    .line 67
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -147,6 +156,7 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 126
     invoke-static {p0, p1, p2}, Lcom/xiaomi/dist/utils/Log;->printError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -157,6 +167,7 @@
 
     const/4 v0, 0x0
 
+    .line 114
     invoke-static {p0, v0, p1, p2}, Lcom/xiaomi/dist/utils/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -165,6 +176,7 @@
 .method public static varargs e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 119
     :try_start_0
     invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -176,6 +188,7 @@
 
     goto :goto_0
 
+    .line 121
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -204,6 +217,7 @@
 
     const/4 v0, 0x0
 
+    .line 33
     check-cast v0, [Ljava/lang/Object;
 
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -214,6 +228,7 @@
 .method public static varargs i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 44
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -225,6 +240,7 @@
 
     goto :goto_0
 
+    .line 47
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -251,6 +267,7 @@
 .method private static isDebug()Z
     .locals 1
 
+    .line 159
     sget-boolean v0, Lcom/xiaomi/dist/utils/Log;->sIsDebug:Z
 
     return v0
@@ -259,6 +276,7 @@
 .method private static printDebug(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 72
     invoke-static {}, Lcom/xiaomi/dist/utils/Log;->isDebug()Z
 
     move-result v0
@@ -267,6 +285,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 73
     invoke-static {v1, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -275,6 +294,7 @@
 
     return-void
 
+    .line 76
     :cond_0
     invoke-static {v1, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -288,6 +308,7 @@
 .method private static printError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 130
     invoke-static {}, Lcom/xiaomi/dist/utils/Log;->isDebug()Z
 
     move-result v0
@@ -296,6 +317,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 131
     invoke-static {v1, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -304,6 +326,7 @@
 
     return-void
 
+    .line 134
     :cond_0
     invoke-static {v1, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -317,6 +340,7 @@
 .method private static printInfo(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 52
     invoke-static {}, Lcom/xiaomi/dist/utils/Log;->isDebug()Z
 
     move-result v0
@@ -325,6 +349,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 53
     invoke-static {v1, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -333,6 +358,7 @@
 
     return-void
 
+    .line 56
     :cond_0
     invoke-static {v1, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -346,6 +372,7 @@
 .method private static printVerbose(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 25
     invoke-static {}, Lcom/xiaomi/dist/utils/Log;->isDebug()Z
 
     move-result v0
@@ -354,6 +381,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 26
     invoke-static {v1, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -362,6 +390,7 @@
 
     return-void
 
+    .line 29
     :cond_0
     invoke-static {v1, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -375,6 +404,7 @@
 .method private static printWarn(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
+    .line 100
     invoke-static {}, Lcom/xiaomi/dist/utils/Log;->isDebug()Z
 
     move-result v0
@@ -385,6 +415,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 101
     invoke-static {v2, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -397,6 +428,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 102
     invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
@@ -407,10 +439,12 @@
 
     move-result-object p1
 
+    .line 101
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 105
     :cond_0
     invoke-static {v2, p0}, Lcom/xiaomi/dist/utils/Log;->convertTag(ILjava/lang/String;)Ljava/lang/String;
 
@@ -424,6 +458,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 106
     invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
@@ -434,6 +469,7 @@
 
     move-result-object p1
 
+    .line 105
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -442,6 +478,7 @@
 .method public static varargs v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 18
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -453,6 +490,7 @@
 
     goto :goto_0
 
+    .line 20
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -481,6 +519,7 @@
 
     const/4 v0, 0x0
 
+    .line 88
     check-cast v0, Ljava/lang/Throwable;
 
     invoke-static {p0, p1, v0}, Lcom/xiaomi/dist/utils/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -491,6 +530,7 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 96
     invoke-static {p0, p1, p2}, Lcom/xiaomi/dist/utils/Log;->printWarn(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -499,6 +539,7 @@
 .method public static varargs w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 81
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -510,6 +551,7 @@
 
     goto :goto_0
 
+    .line 83
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 

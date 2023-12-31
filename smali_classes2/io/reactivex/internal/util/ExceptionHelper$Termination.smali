@@ -1,5 +1,6 @@
 .class final Lio/reactivex/internal/util/ExceptionHelper$Termination;
 .super Ljava/lang/Throwable;
+.source "ExceptionHelper.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 
     const-string v0, "No further exceptions"
 
+    .line 129
     invoke-direct {p0, v0}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
     return-void

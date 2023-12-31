@@ -1,5 +1,6 @@
 .class public Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
 .super Ljava/lang/Object;
+.source "ViewModelProvider.java"
 
 # interfaces
 .implements Landroidx/lifecycle/ViewModelProvider$Factory;
@@ -24,6 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 196
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,16 +34,19 @@
 .method static getInstance()Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
     .locals 1
 
+    .line 207
     sget-object v0, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->sInstance:Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
 
     if-nez v0, :cond_0
 
+    .line 208
     new-instance v0, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
 
     invoke-direct {v0}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;-><init>()V
 
     sput-object v0, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->sInstance:Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
 
+    .line 210
     :cond_0
     sget-object v0, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->sInstance:Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
 
@@ -64,6 +69,7 @@
 
     const-string p0, "Cannot create an instance of "
 
+    .line 219
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
@@ -79,6 +85,7 @@
     :catch_0
     move-exception v0
 
+    .line 223
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -100,6 +107,7 @@
     :catch_1
     move-exception v0
 
+    .line 221
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;

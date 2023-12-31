@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/DefaultSpecialEffectsController;
 .super Landroidx/fragment/app/SpecialEffectsController;
+.source "DefaultSpecialEffectsController.java"
 
 
 # annotations
@@ -16,6 +17,7 @@
 .method constructor <init>(Landroid/view/ViewGroup;)V
     .locals 0
 
+    .line 52
     invoke-direct {p0, p1}, Landroidx/fragment/app/SpecialEffectsController;-><init>(Landroid/view/ViewGroup;)V
 
     return-void
@@ -41,18 +43,22 @@
 
     move-object/from16 v7, p0
 
+    .line 132
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
     move-result-object v8
 
+    .line 133
     invoke-virtual {v8}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v9
 
+    .line 134
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
+    .line 138
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -78,12 +84,14 @@
 
     check-cast v14, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;
 
+    .line 139
     invoke-virtual {v14}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->isVisibilityUnchanged()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 141
     invoke-virtual {v14}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->completeSpecialEffect()V
 
     :goto_1
@@ -91,6 +99,7 @@
 
     goto :goto_0
 
+    .line 144
     :cond_0
     invoke-virtual {v14, v9}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->getAnimation(Landroid/content/Context;)Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;
 
@@ -98,28 +107,34 @@
 
     if-nez v1, :cond_1
 
+    .line 147
     invoke-virtual {v14}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->completeSpecialEffect()V
 
     goto :goto_1
 
+    .line 150
     :cond_1
     iget-object v15, v1, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animator:Landroid/animation/Animator;
 
     if-nez v15, :cond_2
 
+    .line 153
     invoke-virtual {v10, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 158
     :cond_2
     invoke-virtual {v14}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object v5
 
+    .line 159
     invoke-virtual {v5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
+    .line 160
     sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     move-object/from16 v6, p4
@@ -134,12 +149,14 @@
 
     if-eqz v4, :cond_4
 
+    .line 162
     invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
+    .line 163
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,11 +177,13 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 166
     :cond_3
     invoke-virtual {v14}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->completeSpecialEffect()V
 
     goto :goto_0
 
+    .line 172
     :cond_4
     invoke-virtual {v5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFinalState()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -186,13 +205,17 @@
 
     if-eqz v4, :cond_6
 
+    .line 177
     invoke-interface {v12, v5}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 179
     :cond_6
     iget-object v3, v1, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
+    .line 180
     invoke-virtual {v8, v3}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
 
+    .line 181
     new-instance v2, Landroidx/fragment/app/DefaultSpecialEffectsController$2;
 
     move-object v0, v2
@@ -213,14 +236,18 @@
 
     move-object/from16 v0, v16
 
+    .line 193
     invoke-virtual {v15, v0}, Landroid/animation/Animator;->setTarget(Ljava/lang/Object;)V
 
+    .line 194
     invoke-virtual {v15}, Landroid/animation/Animator;->start()V
 
+    .line 196
     invoke-virtual {v14}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->getSignal()Landroidx/core/os/CancellationSignal;
 
     move-result-object v0
 
+    .line 197
     new-instance v1, Landroidx/fragment/app/DefaultSpecialEffectsController$3;
 
     invoke-direct {v1, v7, v15}, Landroidx/fragment/app/DefaultSpecialEffectsController$3;-><init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Landroid/animation/Animator;)V
@@ -231,6 +258,7 @@
 
     goto/16 :goto_0
 
+    .line 206
     :cond_7
     invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -249,10 +277,12 @@
 
     check-cast v4, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;
 
+    .line 208
     invoke-virtual {v4}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object v5
 
+    .line 209
     invoke-virtual {v5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v6
@@ -261,12 +291,14 @@
 
     if-eqz p3, :cond_9
 
+    .line 211
     invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_8
 
+    .line 212
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -285,6 +317,7 @@
 
     invoke-static {v2, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 215
     :cond_8
     invoke-virtual {v4}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->completeSpecialEffect()V
 
@@ -293,12 +326,14 @@
     :cond_9
     if-eqz v0, :cond_b
 
+    .line 220
     invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_a
 
+    .line 221
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -317,14 +352,17 @@
 
     invoke-static {v2, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 224
     :cond_a
     invoke-virtual {v4}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->completeSpecialEffect()V
 
     goto :goto_3
 
+    .line 229
     :cond_b
     iget-object v6, v6, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
+    .line 231
     invoke-virtual {v4, v9}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->getAnimation(Landroid/content/Context;)Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;
 
     move-result-object v10
@@ -337,46 +375,57 @@
 
     iget-object v10, v10, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animation:Landroid/view/animation/Animation;
 
+    .line 230
     invoke-static {v10}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Landroid/view/animation/Animation;
 
+    .line 232
     invoke-virtual {v5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFinalState()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     move-result-object v5
 
+    .line 233
     sget-object v11, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->REMOVED:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     if-eq v5, v11, :cond_c
 
+    .line 236
     invoke-virtual {v6, v10}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 240
     invoke-virtual {v4}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->completeSpecialEffect()V
 
     goto :goto_4
 
+    .line 242
     :cond_c
     invoke-virtual {v8, v6}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
 
+    .line 243
     new-instance v5, Landroidx/fragment/app/FragmentAnim$EndViewTransitionAnimation;
 
     invoke-direct {v5, v10, v8, v6}, Landroidx/fragment/app/FragmentAnim$EndViewTransitionAnimation;-><init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
 
+    .line 245
     new-instance v10, Landroidx/fragment/app/DefaultSpecialEffectsController$4;
 
     invoke-direct {v10, v7, v8, v6, v4}, Landroidx/fragment/app/DefaultSpecialEffectsController$4;-><init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Landroid/view/ViewGroup;Landroid/view/View;Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;)V
 
     invoke-virtual {v5, v10}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
+    .line 268
     invoke-virtual {v6, v5}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 271
     :goto_4
     invoke-virtual {v4}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;->getSignal()Landroidx/core/os/CancellationSignal;
 
     move-result-object v5
 
+    .line 272
     new-instance v10, Landroidx/fragment/app/DefaultSpecialEffectsController$5;
 
     invoke-direct {v10, v7, v6, v8, v4}, Landroidx/fragment/app/DefaultSpecialEffectsController$5;-><init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Landroid/view/View;Landroid/view/ViewGroup;Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;)V
@@ -418,10 +467,12 @@
 
     move-object/from16 v9, p5
 
+    .line 288
     new-instance v10, Ljava/util/HashMap;
 
     invoke-direct {v10}, Ljava/util/HashMap;-><init>()V
 
+    .line 291
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -442,6 +493,7 @@
 
     check-cast v1, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;
 
+    .line 292
     invoke-virtual {v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->isVisibilityUnchanged()Z
 
     move-result v2
@@ -450,6 +502,7 @@
 
     goto :goto_0
 
+    .line 296
     :cond_1
     invoke-virtual {v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getHandlingImpl()Landroidx/fragment/app/FragmentTransitionImpl;
 
@@ -468,6 +521,7 @@
 
     goto :goto_0
 
+    .line 300
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -479,6 +533,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 302
     invoke-virtual {v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object v3
@@ -493,6 +548,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 303
     invoke-virtual {v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getTransition()Ljava/lang/Object;
 
     move-result-object v1
@@ -516,6 +572,7 @@
 
     if-nez v15, :cond_6
 
+    .line 309
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -533,6 +590,7 @@
 
     check-cast v1, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;
 
+    .line 310
     invoke-virtual {v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object v2
@@ -543,6 +601,7 @@
 
     invoke-interface {v10, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 311
     invoke-virtual {v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->completeSpecialEffect()V
 
     goto :goto_1
@@ -550,6 +609,7 @@
     :cond_5
     return-object v10
 
+    .line 319
     :cond_6
     new-instance v13, Landroid/view/View;
 
@@ -563,22 +623,27 @@
 
     invoke-direct {v13, v0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
+    .line 325
     new-instance v12, Landroid/graphics/Rect;
 
     invoke-direct {v12}, Landroid/graphics/Rect;-><init>()V
 
+    .line 326
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
+    .line 327
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    .line 328
     new-instance v3, Landroidx/collection/ArrayMap;
 
     invoke-direct {v3}, Landroidx/collection/ArrayMap;-><init>()V
 
+    .line 329
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v20
@@ -602,6 +667,7 @@
 
     check-cast v1, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;
 
+    .line 330
     invoke-virtual {v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->hasSharedElementTransition()Z
 
     move-result v16
@@ -612,38 +678,47 @@
 
     if-eqz v9, :cond_16
 
+    .line 336
     invoke-virtual {v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getSharedElementTransition()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 335
     invoke-virtual {v15, v0}, Landroidx/fragment/app/FragmentTransitionImpl;->cloneTransition(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 334
     invoke-virtual {v15, v0}, Landroidx/fragment/app/FragmentTransitionImpl;->wrapTransitionInSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 339
     invoke-virtual/range {p5 .. p5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
+    .line 340
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getSharedElementSourceNames()Ljava/util/ArrayList;
 
     move-result-object v0
 
+    .line 343
     invoke-virtual/range {p4 .. p4}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v16
 
+    .line 344
     invoke-virtual/range {v16 .. v16}, Landroidx/fragment/app/Fragment;->getSharedElementSourceNames()Ljava/util/ArrayList;
 
     move-result-object v14
 
+    .line 345
     invoke-virtual/range {p4 .. p4}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v16
 
+    .line 346
     invoke-virtual/range {v16 .. v16}, Landroidx/fragment/app/Fragment;->getSharedElementTargetNames()Ljava/util/ArrayList;
 
     move-result-object v11
@@ -654,6 +729,7 @@
 
     const/4 v1, 0x0
 
+    .line 349
     :goto_3
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
@@ -661,6 +737,7 @@
 
     if-ge v1, v2, :cond_8
 
+    .line 350
     invoke-virtual {v11, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -675,6 +752,7 @@
 
     if-eq v2, v11, :cond_7
 
+    .line 354
     invoke-virtual {v14, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -688,17 +766,20 @@
 
     goto :goto_3
 
+    .line 357
     :cond_8
     invoke-virtual/range {p5 .. p5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
+    .line 358
     invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getSharedElementTargetNames()Ljava/util/ArrayList;
 
     move-result-object v11
 
     if-nez v7, :cond_9
 
+    .line 364
     invoke-virtual/range {p4 .. p4}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v1
@@ -707,6 +788,7 @@
 
     move-result-object v1
 
+    .line 365
     invoke-virtual/range {p5 .. p5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -717,6 +799,7 @@
 
     goto :goto_4
 
+    .line 369
     :cond_9
     invoke-virtual/range {p4 .. p4}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
@@ -726,6 +809,7 @@
 
     move-result-object v1
 
+    .line 370
     invoke-virtual/range {p5 .. p5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -734,6 +818,7 @@
 
     move-result-object v2
 
+    .line 372
     :goto_4
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -744,6 +829,7 @@
     :goto_5
     if-ge v9, v14, :cond_a
 
+    .line 374
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v19
@@ -754,6 +840,7 @@
 
     check-cast v14, Ljava/lang/String;
 
+    .line 375
     invoke-virtual {v11, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v19
@@ -762,6 +849,7 @@
 
     check-cast v8, Ljava/lang/String;
 
+    .line 376
     invoke-virtual {v3, v14, v8}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v9, v9, 0x1
@@ -772,11 +860,13 @@
 
     goto :goto_5
 
+    .line 381
     :cond_a
     new-instance v8, Landroidx/collection/ArrayMap;
 
     invoke-direct {v8}, Landroidx/collection/ArrayMap;-><init>()V
 
+    .line 382
     invoke-virtual/range {p4 .. p4}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v9
@@ -785,12 +875,15 @@
 
     invoke-virtual {v6, v8, v9}, Landroidx/fragment/app/DefaultSpecialEffectsController;->findNamedViews(Ljava/util/Map;Landroid/view/View;)V
 
+    .line 383
     invoke-virtual {v8, v0}, Landroidx/collection/ArrayMap;->retainAll(Ljava/util/Collection;)Z
 
     if-eqz v1, :cond_e
 
+    .line 386
     invoke-virtual {v1, v0, v8}, Landroidx/core/app/SharedElementCallback;->onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
 
+    .line 387
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -802,12 +895,14 @@
     :goto_6
     if-ltz v1, :cond_d
 
+    .line 388
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Ljava/lang/String;
 
+    .line 389
     invoke-virtual {v8, v9}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v14
@@ -816,6 +911,7 @@
 
     if-nez v14, :cond_b
 
+    .line 391
     invoke-virtual {v3, v9}, Landroidx/collection/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object/from16 v19, v0
@@ -825,6 +921,7 @@
     :cond_b
     move-object/from16 v19, v0
 
+    .line 392
     invoke-static {v14}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v0
@@ -835,12 +932,14 @@
 
     if-nez v0, :cond_c
 
+    .line 393
     invoke-virtual {v3, v9}, Landroidx/collection/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
+    .line 394
     invoke-static {v14}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v9
@@ -863,17 +962,20 @@
     :cond_e
     move-object/from16 v19, v0
 
+    .line 400
     invoke-virtual {v8}, Landroidx/collection/ArrayMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
     invoke-virtual {v3, v0}, Landroidx/collection/ArrayMap;->retainAll(Ljava/util/Collection;)Z
 
+    .line 405
     :goto_8
     new-instance v9, Landroidx/collection/ArrayMap;
 
     invoke-direct {v9}, Landroidx/collection/ArrayMap;-><init>()V
 
+    .line 406
     invoke-virtual/range {p5 .. p5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -882,8 +984,10 @@
 
     invoke-virtual {v6, v9, v0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->findNamedViews(Ljava/util/Map;Landroid/view/View;)V
 
+    .line 407
     invoke-virtual {v9, v11}, Landroidx/collection/ArrayMap;->retainAll(Ljava/util/Collection;)Z
 
+    .line 408
     invoke-virtual {v3}, Landroidx/collection/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v0
@@ -892,8 +996,10 @@
 
     if-eqz v2, :cond_11
 
+    .line 411
     invoke-virtual {v2, v11, v9}, Landroidx/core/app/SharedElementCallback;->onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
 
+    .line 412
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -905,12 +1011,14 @@
     :goto_9
     if-ltz v0, :cond_12
 
+    .line 413
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 414
     invoke-virtual {v9, v1}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -919,16 +1027,19 @@
 
     if-nez v2, :cond_f
 
+    .line 416
     invoke-static {v3, v1}, Landroidx/fragment/app/FragmentTransition;->findKeyForValue(Landroidx/collection/ArrayMap;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_10
 
+    .line 419
     invoke-virtual {v3, v1}, Landroidx/collection/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_a
 
+    .line 421
     :cond_f
     invoke-static {v2}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
 
@@ -940,16 +1051,19 @@
 
     if-nez v14, :cond_10
 
+    .line 422
     invoke-static {v3, v1}, Landroidx/fragment/app/FragmentTransition;->findKeyForValue(Landroidx/collection/ArrayMap;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_10
 
+    .line 426
     invoke-static {v2}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 425
     invoke-virtual {v3, v1, v2}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_10
@@ -958,9 +1072,11 @@
 
     goto :goto_9
 
+    .line 432
     :cond_11
     invoke-static {v3, v9}, Landroidx/fragment/app/FragmentTransition;->retainValues(Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;)V
 
+    .line 437
     :cond_12
     invoke-virtual {v3}, Landroidx/collection/ArrayMap;->keySet()Ljava/util/Set;
 
@@ -968,20 +1084,24 @@
 
     invoke-virtual {v6, v8, v0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->retainMatchingViews(Landroidx/collection/ArrayMap;Ljava/util/Collection;)V
 
+    .line 438
     invoke-virtual {v3}, Landroidx/collection/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v0
 
     invoke-virtual {v6, v9, v0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->retainMatchingViews(Landroidx/collection/ArrayMap;Ljava/util/Collection;)V
 
+    .line 440
     invoke-virtual {v3}, Landroidx/collection/ArrayMap;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_13
 
+    .line 444
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
+    .line 445
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
     move-object/from16 v24, v3
@@ -1014,6 +1134,7 @@
 
     goto/16 :goto_d
 
+    .line 450
     :cond_13
     invoke-virtual/range {p5 .. p5}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
@@ -1025,8 +1146,10 @@
 
     const/4 v2, 0x1
 
+    .line 449
     invoke-static {v0, v1, v7, v8, v2}, Landroidx/fragment/app/FragmentTransition;->callSharedElementStartEnd(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/ArrayMap;Z)V
 
+    .line 454
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
     move-result-object v14
@@ -1067,12 +1190,14 @@
 
     invoke-static {v14, v10}, Landroidx/core/view/OneShotPreDrawListener;->add(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/OneShotPreDrawListener;
 
+    .line 463
     invoke-virtual {v8}, Landroidx/collection/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v0
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
+    .line 466
     invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1083,12 +1208,14 @@
 
     const/4 v1, 0x0
 
+    .line 467
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
+    .line 468
     invoke-virtual {v8, v0}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1097,6 +1224,7 @@
 
     check-cast v2, Landroid/view/View;
 
+    .line 469
     invoke-virtual {v15, v7, v2}, Landroidx/fragment/app/FragmentTransitionImpl;->setEpicenter(Ljava/lang/Object;Landroid/view/View;)V
 
     goto :goto_b
@@ -1106,6 +1234,7 @@
 
     move-object/from16 v2, v23
 
+    .line 473
     :goto_b
     invoke-virtual {v9}, Landroidx/collection/ArrayMap;->values()Ljava/util/Collection;
 
@@ -1113,18 +1242,21 @@
 
     invoke-virtual {v13, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
+    .line 476
     invoke-virtual {v11}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_15
 
+    .line 477
     invoke-virtual {v11, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
+    .line 478
     invoke-virtual {v9, v0}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1133,6 +1265,7 @@
 
     if-eqz v0, :cond_15
 
+    .line 485
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
     move-result-object v3
@@ -1156,6 +1289,7 @@
 
     move-object/from16 v0, v16
 
+    .line 498
     :goto_c
     invoke-virtual {v15, v7, v0, v6}, Landroidx/fragment/app/FragmentTransitionImpl;->setSharedElementTargets(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;)V
 
@@ -1185,10 +1319,12 @@
 
     move-object/from16 v19, v9
 
+    .line 503
     invoke-virtual/range {v12 .. v19}, Landroidx/fragment/app/FragmentTransitionImpl;->scheduleRemoveTargets(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
 
     const/4 v0, 0x1
 
+    .line 508
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
@@ -1199,6 +1335,7 @@
 
     invoke-interface {v15, v10, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 509
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -1296,10 +1433,12 @@
 
     move-object/from16 v5, v30
 
+    .line 513
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 519
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -1323,12 +1462,14 @@
 
     check-cast v20, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;
 
+    .line 520
     invoke-virtual/range {v20 .. v20}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->isVisibilityUnchanged()Z
 
     move-result v12
 
     if-eqz v12, :cond_18
 
+    .line 522
     invoke-virtual/range {v20 .. v20}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object v12
@@ -1341,6 +1482,7 @@
 
     invoke-interface {v15, v12, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 523
     invoke-virtual/range {v20 .. v20}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->completeSpecialEffect()V
 
     :goto_f
@@ -1351,6 +1493,7 @@
     :cond_18
     move-object/from16 p3, v7
 
+    .line 526
     invoke-virtual/range {v20 .. v20}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getTransition()Ljava/lang/Object;
 
     move-result-object v7
@@ -1359,6 +1502,7 @@
 
     move-result-object v7
 
+    .line 527
     invoke-virtual/range {v20 .. v20}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object v12
@@ -1382,12 +1526,14 @@
 
     if-nez v16, :cond_1b
 
+    .line 536
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v7
 
     invoke-interface {v15, v12, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 537
     invoke-virtual/range {v20 .. v20}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->completeSpecialEffect()V
 
     :cond_1b
@@ -1413,6 +1559,7 @@
 
     goto/16 :goto_14
 
+    .line 541
     :cond_1c
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1420,25 +1567,30 @@
 
     move-object/from16 v17, v13
 
+    .line 543
     invoke-virtual {v12}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v13
 
     iget-object v13, v13, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
+    .line 542
     invoke-virtual {v5, v1, v13}, Landroidx/fragment/app/DefaultSpecialEffectsController;->captureTransitioningViews(Ljava/util/ArrayList;Landroid/view/View;)V
 
     if-eqz v16, :cond_1e
 
     if-ne v12, v10, :cond_1d
 
+    .line 547
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
     goto :goto_11
 
+    .line 549
     :cond_1d
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
+    .line 552
     :cond_1e
     :goto_11
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1447,6 +1599,7 @@
 
     if-eqz v13, :cond_1f
 
+    .line 553
     invoke-virtual {v11, v7, v8}, Landroidx/fragment/app/FragmentTransitionImpl;->addTarget(Ljava/lang/Object;Landroid/view/View;)V
 
     move-object/from16 v28, v6
@@ -1467,6 +1620,7 @@
 
     goto :goto_12
 
+    .line 555
     :cond_1f
     invoke-virtual {v11, v7, v1}, Landroidx/fragment/app/FragmentTransitionImpl;->addTargets(Ljava/lang/Object;Ljava/util/ArrayList;)V
 
@@ -1508,8 +1662,10 @@
 
     move-object/from16 v19, v25
 
+    .line 556
     invoke-virtual/range {v12 .. v19}, Landroidx/fragment/app/FragmentTransitionImpl;->scheduleRemoveTargets(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
 
+    .line 559
     invoke-virtual/range {v27 .. v27}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFinalState()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     move-result-object v12
@@ -1522,12 +1678,15 @@
 
     move-object/from16 v13, v27
 
+    .line 563
     invoke-interface {v12, v13}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 566
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 568
     invoke-virtual {v13}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v15
@@ -1536,14 +1695,17 @@
 
     invoke-virtual {v14, v15}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 570
     invoke-virtual {v13}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v15
 
     iget-object v15, v15, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
+    .line 569
     invoke-virtual {v11, v7, v15, v14}, Landroidx/fragment/app/FragmentTransitionImpl;->scheduleHideFragmentView(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;)V
 
+    .line 577
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
     move-result-object v14
@@ -1561,6 +1723,7 @@
 
     move-object/from16 v13, v27
 
+    .line 586
     :goto_12
     invoke-virtual {v13}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFinalState()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -1570,10 +1733,12 @@
 
     if-ne v14, v15, :cond_22
 
+    .line 587
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     if-eqz v21, :cond_21
 
+    .line 589
     invoke-virtual {v11, v7, v4}, Landroidx/fragment/app/FragmentTransitionImpl;->setEpicenter(Ljava/lang/Object;Landroid/graphics/Rect;)V
 
     :cond_21
@@ -1584,17 +1749,20 @@
     :cond_22
     move-object/from16 v1, v23
 
+    .line 592
     invoke-virtual {v11, v7, v1}, Landroidx/fragment/app/FragmentTransitionImpl;->setEpicenter(Ljava/lang/Object;Landroid/view/View;)V
 
     :goto_13
     const/4 v14, 0x1
 
+    .line 594
     invoke-static {v14}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v15
 
     invoke-interface {v9, v13, v15}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 596
     invoke-virtual/range {v20 .. v20}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->isOverlapAllowed()Z
 
     move-result v13
@@ -1603,6 +1771,7 @@
 
     const/4 v13, 0x0
 
+    .line 598
     invoke-virtual {v11, v6, v7, v13}, Landroidx/fragment/app/FragmentTransitionImpl;->mergeTransitionsTogether(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
@@ -1614,6 +1783,7 @@
     :cond_23
     const/4 v13, 0x0
 
+    .line 602
     invoke-virtual {v11, v8, v7, v13}, Landroidx/fragment/app/FragmentTransitionImpl;->mergeTransitionsTogether(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
@@ -1650,10 +1820,12 @@
 
     const/4 v14, 0x1
 
+    .line 610
     invoke-virtual {v11, v6, v8, v0}, Landroidx/fragment/app/FragmentTransitionImpl;->mergeTransitionsInSequence(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 614
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -1672,6 +1844,7 @@
 
     check-cast v6, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;
 
+    .line 615
     invoke-virtual {v6}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->isVisibilityUnchanged()Z
 
     move-result v7
@@ -1680,11 +1853,13 @@
 
     goto :goto_15
 
+    .line 619
     :cond_26
     invoke-virtual {v6}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getTransition()Ljava/lang/Object;
 
     move-result-object v7
 
+    .line 620
     invoke-virtual {v6}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object v8
@@ -1708,6 +1883,7 @@
 
     if-eqz v12, :cond_25
 
+    .line 626
     :cond_29
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
@@ -1721,12 +1897,14 @@
 
     const/4 v7, 0x2
 
+    .line 627
     invoke-static {v7}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v7
 
     if-eqz v7, :cond_2a
 
+    .line 628
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1735,6 +1913,7 @@
 
     invoke-virtual {v7, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 629
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
     move-result-object v12
@@ -1753,13 +1932,16 @@
 
     const-string v8, "FragmentManager"
 
+    .line 628
     invoke-static {v8, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 633
     :cond_2a
     invoke-virtual {v6}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->completeSpecialEffect()V
 
     goto :goto_15
 
+    .line 636
     :cond_2b
     invoke-virtual {v6}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
@@ -1769,6 +1951,7 @@
 
     move-result-object v7
 
+    .line 638
     invoke-virtual {v6}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getSignal()Landroidx/core/os/CancellationSignal;
 
     move-result-object v8
@@ -1777,10 +1960,12 @@
 
     invoke-direct {v12, v5, v6}, Landroidx/fragment/app/DefaultSpecialEffectsController$9;-><init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;)V
 
+    .line 635
     invoke-virtual {v11, v7, v1, v8, v12}, Landroidx/fragment/app/FragmentTransitionImpl;->setListenerForTransitionEnd(Landroidx/fragment/app/Fragment;Ljava/lang/Object;Landroidx/core/os/CancellationSignal;Ljava/lang/Runnable;)V
 
     goto :goto_15
 
+    .line 650
     :cond_2c
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
@@ -1797,20 +1982,24 @@
     :cond_2d
     const/4 v3, 0x4
 
+    .line 655
     invoke-static {v2, v3}, Landroidx/fragment/app/FragmentTransition;->setViewVisibility(Ljava/util/ArrayList;I)V
 
     move-object/from16 v3, v29
 
+    .line 657
     invoke-virtual {v11, v3}, Landroidx/fragment/app/FragmentTransitionImpl;->prepareSetNameOverridesReordered(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v4
 
+    .line 659
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
     move-result-object v6
 
     invoke-virtual {v11, v6, v1}, Landroidx/fragment/app/FragmentTransitionImpl;->beginDelayedTransition(Landroid/view/ViewGroup;Ljava/lang/Object;)V
 
+    .line 660
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DefaultSpecialEffectsController;->getContainer()Landroid/view/ViewGroup;
 
     move-result-object v1
@@ -1831,10 +2020,12 @@
 
     const/4 v1, 0x0
 
+    .line 664
     invoke-static {v2, v1}, Landroidx/fragment/app/FragmentTransition;->setViewVisibility(Ljava/util/ArrayList;I)V
 
     move-object/from16 v1, v28
 
+    .line 665
     invoke-virtual {v11, v0, v1, v3}, Landroidx/fragment/app/FragmentTransitionImpl;->swapSharedElementTargets(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     return-object v9
@@ -1845,12 +2036,14 @@
 .method applyContainerChanges(Landroidx/fragment/app/SpecialEffectsController$Operation;)V
     .locals 0
 
+    .line 742
     invoke-virtual {p1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object p0
 
     iget-object p0, p0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
+    .line 743
     invoke-virtual {p1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFinalState()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     move-result-object p1
@@ -1873,30 +2066,36 @@
         }
     .end annotation
 
+    .line 697
     instance-of v0, p2, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_2
 
+    .line 698
     move-object v0, p2
 
     check-cast v0, Landroid/view/ViewGroup;
 
+    .line 699
     invoke-static {v0}, Landroidx/core/view/ViewGroupCompat;->isTransitionGroup(Landroid/view/ViewGroup;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 700
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-nez p0, :cond_3
 
+    .line 701
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 704
     :cond_0
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -1907,16 +2106,19 @@
     :goto_0
     if-ge v1, p2, :cond_3
 
+    .line 706
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 707
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v3
 
     if-nez v3, :cond_1
 
+    .line 708
     invoke-virtual {p0, p1, v2}, Landroidx/fragment/app/DefaultSpecialEffectsController;->captureTransitioningViews(Ljava/util/ArrayList;Landroid/view/View;)V
 
     :cond_1
@@ -1924,6 +2126,7 @@
 
     goto :goto_0
 
+    .line 713
     :cond_2
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1931,6 +2134,7 @@
 
     if-nez p0, :cond_3
 
+    .line 714
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
@@ -1949,6 +2153,7 @@
         }
     .end annotation
 
+    .line 61
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1975,6 +2180,7 @@
 
     check-cast v1, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
+    .line 62
     invoke-virtual {v1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -1985,6 +2191,7 @@
 
     move-result-object v2
 
+    .line 63
     sget-object v3, Landroidx/fragment/app/DefaultSpecialEffectsController$10;->$SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State:[I
 
     invoke-virtual {v1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFinalState()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
@@ -2013,6 +2220,7 @@
 
     goto :goto_0
 
+    .line 73
     :cond_1
     sget-object v3, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->VISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -2022,6 +2230,7 @@
 
     goto :goto_0
 
+    .line 67
     :cond_2
     sget-object v3, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->VISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -2033,19 +2242,23 @@
 
     goto :goto_0
 
+    .line 83
     :cond_3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 84
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    .line 85
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 87
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -2063,24 +2276,30 @@
 
     check-cast v2, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
+    .line 89
     new-instance v4, Landroidx/core/os/CancellationSignal;
 
     invoke-direct {v4}, Landroidx/core/os/CancellationSignal;-><init>()V
 
+    .line 90
     invoke-virtual {v2, v4}, Landroidx/fragment/app/SpecialEffectsController$Operation;->markStartedSpecialEffect(Landroidx/core/os/CancellationSignal;)V
 
+    .line 92
     new-instance v5, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;
 
     invoke-direct {v5, v2, v4, p2}, Landroidx/fragment/app/DefaultSpecialEffectsController$AnimationInfo;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/core/os/CancellationSignal;Z)V
 
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 95
     new-instance v4, Landroidx/core/os/CancellationSignal;
 
     invoke-direct {v4}, Landroidx/core/os/CancellationSignal;-><init>()V
 
+    .line 96
     invoke-virtual {v2, v4}, Landroidx/fragment/app/SpecialEffectsController$Operation;->markStartedSpecialEffect(Landroidx/core/os/CancellationSignal;)V
 
+    .line 98
     new-instance v5, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;
 
     const/4 v9, 0x0
@@ -2097,11 +2316,14 @@
     :goto_2
     move v9, v8
 
+    .line 99
     :cond_5
     invoke-direct {v5, v2, v4, p2, v9}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/core/os/CancellationSignal;ZZ)V
 
+    .line 98
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 103
     new-instance v4, Landroidx/fragment/app/DefaultSpecialEffectsController$1;
 
     invoke-direct {v4, p0, v1, v2}, Landroidx/fragment/app/DefaultSpecialEffectsController$1;-><init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Ljava/util/List;Landroidx/fragment/app/SpecialEffectsController$Operation;)V
@@ -2117,10 +2339,12 @@
 
     move v5, p2
 
+    .line 115
     invoke-direct/range {v2 .. v7}, Landroidx/fragment/app/DefaultSpecialEffectsController;->startTransitions(Ljava/util/List;Ljava/util/List;ZLandroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/fragment/app/SpecialEffectsController$Operation;)Ljava/util/Map;
 
     move-result-object p1
 
+    .line 117
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
@@ -2129,8 +2353,10 @@
 
     move-result p2
 
+    .line 120
     invoke-direct {p0, v0, v1, p2, p1}, Landroidx/fragment/app/DefaultSpecialEffectsController;->startAnimations(Ljava/util/List;Ljava/util/List;ZLjava/util/Map;)V
 
+    .line 123
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -2148,10 +2374,12 @@
 
     check-cast p2, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
+    .line 124
     invoke-virtual {p0, p2}, Landroidx/fragment/app/DefaultSpecialEffectsController;->applyContainerChanges(Landroidx/fragment/app/SpecialEffectsController$Operation;)V
 
     goto :goto_3
 
+    .line 126
     :cond_7
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
@@ -2172,21 +2400,26 @@
         }
     .end annotation
 
+    .line 724
     invoke-static {p2}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 726
     invoke-interface {p1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 728
     :cond_0
     instance-of v0, p2, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_2
 
+    .line 729
     check-cast p2, Landroid/view/ViewGroup;
 
+    .line 730
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -2196,16 +2429,19 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 732
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 733
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v3
 
     if-nez v3, :cond_1
 
+    .line 734
     invoke-virtual {p0, p1, v2}, Landroidx/fragment/app/DefaultSpecialEffectsController;->findNamedViews(Ljava/util/Map;Landroid/view/View;)V
 
     :cond_1
@@ -2232,6 +2468,7 @@
         }
     .end annotation
 
+    .line 679
     invoke-virtual {p1}, Landroidx/collection/ArrayMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -2240,6 +2477,7 @@
 
     move-result-object p0
 
+    .line 680
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -2248,12 +2486,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 681
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 682
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -2270,6 +2510,7 @@
 
     if-nez p1, :cond_0
 
+    .line 683
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0

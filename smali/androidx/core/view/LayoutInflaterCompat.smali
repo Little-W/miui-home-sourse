@@ -1,5 +1,6 @@
 .class public final Landroidx/core/view/LayoutInflaterCompat;
 .super Ljava/lang/Object;
+.source "LayoutInflaterCompat.java"
 
 
 # static fields
@@ -12,6 +13,7 @@
 .method private static forceSetFactory2(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
     .locals 6
 
+    .line 72
     sget-boolean v0, Landroidx/core/view/LayoutInflaterCompat;->sCheckedField:Z
 
     const-string v1, "; inflation may have unexpected results."
@@ -22,6 +24,7 @@
 
     const/4 v0, 0x1
 
+    .line 74
     :try_start_0
     const-class v3, Landroid/view/LayoutInflater;
 
@@ -33,6 +36,7 @@
 
     sput-object v3, Landroidx/core/view/LayoutInflaterCompat;->sLayoutInflaterFactory2Field:Ljava/lang/reflect/Field;
 
+    .line 75
     sget-object v3, Landroidx/core/view/LayoutInflaterCompat;->sLayoutInflaterFactory2Field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v3, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -44,6 +48,7 @@
     :catch_0
     move-exception v3
 
+    .line 77
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,6 +59,7 @@
 
     const-class v5, Landroid/view/LayoutInflater;
 
+    .line 78
     invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -66,16 +72,20 @@
 
     move-result-object v4
 
+    .line 77
     invoke-static {v2, v4, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 81
     :goto_0
     sput-boolean v0, Landroidx/core/view/LayoutInflaterCompat;->sCheckedField:Z
 
+    .line 83
     :cond_0
     sget-object v0, Landroidx/core/view/LayoutInflaterCompat;->sLayoutInflaterFactory2Field:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_1
 
+    .line 85
     :try_start_1
     invoke-virtual {v0, p0, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_1
@@ -86,6 +96,7 @@
     :catch_1
     move-exception p1
 
+    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,28 +123,34 @@
 .method public static setFactory2(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
     .locals 2
 
+    .line 140
     invoke-virtual {p0, p1}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
 
+    .line 142
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-ge v0, v1, :cond_1
 
+    .line 143
     invoke-virtual {p0}, Landroid/view/LayoutInflater;->getFactory()Landroid/view/LayoutInflater$Factory;
 
     move-result-object v0
 
+    .line 144
     instance-of v1, v0, Landroid/view/LayoutInflater$Factory2;
 
     if-eqz v1, :cond_0
 
+    .line 147
     check-cast v0, Landroid/view/LayoutInflater$Factory2;
 
     invoke-static {p0, v0}, Landroidx/core/view/LayoutInflaterCompat;->forceSetFactory2(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
 
     goto :goto_0
 
+    .line 150
     :cond_0
     invoke-static {p0, p1}, Landroidx/core/view/LayoutInflaterCompat;->forceSetFactory2(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
 

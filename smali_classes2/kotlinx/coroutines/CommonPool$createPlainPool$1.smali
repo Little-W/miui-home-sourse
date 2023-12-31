@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/CommonPool$createPlainPool$1;
 .super Ljava/lang/Object;
+.source "CommonPool.kt"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -40,6 +41,7 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
+    .line 93
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Ljava/lang/StringBuilder;

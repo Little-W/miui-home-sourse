@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/android/datatransport/cct/-$$Lambda$CctTransportBackend$_rq-fc_YXS06ldvyyUgbpd79-v0;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/retries/RetryStrategy;

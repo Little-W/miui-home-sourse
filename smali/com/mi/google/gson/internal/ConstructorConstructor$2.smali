@@ -1,5 +1,6 @@
 .class Lcom/mi/google/gson/internal/ConstructorConstructor$2;
 .super Ljava/lang/Object;
+.source "ConstructorConstructor.java"
 
 # interfaces
 .implements Lcom/mi/google/gson/internal/ObjectConstructor;
@@ -36,6 +37,7 @@
 .method constructor <init>(Lcom/mi/google/gson/internal/ConstructorConstructor;Lcom/mi/google/gson/InstanceCreator;Ljava/lang/reflect/Type;)V
     .locals 0
 
+    .line 76
     iput-object p1, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->this$0:Lcom/mi/google/gson/internal/ConstructorConstructor;
 
     iput-object p2, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->val$rawTypeCreator:Lcom/mi/google/gson/InstanceCreator;
@@ -57,6 +59,7 @@
         }
     .end annotation
 
+    .line 78
     iget-object v0, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->val$rawTypeCreator:Lcom/mi/google/gson/InstanceCreator;
 
     iget-object p0, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->val$type:Ljava/lang/reflect/Type;

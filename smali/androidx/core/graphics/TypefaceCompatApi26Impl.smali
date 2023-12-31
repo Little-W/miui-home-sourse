@@ -1,5 +1,6 @@
 .class public Landroidx/core/graphics/TypefaceCompatApi26Impl;
 .super Landroidx/core/graphics/TypefaceCompatApi21Impl;
+.source "TypefaceCompatApi26Impl.java"
 
 
 # instance fields
@@ -36,35 +37,43 @@
 .method public constructor <init>()V
     .locals 8
 
+    .line 74
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi21Impl;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 83
     :try_start_0
     invoke-virtual {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->obtainFontFamily()Ljava/lang/Class;
 
     move-result-object v1
 
+    .line 84
     invoke-virtual {p0, v1}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->obtainFontFamilyCtor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v2
 
+    .line 85
     invoke-virtual {p0, v1}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->obtainAddFontFromAssetManagerMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
+    .line 86
     invoke-virtual {p0, v1}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->obtainAddFontFromBufferMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v4
 
+    .line 87
     invoke-virtual {p0, v1}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->obtainFreezeMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v5
 
+    .line 88
     invoke-virtual {p0, v1}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->obtainAbortCreationMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v6
 
+    .line 89
     invoke-virtual {p0, v1}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->obtainCreateFromFamiliesWithDefaultMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -83,6 +92,7 @@
     :catch_0
     move-exception v1
 
+    .line 91
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,19 +131,26 @@
 
     move-object v6, v5
 
+    .line 101
     :goto_0
     iput-object v0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFontFamily:Ljava/lang/Class;
 
+    .line 102
     iput-object v2, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFontFamilyCtor:Ljava/lang/reflect/Constructor;
 
+    .line 103
     iput-object v3, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mAddFontFromAssetManager:Ljava/lang/reflect/Method;
 
+    .line 104
     iput-object v4, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mAddFontFromBuffer:Ljava/lang/reflect/Method;
 
+    .line 105
     iput-object v5, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFreeze:Ljava/lang/reflect/Method;
 
+    .line 106
     iput-object v6, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mAbortCreation:Ljava/lang/reflect/Method;
 
+    .line 107
     iput-object v1, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
 
     return-void
@@ -142,6 +159,7 @@
 .method private abortCreation(Ljava/lang/Object;)V
     .locals 1
 
+    .line 194
     :try_start_0
     iget-object p0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mAbortCreation:Ljava/lang/reflect/Method;
 
@@ -163,6 +181,7 @@
 
     const/4 v0, 0x0
 
+    .line 140
     :try_start_0
     iget-object p0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mAddFontFromAssetManager:Ljava/lang/reflect/Method;
 
@@ -170,6 +189,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    .line 141
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p1
@@ -206,6 +226,7 @@
 
     const/4 p1, 0x5
 
+    .line 142
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -224,6 +245,7 @@
 
     aput-object p7, v1, p1
 
+    .line 140
     invoke-virtual {p0, p2, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -248,6 +270,7 @@
 
     const/4 v0, 0x0
 
+    .line 155
     :try_start_0
     iget-object p0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mAddFontFromBuffer:Ljava/lang/reflect/Method;
 
@@ -259,6 +282,7 @@
 
     const/4 p2, 0x1
 
+    .line 156
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -287,6 +311,7 @@
 
     aput-object p3, v1, p2
 
+    .line 155
     invoke-virtual {p0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -311,6 +336,7 @@
 
     const/4 v0, 0x0
 
+    .line 183
     :try_start_0
     iget-object p0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFreeze:Ljava/lang/reflect/Method;
 
@@ -338,6 +364,7 @@
 .method private isFontFamilyPrivateAPIAvailable()Z
     .locals 2
 
+    .line 114
     iget-object v0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mAddFontFromAssetManager:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
@@ -346,8 +373,10 @@
 
     const-string v1, "Unable to collect necessary private methods. Fallback to legacy implementation."
 
+    .line 115
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 118
     :cond_0
     iget-object p0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mAddFontFromAssetManager:Ljava/lang/reflect/Method;
 
@@ -367,6 +396,7 @@
 .method private newFamily()Ljava/lang/Object;
     .locals 1
 
+    .line 127
     :try_start_0
     iget-object p0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFontFamilyCtor:Ljava/lang/reflect/Constructor;
 
@@ -397,6 +427,7 @@
 
     const/4 v0, 0x0
 
+    .line 169
     :try_start_0
     iget-object v1, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFontFamily:Ljava/lang/Class;
 
@@ -408,8 +439,10 @@
 
     const/4 v3, 0x0
 
+    .line 170
     invoke-static {v1, v3, p1}, Ljava/lang/reflect/Array;->set(Ljava/lang/Object;ILjava/lang/Object;)V
 
+    .line 171
     iget-object p0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
 
     const/4 p1, 0x3
@@ -420,6 +453,7 @@
 
     const/4 v1, -0x1
 
+    .line 172
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -434,6 +468,7 @@
 
     aput-object v1, p1, v2
 
+    .line 171
     invoke-virtual {p0, v0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -452,18 +487,21 @@
 .method public createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
     .locals 10
 
+    .line 203
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->isFontFamilyPrivateAPIAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 204
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
 
     move-result-object p0
 
     return-object p0
 
+    .line 206
     :cond_0
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->newFamily()Ljava/lang/Object;
 
@@ -475,6 +513,7 @@
 
     return-object p4
 
+    .line 210
     :cond_1
     invoke-virtual {p2}, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;->getEntries()[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
 
@@ -491,10 +530,12 @@
 
     aget-object v0, p2, v9
 
+    .line 211
     invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getFileName()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 212
     invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getTtcIndex()I
 
     move-result v4
@@ -507,6 +548,7 @@
 
     move-result v6
 
+    .line 213
     invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getVariationSettings()Ljava/lang/String;
 
     move-result-object v0
@@ -521,12 +563,14 @@
 
     move-object v2, p3
 
+    .line 211
     invoke-direct/range {v0 .. v7}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->addFontFromAssetManager(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/String;III[Landroid/graphics/fonts/FontVariationAxis;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 214
     invoke-direct {p0, p3}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->abortCreation(Ljava/lang/Object;)V
 
     return-object p4
@@ -536,6 +580,7 @@
 
     goto :goto_0
 
+    .line 218
     :cond_3
     invoke-direct {p0, p3}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->freeze(Ljava/lang/Object;)Z
 
@@ -545,6 +590,7 @@
 
     return-object p4
 
+    .line 221
     :cond_4
     invoke-virtual {p0, p3}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
 
@@ -556,6 +602,7 @@
 .method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroid/graphics/Typeface;
     .locals 10
 
+    .line 229
     array-length v0, p3
 
     const/4 v1, 0x1
@@ -566,6 +613,7 @@
 
     return-object v2
 
+    .line 232
     :cond_0
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->isFontFamilyPrivateAPIAvailable()Z
 
@@ -573,14 +621,17 @@
 
     if-nez v0, :cond_5
 
+    .line 235
     invoke-virtual {p0, p3, p4}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroidx/core/provider/FontsContractCompat$FontInfo;
 
     move-result-object p0
 
+    .line 236
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
+    .line 238
     :try_start_0
     invoke-virtual {p0}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
 
@@ -596,6 +647,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 246
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -603,6 +655,7 @@
     :cond_1
     return-object v2
 
+    .line 242
     :cond_2
     :try_start_1
     new-instance p2, Landroid/graphics/Typeface$Builder;
@@ -613,6 +666,7 @@
 
     invoke-direct {p2, p3}, Landroid/graphics/Typeface$Builder;-><init>(Ljava/io/FileDescriptor;)V
 
+    .line 243
     invoke-virtual {p0}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getWeight()I
 
     move-result p3
@@ -621,6 +675,7 @@
 
     move-result-object p2
 
+    .line 244
     invoke-virtual {p0}, Landroidx/core/provider/FontsContractCompat$FontInfo;->isItalic()Z
 
     move-result p0
@@ -629,6 +684,7 @@
 
     move-result-object p0
 
+    .line 245
     invoke-virtual {p0}, Landroid/graphics/Typeface$Builder;->build()Landroid/graphics/Typeface;
 
     move-result-object p0
@@ -637,6 +693,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 246
     :try_start_2
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_2
@@ -650,6 +707,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 237
     :try_start_3
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_3
@@ -672,11 +730,13 @@
     :catch_0
     return-object v2
 
+    .line 250
     :cond_5
     invoke-static {p1, p3, p2}, Landroidx/core/graphics/TypefaceCompatUtil;->readFontInfoIntoByteBuffer(Landroid/content/Context;[Landroidx/core/provider/FontsContractCompat$FontInfo;Landroid/os/CancellationSignal;)Ljava/util/Map;
 
     move-result-object p1
 
+    .line 252
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->newFamily()Ljava/lang/Object;
 
     move-result-object p2
@@ -685,6 +745,7 @@
 
     return-object v2
 
+    .line 257
     :cond_6
     array-length v0, p3
 
@@ -697,6 +758,7 @@
 
     aget-object v4, p3, v9
 
+    .line 258
     invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
 
     move-result-object v5
@@ -711,6 +773,7 @@
 
     goto :goto_2
 
+    .line 263
     :cond_7
     invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getTtcIndex()I
 
@@ -728,12 +791,14 @@
 
     move-object v4, p2
 
+    .line 262
     invoke-direct/range {v3 .. v8}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->addFontFromBuffer(Ljava/lang/Object;Ljava/nio/ByteBuffer;III)Z
 
     move-result v3
 
     if-nez v3, :cond_8
 
+    .line 265
     invoke-direct {p0, p2}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->abortCreation(Ljava/lang/Object;)V
 
     return-object v2
@@ -749,10 +814,12 @@
     :cond_9
     if-nez v3, :cond_a
 
+    .line 271
     invoke-direct {p0, p2}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->abortCreation(Ljava/lang/Object;)V
 
     return-object v2
 
+    .line 274
     :cond_a
     invoke-direct {p0, p2}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->freeze(Ljava/lang/Object;)Z
 
@@ -762,6 +829,7 @@
 
     return-object v2
 
+    .line 277
     :cond_b
     invoke-virtual {p0, p2}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
 
@@ -771,6 +839,7 @@
 
     return-object v2
 
+    .line 281
     :cond_c
     invoke-static {p0, p4}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
 
@@ -782,18 +851,21 @@
 .method public createFromResourcesFontFile(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
     .locals 8
 
+    .line 291
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->isFontFamilyPrivateAPIAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 292
     invoke-super/range {p0 .. p5}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromResourcesFontFile(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object p0
 
     return-object p0
 
+    .line 294
     :cond_0
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->newFamily()Ljava/lang/Object;
 
@@ -822,16 +894,19 @@
 
     move-object v3, p4
 
+    .line 298
     invoke-direct/range {v0 .. v7}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->addFontFromAssetManager(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/String;III[Landroid/graphics/fonts/FontVariationAxis;)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
+    .line 301
     invoke-direct {p0, p2}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->abortCreation(Ljava/lang/Object;)V
 
     return-object p3
 
+    .line 304
     :cond_2
     invoke-direct {p0, p2}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->freeze(Ljava/lang/Object;)Z
 
@@ -841,6 +916,7 @@
 
     return-object p3
 
+    .line 307
     :cond_3
     invoke-virtual {p0, p2}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
 
@@ -872,6 +948,7 @@
 
     const-string v0, "abortCreation"
 
+    .line 343
     invoke-virtual {p1, v0, p0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
@@ -900,6 +977,7 @@
 
     new-array p0, p0, [Ljava/lang/Class;
 
+    .line 326
     const-class v0, Landroid/content/res/AssetManager;
 
     const/4 v1, 0x0
@@ -978,6 +1056,7 @@
 
     new-array p0, p0, [Ljava/lang/Class;
 
+    .line 333
     const-class v0, Ljava/nio/ByteBuffer;
 
     const/4 v1, 0x0
@@ -1036,16 +1115,19 @@
 
     const/4 p0, 0x1
 
+    .line 348
     invoke-static {p1, p0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 349
     const-class v0, Landroid/graphics/Typeface;
 
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/Class;
 
+    .line 350
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -1066,10 +1148,12 @@
 
     const-string p1, "createFromFamiliesWithDefault"
 
+    .line 349
     invoke-virtual {v0, p1, v1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
 
+    .line 351
     invoke-virtual {p1, p0}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     return-object p1
@@ -1093,6 +1177,7 @@
 
     const-string p0, "android.graphics.FontFamily"
 
+    .line 316
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
@@ -1122,6 +1207,7 @@
 
     new-array p0, p0, [Ljava/lang/Class;
 
+    .line 321
     invoke-virtual {p1, p0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p0
@@ -1152,6 +1238,7 @@
 
     const-string v0, "freeze"
 
+    .line 339
     invoke-virtual {p1, v0, p0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0

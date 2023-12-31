@@ -1,11 +1,13 @@
 .class public Lcom/xiaomi/analytics/TrackAction;
 .super Lcom/xiaomi/analytics/Action;
+.source "TrackAction.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Lcom/xiaomi/analytics/Action;-><init>()V
 
     return-void
@@ -18,6 +20,7 @@
 
     const-string v0, "_action_"
 
+    .line 11
     invoke-virtual {p0, v0, p1}, Lcom/xiaomi/analytics/TrackAction;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object p0
@@ -28,6 +31,7 @@
 
     const-string v0, "_category_"
 
+    .line 6
     invoke-virtual {p0, v0, p1}, Lcom/xiaomi/analytics/TrackAction;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object p0
@@ -38,6 +42,7 @@
 
     const-string v0, "_label_"
 
+    .line 16
     invoke-virtual {p0, v0, p1}, Lcom/xiaomi/analytics/TrackAction;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object p0
@@ -46,6 +51,7 @@
 .method public setValue(J)Lcom/xiaomi/analytics/TrackAction;
     .locals 1
 
+    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

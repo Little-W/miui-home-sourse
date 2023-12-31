@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2;
 .super Ljava/lang/Object;
+.source "Collect.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -42,6 +43,7 @@
 
     iput-object p2, p0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2;->this$0:Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -88,6 +90,7 @@
 
     move-result-object v1
 
+    .line 72
     iget v2, v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2$1;->label:I
 
     const/4 v3, 0x2
@@ -126,6 +129,7 @@
 
     goto :goto_2
 
+    .line 135
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -135,6 +139,7 @@
 
     throw p0
 
+    .line 72
     :cond_2
     iget-object p0, v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2$1;->L$6:Ljava/lang/Object;
 
@@ -165,12 +170,14 @@
     :cond_3
     invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
+    .line 133
     iget-object p2, p0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2;->$this_unsafeFlow$inlined:Lkotlinx/coroutines/flow/FlowCollector;
 
     move-object v2, v0
 
     check-cast v2, Lkotlin/coroutines/Continuation;
 
+    .line 134
     iget-object v5, p0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2;->this$0:Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
     iget-object v5, v5, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;->$action$inlined:Lkotlin/jvm/functions/Function2;
@@ -218,6 +225,7 @@
 
     move-object v5, v0
 
+    .line 135
     :goto_1
     iput-object v7, v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1$2$1;->L$0:Ljava/lang/Object;
 

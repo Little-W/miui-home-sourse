@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$1;
 .super Landroid/database/ContentObserver;
+.source "SoscSplitScreenController.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;Landroid/os/Handler;)V
     .locals 0
 
+    .line 86
     iput-object p1, p0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$1;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -33,6 +35,7 @@
 .method public onChange(Z)V
     .locals 1
 
+    .line 89
     iget-object p1, p0, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$1;->this$0:Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;->access$100(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;)Z
@@ -41,6 +44,7 @@
 
     invoke-static {p1, v0}, Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;->access$002(Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController;Z)Z
 
+    .line 90
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

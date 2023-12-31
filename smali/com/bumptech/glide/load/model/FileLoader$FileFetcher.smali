@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/model/FileLoader$FileFetcher;
 .super Ljava/lang/Object;
+.source "FileLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataFetcher;
@@ -60,10 +61,13 @@
         }
     .end annotation
 
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 61
     iput-object p1, p0, Lcom/bumptech/glide/load/model/FileLoader$FileFetcher;->file:Ljava/io/File;
 
+    .line 62
     iput-object p2, p0, Lcom/bumptech/glide/load/model/FileLoader$FileFetcher;->opener:Lcom/bumptech/glide/load/model/FileLoader$FileOpener;
 
     return-void
@@ -80,10 +84,12 @@
 .method public cleanup()V
     .locals 1
 
+    .line 81
     iget-object v0, p0, Lcom/bumptech/glide/load/model/FileLoader$FileFetcher;->data:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 83
     :try_start_0
     iget-object p0, p0, Lcom/bumptech/glide/load/model/FileLoader$FileFetcher;->opener:Lcom/bumptech/glide/load/model/FileLoader$FileOpener;
 
@@ -106,6 +112,7 @@
         }
     .end annotation
 
+    .line 98
     iget-object p0, p0, Lcom/bumptech/glide/load/model/FileLoader$FileFetcher;->opener:Lcom/bumptech/glide/load/model/FileLoader$FileOpener;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/model/FileLoader$FileOpener;->getDataClass()Ljava/lang/Class;
@@ -118,6 +125,7 @@
 .method public getDataSource()Lcom/bumptech/glide/load/DataSource;
     .locals 0
 
+    .line 104
     sget-object p0, Lcom/bumptech/glide/load/DataSource;->LOCAL:Lcom/bumptech/glide/load/DataSource;
 
     return-object p0
@@ -134,6 +142,7 @@
         }
     .end annotation
 
+    .line 68
     :try_start_0
     iget-object p1, p0, Lcom/bumptech/glide/load/model/FileLoader$FileFetcher;->opener:Lcom/bumptech/glide/load/model/FileLoader$FileOpener;
 
@@ -147,6 +156,7 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 76
     iget-object p0, p0, Lcom/bumptech/glide/load/model/FileLoader$FileFetcher;->data:Ljava/lang/Object;
 
     invoke-interface {p2, p0}, Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;->onDataReady(Ljava/lang/Object;)V
@@ -160,6 +170,7 @@
 
     const-string v0, "FileLoader"
 
+    .line 70
     invoke-static {v0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
@@ -168,8 +179,10 @@
 
     const-string p1, "Failed to open file"
 
+    .line 71
     invoke-static {v0, p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 73
     :cond_0
     invoke-interface {p2, p0}, Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;->onLoadFailed(Ljava/lang/Exception;)V
 

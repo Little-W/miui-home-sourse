@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/ResourceLoader;
 .super Ljava/lang/Object;
+.source "ResourceLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoader;
@@ -55,10 +56,13 @@
         }
     .end annotation
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 28
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ResourceLoader;->resources:Landroid/content/res/Resources;
 
+    .line 29
     iput-object p2, p0, Lcom/bumptech/glide/load/model/ResourceLoader;->uriLoader:Lcom/bumptech/glide/load/model/ModelLoader;
 
     return-void
@@ -67,6 +71,7 @@
 .method private getResourceUri(Ljava/lang/Integer;)Landroid/net/Uri;
     .locals 4
 
+    .line 42
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -78,6 +83,7 @@
 
     iget-object v1, p0, Lcom/bumptech/glide/load/model/ResourceLoader;->resources:Landroid/content/res/Resources;
 
+    .line 43
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -94,6 +100,7 @@
 
     iget-object v2, p0, Lcom/bumptech/glide/load/model/ResourceLoader;->resources:Landroid/content/res/Resources;
 
+    .line 44
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -108,6 +115,7 @@
 
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ResourceLoader;->resources:Landroid/content/res/Resources;
 
+    .line 45
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -122,6 +130,7 @@
 
     move-result-object p0
 
+    .line 42
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -137,12 +146,14 @@
 
     const-string v1, "ResourceLoader"
 
+    .line 47
     invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 48
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,6 +192,7 @@
         }
     .end annotation
 
+    .line 35
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/model/ResourceLoader;->getResourceUri(Ljava/lang/Integer;)Landroid/net/Uri;
 
     move-result-object p1
@@ -191,6 +203,7 @@
 
     goto :goto_0
 
+    .line 36
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ResourceLoader;->uriLoader:Lcom/bumptech/glide/load/model/ModelLoader;
 
@@ -205,6 +218,7 @@
 .method public bridge synthetic buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
     .locals 0
 
+    .line 20
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/model/ResourceLoader;->buildLoadData(Ljava/lang/Integer;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
@@ -225,6 +239,7 @@
 .method public bridge synthetic handles(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 20
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/ResourceLoader;->handles(Ljava/lang/Integer;)Z

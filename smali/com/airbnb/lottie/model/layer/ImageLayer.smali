@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/layer/ImageLayer;
 .super Lcom/airbnb/lottie/model/layer/BaseLayer;
+.source "ImageLayer.java"
 
 
 # instance fields
@@ -38,8 +39,10 @@
 .method constructor <init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/Layer;)V
     .locals 2
 
+    .line 33
     invoke-direct {p0, p1, p2}, Lcom/airbnb/lottie/model/layer/BaseLayer;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/Layer;)V
 
+    .line 25
     new-instance v0, Lcom/airbnb/lottie/animation/LPaint;
 
     const/4 v1, 0x3
@@ -48,18 +51,21 @@
 
     iput-object v0, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->paint:Landroid/graphics/Paint;
 
+    .line 26
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->src:Landroid/graphics/Rect;
 
+    .line 27
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->dst:Landroid/graphics/Rect;
 
+    .line 34
     invoke-virtual {p2}, Lcom/airbnb/lottie/model/layer/Layer;->getRefId()Ljava/lang/String;
 
     move-result-object p2
@@ -76,10 +82,12 @@
 .method private getBitmap()Landroid/graphics/Bitmap;
     .locals 2
 
+    .line 72
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->imageAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-eqz v0, :cond_0
 
+    .line 73
     invoke-virtual {v0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -90,6 +98,7 @@
 
     return-object v0
 
+    .line 78
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->layerModel:Lcom/airbnb/lottie/model/layer/Layer;
 
@@ -97,6 +106,7 @@
 
     move-result-object v0
 
+    .line 79
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-virtual {v1, v0}, Lcom/airbnb/lottie/LottieDrawable;->getBitmapForId(Ljava/lang/String;)Landroid/graphics/Bitmap;
@@ -107,11 +117,13 @@
 
     return-object v0
 
+    .line 83
     :cond_1
     iget-object p0, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->lottieImageAsset:Lcom/airbnb/lottie/LottieImageAsset;
 
     if-eqz p0, :cond_2
 
+    .line 85
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieImageAsset;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -138,8 +150,10 @@
         }
     .end annotation
 
+    .line 93
     invoke-super {p0, p1, p2}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addValueCallback(Ljava/lang/Object;Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
+    .line 94
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->COLOR_FILTER:Landroid/graphics/ColorFilter;
 
     const/4 v1, 0x0
@@ -148,10 +162,12 @@
 
     if-nez p2, :cond_0
 
+    .line 96
     iput-object v1, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->colorFilterAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     goto :goto_0
 
+    .line 99
     :cond_0
     new-instance p1, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
@@ -161,6 +177,7 @@
 
     goto :goto_0
 
+    .line 102
     :cond_1
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->IMAGE:Landroid/graphics/Bitmap;
 
@@ -168,10 +185,12 @@
 
     if-nez p2, :cond_2
 
+    .line 104
     iput-object v1, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->imageAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     goto :goto_0
 
+    .line 107
     :cond_2
     new-instance p1, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
@@ -187,12 +206,14 @@
 .method public drawLayer(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
     .locals 4
 
+    .line 38
     invoke-direct {p0}, Lcom/airbnb/lottie/model/layer/ImageLayer;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
+    .line 39
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v1
@@ -205,19 +226,23 @@
 
     goto :goto_1
 
+    .line 42
     :cond_0
     invoke-static {}, Lcom/airbnb/lottie/utils/Utils;->dpScale()F
 
     move-result v1
 
+    .line 44
     iget-object v2, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, p3}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 45
     iget-object p3, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->colorFilterAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-eqz p3, :cond_1
 
+    .line 46
     iget-object v2, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p3}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -228,11 +253,14 @@
 
     invoke-virtual {v2, p3}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
+    .line 48
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
+    .line 49
     invoke-virtual {p1, p2}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
+    .line 50
     iget-object p2, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->src:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -247,6 +275,7 @@
 
     invoke-virtual {p2, v3, v3, p3, v2}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 51
     iget-object p2, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-virtual {p2}, Lcom/airbnb/lottie/LottieDrawable;->getMaintainOriginalImageBounds()Z
@@ -255,6 +284,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 52
     iget-object p2, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->dst:Landroid/graphics/Rect;
 
     iget-object p3, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->lottieImageAsset:Lcom/airbnb/lottie/LottieImageAsset;
@@ -285,6 +315,7 @@
 
     goto :goto_0
 
+    .line 54
     :cond_2
     iget-object p2, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->dst:Landroid/graphics/Rect;
 
@@ -310,6 +341,7 @@
 
     invoke-virtual {p2, v3, v3, p3, v1}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 57
     :goto_0
     iget-object p2, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->src:Landroid/graphics/Rect;
 
@@ -319,6 +351,7 @@
 
     invoke-virtual {p1, v0, p2, p3, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
+    .line 58
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_3
@@ -329,16 +362,20 @@
 .method public getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
     .locals 1
 
+    .line 62
     invoke-super {p0, p1, p2, p3}, Lcom/airbnb/lottie/model/layer/BaseLayer;->getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
 
+    .line 63
     iget-object p2, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->lottieImageAsset:Lcom/airbnb/lottie/LottieImageAsset;
 
     if-eqz p2, :cond_0
 
+    .line 64
     invoke-static {}, Lcom/airbnb/lottie/utils/Utils;->dpScale()F
 
     move-result p2
 
+    .line 65
     iget-object p3, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->lottieImageAsset:Lcom/airbnb/lottie/LottieImageAsset;
 
     invoke-virtual {p3}, Lcom/airbnb/lottie/LottieImageAsset;->getWidth()I
@@ -363,6 +400,7 @@
 
     invoke-virtual {p1, p2, p2, p3, v0}, Landroid/graphics/RectF;->set(FFFF)V
 
+    .line 66
     iget-object p0, p0, Lcom/airbnb/lottie/model/layer/ImageLayer;->boundsMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, p1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z

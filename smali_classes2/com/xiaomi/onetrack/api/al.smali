@@ -21,6 +21,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/m;Ljava/lang/String;Lcom/xiaomi/onetrack/OneTrack$UserIdType;ZLjava/util/Map;)V
     .locals 0
 
+    .line 305
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/al;->e:Lcom/xiaomi/onetrack/api/m;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/al;->a:Ljava/lang/String;
@@ -43,11 +44,13 @@
 
     const-string v0, "ot_login"
 
+    .line 309
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/al;->a:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/aa;->g(Ljava/lang/String;)V
 
+    .line 310
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/al;->b:Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     invoke-virtual {v1}, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->getUserIdType()Ljava/lang/String;
@@ -56,12 +59,14 @@
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/aa;->h(Ljava/lang/String;)V
 
+    .line 311
     iget-boolean v1, p0, Lcom/xiaomi/onetrack/api/al;->c:Z
 
     if-eqz v1, :cond_0
 
     return-void
 
+    .line 314
     :cond_0
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/al;->d:Ljava/util/Map;
 
@@ -71,6 +76,7 @@
 
     move-result-object v3
 
+    .line 315
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/al;->e:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/api/m;->f(Lcom/xiaomi/onetrack/api/m;)Z
@@ -81,12 +87,14 @@
 
     const-string v1, "uid"
 
+    .line 316
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/al;->a:Ljava/lang/String;
 
     invoke-virtual {v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "uid_type"
 
+    .line 317
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/al;->b:Lcom/xiaomi/onetrack/OneTrack$UserIdType;
 
     invoke-virtual {v2}, Lcom/xiaomi/onetrack/OneTrack$UserIdType;->getUserIdType()Ljava/lang/String;
@@ -95,6 +103,7 @@
 
     invoke-virtual {v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
+    .line 319
     :cond_1
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/al;->e:Lcom/xiaomi/onetrack/api/m;
 
@@ -102,6 +111,7 @@
 
     move-result-object v6
 
+    .line 320
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/al;->e:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/api/m;->b(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/Configuration;
@@ -130,6 +140,7 @@
 
     move-result-object v1
 
+    .line 321
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/al;->e:Lcom/xiaomi/onetrack/api/m;
 
     invoke-static {p0}, Lcom/xiaomi/onetrack/api/m;->a(Lcom/xiaomi/onetrack/api/m;)Lcom/xiaomi/onetrack/api/j;
@@ -145,6 +156,7 @@
     :catch_0
     move-exception p0
 
+    .line 323
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

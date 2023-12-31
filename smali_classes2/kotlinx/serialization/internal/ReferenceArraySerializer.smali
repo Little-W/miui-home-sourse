@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/ReferenceArraySerializer;
 .super Lkotlinx/serialization/internal/ListLikeSerializer;
+.source "CollectionSerializers.kt"
 
 
 # annotations
@@ -52,10 +53,12 @@
 
     const/4 v0, 0x0
 
+    .line 187
     invoke-direct {p0, p2, v0}, Lkotlinx/serialization/internal/ListLikeSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lkotlinx/serialization/internal/ReferenceArraySerializer;->kClass:Lkotlin/reflect/KClass;
 
+    .line 188
     new-instance p1, Lkotlinx/serialization/internal/ArrayClassDesc;
 
     invoke-interface {p2}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -76,6 +79,7 @@
 .method public bridge synthetic builder()Ljava/lang/Object;
     .locals 0
 
+    .line 184
     invoke-virtual {p0}, Lkotlinx/serialization/internal/ReferenceArraySerializer;->builder()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -93,6 +97,7 @@
         }
     .end annotation
 
+    .line 192
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -103,6 +108,7 @@
 .method public bridge synthetic builderSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 184
     check-cast p1, Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/ReferenceArraySerializer;->builderSize(Ljava/util/ArrayList;)I
@@ -126,6 +132,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 193
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -136,6 +143,7 @@
 .method public bridge synthetic checkCapacity(Ljava/lang/Object;I)V
     .locals 0
 
+    .line 184
     check-cast p1, Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/ReferenceArraySerializer;->checkCapacity(Ljava/util/ArrayList;I)V
@@ -157,6 +165,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 199
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->ensureCapacity(I)V
 
     return-void
@@ -165,6 +174,7 @@
 .method public bridge synthetic collectionIterator(Ljava/lang/Object;)Ljava/util/Iterator;
     .locals 0
 
+    .line 184
     check-cast p1, [Ljava/lang/Object;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/ReferenceArraySerializer;->collectionIterator([Ljava/lang/Object;)Ljava/util/Iterator;
@@ -188,6 +198,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 191
     invoke-static {p1}, Lkotlin/jvm/internal/ArrayIteratorKt;->iterator([Ljava/lang/Object;)Ljava/util/Iterator;
 
     move-result-object p0
@@ -198,6 +209,7 @@
 .method public bridge synthetic collectionSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 184
     check-cast p1, [Ljava/lang/Object;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/ReferenceArraySerializer;->collectionSize([Ljava/lang/Object;)I
@@ -219,6 +231,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 190
     array-length p0, p1
 
     return p0
@@ -227,6 +240,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 188
     iget-object p0, p0, Lkotlinx/serialization/internal/ReferenceArraySerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -235,6 +249,7 @@
 .method public bridge synthetic insert(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 184
     check-cast p1, Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/serialization/internal/ReferenceArraySerializer;->insert(Ljava/util/ArrayList;ILjava/lang/Object;)V
@@ -256,6 +271,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 201
     invoke-virtual {p1, p2, p3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     return-void
@@ -264,6 +280,7 @@
 .method public bridge synthetic toBuilder(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 184
     check-cast p1, [Ljava/lang/Object;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/ReferenceArraySerializer;->toBuilder([Ljava/lang/Object;)Ljava/util/ArrayList;
@@ -287,6 +304,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 198
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-static {p1}, Lkotlin/collections/ArraysKt;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -303,6 +321,7 @@
 .method public bridge synthetic toResult(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 184
     check-cast p1, Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/ReferenceArraySerializer;->toResult(Ljava/util/ArrayList;)[Ljava/lang/Object;
@@ -326,6 +345,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 196
     iget-object p0, p0, Lkotlinx/serialization/internal/ReferenceArraySerializer;->kClass:Lkotlin/reflect/KClass;
 
     invoke-static {p1, p0}, Lkotlinx/serialization/internal/PlatformKt;->toNativeArrayImpl(Ljava/util/ArrayList;Lkotlin/reflect/KClass;)[Ljava/lang/Object;

@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;
 .super Ljava/lang/Object;
+.source "UnitTranscoder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/resource/transcode/ResourceTranscoder;
@@ -33,6 +34,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 14
     new-instance v0, Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;-><init>()V
@@ -45,6 +47,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,6 +65,7 @@
         }
     .end annotation
 
+    .line 18
     sget-object v0, Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;->UNIT_TRANSCODER:Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;
 
     return-object v0

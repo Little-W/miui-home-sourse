@@ -1,5 +1,6 @@
 .class public final Lio/requery/android/database/sqlite/SQLiteConnection;
 .super Ljava/lang/Object;
+.source "SQLiteConnection.java"
 
 # interfaces
 .implements Landroidx/core/os/CancellationSignal$OnCancelListener;
@@ -60,14 +61,17 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
+    .line 99
     sput-object v1, Lio/requery/android/database/sqlite/SQLiteConnection;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
     new-array v0, v0, [B
 
+    .line 100
     sput-object v0, Lio/requery/android/database/sqlite/SQLiteConnection;->EMPTY_BYTE_ARRAY:[B
 
     const-string v0, "[\\s]*\\n+[\\s]*"
 
+    .line 102
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -80,14 +84,17 @@
 .method private constructor <init>(Lio/requery/android/database/sqlite/SQLiteConnectionPool;Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;IZ)V
     .locals 2
 
+    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 104
     invoke-static {}, Lio/requery/android/database/sqlite/CloseGuard;->get()Lio/requery/android/database/sqlite/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCloseGuard:Lio/requery/android/database/sqlite/CloseGuard;
 
+    .line 115
     new-instance v0, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const/4 v1, 0x0
@@ -96,18 +103,23 @@
 
     iput-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
+    .line 178
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPool:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
+    .line 179
     new-instance p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-direct {p1, p2}, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;-><init>(Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;)V
 
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
+    .line 180
     iput p3, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionId:I
 
+    .line 181
     iput-boolean p4, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mIsPrimaryConnection:Z
 
+    .line 182
     iget p1, p2, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->openFlags:I
 
     const/4 p2, 0x1
@@ -124,6 +136,7 @@
     :goto_0
     iput-boolean p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mIsReadOnlyConnection:Z
 
+    .line 183
     new-instance p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
@@ -134,6 +147,7 @@
 
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
+    .line 185
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCloseGuard:Lio/requery/android/database/sqlite/CloseGuard;
 
     const-string p1, "close"
@@ -146,6 +160,7 @@
 .method static synthetic access$200(Lio/requery/android/database/sqlite/SQLiteConnection;Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     .locals 0
 
+    .line 95
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->finalizePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
     return-void
@@ -154,6 +169,7 @@
 .method static synthetic access$300(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 95
     invoke-static {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->trimSqlForDisplay(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -164,6 +180,7 @@
 .method static synthetic access$500()[B
     .locals 1
 
+    .line 95
     sget-object v0, Lio/requery/android/database/sqlite/SQLiteConnection;->EMPTY_BYTE_ARRAY:[B
 
     return-object v0
@@ -172,6 +189,7 @@
 .method private acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
     .locals 13
 
+    .line 925
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {v0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -184,6 +202,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 928
     iget-boolean v2, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInUse:Z
 
     if-nez v2, :cond_0
@@ -198,6 +217,7 @@
     :cond_1
     const/4 v2, 0x0
 
+    .line 937
     :goto_0
     iget-wide v3, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -205,6 +225,7 @@
 
     move-result-wide v3
 
+    .line 939
     :try_start_0
     iget-wide v5, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -212,10 +233,12 @@
 
     move-result v9
 
+    .line 940
     invoke-static {p1}, Lio/requery/android/database/sqlite/SQLiteStatementType;->getSqlStatementType(Ljava/lang/String;)I
 
     move-result v12
 
+    .line 941
     iget-wide v5, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v5, v6, v3, v4}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeIsReadOnly(JJ)Z
@@ -230,26 +253,31 @@
 
     move v10, v12
 
+    .line 942
     invoke-direct/range {v5 .. v11}, Lio/requery/android/database/sqlite/SQLiteConnection;->obtainPreparedStatement(Ljava/lang/String;JIIZ)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
     move-result-object v0
 
     if-nez v2, :cond_2
 
+    .line 943
     invoke-static {v12}, Lio/requery/android/database/sqlite/SQLiteConnection;->isCacheable(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
+    .line 944
     iget-object v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {v2, p1, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 945
     iput-boolean v1, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 955
     :cond_2
     iput-boolean v1, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInUse:Z
 
@@ -260,15 +288,18 @@
 
     if-eqz v0, :cond_3
 
+    .line 950
     iget-boolean v0, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
     if-nez v0, :cond_4
 
+    .line 951
     :cond_3
     iget-wide v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v0, v1, v3, v4}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeFinalizeStatement(JJ)V
 
+    .line 953
     :cond_4
     throw p1
 .end method
@@ -276,6 +307,7 @@
 .method private applyBlockGuardPolicy(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     .locals 1
 
+    .line 1120
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->isInMemoryDb()Z
@@ -288,6 +320,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 1122
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p0
@@ -298,6 +331,7 @@
 
     if-ne p0, v0, :cond_1
 
+    .line 1123
     iget-boolean p0, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mReadOnly:Z
 
     const-string p1, "SQLiteConnection"
@@ -306,6 +340,7 @@
 
     const-string p0, "Reading from disk on main thread"
 
+    .line 1124
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -313,6 +348,7 @@
     :cond_0
     const-string p0, "Writing to disk on main thread"
 
+    .line 1126
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -325,8 +361,10 @@
 
     if-eqz p1, :cond_0
 
+    .line 989
     invoke-virtual {p1}, Landroidx/core/os/CancellationSignal;->throwIfCanceled()V
 
+    .line 991
     iget v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
     const/4 v1, 0x1
@@ -335,14 +373,17 @@
 
     iput v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
+    .line 992
     iget v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
     if-ne v0, v1, :cond_0
 
+    .line 994
     iget-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v2, v3, v1}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeResetCancel(JZ)V
 
+    .line 997
     invoke-virtual {p1, p0}, Landroidx/core/os/CancellationSignal;->setOnCancelListener(Landroidx/core/os/CancellationSignal$OnCancelListener;)V
 
     :cond_0
@@ -356,6 +397,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 1029
     array-length v1, p2
 
     goto :goto_0
@@ -363,11 +405,13 @@
     :cond_0
     move v1, v0
 
+    .line 1030
     :goto_0
     iget v2, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mNumParameters:I
 
     if-eq v1, v2, :cond_2
 
+    .line 1031
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -394,18 +438,21 @@
 
     move-result-object p0
 
+    .line 1033
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 p2, 0xb
 
     if-lt p1, p2, :cond_1
 
+    .line 1034
     new-instance p1, Landroid/database/sqlite/SQLiteBindOrColumnIndexOutOfRangeException;
 
     invoke-direct {p1, p0}, Landroid/database/sqlite/SQLiteBindOrColumnIndexOutOfRangeException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
+    .line 1036
     :cond_1
     new-instance p1, Landroid/database/sqlite/SQLiteException;
 
@@ -418,14 +465,17 @@
 
     return-void
 
+    .line 1043
     :cond_3
     iget-wide v9, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
 
     :goto_1
     if-ge v0, v1, :cond_a
 
+    .line 1045
     aget-object p1, p2, v0
 
+    .line 1046
     invoke-static {p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->getTypeOfObject(Ljava/lang/Object;)I
 
     move-result v2
@@ -444,10 +494,12 @@
 
     if-eq v2, v3, :cond_6
 
+    .line 1063
     instance-of v2, p1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_5
 
+    .line 1066
     iget-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     add-int/lit8 v6, v0, 0x1
@@ -476,6 +528,7 @@
 
     goto :goto_3
 
+    .line 1068
     :cond_5
     iget-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -491,6 +544,7 @@
 
     goto :goto_3
 
+    .line 1059
     :cond_6
     iget-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -508,6 +562,7 @@
 
     goto :goto_3
 
+    .line 1055
     :cond_7
     iget-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -515,16 +570,19 @@
 
     check-cast p1, Ljava/lang/Number;
 
+    .line 1056
     invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
 
     move-result-wide v7
 
     move-wide v4, v9
 
+    .line 1055
     invoke-static/range {v2 .. v8}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeBindDouble(JJID)V
 
     goto :goto_3
 
+    .line 1051
     :cond_8
     iget-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -532,16 +590,19 @@
 
     check-cast p1, Ljava/lang/Number;
 
+    .line 1052
     invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
     move-result-wide v7
 
     move-wide v4, v9
 
+    .line 1051
     invoke-static/range {v2 .. v8}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeBindLong(JJIJ)V
 
     goto :goto_3
 
+    .line 1048
     :cond_9
     iget-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -561,6 +622,7 @@
 .method private static canonicalizeSyncMode(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
+    .line 341
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -655,20 +717,24 @@
 
     if-eqz p1, :cond_0
 
+    .line 1007
     iget v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
+    .line 1008
     iget v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 1010
     invoke-virtual {p1, v0}, Landroidx/core/os/CancellationSignal;->setOnCancelListener(Landroidx/core/os/CancellationSignal$OnCancelListener;)V
 
+    .line 1013
     iget-wide p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     const/4 v0, 0x0
@@ -682,19 +748,23 @@
 .method private dispose(Z)V
     .locals 4
 
+    .line 261
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCloseGuard:Lio/requery/android/database/sqlite/CloseGuard;
 
     if-eqz v0, :cond_1
 
     if-eqz p1, :cond_0
 
+    .line 263
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/CloseGuard;->warnIfOpen()V
 
+    .line 265
     :cond_0
     iget-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mCloseGuard:Lio/requery/android/database/sqlite/CloseGuard;
 
     invoke-virtual {p1}, Lio/requery/android/database/sqlite/CloseGuard;->close()V
 
+    .line 268
     :cond_1
     iget-wide v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -704,6 +774,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 269
     iget-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const/4 v0, 0x0
@@ -714,19 +785,23 @@
 
     move-result p1
 
+    .line 271
     :try_start_0
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->evictAll()V
 
+    .line 272
     iget-wide v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v0, v1}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeClose(J)V
 
+    .line 273
     iput-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 275
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
@@ -740,6 +815,7 @@
 
     invoke-virtual {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
+    .line 276
     throw v0
 
     :cond_2
@@ -750,12 +826,14 @@
 .method private finalizePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     .locals 4
 
+    .line 983
     iget-wide v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     iget-wide v2, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
 
     invoke-static {v0, v1, v2, v3}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeFinalizeStatement(JJ)V
 
+    .line 984
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->recyclePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
     return-void
@@ -766,14 +844,17 @@
 
     move-object v0, p0
 
+    .line 1248
     iget-object v1, v0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-object v1, v1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->path:Ljava/lang/String;
 
+    .line 1249
     iget-boolean v2, v0, Lio/requery/android/database/sqlite/SQLiteConnection;->mIsPrimaryConnection:Z
 
     if-nez v2, :cond_0
 
+    .line 1250
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -799,22 +880,26 @@
     :cond_0
     move-object v3, v1
 
+    .line 1252
     new-instance v1, Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;
 
     iget-object v2, v0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
+    .line 1253
     invoke-virtual {v2}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->hitCount()I
 
     move-result v9
 
     iget-object v2, v0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
+    .line 1254
     invoke-virtual {v2}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->missCount()I
 
     move-result v10
 
     iget-object v0, v0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
+    .line 1255
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->size()I
 
     move-result v11
@@ -841,6 +926,7 @@
 
     return p0
 
+    .line 1095
     :cond_0
     instance-of v0, p0, [B
 
@@ -850,6 +936,7 @@
 
     return p0
 
+    .line 1097
     :cond_1
     instance-of v0, p0, Ljava/lang/Float;
 
@@ -861,6 +948,7 @@
 
     goto :goto_1
 
+    .line 1099
     :cond_2
     instance-of v0, p0, Ljava/lang/Long;
 
@@ -901,6 +989,7 @@
 .method public static hasCodec()Z
     .locals 1
 
+    .line 173
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeHasCodec()Z
 
     move-result v0
@@ -1019,38 +1108,48 @@
 .method private obtainPreparedStatement(Ljava/lang/String;JIIZ)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
     .locals 3
 
+    .line 1265
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementPool:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 1267
     iget-object v2, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mPoolNext:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
     iput-object v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementPool:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
+    .line 1268
     iput-object v1, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mPoolNext:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
     const/4 p0, 0x0
 
+    .line 1269
     iput-boolean p0, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
     goto :goto_0
 
+    .line 1271
     :cond_0
     new-instance v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
     invoke-direct {v0, v1}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;-><init>(Lio/requery/android/database/sqlite/SQLiteConnection$1;)V
 
+    .line 1273
     :goto_0
     iput-object p1, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mSql:Ljava/lang/String;
 
+    .line 1274
     iput-wide p2, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
 
+    .line 1275
     iput p4, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mNumParameters:I
 
+    .line 1276
     iput p5, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mType:I
 
+    .line 1277
     iput-boolean p6, v0, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mReadOnly:Z
 
     return-object v0
@@ -1059,10 +1158,12 @@
 .method static open(Lio/requery/android/database/sqlite/SQLiteConnectionPool;Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;IZ)Lio/requery/android/database/sqlite/SQLiteConnection;
     .locals 1
 
+    .line 206
     new-instance v0, Lio/requery/android/database/sqlite/SQLiteConnection;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;-><init>(Lio/requery/android/database/sqlite/SQLiteConnectionPool;Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;IZ)V
 
+    .line 209
     :try_start_0
     invoke-direct {v0}, Lio/requery/android/database/sqlite/SQLiteConnection;->open()V
     :try_end_0
@@ -1075,14 +1176,17 @@
 
     const/4 p1, 0x0
 
+    .line 212
     invoke-direct {v0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->dispose(Z)V
 
+    .line 213
     throw p0
 .end method
 
 .method private open()V
     .locals 6
 
+    .line 225
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-object v0, v0, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->path:Ljava/lang/String;
@@ -1109,24 +1213,32 @@
 
     iput-wide v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
+    .line 231
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setPageSize()V
 
+    .line 232
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setForeignKeyModeFromConfiguration()V
 
+    .line 233
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setJournalSizeLimit()V
 
+    .line 234
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setAutoCheckpointInterval()V
 
+    .line 235
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeHasCodec()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 236
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setWalModeFromConfiguration()V
 
+    .line 237
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setLocaleFromConfiguration()V
 
+    .line 241
     :cond_0
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
@@ -1143,6 +1255,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 243
     iget-object v3, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-object v3, v3, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->customFunctions:Ljava/util/List;
@@ -1153,6 +1266,7 @@
 
     check-cast v3, Lio/requery/android/database/sqlite/SQLiteCustomFunction;
 
+    .line 244
     iget-wide v4, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v4, v5, v3}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeRegisterCustomFunction(JLio/requery/android/database/sqlite/SQLiteCustomFunction;)V
@@ -1161,6 +1275,7 @@
 
     goto :goto_0
 
+    .line 248
     :cond_1
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
@@ -1173,6 +1288,7 @@
     :goto_1
     if-ge v1, v0, :cond_2
 
+    .line 250
     iget-object v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-object v2, v2, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->functions:Ljava/util/List;
@@ -1183,6 +1299,7 @@
 
     check-cast v2, Lio/requery/android/database/sqlite/SQLiteFunction;
 
+    .line 251
     iget-wide v3, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v3, v4, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeRegisterFunction(JLio/requery/android/database/sqlite/SQLiteFunction;)V
@@ -1191,6 +1308,7 @@
 
     goto :goto_1
 
+    .line 255
     :cond_2
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
@@ -1213,6 +1331,7 @@
 
     check-cast v1, Lio/requery/android/database/sqlite/SQLiteCustomExtension;
 
+    .line 256
     iget-wide v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     iget-object v4, v1, Lio/requery/android/database/sqlite/SQLiteCustomExtension;->path:Ljava/lang/String;
@@ -1232,12 +1351,15 @@
 
     const/4 v0, 0x0
 
+    .line 1282
     iput-object v0, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mSql:Ljava/lang/String;
 
+    .line 1283
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementPool:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
     iput-object v0, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mPoolNext:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
+    .line 1284
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementPool:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
     return-void
@@ -1248,12 +1370,15 @@
 
     const/4 v0, 0x0
 
+    .line 960
     iput-boolean v0, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInUse:Z
 
+    .line 961
     iget-boolean v0, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
     if-eqz v0, :cond_0
 
+    .line 963
     :try_start_0
     iget-wide v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -1265,6 +1390,7 @@
 
     goto :goto_0
 
+    .line 975
     :catch_0
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
@@ -1274,6 +1400,7 @@
 
     goto :goto_0
 
+    .line 978
     :cond_0
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->finalizePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
@@ -1284,6 +1411,7 @@
 .method private setAutoCheckpointInterval()V
     .locals 5
 
+    .line 291
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->isInMemoryDb()Z
@@ -1296,6 +1424,7 @@
 
     if-nez v0, :cond_0
 
+    .line 292
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteGlobal;->getWALAutoCheckpoint()I
 
     move-result v0
@@ -1306,6 +1435,7 @@
 
     const-string v3, "PRAGMA wal_autocheckpoint"
 
+    .line 293
     invoke-virtual {p0, v3, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForLong(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)J
 
     move-result-wide v3
@@ -1314,6 +1444,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 295
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1337,10 +1468,12 @@
 .method private setForeignKeyModeFromConfiguration()V
     .locals 5
 
+    .line 311
     iget-boolean v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mIsReadOnlyConnection:Z
 
     if-nez v0, :cond_1
 
+    .line 312
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-boolean v0, v0, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->foreignKeyConstraintsEnabled:Z
@@ -1359,6 +1492,7 @@
 
     const-string v3, "PRAGMA foreign_keys"
 
+    .line 313
     invoke-virtual {p0, v3, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForLong(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)J
 
     move-result-wide v3
@@ -1367,6 +1501,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 315
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1394,16 +1529,19 @@
 
     const-string v1, "PRAGMA journal_mode"
 
+    .line 353
     invoke-virtual {p0, v1, v0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForString(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 354
     invoke-virtual {v1, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
+    .line 356
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1423,6 +1561,7 @@
 
     move-result-object v0
 
+    .line 357
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -1436,10 +1575,12 @@
     :catch_0
     move-exception v0
 
+    .line 365
     instance-of v2, v0, Landroid/database/sqlite/SQLiteDatabaseLockedException;
 
     if-eqz v2, :cond_1
 
+    .line 382
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1481,6 +1622,7 @@
 
     goto :goto_0
 
+    .line 366
     :cond_1
     throw v0
 
@@ -1492,6 +1634,7 @@
 .method private setJournalSizeLimit()V
     .locals 5
 
+    .line 301
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->isInMemoryDb()Z
@@ -1504,6 +1647,7 @@
 
     if-nez v0, :cond_0
 
+    .line 302
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteGlobal;->getJournalSizeLimit()I
 
     move-result v0
@@ -1514,6 +1658,7 @@
 
     const-string v3, "PRAGMA journal_size_limit"
 
+    .line 303
     invoke-virtual {p0, v3, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForLong(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)J
 
     move-result-wide v3
@@ -1522,6 +1667,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 305
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1545,6 +1691,7 @@
 .method private setLocaleFromConfiguration()V
     .locals 5
 
+    .line 393
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-object v0, v0, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->locale:Ljava/util/Locale;
@@ -1553,10 +1700,12 @@
 
     move-result-object v0
 
+    .line 394
     iget-wide v1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v1, v2, v0}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeRegisterLocalizedCollators(JLjava/lang/String;)V
 
+    .line 398
     iget-boolean v1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mIsReadOnlyConnection:Z
 
     if-eqz v1, :cond_0
@@ -1569,16 +1718,19 @@
 
     const/4 v2, 0x0
 
+    .line 404
     invoke-virtual {p0, v1, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
 
     const-string v1, "SELECT locale FROM android_metadata UNION SELECT NULL ORDER BY locale DESC LIMIT 1"
 
+    .line 407
     invoke-virtual {p0, v1, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForString(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 409
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1590,6 +1742,7 @@
     :cond_1
     const-string v1, "BEGIN"
 
+    .line 414
     invoke-virtual {p0, v1, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1597,6 +1750,7 @@
     :try_start_1
     const-string v1, "DELETE FROM android_metadata"
 
+    .line 417
     invoke-virtual {p0, v1, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
 
     const-string v1, "INSERT INTO android_metadata (locale) VALUES(?)"
@@ -1609,10 +1763,12 @@
 
     aput-object v0, v3, v4
 
+    .line 418
     invoke-virtual {p0, v1, v3, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
 
     const-string v1, "REINDEX LOCALIZED"
 
+    .line 420
     invoke-virtual {p0, v1, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1620,6 +1776,7 @@
     :try_start_2
     const-string v1, "COMMIT"
 
+    .line 423
     invoke-virtual {p0, v1, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
 
     return-void
@@ -1631,10 +1788,12 @@
 
     invoke-virtual {p0, v3, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)V
 
+    .line 424
     throw v1
     :try_end_2
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
 
+    .line 426
     :catch_0
     new-instance v1, Landroid/database/sqlite/SQLiteException;
 
@@ -1674,6 +1833,7 @@
 .method private setPageSize()V
     .locals 5
 
+    .line 281
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->isInMemoryDb()Z
@@ -1686,6 +1846,7 @@
 
     if-nez v0, :cond_0
 
+    .line 282
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteGlobal;->getDefaultPageSize()I
 
     move-result v0
@@ -1696,6 +1857,7 @@
 
     const-string v3, "PRAGMA page_size"
 
+    .line 283
     invoke-virtual {p0, v3, v2, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForLong(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)J
 
     move-result-wide v3
@@ -1704,6 +1866,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 285
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1731,24 +1894,29 @@
 
     const-string v1, "PRAGMA synchronous"
 
+    .line 333
     invoke-virtual {p0, v1, v0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForString(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 334
     invoke-static {v1}, Lio/requery/android/database/sqlite/SQLiteConnection;->canonicalizeSyncMode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 335
     invoke-static {p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->canonicalizeSyncMode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 334
     invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 336
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1772,6 +1940,7 @@
 .method private setWalModeFromConfiguration()V
     .locals 2
 
+    .line 321
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->isInMemoryDb()Z
@@ -1784,6 +1953,7 @@
 
     if-nez v0, :cond_1
 
+    .line 322
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget v0, v0, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->openFlags:I
@@ -1796,8 +1966,10 @@
 
     const-string v0, "WAL"
 
+    .line 323
     invoke-direct {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setJournalMode(Ljava/lang/String;)V
 
+    .line 324
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteGlobal;->getWALSyncMode()Ljava/lang/String;
 
     move-result-object v0
@@ -1806,6 +1978,7 @@
 
     goto :goto_0
 
+    .line 326
     :cond_0
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteGlobal;->getDefaultJournalMode()Ljava/lang/String;
 
@@ -1813,6 +1986,7 @@
 
     invoke-direct {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setJournalMode(Ljava/lang/String;)V
 
+    .line 327
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteGlobal;->getDefaultSyncMode()Ljava/lang/String;
 
     move-result-object v0
@@ -1827,6 +2001,7 @@
 .method private throwIfStatementForbidden(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     .locals 0
 
+    .line 1108
     iget-boolean p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mOnlyAllowReadOnlyOperations:Z
 
     if-eqz p0, :cond_1
@@ -1837,6 +2012,7 @@
 
     goto :goto_0
 
+    .line 1109
     :cond_0
     new-instance p0, Landroid/database/sqlite/SQLiteException;
 
@@ -1854,6 +2030,7 @@
 .method private static trimSqlForDisplay(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 1288
     sget-object v0, Lio/requery/android/database/sqlite/SQLiteConnection;->TRIM_SQL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -1876,6 +2053,7 @@
 
     const/4 v0, 0x0
 
+    .line 221
     invoke-direct {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection;->dispose(Z)V
 
     return-void
@@ -1898,6 +2076,7 @@
 
     const-string v10, "PRAGMA "
 
+    .line 1196
     iget-wide v1, v0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v1, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeGetDbLookaside(J)I
@@ -1911,6 +2090,7 @@
     :try_start_0
     const-string v1, "PRAGMA page_count;"
 
+    .line 1200
     invoke-virtual {v0, v1, v13, v13}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForLong(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)J
 
     move-result-wide v3
@@ -1920,6 +2100,7 @@
     :try_start_1
     const-string v1, "PRAGMA page_size;"
 
+    .line 1201
     invoke-virtual {v0, v1, v13, v13}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForLong(Ljava/lang/String;[Ljava/lang/Object;Landroidx/core/os/CancellationSignal;)J
 
     move-result-wide v5
@@ -1937,12 +2118,14 @@
     :goto_0
     move-object/from16 v1, p0
 
+    .line 1205
     invoke-direct/range {v1 .. v6}, Lio/requery/android/database/sqlite/SQLiteConnection;->getMainDbStatsUnsafe(IJJ)Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;
 
     move-result-object v1
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 1210
     new-instance v14, Lio/requery/android/database/CursorWindow;
 
     const-string v1, "collectDbStats"
@@ -1966,12 +2149,14 @@
 
     move-object v4, v14
 
+    .line 1212
     invoke-virtual/range {v1 .. v8}, Lio/requery/android/database/sqlite/SQLiteConnection;->executeForCursorWindow(Ljava/lang/String;[Ljava/lang/Object;Lio/requery/android/database/CursorWindow;IIZLandroidx/core/os/CancellationSignal;)I
 
     const/4 v1, 0x1
 
     move v2, v1
 
+    .line 1213
     :goto_1
     invoke-virtual {v14}, Lio/requery/android/database/CursorWindow;->getNumRows()I
 
@@ -1979,12 +2164,14 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 1214
     invoke-virtual {v14, v2, v1}, Lio/requery/android/database/CursorWindow;->getString(II)Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v4, 0x2
 
+    .line 1215
     invoke-virtual {v14, v2, v4}, Lio/requery/android/database/CursorWindow;->getString(II)Ljava/lang/String;
 
     move-result-object v4
@@ -1992,6 +2179,7 @@
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 1219
     :try_start_3
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2016,6 +2204,7 @@
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 1220
     :try_start_4
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2054,6 +2243,7 @@
 
     move-wide/from16 v19, v11
 
+    .line 1224
     :goto_2
     :try_start_5
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2070,12 +2260,14 @@
 
     move-result-object v3
 
+    .line 1225
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
+    .line 1226
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2095,6 +2287,7 @@
     :cond_0
     move-object/from16 v16, v3
 
+    .line 1228
     new-instance v3, Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;
 
     const/16 v21, 0x0
@@ -2121,10 +2314,13 @@
     :catchall_0
     move-exception v0
 
+    .line 1233
     invoke-virtual {v14}, Lio/requery/android/database/CursorWindow;->close()V
 
+    .line 1234
     throw v0
 
+    .line 1233
     :catch_4
     :cond_1
     invoke-virtual {v14}, Lio/requery/android/database/CursorWindow;->close()V
@@ -2151,6 +2347,7 @@
 
     move-object v0, p0
 
+    .line 1242
     invoke-direct/range {v0 .. v5}, Lio/requery/android/database/sqlite/SQLiteConnection;->getMainDbStatsUnsafe(IJJ)Lio/requery/android/database/sqlite/SQLiteDebug$DbStats;
 
     move-result-object p0
@@ -2163,6 +2360,7 @@
 .method describeCurrentOperationUnsafe()Ljava/lang/String;
     .locals 0
 
+    .line 1186
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->describeCurrentOperation()Ljava/lang/String;
@@ -2175,6 +2373,7 @@
 .method public dump(Landroid/util/Printer;Z)V
     .locals 0
 
+    .line 1139
     invoke-virtual {p0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteConnection;->dumpUnsafe(Landroid/util/Printer;Z)V
 
     return-void
@@ -2183,6 +2382,7 @@
 .method dumpUnsafe(Landroid/util/Printer;Z)V
     .locals 3
 
+    .line 1157
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2207,6 +2407,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 1159
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2229,6 +2430,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 1161
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2248,6 +2450,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 1162
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2266,12 +2469,14 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 1164
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->dump(Landroid/util/Printer;Z)V
 
     if-eqz p2, :cond_1
 
+    .line 1167
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->dump(Landroid/util/Printer;)V
@@ -2283,12 +2488,14 @@
 .method public enableLocalizedCollators()V
     .locals 1
 
+    .line 432
     invoke-static {}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeHasCodec()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 433
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setLocaleFromConfiguration()V
 
     :cond_0
@@ -2300,6 +2507,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 586
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const-string v1, "execute"
@@ -2308,6 +2516,7 @@
 
     move-result v0
 
+    .line 588
     :try_start_0
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -2316,17 +2525,22 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 590
     :try_start_1
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 591
     invoke-direct {p0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteConnection;->bindArguments(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
+    .line 592
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 593
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 595
     :try_start_2
     iget-wide v1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -2336,17 +2550,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 597
     :try_start_3
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 600
     :try_start_4
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 606
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
@@ -2356,9 +2573,11 @@
     :catchall_0
     move-exception p2
 
+    .line 597
     :try_start_5
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
 
+    .line 598
     throw p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -2366,9 +2585,11 @@
     :catchall_1
     move-exception p2
 
+    .line 600
     :try_start_6
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 601
     throw p2
     :try_end_6
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
@@ -2382,22 +2603,27 @@
     :catch_0
     move-exception p1
 
+    .line 603
     :try_start_7
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p2, v0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
+    .line 604
     throw p1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    .line 606
     :goto_0
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
+    .line 607
     throw p1
 
+    .line 583
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2413,6 +2639,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 717
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const-string v1, "executeForBlobFileDescriptor"
@@ -2421,6 +2648,7 @@
 
     move-result v0
 
+    .line 720
     :try_start_0
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -2429,17 +2657,22 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 722
     :try_start_1
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 723
     invoke-direct {p0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteConnection;->bindArguments(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
+    .line 724
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 725
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 727
     :try_start_2
     iget-wide v1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -2449,6 +2682,7 @@
 
     move-result p2
 
+    .line 729
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xd
@@ -2457,6 +2691,7 @@
 
     if-ltz p2, :cond_0
 
+    .line 730
     invoke-static {p2}, Landroid/os/ParcelFileDescriptor;->adoptFd(I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p2
@@ -2468,24 +2703,28 @@
     :cond_0
     const/4 p2, 0x0
 
+    .line 735
     :goto_0
     :try_start_3
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 738
     :try_start_4
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 744
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
     return-object p2
 
+    .line 732
     :cond_1
     :try_start_5
     new-instance p2, Ljava/lang/UnsupportedOperationException;
@@ -2499,9 +2738,11 @@
     :catchall_0
     move-exception p2
 
+    .line 735
     :try_start_6
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
 
+    .line 736
     throw p2
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
@@ -2509,9 +2750,11 @@
     :catchall_1
     move-exception p2
 
+    .line 738
     :try_start_7
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 739
     throw p2
     :try_end_7
     .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_7} :catch_0
@@ -2525,22 +2768,27 @@
     :catch_0
     move-exception p1
 
+    .line 741
     :try_start_8
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p2, v0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
+    .line 742
     throw p1
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
+    .line 744
     :goto_1
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
+    .line 745
     throw p1
 
+    .line 714
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2560,6 +2808,7 @@
 
     const/4 v1, 0x0
 
+    .line 768
     iget-object v2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const-string v3, "executeForChangedRowCount"
@@ -2568,6 +2817,7 @@
 
     move-result v2
 
+    .line 771
     :try_start_0
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -2576,17 +2826,22 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 773
     :try_start_1
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 774
     invoke-direct {p0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteConnection;->bindArguments(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
+    .line 775
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 776
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 778
     :try_start_2
     iget-wide v3, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -2598,17 +2853,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 782
     :try_start_3
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 785
     :try_start_4
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 791
     iget-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p1, v2}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperationDeferLog(I)Z
@@ -2617,6 +2875,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 792
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -2639,9 +2898,11 @@
     :catchall_0
     move-exception p2
 
+    .line 782
     :try_start_5
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
 
+    .line 783
     throw p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -2649,9 +2910,11 @@
     :catchall_1
     move-exception p2
 
+    .line 785
     :try_start_6
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 786
     throw p2
     :try_end_6
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
@@ -2665,15 +2928,18 @@
     :catch_0
     move-exception p1
 
+    .line 788
     :try_start_7
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p2, v2, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
+    .line 789
     throw p1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    .line 791
     :goto_0
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -2683,6 +2949,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 792
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2699,9 +2966,11 @@
 
     invoke-virtual {p0, v2, p2}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->logOperation(ILjava/lang/String;)V
 
+    .line 794
     :cond_1
     throw p1
 
+    .line 764
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2741,8 +3010,10 @@
 
     if-eqz v3, :cond_2
 
+    .line 878
     invoke-virtual/range {p3 .. p3}, Lio/requery/android/database/CursorWindow;->acquireReference()V
 
+    .line 883
     :try_start_0
     iget-object v4, v1, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -2756,6 +3027,7 @@
 
     const/16 v16, -0x1
 
+    .line 886
     :try_start_1
     invoke-direct/range {p0 .. p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -2764,17 +3036,22 @@
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_a
 
+    .line 888
     :try_start_2
     invoke-direct {v1, v6}, Lio/requery/android/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 889
     invoke-direct {v1, v6, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->bindArguments(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
+    .line 890
     invoke-direct {v1, v6}, Lio/requery/android/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 891
     invoke-direct {v1, v14}, Lio/requery/android/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_9
 
+    .line 893
     :try_start_3
     iget-wide v4, v1, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
     :try_end_3
@@ -2837,6 +3114,7 @@
 
     long-to-int v4, v4
 
+    .line 898
     :try_start_7
     invoke-virtual/range {p3 .. p3}, Lio/requery/android/database/CursorWindow;->getNumRows()I
 
@@ -2844,22 +3122,26 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
+    .line 899
     :try_start_8
     invoke-virtual {v3, v6}, Lio/requery/android/database/CursorWindow;->setStartPosition(I)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
+    .line 902
     :try_start_9
     invoke-direct {v1, v14}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
+    .line 905
     :try_start_a
     invoke-direct {v1, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_a
     .catch Ljava/lang/RuntimeException; {:try_start_a .. :try_end_a} :catch_0
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
+    .line 911
     :try_start_b
     iget-object v0, v1, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -2869,6 +3151,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 912
     iget-object v0, v1, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2913,6 +3196,7 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_c
 
+    .line 920
     :cond_0
     invoke-virtual/range {p3 .. p3}, Lio/requery/android/database/CursorWindow;->releaseReference()V
 
@@ -3092,10 +3376,12 @@
 
     move v5, v4
 
+    .line 902
     :goto_3
     :try_start_c
     invoke-direct {v1, v14}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
 
+    .line 903
     throw v0
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_8
@@ -3130,10 +3416,12 @@
 
     move v5, v4
 
+    .line 905
     :goto_4
     :try_start_d
     invoke-direct {v1, v2}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 906
     throw v0
     :try_end_d
     .catch Ljava/lang/RuntimeException; {:try_start_d .. :try_end_d} :catch_1
@@ -3194,12 +3482,14 @@
 
     move v5, v4
 
+    .line 908
     :goto_5
     :try_start_e
     iget-object v2, v1, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v2, v15, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
+    .line 909
     throw v0
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_b
@@ -3209,6 +3499,7 @@
 
     move/from16 v6, v16
 
+    .line 911
     :goto_6
     :try_start_f
     iget-object v2, v1, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
@@ -3219,6 +3510,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 912
     iget-object v1, v1, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3251,6 +3543,7 @@
 
     invoke-virtual {v1, v15, v2}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->logOperation(ILjava/lang/String;)V
 
+    .line 918
     :cond_1
     throw v0
     :try_end_f
@@ -3259,10 +3552,13 @@
     :catchall_c
     move-exception v0
 
+    .line 920
     invoke-virtual/range {p3 .. p3}, Lio/requery/android/database/CursorWindow;->releaseReference()V
 
+    .line 921
     throw v0
 
+    .line 875
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3272,6 +3568,7 @@
 
     throw v0
 
+    .line 872
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3287,6 +3584,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 816
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const-string v1, "executeForLastInsertedRowId"
@@ -3295,6 +3593,7 @@
 
     move-result v0
 
+    .line 819
     :try_start_0
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -3303,17 +3602,22 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 821
     :try_start_1
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 822
     invoke-direct {p0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteConnection;->bindArguments(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
+    .line 823
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 824
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 826
     :try_start_2
     iget-wide v1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -3325,17 +3629,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 829
     :try_start_3
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 832
     :try_start_4
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 838
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
@@ -3345,9 +3652,11 @@
     :catchall_0
     move-exception p2
 
+    .line 829
     :try_start_5
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
 
+    .line 830
     throw p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -3355,9 +3664,11 @@
     :catchall_1
     move-exception p2
 
+    .line 832
     :try_start_6
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 833
     throw p2
     :try_end_6
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
@@ -3371,22 +3682,27 @@
     :catch_0
     move-exception p1
 
+    .line 835
     :try_start_7
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p2, v0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
+    .line 836
     throw p1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    .line 838
     :goto_0
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
+    .line 839
     throw p1
 
+    .line 813
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -3402,6 +3718,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 629
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const-string v1, "executeForLong"
@@ -3410,6 +3727,7 @@
 
     move-result v0
 
+    .line 631
     :try_start_0
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -3418,17 +3736,22 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 633
     :try_start_1
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 634
     invoke-direct {p0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteConnection;->bindArguments(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
+    .line 635
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 636
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 638
     :try_start_2
     iget-wide v1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -3440,17 +3763,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 640
     :try_start_3
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 643
     :try_start_4
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 649
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
@@ -3460,9 +3786,11 @@
     :catchall_0
     move-exception p2
 
+    .line 640
     :try_start_5
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
 
+    .line 641
     throw p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -3470,9 +3798,11 @@
     :catchall_1
     move-exception p2
 
+    .line 643
     :try_start_6
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 644
     throw p2
     :try_end_6
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
@@ -3486,22 +3816,27 @@
     :catch_0
     move-exception p1
 
+    .line 646
     :try_start_7
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p2, v0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
+    .line 647
     throw p1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    .line 649
     :goto_0
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
+    .line 650
     throw p1
 
+    .line 626
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -3517,6 +3852,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 672
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const-string v1, "executeForString"
@@ -3525,6 +3861,7 @@
 
     move-result v0
 
+    .line 674
     :try_start_0
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -3533,17 +3870,22 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 676
     :try_start_1
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 677
     invoke-direct {p0, p1, p2}, Lio/requery/android/database/sqlite/SQLiteConnection;->bindArguments(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
+    .line 678
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 679
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 681
     :try_start_2
     iget-wide v1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -3555,17 +3897,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 683
     :try_start_3
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 686
     :try_start_4
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 692
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
@@ -3575,9 +3920,11 @@
     :catchall_0
     move-exception p2
 
+    .line 683
     :try_start_5
     invoke-direct {p0, p3}, Lio/requery/android/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroidx/core/os/CancellationSignal;)V
 
+    .line 684
     throw p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -3585,9 +3932,11 @@
     :catchall_1
     move-exception p2
 
+    .line 686
     :try_start_6
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 687
     throw p2
     :try_end_6
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
@@ -3601,22 +3950,27 @@
     :catch_0
     move-exception p1
 
+    .line 689
     :try_start_7
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p2, v0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
+    .line 690
     throw p1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    .line 692
     :goto_0
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
+    .line 693
     throw p1
 
+    .line 669
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -3635,6 +3989,7 @@
         }
     .end annotation
 
+    .line 192
     :try_start_0
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPool:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
@@ -3648,6 +4003,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 193
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPool:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteConnectionPool;->onConnectionLeaked()V
@@ -3655,10 +4011,12 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 196
     invoke-direct {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection;->dispose(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 198
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -3668,12 +4026,14 @@
 
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 199
     throw v0
 .end method
 
 .method isPreparedStatementInCache(Ljava/lang/String;)Z
     .locals 0
 
+    .line 498
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3696,6 +4056,7 @@
 .method public isPrimaryConnection()Z
     .locals 0
 
+    .line 506
     iget-boolean p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mIsPrimaryConnection:Z
 
     return p0
@@ -3704,6 +4065,7 @@
 .method public onCancel()V
     .locals 2
 
+    .line 1025
     iget-wide v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v0, v1}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeCancel(J)V
@@ -3716,6 +4078,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 538
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     const/4 v1, 0x0
@@ -3726,6 +4089,7 @@
 
     move-result v0
 
+    .line 540
     :try_start_0
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -3736,15 +4100,18 @@
 
     if-eqz p2, :cond_1
 
+    .line 543
     :try_start_1
     iget v1, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mNumParameters:I
 
     iput v1, p2, Lio/requery/android/database/sqlite/SQLiteStatementInfo;->numParameters:I
 
+    .line 544
     iget-boolean v1, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mReadOnly:Z
 
     iput-boolean v1, p2, Lio/requery/android/database/sqlite/SQLiteStatementInfo;->readOnly:Z
 
+    .line 546
     iget-wide v1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     iget-wide v3, p1, Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
@@ -3755,12 +4122,14 @@
 
     if-nez v1, :cond_0
 
+    .line 549
     sget-object v1, Lio/requery/android/database/sqlite/SQLiteConnection;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
     iput-object v1, p2, Lio/requery/android/database/sqlite/SQLiteStatementInfo;->columnNames:[Ljava/lang/String;
 
     goto :goto_1
 
+    .line 551
     :cond_0
     new-array v2, v1, [Ljava/lang/String;
 
@@ -3771,6 +4140,7 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 553
     iget-object v3, p2, Lio/requery/android/database/sqlite/SQLiteStatementInfo;->columnNames:[Ljava/lang/String;
 
     iget-wide v4, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
@@ -3792,11 +4162,14 @@
     :catchall_0
     move-exception p2
 
+    .line 559
     :try_start_2
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
+    .line 560
     throw p2
 
+    .line 559
     :cond_1
     :goto_1
     invoke-direct {p0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection;->releasePreparedStatement(Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatement;)V
@@ -3804,6 +4177,7 @@
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 565
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
@@ -3818,22 +4192,27 @@
     :catch_0
     move-exception p1
 
+    .line 562
     :try_start_3
     iget-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p2, v0, p1}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
+    .line 563
     throw p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 565
     :goto_2
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mRecentOperations:Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {p0, v0}, Lio/requery/android/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
+    .line 566
     throw p1
 
+    .line 535
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -3849,8 +4228,10 @@
 
     const/4 v0, 0x0
 
+    .line 439
     iput-boolean v0, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mOnlyAllowReadOnlyOperations:Z
 
+    .line 442
     iget-object v1, p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->customFunctions:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -3862,6 +4243,7 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 444
     iget-object v3, p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->customFunctions:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3870,6 +4252,7 @@
 
     check-cast v3, Lio/requery/android/database/sqlite/SQLiteCustomFunction;
 
+    .line 445
     iget-object v4, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-object v4, v4, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->customFunctions:Ljava/util/List;
@@ -3880,6 +4263,7 @@
 
     if-nez v4, :cond_0
 
+    .line 446
     iget-wide v4, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v4, v5, v3}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeRegisterCustomFunction(JLio/requery/android/database/sqlite/SQLiteCustomFunction;)V
@@ -3889,6 +4273,7 @@
 
     goto :goto_0
 
+    .line 451
     :cond_1
     iget-object v1, p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->functions:Ljava/util/List;
 
@@ -3901,6 +4286,7 @@
     :goto_1
     if-ge v2, v1, :cond_3
 
+    .line 453
     iget-object v3, p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->functions:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3909,6 +4295,7 @@
 
     check-cast v3, Lio/requery/android/database/sqlite/SQLiteFunction;
 
+    .line 454
     iget-object v4, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-object v4, v4, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->functions:Ljava/util/List;
@@ -3919,6 +4306,7 @@
 
     if-nez v4, :cond_2
 
+    .line 455
     iget-wide v4, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v4, v5, v3}, Lio/requery/android/database/sqlite/SQLiteConnection;->nativeRegisterFunction(JLio/requery/android/database/sqlite/SQLiteFunction;)V
@@ -3928,6 +4316,7 @@
 
     goto :goto_1
 
+    .line 460
     :cond_3
     iget-boolean v1, p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->foreignKeyConstraintsEnabled:Z
 
@@ -3946,6 +4335,7 @@
     :cond_4
     move v1, v0
 
+    .line 462
     :goto_2
     iget v2, p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->openFlags:I
 
@@ -3963,6 +4353,7 @@
 
     move v0, v3
 
+    .line 464
     :cond_5
     iget-object v2, p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->locale:Ljava/util/Locale;
 
@@ -3976,10 +4367,12 @@
 
     xor-int/2addr v2, v3
 
+    .line 467
     iget-object v3, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mConfiguration:Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-virtual {v3, p1}, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->updateParametersFrom(Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;)V
 
+    .line 470
     iget-object v3, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Lio/requery/android/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     iget p1, p1, Lio/requery/android/database/sqlite/SQLiteDatabaseConfiguration;->maxSqlCacheSize:I
@@ -3988,16 +4381,19 @@
 
     if-eqz v1, :cond_6
 
+    .line 474
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setForeignKeyModeFromConfiguration()V
 
     :cond_6
     if-eqz v0, :cond_7
 
+    .line 479
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setWalModeFromConfiguration()V
 
     :cond_7
     if-eqz v2, :cond_8
 
+    .line 484
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnection;->setLocaleFromConfiguration()V
 
     :cond_8
@@ -4007,6 +4403,7 @@
 .method setOnlyAllowReadOnlyOperations(Z)V
     .locals 0
 
+    .line 492
     iput-boolean p1, p0, Lio/requery/android/database/sqlite/SQLiteConnection;->mOnlyAllowReadOnlyOperations:Z
 
     return-void
@@ -4015,6 +4412,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1260
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

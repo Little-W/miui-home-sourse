@@ -1,5 +1,6 @@
 .class final Lretrofit2/BuiltInConverters$ToStringConverter;
 .super Ljava/lang/Object;
+.source "BuiltInConverters.java"
 
 # interfaces
 .implements Lretrofit2/Converter;
@@ -34,6 +35,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 90
     new-instance v0, Lretrofit2/BuiltInConverters$ToStringConverter;
 
     invoke-direct {v0}, Lretrofit2/BuiltInConverters$ToStringConverter;-><init>()V
@@ -46,6 +48,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,6 +64,7 @@
         }
     .end annotation
 
+    .line 89
     invoke-virtual {p0, p1}, Lretrofit2/BuiltInConverters$ToStringConverter;->convert(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -71,6 +75,7 @@
 .method public convert(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
+    .line 93
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0

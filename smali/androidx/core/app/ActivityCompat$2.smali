@@ -1,5 +1,6 @@
 .class Landroidx/core/app/ActivityCompat$2;
 .super Ljava/lang/Object;
+.source "ActivityCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
+    .line 626
     iput-object p1, p0, Landroidx/core/app/ActivityCompat$2;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 629
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$2;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
@@ -44,6 +47,7 @@
 
     if-nez v0, :cond_0
 
+    .line 630
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$2;->val$activity:Landroid/app/Activity;
 
     invoke-static {v0}, Landroidx/core/app/ActivityRecreator;->recreate(Landroid/app/Activity;)Z
@@ -52,6 +56,7 @@
 
     if-nez v0, :cond_0
 
+    .line 633
     iget-object p0, p0, Landroidx/core/app/ActivityCompat$2;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {p0}, Landroid/app/Activity;->recreate()V

@@ -32,12 +32,14 @@
     :try_start_0
     const-string v0, "com.android.id.impl.IdProviderImpl"
 
+    .line 21
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     sput-object v0, Lcom/xiaomi/onetrack/util/n;->c:Ljava/lang/Class;
 
+    .line 22
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->c:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
@@ -46,6 +48,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/util/n;->b:Ljava/lang/Object;
 
+    .line 23
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->c:Ljava/lang/Class;
 
     const-string v1, "getUDID"
@@ -66,6 +69,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/util/n;->d:Ljava/lang/reflect/Method;
 
+    .line 24
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->c:Ljava/lang/Class;
 
     const-string v1, "getOAID"
@@ -82,6 +86,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/util/n;->e:Ljava/lang/reflect/Method;
 
+    .line 25
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->c:Ljava/lang/Class;
 
     const-string v1, "getVAID"
@@ -98,6 +103,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/util/n;->f:Ljava/lang/reflect/Method;
 
+    .line 26
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->c:Ljava/lang/Class;
 
     const-string v1, "getAAID"
@@ -125,6 +131,7 @@
 
     const-string v2, "reflect exception!"
 
+    .line 28
     invoke-static {v1, v2, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -134,6 +141,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -142,6 +150,7 @@
 .method public static a(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
+    .line 48
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->d:Ljava/lang/reflect/Method;
 
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/n;->a(Landroid/content/Context;Ljava/lang/reflect/Method;)Ljava/lang/String;
@@ -156,6 +165,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 82
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->b:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -171,12 +181,14 @@
 
     aput-object p0, v1, v2
 
+    .line 84
     invoke-virtual {p1, v0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 86
     check-cast p0, Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -190,6 +202,7 @@
 
     const-string v0, "oaid invoke exception!"
 
+    .line 89
     invoke-static {p1, v0, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
@@ -201,6 +214,7 @@
 .method public static a()Z
     .locals 1
 
+    .line 38
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->c:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
@@ -223,6 +237,7 @@
 .method public static b(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
+    .line 58
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->e:Ljava/lang/reflect/Method;
 
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/n;->a(Landroid/content/Context;Ljava/lang/reflect/Method;)Ljava/lang/String;
@@ -235,6 +250,7 @@
 .method public static c(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
+    .line 68
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->f:Ljava/lang/reflect/Method;
 
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/n;->a(Landroid/content/Context;Ljava/lang/reflect/Method;)Ljava/lang/String;
@@ -247,6 +263,7 @@
 .method public static d(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
+    .line 78
     sget-object v0, Lcom/xiaomi/onetrack/util/n;->g:Ljava/lang/reflect/Method;
 
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/n;->a(Landroid/content/Context;Ljava/lang/reflect/Method;)Ljava/lang/String;

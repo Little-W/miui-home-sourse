@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/widget/MiuiDragShadowBuilder;
 .super Landroid/view/View$DragShadowBuilder;
+.source "SourceFile"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/android/AndroidDispatcherFactory;
 .super Ljava/lang/Object;
+.source "HandlerDispatcher.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/internal/MainDispatcherFactory;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +21,7 @@
 .method public bridge synthetic createDispatcher(Ljava/util/List;)Lkotlinx/coroutines/MainCoroutineDispatcher;
     .locals 0
 
+    .line 52
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/android/AndroidDispatcherFactory;->createDispatcher(Ljava/util/List;)Lkotlinx/coroutines/android/HandlerContext;
 
     move-result-object p0
@@ -41,6 +44,7 @@
         }
     .end annotation
 
+    .line 55
     new-instance p0, Lkotlinx/coroutines/android/HandlerContext;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;

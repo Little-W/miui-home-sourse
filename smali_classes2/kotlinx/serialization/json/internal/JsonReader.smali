@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/JsonReader;
 .super Ljava/lang/Object;
+.source "JsonReader.kt"
 
 
 # annotations
@@ -32,24 +33,29 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->source:Ljava/lang/String;
 
     const/16 p1, 0xc
 
+    .line 120
     iput-byte p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     const/4 p1, -0x1
 
+    .line 134
     iput p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->offset:I
 
     const/16 p1, 0x10
 
     new-array p1, p1, [C
 
+    .line 136
     iput-object p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->buf:[C
 
+    .line 139
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
     return-void
@@ -58,6 +64,7 @@
 .method public static final synthetic access$getTokenPosition$p(Lkotlinx/serialization/json/internal/JsonReader;)I
     .locals 0
 
+    .line 114
     iget p0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
     return p0
@@ -66,6 +73,7 @@
 .method private final append(C)V
     .locals 3
 
+    .line 187
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->length:I
 
     iget-object v1, p0, Lkotlinx/serialization/json/internal/JsonReader;->buf:[C
@@ -88,6 +96,7 @@
 
     iput-object v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->buf:[C
 
+    .line 188
     :cond_0
     iget-object v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->buf:[C
 
@@ -105,6 +114,7 @@
 .method private final appendEsc(Ljava/lang/String;I)I
     .locals 4
 
+    .line 275
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -127,6 +137,7 @@
 
     add-int/lit8 v0, p2, 0x1
 
+    .line 276
     invoke-virtual {p1, p2}, Ljava/lang/String;->charAt(I)C
 
     move-result p2
@@ -135,12 +146,14 @@
 
     if-ne p2, v3, :cond_1
 
+    .line 278
     invoke-direct {p0, p1, v0}, Lkotlinx/serialization/json/internal/JsonReader;->appendHex(Ljava/lang/String;I)I
 
     move-result p0
 
     return p0
 
+    .line 281
     :cond_1
     invoke-static {p2}, Lkotlinx/serialization/json/internal/JsonReaderKt;->escapeToChar(I)C
 
@@ -153,10 +166,12 @@
     :cond_2
     if-eqz v1, :cond_3
 
+    .line 283
     invoke-direct {p0, p1}, Lkotlinx/serialization/json/internal/JsonReader;->append(C)V
 
     return v0
 
+    .line 282
     :cond_3
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -187,6 +202,7 @@
     :cond_4
     const-string p1, "Unexpected EOF after escape character"
 
+    .line 275
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -201,6 +217,7 @@
 
     add-int/lit8 v0, p2, 0x1
 
+    .line 290
     invoke-direct {p0, p1, p2}, Lkotlinx/serialization/json/internal/JsonReader;->fromHexChar(Ljava/lang/String;I)I
 
     move-result p2
@@ -209,6 +226,7 @@
 
     add-int/lit8 v1, v0, 0x1
 
+    .line 291
     invoke-direct {p0, p1, v0}, Lkotlinx/serialization/json/internal/JsonReader;->fromHexChar(Ljava/lang/String;I)I
 
     move-result v0
@@ -219,6 +237,7 @@
 
     add-int/lit8 v0, v1, 0x1
 
+    .line 292
     invoke-direct {p0, p1, v1}, Lkotlinx/serialization/json/internal/JsonReader;->fromHexChar(Ljava/lang/String;I)I
 
     move-result v1
@@ -229,6 +248,7 @@
 
     add-int/lit8 v1, v0, 0x1
 
+    .line 293
     invoke-direct {p0, p1, v0}, Lkotlinx/serialization/json/internal/JsonReader;->fromHexChar(Ljava/lang/String;I)I
 
     move-result p1
@@ -237,6 +257,7 @@
 
     int-to-char p1, p2
 
+    .line 289
     invoke-direct {p0, p1}, Lkotlinx/serialization/json/internal/JsonReader;->append(C)V
 
     return v1
@@ -247,10 +268,12 @@
 
     sub-int/2addr p3, p2
 
+    .line 194
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->length:I
 
     add-int v1, v0, p3
 
+    .line 196
     iget-object v2, p0, Lkotlinx/serialization/json/internal/JsonReader;->buf:[C
 
     array-length v3, v2
@@ -281,6 +304,7 @@
     :goto_0
     if-ge v1, p3, :cond_1
 
+    .line 197
     iget-object v2, p0, Lkotlinx/serialization/json/internal/JsonReader;->buf:[C
 
     add-int v3, v0, v1
@@ -297,6 +321,7 @@
 
     goto :goto_0
 
+    .line 198
     :cond_1
     iget p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->length:I
 
@@ -314,6 +339,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 332
     iget p2, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
     :cond_0
@@ -327,6 +353,7 @@
 .method private final fromHexChar(Ljava/lang/String;I)I
     .locals 2
 
+    .line 341
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -345,6 +372,7 @@
     :goto_0
     if-eqz v0, :cond_6
 
+    .line 342
     invoke-virtual {p1, p2}, Ljava/lang/String;->charAt(I)C
 
     move-result p1
@@ -399,6 +427,7 @@
     :goto_4
     return p1
 
+    .line 346
     :cond_5
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -433,6 +462,7 @@
     :cond_6
     const-string p1, "Unexpected EOF during unicode escape"
 
+    .line 341
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -445,10 +475,13 @@
 .method private final nextLiteral(Ljava/lang/String;I)V
     .locals 2
 
+    .line 230
     iput p2, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
+    .line 231
     iput p2, p0, Lkotlinx/serialization/json/internal/JsonReader;->offset:I
 
+    .line 233
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -470,15 +503,18 @@
 
     goto :goto_0
 
+    .line 236
     :cond_0
     iput p2, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
+    .line 237
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->offset:I
 
     sub-int/2addr p2, v0
 
     iput p2, p0, Lkotlinx/serialization/json/internal/JsonReader;->length:I
 
+    .line 238
     iget p2, p0, Lkotlinx/serialization/json/internal/JsonReader;->length:I
 
     const-string v1, "null"
@@ -505,16 +541,19 @@
 .method private final nextString(Ljava/lang/String;I)V
     .locals 6
 
+    .line 242
     iput p2, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
     const/4 v0, 0x0
 
+    .line 243
     iput v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->length:I
 
     const/4 v0, 0x1
 
     add-int/2addr p2, v0
 
+    .line 246
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -528,6 +567,7 @@
     :goto_0
     move v3, v1
 
+    .line 250
     :goto_1
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
@@ -537,6 +577,7 @@
 
     if-eq v4, v5, :cond_2
 
+    .line 251
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -545,10 +586,12 @@
 
     if-ne v4, v5, :cond_0
 
+    .line 252
     invoke-direct {p0, p1, v3, v1}, Lkotlinx/serialization/json/internal/JsonReader;->appendRange(Ljava/lang/String;II)V
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 253
     invoke-direct {p0, p1, v1}, Lkotlinx/serialization/json/internal/JsonReader;->appendEsc(Ljava/lang/String;I)I
 
     move-result v1
@@ -558,6 +601,7 @@
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
+    .line 256
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -566,6 +610,7 @@
 
     goto :goto_1
 
+    .line 257
     :cond_1
     invoke-virtual {p0, v2, v1}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
@@ -578,30 +623,37 @@
     :cond_2
     if-ne v3, p2, :cond_3
 
+    .line 262
     iput v3, p0, Lkotlinx/serialization/json/internal/JsonReader;->offset:I
 
     sub-int p1, v1, v3
 
+    .line 263
     iput p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->length:I
 
     goto :goto_2
 
+    .line 266
     :cond_3
     invoke-direct {p0, p1, v3, v1}, Lkotlinx/serialization/json/internal/JsonReader;->appendRange(Ljava/lang/String;II)V
 
     const/4 p1, -0x1
 
+    .line 267
     iput p1, p0, Lkotlinx/serialization/json/internal/JsonReader;->offset:I
 
     :goto_2
     add-int/2addr v1, v0
 
+    .line 269
     iput v1, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
+    .line 270
     iput-byte v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     return-void
 
+    .line 247
     :cond_4
     invoke-virtual {p0, v2, p2}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
@@ -615,10 +667,12 @@
 .method private final takeStringInternal(Z)Ljava/lang/String;
     .locals 3
 
+    .line 179
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->offset:I
 
     if-gez v0, :cond_0
 
+    .line 180
     iget-object v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->buf:[C
 
     iget v1, p0, Lkotlinx/serialization/json/internal/JsonReader;->length:I
@@ -633,6 +687,7 @@
 
     goto :goto_0
 
+    .line 181
     :cond_0
     iget-object v1, p0, Lkotlinx/serialization/json/internal/JsonReader;->source:Ljava/lang/String;
 
@@ -653,11 +708,13 @@
     :goto_0
     if-eqz p1, :cond_1
 
+    .line 182
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
     :cond_1
     return-object v0
 
+    .line 181
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -679,6 +736,7 @@
 
     move p1, p3
 
+    .line 178
     :cond_0
     invoke-direct {p0, p1}, Lkotlinx/serialization/json/internal/JsonReader;->takeStringInternal(Z)Ljava/lang/String;
 
@@ -696,6 +754,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 333
     iget-object p0, p0, Lkotlinx/serialization/json/internal/JsonReader;->source:Ljava/lang/String;
 
     invoke-static {p2, p1, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;Ljava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
@@ -710,6 +769,7 @@
 .method public final getCanBeginValue()Z
     .locals 2
 
+    .line 125
     iget-byte p0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     const/4 v0, 0x1
@@ -739,6 +799,7 @@
 .method public final isDone()Z
     .locals 1
 
+    .line 122
     iget-byte p0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     const/16 v0, 0xc
@@ -759,10 +820,13 @@
 .method public final nextToken()V
     .locals 5
 
+    .line 202
     iget-object v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->source:Ljava/lang/String;
 
+    .line 203
     iget v1, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
+    .line 204
     :goto_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -770,10 +834,12 @@
 
     if-ge v1, v2, :cond_3
 
+    .line 205
     invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
+    .line 206
     invoke-static {v2}, Lkotlinx/serialization/json/internal/JsonReaderKt;->charToTokenClass(C)B
 
     move-result v2
@@ -788,12 +854,15 @@
 
     if-eq v2, v4, :cond_0
 
+    .line 217
     iput v1, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
+    .line 218
     iput-byte v2, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     add-int/2addr v1, v3
 
+    .line 219
     iput v1, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
     return-void
@@ -803,21 +872,25 @@
 
     goto :goto_0
 
+    .line 213
     :cond_1
     invoke-direct {p0, v0, v1}, Lkotlinx/serialization/json/internal/JsonReader;->nextString(Ljava/lang/String;I)V
 
     return-void
 
+    .line 209
     :cond_2
     invoke-direct {p0, v0, v1}, Lkotlinx/serialization/json/internal/JsonReader;->nextLiteral(Ljava/lang/String;I)V
 
     return-void
 
+    .line 225
     :cond_3
     iput v1, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
     const/16 v0, 0xc
 
+    .line 226
     iput-byte v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     return-void
@@ -826,6 +899,7 @@
 .method public final peekString(Z)Ljava/lang/String;
     .locals 2
 
+    .line 154
     iget-byte v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     const/4 v1, 0x1
@@ -844,6 +918,7 @@
     :cond_1
     const/4 p1, 0x0
 
+    .line 155
     invoke-direct {p0, p1}, Lkotlinx/serialization/json/internal/JsonReader;->takeStringInternal(Z)Ljava/lang/String;
 
     move-result-object p0
@@ -855,6 +930,7 @@
 .method public final skipElement()V
     .locals 4
 
+    .line 299
     iget-byte v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     const/16 v1, 0x8
@@ -865,10 +941,12 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 300
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
     return-void
 
+    .line 303
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -876,6 +954,7 @@
 
     check-cast v0, Ljava/util/List;
 
+    .line 305
     :cond_1
     iget-byte v3, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
@@ -883,6 +962,7 @@
 
     goto :goto_0
 
+    .line 308
     :pswitch_0
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->last(Ljava/util/List;)Ljava/lang/Object;
 
@@ -896,6 +976,7 @@
 
     if-ne v3, v1, :cond_2
 
+    .line 313
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -906,13 +987,16 @@
 
     goto :goto_0
 
+    .line 309
     :cond_2
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
+    .line 311
     iget-object p0, p0, Lkotlinx/serialization/json/internal/JsonReader;->source:Ljava/lang/String;
 
     const-string v1, "found ] instead of }"
 
+    .line 308
     invoke-static {v0, v1, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;Ljava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -921,6 +1005,7 @@
 
     throw p0
 
+    .line 316
     :pswitch_1
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->last(Ljava/util/List;)Ljava/lang/Object;
 
@@ -934,6 +1019,7 @@
 
     if-ne v3, v2, :cond_3
 
+    .line 321
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -944,13 +1030,16 @@
 
     goto :goto_0
 
+    .line 317
     :cond_3
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->currentPosition:I
 
+    .line 319
     iget-object p0, p0, Lkotlinx/serialization/json/internal/JsonReader;->source:Ljava/lang/String;
 
     const-string v1, "found } instead of ]"
 
+    .line 316
     invoke-static {v0, v1, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;Ljava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -959,6 +1048,7 @@
 
     throw p0
 
+    .line 306
     :pswitch_2
     invoke-static {v3}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -966,9 +1056,11 @@
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 324
     :goto_0
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonReader;->nextToken()V
 
+    .line 325
     move-object v3, v0
 
     check-cast v3, Ljava/util/Collection;
@@ -995,6 +1087,7 @@
 .method public final takeBooleanStringUnquoted()Ljava/lang/String;
     .locals 3
 
+    .line 174
     iget-byte v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     if-nez v0, :cond_0
@@ -1005,12 +1098,14 @@
 
     const/4 v2, 0x0
 
+    .line 175
     invoke-static {p0, v0, v1, v2}, Lkotlinx/serialization/json/internal/JsonReader;->takeStringInternal$default(Lkotlinx/serialization/json/internal/JsonReader;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 174
     :cond_0
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
@@ -1028,6 +1123,7 @@
 .method public final takeString()Ljava/lang/String;
     .locals 3
 
+    .line 147
     iget-byte v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     const/4 v1, 0x1
@@ -1038,11 +1134,13 @@
 
     goto :goto_0
 
+    .line 148
     :cond_0
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
     const-string v1, "Expected string or non-null literal"
 
+    .line 147
     invoke-virtual {p0, v1, v0}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -1057,6 +1155,7 @@
 
     const/4 v2, 0x0
 
+    .line 150
     invoke-static {p0, v0, v1, v2}, Lkotlinx/serialization/json/internal/JsonReader;->takeStringInternal$default(Lkotlinx/serialization/json/internal/JsonReader;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1067,6 +1166,7 @@
 .method public final takeStringQuoted()Ljava/lang/String;
     .locals 3
 
+    .line 159
     iget-byte v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenClass:B
 
     const/4 v1, 0x1
@@ -1077,10 +1177,12 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 167
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
     const-string v1, "Expected string literal with quotes.\nUse \'isLenient = true\' in \'Json {}` builder to accept non-compliant JSON."
 
+    .line 165
     invoke-virtual {p0, v1, v0}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -1089,11 +1191,13 @@
 
     throw p0
 
+    .line 163
     :cond_0
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonReader;->tokenPosition:I
 
     const-string v1, "Expected string literal but \'null\' literal was found.\nUse \'coerceInputValues = true\' in \'Json {}` builder to coerce nulls to default values."
 
+    .line 161
     invoke-virtual {p0, v1, v0}, Lkotlinx/serialization/json/internal/JsonReader;->fail(Ljava/lang/String;I)Ljava/lang/Void;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
@@ -1107,6 +1211,7 @@
 
     const/4 v2, 0x0
 
+    .line 170
     invoke-static {p0, v0, v1, v2}, Lkotlinx/serialization/json/internal/JsonReader;->takeStringInternal$default(Lkotlinx/serialization/json/internal/JsonReader;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1117,6 +1222,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 329
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

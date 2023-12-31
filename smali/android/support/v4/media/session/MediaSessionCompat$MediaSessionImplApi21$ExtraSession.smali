@@ -1,5 +1,6 @@
 .class Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;
 .super Landroid/support/v4/media/session/IMediaSession$Stub;
+.source "MediaSessionCompat.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;)V
     .locals 0
 
+    .line 3603
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     invoke-direct {p0}, Landroid/support/v4/media/session/IMediaSession$Stub;-><init>()V
@@ -33,6 +35,7 @@
 .method public addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
     .locals 0
 
+    .line 3834
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -43,6 +46,7 @@
 .method public addQueueItemAt(Landroid/support/v4/media/MediaDescriptionCompat;I)V
     .locals 0
 
+    .line 3840
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -53,6 +57,7 @@
 .method public adjustVolume(IILjava/lang/String;)V
     .locals 0
 
+    .line 3668
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -68,6 +73,7 @@
         }
     .end annotation
 
+    .line 3758
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -78,6 +84,7 @@
 .method public getExtras()Landroid/os/Bundle;
     .locals 0
 
+    .line 3864
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -88,6 +95,7 @@
 .method public getFlags()J
     .locals 0
 
+    .line 3656
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -98,6 +106,7 @@
 .method public getLaunchPendingIntent()Landroid/app/PendingIntent;
     .locals 0
 
+    .line 3649
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -108,6 +117,7 @@
 .method public getMetadata()Landroid/support/v4/media/MediaMetadataCompat;
     .locals 0
 
+    .line 3817
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -118,6 +128,7 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
+    .line 3637
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -128,6 +139,7 @@
 .method public getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;
     .locals 1
 
+    .line 3822
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mPlaybackState:Landroid/support/v4/media/session/PlaybackStateCompat;
@@ -162,6 +174,7 @@
 .method public getQueueTitle()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 3858
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -172,6 +185,7 @@
 .method public getRatingType()I
     .locals 0
 
+    .line 3870
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     iget p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mRatingType:I
@@ -182,6 +196,7 @@
 .method public getRepeatMode()I
     .locals 0
 
+    .line 3881
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     iget p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mRepeatMode:I
@@ -192,6 +207,7 @@
 .method public getShuffleMode()I
     .locals 0
 
+    .line 3892
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     iget p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mShuffleMode:I
@@ -202,6 +218,7 @@
 .method public getTag()Ljava/lang/String;
     .locals 0
 
+    .line 3643
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -212,6 +229,7 @@
 .method public getVolumeAttributes()Landroid/support/v4/media/session/ParcelableVolumeInfo;
     .locals 0
 
+    .line 3662
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -222,6 +240,7 @@
 .method public isCaptioningEnabled()Z
     .locals 0
 
+    .line 3875
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     iget-boolean p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mCaptioningEnabled:Z
@@ -240,6 +259,7 @@
 .method public isTransportControlEnabled()Z
     .locals 0
 
+    .line 3898
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -255,6 +275,7 @@
         }
     .end annotation
 
+    .line 3746
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -270,6 +291,7 @@
         }
     .end annotation
 
+    .line 3734
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -285,6 +307,7 @@
         }
     .end annotation
 
+    .line 3704
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -300,6 +323,7 @@
         }
     .end annotation
 
+    .line 3710
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -315,6 +339,7 @@
         }
     .end annotation
 
+    .line 3716
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -330,6 +355,7 @@
         }
     .end annotation
 
+    .line 3722
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -345,6 +371,7 @@
         }
     .end annotation
 
+    .line 3680
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -360,6 +387,7 @@
         }
     .end annotation
 
+    .line 3686
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -375,6 +403,7 @@
         }
     .end annotation
 
+    .line 3692
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -390,6 +419,7 @@
         }
     .end annotation
 
+    .line 3698
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -405,6 +435,7 @@
         }
     .end annotation
 
+    .line 3752
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -420,6 +451,7 @@
         }
     .end annotation
 
+    .line 3776
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -435,6 +467,7 @@
         }
     .end annotation
 
+    .line 3782
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -445,12 +478,14 @@
 .method public registerCallbackListener(Landroid/support/v4/media/session/IMediaControllerCallback;)V
     .locals 4
 
+    .line 3618
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     iget-boolean v0, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mDestroyed:Z
 
     if-nez v0, :cond_1
 
+    .line 3619
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->getCallingPackage()Ljava/lang/String;
@@ -461,9 +496,11 @@
 
     const-string v0, "android.media.session.MediaController"
 
+    .line 3623
     :cond_0
     new-instance v1, Landroidx/media/MediaSessionManager$RemoteUserInfo;
 
+    .line 3624
     invoke-static {}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->getCallingPid()I
 
     move-result v2
@@ -474,6 +511,7 @@
 
     invoke-direct {v1, v0, v2, v3}, Landroidx/media/MediaSessionManager$RemoteUserInfo;-><init>(Ljava/lang/String;II)V
 
+    .line 3625
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mExtraControllerCallbacks:Landroid/os/RemoteCallbackList;
@@ -487,6 +525,7 @@
 .method public removeQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
     .locals 0
 
+    .line 3846
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -497,6 +536,7 @@
 .method public removeQueueItemAt(I)V
     .locals 0
 
+    .line 3852
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -512,6 +552,7 @@
         }
     .end annotation
 
+    .line 3764
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -527,6 +568,7 @@
         }
     .end annotation
 
+    .line 3770
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -537,6 +579,7 @@
 .method public sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;)V
     .locals 0
 
+    .line 3607
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -552,6 +595,7 @@
         }
     .end annotation
 
+    .line 3811
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -562,6 +606,7 @@
 .method public sendMediaButton(Landroid/view/KeyEvent;)Z
     .locals 0
 
+    .line 3613
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -577,6 +622,7 @@
         }
     .end annotation
 
+    .line 3788
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -592,6 +638,7 @@
         }
     .end annotation
 
+    .line 3794
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -607,6 +654,7 @@
         }
     .end annotation
 
+    .line 3805
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -628,6 +676,7 @@
 .method public setVolumeTo(IILjava/lang/String;)V
     .locals 0
 
+    .line 3674
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -638,6 +687,7 @@
 .method public skipToQueueItem(J)V
     .locals 0
 
+    .line 3728
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -653,6 +703,7 @@
         }
     .end annotation
 
+    .line 3740
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -663,6 +714,7 @@
 .method public unregisterCallbackListener(Landroid/support/v4/media/session/IMediaControllerCallback;)V
     .locals 0
 
+    .line 3631
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21$ExtraSession;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;
 
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mExtraControllerCallbacks:Landroid/os/RemoteCallbackList;

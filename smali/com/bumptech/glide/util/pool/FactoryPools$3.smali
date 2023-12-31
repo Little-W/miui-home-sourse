@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/util/pool/FactoryPools$3;
 .super Ljava/lang/Object;
+.source "FactoryPools.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/util/pool/FactoryPools$Resetter;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public bridge synthetic reset(Ljava/lang/Object;)V
     .locals 0
 
+    .line 91
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/util/pool/FactoryPools$3;->reset(Ljava/util/List;)V
@@ -56,6 +59,7 @@
         }
     .end annotation
 
+    .line 94
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
     return-void

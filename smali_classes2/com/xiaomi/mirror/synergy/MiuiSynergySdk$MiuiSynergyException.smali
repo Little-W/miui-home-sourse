@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$MiuiSynergyException;
 .super Ljava/lang/Exception;
+.source "SourceFile"
 
 
 # annotations

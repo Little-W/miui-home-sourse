@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/serialization/DeserializationStrategy;
 .super Ljava/lang/Object;
+.source "KSerializer.kt"
 
 
 # annotations

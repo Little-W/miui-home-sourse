@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$2;
 .super Ljava/lang/Object;
+.source "CrashlyticsBackgroundWorker.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -35,6 +36,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 90
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$2;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$2;->val$runnable:Ljava/lang/Runnable;
@@ -54,6 +56,7 @@
         }
     .end annotation
 
+    .line 90
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$2;->call()Ljava/lang/Void;
 
     move-result-object p0
@@ -69,6 +72,7 @@
         }
     .end annotation
 
+    .line 93
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$2;->val$runnable:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V

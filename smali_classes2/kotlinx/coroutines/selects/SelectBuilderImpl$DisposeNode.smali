@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/selects/SelectBuilderImpl$DisposeNode;
 .super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
+.source "Select.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/DisposableHandle;)V
     .locals 0
 
+    .line 657
     invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$DisposeNode;->handle:Lkotlinx/coroutines/DisposableHandle;

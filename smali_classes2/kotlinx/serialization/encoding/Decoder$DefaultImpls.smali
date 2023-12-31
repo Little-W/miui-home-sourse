@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/encoding/Decoder$DefaultImpls;
 .super Ljava/lang/Object;
+.source "Decoding.kt"
 
 
 # annotations
@@ -31,6 +32,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 234
     invoke-interface {p1, p0}, Lkotlinx/serialization/DeserializationStrategy;->deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 
     move-result-object p0

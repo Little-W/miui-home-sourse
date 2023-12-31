@@ -1,5 +1,6 @@
 .class public final Landroidx/core/view/WindowInsetsCompat$Type;
 .super Ljava/lang/Object;
+.source "WindowInsetsCompat.java"
 
 
 # annotations
@@ -55,6 +56,7 @@
 
     return v1
 
+    .line 2047
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

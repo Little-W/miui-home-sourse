@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/StringResolver$Constant;
 .super Lio/branch/search/internal/ui/StringResolver;
+.source "SourceFile"
 
 
 # annotations

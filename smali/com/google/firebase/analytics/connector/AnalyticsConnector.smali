@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/analytics/connector/AnalyticsConnector;
 .super Ljava/lang/Object;
+.source "com.google.firebase:firebase-measurement-connector@@18.0.2"
 
 
 # annotations

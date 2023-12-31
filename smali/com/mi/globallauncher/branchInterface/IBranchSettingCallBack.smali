@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/IBranchSettingCallBack;
 .super Ljava/lang/Object;
+.source "IBranchSettingCallBack.java"
 
 
 # virtual methods

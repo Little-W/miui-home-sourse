@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/synergy/RelayIconHelper$3;
 .super Landroid/database/ContentObserver;
+.source "SourceFile"
 
 
 # annotations

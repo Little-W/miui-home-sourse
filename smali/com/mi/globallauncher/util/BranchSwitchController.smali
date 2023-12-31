@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/util/BranchSwitchController;
 .super Ljava/lang/Object;
+.source "BranchSwitchController.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,6 +20,7 @@
 .method public static isIndiaRegion()Z
     .locals 3
 
+    .line 25
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
     move-result-object v0
@@ -38,6 +41,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 26
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
     move-result-object v0
@@ -58,6 +62,7 @@
 
     goto :goto_0
 
+    .line 28
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
@@ -77,6 +82,7 @@
 
     move-result-object v0
 
+    .line 30
     :goto_0
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -90,10 +96,12 @@
 
     move-result-object v1
 
+    .line 31
     invoke-virtual {v1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 30
     invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0

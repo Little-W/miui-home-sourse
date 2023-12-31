@@ -1,5 +1,6 @@
 .class public final Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelperFactory;
 .super Ljava/lang/Object;
+.source "FrameworkSQLiteOpenHelperFactory.java"
 
 # interfaces
 .implements Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;
@@ -9,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +21,7 @@
 .method public create(Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;)Landroidx/sqlite/db/SupportSQLiteOpenHelper;
     .locals 2
 
+    .line 29
     new-instance p0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelper;
 
     iget-object v0, p1, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;->context:Landroid/content/Context;

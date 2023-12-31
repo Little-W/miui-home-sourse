@@ -1,5 +1,6 @@
 .class final synthetic Lcom/google/android/gms/internal/measurement/zzbw;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement@@18.0.0"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzhy$zze;->zza()[I
 
     move-result-object v0

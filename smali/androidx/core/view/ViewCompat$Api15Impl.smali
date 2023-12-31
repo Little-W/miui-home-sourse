@@ -1,5 +1,6 @@
 .class Landroidx/core/view/ViewCompat$Api15Impl;
 .super Ljava/lang/Object;
+.source "ViewCompat.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method static hasOnClickListeners(Landroid/view/View;)Z
     .locals 0
 
+    .line 5252
     invoke-virtual {p0}, Landroid/view/View;->hasOnClickListeners()Z
 
     move-result p0

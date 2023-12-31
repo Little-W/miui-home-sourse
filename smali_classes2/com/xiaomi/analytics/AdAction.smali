@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/analytics/AdAction;
 .super Lcom/xiaomi/analytics/TrackAction;
+.source "AdAction.java"
 
 
 # static fields
@@ -10,12 +11,15 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
+    .line 14
     invoke-direct {p0}, Lcom/xiaomi/analytics/TrackAction;-><init>()V
 
     const-string v0, "ad"
 
+    .line 15
     invoke-virtual {p0, v0}, Lcom/xiaomi/analytics/AdAction;->setCategory(Ljava/lang/String;)Lcom/xiaomi/analytics/TrackAction;
 
+    .line 16
     invoke-virtual {p0, p1}, Lcom/xiaomi/analytics/AdAction;->setAction(Ljava/lang/String;)Lcom/xiaomi/analytics/TrackAction;
 
     return-void
@@ -24,10 +28,13 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 19
     invoke-direct {p0}, Lcom/xiaomi/analytics/TrackAction;-><init>()V
 
+    .line 20
     invoke-virtual {p0, p1}, Lcom/xiaomi/analytics/AdAction;->setCategory(Ljava/lang/String;)Lcom/xiaomi/analytics/TrackAction;
 
+    .line 21
     invoke-virtual {p0, p2}, Lcom/xiaomi/analytics/AdAction;->setAction(Ljava/lang/String;)Lcom/xiaomi/analytics/TrackAction;
 
     return-void
@@ -49,10 +56,12 @@
 
     if-eqz p1, :cond_3
 
+    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 27
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -70,6 +79,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 28
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -78,6 +88,7 @@
 
     goto :goto_0
 
+    .line 31
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -87,13 +98,16 @@
 
     const-string v2, "|"
 
+    .line 32
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 34
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 36
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -101,6 +115,7 @@
 
     if-lez p1, :cond_3
 
+    .line 37
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1

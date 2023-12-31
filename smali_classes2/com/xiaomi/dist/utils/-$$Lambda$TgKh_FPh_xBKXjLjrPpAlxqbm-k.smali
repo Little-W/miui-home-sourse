@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/utils/-$$Lambda$TgKh_FPh_xBKXjLjrPpAlxqbm-k;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/xiaomi/dist/utils/ExecutorHelper$Task;

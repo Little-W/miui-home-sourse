@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/Texture$Format;
 .super Ljava/lang/Enum;
+.source "Texture.java"
 
 
 # annotations
@@ -55,6 +56,7 @@
 .method static constructor <clinit>()V
     .locals 15
 
+    .line 261
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/4 v1, 0x0
@@ -65,6 +67,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->R:Lcom/google/android/filament/Texture$Format;
 
+    .line 262
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/4 v2, 0x1
@@ -75,6 +78,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->R_INTEGER:Lcom/google/android/filament/Texture$Format;
 
+    .line 263
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/4 v3, 0x2
@@ -85,6 +89,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->RG:Lcom/google/android/filament/Texture$Format;
 
+    .line 264
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/4 v4, 0x3
@@ -95,6 +100,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->RG_INTEGER:Lcom/google/android/filament/Texture$Format;
 
+    .line 265
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/4 v5, 0x4
@@ -105,6 +111,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->RGB:Lcom/google/android/filament/Texture$Format;
 
+    .line 266
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/4 v6, 0x5
@@ -115,6 +122,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->RGB_INTEGER:Lcom/google/android/filament/Texture$Format;
 
+    .line 267
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/4 v7, 0x6
@@ -125,6 +133,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->RGBA:Lcom/google/android/filament/Texture$Format;
 
+    .line 268
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/4 v8, 0x7
@@ -135,6 +144,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->RGBA_INTEGER:Lcom/google/android/filament/Texture$Format;
 
+    .line 269
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/16 v9, 0x8
@@ -145,6 +155,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->UNUSED:Lcom/google/android/filament/Texture$Format;
 
+    .line 270
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/16 v10, 0x9
@@ -155,6 +166,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->DEPTH_COMPONENT:Lcom/google/android/filament/Texture$Format;
 
+    .line 271
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/16 v11, 0xa
@@ -165,6 +177,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->DEPTH_STENCIL:Lcom/google/android/filament/Texture$Format;
 
+    .line 272
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/16 v12, 0xb
@@ -175,6 +188,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Format;->STENCIL_INDEX:Lcom/google/android/filament/Texture$Format;
 
+    .line 273
     new-instance v0, Lcom/google/android/filament/Texture$Format;
 
     const/16 v13, 0xc
@@ -189,6 +203,7 @@
 
     new-array v0, v0, [Lcom/google/android/filament/Texture$Format;
 
+    .line 260
     sget-object v14, Lcom/google/android/filament/Texture$Format;->R:Lcom/google/android/filament/Texture$Format;
 
     aput-object v14, v0, v1
@@ -254,6 +269,7 @@
         }
     .end annotation
 
+    .line 260
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -262,6 +278,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Texture$Format;
     .locals 1
 
+    .line 260
     const-class v0, Lcom/google/android/filament/Texture$Format;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -276,6 +293,7 @@
 .method public static values()[Lcom/google/android/filament/Texture$Format;
     .locals 1
 
+    .line 260
     sget-object v0, Lcom/google/android/filament/Texture$Format;->$VALUES:[Lcom/google/android/filament/Texture$Format;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Texture$Format;->clone()Ljava/lang/Object;

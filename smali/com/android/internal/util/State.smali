@@ -1,5 +1,6 @@
 .class public Lcom/android/internal/util/State;
 .super Ljava/lang/Object;
+.source "State.java"
 
 # interfaces
 .implements Lcom/android/internal/util/IState;
@@ -9,6 +10,7 @@
 .method protected constructor <init>()V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +33,7 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
+    .line 70
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -41,12 +44,14 @@
 
     const/16 v0, 0x24
 
+    .line 71
     invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 72
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0

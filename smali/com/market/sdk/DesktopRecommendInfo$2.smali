@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/DesktopRecommendInfo$2;
 .super Ljava/lang/Object;
+.source "DesktopRecommendInfo.java"
 
 # interfaces
 .implements Lcom/google/gson/JsonDeserializer;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +46,7 @@
         }
     .end annotation
 
+    .line 93
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
 
     move-result-object p0
@@ -67,6 +70,7 @@
         }
     .end annotation
 
+    .line 90
     invoke-virtual {p0, p1, p2, p3}, Lcom/market/sdk/DesktopRecommendInfo$2;->deserialize(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Landroid/net/Uri;
 
     move-result-object p0

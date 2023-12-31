@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/util/ExceptionCatchingInputStream;
 .super Ljava/io/InputStream;
+.source "ExceptionCatchingInputStream.java"
 
 
 # static fields
@@ -26,6 +27,7 @@
 
     const/4 v0, 0x0
 
+    .line 19
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->createQueue(I)Ljava/util/Queue;
 
     move-result-object v0
@@ -38,6 +40,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 44
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     return-void
@@ -46,10 +49,12 @@
 .method public static obtain(Ljava/io/InputStream;)Lcom/bumptech/glide/util/ExceptionCatchingInputStream;
     .locals 2
 
+    .line 27
     sget-object v0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->QUEUE:Ljava/util/Queue;
 
     monitor-enter v0
 
+    .line 28
     :try_start_0
     sget-object v1, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->QUEUE:Ljava/util/Queue;
 
@@ -59,16 +64,19 @@
 
     check-cast v1, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;
 
+    .line 29
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v1, :cond_0
 
+    .line 31
     new-instance v1, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;
 
     invoke-direct {v1}, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;-><init>()V
 
+    .line 33
     :cond_0
     invoke-virtual {v1, p0}, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->setInputStream(Ljava/io/InputStream;)V
 
@@ -77,6 +85,7 @@
     :catchall_0
     move-exception p0
 
+    .line 29
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -95,6 +104,7 @@
         }
     .end annotation
 
+    .line 54
     iget-object p0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->available()I
@@ -112,6 +122,7 @@
         }
     .end annotation
 
+    .line 59
     iget-object p0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
@@ -122,6 +133,7 @@
 .method public getException()Ljava/io/IOException;
     .locals 0
 
+    .line 127
     iget-object p0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->exception:Ljava/io/IOException;
 
     return-object p0
@@ -130,6 +142,7 @@
 .method public mark(I)V
     .locals 0
 
+    .line 64
     iget-object p0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
     invoke-virtual {p0, p1}, Ljava/io/InputStream;->mark(I)V
@@ -140,6 +153,7 @@
 .method public markSupported()Z
     .locals 0
 
+    .line 69
     iget-object p0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->markSupported()Z
@@ -152,6 +166,7 @@
 .method public read()I
     .locals 1
 
+    .line 117
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
@@ -166,6 +181,7 @@
     :catch_0
     move-exception v0
 
+    .line 119
     iput-object v0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->exception:Ljava/io/IOException;
 
     const/4 p0, -0x1
@@ -177,6 +193,7 @@
 .method public read([B)I
     .locals 1
 
+    .line 76
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
@@ -191,6 +208,7 @@
     :catch_0
     move-exception p1
 
+    .line 78
     iput-object p1, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->exception:Ljava/io/IOException;
 
     const/4 p0, -0x1
@@ -202,6 +220,7 @@
 .method public read([BII)I
     .locals 1
 
+    .line 88
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
@@ -216,6 +235,7 @@
     :catch_0
     move-exception p1
 
+    .line 90
     iput-object p1, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->exception:Ljava/io/IOException;
 
     const/4 p0, -0x1
@@ -229,19 +249,24 @@
 
     const/4 v0, 0x0
 
+    .line 131
     iput-object v0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->exception:Ljava/io/IOException;
 
+    .line 132
     iput-object v0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
+    .line 133
     sget-object v0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->QUEUE:Ljava/util/Queue;
 
     monitor-enter v0
 
+    .line 134
     :try_start_0
     sget-object v1, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->QUEUE:Ljava/util/Queue;
 
     invoke-interface {v1, p0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
+    .line 135
     monitor-exit v0
 
     return-void
@@ -266,6 +291,7 @@
 
     monitor-enter p0
 
+    .line 98
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
@@ -273,6 +299,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 99
     monitor-exit p0
 
     return-void
@@ -288,6 +315,7 @@
 .method setInputStream(Ljava/io/InputStream;)V
     .locals 0
 
+    .line 49
     iput-object p1, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
     return-void
@@ -296,6 +324,7 @@
 .method public skip(J)J
     .locals 1
 
+    .line 105
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->wrapped:Ljava/io/InputStream;
 
@@ -310,6 +339,7 @@
     :catch_0
     move-exception p1
 
+    .line 107
     iput-object p1, p0, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->exception:Ljava/io/IOException;
 
     const-wide/16 p0, 0x0

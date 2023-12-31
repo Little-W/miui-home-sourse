@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/components/Lazy;
 .super Ljava/lang/Object;
+.source "Lazy.java"
 
 # interfaces
 .implements Lcom/google/firebase/inject/Provider;
@@ -39,6 +40,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 31
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -58,12 +60,15 @@
         }
     .end annotation
 
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     sget-object v0, Lcom/google/firebase/components/Lazy;->UNINITIALIZED:Ljava/lang/Object;
 
     iput-object v0, p0, Lcom/google/firebase/components/Lazy;->instance:Ljava/lang/Object;
 
+    .line 42
     iput-object p1, p0, Lcom/google/firebase/components/Lazy;->provider:Lcom/google/firebase/inject/Provider;
 
     return-void
@@ -79,33 +84,42 @@
         }
     .end annotation
 
+    .line 48
     iget-object v0, p0, Lcom/google/firebase/components/Lazy;->instance:Ljava/lang/Object;
 
+    .line 49
     sget-object v1, Lcom/google/firebase/components/Lazy;->UNINITIALIZED:Ljava/lang/Object;
 
     if-ne v0, v1, :cond_1
 
+    .line 50
     monitor-enter p0
 
+    .line 51
     :try_start_0
     iget-object v0, p0, Lcom/google/firebase/components/Lazy;->instance:Ljava/lang/Object;
 
+    .line 52
     sget-object v1, Lcom/google/firebase/components/Lazy;->UNINITIALIZED:Ljava/lang/Object;
 
     if-ne v0, v1, :cond_0
 
+    .line 53
     iget-object v0, p0, Lcom/google/firebase/components/Lazy;->provider:Lcom/google/firebase/inject/Provider;
 
     invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 54
     iput-object v0, p0, Lcom/google/firebase/components/Lazy;->instance:Ljava/lang/Object;
 
     const/4 v1, 0x0
 
+    .line 57
     iput-object v1, p0, Lcom/google/firebase/components/Lazy;->provider:Lcom/google/firebase/inject/Provider;
 
+    .line 59
     :cond_0
     monitor-exit p0
 

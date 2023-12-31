@@ -1,5 +1,6 @@
 .class public Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 .super Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
+.source "ViewModelProvider.java"
 
 
 # annotations
@@ -25,8 +26,10 @@
 .method public constructor <init>(Landroid/app/Application;)V
     .locals 0
 
+    .line 257
     invoke-direct {p0}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;-><init>()V
 
+    .line 258
     iput-object p1, p0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->mApplication:Landroid/app/Application;
 
     return-void
@@ -35,16 +38,19 @@
 .method public static getInstance(Landroid/app/Application;)Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
     .locals 1
 
+    .line 244
     sget-object v0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->sInstance:Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 
     if-nez v0, :cond_0
 
+    .line 245
     new-instance v0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;-><init>(Landroid/app/Application;)V
 
     sput-object v0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->sInstance:Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 
+    .line 247
     :cond_0
     sget-object p0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->sInstance:Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 
@@ -67,6 +73,7 @@
 
     const-string v0, "Cannot create an instance of "
 
+    .line 264
     const-class v1, Landroidx/lifecycle/AndroidViewModel;
 
     invoke-virtual {v1, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -80,6 +87,7 @@
     :try_start_0
     new-array v2, v1, [Ljava/lang/Class;
 
+    .line 267
     const-class v3, Landroid/app/Application;
 
     const/4 v4, 0x0
@@ -112,6 +120,7 @@
     :catch_0
     move-exception p0
 
+    .line 275
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -133,6 +142,7 @@
     :catch_1
     move-exception p0
 
+    .line 273
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -154,6 +164,7 @@
     :catch_2
     move-exception p0
 
+    .line 271
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -175,6 +186,7 @@
     :catch_3
     move-exception p0
 
+    .line 269
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -193,6 +205,7 @@
 
     throw v1
 
+    .line 278
     :cond_0
     invoke-super {p0, p1}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 

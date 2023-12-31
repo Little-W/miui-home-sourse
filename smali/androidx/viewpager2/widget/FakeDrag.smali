@@ -1,5 +1,6 @@
 .class final Landroidx/viewpager2/widget/FakeDrag;
 .super Ljava/lang/Object;
+.source "FakeDrag.java"
 
 
 # instance fields
@@ -10,6 +11,7 @@
 .method isFakeDragging()Z
     .locals 0
 
+    .line 51
     iget-object p0, p0, Landroidx/viewpager2/widget/FakeDrag;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ScrollEventAdapter;->isFakeDragging()Z

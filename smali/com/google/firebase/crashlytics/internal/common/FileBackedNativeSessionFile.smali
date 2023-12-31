@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;
 .super Ljava/lang/Object;
+.source "FileBackedNativeSessionFile.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/common/NativeSessionFile;
@@ -17,12 +18,16 @@
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)V
     .locals 0
 
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 39
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;->dataTransportFilename:Ljava/lang/String;
 
+    .line 40
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;->reportsEndpointFilename:Ljava/lang/String;
 
+    .line 41
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;->file:Ljava/io/File;
 
     return-void
@@ -37,6 +42,7 @@
 
     const/4 v1, 0x0
 
+    .line 78
     :try_start_0
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;->getStream()Ljava/io/InputStream;
 
@@ -44,6 +50,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 79
     :try_start_1
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
@@ -51,6 +58,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
+    .line 80
     :try_start_2
     new-instance v3, Ljava/util/zip/GZIPOutputStream;
 
@@ -58,6 +66,7 @@
 
     if-nez p0, :cond_1
 
+    .line 90
     invoke-virtual {v3}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -77,6 +86,7 @@
     :cond_0
     return-object v1
 
+    .line 85
     :cond_1
     :goto_0
     :try_start_5
@@ -88,19 +98,23 @@
 
     const/4 v5, 0x0
 
+    .line 86
     invoke-virtual {v3, v0, v5, v4}, Ljava/util/zip/GZIPOutputStream;->write([BII)V
 
     goto :goto_0
 
+    .line 88
     :cond_2
     invoke-virtual {v3}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
+    .line 89
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 90
     :try_start_6
     invoke-virtual {v3}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_6
@@ -124,6 +138,7 @@
     :catchall_0
     move-exception v0
 
+    .line 78
     :try_start_9
     invoke-virtual {v3}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_9
@@ -196,26 +211,31 @@
 .method public asFilePayload()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File;
     .locals 2
 
+    .line 66
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;->asGzippedBytes()[B
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 68
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File;->builder()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File$Builder;
 
     move-result-object v1
 
+    .line 69
     invoke-virtual {v1, v0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File$Builder;->setContents([B)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File$Builder;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;->dataTransportFilename:Ljava/lang/String;
 
+    .line 70
     invoke-virtual {v0, p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File$Builder;->setFilename(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File$Builder;
 
     move-result-object p0
 
+    .line 71
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File$Builder;->build()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$FilesPayload$File;
 
     move-result-object p0
@@ -232,6 +252,7 @@
 .method public getReportsEndpointFilename()Ljava/lang/String;
     .locals 0
 
+    .line 47
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;->reportsEndpointFilename:Ljava/lang/String;
 
     return-object p0
@@ -240,6 +261,7 @@
 .method public getStream()Ljava/io/InputStream;
     .locals 2
 
+    .line 53
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;->file:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -260,6 +282,7 @@
 
     goto :goto_0
 
+    .line 57
     :cond_0
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;

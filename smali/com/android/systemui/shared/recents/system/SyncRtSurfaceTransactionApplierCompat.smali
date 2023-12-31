@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 .super Ljava/lang/Object;
+.source "SyncRtSurfaceTransactionApplierCompat.java"
 
 
 # annotations
@@ -66,22 +67,27 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 4
 
+    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 72
     iput v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mSequenceNumber:I
 
+    .line 73
     iput v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mPendingSequenceNumber:I
 
     const/4 v1, 0x0
 
     if-nez p1, :cond_0
 
+    .line 84
     iput-object v1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mTargetViewRootImpl:Landroid/view/ViewRootImpl;
 
     goto :goto_0
 
+    .line 86
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
@@ -89,6 +95,7 @@
 
     if-nez v2, :cond_1
 
+    .line 88
     invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v2
@@ -97,9 +104,11 @@
 
     move-result-object v2
 
+    .line 90
     :cond_1
     iput-object v2, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mTargetViewRootImpl:Landroid/view/ViewRootImpl;
 
+    .line 92
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -144,6 +153,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 95
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mTargetViewRootImpl:Landroid/view/ViewRootImpl;
 
     if-eqz p1, :cond_4
@@ -159,6 +169,7 @@
     :cond_4
     iput-object v1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mBarrierSurfaceControl:Landroid/view/SurfaceControl;
 
+    .line 97
     new-instance p1, Landroid/os/Handler;
 
     new-instance v0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$1;
@@ -175,6 +186,7 @@
 .method static synthetic access$000(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;I)V
     .locals 0
 
+    .line 49
     invoke-direct {p0, p1}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->onApplyMessage(I)V
 
     return-void
@@ -183,6 +195,7 @@
 .method static synthetic access$100(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Landroid/view/SurfaceControl;
     .locals 0
 
+    .line 49
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mBarrierSurfaceControl:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -191,6 +204,7 @@
 .method static synthetic access$200(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Landroid/os/Handler;
     .locals 0
 
+    .line 49
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mApplyHandler:Landroid/os/Handler;
 
     return-object p0
@@ -199,6 +213,7 @@
 .method static synthetic access$300(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Landroid/view/ViewRootImpl;
     .locals 0
 
+    .line 49
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mTargetViewRootImpl:Landroid/view/ViewRootImpl;
 
     return-object p0
@@ -207,6 +222,7 @@
 .method public static applyParams(Lcom/android/systemui/shared/recents/system/TransactionCompat;Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;)V
     .locals 0
 
+    .line 211
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/TransactionCompat;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
     invoke-virtual {p1, p0}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;->applyTo(Landroid/view/SurfaceControl$Transaction;)V
@@ -230,10 +246,12 @@
 
     const/4 p0, 0x0
 
+    .line 222
     invoke-interface {p1, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 223
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
@@ -241,6 +259,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 225
     new-instance v0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;-><init>(Landroid/view/View;)V
@@ -249,6 +268,7 @@
 
     goto :goto_0
 
+    .line 228
     :cond_1
     new-instance v0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$5;
 
@@ -263,8 +283,10 @@
 .method private onApplyMessage(I)V
     .locals 1
 
+    .line 110
     iput p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mSequenceNumber:I
 
+    .line 111
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mSequenceNumber:I
 
     iget v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mPendingSequenceNumber:I
@@ -277,8 +299,10 @@
 
     const/4 v0, 0x0
 
+    .line 113
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mAfterApplyCallback:Ljava/lang/Runnable;
 
+    .line 114
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_0
@@ -290,25 +314,30 @@
 .method public addAfterApplyCallback(Ljava/lang/Runnable;)V
     .locals 2
 
+    .line 191
     iget v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mSequenceNumber:I
 
     iget v1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mPendingSequenceNumber:I
 
     if-ne v0, v1, :cond_0
 
+    .line 192
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
+    .line 194
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mAfterApplyCallback:Ljava/lang/Runnable;
 
     if-nez v0, :cond_1
 
+    .line 195
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mAfterApplyCallback:Ljava/lang/Runnable;
 
     goto :goto_0
 
+    .line 198
     :cond_1
     new-instance v1, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$4;
 
@@ -323,6 +352,7 @@
 .method public varargs scheduleApply([Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;)V
     .locals 3
 
+    .line 125
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mTargetViewRootImpl:Landroid/view/ViewRootImpl;
 
     if-eqz v0, :cond_2
@@ -335,6 +365,7 @@
 
     goto :goto_0
 
+    .line 129
     :cond_0
     iget v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mPendingSequenceNumber:I
 
@@ -342,8 +373,10 @@
 
     iput v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mPendingSequenceNumber:I
 
+    .line 130
     iget v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mPendingSequenceNumber:I
 
+    .line 132
     :try_start_0
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mTargetViewRootImpl:Landroid/view/ViewRootImpl;
 
@@ -363,10 +396,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 169
     new-instance p1, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$3;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$3;-><init>(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)V
 
+    .line 180
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -377,10 +412,12 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 181
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
+    .line 183
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->mTargetViewRootImpl:Landroid/view/ViewRootImpl;
 

@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;
 .super Lkotlinx/coroutines/internal/AtomicDesc;
+.source "LockFreeLinkedList.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 448
     invoke-direct {p0}, Lkotlinx/coroutines/internal/AtomicDesc;-><init>()V
 
     return-void
@@ -51,6 +53,7 @@
     :cond_0
     const/4 p2, 0x0
 
+    .line 508
     :goto_0
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;->getAffectedNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
@@ -58,6 +61,7 @@
 
     if-eqz v1, :cond_6
 
+    .line 509
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;->getOriginalNext()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     move-result-object v2
@@ -66,6 +70,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 510
     invoke-virtual {p0, v1, v2}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;->updatedNext(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
 
     move-result-object v0
@@ -75,6 +80,7 @@
     :cond_1
     move-object v0, v2
 
+    .line 511
     :goto_1
     sget-object v3, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->_next$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -86,11 +92,13 @@
 
     if-eqz p2, :cond_2
 
+    .line 512
     invoke-virtual {p0, v1, v2}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;->finishOnSuccess(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)V
 
     :cond_2
     return-void
 
+    .line 509
     :cond_3
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;
 
@@ -119,6 +127,7 @@
     :goto_2
     return-void
 
+    .line 508
     :cond_6
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;
 
@@ -171,6 +180,7 @@
 .method public onPrepare(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)Ljava/lang/Object;
     .locals 0
 
+    .line 462
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;->finishPrepare(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)V
 
     const/4 p0, 0x0
@@ -195,6 +205,7 @@
         }
     .end annotation
 
+    .line 471
     :cond_0
     :goto_0
     move-object v0, p1
@@ -207,6 +218,7 @@
 
     if-eqz v0, :cond_c
 
+    .line 473
     iget-object v1, v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->_next:Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -215,6 +227,7 @@
 
     return-object v2
 
+    .line 476
     :cond_1
     invoke-virtual {p1}, Lkotlinx/coroutines/internal/AtomicOp;->isDecided()Z
 
@@ -224,11 +237,13 @@
 
     return-object v2
 
+    .line 477
     :cond_2
     instance-of v3, v1, Lkotlinx/coroutines/internal/OpDescriptor;
 
     if-eqz v3, :cond_4
 
+    .line 480
     check-cast v1, Lkotlinx/coroutines/internal/OpDescriptor;
 
     invoke-virtual {p1, v1}, Lkotlinx/coroutines/internal/AtomicOp;->isEarlierThan(Lkotlinx/coroutines/internal/OpDescriptor;)Z
@@ -237,15 +252,18 @@
 
     if-eqz v2, :cond_3
 
+    .line 481
     sget-object p0, Lkotlinx/coroutines/internal/AtomicKt;->RETRY_ATOMIC:Ljava/lang/Object;
 
     return-object p0
 
+    .line 482
     :cond_3
     invoke-virtual {v1, v0}, Lkotlinx/coroutines/internal/OpDescriptor;->perform(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 486
     :cond_4
     invoke-virtual {p0, v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;->failure(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
 
@@ -255,6 +273,7 @@
 
     return-object v3
 
+    .line 488
     :cond_5
     invoke-virtual {p0, v0, v1}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;->retry(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Ljava/lang/Object;)Z
 
@@ -264,6 +283,7 @@
 
     goto :goto_0
 
+    .line 489
     :cond_6
     new-instance v3, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;
 
@@ -275,6 +295,7 @@
 
     invoke-direct {v3, v0, v4, p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;-><init>(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;)V
 
+    .line 490
     sget-object v4, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->_next$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     invoke-virtual {v4, v0, v1, v3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -283,17 +304,20 @@
 
     if-eqz v4, :cond_0
 
+    .line 493
     :try_start_0
     invoke-virtual {v3, v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->perform(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
+    .line 494
     sget-object v5, Lkotlinx/coroutines/internal/LockFreeLinkedList_commonKt;->REMOVE_PREPARED:Ljava/lang/Object;
 
     if-ne v4, v5, :cond_7
 
     goto :goto_0
 
+    .line 495
     :cond_7
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
@@ -333,12 +357,15 @@
     :catchall_0
     move-exception p0
 
+    .line 499
     sget-object p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->_next$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     invoke-virtual {p1, v0, v3, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 500
     throw p0
 
+    .line 489
     :cond_b
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -348,6 +375,7 @@
 
     throw p0
 
+    .line 471
     :cond_c
     sget-object p0, Lkotlinx/coroutines/internal/AtomicKt;->RETRY_ATOMIC:Ljava/lang/Object;
 
@@ -365,6 +393,7 @@
 .method protected takeAffectedNode(Lkotlinx/coroutines/internal/OpDescriptor;)Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
     .locals 0
 
+    .line 451
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;->getAffectedNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     move-result-object p0

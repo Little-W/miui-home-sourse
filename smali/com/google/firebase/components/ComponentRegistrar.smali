@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/components/ComponentRegistrar;
 .super Ljava/lang/Object;
+.source "ComponentRegistrar.java"
 
 
 # virtual methods

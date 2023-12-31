@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/functions/Predicate;
 .super Ljava/lang/Object;
+.source "Predicate.java"
 
 
 # annotations

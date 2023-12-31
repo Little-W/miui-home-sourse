@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/LockFreeLinkedList_commonKt;
 .super Ljava/lang/Object;
+.source "LockFreeLinkedList.common.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 90
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "REMOVE_PREPARED"

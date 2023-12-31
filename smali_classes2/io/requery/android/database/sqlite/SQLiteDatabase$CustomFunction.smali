@@ -1,5 +1,6 @@
 .class public interface abstract Lio/requery/android/database/sqlite/SQLiteDatabase$CustomFunction;
 .super Ljava/lang/Object;
+.source "SQLiteDatabase.java"
 
 
 # annotations

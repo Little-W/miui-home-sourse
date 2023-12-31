@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/internal/ParcelableSparseBooleanArray$1;
 .super Ljava/lang/Object;
+.source "ParcelableSparseBooleanArray.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,20 +41,26 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/internal/ParcelableSparseBooleanArray;
     .locals 5
 
+    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
 
+    .line 76
     new-instance v0, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;
 
     invoke-direct {v0, p0}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;-><init>(I)V
 
+    .line 78
     new-array v1, p0, [I
 
+    .line 79
     new-array v2, p0, [Z
 
+    .line 81
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
 
+    .line 82
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
     const/4 p1, 0x0
@@ -60,6 +68,7 @@
     :goto_0
     if-ge p1, p0, :cond_0
 
+    .line 85
     aget v3, v1, p1
 
     aget-boolean v4, v2, p1
@@ -77,6 +86,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 71
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray$1;->createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/internal/ParcelableSparseBooleanArray;
 
     move-result-object p0
@@ -87,6 +97,7 @@
 .method public newArray(I)[Lcom/google/android/material/internal/ParcelableSparseBooleanArray;
     .locals 0
 
+    .line 94
     new-array p0, p1, [Lcom/google/android/material/internal/ParcelableSparseBooleanArray;
 
     return-object p0
@@ -95,6 +106,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 71
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray$1;->newArray(I)[Lcom/google/android/material/internal/ParcelableSparseBooleanArray;
 
     move-result-object p0

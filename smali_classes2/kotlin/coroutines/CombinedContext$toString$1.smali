@@ -1,5 +1,6 @@
 .class final Lkotlin/coroutines/CombinedContext$toString$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "CoroutineContextImpl.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -59,6 +60,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 112
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Lkotlin/coroutines/CoroutineContext$Element;
@@ -81,6 +83,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 175
     move-object p0, p1
 
     check-cast p0, Ljava/lang/CharSequence;

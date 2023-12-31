@@ -1,5 +1,6 @@
 .class Lcom/google/gson/internal/LinkedTreeMap$KeySet$1;
 .super Lcom/google/gson/internal/LinkedTreeMap$LinkedTreeMapIterator;
+.source "LinkedTreeMap.java"
 
 
 # annotations
@@ -30,6 +31,7 @@
 .method constructor <init>(Lcom/google/gson/internal/LinkedTreeMap$KeySet;)V
     .locals 0
 
+    .line 601
     iput-object p1, p0, Lcom/google/gson/internal/LinkedTreeMap$KeySet$1;->this$1:Lcom/google/gson/internal/LinkedTreeMap$KeySet;
 
     iget-object p1, p1, Lcom/google/gson/internal/LinkedTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedTreeMap;
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 603
     invoke-virtual {p0}, Lcom/google/gson/internal/LinkedTreeMap$KeySet$1;->nextNode()Lcom/google/gson/internal/LinkedTreeMap$Node;
 
     move-result-object p0

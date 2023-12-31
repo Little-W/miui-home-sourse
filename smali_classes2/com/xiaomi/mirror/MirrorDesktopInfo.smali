@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/MirrorDesktopInfo;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;

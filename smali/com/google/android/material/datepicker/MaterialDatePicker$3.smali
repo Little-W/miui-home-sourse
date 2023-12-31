@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/datepicker/MaterialDatePicker$3;
 .super Ljava/lang/Object;
+.source "MaterialDatePicker.java"
 
 # interfaces
 .implements Landroidx/core/view/OnApplyWindowInsetsListener;
@@ -30,6 +31,7 @@
 .method constructor <init>(Lcom/google/android/material/datepicker/MaterialDatePicker;ILandroid/view/View;I)V
     .locals 0
 
+    .line 373
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$3;->this$0:Lcom/google/android/material/datepicker/MaterialDatePicker;
 
     iput p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$3;->val$originalHeaderHeight:I
@@ -48,6 +50,7 @@
 .method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
     .locals 3
 
+    .line 376
     invoke-static {}, Landroidx/core/view/WindowInsetsCompat$Type;->systemBars()I
 
     move-result p1
@@ -58,10 +61,12 @@
 
     iget p1, p1, Landroidx/core/graphics/Insets;->top:I
 
+    .line 377
     iget v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$3;->val$originalHeaderHeight:I
 
     if-ltz v0, :cond_0
 
+    .line 378
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$3;->val$headerLayout:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -74,6 +79,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
+    .line 379
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$3;->val$headerLayout:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -82,9 +88,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 381
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$3;->val$headerLayout:Landroid/view/View;
 
+    .line 382
     invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v1
@@ -95,16 +103,19 @@
 
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$3;->val$headerLayout:Landroid/view/View;
 
+    .line 384
     invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
 
     move-result p1
 
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$3;->val$headerLayout:Landroid/view/View;
 
+    .line 385
     invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result p0
 
+    .line 381
     invoke-virtual {v0, v1, v2, p1, p0}, Landroid/view/View;->setPadding(IIII)V
 
     return-object p2

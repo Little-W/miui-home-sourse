@@ -1,5 +1,6 @@
 .class public Lorg/greenrobot/eventbus/util/ErrorDialogConfig;
 .super Ljava/lang/Object;
+.source "ErrorDialogConfig.java"
 
 
 # instance fields
@@ -10,6 +11,7 @@
 .method getEventBus()Lorg/greenrobot/eventbus/EventBus;
     .locals 0
 
+    .line 80
     iget-object p0, p0, Lorg/greenrobot/eventbus/util/ErrorDialogConfig;->eventBus:Lorg/greenrobot/eventbus/EventBus;
 
     if-eqz p0, :cond_0

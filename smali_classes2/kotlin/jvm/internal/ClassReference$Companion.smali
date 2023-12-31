@@ -1,5 +1,6 @@
 .class public final Lkotlin/jvm/internal/ClassReference$Companion;
 .super Ljava/lang/Object;
+.source "ClassReference.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +31,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 95
     invoke-direct {p0}, Lkotlin/jvm/internal/ClassReference$Companion;-><init>()V
 
     return-void
@@ -51,6 +54,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 162
     invoke-virtual {p1}, Ljava/lang/Class;->isAnonymousClass()Z
 
     move-result p0
@@ -66,6 +70,7 @@
 
     goto/16 :goto_2
 
+    .line 163
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Class;->isLocalClass()Z
 
@@ -73,10 +78,12 @@
 
     if-eqz p0, :cond_4
 
+    .line 164
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 165
     invoke-virtual {p1}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -115,6 +122,7 @@
 
     goto :goto_1
 
+    .line 166
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Class;->getEnclosingConstructor()Ljava/lang/reflect/Constructor;
 
@@ -156,6 +164,7 @@
 
     goto :goto_2
 
+    .line 167
     :cond_3
     invoke-static {p0, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -167,6 +176,7 @@
 
     goto :goto_2
 
+    .line 169
     :cond_4
     invoke-virtual {p1}, Ljava/lang/Class;->isArray()Z
 
@@ -174,12 +184,14 @@
 
     if-eqz p0, :cond_6
 
+    .line 170
     invoke-virtual {p1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object p0
 
     const-string p1, "componentType"
 
+    .line 172
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Ljava/lang/Class;->isPrimitive()Z
@@ -223,6 +235,7 @@
 
     goto/16 :goto_0
 
+    .line 176
     :cond_6
     invoke-static {}, Lkotlin/jvm/internal/ClassReference;->access$getSimpleNames$cp()Ljava/util/Map;
 

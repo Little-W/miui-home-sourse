@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;
 .super Ljava/lang/Object;
+.source "BlockingAnalyticsEventLogger.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/analytics/AnalyticsEventLogger;
@@ -24,8 +25,10 @@
 .method public constructor <init>(Lcom/google/firebase/crashlytics/internal/analytics/CrashlyticsOriginAnalyticsEventLogger;ILjava/util/concurrent/TimeUnit;)V
     .locals 1
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -34,12 +37,16 @@
 
     const/4 v0, 0x0
 
+    .line 40
     iput-boolean v0, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->callbackReceived:Z
 
+    .line 46
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->baseAnalyticsEventLogger:Lcom/google/firebase/crashlytics/internal/analytics/CrashlyticsOriginAnalyticsEventLogger;
 
+    .line 47
     iput p2, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->timeout:I
 
+    .line 48
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->timeUnit:Ljava/util/concurrent/TimeUnit;
 
     return-void
@@ -50,10 +57,12 @@
 .method public logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 5
 
+    .line 53
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->latchLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 54
     :try_start_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -79,8 +88,10 @@
 
     move-result-object v2
 
+    .line 55
     invoke-virtual {v1, v2}, Lcom/google/firebase/crashlytics/internal/Logger;->v(Ljava/lang/String;)V
 
+    .line 56
     new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v2, 0x1
@@ -91,12 +102,15 @@
 
     const/4 v1, 0x0
 
+    .line 57
     iput-boolean v1, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->callbackReceived:Z
 
+    .line 59
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->baseAnalyticsEventLogger:Lcom/google/firebase/crashlytics/internal/analytics/CrashlyticsOriginAnalyticsEventLogger;
 
     invoke-virtual {v1, p1, p2}, Lcom/google/firebase/crashlytics/internal/analytics/CrashlyticsOriginAnalyticsEventLogger;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
 
+    .line 61
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p1
@@ -107,6 +121,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 63
     :try_start_1
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->eventLatch:Ljava/util/concurrent/CountDownLatch;
 
@@ -122,8 +137,10 @@
 
     if-eqz p1, :cond_0
 
+    .line 64
     iput-boolean v2, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->callbackReceived:Z
 
+    .line 65
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p1
@@ -134,6 +151,7 @@
 
     goto :goto_0
 
+    .line 67
     :cond_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -141,6 +159,7 @@
 
     const-string p2, "Timeout exceeded while awaiting app exception callback from Analytics listener."
 
+    .line 68
     invoke-virtual {p1, p2}, Lcom/google/firebase/crashlytics/internal/Logger;->w(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
@@ -148,6 +167,7 @@
 
     goto :goto_0
 
+    .line 71
     :catch_0
     :try_start_2
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
@@ -156,13 +176,16 @@
 
     const-string p2, "Interrupted while awaiting app exception callback from Analytics listener."
 
+    .line 72
     invoke-virtual {p1, p2}, Lcom/google/firebase/crashlytics/internal/Logger;->e(Ljava/lang/String;)V
 
     :goto_0
     const/4 p1, 0x0
 
+    .line 75
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->eventLatch:Ljava/util/concurrent/CountDownLatch;
 
+    .line 76
     monitor-exit v0
 
     return-void
@@ -180,6 +203,7 @@
 .method public onEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 82
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/analytics/BlockingAnalyticsEventLogger;->eventLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-nez p0, :cond_0
@@ -189,12 +213,14 @@
     :cond_0
     const-string p2, "_ae"
 
+    .line 88
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 89
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     :cond_1

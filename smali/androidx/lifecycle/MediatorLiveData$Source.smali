@@ -1,5 +1,6 @@
 .class Landroidx/lifecycle/MediatorLiveData$Source;
 .super Ljava/lang/Object;
+.source "MediatorLiveData.java"
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -62,14 +63,18 @@
         }
     .end annotation
 
+    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 133
     iput v0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mVersion:I
 
+    .line 136
     iput-object p1, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mLiveData:Landroidx/lifecycle/LiveData;
 
+    .line 137
     iput-object p2, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mObserver:Landroidx/lifecycle/Observer;
 
     return-void
@@ -85,6 +90,7 @@
         }
     .end annotation
 
+    .line 150
     iget v0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mVersion:I
 
     iget-object v1, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mLiveData:Landroidx/lifecycle/LiveData;
@@ -95,6 +101,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 151
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mLiveData:Landroidx/lifecycle/LiveData;
 
     invoke-virtual {v0}, Landroidx/lifecycle/LiveData;->getVersion()I
@@ -103,6 +110,7 @@
 
     iput v0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mVersion:I
 
+    .line 152
     iget-object p0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mObserver:Landroidx/lifecycle/Observer;
 
     invoke-interface {p0, p1}, Landroidx/lifecycle/Observer;->onChanged(Ljava/lang/Object;)V
@@ -114,6 +122,7 @@
 .method plug()V
     .locals 1
 
+    .line 141
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mLiveData:Landroidx/lifecycle/LiveData;
 
     invoke-virtual {v0, p0}, Landroidx/lifecycle/LiveData;->observeForever(Landroidx/lifecycle/Observer;)V
@@ -124,6 +133,7 @@
 .method unplug()V
     .locals 1
 
+    .line 145
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mLiveData:Landroidx/lifecycle/LiveData;
 
     invoke-virtual {v0, p0}, Landroidx/lifecycle/LiveData;->removeObserver(Landroidx/lifecycle/Observer;)V

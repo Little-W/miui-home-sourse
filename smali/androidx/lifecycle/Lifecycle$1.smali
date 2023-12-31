@@ -1,5 +1,6 @@
 .class synthetic Landroidx/lifecycle/Lifecycle$1;
 .super Ljava/lang/Object;
+.source "Lifecycle.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
+    .line 224
     invoke-static {}, Landroidx/lifecycle/Lifecycle$Event;->values()[Landroidx/lifecycle/Lifecycle$Event;
 
     move-result-object v0
@@ -144,6 +146,7 @@
     :try_end_6
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
+    .line 135
     :catch_6
     invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 

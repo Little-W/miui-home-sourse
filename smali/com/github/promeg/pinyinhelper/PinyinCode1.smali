@@ -1,5 +1,6 @@
 .class final Lcom/github/promeg/pinyinhelper/PinyinCode1;
 .super Ljava/lang/Object;
+.source "PinyinCode1.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 
     new-array v0, v0, [B
 
+    .line 13
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/github/promeg/pinyinhelper/PinyinCode1;->PINYIN_CODE_PADDING:[B
@@ -24,6 +26,7 @@
 
     new-array v0, v0, [B
 
+    .line 61
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/github/promeg/pinyinhelper/PinyinCode1;->PINYIN_CODE:[B

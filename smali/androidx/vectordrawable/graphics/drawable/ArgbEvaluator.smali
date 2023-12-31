@@ -1,5 +1,6 @@
 .class public Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 .super Ljava/lang/Object;
+.source "ArgbEvaluator.java"
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -13,6 +14,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 33
     new-instance v0, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 
     invoke-direct {v0}, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;-><init>()V
@@ -25,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +36,7 @@
 .method public static getInstance()Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
     .locals 1
 
+    .line 43
     sget-object v0, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;->sInstance:Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 
     return-object v0
@@ -43,6 +47,7 @@
 .method public evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 10
 
+    .line 64
     check-cast p2, Ljava/lang/Integer;
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
@@ -81,6 +86,7 @@
 
     div-float/2addr p0, v0
 
+    .line 70
     check-cast p3, Ljava/lang/Integer;
 
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
@@ -121,6 +127,7 @@
 
     const-wide v8, 0x400199999999999aL    # 2.2
 
+    .line 77
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -129,6 +136,7 @@
 
     float-to-double v6, v2
 
+    .line 78
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -137,6 +145,7 @@
 
     float-to-double v6, p0
 
+    .line 79
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -145,6 +154,7 @@
 
     float-to-double v6, v4
 
+    .line 81
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -153,6 +163,7 @@
 
     float-to-double v5, v5
 
+    .line 82
     invoke-static {v5, v6, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -161,6 +172,7 @@
 
     float-to-double v6, p3
 
+    .line 83
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -197,6 +209,7 @@
 
     const-wide v5, 0x3fdd1745d1745d17L    # 0.45454545454545453
 
+    .line 93
     invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v3
@@ -207,6 +220,7 @@
 
     float-to-double v1, v2
 
+    .line 94
     invoke-static {v1, v2, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -217,6 +231,7 @@
 
     float-to-double v1, p0
 
+    .line 95
     invoke-static {v1, v2, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -225,6 +240,7 @@
 
     mul-float/2addr p0, v0
 
+    .line 97
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result p2

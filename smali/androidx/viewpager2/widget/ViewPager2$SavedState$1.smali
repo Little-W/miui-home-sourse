@@ -1,5 +1,6 @@
 .class final Landroidx/viewpager2/widget/ViewPager2$SavedState$1;
 .super Ljava/lang/Object;
+.source "ViewPager2.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 412
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,6 +43,7 @@
 
     const/4 v0, 0x0
 
+    .line 422
     invoke-virtual {p0, p1, v0}, Landroidx/viewpager2/widget/ViewPager2$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     move-result-object p0
@@ -51,6 +54,7 @@
 .method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/viewpager2/widget/ViewPager2$SavedState;
     .locals 1
 
+    .line 415
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x18
@@ -75,6 +79,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 412
     invoke-virtual {p0, p1}, Landroidx/viewpager2/widget/ViewPager2$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     move-result-object p0
@@ -85,6 +90,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 0
 
+    .line 412
     invoke-virtual {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     move-result-object p0
@@ -95,6 +101,7 @@
 .method public newArray(I)[Landroidx/viewpager2/widget/ViewPager2$SavedState;
     .locals 0
 
+    .line 427
     new-array p0, p1, [Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     return-object p0
@@ -103,6 +110,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 412
     invoke-virtual {p0, p1}, Landroidx/viewpager2/widget/ViewPager2$SavedState$1;->newArray(I)[Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     move-result-object p0

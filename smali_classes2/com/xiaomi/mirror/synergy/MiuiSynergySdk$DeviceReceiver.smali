@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$DeviceReceiver;
 .super Landroid/content/BroadcastReceiver;
+.source "SourceFile"
 
 
 # annotations

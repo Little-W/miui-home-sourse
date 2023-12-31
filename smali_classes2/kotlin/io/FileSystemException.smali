@@ -1,5 +1,6 @@
 .class public Lkotlin/io/FileSystemException;
 .super Ljava/io/IOException;
+.source "Exceptions.kt"
 
 
 # instance fields
@@ -18,6 +19,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 32
     invoke-static {p1, p2, p3}, Lkotlin/io/ExceptionsKt;->access$constructMessage(Ljava/io/File;Ljava/io/File;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -42,6 +44,7 @@
 
     if-eqz p5, :cond_0
 
+    .line 30
     move-object p2, v0
 
     check-cast p2, Ljava/io/File;
@@ -51,6 +54,7 @@
 
     if-eqz p4, :cond_1
 
+    .line 31
     move-object p3, v0
 
     check-cast p3, Ljava/lang/String;
@@ -66,6 +70,7 @@
 .method public final getFile()Ljava/io/File;
     .locals 0
 
+    .line 29
     iget-object p0, p0, Lkotlin/io/FileSystemException;->file:Ljava/io/File;
 
     return-object p0
@@ -74,6 +79,7 @@
 .method public final getOther()Ljava/io/File;
     .locals 0
 
+    .line 30
     iget-object p0, p0, Lkotlin/io/FileSystemException;->other:Ljava/io/File;
 
     return-object p0
@@ -82,6 +88,7 @@
 .method public final getReason()Ljava/lang/String;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lkotlin/io/FileSystemException;->reason:Ljava/lang/String;
 
     return-object p0

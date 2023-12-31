@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/android/HandlerContext$scheduleResumeAfterDelay$$inlined$Runnable$1;
 .super Ljava/lang/Object;
+.source "Runnable.kt"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -44,6 +45,7 @@
 .method public final run()V
     .locals 2
 
+    .line 19
     iget-object v0, p0, Lkotlinx/coroutines/android/HandlerContext$scheduleResumeAfterDelay$$inlined$Runnable$1;->$continuation$inlined:Lkotlinx/coroutines/CancellableContinuation;
 
     iget-object p0, p0, Lkotlinx/coroutines/android/HandlerContext$scheduleResumeAfterDelay$$inlined$Runnable$1;->this$0:Lkotlinx/coroutines/android/HandlerContext;

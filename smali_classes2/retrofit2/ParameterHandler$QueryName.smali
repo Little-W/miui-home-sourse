@@ -1,5 +1,6 @@
 .class final Lretrofit2/ParameterHandler$QueryName;
 .super Lretrofit2/ParameterHandler;
+.source "ParameterHandler.java"
 
 
 # annotations
@@ -51,10 +52,13 @@
         }
     .end annotation
 
+    .line 128
     invoke-direct {p0}, Lretrofit2/ParameterHandler;-><init>()V
 
+    .line 129
     iput-object p1, p0, Lretrofit2/ParameterHandler$QueryName;->nameConverter:Lretrofit2/Converter;
 
+    .line 130
     iput-boolean p2, p0, Lretrofit2/ParameterHandler$QueryName;->encoded:Z
 
     return-void
@@ -86,6 +90,7 @@
 
     return-void
 
+    .line 135
     :cond_0
     iget-object v0, p0, Lretrofit2/ParameterHandler$QueryName;->nameConverter:Lretrofit2/Converter;
 

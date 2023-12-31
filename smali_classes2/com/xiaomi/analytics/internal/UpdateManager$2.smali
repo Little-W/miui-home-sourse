@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/internal/UpdateManager$2;
 .super Ljava/lang/Object;
+.source "UpdateManager.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/xiaomi/analytics/internal/UpdateManager;)V
     .locals 0
 
+    .line 225
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/UpdateManager$2;->this$0:Lcom/xiaomi/analytics/internal/UpdateManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,6 +40,7 @@
 
     const-string v0, "UpdateManager"
 
+    .line 229
     :try_start_0
     new-instance v1, Ljava/net/URL;
 
@@ -57,14 +60,18 @@
 
     const-string v2, "GET"
 
+    .line 230
     invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
+    .line 232
     sget v2, Lcom/xiaomi/analytics/internal/Constants;->CONNECT_TIME_OUT_MILLIS:I
 
     invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
+    .line 233
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->connect()V
 
+    .line 234
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v2
@@ -73,6 +80,7 @@
 
     if-ne v2, v3, :cond_2
 
+    .line 236
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v1
@@ -81,6 +89,7 @@
 
     move-result-object v1
 
+    .line 237
     iget-object v2, p0, Lcom/xiaomi/analytics/internal/UpdateManager$2;->this$0:Lcom/xiaomi/analytics/internal/UpdateManager;
 
     invoke-static {v2}, Lcom/xiaomi/analytics/internal/UpdateManager;->access$300(Lcom/xiaomi/analytics/internal/UpdateManager;)Ljava/lang/String;
@@ -95,10 +104,12 @@
 
     if-nez v2, :cond_0
 
+    .line 239
     invoke-static {v1}, Lcom/xiaomi/analytics/internal/util/Utils;->getMd5([B)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 240
     iget-object v4, p0, Lcom/xiaomi/analytics/internal/UpdateManager$2;->this$0:Lcom/xiaomi/analytics/internal/UpdateManager;
 
     invoke-static {v4}, Lcom/xiaomi/analytics/internal/UpdateManager;->access$300(Lcom/xiaomi/analytics/internal/UpdateManager;)Ljava/lang/String;
@@ -116,6 +127,7 @@
     :cond_0
     if-eqz v1, :cond_2
 
+    .line 245
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -124,6 +136,7 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 246
     new-instance v2, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -150,6 +163,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
+    .line 249
     :try_start_1
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -158,16 +172,20 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 250
     :try_start_2
     invoke-virtual {v4, v1}, Ljava/io/FileOutputStream;->write([B)V
 
+    .line 251
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->flush()V
 
+    .line 252
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 254
     :try_start_3
     iget-object v1, p0, Lcom/xiaomi/analytics/internal/UpdateManager$2;->this$0:Lcom/xiaomi/analytics/internal/UpdateManager;
 
@@ -185,6 +203,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 255
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -193,6 +212,7 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 256
     new-instance v1, Ljava/io/File;
 
     iget-object v4, p0, Lcom/xiaomi/analytics/internal/UpdateManager$2;->this$0:Lcom/xiaomi/analytics/internal/UpdateManager;
@@ -203,14 +223,17 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 257
     invoke-virtual {v2, v1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
+    .line 258
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/UpdateManager$2;->this$0:Lcom/xiaomi/analytics/internal/UpdateManager;
 
     invoke-static {p0}, Lcom/xiaomi/analytics/internal/UpdateManager;->access$900(Lcom/xiaomi/analytics/internal/UpdateManager;)V
 
     goto :goto_0
 
+    .line 260
     :cond_1
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
@@ -223,6 +246,7 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 266
     :goto_0
     :try_start_4
     invoke-static {v3}, Lcom/xiaomi/analytics/internal/util/IOUtil;->closeSafely(Ljava/io/Closeable;)V
@@ -253,6 +277,7 @@
     :catch_1
     move-exception p0
 
+    .line 264
     :goto_1
     :try_start_5
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
@@ -267,6 +292,7 @@
 
     goto :goto_0
 
+    .line 266
     :goto_2
     :try_start_6
     invoke-static {v3}, Lcom/xiaomi/analytics/internal/util/IOUtil;->closeSafely(Ljava/io/Closeable;)V
@@ -278,6 +304,7 @@
     :catch_2
     move-exception p0
 
+    .line 271
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

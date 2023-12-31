@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;
 .super Landroid/os/AsyncTask;
+.source "XiaomiUpdateAgent.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 313
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
 .method synthetic constructor <init>(Lcom/market/sdk/XiaomiUpdateAgent$1;)V
     .locals 0
 
+    .line 313
     invoke-direct {p0}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;-><init>()V
 
     return-void
@@ -43,6 +46,7 @@
 .method private static getDayOfMonth(Ljava/lang/Long;)I
     .locals 3
 
+    .line 477
     new-instance v0, Ljava/util/Date;
 
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
@@ -51,14 +55,17 @@
 
     invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
+    .line 478
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object p0
 
+    .line 479
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
     const/4 v0, 0x5
 
+    .line 480
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
@@ -69,6 +76,7 @@
 .method private getFilterParams()Ljava/lang/String;
     .locals 3
 
+    .line 402
     new-instance p0, Lorg/json/JSONObject;
 
     invoke-direct {p0}, Lorg/json/JSONObject;-><init>()V
@@ -76,6 +84,7 @@
     :try_start_0
     const-string v0, "screenSize"
 
+    .line 404
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,66 +109,77 @@
 
     const-string v0, "resolution"
 
+    .line 406
     sget-object v1, Lcom/market/sdk/utils/Client;->DISPLAY_RESOLUTION:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "density"
 
+    .line 407
     sget v1, Lcom/market/sdk/utils/Client;->DISPLAY_DENSITY:I
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string/jumbo v0, "touchScreen"
 
+    .line 408
     sget v1, Lcom/market/sdk/utils/Client;->TOUCH_SCREEN:I
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v0, "glEsVersion"
 
+    .line 409
     sget-object v1, Lcom/market/sdk/utils/Client;->GLES_VERSION:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "feature"
 
+    .line 410
     sget-object v1, Lcom/market/sdk/utils/Client;->FEATURE:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "library"
 
+    .line 411
     sget-object v1, Lcom/market/sdk/utils/Client;->LIBRARY:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "glExtension"
 
+    .line 412
     sget-object v1, Lcom/market/sdk/utils/Client;->GL_EXTENSION:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "sdk"
 
+    .line 413
     sget v1, Lcom/market/sdk/utils/Client;->SDK_VERSION:I
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string/jumbo v0, "version"
 
+    .line 414
     sget-object v1, Lcom/market/sdk/utils/Client;->SYSTEM_VERSION:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "release"
 
+    .line 415
     sget-object v1, Lcom/market/sdk/utils/Client;->RELEASE:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 419
     invoke-virtual {p0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -181,6 +201,7 @@
 
     const-string v2, "sdkBeginTime"
 
+    .line 449
     invoke-static {v2, v1}, Lcom/market/sdk/utils/PrefUtils;->getLong(Ljava/lang/String;[Lcom/market/sdk/utils/PrefUtils$PrefFile;)J
 
     move-result-wide v1
@@ -189,6 +210,7 @@
 
     move-result-object v1
 
+    .line 450
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -211,6 +233,7 @@
 
     const-string v3, "sdkWindowLastShowTime"
 
+    .line 451
     invoke-static {v3, v1}, Lcom/market/sdk/utils/PrefUtils;->getLong(Ljava/lang/String;[Lcom/market/sdk/utils/PrefUtils$PrefFile;)J
 
     move-result-wide v4
@@ -219,6 +242,7 @@
 
     move-result-object v1
 
+    .line 452
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -242,6 +266,7 @@
 
     const-string v5, "sdkWindowShowTimes"
 
+    .line 456
     invoke-static {v5, v4}, Lcom/market/sdk/utils/PrefUtils;->getInt(Ljava/lang/String;[Lcom/market/sdk/utils/PrefUtils$PrefFile;)I
 
     move-result v4
@@ -254,8 +279,10 @@
 
     new-array v1, v0, [Lcom/market/sdk/utils/PrefUtils$PrefFile;
 
+    .line 458
     invoke-static {v5, v4, v1}, Lcom/market/sdk/utils/PrefUtils;->setInt(Ljava/lang/String;I[Lcom/market/sdk/utils/PrefUtils$PrefFile;)V
 
+    .line 459
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -266,6 +293,7 @@
 
     return v2
 
+    .line 462
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -287,8 +315,10 @@
 
     new-array v1, v0, [Lcom/market/sdk/utils/PrefUtils$PrefFile;
 
+    .line 465
     invoke-static {v5, v2, v1}, Lcom/market/sdk/utils/PrefUtils;->setInt(Ljava/lang/String;I[Lcom/market/sdk/utils/PrefUtils$PrefFile;)V
 
+    .line 466
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -315,17 +345,20 @@
 
     const-string/jumbo p1, "update info json obj null"
 
+    .line 424
     invoke-static {p0, p1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 428
     :cond_0
     sget-boolean v0, Lcom/market/sdk/utils/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_1
 
+    .line 429
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -346,6 +379,7 @@
 
     invoke-static {p0, v0}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 432
     :cond_1
     new-instance p0, Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
@@ -353,6 +387,7 @@
 
     const-string v0, "host"
 
+    .line 433
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -361,6 +396,7 @@
 
     const-string v0, "fitness"
 
+    .line 434
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v0
@@ -369,6 +405,7 @@
 
     const-string v0, "source"
 
+    .line 435
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v0
@@ -377,6 +414,7 @@
 
     const-string/jumbo v0, "updateLog"
 
+    .line 436
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -385,6 +423,7 @@
 
     const-string/jumbo v0, "versionCode"
 
+    .line 437
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v0
@@ -393,6 +432,7 @@
 
     const-string/jumbo v0, "versionName"
 
+    .line 438
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -401,6 +441,7 @@
 
     const-string v0, "apk"
 
+    .line 439
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -409,6 +450,7 @@
 
     const-string v0, "apkHash"
 
+    .line 440
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -417,6 +459,7 @@
 
     const-string v0, "apkSize"
 
+    .line 441
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -425,6 +468,7 @@
 
     const-string v0, "matchLanguage"
 
+    .line 442
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -437,6 +481,7 @@
 .method private static showUpdateDialog()V
     .locals 5
 
+    .line 485
     :try_start_0
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$100()Ljava/lang/ref/WeakReference;
 
@@ -452,6 +497,7 @@
 
     return-void
 
+    .line 490
     :cond_0
     new-instance v1, Lmiuix/appcompat/app/AlertDialog$Builder;
 
@@ -471,6 +517,7 @@
     :goto_0
     invoke-direct {v1, v0, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
+    .line 491
     sget v2, Lcom/market/sdk/R$string;->xiaomi_market_sdk_update_dialog_title:I
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -479,6 +526,7 @@
 
     invoke-virtual {v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
+    .line 492
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v2
@@ -487,6 +535,7 @@
 
     invoke-virtual {v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
+    .line 493
     sget v2, Lcom/market/sdk/R$string;->xiaomi_market_sdk_update_dialog_cancel:I
 
     const/4 v3, 0x0
@@ -501,8 +550,10 @@
 
     invoke-direct {v4}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask$1;-><init>()V
 
+    .line 494
     invoke-virtual {v2, v3, v4}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
+    .line 503
     instance-of v2, v0, Landroid/app/Activity;
 
     if-eqz v2, :cond_2
@@ -515,6 +566,7 @@
 
     if-nez v0, :cond_2
 
+    .line 504
     invoke-virtual {v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->show()Lmiuix/appcompat/app/AlertDialog;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -524,6 +576,7 @@
     :catch_0
     move-exception v0
 
+    .line 507
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -556,6 +609,7 @@
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/Integer;
     .locals 6
 
+    .line 321
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$100()Ljava/lang/ref/WeakReference;
 
     move-result-object v0
@@ -568,6 +622,7 @@
 
     const/4 v1, 0x4
 
+    .line 322
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -576,6 +631,7 @@
 
     return-object v1
 
+    .line 325
     :cond_0
     invoke-static {v0}, Lcom/market/sdk/utils/Utils;->isConnected(Landroid/content/Context;)Z
 
@@ -585,12 +641,14 @@
 
     const/4 p0, 0x3
 
+    .line 326
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
     return-object p0
 
+    .line 327
     :cond_1
     invoke-static {v0}, Lcom/market/sdk/utils/Utils;->isWifiConnected(Landroid/content/Context;)Z
 
@@ -604,6 +662,7 @@
 
     const/4 p0, 0x2
 
+    .line 328
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -613,6 +672,7 @@
     :cond_2
     const/4 v2, 0x0
 
+    .line 331
     aget-object p1, p1, v2
 
     invoke-static {v0, p1}, Lcom/market/sdk/XiaomiUpdateAgent;->getAppInfo(Landroid/content/Context;Ljava/lang/String;)Lcom/market/sdk/LocalAppInfo;
@@ -621,6 +681,7 @@
 
     invoke-static {p1}, Lcom/market/sdk/XiaomiUpdateAgent;->access$202(Lcom/market/sdk/LocalAppInfo;)Lcom/market/sdk/LocalAppInfo;
 
+    .line 332
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$200()Lcom/market/sdk/LocalAppInfo;
 
     move-result-object p1
@@ -629,12 +690,14 @@
 
     const/4 p0, 0x5
 
+    .line 333
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
     return-object p0
 
+    .line 336
     :cond_3
     new-instance p1, Lcom/market/sdk/utils/Connection;
 
@@ -642,10 +705,12 @@
 
     invoke-direct {p1, v3}, Lcom/market/sdk/utils/Connection;-><init>(Ljava/lang/String;)V
 
+    .line 337
     new-instance v3, Lcom/market/sdk/utils/Connection$Parameter;
 
     invoke-direct {v3, p1}, Lcom/market/sdk/utils/Connection$Parameter;-><init>(Lcom/market/sdk/utils/Connection;)V
 
+    .line 338
     invoke-direct {p0}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;->getFilterParams()Ljava/lang/String;
 
     move-result-object v4
@@ -654,6 +719,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 339
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$200()Lcom/market/sdk/LocalAppInfo;
 
     move-result-object v4
@@ -664,6 +730,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 340
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -688,6 +755,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 341
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$200()Lcom/market/sdk/LocalAppInfo;
 
     move-result-object v4
@@ -698,6 +766,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 342
     sget v4, Lcom/market/sdk/utils/Client;->SDK_VERSION:I
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -708,12 +777,14 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 343
     sget-object v4, Lcom/market/sdk/utils/Client;->SYSTEM_VERSION:Ljava/lang/String;
 
     const-string v5, "os"
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 344
     invoke-static {}, Lcom/market/sdk/utils/Client;->getLanguage()Ljava/lang/String;
 
     move-result-object v4
@@ -722,6 +793,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 345
     invoke-static {}, Lcom/market/sdk/utils/Client;->getCountry()Ljava/lang/String;
 
     move-result-object v4
@@ -730,6 +802,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 346
     invoke-static {}, Lcom/market/sdk/utils/Client;->getRegion()Ljava/lang/String;
 
     move-result-object v4
@@ -738,12 +811,14 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 347
     sget-object v4, Lcom/market/sdk/utils/Client;->ANDROID_ID:Ljava/lang/String;
 
     const-string v5, "androidId"
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 348
     invoke-static {}, Lcom/market/sdk/utils/Client;->getDevice()Ljava/lang/String;
 
     move-result-object v4
@@ -752,6 +827,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 349
     invoke-static {}, Lcom/market/sdk/utils/Client;->getDeviceType()I
 
     move-result v4
@@ -764,6 +840,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 350
     invoke-static {}, Lcom/market/sdk/utils/Client;->getCpuArch()Ljava/lang/String;
 
     move-result-object v4
@@ -772,6 +849,7 @@
 
     invoke-virtual {v3, v5, v4}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 351
     invoke-static {}, Lcom/market/sdk/utils/Client;->getModel()Ljava/lang/String;
 
     move-result-object v4
@@ -784,8 +862,10 @@
 
     const-string v5, "11"
 
+    .line 352
     invoke-virtual {v3, v4, v5}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 353
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -800,6 +880,7 @@
 
     invoke-virtual {v3, v4, v0}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 354
     sget-boolean v0, Lcom/market/sdk/XiaomiUpdateAgent;->sUseSandbox:Z
 
     if-eqz v0, :cond_4
@@ -816,6 +897,7 @@
 
     invoke-virtual {v3, v4, v0}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 355
     invoke-static {}, Lcom/market/sdk/utils/Client;->getMiuiBigVersionName()Ljava/lang/String;
 
     move-result-object v0
@@ -824,6 +906,7 @@
 
     invoke-virtual {v3, v4, v0}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 356
     invoke-static {}, Lcom/market/sdk/utils/Client;->getMiuiBigVersionCode()Ljava/lang/String;
 
     move-result-object v0
@@ -832,6 +915,7 @@
 
     invoke-virtual {v3, v4, v0}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 357
     sget-object v0, Lcom/market/sdk/XiaomiUpdateAgent;->sAbTestIdentifer:Lcom/market/sdk/AbTestIdentifier;
 
     invoke-virtual {v0}, Lcom/market/sdk/AbTestIdentifier;->ordinal()I
@@ -846,6 +930,7 @@
 
     invoke-virtual {v3, v4, v0}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 358
     sget-boolean v0, Lcom/market/sdk/XiaomiUpdateAgent;->sUseImeiMd5AsIdentifier:Z
 
     if-nez v0, :cond_5
@@ -856,6 +941,7 @@
 
     if-ne v0, v4, :cond_6
 
+    .line 359
     :cond_5
     invoke-static {}, Lcom/market/sdk/utils/Client;->getImeiMd5()Ljava/lang/String;
 
@@ -865,6 +951,7 @@
 
     invoke-virtual {v3, v4, v0}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
+    .line 363
     :cond_6
     sget-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->OK:Lcom/market/sdk/utils/Connection$NetworkError;
 
@@ -874,22 +961,26 @@
 
     if-ne v0, v3, :cond_8
 
+    .line 364
     invoke-virtual {p1}, Lcom/market/sdk/utils/Connection;->getResponse()Lorg/json/JSONObject;
 
     move-result-object p1
 
+    .line 365
     invoke-direct {p0, p1}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;->parseUpdateInfo(Lorg/json/JSONObject;)Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object p0
 
     invoke-static {p0}, Lcom/market/sdk/XiaomiUpdateAgent;->access$302(Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;)Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
+    .line 366
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_8
 
+    .line 367
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object p0
@@ -902,6 +993,7 @@
 
     invoke-static {p1, p0}, Lcom/market/sdk/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 368
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object p0
@@ -929,6 +1021,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 313
     check-cast p1, [Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;->doInBackground([Ljava/lang/String;)Ljava/lang/Integer;
@@ -943,8 +1036,10 @@
 
     const/4 p0, 0x0
 
+    .line 377
     invoke-static {p0}, Lcom/market/sdk/XiaomiUpdateAgent;->access$402(Z)Z
 
+    .line 378
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$100()Ljava/lang/ref/WeakReference;
 
     move-result-object p0
@@ -959,17 +1054,20 @@
 
     return-void
 
+    .line 382
     :cond_0
     new-instance v0, Lcom/market/sdk/UpdateResponse;
 
     invoke-direct {v0}, Lcom/market/sdk/UpdateResponse;-><init>()V
 
+    .line 383
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
     if-nez v1, :cond_1
 
+    .line 384
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v1
@@ -978,6 +1076,7 @@
 
     iput-object v1, v0, Lcom/market/sdk/UpdateResponse;->updateLog:Ljava/lang/String;
 
+    .line 385
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v1
@@ -986,6 +1085,7 @@
 
     iput v1, v0, Lcom/market/sdk/UpdateResponse;->versionCode:I
 
+    .line 386
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v1
@@ -994,6 +1094,7 @@
 
     iput-object v1, v0, Lcom/market/sdk/UpdateResponse;->versionName:Ljava/lang/String;
 
+    .line 387
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v1
@@ -1002,6 +1103,7 @@
 
     iput-wide v1, v0, Lcom/market/sdk/UpdateResponse;->apkSize:J
 
+    .line 388
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v1
@@ -1010,6 +1112,7 @@
 
     iput-object v1, v0, Lcom/market/sdk/UpdateResponse;->apkHash:Ljava/lang/String;
 
+    .line 389
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v1
@@ -1018,6 +1121,7 @@
 
     iput-wide v1, v0, Lcom/market/sdk/UpdateResponse;->diffSize:J
 
+    .line 390
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v1
@@ -1036,6 +1140,7 @@
 
     iput-object v1, v0, Lcom/market/sdk/UpdateResponse;->path:Ljava/lang/String;
 
+    .line 391
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$300()Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 
     move-result-object v1
@@ -1044,6 +1149,7 @@
 
     iput-boolean v1, v0, Lcom/market/sdk/UpdateResponse;->matchLanguage:Z
 
+    .line 393
     :cond_1
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$500()Lcom/market/sdk/XiaomiUpdateListener;
 
@@ -1051,6 +1157,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 394
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$500()Lcom/market/sdk/XiaomiUpdateListener;
 
     move-result-object v1
@@ -1061,6 +1168,7 @@
 
     invoke-interface {v1, v2, v0}, Lcom/market/sdk/XiaomiUpdateListener;->onUpdateReturned(ILcom/market/sdk/UpdateResponse;)V
 
+    .line 396
     :cond_2
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$600()Z
 
@@ -1090,6 +1198,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 397
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;->showUpdateDialog()V
 
     :cond_3
@@ -1099,6 +1208,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
+    .line 313
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;->onPostExecute(Ljava/lang/Integer;)V
@@ -1113,6 +1223,7 @@
 
     const-string v0, "start to check update"
 
+    .line 316
     invoke-static {p0, v0}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

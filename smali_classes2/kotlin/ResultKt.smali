@@ -1,5 +1,6 @@
 .class public final Lkotlin/ResultKt;
 .super Ljava/lang/Object;
+.source "Result.kt"
 
 
 # annotations
@@ -16,6 +17,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 121
     new-instance v0, Lkotlin/Result$Failure;
 
     invoke-direct {v0, p0}, Lkotlin/Result$Failure;-><init>(Ljava/lang/Throwable;)V
@@ -26,6 +28,7 @@
 .method public static final throwOnFailure(Ljava/lang/Object;)V
     .locals 1
 
+    .line 131
     instance-of v0, p0, Lkotlin/Result$Failure;
 
     if-nez v0, :cond_0

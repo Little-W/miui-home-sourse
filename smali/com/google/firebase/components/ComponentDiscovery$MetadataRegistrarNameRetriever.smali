@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/components/ComponentDiscovery$MetadataRegistrarNameRetriever;
 .super Ljava/lang/Object;
+.source "ComponentDiscovery.java"
 
 # interfaces
 .implements Lcom/google/firebase/components/ComponentDiscovery$RegistrarNameRetriever;
@@ -51,8 +52,10 @@
         }
     .end annotation
 
+    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 151
     iput-object p1, p0, Lcom/google/firebase/components/ComponentDiscovery$MetadataRegistrarNameRetriever;->discoveryService:Ljava/lang/Class;
 
     return-void
@@ -61,6 +64,7 @@
 .method synthetic constructor <init>(Ljava/lang/Class;Lcom/google/firebase/components/ComponentDiscovery$1;)V
     .locals 0
 
+    .line 146
     invoke-direct {p0, p1}, Lcom/google/firebase/components/ComponentDiscovery$MetadataRegistrarNameRetriever;-><init>(Ljava/lang/Class;)V
 
     return-void
@@ -73,6 +77,7 @@
 
     const/4 v1, 0x0
 
+    .line 175
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -82,10 +87,12 @@
 
     const-string p0, "Context has no PackageManager."
 
+    .line 177
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
+    .line 180
     :cond_0
     new-instance v3, Landroid/content/ComponentName;
 
@@ -95,12 +102,14 @@
 
     const/16 p1, 0x80
 
+    .line 181
     invoke-virtual {v2, v3, p1}, Landroid/content/pm/PackageManager;->getServiceInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;
 
     move-result-object p1
 
     if-nez p1, :cond_1
 
+    .line 184
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,6 +130,7 @@
 
     return-object v1
 
+    .line 187
     :cond_1
     iget-object p0, p1, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
     :try_end_0
@@ -131,6 +141,7 @@
     :catch_0
     const-string p0, "Application info not found."
 
+    .line 189
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -151,6 +162,7 @@
         }
     .end annotation
 
+    .line 156
     invoke-direct {p0, p1}, Lcom/google/firebase/components/ComponentDiscovery$MetadataRegistrarNameRetriever;->getMetadata(Landroid/content/Context;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -161,19 +173,23 @@
 
     const-string p1, "Could not retrieve metadata, returning empty list of registrars."
 
+    .line 159
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 160
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
+    .line 163
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 164
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -196,12 +212,14 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 165
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     const-string v3, "com.google.firebase.components.ComponentRegistrar"
 
+    .line 166
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -218,6 +236,7 @@
 
     const/16 v2, 0x1f
 
+    .line 167
     invoke-virtual {v1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
@@ -233,6 +252,7 @@
 .method public bridge synthetic retrieve(Ljava/lang/Object;)Ljava/util/List;
     .locals 0
 
+    .line 146
     check-cast p1, Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Lcom/google/firebase/components/ComponentDiscovery$MetadataRegistrarNameRetriever;->retrieve(Landroid/content/Context;)Ljava/util/List;

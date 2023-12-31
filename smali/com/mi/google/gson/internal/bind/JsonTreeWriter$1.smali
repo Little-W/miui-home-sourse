@@ -1,5 +1,6 @@
 .class final Lcom/mi/google/gson/internal/bind/JsonTreeWriter$1;
 .super Ljava/io/Writer;
+.source "JsonTreeWriter.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 34
     invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
     return-void
@@ -32,6 +34,7 @@
         }
     .end annotation
 
+    .line 42
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -47,6 +50,7 @@
         }
     .end annotation
 
+    .line 39
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -57,6 +61,7 @@
 .method public write([CII)V
     .locals 0
 
+    .line 36
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V

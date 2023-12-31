@@ -1,5 +1,6 @@
 .class public Lio/branch/search/internal/sqlite/SQLiteDBInner_Impl$a;
 .super Landroidx/room/RoomOpenHelper$Delegate;
+.source "SourceFile"
 
 
 # annotations

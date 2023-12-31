@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/android/systemui/shared/system/-$$Lambda$RemoteTransitionCompat$1$HXka5LFRO8VgxLjJ69AvmO9Ga-g;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

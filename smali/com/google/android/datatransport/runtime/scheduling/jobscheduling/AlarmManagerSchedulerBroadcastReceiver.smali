@@ -1,5 +1,6 @@
 .class public Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerSchedulerBroadcastReceiver;
 .super Landroid/content/BroadcastReceiver;
+.source "AlarmManagerSchedulerBroadcastReceiver.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -36,6 +38,7 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
+    .line 31
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p0
@@ -46,6 +49,7 @@
 
     move-result-object p0
 
+    .line 32
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -56,6 +60,7 @@
 
     move-result-object v0
 
+    .line 34
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -74,6 +79,7 @@
 
     move-result v1
 
+    .line 35
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
@@ -84,16 +90,20 @@
 
     move-result p2
 
+    .line 36
     invoke-static {p1}, Lcom/google/android/datatransport/runtime/TransportRuntime;->initialize(Landroid/content/Context;)V
 
+    .line 39
     invoke-static {}, Lcom/google/android/datatransport/runtime/TransportContext;->builder()Lcom/google/android/datatransport/runtime/TransportContext$Builder;
 
     move-result-object p1
 
+    .line 40
     invoke-virtual {p1, p0}, Lcom/google/android/datatransport/runtime/TransportContext$Builder;->setBackendName(Ljava/lang/String;)Lcom/google/android/datatransport/runtime/TransportContext$Builder;
 
     move-result-object p0
 
+    .line 41
     invoke-static {v1}, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->valueOf(I)Lcom/google/android/datatransport/Priority;
 
     move-result-object p1
@@ -106,21 +116,25 @@
 
     const/4 p1, 0x0
 
+    .line 44
     invoke-static {v0, p1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/TransportContext$Builder;->setExtras([B)Lcom/google/android/datatransport/runtime/TransportContext$Builder;
 
+    .line 47
     :cond_0
     invoke-static {}, Lcom/google/android/datatransport/runtime/TransportRuntime;->getInstance()Lcom/google/android/datatransport/runtime/TransportRuntime;
 
     move-result-object p1
 
+    .line 48
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportRuntime;->getUploader()Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
 
     move-result-object p1
 
+    .line 49
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportContext$Builder;->build()Lcom/google/android/datatransport/runtime/TransportContext;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;
 .super Ljava/lang/Object;
+.source "WorkInitializer.java"
 
 
 # instance fields
@@ -16,14 +17,19 @@
 .method constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;)V
     .locals 0
 
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 45
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->executor:Ljava/util/concurrent/Executor;
 
+    .line 46
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->store:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
+    .line 47
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->scheduler:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;
 
+    .line 48
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->guard:Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;
 
     return-void
@@ -34,6 +40,7 @@
 .method public ensureContextsScheduled()V
     .locals 2
 
+    .line 52
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->executor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/-$$Lambda$WorkInitializer$4euq1WvqLQFGz_1FrH7d8V-ONnE;
@@ -48,6 +55,7 @@
 .method public synthetic lambda$ensureContextsScheduled$0$WorkInitializer()Ljava/lang/Object;
     .locals 4
 
+    .line 56
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->store:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
     invoke-interface {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;->loadActiveContexts()Ljava/lang/Iterable;
@@ -71,6 +79,7 @@
 
     check-cast v1, Lcom/google/android/datatransport/runtime/TransportContext;
 
+    .line 57
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->scheduler:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;
 
     const/4 v3, 0x1
@@ -88,6 +97,7 @@
 .method public synthetic lambda$ensureContextsScheduled$1$WorkInitializer()V
     .locals 2
 
+    .line 54
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->guard:Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;
 
     new-instance v1, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/-$$Lambda$WorkInitializer$NRHUY4kiIAYkslmRyjlKfd6AS8I;

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/snackbar/BaseTransientBottomBar$7;
 .super Ljava/lang/Object;
+.source "BaseTransientBottomBar.java"
 
 # interfaces
 .implements Lcom/google/android/material/behavior/SwipeDismissBehavior$OnDismissListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
     .locals 0
 
+    .line 804
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$7;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onDismiss(Landroid/view/View;)V
     .locals 1
 
+    .line 807
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -44,8 +47,10 @@
 
     const/16 v0, 0x8
 
+    .line 808
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 810
     :cond_0
     iget-object p0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$7;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
@@ -71,6 +76,7 @@
 
     goto :goto_0
 
+    .line 819
     :cond_0
     invoke-static {}, Lcom/google/android/material/snackbar/SnackbarManager;->getInstance()Lcom/google/android/material/snackbar/SnackbarManager;
 
@@ -84,6 +90,7 @@
 
     goto :goto_0
 
+    .line 823
     :cond_1
     invoke-static {}, Lcom/google/android/material/snackbar/SnackbarManager;->getInstance()Lcom/google/android/material/snackbar/SnackbarManager;
 

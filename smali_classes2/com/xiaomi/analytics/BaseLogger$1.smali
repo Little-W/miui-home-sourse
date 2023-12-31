@@ -1,5 +1,6 @@
 .class final Lcom/xiaomi/analytics/BaseLogger$1;
 .super Ljava/lang/Object;
+.source "BaseLogger.java"
 
 # interfaces
 .implements Lcom/xiaomi/analytics/internal/SdkManager$OnSdkCorePrepareListener;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,8 +32,10 @@
 .method public onSdkCorePrepared(Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;)V
     .locals 0
 
+    .line 104
     invoke-static {p1}, Lcom/xiaomi/analytics/BaseLogger;->access$002(Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;)Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;
 
+    .line 105
     invoke-static {}, Lcom/xiaomi/analytics/BaseLogger;->access$100()V
 
     return-void

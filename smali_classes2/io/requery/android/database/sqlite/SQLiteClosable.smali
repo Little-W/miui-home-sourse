@@ -1,5 +1,6 @@
 .class public abstract Lio/requery/android/database/sqlite/SQLiteClosable;
 .super Ljava/lang/Object;
+.source "SQLiteClosable.java"
 
 # interfaces
 .implements Ljava/io/Closeable;
@@ -13,10 +14,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 28
     iput v0, p0, Lio/requery/android/database/sqlite/SQLiteClosable;->mReferenceCount:I
 
     return-void
@@ -27,23 +30,28 @@
 .method public acquireReference()V
     .locals 3
 
+    .line 43
     monitor-enter p0
 
+    .line 44
     :try_start_0
     iget v0, p0, Lio/requery/android/database/sqlite/SQLiteClosable;->mReferenceCount:I
 
     if-lez v0, :cond_0
 
+    .line 48
     iget v0, p0, Lio/requery/android/database/sqlite/SQLiteClosable;->mReferenceCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lio/requery/android/database/sqlite/SQLiteClosable;->mReferenceCount:I
 
+    .line 49
     monitor-exit p0
 
     return-void
 
+    .line 45
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -68,6 +76,7 @@
     :catchall_0
     move-exception v0
 
+    .line 49
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -78,6 +87,7 @@
 .method public close()V
     .locals 0
 
+    .line 78
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return-void
@@ -89,8 +99,10 @@
 .method public releaseReference()V
     .locals 2
 
+    .line 60
     monitor-enter p0
 
+    .line 61
     :try_start_0
     iget v0, p0, Lio/requery/android/database/sqlite/SQLiteClosable;->mReferenceCount:I
 
@@ -107,6 +119,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 62
     :goto_0
     monitor-exit p0
     :try_end_0
@@ -114,6 +127,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 64
     invoke-virtual {p0}, Lio/requery/android/database/sqlite/SQLiteClosable;->onAllReferencesReleased()V
 
     :cond_1
@@ -122,6 +136,7 @@
     :catchall_0
     move-exception v0
 
+    .line 62
     :try_start_1
     monitor-exit p0
     :try_end_1

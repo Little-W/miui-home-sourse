@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/globallauncher/view/GeneralFullScreenDialog$1;
 .super Ljava/lang/Object;
+.source "GeneralFullScreenDialog.java"
 
 
 # annotations

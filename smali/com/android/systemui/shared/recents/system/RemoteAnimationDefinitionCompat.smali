@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/RemoteAnimationDefinitionCompat;
 .super Ljava/lang/Object;
+.source "RemoteAnimationDefinitionCompat.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
     new-instance v0, Landroid/view/RemoteAnimationDefinition;
 
     invoke-direct {v0}, Landroid/view/RemoteAnimationDefinition;-><init>()V
@@ -26,6 +29,7 @@
 .method public addRemoteAnimation(IILcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;)V
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationDefinitionCompat;->mWrapped:Landroid/view/RemoteAnimationDefinition;
 
     invoke-virtual {p3}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->getWrapped()Landroid/view/RemoteAnimationAdapter;
@@ -40,6 +44,7 @@
 .method public addRemoteAnimation(ILcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;)V
     .locals 0
 
+    .line 29
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationDefinitionCompat;->mWrapped:Landroid/view/RemoteAnimationDefinition;
 
     invoke-virtual {p2}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->getWrapped()Landroid/view/RemoteAnimationAdapter;
@@ -54,6 +59,7 @@
 .method getWrapped()Landroid/view/RemoteAnimationDefinition;
     .locals 0
 
+    .line 38
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationDefinitionCompat;->mWrapped:Landroid/view/RemoteAnimationDefinition;
 
     return-object p0

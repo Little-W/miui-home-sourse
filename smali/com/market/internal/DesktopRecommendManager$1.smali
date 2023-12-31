@@ -1,5 +1,6 @@
 .class Lcom/market/internal/DesktopRecommendManager$1;
 .super Lcom/market/sdk/RemoteMethodInvoker;
+.source "DesktopRecommendManager.java"
 
 
 # annotations
@@ -35,6 +36,7 @@
 .method constructor <init>(JLcom/market/sdk/DesktopRecommendCallback;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
 
+    .line 27
     iput-wide p1, p0, Lcom/market/internal/DesktopRecommendManager$1;->val$folderId:J
 
     iput-object p3, p0, Lcom/market/internal/DesktopRecommendManager$1;->val$callback:Lcom/market/sdk/DesktopRecommendCallback;
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 27
     invoke-virtual {p0, p1}, Lcom/market/internal/DesktopRecommendManager$1;->innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Void;
 
     move-result-object p0
@@ -73,6 +76,7 @@
         }
     .end annotation
 
+    .line 32
     :try_start_0
     new-instance v5, Lcom/market/internal/DesktopRecommendManager$DesktopRecomendResponse;
 
@@ -82,6 +86,7 @@
 
     invoke-direct {v5, v0, v1, v2}, Lcom/market/internal/DesktopRecommendManager$DesktopRecomendResponse;-><init>(JLcom/market/sdk/DesktopRecommendCallback;)V
 
+    .line 34
     iget-wide v1, p0, Lcom/market/internal/DesktopRecommendManager$1;->val$folderId:J
 
     iget-object v3, p0, Lcom/market/internal/DesktopRecommendManager$1;->val$folderName:Ljava/lang/String;
@@ -99,6 +104,7 @@
     :catch_0
     move-exception p0
 
+    .line 36
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

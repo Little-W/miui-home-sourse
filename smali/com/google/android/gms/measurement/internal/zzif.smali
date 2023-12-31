@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzif;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -46,26 +47,35 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzf:Lcom/google/android/gms/measurement/internal/zzid;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 3
     invoke-static {p3}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {p6}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     iput-object p3, p0, Lcom/google/android/gms/measurement/internal/zzif;->zza:Ljava/net/URL;
 
     const/4 p1, 0x0
 
+    .line 6
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzb:[B
 
+    .line 7
     iput-object p6, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzc:Lcom/google/android/gms/measurement/internal/zzic;
 
+    .line 8
     iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzd:Ljava/lang/String;
 
+    .line 9
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzif;->zze:Ljava/util/Map;
 
     return-void
@@ -86,6 +96,7 @@
         }
     .end annotation
 
+    .line 33
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzf:Lcom/google/android/gms/measurement/internal/zzid;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzp()Lcom/google/android/gms/measurement/internal/zzfr;
@@ -108,6 +119,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/measurement/internal/zzie;-><init>(Lcom/google/android/gms/measurement/internal/zzif;ILjava/lang/Exception;[BLjava/util/Map;)V
 
+    .line 34
     invoke-virtual {v0, v7}, Lcom/google/android/gms/measurement/internal/zzfr;->zza(Ljava/lang/Runnable;)V
 
     return-void
@@ -118,6 +130,7 @@
 .method public final run()V
     .locals 5
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzf:Lcom/google/android/gms/measurement/internal/zzid;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzb()V
@@ -126,6 +139,7 @@
 
     const/4 v1, 0x0
 
+    .line 15
     :try_start_0
     iget-object v2, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzf:Lcom/google/android/gms/measurement/internal/zzid;
 
@@ -138,11 +152,13 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 16
     :try_start_1
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v1
 
+    .line 17
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getHeaderFields()Ljava/util/Map;
 
     move-result-object v3
@@ -150,6 +166,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 18
     :try_start_2
     iget-object v4, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzf:Lcom/google/android/gms/measurement/internal/zzid;
 
@@ -162,8 +179,10 @@
 
     if-eqz v2, :cond_0
 
+    .line 20
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 21
     :cond_0
     invoke-direct {p0, v1, v0, v4, v3}, Lcom/google/android/gms/measurement/internal/zzif;->zzb(ILjava/lang/Exception;[BLjava/util/Map;)V
 
@@ -203,11 +222,14 @@
     :goto_0
     if-eqz v2, :cond_1
 
+    .line 30
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 31
     :cond_1
     invoke-direct {p0, v1, v0, v0, v3}, Lcom/google/android/gms/measurement/internal/zzif;->zzb(ILjava/lang/Exception;[BLjava/util/Map;)V
 
+    .line 32
     throw v4
 
     :catch_2
@@ -220,8 +242,10 @@
     :goto_1
     if-eqz v2, :cond_2
 
+    .line 25
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->disconnect()V
 
+    .line 26
     :cond_2
     invoke-direct {p0, v1, v4, v0, v3}, Lcom/google/android/gms/measurement/internal/zzif;->zzb(ILjava/lang/Exception;[BLjava/util/Map;)V
 
@@ -231,6 +255,7 @@
 .method final synthetic zza(ILjava/lang/Exception;[BLjava/util/Map;)V
     .locals 6
 
+    .line 36
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzc:Lcom/google/android/gms/measurement/internal/zzic;
 
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzif;->zzd:Ljava/lang/String;

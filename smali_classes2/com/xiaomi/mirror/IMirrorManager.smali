@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/mirror/IMirrorManager;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

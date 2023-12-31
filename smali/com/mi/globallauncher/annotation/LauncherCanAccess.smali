@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/mi/globallauncher/annotation/LauncherCanAccess;
 .super Ljava/lang/Object;
+.source "LauncherCanAccess.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

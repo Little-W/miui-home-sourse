@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/TapTargetView$9;
 .super Ljava/lang/Object;
+.source "TapTargetView.java"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -36,6 +37,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/TapTargetView;Lcom/mi/globallauncher/view/TapTarget;Landroid/view/ViewGroup;Landroid/content/Context;ZZZ)V
     .locals 0
 
+    .line 536
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$9;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/TapTargetView$9;->val$target:Lcom/mi/globallauncher/view/TapTarget;
@@ -60,6 +62,7 @@
 .method public onGlobalLayout()V
     .locals 2
 
+    .line 539
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTargetView$9;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-static {v0}, Lcom/mi/globallauncher/view/TapTargetView;->access$200(Lcom/mi/globallauncher/view/TapTargetView;)Z
@@ -70,11 +73,13 @@
 
     return-void
 
+    .line 542
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTargetView$9;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-virtual {v0}, Lcom/mi/globallauncher/view/TapTargetView;->updateTextLayouts()V
 
+    .line 543
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTargetView$9;->val$target:Lcom/mi/globallauncher/view/TapTarget;
 
     new-instance v1, Lcom/mi/globallauncher/view/TapTargetView$9$1;

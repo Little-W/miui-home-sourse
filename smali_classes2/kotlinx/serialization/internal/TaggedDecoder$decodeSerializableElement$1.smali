@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/TaggedDecoder$decodeSerializableElement$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Tagged.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -59,6 +60,7 @@
         }
     .end annotation
 
+    .line 256
     iget-object v0, p0, Lkotlinx/serialization/internal/TaggedDecoder$decodeSerializableElement$1;->this$0:Lkotlinx/serialization/internal/TaggedDecoder;
 
     iget-object v1, p0, Lkotlinx/serialization/internal/TaggedDecoder$decodeSerializableElement$1;->$deserializer:Lkotlinx/serialization/DeserializationStrategy;

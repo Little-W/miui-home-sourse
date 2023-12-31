@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/dist/handoff/system/callback/ActiveLocalHandoffTaskListener;
 .super Ljava/lang/Object;
+.source "ActiveLocalHandoffTaskListener.java"
 
 
 # virtual methods

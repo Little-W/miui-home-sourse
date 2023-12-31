@@ -1,5 +1,6 @@
 .class public final Lio/reactivex/plugins/RxJavaPlugins;
 .super Ljava/lang/Object;
+.source "RxJavaPlugins.java"
 
 
 # static fields
@@ -207,6 +208,7 @@
         }
     .end annotation
 
+    .line 1291
     :try_start_0
     invoke-interface {p0, p1, p2}, Lio/reactivex/functions/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -219,6 +221,7 @@
     :catchall_0
     move-exception p0
 
+    .line 1293
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -240,6 +243,7 @@
         }
     .end annotation
 
+    .line 1271
     :try_start_0
     invoke-interface {p0, p1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -252,6 +256,7 @@
     :catchall_0
     move-exception p0
 
+    .line 1273
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -278,6 +283,7 @@
         }
     .end annotation
 
+    .line 1323
     invoke-static {p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -305,6 +311,7 @@
         }
     .end annotation
 
+    .line 1307
     :try_start_0
     invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
@@ -325,6 +332,7 @@
     :catchall_0
     move-exception p0
 
+    .line 1309
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -346,18 +354,22 @@
 
     const-string v0, "Scheduler Callable can\'t be null"
 
+    .line 269
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 270
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitComputationHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
+    .line 272
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
+    .line 274
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->applyRequireNonNull(Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
@@ -380,18 +392,22 @@
 
     const-string v0, "Scheduler Callable can\'t be null"
 
+    .line 285
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 286
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitIoHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
+    .line 288
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
+    .line 290
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->applyRequireNonNull(Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
@@ -414,18 +430,22 @@
 
     const-string v0, "Scheduler Callable can\'t be null"
 
+    .line 301
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 302
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitNewThreadHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
+    .line 304
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
+    .line 306
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->applyRequireNonNull(Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
@@ -448,18 +468,22 @@
 
     const-string v0, "Scheduler Callable can\'t be null"
 
+    .line 317
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 318
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitSingleHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
+    .line 320
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
+    .line 322
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->applyRequireNonNull(Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
@@ -471,6 +495,7 @@
 .method static isBug(Ljava/lang/Throwable;)Z
     .locals 2
 
+    .line 396
     instance-of v0, p0, Lio/reactivex/exceptions/OnErrorNotImplementedException;
 
     const/4 v1, 0x1
@@ -479,6 +504,7 @@
 
     return v1
 
+    .line 401
     :cond_0
     instance-of v0, p0, Lio/reactivex/exceptions/MissingBackpressureException;
 
@@ -486,6 +512,7 @@
 
     return v1
 
+    .line 406
     :cond_1
     instance-of v0, p0, Ljava/lang/IllegalStateException;
 
@@ -493,6 +520,7 @@
 
     return v1
 
+    .line 411
     :cond_2
     instance-of v0, p0, Ljava/lang/NullPointerException;
 
@@ -500,6 +528,7 @@
 
     return v1
 
+    .line 415
     :cond_3
     instance-of v0, p0, Ljava/lang/IllegalArgumentException;
 
@@ -507,6 +536,7 @@
 
     return v1
 
+    .line 419
     :cond_4
     instance-of p0, p0, Lio/reactivex/exceptions/CompositeException;
 
@@ -523,10 +553,12 @@
 .method public static onAssembly(Lio/reactivex/Completable;)Lio/reactivex/Completable;
     .locals 1
 
+    .line 1098
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onCompletableAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
+    .line 1100
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -551,10 +583,12 @@
         }
     .end annotation
 
+    .line 1020
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onFlowableAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
+    .line 1022
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -579,10 +613,12 @@
         }
     .end annotation
 
+    .line 1004
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onMaybeAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
+    .line 1006
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -607,10 +643,12 @@
         }
     .end annotation
 
+    .line 1052
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onObservableAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
+    .line 1054
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -635,10 +673,12 @@
         }
     .end annotation
 
+    .line 1084
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
+    .line 1086
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -652,12 +692,14 @@
 .method public static onComputationScheduler(Lio/reactivex/Scheduler;)Lio/reactivex/Scheduler;
     .locals 1
 
+    .line 332
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onComputationHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
+    .line 336
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -671,10 +713,12 @@
 .method public static onError(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 361
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->errorHandler:Lio/reactivex/functions/Consumer;
 
     if-nez p0, :cond_0
 
+    .line 364
     new-instance p0, Ljava/lang/NullPointerException;
 
     const-string v1, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
@@ -683,6 +727,7 @@
 
     goto :goto_0
 
+    .line 366
     :cond_0
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->isBug(Ljava/lang/Throwable;)Z
 
@@ -690,6 +735,7 @@
 
     if-nez v1, :cond_1
 
+    .line 367
     new-instance v1, Lio/reactivex/exceptions/UndeliverableException;
 
     invoke-direct {v1, p0}, Lio/reactivex/exceptions/UndeliverableException;-><init>(Ljava/lang/Throwable;)V
@@ -700,6 +746,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
+    .line 373
     :try_start_0
     invoke-interface {v0, p0}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
@@ -710,13 +757,17 @@
     :catchall_0
     move-exception v0
 
+    .line 377
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 378
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->uncaught(Ljava/lang/Throwable;)V
 
+    .line 382
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 383
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->uncaught(Ljava/lang/Throwable;)V
 
     return-void
@@ -725,12 +776,14 @@
 .method public static onIoScheduler(Lio/reactivex/Scheduler;)Lio/reactivex/Scheduler;
     .locals 1
 
+    .line 439
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onIoHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
+    .line 443
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -746,14 +799,17 @@
 
     const-string v0, "run is null"
 
+    .line 467
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 469
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onScheduleHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
+    .line 473
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -780,10 +836,12 @@
         }
     .end annotation
 
+    .line 939
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onObservableSubscribe:Lio/reactivex/functions/BiFunction;
 
     if-eqz v0, :cond_0
 
+    .line 941
     invoke-static {v0, p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/BiFunction;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -799,14 +857,17 @@
 .method static uncaught(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 427
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
+    .line 428
     invoke-virtual {v0}, Ljava/lang/Thread;->getUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
     move-result-object v1
 
+    .line 429
     invoke-interface {v1, v0, p0}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
     return-void

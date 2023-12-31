@@ -1,5 +1,6 @@
 .class Lorg/greenrobot/eventbus/EventBus$1;
 .super Ljava/lang/ThreadLocal;
+.source "EventBus.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lorg/greenrobot/eventbus/EventBus;)V
     .locals 0
 
+    .line 53
     iput-object p1, p0, Lorg/greenrobot/eventbus/EventBus$1;->this$0:Lorg/greenrobot/eventbus/EventBus;
 
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -41,6 +43,7 @@
 .method protected bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 53
     invoke-virtual {p0}, Lorg/greenrobot/eventbus/EventBus$1;->initialValue()Lorg/greenrobot/eventbus/EventBus$PostingThreadState;
 
     move-result-object p0
@@ -51,6 +54,7 @@
 .method protected initialValue()Lorg/greenrobot/eventbus/EventBus$PostingThreadState;
     .locals 0
 
+    .line 56
     new-instance p0, Lorg/greenrobot/eventbus/EventBus$PostingThreadState;
 
     invoke-direct {p0}, Lorg/greenrobot/eventbus/EventBus$PostingThreadState;-><init>()V

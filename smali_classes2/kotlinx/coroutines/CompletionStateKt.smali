@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/CompletionStateKt;
 .super Ljava/lang/Object;
+.source "CompletionState.kt"
 
 
 # annotations
@@ -23,16 +24,19 @@
         }
     .end annotation
 
+    .line 26
     instance-of v0, p0, Lkotlinx/coroutines/CompletedExceptionally;
 
     if-eqz v0, :cond_2
 
+    .line 27
     sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
     check-cast p0, Lkotlinx/coroutines/CompletedExceptionally;
 
     iget-object p0, p0, Lkotlinx/coroutines/CompletedExceptionally;->cause:Ljava/lang/Throwable;
 
+    .line 70
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getRECOVER_STACK_TRACES()Z
 
     move-result v0
@@ -45,6 +49,7 @@
 
     goto :goto_0
 
+    .line 71
     :cond_0
     check-cast p1, Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
 
@@ -52,6 +57,7 @@
 
     move-result-object p0
 
+    .line 27
     :cond_1
     :goto_0
     invoke-static {p0}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
@@ -64,6 +70,7 @@
 
     goto :goto_1
 
+    .line 29
     :cond_2
     sget-object p1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
@@ -92,6 +99,7 @@
         }
     .end annotation
 
+    .line 14
     invoke-static {p0}, Lkotlin/Result;->exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object v0
@@ -100,6 +108,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 15
     new-instance v0, Lkotlinx/coroutines/CompletedWithCancellation;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/coroutines/CompletedWithCancellation;-><init>(Ljava/lang/Object;Lkotlin/jvm/functions/Function1;)V
@@ -108,6 +117,7 @@
 
     goto :goto_0
 
+    .line 16
     :cond_0
     new-instance p0, Lkotlinx/coroutines/CompletedExceptionally;
 
@@ -138,6 +148,7 @@
         }
     .end annotation
 
+    .line 19
     invoke-static {p0}, Lkotlin/Result;->exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object v0
@@ -146,11 +157,13 @@
 
     goto :goto_1
 
+    .line 21
     :cond_0
     new-instance p0, Lkotlinx/coroutines/CompletedExceptionally;
 
     check-cast p1, Lkotlin/coroutines/Continuation;
 
+    .line 68
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getRECOVER_STACK_TRACES()Z
 
     move-result v1
@@ -163,6 +176,7 @@
 
     goto :goto_0
 
+    .line 69
     :cond_1
     check-cast p1, Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
 
@@ -178,6 +192,7 @@
 
     const/4 v2, 0x0
 
+    .line 21
     invoke-direct {p0, v0, p1, v1, v2}, Lkotlinx/coroutines/CompletedExceptionally;-><init>(Ljava/lang/Throwable;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_1
@@ -193,6 +208,7 @@
 
     const/4 p1, 0x0
 
+    .line 13
     check-cast p1, Lkotlin/jvm/functions/Function1;
 
     :cond_0

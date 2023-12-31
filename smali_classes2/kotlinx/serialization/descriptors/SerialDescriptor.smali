@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/serialization/descriptors/SerialDescriptor;
 .super Ljava/lang/Object;
+.source "SerialDescriptor.kt"
 
 
 # annotations

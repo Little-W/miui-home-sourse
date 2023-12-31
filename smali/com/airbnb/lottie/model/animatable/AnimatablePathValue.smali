@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/animatable/AnimatablePathValue;
 .super Ljava/lang/Object;
+.source "AnimatablePathValue.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/model/animatable/AnimatableValue;
@@ -43,8 +44,10 @@
         }
     .end annotation
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 16
     iput-object p1, p0, Lcom/airbnb/lottie/model/animatable/AnimatablePathValue;->keyframes:Ljava/util/List;
 
     return-void
@@ -64,6 +67,7 @@
         }
     .end annotation
 
+    .line 31
     iget-object v0, p0, Lcom/airbnb/lottie/model/animatable/AnimatablePathValue;->keyframes:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -80,6 +84,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 32
     new-instance v0, Lcom/airbnb/lottie/animation/keyframe/PointKeyframeAnimation;
 
     iget-object p0, p0, Lcom/airbnb/lottie/model/animatable/AnimatablePathValue;->keyframes:Ljava/util/List;
@@ -88,6 +93,7 @@
 
     return-object v0
 
+    .line 34
     :cond_0
     new-instance v0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframeAnimation;
 
@@ -110,6 +116,7 @@
         }
     .end annotation
 
+    .line 21
     iget-object p0, p0, Lcom/airbnb/lottie/model/animatable/AnimatablePathValue;->keyframes:Ljava/util/List;
 
     return-object p0
@@ -118,6 +125,7 @@
 .method public isStatic()Z
     .locals 3
 
+    .line 26
     iget-object v0, p0, Lcom/airbnb/lottie/model/animatable/AnimatablePathValue;->keyframes:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I

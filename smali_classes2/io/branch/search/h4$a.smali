@@ -1,5 +1,6 @@
 .class public Lio/branch/search/h4$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;

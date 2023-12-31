@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/synergy/RemoteBroadcastManager;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields

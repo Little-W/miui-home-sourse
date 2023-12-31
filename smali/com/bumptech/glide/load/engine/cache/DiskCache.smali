@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/load/engine/cache/DiskCache;
 .super Ljava/lang/Object;
+.source "DiskCache.java"
 
 
 # annotations

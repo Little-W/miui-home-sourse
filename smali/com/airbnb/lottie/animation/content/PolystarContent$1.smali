@@ -1,5 +1,6 @@
 .class synthetic Lcom/airbnb/lottie/animation/content/PolystarContent$1;
 .super Ljava/lang/Object;
+.source "PolystarContent.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 123
     invoke-static {}, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->values()[Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     move-result-object v0

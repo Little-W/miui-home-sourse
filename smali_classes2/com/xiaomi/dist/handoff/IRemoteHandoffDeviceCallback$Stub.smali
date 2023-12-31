@@ -1,5 +1,6 @@
 .class public abstract Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback$Stub;
 .super Landroid/os/Binder;
+.source "IRemoteHandoffDeviceCallback.java"
 
 # interfaces
 .implements Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback;
@@ -35,20 +36,24 @@
     :cond_0
     const-string v0, "com.xiaomi.dist.handoff.IRemoteHandoffDeviceCallback"
 
+    .line 39
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 40
     instance-of v1, v0, Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback;
 
     if-eqz v1, :cond_1
 
+    .line 41
     check-cast v0, Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback;
 
     return-object v0
 
+    .line 43
     :cond_1
     new-instance v0, Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback$Stub$Proxy;
 
@@ -60,6 +65,7 @@
 .method public static getDefaultImpl()Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback;
     .locals 1
 
+    .line 176
     sget-object v0, Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback$Stub$Proxy;->sDefaultImpl:Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback;
 
     return-object v0
@@ -97,26 +103,31 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 89
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 56
     :cond_0
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
+    .line 75
     :cond_1
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 77
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 78
     sget-object p1, Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -127,22 +138,27 @@
 
     check-cast v0, Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;
 
+    .line 83
     :cond_2
     invoke-virtual {p0, v0}, Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback$Stub;->onDeviceOffline(Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;)V
 
+    .line 84
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 61
     :cond_3
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 63
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_4
 
+    .line 64
     sget-object p1, Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -153,9 +169,11 @@
 
     check-cast v0, Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;
 
+    .line 69
     :cond_4
     invoke-virtual {p0, v0}, Lcom/xiaomi/dist/handoff/IRemoteHandoffDeviceCallback$Stub;->onDeviceOnline(Lcom/xiaomi/dist/handoff/parcel/RemoteHandoffDevice;)V
 
+    .line 70
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1

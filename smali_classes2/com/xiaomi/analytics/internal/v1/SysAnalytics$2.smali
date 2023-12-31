@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;
 .super Ljava/lang/Object;
+.source "SysAnalytics.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/xiaomi/analytics/internal/v1/SysAnalytics;)V
     .locals 0
 
+    .line 113
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;->this$0:Lcom/xiaomi/analytics/internal/v1/SysAnalytics;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 8
 
+    .line 116
     iget-object v0, p0, Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;->this$0:Lcom/xiaomi/analytics/internal/v1/SysAnalytics;
 
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/v1/SysAnalytics;->access$500(Lcom/xiaomi/analytics/internal/v1/SysAnalytics;)Ljava/util/Set;
@@ -44,6 +47,7 @@
 
     monitor-enter v0
 
+    .line 118
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;->this$0:Lcom/xiaomi/analytics/internal/v1/SysAnalytics;
 
@@ -57,6 +61,7 @@
 
     if-nez v1, :cond_0
 
+    .line 119
     iget-object v1, p0, Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;->this$0:Lcom/xiaomi/analytics/internal/v1/SysAnalytics;
 
     invoke-static {v1}, Lcom/xiaomi/analytics/internal/v1/SysAnalytics;->access$500(Lcom/xiaomi/analytics/internal/v1/SysAnalytics;)Ljava/util/Set;
@@ -69,6 +74,7 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
+    .line 120
     iget-object v2, p0, Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;->this$0:Lcom/xiaomi/analytics/internal/v1/SysAnalytics;
 
     invoke-static {v2}, Lcom/xiaomi/analytics/internal/v1/SysAnalytics;->access$500(Lcom/xiaomi/analytics/internal/v1/SysAnalytics;)Ljava/util/Set;
@@ -83,6 +89,7 @@
 
     const-string v2, "com.miui.analytics.ICore"
 
+    .line 121
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -99,12 +106,14 @@
 
     aput-object v6, v5, v7
 
+    .line 122
     invoke-virtual {v2, v3, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;->this$0:Lcom/xiaomi/analytics/internal/v1/SysAnalytics;
 
+    .line 123
     invoke-static {v3}, Lcom/xiaomi/analytics/internal/v1/SysAnalytics;->access$100(Lcom/xiaomi/analytics/internal/v1/SysAnalytics;)Lcom/miui/analytics/ICore;
 
     move-result-object v3
@@ -121,6 +130,7 @@
 
     new-array v3, v4, [Ljava/lang/Object;
 
+    .line 124
     iget-object v4, p0, Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;->this$0:Lcom/xiaomi/analytics/internal/v1/SysAnalytics;
 
     invoke-static {v4}, Lcom/xiaomi/analytics/internal/v1/SysAnalytics;->access$500(Lcom/xiaomi/analytics/internal/v1/SysAnalytics;)Ljava/util/Set;
@@ -143,6 +153,7 @@
 
     invoke-static {v1, v2}, Lcom/xiaomi/analytics/internal/util/ALog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 125
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/v1/SysAnalytics$2;->this$0:Lcom/xiaomi/analytics/internal/v1/SysAnalytics;
 
     invoke-static {p0}, Lcom/xiaomi/analytics/internal/v1/SysAnalytics;->access$500(Lcom/xiaomi/analytics/internal/v1/SysAnalytics;)Ljava/util/Set;
@@ -167,6 +178,7 @@
     :try_start_1
     const-string v1, "SysAnalytics"
 
+    .line 128
     invoke-static {v1}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -175,6 +187,7 @@
 
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 130
     :cond_0
     :goto_0
     monitor-exit v0

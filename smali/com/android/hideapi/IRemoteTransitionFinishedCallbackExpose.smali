@@ -1,5 +1,6 @@
 .class public Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;
 .super Ljava/lang/Object;
+.source "IRemoteTransitionFinishedCallbackExpose.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method private constructor <init>(Landroid/window/IRemoteTransitionFinishedCallback;)V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
     iput-object p1, p0, Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;->instance:Landroid/window/IRemoteTransitionFinishedCallback;
 
     return-void
@@ -20,6 +23,7 @@
 .method public static box(Landroid/window/IRemoteTransitionFinishedCallback;)Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;
     .locals 1
 
+    .line 21
     new-instance v0, Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;
 
     invoke-direct {v0, p0}, Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;-><init>(Landroid/window/IRemoteTransitionFinishedCallback;)V
@@ -32,6 +36,7 @@
 .method public onTransitionFinished(Landroid/window/WindowContainerTransaction;Landroid/view/SurfaceControl$Transaction;)V
     .locals 6
 
+    .line 25
     iget-object p0, p0, Lcom/android/hideapi/IRemoteTransitionFinishedCallbackExpose;->instance:Landroid/window/IRemoteTransitionFinishedCallback;
 
     sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;

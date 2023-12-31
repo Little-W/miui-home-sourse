@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/advertise/adapter/-$$Lambda$RecommendGamesGridAdapter$lwqHMmicaUsAiWOD5sH-tG0okJ4;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

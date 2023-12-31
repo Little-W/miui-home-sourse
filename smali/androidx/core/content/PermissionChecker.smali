@@ -1,11 +1,13 @@
 .class public final Landroidx/core/content/PermissionChecker;
 .super Ljava/lang/Object;
+.source "PermissionChecker.java"
 
 
 # direct methods
 .method public static checkPermission(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;)I
     .locals 2
 
+    .line 98
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result p2
@@ -16,6 +18,7 @@
 
     return v0
 
+    .line 102
     :cond_0
     invoke-static {p1}, Landroidx/core/app/AppOpsManagerCompat;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;
 
@@ -30,6 +33,7 @@
     :cond_1
     if-nez p4, :cond_4
 
+    .line 108
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p4
@@ -40,12 +44,14 @@
 
     if-eqz p4, :cond_3
 
+    .line 109
     array-length v1, p4
 
     if-gtz v1, :cond_2
 
     goto :goto_0
 
+    .line 112
     :cond_2
     aget-object p4, p4, p2
 
@@ -55,18 +61,21 @@
     :goto_0
     return v0
 
+    .line 115
     :cond_4
     :goto_1
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
 
+    .line 116
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     if-ne v0, p3, :cond_5
 
+    .line 118
     invoke-static {v1, p4}, Landroidx/core/util/ObjectsCompat;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -83,12 +92,14 @@
     :goto_2
     if-eqz v0, :cond_6
 
+    .line 122
     invoke-static {p0, p3, p1, p4}, Landroidx/core/app/AppOpsManagerCompat;->checkOrNoteProxyOp(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
     goto :goto_3
 
+    .line 124
     :cond_6
     invoke-static {p0, p1, p4}, Landroidx/core/app/AppOpsManagerCompat;->noteProxyOpNoThrow(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
@@ -109,10 +120,12 @@
 .method public static checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
     .locals 3
 
+    .line 143
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
+    .line 144
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
@@ -121,6 +134,7 @@
 
     move-result-object v2
 
+    .line 143
     invoke-static {p0, p1, v0, v1, v2}, Landroidx/core/content/PermissionChecker;->checkPermission(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;)I
 
     move-result p0

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/wm/shell/recents/IRecentTasks;
 .super Ljava/lang/Object;
+.source "IRecentTasks.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

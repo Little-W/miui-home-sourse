@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/internal/fuseable/QueueDisposable;
 .super Ljava/lang/Object;
+.source "QueueDisposable.java"
 
 # interfaces
 .implements Lio/reactivex2/disposables/Disposable;

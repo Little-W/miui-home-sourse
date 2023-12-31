@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/CctTransportBackend$HttpResponse;
 .super Ljava/lang/Object;
+.source "CctTransportBackend.java"
 
 
 # annotations
@@ -25,12 +26,16 @@
 .method constructor <init>(ILjava/net/URL;J)V
     .locals 0
 
+    .line 413
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 414
     iput p1, p0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpResponse;->code:I
 
+    .line 415
     iput-object p2, p0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpResponse;->redirectUrl:Ljava/net/URL;
 
+    .line 416
     iput-wide p3, p0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpResponse;->nextRequestMillis:J
 
     return-void

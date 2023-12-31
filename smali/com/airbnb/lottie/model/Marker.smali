@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/Marker;
 .super Ljava/lang/Object;
+.source "Marker.java"
 
 
 # instance fields
@@ -14,12 +15,16 @@
 .method public constructor <init>(Ljava/lang/String;FF)V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 11
     iput-object p1, p0, Lcom/airbnb/lottie/model/Marker;->name:Ljava/lang/String;
 
+    .line 12
     iput p3, p0, Lcom/airbnb/lottie/model/Marker;->durationFrames:F
 
+    .line 13
     iput p2, p0, Lcom/airbnb/lottie/model/Marker;->startFrame:F
 
     return-void
@@ -30,6 +35,7 @@
 .method public matchesName(Ljava/lang/String;)Z
     .locals 3
 
+    .line 29
     iget-object v0, p0, Lcom/airbnb/lottie/model/Marker;->name:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -42,6 +48,7 @@
 
     return v1
 
+    .line 35
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/model/Marker;->name:Ljava/lang/String;
 

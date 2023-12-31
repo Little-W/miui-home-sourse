@@ -1,5 +1,6 @@
 .class public final Lkotlin/Unit;
 .super Ljava/lang/Object;
+.source "Unit.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 22
     new-instance v0, Lkotlin/Unit;
 
     invoke-direct {v0}, Lkotlin/Unit;-><init>()V
@@ -22,6 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

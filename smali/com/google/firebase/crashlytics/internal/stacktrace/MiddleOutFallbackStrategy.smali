@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutFallbackStrategy;
 .super Ljava/lang/Object;
+.source "MiddleOutFallbackStrategy.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/stacktrace/StackTraceTrimmingStrategy;
@@ -17,12 +18,16 @@
 .method public varargs constructor <init>(I[Lcom/google/firebase/crashlytics/internal/stacktrace/StackTraceTrimmingStrategy;)V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 28
     iput p1, p0, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutFallbackStrategy;->maximumStackSize:I
 
+    .line 29
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutFallbackStrategy;->trimmingStrategies:[Lcom/google/firebase/crashlytics/internal/stacktrace/StackTraceTrimmingStrategy;
 
+    .line 30
     new-instance p2, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutStrategy;
 
     invoke-direct {p2, p1}, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutStrategy;-><init>(I)V
@@ -37,6 +42,7 @@
 .method public getTrimmedStackTrace([Ljava/lang/StackTraceElement;)[Ljava/lang/StackTraceElement;
     .locals 7
 
+    .line 35
     array-length v0, p1
 
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutFallbackStrategy;->maximumStackSize:I
@@ -45,6 +51,7 @@
 
     return-object p1
 
+    .line 40
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutFallbackStrategy;->trimmingStrategies:[Lcom/google/firebase/crashlytics/internal/stacktrace/StackTraceTrimmingStrategy;
 
@@ -59,6 +66,7 @@
 
     aget-object v4, v0, v2
 
+    .line 41
     array-length v5, v3
 
     iget v6, p0, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutFallbackStrategy;->maximumStackSize:I
@@ -67,6 +75,7 @@
 
     goto :goto_1
 
+    .line 45
     :cond_1
     invoke-interface {v4, p1}, Lcom/google/firebase/crashlytics/internal/stacktrace/StackTraceTrimmingStrategy;->getTrimmedStackTrace([Ljava/lang/StackTraceElement;)[Ljava/lang/StackTraceElement;
 
@@ -76,6 +85,7 @@
 
     goto :goto_0
 
+    .line 48
     :cond_2
     :goto_1
     array-length p1, v3
@@ -84,6 +94,7 @@
 
     if-le p1, v0, :cond_3
 
+    .line 49
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutFallbackStrategy;->middleOutStrategy:Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutStrategy;
 
     invoke-virtual {p0, v3}, Lcom/google/firebase/crashlytics/internal/stacktrace/MiddleOutStrategy;->getTrimmedStackTrace([Ljava/lang/StackTraceElement;)[Ljava/lang/StackTraceElement;

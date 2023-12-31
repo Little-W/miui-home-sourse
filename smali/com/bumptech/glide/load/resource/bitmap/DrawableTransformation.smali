@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;
 .super Ljava/lang/Object;
+.source "DrawableTransformation.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/Transformation;
@@ -42,10 +43,13 @@
         }
     .end annotation
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->wrapped:Lcom/bumptech/glide/load/Transformation;
 
+    .line 38
     iput-boolean p2, p0, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->isRequired:Z
 
     return-void
@@ -66,6 +70,7 @@
         }
     .end annotation
 
+    .line 77
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -96,12 +101,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 83
     instance-of v0, p1, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;
 
     if-eqz v0, :cond_0
 
+    .line 84
     check-cast p1, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;
 
+    .line 85
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->wrapped:Lcom/bumptech/glide/load/Transformation;
 
     iget-object p1, p1, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->wrapped:Lcom/bumptech/glide/load/Transformation;
@@ -121,6 +129,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 92
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->wrapped:Lcom/bumptech/glide/load/Transformation;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -145,6 +154,7 @@
         }
     .end annotation
 
+    .line 50
     invoke-static {p1}, Lcom/bumptech/glide/Glide;->get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;
 
     move-result-object v0
@@ -153,24 +163,28 @@
 
     move-result-object v0
 
+    .line 51
     invoke-interface {p2}, Lcom/bumptech/glide/load/engine/Resource;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/graphics/drawable/Drawable;
 
+    .line 53
     invoke-static {v0, v1, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter;->convert(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Landroid/graphics/drawable/Drawable;II)Lcom/bumptech/glide/load/engine/Resource;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
+    .line 55
     iget-boolean p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->isRequired:Z
 
     if-nez p0, :cond_0
 
     return-object p2
 
+    .line 56
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -196,23 +210,28 @@
 
     throw p0
 
+    .line 61
     :cond_1
     iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->wrapped:Lcom/bumptech/glide/load/Transformation;
 
+    .line 62
     invoke-interface {v1, p1, v0, p3, p4}, Lcom/bumptech/glide/load/Transformation;->transform(Landroid/content/Context;Lcom/bumptech/glide/load/engine/Resource;II)Lcom/bumptech/glide/load/engine/Resource;
 
     move-result-object p3
 
+    .line 64
     invoke-virtual {p3, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p4
 
     if-eqz p4, :cond_2
 
+    .line 65
     invoke-interface {p3}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
 
     return-object p2
 
+    .line 68
     :cond_2
     invoke-direct {p0, p1, p3}, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->newDrawableResource(Landroid/content/Context;Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;
 
@@ -224,6 +243,7 @@
 .method public updateDiskCacheKey(Ljava/security/MessageDigest;)V
     .locals 0
 
+    .line 97
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->wrapped:Lcom/bumptech/glide/load/Transformation;
 
     invoke-interface {p0, p1}, Lcom/bumptech/glide/load/Transformation;->updateDiskCacheKey(Ljava/security/MessageDigest;)V

@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/descriptors/SerialDescriptorsKt$buildSerialDescriptor$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "SerialDescriptors.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;

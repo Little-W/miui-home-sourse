@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/JsonKt;
 .super Ljava/lang/Object;
+.source "Json.kt"
 
 
 # annotations
@@ -32,6 +33,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 121
     new-instance v0, Lkotlinx/serialization/json/JsonBuilder;
 
     invoke-virtual {p0}, Lkotlinx/serialization/json/Json;->getConfiguration$kotlinx_serialization_json()Lkotlinx/serialization/json/internal/JsonConf;
@@ -40,12 +42,15 @@
 
     invoke-direct {v0, p0}, Lkotlinx/serialization/json/JsonBuilder;-><init>(Lkotlinx/serialization/json/internal/JsonConf;)V
 
+    .line 122
     invoke-interface {p1, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 123
     invoke-virtual {v0}, Lkotlinx/serialization/json/JsonBuilder;->build$kotlinx_serialization_json()Lkotlinx/serialization/json/internal/JsonConf;
 
     move-result-object p0
 
+    .line 124
     new-instance p1, Lkotlinx/serialization/json/JsonImpl;
 
     invoke-direct {p1, p0}, Lkotlinx/serialization/json/JsonImpl;-><init>(Lkotlinx/serialization/json/internal/JsonConf;)V
@@ -62,6 +67,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 120
     sget-object p0, Lkotlinx/serialization/json/Json;->Default:Lkotlinx/serialization/json/Json$Default;
 
     check-cast p0, Lkotlinx/serialization/json/Json;

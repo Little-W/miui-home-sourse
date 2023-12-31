@@ -1,5 +1,6 @@
 .class public final Landroid/window/TransitionInfo$Change;
 .super Ljava/lang/Object;
+.source "TransitionInfo.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -32,6 +33,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 553
     new-instance v0, Landroid/window/TransitionInfo$Change$1;
 
     invoke-direct {v0}, Landroid/window/TransitionInfo$Change$1;-><init>()V
@@ -46,6 +48,7 @@
 .method public describeContents()I
     .locals 1
 
+    .line 569
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -58,6 +61,7 @@
 .method public getContainer()Landroid/window/WindowContainerToken;
     .locals 1
 
+    .line 431
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -70,6 +74,7 @@
 .method public getLeash()Landroid/view/SurfaceControl;
     .locals 1
 
+    .line 494
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -82,6 +87,7 @@
 .method public getMode()I
     .locals 1
 
+    .line 454
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -94,6 +100,7 @@
 .method public getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
     .locals 1
 
+    .line 499
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -106,6 +113,7 @@
 .method public hasFlags(I)Z
     .locals 0
 
+    .line 464
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"
@@ -118,6 +126,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 574
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -130,6 +139,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 550
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"

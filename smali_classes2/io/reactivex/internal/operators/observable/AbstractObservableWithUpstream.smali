@@ -1,5 +1,6 @@
 .class abstract Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
 .super Lio/reactivex/Observable;
+.source "AbstractObservableWithUpstream.java"
 
 
 # annotations
@@ -38,8 +39,10 @@
         }
     .end annotation
 
+    .line 34
     invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
+    .line 35
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->source:Lio/reactivex/ObservableSource;
 
     return-void

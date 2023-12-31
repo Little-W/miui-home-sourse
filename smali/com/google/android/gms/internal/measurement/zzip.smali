@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzip;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -49,8 +50,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzip;->zza:Ljava/util/Iterator;
 
     return-void
@@ -61,6 +64,7 @@
 .method public final hasNext()Z
     .locals 0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzip;->zza:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -73,6 +77,7 @@
 .method public final synthetic next()Ljava/lang/Object;
     .locals 2
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzip;->zza:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -81,6 +86,7 @@
 
     check-cast p0, Ljava/util/Map$Entry;
 
+    .line 9
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -89,6 +95,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 10
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzim;
 
     const/4 v1, 0x0
@@ -104,6 +111,7 @@
 .method public final remove()V
     .locals 0
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzip;->zza:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V

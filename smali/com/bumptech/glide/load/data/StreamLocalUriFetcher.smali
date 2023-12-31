@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;
 .super Lcom/bumptech/glide/load/data/LocalUriFetcher;
+.source "StreamLocalUriFetcher.java"
 
 
 # annotations
@@ -20,6 +21,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 44
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -28,6 +30,7 @@
 
     sput-object v0, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->URI_MATCHER:Landroid/content/UriMatcher;
 
+    .line 45
     sget-object v0, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const/4 v1, 0x1
@@ -38,12 +41,14 @@
 
     invoke-virtual {v0, v2, v3, v1}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 46
     sget-object v0, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v3, "contacts/lookup/*"
 
     invoke-virtual {v0, v2, v3, v1}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 47
     sget-object v0, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "contacts/#/photo"
@@ -52,6 +57,7 @@
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 48
     sget-object v0, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "contacts/#"
@@ -60,6 +66,7 @@
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 49
     sget-object v0, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "contacts/#/display_photo"
@@ -68,6 +75,7 @@
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 50
     sget-object v0, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "phone_lookup/*"
@@ -82,6 +90,7 @@
 .method public constructor <init>(Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
+    .line 54
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/load/data/LocalUriFetcher;-><init>(Landroid/content/ContentResolver;Landroid/net/Uri;)V
 
     return-void
@@ -95,6 +104,7 @@
         }
     .end annotation
 
+    .line 70
     sget-object v0, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->URI_MATCHER:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -113,12 +123,14 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 85
     invoke-virtual {p2, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
     move-result-object p0
 
     return-object p0
 
+    .line 72
     :cond_0
     invoke-direct {p0, p2, p1}, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->openContactPhotoInputStream(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/io/InputStream;
 
@@ -126,6 +138,7 @@
 
     return-object p0
 
+    .line 76
     :cond_1
     invoke-static {p2, p1}, Landroid/provider/ContactsContract$Contacts;->lookupContact(Landroid/content/ContentResolver;Landroid/net/Uri;)Landroid/net/Uri;
 
@@ -133,12 +146,14 @@
 
     if-eqz p1, :cond_2
 
+    .line 80
     invoke-direct {p0, p2, p1}, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->openContactPhotoInputStream(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/io/InputStream;
 
     move-result-object p0
 
     return-object p0
 
+    .line 78
     :cond_2
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -154,6 +169,7 @@
 
     const/4 p0, 0x1
 
+    .line 90
     invoke-static {p1, p2, p0}, Landroid/provider/ContactsContract$Contacts;->openContactPhotoInputStream(Landroid/content/ContentResolver;Landroid/net/Uri;Z)Ljava/io/InputStream;
 
     move-result-object p0
@@ -171,6 +187,7 @@
         }
     .end annotation
 
+    .line 96
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
     return-void
@@ -184,6 +201,7 @@
         }
     .end annotation
 
+    .line 15
     check-cast p1, Ljava/io/InputStream;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->close(Ljava/io/InputStream;)V
@@ -202,6 +220,7 @@
         }
     .end annotation
 
+    .line 102
     const-class p0, Ljava/io/InputStream;
 
     return-object p0
@@ -215,6 +234,7 @@
         }
     .end annotation
 
+    .line 60
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->loadResourceFromUri(Landroid/net/Uri;Landroid/content/ContentResolver;)Ljava/io/InputStream;
 
     move-result-object p0
@@ -223,6 +243,7 @@
 
     return-object p0
 
+    .line 62
     :cond_0
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -253,6 +274,7 @@
         }
     .end annotation
 
+    .line 15
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/data/StreamLocalUriFetcher;->loadResource(Landroid/net/Uri;Landroid/content/ContentResolver;)Ljava/io/InputStream;
 
     move-result-object p0

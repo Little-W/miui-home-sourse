@@ -1,5 +1,6 @@
 .class public abstract Lcom/market/sdk/homeguide/IAppstoreHomeGuideService$Stub;
 .super Landroid/os/Binder;
+.source "IAppstoreHomeGuideService.java"
 
 # interfaces
 .implements Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;
@@ -34,10 +35,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 13
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.market.sdk.homeguide.IAppstoreHomeGuideService"
 
+    .line 14
     invoke-virtual {p0, p0, v0}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -55,20 +58,24 @@
     :cond_0
     const-string v0, "com.market.sdk.homeguide.IAppstoreHomeGuideService"
 
+    .line 25
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 26
     instance-of v1, v0, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;
 
     if-eqz v1, :cond_1
 
+    .line 27
     check-cast v0, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;
 
     return-object v0
 
+    .line 29
     :cond_1
     new-instance v0, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService$Stub$Proxy;
 
@@ -109,26 +116,31 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 82
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 42
     :cond_0
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
+    .line 68
     :cond_1
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 70
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 71
     sget-object p1, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -139,22 +151,27 @@
 
     check-cast v0, Landroid/os/ResultReceiver;
 
+    .line 76
     :cond_2
     invoke-virtual {p0, v0}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService$Stub;->show(Landroid/os/ResultReceiver;)V
 
+    .line 77
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v1
 
+    .line 47
     :cond_3
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 49
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_4
 
+    .line 50
     sget-object p1, Lcom/market/sdk/homeguide/HomeUserGuideData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -165,17 +182,21 @@
 
     check-cast v0, Lcom/market/sdk/homeguide/HomeUserGuideData;
 
+    .line 55
     :cond_4
     invoke-virtual {p0, v0}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService$Stub;->ready(Lcom/market/sdk/homeguide/HomeUserGuideData;)Lcom/market/sdk/homeguide/HomeUserGuideResult;
 
     move-result-object p0
 
+    .line 56
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     if-eqz p0, :cond_5
 
+    .line 58
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 59
     invoke-virtual {p0, p3, v1}, Lcom/market/sdk/homeguide/HomeUserGuideResult;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
@@ -183,6 +204,7 @@
     :cond_5
     const/4 p0, 0x0
 
+    .line 62
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     :goto_0

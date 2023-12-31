@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;
 .super Ljava/lang/Object;
+.source "SizeConfigStrategy.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;
@@ -28,8 +29,10 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$KeyPool;)V
     .locals 0
 
+    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 199
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->pool:Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$KeyPool;
 
     return-void
@@ -40,14 +43,17 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 225
     instance-of v0, p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 226
     check-cast p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;
 
+    .line 227
     iget v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->size:I
 
     iget v2, p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->size:I
@@ -58,6 +64,7 @@
 
     iget-object p1, p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->config:Landroid/graphics/Bitmap$Config;
 
+    .line 228
     invoke-static {p0, p1}, Lcom/bumptech/glide/util/Util;->bothNullOrEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -73,10 +80,12 @@
 .method public hashCode()I
     .locals 1
 
+    .line 235
     iget v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->size:I
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 236
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->config:Landroid/graphics/Bitmap$Config;
 
     if-eqz p0, :cond_0
@@ -99,8 +108,10 @@
 .method public init(ILandroid/graphics/Bitmap$Config;)V
     .locals 0
 
+    .line 209
     iput p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->size:I
 
+    .line 210
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->config:Landroid/graphics/Bitmap$Config;
 
     return-void
@@ -109,6 +120,7 @@
 .method public offer()V
     .locals 1
 
+    .line 215
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->pool:Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$KeyPool;
 
     invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$KeyPool;->offer(Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;)V
@@ -119,6 +131,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 220
     iget v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->size:I
 
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$Key;->config:Landroid/graphics/Bitmap$Config;

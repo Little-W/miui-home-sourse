@@ -1,5 +1,6 @@
 .class public abstract Lkotlin/coroutines/jvm/internal/RestrictedContinuationImpl;
 .super Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;
+.source "ContinuationImpl.kt"
 
 
 # direct methods
@@ -14,10 +15,12 @@
         }
     .end annotation
 
+    .line 83
     invoke-direct {p0, p1}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;)V
 
     if-eqz p1, :cond_2
 
+    .line 86
     invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p0
@@ -63,6 +66,7 @@
 .method public getContext()Lkotlin/coroutines/CoroutineContext;
     .locals 0
 
+    .line 93
     sget-object p0, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
     check-cast p0, Lkotlin/coroutines/CoroutineContext;

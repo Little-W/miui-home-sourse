@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/measurement/internal/zzfg;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # instance fields
@@ -18,14 +19,18 @@
 .method public constructor <init>(Lcom/google/android/gms/measurement/internal/zzfc;Ljava/lang/String;J)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zza:Ljava/lang/String;
 
+    .line 4
     iput-wide p3, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zzb:J
 
     return-void
@@ -36,14 +41,17 @@
 .method public final zza()J
     .locals 4
 
+    .line 7
     iget-boolean v0, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zzc:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
+    .line 8
     iput-boolean v0, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zzc:Z
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzfc;->zzf()Landroid/content/SharedPreferences;
@@ -60,6 +68,7 @@
 
     iput-wide v0, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zzd:J
 
+    .line 10
     :cond_0
     iget-wide v0, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zzd:J
 
@@ -69,6 +78,7 @@
 .method public final zza(J)V
     .locals 2
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zze:Lcom/google/android/gms/measurement/internal/zzfc;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzfc;->zzf()Landroid/content/SharedPreferences;
@@ -79,12 +89,15 @@
 
     move-result-object v0
 
+    .line 12
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zza:Ljava/lang/String;
 
     invoke-interface {v0, v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
+    .line 13
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
+    .line 14
     iput-wide p1, p0, Lcom/google/android/gms/measurement/internal/zzfg;->zzd:J
 
     return-void

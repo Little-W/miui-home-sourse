@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/CoroutineDispatcher;
 .super Lkotlin/coroutines/AbstractCoroutineContextElement;
+.source "CoroutineDispatcher.kt"
 
 # interfaces
 .implements Lkotlin/coroutines/ContinuationInterceptor;
@@ -35,6 +36,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 32
     sget-object v0, Lkotlin/coroutines/ContinuationInterceptor;->Key:Lkotlin/coroutines/ContinuationInterceptor$Key;
 
     check-cast v0, Lkotlin/coroutines/CoroutineContext$Key;
@@ -61,6 +63,7 @@
         }
     .end annotation
 
+    .line 31
     invoke-static {p0, p1}, Lkotlin/coroutines/ContinuationInterceptor$DefaultImpls;->get(Lkotlin/coroutines/ContinuationInterceptor;Lkotlin/coroutines/CoroutineContext$Key;)Lkotlin/coroutines/CoroutineContext$Element;
 
     move-result-object p0
@@ -82,6 +85,7 @@
         }
     .end annotation
 
+    .line 100
     new-instance v0, Lkotlinx/coroutines/internal/DispatchedContinuation;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/coroutines/internal/DispatchedContinuation;-><init>(Lkotlinx/coroutines/CoroutineDispatcher;Lkotlin/coroutines/Continuation;)V
@@ -110,6 +114,7 @@
         }
     .end annotation
 
+    .line 31
     invoke-static {p0, p1}, Lkotlin/coroutines/ContinuationInterceptor$DefaultImpls;->minusKey(Lkotlin/coroutines/ContinuationInterceptor;Lkotlin/coroutines/CoroutineContext$Key;)Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p0
@@ -129,6 +134,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 104
     check-cast p1, Lkotlinx/coroutines/internal/DispatchedContinuation;
 
     invoke-virtual {p1}, Lkotlinx/coroutines/internal/DispatchedContinuation;->getReusableCancellableContinuation()Lkotlinx/coroutines/CancellableContinuationImpl;
@@ -155,6 +161,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

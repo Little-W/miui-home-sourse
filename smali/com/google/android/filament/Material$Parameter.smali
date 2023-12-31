@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/Material$Parameter;
 .super Ljava/lang/Object;
+.source "Material.java"
 
 
 # annotations
@@ -38,6 +39,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 248
     sget-object v0, Lcom/google/android/filament/Material$Parameter$Type;->MAT4:Lcom/google/android/filament/Material$Parameter$Type;
 
     invoke-virtual {v0}, Lcom/google/android/filament/Material$Parameter$Type;->ordinal()I
@@ -54,14 +56,19 @@
 .method private constructor <init>(Ljava/lang/String;Lcom/google/android/filament/Material$Parameter$Type;Lcom/google/android/filament/Material$Parameter$Precision;I)V
     .locals 0
 
+    .line 260
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 261
     iput-object p1, p0, Lcom/google/android/filament/Material$Parameter;->name:Ljava/lang/String;
 
+    .line 262
     iput-object p2, p0, Lcom/google/android/filament/Material$Parameter;->type:Lcom/google/android/filament/Material$Parameter$Type;
 
+    .line 263
     iput-object p3, p0, Lcom/google/android/filament/Material$Parameter;->precision:Lcom/google/android/filament/Material$Parameter$Precision;
 
+    .line 264
     iput p4, p0, Lcom/google/android/filament/Material$Parameter;->count:I
 
     return-void
@@ -80,8 +87,10 @@
         }
     .end annotation
 
+    .line 272
     new-instance v0, Lcom/google/android/filament/Material$Parameter;
 
+    .line 273
     invoke-static {}, Lcom/google/android/filament/Material$Parameter$Type;->values()[Lcom/google/android/filament/Material$Parameter$Type;
 
     move-result-object v1
@@ -96,6 +105,7 @@
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/google/android/filament/Material$Parameter;-><init>(Ljava/lang/String;Lcom/google/android/filament/Material$Parameter$Type;Lcom/google/android/filament/Material$Parameter$Precision;I)V
 
+    .line 272
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void

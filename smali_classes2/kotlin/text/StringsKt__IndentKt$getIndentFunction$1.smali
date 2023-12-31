@@ -1,5 +1,6 @@
 .class final Lkotlin/text/StringsKt__IndentKt$getIndentFunction$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Indent.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;

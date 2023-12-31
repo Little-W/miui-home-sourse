@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/selects/SelectBuilderImpl$PairSelectOp;
 .super Lkotlinx/coroutines/internal/OpDescriptor;
+.source "Select.kt"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)V
     .locals 0
 
+    .line 544
     invoke-direct {p0}, Lkotlinx/coroutines/internal/OpDescriptor;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$PairSelectOp;->otherOp:Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;
@@ -40,6 +42,7 @@
         }
     .end annotation
 
+    .line 557
     iget-object p0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$PairSelectOp;->otherOp:Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;
 
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->getAtomicOp()Lkotlinx/coroutines/internal/AtomicOp;
@@ -54,12 +57,15 @@
 
     if-eqz p1, :cond_1
 
+    .line 546
     check-cast p1, Lkotlinx/coroutines/selects/SelectBuilderImpl;
 
+    .line 549
     iget-object v0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$PairSelectOp;->otherOp:Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->finishPrepare()V
 
+    .line 550
     iget-object v0, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$PairSelectOp;->otherOp:Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->getAtomicOp()Lkotlinx/coroutines/internal/AtomicOp;
@@ -74,6 +80,7 @@
 
     if-nez v0, :cond_0
 
+    .line 551
     iget-object v1, p0, Lkotlinx/coroutines/selects/SelectBuilderImpl$PairSelectOp;->otherOp:Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;
 
     iget-object v1, v1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->desc:Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;
@@ -85,6 +92,7 @@
 
     move-result-object v1
 
+    .line 552
     :goto_0
     sget-object v2, Lkotlinx/coroutines/selects/SelectBuilderImpl;->_state$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -92,6 +100,7 @@
 
     return-object v0
 
+    .line 546
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 

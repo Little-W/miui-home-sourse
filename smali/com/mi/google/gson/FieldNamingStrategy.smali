@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/google/gson/FieldNamingStrategy;
 .super Ljava/lang/Object;
+.source "FieldNamingStrategy.java"
 
 
 # virtual methods

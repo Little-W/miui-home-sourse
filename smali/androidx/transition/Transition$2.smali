@@ -1,5 +1,6 @@
 .class Landroidx/transition/Transition$2;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "Transition.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Landroidx/transition/Transition;Landroidx/collection/ArrayMap;)V
     .locals 0
 
+    .line 898
     iput-object p1, p0, Landroidx/transition/Transition$2;->this$0:Landroidx/transition/Transition;
 
     iput-object p2, p0, Landroidx/transition/Transition$2;->val$runningAnimators:Landroidx/collection/ArrayMap;
@@ -37,10 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
+    .line 906
     iget-object v0, p0, Landroidx/transition/Transition$2;->val$runningAnimators:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 907
     iget-object p0, p0, Landroidx/transition/Transition$2;->this$0:Landroidx/transition/Transition;
 
     iget-object p0, p0, Landroidx/transition/Transition;->mCurrentAnimators:Ljava/util/ArrayList;
@@ -53,6 +57,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
+    .line 901
     iget-object p0, p0, Landroidx/transition/Transition$2;->this$0:Landroidx/transition/Transition;
 
     iget-object p0, p0, Landroidx/transition/Transition;->mCurrentAnimators:Ljava/util/ArrayList;

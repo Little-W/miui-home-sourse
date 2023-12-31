@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzao;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -34,10 +35,12 @@
 .method constructor <init>(Lcom/google/android/gms/measurement/internal/zzap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzao;->zzb:Lcom/google/android/gms/measurement/internal/zzap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/gms/measurement/internal/zzao;->zzb:Lcom/google/android/gms/measurement/internal/zzap;
 
     invoke-static {p1}, Lcom/google/android/gms/measurement/internal/zzap;->zza(Lcom/google/android/gms/measurement/internal/zzap;)Landroid/os/Bundle;
@@ -62,6 +65,7 @@
 .method public final hasNext()Z
     .locals 0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzao;->zza:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -74,6 +78,7 @@
 .method public final synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzao;->zza:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -88,6 +93,7 @@
 .method public final remove()V
     .locals 1
 
+    .line 4
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Remove not supported"

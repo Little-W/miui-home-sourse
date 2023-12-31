@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/synergy/CallMethod;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields

@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/mi/google/gson/annotations/SerializedName;
 .super Ljava/lang/Object;
+.source "SerializedName.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

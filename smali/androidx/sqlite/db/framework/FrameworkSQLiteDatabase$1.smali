@@ -1,5 +1,6 @@
 .class Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase$1;
 .super Ljava/lang/Object;
+.source "FrameworkSQLiteDatabase.java"
 
 # interfaces
 .implements Landroid/database/sqlite/SQLiteDatabase$CursorFactory;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;Landroidx/sqlite/db/SupportSQLiteQuery;)V
     .locals 0
 
+    .line 161
     iput-object p1, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase$1;->this$0:Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;
 
     iput-object p2, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase$1;->val$supportQuery:Landroidx/sqlite/db/SupportSQLiteQuery;
@@ -40,6 +42,7 @@
 .method public newCursor(Landroid/database/sqlite/SQLiteDatabase;Landroid/database/sqlite/SQLiteCursorDriver;Ljava/lang/String;Landroid/database/sqlite/SQLiteQuery;)Landroid/database/Cursor;
     .locals 0
 
+    .line 165
     iget-object p0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase$1;->val$supportQuery:Landroidx/sqlite/db/SupportSQLiteQuery;
 
     new-instance p1, Landroidx/sqlite/db/framework/FrameworkSQLiteProgram;
@@ -48,6 +51,7 @@
 
     invoke-interface {p0, p1}, Landroidx/sqlite/db/SupportSQLiteQuery;->bindTo(Landroidx/sqlite/db/SupportSQLiteProgram;)V
 
+    .line 166
     new-instance p0, Landroid/database/sqlite/SQLiteCursor;
 
     invoke-direct {p0, p2, p3, p4}, Landroid/database/sqlite/SQLiteCursor;-><init>(Landroid/database/sqlite/SQLiteCursorDriver;Ljava/lang/String;Landroid/database/sqlite/SQLiteQuery;)V

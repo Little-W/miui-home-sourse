@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/bitmap/ByteBufferBitmapDecoder;
 .super Ljava/lang/Object;
+.source "ByteBufferBitmapDecoder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/ResourceDecoder;
@@ -25,8 +26,10 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/resource/bitmap/Downsampler;)V
     .locals 0
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 20
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/ByteBufferBitmapDecoder;->downsampler:Lcom/bumptech/glide/load/resource/bitmap/Downsampler;
 
     return-void
@@ -42,6 +45,7 @@
         }
     .end annotation
 
+    .line 16
     check-cast p1, Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/ByteBufferBitmapDecoder;->decode(Ljava/nio/ByteBuffer;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/engine/Resource;
@@ -72,10 +76,12 @@
         }
     .end annotation
 
+    .line 32
     invoke-static {p1}, Lcom/bumptech/glide/util/ByteBufferUtil;->toStream(Ljava/nio/ByteBuffer;)Ljava/io/InputStream;
 
     move-result-object p1
 
+    .line 33
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/ByteBufferBitmapDecoder;->downsampler:Lcom/bumptech/glide/load/resource/bitmap/Downsampler;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->decode(Ljava/io/InputStream;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/engine/Resource;
@@ -93,6 +99,7 @@
         }
     .end annotation
 
+    .line 16
     check-cast p1, Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/ByteBufferBitmapDecoder;->handles(Ljava/nio/ByteBuffer;Lcom/bumptech/glide/load/Options;)Z
@@ -105,6 +112,7 @@
 .method public handles(Ljava/nio/ByteBuffer;Lcom/bumptech/glide/load/Options;)Z
     .locals 0
 
+    .line 25
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/ByteBufferBitmapDecoder;->downsampler:Lcom/bumptech/glide/load/resource/bitmap/Downsampler;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->handles(Ljava/nio/ByteBuffer;)Z

@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/runtime/EventInternal$Builder;
 .super Ljava/lang/Object;
+.source "EventInternal.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,6 +29,7 @@
 .method public final addMetadata(Ljava/lang/String;I)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
     .locals 1
 
+    .line 108
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object v0
@@ -43,6 +46,7 @@
 .method public final addMetadata(Ljava/lang/String;J)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
     .locals 1
 
+    .line 103
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object v0
@@ -59,6 +63,7 @@
 .method public final addMetadata(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
     .locals 1
 
+    .line 98
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object v0

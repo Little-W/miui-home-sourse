@@ -1,5 +1,6 @@
 .class Lkotlin/collections/AbstractList$IteratorImpl;
 .super Ljava/lang/Object;
+.source "AbstractList.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -39,6 +40,7 @@
         }
     .end annotation
 
+    .line 71
     iput-object p1, p0, Lkotlin/collections/AbstractList$IteratorImpl;->this$0:Lkotlin/collections/AbstractList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +53,7 @@
 .method protected final getIndex()I
     .locals 0
 
+    .line 73
     iget p0, p0, Lkotlin/collections/AbstractList$IteratorImpl;->index:I
 
     return p0
@@ -59,6 +62,7 @@
 .method public hasNext()Z
     .locals 1
 
+    .line 75
     iget v0, p0, Lkotlin/collections/AbstractList$IteratorImpl;->index:I
 
     iget-object p0, p0, Lkotlin/collections/AbstractList$IteratorImpl;->this$0:Lkotlin/collections/AbstractList;
@@ -88,12 +92,14 @@
         }
     .end annotation
 
+    .line 78
     invoke-virtual {p0}, Lkotlin/collections/AbstractList$IteratorImpl;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 79
     iget-object v0, p0, Lkotlin/collections/AbstractList$IteratorImpl;->this$0:Lkotlin/collections/AbstractList;
 
     iget v1, p0, Lkotlin/collections/AbstractList$IteratorImpl;->index:I
@@ -108,6 +114,7 @@
 
     return-object p0
 
+    .line 78
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -133,6 +140,7 @@
 .method protected final setIndex(I)V
     .locals 0
 
+    .line 73
     iput p1, p0, Lkotlin/collections/AbstractList$IteratorImpl;->index:I
 
     return-void

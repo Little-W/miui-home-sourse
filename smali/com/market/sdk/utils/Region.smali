@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/utils/Region;
 .super Ljava/lang/Object;
+.source "Region.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +31,7 @@
     :try_start_0
     const-string v1, "ro.miui.region"
 
+    .line 23
     invoke-static {v1, v0}, Lmiuix/core/util/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -40,6 +43,7 @@
     :catchall_0
     move-exception v1
 
+    .line 25
     invoke-virtual {v1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1

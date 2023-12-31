@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/DefaultExecutor;
 .super Lkotlinx/coroutines/EventLoopImplBase;
+.source "DefaultExecutor.kt"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -25,6 +26,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 13
     new-instance v0, Lkotlinx/coroutines/DefaultExecutor;
 
     invoke-direct {v0}, Lkotlinx/coroutines/DefaultExecutor;-><init>()V
@@ -37,8 +39,10 @@
 
     const/4 v3, 0x0
 
+    .line 17
     invoke-static {v0, v1, v2, v3}, Lkotlinx/coroutines/EventLoop;->incrementUseCount$default(Lkotlinx/coroutines/EventLoop;ZILjava/lang/Object;)V
 
+    .line 22
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x3e8
@@ -46,6 +50,7 @@
     :try_start_0
     const-string v3, "kotlinx.coroutines.DefaultExecutor.keepAlive"
 
+    .line 24
     invoke-static {v3, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
 
     move-result-object v1
@@ -54,16 +59,19 @@
 
     goto :goto_0
 
+    .line 26
     :catch_0
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
+    .line 23
     :goto_0
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
+    .line 22
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide v0
@@ -76,6 +84,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Lkotlinx/coroutines/EventLoopImplBase;-><init>()V
 
     return-void
@@ -86,6 +95,7 @@
 
     monitor-enter p0
 
+    .line 139
     :try_start_0
     invoke-direct {p0}, Lkotlinx/coroutines/DefaultExecutor;->isShutdownRequested()Z
 
@@ -102,11 +112,14 @@
     :cond_0
     const/4 v0, 0x3
 
+    .line 140
     :try_start_1
     sput v0, Lkotlinx/coroutines/DefaultExecutor;->debugStatus:I
 
+    .line 141
     invoke-virtual {p0}, Lkotlinx/coroutines/DefaultExecutor;->resetAll()V
 
+    .line 142
     move-object v0, p0
 
     check-cast v0, Ljava/lang/Object;
@@ -115,6 +128,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 143
     monitor-exit p0
 
     return-void
@@ -132,6 +146,7 @@
 
     monitor-enter p0
 
+    .line 96
     :try_start_0
     sget-object v0, Lkotlinx/coroutines/DefaultExecutor;->_thread:Ljava/lang/Thread;
 
@@ -150,16 +165,20 @@
 
     invoke-direct {v0, v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
+    .line 97
     sput-object v0, Lkotlinx/coroutines/DefaultExecutor;->_thread:Ljava/lang/Thread;
 
     const/4 v1, 0x1
 
+    .line 98
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setDaemon(Z)V
 
+    .line 99
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 96
     :goto_0
     monitor-exit p0
 
@@ -176,6 +195,7 @@
 .method private final isShutdownRequested()Z
     .locals 1
 
+    .line 45
     sget p0, Lkotlinx/coroutines/DefaultExecutor;->debugStatus:I
 
     const/4 v0, 0x2
@@ -206,6 +226,7 @@
 
     monitor-enter p0
 
+    .line 115
     :try_start_0
     invoke-direct {p0}, Lkotlinx/coroutines/DefaultExecutor;->isShutdownRequested()Z
 
@@ -224,9 +245,11 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 116
     :try_start_1
     sput v0, Lkotlinx/coroutines/DefaultExecutor;->debugStatus:I
 
+    .line 117
     move-object v1, p0
 
     check-cast v1, Ljava/lang/Object;
@@ -235,6 +258,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 118
     monitor-exit p0
 
     return v0
@@ -252,6 +276,7 @@
 .method protected getThread()Ljava/lang/Thread;
     .locals 1
 
+    .line 34
     sget-object v0, Lkotlinx/coroutines/DefaultExecutor;->_thread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
@@ -270,6 +295,7 @@
 .method public invokeOnTimeout(JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
     .locals 0
 
+    .line 59
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/coroutines/DefaultExecutor;->scheduleInvokeOnTimeout(JLjava/lang/Runnable;)Lkotlinx/coroutines/DisposableHandle;
 
     move-result-object p0
@@ -280,6 +306,7 @@
 .method public run()V
     .locals 12
 
+    .line 62
     sget-object v0, Lkotlinx/coroutines/ThreadLocalEventLoop;->INSTANCE:Lkotlinx/coroutines/ThreadLocalEventLoop;
 
     move-object v1, p0
@@ -288,6 +315,7 @@
 
     invoke-virtual {v0, v1}, Lkotlinx/coroutines/ThreadLocalEventLoop;->setEventLoop$kotlinx_coroutines_core(Lkotlinx/coroutines/EventLoop;)V
 
+    .line 63
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0
@@ -299,6 +327,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 66
     :try_start_0
     invoke-direct {p0}, Lkotlinx/coroutines/DefaultExecutor;->notifyStartup()Z
 
@@ -308,12 +337,15 @@
 
     if-nez v1, :cond_3
 
+    .line 86
     check-cast v0, Ljava/lang/Thread;
 
     sput-object v0, Lkotlinx/coroutines/DefaultExecutor;->_thread:Ljava/lang/Thread;
 
+    .line 87
     invoke-direct {p0}, Lkotlinx/coroutines/DefaultExecutor;->acknowledgeShutdownIfNeeded()V
 
+    .line 88
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0
@@ -322,6 +354,7 @@
 
     invoke-interface {v0}, Lkotlinx/coroutines/TimeSource;->unregisterTimeLoopThread()V
 
+    .line 90
     :cond_1
     invoke-virtual {p0}, Lkotlinx/coroutines/DefaultExecutor;->isEmpty()Z
 
@@ -339,11 +372,13 @@
 
     move-wide v3, v1
 
+    .line 68
     :cond_4
     :goto_0
     :try_start_1
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
+    .line 69
     invoke-virtual {p0}, Lkotlinx/coroutines/DefaultExecutor;->processNextEvent()J
 
     move-result-wide v5
@@ -354,6 +389,7 @@
 
     if-nez v7, :cond_a
 
+    .line 72
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v7
@@ -376,6 +412,7 @@
 
     if-nez v7, :cond_6
 
+    .line 73
     sget-wide v3, Lkotlinx/coroutines/DefaultExecutor;->KEEP_ALIVE_NANOS:J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -389,12 +426,15 @@
 
     if-gtz v7, :cond_9
 
+    .line 86
     check-cast v0, Ljava/lang/Thread;
 
     sput-object v0, Lkotlinx/coroutines/DefaultExecutor;->_thread:Ljava/lang/Thread;
 
+    .line 87
     invoke-direct {p0}, Lkotlinx/coroutines/DefaultExecutor;->acknowledgeShutdownIfNeeded()V
 
+    .line 88
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0
@@ -403,6 +443,7 @@
 
     invoke-interface {v0}, Lkotlinx/coroutines/TimeSource;->unregisterTimeLoopThread()V
 
+    .line 90
     :cond_7
     invoke-virtual {p0}, Lkotlinx/coroutines/DefaultExecutor;->isEmpty()Z
 
@@ -415,6 +456,7 @@
     :cond_8
     return-void
 
+    .line 76
     :cond_9
     :try_start_2
     invoke-static {v5, v6, v10, v11}, Lkotlin/ranges/RangesKt;->coerceAtMost(JJ)J
@@ -431,6 +473,7 @@
 
     if-lez v7, :cond_4
 
+    .line 81
     invoke-direct {p0}, Lkotlinx/coroutines/DefaultExecutor;->isShutdownRequested()Z
 
     move-result v7
@@ -439,12 +482,15 @@
 
     if-eqz v7, :cond_d
 
+    .line 86
     check-cast v0, Ljava/lang/Thread;
 
     sput-object v0, Lkotlinx/coroutines/DefaultExecutor;->_thread:Ljava/lang/Thread;
 
+    .line 87
     invoke-direct {p0}, Lkotlinx/coroutines/DefaultExecutor;->acknowledgeShutdownIfNeeded()V
 
+    .line 88
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0
@@ -453,6 +499,7 @@
 
     invoke-interface {v0}, Lkotlinx/coroutines/TimeSource;->unregisterTimeLoopThread()V
 
+    .line 90
     :cond_b
     invoke-virtual {p0}, Lkotlinx/coroutines/DefaultExecutor;->isEmpty()Z
 
@@ -465,6 +512,7 @@
     :cond_c
     return-void
 
+    .line 82
     :cond_d
     :try_start_3
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
@@ -487,12 +535,15 @@
     :catchall_0
     move-exception v1
 
+    .line 86
     check-cast v0, Ljava/lang/Thread;
 
     sput-object v0, Lkotlinx/coroutines/DefaultExecutor;->_thread:Ljava/lang/Thread;
 
+    .line 87
     invoke-direct {p0}, Lkotlinx/coroutines/DefaultExecutor;->acknowledgeShutdownIfNeeded()V
 
+    .line 88
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v0
@@ -501,6 +552,7 @@
 
     invoke-interface {v0}, Lkotlinx/coroutines/TimeSource;->unregisterTimeLoopThread()V
 
+    .line 90
     :cond_f
     invoke-virtual {p0}, Lkotlinx/coroutines/DefaultExecutor;->isEmpty()Z
 

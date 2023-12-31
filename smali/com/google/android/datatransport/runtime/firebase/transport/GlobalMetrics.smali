@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;
 .super Ljava/lang/Object;
+.source "GlobalMetrics.java"
 
 
 # annotations
@@ -22,6 +23,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 7
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;-><init>()V
@@ -38,8 +40,10 @@
 .method constructor <init>(Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;)V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 12
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;->storage_metrics_:Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;
 
     return-void
@@ -48,6 +52,7 @@
 .method public static newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;
     .locals 1
 
+    .line 16
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;-><init>()V
@@ -60,6 +65,7 @@
 .method public getStorageMetricsInternal()Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;->storage_metrics_:Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;
 
     return-object p0

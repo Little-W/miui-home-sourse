@@ -1,5 +1,6 @@
 .class public Lpl/droidsonroids/relinker/ReLinker;
 .super Ljava/lang/Object;
+.source "ReLinker.java"
 
 
 # annotations
@@ -19,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 51
     invoke-static {p0, p1, v0, v0}, Lpl/droidsonroids/relinker/ReLinker;->loadLibrary(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lpl/droidsonroids/relinker/ReLinker$LoadListener;)V
 
     return-void
@@ -27,6 +29,7 @@
 .method public static loadLibrary(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lpl/droidsonroids/relinker/ReLinker$LoadListener;)V
     .locals 1
 
+    .line 70
     new-instance v0, Lpl/droidsonroids/relinker/ReLinkerInstance;
 
     invoke-direct {v0}, Lpl/droidsonroids/relinker/ReLinkerInstance;-><init>()V

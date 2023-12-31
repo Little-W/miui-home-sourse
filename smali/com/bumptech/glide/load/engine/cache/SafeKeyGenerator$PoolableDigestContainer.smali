@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$PoolableDigestContainer;
 .super Ljava/lang/Object;
+.source "SafeKeyGenerator.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/util/pool/FactoryPools$Poolable;
@@ -26,14 +27,17 @@
 .method constructor <init>(Ljava/security/MessageDigest;)V
     .locals 1
 
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 63
     invoke-static {}, Lcom/bumptech/glide/util/pool/StateVerifier;->newInstance()Lcom/bumptech/glide/util/pool/StateVerifier;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$PoolableDigestContainer;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
+    .line 66
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$PoolableDigestContainer;->messageDigest:Ljava/security/MessageDigest;
 
     return-void
@@ -44,6 +48,7 @@
 .method public getVerifier()Lcom/bumptech/glide/util/pool/StateVerifier;
     .locals 0
 
+    .line 72
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator$PoolableDigestContainer;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     return-object p0

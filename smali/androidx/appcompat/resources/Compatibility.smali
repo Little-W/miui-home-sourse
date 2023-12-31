@@ -1,5 +1,6 @@
 .class public final Landroidx/appcompat/resources/Compatibility;
 .super Ljava/lang/Object;
+.source "Compatibility.java"
 
 
 # annotations

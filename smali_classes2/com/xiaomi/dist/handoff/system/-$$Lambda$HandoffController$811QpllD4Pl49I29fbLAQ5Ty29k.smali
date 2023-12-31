@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/handoff/system/-$$Lambda$HandoffController$811QpllD4Pl49I29fbLAQ5Ty29k;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Landroid/os/IBinder$DeathRecipient;

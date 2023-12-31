@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/load/Option$CacheKeyUpdater;
 .super Ljava/lang/Object;
+.source "Option.java"
 
 
 # annotations

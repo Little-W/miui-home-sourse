@@ -1,5 +1,6 @@
 .class public interface abstract Lio/branch/search/IBranchExclusiveCompositeSearchEvents;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods

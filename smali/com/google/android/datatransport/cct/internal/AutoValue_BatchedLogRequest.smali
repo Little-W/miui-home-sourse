@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoValue_BatchedLogRequest;
 .super Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;
+.source "AutoValue_BatchedLogRequest.java"
 
 
 # instance fields
@@ -26,14 +27,17 @@
         }
     .end annotation
 
+    .line 15
     invoke-direct {p0}, Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;-><init>()V
 
     if-eqz p1, :cond_0
 
+    .line 19
     iput-object p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_BatchedLogRequest;->logRequests:Ljava/util/List;
 
     return-void
 
+    .line 17
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -55,13 +59,16 @@
 
     return p0
 
+    .line 41
     :cond_0
     instance-of v0, p1, Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;
 
     if-eqz v0, :cond_1
 
+    .line 42
     check-cast p1, Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;
 
+    .line 43
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_BatchedLogRequest;->logRequests:Ljava/util/List;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;->getLogRequests()Ljava/util/List;
@@ -91,6 +98,7 @@
         }
     .end annotation
 
+    .line 26
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_BatchedLogRequest;->logRequests:Ljava/util/List;
 
     return-object p0
@@ -99,6 +107,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 52
     iget-object p0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_BatchedLogRequest;->logRequests:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->hashCode()I
@@ -115,6 +124,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 31
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

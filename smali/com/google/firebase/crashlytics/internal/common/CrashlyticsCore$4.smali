@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$4;
 .super Ljava/lang/Object;
+.source "CrashlyticsCore.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -33,6 +34,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;)V
     .locals 0
 
+    .line 448
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$4;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,6 +52,7 @@
         }
     .end annotation
 
+    .line 451
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$4;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;->access$200(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;)Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
@@ -75,6 +78,7 @@
         }
     .end annotation
 
+    .line 448
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$4;->call()Ljava/lang/Boolean;
 
     move-result-object p0

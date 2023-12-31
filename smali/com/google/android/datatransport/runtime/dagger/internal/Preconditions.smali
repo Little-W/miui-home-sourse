@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/dagger/internal/Preconditions;
 .super Ljava/lang/Object;
+.source "Preconditions.java"
 
 
 # direct methods
@@ -19,6 +20,7 @@
 
     return-void
 
+    .line 95
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -59,6 +61,7 @@
 
     return-object p0
 
+    .line 33
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -83,6 +86,7 @@
 
     return-object p0
 
+    .line 48
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

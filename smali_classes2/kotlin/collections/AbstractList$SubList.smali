@@ -1,5 +1,6 @@
 .class final Lkotlin/collections/AbstractList$SubList;
 .super Lkotlin/collections/AbstractList;
+.source "AbstractList.kt"
 
 # interfaces
 .implements Ljava/util/RandomAccess;
@@ -57,12 +58,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 37
     invoke-direct {p0}, Lkotlin/collections/AbstractList;-><init>()V
 
     iput-object p1, p0, Lkotlin/collections/AbstractList$SubList;->list:Lkotlin/collections/AbstractList;
 
     iput p2, p0, Lkotlin/collections/AbstractList$SubList;->fromIndex:I
 
+    .line 41
     sget-object p1, Lkotlin/collections/AbstractList;->Companion:Lkotlin/collections/AbstractList$Companion;
 
     iget p2, p0, Lkotlin/collections/AbstractList$SubList;->fromIndex:I
@@ -75,6 +78,7 @@
 
     invoke-virtual {p1, p2, p3, v0}, Lkotlin/collections/AbstractList$Companion;->checkRangeIndexes$kotlin_stdlib(III)V
 
+    .line 42
     iget p1, p0, Lkotlin/collections/AbstractList$SubList;->fromIndex:I
 
     sub-int/2addr p3, p1
@@ -94,12 +98,14 @@
         }
     .end annotation
 
+    .line 46
     sget-object v0, Lkotlin/collections/AbstractList;->Companion:Lkotlin/collections/AbstractList$Companion;
 
     iget v1, p0, Lkotlin/collections/AbstractList$SubList;->_size:I
 
     invoke-virtual {v0, p1, v1}, Lkotlin/collections/AbstractList$Companion;->checkElementIndex$kotlin_stdlib(II)V
 
+    .line 48
     iget-object v0, p0, Lkotlin/collections/AbstractList$SubList;->list:Lkotlin/collections/AbstractList;
 
     iget p0, p0, Lkotlin/collections/AbstractList$SubList;->fromIndex:I
@@ -116,6 +122,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 51
     iget p0, p0, Lkotlin/collections/AbstractList$SubList;->_size:I
 
     return p0

@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/log/LogFileManager$NoopLogStore;
 .super Ljava/lang/Object;
+.source "LogFileManager.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/log/FileLogStore;
@@ -20,6 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +30,7 @@
 .method synthetic constructor <init>(Lcom/google/firebase/crashlytics/internal/log/LogFileManager$1;)V
     .locals 0
 
+    .line 94
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/log/LogFileManager$NoopLogStore;-><init>()V
 
     return-void

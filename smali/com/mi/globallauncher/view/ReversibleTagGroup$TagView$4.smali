@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$4;
 .super Ljava/lang/Object;
+.source "ReversibleTagGroup.java"
 
 # interfaces
 .implements Landroid/text/TextWatcher;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;Lcom/mi/globallauncher/view/ReversibleTagGroup;)V
     .locals 0
 
+    .line 825
     iput-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$4;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$4;->val$this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -46,6 +48,7 @@
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
+    .line 829
     iget-object p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$4;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iget-object p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -58,6 +61,7 @@
 
     const/4 p1, 0x0
 
+    .line 831
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->setChecked(Z)V
 
     :cond_0

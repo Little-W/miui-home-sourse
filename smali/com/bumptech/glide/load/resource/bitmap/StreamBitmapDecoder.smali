@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder;
 .super Ljava/lang/Object;
+.source "StreamBitmapDecoder.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/ResourceDecoder;
@@ -33,10 +34,13 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/resource/bitmap/Downsampler;Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;)V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 24
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder;->downsampler:Lcom/bumptech/glide/load/resource/bitmap/Downsampler;
 
+    .line 25
     iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     return-void
@@ -65,16 +69,19 @@
         }
     .end annotation
 
+    .line 41
     instance-of v0, p1, Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;
 
     if-eqz v0, :cond_0
 
+    .line 42
     check-cast p1, Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;
 
     const/4 v0, 0x0
 
     goto :goto_0
 
+    .line 45
     :cond_0
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;
 
@@ -90,19 +97,23 @@
 
     move-object p1, v8
 
+    .line 53
     :goto_0
     invoke-static {p1}, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->obtain(Ljava/io/InputStream;)Lcom/bumptech/glide/util/ExceptionCatchingInputStream;
 
     move-result-object v1
 
+    .line 59
     new-instance v3, Lcom/bumptech/glide/util/MarkEnforcingInputStream;
 
     invoke-direct {v3, v1}, Lcom/bumptech/glide/util/MarkEnforcingInputStream;-><init>(Ljava/io/InputStream;)V
 
+    .line 60
     new-instance v7, Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder$UntrustedCallbacks;
 
     invoke-direct {v7, p1, v1}, Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder$UntrustedCallbacks;-><init>(Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;Lcom/bumptech/glide/util/ExceptionCatchingInputStream;)V
 
+    .line 62
     :try_start_0
     iget-object v2, p0, Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder;->downsampler:Lcom/bumptech/glide/load/resource/bitmap/Downsampler;
 
@@ -118,10 +129,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 64
     invoke-virtual {v1}, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->release()V
 
     if-eqz v0, :cond_1
 
+    .line 66
     invoke-virtual {p1}, Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;->release()V
 
     :cond_1
@@ -130,10 +143,12 @@
     :catchall_0
     move-exception p0
 
+    .line 64
     invoke-virtual {v1}, Lcom/bumptech/glide/util/ExceptionCatchingInputStream;->release()V
 
     if-eqz v0, :cond_2
 
+    .line 66
     invoke-virtual {p1}, Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;->release()V
 
     :cond_2
@@ -148,6 +163,7 @@
         }
     .end annotation
 
+    .line 18
     check-cast p1, Ljava/io/InputStream;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder;->decode(Ljava/io/InputStream;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/engine/Resource;
@@ -160,6 +176,7 @@
 .method public handles(Ljava/io/InputStream;Lcom/bumptech/glide/load/Options;)Z
     .locals 0
 
+    .line 30
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder;->downsampler:Lcom/bumptech/glide/load/resource/bitmap/Downsampler;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->handles(Ljava/io/InputStream;)Z
@@ -177,6 +194,7 @@
         }
     .end annotation
 
+    .line 18
     check-cast p1, Ljava/io/InputStream;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/StreamBitmapDecoder;->handles(Ljava/io/InputStream;Lcom/bumptech/glide/load/Options;)Z

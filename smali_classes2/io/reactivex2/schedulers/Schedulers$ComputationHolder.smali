@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/schedulers/Schedulers$ComputationHolder;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 63
     new-instance v0, Lio/reactivex2/internal/schedulers/ComputationScheduler;
 
     invoke-direct {v0}, Lio/reactivex2/internal/schedulers/ComputationScheduler;-><init>()V

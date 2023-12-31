@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/TimeoutCoroutine;
 .super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.source "Timeout.kt"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -33,6 +34,7 @@
         }
     .end annotation
 
+    .line 154
     invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object v0
@@ -49,6 +51,7 @@
 .method public nameString$kotlinx_coroutines_core()Ljava/lang/String;
     .locals 3
 
+    .line 160
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,6 +84,7 @@
 .method public run()V
     .locals 3
 
+    .line 156
     iget-wide v0, p0, Lkotlinx/coroutines/TimeoutCoroutine;->time:J
 
     move-object v2, p0

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/View;
 .super Ljava/lang/Object;
+.source "View.java"
 
 
 # annotations
@@ -59,8 +60,10 @@
 .method constructor <init>(J)V
     .locals 2
 
+    .line 522
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 66
     new-instance v0, Lcom/google/android/filament/Viewport;
 
     const/4 v1, 0x0
@@ -69,6 +72,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/View;->mViewport:Lcom/google/android/filament/Viewport;
 
+    .line 523
     iput-wide p1, p0, Lcom/google/android/filament/View;->mNativeObject:J
 
     return-void
@@ -168,6 +172,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1143
     iput-wide v0, p0, Lcom/google/android/filament/View;->mNativeObject:J
 
     return-void
@@ -176,6 +181,7 @@
 .method public getAmbientOcclusion()Lcom/google/android/filament/View$AmbientOcclusion;
     .locals 3
 
+    .line 994
     invoke-static {}, Lcom/google/android/filament/View$AmbientOcclusion;->values()[Lcom/google/android/filament/View$AmbientOcclusion;
 
     move-result-object v0
@@ -196,16 +202,19 @@
 .method public getAmbientOcclusionOptions()Lcom/google/android/filament/View$AmbientOcclusionOptions;
     .locals 1
 
+    .line 1015
     iget-object v0, p0, Lcom/google/android/filament/View;->mAmbientOcclusionOptions:Lcom/google/android/filament/View$AmbientOcclusionOptions;
 
     if-nez v0, :cond_0
 
+    .line 1016
     new-instance v0, Lcom/google/android/filament/View$AmbientOcclusionOptions;
 
     invoke-direct {v0}, Lcom/google/android/filament/View$AmbientOcclusionOptions;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/filament/View;->mAmbientOcclusionOptions:Lcom/google/android/filament/View$AmbientOcclusionOptions;
 
+    .line 1018
     :cond_0
     iget-object p0, p0, Lcom/google/android/filament/View;->mAmbientOcclusionOptions:Lcom/google/android/filament/View$AmbientOcclusionOptions;
 
@@ -215,6 +224,7 @@
 .method public getAntiAliasing()Lcom/google/android/filament/View$AntiAliasing;
     .locals 3
 
+    .line 763
     invoke-static {}, Lcom/google/android/filament/View$AntiAliasing;->values()[Lcom/google/android/filament/View$AntiAliasing;
 
     move-result-object v0
@@ -235,6 +245,7 @@
 .method public getBlendMode()Lcom/google/android/filament/View$BlendMode;
     .locals 0
 
+    .line 652
     iget-object p0, p0, Lcom/google/android/filament/View;->mBlendMode:Lcom/google/android/filament/View$BlendMode;
 
     return-object p0
@@ -243,16 +254,19 @@
 .method public getBloomOptions()Lcom/google/android/filament/View$BloomOptions;
     .locals 1
 
+    .line 1043
     iget-object v0, p0, Lcom/google/android/filament/View;->mBloomOptions:Lcom/google/android/filament/View$BloomOptions;
 
     if-nez v0, :cond_0
 
+    .line 1044
     new-instance v0, Lcom/google/android/filament/View$BloomOptions;
 
     invoke-direct {v0}, Lcom/google/android/filament/View$BloomOptions;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/filament/View;->mBloomOptions:Lcom/google/android/filament/View$BloomOptions;
 
+    .line 1046
     :cond_0
     iget-object p0, p0, Lcom/google/android/filament/View;->mBloomOptions:Lcom/google/android/filament/View$BloomOptions;
 
@@ -262,6 +276,7 @@
 .method public getCamera()Lcom/google/android/filament/Camera;
     .locals 0
 
+    .line 601
     iget-object p0, p0, Lcom/google/android/filament/View;->mCamera:Lcom/google/android/filament/Camera;
 
     return-object p0
@@ -270,6 +285,7 @@
 .method public getColorGrading()Lcom/google/android/filament/ColorGrading;
     .locals 0
 
+    .line 809
     iget-object p0, p0, Lcom/google/android/filament/View;->mColorGrading:Lcom/google/android/filament/ColorGrading;
 
     return-object p0
@@ -278,16 +294,19 @@
 .method public getDepthOfFieldOptions()Lcom/google/android/filament/View$DepthOfFieldOptions;
     .locals 1
 
+    .line 1128
     iget-object v0, p0, Lcom/google/android/filament/View;->mDepthOfFieldOptions:Lcom/google/android/filament/View$DepthOfFieldOptions;
 
     if-nez v0, :cond_0
 
+    .line 1129
     new-instance v0, Lcom/google/android/filament/View$DepthOfFieldOptions;
 
     invoke-direct {v0}, Lcom/google/android/filament/View$DepthOfFieldOptions;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/filament/View;->mDepthOfFieldOptions:Lcom/google/android/filament/View$DepthOfFieldOptions;
 
+    .line 1131
     :cond_0
     iget-object p0, p0, Lcom/google/android/filament/View;->mDepthOfFieldOptions:Lcom/google/android/filament/View$DepthOfFieldOptions;
 
@@ -297,6 +316,7 @@
 .method public getDithering()Lcom/google/android/filament/View$Dithering;
     .locals 3
 
+    .line 828
     invoke-static {}, Lcom/google/android/filament/View$Dithering;->values()[Lcom/google/android/filament/View$Dithering;
 
     move-result-object v0
@@ -317,16 +337,19 @@
 .method public getDynamicResolutionOptions()Lcom/google/android/filament/View$DynamicResolutionOptions;
     .locals 1
 
+    .line 862
     iget-object v0, p0, Lcom/google/android/filament/View;->mDynamicResolution:Lcom/google/android/filament/View$DynamicResolutionOptions;
 
     if-nez v0, :cond_0
 
+    .line 863
     new-instance v0, Lcom/google/android/filament/View$DynamicResolutionOptions;
 
     invoke-direct {v0}, Lcom/google/android/filament/View$DynamicResolutionOptions;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/filament/View;->mDynamicResolution:Lcom/google/android/filament/View$DynamicResolutionOptions;
 
+    .line 865
     :cond_0
     iget-object p0, p0, Lcom/google/android/filament/View;->mDynamicResolution:Lcom/google/android/filament/View$DynamicResolutionOptions;
 
@@ -336,16 +359,19 @@
 .method public getFogOptions()Lcom/google/android/filament/View$FogOptions;
     .locals 1
 
+    .line 1102
     iget-object v0, p0, Lcom/google/android/filament/View;->mFogOptions:Lcom/google/android/filament/View$FogOptions;
 
     if-nez v0, :cond_0
 
+    .line 1103
     new-instance v0, Lcom/google/android/filament/View$FogOptions;
 
     invoke-direct {v0}, Lcom/google/android/filament/View$FogOptions;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/filament/View;->mFogOptions:Lcom/google/android/filament/View$FogOptions;
 
+    .line 1105
     :cond_0
     iget-object p0, p0, Lcom/google/android/filament/View;->mFogOptions:Lcom/google/android/filament/View$FogOptions;
 
@@ -355,6 +381,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 539
     iget-object p0, p0, Lcom/google/android/filament/View;->mName:Ljava/lang/String;
 
     return-object p0
@@ -363,6 +390,7 @@
 .method public getNativeObject()J
     .locals 4
 
+    .line 1136
     iget-wide v0, p0, Lcom/google/android/filament/View;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -373,6 +401,7 @@
 
     return-wide v0
 
+    .line 1137
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -386,16 +415,19 @@
 .method public getRenderQuality()Lcom/google/android/filament/View$RenderQuality;
     .locals 1
 
+    .line 884
     iget-object v0, p0, Lcom/google/android/filament/View;->mRenderQuality:Lcom/google/android/filament/View$RenderQuality;
 
     if-nez v0, :cond_0
 
+    .line 885
     new-instance v0, Lcom/google/android/filament/View$RenderQuality;
 
     invoke-direct {v0}, Lcom/google/android/filament/View$RenderQuality;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/filament/View;->mRenderQuality:Lcom/google/android/filament/View$RenderQuality;
 
+    .line 887
     :cond_0
     iget-object p0, p0, Lcom/google/android/filament/View;->mRenderQuality:Lcom/google/android/filament/View$RenderQuality;
 
@@ -405,6 +437,7 @@
 .method public getRenderTarget()Lcom/google/android/filament/RenderTarget;
     .locals 0
 
+    .line 711
     iget-object p0, p0, Lcom/google/android/filament/View;->mRenderTarget:Lcom/google/android/filament/RenderTarget;
 
     return-object p0
@@ -413,6 +446,7 @@
 .method public getSampleCount()I
     .locals 2
 
+    .line 739
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -427,6 +461,7 @@
 .method public getScene()Lcom/google/android/filament/Scene;
     .locals 0
 
+    .line 570
     iget-object p0, p0, Lcom/google/android/filament/View;->mScene:Lcom/google/android/filament/Scene;
 
     return-object p0
@@ -437,6 +472,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 786
     sget-object p0, Lcom/google/android/filament/View$ToneMapping;->ACES:Lcom/google/android/filament/View$ToneMapping;
 
     return-object p0
@@ -445,6 +481,7 @@
 .method public getViewport()Lcom/google/android/filament/Viewport;
     .locals 0
 
+    .line 632
     iget-object p0, p0, Lcom/google/android/filament/View;->mViewport:Lcom/google/android/filament/Viewport;
 
     return-object p0
@@ -453,16 +490,19 @@
 .method public getVignetteOptions()Lcom/google/android/filament/View$VignetteOptions;
     .locals 1
 
+    .line 1072
     iget-object v0, p0, Lcom/google/android/filament/View;->mVignetteOptions:Lcom/google/android/filament/View$VignetteOptions;
 
     if-nez v0, :cond_0
 
+    .line 1073
     new-instance v0, Lcom/google/android/filament/View$VignetteOptions;
 
     invoke-direct {v0}, Lcom/google/android/filament/View$VignetteOptions;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/filament/View;->mVignetteOptions:Lcom/google/android/filament/View$VignetteOptions;
 
+    .line 1075
     :cond_0
     iget-object p0, p0, Lcom/google/android/filament/View;->mVignetteOptions:Lcom/google/android/filament/View$VignetteOptions;
 
@@ -472,6 +512,7 @@
 .method public isFrontFaceWindingInverted()Z
     .locals 2
 
+    .line 933
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -486,6 +527,7 @@
 .method public isPostProcessingEnabled()Z
     .locals 2
 
+    .line 896
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -500,6 +542,7 @@
 .method public setAmbientOcclusion(Lcom/google/android/filament/View$AmbientOcclusion;)V
     .locals 2
 
+    .line 984
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -516,8 +559,10 @@
 .method public setAmbientOcclusionOptions(Lcom/google/android/filament/View$AmbientOcclusionOptions;)V
     .locals 9
 
+    .line 1003
     iput-object p1, p0, Lcom/google/android/filament/View;->mAmbientOcclusionOptions:Lcom/google/android/filament/View$AmbientOcclusionOptions;
 
+    .line 1004
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -534,6 +579,7 @@
 
     iget-object p0, p1, Lcom/google/android/filament/View$AmbientOcclusionOptions;->quality:Lcom/google/android/filament/View$QualityLevel;
 
+    .line 1005
     invoke-virtual {p0}, Lcom/google/android/filament/View$QualityLevel;->ordinal()I
 
     move-result v7
@@ -544,6 +590,7 @@
 
     move-result v8
 
+    .line 1004
     invoke-static/range {v0 .. v8}, Lcom/google/android/filament/View;->nSetAmbientOcclusionOptions(JFFFFFII)V
 
     return-void
@@ -552,6 +599,7 @@
 .method public setAntiAliasing(Lcom/google/android/filament/View$AntiAliasing;)V
     .locals 2
 
+    .line 752
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -568,8 +616,10 @@
 .method public setBlendMode(Lcom/google/android/filament/View$BlendMode;)V
     .locals 2
 
+    .line 642
     iput-object p1, p0, Lcom/google/android/filament/View;->mBlendMode:Lcom/google/android/filament/View$BlendMode;
 
+    .line 643
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -586,8 +636,10 @@
 .method public setBloomOptions(Lcom/google/android/filament/View$BloomOptions;)V
     .locals 12
 
+    .line 1028
     iput-object p1, p0, Lcom/google/android/filament/View;->mBloomOptions:Lcom/google/android/filament/View$BloomOptions;
 
+    .line 1029
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -620,6 +672,7 @@
 
     iget-object p0, p1, Lcom/google/android/filament/View$BloomOptions;->blendingMode:Lcom/google/android/filament/View$BloomOptions$BlendingMode;
 
+    .line 1031
     invoke-virtual {p0}, Lcom/google/android/filament/View$BloomOptions$BlendingMode;->ordinal()I
 
     move-result v9
@@ -628,6 +681,7 @@
 
     iget-boolean v11, p1, Lcom/google/android/filament/View$BloomOptions;->enabled:Z
 
+    .line 1029
     invoke-static/range {v0 .. v11}, Lcom/google/android/filament/View;->nSetBloomOptions(JJFFIFIIZZ)V
 
     return-void
@@ -636,8 +690,10 @@
 .method public setCamera(Lcom/google/android/filament/Camera;)V
     .locals 2
 
+    .line 590
     iput-object p1, p0, Lcom/google/android/filament/View;->mCamera:Lcom/google/android/filament/Camera;
 
+    .line 591
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -662,12 +718,14 @@
 .method public setColorGrading(Lcom/google/android/filament/ColorGrading;)V
     .locals 4
 
+    .line 798
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
 
     if-eqz p1, :cond_0
 
+    .line 799
     invoke-virtual {p1}, Lcom/google/android/filament/ColorGrading;->getNativeObject()J
 
     move-result-wide v2
@@ -677,9 +735,11 @@
     :cond_0
     const-wide/16 v2, 0x0
 
+    .line 798
     :goto_0
     invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/View;->nSetColorGrading(JJ)V
 
+    .line 800
     iput-object p1, p0, Lcom/google/android/filament/View;->mColorGrading:Lcom/google/android/filament/ColorGrading;
 
     return-void
@@ -688,8 +748,10 @@
 .method public setDepthOfFieldOptions(Lcom/google/android/filament/View$DepthOfFieldOptions;)V
     .locals 6
 
+    .line 1116
     iput-object p1, p0, Lcom/google/android/filament/View;->mDepthOfFieldOptions:Lcom/google/android/filament/View$DepthOfFieldOptions;
 
+    .line 1117
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -710,6 +772,7 @@
 .method public setDithering(Lcom/google/android/filament/View$Dithering;)V
     .locals 2
 
+    .line 818
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -726,6 +789,7 @@
 .method public setDynamicLightingOptions(FF)V
     .locals 2
 
+    .line 975
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -738,8 +802,10 @@
 .method public setDynamicResolutionOptions(Lcom/google/android/filament/View$DynamicResolutionOptions;)V
     .locals 7
 
+    .line 847
     iput-object p1, p0, Lcom/google/android/filament/View;->mDynamicResolution:Lcom/google/android/filament/View$DynamicResolutionOptions;
 
+    .line 848
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -754,10 +820,12 @@
 
     iget-object p0, p1, Lcom/google/android/filament/View$DynamicResolutionOptions;->quality:Lcom/google/android/filament/View$QualityLevel;
 
+    .line 853
     invoke-virtual {p0}, Lcom/google/android/filament/View$QualityLevel;->ordinal()I
 
     move-result v6
 
+    .line 848
     invoke-static/range {v0 .. v6}, Lcom/google/android/filament/View;->nSetDynamicResolutionOptions(JZZFFI)V
 
     return-void
@@ -768,14 +836,17 @@
 
     move-object/from16 v0, p1
 
+    .line 1085
     iget-object v1, v0, Lcom/google/android/filament/View$FogOptions;->color:[F
 
     invoke-static {v1}, Lcom/google/android/filament/Asserts;->assertFloat3In([F)V
 
     move-object v1, p0
 
+    .line 1086
     iput-object v0, v1, Lcom/google/android/filament/View;->mFogOptions:Lcom/google/android/filament/View$FogOptions;
 
+    .line 1087
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v1
@@ -850,6 +921,7 @@
 .method public setFrontFaceWindingInverted(Z)V
     .locals 2
 
+    .line 950
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -862,8 +934,10 @@
 .method public setName(Ljava/lang/String;)V
     .locals 2
 
+    .line 530
     iput-object p1, p0, Lcom/google/android/filament/View;->mName:Ljava/lang/String;
 
+    .line 531
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -876,6 +950,7 @@
 .method public setPostProcessingEnabled(Z)V
     .locals 2
 
+    .line 924
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -888,8 +963,10 @@
 .method public setRenderQuality(Lcom/google/android/filament/View$RenderQuality;)V
     .locals 2
 
+    .line 874
     iput-object p1, p0, Lcom/google/android/filament/View;->mRenderQuality:Lcom/google/android/filament/View$RenderQuality;
 
+    .line 875
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -908,8 +985,10 @@
 .method public setRenderTarget(Lcom/google/android/filament/RenderTarget;)V
     .locals 2
 
+    .line 698
     iput-object p1, p0, Lcom/google/android/filament/View;->mRenderTarget:Lcom/google/android/filament/RenderTarget;
 
+    .line 699
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -934,6 +1013,7 @@
 .method public setSampleCount(I)V
     .locals 2
 
+    .line 726
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -946,8 +1026,10 @@
 .method public setScene(Lcom/google/android/filament/Scene;)V
     .locals 2
 
+    .line 559
     iput-object p1, p0, Lcom/google/android/filament/View;->mScene:Lcom/google/android/filament/Scene;
 
+    .line 560
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -972,6 +1054,7 @@
 .method public setShadowsEnabled(Z)V
     .locals 2
 
+    .line 684
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -992,8 +1075,10 @@
 .method public setViewport(Lcom/google/android/filament/Viewport;)V
     .locals 6
 
+    .line 620
     iput-object p1, p0, Lcom/google/android/filament/View;->mViewport:Lcom/google/android/filament/Viewport;
 
+    .line 621
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0
@@ -1022,12 +1107,15 @@
 .method public setVignetteOptions(Lcom/google/android/filament/View$VignetteOptions;)V
     .locals 11
 
+    .line 1056
     iget-object v0, p1, Lcom/google/android/filament/View$VignetteOptions;->color:[F
 
     invoke-static {v0}, Lcom/google/android/filament/Asserts;->assertFloat4In([F)V
 
+    .line 1057
     iput-object p1, p0, Lcom/google/android/filament/View;->mVignetteOptions:Lcom/google/android/filament/View$VignetteOptions;
 
+    .line 1058
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v1
@@ -1072,6 +1160,7 @@
 .method public setVisibleLayers(II)V
     .locals 2
 
+    .line 673
     invoke-virtual {p0}, Lcom/google/android/filament/View;->getNativeObject()J
 
     move-result-wide v0

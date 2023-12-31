@@ -1,5 +1,6 @@
 .class Lcom/android/wm/shell/onehanded/IOneHanded$Stub$Proxy;
 .super Ljava/lang/Object;
+.source "IOneHanded.java"
 
 # interfaces
 .implements Lcom/android/wm/shell/onehanded/IOneHanded;
@@ -28,8 +29,10 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 104
     iput-object p1, p0, Lcom/android/wm/shell/onehanded/IOneHanded$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -40,6 +43,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
+    .line 108
     iget-object p0, p0, Lcom/android/wm/shell/onehanded/IOneHanded$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0
@@ -53,6 +57,7 @@
         }
     .end annotation
 
+    .line 119
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -60,8 +65,10 @@
     :try_start_0
     const-string v1, "com.android.wm.shell.onehanded.IOneHanded"
 
+    .line 121
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 122
     iget-object p0, p0, Lcom/android/wm/shell/onehanded/IOneHanded$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v1, 0x2
@@ -76,12 +83,14 @@
 
     if-nez p0, :cond_0
 
+    .line 123
     invoke-static {}, Lcom/android/wm/shell/onehanded/IOneHanded$Stub;->getDefaultImpl()Lcom/android/wm/shell/onehanded/IOneHanded;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 124
     invoke-static {}, Lcom/android/wm/shell/onehanded/IOneHanded$Stub;->getDefaultImpl()Lcom/android/wm/shell/onehanded/IOneHanded;
 
     move-result-object p0
@@ -90,6 +99,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 129
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -104,6 +114,7 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 130
     throw p0
 .end method
 
@@ -115,6 +126,7 @@
         }
     .end annotation
 
+    .line 137
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -122,8 +134,10 @@
     :try_start_0
     const-string v1, "com.android.wm.shell.onehanded.IOneHanded"
 
+    .line 139
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 140
     iget-object p0, p0, Lcom/android/wm/shell/onehanded/IOneHanded$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v1, 0x3
@@ -138,12 +152,14 @@
 
     if-nez p0, :cond_0
 
+    .line 141
     invoke-static {}, Lcom/android/wm/shell/onehanded/IOneHanded$Stub;->getDefaultImpl()Lcom/android/wm/shell/onehanded/IOneHanded;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 142
     invoke-static {}, Lcom/android/wm/shell/onehanded/IOneHanded$Stub;->getDefaultImpl()Lcom/android/wm/shell/onehanded/IOneHanded;
 
     move-result-object p0
@@ -152,6 +168,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 147
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -166,5 +183,6 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 148
     throw p0
 .end method

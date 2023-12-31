@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/reflect/Constructor;
 .super Ljava/lang/Object;
+.source "Constructor.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method private constructor <init>(Ljava/lang/reflect/Constructor;)V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15
     iput-object p1, p0, Lcom/market/sdk/reflect/Constructor;->mCons:Ljava/lang/reflect/Constructor;
 
     return-void
@@ -36,6 +39,7 @@
         }
     .end annotation
 
+    .line 28
     new-instance p0, Lcom/market/sdk/reflect/Constructor;
 
     const/4 p1, 0x0

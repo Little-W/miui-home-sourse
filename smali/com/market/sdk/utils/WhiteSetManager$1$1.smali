@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/utils/WhiteSetManager$1$1;
 .super Landroid/os/ResultReceiver;
+.source "WhiteSetManager.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/market/sdk/utils/WhiteSetManager$1;Landroid/os/Handler;)V
     .locals 0
 
+    .line 110
     iput-object p1, p0, Lcom/market/sdk/utils/WhiteSetManager$1$1;->this$0:Lcom/market/sdk/utils/WhiteSetManager$1;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -35,10 +37,12 @@
 
     const-string/jumbo p1, "whiteSet"
 
+    .line 113
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 114
     iget-object p0, p0, Lcom/market/sdk/utils/WhiteSetManager$1$1;->this$0:Lcom/market/sdk/utils/WhiteSetManager$1;
 
     iget-object p0, p0, Lcom/market/sdk/utils/WhiteSetManager$1;->val$futureTask:Lcom/market/sdk/compat/FutureTaskCompat;

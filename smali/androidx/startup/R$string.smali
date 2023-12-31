@@ -1,5 +1,6 @@
 .class public final Landroidx/startup/R$string;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations

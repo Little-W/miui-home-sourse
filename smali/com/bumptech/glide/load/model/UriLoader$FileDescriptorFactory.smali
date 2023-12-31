@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/UriLoader$FileDescriptorFactory;
 .super Ljava/lang/Object;
+.source "UriLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoaderFactory;
@@ -38,8 +39,10 @@
 .method public constructor <init>(Landroid/content/ContentResolver;)V
     .locals 0
 
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 106
     iput-object p1, p0, Lcom/bumptech/glide/load/model/UriLoader$FileDescriptorFactory;->contentResolver:Landroid/content/ContentResolver;
 
     return-void
@@ -60,6 +63,7 @@
         }
     .end annotation
 
+    .line 111
     new-instance v0, Lcom/bumptech/glide/load/data/FileDescriptorLocalUriFetcher;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/model/UriLoader$FileDescriptorFactory;->contentResolver:Landroid/content/ContentResolver;
@@ -83,6 +87,7 @@
         }
     .end annotation
 
+    .line 117
     new-instance p1, Lcom/bumptech/glide/load/model/UriLoader;
 
     invoke-direct {p1, p0}, Lcom/bumptech/glide/load/model/UriLoader;-><init>(Lcom/bumptech/glide/load/model/UriLoader$LocalUriFetcherFactory;)V

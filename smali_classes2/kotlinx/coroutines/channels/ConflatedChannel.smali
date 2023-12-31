@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/channels/ConflatedChannel;
 .super Lkotlinx/coroutines/channels/AbstractChannel;
+.source "ConflatedChannel.kt"
 
 
 # annotations
@@ -37,14 +38,17 @@
         }
     .end annotation
 
+    .line 20
     invoke-direct {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;-><init>(Lkotlin/jvm/functions/Function1;)V
 
+    .line 28
     new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 30
     sget-object p1, Lkotlinx/coroutines/channels/AbstractChannelKt;->EMPTY:Lkotlinx/coroutines/internal/Symbol;
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->value:Ljava/lang/Object;
@@ -55,8 +59,10 @@
 .method private final updateValueLocked(Ljava/lang/Object;)Lkotlinx/coroutines/internal/UndeliveredElementException;
     .locals 4
 
+    .line 127
     iget-object v0, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->value:Ljava/lang/Object;
 
+    .line 128
     sget-object v1, Lkotlinx/coroutines/channels/AbstractChannelKt;->EMPTY:Lkotlinx/coroutines/internal/Symbol;
 
     const/4 v2, 0x0
@@ -65,6 +71,7 @@
 
     goto :goto_0
 
+    .line 129
     :cond_0
     iget-object v1, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->onUndeliveredElement:Lkotlin/jvm/functions/Function1;
 
@@ -76,6 +83,7 @@
 
     move-result-object v2
 
+    .line 130
     :cond_1
     :goto_0
     iput-object p1, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->value:Ljava/lang/Object;
@@ -95,12 +103,15 @@
         }
     .end annotation
 
+    .line 134
     iget-object v0, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 151
     check-cast v0, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 135
     :try_start_0
     invoke-super {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;->enqueueReceiveInternal(Lkotlinx/coroutines/channels/Receive;)Z
 
@@ -123,6 +134,7 @@
 .method protected getBufferDebugString()Ljava/lang/String;
     .locals 2
 
+    .line 141
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,6 +177,7 @@
 .method protected final isBufferEmpty()Z
     .locals 1
 
+    .line 22
     iget-object p0, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->value:Ljava/lang/Object;
 
     sget-object v0, Lkotlinx/coroutines/channels/AbstractChannelKt;->EMPTY:Lkotlinx/coroutines/internal/Symbol;
@@ -201,16 +214,20 @@
 
     const/4 v0, 0x0
 
+    .line 34
     move-object v1, v0
 
     check-cast v1, Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
+    .line 35
     iget-object v1, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 145
     check-cast v1, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 36
     :try_start_0
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/ConflatedChannel;->getClosedForSend()Lkotlinx/coroutines/channels/Closed;
 
@@ -224,6 +241,7 @@
 
     return-object v2
 
+    .line 38
     :cond_0
     :try_start_1
     iget-object v2, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->value:Ljava/lang/Object;
@@ -232,6 +250,7 @@
 
     if-ne v2, v3, :cond_6
 
+    .line 41
     :cond_1
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/ConflatedChannel;->takeFirstReceiveOrPeekClosed()Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
@@ -239,10 +258,12 @@
 
     if-eqz v2, :cond_6
 
+    .line 42
     instance-of v3, v2, Lkotlinx/coroutines/channels/Closed;
 
     if-eqz v3, :cond_2
 
+    .line 43
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -251,6 +272,7 @@
 
     return-object v2
 
+    .line 45
     :cond_2
     :try_start_2
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
@@ -261,6 +283,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 47
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result p0
@@ -292,6 +315,7 @@
 
     throw p0
 
+    .line 53
     :cond_5
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -300,10 +324,12 @@
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 56
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     invoke-interface {v2, p1}, Lkotlinx/coroutines/channels/ReceiveOrClosed;->completeResumeReceive(Ljava/lang/Object;)V
 
+    .line 57
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     invoke-interface {v2}, Lkotlinx/coroutines/channels/ReceiveOrClosed;->getOfferResult()Ljava/lang/Object;
@@ -312,6 +338,7 @@
 
     return-object p0
 
+    .line 52
     :cond_6
     :try_start_3
     invoke-direct {p0, p1}, Lkotlinx/coroutines/channels/ConflatedChannel;->updateValueLocked(Ljava/lang/Object;)Lkotlinx/coroutines/internal/UndeliveredElementException;
@@ -320,6 +347,7 @@
 
     if-nez p0, :cond_7
 
+    .line 53
     sget-object p0, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_SUCCESS:Lkotlinx/coroutines/internal/Symbol;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -328,6 +356,7 @@
 
     return-object p0
 
+    .line 52
     :cond_7
     :try_start_4
     check-cast p0, Ljava/lang/Throwable;
@@ -339,6 +368,7 @@
     :catchall_0
     move-exception p0
 
+    .line 53
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p0
@@ -349,14 +379,18 @@
 
     const/4 v0, 0x0
 
+    .line 118
     check-cast v0, Lkotlinx/coroutines/internal/UndeliveredElementException;
 
+    .line 119
     iget-object v0, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 150
     check-cast v0, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 120
     :try_start_0
     sget-object v1, Lkotlinx/coroutines/channels/AbstractChannelKt;->EMPTY:Lkotlinx/coroutines/internal/Symbol;
 
@@ -364,18 +398,21 @@
 
     move-result-object v1
 
+    .line 121
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 122
     invoke-super {p0, p1}, Lkotlinx/coroutines/channels/AbstractChannel;->onCancelIdempotent(Z)V
 
     if-nez v1, :cond_0
 
     return-void
 
+    .line 123
     :cond_0
     check-cast v1, Ljava/lang/Throwable;
 
@@ -384,6 +421,7 @@
     :catchall_0
     move-exception p0
 
+    .line 121
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw p0
@@ -400,12 +438,15 @@
         }
     .end annotation
 
+    .line 107
     iget-object v0, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 149
     check-cast v0, Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 108
     :try_start_0
     iget-object v1, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->value:Ljava/lang/Object;
 
@@ -431,6 +472,7 @@
 
     return-object p0
 
+    .line 109
     :cond_1
     :try_start_1
     invoke-interface {p1}, Lkotlinx/coroutines/selects/SelectInstance;->trySelect()Z
@@ -439,6 +481,7 @@
 
     if-nez p1, :cond_2
 
+    .line 110
     invoke-static {}, Lkotlinx/coroutines/selects/SelectKt;->getALREADY_SELECTED()Ljava/lang/Object;
 
     move-result-object p0
@@ -449,14 +492,17 @@
 
     return-object p0
 
+    .line 111
     :cond_2
     :try_start_2
     iget-object p1, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->value:Ljava/lang/Object;
 
+    .line 112
     sget-object v1, Lkotlinx/coroutines/channels/AbstractChannelKt;->EMPTY:Lkotlinx/coroutines/internal/Symbol;
 
     iput-object v1, p0, Lkotlinx/coroutines/channels/ConflatedChannel;->value:Ljava/lang/Object;
 
+    .line 113
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

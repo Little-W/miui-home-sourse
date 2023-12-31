@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/config/CommercialConfigItemRule;
 .super Ljava/lang/Object;
+.source "CommercialConfigItemRule.java"
 
 
 # instance fields
@@ -26,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +38,7 @@
 .method public getEndTime()Ljava/lang/Long;
     .locals 0
 
+    .line 27
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigItemRule;->endTime:Ljava/lang/Long;
 
     return-object p0
@@ -44,6 +47,7 @@
 .method public getStartTime()Ljava/lang/Long;
     .locals 0
 
+    .line 19
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigItemRule;->startTime:Ljava/lang/Long;
 
     return-object p0
@@ -52,6 +56,7 @@
 .method public setEndTime(Ljava/lang/Long;)V
     .locals 0
 
+    .line 31
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigItemRule;->endTime:Ljava/lang/Long;
 
     return-void
@@ -60,6 +65,7 @@
 .method public setStartTime(Ljava/lang/Long;)V
     .locals 0
 
+    .line 23
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigItemRule;->startTime:Ljava/lang/Long;
 
     return-void

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/TextInputLayout$1;
 .super Ljava/lang/Object;
+.source "TextInputLayout.java"
 
 # interfaces
 .implements Landroid/text/TextWatcher;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
     .locals 0
 
+    .line 1439
     iput-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$1;->this$0:Lcom/google/android/material/textfield/TextInputLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 2
 
+    .line 1442
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$1;->this$0:Lcom/google/android/material/textfield/TextInputLayout;
 
     invoke-static {v0}, Lcom/google/android/material/textfield/TextInputLayout;->access$000(Lcom/google/android/material/textfield/TextInputLayout;)Z
@@ -46,12 +49,14 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->updateLabelState(Z)V
 
+    .line 1443
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$1;->this$0:Lcom/google/android/material/textfield/TextInputLayout;
 
     iget-boolean v0, v0, Lcom/google/android/material/textfield/TextInputLayout;->counterEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 1444
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$1;->this$0:Lcom/google/android/material/textfield/TextInputLayout;
 
     invoke-interface {p1}, Landroid/text/Editable;->length()I
@@ -60,6 +65,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->updateCounter(I)V
 
+    .line 1446
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$1;->this$0:Lcom/google/android/material/textfield/TextInputLayout;
 
@@ -69,6 +75,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 1447
     iget-object p0, p0, Lcom/google/android/material/textfield/TextInputLayout$1;->this$0:Lcom/google/android/material/textfield/TextInputLayout;
 
     invoke-interface {p1}, Landroid/text/Editable;->length()I

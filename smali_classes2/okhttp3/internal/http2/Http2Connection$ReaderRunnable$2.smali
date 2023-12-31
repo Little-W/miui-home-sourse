@@ -1,5 +1,6 @@
 .class Lokhttp3/internal/http2/Http2Connection$ReaderRunnable$2;
 .super Lokhttp3/internal/NamedRunnable;
+.source "Http2Connection.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method varargs constructor <init>(Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;Ljava/lang/String;[Ljava/lang/Object;ZLokhttp3/internal/http2/Settings;)V
     .locals 0
 
+    .line 774
     iput-object p1, p0, Lokhttp3/internal/http2/Http2Connection$ReaderRunnable$2;->this$1:Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;
 
     iput-boolean p4, p0, Lokhttp3/internal/http2/Http2Connection$ReaderRunnable$2;->val$clearPrevious:Z
@@ -41,6 +43,7 @@
 .method public execute()V
     .locals 2
 
+    .line 776
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$ReaderRunnable$2;->this$1:Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;
 
     iget-boolean v1, p0, Lokhttp3/internal/http2/Http2Connection$ReaderRunnable$2;->val$clearPrevious:Z

@@ -1,5 +1,6 @@
 .class interface abstract Lcom/android/systemui/shared/recents/model/TaskFilter;
 .super Ljava/lang/Object;
+.source "TaskStack.java"
 
 
 # virtual methods

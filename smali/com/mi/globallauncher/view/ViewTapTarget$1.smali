@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ViewTapTarget$1;
 .super Ljava/lang/Object;
+.source "ViewTapTarget.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/ViewTapTarget;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 39
     iput-object p1, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->this$0:Lcom/mi/globallauncher/view/ViewTapTarget;
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->val$runnable:Ljava/lang/Runnable;
@@ -44,12 +46,14 @@
 
     new-array v0, v0, [I
 
+    .line 44
     iget-object v1, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->this$0:Lcom/mi/globallauncher/view/ViewTapTarget;
 
     iget-object v1, v1, Lcom/mi/globallauncher/view/ViewTapTarget;->view:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
+    .line 45
     iget-object v1, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->this$0:Lcom/mi/globallauncher/view/ViewTapTarget;
 
     new-instance v2, Landroid/graphics/Rect;
@@ -66,6 +70,7 @@
 
     iget-object v8, v1, Lcom/mi/globallauncher/view/ViewTapTarget;->view:Landroid/view/View;
 
+    .line 46
     invoke-virtual {v8}, Landroid/view/View;->getWidth()I
 
     move-result v8
@@ -88,6 +93,7 @@
 
     iput-object v2, v1, Lcom/mi/globallauncher/view/ViewTapTarget;->bounds:Landroid/graphics/Rect;
 
+    .line 48
     iget-object v0, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->this$0:Lcom/mi/globallauncher/view/ViewTapTarget;
 
     iget-object v0, v0, Lcom/mi/globallauncher/view/ViewTapTarget;->icon:Landroid/graphics/drawable/Drawable;
@@ -114,6 +120,7 @@
 
     if-lez v0, :cond_0
 
+    .line 49
     iget-object v0, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->this$0:Lcom/mi/globallauncher/view/ViewTapTarget;
 
     iget-object v0, v0, Lcom/mi/globallauncher/view/ViewTapTarget;->view:Landroid/view/View;
@@ -136,16 +143,19 @@
 
     move-result-object v0
 
+    .line 50
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 51
     iget-object v2, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->this$0:Lcom/mi/globallauncher/view/ViewTapTarget;
 
     iget-object v2, v2, Lcom/mi/globallauncher/view/ViewTapTarget;->view:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
+    .line 52
     iget-object v1, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->this$0:Lcom/mi/globallauncher/view/ViewTapTarget;
 
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
@@ -164,6 +174,7 @@
 
     iput-object v2, v1, Lcom/mi/globallauncher/view/ViewTapTarget;->icon:Landroid/graphics/drawable/Drawable;
 
+    .line 53
     iget-object v0, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->this$0:Lcom/mi/globallauncher/view/ViewTapTarget;
 
     iget-object v0, v0, Lcom/mi/globallauncher/view/ViewTapTarget;->icon:Landroid/graphics/drawable/Drawable;
@@ -186,6 +197,7 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 56
     :cond_0
     iget-object p0, p0, Lcom/mi/globallauncher/view/ViewTapTarget$1;->val$runnable:Ljava/lang/Runnable;
 

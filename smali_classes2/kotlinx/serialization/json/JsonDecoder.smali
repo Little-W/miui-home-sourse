@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/serialization/json/JsonDecoder;
 .super Ljava/lang/Object;
+.source "JsonDecoder.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/encoding/CompositeDecoder;

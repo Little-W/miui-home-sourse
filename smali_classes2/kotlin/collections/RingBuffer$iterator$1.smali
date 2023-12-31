@@ -1,5 +1,6 @@
 .class public final Lkotlin/collections/RingBuffer$iterator$1;
 .super Lkotlin/collections/AbstractIterator;
+.source "SlidingWindow.kt"
 
 
 # annotations
@@ -41,16 +42,19 @@
         }
     .end annotation
 
+    .line 111
     iput-object p1, p0, Lkotlin/collections/RingBuffer$iterator$1;->this$0:Lkotlin/collections/RingBuffer;
 
     invoke-direct {p0}, Lkotlin/collections/AbstractIterator;-><init>()V
 
+    .line 112
     invoke-virtual {p1}, Lkotlin/collections/RingBuffer;->size()I
 
     move-result v0
 
     iput v0, p0, Lkotlin/collections/RingBuffer$iterator$1;->count:I
 
+    .line 113
     invoke-static {p1}, Lkotlin/collections/RingBuffer;->access$getStartIndex$p(Lkotlin/collections/RingBuffer;)I
 
     move-result p1
@@ -65,14 +69,17 @@
 .method protected computeNext()V
     .locals 2
 
+    .line 116
     iget v0, p0, Lkotlin/collections/RingBuffer$iterator$1;->count:I
 
     if-nez v0, :cond_0
 
+    .line 117
     invoke-virtual {p0}, Lkotlin/collections/RingBuffer$iterator$1;->done()V
 
     goto :goto_0
 
+    .line 120
     :cond_0
     iget-object v0, p0, Lkotlin/collections/RingBuffer$iterator$1;->this$0:Lkotlin/collections/RingBuffer;
 
@@ -86,12 +93,14 @@
 
     invoke-virtual {p0, v0}, Lkotlin/collections/RingBuffer$iterator$1;->setNext(Ljava/lang/Object;)V
 
+    .line 121
     iget-object v0, p0, Lkotlin/collections/RingBuffer$iterator$1;->this$0:Lkotlin/collections/RingBuffer;
 
     iget v1, p0, Lkotlin/collections/RingBuffer$iterator$1;->index:I
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 208
     invoke-static {v0}, Lkotlin/collections/RingBuffer;->access$getCapacity$p(Lkotlin/collections/RingBuffer;)I
 
     move-result v0
@@ -100,6 +109,7 @@
 
     iput v1, p0, Lkotlin/collections/RingBuffer$iterator$1;->index:I
 
+    .line 122
     iget v0, p0, Lkotlin/collections/RingBuffer$iterator$1;->count:I
 
     add-int/lit8 v0, v0, -0x1

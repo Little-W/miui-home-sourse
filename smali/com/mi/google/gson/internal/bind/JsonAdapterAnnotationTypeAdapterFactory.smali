@@ -1,5 +1,6 @@
 .class public final Lcom/mi/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;
 .super Ljava/lang/Object;
+.source "JsonAdapterAnnotationTypeAdapterFactory.java"
 
 # interfaces
 .implements Lcom/mi/google/gson/TypeAdapterFactory;
@@ -13,8 +14,10 @@
 .method public constructor <init>(Lcom/mi/google/gson/internal/ConstructorConstructor;)V
     .locals 0
 
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 38
     iput-object p1, p0, Lcom/mi/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;->constructorConstructor:Lcom/mi/google/gson/internal/ConstructorConstructor;
 
     return-void
@@ -37,10 +40,12 @@
         }
     .end annotation
 
+    .line 44
     invoke-virtual {p2}, Lcom/mi/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 45
     const-class v1, Lcom/mi/google/gson/annotations/JsonAdapter;
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -55,6 +60,7 @@
 
     return-object p0
 
+    .line 49
     :cond_0
     iget-object v1, p0, Lcom/mi/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;->constructorConstructor:Lcom/mi/google/gson/internal/ConstructorConstructor;
 
@@ -81,6 +87,7 @@
         }
     .end annotation
 
+    .line 55
     invoke-interface {p4}, Lcom/mi/google/gson/annotations/JsonAdapter;->value()Ljava/lang/Class;
 
     move-result-object p0
@@ -97,19 +104,23 @@
 
     move-result-object p0
 
+    .line 58
     instance-of p1, p0, Lcom/mi/google/gson/TypeAdapter;
 
     if-eqz p1, :cond_0
 
+    .line 59
     check-cast p0, Lcom/mi/google/gson/TypeAdapter;
 
     goto :goto_2
 
+    .line 60
     :cond_0
     instance-of p1, p0, Lcom/mi/google/gson/TypeAdapterFactory;
 
     if-eqz p1, :cond_1
 
+    .line 61
     check-cast p0, Lcom/mi/google/gson/TypeAdapterFactory;
 
     invoke-interface {p0, p2, p3}, Lcom/mi/google/gson/TypeAdapterFactory;->create(Lcom/mi/google/gson/Gson;Lcom/mi/google/gson/reflect/TypeToken;)Lcom/mi/google/gson/TypeAdapter;
@@ -118,6 +129,7 @@
 
     goto :goto_2
 
+    .line 62
     :cond_1
     instance-of p1, p0, Lcom/mi/google/gson/JsonSerializer;
 
@@ -129,6 +141,7 @@
 
     goto :goto_0
 
+    .line 71
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -144,6 +157,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 63
     move-object p1, p0
 
     check-cast p1, Lcom/mi/google/gson/JsonSerializer;
@@ -155,6 +169,7 @@
     :cond_4
     move-object v2, v0
 
+    .line 66
     :goto_1
     instance-of p1, p0, Lcom/mi/google/gson/JsonDeserializer;
 
@@ -167,6 +182,7 @@
     :cond_5
     move-object v3, v0
 
+    .line 69
     new-instance p0, Lcom/mi/google/gson/internal/bind/TreeTypeAdapter;
 
     const/4 v6, 0x0
@@ -182,12 +198,14 @@
     :goto_2
     if-eqz p0, :cond_6
 
+    .line 76
     invoke-interface {p4}, Lcom/mi/google/gson/annotations/JsonAdapter;->nullSafe()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
+    .line 77
     invoke-virtual {p0}, Lcom/mi/google/gson/TypeAdapter;->nullSafe()Lcom/mi/google/gson/TypeAdapter;
 
     move-result-object p0

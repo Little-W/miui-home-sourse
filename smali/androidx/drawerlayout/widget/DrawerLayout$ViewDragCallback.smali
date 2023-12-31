@@ -1,5 +1,6 @@
 .class Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;
 .super Landroidx/customview/widget/ViewDragHelper$Callback;
+.source "DrawerLayout.java"
 
 
 # annotations
@@ -27,6 +28,7 @@
 .method private closeOtherDrawer()V
     .locals 2
 
+    .line 2278
     iget v0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->mAbsGravity:I
 
     const/4 v1, 0x3
@@ -35,6 +37,7 @@
 
     const/4 v1, 0x5
 
+    .line 2279
     :cond_0
     iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
@@ -44,6 +47,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2281
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {p0, v0}, Landroidx/drawerlayout/widget/DrawerLayout;->closeDrawer(Landroid/view/View;)V
@@ -57,6 +61,7 @@
 .method public clampViewPositionHorizontal(Landroid/view/View;II)I
     .locals 1
 
+    .line 2369
     iget-object p3, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     const/4 v0, 0x3
@@ -67,6 +72,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 2370
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p0
@@ -85,6 +91,7 @@
 
     return p0
 
+    .line 2372
     :cond_0
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
@@ -92,6 +99,7 @@
 
     move-result p0
 
+    .line 2373
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p1
@@ -112,6 +120,7 @@
 .method public clampViewPositionVertical(Landroid/view/View;II)I
     .locals 0
 
+    .line 2379
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result p0
@@ -122,6 +131,7 @@
 .method public getViewHorizontalDragRange(Landroid/view/View;)I
     .locals 0
 
+    .line 2364
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {p0, p1}, Landroidx/drawerlayout/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
@@ -152,6 +162,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 2352
     iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     const/4 v0, 0x3
@@ -162,6 +173,7 @@
 
     goto :goto_0
 
+    .line 2354
     :cond_0
     iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
@@ -174,6 +186,7 @@
     :goto_0
     if-eqz p1, :cond_1
 
+    .line 2357
     iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {v0, p1}, Landroidx/drawerlayout/widget/DrawerLayout;->getDrawerLockMode(Landroid/view/View;)I
@@ -182,6 +195,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2358
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->mDragger:Landroidx/customview/widget/ViewDragHelper;
 
     invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ViewDragHelper;->captureChildView(Landroid/view/View;I)V
@@ -201,6 +215,7 @@
 .method public onEdgeTouched(II)V
     .locals 2
 
+    .line 2306
     iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->mPeekRunnable:Ljava/lang/Runnable;
@@ -215,6 +230,7 @@
 .method public onViewCaptured(Landroid/view/View;I)V
     .locals 0
 
+    .line 2271
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
@@ -223,8 +239,10 @@
 
     const/4 p2, 0x0
 
+    .line 2272
     iput-boolean p2, p1, Landroidx/drawerlayout/widget/DrawerLayout$LayoutParams;->isPeeking:Z
 
+    .line 2274
     invoke-direct {p0}, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->closeOtherDrawer()V
 
     return-void
@@ -233,6 +251,7 @@
 .method public onViewDragStateChanged(I)V
     .locals 1
 
+    .line 2249
     iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->mDragger:Landroidx/customview/widget/ViewDragHelper;
@@ -249,10 +268,12 @@
 .method public onViewPositionChanged(Landroid/view/View;IIII)V
     .locals 0
 
+    .line 2255
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p3
 
+    .line 2258
     iget-object p4, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     const/4 p5, 0x3
@@ -269,6 +290,7 @@
 
     goto :goto_0
 
+    .line 2261
     :cond_0
     iget-object p4, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
@@ -285,6 +307,7 @@
 
     div-float/2addr p2, p3
 
+    .line 2264
     iget-object p3, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {p3, p1, p2}, Landroidx/drawerlayout/widget/DrawerLayout;->setDrawerViewOffset(Landroid/view/View;F)V
@@ -302,9 +325,11 @@
     :cond_1
     const/4 p2, 0x0
 
+    .line 2265
     :goto_1
     invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
+    .line 2266
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {p0}, Landroidx/drawerlayout/widget/DrawerLayout;->invalidate()V
@@ -315,16 +340,19 @@
 .method public onViewReleased(Landroid/view/View;FF)V
     .locals 5
 
+    .line 2289
     iget-object p3, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {p3, p1}, Landroidx/drawerlayout/widget/DrawerLayout;->getDrawerViewOffset(Landroid/view/View;)F
 
     move-result p3
 
+    .line 2290
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
+    .line 2293
     iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     const/4 v2, 0x3
@@ -362,6 +390,7 @@
 
     goto :goto_1
 
+    .line 2296
     :cond_2
     iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
@@ -387,6 +416,7 @@
     :cond_4
     move p2, v1
 
+    .line 2300
     :goto_1
     iget-object p3, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->mDragger:Landroidx/customview/widget/ViewDragHelper;
 
@@ -396,6 +426,7 @@
 
     invoke-virtual {p3, p2, p1}, Landroidx/customview/widget/ViewDragHelper;->settleCapturedViewAt(II)Z
 
+    .line 2301
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {p0}, Landroidx/drawerlayout/widget/DrawerLayout;->invalidate()V
@@ -406,6 +437,7 @@
 .method public removeCallbacks()V
     .locals 1
 
+    .line 2236
     iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->mPeekRunnable:Ljava/lang/Runnable;
@@ -418,6 +450,7 @@
 .method public tryCaptureView(Landroid/view/View;I)Z
     .locals 1
 
+    .line 2243
     iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {p2, p1}, Landroidx/drawerlayout/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
@@ -438,6 +471,7 @@
 
     iget-object p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$ViewDragCallback;->this$0:Landroidx/drawerlayout/widget/DrawerLayout;
 
+    .line 2244
     invoke-virtual {p0, p1}, Landroidx/drawerlayout/widget/DrawerLayout;->getDrawerLockMode(Landroid/view/View;)I
 
     move-result p0

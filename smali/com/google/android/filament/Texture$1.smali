@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/filament/Texture$1;
 .super Ljava/lang/Object;
+.source "Texture.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 11
 
+    .line 513
     invoke-static {}, Lcom/google/android/filament/Texture$Type;->values()[Lcom/google/android/filament/Texture$Type;
 
     move-result-object v0
@@ -176,6 +178,7 @@
     :try_end_8
     .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
+    .line 489
     :catch_8
     invoke-static {}, Lcom/google/android/filament/Texture$Format;->values()[Lcom/google/android/filament/Texture$Format;
 

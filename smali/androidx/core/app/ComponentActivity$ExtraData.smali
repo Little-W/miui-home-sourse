@@ -1,5 +1,6 @@
 .class public Landroidx/core/app/ComponentActivity$ExtraData;
 .super Ljava/lang/Object;
+.source "ComponentActivity.java"
 
 
 # annotations
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

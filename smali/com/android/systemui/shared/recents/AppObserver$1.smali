@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/AppObserver$1;
 .super Lmiui/process/IForegroundInfoListener$Stub;
+.source "AppObserver.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/AppObserver;)V
     .locals 0
 
+    .line 23
     iput-object p1, p0, Lcom/android/systemui/shared/recents/AppObserver$1;->this$0:Lcom/android/systemui/shared/recents/AppObserver;
 
     invoke-direct {p0}, Lmiui/process/IForegroundInfoListener$Stub;-><init>()V
@@ -38,6 +40,7 @@
         }
     .end annotation
 
+    .line 26
     invoke-virtual {p1}, Lmiui/process/ForegroundInfo;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -46,6 +49,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 27
     iget-object v0, p0, Lcom/android/systemui/shared/recents/AppObserver$1;->this$0:Lcom/android/systemui/shared/recents/AppObserver;
 
     invoke-static {v0}, Lcom/android/systemui/shared/recents/AppObserver;->access$000(Lcom/android/systemui/shared/recents/AppObserver;)Ljava/util/List;
@@ -54,6 +58,7 @@
 
     monitor-enter v0
 
+    .line 28
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/AppObserver$1;->this$0:Lcom/android/systemui/shared/recents/AppObserver;
 
@@ -78,12 +83,14 @@
 
     check-cast v1, Lcom/android/systemui/shared/recents/AppObserver$ForegroundListener;
 
+    .line 29
     iget-object v2, p1, Lmiui/process/ForegroundInfo;->mForegroundPackageName:Ljava/lang/String;
 
     invoke-interface {v1, v2}, Lcom/android/systemui/shared/recents/AppObserver$ForegroundListener;->onForegroundChanged(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 31
     :cond_0
     monitor-exit v0
 

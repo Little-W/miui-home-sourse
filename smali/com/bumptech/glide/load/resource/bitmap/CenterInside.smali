@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/bitmap/CenterInside;
 .super Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;
+.source "CenterInside.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 17
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/CenterInside;->CHARSET:Ljava/nio/charset/Charset;
 
     const-string v1, "com.bumptech.glide.load.resource.bitmap.CenterInside"
@@ -26,6 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;-><init>()V
 
     return-void
@@ -36,6 +39,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 27
     instance-of p0, p1, Lcom/bumptech/glide/load/resource/bitmap/CenterInside;
 
     return p0
@@ -46,6 +50,7 @@
 
     const-string p0, "com.bumptech.glide.load.resource.bitmap.CenterInside"
 
+    .line 32
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result p0
@@ -56,6 +61,7 @@
 .method protected transform(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 0
 
+    .line 22
     invoke-static {p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->centerInside(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -66,6 +72,7 @@
 .method public updateDiskCacheKey(Ljava/security/MessageDigest;)V
     .locals 0
 
+    .line 37
     sget-object p0, Lcom/bumptech/glide/load/resource/bitmap/CenterInside;->ID_BYTES:[B
 
     invoke-virtual {p1, p0}, Ljava/security/MessageDigest;->update([B)V

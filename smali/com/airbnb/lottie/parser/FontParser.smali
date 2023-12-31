@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/parser/FontParser;
 .super Ljava/lang/Object;
+.source "FontParser.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 
     const-string v3, "ascent"
 
+    .line 9
     filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
@@ -39,6 +41,7 @@
         }
     .end annotation
 
+    .line 25
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->beginObject()V
 
     const/4 v0, 0x0
@@ -51,6 +54,7 @@
 
     move-object v1, v2
 
+    .line 26
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -58,6 +62,7 @@
 
     if-eqz v4, :cond_4
 
+    .line 27
     sget-object v4, Lcom/airbnb/lottie/parser/FontParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v4}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -78,12 +83,15 @@
 
     if-eq v4, v5, :cond_0
 
+    .line 41
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
+    .line 42
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
+    .line 38
     :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
@@ -93,6 +101,7 @@
 
     goto :goto_0
 
+    .line 35
     :cond_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -100,6 +109,7 @@
 
     goto :goto_0
 
+    .line 32
     :cond_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -107,6 +117,7 @@
 
     goto :goto_0
 
+    .line 29
     :cond_3
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -114,9 +125,11 @@
 
     goto :goto_0
 
+    .line 45
     :cond_4
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endObject()V
 
+    .line 47
     new-instance p0, Lcom/airbnb/lottie/model/Font;
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/airbnb/lottie/model/Font;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;F)V

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/MainDispatchersKt;
 .super Ljava/lang/Object;
+.source "MainDispatchers.kt"
 
 
 # annotations
@@ -22,6 +23,7 @@
 .method private static final createMissingDispatcher(Ljava/lang/Throwable;Ljava/lang/String;)Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;
     .locals 1
 
+    .line 72
     sget-boolean v0, Lkotlinx/coroutines/internal/MainDispatchersKt;->SUPPORT_MISSING:Z
 
     if-eqz v0, :cond_0
@@ -35,6 +37,7 @@
     :cond_0
     if-eqz p0, :cond_1
 
+    .line 73
     throw p0
 
     :cond_1
@@ -56,6 +59,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 71
     move-object p0, v0
 
     check-cast p0, Ljava/lang/Throwable;
@@ -80,6 +84,7 @@
 .method public static final throwMissingMainDispatcherException()Ljava/lang/Void;
     .locals 2
 
+    .line 76
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Module with the Main dispatcher is missing. Add dependency providing the Main dispatcher, e.g. \'kotlinx-coroutines-android\' and ensure it has the same version as \'kotlinx-coroutines-core\'"
@@ -105,6 +110,7 @@
         }
     .end annotation
 
+    .line 57
     :try_start_0
     invoke-interface {p0, p1}, Lkotlinx/coroutines/internal/MainDispatcherFactory;->createDispatcher(Ljava/util/List;)Lkotlinx/coroutines/MainCoroutineDispatcher;
 
@@ -117,6 +123,7 @@
     :catchall_0
     move-exception p1
 
+    .line 59
     invoke-interface {p0}, Lkotlinx/coroutines/internal/MainDispatcherFactory;->hintOnError()Ljava/lang/String;
 
     move-result-object p0

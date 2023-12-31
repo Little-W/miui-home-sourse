@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
 .super Ljava/lang/Object;
+.source "SyncRtSurfaceTransactionApplierCompat.java"
 
 
 # annotations
@@ -47,12 +48,15 @@
 .method public constructor <init>(Landroid/view/SurfaceControl;)V
     .locals 1
 
+    .line 309
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 304
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->isShow:Z
 
+    .line 310
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->surface:Landroid/view/SurfaceControl;
 
     return-void
@@ -65,6 +69,7 @@
 
     move-object/from16 v0, p0
 
+    .line 421
     new-instance v16, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;
 
     iget-object v1, v0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->surface:Landroid/view/SurfaceControl;
@@ -107,8 +112,10 @@
 .method public withAlpha(F)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 0
 
+    .line 318
     iput p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->alpha:F
 
+    .line 319
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit8 p1, p1, 0x1
@@ -121,8 +128,10 @@
 .method public withBackgroundBlur(I)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 0
 
+    .line 396
     iput p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->backgroundBlurRadius:I
 
+    .line 397
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit8 p1, p1, 0x20
@@ -135,8 +144,10 @@
 .method public withCornerRadius(F)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 0
 
+    .line 376
     iput p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->cornerRadius:F
 
+    .line 377
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit8 p1, p1, 0x10
@@ -149,8 +160,10 @@
 .method public withHomeLayer(Landroid/view/SurfaceControl;)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 0
 
+    .line 366
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->homeSurface:Landroid/view/SurfaceControl;
 
+    .line 367
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit16 p1, p1, 0x400
@@ -163,8 +176,10 @@
 .method public withLayer(I)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 0
 
+    .line 348
     iput p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->layer:I
 
+    .line 349
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit8 p1, p1, 0x8
@@ -177,12 +192,14 @@
 .method public withMatrix(Landroid/graphics/Matrix;)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 1
 
+    .line 328
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0, p1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->matrix:Landroid/graphics/Matrix;
 
+    .line 329
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit8 p1, p1, 0x2
@@ -195,10 +212,13 @@
 .method public withRelativeLayerTo(Landroid/view/SurfaceControl;I)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 0
 
+    .line 359
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->relativeTo:Landroid/view/SurfaceControl;
 
+    .line 360
     iput p2, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->relativeLayer:I
 
+    .line 361
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit16 p1, p1, 0x80
@@ -211,8 +231,10 @@
 .method public withShadowRadius(F)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 0
 
+    .line 386
     iput p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->shadowRadius:F
 
+    .line 387
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit16 p1, p1, 0x100
@@ -225,8 +247,10 @@
 .method public withShow(Z)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 0
 
+    .line 412
     iput-boolean p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->isShow:Z
 
+    .line 413
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit16 p1, p1, 0x200
@@ -239,12 +263,14 @@
 .method public withWindowCrop(Landroid/graphics/Rect;)Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;
     .locals 1
 
+    .line 338
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->windowCrop:Landroid/graphics/Rect;
 
+    .line 339
     iget p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams$Builder;->flags:I
 
     or-int/lit8 p1, p1, 0x4

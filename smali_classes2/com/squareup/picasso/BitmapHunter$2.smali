@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/BitmapHunter$2;
 .super Lcom/squareup/picasso/RequestHandler;
+.source "BitmapHunter.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 72
     invoke-direct {p0}, Lcom/squareup/picasso/RequestHandler;-><init>()V
 
     return-void
@@ -40,6 +42,7 @@
         }
     .end annotation
 
+    .line 78
     new-instance p0, Ljava/lang/IllegalStateException;
 
     new-instance p2, Ljava/lang/StringBuilder;

@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/channels/ReceiveOrClosed;
 .super Ljava/lang/Object;
+.source "AbstractChannel.kt"
 
 
 # annotations

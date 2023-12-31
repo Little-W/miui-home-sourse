@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/parser/CircleShapeParser;
 .super Ljava/lang/Object;
+.source "CircleShapeParser.java"
 
 
 # static fields
@@ -20,6 +21,7 @@
 
     const-string v4, "d"
 
+    .line 15
     filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
 
     move-result-object v0
@@ -69,6 +71,7 @@
 
     move-object v7, v6
 
+    .line 34
     :goto_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -76,6 +79,7 @@
 
     if-eqz p2, :cond_7
 
+    .line 35
     sget-object p2, Lcom/airbnb/lottie/parser/CircleShapeParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, p2}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -96,12 +100,15 @@
 
     if-eq p2, v3, :cond_1
 
+    .line 53
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
+    .line 54
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_1
 
+    .line 50
     :cond_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
@@ -118,6 +125,7 @@
 
     goto :goto_1
 
+    .line 46
     :cond_3
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
@@ -125,6 +133,7 @@
 
     goto :goto_1
 
+    .line 43
     :cond_4
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parsePoint(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
@@ -132,6 +141,7 @@
 
     goto :goto_1
 
+    .line 40
     :cond_5
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatablePathValueParser;->parseSplitPath(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
@@ -139,6 +149,7 @@
 
     goto :goto_1
 
+    .line 37
     :cond_6
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -146,6 +157,7 @@
 
     goto :goto_1
 
+    .line 58
     :cond_7
     new-instance p0, Lcom/airbnb/lottie/model/content/CircleShape;
 

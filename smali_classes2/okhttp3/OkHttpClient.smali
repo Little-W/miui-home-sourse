@@ -1,5 +1,6 @@
 .class public Lokhttp3/OkHttpClient;
 .super Ljava/lang/Object;
+.source "OkHttpClient.java"
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -143,6 +144,7 @@
 
     new-array v1, v0, [Lokhttp3/Protocol;
 
+    .line 127
     sget-object v2, Lokhttp3/Protocol;->HTTP_2:Lokhttp3/Protocol;
 
     const/4 v3, 0x0
@@ -163,6 +165,7 @@
 
     new-array v0, v0, [Lokhttp3/ConnectionSpec;
 
+    .line 130
     sget-object v1, Lokhttp3/ConnectionSpec;->MODERN_TLS:Lokhttp3/ConnectionSpec;
 
     aput-object v1, v0, v3
@@ -177,6 +180,7 @@
 
     sput-object v0, Lokhttp3/OkHttpClient;->DEFAULT_CONNECTION_SPECS:Ljava/util/List;
 
+    .line 134
     new-instance v0, Lokhttp3/OkHttpClient$1;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient$1;-><init>()V
@@ -189,6 +193,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 231
     new-instance v0, Lokhttp3/OkHttpClient$Builder;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
@@ -201,24 +206,30 @@
 .method constructor <init>(Lokhttp3/OkHttpClient$Builder;)V
     .locals 4
 
+    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 235
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->dispatcher:Lokhttp3/Dispatcher;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->dispatcher:Lokhttp3/Dispatcher;
 
+    .line 236
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->proxy:Ljava/net/Proxy;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->proxy:Ljava/net/Proxy;
 
+    .line 237
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->protocols:Ljava/util/List;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->protocols:Ljava/util/List;
 
+    .line 238
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->connectionSpecs:Ljava/util/List;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->connectionSpecs:Ljava/util/List;
 
+    .line 239
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->interceptors:Ljava/util/List;
 
     invoke-static {v0}, Lokhttp3/internal/Util;->immutableList(Ljava/util/List;)Ljava/util/List;
@@ -227,6 +238,7 @@
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->interceptors:Ljava/util/List;
 
+    .line 240
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->networkInterceptors:Ljava/util/List;
 
     invoke-static {v0}, Lokhttp3/internal/Util;->immutableList(Ljava/util/List;)Ljava/util/List;
@@ -235,30 +247,37 @@
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->networkInterceptors:Ljava/util/List;
 
+    .line 241
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->eventListenerFactory:Lokhttp3/EventListener$Factory;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->eventListenerFactory:Lokhttp3/EventListener$Factory;
 
+    .line 242
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->proxySelector:Ljava/net/ProxySelector;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->proxySelector:Ljava/net/ProxySelector;
 
+    .line 243
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->cookieJar:Lokhttp3/CookieJar;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->cookieJar:Lokhttp3/CookieJar;
 
+    .line 244
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->cache:Lokhttp3/Cache;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->cache:Lokhttp3/Cache;
 
+    .line 245
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->internalCache:Lokhttp3/internal/cache/InternalCache;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->internalCache:Lokhttp3/internal/cache/InternalCache;
 
+    .line 246
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->socketFactory:Ljavax/net/SocketFactory;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->socketFactory:Ljavax/net/SocketFactory;
 
+    .line 249
     iget-object v0, p0, Lokhttp3/OkHttpClient;->connectionSpecs:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -285,6 +304,7 @@
 
     if-nez v2, :cond_1
 
+    .line 250
     invoke-virtual {v3}, Lokhttp3/ConnectionSpec;->isTls()Z
 
     move-result v2
@@ -296,6 +316,7 @@
 
     goto :goto_0
 
+    .line 253
     :cond_2
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->sslSocketFactory:Ljavax/net/ssl/SSLSocketFactory;
 
@@ -305,17 +326,20 @@
 
     goto :goto_1
 
+    .line 257
     :cond_3
     invoke-static {}, Lokhttp3/internal/Util;->platformTrustManager()Ljavax/net/ssl/X509TrustManager;
 
     move-result-object v0
 
+    .line 258
     invoke-static {v0}, Lokhttp3/OkHttpClient;->newSslSocketFactory(Ljavax/net/ssl/X509TrustManager;)Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
 
     iput-object v1, p0, Lokhttp3/OkHttpClient;->sslSocketFactory:Ljavax/net/ssl/SSLSocketFactory;
 
+    .line 259
     invoke-static {v0}, Lokhttp3/internal/tls/CertificateChainCleaner;->get(Ljavax/net/ssl/X509TrustManager;)Lokhttp3/internal/tls/CertificateChainCleaner;
 
     move-result-object v0
@@ -324,21 +348,25 @@
 
     goto :goto_2
 
+    .line 254
     :cond_4
     :goto_1
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->sslSocketFactory:Ljavax/net/ssl/SSLSocketFactory;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->sslSocketFactory:Ljavax/net/ssl/SSLSocketFactory;
 
+    .line 255
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->certificateChainCleaner:Lokhttp3/internal/tls/CertificateChainCleaner;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->certificateChainCleaner:Lokhttp3/internal/tls/CertificateChainCleaner;
 
+    .line 262
     :goto_2
     iget-object v0, p0, Lokhttp3/OkHttpClient;->sslSocketFactory:Ljavax/net/ssl/SSLSocketFactory;
 
     if-eqz v0, :cond_5
 
+    .line 263
     invoke-static {}, Lokhttp3/internal/platform/Platform;->get()Lokhttp3/internal/platform/Platform;
 
     move-result-object v0
@@ -347,11 +375,13 @@
 
     invoke-virtual {v0, v1}, Lokhttp3/internal/platform/Platform;->configureSslSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
 
+    .line 266
     :cond_5
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->hostnameVerifier:Ljavax/net/ssl/HostnameVerifier;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->hostnameVerifier:Ljavax/net/ssl/HostnameVerifier;
 
+    .line 267
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->certificatePinner:Lokhttp3/CertificatePinner;
 
     iget-object v1, p0, Lokhttp3/OkHttpClient;->certificateChainCleaner:Lokhttp3/internal/tls/CertificateChainCleaner;
@@ -362,54 +392,67 @@
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->certificatePinner:Lokhttp3/CertificatePinner;
 
+    .line 269
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->proxyAuthenticator:Lokhttp3/Authenticator;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->proxyAuthenticator:Lokhttp3/Authenticator;
 
+    .line 270
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->authenticator:Lokhttp3/Authenticator;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->authenticator:Lokhttp3/Authenticator;
 
+    .line 271
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->connectionPool:Lokhttp3/ConnectionPool;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->connectionPool:Lokhttp3/ConnectionPool;
 
+    .line 272
     iget-object v0, p1, Lokhttp3/OkHttpClient$Builder;->dns:Lokhttp3/Dns;
 
     iput-object v0, p0, Lokhttp3/OkHttpClient;->dns:Lokhttp3/Dns;
 
+    .line 273
     iget-boolean v0, p1, Lokhttp3/OkHttpClient$Builder;->followSslRedirects:Z
 
     iput-boolean v0, p0, Lokhttp3/OkHttpClient;->followSslRedirects:Z
 
+    .line 274
     iget-boolean v0, p1, Lokhttp3/OkHttpClient$Builder;->followRedirects:Z
 
     iput-boolean v0, p0, Lokhttp3/OkHttpClient;->followRedirects:Z
 
+    .line 275
     iget-boolean v0, p1, Lokhttp3/OkHttpClient$Builder;->retryOnConnectionFailure:Z
 
     iput-boolean v0, p0, Lokhttp3/OkHttpClient;->retryOnConnectionFailure:Z
 
+    .line 276
     iget v0, p1, Lokhttp3/OkHttpClient$Builder;->callTimeout:I
 
     iput v0, p0, Lokhttp3/OkHttpClient;->callTimeout:I
 
+    .line 277
     iget v0, p1, Lokhttp3/OkHttpClient$Builder;->connectTimeout:I
 
     iput v0, p0, Lokhttp3/OkHttpClient;->connectTimeout:I
 
+    .line 278
     iget v0, p1, Lokhttp3/OkHttpClient$Builder;->readTimeout:I
 
     iput v0, p0, Lokhttp3/OkHttpClient;->readTimeout:I
 
+    .line 279
     iget v0, p1, Lokhttp3/OkHttpClient$Builder;->writeTimeout:I
 
     iput v0, p0, Lokhttp3/OkHttpClient;->writeTimeout:I
 
+    .line 280
     iget p1, p1, Lokhttp3/OkHttpClient$Builder;->pingInterval:I
 
     iput p1, p0, Lokhttp3/OkHttpClient;->pingInterval:I
 
+    .line 282
     iget-object p1, p0, Lokhttp3/OkHttpClient;->interceptors:Ljava/util/List;
 
     const/4 v0, 0x0
@@ -420,6 +463,7 @@
 
     if-nez p1, :cond_7
 
+    .line 285
     iget-object p1, p0, Lokhttp3/OkHttpClient;->networkInterceptors:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -430,6 +474,7 @@
 
     return-void
 
+    .line 286
     :cond_6
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -453,6 +498,7 @@
 
     throw p1
 
+    .line 283
     :cond_7
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -480,6 +526,7 @@
 .method private static newSslSocketFactory(Ljavax/net/ssl/X509TrustManager;)Ljavax/net/ssl/SSLSocketFactory;
     .locals 3
 
+    .line 292
     :try_start_0
     invoke-static {}, Lokhttp3/internal/platform/Platform;->get()Lokhttp3/internal/platform/Platform;
 
@@ -499,8 +546,10 @@
 
     const/4 p0, 0x0
 
+    .line 293
     invoke-virtual {v0, p0, v1, p0}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
+    .line 294
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object p0
@@ -514,6 +563,7 @@
 
     const-string v0, "No System TLS"
 
+    .line 296
     invoke-static {v0, p0}, Lokhttp3/internal/Util;->assertionError(Ljava/lang/String;Ljava/lang/Exception;)Ljava/lang/AssertionError;
 
     move-result-object p0
@@ -526,6 +576,7 @@
 .method public authenticator()Lokhttp3/Authenticator;
     .locals 0
 
+    .line 366
     iget-object p0, p0, Lokhttp3/OkHttpClient;->authenticator:Lokhttp3/Authenticator;
 
     return-object p0
@@ -536,6 +587,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 338
     iget-object p0, p0, Lokhttp3/OkHttpClient;->cache:Lokhttp3/Cache;
 
     return-object p0
@@ -544,6 +596,7 @@
 .method public callTimeoutMillis()I
     .locals 0
 
+    .line 302
     iget p0, p0, Lokhttp3/OkHttpClient;->callTimeout:I
 
     return p0
@@ -552,6 +605,7 @@
 .method public certificatePinner()Lokhttp3/CertificatePinner;
     .locals 0
 
+    .line 362
     iget-object p0, p0, Lokhttp3/OkHttpClient;->certificatePinner:Lokhttp3/CertificatePinner;
 
     return-object p0
@@ -560,6 +614,7 @@
 .method public connectTimeoutMillis()I
     .locals 0
 
+    .line 307
     iget p0, p0, Lokhttp3/OkHttpClient;->connectTimeout:I
 
     return p0
@@ -568,6 +623,7 @@
 .method public connectionPool()Lokhttp3/ConnectionPool;
     .locals 0
 
+    .line 374
     iget-object p0, p0, Lokhttp3/OkHttpClient;->connectionPool:Lokhttp3/ConnectionPool;
 
     return-object p0
@@ -584,6 +640,7 @@
         }
     .end annotation
 
+    .line 398
     iget-object p0, p0, Lokhttp3/OkHttpClient;->connectionSpecs:Ljava/util/List;
 
     return-object p0
@@ -592,6 +649,7 @@
 .method public cookieJar()Lokhttp3/CookieJar;
     .locals 0
 
+    .line 334
     iget-object p0, p0, Lokhttp3/OkHttpClient;->cookieJar:Lokhttp3/CookieJar;
 
     return-object p0
@@ -600,6 +658,7 @@
 .method public dispatcher()Lokhttp3/Dispatcher;
     .locals 0
 
+    .line 390
     iget-object p0, p0, Lokhttp3/OkHttpClient;->dispatcher:Lokhttp3/Dispatcher;
 
     return-object p0
@@ -608,6 +667,7 @@
 .method public dns()Lokhttp3/Dns;
     .locals 0
 
+    .line 346
     iget-object p0, p0, Lokhttp3/OkHttpClient;->dns:Lokhttp3/Dns;
 
     return-object p0
@@ -616,6 +676,7 @@
 .method public eventListenerFactory()Lokhttp3/EventListener$Factory;
     .locals 0
 
+    .line 420
     iget-object p0, p0, Lokhttp3/OkHttpClient;->eventListenerFactory:Lokhttp3/EventListener$Factory;
 
     return-object p0
@@ -624,6 +685,7 @@
 .method public followRedirects()Z
     .locals 0
 
+    .line 382
     iget-boolean p0, p0, Lokhttp3/OkHttpClient;->followRedirects:Z
 
     return p0
@@ -632,6 +694,7 @@
 .method public followSslRedirects()Z
     .locals 0
 
+    .line 378
     iget-boolean p0, p0, Lokhttp3/OkHttpClient;->followSslRedirects:Z
 
     return p0
@@ -640,6 +703,7 @@
 .method public hostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
     .locals 0
 
+    .line 358
     iget-object p0, p0, Lokhttp3/OkHttpClient;->hostnameVerifier:Ljavax/net/ssl/HostnameVerifier;
 
     return-object p0
@@ -656,6 +720,7 @@
         }
     .end annotation
 
+    .line 407
     iget-object p0, p0, Lokhttp3/OkHttpClient;->interceptors:Ljava/util/List;
 
     return-object p0
@@ -664,6 +729,7 @@
 .method internalCache()Lokhttp3/internal/cache/InternalCache;
     .locals 1
 
+    .line 342
     iget-object v0, p0, Lokhttp3/OkHttpClient;->cache:Lokhttp3/Cache;
 
     if-eqz v0, :cond_0
@@ -690,6 +756,7 @@
         }
     .end annotation
 
+    .line 416
     iget-object p0, p0, Lokhttp3/OkHttpClient;->networkInterceptors:Ljava/util/List;
 
     return-object p0
@@ -698,6 +765,7 @@
 .method public newBuilder()Lokhttp3/OkHttpClient$Builder;
     .locals 1
 
+    .line 440
     new-instance v0, Lokhttp3/OkHttpClient$Builder;
 
     invoke-direct {v0, p0}, Lokhttp3/OkHttpClient$Builder;-><init>(Lokhttp3/OkHttpClient;)V
@@ -710,6 +778,7 @@
 
     const/4 v0, 0x0
 
+    .line 427
     invoke-static {p0, p1, v0}, Lokhttp3/RealCall;->newRealCall(Lokhttp3/OkHttpClient;Lokhttp3/Request;Z)Lokhttp3/RealCall;
 
     move-result-object p0
@@ -720,6 +789,7 @@
 .method public pingIntervalMillis()I
     .locals 0
 
+    .line 322
     iget p0, p0, Lokhttp3/OkHttpClient;->pingInterval:I
 
     return p0
@@ -736,6 +806,7 @@
         }
     .end annotation
 
+    .line 394
     iget-object p0, p0, Lokhttp3/OkHttpClient;->protocols:Ljava/util/List;
 
     return-object p0
@@ -746,6 +817,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 326
     iget-object p0, p0, Lokhttp3/OkHttpClient;->proxy:Ljava/net/Proxy;
 
     return-object p0
@@ -754,6 +826,7 @@
 .method public proxyAuthenticator()Lokhttp3/Authenticator;
     .locals 0
 
+    .line 370
     iget-object p0, p0, Lokhttp3/OkHttpClient;->proxyAuthenticator:Lokhttp3/Authenticator;
 
     return-object p0
@@ -762,6 +835,7 @@
 .method public proxySelector()Ljava/net/ProxySelector;
     .locals 0
 
+    .line 330
     iget-object p0, p0, Lokhttp3/OkHttpClient;->proxySelector:Ljava/net/ProxySelector;
 
     return-object p0
@@ -770,6 +844,7 @@
 .method public readTimeoutMillis()I
     .locals 0
 
+    .line 312
     iget p0, p0, Lokhttp3/OkHttpClient;->readTimeout:I
 
     return p0
@@ -778,6 +853,7 @@
 .method public retryOnConnectionFailure()Z
     .locals 0
 
+    .line 386
     iget-boolean p0, p0, Lokhttp3/OkHttpClient;->retryOnConnectionFailure:Z
 
     return p0
@@ -786,6 +862,7 @@
 .method public socketFactory()Ljavax/net/SocketFactory;
     .locals 0
 
+    .line 350
     iget-object p0, p0, Lokhttp3/OkHttpClient;->socketFactory:Ljavax/net/SocketFactory;
 
     return-object p0
@@ -794,6 +871,7 @@
 .method public sslSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
     .locals 0
 
+    .line 354
     iget-object p0, p0, Lokhttp3/OkHttpClient;->sslSocketFactory:Ljavax/net/ssl/SSLSocketFactory;
 
     return-object p0
@@ -802,6 +880,7 @@
 .method public writeTimeoutMillis()I
     .locals 0
 
+    .line 317
     iget p0, p0, Lokhttp3/OkHttpClient;->writeTimeout:I
 
     return p0

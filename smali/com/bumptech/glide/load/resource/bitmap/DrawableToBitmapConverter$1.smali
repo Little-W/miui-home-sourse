@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter$1;
 .super Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPoolAdapter;
+.source "DrawableToBitmapConverter.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 18
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPoolAdapter;-><init>()V
 
     return-void

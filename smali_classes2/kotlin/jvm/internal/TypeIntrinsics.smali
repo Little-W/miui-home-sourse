@@ -1,11 +1,13 @@
 .class public Lkotlin/jvm/internal/TypeIntrinsics;
 .super Ljava/lang/Object;
+.source "TypeIntrinsics.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,12 +18,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 341
     invoke-static {p0, p1}, Lkotlin/jvm/internal/TypeIntrinsics;->isFunctionOfArity(Ljava/lang/Object;I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 342
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,10 +49,12 @@
 .method public static getFunctionArity(Ljava/lang/Object;)I
     .locals 1
 
+    .line 258
     instance-of v0, p0, Lkotlin/jvm/internal/FunctionBase;
 
     if-eqz v0, :cond_0
 
+    .line 259
     check-cast p0, Lkotlin/jvm/internal/FunctionBase;
 
     invoke-interface {p0}, Lkotlin/jvm/internal/FunctionBase;->getArity()I
@@ -57,6 +63,7 @@
 
     return p0
 
+    .line 261
     :cond_0
     instance-of v0, p0, Lkotlin/jvm/functions/Function0;
 
@@ -66,6 +73,7 @@
 
     return p0
 
+    .line 264
     :cond_1
     instance-of v0, p0, Lkotlin/jvm/functions/Function1;
 
@@ -75,6 +83,7 @@
 
     return p0
 
+    .line 267
     :cond_2
     instance-of v0, p0, Lkotlin/jvm/functions/Function2;
 
@@ -84,6 +93,7 @@
 
     return p0
 
+    .line 270
     :cond_3
     instance-of v0, p0, Lkotlin/jvm/functions/Function3;
 
@@ -93,6 +103,7 @@
 
     return p0
 
+    .line 273
     :cond_4
     instance-of v0, p0, Lkotlin/jvm/functions/Function4;
 
@@ -102,6 +113,7 @@
 
     return p0
 
+    .line 276
     :cond_5
     instance-of v0, p0, Lkotlin/jvm/functions/Function5;
 
@@ -111,6 +123,7 @@
 
     return p0
 
+    .line 279
     :cond_6
     instance-of v0, p0, Lkotlin/jvm/functions/Function6;
 
@@ -120,6 +133,7 @@
 
     return p0
 
+    .line 282
     :cond_7
     instance-of v0, p0, Lkotlin/jvm/functions/Function7;
 
@@ -129,6 +143,7 @@
 
     return p0
 
+    .line 285
     :cond_8
     instance-of v0, p0, Lkotlin/jvm/functions/Function8;
 
@@ -138,6 +153,7 @@
 
     return p0
 
+    .line 288
     :cond_9
     instance-of v0, p0, Lkotlin/jvm/functions/Function9;
 
@@ -147,6 +163,7 @@
 
     return p0
 
+    .line 291
     :cond_a
     instance-of v0, p0, Lkotlin/jvm/functions/Function10;
 
@@ -156,6 +173,7 @@
 
     return p0
 
+    .line 294
     :cond_b
     instance-of v0, p0, Lkotlin/jvm/functions/Function11;
 
@@ -165,6 +183,7 @@
 
     return p0
 
+    .line 297
     :cond_c
     instance-of v0, p0, Lkotlin/jvm/functions/Function12;
 
@@ -174,6 +193,7 @@
 
     return p0
 
+    .line 300
     :cond_d
     instance-of v0, p0, Lkotlin/jvm/functions/Function13;
 
@@ -183,6 +203,7 @@
 
     return p0
 
+    .line 303
     :cond_e
     instance-of v0, p0, Lkotlin/jvm/functions/Function14;
 
@@ -192,6 +213,7 @@
 
     return p0
 
+    .line 306
     :cond_f
     instance-of v0, p0, Lkotlin/jvm/functions/Function15;
 
@@ -201,6 +223,7 @@
 
     return p0
 
+    .line 309
     :cond_10
     instance-of v0, p0, Lkotlin/jvm/functions/Function16;
 
@@ -210,6 +233,7 @@
 
     return p0
 
+    .line 312
     :cond_11
     instance-of v0, p0, Lkotlin/jvm/functions/Function17;
 
@@ -219,6 +243,7 @@
 
     return p0
 
+    .line 315
     :cond_12
     instance-of v0, p0, Lkotlin/jvm/functions/Function18;
 
@@ -228,6 +253,7 @@
 
     return p0
 
+    .line 318
     :cond_13
     instance-of v0, p0, Lkotlin/jvm/functions/Function19;
 
@@ -237,6 +263,7 @@
 
     return p0
 
+    .line 321
     :cond_14
     instance-of v0, p0, Lkotlin/jvm/functions/Function20;
 
@@ -246,6 +273,7 @@
 
     return p0
 
+    .line 324
     :cond_15
     instance-of v0, p0, Lkotlin/jvm/functions/Function21;
 
@@ -255,6 +283,7 @@
 
     return p0
 
+    .line 327
     :cond_16
     instance-of p0, p0, Lkotlin/jvm/functions/Function22;
 
@@ -273,6 +302,7 @@
 .method public static isFunctionOfArity(Ljava/lang/Object;I)Z
     .locals 1
 
+    .line 336
     instance-of v0, p0, Lkotlin/Function;
 
     if-eqz v0, :cond_0
@@ -304,6 +334,7 @@
         }
     .end annotation
 
+    .line 17
     const-class v0, Lkotlin/jvm/internal/TypeIntrinsics;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -320,6 +351,7 @@
 .method public static throwCce(Ljava/lang/ClassCastException;)Ljava/lang/ClassCastException;
     .locals 0
 
+    .line 30
     invoke-static {p0}, Lkotlin/jvm/internal/TypeIntrinsics;->sanitizeStackTrace(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
@@ -338,6 +370,7 @@
 
     goto :goto_0
 
+    .line 21
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -347,6 +380,7 @@
 
     move-result-object p0
 
+    .line 22
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -372,6 +406,7 @@
 .method public static throwCce(Ljava/lang/String;)V
     .locals 1
 
+    .line 26
     new-instance v0, Ljava/lang/ClassCastException;
 
     invoke-direct {v0, p0}, Ljava/lang/ClassCastException;-><init>(Ljava/lang/String;)V

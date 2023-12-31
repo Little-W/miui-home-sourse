@@ -1,5 +1,6 @@
 .class public abstract Lcom/xiaomi/market/IPreloadAppDetailService$Stub;
 .super Landroid/os/Binder;
+.source "IPreloadAppDetailService.java"
 
 # interfaces
 .implements Lcom/xiaomi/market/IPreloadAppDetailService;
@@ -35,20 +36,24 @@
     :cond_0
     const-string v0, "com.xiaomi.market.IPreloadAppDetailService"
 
+    .line 25
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 26
     instance-of v1, v0, Lcom/xiaomi/market/IPreloadAppDetailService;
 
     if-eqz v1, :cond_1
 
+    .line 27
     check-cast v0, Lcom/xiaomi/market/IPreloadAppDetailService;
 
     return-object v0
 
+    .line 29
     :cond_1
     new-instance v0, Lcom/xiaomi/market/IPreloadAppDetailService$Stub$Proxy;
 
@@ -77,26 +82,32 @@
 
     if-eq p1, v2, :cond_0
 
+    .line 56
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 42
     :cond_0
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v0
 
+    .line 47
     :cond_1
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 49
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 50
     invoke-virtual {p0, p1}, Lcom/xiaomi/market/IPreloadAppDetailService$Stub;->preloadAppDetail(Ljava/lang/String;)V
 
+    .line 51
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v0

@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/config/-$$Lambda$CommercialRemoteConfig$myqlnhMLIQDnfrivuBIs5ZehCro;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/OnFailureListener;

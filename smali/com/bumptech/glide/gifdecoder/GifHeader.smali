@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/gifdecoder/GifHeader;
 .super Ljava/lang/Object;
+.source "GifHeader.java"
 
 
 # instance fields
@@ -42,18 +43,23 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 22
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->gct:[I
 
     const/4 v0, 0x0
 
+    .line 24
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->status:I
 
+    .line 26
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
 
+    .line 29
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -62,6 +68,7 @@
 
     const/4 v0, -0x1
 
+    .line 51
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->loopCount:I
 
     return-void
@@ -72,6 +79,7 @@
 .method public getHeight()I
     .locals 0
 
+    .line 54
     iget p0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->height:I
 
     return p0
@@ -80,6 +88,7 @@
 .method public getNumFrames()I
     .locals 0
 
+    .line 62
     iget p0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
 
     return p0
@@ -88,6 +97,7 @@
 .method public getStatus()I
     .locals 0
 
+    .line 70
     iget p0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->status:I
 
     return p0
@@ -96,6 +106,7 @@
 .method public getWidth()I
     .locals 0
 
+    .line 58
     iget p0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->width:I
 
     return p0

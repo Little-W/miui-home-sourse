@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;
 .super Ljava/lang/Object;
+.source "WorkInitializer_Factory.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
@@ -79,14 +80,19 @@
         }
     .end annotation
 
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;->executorProvider:Ljavax/inject/Provider;
 
+    .line 27
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;->storeProvider:Ljavax/inject/Provider;
 
+    .line 28
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;->schedulerProvider:Ljavax/inject/Provider;
 
+    .line 29
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;->guardProvider:Ljavax/inject/Provider;
 
     return-void
@@ -113,6 +119,7 @@
         }
     .end annotation
 
+    .line 40
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
@@ -123,6 +130,7 @@
 .method public static newInstance(Ljava/util/concurrent/Executor;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;
     .locals 1
 
+    .line 45
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;-><init>(Ljava/util/concurrent/Executor;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;)V
@@ -135,6 +143,7 @@
 .method public get()Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;
     .locals 3
 
+    .line 34
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;->executorProvider:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -177,6 +186,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 10
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;->get()Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;
 
     move-result-object p0

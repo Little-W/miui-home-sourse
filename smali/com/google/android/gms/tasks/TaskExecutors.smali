@@ -20,12 +20,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 2
     new-instance v0, Lcom/google/android/gms/tasks/TaskExecutors$zza;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/TaskExecutors$zza;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
 
+    .line 3
     new-instance v0, Lcom/google/android/gms/tasks/zzt;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/zzt;-><init>()V

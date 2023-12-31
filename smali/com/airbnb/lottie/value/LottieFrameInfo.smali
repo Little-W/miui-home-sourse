@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/value/LottieFrameInfo;
 .super Ljava/lang/Object;
+.source "LottieFrameInfo.java"
 
 
 # annotations
@@ -45,6 +46,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,6 +57,7 @@
 .method public getEndFrame()F
     .locals 0
 
+    .line 43
     iget p0, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->endFrame:F
 
     return p0
@@ -68,6 +71,7 @@
         }
     .end annotation
 
+    .line 51
     iget-object p0, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->endValue:Ljava/lang/Object;
 
     return-object p0
@@ -76,6 +80,7 @@
 .method public getInterpolatedKeyframeProgress()F
     .locals 0
 
+    .line 59
     iget p0, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->interpolatedKeyframeProgress:F
 
     return p0
@@ -84,6 +89,7 @@
 .method public getLinearKeyframeProgress()F
     .locals 0
 
+    .line 55
     iget p0, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->linearKeyframeProgress:F
 
     return p0
@@ -92,6 +98,7 @@
 .method public getOverallProgress()F
     .locals 0
 
+    .line 63
     iget p0, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->overallProgress:F
 
     return p0
@@ -100,6 +107,7 @@
 .method public getStartFrame()F
     .locals 0
 
+    .line 39
     iget p0, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->startFrame:F
 
     return p0
@@ -113,6 +121,7 @@
         }
     .end annotation
 
+    .line 47
     iget-object p0, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->startValue:Ljava/lang/Object;
 
     return-object p0
@@ -128,18 +137,25 @@
         }
     .end annotation
 
+    .line 28
     iput p1, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->startFrame:F
 
+    .line 29
     iput p2, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->endFrame:F
 
+    .line 30
     iput-object p3, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->startValue:Ljava/lang/Object;
 
+    .line 31
     iput-object p4, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->endValue:Ljava/lang/Object;
 
+    .line 32
     iput p5, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->linearKeyframeProgress:F
 
+    .line 33
     iput p6, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->interpolatedKeyframeProgress:F
 
+    .line 34
     iput p7, p0, Lcom/airbnb/lottie/value/LottieFrameInfo;->overallProgress:F
 
     return-object p0

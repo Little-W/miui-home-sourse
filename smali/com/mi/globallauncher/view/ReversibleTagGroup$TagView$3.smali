@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;
 .super Ljava/lang/Object;
+.source "ReversibleTagGroup.java"
 
 # interfaces
 .implements Landroid/view/View$OnKeyListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;Lcom/mi/globallauncher/view/ReversibleTagGroup;)V
     .locals 0
 
+    .line 796
     iput-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;->val$this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -46,12 +48,14 @@
 
     if-ne p2, v0, :cond_3
 
+    .line 799
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p2
 
     if-nez p2, :cond_3
 
+    .line 801
     iget-object p2, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     invoke-virtual {p2}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->getText()Ljava/lang/CharSequence;
@@ -68,6 +72,7 @@
 
     if-eqz p2, :cond_3
 
+    .line 802
     iget-object p2, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iget-object p2, p2, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -78,6 +83,7 @@
 
     if-eqz p2, :cond_3
 
+    .line 804
     invoke-static {p2}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->access$100(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;)Z
 
     move-result p3
@@ -86,12 +92,14 @@
 
     if-eqz p3, :cond_0
 
+    .line 805
     iget-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     invoke-virtual {p1, p2}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->removeView(Landroid/view/View;)V
 
+    .line 806
     iget-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -102,6 +110,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 807
     iget-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -126,6 +135,7 @@
 
     goto :goto_0
 
+    .line 810
     :cond_0
     iget-object p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$3;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
@@ -137,8 +147,10 @@
 
     if-eqz p0, :cond_1
 
+    .line 812
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->setChecked(Z)V
 
+    .line 814
     :cond_1
     invoke-virtual {p2, v0}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->setChecked(Z)V
 

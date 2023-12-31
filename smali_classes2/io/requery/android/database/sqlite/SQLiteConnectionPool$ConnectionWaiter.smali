@@ -1,5 +1,6 @@
 .class final Lio/requery/android/database/sqlite/SQLiteConnectionPool$ConnectionWaiter;
 .super Ljava/lang/Object;
+.source "SQLiteConnectionPool.java"
 
 
 # annotations
@@ -39,6 +40,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1072
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +49,7 @@
 .method synthetic constructor <init>(Lio/requery/android/database/sqlite/SQLiteConnectionPool$1;)V
     .locals 0
 
+    .line 1072
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteConnectionPool$ConnectionWaiter;-><init>()V
 
     return-void

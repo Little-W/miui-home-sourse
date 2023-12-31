@@ -1,5 +1,6 @@
 .class public final Lcom/xiaomi/mirror/Config;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields

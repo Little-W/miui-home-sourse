@@ -1,11 +1,13 @@
 .class public final Lkotlinx/coroutines/CoroutineScopeKt;
 .super Ljava/lang/Object;
+.source "CoroutineScope.kt"
 
 
 # direct methods
 .method public static final CoroutineScope(Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/CoroutineScope;
     .locals 3
 
+    .line 207
     new-instance v0, Lkotlinx/coroutines/internal/ContextScope;
 
     sget-object v1, Lkotlinx/coroutines/Job;->Key:Lkotlinx/coroutines/Job$Key;

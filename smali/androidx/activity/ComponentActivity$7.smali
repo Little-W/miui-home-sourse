@@ -1,5 +1,6 @@
 .class Landroidx/activity/ComponentActivity$7;
 .super Ljava/lang/Object;
+.source "ComponentActivity.java"
 
 # interfaces
 .implements Landroidx/activity/contextaware/OnContextAvailableListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/activity/ComponentActivity;)V
     .locals 0
 
+    .line 281
     iput-object p1, p0, Landroidx/activity/ComponentActivity$7;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onContextAvailable(Landroid/content/Context;)V
     .locals 1
 
+    .line 285
     iget-object p1, p0, Landroidx/activity/ComponentActivity$7;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
@@ -44,12 +47,14 @@
 
     const-string v0, "android:support:activity-result"
 
+    .line 286
     invoke-virtual {p1, v0}, Landroidx/savedstate/SavedStateRegistry;->consumeRestoredStateForKey(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 289
     iget-object p0, p0, Landroidx/activity/ComponentActivity$7;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-static {p0}, Landroidx/activity/ComponentActivity;->access$100(Landroidx/activity/ComponentActivity;)Landroidx/activity/result/ActivityResultRegistry;

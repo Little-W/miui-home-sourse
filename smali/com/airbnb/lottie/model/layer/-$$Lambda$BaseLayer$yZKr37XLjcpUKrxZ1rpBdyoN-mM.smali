@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/airbnb/lottie/model/layer/-$$Lambda$BaseLayer$yZKr37XLjcpUKrxZ1rpBdyoN-mM;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;

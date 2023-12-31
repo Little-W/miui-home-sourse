@@ -1,5 +1,6 @@
 .class public final Lkotlin/jvm/internal/PackageReference;
 .super Ljava/lang/Object;
+.source "PackageReference.kt"
 
 # interfaces
 .implements Lkotlin/jvm/internal/ClassBasedDeclarationContainer;
@@ -39,6 +40,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/jvm/internal/PackageReference;->jClass:Ljava/lang/Class;
@@ -53,6 +55,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 19
     instance-of v0, p1, Lkotlin/jvm/internal/PackageReference;
 
     if-eqz v0, :cond_0
@@ -94,6 +97,7 @@
         }
     .end annotation
 
+    .line 12
     iget-object p0, p0, Lkotlin/jvm/internal/PackageReference;->jClass:Ljava/lang/Class;
 
     return-object p0
@@ -102,6 +106,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 22
     invoke-virtual {p0}, Lkotlin/jvm/internal/PackageReference;->getJClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -116,6 +121,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

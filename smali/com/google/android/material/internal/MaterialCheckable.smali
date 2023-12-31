@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/material/internal/MaterialCheckable;
 .super Ljava/lang/Object;
+.source "MaterialCheckable.java"
 
 # interfaces
 .implements Landroid/widget/Checkable;

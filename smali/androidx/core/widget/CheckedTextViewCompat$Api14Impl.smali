@@ -1,5 +1,6 @@
 .class Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;
 .super Ljava/lang/Object;
+.source "CheckedTextViewCompat.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static getCheckMarkDrawable(Landroid/widget/CheckedTextView;)Landroid/graphics/drawable/Drawable;
     .locals 4
 
+    .line 177
     sget-boolean v0, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sResolved:Z
 
     const-string v1, "CheckedTextViewCompat"
@@ -31,17 +33,20 @@
 
     const/4 v0, 0x1
 
+    .line 179
     :try_start_0
     const-class v2, Landroid/widget/CheckedTextView;
 
     const-string v3, "mCheckMarkDrawable"
 
+    .line 180
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
     sput-object v2, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sCheckMarkDrawableField:Ljava/lang/reflect/Field;
 
+    .line 181
     sget-object v2, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sCheckMarkDrawableField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -55,11 +60,14 @@
 
     const-string v3, "Failed to retrieve mCheckMarkDrawable field"
 
+    .line 183
     invoke-static {v1, v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 185
     :goto_0
     sput-boolean v0, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sResolved:Z
 
+    .line 188
     :cond_0
     sget-object v0, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sCheckMarkDrawableField:Ljava/lang/reflect/Field;
 
@@ -67,6 +75,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 190
     :try_start_1
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -83,8 +92,10 @@
 
     const-string v0, "Failed to get check mark drawable via reflection"
 
+    .line 192
     invoke-static {v1, v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 193
     sput-object v2, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sCheckMarkDrawableField:Ljava/lang/reflect/Field;
 
     :cond_1

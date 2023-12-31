@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/b/h;Ljava/util/ArrayList;)V
     .locals 0
 
+    .line 50
     iput-object p1, p0, Lcom/xiaomi/onetrack/b/i;->b:Lcom/xiaomi/onetrack/b/h;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/b/i;->a:Ljava/util/ArrayList;
@@ -29,10 +30,12 @@
 .method public run()V
     .locals 2
 
+    .line 53
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
+    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,6 +56,7 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 57
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/b/i;->b:Lcom/xiaomi/onetrack/b/h;
 

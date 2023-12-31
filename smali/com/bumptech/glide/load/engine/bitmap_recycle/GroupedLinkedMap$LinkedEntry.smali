@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;
 .super Ljava/lang/Object;
+.source "GroupedLinkedMap.java"
 
 
 # annotations
@@ -67,6 +68,7 @@
 
     const/4 v0, 0x0
 
+    .line 131
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;-><init>(Ljava/lang/Object;)V
 
     return-void
@@ -80,12 +82,15 @@
         }
     .end annotation
 
+    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 135
     iput-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->prev:Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;
 
     iput-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->next:Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;
 
+    .line 136
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->key:Ljava/lang/Object;
 
     return-void
@@ -101,16 +106,19 @@
         }
     .end annotation
 
+    .line 150
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->values:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 151
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->values:Ljava/util/List;
 
+    .line 153
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->values:Ljava/util/List;
 
@@ -127,12 +135,14 @@
         }
     .end annotation
 
+    .line 141
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->size()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
+    .line 142
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->values:Ljava/util/List;
 
     add-int/lit8 v0, v0, -0x1
@@ -153,6 +163,7 @@
 .method public size()I
     .locals 0
 
+    .line 146
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/GroupedLinkedMap$LinkedEntry;->values:Ljava/util/List;
 
     if-eqz p0, :cond_0

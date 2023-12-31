@@ -1,5 +1,6 @@
 .class Lorg/brotli/dec/BitReader;
 .super Ljava/lang/Object;
+.source "BitReader.java"
 
 
 # instance fields
@@ -26,10 +27,12 @@
 .method constructor <init>()V
     .locals 3
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x1040
 
+    .line 28
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -42,6 +45,7 @@
 
     iput-object v1, p0, Lorg/brotli/dec/BitReader;->byteBuffer:Ljava/nio/ByteBuffer;
 
+    .line 29
     iget-object v1, p0, Lorg/brotli/dec/BitReader;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->asIntBuffer()Ljava/nio/IntBuffer;
@@ -52,10 +56,12 @@
 
     new-array v0, v0, [B
 
+    .line 30
     iput-object v0, p0, Lorg/brotli/dec/BitReader;->shadowBuffer:[B
 
     const/4 v0, 0x0
 
+    .line 55
     iput v0, p0, Lorg/brotli/dec/BitReader;->tailBytes:I
 
     return-void
@@ -64,12 +70,14 @@
 .method static checkHealth(Lorg/brotli/dec/BitReader;)V
     .locals 2
 
+    .line 101
     iget-boolean v0, p0, Lorg/brotli/dec/BitReader;->endOfStreamReached:Z
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 106
     :cond_0
     iget v0, p0, Lorg/brotli/dec/BitReader;->available:I
 
@@ -83,6 +91,7 @@
 
     add-int/2addr v0, v1
 
+    .line 107
     iget p0, p0, Lorg/brotli/dec/BitReader;->tailBytes:I
 
     rsub-int/lit8 p0, p0, 0x40
@@ -91,6 +100,7 @@
 
     return-void
 
+    .line 109
     :cond_1
     new-instance p0, Lorg/brotli/dec/BrotliRuntimeException;
 
@@ -109,14 +119,17 @@
         }
     .end annotation
 
+    .line 163
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->input:Ljava/io/InputStream;
 
     const/4 v1, 0x0
 
+    .line 164
     iput-object v1, p0, Lorg/brotli/dec/BitReader;->input:Ljava/io/InputStream;
 
     if-eqz v0, :cond_0
 
+    .line 166
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     :cond_0
@@ -126,12 +139,14 @@
 .method static fillBitWindow(Lorg/brotli/dec/BitReader;)V
     .locals 6
 
+    .line 117
     iget v0, p0, Lorg/brotli/dec/BitReader;->bitOffset:I
 
     const/16 v1, 0x20
 
     if-lt v0, v1, :cond_0
 
+    .line 118
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->intBuffer:Ljava/nio/IntBuffer;
 
     invoke-virtual {v0}, Ljava/nio/IntBuffer;->get()I
@@ -150,12 +165,14 @@
 
     iput-wide v2, p0, Lorg/brotli/dec/BitReader;->accumulator:J
 
+    .line 119
     iget v0, p0, Lorg/brotli/dec/BitReader;->bitOffset:I
 
     sub-int/2addr v0, v1
 
     iput v0, p0, Lorg/brotli/dec/BitReader;->bitOffset:I
 
+    .line 120
     iget v0, p0, Lorg/brotli/dec/BitReader;->available:I
 
     add-int/lit8 v0, v0, -0x1
@@ -169,16 +186,20 @@
 .method static init(Lorg/brotli/dec/BitReader;Ljava/io/InputStream;)V
     .locals 2
 
+    .line 144
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->input:Ljava/io/InputStream;
 
     if-nez v0, :cond_1
 
+    .line 147
     iput-object p1, p0, Lorg/brotli/dec/BitReader;->input:Ljava/io/InputStream;
 
     const-wide/16 v0, 0x0
 
+    .line 148
     iput-wide v0, p0, Lorg/brotli/dec/BitReader;->accumulator:J
 
+    .line 149
     iget-object p1, p0, Lorg/brotli/dec/BitReader;->intBuffer:Ljava/nio/IntBuffer;
 
     const/16 v0, 0x400
@@ -187,26 +208,34 @@
 
     const/16 p1, 0x40
 
+    .line 150
     iput p1, p0, Lorg/brotli/dec/BitReader;->bitOffset:I
 
     const/4 p1, 0x0
 
+    .line 151
     iput p1, p0, Lorg/brotli/dec/BitReader;->available:I
 
+    .line 152
     iput-boolean p1, p0, Lorg/brotli/dec/BitReader;->endOfStreamReached:Z
 
+    .line 153
     invoke-static {p0}, Lorg/brotli/dec/BitReader;->readMoreInput(Lorg/brotli/dec/BitReader;)V
 
+    .line 155
     iget p1, p0, Lorg/brotli/dec/BitReader;->available:I
 
     if-eqz p1, :cond_0
 
+    .line 158
     invoke-static {p0}, Lorg/brotli/dec/BitReader;->fillBitWindow(Lorg/brotli/dec/BitReader;)V
 
+    .line 159
     invoke-static {p0}, Lorg/brotli/dec/BitReader;->fillBitWindow(Lorg/brotli/dec/BitReader;)V
 
     return-void
 
+    .line 156
     :cond_0
     new-instance p0, Lorg/brotli/dec/BrotliRuntimeException;
 
@@ -216,6 +245,7 @@
 
     throw p0
 
+    .line 145
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -229,6 +259,7 @@
 .method static jumpToByteBoundary(Lorg/brotli/dec/BitReader;)V
     .locals 1
 
+    .line 171
     iget v0, p0, Lorg/brotli/dec/BitReader;->bitOffset:I
 
     rsub-int/lit8 v0, v0, 0x40
@@ -237,6 +268,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 173
     invoke-static {p0, v0}, Lorg/brotli/dec/BitReader;->readBits(Lorg/brotli/dec/BitReader;I)I
 
     move-result p0
@@ -245,6 +277,7 @@
 
     goto :goto_0
 
+    .line 175
     :cond_0
     new-instance p0, Lorg/brotli/dec/BrotliRuntimeException;
 
@@ -262,8 +295,10 @@
 .method static readBits(Lorg/brotli/dec/BitReader;I)I
     .locals 4
 
+    .line 128
     invoke-static {p0}, Lorg/brotli/dec/BitReader;->fillBitWindow(Lorg/brotli/dec/BitReader;)V
 
+    .line 129
     iget-wide v0, p0, Lorg/brotli/dec/BitReader;->accumulator:J
 
     iget v2, p0, Lorg/brotli/dec/BitReader;->bitOffset:I
@@ -282,6 +317,7 @@
 
     add-int/2addr v2, p1
 
+    .line 130
     iput v2, p0, Lorg/brotli/dec/BitReader;->bitOffset:I
 
     return v0
@@ -290,6 +326,7 @@
 .method static readMoreInput(Lorg/brotli/dec/BitReader;)V
     .locals 6
 
+    .line 67
     iget v0, p0, Lorg/brotli/dec/BitReader;->available:I
 
     const/16 v1, 0x9
@@ -298,6 +335,7 @@
 
     return-void
 
+    .line 70
     :cond_0
     iget-boolean v1, p0, Lorg/brotli/dec/BitReader;->endOfStreamReached:Z
 
@@ -309,6 +347,7 @@
 
     return-void
 
+    .line 74
     :cond_1
     new-instance p0, Lorg/brotli/dec/BrotliRuntimeException;
 
@@ -318,6 +357,7 @@
 
     throw p0
 
+    .line 76
     :cond_2
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->intBuffer:Ljava/nio/IntBuffer;
 
@@ -331,6 +371,7 @@
 
     rsub-int v2, v0, 0x1000
 
+    .line 78
     iget-object v3, p0, Lorg/brotli/dec/BitReader;->shadowBuffer:[B
 
     const/4 v4, 0x0
@@ -340,6 +381,7 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
+    .line 81
     :try_start_0
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->input:Ljava/io/InputStream;
 
@@ -357,8 +399,10 @@
 
     const/4 v0, 0x1
 
+    .line 83
     iput-boolean v0, p0, Lorg/brotli/dec/BitReader;->endOfStreamReached:Z
 
+    .line 84
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->shadowBuffer:[B
 
     const/16 v1, 0x40
@@ -369,6 +413,7 @@
 
     and-int/lit8 v0, v2, 0x3
 
+    .line 86
     iput v0, p0, Lorg/brotli/dec/BitReader;->tailBytes:I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -383,6 +428,7 @@
     :catch_0
     move-exception p0
 
+    .line 92
     new-instance v0, Lorg/brotli/dec/BrotliRuntimeException;
 
     const-string v1, "Failed to read input"
@@ -391,12 +437,14 @@
 
     throw v0
 
+    .line 94
     :cond_4
     :goto_1
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
+    .line 95
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->byteBuffer:Ljava/nio/ByteBuffer;
 
     iget-object v1, p0, Lorg/brotli/dec/BitReader;->shadowBuffer:[B
@@ -407,12 +455,14 @@
 
     invoke-virtual {v0, v1, v4, v3}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
+    .line 96
     iget-object v0, p0, Lorg/brotli/dec/BitReader;->intBuffer:Ljava/nio/IntBuffer;
 
     invoke-virtual {v0}, Ljava/nio/IntBuffer;->rewind()Ljava/nio/Buffer;
 
     shr-int/lit8 v0, v2, 0x2
 
+    .line 97
     iput v0, p0, Lorg/brotli/dec/BitReader;->available:I
 
     return-void

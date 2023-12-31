@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform$ObjectParser;
 .super Ljava/lang/Object;
+.source "CrashlyticsReportJsonTransform.java"
 
 
 # annotations

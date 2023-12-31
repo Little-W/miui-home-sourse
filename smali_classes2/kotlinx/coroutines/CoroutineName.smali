@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/CoroutineName;
 .super Lkotlin/coroutines/AbstractCoroutineContextElement;
+.source "CoroutineName.kt"
 
 
 # annotations
@@ -36,6 +37,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
+    .line 19
     sget-object v0, Lkotlinx/coroutines/CoroutineName;->Key:Lkotlinx/coroutines/CoroutineName$Key;
 
     check-cast v0, Lkotlin/coroutines/CoroutineContext$Key;
@@ -87,6 +89,7 @@
 .method public final getName()Ljava/lang/String;
     .locals 0
 
+    .line 18
     iget-object p0, p0, Lkotlinx/coroutines/CoroutineName;->name:Ljava/lang/String;
 
     return-object p0
@@ -115,6 +118,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

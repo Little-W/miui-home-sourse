@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application_Organization;
 .super Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;
+.source "AutoValue_CrashlyticsReport_Session_Application_Organization.java"
 
 
 # instance fields
@@ -16,13 +17,16 @@
 
     return p0
 
+    .line 35
     :cond_0
     instance-of v0, p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;
 
     if-eqz v0, :cond_1
 
+    .line 36
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;
 
+    .line 37
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application_Organization;->clsId:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Application$Organization;->getClsId()Ljava/lang/String;
@@ -44,6 +48,7 @@
 .method public getClsId()Ljava/lang/String;
     .locals 0
 
+    .line 20
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application_Organization;->clsId:Ljava/lang/String;
 
     return-object p0
@@ -52,6 +57,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 46
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Application_Organization;->clsId:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -68,6 +74,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public interface abstract Lokio/BufferedSink;
 .super Ljava/lang/Object;
+.source "BufferedSink.java"
 
 # interfaces
 .implements Ljava/nio/channels/WritableByteChannel;

@@ -1,11 +1,13 @@
 .class public Landroidx/room/RoomMasterTable;
 .super Ljava/lang/Object;
+.source "RoomMasterTable.java"
 
 
 # direct methods
 .method public static createInsertQuery(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

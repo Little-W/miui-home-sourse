@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/a3$b$a;
 .super Lkotlin/jvm/internal/Lambda;
+.source "SourceFile"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;

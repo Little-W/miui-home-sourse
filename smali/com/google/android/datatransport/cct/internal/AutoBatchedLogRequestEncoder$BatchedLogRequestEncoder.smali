@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$BatchedLogRequestEncoder;
 .super Ljava/lang/Object;
+.source "AutoBatchedLogRequestEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -35,6 +36,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 36
     new-instance v0, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$BatchedLogRequestEncoder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$BatchedLogRequestEncoder;-><init>()V
@@ -43,6 +45,7 @@
 
     const-string v0, "logRequest"
 
+    .line 38
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -55,6 +58,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,6 +74,7 @@
         }
     .end annotation
 
+    .line 42
     sget-object p0, Lcom/google/android/datatransport/cct/internal/AutoBatchedLogRequestEncoder$BatchedLogRequestEncoder;->LOGREQUEST_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;->getLogRequests()Ljava/util/List;
@@ -89,6 +94,7 @@
         }
     .end annotation
 
+    .line 35
     check-cast p1, Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

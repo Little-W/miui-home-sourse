@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/flow/SubscribedFlowCollector$onSubscription$1;
 .super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "Share.kt"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/JsonExceptionsKt;
 .super Ljava/lang/Object;
+.source "JsonExceptions.kt"
 
 
 # direct methods
@@ -18,6 +19,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 45
     invoke-static {p0, p1, p2}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->unexpectedFpErrorMessage(Ljava/lang/Number;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -42,8 +44,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 34
     new-instance v0, Lkotlinx/serialization/json/internal/JsonEncodingException;
 
+    .line 35
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,6 +80,7 @@
 
     const/4 v3, 0x0
 
+    .line 38
     invoke-static {p1, p0, v2, v3}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->minify$default(Ljava/lang/String;IILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -86,6 +91,7 @@
 
     move-result-object p0
 
+    .line 34
     invoke-direct {v0, p0}, Lkotlinx/serialization/json/internal/JsonEncodingException;-><init>(Ljava/lang/String;)V
 
     return-object v0
@@ -98,8 +104,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 69
     new-instance v0, Lkotlinx/serialization/json/internal/JsonEncodingException;
 
+    .line 70
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,6 +130,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 71
     invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
     move-result-object p0
@@ -140,6 +149,7 @@
 
     move-result-object p0
 
+    .line 69
     invoke-direct {v0, p0}, Lkotlinx/serialization/json/internal/JsonEncodingException;-><init>(Ljava/lang/String;)V
 
     return-object v0
@@ -152,6 +162,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 24
     new-instance v0, Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     if-ltz p0, :cond_0
@@ -193,6 +204,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -231,6 +243,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -259,6 +272,7 @@
 
     const/4 v2, 0x0
 
+    .line 66
     invoke-static {p1, p0, v1, v2}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->minify$default(Ljava/lang/String;IILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -271,6 +285,7 @@
 
     const/4 p1, -0x1
 
+    .line 62
     invoke-static {p1, p0}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->JsonDecodingException(ILjava/lang/String;)Lkotlinx/serialization/json/internal/JsonDecodingException;
 
     move-result-object p0
@@ -281,6 +296,7 @@
 .method private static final minify(Ljava/lang/String;I)Ljava/lang/String;
     .locals 6
 
+    .line 76
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -300,6 +316,7 @@
 
     if-ne p1, v0, :cond_3
 
+    .line 78
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p1
@@ -310,6 +327,7 @@
 
     return-object p0
 
+    .line 80
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -358,6 +376,7 @@
     :cond_4
     move-object v4, v2
 
+    .line 86
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -367,6 +386,7 @@
 
     move-object v2, v3
 
+    .line 87
     :cond_5
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -425,6 +445,7 @@
 
     const/4 p1, -0x1
 
+    .line 75
     :cond_0
     invoke-static {p0, p1}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->minify(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -444,6 +465,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -488,6 +510,7 @@
 .method private static final unexpectedFpErrorMessage(Ljava/lang/Number;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -526,6 +549,7 @@
 
     const/4 v1, 0x0
 
+    .line 59
     invoke-static {p2, p0, p1, v1}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->minify$default(Ljava/lang/String;IILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

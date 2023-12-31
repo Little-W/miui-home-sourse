@@ -1,5 +1,6 @@
 .class Landroidx/core/view/WindowInsetsCompat$Impl20;
 .super Landroidx/core/view/WindowInsetsCompat$Impl;
+.source "WindowInsetsCompat.java"
 
 
 # annotations
@@ -54,12 +55,15 @@
 .method constructor <init>(Landroidx/core/view/WindowInsetsCompat;Landroid/view/WindowInsets;)V
     .locals 0
 
+    .line 899
     invoke-direct {p0, p1}, Landroidx/core/view/WindowInsetsCompat$Impl;-><init>(Landroidx/core/view/WindowInsetsCompat;)V
 
     const/4 p1, 0x0
 
+    .line 893
     iput-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mSystemWindowInsets:Landroidx/core/graphics/Insets;
 
+    .line 900
     iput-object p2, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
     return-void
@@ -68,6 +72,7 @@
 .method constructor <init>(Landroidx/core/view/WindowInsetsCompat;Landroidx/core/view/WindowInsetsCompat$Impl20;)V
     .locals 1
 
+    .line 904
     new-instance v0, Landroid/view/WindowInsets;
 
     iget-object p2, p2, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
@@ -82,6 +87,7 @@
 .method private getInsets(IZ)Landroidx/core/graphics/Insets;
     .locals 3
 
+    .line 941
     sget-object v0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
     const/4 v1, 0x1
@@ -97,6 +103,7 @@
 
     goto :goto_1
 
+    .line 946
     :cond_0
     invoke-virtual {p0, v1, p2}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getInsetsForType(IZ)Landroidx/core/graphics/Insets;
 
@@ -118,16 +125,19 @@
 .method private getRootStableInsets()Landroidx/core/graphics/Insets;
     .locals 0
 
+    .line 1103
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootWindowInsets:Landroidx/core/view/WindowInsetsCompat;
 
     if-eqz p0, :cond_0
 
+    .line 1104
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat;->getStableInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p0
 
     return-object p0
 
+    .line 1106
     :cond_0
     sget-object p0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
@@ -139,18 +149,22 @@
 
     const-string p0, "WindowInsetsCompat"
 
+    .line 1127
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-ge v0, v1, :cond_5
 
+    .line 1131
     sget-boolean v0, Landroidx/core/view/WindowInsetsCompat$Impl20;->sVisibleRectReflectionFetched:Z
 
     if-nez v0, :cond_0
 
+    .line 1132
     invoke-static {}, Landroidx/core/view/WindowInsetsCompat$Impl20;->loadReflectionField()V
 
+    .line 1135
     :cond_0
     sget-object v0, Landroidx/core/view/WindowInsetsCompat$Impl20;->sGetViewRootImplMethod:Ljava/lang/reflect/Method;
 
@@ -174,6 +188,7 @@
     :try_start_0
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 1142
     invoke-virtual {v0, p1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -182,6 +197,7 @@
 
     const-string p1, "Failed to get visible insets. getViewRootImpl() returned null from the provided view. This means that the view is either not attached or the method has been overridden"
 
+    .line 1144
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
@@ -190,6 +206,7 @@
 
     return-object v1
 
+    .line 1150
     :cond_2
     sget-object v0, Landroidx/core/view/WindowInsetsCompat$Impl20;->sAttachInfoField:Ljava/lang/reflect/Field;
 
@@ -197,6 +214,7 @@
 
     move-result-object p1
 
+    .line 1151
     sget-object v0, Landroidx/core/view/WindowInsetsCompat$Impl20;->sVisibleInsetsField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -207,6 +225,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1152
     invoke-static {p1}, Landroidx/core/graphics/Insets;->of(Landroid/graphics/Rect;)Landroidx/core/graphics/Insets;
 
     move-result-object v1
@@ -219,6 +238,7 @@
     :catch_0
     move-exception p1
 
+    .line 1155
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -227,6 +247,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1156
     invoke-virtual {p1}, Ljava/lang/ReflectiveOperationException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -237,12 +258,14 @@
 
     move-result-object v0
 
+    .line 1155
     invoke-static {p0, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_4
     :goto_0
     return-object v1
 
+    .line 1128
     :cond_5
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -258,6 +281,7 @@
 
     const/4 v0, 0x1
 
+    .line 1172
     :try_start_0
     const-class v1, Landroid/view/View;
 
@@ -275,12 +299,14 @@
 
     const-string v1, "android.view.View$AttachInfo"
 
+    .line 1173
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     sput-object v1, Landroidx/core/view/WindowInsetsCompat$Impl20;->sAttachInfoClass:Ljava/lang/Class;
 
+    .line 1174
     sget-object v1, Landroidx/core/view/WindowInsetsCompat$Impl20;->sAttachInfoClass:Ljava/lang/Class;
 
     const-string v2, "mVisibleInsets"
@@ -293,22 +319,26 @@
 
     const-string v1, "android.view.ViewRootImpl"
 
+    .line 1175
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     const-string v2, "mAttachInfo"
 
+    .line 1176
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
     sput-object v1, Landroidx/core/view/WindowInsetsCompat$Impl20;->sAttachInfoField:Ljava/lang/reflect/Field;
 
+    .line 1177
     sget-object v1, Landroidx/core/view/WindowInsetsCompat$Impl20;->sVisibleInsetsField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 1178
     sget-object v1, Landroidx/core/view/WindowInsetsCompat$Impl20;->sAttachInfoField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -320,6 +350,7 @@
     :catch_0
     move-exception v1
 
+    .line 1180
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -342,6 +373,7 @@
 
     invoke-static {v3, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 1183
     :goto_0
     sput-boolean v0, Landroidx/core/view/WindowInsetsCompat$Impl20;->sVisibleRectReflectionFetched:Z
 
@@ -353,14 +385,17 @@
 .method copyRootViewBounds(Landroid/view/View;)V
     .locals 0
 
+    .line 1112
     invoke-direct {p0, p1}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getVisibleInsets(Landroid/view/View;)Landroidx/core/graphics/Insets;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
+    .line 1114
     sget-object p1, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
+    .line 1116
     :cond_0
     invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsCompat$Impl20;->setRootViewData(Landroidx/core/graphics/Insets;)V
 
@@ -370,10 +405,12 @@
 .method copyWindowDataInto(Landroidx/core/view/WindowInsetsCompat;)V
     .locals 1
 
+    .line 1087
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootWindowInsets:Landroidx/core/view/WindowInsetsCompat;
 
     invoke-virtual {p1, v0}, Landroidx/core/view/WindowInsetsCompat;->setRootWindowInsets(Landroidx/core/view/WindowInsetsCompat;)V
 
+    .line 1088
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootViewVisibleInsets:Landroidx/core/graphics/Insets;
 
     invoke-virtual {p1, p0}, Landroidx/core/view/WindowInsetsCompat;->setRootViewData(Landroidx/core/graphics/Insets;)V
@@ -384,6 +421,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1188
     invoke-super {p0, p1}, Landroidx/core/view/WindowInsetsCompat$Impl;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -394,9 +432,11 @@
 
     return p0
 
+    .line 1189
     :cond_0
     check-cast p1, Landroidx/core/view/WindowInsetsCompat$Impl20;
 
+    .line 1190
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootViewVisibleInsets:Landroidx/core/graphics/Insets;
 
     iget-object p1, p1, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootViewVisibleInsets:Landroidx/core/graphics/Insets;
@@ -413,6 +453,7 @@
 
     const/4 v0, 0x0
 
+    .line 915
     invoke-direct {p0, p1, v0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getInsets(IZ)Landroidx/core/graphics/Insets;
 
     move-result-object p0
@@ -455,21 +496,25 @@
 
     if-eq p1, p2, :cond_0
 
+    .line 1043
     sget-object p0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
     return-object p0
 
+    .line 1032
     :cond_0
     iget-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootWindowInsets:Landroidx/core/view/WindowInsetsCompat;
 
     if-eqz p1, :cond_1
 
+    .line 1033
     invoke-virtual {p1}, Landroidx/core/view/WindowInsetsCompat;->getDisplayCutout()Landroidx/core/view/DisplayCutoutCompat;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 1034
     :cond_1
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getDisplayCutout()Landroidx/core/view/DisplayCutoutCompat;
 
@@ -478,6 +523,7 @@
     :goto_0
     if-eqz p0, :cond_2
 
+    .line 1036
     invoke-virtual {p0}, Landroidx/core/view/DisplayCutoutCompat;->getSafeInsetLeft()I
 
     move-result p1
@@ -486,6 +532,7 @@
 
     move-result p2
 
+    .line 1037
     invoke-virtual {p0}, Landroidx/core/view/DisplayCutoutCompat;->getSafeInsetRight()I
 
     move-result v0
@@ -494,17 +541,20 @@
 
     move-result p0
 
+    .line 1036
     invoke-static {p1, p2, v0, p0}, Landroidx/core/graphics/Insets;->of(IIII)Landroidx/core/graphics/Insets;
 
     move-result-object p0
 
     return-object p0
 
+    .line 1039
     :cond_2
     sget-object p0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
     return-object p0
 
+    .line 1028
     :cond_3
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getTappableElementInsets()Landroidx/core/graphics/Insets;
 
@@ -512,6 +562,7 @@
 
     return-object p0
 
+    .line 1024
     :cond_4
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getMandatorySystemGestureInsets()Landroidx/core/graphics/Insets;
 
@@ -519,6 +570,7 @@
 
     return-object p0
 
+    .line 1020
     :cond_5
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getSystemGestureInsets()Landroidx/core/graphics/Insets;
 
@@ -526,11 +578,13 @@
 
     return-object p0
 
+    .line 996
     :cond_6
     iget-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mOverriddenInsets:[Landroidx/core/graphics/Insets;
 
     if-eqz p1, :cond_7
 
+    .line 997
     invoke-static {p2}, Landroidx/core/view/WindowInsetsCompat$Type;->indexOf(I)I
 
     move-result p2
@@ -542,21 +596,25 @@
 
     return-object v2
 
+    .line 1001
     :cond_8
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getSystemWindowInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p1
 
+    .line 1002
     invoke-direct {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getRootStableInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p2
 
+    .line 1004
     iget v0, p1, Landroidx/core/graphics/Insets;->bottom:I
 
     iget v2, p2, Landroidx/core/graphics/Insets;->bottom:I
 
     if-le v0, v2, :cond_9
 
+    .line 1007
     iget p0, p1, Landroidx/core/graphics/Insets;->bottom:I
 
     invoke-static {v1, v1, v1, p0}, Landroidx/core/graphics/Insets;->of(IIII)Landroidx/core/graphics/Insets;
@@ -565,6 +623,7 @@
 
     return-object p0
 
+    .line 1008
     :cond_9
     iget-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootViewVisibleInsets:Landroidx/core/graphics/Insets;
 
@@ -572,12 +631,14 @@
 
     sget-object v0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
+    .line 1009
     invoke-virtual {p1, v0}, Landroidx/core/graphics/Insets;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_a
 
+    .line 1012
     iget-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootViewVisibleInsets:Landroidx/core/graphics/Insets;
 
     iget p1, p1, Landroidx/core/graphics/Insets;->bottom:I
@@ -586,6 +647,7 @@
 
     if-le p1, p2, :cond_a
 
+    .line 1013
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootViewVisibleInsets:Landroidx/core/graphics/Insets;
 
     iget p0, p0, Landroidx/core/graphics/Insets;->bottom:I
@@ -596,6 +658,7 @@
 
     return-object p0
 
+    .line 1016
     :cond_a
     sget-object p0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
@@ -604,18 +667,22 @@
     :cond_b
     if-eqz p2, :cond_c
 
+    .line 966
     invoke-direct {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getRootStableInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p1
 
+    .line 967
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getStableInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p0
 
+    .line 968
     iget p2, p1, Landroidx/core/graphics/Insets;->left:I
 
     iget v0, p0, Landroidx/core/graphics/Insets;->left:I
 
+    .line 969
     invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p2
@@ -624,6 +691,7 @@
 
     iget v2, p0, Landroidx/core/graphics/Insets;->right:I
 
+    .line 971
     invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -632,40 +700,48 @@
 
     iget p0, p0, Landroidx/core/graphics/Insets;->bottom:I
 
+    .line 972
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
 
+    .line 968
     invoke-static {p2, v1, v0, p0}, Landroidx/core/graphics/Insets;->of(IIII)Landroidx/core/graphics/Insets;
 
     move-result-object p0
 
     return-object p0
 
+    .line 975
     :cond_c
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getSystemWindowInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p1
 
+    .line 976
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootWindowInsets:Landroidx/core/view/WindowInsetsCompat;
 
     if-eqz p0, :cond_d
 
+    .line 977
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat;->getStableInsets()Landroidx/core/graphics/Insets;
 
     move-result-object v2
 
+    .line 980
     :cond_d
     iget p0, p1, Landroidx/core/graphics/Insets;->bottom:I
 
     if-eqz v2, :cond_e
 
+    .line 985
     iget p2, v2, Landroidx/core/graphics/Insets;->bottom:I
 
     invoke-static {p0, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p0
 
+    .line 987
     :cond_e
     iget p2, p1, Landroidx/core/graphics/Insets;->left:I
 
@@ -680,12 +756,15 @@
     :cond_f
     if-eqz p2, :cond_10
 
+    .line 957
     invoke-direct {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getRootStableInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p1
 
+    .line 958
     iget p1, p1, Landroidx/core/graphics/Insets;->top:I
 
+    .line 959
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getSystemWindowInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p0
@@ -696,12 +775,14 @@
 
     move-result p0
 
+    .line 958
     invoke-static {v1, p0, v1, v1}, Landroidx/core/graphics/Insets;->of(IIII)Landroidx/core/graphics/Insets;
 
     move-result-object p0
 
     return-object p0
 
+    .line 961
     :cond_10
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getSystemWindowInsets()Landroidx/core/graphics/Insets;
 
@@ -719,40 +800,48 @@
 .method final getSystemWindowInsets()Landroidx/core/graphics/Insets;
     .locals 4
 
+    .line 1065
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mSystemWindowInsets:Landroidx/core/graphics/Insets;
 
     if-nez v0, :cond_0
 
+    .line 1066
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
+    .line 1067
     invoke-virtual {v0}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
 
     move-result v0
 
     iget-object v1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
+    .line 1068
     invoke-virtual {v1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v1
 
     iget-object v2, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
+    .line 1069
     invoke-virtual {v2}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
 
     move-result v2
 
     iget-object v3, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
+    .line 1070
     invoke-virtual {v3}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
 
     move-result v3
 
+    .line 1066
     invoke-static {v0, v1, v2, v3}, Landroidx/core/graphics/Insets;->of(IIII)Landroidx/core/graphics/Insets;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mSystemWindowInsets:Landroidx/core/graphics/Insets;
 
+    .line 1072
     :cond_0
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mSystemWindowInsets:Landroidx/core/graphics/Insets;
 
@@ -762,6 +851,7 @@
 .method inset(IIII)Landroidx/core/view/WindowInsetsCompat;
     .locals 2
 
+    .line 1079
     new-instance v0, Landroidx/core/view/WindowInsetsCompat$Builder;
 
     iget-object v1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
@@ -772,6 +862,7 @@
 
     invoke-direct {v0, v1}, Landroidx/core/view/WindowInsetsCompat$Builder;-><init>(Landroidx/core/view/WindowInsetsCompat;)V
 
+    .line 1080
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getSystemWindowInsets()Landroidx/core/graphics/Insets;
 
     move-result-object v1
@@ -782,6 +873,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/core/view/WindowInsetsCompat$Builder;->setSystemWindowInsets(Landroidx/core/graphics/Insets;)Landroidx/core/view/WindowInsetsCompat$Builder;
 
+    .line 1081
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getStableInsets()Landroidx/core/graphics/Insets;
 
     move-result-object p0
@@ -792,6 +884,7 @@
 
     invoke-virtual {v0, p0}, Landroidx/core/view/WindowInsetsCompat$Builder;->setStableInsets(Landroidx/core/graphics/Insets;)Landroidx/core/view/WindowInsetsCompat$Builder;
 
+    .line 1082
     invoke-virtual {v0}, Landroidx/core/view/WindowInsetsCompat$Builder;->build()Landroidx/core/view/WindowInsetsCompat;
 
     move-result-object p0
@@ -802,6 +895,7 @@
 .method isRound()Z
     .locals 0
 
+    .line 909
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
     invoke-virtual {p0}, Landroid/view/WindowInsets;->isRound()Z
@@ -814,6 +908,7 @@
 .method public setOverriddenInsets([Landroidx/core/graphics/Insets;)V
     .locals 0
 
+    .line 1165
     iput-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mOverriddenInsets:[Landroidx/core/graphics/Insets;
 
     return-void
@@ -822,6 +917,7 @@
 .method setRootViewData(Landroidx/core/graphics/Insets;)V
     .locals 0
 
+    .line 1098
     iput-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootViewVisibleInsets:Landroidx/core/graphics/Insets;
 
     return-void
@@ -830,6 +926,7 @@
 .method setRootWindowInsets(Landroidx/core/view/WindowInsetsCompat;)V
     .locals 0
 
+    .line 1093
     iput-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mRootWindowInsets:Landroidx/core/view/WindowInsetsCompat;
 
     return-void

@@ -1,5 +1,6 @@
 .class public final synthetic Landroidx/appcompat/widget/-$$Lambda$tJOcH8l7yIboOEu0TODlxWoYu9s;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

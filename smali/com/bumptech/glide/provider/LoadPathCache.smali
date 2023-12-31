@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/provider/LoadPathCache;
 .super Ljava/lang/Object;
+.source "LoadPathCache.java"
 
 
 # static fields
@@ -40,6 +41,7 @@
 .method static constructor <clinit>()V
     .locals 14
 
+    .line 18
     new-instance v6, Lcom/bumptech/glide/load/engine/LoadPath;
 
     const-class v1, Ljava/lang/Object;
@@ -56,6 +58,7 @@
 
     const-class v10, Ljava/lang/Object;
 
+    .line 28
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v11
@@ -70,6 +73,7 @@
 
     invoke-direct/range {v7 .. v13}, Lcom/bumptech/glide/load/engine/DecodePath;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;Lcom/bumptech/glide/load/resource/transcode/ResourceTranscoder;Landroidx/core/util/Pools$Pool;)V
 
+    .line 23
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
@@ -88,14 +92,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     new-instance v0, Landroidx/collection/ArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/provider/LoadPathCache;->cache:Landroidx/collection/ArrayMap;
 
+    .line 34
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -120,6 +127,7 @@
         }
     .end annotation
 
+    .line 77
     iget-object p0, p0, Lcom/bumptech/glide/provider/LoadPathCache;->keyRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v0, 0x0
@@ -132,10 +140,12 @@
 
     if-nez p0, :cond_0
 
+    .line 79
     new-instance p0, Lcom/bumptech/glide/util/MultiClassKey;
 
     invoke-direct {p0}, Lcom/bumptech/glide/util/MultiClassKey;-><init>()V
 
+    .line 81
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/bumptech/glide/util/MultiClassKey;->set(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V
 
@@ -166,14 +176,17 @@
         }
     .end annotation
 
+    .line 54
     invoke-direct {p0, p1, p2, p3}, Lcom/bumptech/glide/provider/LoadPathCache;->getKey(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)Lcom/bumptech/glide/util/MultiClassKey;
 
     move-result-object p1
 
+    .line 56
     iget-object p2, p0, Lcom/bumptech/glide/provider/LoadPathCache;->cache:Landroidx/collection/ArrayMap;
 
     monitor-enter p2
 
+    .line 57
     :try_start_0
     iget-object p3, p0, Lcom/bumptech/glide/provider/LoadPathCache;->cache:Landroidx/collection/ArrayMap;
 
@@ -183,10 +196,12 @@
 
     check-cast p3, Lcom/bumptech/glide/load/engine/LoadPath;
 
+    .line 58
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 59
     iget-object p0, p0, Lcom/bumptech/glide/provider/LoadPathCache;->keyRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
@@ -196,6 +211,7 @@
     :catchall_0
     move-exception p0
 
+    .line 58
     :try_start_1
     monitor-exit p2
     :try_end_1
@@ -214,6 +230,7 @@
         }
     .end annotation
 
+    .line 42
     sget-object p0, Lcom/bumptech/glide/provider/LoadPathCache;->NO_PATHS_SIGNAL:Lcom/bumptech/glide/load/engine/LoadPath;
 
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -239,10 +256,12 @@
         }
     .end annotation
 
+    .line 68
     iget-object v0, p0, Lcom/bumptech/glide/provider/LoadPathCache;->cache:Landroidx/collection/ArrayMap;
 
     monitor-enter v0
 
+    .line 69
     :try_start_0
     iget-object p0, p0, Lcom/bumptech/glide/provider/LoadPathCache;->cache:Landroidx/collection/ArrayMap;
 
@@ -254,12 +273,15 @@
 
     goto :goto_0
 
+    .line 71
     :cond_0
     sget-object p4, Lcom/bumptech/glide/provider/LoadPathCache;->NO_PATHS_SIGNAL:Lcom/bumptech/glide/load/engine/LoadPath;
 
+    .line 69
     :goto_0
     invoke-virtual {p0, v1, p4}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 72
     monitor-exit v0
 
     return-void

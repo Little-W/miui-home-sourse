@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/datatransport/cct/internal/AutoValue_NetworkConnectionInfo$1;
 .super Ljava/lang/Object;
+.source "AutoValue_NetworkConnectionInfo.java"
 
 
 # annotations

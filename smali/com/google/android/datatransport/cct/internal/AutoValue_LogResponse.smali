@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/cct/internal/AutoValue_LogResponse;
 .super Lcom/google/android/datatransport/cct/internal/LogResponse;
+.source "AutoValue_LogResponse.java"
 
 
 # instance fields
@@ -10,8 +11,10 @@
 .method constructor <init>(J)V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Lcom/google/android/datatransport/cct/internal/LogResponse;-><init>()V
 
+    .line 12
     iput-wide p1, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogResponse;->nextRequestWaitMillis:J
 
     return-void
@@ -28,6 +31,7 @@
 
     return v0
 
+    .line 32
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/cct/internal/LogResponse;
 
@@ -35,8 +39,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 33
     check-cast p1, Lcom/google/android/datatransport/cct/internal/LogResponse;
 
+    .line 34
     iget-wide v3, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogResponse;->nextRequestWaitMillis:J
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/cct/internal/LogResponse;->getNextRequestWaitMillis()J
@@ -62,6 +68,7 @@
 .method public getNextRequestWaitMillis()J
     .locals 2
 
+    .line 17
     iget-wide v0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogResponse;->nextRequestWaitMillis:J
 
     return-wide v0
@@ -70,6 +77,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 43
     iget-wide v0, p0, Lcom/google/android/datatransport/cct/internal/AutoValue_LogResponse;->nextRequestWaitMillis:J
 
     const/16 p0, 0x20
@@ -90,6 +98,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 22
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

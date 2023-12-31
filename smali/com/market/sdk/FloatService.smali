@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/FloatService;
 .super Lcom/market/ServiceProxy;
+.source "FloatService.java"
 
 # interfaces
 .implements Lcom/xiaomi/market/IAppDownloadManager;
@@ -21,6 +22,7 @@
 .method private constructor <init>(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
+    .line 39
     invoke-direct {p0, p1, p2}, Lcom/market/ServiceProxy;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -29,6 +31,7 @@
 .method static synthetic access$000(Lcom/market/sdk/FloatService;)Lcom/xiaomi/market/IAppDownloadManager;
     .locals 0
 
+    .line 21
     iget-object p0, p0, Lcom/market/sdk/FloatService;->mAidl:Lcom/xiaomi/market/IAppDownloadManager;
 
     return-object p0
@@ -37,19 +40,23 @@
 .method public static openService(Landroid/content/Context;Ljava/lang/String;)Lcom/xiaomi/market/IAppDownloadManager;
     .locals 3
 
+    .line 29
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 30
     sget-object p1, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
 
+    .line 32
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
+    .line 33
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.xiaomi.market.data.AppDownloadService"
@@ -60,8 +67,10 @@
 
     const-string p1, "com.xiaomi.market.service.AppDownloadService"
 
+    .line 34
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 35
     new-instance p1, Lcom/market/sdk/FloatService;
 
     invoke-direct {p1, p0, v0}, Lcom/market/sdk/FloatService;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
@@ -100,6 +109,7 @@
         }
     .end annotation
 
+    .line 54
     new-instance v0, Lcom/market/sdk/FloatService$1;
 
     invoke-direct {v0, p0, p1}, Lcom/market/sdk/FloatService$1;-><init>(Lcom/market/sdk/FloatService;Landroid/os/Bundle;)V
@@ -119,6 +129,7 @@
         }
     .end annotation
 
+    .line 107
     new-instance v0, Lcom/market/sdk/FloatService$4;
 
     invoke-direct {v0, p0, p1}, Lcom/market/sdk/FloatService$4;-><init>(Lcom/market/sdk/FloatService;Landroid/net/Uri;)V
@@ -138,6 +149,7 @@
         }
     .end annotation
 
+    .line 149
     new-instance v0, Lcom/market/sdk/FloatService$7;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/market/sdk/FloatService$7;-><init>(Lcom/market/sdk/FloatService;Ljava/lang/String;I)V
@@ -152,6 +164,7 @@
 .method public onConnected(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 44
     invoke-static {p1}, Lcom/xiaomi/market/IAppDownloadManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/xiaomi/market/IAppDownloadManager;
 
     move-result-object p1
@@ -175,10 +188,12 @@
         }
     .end annotation
 
+    .line 73
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
+    .line 74
     new-instance v1, Lcom/market/sdk/FloatService$2;
 
     invoke-direct {v1, p0, v0, p1, p2}, Lcom/market/sdk/FloatService$2;-><init>(Lcom/market/sdk/FloatService;Lcom/market/sdk/compat/FutureTaskCompat;Ljava/lang/String;Ljava/lang/String;)V
@@ -187,8 +202,10 @@
 
     invoke-virtual {p0, v1, p1}, Lcom/market/sdk/FloatService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
+    .line 84
     invoke-virtual {p0}, Lcom/market/sdk/FloatService;->waitForCompletion()V
 
+    .line 85
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
     move-result p0
@@ -222,6 +239,7 @@
         }
     .end annotation
 
+    .line 121
     new-instance v0, Lcom/market/sdk/FloatService$5;
 
     invoke-direct {v0, p0, p1}, Lcom/market/sdk/FloatService$5;-><init>(Lcom/market/sdk/FloatService;Landroid/net/Uri;)V
@@ -241,10 +259,12 @@
         }
     .end annotation
 
+    .line 90
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
+    .line 91
     new-instance v1, Lcom/market/sdk/FloatService$3;
 
     invoke-direct {v1, p0, v0, p1, p2}, Lcom/market/sdk/FloatService$3;-><init>(Lcom/market/sdk/FloatService;Lcom/market/sdk/compat/FutureTaskCompat;Ljava/lang/String;Ljava/lang/String;)V
@@ -253,8 +273,10 @@
 
     invoke-virtual {p0, v1, p1}, Lcom/market/sdk/FloatService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
+    .line 101
     invoke-virtual {p0}, Lcom/market/sdk/FloatService;->waitForCompletion()V
 
+    .line 102
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
     move-result p0
@@ -288,6 +310,7 @@
         }
     .end annotation
 
+    .line 135
     new-instance v0, Lcom/market/sdk/FloatService$6;
 
     invoke-direct {v0, p0, p1}, Lcom/market/sdk/FloatService$6;-><init>(Lcom/market/sdk/FloatService;Landroid/net/Uri;)V

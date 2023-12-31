@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/MarketManager$4;
 .super Lcom/market/sdk/RemoteMethodInvoker;
+.source "MarketManager.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager;)V
     .locals 0
 
+    .line 301
     iput-object p1, p0, Lcom/market/sdk/MarketManager$4;->this$0:Lcom/market/sdk/MarketManager;
 
     invoke-direct {p0}, Lcom/market/sdk/RemoteMethodInvoker;-><init>()V
@@ -41,6 +43,7 @@
 .method public innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Boolean;
     .locals 1
 
+    .line 304
     :try_start_0
     invoke-interface {p1}, Lcom/market/sdk/IMarketService;->allowConnectToNetwork()Z
 
@@ -57,6 +60,7 @@
     :catch_0
     move-exception p0
 
+    .line 306
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,6 +81,7 @@
 
     const/4 p0, 0x0
 
+    .line 308
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -92,6 +97,7 @@
         }
     .end annotation
 
+    .line 301
     invoke-virtual {p0, p1}, Lcom/market/sdk/MarketManager$4;->innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Boolean;
 
     move-result-object p0

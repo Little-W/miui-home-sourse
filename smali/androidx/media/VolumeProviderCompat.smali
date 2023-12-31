@@ -1,5 +1,6 @@
 .class public abstract Landroidx/media/VolumeProviderCompat;
 .super Ljava/lang/Object;
+.source "VolumeProviderCompat.java"
 
 
 # annotations
@@ -26,6 +27,7 @@
 .method public final getCurrentVolume()I
     .locals 0
 
+    .line 94
     iget p0, p0, Landroidx/media/VolumeProviderCompat;->mCurrentVolume:I
 
     return p0
@@ -34,6 +36,7 @@
 .method public final getMaxVolume()I
     .locals 0
 
+    .line 113
     iget p0, p0, Landroidx/media/VolumeProviderCompat;->mMaxVolume:I
 
     return p0
@@ -42,6 +45,7 @@
 .method public final getVolumeControl()I
     .locals 0
 
+    .line 104
     iget p0, p0, Landroidx/media/VolumeProviderCompat;->mControlType:I
 
     return p0
@@ -50,6 +54,7 @@
 .method public getVolumeProvider()Ljava/lang/Object;
     .locals 4
 
+    .line 168
     iget-object v0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderObj:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -60,6 +65,7 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 169
     iget v0, p0, Landroidx/media/VolumeProviderCompat;->mControlType:I
 
     iget v1, p0, Landroidx/media/VolumeProviderCompat;->mMaxVolume:I
@@ -76,6 +82,7 @@
 
     iput-object v0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderObj:Ljava/lang/Object;
 
+    .line 184
     :cond_0
     iget-object p0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderObj:Ljava/lang/Object;
 
@@ -97,6 +104,7 @@
 .method public setCallback(Landroidx/media/VolumeProviderCompat$Callback;)V
     .locals 0
 
+    .line 156
     iput-object p1, p0, Landroidx/media/VolumeProviderCompat;->mCallback:Landroidx/media/VolumeProviderCompat$Callback;
 
     return-void

@@ -1,5 +1,6 @@
 .class final Landroidx/activity/ComponentActivity$NonConfigurationInstances;
 .super Ljava/lang/Object;
+.source "ComponentActivity.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

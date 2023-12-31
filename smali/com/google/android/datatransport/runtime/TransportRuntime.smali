@@ -1,5 +1,6 @@
 .class public Lcom/google/android/datatransport/runtime/TransportRuntime;
 .super Ljava/lang/Object;
+.source "TransportRuntime.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/TransportInternal;
@@ -29,16 +30,22 @@
 .method constructor <init>(Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/scheduling/Scheduler;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;)V
     .locals 0
 
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 58
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->eventClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 59
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->uptimeClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 60
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->scheduler:Lcom/google/android/datatransport/runtime/scheduling/Scheduler;
 
+    .line 61
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->uploader:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
 
+    .line 63
     invoke-virtual {p5}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;->ensureContextsScheduled()V
 
     return-void
@@ -47,12 +54,14 @@
 .method private convert(Lcom/google/android/datatransport/runtime/SendRequest;)Lcom/google/android/datatransport/runtime/EventInternal;
     .locals 3
 
+    .line 158
     invoke-static {}, Lcom/google/android/datatransport/runtime/EventInternal;->builder()Lcom/google/android/datatransport/runtime/EventInternal$Builder;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->eventClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 159
     invoke-interface {v1}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
 
     move-result-wide v1
@@ -63,6 +72,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->uptimeClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 160
     invoke-interface {p0}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
 
     move-result-wide v1
@@ -71,6 +81,7 @@
 
     move-result-object p0
 
+    .line 161
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getTransportName()Ljava/lang/String;
 
     move-result-object v0
@@ -81,6 +92,7 @@
 
     new-instance v0, Lcom/google/android/datatransport/runtime/EncodedPayload;
 
+    .line 162
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getEncoding()Lcom/google/android/datatransport/Encoding;
 
     move-result-object v1
@@ -95,6 +107,7 @@
 
     move-result-object p0
 
+    .line 163
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getEvent()Lcom/google/android/datatransport/Event;
 
     move-result-object p1
@@ -107,6 +120,7 @@
 
     move-result-object p0
 
+    .line 164
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->build()Lcom/google/android/datatransport/runtime/EventInternal;
 
     move-result-object p0
@@ -117,16 +131,19 @@
 .method public static getInstance()Lcom/google/android/datatransport/runtime/TransportRuntime;
     .locals 2
 
+    .line 91
     sget-object v0, Lcom/google/android/datatransport/runtime/TransportRuntime;->instance:Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
 
     if-eqz v0, :cond_0
 
+    .line 95
     invoke-virtual {v0}, Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;->getTransportRuntime()Lcom/google/android/datatransport/runtime/TransportRuntime;
 
     move-result-object v0
 
     return-object v0
 
+    .line 93
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -150,12 +167,15 @@
         }
     .end annotation
 
+    .line 137
     instance-of v0, p0, Lcom/google/android/datatransport/runtime/EncodedDestination;
 
     if-eqz v0, :cond_0
 
+    .line 138
     check-cast p0, Lcom/google/android/datatransport/runtime/EncodedDestination;
 
+    .line 139
     invoke-interface {p0}, Lcom/google/android/datatransport/runtime/EncodedDestination;->getSupportedEncodings()Ljava/util/Set;
 
     move-result-object p0
@@ -169,6 +189,7 @@
     :cond_0
     const-string p0, "proto"
 
+    .line 141
     invoke-static {p0}, Lcom/google/android/datatransport/Encoding;->of(Ljava/lang/String;)Lcom/google/android/datatransport/Encoding;
 
     move-result-object p0
@@ -183,33 +204,40 @@
 .method public static initialize(Landroid/content/Context;)V
     .locals 2
 
+    .line 72
     sget-object v0, Lcom/google/android/datatransport/runtime/TransportRuntime;->instance:Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
 
     if-nez v0, :cond_1
 
+    .line 73
     const-class v0, Lcom/google/android/datatransport/runtime/TransportRuntime;
 
     monitor-enter v0
 
+    .line 74
     :try_start_0
     sget-object v1, Lcom/google/android/datatransport/runtime/TransportRuntime;->instance:Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
 
     if-nez v1, :cond_0
 
+    .line 76
     invoke-static {}, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->builder()Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;
 
     move-result-object v1
 
+    .line 77
     invoke-interface {v1, p0}, Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;->setApplicationContext(Landroid/content/Context;)Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;
 
     move-result-object p0
 
+    .line 78
     invoke-interface {p0}, Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;->build()Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
 
     move-result-object p0
 
     sput-object p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->instance:Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
 
+    .line 80
     :cond_0
     monitor-exit v0
 
@@ -234,6 +262,7 @@
 .method public getUploader()Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
     .locals 0
 
+    .line 146
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->uploader:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
 
     return-object p0
@@ -242,16 +271,20 @@
 .method public newFactory(Lcom/google/android/datatransport/runtime/Destination;)Lcom/google/android/datatransport/TransportFactory;
     .locals 4
 
+    .line 127
     new-instance v0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;
 
+    .line 128
     invoke-static {p1}, Lcom/google/android/datatransport/runtime/TransportRuntime;->getSupportedEncodings(Lcom/google/android/datatransport/runtime/Destination;)Ljava/util/Set;
 
     move-result-object v1
 
+    .line 129
     invoke-static {}, Lcom/google/android/datatransport/runtime/TransportContext;->builder()Lcom/google/android/datatransport/runtime/TransportContext$Builder;
 
     move-result-object v2
 
+    .line 130
     invoke-interface {p1}, Lcom/google/android/datatransport/runtime/Destination;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -260,6 +293,7 @@
 
     move-result-object v2
 
+    .line 131
     invoke-interface {p1}, Lcom/google/android/datatransport/runtime/Destination;->getExtras()[B
 
     move-result-object p1
@@ -268,6 +302,7 @@
 
     move-result-object p1
 
+    .line 132
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext$Builder;->build()Lcom/google/android/datatransport/runtime/TransportContext;
 
     move-result-object p1
@@ -280,8 +315,10 @@
 .method public send(Lcom/google/android/datatransport/runtime/SendRequest;Lcom/google/android/datatransport/TransportScheduleCallback;)V
     .locals 3
 
+    .line 151
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/TransportRuntime;->scheduler:Lcom/google/android/datatransport/runtime/scheduling/Scheduler;
 
+    .line 152
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getTransportContext()Lcom/google/android/datatransport/runtime/TransportContext;
 
     move-result-object v1
@@ -298,10 +335,12 @@
 
     move-result-object v1
 
+    .line 153
     invoke-direct {p0, p1}, Lcom/google/android/datatransport/runtime/TransportRuntime;->convert(Lcom/google/android/datatransport/runtime/SendRequest;)Lcom/google/android/datatransport/runtime/EventInternal;
 
     move-result-object p0
 
+    .line 151
     invoke-interface {v0, v1, p0, p2}, Lcom/google/android/datatransport/runtime/scheduling/Scheduler;->schedule(Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/TransportScheduleCallback;)V
 
     return-void

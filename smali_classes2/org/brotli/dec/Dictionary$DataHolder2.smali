@@ -1,5 +1,6 @@
 .class Lorg/brotli/dec/Dictionary$DataHolder2;
 .super Ljava/lang/Object;
+.source "Dictionary.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method static synthetic access$200()Ljava/lang/String;
     .locals 1
 
+    .line 37
     invoke-static {}, Lorg/brotli/dec/Dictionary$DataHolder2;->getData()Ljava/lang/String;
 
     move-result-object v0

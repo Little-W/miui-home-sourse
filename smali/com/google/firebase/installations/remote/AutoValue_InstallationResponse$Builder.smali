@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;
 .super Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
+.source "AutoValue_InstallationResponse.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 117
     invoke-direct {p0}, Lcom/google/firebase/installations/remote/InstallationResponse$Builder;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public build()Lcom/google/firebase/installations/remote/InstallationResponse;
     .locals 8
 
+    .line 153
     new-instance v7, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse;
 
     iget-object v1, p0, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;->uri:Ljava/lang/String;
@@ -63,6 +66,7 @@
 .method public setAuthToken(Lcom/google/firebase/installations/remote/TokenResult;)Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
     .locals 0
 
+    .line 143
     iput-object p1, p0, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;->authToken:Lcom/google/firebase/installations/remote/TokenResult;
 
     return-object p0
@@ -71,6 +75,7 @@
 .method public setFid(Ljava/lang/String;)Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
     .locals 0
 
+    .line 133
     iput-object p1, p0, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;->fid:Ljava/lang/String;
 
     return-object p0
@@ -79,6 +84,7 @@
 .method public setRefreshToken(Ljava/lang/String;)Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
     .locals 0
 
+    .line 138
     iput-object p1, p0, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;->refreshToken:Ljava/lang/String;
 
     return-object p0
@@ -87,6 +93,7 @@
 .method public setResponseCode(Lcom/google/firebase/installations/remote/InstallationResponse$ResponseCode;)Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
     .locals 0
 
+    .line 148
     iput-object p1, p0, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;->responseCode:Lcom/google/firebase/installations/remote/InstallationResponse$ResponseCode;
 
     return-object p0
@@ -95,6 +102,7 @@
 .method public setUri(Ljava/lang/String;)Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
     .locals 0
 
+    .line 128
     iput-object p1, p0, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;->uri:Ljava/lang/String;
 
     return-object p0

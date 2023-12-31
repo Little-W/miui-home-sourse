@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/firebase/installations/remote/InstallationResponse;
 .super Ljava/lang/Object;
+.source "InstallationResponse.java"
 
 
 # annotations
@@ -15,6 +16,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +25,7 @@
 .method public static builder()Lcom/google/firebase/installations/remote/InstallationResponse$Builder;
     .locals 1
 
+    .line 54
     new-instance v0, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;
 
     invoke-direct {v0}, Lcom/google/firebase/installations/remote/AutoValue_InstallationResponse$Builder;-><init>()V

@@ -1,5 +1,6 @@
 .class public final Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;
 .super Ljava/lang/Object;
+.source "DirectedAcyclicGraph.java"
 
 
 # annotations
@@ -58,8 +59,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 40
     new-instance v0, Landroidx/core/util/Pools$SimplePool;
 
     const/16 v1, 0xa
@@ -68,18 +71,21 @@
 
     iput-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mListPool:Landroidx/core/util/Pools$Pool;
 
+    .line 41
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
     iput-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
+    .line 43
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mSortResult:Ljava/util/ArrayList;
 
+    .line 44
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -101,6 +107,7 @@
         }
     .end annotation
 
+    .line 174
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -109,6 +116,7 @@
 
     return-void
 
+    .line 178
     :cond_0
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -116,8 +124,10 @@
 
     if-nez v0, :cond_2
 
+    .line 182
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 184
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -130,6 +140,7 @@
 
     const/4 v1, 0x0
 
+    .line 186
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -137,6 +148,7 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
+    .line 187
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -147,13 +159,16 @@
 
     goto :goto_0
 
+    .line 191
     :cond_1
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
+    .line 193
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
+    .line 179
     :cond_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -174,6 +189,7 @@
         }
     .end annotation
 
+    .line 205
     iget-object p0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mListPool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {p0}, Landroidx/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -184,6 +200,7 @@
 
     if-nez p0, :cond_0
 
+    .line 207
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -202,8 +219,10 @@
         }
     .end annotation
 
+    .line 213
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
+    .line 214
     iget-object p0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mListPool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {p0, p1}, Landroidx/core/util/Pools$Pool;->release(Ljava/lang/Object;)Z
@@ -221,6 +240,7 @@
         }
     .end annotation
 
+    .line 76
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -237,6 +257,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 81
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -247,19 +268,23 @@
 
     if-nez v0, :cond_0
 
+    .line 84
     invoke-direct {p0}, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->getEmptyList()Ljava/util/ArrayList;
 
     move-result-object v0
 
+    .line 85
     iget-object p0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {p0, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 88
     :cond_0
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
+    .line 77
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -278,6 +303,7 @@
         }
     .end annotation
 
+    .line 54
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -286,6 +312,7 @@
 
     if-nez v0, :cond_0
 
+    .line 55
     iget-object p0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     const/4 v0, 0x0
@@ -299,6 +326,7 @@
 .method public clear()V
     .locals 3
 
+    .line 143
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
@@ -310,6 +338,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 144
     iget-object v2, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v2, v1}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -320,6 +349,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 146
     invoke-direct {p0, v2}, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->poolList(Ljava/util/ArrayList;)V
 
     :cond_0
@@ -327,6 +357,7 @@
 
     goto :goto_0
 
+    .line 149
     :cond_1
     iget-object p0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
@@ -343,6 +374,7 @@
         }
     .end annotation
 
+    .line 63
     iget-object p0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {p0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -361,6 +393,7 @@
         }
     .end annotation
 
+    .line 98
     iget-object p0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {p0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -382,6 +415,7 @@
         }
     .end annotation
 
+    .line 110
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
@@ -395,6 +429,7 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
+    .line 111
     iget-object v3, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v3, v2}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -405,6 +440,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 112
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -413,10 +449,12 @@
 
     if-nez v1, :cond_0
 
+    .line 114
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 116
     :cond_0
     iget-object v3, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
@@ -445,14 +483,17 @@
         }
     .end annotation
 
+    .line 162
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mSortResult:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
+    .line 163
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mSortTmpMarked:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
+    .line 166
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
@@ -464,6 +505,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 167
     iget-object v2, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v2, v1}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -480,6 +522,7 @@
 
     goto :goto_0
 
+    .line 170
     :cond_0
     iget-object p0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mSortResult:Ljava/util/ArrayList;
 
@@ -494,6 +537,7 @@
         }
     .end annotation
 
+    .line 130
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
@@ -507,6 +551,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 131
     iget-object v3, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v3, v2}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -517,6 +562,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 132
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v3

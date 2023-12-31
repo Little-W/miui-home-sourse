@@ -1,5 +1,6 @@
 .class Landroidx/media/VolumeProviderCompat$1;
 .super Ljava/lang/Object;
+.source "VolumeProviderCompat.java"
 
 # interfaces
 .implements Landroidx/media/VolumeProviderCompatApi21$Delegate;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/media/VolumeProviderCompat;)V
     .locals 0
 
+    .line 171
     iput-object p1, p0, Landroidx/media/VolumeProviderCompat$1;->this$0:Landroidx/media/VolumeProviderCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onAdjustVolume(I)V
     .locals 0
 
+    .line 180
     iget-object p0, p0, Landroidx/media/VolumeProviderCompat$1;->this$0:Landroidx/media/VolumeProviderCompat;
 
     invoke-virtual {p0, p1}, Landroidx/media/VolumeProviderCompat;->onAdjustVolume(I)V
@@ -46,6 +49,7 @@
 .method public onSetVolumeTo(I)V
     .locals 0
 
+    .line 175
     iget-object p0, p0, Landroidx/media/VolumeProviderCompat$1;->this$0:Landroidx/media/VolumeProviderCompat;
 
     invoke-virtual {p0, p1}, Landroidx/media/VolumeProviderCompat;->onSetVolumeTo(I)V

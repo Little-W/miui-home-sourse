@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/InvokeOnCancel;
 .super Lkotlinx/coroutines/CancelHandler;
+.source "CancellableContinuationImpl.kt"
 
 
 # instance fields
@@ -29,6 +30,7 @@
         }
     .end annotation
 
+    .line 537
     invoke-direct {p0}, Lkotlinx/coroutines/CancelHandler;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/InvokeOnCancel;->handler:Lkotlin/jvm/functions/Function1;
@@ -41,6 +43,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 535
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/InvokeOnCancel;->invoke(Ljava/lang/Throwable;)V
@@ -53,6 +56,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 539
     iget-object p0, p0, Lkotlinx/coroutines/InvokeOnCancel;->handler:Lkotlin/jvm/functions/Function1;
 
     invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
@@ -63,6 +67,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 541
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/PrimitivesKt;
 .super Ljava/lang/Object;
+.source "Primitives.kt"
 
 
 # static fields
@@ -28,6 +29,7 @@
 
     new-array v0, v0, [Lkotlin/Pair;
 
+    .line 19
     const-class v1, Ljava/lang/String;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -48,6 +50,7 @@
 
     aput-object v1, v0, v2
 
+    .line 20
     sget-object v1, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -68,6 +71,7 @@
 
     aput-object v1, v0, v2
 
+    .line 21
     const-class v1, [C
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -86,6 +90,7 @@
 
     aput-object v1, v0, v2
 
+    .line 22
     sget-object v1, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -106,6 +111,7 @@
 
     aput-object v1, v0, v2
 
+    .line 23
     const-class v1, [D
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -124,6 +130,7 @@
 
     aput-object v1, v0, v2
 
+    .line 24
     sget-object v1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -144,6 +151,7 @@
 
     aput-object v1, v0, v2
 
+    .line 25
     const-class v1, [F
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -162,6 +170,7 @@
 
     aput-object v1, v0, v2
 
+    .line 26
     sget-object v1, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -182,6 +191,7 @@
 
     aput-object v1, v0, v2
 
+    .line 27
     const-class v1, [J
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -200,6 +210,7 @@
 
     aput-object v1, v0, v2
 
+    .line 28
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -220,6 +231,7 @@
 
     aput-object v1, v0, v2
 
+    .line 29
     const-class v1, [I
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -238,6 +250,7 @@
 
     aput-object v1, v0, v2
 
+    .line 30
     sget-object v1, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -258,6 +271,7 @@
 
     aput-object v1, v0, v2
 
+    .line 31
     const-class v1, [S
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -276,6 +290,7 @@
 
     aput-object v1, v0, v2
 
+    .line 32
     sget-object v1, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -296,6 +311,7 @@
 
     aput-object v1, v0, v2
 
+    .line 33
     const-class v1, [B
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -314,6 +330,7 @@
 
     aput-object v1, v0, v2
 
+    .line 34
     sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -334,6 +351,7 @@
 
     aput-object v1, v0, v2
 
+    .line 35
     const-class v1, [Z
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -352,6 +370,7 @@
 
     aput-object v1, v0, v2
 
+    .line 36
     const-class v1, Lkotlin/Unit;
 
     invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
@@ -372,6 +391,7 @@
 
     aput-object v1, v0, v2
 
+    .line 18
     invoke-static {v0}, Lkotlin/collections/MapsKt;->mapOf([Lkotlin/Pair;)Ljava/util/Map;
 
     move-result-object v0
@@ -392,8 +412,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 54
     invoke-static {p0}, Lkotlinx/serialization/internal/PrimitivesKt;->checkName(Ljava/lang/String;)V
 
+    .line 55
     new-instance v0, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;
 
     invoke-direct {v0, p0, p1}, Lkotlinx/serialization/internal/PrimitiveSerialDescriptor;-><init>(Ljava/lang/String;Lkotlinx/serialization/descriptors/PrimitiveKind;)V
@@ -421,6 +443,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 75
     sget-object v0, Lkotlinx/serialization/internal/PrimitivesKt;->BUILTIN_SERIALIZERS:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -435,12 +458,14 @@
 .method private static final checkName(Ljava/lang/String;)V
     .locals 4
 
+    .line 59
     sget-object v0, Lkotlinx/serialization/internal/PrimitivesKt;->BUILTIN_SERIALIZERS:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
+    .line 60
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -458,6 +483,7 @@
 
     check-cast v1, Lkotlin/reflect/KClass;
 
+    .line 61
     invoke-interface {v1}, Lkotlin/reflect/KClass;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
@@ -468,6 +494,7 @@
 
     move-result-object v1
 
+    .line 62
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -484,6 +511,7 @@
 
     const/4 v3, 0x1
 
+    .line 63
     invoke-static {p0, v2, v3}, Lkotlin/text/StringsKt;->equals(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v2
@@ -498,6 +526,7 @@
 
     goto :goto_0
 
+    .line 64
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -509,6 +538,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 66
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p0, " there already exist "
@@ -529,10 +559,12 @@
 
     move-result-object p0
 
+    .line 68
     invoke-static {p0}, Lkotlin/text/StringsKt;->trimIndent(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 64
     invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Throwable;

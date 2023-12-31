@@ -1,5 +1,6 @@
 .class public Lio/requery/android/database/CursorWindow;
 .super Lio/requery/android/database/sqlite/SQLiteClosable;
+.source "CursorWindow.java"
 
 
 # static fields
@@ -24,6 +25,7 @@
 
     const/high16 v0, 0x200000
 
+    .line 76
     invoke-direct {p0, p1, v0}, Lio/requery/android/database/CursorWindow;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -32,16 +34,20 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 2
 
+    .line 95
     invoke-direct {p0}, Lio/requery/android/database/sqlite/SQLiteClosable;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 104
     iput v0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
 
+    .line 105
     iput p2, p0, Lio/requery/android/database/CursorWindow;->mWindowSizeBytes:I
 
     if-eqz p1, :cond_0
 
+    .line 106
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -56,6 +62,7 @@
     :goto_0
     iput-object p1, p0, Lio/requery/android/database/CursorWindow;->mName:Ljava/lang/String;
 
+    .line 107
     iget-object p1, p0, Lio/requery/android/database/CursorWindow;->mName:Ljava/lang/String;
 
     invoke-static {p1, p2}, Lio/requery/android/database/CursorWindow;->nativeCreate(Ljava/lang/String;I)J
@@ -64,6 +71,7 @@
 
     iput-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
+    .line 108
     iget-wide p0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     const-wide/16 v0, 0x0
@@ -74,6 +82,7 @@
 
     return-void
 
+    .line 109
     :cond_1
     new-instance p0, Lio/requery/android/database/CursorWindowAllocationException;
 
@@ -105,6 +114,7 @@
 .method private dispose()V
     .locals 5
 
+    .line 125
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     const-wide/16 v2, 0x0
@@ -113,8 +123,10 @@
 
     if-eqz v4, :cond_0
 
+    .line 126
     invoke-static {v0, v1}, Lio/requery/android/database/CursorWindow;->nativeDispose(J)V
 
+    .line 127
     iput-wide v2, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     :cond_0
@@ -180,6 +192,7 @@
 .method public allocRow()Z
     .locals 2
 
+    .line 207
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     invoke-static {v0, v1}, Lio/requery/android/database/CursorWindow;->nativeAllocRow(J)Z
@@ -194,8 +207,10 @@
 
     const/4 v0, 0x0
 
+    .line 147
     iput v0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
 
+    .line 148
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     invoke-static {v0, v1}, Lio/requery/android/database/CursorWindow;->nativeClear(J)V
@@ -208,6 +223,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 328
     invoke-virtual {p0, p1, p2}, Lio/requery/android/database/CursorWindow;->getString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -216,14 +232,17 @@
 
     move-result-object p0
 
+    .line 329
     iput-object p0, p3, Landroid/database/CharArrayBuffer;->data:[C
 
+    .line 330
     array-length p0, p0
 
     iput p0, p3, Landroid/database/CharArrayBuffer;->sizeCopied:I
 
     return-void
 
+    .line 325
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -242,11 +261,13 @@
         }
     .end annotation
 
+    .line 118
     :try_start_0
     invoke-direct {p0}, Lio/requery/android/database/CursorWindow;->dispose()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 120
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -256,12 +277,14 @@
 
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 121
     throw v0
 .end method
 
 .method public freeLastRow()V
     .locals 2
 
+    .line 214
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     invoke-static {v0, v1}, Lio/requery/android/database/CursorWindow;->nativeFreeLastRow(J)V
@@ -272,6 +295,7 @@
 .method public getBlob(II)[B
     .locals 2
 
+    .line 260
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -288,6 +312,7 @@
 .method public getDouble(II)D
     .locals 2
 
+    .line 383
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -304,6 +329,7 @@
 .method public getFloat(II)F
     .locals 0
 
+    .line 431
     invoke-virtual {p0, p1, p2}, Lio/requery/android/database/CursorWindow;->getDouble(II)D
 
     move-result-wide p0
@@ -316,6 +342,7 @@
 .method public getInt(II)I
     .locals 0
 
+    .line 415
     invoke-virtual {p0, p1, p2}, Lio/requery/android/database/CursorWindow;->getLong(II)J
 
     move-result-wide p0
@@ -328,6 +355,7 @@
 .method public getLong(II)J
     .locals 2
 
+    .line 356
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -344,6 +372,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 135
     iget-object p0, p0, Lio/requery/android/database/CursorWindow;->mName:Ljava/lang/String;
 
     return-object p0
@@ -352,6 +381,7 @@
 .method public getNumRows()I
     .locals 2
 
+    .line 183
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     invoke-static {v0, v1}, Lio/requery/android/database/CursorWindow;->nativeGetNumRows(J)I
@@ -364,6 +394,7 @@
 .method public getShort(II)S
     .locals 0
 
+    .line 399
     invoke-virtual {p0, p1, p2}, Lio/requery/android/database/CursorWindow;->getLong(II)J
 
     move-result-wide p0
@@ -378,6 +409,7 @@
 .method public getStartPosition()I
     .locals 0
 
+    .line 161
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
 
     return p0
@@ -386,6 +418,7 @@
 .method public getString(II)Ljava/lang/String;
     .locals 2
 
+    .line 290
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -402,6 +435,7 @@
 .method public getType(II)I
     .locals 2
 
+    .line 235
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -418,6 +452,7 @@
 .method public getWindowSizeBytes()I
     .locals 0
 
+    .line 505
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mWindowSizeBytes:I
 
     return p0
@@ -426,6 +461,7 @@
 .method protected onAllReferencesReleased()V
     .locals 0
 
+    .line 496
     invoke-direct {p0}, Lio/requery/android/database/CursorWindow;->dispose()V
 
     return-void
@@ -434,6 +470,7 @@
 .method public putBlob([BII)Z
     .locals 2
 
+    .line 443
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -450,6 +487,7 @@
 .method public putDouble(DII)Z
     .locals 6
 
+    .line 480
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -470,6 +508,7 @@
 .method public putLong(JII)Z
     .locals 6
 
+    .line 467
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -490,6 +529,7 @@
 .method public putNull(II)Z
     .locals 2
 
+    .line 491
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -506,6 +546,7 @@
 .method public putString(Ljava/lang/String;II)Z
     .locals 2
 
+    .line 455
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     iget p0, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
@@ -522,6 +563,7 @@
 .method public setNumColumns(I)Z
     .locals 2
 
+    .line 198
     iget-wide v0, p0, Lio/requery/android/database/CursorWindow;->mWindowPtr:J
 
     invoke-static {v0, v1, p1}, Lio/requery/android/database/CursorWindow;->nativeSetNumColumns(JI)Z
@@ -534,6 +576,7 @@
 .method public setStartPosition(I)V
     .locals 0
 
+    .line 174
     iput p1, p0, Lio/requery/android/database/CursorWindow;->mStartPos:I
 
     return-void
@@ -542,6 +585,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 501
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

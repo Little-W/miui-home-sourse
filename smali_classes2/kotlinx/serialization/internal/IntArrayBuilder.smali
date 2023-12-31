@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/IntArrayBuilder;
 .super Lkotlinx/serialization/internal/PrimitiveArrayBuilder;
+.source "PrimitiveArraysSerializers.kt"
 
 
 # annotations
@@ -25,16 +26,20 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 141
     invoke-direct {p0}, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;-><init>()V
 
+    .line 143
     iput-object p1, p0, Lkotlinx/serialization/internal/IntArrayBuilder;->buffer:[I
 
+    .line 144
     array-length p1, p1
 
     iput p1, p0, Lkotlinx/serialization/internal/IntArrayBuilder;->position:I
 
     const/16 p1, 0xa
 
+    .line 148
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/IntArrayBuilder;->ensureCapacity$kotlinx_serialization_core(I)V
 
     return-void
@@ -51,8 +56,10 @@
 
     const/4 v2, 0x0
 
+    .line 157
     invoke-static {p0, v1, v0, v2}, Lkotlinx/serialization/internal/PrimitiveArrayBuilder;->ensureCapacity$kotlinx_serialization_core$default(Lkotlinx/serialization/internal/PrimitiveArrayBuilder;IILjava/lang/Object;)V
 
+    .line 158
     iget-object v0, p0, Lkotlinx/serialization/internal/IntArrayBuilder;->buffer:[I
 
     invoke-virtual {p0}, Lkotlinx/serialization/internal/IntArrayBuilder;->getPosition$kotlinx_serialization_core()I
@@ -71,6 +78,7 @@
 .method public bridge synthetic build$kotlinx_serialization_core()Ljava/lang/Object;
     .locals 0
 
+    .line 139
     invoke-virtual {p0}, Lkotlinx/serialization/internal/IntArrayBuilder;->build$kotlinx_serialization_core()[I
 
     move-result-object p0
@@ -81,6 +89,7 @@
 .method public build$kotlinx_serialization_core()[I
     .locals 1
 
+    .line 161
     iget-object v0, p0, Lkotlinx/serialization/internal/IntArrayBuilder;->buffer:[I
 
     invoke-virtual {p0}, Lkotlinx/serialization/internal/IntArrayBuilder;->getPosition$kotlinx_serialization_core()I
@@ -101,12 +110,14 @@
 .method public ensureCapacity$kotlinx_serialization_core(I)V
     .locals 2
 
+    .line 152
     iget-object v0, p0, Lkotlinx/serialization/internal/IntArrayBuilder;->buffer:[I
 
     array-length v1, v0
 
     if-ge v1, p1, :cond_0
 
+    .line 153
     array-length v1, v0
 
     mul-int/lit8 v1, v1, 0x2
@@ -132,6 +143,7 @@
 .method public getPosition$kotlinx_serialization_core()I
     .locals 0
 
+    .line 144
     iget p0, p0, Lkotlinx/serialization/internal/IntArrayBuilder;->position:I
 
     return p0

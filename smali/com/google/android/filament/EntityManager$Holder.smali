@@ -1,5 +1,6 @@
 .class Lcom/google/android/filament/EntityManager$Holder;
 .super Ljava/lang/Object;
+.source "EntityManager.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 28
     new-instance v0, Lcom/google/android/filament/EntityManager;
 
     const/4 v1, 0x0
@@ -35,6 +37,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/widget/ResourceManagerInternal$AvdcInflateDelegate;
 .super Ljava/lang/Object;
+.source "ResourceManagerInternal.java"
 
 # interfaces
 .implements Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 524
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public createFromXmlInner(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 532
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -50,6 +53,7 @@
 
     const-string p2, "Exception while inflating <animated-vector>"
 
+    .line 534
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0

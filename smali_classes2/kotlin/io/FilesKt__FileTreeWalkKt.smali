@@ -1,5 +1,6 @@
 .class Lkotlin/io/FilesKt__FileTreeWalkKt;
 .super Lkotlin/io/FilesKt__FileReadWriteKt;
+.source "FileTreeWalk.kt"
 
 
 # direct methods
@@ -14,6 +15,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 260
     new-instance v0, Lkotlin/io/FileTreeWalk;
 
     invoke-direct {v0, p0, p1}, Lkotlin/io/FileTreeWalk;-><init>(Ljava/io/File;Lkotlin/io/FileWalkDirection;)V
@@ -28,6 +30,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 272
     sget-object v0, Lkotlin/io/FileWalkDirection;->BOTTOM_UP:Lkotlin/io/FileWalkDirection;
 
     invoke-static {p0, v0}, Lkotlin/io/FilesKt;->walk(Ljava/io/File;Lkotlin/io/FileWalkDirection;)Lkotlin/io/FileTreeWalk;

@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/ContainerResolver$LinkContainerResolver;
 .super Lio/branch/search/internal/ui/ContainerResolver;
+.source "SourceFile"
 
 # interfaces
 .implements Lio/branch/search/r4;

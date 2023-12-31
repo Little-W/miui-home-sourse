@@ -1,5 +1,6 @@
 .class public final Landroidx/palette/graphics/Palette;
 .super Ljava/lang/Object;
+.source "Palette.java"
 
 
 # annotations
@@ -57,6 +58,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 956
     new-instance v0, Landroidx/palette/graphics/Palette$1;
 
     invoke-direct {v0}, Landroidx/palette/graphics/Palette$1;-><init>()V
@@ -80,24 +82,30 @@
         }
     .end annotation
 
+    .line 155
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 156
     iput-object p1, p0, Landroidx/palette/graphics/Palette;->mSwatches:Ljava/util/List;
 
+    .line 157
     iput-object p2, p0, Landroidx/palette/graphics/Palette;->mTargets:Ljava/util/List;
 
+    .line 159
     new-instance p1, Landroid/util/SparseBooleanArray;
 
     invoke-direct {p1}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object p1, p0, Landroidx/palette/graphics/Palette;->mUsedColors:Landroid/util/SparseBooleanArray;
 
+    .line 160
     new-instance p1, Landroidx/collection/ArrayMap;
 
     invoke-direct {p1}, Landroidx/collection/ArrayMap;-><init>()V
 
     iput-object p1, p0, Landroidx/palette/graphics/Palette;->mSelectedSwatches:Ljava/util/Map;
 
+    .line 162
     invoke-direct {p0}, Landroidx/palette/graphics/Palette;->findDominantSwatch()Landroidx/palette/graphics/Palette$Swatch;
 
     move-result-object p1
@@ -110,6 +118,7 @@
 .method private findDominantSwatch()Landroidx/palette/graphics/Palette$Swatch;
     .locals 6
 
+    .line 423
     iget-object v0, p0, Landroidx/palette/graphics/Palette;->mSwatches:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -125,6 +134,7 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
+    .line 424
     iget-object v4, p0, Landroidx/palette/graphics/Palette;->mSwatches:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -133,12 +143,14 @@
 
     check-cast v4, Landroidx/palette/graphics/Palette$Swatch;
 
+    .line 425
     invoke-virtual {v4}, Landroidx/palette/graphics/Palette$Swatch;->getPopulation()I
 
     move-result v5
 
     if-le v5, v1, :cond_0
 
+    .line 427
     invoke-virtual {v4}, Landroidx/palette/graphics/Palette$Swatch;->getPopulation()I
 
     move-result v1
@@ -157,6 +169,7 @@
 .method public static from(Landroid/graphics/Bitmap;)Landroidx/palette/graphics/Palette$Builder;
     .locals 1
 
+    .line 100
     new-instance v0, Landroidx/palette/graphics/Palette$Builder;
 
     invoke-direct {v0, p0}, Landroidx/palette/graphics/Palette$Builder;-><init>(Landroid/graphics/Bitmap;)V
@@ -167,10 +180,12 @@
 .method private generateScore(Landroidx/palette/graphics/Palette$Swatch;Landroidx/palette/graphics/Target;)F
     .locals 6
 
+    .line 396
     invoke-virtual {p1}, Landroidx/palette/graphics/Palette$Swatch;->getHsl()[F
 
     move-result-object v0
 
+    .line 402
     iget-object p0, p0, Landroidx/palette/graphics/Palette;->mDominantSwatch:Landroidx/palette/graphics/Palette$Swatch;
 
     const/4 v1, 0x1
@@ -186,6 +201,7 @@
     :cond_0
     move p0, v1
 
+    .line 404
     :goto_0
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getSaturationWeight()F
 
@@ -199,12 +215,14 @@
 
     if-lez v2, :cond_1
 
+    .line 405
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getSaturationWeight()F
 
     move-result v2
 
     aget v1, v0, v1
 
+    .line 406
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getTargetSaturation()F
 
     move-result v5
@@ -224,6 +242,7 @@
     :cond_1
     move v1, v3
 
+    .line 408
     :goto_1
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getLightnessWeight()F
 
@@ -233,6 +252,7 @@
 
     if-lez v2, :cond_2
 
+    .line 409
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getLightnessWeight()F
 
     move-result v2
@@ -241,6 +261,7 @@
 
     aget v0, v0, v5
 
+    .line 410
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getTargetLightness()F
 
     move-result v5
@@ -260,6 +281,7 @@
     :cond_2
     move v0, v3
 
+    .line 412
     :goto_2
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getPopulationWeight()F
 
@@ -269,10 +291,12 @@
 
     if-lez v2, :cond_3
 
+    .line 413
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getPopulationWeight()F
 
     move-result p2
 
+    .line 414
     invoke-virtual {p1}, Landroidx/palette/graphics/Palette$Swatch;->getPopulation()I
 
     move-result p1
@@ -296,18 +320,21 @@
 .method private generateScoredTarget(Landroidx/palette/graphics/Target;)Landroidx/palette/graphics/Palette$Swatch;
     .locals 2
 
+    .line 362
     invoke-direct {p0, p1}, Landroidx/palette/graphics/Palette;->getMaxScoredSwatchForTarget(Landroidx/palette/graphics/Target;)Landroidx/palette/graphics/Palette$Swatch;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 363
     invoke-virtual {p1}, Landroidx/palette/graphics/Target;->isExclusive()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 365
     iget-object p0, p0, Landroidx/palette/graphics/Palette;->mUsedColors:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0}, Landroidx/palette/graphics/Palette$Swatch;->getRgb()I
@@ -325,6 +352,7 @@
 .method private getMaxScoredSwatchForTarget(Landroidx/palette/graphics/Target;)Landroidx/palette/graphics/Palette$Swatch;
     .locals 7
 
+    .line 373
     iget-object v0, p0, Landroidx/palette/graphics/Palette;->mSwatches:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -340,6 +368,7 @@
     :goto_0
     if-ge v3, v0, :cond_2
 
+    .line 374
     iget-object v4, p0, Landroidx/palette/graphics/Palette;->mSwatches:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -348,12 +377,14 @@
 
     check-cast v4, Landroidx/palette/graphics/Palette$Swatch;
 
+    .line 375
     invoke-direct {p0, v4, p1}, Landroidx/palette/graphics/Palette;->shouldBeScoredForTarget(Landroidx/palette/graphics/Palette$Swatch;Landroidx/palette/graphics/Target;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
+    .line 376
     invoke-direct {p0, v4, p1}, Landroidx/palette/graphics/Palette;->generateScore(Landroidx/palette/graphics/Palette$Swatch;Landroidx/palette/graphics/Target;)F
 
     move-result v5
@@ -381,12 +412,14 @@
 .method private shouldBeScoredForTarget(Landroidx/palette/graphics/Palette$Swatch;Landroidx/palette/graphics/Target;)Z
     .locals 5
 
+    .line 389
     invoke-virtual {p1}, Landroidx/palette/graphics/Palette$Swatch;->getHsl()[F
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 390
     aget v2, v0, v1
 
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getMinimumSaturation()F
@@ -411,6 +444,7 @@
 
     aget v3, v0, v2
 
+    .line 391
     invoke-virtual {p2}, Landroidx/palette/graphics/Target;->getMinimumLightness()F
 
     move-result v4
@@ -431,6 +465,7 @@
 
     iget-object p0, p0, Landroidx/palette/graphics/Palette;->mUsedColors:Landroid/util/SparseBooleanArray;
 
+    .line 392
     invoke-virtual {p1}, Landroidx/palette/graphics/Palette$Swatch;->getRgb()I
 
     move-result p1
@@ -455,6 +490,7 @@
 .method generate()V
     .locals 5
 
+    .line 352
     iget-object v0, p0, Landroidx/palette/graphics/Palette;->mTargets:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -466,6 +502,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 353
     iget-object v2, p0, Landroidx/palette/graphics/Palette;->mTargets:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -474,8 +511,10 @@
 
     check-cast v2, Landroidx/palette/graphics/Target;
 
+    .line 354
     invoke-virtual {v2}, Landroidx/palette/graphics/Target;->normalizeWeights()V
 
+    .line 355
     iget-object v3, p0, Landroidx/palette/graphics/Palette;->mSelectedSwatches:Ljava/util/Map;
 
     invoke-direct {p0, v2}, Landroidx/palette/graphics/Palette;->generateScoredTarget(Landroidx/palette/graphics/Target;)Landroidx/palette/graphics/Palette$Swatch;
@@ -488,6 +527,7 @@
 
     goto :goto_0
 
+    .line 358
     :cond_0
     iget-object p0, p0, Landroidx/palette/graphics/Palette;->mUsedColors:Landroid/util/SparseBooleanArray;
 
@@ -499,6 +539,7 @@
 .method public getDominantColor(I)I
     .locals 0
 
+    .line 346
     iget-object p0, p0, Landroidx/palette/graphics/Palette;->mDominantSwatch:Landroidx/palette/graphics/Palette$Swatch;
 
     if-eqz p0, :cond_0
@@ -522,6 +563,7 @@
         }
     .end annotation
 
+    .line 170
     iget-object p0, p0, Landroidx/palette/graphics/Palette;->mSwatches:Ljava/util/List;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;

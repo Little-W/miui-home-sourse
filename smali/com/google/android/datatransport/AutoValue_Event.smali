@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/AutoValue_Event;
 .super Lcom/google/android/datatransport/Event;
+.source "AutoValue_Event.java"
 
 
 # annotations
@@ -41,20 +42,25 @@
         }
     .end annotation
 
+    .line 19
     invoke-direct {p0}, Lcom/google/android/datatransport/Event;-><init>()V
 
+    .line 20
     iput-object p1, p0, Lcom/google/android/datatransport/AutoValue_Event;->code:Ljava/lang/Integer;
 
     if-eqz p2, :cond_1
 
+    .line 24
     iput-object p2, p0, Lcom/google/android/datatransport/AutoValue_Event;->payload:Ljava/lang/Object;
 
     if-eqz p3, :cond_0
 
+    .line 28
     iput-object p3, p0, Lcom/google/android/datatransport/AutoValue_Event;->priority:Lcom/google/android/datatransport/Priority;
 
     return-void
 
+    .line 26
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -64,6 +70,7 @@
 
     throw p0
 
+    .line 22
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -85,6 +92,7 @@
 
     return v0
 
+    .line 61
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/Event;
 
@@ -92,8 +100,10 @@
 
     if-eqz v1, :cond_3
 
+    .line 62
     check-cast p1, Lcom/google/android/datatransport/Event;
 
+    .line 63
     iget-object v1, p0, Lcom/google/android/datatransport/AutoValue_Event;->code:Ljava/lang/Integer;
 
     if-nez v1, :cond_1
@@ -120,6 +130,7 @@
     :goto_0
     iget-object v1, p0, Lcom/google/android/datatransport/AutoValue_Event;->payload:Ljava/lang/Object;
 
+    .line 64
     invoke-virtual {p1}, Lcom/google/android/datatransport/Event;->getPayload()Ljava/lang/Object;
 
     move-result-object v3
@@ -132,6 +143,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/AutoValue_Event;->priority:Lcom/google/android/datatransport/Priority;
 
+    .line 65
     invoke-virtual {p1}, Lcom/google/android/datatransport/Event;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object p1
@@ -157,6 +169,7 @@
 .method public getCode()Ljava/lang/Integer;
     .locals 0
 
+    .line 34
     iget-object p0, p0, Lcom/google/android/datatransport/AutoValue_Event;->code:Ljava/lang/Integer;
 
     return-object p0
@@ -170,6 +183,7 @@
         }
     .end annotation
 
+    .line 39
     iget-object p0, p0, Lcom/google/android/datatransport/AutoValue_Event;->payload:Ljava/lang/Object;
 
     return-object p0
@@ -178,6 +192,7 @@
 .method public getPriority()Lcom/google/android/datatransport/Priority;
     .locals 0
 
+    .line 44
     iget-object p0, p0, Lcom/google/android/datatransport/AutoValue_Event;->priority:Lcom/google/android/datatransport/Priority;
 
     return-object p0
@@ -186,6 +201,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 74
     iget-object v0, p0, Lcom/google/android/datatransport/AutoValue_Event;->code:Ljava/lang/Integer;
 
     if-nez v0, :cond_0
@@ -206,6 +222,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 76
     iget-object v2, p0, Lcom/google/android/datatransport/AutoValue_Event;->payload:Ljava/lang/Object;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -216,6 +233,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 78
     iget-object p0, p0, Lcom/google/android/datatransport/AutoValue_Event;->priority:Lcom/google/android/datatransport/Priority;
 
     invoke-virtual {p0}, Lcom/google/android/datatransport/Priority;->hashCode()I
@@ -230,6 +248,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

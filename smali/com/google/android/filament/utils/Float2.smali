@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/Float2;
 .super Ljava/lang/Object;
+.source "Vector.kt"
 
 
 # instance fields
@@ -26,6 +27,7 @@
 .method public constructor <init>(F)V
     .locals 0
 
+    .line 33
     invoke-direct {p0, p1, p1}, Lcom/google/android/filament/utils/Float2;-><init>(FF)V
 
     return-void
@@ -34,6 +36,7 @@
 .method public constructor <init>(FF)V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/google/android/filament/utils/Float2;->x:F
@@ -61,6 +64,7 @@
 
     move p2, v0
 
+    .line 32
     :cond_1
     invoke-direct {p0, p1, p2}, Lcom/google/android/filament/utils/Float2;-><init>(FF)V
 
@@ -74,6 +78,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 34
     iget v0, p1, Lcom/google/android/filament/utils/Float2;->x:F
 
     iget p1, p1, Lcom/google/android/filament/utils/Float2;->y:F
@@ -138,6 +143,7 @@
 .method public final dec()Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 127
     iget v0, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -146,6 +152,7 @@
 
     iput v0, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
+    .line 128
     iget v0, p0, Lcom/google/android/filament/utils/Float2;->y:F
 
     sub-float/2addr v0, v1
@@ -158,6 +165,7 @@
 .method public final div(F)Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 135
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -184,6 +192,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 140
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -265,10 +274,12 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 89
     iget p0, p0, Lcom/google/android/filament/utils/Float2;->y:F
 
     goto :goto_0
 
+    .line 90
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -280,6 +291,7 @@
 
     throw p0
 
+    .line 88
     :cond_1
     iget p0, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
@@ -294,6 +306,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 77
     sget-object v0, Lcom/google/android/filament/utils/Float2$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/VectorComponent;->ordinal()I
@@ -304,6 +317,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 80
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "index must be X, Y, R, G, S or T"
@@ -314,11 +328,13 @@
 
     throw p0
 
+    .line 79
     :pswitch_0
     iget p0, p0, Lcom/google/android/filament/utils/Float2;->y:F
 
     goto :goto_0
 
+    .line 78
     :pswitch_1
     iget p0, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
@@ -339,6 +355,7 @@
 .method public final get(II)Lcom/google/android/filament/utils/Float2;
     .locals 1
 
+    .line 93
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Float2;->get(I)F
@@ -365,6 +382,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 84
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Float2;->get(Lcom/google/android/filament/utils/VectorComponent;)F
@@ -383,6 +401,7 @@
 .method public final getG()F
     .locals 0
 
+    .line 42
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getY()F
 
     move-result p0
@@ -393,6 +412,7 @@
 .method public final getR()F
     .locals 0
 
+    .line 37
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
 
     move-result p0
@@ -403,6 +423,7 @@
 .method public final getRg()Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 65
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -421,6 +442,7 @@
 .method public final getS()F
     .locals 0
 
+    .line 48
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
 
     move-result p0
@@ -431,6 +453,7 @@
 .method public final getSt()Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 71
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -449,6 +472,7 @@
 .method public final getT()F
     .locals 0
 
+    .line 53
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getY()F
 
     move-result p0
@@ -459,6 +483,7 @@
 .method public final getX()F
     .locals 0
 
+    .line 32
     iget p0, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
     return p0
@@ -467,6 +492,7 @@
 .method public final getXy()Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 59
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -485,6 +511,7 @@
 .method public final getY()F
     .locals 0
 
+    .line 32
     iget p0, p0, Lcom/google/android/filament/utils/Float2;->y:F
 
     return p0
@@ -515,6 +542,7 @@
 .method public final inc()Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 121
     iget v0, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -523,6 +551,7 @@
 
     iput v0, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
+    .line 122
     iget v0, p0, Lcom/google/android/filament/utils/Float2;->y:F
 
     add-float/2addr v0, v1
@@ -537,6 +566,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
+    .line 95
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Float2;->get(I)F
 
     move-result p0
@@ -547,6 +577,7 @@
 .method public final minus(F)Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 133
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -573,6 +604,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 138
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -603,6 +635,7 @@
 .method public final plus(F)Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 132
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -629,6 +662,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 137
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -665,10 +699,12 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 99
     iput p2, p0, Lcom/google/android/filament/utils/Float2;->y:F
 
     goto :goto_0
 
+    .line 100
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -680,6 +716,7 @@
 
     throw p0
 
+    .line 98
     :cond_1
     iput p2, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
@@ -690,8 +727,10 @@
 .method public final set(IIF)V
     .locals 0
 
+    .line 104
     invoke-virtual {p0, p1, p3}, Lcom/google/android/filament/utils/Float2;->set(IF)V
 
+    .line 105
     invoke-virtual {p0, p2, p3}, Lcom/google/android/filament/utils/Float2;->set(IF)V
 
     return-void
@@ -704,6 +743,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 108
     sget-object v0, Lcom/google/android/filament/utils/Float2$WhenMappings;->$EnumSwitchMapping$1:[I
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/VectorComponent;->ordinal()I
@@ -714,6 +754,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 111
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "index must be X, Y, R, G, S or T"
@@ -724,11 +765,13 @@
 
     throw p0
 
+    .line 110
     :pswitch_0
     iput p2, p0, Lcom/google/android/filament/utils/Float2;->y:F
 
     goto :goto_0
 
+    .line 109
     :pswitch_1
     iput p2, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
@@ -757,8 +800,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 115
     invoke-virtual {p0, p1, p3}, Lcom/google/android/filament/utils/Float2;->set(Lcom/google/android/filament/utils/VectorComponent;F)V
 
+    .line 116
     invoke-virtual {p0, p2, p3}, Lcom/google/android/filament/utils/Float2;->set(Lcom/google/android/filament/utils/VectorComponent;F)V
 
     return-void
@@ -767,6 +812,7 @@
 .method public final setG(F)V
     .locals 0
 
+    .line 44
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Float2;->setY(F)V
 
     return-void
@@ -775,6 +821,7 @@
 .method public final setR(F)V
     .locals 0
 
+    .line 39
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Float2;->setX(F)V
 
     return-void
@@ -787,12 +834,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 67
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float2;->getX()F
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Float2;->setX(F)V
 
+    .line 68
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float2;->getY()F
 
     move-result p1
@@ -805,6 +854,7 @@
 .method public final setS(F)V
     .locals 0
 
+    .line 50
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Float2;->setX(F)V
 
     return-void
@@ -817,12 +867,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 73
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float2;->getX()F
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Float2;->setX(F)V
 
+    .line 74
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float2;->getY()F
 
     move-result p1
@@ -835,6 +887,7 @@
 .method public final setT(F)V
     .locals 0
 
+    .line 55
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Float2;->setY(F)V
 
     return-void
@@ -843,6 +896,7 @@
 .method public final setX(F)V
     .locals 0
 
+    .line 32
     iput p1, p0, Lcom/google/android/filament/utils/Float2;->x:F
 
     return-void
@@ -855,12 +909,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 61
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float2;->getX()F
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Float2;->setX(F)V
 
+    .line 62
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Float2;->getY()F
 
     move-result p1
@@ -873,6 +929,7 @@
 .method public final setY(F)V
     .locals 0
 
+    .line 32
     iput p1, p0, Lcom/google/android/filament/utils/Float2;->y:F
 
     return-void
@@ -881,6 +938,7 @@
 .method public final times(F)Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 134
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -907,6 +965,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 139
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
@@ -986,6 +1045,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 143
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getX()F
 
     move-result v0
@@ -1006,6 +1066,7 @@
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Float2;->setX(F)V
 
+    .line 144
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Float2;->getY()F
 
     move-result v0
@@ -1032,6 +1093,7 @@
 .method public final unaryMinus()Lcom/google/android/filament/utils/Float2;
     .locals 2
 
+    .line 119
     new-instance v0, Lcom/google/android/filament/utils/Float2;
 
     iget v1, p0, Lcom/google/android/filament/utils/Float2;->x:F

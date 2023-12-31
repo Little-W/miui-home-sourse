@@ -67,12 +67,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/tasks/zze;->zzd:Ljava/util/concurrent/Executor;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/gms/tasks/zze;->zze:Lcom/google/android/gms/tasks/Continuation;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/gms/tasks/zze;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     return-void
@@ -81,6 +85,7 @@
 .method static synthetic zza(Lcom/google/android/gms/tasks/zze;)Lcom/google/android/gms/tasks/Continuation;
     .locals 0
 
+    .line 15
     iget-object p0, p0, Lcom/google/android/gms/tasks/zze;->zze:Lcom/google/android/gms/tasks/Continuation;
 
     return-object p0
@@ -89,6 +94,7 @@
 .method static synthetic zzb(Lcom/google/android/gms/tasks/zze;)Lcom/google/android/gms/tasks/zzu;
     .locals 0
 
+    .line 16
     iget-object p0, p0, Lcom/google/android/gms/tasks/zze;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     return-object p0
@@ -99,6 +105,7 @@
 .method public final onCanceled()V
     .locals 0
 
+    .line 12
     iget-object p0, p0, Lcom/google/android/gms/tasks/zze;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/zzu;->zza()Z
@@ -116,6 +123,7 @@
         }
     .end annotation
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/gms/tasks/zze;->zzd:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/gms/tasks/zzf;
@@ -130,6 +138,7 @@
 .method public final onFailure(Ljava/lang/Exception;)V
     .locals 0
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/gms/tasks/zze;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzu;->setException(Ljava/lang/Exception;)V
@@ -145,6 +154,7 @@
         }
     .end annotation
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/gms/tasks/zze;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzu;->setResult(Ljava/lang/Object;)V

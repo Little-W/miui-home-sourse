@@ -26,6 +26,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/a;Landroid/content/Intent;)V
     .locals 0
 
+    .line 76
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/b;->b:Lcom/xiaomi/onetrack/api/a;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/b;->a:Landroid/content/Intent;
@@ -61,6 +62,7 @@
 
     const-string v7, ""
 
+    .line 82
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/api/a;->d()Z
 
@@ -70,6 +72,7 @@
 
     return-object v7
 
+    .line 85
     :cond_0
     iget-object v9, v0, Lcom/xiaomi/onetrack/api/b;->a:Landroid/content/Intent;
 
@@ -77,18 +80,21 @@
 
     move-result-object v9
 
+    .line 86
     iget-object v10, v0, Lcom/xiaomi/onetrack/api/b;->a:Landroid/content/Intent;
 
     invoke-virtual {v10, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
+    .line 87
     iget-object v11, v0, Lcom/xiaomi/onetrack/api/b;->a:Landroid/content/Intent;
 
     invoke-virtual {v11, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
+    .line 88
     iget-object v12, v0, Lcom/xiaomi/onetrack/api/b;->a:Landroid/content/Intent;
 
     const-wide/16 v13, -0x1
@@ -97,12 +103,14 @@
 
     move-result-wide v15
 
+    .line 89
     iget-object v12, v0, Lcom/xiaomi/onetrack/api/b;->a:Landroid/content/Intent;
 
     invoke-virtual {v12, v2, v13, v14}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v12
 
+    .line 90
     iget-object v14, v0, Lcom/xiaomi/onetrack/api/b;->a:Landroid/content/Intent;
 
     const/4 v8, -0x1
@@ -111,6 +119,7 @@
 
     move-result v8
 
+    .line 91
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v18
@@ -121,6 +130,7 @@
 
     const-string v18, "content://com.miui.analytics.OneTrackProvider/traceId"
 
+    .line 92
     invoke-static/range {v18 .. v18}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v18
@@ -139,6 +149,7 @@
 
     move-object/from16 v18, v1
 
+    .line 93
     invoke-static {}, Lcom/xiaomi/onetrack/api/a;->e()Ljava/lang/String;
 
     move-result-object v1
@@ -147,6 +158,7 @@
 
     const-string v0, "sign"
 
+    .line 94
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,24 +187,30 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 95
     invoke-virtual {v7, v6, v9}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 96
     invoke-virtual {v7, v5, v10}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 97
     invoke-virtual {v7, v4, v11}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 98
     invoke-static/range {v15 .. v16}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v7, v3, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 99
     invoke-static {v12, v13}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v7, v2, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 100
     invoke-static/range {v20 .. v20}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
@@ -203,10 +221,12 @@
 
     const-string v0, "queryTime"
 
+    .line 101
     invoke-virtual {v7, v0, v14}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-object/from16 v0, p0
 
+    .line 102
     iget-object v0, v0, Lcom/xiaomi/onetrack/api/b;->b:Lcom/xiaomi/onetrack/api/a;
 
     invoke-static {v0}, Lcom/xiaomi/onetrack/api/a;->a(Lcom/xiaomi/onetrack/api/a;)Landroid/content/Context;
@@ -217,6 +237,7 @@
 
     move-result-object v1
 
+    .line 103
     invoke-virtual {v7}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v2
@@ -240,6 +261,7 @@
 
     move-object/from16 v7, v19
 
+    .line 105
     :goto_0
     :try_start_2
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
@@ -250,6 +272,7 @@
 
     const/4 v0, 0x0
 
+    .line 106
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
@@ -275,6 +298,7 @@
     :goto_1
     if-eqz v8, :cond_3
 
+    .line 113
     :goto_2
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
@@ -306,6 +330,7 @@
 
     const-string v2, "exception while getTraceId"
 
+    .line 110
     invoke-static {v1, v2, v0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -326,8 +351,10 @@
     :goto_6
     if-eqz v17, :cond_4
 
+    .line 113
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->close()V
 
+    .line 115
     :cond_4
     throw v0
 .end method
@@ -340,6 +367,7 @@
         }
     .end annotation
 
+    .line 76
     invoke-virtual {p0}, Lcom/xiaomi/onetrack/api/b;->a()Ljava/lang/String;
 
     move-result-object p0

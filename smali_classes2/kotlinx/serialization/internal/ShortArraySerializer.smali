@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/ShortArraySerializer;
 .super Lkotlinx/serialization/internal/PrimitiveArraySerializer;
+.source "PrimitiveArraysSerializers.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -27,6 +28,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 71
     new-instance v0, Lkotlinx/serialization/internal/ShortArraySerializer;
 
     invoke-direct {v0}, Lkotlinx/serialization/internal/ShortArraySerializer;-><init>()V
@@ -39,6 +41,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 72
     sget-object v0, Lkotlin/jvm/internal/ShortCompanionObject;->INSTANCE:Lkotlin/jvm/internal/ShortCompanionObject;
 
     invoke-static {v0}, Lkotlinx/serialization/builtins/BuiltinSerializersKt;->serializer(Lkotlin/jvm/internal/ShortCompanionObject;)Lkotlinx/serialization/KSerializer;
@@ -55,6 +58,7 @@
 .method public bridge synthetic collectionSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 71
     check-cast p1, [S
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/ShortArraySerializer;->collectionSize([S)I
@@ -71,6 +75,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 74
     array-length p0, p1
 
     return p0
@@ -79,6 +84,7 @@
 .method public bridge synthetic empty()Ljava/lang/Object;
     .locals 0
 
+    .line 71
     invoke-virtual {p0}, Lkotlinx/serialization/internal/ShortArraySerializer;->empty()[S
 
     move-result-object p0
@@ -99,6 +105,7 @@
 .method public bridge synthetic readElement(Lkotlinx/serialization/encoding/CompositeDecoder;ILjava/lang/Object;Z)V
     .locals 0
 
+    .line 71
     check-cast p3, Lkotlinx/serialization/internal/ShortArrayBuilder;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lkotlinx/serialization/internal/ShortArraySerializer;->readElement(Lkotlinx/serialization/encoding/CompositeDecoder;ILkotlinx/serialization/internal/ShortArrayBuilder;Z)V
@@ -117,6 +124,7 @@
 
     invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 79
     invoke-virtual {p0}, Lkotlinx/serialization/internal/ShortArraySerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -133,6 +141,7 @@
 .method public bridge synthetic toBuilder(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 71
     check-cast p1, [S
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/ShortArraySerializer;->toBuilder([S)Lkotlinx/serialization/internal/ShortArrayBuilder;
@@ -149,6 +158,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 75
     new-instance p0, Lkotlinx/serialization/internal/ShortArrayBuilder;
 
     invoke-direct {p0, p1}, Lkotlinx/serialization/internal/ShortArrayBuilder;-><init>([S)V
@@ -159,6 +169,7 @@
 .method public bridge synthetic writeContent(Lkotlinx/serialization/encoding/CompositeEncoder;Ljava/lang/Object;I)V
     .locals 0
 
+    .line 71
     check-cast p2, [S
 
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/serialization/internal/ShortArraySerializer;->writeContent(Lkotlinx/serialization/encoding/CompositeEncoder;[SI)V
@@ -182,6 +193,7 @@
     :goto_0
     if-ge v0, p3, :cond_0
 
+    .line 84
     invoke-virtual {p0}, Lkotlinx/serialization/internal/ShortArraySerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v1

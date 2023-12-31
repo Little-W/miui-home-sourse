@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/TransportFactoryImpl;
 .super Ljava/lang/Object;
+.source "TransportFactoryImpl.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/TransportFactory;
@@ -36,12 +37,16 @@
         }
     .end annotation
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;->supportedPayloadEncodings:Ljava/util/Set;
 
+    .line 33
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
+    .line 34
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;->transportInternal:Lcom/google/android/datatransport/runtime/TransportInternal;
 
     return-void
@@ -67,6 +72,7 @@
         }
     .end annotation
 
+    .line 49
     iget-object p2, p0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;->supportedPayloadEncodings:Ljava/util/Set;
 
     invoke-interface {p2, p3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -75,6 +81,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 55
     new-instance p2, Lcom/google/android/datatransport/runtime/TransportImpl;
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
@@ -93,6 +100,7 @@
 
     return-object p2
 
+    .line 50
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -112,6 +120,7 @@
 
     const-string p0, "%s is not supported byt this factory. Supported encodings are: %s."
 
+    .line 51
     invoke-static {p0, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

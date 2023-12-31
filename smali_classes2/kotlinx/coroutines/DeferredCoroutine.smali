@@ -1,5 +1,6 @@
 .class Lkotlinx/coroutines/DeferredCoroutine;
 .super Lkotlinx/coroutines/AbstractCoroutine;
+.source "Builders.common.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/Deferred;
@@ -26,6 +27,7 @@
 .method public constructor <init>(Lkotlin/coroutines/CoroutineContext;Z)V
     .locals 0
 
+    .line 99
     invoke-direct {p0, p1, p2}, Lkotlinx/coroutines/AbstractCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Z)V
 
     return-void
@@ -70,6 +72,7 @@
 
     move-result-object v1
 
+    .line 101
     iget v2, v0, Lkotlinx/coroutines/DeferredCoroutine$await$1;->label:I
 
     const/4 v3, 0x1
@@ -143,6 +146,7 @@
         }
     .end annotation
 
+    .line 100
     invoke-virtual {p0}, Lkotlinx/coroutines/DeferredCoroutine;->getCompletedInternal$kotlinx_coroutines_core()Ljava/lang/Object;
 
     move-result-object p0
@@ -168,6 +172,7 @@
         }
     .end annotation
 
+    .line 104
     invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/DeferredCoroutine;->registerSelectClause1Internal$kotlinx_coroutines_core(Lkotlinx/coroutines/selects/SelectInstance;Lkotlin/jvm/functions/Function2;)V
 
     return-void

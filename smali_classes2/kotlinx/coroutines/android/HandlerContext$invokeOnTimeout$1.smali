@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/android/HandlerContext$invokeOnTimeout$1;
 .super Ljava/lang/Object;
+.source "HandlerDispatcher.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/DisposableHandle;
@@ -33,6 +34,7 @@
         }
     .end annotation
 
+    .line 145
     iput-object p1, p0, Lkotlinx/coroutines/android/HandlerContext$invokeOnTimeout$1;->this$0:Lkotlinx/coroutines/android/HandlerContext;
 
     iput-object p2, p0, Lkotlinx/coroutines/android/HandlerContext$invokeOnTimeout$1;->$block:Ljava/lang/Runnable;
@@ -47,6 +49,7 @@
 .method public dispose()V
     .locals 1
 
+    .line 147
     iget-object v0, p0, Lkotlinx/coroutines/android/HandlerContext$invokeOnTimeout$1;->this$0:Lkotlinx/coroutines/android/HandlerContext;
 
     invoke-static {v0}, Lkotlinx/coroutines/android/HandlerContext;->access$getHandler$p(Lkotlinx/coroutines/android/HandlerContext;)Landroid/os/Handler;

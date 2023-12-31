@@ -1,5 +1,6 @@
 .class public final Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;
 .super Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;
+.source "EncryptInterceptorV2.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 41
     invoke-direct {p0}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$Builder;-><init>()V
 
     return-void
@@ -31,6 +33,7 @@
 .method static synthetic access$000(Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;)[Ljava/lang/String;
     .locals 0
 
+    .line 41
     iget-object p0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;->encryptHeaderKeys:[Ljava/lang/String;
 
     return-object p0
@@ -39,6 +42,7 @@
 .method static synthetic access$100(Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;)[Ljava/lang/String;
     .locals 0
 
+    .line 41
     iget-object p0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;->reservedQueryKeys:[Ljava/lang/String;
 
     return-object p0
@@ -49,6 +53,7 @@
 .method public build()Lcom/mi/encrypt/okhttp/EncryptInterceptor;
     .locals 1
 
+    .line 63
     new-instance v0, Lcom/mi/encrypt/okhttp/EncryptInterceptorV2;
 
     invoke-direct {v0, p0}, Lcom/mi/encrypt/okhttp/EncryptInterceptorV2;-><init>(Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;)V
@@ -59,6 +64,7 @@
 .method public setEncryptHeaderKeys([Ljava/lang/String;)Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;
     .locals 0
 
+    .line 52
     iput-object p1, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;->encryptHeaderKeys:[Ljava/lang/String;
 
     return-object p0
@@ -67,6 +73,7 @@
 .method public setReservedQueryKeys([Ljava/lang/String;)Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;
     .locals 0
 
+    .line 57
     iput-object p1, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptorV2$Builder;->reservedQueryKeys:[Ljava/lang/String;
 
     return-object p0

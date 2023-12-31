@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
 .super Ljava/lang/Object;
+.source "IBranchGuildCallBack.java"
 
 
 # virtual methods

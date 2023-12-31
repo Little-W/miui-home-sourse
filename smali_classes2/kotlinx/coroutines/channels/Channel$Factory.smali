@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/Channel$Factory;
 .super Ljava/lang/Object;
+.source "Channel.kt"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 591
     new-instance v0, Lkotlinx/coroutines/channels/Channel$Factory;
 
     invoke-direct {v0}, Lkotlinx/coroutines/channels/Channel$Factory;-><init>()V
@@ -37,6 +39,7 @@
 
     const v3, 0x7ffffffe
 
+    .line 625
     invoke-static {v0, v1, v2, v3}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;III)I
 
     move-result v0
@@ -49,6 +52,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 591
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,6 +63,7 @@
 .method public final getCHANNEL_DEFAULT_CAPACITY$kotlinx_coroutines_core()I
     .locals 0
 
+    .line 625
     sget p0, Lkotlinx/coroutines/channels/Channel$Factory;->CHANNEL_DEFAULT_CAPACITY:I
 
     return p0

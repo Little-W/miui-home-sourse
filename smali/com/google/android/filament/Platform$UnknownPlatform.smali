@@ -1,5 +1,6 @@
 .class Lcom/google/android/filament/Platform$UnknownPlatform;
 .super Lcom/google/android/filament/Platform;
+.source "Platform.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 72
     invoke-direct {p0}, Lcom/google/android/filament/Platform;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method synthetic constructor <init>(Lcom/google/android/filament/Platform$1;)V
     .locals 0
 
+    .line 72
     invoke-direct {p0}, Lcom/google/android/filament/Platform$UnknownPlatform;-><init>()V
 
     return-void
@@ -43,6 +46,7 @@
 .method log(Ljava/lang/String;)V
     .locals 0
 
+    .line 75
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {p0, p1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
@@ -77,6 +81,7 @@
 .method warn(Ljava/lang/String;)V
     .locals 0
 
+    .line 80
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {p0, p1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V

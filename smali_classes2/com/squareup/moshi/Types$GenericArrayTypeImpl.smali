@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/Types$GenericArrayTypeImpl;
 .super Ljava/lang/Object;
+.source "Types.java"
 
 # interfaces
 .implements Ljava/lang/reflect/GenericArrayType;
@@ -24,8 +25,10 @@
 .method constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 0
 
+    .line 565
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 566
     invoke-static {p1}, Lcom/squareup/moshi/Types;->canonicalize(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
     move-result-object p1
@@ -40,12 +43,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 574
     instance-of v0, p1, Ljava/lang/reflect/GenericArrayType;
 
     if-eqz v0, :cond_0
 
     check-cast p1, Ljava/lang/reflect/GenericArrayType;
 
+    .line 575
     invoke-static {p0, p1}, Lcom/squareup/moshi/Types;->equals(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
 
     move-result p0
@@ -66,6 +71,7 @@
 .method public getGenericComponentType()Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 570
     iget-object p0, p0, Lcom/squareup/moshi/Types$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
     return-object p0
@@ -74,6 +80,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 579
     iget-object p0, p0, Lcom/squareup/moshi/Types$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -86,6 +93,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 583
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

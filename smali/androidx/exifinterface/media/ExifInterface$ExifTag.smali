@@ -1,5 +1,6 @@
 .class Landroidx/exifinterface/media/ExifInterface$ExifTag;
 .super Ljava/lang/Object;
+.source "ExifInterface.java"
 
 
 # annotations
@@ -27,16 +28,21 @@
 .method constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 3310
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3311
     iput-object p1, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->name:Ljava/lang/String;
 
+    .line 3312
     iput p2, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->number:I
 
+    .line 3313
     iput p3, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->primaryFormat:I
 
     const/4 p1, -0x1
 
+    .line 3314
     iput p1, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->secondaryFormat:I
 
     return-void
@@ -45,14 +51,19 @@
 .method constructor <init>(Ljava/lang/String;III)V
     .locals 0
 
+    .line 3318
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3319
     iput-object p1, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->name:Ljava/lang/String;
 
+    .line 3320
     iput p2, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->number:I
 
+    .line 3321
     iput p3, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->primaryFormat:I
 
+    .line 3322
     iput p4, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->secondaryFormat:I
 
     return-void
@@ -63,6 +74,7 @@
 .method isFormatCompatible(I)Z
     .locals 4
 
+    .line 3327
     iget v0, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->primaryFormat:I
 
     const/4 v1, 0x7
@@ -78,6 +90,7 @@
     :cond_0
     if-eq v0, p1, :cond_8
 
+    .line 3329
     iget v1, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->secondaryFormat:I
 
     if-ne v1, p1, :cond_1
@@ -98,6 +111,7 @@
 
     return v2
 
+    .line 3334
     :cond_3
     iget v0, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->primaryFormat:I
 
@@ -116,6 +130,7 @@
 
     return v2
 
+    .line 3337
     :cond_5
     iget v0, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->primaryFormat:I
 

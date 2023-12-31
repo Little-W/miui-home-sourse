@@ -1,5 +1,6 @@
 .class public final Lkotlin/sequences/GeneratorSequence$iterator$1;
 .super Ljava/lang/Object;
+.source "Sequences.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -47,12 +48,14 @@
         }
     .end annotation
 
+    .line 586
     iput-object p1, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->this$0:Lkotlin/sequences/GeneratorSequence;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x2
 
+    .line 588
     iput p1, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextState:I
 
     return-void
@@ -61,6 +64,7 @@
 .method private final calcNext()V
     .locals 2
 
+    .line 591
     iget v0, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextState:I
 
     const/4 v1, -0x2
@@ -97,6 +101,7 @@
     :goto_0
     iput-object v0, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextItem:Ljava/lang/Object;
 
+    .line 592
     iget-object v0, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextItem:Ljava/lang/Object;
 
     if-nez v0, :cond_1
@@ -119,12 +124,15 @@
 .method public hasNext()Z
     .locals 1
 
+    .line 608
     iget v0, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextState:I
 
     if-gez v0, :cond_0
 
+    .line 609
     invoke-direct {p0}, Lkotlin/sequences/GeneratorSequence$iterator$1;->calcNext()V
 
+    .line 610
     :cond_0
     iget p0, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextState:I
 
@@ -149,27 +157,33 @@
         }
     .end annotation
 
+    .line 596
     iget v0, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextState:I
 
     if-gez v0, :cond_0
 
+    .line 597
     invoke-direct {p0}, Lkotlin/sequences/GeneratorSequence$iterator$1;->calcNext()V
 
+    .line 599
     :cond_0
     iget v0, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextState:I
 
     if-eqz v0, :cond_2
 
+    .line 601
     iget-object v0, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextItem:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
     const/4 v1, -0x1
 
+    .line 603
     iput v1, p0, Lkotlin/sequences/GeneratorSequence$iterator$1;->nextState:I
 
     return-object v0
 
+    .line 601
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -179,6 +193,7 @@
 
     throw p0
 
+    .line 600
     :cond_2
     new-instance p0, Ljava/util/NoSuchElementException;
 

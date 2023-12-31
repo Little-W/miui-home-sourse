@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/ui/BranchExtra$AppStoreExtra;
 .super Lio/branch/search/ui/BranchExtra;
+.source "SourceFile"
 
 
 # annotations

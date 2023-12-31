@@ -1,5 +1,6 @@
 .class Lokhttp3/Cache$CacheResponseBody$1;
 .super Lokio/ForwardingSource;
+.source "Cache.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Lokhttp3/Cache$CacheResponseBody;Lokio/Source;Lokhttp3/internal/cache/DiskLruCache$Snapshot;)V
     .locals 0
 
+    .line 750
     iput-object p1, p0, Lokhttp3/Cache$CacheResponseBody$1;->this$0:Lokhttp3/Cache$CacheResponseBody;
 
     iput-object p3, p0, Lokhttp3/Cache$CacheResponseBody$1;->val$snapshot:Lokhttp3/internal/cache/DiskLruCache$Snapshot;
@@ -42,10 +44,12 @@
         }
     .end annotation
 
+    .line 752
     iget-object v0, p0, Lokhttp3/Cache$CacheResponseBody$1;->val$snapshot:Lokhttp3/internal/cache/DiskLruCache$Snapshot;
 
     invoke-virtual {v0}, Lokhttp3/internal/cache/DiskLruCache$Snapshot;->close()V
 
+    .line 753
     invoke-super {p0}, Lokio/ForwardingSource;->close()V
 
     return-void

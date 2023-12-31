@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/PerformanceTracker$1;
 .super Ljava/lang/Object;
+.source "PerformanceTracker.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -35,6 +36,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/PerformanceTracker;)V
     .locals 0
 
+    .line 28
     iput-object p1, p0, Lcom/airbnb/lottie/PerformanceTracker$1;->this$0:Lcom/airbnb/lottie/PerformanceTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -60,6 +62,7 @@
         }
     .end annotation
 
+    .line 30
     iget-object p0, p1, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Float;
@@ -68,6 +71,7 @@
 
     move-result p0
 
+    .line 31
     iget-object p1, p2, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Float;
@@ -102,6 +106,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 28
     check-cast p1, Landroidx/core/util/Pair;
 
     check-cast p2, Landroidx/core/util/Pair;

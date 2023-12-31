@@ -1,11 +1,13 @@
 .class public final Landroidx/startup/InitializationProvider;
 .super Landroid/content/ContentProvider;
+.source "InitializationProvider.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 37
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -16,6 +18,7 @@
 .method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
+    .line 77
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Not allowed."
@@ -28,6 +31,7 @@
 .method public getType(Landroid/net/Uri;)Ljava/lang/String;
     .locals 0
 
+    .line 63
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Not allowed."
@@ -40,6 +44,7 @@
 .method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 0
 
+    .line 69
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Not allowed."
@@ -52,12 +57,14 @@
 .method public onCreate()Z
     .locals 1
 
+    .line 40
     invoke-virtual {p0}, Landroidx/startup/InitializationProvider;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 42
     invoke-static {p0}, Landroidx/startup/AppInitializer;->getInstance(Landroid/content/Context;)Landroidx/startup/AppInitializer;
 
     move-result-object p0
@@ -68,6 +75,7 @@
 
     return p0
 
+    .line 44
     :cond_0
     new-instance p0, Landroidx/startup/StartupException;
 
@@ -81,6 +89,7 @@
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 0
 
+    .line 57
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Not allowed."
@@ -93,6 +102,7 @@
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
+    .line 86
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Not allowed."

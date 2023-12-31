@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/YieldContext;
 .super Lkotlin/coroutines/AbstractCoroutineContextElement;
+.source "Unconfined.kt"
 
 
 # annotations
@@ -36,6 +37,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 35
     sget-object v0, Lkotlinx/coroutines/YieldContext;->Key:Lkotlinx/coroutines/YieldContext$Key;
 
     check-cast v0, Lkotlin/coroutines/CoroutineContext$Key;

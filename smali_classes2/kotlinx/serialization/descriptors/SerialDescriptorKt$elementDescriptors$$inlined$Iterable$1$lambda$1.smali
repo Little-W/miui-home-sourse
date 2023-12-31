@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1$lambda$1;
 .super Ljava/lang/Object;
+.source "SerialDescriptor.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -37,8 +38,10 @@
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1$lambda$1;->this$0:Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;
 
+    .line 273
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 274
     iget-object p1, p0, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1$lambda$1;->this$0:Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;
 
     iget-object p1, p1, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;->$this_elementDescriptors$inlined:Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -57,6 +60,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 275
     iget p0, p0, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1$lambda$1;->elementsLeft:I
 
     if-lez p0, :cond_0
@@ -75,6 +79,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 273
     invoke-virtual {p0}, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1$lambda$1;->next()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -85,6 +90,7 @@
 .method public next()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 4
 
+    .line 278
     iget-object v0, p0, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1$lambda$1;->this$0:Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;
 
     iget-object v0, v0, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;->$this_elementDescriptors$inlined:Lkotlinx/serialization/descriptors/SerialDescriptor;

@@ -1,5 +1,6 @@
 .class public Lio/branch/search/a6;
 .super Ljava/io/IOException;
+.source "SourceFile"
 
 
 # direct methods

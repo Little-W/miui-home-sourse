@@ -1,5 +1,6 @@
 .class public abstract Lio/reactivex2/internal/observers/BasicQueueDisposable;
 .super Ljava/lang/Object;
+.source "BasicQueueDisposable.java"
 
 # interfaces
 .implements Lio/reactivex2/internal/fuseable/QueueDisposable;
@@ -22,6 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +39,7 @@
         }
     .end annotation
 
+    .line 27
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Should not be called"

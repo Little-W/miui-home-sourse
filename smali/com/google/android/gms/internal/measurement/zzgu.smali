@@ -1,5 +1,6 @@
 .class abstract Lcom/google/android/gms/internal/measurement/zzgu;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/internal/measurement/zzgy;
@@ -9,6 +10,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +21,7 @@
 .method public synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzgu;->zza()B
 
     move-result p0
@@ -33,6 +36,7 @@
 .method public final remove()V
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

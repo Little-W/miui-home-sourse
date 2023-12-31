@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/content/MergePaths;
 .super Ljava/lang/Object;
+.source "MergePaths.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/model/content/ContentModel;
@@ -25,12 +26,16 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;Z)V
     .locals 0
 
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 44
     iput-object p1, p0, Lcom/airbnb/lottie/model/content/MergePaths;->name:Ljava/lang/String;
 
+    .line 45
     iput-object p2, p0, Lcom/airbnb/lottie/model/content/MergePaths;->mode:Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
+    .line 46
     iput-boolean p3, p0, Lcom/airbnb/lottie/model/content/MergePaths;->hidden:Z
 
     return-void
@@ -41,6 +46,7 @@
 .method public getMode()Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
     .locals 0
 
+    .line 54
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/MergePaths;->mode:Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
     return-object p0
@@ -49,6 +55,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 50
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/MergePaths;->name:Ljava/lang/String;
 
     return-object p0
@@ -57,6 +64,7 @@
 .method public isHidden()Z
     .locals 0
 
+    .line 58
     iget-boolean p0, p0, Lcom/airbnb/lottie/model/content/MergePaths;->hidden:Z
 
     return p0
@@ -65,6 +73,7 @@
 .method public toContent(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;)Lcom/airbnb/lottie/animation/content/Content;
     .locals 0
 
+    .line 62
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->enableMergePathsForKitKatAndAbove()Z
 
     move-result p1
@@ -73,12 +82,14 @@
 
     const-string p0, "Animation contains merge paths but they are disabled."
 
+    .line 63
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 66
     :cond_0
     new-instance p1, Lcom/airbnb/lottie/animation/content/MergePathsContent;
 
@@ -90,6 +101,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

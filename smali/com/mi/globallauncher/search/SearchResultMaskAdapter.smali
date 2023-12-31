@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 .super Landroid/widget/BaseAdapter;
+.source "SearchResultMaskAdapter.java"
 
 
 # annotations
@@ -86,26 +87,31 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 62
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
+    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mItemList:Ljava/util/List;
 
+    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mTagList:Ljava/util/List;
 
+    .line 52
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mRecommendGameList:Ljava/util/List;
 
+    .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -114,16 +120,20 @@
 
     const/4 v0, 0x1
 
+    .line 58
     iput-boolean v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mIsInLightMode:Z
 
     const/4 v0, 0x5
 
+    .line 59
     iput v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mRecommendNumColumn:I
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 60
     iput v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mScale:F
 
+    .line 63
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mContext:Landroid/content/Context;
 
     return-void
@@ -132,6 +142,7 @@
 .method static synthetic access$100(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Z
     .locals 0
 
+    .line 40
     iget-boolean p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mIsInLightMode:Z
 
     return p0
@@ -140,6 +151,7 @@
 .method static synthetic access$1000(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Ljava/util/List;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mFrequentUsedAppList:Ljava/util/List;
 
     return-object p0
@@ -148,6 +160,7 @@
 .method static synthetic access$1100(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)F
     .locals 0
 
+    .line 40
     iget p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mScale:F
 
     return p0
@@ -156,6 +169,7 @@
 .method static synthetic access$1200(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/local/FrequentUsedAppClickListener;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mAppClickListener:Lcom/mi/globallauncher/local/FrequentUsedAppClickListener;
 
     return-object p0
@@ -164,6 +178,7 @@
 .method static synthetic access$1300(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/search/SearchResultMaskView$QuickSearchGuideListener;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mQuickSearchGuideListener:Lcom/mi/globallauncher/search/SearchResultMaskView$QuickSearchGuideListener;
 
     return-object p0
@@ -172,6 +187,7 @@
 .method static synthetic access$200(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Landroid/content/Context;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -180,6 +196,7 @@
 .method static synthetic access$300(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Ljava/util/List;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mItemList:Ljava/util/List;
 
     return-object p0
@@ -188,6 +205,7 @@
 .method static synthetic access$400(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/search/SearchResultMaskView$SearchMaskPermissionListener;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mSearchMaskPermissionListener:Lcom/mi/globallauncher/search/SearchResultMaskView$SearchMaskPermissionListener;
 
     return-object p0
@@ -196,6 +214,7 @@
 .method static synthetic access$500(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagClickListener;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mTagClickListener:Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagClickListener;
 
     return-object p0
@@ -204,6 +223,7 @@
 .method static synthetic access$600(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Ljava/util/List;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mTagList:Ljava/util/List;
 
     return-object p0
@@ -212,6 +232,7 @@
 .method static synthetic access$700(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Ljava/util/List;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mRecommendGameList:Ljava/util/List;
 
     return-object p0
@@ -220,6 +241,7 @@
 .method static synthetic access$800(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter$RecommendGameClickListener;
     .locals 0
 
+    .line 40
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->gameClickListener:Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter$RecommendGameClickListener;
 
     return-object p0
@@ -228,6 +250,7 @@
 .method static synthetic access$900(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)I
     .locals 0
 
+    .line 40
     iget p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mRecommendNumColumn:I
 
     return p0
@@ -238,6 +261,7 @@
 .method public getCount()I
     .locals 0
 
+    .line 149
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mItemList:Ljava/util/List;
 
     if-nez p0, :cond_0
@@ -258,6 +282,7 @@
 .method public getItem(I)Ljava/lang/Object;
     .locals 0
 
+    .line 154
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mItemList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -278,6 +303,7 @@
 .method public getItemViewType(I)I
     .locals 0
 
+    .line 210
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -294,6 +320,7 @@
 
     if-nez p2, :cond_7
 
+    .line 166
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->getItemViewType(I)I
 
     move-result p3
@@ -324,6 +351,7 @@
 
     goto :goto_0
 
+    .line 188
     :cond_0
     iget-object p2, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mContext:Landroid/content/Context;
 
@@ -337,12 +365,14 @@
 
     move-result-object p2
 
+    .line 189
     new-instance v0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ZeroStateShortcutViewHolder;
 
     invoke-direct {v0, p0, p2}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ZeroStateShortcutViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 184
     :cond_1
     iget-object p2, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mContext:Landroid/content/Context;
 
@@ -356,12 +386,14 @@
 
     move-result-object p2
 
+    .line 185
     new-instance v0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;
 
     invoke-direct {v0, p0, p2}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$QuickSearchGuideViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 176
     :cond_2
     iget-object p2, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mContext:Landroid/content/Context;
 
@@ -375,12 +407,14 @@
 
     move-result-object p2
 
+    .line 177
     new-instance v0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;
 
     invoke-direct {v0, p0, p2}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 180
     :cond_3
     iget-object p2, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mContext:Landroid/content/Context;
 
@@ -394,12 +428,14 @@
 
     move-result-object p2
 
+    .line 181
     new-instance v0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$FrequentUsedAppsViewHolder;
 
     invoke-direct {v0, p0, p2}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$FrequentUsedAppsViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 172
     :cond_4
     iget-object p2, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mContext:Landroid/content/Context;
 
@@ -413,12 +449,14 @@
 
     move-result-object p2
 
+    .line 173
     new-instance v0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;
 
     invoke-direct {v0, p0, p2}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 168
     :cond_5
     iget-object p2, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mContext:Landroid/content/Context;
 
@@ -432,6 +470,7 @@
 
     move-result-object p2
 
+    .line 169
     new-instance v0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$PermissionGuideViewHolder;
 
     invoke-direct {v0, p0, p2}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$PermissionGuideViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
@@ -439,15 +478,18 @@
     :goto_0
     if-eqz v0, :cond_6
 
+    .line 193
     invoke-virtual {v0, p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;->updateView(I)V
 
     :cond_6
     if-eqz p2, :cond_8
 
+    .line 195
     invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     goto :goto_1
 
+    .line 197
     :cond_7
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -455,6 +497,7 @@
 
     check-cast p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;
 
+    .line 198
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;->updateView(I)V
 
     :cond_8
@@ -473,6 +516,7 @@
 .method public isRecommendAppsEmpty()Z
     .locals 0
 
+    .line 140
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mRecommendGameList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -495,10 +539,12 @@
 .method public onPermissionViewShow()V
     .locals 1
 
+    .line 124
     iget-object p0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mSearchMaskPermissionListener:Lcom/mi/globallauncher/search/SearchResultMaskView$SearchMaskPermissionListener;
 
     if-eqz p0, :cond_2
 
+    .line 126
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -509,6 +555,7 @@
 
     if-nez v0, :cond_1
 
+    .line 127
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -530,6 +577,7 @@
     :goto_0
     const/4 v0, 0x1
 
+    .line 125
     :goto_1
     invoke-interface {p0, v0}, Lcom/mi/globallauncher/search/SearchResultMaskView$SearchMaskPermissionListener;->onPermissionGuideShow(Z)V
 
@@ -540,6 +588,7 @@
 .method public setFrequentUseIconScale(F)V
     .locals 0
 
+    .line 116
     iput p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mScale:F
 
     return-void
@@ -548,6 +597,7 @@
 .method public setFrequentUsedAppClickListener(Lcom/mi/globallauncher/local/FrequentUsedAppClickListener;)V
     .locals 0
 
+    .line 112
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mAppClickListener:Lcom/mi/globallauncher/local/FrequentUsedAppClickListener;
 
     return-void
@@ -564,24 +614,29 @@
         }
     .end annotation
 
+    .line 103
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mFrequentUsedAppList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     if-eqz p1, :cond_0
 
+    .line 104
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 105
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mFrequentUsedAppList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 106
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackRecommendApp()V
 
+    .line 108
     :cond_0
     invoke-virtual {p0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->notifyDataSetChanged()V
 
@@ -591,6 +646,7 @@
 .method public setGameClickListener(Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter$RecommendGameClickListener;)V
     .locals 0
 
+    .line 136
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->gameClickListener:Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter$RecommendGameClickListener;
 
     return-void
@@ -599,6 +655,7 @@
 .method public setIsInLightMode(Z)V
     .locals 0
 
+    .line 67
     iput-boolean p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mIsInLightMode:Z
 
     return-void
@@ -615,22 +672,26 @@
         }
     .end annotation
 
+    .line 71
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mItemList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     if-eqz p1, :cond_0
 
+    .line 72
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 73
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mItemList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 75
     :cond_0
     invoke-virtual {p0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->notifyDataSetChanged()V
 
@@ -640,6 +701,7 @@
 .method public setPermissionListener(Lcom/mi/globallauncher/search/SearchResultMaskView$SearchMaskPermissionListener;)V
     .locals 0
 
+    .line 83
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mSearchMaskPermissionListener:Lcom/mi/globallauncher/search/SearchResultMaskView$SearchMaskPermissionListener;
 
     return-void
@@ -648,6 +710,7 @@
 .method public setPermissionRequestCode(I)V
     .locals 0
 
+    .line 120
     iput p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mPermissionRequestCode:I
 
     return-void
@@ -656,6 +719,7 @@
 .method public setQuickSearchGuideListener(Lcom/mi/globallauncher/search/SearchResultMaskView$QuickSearchGuideListener;)V
     .locals 0
 
+    .line 87
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mQuickSearchGuideListener:Lcom/mi/globallauncher/search/SearchResultMaskView$QuickSearchGuideListener;
 
     return-void
@@ -672,22 +736,26 @@
         }
     .end annotation
 
+    .line 95
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mRecommendGameList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     if-eqz p1, :cond_0
 
+    .line 96
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 97
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mRecommendGameList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 99
     :cond_0
     invoke-virtual {p0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->notifyDataSetChanged()V
 
@@ -697,6 +765,7 @@
 .method public setRecommendNumColumn(I)V
     .locals 0
 
+    .line 144
     iput p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mRecommendNumColumn:I
 
     return-void
@@ -705,6 +774,7 @@
 .method public setTagClickListener(Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagClickListener;)V
     .locals 0
 
+    .line 79
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mTagClickListener:Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagClickListener;
 
     return-void
@@ -721,6 +791,7 @@
         }
     .end annotation
 
+    .line 91
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->mTagList:Ljava/util/List;
 
     return-void

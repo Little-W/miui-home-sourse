@@ -1,5 +1,6 @@
 .class final Landroidx/core/provider/FontRequestWorker$TypefaceResult;
 .super Ljava/lang/Object;
+.source "FontRequestWorker.java"
 
 
 # annotations
@@ -23,12 +24,15 @@
 .method constructor <init>(I)V
     .locals 1
 
+    .line 301
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 302
     iput-object v0, p0, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->mTypeface:Landroid/graphics/Typeface;
 
+    .line 303
     iput p1, p0, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->mResult:I
 
     return-void
@@ -37,12 +41,15 @@
 .method constructor <init>(Landroid/graphics/Typeface;)V
     .locals 0
 
+    .line 307
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 308
     iput-object p1, p0, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->mTypeface:Landroid/graphics/Typeface;
 
     const/4 p1, 0x0
 
+    .line 309
     iput p1, p0, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->mResult:I
 
     return-void
@@ -53,6 +60,7 @@
 .method isSuccess()Z
     .locals 0
 
+    .line 314
     iget p0, p0, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->mResult:I
 
     if-nez p0, :cond_0

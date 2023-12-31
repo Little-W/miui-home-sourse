@@ -1,5 +1,6 @@
 .class abstract Lcom/mi/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
 .super Ljava/lang/Object;
+.source "ReflectiveTypeAdapterFactory.java"
 
 
 # annotations
@@ -25,12 +26,16 @@
 .method protected constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
 
+    .line 185
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 186
     iput-object p1, p0, Lcom/mi/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->name:Ljava/lang/String;
 
+    .line 187
     iput-boolean p2, p0, Lcom/mi/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->serialized:Z
 
+    .line 188
     iput-boolean p3, p0, Lcom/mi/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->deserialized:Z
 
     return-void

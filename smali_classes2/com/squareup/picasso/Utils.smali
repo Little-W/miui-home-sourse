@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/Utils;
 .super Ljava/lang/Object;
+.source "Utils.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 61
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -31,6 +33,7 @@
 
     const-string v0, "RIFF"
 
+    .line 97
     invoke-static {v0}, Lokio/ByteString;->encodeUtf8(Ljava/lang/String;)Lokio/ByteString;
 
     move-result-object v0
@@ -39,6 +42,7 @@
 
     const-string v0, "WEBP"
 
+    .line 98
     invoke-static {v0}, Lokio/ByteString;->encodeUtf8(Ljava/lang/String;)Lokio/ByteString;
 
     move-result-object v0
@@ -53,6 +57,7 @@
 
     const-wide/32 v0, 0x500000
 
+    .line 225
     :try_start_0
     new-instance v2, Landroid/os/StatFs;
 
@@ -62,12 +67,14 @@
 
     invoke-direct {v2, p0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
+    .line 227
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x12
 
     if-ge p0, v3, :cond_0
 
+    .line 228
     invoke-virtual {v2}, Landroid/os/StatFs;->getBlockCount()I
 
     move-result p0
@@ -81,11 +88,13 @@
 
     move-result-wide v4
 
+    .line 230
     :goto_0
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ge p0, v3, :cond_1
 
+    .line 231
     invoke-virtual {v2}, Landroid/os/StatFs;->getBlockSize()I
 
     move-result p0
@@ -104,6 +113,7 @@
 
     const-wide/16 v2, 0x32
 
+    .line 234
     div-long v2, v4, v2
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -116,6 +126,7 @@
     :goto_2
     const-wide/32 v4, 0x3200000
 
+    .line 239
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v2
@@ -132,12 +143,14 @@
 
     const-string v0, "activity"
 
+    .line 243
     invoke-static {p0, v0}, Lcom/squareup/picasso/Utils;->getService(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ActivityManager;
 
+    .line 244
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
@@ -160,6 +173,7 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 245
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getLargeMemoryClass()I
 
     move-result p0
@@ -180,6 +194,7 @@
 
     const-wide/16 v0, 0x7
 
+    .line 247
     div-long/2addr v2, v0
 
     long-to-int p0, v2
@@ -190,6 +205,7 @@
 .method static checkMain()V
     .locals 2
 
+    .line 126
     invoke-static {}, Lcom/squareup/picasso/Utils;->isMain()Z
 
     move-result v0
@@ -198,6 +214,7 @@
 
     return-void
 
+    .line 127
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -224,6 +241,7 @@
 
     return-object p0
 
+    .line 114
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -235,6 +253,7 @@
 .method static createDefaultCacheDir(Landroid/content/Context;)Ljava/io/File;
     .locals 2
 
+    .line 212
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -249,12 +268,14 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 213
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
+    .line 215
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     :cond_0
@@ -264,12 +285,14 @@
 .method static createKey(Lcom/squareup/picasso/Request;)Ljava/lang/String;
     .locals 2
 
+    .line 164
     sget-object v0, Lcom/squareup/picasso/Utils;->MAIN_THREAD_KEY_BUILDER:Ljava/lang/StringBuilder;
 
     invoke-static {p0, v0}, Lcom/squareup/picasso/Utils;->createKey(Lcom/squareup/picasso/Request;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 165
     sget-object v0, Lcom/squareup/picasso/Utils;->MAIN_THREAD_KEY_BUILDER:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
@@ -282,12 +305,14 @@
 .method static createKey(Lcom/squareup/picasso/Request;Ljava/lang/StringBuilder;)Ljava/lang/String;
     .locals 4
 
+    .line 170
     iget-object v0, p0, Lcom/squareup/picasso/Request;->stableKey:Ljava/lang/String;
 
     const/16 v1, 0x32
 
     if-eqz v0, :cond_0
 
+    .line 171
     iget-object v0, p0, Lcom/squareup/picasso/Request;->stableKey:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -298,23 +323,27 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->ensureCapacity(I)V
 
+    .line 172
     iget-object v0, p0, Lcom/squareup/picasso/Request;->stableKey:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 173
     :cond_0
     iget-object v0, p0, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
     if-eqz v0, :cond_1
 
+    .line 174
     iget-object v0, p0, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 175
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -323,13 +352,16 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->ensureCapacity(I)V
 
+    .line 176
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 178
     :cond_1
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->ensureCapacity(I)V
 
+    .line 179
     iget v0, p0, Lcom/squareup/picasso/Request;->resourceId:I
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -337,8 +369,10 @@
     :goto_0
     const/16 v0, 0xa
 
+    .line 181
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 183
     iget v1, p0, Lcom/squareup/picasso/Request;->rotationDegrees:F
 
     const/4 v2, 0x0
@@ -351,18 +385,21 @@
 
     const-string v1, "rotation:"
 
+    .line 184
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/squareup/picasso/Request;->rotationDegrees:F
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    .line 185
     iget-boolean v1, p0, Lcom/squareup/picasso/Request;->hasRotationPivot:Z
 
     if-eqz v1, :cond_2
 
     const/16 v1, 0x40
 
+    .line 186
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/squareup/picasso/Request;->rotationPivotX:F
@@ -375,9 +412,11 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    .line 188
     :cond_2
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 190
     :cond_3
     invoke-virtual {p0}, Lcom/squareup/picasso/Request;->hasSize()Z
 
@@ -387,6 +426,7 @@
 
     const-string v1, "resize:"
 
+    .line 191
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/squareup/picasso/Request;->targetWidth:I
@@ -399,8 +439,10 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 192
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 194
     :cond_4
     iget-boolean v1, p0, Lcom/squareup/picasso/Request;->centerCrop:Z
 
@@ -408,6 +450,7 @@
 
     const-string v1, "centerCrop:"
 
+    .line 195
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/squareup/picasso/Request;->centerCropGravity:I
@@ -418,6 +461,7 @@
 
     goto :goto_1
 
+    .line 196
     :cond_5
     iget-boolean v1, p0, Lcom/squareup/picasso/Request;->centerInside:Z
 
@@ -425,10 +469,12 @@
 
     const-string v1, "centerInside"
 
+    .line 197
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 200
     :cond_6
     :goto_1
     iget-object v1, p0, Lcom/squareup/picasso/Request;->transformations:Ljava/util/List;
@@ -437,6 +483,7 @@
 
     const/4 v1, 0x0
 
+    .line 202
     iget-object v2, p0, Lcom/squareup/picasso/Request;->transformations:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -446,6 +493,7 @@
     :goto_2
     if-ge v1, v2, :cond_7
 
+    .line 203
     iget-object v3, p0, Lcom/squareup/picasso/Request;->transformations:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -460,12 +508,14 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 204
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
+    .line 208
     :cond_7
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -477,10 +527,12 @@
 .method static flushStackLocalLeaks(Landroid/os/Looper;)V
     .locals 3
 
+    .line 332
     new-instance v0, Lcom/squareup/picasso/Utils$1;
 
     invoke-direct {v0, p0}, Lcom/squareup/picasso/Utils$1;-><init>(Landroid/os/Looper;)V
 
+    .line 337
     invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
 
     move-result-object p0
@@ -495,6 +547,7 @@
 .method static getBitmapBytes(Landroid/graphics/Bitmap;)I
     .locals 3
 
+    .line 105
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -517,6 +570,7 @@
 
     return v0
 
+    .line 107
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -544,6 +598,7 @@
 
     const-string v0, ""
 
+    .line 136
     invoke-static {p0, v0}, Lcom/squareup/picasso/Utils;->getLogIdsForHunter(Lcom/squareup/picasso/BitmapHunter;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -554,16 +609,19 @@
 .method static getLogIdsForHunter(Lcom/squareup/picasso/BitmapHunter;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
+    .line 140
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 141
     invoke-virtual {p0}, Lcom/squareup/picasso/BitmapHunter;->getAction()Lcom/squareup/picasso/Action;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 143
     iget-object v1, p1, Lcom/squareup/picasso/Action;->request:Lcom/squareup/picasso/Request;
 
     invoke-virtual {v1}, Lcom/squareup/picasso/Request;->logId()Ljava/lang/String;
@@ -572,6 +630,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 145
     :cond_0
     invoke-virtual {p0}, Lcom/squareup/picasso/BitmapHunter;->getActions()Ljava/util/List;
 
@@ -581,6 +640,7 @@
 
     const/4 v1, 0x0
 
+    .line 147
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -595,8 +655,10 @@
     :cond_1
     const-string v3, ", "
 
+    .line 148
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 149
     :cond_2
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -616,6 +678,7 @@
 
     goto :goto_0
 
+    .line 152
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -632,6 +695,7 @@
         }
     .end annotation
 
+    .line 283
     iget v0, p1, Lcom/squareup/picasso/Request;->resourceId:I
 
     if-nez v0, :cond_5
@@ -642,6 +706,7 @@
 
     goto/16 :goto_1
 
+    .line 287
     :cond_0
     iget-object v0, p1, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
@@ -651,6 +716,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 291
     iget-object v1, p1, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
@@ -659,12 +725,14 @@
 
     if-eqz v1, :cond_3
 
+    .line 292
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
+    .line 294
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -675,6 +743,7 @@
 
     if-ne v2, v4, :cond_1
 
+    .line 296
     :try_start_0
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -690,6 +759,7 @@
 
     goto :goto_0
 
+    .line 298
     :catch_0
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -713,6 +783,7 @@
 
     throw p0
 
+    .line 300
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -722,18 +793,21 @@
 
     if-ne v2, v5, :cond_2
 
+    .line 301
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/String;
 
+    .line 302
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 304
     invoke-virtual {p0, v1, p1, v0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -741,6 +815,7 @@
     :goto_0
     return p0
 
+    .line 306
     :cond_2
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -764,6 +839,7 @@
 
     throw p0
 
+    .line 293
     :cond_3
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -787,6 +863,7 @@
 
     throw p0
 
+    .line 288
     :cond_4
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -810,6 +887,7 @@
 
     throw p0
 
+    .line 284
     :cond_5
     :goto_1
     iget p0, p1, Lcom/squareup/picasso/Request;->resourceId:I
@@ -825,6 +903,7 @@
         }
     .end annotation
 
+    .line 312
     iget v0, p1, Lcom/squareup/picasso/Request;->resourceId:I
 
     if-nez v0, :cond_2
@@ -835,6 +914,7 @@
 
     goto :goto_0
 
+    .line 316
     :cond_0
     iget-object v0, p1, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
@@ -844,11 +924,13 @@
 
     if-eqz v0, :cond_1
 
+    .line 319
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
+    .line 320
     invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
 
     move-result-object p0
@@ -857,6 +939,7 @@
 
     return-object p0
 
+    .line 322
     :catch_0
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -880,6 +963,7 @@
 
     throw p0
 
+    .line 317
     :cond_1
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -903,6 +987,7 @@
 
     throw p0
 
+    .line 313
     :cond_2
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -925,6 +1010,7 @@
         }
     .end annotation
 
+    .line 270
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -935,6 +1021,7 @@
 .method static hasPermission(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
+    .line 274
     invoke-virtual {p0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -955,12 +1042,14 @@
 .method static isAirplaneModeOn(Landroid/content/Context;)Z
     .locals 5
 
+    .line 251
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
+    .line 253
     :try_start_0
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
     :try_end_0
@@ -975,6 +1064,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 255
     :try_start_1
     invoke-static {p0, v4, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -987,6 +1077,7 @@
     :cond_0
     return v0
 
+    .line 257
     :cond_1
     invoke-static {p0, v4, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -1007,6 +1098,7 @@
 .method static isMain()Z
     .locals 2
 
+    .line 132
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1040,6 +1132,7 @@
         }
     .end annotation
 
+    .line 278
     sget-object v0, Lcom/squareup/picasso/Utils;->WEBP_FILE_HEADER_RIFF:Lokio/ByteString;
 
     const-wide/16 v1, 0x0
@@ -1054,6 +1147,7 @@
 
     sget-object v2, Lcom/squareup/picasso/Utils;->WEBP_FILE_HEADER_WEBP:Lokio/ByteString;
 
+    .line 279
     invoke-interface {p0, v0, v1, v2}, Lokio/BufferedSource;->rangeEquals(JLokio/ByteString;)Z
 
     move-result p0
@@ -1076,6 +1170,7 @@
 
     const-string v0, ""
 
+    .line 156
     invoke-static {p0, p1, p2, v0}, Lcom/squareup/picasso/Utils;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1106,6 +1201,7 @@
 
     const-string p0, "%1$-11s %2$-12s %3$s %4$s"
 
+    .line 160
     invoke-static {p0, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

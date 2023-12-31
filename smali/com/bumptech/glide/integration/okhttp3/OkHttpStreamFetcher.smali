@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;
 .super Ljava/lang/Object;
+.source "OkHttpStreamFetcher.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataFetcher;
@@ -45,10 +46,13 @@
 .method public constructor <init>(Lokhttp3/Call$Factory;Lcom/bumptech/glide/load/model/GlideUrl;)V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     iput-object p1, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->client:Lokhttp3/Call$Factory;
 
+    .line 38
     iput-object p2, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->url:Lcom/bumptech/glide/load/model/GlideUrl;
 
     return-void
@@ -59,10 +63,12 @@
 .method public cancel()V
     .locals 0
 
+    .line 94
     iget-object p0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->call:Lokhttp3/Call;
 
     if-eqz p0, :cond_0
 
+    .line 96
     invoke-interface {p0}, Lokhttp3/Call;->cancel()V
 
     :cond_0
@@ -72,28 +78,33 @@
 .method public cleanup()V
     .locals 1
 
+    .line 80
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->stream:Ljava/io/InputStream;
 
     if-eqz v0, :cond_0
 
+    .line 81
     iget-object v0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->stream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 86
     :catch_0
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->responseBody:Lokhttp3/ResponseBody;
 
     if-eqz v0, :cond_1
 
+    .line 87
     invoke-virtual {v0}, Lokhttp3/ResponseBody;->close()V
 
     :cond_1
     const/4 v0, 0x0
 
+    .line 89
     iput-object v0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->callback:Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;
 
     return-void
@@ -110,6 +121,7 @@
         }
     .end annotation
 
+    .line 103
     const-class p0, Ljava/io/InputStream;
 
     return-object p0
@@ -118,6 +130,7 @@
 .method public getDataSource()Lcom/bumptech/glide/load/DataSource;
     .locals 0
 
+    .line 109
     sget-object p0, Lcom/bumptech/glide/load/DataSource;->REMOTE:Lcom/bumptech/glide/load/DataSource;
 
     return-object p0
@@ -136,6 +149,7 @@
         }
     .end annotation
 
+    .line 44
     new-instance p1, Lokhttp3/Request$Builder;
 
     invoke-direct {p1}, Lokhttp3/Request$Builder;-><init>()V
@@ -150,6 +164,7 @@
 
     move-result-object p1
 
+    .line 45
     iget-object v0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->url:Lcom/bumptech/glide/load/model/GlideUrl;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/load/model/GlideUrl;->getHeaders()Ljava/util/Map;
@@ -177,12 +192,14 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 46
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 47
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -193,13 +210,16 @@
 
     goto :goto_0
 
+    .line 49
     :cond_0
     invoke-virtual {p1}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 
     move-result-object p1
 
+    .line 50
     iput-object p2, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->callback:Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;
 
+    .line 52
     iget-object p2, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->client:Lokhttp3/Call$Factory;
 
     invoke-interface {p2, p1}, Lokhttp3/Call$Factory;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
@@ -208,6 +228,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->call:Lokhttp3/Call;
 
+    .line 53
     iget-object p1, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->call:Lokhttp3/Call;
 
     invoke-interface {p1, p0}, Lokhttp3/Call;->enqueue(Lokhttp3/Callback;)V
@@ -222,6 +243,7 @@
 
     const/4 v0, 0x3
 
+    .line 58
     invoke-static {p1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -230,8 +252,10 @@
 
     const-string v0, "OkHttp failed to obtain result"
 
+    .line 59
     invoke-static {p1, v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 62
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->callback:Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;
 
@@ -243,18 +267,21 @@
 .method public onResponse(Lokhttp3/Call;Lokhttp3/Response;)V
     .locals 1
 
+    .line 67
     invoke-virtual {p2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->responseBody:Lokhttp3/ResponseBody;
 
+    .line 68
     invoke-virtual {p2}, Lokhttp3/Response;->isSuccessful()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 69
     iget-object p1, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->responseBody:Lokhttp3/ResponseBody;
 
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -267,6 +294,7 @@
 
     move-result-wide p1
 
+    .line 70
     iget-object v0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->responseBody:Lokhttp3/ResponseBody;
 
     invoke-virtual {v0}, Lokhttp3/ResponseBody;->byteStream()Ljava/io/InputStream;
@@ -279,6 +307,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->stream:Ljava/io/InputStream;
 
+    .line 71
     iget-object p1, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->callback:Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;
 
     iget-object p0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->stream:Ljava/io/InputStream;
@@ -287,6 +316,7 @@
 
     goto :goto_0
 
+    .line 73
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher;->callback:Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;
 

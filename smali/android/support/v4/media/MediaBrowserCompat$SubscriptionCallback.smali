@@ -1,5 +1,6 @@
 .class public abstract Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;
 .super Ljava/lang/Object;
+.source "MediaBrowserCompat.java"
 
 
 # annotations
@@ -40,24 +41,29 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 698
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 699
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->mToken:Landroid/os/IBinder;
 
+    .line 700
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
+    .line 701
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback$StubApi26;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback$StubApi26;-><init>(Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
 
+    .line 702
     invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi26;->createSubscriptionCallback(Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;)Ljava/lang/Object;
 
     move-result-object v0
@@ -66,6 +72,7 @@
 
     goto :goto_0
 
+    .line 703
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -73,10 +80,12 @@
 
     if-lt v0, v1, :cond_1
 
+    .line 704
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback$StubApi21;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback$StubApi21;-><init>(Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
 
+    .line 705
     invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi21;->createSubscriptionCallback(Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;)Ljava/lang/Object;
 
     move-result-object v0
@@ -88,6 +97,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 707
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->mSubscriptionCallbackObj:Ljava/lang/Object;
 
     :goto_0
@@ -143,6 +153,7 @@
 .method setSubscription(Landroid/support/v4/media/MediaBrowserCompat$Subscription;)V
     .locals 1
 
+    .line 761
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V

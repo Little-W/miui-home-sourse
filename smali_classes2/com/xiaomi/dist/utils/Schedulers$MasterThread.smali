@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/dist/utils/Schedulers$MasterThread;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 # interfaces
 .implements Ljava/io/Closeable;

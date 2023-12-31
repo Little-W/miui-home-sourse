@@ -1,5 +1,6 @@
 .class Landroidx/recyclerview/widget/RecyclerView$1;
 .super Ljava/lang/Object;
+.source "RecyclerView.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
+    .line 398
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 401
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-boolean v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mFirstLayoutComplete:Z
@@ -52,6 +55,7 @@
 
     goto :goto_0
 
+    .line 405
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -59,12 +63,14 @@
 
     if-nez v0, :cond_1
 
+    .line 406
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->requestLayout()V
 
     return-void
 
+    .line 410
     :cond_1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -72,6 +78,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 411
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 v0, 0x1
@@ -80,6 +87,7 @@
 
     return-void
 
+    .line 414
     :cond_2
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 

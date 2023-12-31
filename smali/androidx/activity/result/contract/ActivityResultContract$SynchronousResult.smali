@@ -1,5 +1,6 @@
 .class public final Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
 .super Ljava/lang/Object;
+.source "ActivityResultContract.java"
 
 
 # annotations
@@ -41,8 +42,10 @@
         }
     .end annotation
 
+    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 76
     iput-object p1, p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->mValue:Ljava/lang/Object;
 
     return-void
@@ -58,6 +61,7 @@
         }
     .end annotation
 
+    .line 83
     iget-object p0, p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->mValue:Ljava/lang/Object;
 
     return-object p0

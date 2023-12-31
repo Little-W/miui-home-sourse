@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/view/TapTargetSequence$Listener;
 .super Ljava/lang/Object;
+.source "TapTargetSequence.java"
 
 
 # annotations

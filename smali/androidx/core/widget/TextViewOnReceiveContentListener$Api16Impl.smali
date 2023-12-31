@@ -1,5 +1,6 @@
 .class final Landroidx/core/widget/TextViewOnReceiveContentListener$Api16Impl;
 .super Ljava/lang/Object;
+.source "TextViewOnReceiveContentListener.java"
 
 
 # annotations
@@ -21,10 +22,12 @@
 
     if-eqz p2, :cond_1
 
+    .line 118
     invoke-virtual {p1, p0}, Landroid/content/ClipData$Item;->coerceToText(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p0
 
+    .line 119
     instance-of p1, p0, Landroid/text/Spanned;
 
     if-eqz p1, :cond_0
@@ -36,6 +39,7 @@
     :cond_0
     return-object p0
 
+    .line 121
     :cond_1
     invoke-virtual {p1, p0}, Landroid/content/ClipData$Item;->coerceToStyledText(Landroid/content/Context;)Ljava/lang/CharSequence;
 

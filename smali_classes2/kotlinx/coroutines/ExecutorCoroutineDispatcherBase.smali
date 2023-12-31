@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;
 .super Lkotlinx/coroutines/ExecutorCoroutineDispatcher;
+.source "Executors.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/Delay;
@@ -13,6 +14,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 84
     invoke-direct {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcher;-><init>()V
 
     return-void
@@ -21,6 +23,7 @@
 .method private final cancelJobOnRejection(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/RejectedExecutionException;)V
     .locals 0
 
+    .line 144
     check-cast p2, Ljava/lang/Throwable;
 
     const-string p0, "The task was rejected"
@@ -49,6 +52,7 @@
 
     const/4 v0, 0x0
 
+    .line 136
     :try_start_0
     invoke-virtual {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->getExecutor()Ljava/util/concurrent/Executor;
 
@@ -80,6 +84,7 @@
     :catch_0
     move-exception p1
 
+    .line 138
     invoke-direct {p0, p2, p1}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->cancelJobOnRejection(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/RejectedExecutionException;)V
 
     :cond_1
@@ -92,6 +97,7 @@
 .method public close()V
     .locals 1
 
+    .line 148
     invoke-virtual {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p0
@@ -116,6 +122,7 @@
 .method public dispatch(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
     .locals 2
 
+    .line 94
     :try_start_0
     invoke-virtual {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->getExecutor()Ljava/util/concurrent/Executor;
 
@@ -148,6 +155,7 @@
     :catch_0
     move-exception v0
 
+    .line 96
     invoke-static {}, Lkotlinx/coroutines/TimeSourceKt;->getTimeSource()Lkotlinx/coroutines/TimeSource;
 
     move-result-object v1
@@ -156,9 +164,11 @@
 
     invoke-interface {v1}, Lkotlinx/coroutines/TimeSource;->unTrackTask()V
 
+    .line 97
     :cond_1
     invoke-direct {p0, p1, v0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->cancelJobOnRejection(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/RejectedExecutionException;)V
 
+    .line 98
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
 
     move-result-object p0
@@ -172,6 +182,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 152
     instance-of v0, p1, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;
 
     if-eqz v0, :cond_0
@@ -202,6 +213,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 153
     invoke-virtual {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p0
@@ -216,6 +228,7 @@
 .method public final initFutureCancellation$kotlinx_coroutines_core()V
     .locals 1
 
+    .line 89
     invoke-virtual {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -232,10 +245,12 @@
 .method public invokeOnTimeout(JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
     .locals 1
 
+    .line 123
     iget-boolean v0, p0, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->removesFutureOnCancellation:Z
 
     if-eqz v0, :cond_0
 
+    .line 124
     invoke-direct {p0, p3, p4, p1, p2}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->scheduleBlock(Ljava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;J)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object p0
@@ -248,6 +263,7 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 129
     new-instance p1, Lkotlinx/coroutines/DisposableFutureHandle;
 
     check-cast p0, Ljava/util/concurrent/Future;
@@ -258,6 +274,7 @@
 
     goto :goto_1
 
+    .line 130
     :cond_1
     sget-object p0, Lkotlinx/coroutines/DefaultExecutor;->INSTANCE:Lkotlinx/coroutines/DefaultExecutor;
 
@@ -281,10 +298,12 @@
         }
     .end annotation
 
+    .line 108
     iget-boolean v0, p0, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->removesFutureOnCancellation:Z
 
     if-eqz v0, :cond_0
 
+    .line 109
     new-instance v0, Lkotlinx/coroutines/ResumeUndispatchedRunnable;
 
     move-object v1, p0
@@ -311,12 +330,14 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 115
     check-cast p0, Ljava/util/concurrent/Future;
 
     invoke-static {p3, p0}, Lkotlinx/coroutines/JobKt;->cancelFutureOnCancellation(Lkotlinx/coroutines/CancellableContinuation;Ljava/util/concurrent/Future;)V
 
     return-void
 
+    .line 119
     :cond_1
     sget-object p0, Lkotlinx/coroutines/DefaultExecutor;->INSTANCE:Lkotlinx/coroutines/DefaultExecutor;
 
@@ -328,6 +349,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 151
     invoke-virtual {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcherBase;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p0

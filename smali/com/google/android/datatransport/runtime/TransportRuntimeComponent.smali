@@ -1,5 +1,6 @@
 .class abstract Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
 .super Ljava/lang/Object;
+.source "TransportRuntimeComponent.java"
 
 # interfaces
 .implements Ljava/io/Closeable;
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +34,7 @@
         }
     .end annotation
 
+    .line 47
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;->getEventStore()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
     move-result-object p0

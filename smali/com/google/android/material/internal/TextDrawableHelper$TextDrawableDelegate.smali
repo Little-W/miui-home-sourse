@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;
 .super Ljava/lang/Object;
+.source "TextDrawableHelper.java"
 
 
 # annotations

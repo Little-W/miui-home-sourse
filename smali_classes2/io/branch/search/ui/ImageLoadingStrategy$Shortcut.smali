@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/ui/ImageLoadingStrategy$Shortcut;
 .super Lio/branch/search/ui/ImageLoadingStrategy;
+.source "SourceFile"
 
 
 # annotations

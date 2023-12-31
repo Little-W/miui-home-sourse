@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/internal/ChildCancelledException;
 .super Ljava/util/concurrent/CancellationException;
+.source "FlowExceptions.kt"
 
 
 # direct methods
@@ -8,6 +9,7 @@
 
     const-string v0, "Child of the scoped flow was cancelled"
 
+    .line 22
     invoke-direct {p0, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -18,6 +20,7 @@
 .method public fillInStackTrace()Ljava/lang/Throwable;
     .locals 1
 
+    .line 24
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getDEBUG()Z
 
     move-result v0
@@ -35,8 +38,10 @@
 
     new-array v0, v0, [Ljava/lang/StackTraceElement;
 
+    .line 26
     invoke-virtual {p0, v0}, Lkotlinx/coroutines/flow/internal/ChildCancelledException;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
+    .line 27
     check-cast p0, Ljava/lang/Throwable;
 
     return-object p0

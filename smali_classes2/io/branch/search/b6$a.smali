@@ -1,5 +1,6 @@
 .class public Lio/branch/search/b6$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;

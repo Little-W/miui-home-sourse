@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior$1;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "HideBottomViewOnScrollBehavior.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;)V
     .locals 0
 
+    .line 201
     iput-object p1, p0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior$1;->this$0:Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -33,6 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
+    .line 204
     iget-object p0, p0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior$1;->this$0:Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
 
     const/4 p1, 0x0

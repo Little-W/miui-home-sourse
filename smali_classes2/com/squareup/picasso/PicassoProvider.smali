@@ -1,5 +1,6 @@
 .class public final Lcom/squareup/picasso/PicassoProvider;
 .super Landroid/content/ContentProvider;
+.source "PicassoProvider.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -44,6 +46,7 @@
 .method public onCreate()Z
     .locals 0
 
+    .line 36
     invoke-virtual {p0}, Lcom/squareup/picasso/PicassoProvider;->getContext()Landroid/content/Context;
 
     move-result-object p0

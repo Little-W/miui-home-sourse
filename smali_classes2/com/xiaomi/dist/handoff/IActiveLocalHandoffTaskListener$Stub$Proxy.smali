@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub$Proxy;
 .super Ljava/lang/Object;
+.source "IActiveLocalHandoffTaskListener.java"
 
 # interfaces
 .implements Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
@@ -28,8 +29,10 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 76
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -40,6 +43,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
+    .line 80
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0
@@ -53,10 +57,12 @@
         }
     .end annotation
 
+    .line 88
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 89
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -64,12 +70,15 @@
     :try_start_0
     const-string v2, "com.xiaomi.dist.handoff.IActiveLocalHandoffTaskListener"
 
+    .line 91
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
+    .line 92
     invoke-virtual {v0, p1, v2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
+    .line 93
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x1
@@ -80,12 +89,14 @@
 
     if-nez p0, :cond_0
 
+    .line 94
     invoke-static {}, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub;->getDefaultImpl()Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 95
     invoke-static {}, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub;->getDefaultImpl()Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
 
     move-result-object p0
@@ -94,20 +105,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 101
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 102
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 98
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 101
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 102
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -115,9 +131,12 @@
     :catchall_0
     move-exception p0
 
+    .line 101
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 102
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 103
     throw p0
 .end method

@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/Job$DefaultImpls;
 .super Ljava/lang/Object;
+.source "Job.kt"
 
 
 # annotations
@@ -25,6 +26,7 @@
 
     const/4 p1, 0x0
 
+    .line 192
     check-cast p1, Ljava/util/concurrent/CancellationException;
 
     :cond_0
@@ -32,6 +34,7 @@
 
     return-void
 
+    .line 0
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -107,6 +110,7 @@
 
     const/4 p2, 0x1
 
+    .line 353
     :cond_1
     invoke-interface {p0, p1, p2, p3}, Lkotlinx/coroutines/Job;->invokeOnCompletion(ZZLkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/DisposableHandle;
 
@@ -114,6 +118,7 @@
 
     return-object p0
 
+    .line 0
     :cond_2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

@@ -1,5 +1,6 @@
 .class Landroidx/recyclerview/widget/SpringRecyclerView$NonEdgeEffectFactory;
 .super Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory;
+.source "SpringRecyclerView.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 310
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method synthetic constructor <init>(Landroidx/recyclerview/widget/SpringRecyclerView$1;)V
     .locals 0
 
+    .line 310
     invoke-direct {p0}, Landroidx/recyclerview/widget/SpringRecyclerView$NonEdgeEffectFactory;-><init>()V
 
     return-void
@@ -35,6 +38,7 @@
 .method protected createEdgeEffect(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
     .locals 0
 
+    .line 314
     new-instance p0, Landroidx/recyclerview/widget/SpringRecyclerView$NonEdgeEffect;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getContext()Landroid/content/Context;

@@ -1,5 +1,6 @@
 .class Landroidx/emoji2/viewsintegration/EmojiTextWatcher$InitCallbackImpl;
 .super Landroidx/emoji2/text/EmojiCompat$InitCallback;
+.source "EmojiTextWatcher.java"
 
 
 # annotations
@@ -29,8 +30,10 @@
 .method constructor <init>(Landroid/widget/EditText;)V
     .locals 1
 
+    .line 138
     invoke-direct {p0}, Landroidx/emoji2/text/EmojiCompat$InitCallback;-><init>()V
 
+    .line 139
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -45,8 +48,10 @@
 .method public onInitialized()V
     .locals 1
 
+    .line 144
     invoke-super {p0}, Landroidx/emoji2/text/EmojiCompat$InitCallback;->onInitialized()V
 
+    .line 145
     iget-object p0, p0, Landroidx/emoji2/viewsintegration/EmojiTextWatcher$InitCallbackImpl;->mViewRef:Ljava/lang/ref/Reference;
 
     invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
@@ -57,6 +62,7 @@
 
     const/4 v0, 0x1
 
+    .line 146
     invoke-static {p0, v0}, Landroidx/emoji2/viewsintegration/EmojiTextWatcher;->processTextOnEnablingEvent(Landroid/widget/EditText;I)V
 
     return-void

@@ -1,5 +1,6 @@
 .class Lkotlinx/serialization/json/internal/JsonTreeDecoder;
 .super Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;
+.source "TreeJsonDecoder.kt"
 
 
 # instance fields
@@ -24,6 +25,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 163
     move-object v0, p2
 
     check-cast v0, Lkotlinx/serialization/json/JsonElement;
@@ -50,6 +52,7 @@
 
     if-eqz p6, :cond_0
 
+    .line 161
     move-object p3, v0
 
     check-cast p3, Ljava/lang/String;
@@ -59,6 +62,7 @@
 
     if-eqz p5, :cond_1
 
+    .line 162
     move-object p4, v0
 
     check-cast p4, Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -72,10 +76,12 @@
 .method private final coerceInputValue(Lkotlinx/serialization/descriptors/SerialDescriptor;ILjava/lang/String;)Z
     .locals 2
 
+    .line 170
     invoke-interface {p1, p2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p1
 
+    .line 171
     invoke-virtual {p0, p3}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->currentElement(Ljava/lang/String;)Lkotlinx/serialization/json/JsonElement;
 
     move-result-object p2
@@ -94,6 +100,7 @@
 
     return v0
 
+    .line 172
     :cond_0
     invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
@@ -109,6 +116,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 173
     invoke-virtual {p0, p3}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->currentElement(Ljava/lang/String;)Lkotlinx/serialization/json/JsonElement;
 
     move-result-object p0
@@ -130,6 +138,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 175
     invoke-interface {p1, p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementIndex(Ljava/lang/String;)I
 
     move-result p0
@@ -153,6 +162,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 198
     iget-object v0, p0, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->polyDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     if-ne p1, v0, :cond_0
@@ -161,6 +171,7 @@
 
     return-object p0
 
+    .line 199
     :cond_0
     invoke-super {p0, p1}, Lkotlinx/serialization/json/internal/AbstractJsonTreeDecoder;->beginStructure(Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/encoding/CompositeDecoder;
 
@@ -176,6 +187,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 191
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->getValue()Lkotlinx/serialization/json/JsonObject;
 
     move-result-object p0
@@ -198,6 +210,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 182
     :cond_0
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->position:I
 
@@ -207,6 +220,7 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 183
     iget v0, p0, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->position:I
 
     add-int/lit8 v1, v0, 0x1
@@ -217,6 +231,7 @@
 
     move-result-object v0
 
+    .line 184
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->getValue()Lkotlinx/serialization/json/JsonObject;
 
     move-result-object v1
@@ -245,6 +260,7 @@
 
     if-nez v0, :cond_0
 
+    .line 185
     :cond_1
     iget p0, p0, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->position:I
 
@@ -265,6 +281,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 203
     iget-object v0, p0, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->configuration:Lkotlinx/serialization/json/internal/JsonConf;
 
     iget-boolean v0, v0, Lkotlinx/serialization/json/internal/JsonConf;->ignoreUnknownKeys:Z
@@ -281,11 +298,13 @@
 
     goto :goto_1
 
+    .line 206
     :cond_0
     invoke-static {p1}, Lkotlinx/serialization/internal/JsonInternalDependenciesKt;->jsonCachedSerialNames(Lkotlinx/serialization/descriptors/SerialDescriptor;)Ljava/util/Set;
 
     move-result-object p1
 
+    .line 207
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->getValue()Lkotlinx/serialization/json/JsonObject;
 
     move-result-object v0
@@ -312,6 +331,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 208
     invoke-interface {p1, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v2
@@ -330,6 +350,7 @@
 
     goto :goto_0
 
+    .line 209
     :cond_2
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->getValue()Lkotlinx/serialization/json/JsonObject;
 
@@ -355,6 +376,7 @@
 .method public bridge synthetic getValue()Lkotlinx/serialization/json/JsonElement;
     .locals 0
 
+    .line 158
     invoke-virtual {p0}, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->getValue()Lkotlinx/serialization/json/JsonObject;
 
     move-result-object p0
@@ -367,6 +389,7 @@
 .method public getValue()Lkotlinx/serialization/json/JsonObject;
     .locals 0
 
+    .line 160
     iget-object p0, p0, Lkotlinx/serialization/json/internal/JsonTreeDecoder;->value:Lkotlinx/serialization/json/JsonObject;
 
     return-object p0

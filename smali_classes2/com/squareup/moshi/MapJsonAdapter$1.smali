@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/MapJsonAdapter$1;
 .super Ljava/lang/Object;
+.source "MapJsonAdapter.java"
 
 # interfaces
 .implements Lcom/squareup/moshi/JsonAdapter$Factory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +49,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 34
     invoke-interface {p2}, Ljava/util/Set;->isEmpty()Z
 
     move-result p0
@@ -57,22 +60,26 @@
 
     return-object p2
 
+    .line 35
     :cond_0
     invoke-static {p1}, Lcom/squareup/moshi/Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 36
     const-class v0, Ljava/util/Map;
 
     if-eq p0, v0, :cond_1
 
     return-object p2
 
+    .line 37
     :cond_1
     invoke-static {p1, p0}, Lcom/squareup/moshi/Types;->mapKeyAndValueTypes(Ljava/lang/reflect/Type;Ljava/lang/Class;)[Ljava/lang/reflect/Type;
 
     move-result-object p0
 
+    .line 38
     new-instance p1, Lcom/squareup/moshi/MapJsonAdapter;
 
     const/4 p2, 0x0

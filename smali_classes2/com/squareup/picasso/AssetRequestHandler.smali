@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/AssetRequestHandler;
 .super Lcom/squareup/picasso/RequestHandler;
+.source "AssetRequestHandler.java"
 
 
 # static fields
@@ -24,14 +25,17 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 37
     invoke-direct {p0}, Lcom/squareup/picasso/RequestHandler;-><init>()V
 
+    .line 34
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/squareup/picasso/AssetRequestHandler;->lock:Ljava/lang/Object;
 
+    .line 38
     iput-object p1, p0, Lcom/squareup/picasso/AssetRequestHandler;->context:Landroid/content/Context;
 
     return-void
@@ -40,6 +44,7 @@
 .method static getFilePath(Lcom/squareup/picasso/Request;)Ljava/lang/String;
     .locals 1
 
+    .line 60
     iget-object p0, p0, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -60,8 +65,10 @@
 .method public canHandleRequest(Lcom/squareup/picasso/Request;)Z
     .locals 1
 
+    .line 42
     iget-object p0, p1, Lcom/squareup/picasso/Request;->uri:Landroid/net/Uri;
 
+    .line 43
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object p1
@@ -76,6 +83,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 44
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object p1
@@ -116,19 +124,23 @@
         }
     .end annotation
 
+    .line 48
     iget-object p2, p0, Lcom/squareup/picasso/AssetRequestHandler;->assetManager:Landroid/content/res/AssetManager;
 
     if-nez p2, :cond_1
 
+    .line 49
     iget-object p2, p0, Lcom/squareup/picasso/AssetRequestHandler;->lock:Ljava/lang/Object;
 
     monitor-enter p2
 
+    .line 50
     :try_start_0
     iget-object v0, p0, Lcom/squareup/picasso/AssetRequestHandler;->assetManager:Landroid/content/res/AssetManager;
 
     if-nez v0, :cond_0
 
+    .line 51
     iget-object v0, p0, Lcom/squareup/picasso/AssetRequestHandler;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -137,6 +149,7 @@
 
     iput-object v0, p0, Lcom/squareup/picasso/AssetRequestHandler;->assetManager:Landroid/content/res/AssetManager;
 
+    .line 53
     :cond_0
     monitor-exit p2
 
@@ -151,6 +164,7 @@
 
     throw p0
 
+    .line 55
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/squareup/picasso/AssetRequestHandler;->assetManager:Landroid/content/res/AssetManager;
@@ -167,6 +181,7 @@
 
     move-result-object p0
 
+    .line 56
     new-instance p1, Lcom/squareup/picasso/RequestHandler$Result;
 
     sget-object p2, Lcom/squareup/picasso/Picasso$LoadedFrom;->DISK:Lcom/squareup/picasso/Picasso$LoadedFrom;

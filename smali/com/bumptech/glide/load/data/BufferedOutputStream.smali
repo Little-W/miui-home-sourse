@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/load/data/BufferedOutputStream;
 .super Ljava/io/OutputStream;
+.source "BufferedOutputStream.java"
 
 
 # instance fields
@@ -18,6 +19,7 @@
 
     const/high16 v0, 0x10000
 
+    .line 21
     invoke-direct {p0, p1, p2, v0}, Lcom/bumptech/glide/load/data/BufferedOutputStream;-><init>(Ljava/io/OutputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;I)V
 
     return-void
@@ -26,12 +28,16 @@
 .method constructor <init>(Ljava/io/OutputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;I)V
     .locals 0
 
+    .line 25
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
+    .line 26
     iput-object p1, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->out:Ljava/io/OutputStream;
 
+    .line 27
     iput-object p2, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
+    .line 28
     const-class p1, [B
 
     invoke-interface {p2, p3, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;->get(ILjava/lang/Class;)Ljava/lang/Object;
@@ -53,10 +59,12 @@
         }
     .end annotation
 
+    .line 74
     iget v0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->index:I
 
     if-lez v0, :cond_0
 
+    .line 75
     iget-object v1, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->out:Ljava/io/OutputStream;
 
     iget-object v2, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->buffer:[B
@@ -65,6 +73,7 @@
 
     invoke-virtual {v1, v2, v3, v0}, Ljava/io/OutputStream;->write([BII)V
 
+    .line 76
     iput v3, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->index:I
 
     :cond_0
@@ -79,6 +88,7 @@
         }
     .end annotation
 
+    .line 81
     iget v0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->index:I
 
     iget-object v1, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->buffer:[B
@@ -87,6 +97,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 82
     invoke-direct {p0}, Lcom/bumptech/glide/load/data/BufferedOutputStream;->flushBuffer()V
 
     :cond_0
@@ -96,16 +107,19 @@
 .method private release()V
     .locals 2
 
+    .line 97
     iget-object v0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->buffer:[B
 
     if-eqz v0, :cond_0
 
+    .line 98
     iget-object v1, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     invoke-interface {v1, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;->put(Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
+    .line 99
     iput-object v0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->buffer:[B
 
     :cond_0
@@ -122,15 +136,18 @@
         }
     .end annotation
 
+    .line 89
     :try_start_0
     invoke-virtual {p0}, Lcom/bumptech/glide/load/data/BufferedOutputStream;->flush()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 91
     iget-object v0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
+    .line 93
     invoke-direct {p0}, Lcom/bumptech/glide/load/data/BufferedOutputStream;->release()V
 
     return-void
@@ -138,6 +155,7 @@
     :catchall_0
     move-exception v0
 
+    .line 91
     iget-object p0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
@@ -153,8 +171,10 @@
         }
     .end annotation
 
+    .line 69
     invoke-direct {p0}, Lcom/bumptech/glide/load/data/BufferedOutputStream;->flushBuffer()V
 
+    .line 70
     iget-object p0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
@@ -170,6 +190,7 @@
         }
     .end annotation
 
+    .line 33
     iget-object v0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->buffer:[B
 
     iget v1, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->index:I
@@ -182,6 +203,7 @@
 
     aput-byte p1, v0, v1
 
+    .line 34
     invoke-direct {p0}, Lcom/bumptech/glide/load/data/BufferedOutputStream;->maybeFlushBuffer()V
 
     return-void
@@ -195,6 +217,7 @@
         }
     .end annotation
 
+    .line 39
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -219,6 +242,7 @@
 
     add-int v2, p2, v0
 
+    .line 50
     iget v3, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->index:I
 
     if-nez v3, :cond_1
@@ -229,12 +253,14 @@
 
     if-lt v1, v3, :cond_1
 
+    .line 51
     iget-object p0, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {p0, p1, v2, v1}, Ljava/io/OutputStream;->write([BII)V
 
     return-void
 
+    .line 55
     :cond_1
     iget-object v3, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->buffer:[B
 
@@ -244,16 +270,19 @@
 
     sub-int/2addr v3, v4
 
+    .line 56
     invoke-static {v1, v3}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
+    .line 58
     iget-object v3, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->buffer:[B
 
     iget v4, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->index:I
 
     invoke-static {p1, v2, v3, v4, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 60
     iget v2, p0, Lcom/bumptech/glide/load/data/BufferedOutputStream;->index:I
 
     add-int/2addr v2, v1
@@ -262,6 +291,7 @@
 
     add-int/2addr v0, v1
 
+    .line 63
     invoke-direct {p0}, Lcom/bumptech/glide/load/data/BufferedOutputStream;->maybeFlushBuffer()V
 
     if-lt v0, p3, :cond_0

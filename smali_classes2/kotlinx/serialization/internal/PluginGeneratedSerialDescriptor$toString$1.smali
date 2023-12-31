@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$toString$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "PluginGeneratedSerialDescriptor.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -67,6 +68,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 99
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,6 +119,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 17
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$toString$1;->invoke(Ljava/util/Map$Entry;)Ljava/lang/CharSequence;

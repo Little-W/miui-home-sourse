@@ -1,5 +1,6 @@
 .class final Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;
 .super Lio/reactivex/Scheduler$Worker;
+.source "HandlerScheduler.java"
 
 
 # annotations
@@ -23,8 +24,10 @@
 .method constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
+    .line 52
     invoke-direct {p0}, Lio/reactivex/Scheduler$Worker;-><init>()V
 
+    .line 53
     iput-object p1, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->handler:Landroid/os/Handler;
 
     return-void
@@ -37,8 +40,10 @@
 
     const/4 v0, 0x1
 
+    .line 85
     iput-boolean v0, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->disposed:Z
 
+    .line 86
     iget-object v0, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->handler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
@@ -53,35 +58,42 @@
 
     if-eqz p4, :cond_2
 
+    .line 61
     iget-boolean v0, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->disposed:Z
 
     if-eqz v0, :cond_0
 
+    .line 62
     invoke-static {}, Lio/reactivex/disposables/Disposables;->disposed()Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
 
     return-object p0
 
+    .line 65
     :cond_0
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
+    .line 67
     new-instance v0, Lio/reactivex/android/schedulers/HandlerScheduler$ScheduledRunnable;
 
     iget-object v1, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->handler:Landroid/os/Handler;
 
     invoke-direct {v0, v1, p1}, Lio/reactivex/android/schedulers/HandlerScheduler$ScheduledRunnable;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
+    .line 69
     iget-object p1, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->handler:Landroid/os/Handler;
 
     invoke-static {p1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 
     move-result-object p1
 
+    .line 70
     iput-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 72
     iget-object v1, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->handler:Landroid/os/Handler;
 
     invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
@@ -90,14 +102,17 @@
 
     invoke-virtual {v1, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
+    .line 75
     iget-boolean p1, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->disposed:Z
 
     if-eqz p1, :cond_1
 
+    .line 76
     iget-object p0, p0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    .line 77
     invoke-static {}, Lio/reactivex/disposables/Disposables;->disposed()Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
@@ -107,6 +122,7 @@
     :cond_1
     return-object v0
 
+    .line 59
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -116,6 +132,7 @@
 
     throw p0
 
+    .line 58
     :cond_3
     new-instance p0, Ljava/lang/NullPointerException;
 

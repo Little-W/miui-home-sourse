@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/ObservableEmitter;
 .super Ljava/lang/Object;
+.source "ObservableEmitter.java"
 
 # interfaces
 .implements Lio/reactivex2/Emitter;

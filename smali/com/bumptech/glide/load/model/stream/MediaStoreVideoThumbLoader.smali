@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;
 .super Ljava/lang/Object;
+.source "MediaStoreVideoThumbLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoader;
@@ -31,8 +32,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -45,6 +48,7 @@
 .method private isRequestingDefaultFrame(Lcom/bumptech/glide/load/Options;)Z
     .locals 2
 
+    .line 47
     sget-object p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->TARGET_FRAME:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {p1, p0}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -55,6 +59,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 48
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p0
@@ -93,6 +98,7 @@
         }
     .end annotation
 
+    .line 39
     invoke-static {p2, p3}, Lcom/bumptech/glide/load/data/mediastore/MediaStoreUtil;->isThumbnailSize(II)Z
 
     move-result p2
@@ -105,6 +111,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 40
     new-instance p2, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     new-instance p3, Lcom/bumptech/glide/signature/ObjectKey;
@@ -130,6 +137,7 @@
 .method public bridge synthetic buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
     .locals 0
 
+    .line 26
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;->buildLoadData(Landroid/net/Uri;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
@@ -142,6 +150,7 @@
 .method public handles(Landroid/net/Uri;)Z
     .locals 0
 
+    .line 53
     invoke-static {p1}, Lcom/bumptech/glide/load/data/mediastore/MediaStoreUtil;->isMediaStoreVideoUri(Landroid/net/Uri;)Z
 
     move-result p0
@@ -152,6 +161,7 @@
 .method public bridge synthetic handles(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 26
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;->handles(Landroid/net/Uri;)Z

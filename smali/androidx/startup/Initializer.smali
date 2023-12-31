@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/startup/Initializer;
 .super Ljava/lang/Object;
+.source "Initializer.java"
 
 
 # annotations

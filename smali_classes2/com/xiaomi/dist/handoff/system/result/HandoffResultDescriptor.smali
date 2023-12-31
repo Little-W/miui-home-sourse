@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/dist/handoff/system/result/HandoffResultDescriptor;
 .super Ljava/lang/Object;
+.source "HandoffResultDescriptor.java"
 
 # interfaces
 .implements Lcom/xiaomi/dist/common/ResultDescriptor;
@@ -43,12 +44,16 @@
         }
     .end annotation
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 17
     iput-object p1, p0, Lcom/xiaomi/dist/handoff/system/result/HandoffResultDescriptor;->mData:Ljava/lang/Object;
 
+    .line 18
     iput p2, p0, Lcom/xiaomi/dist/handoff/system/result/HandoffResultDescriptor;->mCode:I
 
+    .line 19
     iput-object p3, p0, Lcom/xiaomi/dist/handoff/system/result/HandoffResultDescriptor;->mMessage:Ljava/lang/String;
 
     return-void
@@ -64,6 +69,7 @@
         }
     .end annotation
 
+    .line 25
     iget-object p0, p0, Lcom/xiaomi/dist/handoff/system/result/HandoffResultDescriptor;->mData:Ljava/lang/Object;
 
     return-object p0
@@ -72,6 +78,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

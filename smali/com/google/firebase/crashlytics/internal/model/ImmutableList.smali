@@ -1,5 +1,6 @@
 .class public final Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 .super Ljava/lang/Object;
+.source "ImmutableList.java"
 
 # interfaces
 .implements Ljava/util/List;
@@ -42,8 +43,10 @@
         }
     .end annotation
 
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -67,6 +70,7 @@
         }
     .end annotation
 
+    .line 37
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     invoke-direct {v0, p0}, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;-><init>(Ljava/util/List;)V
@@ -86,6 +90,7 @@
         }
     .end annotation
 
+    .line 32
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;
 
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -107,6 +112,7 @@
         }
     .end annotation
 
+    .line 142
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
@@ -122,6 +128,7 @@
         }
     .end annotation
 
+    .line 80
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -141,6 +148,7 @@
         }
     .end annotation
 
+    .line 100
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1, p2}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
@@ -160,6 +168,7 @@
         }
     .end annotation
 
+    .line 95
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
@@ -172,6 +181,7 @@
 .method public clear()V
     .locals 0
 
+    .line 115
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
@@ -182,6 +192,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 58
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -201,6 +212,7 @@
         }
     .end annotation
 
+    .line 90
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
@@ -213,6 +225,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 120
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
@@ -230,6 +243,7 @@
         }
     .end annotation
 
+    .line 131
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -242,6 +256,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 125
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->hashCode()I
@@ -254,6 +269,7 @@
 .method public indexOf(Ljava/lang/Object;)I
     .locals 0
 
+    .line 152
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -266,6 +282,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 53
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
@@ -285,6 +302,7 @@
         }
     .end annotation
 
+    .line 64
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -297,6 +315,7 @@
 .method public lastIndexOf(Ljava/lang/Object;)I
     .locals 0
 
+    .line 157
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->lastIndexOf(Ljava/lang/Object;)I
@@ -316,6 +335,7 @@
         }
     .end annotation
 
+    .line 163
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
@@ -335,6 +355,7 @@
         }
     .end annotation
 
+    .line 169
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
@@ -352,6 +373,7 @@
         }
     .end annotation
 
+    .line 147
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -364,6 +386,7 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 85
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -383,6 +406,7 @@
         }
     .end annotation
 
+    .line 105
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
@@ -402,6 +426,7 @@
         }
     .end annotation
 
+    .line 110
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->retainAll(Ljava/util/Collection;)Z
@@ -419,6 +444,7 @@
         }
     .end annotation
 
+    .line 137
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -431,6 +457,7 @@
 .method public size()I
     .locals 0
 
+    .line 48
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -450,6 +477,7 @@
         }
     .end annotation
 
+    .line 175
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
@@ -462,6 +490,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 70
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
@@ -481,6 +510,7 @@
         }
     .end annotation
 
+    .line 75
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/model/ImmutableList;->immutableList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;

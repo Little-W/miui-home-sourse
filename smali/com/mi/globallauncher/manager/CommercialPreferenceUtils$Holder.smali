@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/manager/CommercialPreferenceUtils$Holder;
 .super Ljava/lang/Object;
+.source "CommercialPreferenceUtils.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 16
     new-instance v0, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     const/4 v1, 0x0
@@ -35,6 +37,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +46,7 @@
 .method static synthetic access$100()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
     .locals 1
 
+    .line 15
     sget-object v0, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils$Holder;->sInstance:Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     return-object v0

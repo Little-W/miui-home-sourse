@@ -13,6 +13,7 @@
 .method constructor <init>(Lcom/google/android/gms/tasks/zzg;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/tasks/zzh;->zzk:Lcom/google/android/gms/tasks/zzg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,6 +26,7 @@
 .method public final run()V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzh;->zzk:Lcom/google/android/gms/tasks/zzg;
 
     invoke-static {v0}, Lcom/google/android/gms/tasks/zzg;->zza(Lcom/google/android/gms/tasks/zzg;)Ljava/lang/Object;
@@ -33,6 +35,7 @@
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/google/android/gms/tasks/zzh;->zzk:Lcom/google/android/gms/tasks/zzg;
 
@@ -42,6 +45,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzh;->zzk:Lcom/google/android/gms/tasks/zzg;
 
     invoke-static {p0}, Lcom/google/android/gms/tasks/zzg;->zzb(Lcom/google/android/gms/tasks/zzg;)Lcom/google/android/gms/tasks/OnCanceledListener;
@@ -50,6 +54,7 @@
 
     invoke-interface {p0}, Lcom/google/android/gms/tasks/OnCanceledListener;->onCanceled()V
 
+    .line 5
     :cond_0
     monitor-exit v0
 

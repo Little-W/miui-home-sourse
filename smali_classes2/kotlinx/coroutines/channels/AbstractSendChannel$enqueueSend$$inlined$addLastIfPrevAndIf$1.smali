@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/channels/AbstractSendChannel$enqueueSend$$inlined$addLastIfPrevAndIf$1;
 .super Lkotlinx/coroutines/internal/LockFreeLinkedListNode$CondAddOp;
+.source "LockFreeLinkedList.kt"
 
 
 # annotations
@@ -31,6 +32,7 @@
 
     iput-object p3, p0, Lkotlinx/coroutines/channels/AbstractSendChannel$enqueueSend$$inlined$addLastIfPrevAndIf$1;->this$0:Lkotlinx/coroutines/channels/AbstractSendChannel;
 
+    .line 87
     invoke-direct {p0, p2}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$CondAddOp;-><init>(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)V
 
     return-void
@@ -41,6 +43,7 @@
 .method public bridge synthetic prepare(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 87
     check-cast p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/channels/AbstractSendChannel$enqueueSend$$inlined$addLastIfPrevAndIf$1;->prepare(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
@@ -53,6 +56,7 @@
 .method public prepare(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
     .locals 0
 
+    .line 668
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel$enqueueSend$$inlined$addLastIfPrevAndIf$1;->this$0:Lkotlinx/coroutines/channels/AbstractSendChannel;
 
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/AbstractSendChannel;->isBufferFull()Z

@@ -1,5 +1,6 @@
 .class final Lio/reactivex/internal/schedulers/ComputationScheduler$FixedSchedulerPool;
 .super Ljava/lang/Object;
+.source "ComputationScheduler.java"
 
 
 # annotations
@@ -25,10 +26,13 @@
 .method constructor <init>(ILjava/util/concurrent/ThreadFactory;)V
     .locals 3
 
+    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 79
     iput p1, p0, Lio/reactivex/internal/schedulers/ComputationScheduler$FixedSchedulerPool;->cores:I
 
+    .line 80
     new-array v0, p1, [Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;
 
     iput-object v0, p0, Lio/reactivex/internal/schedulers/ComputationScheduler$FixedSchedulerPool;->eventLoops:[Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;
@@ -38,6 +42,7 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
+    .line 82
     iget-object v1, p0, Lio/reactivex/internal/schedulers/ComputationScheduler$FixedSchedulerPool;->eventLoops:[Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;
 
     new-instance v2, Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;
@@ -59,14 +64,17 @@
 .method public getEventLoop()Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;
     .locals 6
 
+    .line 87
     iget v0, p0, Lio/reactivex/internal/schedulers/ComputationScheduler$FixedSchedulerPool;->cores:I
 
     if-nez v0, :cond_0
 
+    .line 89
     sget-object p0, Lio/reactivex/internal/schedulers/ComputationScheduler;->SHUTDOWN_WORKER:Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;
 
     return-object p0
 
+    .line 92
     :cond_0
     iget-object v1, p0, Lio/reactivex/internal/schedulers/ComputationScheduler$FixedSchedulerPool;->eventLoops:[Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;
 
@@ -92,6 +100,7 @@
 .method public shutdown()V
     .locals 3
 
+    .line 96
     iget-object p0, p0, Lio/reactivex/internal/schedulers/ComputationScheduler$FixedSchedulerPool;->eventLoops:[Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;
 
     array-length v0, p0
@@ -103,6 +112,7 @@
 
     aget-object v2, p0, v1
 
+    .line 97
     invoke-virtual {v2}, Lio/reactivex/internal/schedulers/ComputationScheduler$PoolWorker;->dispose()V
 
     add-int/lit8 v1, v1, 0x1

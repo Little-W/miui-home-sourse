@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/internal/LockFreeTaskQueue;
 .super Ljava/lang/Object;
+.source "LockFreeTaskQueue.kt"
 
 
 # annotations
@@ -47,8 +48,10 @@
 .method public constructor <init>(Z)V
     .locals 2
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     new-instance v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
     const/16 v1, 0x8
@@ -70,11 +73,13 @@
         }
     .end annotation
 
+    .line 312
     :goto_0
     iget-object v0, p0, Lkotlinx/coroutines/internal/LockFreeTaskQueue;->_cur:Ljava/lang/Object;
 
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
+    .line 48
     invoke-virtual {v0, p1}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->addLast(Ljava/lang/Object;)I
 
     move-result v1
@@ -96,6 +101,7 @@
 
     return p0
 
+    .line 51
     :cond_1
     sget-object v1, Lkotlinx/coroutines/internal/LockFreeTaskQueue;->_cur$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -114,11 +120,13 @@
 .method public final close()V
     .locals 3
 
+    .line 310
     :goto_0
     iget-object v0, p0, Lkotlinx/coroutines/internal/LockFreeTaskQueue;->_cur:Ljava/lang/Object;
 
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
+    .line 41
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->close()Z
 
     move-result v1
@@ -127,6 +135,7 @@
 
     return-void
 
+    .line 42
     :cond_0
     sget-object v1, Lkotlinx/coroutines/internal/LockFreeTaskQueue;->_cur$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -142,6 +151,7 @@
 .method public final getSize()I
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlinx/coroutines/internal/LockFreeTaskQueue;->_cur:Ljava/lang/Object;
 
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
@@ -161,21 +171,25 @@
         }
     .end annotation
 
+    .line 314
     :goto_0
     iget-object v0, p0, Lkotlinx/coroutines/internal/LockFreeTaskQueue;->_cur:Ljava/lang/Object;
 
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
+    .line 59
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->removeFirstOrNull()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 60
     sget-object v2, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->REMOVE_FROZEN:Lkotlinx/coroutines/internal/Symbol;
 
     if-eq v1, v2, :cond_0
 
     return-object v1
 
+    .line 61
     :cond_0
     sget-object v1, Lkotlinx/coroutines/internal/LockFreeTaskQueue;->_cur$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 

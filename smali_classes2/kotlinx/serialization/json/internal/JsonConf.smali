@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/JsonConf;
 .super Ljava/lang/Object;
+.source "JsonConf.kt"
 
 
 # instance fields
@@ -78,6 +79,7 @@
 
     invoke-static {p11, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-boolean p1, p0, Lkotlinx/serialization/json/internal/JsonConf;->encodeDefaults:Z
@@ -184,6 +186,7 @@
 
     if-eqz p12, :cond_a
 
+    .line 24
     invoke-static {}, Lkotlinx/serialization/modules/SerializersModuleKt;->getEmptySerializersModule()Lkotlinx/serialization/modules/SerializersModule;
 
     move-result-object p11

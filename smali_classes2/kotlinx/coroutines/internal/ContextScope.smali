@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/ContextScope;
 .super Ljava/lang/Object;
+.source "Scopes.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/CoroutineScope;
@@ -13,8 +14,10 @@
 .method public constructor <init>(Lkotlin/coroutines/CoroutineContext;)V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     iput-object p1, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lkotlin/coroutines/CoroutineContext;
 
     return-void
@@ -25,6 +28,7 @@
 .method public getCoroutineContext()Lkotlin/coroutines/CoroutineContext;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lkotlin/coroutines/CoroutineContext;
 
     return-object p0
@@ -33,6 +37,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

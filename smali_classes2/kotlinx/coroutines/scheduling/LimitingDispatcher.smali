@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/scheduling/LimitingDispatcher;
 .super Lkotlinx/coroutines/ExecutorCoroutineDispatcher;
+.source "Dispatcher.kt"
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;
@@ -52,6 +53,7 @@
 .method public constructor <init>(Lkotlinx/coroutines/scheduling/ExperimentalCoroutineDispatcher;ILjava/lang/String;I)V
     .locals 0
 
+    .line 148
     invoke-direct {p0}, Lkotlinx/coroutines/ExecutorCoroutineDispatcher;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->dispatcher:Lkotlinx/coroutines/scheduling/ExperimentalCoroutineDispatcher;
@@ -62,6 +64,7 @@
 
     iput p4, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->taskMode:I
 
+    .line 150
     new-instance p1, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
@@ -70,6 +73,7 @@
 
     const/4 p1, 0x0
 
+    .line 151
     iput p1, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->inFlightTasks:I
 
     return-void
@@ -78,6 +82,7 @@
 .method private final dispatch(Ljava/lang/Runnable;Z)V
     .locals 2
 
+    .line 166
     :goto_0
     sget-object v0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->inFlightTasks$FU:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
@@ -85,10 +90,12 @@
 
     move-result v0
 
+    .line 169
     iget v1, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->parallelism:I
 
     if-gt v0, v1, :cond_0
 
+    .line 170
     iget-object v0, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->dispatcher:Lkotlinx/coroutines/scheduling/ExperimentalCoroutineDispatcher;
 
     check-cast p0, Lkotlinx/coroutines/scheduling/TaskContext;
@@ -97,11 +104,13 @@
 
     return-void
 
+    .line 175
     :cond_0
     iget-object v0, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->queue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
+    .line 192
     sget-object p1, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->inFlightTasks$FU:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
@@ -114,6 +123,7 @@
 
     return-void
 
+    .line 196
     :cond_1
     iget-object p1, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->queue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
@@ -136,6 +146,7 @@
 .method public afterTask()V
     .locals 3
 
+    .line 222
     iget-object v0, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->queue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
@@ -148,6 +159,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 225
     iget-object v2, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->dispatcher:Lkotlinx/coroutines/scheduling/ExperimentalCoroutineDispatcher;
 
     check-cast p0, Lkotlinx/coroutines/scheduling/TaskContext;
@@ -156,11 +168,13 @@
 
     return-void
 
+    .line 228
     :cond_0
     sget-object v0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->inFlightTasks$FU:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
 
+    .line 241
     iget-object v0, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->queue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
@@ -171,6 +185,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 242
     invoke-direct {p0, v0, v1}, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->dispatch(Ljava/lang/Runnable;Z)V
 
     :cond_1
@@ -180,6 +195,7 @@
 .method public close()V
     .locals 1
 
+    .line 158
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Close cannot be invoked on LimitingBlockingDispatcher"
@@ -200,6 +216,7 @@
 
     const/4 p1, 0x0
 
+    .line 160
     invoke-direct {p0, p2, p1}, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->dispatch(Ljava/lang/Runnable;Z)V
 
     return-void
@@ -210,6 +227,7 @@
 
     const/4 v0, 0x0
 
+    .line 156
     invoke-direct {p0, p1, v0}, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->dispatch(Ljava/lang/Runnable;Z)V
 
     return-void
@@ -218,6 +236,7 @@
 .method public getExecutor()Ljava/util/concurrent/Executor;
     .locals 0
 
+    .line 154
     check-cast p0, Ljava/util/concurrent/Executor;
 
     return-object p0
@@ -226,6 +245,7 @@
 .method public getTaskMode()I
     .locals 0
 
+    .line 147
     iget p0, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->taskMode:I
 
     return p0
@@ -234,6 +254,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 205
     iget-object v0, p0, Lkotlinx/coroutines/scheduling/LimitingDispatcher;->name:Ljava/lang/String;
 
     if-eqz v0, :cond_0

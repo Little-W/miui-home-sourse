@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/mirror/ISameAccountApCallback;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/IInterface;

@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/emoji2/text/EmojiCompat$MetadataRepoLoader;
 .super Ljava/lang/Object;
+.source "EmojiCompat.java"
 
 
 # annotations

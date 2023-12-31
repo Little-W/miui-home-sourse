@@ -1,11 +1,13 @@
 .class public Lokhttp3/internal/proxy/NullProxySelector;
 .super Ljava/net/ProxySelector;
+.source "NullProxySelector.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 29
     invoke-direct {p0}, Ljava/net/ProxySelector;-><init>()V
 
     return-void
@@ -34,6 +36,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 34
     sget-object p0, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
     invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
@@ -42,6 +45,7 @@
 
     return-object p0
 
+    .line 32
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

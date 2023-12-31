@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/CompletedExceptionally;
 .super Ljava/lang/Object;
+.source "CompletionState.kt"
 
 
 # static fields
@@ -32,10 +33,12 @@
 .method public constructor <init>(Ljava/lang/Throwable;Z)V
     .locals 0
 
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/CompletedExceptionally;->cause:Ljava/lang/Throwable;
 
+    .line 46
     iput p2, p0, Lkotlinx/coroutines/CompletedExceptionally;->_handled:I
 
     return-void
@@ -50,6 +53,7 @@
 
     const/4 p2, 0x0
 
+    .line 44
     :cond_0
     invoke-direct {p0, p1, p2}, Lkotlinx/coroutines/CompletedExceptionally;-><init>(Ljava/lang/Throwable;Z)V
 
@@ -61,6 +65,7 @@
 .method public final getHandled()Z
     .locals 0
 
+    .line 47
     iget p0, p0, Lkotlinx/coroutines/CompletedExceptionally;->_handled:I
 
     return p0
@@ -69,6 +74,7 @@
 .method public final makeHandled()Z
     .locals 3
 
+    .line 48
     sget-object v0, Lkotlinx/coroutines/CompletedExceptionally;->_handled$FU:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     const/4 v1, 0x0
@@ -85,6 +91,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

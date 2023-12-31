@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/functions/BiFunction;
 .super Ljava/lang/Object;
+.source "BiFunction.java"
 
 
 # annotations

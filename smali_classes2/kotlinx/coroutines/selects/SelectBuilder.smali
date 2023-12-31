@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/coroutines/selects/SelectBuilder;
 .super Ljava/lang/Object;
+.source "Select.kt"
 
 
 # annotations

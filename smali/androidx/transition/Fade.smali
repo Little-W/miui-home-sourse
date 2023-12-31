@@ -1,5 +1,6 @@
 .class public Landroidx/transition/Fade;
 .super Landroidx/transition/Visibility;
+.source "Fade.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 98
     invoke-direct {p0}, Landroidx/transition/Visibility;-><init>()V
 
     return-void
@@ -22,8 +24,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 91
     invoke-direct {p0}, Landroidx/transition/Visibility;-><init>()V
 
+    .line 92
     invoke-virtual {p0, p1}, Landroidx/transition/Fade;->setMode(I)V
 
     return-void
@@ -40,9 +44,11 @@
 
     return-object p0
 
+    .line 127
     :cond_0
     invoke-static {p1, p2}, Landroidx/transition/ViewUtils;->setTransitionAlpha(Landroid/view/View;F)V
 
+    .line 128
     sget-object p2, Landroidx/transition/ViewUtils;->TRANSITION_ALPHA:Landroid/util/Property;
 
     const/4 v0, 0x1
@@ -57,12 +63,15 @@
 
     move-result-object p2
 
+    .line 133
     new-instance p3, Landroidx/transition/Fade$FadeAnimatorListener;
 
     invoke-direct {p3, p1}, Landroidx/transition/Fade$FadeAnimatorListener;-><init>(Landroid/view/View;)V
 
+    .line 134
     invoke-virtual {p2, p3}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 135
     new-instance p3, Landroidx/transition/Fade$1;
 
     invoke-direct {p3, p0, p1}, Landroidx/transition/Fade$1;-><init>(Landroidx/transition/Fade;Landroid/view/View;)V
@@ -77,6 +86,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 173
     iget-object p0, p0, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v0, "android:fade:transitionAlpha"
@@ -89,6 +99,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 175
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
@@ -102,12 +113,15 @@
 .method public captureStartValues(Landroidx/transition/TransitionValues;)V
     .locals 1
 
+    .line 115
     invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureStartValues(Landroidx/transition/TransitionValues;)V
 
+    .line 116
     iget-object p0, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object p1, p1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
+    .line 117
     invoke-static {p1}, Landroidx/transition/ViewUtils;->getTransitionAlpha(Landroid/view/View;)F
 
     move-result p1
@@ -118,6 +132,7 @@
 
     const-string v0, "android:fade:transitionAlpha"
 
+    .line 116
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -128,6 +143,7 @@
 
     const/4 p1, 0x0
 
+    .line 155
     invoke-static {p3, p1}, Landroidx/transition/Fade;->getStartAlpha(Landroidx/transition/TransitionValues;F)F
 
     move-result p3
@@ -143,6 +159,7 @@
     :cond_0
     move p1, p3
 
+    .line 159
     :goto_0
     invoke-direct {p0, p2, p1, p4}, Landroidx/transition/Fade;->createAnimation(Landroid/view/View;FF)Landroid/animation/Animator;
 
@@ -154,16 +171,19 @@
 .method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 0
 
+    .line 165
     invoke-static {p2}, Landroidx/transition/ViewUtils;->saveNonTransitionAlpha(Landroid/view/View;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 166
     invoke-static {p3, p1}, Landroidx/transition/Fade;->getStartAlpha(Landroidx/transition/TransitionValues;F)F
 
     move-result p1
 
     const/4 p3, 0x0
 
+    .line 167
     invoke-direct {p0, p2, p1, p3}, Landroidx/transition/Fade;->createAnimation(Landroid/view/View;FF)Landroid/animation/Animator;
 
     move-result-object p0

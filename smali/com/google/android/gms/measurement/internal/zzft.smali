@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzft;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/lang/Thread$UncaughtExceptionHandler;
@@ -15,12 +16,15 @@
 .method public constructor <init>(Lcom/google/android/gms/measurement/internal/zzfr;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzft;->zzb:Lcom/google/android/gms/measurement/internal/zzfr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzft;->zza:Ljava/lang/String;
 
     return-void
@@ -33,6 +37,7 @@
 
     monitor-enter p0
 
+    .line 5
     :try_start_0
     iget-object p1, p0, Lcom/google/android/gms/measurement/internal/zzft;->zzb:Lcom/google/android/gms/measurement/internal/zzfr;
 
@@ -50,6 +55,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     monitor-exit p0
 
     return-void

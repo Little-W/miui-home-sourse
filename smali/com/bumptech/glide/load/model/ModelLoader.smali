@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/load/model/ModelLoader;
 .super Ljava/lang/Object;
+.source "ModelLoader.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/animation/keyframe/DropShadowKeyframeAnimation$1;
 .super Lcom/airbnb/lottie/value/LottieValueCallback;
+.source "DropShadowKeyframeAnimation.java"
 
 
 # annotations
@@ -31,6 +32,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/animation/keyframe/DropShadowKeyframeAnimation;Lcom/airbnb/lottie/value/LottieValueCallback;)V
     .locals 0
 
+    .line 75
     iput-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/DropShadowKeyframeAnimation$1;->this$0:Lcom/airbnb/lottie/animation/keyframe/DropShadowKeyframeAnimation;
 
     iput-object p2, p0, Lcom/airbnb/lottie/animation/keyframe/DropShadowKeyframeAnimation$1;->val$callback:Lcom/airbnb/lottie/value/LottieValueCallback;
@@ -54,6 +56,7 @@
         }
     .end annotation
 
+    .line 79
     iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/DropShadowKeyframeAnimation$1;->val$callback:Lcom/airbnb/lottie/value/LottieValueCallback;
 
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/value/LottieValueCallback;->getValue(Lcom/airbnb/lottie/value/LottieFrameInfo;)Ljava/lang/Object;
@@ -68,6 +71,7 @@
 
     return-object p0
 
+    .line 84
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
@@ -87,6 +91,7 @@
 .method public bridge synthetic getValue(Lcom/airbnb/lottie/value/LottieFrameInfo;)Ljava/lang/Object;
     .locals 0
 
+    .line 75
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/animation/keyframe/DropShadowKeyframeAnimation$1;->getValue(Lcom/airbnb/lottie/value/LottieFrameInfo;)Ljava/lang/Float;
 
     move-result-object p0

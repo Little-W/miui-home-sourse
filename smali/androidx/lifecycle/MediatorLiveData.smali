@@ -1,5 +1,6 @@
 .class public Landroidx/lifecycle/MediatorLiveData;
 .super Landroidx/lifecycle/MutableLiveData;
+.source "MediatorLiveData.java"
 
 
 # annotations
@@ -38,8 +39,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 69
     invoke-direct {p0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
+    .line 70
     new-instance v0, Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-direct {v0}, Landroidx/arch/core/internal/SafeIterableMap;-><init>()V
@@ -65,10 +68,12 @@
         }
     .end annotation
 
+    .line 86
     new-instance v0, Landroidx/lifecycle/MediatorLiveData$Source;
 
     invoke-direct {v0, p1, p2}, Landroidx/lifecycle/MediatorLiveData$Source;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 
+    .line 87
     iget-object v1, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-virtual {v1, p1, v0}, Landroidx/arch/core/internal/SafeIterableMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -79,12 +84,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 88
     iget-object v1, p1, Landroidx/lifecycle/MediatorLiveData$Source;->mObserver:Landroidx/lifecycle/Observer;
 
     if-ne v1, p2, :cond_0
 
     goto :goto_0
 
+    .line 89
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -100,6 +107,7 @@
 
     return-void
 
+    .line 95
     :cond_2
     invoke-virtual {p0}, Landroidx/lifecycle/MediatorLiveData;->hasActiveObservers()Z
 
@@ -107,6 +115,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 96
     invoke-virtual {v0}, Landroidx/lifecycle/MediatorLiveData$Source;->plug()V
 
     :cond_3
@@ -116,6 +125,7 @@
 .method protected onActive()V
     .locals 1
 
+    .line 117
     iget-object p0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-virtual {p0}, Landroidx/arch/core/internal/SafeIterableMap;->iterator()Ljava/util/Iterator;
@@ -135,6 +145,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 118
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -152,6 +163,7 @@
 .method protected onInactive()V
     .locals 1
 
+    .line 125
     iget-object p0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-virtual {p0}, Landroidx/arch/core/internal/SafeIterableMap;->iterator()Ljava/util/Iterator;
@@ -171,6 +183,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 126
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -197,6 +210,7 @@
         }
     .end annotation
 
+    .line 108
     iget-object p0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-virtual {p0, p1}, Landroidx/arch/core/internal/SafeIterableMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -207,6 +221,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 110
     invoke-virtual {p0}, Landroidx/lifecycle/MediatorLiveData$Source;->unplug()V
 
     :cond_0

@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/internal/UpdateManager;
 .super Ljava/lang/Object;
+.source "UpdateManager.java"
 
 
 # annotations
@@ -38,6 +39,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 35
     sget v0, Lcom/xiaomi/analytics/internal/util/TimeUtils;->HALF_DAY_IN_MS:I
 
     int-to-long v0, v0
@@ -50,26 +52,32 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
+    .line 58
     iput-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mDownloadUrl:Ljava/lang/String;
 
+    .line 59
     iput-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mMd5:Ljava/lang/String;
 
+    .line 127
     new-instance v0, Lcom/xiaomi/analytics/internal/UpdateManager$1;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/analytics/internal/UpdateManager$1;-><init>(Lcom/xiaomi/analytics/internal/UpdateManager;)V
 
     iput-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mUpdater:Ljava/lang/Runnable;
 
+    .line 225
     new-instance v0, Lcom/xiaomi/analytics/internal/UpdateManager$2;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/analytics/internal/UpdateManager$2;-><init>(Lcom/xiaomi/analytics/internal/UpdateManager;)V
 
     iput-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mDownloader:Ljava/lang/Runnable;
 
+    .line 72
     invoke-static {p1}, Lcom/xiaomi/analytics/internal/util/AndroidUtils;->getApplicationContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
@@ -82,6 +90,7 @@
 .method static synthetic access$000(Lcom/xiaomi/analytics/internal/UpdateManager;)Landroid/content/Context;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -90,6 +99,7 @@
 .method static synthetic access$100(Lcom/xiaomi/analytics/internal/UpdateManager;)Ljava/lang/String;
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Lcom/xiaomi/analytics/internal/UpdateManager;->getNonce()Ljava/lang/String;
 
     move-result-object p0
@@ -100,6 +110,7 @@
 .method static synthetic access$202(Lcom/xiaomi/analytics/internal/UpdateManager;I)I
     .locals 0
 
+    .line 31
     iput p1, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mForce:I
 
     return p1
@@ -108,6 +119,7 @@
 .method static synthetic access$300(Lcom/xiaomi/analytics/internal/UpdateManager;)Ljava/lang/String;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mMd5:Ljava/lang/String;
 
     return-object p0
@@ -116,6 +128,7 @@
 .method static synthetic access$302(Lcom/xiaomi/analytics/internal/UpdateManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 31
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mMd5:Ljava/lang/String;
 
     return-object p1
@@ -124,6 +137,7 @@
 .method static synthetic access$400(Lcom/xiaomi/analytics/internal/UpdateManager;)Ljava/lang/String;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mDownloadUrl:Ljava/lang/String;
 
     return-object p0
@@ -132,6 +146,7 @@
 .method static synthetic access$402(Lcom/xiaomi/analytics/internal/UpdateManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 31
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mDownloadUrl:Ljava/lang/String;
 
     return-object p1
@@ -140,6 +155,7 @@
 .method static synthetic access$500(Lcom/xiaomi/analytics/internal/UpdateManager;)Ljava/lang/Runnable;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mDownloader:Ljava/lang/Runnable;
 
     return-object p0
@@ -148,6 +164,7 @@
 .method static synthetic access$600(Lcom/xiaomi/analytics/internal/UpdateManager;Ljava/lang/String;)J
     .locals 0
 
+    .line 31
     invoke-direct {p0, p1}, Lcom/xiaomi/analytics/internal/UpdateManager;->parseTs(Ljava/lang/String;)J
 
     move-result-wide p0
@@ -158,6 +175,7 @@
 .method static synthetic access$700(Lcom/xiaomi/analytics/internal/UpdateManager;J)V
     .locals 0
 
+    .line 31
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/analytics/internal/UpdateManager;->saveUpdateTime(J)V
 
     return-void
@@ -166,6 +184,7 @@
 .method static synthetic access$800(Lcom/xiaomi/analytics/internal/UpdateManager;)Ljava/lang/String;
     .locals 0
 
+    .line 31
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mOutPath:Ljava/lang/String;
 
     return-object p0
@@ -174,6 +193,7 @@
 .method static synthetic access$900(Lcom/xiaomi/analytics/internal/UpdateManager;)V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Lcom/xiaomi/analytics/internal/UpdateManager;->notifyApkUpdated()V
 
     return-void
@@ -186,17 +206,20 @@
 
     monitor-enter v0
 
+    .line 65
     :try_start_0
     sget-object v1, Lcom/xiaomi/analytics/internal/UpdateManager;->sInstance:Lcom/xiaomi/analytics/internal/UpdateManager;
 
     if-nez v1, :cond_0
 
+    .line 66
     new-instance v1, Lcom/xiaomi/analytics/internal/UpdateManager;
 
     invoke-direct {v1, p0}, Lcom/xiaomi/analytics/internal/UpdateManager;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/xiaomi/analytics/internal/UpdateManager;->sInstance:Lcom/xiaomi/analytics/internal/UpdateManager;
 
+    .line 68
     :cond_0
     sget-object p0, Lcom/xiaomi/analytics/internal/UpdateManager;->sInstance:Lcom/xiaomi/analytics/internal/UpdateManager;
     :try_end_0
@@ -219,6 +242,7 @@
 
     monitor-enter p0
 
+    .line 106
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mContext:Landroid/content/Context;
 
@@ -234,6 +258,7 @@
 
     const-wide/16 v2, 0x0
 
+    .line 107
     invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -255,6 +280,7 @@
 .method private getNonce()Ljava/lang/String;
     .locals 4
 
+    .line 118
     new-instance v0, Ljava/util/Random;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -263,6 +289,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/util/Random;-><init>(J)V
 
+    .line 120
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mContext:Landroid/content/Context;
 
@@ -270,6 +297,7 @@
 
     move-result-object p0
 
+    .line 121
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -298,6 +326,7 @@
 
     return-object p0
 
+    .line 124
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -327,10 +356,12 @@
 .method private notifyApkUpdated()V
     .locals 3
 
+    .line 277
     iget-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mUpdateListener:Lcom/xiaomi/analytics/internal/UpdateManager$UpdateListener;
 
     if-eqz v0, :cond_1
 
+    .line 278
     iget-object v1, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mOutPath:Ljava/lang/String;
 
     iget p0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mForce:I
@@ -357,6 +388,7 @@
     :try_start_0
     const-string p0, "-"
 
+    .line 219
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -373,6 +405,7 @@
 
     return-wide p0
 
+    .line 222
     :catch_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -386,6 +419,7 @@
 
     monitor-enter p0
 
+    .line 111
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mContext:Landroid/content/Context;
 
@@ -397,18 +431,22 @@
 
     move-result-object v0
 
+    .line 112
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     const-string v1, "updateTime"
 
+    .line 113
     invoke-interface {v0, v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
+    .line 114
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 115
     monitor-exit p0
 
     return-void
@@ -426,6 +464,7 @@
 .method public checkUpdate(Ljava/lang/String;)V
     .locals 2
 
+    .line 80
     iget-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mContext:Landroid/content/Context;
 
     const-string v1, "UpdateManager"
@@ -441,14 +480,18 @@
     :cond_0
     const-string v0, "checkUpdate "
 
+    .line 83
     invoke-static {v1, v0}, Lcom/xiaomi/analytics/internal/util/ALog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 84
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mOutPath:Ljava/lang/String;
 
+    .line 85
     iget-object p1, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mUpdater:Ljava/lang/Runnable;
 
     invoke-static {p1}, Lcom/xiaomi/analytics/internal/util/TaskRunner;->execute(Ljava/lang/Runnable;)V
 
+    .line 86
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -461,6 +504,7 @@
 .method public needCheckUpdate()Z
     .locals 5
 
+    .line 90
     iget-object v0, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mContext:Landroid/content/Context;
 
     const-string v1, "UpdateManager"
@@ -475,6 +519,7 @@
 
     return v2
 
+    .line 93
     :cond_0
     invoke-static {}, Lcom/xiaomi/analytics/Analytics;->isUpdateEnable()Z
 
@@ -484,15 +529,18 @@
 
     const-string p0, "Updating is disabled."
 
+    .line 94
     invoke-static {v1, p0}, Lcom/xiaomi/analytics/internal/util/ALog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
+    .line 97
     :cond_1
     invoke-direct {p0}, Lcom/xiaomi/analytics/internal/UpdateManager;->getLastUpdateTime()J
 
     move-result-wide v3
 
+    .line 98
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -517,6 +565,7 @@
 
     invoke-static {v1, p0}, Lcom/xiaomi/analytics/internal/util/ALog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 99
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -540,6 +589,7 @@
 .method public setUpdateListener(Lcom/xiaomi/analytics/internal/UpdateManager$UpdateListener;)V
     .locals 0
 
+    .line 76
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/UpdateManager;->mUpdateListener:Lcom/xiaomi/analytics/internal/UpdateManager$UpdateListener;
 
     return-void

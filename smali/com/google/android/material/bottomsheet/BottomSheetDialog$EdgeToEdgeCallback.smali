@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;
 .super Lcom/google/android/material/bottomsheet/BottomSheetBehavior$BottomSheetCallback;
+.source "BottomSheetDialog.java"
 
 
 # annotations
@@ -25,16 +26,20 @@
 .method private constructor <init>(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)V
     .locals 1
 
+    .line 417
     invoke-direct {p0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$BottomSheetCallback;-><init>()V
 
+    .line 418
     iput-object p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->insetsCompat:Landroidx/core/view/WindowInsetsCompat;
 
+    .line 419
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x17
 
     if-lt p2, v0, :cond_0
 
+    .line 421
     invoke-virtual {p1}, Landroid/view/View;->getSystemUiVisibility()I
 
     move-result p2
@@ -53,6 +58,7 @@
     :goto_0
     iput-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->lightStatusBar:Z
 
+    .line 426
     invoke-static {p1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->from(Landroid/view/View;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     move-result-object p2
@@ -63,12 +69,14 @@
 
     if-eqz p2, :cond_1
 
+    .line 428
     invoke-virtual {p2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getFillColor()Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
     goto :goto_1
 
+    .line 430
     :cond_1
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getBackgroundTintList(Landroid/view/View;)Landroid/content/res/ColorStateList;
 
@@ -77,6 +85,7 @@
     :goto_1
     if-eqz p2, :cond_2
 
+    .line 435
     invoke-virtual {p2}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result p1
@@ -89,6 +98,7 @@
 
     goto :goto_2
 
+    .line 436
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -98,6 +108,7 @@
 
     if-eqz p2, :cond_3
 
+    .line 438
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -116,6 +127,7 @@
 
     goto :goto_2
 
+    .line 441
     :cond_3
     iget-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->lightStatusBar:Z
 
@@ -128,6 +140,7 @@
 .method synthetic constructor <init>(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;Lcom/google/android/material/bottomsheet/BottomSheetDialog$1;)V
     .locals 0
 
+    .line 410
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;-><init>(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)V
 
     return-void
@@ -136,6 +149,7 @@
 .method private setPaddingForPosition(Landroid/view/View;)V
     .locals 3
 
+    .line 461
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v0
@@ -148,16 +162,19 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 464
     iget-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->lightBottomSheet:Z
 
     invoke-static {p1, v0}, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->setLightStatusBar(Landroid/view/View;Z)V
 
+    .line 467
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v0
 
     iget-object p0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->insetsCompat:Landroidx/core/view/WindowInsetsCompat;
 
+    .line 468
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat;->getSystemWindowInsetTop()I
 
     move-result p0
@@ -168,18 +185,22 @@
 
     sub-int/2addr p0, v1
 
+    .line 469
     invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
 
     move-result v1
 
+    .line 470
     invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v2
 
+    .line 466
     invoke-virtual {p1, v0, p0, v1, v2}, Landroid/view/View;->setPadding(IIII)V
 
     goto :goto_0
 
+    .line 471
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
@@ -187,24 +208,29 @@
 
     if-eqz v0, :cond_1
 
+    .line 474
     iget-boolean p0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->lightStatusBar:Z
 
     invoke-static {p1, p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->setLightStatusBar(Landroid/view/View;Z)V
 
+    .line 476
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
     move-result p0
 
     const/4 v0, 0x0
 
+    .line 478
     invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
 
     move-result v1
 
+    .line 479
     invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v2
 
+    .line 475
     invoke-virtual {p1, p0, v0, v1, v2}, Landroid/view/View;->setPadding(IIII)V
 
     :cond_1
@@ -217,6 +243,7 @@
 .method onLayout(Landroid/view/View;)V
     .locals 0
 
+    .line 457
     invoke-direct {p0, p1}, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->setPaddingForPosition(Landroid/view/View;)V
 
     return-void
@@ -225,6 +252,7 @@
 .method public onSlide(Landroid/view/View;F)V
     .locals 0
 
+    .line 452
     invoke-direct {p0, p1}, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->setPaddingForPosition(Landroid/view/View;)V
 
     return-void
@@ -233,6 +261,7 @@
 .method public onStateChanged(Landroid/view/View;I)V
     .locals 0
 
+    .line 447
     invoke-direct {p0, p1}, Lcom/google/android/material/bottomsheet/BottomSheetDialog$EdgeToEdgeCallback;->setPaddingForPosition(Landroid/view/View;)V
 
     return-void

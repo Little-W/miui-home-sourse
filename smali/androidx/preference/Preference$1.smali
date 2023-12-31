@@ -1,5 +1,6 @@
 .class Landroidx/preference/Preference$1;
 .super Ljava/lang/Object;
+.source "Preference.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/preference/Preference;)V
     .locals 0
 
+    .line 178
     iput-object p1, p0, Landroidx/preference/Preference$1;->this$0:Landroidx/preference/Preference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
+    .line 181
     iget-object p0, p0, Landroidx/preference/Preference$1;->this$0:Landroidx/preference/Preference;
 
     invoke-virtual {p0, p1}, Landroidx/preference/Preference;->performClick(Landroid/view/View;)V

@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;
 .super Ljava/lang/Object;
+.source "DynamicAnimation.java"
 
 
 # annotations

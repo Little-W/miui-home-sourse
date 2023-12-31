@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchAutoSuggestRequest;
 .super Lio/branch/search/f;
+.source "SourceFile"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;
 .super Landroidx/core/view/NestedScrollingChildHelper;
+.source "SpringRecyclerView.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method constructor <init>(Landroidx/recyclerview/widget/SpringRecyclerView;Landroid/view/View;)V
     .locals 0
 
+    .line 181
     iput-object p1, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
+    .line 182
     invoke-direct {p0, p2}, Landroidx/core/view/NestedScrollingChildHelper;-><init>(Landroid/view/View;)V
 
     return-void
@@ -33,6 +36,7 @@
 .method public dispatchNestedPreScroll(II[I[II)Z
     .locals 6
 
+    .line 187
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {p0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$100(Landroidx/recyclerview/widget/SpringRecyclerView;)Lmiuix/spring/view/SpringHelper;
@@ -59,6 +63,7 @@
 .method public dispatchNestedScroll(IIII[II[I)V
     .locals 8
 
+    .line 192
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {p0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$100(Landroidx/recyclerview/widget/SpringRecyclerView;)Lmiuix/spring/view/SpringHelper;
@@ -87,6 +92,7 @@
 .method super_dispatchNestedPreScroll(II[I[II)Z
     .locals 1
 
+    .line 196
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$300(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -107,6 +113,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 197
     :cond_0
     invoke-super/range {p0 .. p5}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedPreScroll(II[I[II)Z
 
@@ -123,6 +130,7 @@
 .method super_dispatchNestedScroll(IIII[II[I)V
     .locals 1
 
+    .line 204
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$300(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -139,6 +147,7 @@
 
     if-nez v0, :cond_0
 
+    .line 205
     invoke-super/range {p0 .. p7}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedScroll(IIII[II[I)V
 
     :cond_0

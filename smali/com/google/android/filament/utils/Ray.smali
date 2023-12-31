@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/Ray;
 .super Ljava/lang/Object;
+.source "Ray.kt"
 
 
 # instance fields
@@ -20,6 +21,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/filament/utils/Ray;->origin:Lcom/google/android/filament/utils/Float3;
@@ -36,6 +38,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 19
     new-instance p1, Lcom/google/android/filament/utils/Float3;
 
     const/4 v1, 0x0
@@ -166,6 +169,7 @@
 .method public final getDirection()Lcom/google/android/filament/utils/Float3;
     .locals 0
 
+    .line 19
     iget-object p0, p0, Lcom/google/android/filament/utils/Ray;->direction:Lcom/google/android/filament/utils/Float3;
 
     return-object p0
@@ -174,6 +178,7 @@
 .method public final getOrigin()Lcom/google/android/filament/utils/Float3;
     .locals 0
 
+    .line 19
     iget-object p0, p0, Lcom/google/android/filament/utils/Ray;->origin:Lcom/google/android/filament/utils/Float3;
 
     return-object p0
@@ -221,6 +226,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 19
     iput-object p1, p0, Lcom/google/android/filament/utils/Ray;->direction:Lcom/google/android/filament/utils/Float3;
 
     return-void
@@ -233,6 +239,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 19
     iput-object p1, p0, Lcom/google/android/filament/utils/Ray;->origin:Lcom/google/android/filament/utils/Float3;
 
     return-void

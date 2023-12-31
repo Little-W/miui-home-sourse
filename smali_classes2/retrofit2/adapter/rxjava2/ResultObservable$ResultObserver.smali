@@ -1,5 +1,6 @@
 .class Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;
 .super Ljava/lang/Object;
+.source "ResultObservable.java"
 
 # interfaces
 .implements Lio/reactivex/Observer;
@@ -54,8 +55,10 @@
         }
     .end annotation
 
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 41
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lio/reactivex/Observer;
 
     return-void
@@ -66,6 +69,7 @@
 .method public onComplete()V
     .locals 0
 
+    .line 68
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {p0}, Lio/reactivex/Observer;->onComplete()V
@@ -76,6 +80,7 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 3
 
+    .line 54
     :try_start_0
     iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lio/reactivex/Observer;
 
@@ -87,6 +92,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 64
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {p0}, Lio/reactivex/Observer;->onComplete()V
@@ -96,6 +102,7 @@
     :catchall_0
     move-exception p1
 
+    .line 57
     :try_start_1
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lio/reactivex/Observer;
 
@@ -108,8 +115,10 @@
     :catchall_1
     move-exception p0
 
+    .line 59
     invoke-static {p0}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
+    .line 60
     new-instance v0, Lio/reactivex/exceptions/CompositeException;
 
     const/4 v1, 0x2
@@ -135,6 +144,7 @@
 .method public bridge synthetic onNext(Ljava/lang/Object;)V
     .locals 0
 
+    .line 37
     check-cast p1, Lretrofit2/Response;
 
     invoke-virtual {p0, p1}, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->onNext(Lretrofit2/Response;)V
@@ -152,6 +162,7 @@
         }
     .end annotation
 
+    .line 49
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lio/reactivex/Observer;
 
     invoke-static {p1}, Lretrofit2/adapter/rxjava2/Result;->response(Lretrofit2/Response;)Lretrofit2/adapter/rxjava2/Result;
@@ -166,6 +177,7 @@
 .method public onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
+    .line 45
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {p0, p1}, Lio/reactivex/Observer;->onSubscribe(Lio/reactivex/disposables/Disposable;)V

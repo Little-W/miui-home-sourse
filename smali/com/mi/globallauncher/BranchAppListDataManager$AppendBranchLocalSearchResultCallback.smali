@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/BranchAppListDataManager$AppendBranchLocalSearchResultCallback;
 .super Ljava/lang/Object;
+.source "BranchAppListDataManager.java"
 
 
 # annotations

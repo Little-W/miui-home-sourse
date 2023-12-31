@@ -1,5 +1,6 @@
 .class public interface abstract Lretrofit2/Converter;
 .super Ljava/lang/Object;
+.source "Converter.java"
 
 
 # annotations

@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/am;I)V
     .locals 0
 
+    .line 92
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/an;->b:Lcom/xiaomi/onetrack/api/am;
 
     iput p2, p0, Lcom/xiaomi/onetrack/api/an;->a:I
@@ -29,6 +30,7 @@
 .method public run()V
     .locals 2
 
+    .line 95
     invoke-static {}, Lcom/xiaomi/onetrack/c/i;->b()Z
 
     move-result v0
@@ -37,6 +39,7 @@
 
     return-void
 
+    .line 99
     :cond_0
     iget p0, p0, Lcom/xiaomi/onetrack/api/an;->a:I
 
@@ -44,6 +47,7 @@
 
     if-ne p0, v0, :cond_1
 
+    .line 100
     invoke-static {}, Lcom/xiaomi/onetrack/c/s;->a()Lcom/xiaomi/onetrack/c/s;
 
     move-result-object p0
@@ -54,12 +58,14 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/onetrack/c/s;->a(IZ)V
 
+    .line 101
     invoke-static {}, Lcom/xiaomi/onetrack/c/s;->a()Lcom/xiaomi/onetrack/c/s;
 
     move-result-object p0
 
     invoke-virtual {p0, v1, v1}, Lcom/xiaomi/onetrack/c/s;->a(IZ)V
 
+    .line 102
     invoke-static {}, Lcom/xiaomi/onetrack/a/c/b;->a()Lcom/xiaomi/onetrack/a/c/b;
 
     move-result-object p0

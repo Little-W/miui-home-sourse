@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$1;
 .super Ljava/lang/Object;
+.source "CrashlyticsBackgroundWorker.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;)V
     .locals 0
 
+    .line 50
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 53
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;
 
     invoke-static {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;->access$000(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsBackgroundWorker;)Ljava/lang/ThreadLocal;

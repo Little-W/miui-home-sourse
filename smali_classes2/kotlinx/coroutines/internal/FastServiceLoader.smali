@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/FastServiceLoader;
 .super Ljava/lang/Object;
+.source "FastServiceLoader.kt"
 
 
 # annotations
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 30
     new-instance v0, Lkotlinx/coroutines/internal/FastServiceLoader;
 
     invoke-direct {v0}, Lkotlinx/coroutines/internal/FastServiceLoader;-><init>()V
@@ -28,6 +30,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,10 +52,12 @@
 
     const/4 p0, 0x0
 
+    .line 105
     invoke-static {p1, p0, p2}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object p1
 
+    .line 106
     invoke-virtual {p3, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result p2
@@ -61,6 +66,7 @@
 
     new-array p2, p0, [Ljava/lang/Class;
 
+    .line 107
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -77,6 +83,7 @@
 
     return-object p0
 
+    .line 106
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -127,6 +134,7 @@
         }
     .end annotation
 
+    .line 87
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/internal/FastServiceLoader;->loadProviders$kotlinx_coroutines_core(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/util/List;
 
@@ -136,6 +144,7 @@
 
     goto :goto_0
 
+    .line 90
     :catchall_0
     invoke-static {p1, p2}, Ljava/util/ServiceLoader;->load(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/util/ServiceLoader;
 
@@ -164,6 +173,7 @@
         }
     .end annotation
 
+    .line 111
     invoke-virtual {p1}, Ljava/net/URL;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -176,6 +186,7 @@
 
     const-string v3, "jar"
 
+    .line 113
     invoke-static {p0, v3, v0, v1, v2}, Lkotlin/text/StringsKt;->startsWith$default(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v3
@@ -184,6 +195,7 @@
 
     const-string p1, "jar:file:"
 
+    .line 114
     invoke-static {p0, p1, v2, v1, v2}, Lkotlin/text/StringsKt;->substringAfter$default(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -196,18 +208,22 @@
 
     const-string v3, "!/"
 
+    .line 115
     invoke-static {p0, v3, v2, v1, v2}, Lkotlin/text/StringsKt;->substringAfter$default(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 117
     new-instance v1, Ljava/util/jar/JarFile;
 
     invoke-direct {v1, p1, v0}, Ljava/util/jar/JarFile;-><init>(Ljava/lang/String;Z)V
 
+    .line 183
     move-object p1, v2
 
     check-cast p1, Ljava/lang/Throwable;
 
+    .line 118
     :try_start_0
     new-instance p1, Ljava/io/BufferedReader;
 
@@ -240,6 +256,7 @@
 
     check-cast p0, Ljava/io/BufferedReader;
 
+    .line 119
     sget-object v0, Lkotlinx/coroutines/internal/FastServiceLoader;->INSTANCE:Lkotlinx/coroutines/internal/FastServiceLoader;
 
     invoke-direct {v0, p0}, Lkotlinx/coroutines/internal/FastServiceLoader;->parseFile(Ljava/io/BufferedReader;)Ljava/util/List;
@@ -253,6 +270,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
+    .line 191
     :try_start_3
     invoke-virtual {v1}, Ljava/util/jar/JarFile;->close()V
     :try_end_3
@@ -263,11 +281,13 @@
     :catchall_0
     move-exception p0
 
+    .line 193
     throw p0
 
     :catchall_1
     move-exception p0
 
+    .line 195
     :try_start_4
     throw p0
     :try_end_4
@@ -286,6 +306,7 @@
     :catchall_3
     move-exception p0
 
+    .line 188
     :try_start_6
     throw p0
     :try_end_6
@@ -294,20 +315,25 @@
     :catchall_4
     move-exception p1
 
+    .line 191
     :try_start_7
     invoke-virtual {v1}, Ljava/util/jar/JarFile;->close()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_5
 
+    .line 195
     throw p1
 
     :catchall_5
     move-exception p1
 
+    .line 194
     invoke-static {p0, p1}, Lkotlin/ExceptionsKt;->addSuppressed(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
+    .line 195
     throw p0
 
+    .line 124
     :cond_0
     new-instance p0, Ljava/io/BufferedReader;
 
@@ -332,6 +358,7 @@
 
     check-cast p1, Ljava/io/BufferedReader;
 
+    .line 125
     sget-object v0, Lkotlinx/coroutines/internal/FastServiceLoader;->INSTANCE:Lkotlinx/coroutines/internal/FastServiceLoader;
 
     invoke-direct {v0, p1}, Lkotlinx/coroutines/internal/FastServiceLoader;->parseFile(Ljava/io/BufferedReader;)Ljava/util/List;
@@ -340,6 +367,7 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_6
 
+    .line 124
     invoke-static {p0, v2}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-object p1
@@ -373,12 +401,14 @@
         }
     .end annotation
 
+    .line 149
     new-instance p0, Ljava/util/LinkedHashSet;
 
     invoke-direct {p0}, Ljava/util/LinkedHashSet;-><init>()V
 
     check-cast p0, Ljava/util/Set;
 
+    .line 151
     :cond_0
     :goto_0
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -393,6 +423,7 @@
 
     const-string v3, "#"
 
+    .line 152
     invoke-static {v0, v3, v2, v1, v2}, Lkotlin/text/StringsKt;->substringBefore$default(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -409,6 +440,7 @@
 
     move-result-object v0
 
+    .line 153
     move-object v1, v0
 
     check-cast v1, Ljava/lang/CharSequence;
@@ -417,6 +449,7 @@
 
     move v3, v2
 
+    .line 196
     :goto_1
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
@@ -434,6 +467,7 @@
 
     if-eq v4, v6, :cond_2
 
+    .line 153
     invoke-static {v4}, Ljava/lang/Character;->isJavaIdentifierPart(C)Z
 
     move-result v4
@@ -469,6 +503,7 @@
     :goto_4
     if-eqz v3, :cond_6
 
+    .line 154
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
@@ -480,10 +515,12 @@
     :cond_5
     if-eqz v2, :cond_0
 
+    .line 155
     invoke-interface {p0, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 153
     :cond_6
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -511,6 +548,7 @@
 
     throw p1
 
+    .line 152
     :cond_7
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -520,6 +558,7 @@
 
     throw p0
 
+    .line 158
     :cond_8
     check-cast p0, Ljava/lang/Iterable;
 
@@ -543,14 +582,17 @@
         }
     .end annotation
 
+    .line 53
     const-class v0, Lkotlinx/coroutines/internal/MainDispatcherFactory;
 
+    .line 54
     invoke-static {}, Lkotlinx/coroutines/internal/FastServiceLoaderKt;->getANDROID_DETECTED()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 55
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v1
@@ -561,6 +603,7 @@
 
     return-object p0
 
+    .line 59
     :cond_0
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
@@ -579,6 +622,7 @@
 
     const/4 v5, 0x0
 
+    .line 163
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -590,6 +634,7 @@
 
     new-array v6, v5, [Ljava/lang/Class;
 
+    .line 164
     invoke-virtual {v2, v6}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v2
@@ -617,6 +662,7 @@
     :goto_0
     if-eqz v2, :cond_1
 
+    .line 60
     :try_start_2
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -625,6 +671,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 169
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -636,6 +683,7 @@
 
     new-array v4, v5, [Ljava/lang/Class;
 
+    .line 170
     invoke-virtual {v2, v4}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v2
@@ -663,9 +711,11 @@
     :goto_1
     if-eqz v2, :cond_2
 
+    .line 61
     :try_start_4
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 62
     :cond_2
     check-cast v1, Ljava/util/List;
     :try_end_4
@@ -673,6 +723,7 @@
 
     goto :goto_2
 
+    .line 65
     :catchall_0
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -702,6 +753,7 @@
         }
     .end annotation
 
+    .line 96
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -720,10 +772,12 @@
 
     move-result-object p0
 
+    .line 98
     invoke-virtual {p2, p0}, Ljava/lang/ClassLoader;->getResources(Ljava/lang/String;)Ljava/util/Enumeration;
 
     move-result-object p0
 
+    .line 99
     invoke-static {p0}, Ljava/util/Collections;->list(Ljava/util/Enumeration;)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -736,12 +790,14 @@
 
     check-cast p0, Ljava/lang/Iterable;
 
+    .line 173
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v0, Ljava/util/Collection;
 
+    .line 174
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -757,8 +813,10 @@
 
     move-result-object v1
 
+    .line 175
     check-cast v1, Ljava/net/URL;
 
+    .line 99
     sget-object v2, Lkotlinx/coroutines/internal/FastServiceLoader;->INSTANCE:Lkotlinx/coroutines/internal/FastServiceLoader;
 
     invoke-direct {v2, v1}, Lkotlinx/coroutines/internal/FastServiceLoader;->parse(Ljava/net/URL;)Ljava/util/List;
@@ -767,19 +825,24 @@
 
     check-cast v1, Ljava/lang/Iterable;
 
+    .line 176
     invoke-static {v0, v1}, Lkotlin/collections/CollectionsKt;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     goto :goto_0
 
+    .line 178
     :cond_0
     check-cast v0, Ljava/util/List;
 
+    .line 173
     check-cast v0, Ljava/lang/Iterable;
 
+    .line 99
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->toSet(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p0
 
+    .line 100
     move-object v0, p0
 
     check-cast v0, Ljava/util/Collection;
@@ -792,8 +855,10 @@
 
     if-eqz v0, :cond_2
 
+    .line 101
     check-cast p0, Ljava/lang/Iterable;
 
+    .line 179
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0xa
@@ -806,6 +871,7 @@
 
     check-cast v0, Ljava/util/Collection;
 
+    .line 180
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -821,8 +887,10 @@
 
     move-result-object v1
 
+    .line 181
     check-cast v1, Ljava/lang/String;
 
+    .line 101
     sget-object v2, Lkotlinx/coroutines/internal/FastServiceLoader;->INSTANCE:Lkotlinx/coroutines/internal/FastServiceLoader;
 
     invoke-direct {v2, v1, p2, p1}, Lkotlinx/coroutines/internal/FastServiceLoader;->getProviderInstance(Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Object;
@@ -833,11 +901,13 @@
 
     goto :goto_1
 
+    .line 182
     :cond_1
     check-cast v0, Ljava/util/List;
 
     return-object v0
 
+    .line 100
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

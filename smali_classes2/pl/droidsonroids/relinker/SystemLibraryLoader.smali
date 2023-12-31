@@ -1,5 +1,6 @@
 .class final Lpl/droidsonroids/relinker/SystemLibraryLoader;
 .super Ljava/lang/Object;
+.source "SystemLibraryLoader.java"
 
 # interfaces
 .implements Lpl/droidsonroids/relinker/ReLinker$LibraryLoader;
@@ -9,6 +10,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +21,7 @@
 .method public loadLibrary(Ljava/lang/String;)V
     .locals 0
 
+    .line 24
     invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -27,6 +30,7 @@
 .method public loadPath(Ljava/lang/String;)V
     .locals 0
 
+    .line 29
     invoke-static {p1}, Ljava/lang/System;->load(Ljava/lang/String;)V
 
     return-void
@@ -37,6 +41,7 @@
 
     const-string p0, "lib"
 
+    .line 34
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -53,6 +58,7 @@
 
     return-object p1
 
+    .line 39
     :cond_0
     invoke-static {p1}, Ljava/lang/System;->mapLibraryName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -64,6 +70,7 @@
 .method public supportedAbis()[Ljava/lang/String;
     .locals 3
 
+    .line 50
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x15
@@ -76,10 +83,12 @@
 
     if-lez p0, :cond_0
 
+    .line 51
     sget-object p0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
 
     return-object p0
 
+    .line 52
     :cond_0
     sget-object p0, Landroid/os/Build;->CPU_ABI2:Ljava/lang/String;
 
@@ -97,6 +106,7 @@
 
     new-array p0, p0, [Ljava/lang/String;
 
+    .line 53
     sget-object v2, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
     aput-object v2, p0, v0
@@ -110,6 +120,7 @@
     :cond_1
     new-array p0, v1, [Ljava/lang/String;
 
+    .line 55
     sget-object v1, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
     aput-object v1, p0, v0
@@ -120,6 +131,7 @@
 .method public unmapLibraryName(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 45
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p0

@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/ActiveResources$1;
 .super Ljava/lang/Object;
+.source "ActiveResources.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
+    .line 40
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/bumptech/glide/load/engine/ActiveResources$1$1;

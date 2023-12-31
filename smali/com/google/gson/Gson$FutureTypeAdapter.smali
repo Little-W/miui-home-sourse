@@ -1,5 +1,6 @@
 .class Lcom/google/gson/Gson$FutureTypeAdapter;
 .super Lcom/google/gson/TypeAdapter;
+.source "Gson.java"
 
 
 # annotations
@@ -38,6 +39,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1006
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -61,16 +63,19 @@
         }
     .end annotation
 
+    .line 1017
     iget-object p0, p0, Lcom/google/gson/Gson$FutureTypeAdapter;->delegate:Lcom/google/gson/TypeAdapter;
 
     if-eqz p0, :cond_0
 
+    .line 1020
     invoke-virtual {p0, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 1018
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -89,14 +94,17 @@
         }
     .end annotation
 
+    .line 1010
     iget-object v0, p0, Lcom/google/gson/Gson$FutureTypeAdapter;->delegate:Lcom/google/gson/TypeAdapter;
 
     if-nez v0, :cond_0
 
+    .line 1013
     iput-object p1, p0, Lcom/google/gson/Gson$FutureTypeAdapter;->delegate:Lcom/google/gson/TypeAdapter;
 
     return-void
 
+    .line 1011
     :cond_0
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -121,14 +129,17 @@
         }
     .end annotation
 
+    .line 1024
     iget-object p0, p0, Lcom/google/gson/Gson$FutureTypeAdapter;->delegate:Lcom/google/gson/TypeAdapter;
 
     if-eqz p0, :cond_0
 
+    .line 1027
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
     return-void
 
+    .line 1025
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

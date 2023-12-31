@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/analytics/connector/internal/zzg;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-api@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/measurement/api/AppMeasurementSdk$OnEventListener;
@@ -13,6 +14,7 @@
 .method public constructor <init>(Lcom/google/firebase/analytics/connector/internal/zze;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/firebase/analytics/connector/internal/zzg;->zza:Lcom/google/firebase/analytics/connector/internal/zze;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,34 +31,41 @@
 
     const-string v0, "crash"
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 4
     invoke-static {p2}, Lcom/google/firebase/analytics/connector/internal/zzd;->zzb(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 5
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
     const-string v0, "name"
 
+    .line 6
     invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p2, "timestampInMillis"
 
+    .line 7
     invoke-virtual {p1, p2, p4, p5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string p2, "params"
 
+    .line 8
     invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
+    .line 9
     iget-object p0, p0, Lcom/google/firebase/analytics/connector/internal/zzg;->zza:Lcom/google/firebase/analytics/connector/internal/zze;
 
     invoke-static {p0}, Lcom/google/firebase/analytics/connector/internal/zze;->zza(Lcom/google/firebase/analytics/connector/internal/zze;)Lcom/google/firebase/analytics/connector/AnalyticsConnector$AnalyticsConnectorListener;

@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;
 .super Ljava/lang/Object;
+.source "CrashlyticsCore.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -36,6 +37,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;)V
     .locals 0
 
+    .line 203
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->val$settingsProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;
@@ -64,6 +66,7 @@
         }
     .end annotation
 
+    .line 206
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->val$settingsProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;
@@ -83,6 +86,7 @@
         }
     .end annotation
 
+    .line 203
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->call()Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0

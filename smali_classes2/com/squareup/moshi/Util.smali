@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/Util;
 .super Ljava/lang/Object;
+.source "Util.java"
 
 
 # static fields
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 26
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v0
@@ -41,6 +43,7 @@
         }
     .end annotation
 
+    .line 37
     invoke-interface {p0}, Ljava/lang/reflect/AnnotatedElement;->getAnnotations()[Ljava/lang/annotation/Annotation;
 
     move-result-object p0
@@ -66,6 +69,7 @@
         }
     .end annotation
 
+    .line 42
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -77,6 +81,7 @@
 
     aget-object v3, p0, v2
 
+    .line 43
     invoke-interface {v3}, Ljava/lang/annotation/Annotation;->annotationType()Ljava/lang/Class;
 
     move-result-object v4
@@ -91,10 +96,12 @@
 
     if-nez v1, :cond_0
 
+    .line 44
     new-instance v1, Ljava/util/LinkedHashSet;
 
     invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
 
+    .line 45
     :cond_0
     invoke-interface {v1, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -106,6 +113,7 @@
     :cond_2
     if-eqz v1, :cond_3
 
+    .line 48
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p0

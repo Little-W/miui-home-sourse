@@ -1,5 +1,6 @@
 .class final Lio/reactivex/android/schedulers/AndroidSchedulers$MainHolder;
 .super Ljava/lang/Object;
+.source "AndroidSchedulers.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 29
     new-instance v0, Lio/reactivex/android/schedulers/HandlerScheduler;
 
     new-instance v1, Landroid/os/Handler;

@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/LockedResource$1;
 .super Ljava/lang/Object;
+.source "LockedResource.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/util/pool/FactoryPools$Factory;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,6 +48,7 @@
         }
     .end annotation
 
+    .line 23
     new-instance p0, Lcom/bumptech/glide/load/engine/LockedResource;
 
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/LockedResource;-><init>()V
@@ -56,6 +59,7 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 0
 
+    .line 20
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/LockedResource$1;->create()Lcom/bumptech/glide/load/engine/LockedResource;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class final Lorg/brotli/dec/HuffmanTreeGroup;
 .super Ljava/lang/Object;
+.source "HuffmanTreeGroup.java"
 
 
 # instance fields
@@ -14,6 +15,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method static decode(Lorg/brotli/dec/HuffmanTreeGroup;Lorg/brotli/dec/BitReader;)V
     .locals 5
 
+    .line 50
     iget-object v0, p0, Lorg/brotli/dec/HuffmanTreeGroup;->trees:[I
 
     array-length v0, v0
@@ -33,10 +36,12 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 52
     iget-object v3, p0, Lorg/brotli/dec/HuffmanTreeGroup;->trees:[I
 
     aput v2, v3, v1
 
+    .line 53
     iget v3, p0, Lorg/brotli/dec/HuffmanTreeGroup;->alphabetSize:I
 
     iget-object v4, p0, Lorg/brotli/dec/HuffmanTreeGroup;->codes:[I
@@ -56,14 +61,17 @@
 .method static init(Lorg/brotli/dec/HuffmanTreeGroup;II)V
     .locals 0
 
+    .line 37
     iput p1, p0, Lorg/brotli/dec/HuffmanTreeGroup;->alphabetSize:I
 
     mul-int/lit16 p1, p2, 0x438
 
+    .line 38
     new-array p1, p1, [I
 
     iput-object p1, p0, Lorg/brotli/dec/HuffmanTreeGroup;->codes:[I
 
+    .line 39
     new-array p1, p2, [I
 
     iput-object p1, p0, Lorg/brotli/dec/HuffmanTreeGroup;->trees:[I

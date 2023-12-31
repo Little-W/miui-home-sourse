@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/MarketManager$1;
 .super Lcom/market/sdk/RemoteMethodInvoker;
+.source "MarketManager.java"
 
 
 # annotations
@@ -35,6 +36,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
+    .line 157
     iput-object p1, p0, Lcom/market/sdk/MarketManager$1;->this$0:Lcom/market/sdk/MarketManager;
 
     iput-object p2, p0, Lcom/market/sdk/MarketManager$1;->val$path:Ljava/lang/String;
@@ -53,6 +55,7 @@
 .method public innerInvoke(Lcom/market/sdk/IMarketService;)Lcom/market/sdk/ApkVerifyInfo;
     .locals 2
 
+    .line 160
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/MarketManager$1;->val$path:Ljava/lang/String;
 
@@ -82,6 +85,7 @@
         }
     .end annotation
 
+    .line 157
     invoke-virtual {p0, p1}, Lcom/market/sdk/MarketManager$1;->innerInvoke(Lcom/market/sdk/IMarketService;)Lcom/market/sdk/ApkVerifyInfo;
 
     move-result-object p0

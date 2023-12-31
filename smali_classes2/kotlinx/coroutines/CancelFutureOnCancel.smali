@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/CancelFutureOnCancel;
 .super Lkotlinx/coroutines/CancelHandler;
+.source "Future.kt"
 
 
 # instance fields
@@ -24,6 +25,7 @@
         }
     .end annotation
 
+    .line 47
     invoke-direct {p0}, Lkotlinx/coroutines/CancelHandler;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/CancelFutureOnCancel;->future:Ljava/util/concurrent/Future;
@@ -36,6 +38,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 47
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/CancelFutureOnCancel;->invoke(Ljava/lang/Throwable;)V
@@ -48,6 +51,7 @@
 .method public invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 51
     iget-object p0, p0, Lkotlinx/coroutines/CancelFutureOnCancel;->future:Ljava/util/concurrent/Future;
 
     const/4 p1, 0x0
@@ -60,6 +64,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

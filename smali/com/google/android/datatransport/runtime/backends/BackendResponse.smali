@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/runtime/backends/BackendResponse;
 .super Ljava/lang/Object;
+.source "BackendResponse.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method public static fatalError()Lcom/google/android/datatransport/runtime/backends/BackendResponse;
     .locals 4
 
+    .line 44
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;
 
     sget-object v1, Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;->FATAL_ERROR:Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
@@ -36,6 +39,7 @@
 .method public static invalidPayload()Lcom/google/android/datatransport/runtime/backends/BackendResponse;
     .locals 4
 
+    .line 48
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;
 
     sget-object v1, Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;->INVALID_PAYLOAD:Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
@@ -50,6 +54,7 @@
 .method public static ok(J)Lcom/google/android/datatransport/runtime/backends/BackendResponse;
     .locals 2
 
+    .line 52
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;
 
     sget-object v1, Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;->OK:Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
@@ -62,6 +67,7 @@
 .method public static transientError()Lcom/google/android/datatransport/runtime/backends/BackendResponse;
     .locals 4
 
+    .line 40
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendResponse;
 
     sget-object v1, Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;->TRANSIENT_ERROR:Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;

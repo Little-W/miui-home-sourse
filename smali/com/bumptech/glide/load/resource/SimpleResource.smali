@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/resource/SimpleResource;
 .super Ljava/lang/Object;
+.source "SimpleResource.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/Resource;
@@ -37,8 +38,10 @@
         }
     .end annotation
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 19
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -58,6 +61,7 @@
         }
     .end annotation
 
+    .line 32
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/SimpleResource;->data:Ljava/lang/Object;
 
     return-object p0
@@ -73,6 +77,7 @@
         }
     .end annotation
 
+    .line 26
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/SimpleResource;->data:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

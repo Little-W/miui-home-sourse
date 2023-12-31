@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/xiaomi/dist/utils/-$$Lambda$ExecutorHelper$TimeoutThreadPoolExecutor$k0nFhlnwF01lhMhYeGL3lQe9lE4;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

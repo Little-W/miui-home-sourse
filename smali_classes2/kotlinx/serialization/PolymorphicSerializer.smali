@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/PolymorphicSerializer;
 .super Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;
+.source "PolymorphicSerializer.kt"
 
 
 # annotations
@@ -42,10 +43,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 69
     invoke-direct {p0}, Lkotlinx/serialization/internal/AbstractPolymorphicSerializer;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/PolymorphicSerializer;->baseClass:Lkotlin/reflect/KClass;
 
+    .line 71
     sget-object p1, Lkotlinx/serialization/descriptors/PolymorphicKind$OPEN;->INSTANCE:Lkotlinx/serialization/descriptors/PolymorphicKind$OPEN;
 
     check-cast p1, Lkotlinx/serialization/descriptors/SerialKind;
@@ -66,6 +69,7 @@
 
     move-result-object p1
 
+    .line 77
     invoke-virtual {p0}, Lkotlinx/serialization/PolymorphicSerializer;->getBaseClass()Lkotlin/reflect/KClass;
 
     move-result-object v0
@@ -91,6 +95,7 @@
         }
     .end annotation
 
+    .line 69
     iget-object p0, p0, Lkotlinx/serialization/PolymorphicSerializer;->baseClass:Lkotlin/reflect/KClass;
 
     return-object p0
@@ -99,6 +104,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 70
     iget-object p0, p0, Lkotlinx/serialization/PolymorphicSerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -107,6 +113,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

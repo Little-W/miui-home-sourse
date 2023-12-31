@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/util/PriorityMapping;
 .super Ljava/lang/Object;
+.source "PriorityMapping.java"
 
 
 # static fields
@@ -29,18 +30,21 @@
 .method static constructor <clinit>()V
     .locals 4
 
+    .line 23
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_MAP:Landroid/util/SparseArray;
 
+    .line 24
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_INT_MAP:Ljava/util/HashMap;
 
+    .line 27
     sget-object v0, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_INT_MAP:Ljava/util/HashMap;
 
     sget-object v1, Lcom/google/android/datatransport/Priority;->DEFAULT:Lcom/google/android/datatransport/Priority;
@@ -53,6 +57,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 28
     sget-object v0, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_INT_MAP:Ljava/util/HashMap;
 
     sget-object v1, Lcom/google/android/datatransport/Priority;->VERY_LOW:Lcom/google/android/datatransport/Priority;
@@ -65,6 +70,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 29
     sget-object v0, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_INT_MAP:Ljava/util/HashMap;
 
     sget-object v1, Lcom/google/android/datatransport/Priority;->HIGHEST:Lcom/google/android/datatransport/Priority;
@@ -77,6 +83,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 31
     sget-object v0, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_INT_MAP:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -100,6 +107,7 @@
 
     check-cast v1, Lcom/google/android/datatransport/Priority;
 
+    .line 32
     sget-object v2, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_MAP:Landroid/util/SparseArray;
 
     sget-object v3, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_INT_MAP:Ljava/util/HashMap;
@@ -125,6 +133,7 @@
 .method public static toInt(Lcom/google/android/datatransport/Priority;)I
     .locals 3
 
+    .line 46
     sget-object v0, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_INT_MAP:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -135,12 +144,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 51
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
     return p0
 
+    .line 48
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -166,6 +177,7 @@
 .method public static valueOf(I)Lcom/google/android/datatransport/Priority;
     .locals 3
 
+    .line 38
     sget-object v0, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->PRIORITY_MAP:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -178,6 +190,7 @@
 
     return-object v0
 
+    .line 40
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

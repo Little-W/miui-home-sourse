@@ -1,5 +1,6 @@
 .class public final Lkotlin/Result$Failure;
 .super Ljava/lang/Object;
+.source "Result.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -28,6 +29,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/Result$Failure;->exception:Ljava/lang/Throwable;
@@ -40,6 +42,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 108
     instance-of v0, p1, Lkotlin/Result$Failure;
 
     if-eqz v0, :cond_0
@@ -70,6 +73,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 109
     iget-object p0, p0, Lkotlin/Result$Failure;->exception:Ljava/lang/Throwable;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->hashCode()I
@@ -82,6 +86,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 110
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

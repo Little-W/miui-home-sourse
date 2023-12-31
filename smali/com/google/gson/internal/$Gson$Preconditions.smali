@@ -1,5 +1,6 @@
 .class public final Lcom/google/gson/internal/$Gson$Preconditions;
 .super Ljava/lang/Object;
+.source "$Gson$Preconditions.java"
 
 
 # direct methods
@@ -10,6 +11,7 @@
 
     return-void
 
+    .line 46
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -32,6 +34,7 @@
 
     return-object p0
 
+    .line 39
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 

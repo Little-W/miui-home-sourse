@@ -1,5 +1,6 @@
 .class Landroidx/arch/core/executor/DefaultTaskExecutor$1;
 .super Ljava/lang/Object;
+.source "DefaultTaskExecutor.java"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -26,10 +27,12 @@
 .method constructor <init>(Landroidx/arch/core/executor/DefaultTaskExecutor;)V
     .locals 1
 
+    .line 41
     iput-object p1, p0, Landroidx/arch/core/executor/DefaultTaskExecutor$1;->this$0:Landroidx/arch/core/executor/DefaultTaskExecutor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 44
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v0, 0x0
@@ -46,6 +49,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
+    .line 48
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
@@ -54,6 +58,7 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
+    .line 49
     iget-object p0, p0, Landroidx/arch/core/executor/DefaultTaskExecutor$1;->mThreadId:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I

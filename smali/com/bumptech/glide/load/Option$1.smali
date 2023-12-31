@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/Option$1;
 .super Ljava/lang/Object;
+.source "Option.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/Option$CacheKeyUpdater;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

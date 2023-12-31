@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomsheet/BottomSheetDialog$5;
 .super Lcom/google/android/material/bottomsheet/BottomSheetBehavior$BottomSheetCallback;
+.source "BottomSheetDialog.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetDialog;)V
     .locals 0
 
+    .line 397
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$5;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialog;
 
     invoke-direct {p0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$BottomSheetCallback;-><init>()V
@@ -43,6 +45,7 @@
 
     if-ne p2, p1, :cond_0
 
+    .line 402
     iget-object p0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$5;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialog;
 
     invoke-virtual {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->cancel()V

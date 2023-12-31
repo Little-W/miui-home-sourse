@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$2;
 .super Ljava/lang/Object;
+.source "ReversibleTagGroup.java"
 
 # interfaces
 .implements Landroid/widget/TextView$OnEditorActionListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;Lcom/mi/globallauncher/view/ReversibleTagGroup;)V
     .locals 0
 
+    .line 774
     iput-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$2;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iput-object p2, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$2;->val$this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -44,6 +46,7 @@
 
     if-eqz p3, :cond_2
 
+    .line 778
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result p1
@@ -52,12 +55,14 @@
 
     if-ne p1, p2, :cond_2
 
+    .line 779
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
 
     if-nez p1, :cond_2
 
+    .line 780
     iget-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$2;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     invoke-virtual {p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->isInputAvailable()Z
@@ -66,10 +71,12 @@
 
     if-eqz p1, :cond_1
 
+    .line 783
     iget-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$2;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     invoke-virtual {p1}, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->endInput()V
 
+    .line 784
     iget-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$2;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -80,6 +87,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 785
     iget-object p1, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$2;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;->this$0:Lcom/mi/globallauncher/view/ReversibleTagGroup;
@@ -104,6 +112,7 @@
 
     invoke-interface {p1, p2, p3}, Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagChangeListener;->onAppend(Lcom/mi/globallauncher/view/ReversibleTagGroup;Ljava/lang/String;)V
 
+    .line 787
     :cond_0
     iget-object p0, p0, Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView$2;->this$1:Lcom/mi/globallauncher/view/ReversibleTagGroup$TagView;
 

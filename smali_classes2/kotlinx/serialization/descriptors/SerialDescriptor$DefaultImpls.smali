@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/descriptors/SerialDescriptor$DefaultImpls;
 .super Ljava/lang/Object;
+.source "SerialDescriptor.kt"
 
 
 # annotations

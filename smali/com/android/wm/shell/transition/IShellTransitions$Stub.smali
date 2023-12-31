@@ -1,5 +1,6 @@
 .class public abstract Lcom/android/wm/shell/transition/IShellTransitions$Stub;
 .super Landroid/os/Binder;
+.source "IShellTransitions.java"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/IShellTransitions;
@@ -35,20 +36,24 @@
     :cond_0
     const-string v0, "com.android.wm.shell.transition.IShellTransitions"
 
+    .line 59
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 60
     instance-of v1, v0, Lcom/android/wm/shell/transition/IShellTransitions;
 
     if-eqz v1, :cond_1
 
+    .line 61
     check-cast v0, Lcom/android/wm/shell/transition/IShellTransitions;
 
     return-object v0
 
+    .line 63
     :cond_1
     new-instance v0, Lcom/android/wm/shell/transition/IShellTransitions$Stub$Proxy;
 
@@ -60,6 +65,7 @@
 .method public static getDefaultImpl()Lcom/android/wm/shell/transition/IShellTransitions;
     .locals 1
 
+    .line 240
     sget-object v0, Lcom/android/wm/shell/transition/IShellTransitions$Stub$Proxy;->sDefaultImpl:Lcom/android/wm/shell/transition/IShellTransitions;
 
     return-object v0
@@ -97,39 +103,48 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 122
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 76
     :cond_0
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v2
 
+    .line 114
     :cond_1
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 115
     invoke-virtual {p0}, Lcom/android/wm/shell/transition/IShellTransitions$Stub;->getShellApplyToken()Landroid/os/IBinder;
 
     move-result-object p0
 
+    .line 116
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 117
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
     return v2
 
+    .line 101
     :cond_2
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 103
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_3
 
+    .line 104
     invoke-static {}, Lcom/android/hideapi/RemoteTransitionExpose;->getCreator()Landroid/os/Parcelable$Creator;
 
     move-result-object p1
@@ -142,20 +157,24 @@
 
     check-cast v1, Landroid/window/RemoteTransition;
 
+    .line 109
     :cond_3
     invoke-virtual {p0, v1}, Lcom/android/wm/shell/transition/IShellTransitions$Stub;->unregisterRemote(Landroid/window/RemoteTransition;)V
 
     return v2
 
+    .line 81
     :cond_4
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 83
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_5
 
+    .line 84
     invoke-static {}, Lcom/android/hideapi/TransitionFilterExpose;->getCreator()Landroid/os/Parcelable$Creator;
 
     move-result-object p1
@@ -171,6 +190,7 @@
     :cond_5
     move-object p1, v1
 
+    .line 90
     :goto_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -178,6 +198,7 @@
 
     if-eqz p3, :cond_6
 
+    .line 91
     invoke-static {}, Lcom/android/hideapi/RemoteTransitionExpose;->getCreator()Landroid/os/Parcelable$Creator;
 
     move-result-object p3
@@ -190,6 +211,7 @@
 
     check-cast v1, Landroid/window/RemoteTransition;
 
+    .line 96
     :cond_6
     invoke-virtual {p0, p1, v1}, Lcom/android/wm/shell/transition/IShellTransitions$Stub;->registerRemote(Landroid/window/TransitionFilter;Landroid/window/RemoteTransition;)V
 

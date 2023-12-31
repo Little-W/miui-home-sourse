@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/TapTargetView$10;
 .super Ljava/lang/Object;
+.source "TapTargetView.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/TapTargetView;)V
     .locals 0
 
+    .line 595
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 7
 
+    .line 598
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->listener:Lcom/mi/globallauncher/view/TapTargetView$Listener;
@@ -58,11 +61,13 @@
 
     goto/16 :goto_2
 
+    .line 600
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object v0, p1, Lcom/mi/globallauncher/view/TapTargetView;->targetBounds:Landroid/graphics/Rect;
 
+    .line 601
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 
     move-result v0
@@ -112,6 +117,7 @@
     :cond_1
     move p1, v1
 
+    .line 602
     :goto_0
     iget-object v2, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
@@ -141,6 +147,7 @@
 
     move-result-wide v2
 
+    .line 604
     iget-object v4, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget v4, v4, Lcom/mi/globallauncher/view/TapTargetView;->outerCircleRadius:F
@@ -159,10 +166,12 @@
     :goto_1
     if-eqz p1, :cond_3
 
+    .line 607
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-static {p1, v1}, Lcom/mi/globallauncher/view/TapTargetView;->access$002(Lcom/mi/globallauncher/view/TapTargetView;Z)Z
 
+    .line 608
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->listener:Lcom/mi/globallauncher/view/TapTargetView$Listener;
@@ -176,6 +185,7 @@
     :cond_3
     if-eqz v0, :cond_4
 
+    .line 610
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->listener:Lcom/mi/globallauncher/view/TapTargetView$Listener;
@@ -186,6 +196,7 @@
 
     goto :goto_2
 
+    .line 611
     :cond_4
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
@@ -193,10 +204,12 @@
 
     if-eqz p1, :cond_5
 
+    .line 612
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-static {p1, v1}, Lcom/mi/globallauncher/view/TapTargetView;->access$002(Lcom/mi/globallauncher/view/TapTargetView;Z)Z
 
+    .line 613
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$10;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->listener:Lcom/mi/globallauncher/view/TapTargetView$Listener;

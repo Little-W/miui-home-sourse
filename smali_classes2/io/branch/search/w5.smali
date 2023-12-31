@@ -1,5 +1,6 @@
 .class public Lio/branch/search/w5;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lokhttp3/Interceptor;

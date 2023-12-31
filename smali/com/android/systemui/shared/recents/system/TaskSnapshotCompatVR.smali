@@ -1,11 +1,13 @@
 .class public Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVR;
 .super Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVQ;
+.source "TaskSnapshotCompatVR.java"
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 15
     invoke-direct {p0, p1}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVQ;-><init>(Ljava/lang/Object;)V
 
     return-void
@@ -14,6 +16,7 @@
 .method public static create(I)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
     .locals 1
 
+    .line 11
     new-instance v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVR;
 
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVR;->getTaskSnapshotInstance(I)Landroid/app/ActivityManager$TaskSnapshot;
@@ -30,6 +33,7 @@
 .method protected getScale(Landroid/app/ActivityManager$TaskSnapshot;I)F
     .locals 6
 
+    .line 19
     const-class v0, Landroid/app/ActivityManager$TaskSnapshot;
 
     const-class v3, Landroid/graphics/Point;
@@ -52,12 +56,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 21
     iget p1, p0, Landroid/graphics/Point;->y:I
 
     if-eqz p1, :cond_0
 
     int-to-float p1, p2
 
+    .line 22
     iget p0, p0, Landroid/graphics/Point;->y:I
 
     int-to-float p0, p0

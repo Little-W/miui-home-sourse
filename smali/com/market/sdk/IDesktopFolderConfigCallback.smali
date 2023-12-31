@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/sdk/IDesktopFolderConfigCallback;
 .super Ljava/lang/Object;
+.source "IDesktopFolderConfigCallback.java"
 
 
 # virtual methods

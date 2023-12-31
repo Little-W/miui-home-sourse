@@ -1,5 +1,6 @@
 .class public Lcom/squareup/picasso/Picasso$Builder;
 .super Ljava/lang/Object;
+.source "Picasso.java"
 
 
 # annotations
@@ -47,10 +48,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 723
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_0
 
+    .line 727
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -59,6 +62,7 @@
 
     return-void
 
+    .line 725
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -74,49 +78,59 @@
 .method public build()Lcom/squareup/picasso/Picasso;
     .locals 13
 
+    .line 845
     iget-object v7, p0, Lcom/squareup/picasso/Picasso$Builder;->context:Landroid/content/Context;
 
+    .line 847
     iget-object v0, p0, Lcom/squareup/picasso/Picasso$Builder;->downloader:Lcom/squareup/picasso/Downloader;
 
     if-nez v0, :cond_0
 
+    .line 848
     new-instance v0, Lcom/squareup/picasso/OkHttp3Downloader;
 
     invoke-direct {v0, v7}, Lcom/squareup/picasso/OkHttp3Downloader;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/squareup/picasso/Picasso$Builder;->downloader:Lcom/squareup/picasso/Downloader;
 
+    .line 850
     :cond_0
     iget-object v0, p0, Lcom/squareup/picasso/Picasso$Builder;->cache:Lcom/squareup/picasso/Cache;
 
     if-nez v0, :cond_1
 
+    .line 851
     new-instance v0, Lcom/squareup/picasso/LruCache;
 
     invoke-direct {v0, v7}, Lcom/squareup/picasso/LruCache;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/squareup/picasso/Picasso$Builder;->cache:Lcom/squareup/picasso/Cache;
 
+    .line 853
     :cond_1
     iget-object v0, p0, Lcom/squareup/picasso/Picasso$Builder;->service:Ljava/util/concurrent/ExecutorService;
 
     if-nez v0, :cond_2
 
+    .line 854
     new-instance v0, Lcom/squareup/picasso/PicassoExecutorService;
 
     invoke-direct {v0}, Lcom/squareup/picasso/PicassoExecutorService;-><init>()V
 
     iput-object v0, p0, Lcom/squareup/picasso/Picasso$Builder;->service:Ljava/util/concurrent/ExecutorService;
 
+    .line 856
     :cond_2
     iget-object v0, p0, Lcom/squareup/picasso/Picasso$Builder;->transformer:Lcom/squareup/picasso/Picasso$RequestTransformer;
 
     if-nez v0, :cond_3
 
+    .line 857
     sget-object v0, Lcom/squareup/picasso/Picasso$RequestTransformer;->IDENTITY:Lcom/squareup/picasso/Picasso$RequestTransformer;
 
     iput-object v0, p0, Lcom/squareup/picasso/Picasso$Builder;->transformer:Lcom/squareup/picasso/Picasso$RequestTransformer;
 
+    .line 860
     :cond_3
     new-instance v8, Lcom/squareup/picasso/Stats;
 
@@ -124,6 +138,7 @@
 
     invoke-direct {v8, v0}, Lcom/squareup/picasso/Stats;-><init>(Lcom/squareup/picasso/Cache;)V
 
+    .line 862
     new-instance v9, Lcom/squareup/picasso/Dispatcher;
 
     iget-object v2, p0, Lcom/squareup/picasso/Picasso$Builder;->service:Ljava/util/concurrent/ExecutorService;
@@ -142,6 +157,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/squareup/picasso/Dispatcher;-><init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Landroid/os/Handler;Lcom/squareup/picasso/Downloader;Lcom/squareup/picasso/Cache;Lcom/squareup/picasso/Stats;)V
 
+    .line 864
     new-instance v11, Lcom/squareup/picasso/Picasso;
 
     iget-object v3, p0, Lcom/squareup/picasso/Picasso$Builder;->cache:Lcom/squareup/picasso/Cache;

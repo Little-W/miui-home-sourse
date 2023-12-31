@@ -1,5 +1,6 @@
 .class Lorg/brotli/dec/Dictionary$DataHolder;
 .super Ljava/lang/Object;
+.source "Dictionary.java"
 
 
 # annotations
@@ -25,12 +26,14 @@
 
     new-array v0, v0, [B
 
+    .line 47
     sput-object v0, Lorg/brotli/dec/Dictionary$DataHolder;->DATA:[B
 
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 48
     invoke-static {}, Lorg/brotli/dec/Dictionary$DataHolder0;->access$000()Ljava/lang/String;
 
     move-result-object v1
@@ -55,6 +58,7 @@
 
     aput-object v1, v0, v3
 
+    .line 50
     array-length v1, v0
 
     move v3, v2
@@ -66,6 +70,7 @@
 
     aget-object v5, v0, v3
 
+    .line 51
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -76,6 +81,7 @@
 
     goto :goto_0
 
+    .line 53
     :cond_0
     sget-object v1, Lorg/brotli/dec/Dictionary$DataHolder;->DATA:[B
 
@@ -83,6 +89,7 @@
 
     if-ne v4, v1, :cond_3
 
+    .line 57
     array-length v1, v0
 
     move v3, v2
@@ -98,6 +105,7 @@
 
     move v4, v2
 
+    .line 58
     :goto_2
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
@@ -105,6 +113,7 @@
 
     if-ge v4, v7, :cond_1
 
+    .line 59
     sget-object v7, Lorg/brotli/dec/Dictionary$DataHolder;->DATA:[B
 
     add-int/lit8 v8, v6, 0x1
@@ -133,6 +142,7 @@
     :cond_2
     return-void
 
+    .line 54
     :cond_3
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -146,6 +156,7 @@
 .method static synthetic access$300()[B
     .locals 1
 
+    .line 43
     sget-object v0, Lorg/brotli/dec/Dictionary$DataHolder;->DATA:[B
 
     return-object v0

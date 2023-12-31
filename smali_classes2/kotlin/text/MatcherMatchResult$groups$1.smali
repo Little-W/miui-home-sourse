@@ -1,5 +1,6 @@
 .class public final Lkotlin/text/MatcherMatchResult$groups$1;
 .super Lkotlin/collections/AbstractCollection;
+.source "Regex.kt"
 
 # interfaces
 .implements Lkotlin/text/MatchNamedGroupCollection;
@@ -38,6 +39,7 @@
         }
     .end annotation
 
+    .line 280
     iput-object p1, p0, Lkotlin/text/MatcherMatchResult$groups$1;->this$0:Lkotlin/text/MatcherMatchResult;
 
     invoke-direct {p0}, Lkotlin/collections/AbstractCollection;-><init>()V
@@ -52,6 +54,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 280
     instance-of v0, p1, Lkotlin/text/MatchGroup;
 
     goto :goto_0
@@ -79,6 +82,7 @@
 .method public bridge contains(Lkotlin/text/MatchGroup;)Z
     .locals 0
 
+    .line 280
     invoke-super {p0, p1}, Lkotlin/collections/AbstractCollection;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -89,6 +93,7 @@
 .method public get(I)Lkotlin/text/MatchGroup;
     .locals 2
 
+    .line 286
     iget-object v0, p0, Lkotlin/text/MatcherMatchResult$groups$1;->this$0:Lkotlin/text/MatcherMatchResult;
 
     invoke-static {v0}, Lkotlin/text/MatcherMatchResult;->access$getMatchResult$p(Lkotlin/text/MatcherMatchResult;)Ljava/util/regex/MatchResult;
@@ -99,6 +104,7 @@
 
     move-result-object v0
 
+    .line 287
     invoke-virtual {v0}, Lkotlin/ranges/IntRange;->getStart()Ljava/lang/Integer;
 
     move-result-object v1
@@ -109,6 +115,7 @@
 
     if-ltz v1, :cond_0
 
+    .line 288
     new-instance v1, Lkotlin/text/MatchGroup;
 
     iget-object p0, p0, Lkotlin/text/MatcherMatchResult$groups$1;->this$0:Lkotlin/text/MatcherMatchResult;
@@ -139,6 +146,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 281
     iget-object p0, p0, Lkotlin/text/MatcherMatchResult$groups$1;->this$0:Lkotlin/text/MatcherMatchResult;
 
     invoke-static {p0}, Lkotlin/text/MatcherMatchResult;->access$getMatchResult$p(Lkotlin/text/MatcherMatchResult;)Ljava/util/regex/MatchResult;
@@ -173,6 +181,7 @@
         }
     .end annotation
 
+    .line 284
     invoke-static {p0}, Lkotlin/collections/CollectionsKt;->getIndices(Ljava/util/Collection;)Lkotlin/ranges/IntRange;
 
     move-result-object v0

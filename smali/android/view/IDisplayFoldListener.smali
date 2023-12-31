@@ -1,5 +1,6 @@
 .class public interface abstract Landroid/view/IDisplayFoldListener;
 .super Ljava/lang/Object;
+.source "IDisplayFoldListener.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
 .super Ljava/lang/Object;
+.source "ClientMetrics.java"
 
 
 # annotations
@@ -36,6 +37,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 13
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;-><init>()V
@@ -64,14 +66,19 @@
         }
     .end annotation
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 25
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->window_:Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
 
+    .line 26
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->log_source_metrics_:Ljava/util/List;
 
+    .line 27
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->global_metrics_:Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;
 
+    .line 28
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->app_namespace_:Ljava/lang/String;
 
     return-void
@@ -80,6 +87,7 @@
 .method public static newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;
     .locals 1
 
+    .line 40
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;-><init>()V
@@ -92,6 +100,7 @@
 .method public getAppNamespace()Ljava/lang/String;
     .locals 0
 
+    .line 87
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->app_namespace_:Ljava/lang/String;
 
     return-object p0
@@ -100,6 +109,7 @@
 .method public getGlobalMetricsInternal()Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;
     .locals 0
 
+    .line 80
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->global_metrics_:Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;
 
     return-object p0
@@ -116,6 +126,7 @@
         }
     .end annotation
 
+    .line 65
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->log_source_metrics_:Ljava/util/List;
 
     return-object p0
@@ -124,6 +135,7 @@
 .method public getWindowInternal()Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
     .locals 0
 
+    .line 55
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->window_:Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
 
     return-object p0
@@ -132,6 +144,7 @@
 .method public toByteArray()[B
     .locals 0
 
+    .line 32
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/ProtoEncoderDoNotUse;->encode(Ljava/lang/Object;)[B
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public Landroidx/room/Room;
 .super Ljava/lang/Object;
+.source "Room.java"
 
 
 # direct methods
@@ -22,6 +23,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 51
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -32,12 +34,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 56
     new-instance v0, Landroidx/room/RoomDatabase$Builder;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/room/RoomDatabase$Builder;-><init>(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)V
 
     return-object v0
 
+    .line 52
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -64,6 +68,7 @@
         }
     .end annotation
 
+    .line 79
     invoke-virtual {p0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
     move-result-object v0
@@ -72,10 +77,12 @@
 
     move-result-object v0
 
+    .line 80
     invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 81
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v2
@@ -84,6 +91,7 @@
 
     goto :goto_0
 
+    .line 83
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -95,6 +103,7 @@
 
     move-result-object v1
 
+    .line 84
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -116,6 +125,7 @@
 
     move-result-object p1
 
+    .line 90
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -144,11 +154,13 @@
 
     move-result-object v0
 
+    .line 89
     :goto_1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 91
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object p0
@@ -159,6 +171,7 @@
 
     return-object p0
 
+    .line 99
     :catch_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -170,6 +183,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 100
     invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object p0
@@ -184,6 +198,7 @@
 
     throw p1
 
+    .line 96
     :catch_1
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -195,6 +210,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 97
     invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object p0
@@ -209,6 +225,7 @@
 
     throw p1
 
+    .line 93
     :catch_2
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -220,6 +237,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 94
     invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object p0

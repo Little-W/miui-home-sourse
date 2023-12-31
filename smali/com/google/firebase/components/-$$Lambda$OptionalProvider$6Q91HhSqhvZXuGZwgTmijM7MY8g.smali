@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/components/-$$Lambda$OptionalProvider$6Q91HhSqhvZXuGZwgTmijM7MY8g;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/firebase/inject/Deferred$DeferredHandler;

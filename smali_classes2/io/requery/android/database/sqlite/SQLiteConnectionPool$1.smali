@@ -1,5 +1,6 @@
 .class Lio/requery/android/database/sqlite/SQLiteConnectionPool$1;
 .super Ljava/lang/Object;
+.source "SQLiteConnectionPool.java"
 
 # interfaces
 .implements Landroidx/core/os/CancellationSignal$OnCancelListener;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lio/requery/android/database/sqlite/SQLiteConnectionPool;Lio/requery/android/database/sqlite/SQLiteConnectionPool$ConnectionWaiter;I)V
     .locals 0
 
+    .line 647
     iput-object p1, p0, Lio/requery/android/database/sqlite/SQLiteConnectionPool$1;->this$0:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
     iput-object p2, p0, Lio/requery/android/database/sqlite/SQLiteConnectionPool$1;->val$waiter:Lio/requery/android/database/sqlite/SQLiteConnectionPool$ConnectionWaiter;
@@ -44,6 +46,7 @@
 .method public onCancel()V
     .locals 3
 
+    .line 650
     iget-object v0, p0, Lio/requery/android/database/sqlite/SQLiteConnectionPool$1;->this$0:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
     invoke-static {v0}, Lio/requery/android/database/sqlite/SQLiteConnectionPool;->access$000(Lio/requery/android/database/sqlite/SQLiteConnectionPool;)Ljava/lang/Object;
@@ -52,6 +55,7 @@
 
     monitor-enter v0
 
+    .line 651
     :try_start_0
     iget-object v1, p0, Lio/requery/android/database/sqlite/SQLiteConnectionPool$1;->val$waiter:Lio/requery/android/database/sqlite/SQLiteConnectionPool$ConnectionWaiter;
 
@@ -61,12 +65,14 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 652
     iget-object v1, p0, Lio/requery/android/database/sqlite/SQLiteConnectionPool$1;->this$0:Lio/requery/android/database/sqlite/SQLiteConnectionPool;
 
     iget-object p0, p0, Lio/requery/android/database/sqlite/SQLiteConnectionPool$1;->val$waiter:Lio/requery/android/database/sqlite/SQLiteConnectionPool$ConnectionWaiter;
 
     invoke-static {v1, p0}, Lio/requery/android/database/sqlite/SQLiteConnectionPool;->access$100(Lio/requery/android/database/sqlite/SQLiteConnectionPool;Lio/requery/android/database/sqlite/SQLiteConnectionPool$ConnectionWaiter;)V
 
+    .line 654
     :cond_0
     monitor-exit v0
 

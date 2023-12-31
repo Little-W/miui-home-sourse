@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/crashlytics/internal/CrashlyticsNativeComponent;
 .super Ljava/lang/Object;
+.source "CrashlyticsNativeComponent.java"
 
 
 # virtual methods

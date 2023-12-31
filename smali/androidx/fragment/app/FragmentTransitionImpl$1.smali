@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/FragmentTransitionImpl$1;
 .super Ljava/lang/Object;
+.source "FragmentTransitionImpl.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -34,6 +35,7 @@
 .method constructor <init>(Landroidx/fragment/app/FragmentTransitionImpl;ILjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
 
+    .line 199
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransitionImpl$1;->this$0:Landroidx/fragment/app/FragmentTransitionImpl;
 
     iput p2, p0, Landroidx/fragment/app/FragmentTransitionImpl$1;->val$numSharedElements:I
@@ -58,11 +60,13 @@
 
     const/4 v0, 0x0
 
+    .line 202
     :goto_0
     iget v1, p0, Landroidx/fragment/app/FragmentTransitionImpl$1;->val$numSharedElements:I
 
     if-ge v0, v1, :cond_0
 
+    .line 203
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransitionImpl$1;->val$sharedElementsIn:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -81,6 +85,7 @@
 
     invoke-static {v1, v2}, Landroidx/core/view/ViewCompat;->setTransitionName(Landroid/view/View;Ljava/lang/String;)V
 
+    .line 204
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransitionImpl$1;->val$sharedElementsOut:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

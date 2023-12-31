@@ -12,6 +12,7 @@
 
     const-string v0, "\\$\\{(.*?)\\}"
 
+    .line 4
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -24,6 +25,7 @@
 .method public static emptyToNull(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -41,6 +43,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0

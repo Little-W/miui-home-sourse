@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/ExceptionsKt;
 .super Ljava/lang/Object;
+.source "Exceptions.kt"
 
 
 # annotations
@@ -12,6 +13,7 @@
 .method public static final CancellationException(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/util/concurrent/CancellationException;
     .locals 1
 
+    .line 22
     new-instance v0, Ljava/util/concurrent/CancellationException;
 
     invoke-direct {v0, p0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V

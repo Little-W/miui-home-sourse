@@ -1,5 +1,6 @@
 .class public Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;
 .super Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;
+.source "LockFreeLinkedList.kt"
 
 
 # annotations
@@ -72,14 +73,17 @@
 .method public constructor <init>(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)V
     .locals 0
 
+    .line 351
     invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$AbstractAtomicDesc;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     const/4 p1, 0x0
 
+    .line 352
     iput-object p1, p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->_affectedNode:Ljava/lang/Object;
 
+    .line 353
     iput-object p1, p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->_originalNext:Ljava/lang/Object;
 
     return-void
@@ -90,6 +94,7 @@
 .method protected failure(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
     .locals 0
 
+    .line 375
     iget-object p0, p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     if-ne p1, p0, :cond_0
@@ -112,6 +117,7 @@
 
     const/4 p0, 0x0
 
+    .line 396
     invoke-static {p2, p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->access$correctPrev(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/OpDescriptor;)Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     return-void
@@ -120,6 +126,7 @@
 .method public finishPrepare(Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)V
     .locals 3
 
+    .line 387
     sget-object v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->_affectedNode$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     iget-object v1, p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->affected:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -128,6 +135,7 @@
 
     invoke-virtual {v0, p0, v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 388
     sget-object v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->_originalNext$FU:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     iget-object p1, p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;->next:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -140,6 +148,7 @@
 .method protected final getAffectedNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
     .locals 0
 
+    .line 370
     iget-object p0, p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->_affectedNode:Ljava/lang/Object;
 
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -150,6 +159,7 @@
 .method protected final getOriginalNext()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
     .locals 0
 
+    .line 371
     iget-object p0, p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->_originalNext:Ljava/lang/Object;
 
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -165,6 +175,7 @@
         }
     .end annotation
 
+    .line 356
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->getAffectedNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     move-result-object p0
@@ -179,6 +190,7 @@
 .method protected final retry(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Ljava/lang/Object;)Z
     .locals 0
 
+    .line 378
     instance-of p0, p2, Lkotlinx/coroutines/internal/Removed;
 
     if-nez p0, :cond_0
@@ -187,6 +199,7 @@
 
     return p0
 
+    .line 379
     :cond_0
     check-cast p2, Lkotlinx/coroutines/internal/Removed;
 
@@ -202,15 +215,19 @@
 .method protected final takeAffectedNode(Lkotlinx/coroutines/internal/OpDescriptor;)Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
     .locals 3
 
+    .line 359
     iget-object v0, p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
+    .line 669
     :goto_0
     iget-object v1, v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->_next:Ljava/lang/Object;
 
+    .line 360
     instance-of v2, v1, Lkotlinx/coroutines/internal/OpDescriptor;
 
     if-eqz v2, :cond_1
 
+    .line 361
     check-cast v1, Lkotlinx/coroutines/internal/OpDescriptor;
 
     invoke-virtual {p1, v1}, Lkotlinx/coroutines/internal/OpDescriptor;->isEarlierThan(Lkotlinx/coroutines/internal/OpDescriptor;)Z
@@ -223,6 +240,7 @@
 
     return-object p0
 
+    .line 363
     :cond_0
     iget-object v2, p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$RemoveFirstDesc;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
@@ -233,6 +251,7 @@
     :cond_1
     if-eqz v1, :cond_2
 
+    .line 365
     check-cast v1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     return-object v1
@@ -250,6 +269,7 @@
 .method public final updatedNext(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Ljava/lang/Object;
     .locals 0
 
+    .line 391
     invoke-static {p2}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->access$removed(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Lkotlinx/coroutines/internal/Removed;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/analytics/CrashlyticsOriginAnalyticsEventLogger;
 .super Ljava/lang/Object;
+.source "CrashlyticsOriginAnalyticsEventLogger.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/analytics/AnalyticsEventLogger;
@@ -13,8 +14,10 @@
 .method public constructor <init>(Lcom/google/firebase/analytics/connector/AnalyticsConnector;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/analytics/CrashlyticsOriginAnalyticsEventLogger;->analyticsConnector:Lcom/google/firebase/analytics/connector/AnalyticsConnector;
 
     return-void
@@ -25,6 +28,7 @@
 .method public logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
+    .line 38
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/analytics/CrashlyticsOriginAnalyticsEventLogger;->analyticsConnector:Lcom/google/firebase/analytics/connector/AnalyticsConnector;
 
     const-string v0, "clx"

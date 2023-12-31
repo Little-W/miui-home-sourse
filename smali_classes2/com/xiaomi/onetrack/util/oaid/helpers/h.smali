@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,10 +25,12 @@
 
     const-string v0, "content://cn.nubia.identity/identity"
 
+    .line 22
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
+    .line 24
     :try_start_0
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
     :try_end_0
@@ -41,6 +44,7 @@
 
     if-le v1, v2, :cond_1
 
+    .line 25
     :try_start_1
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -50,27 +54,32 @@
 
     move-result-object p1
 
+    .line 26
     invoke-virtual {p1, v3, v4, v4}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v0
 
     if-eqz p1, :cond_2
 
+    .line 28
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x18
 
     if-lt v1, v2, :cond_0
 
+    .line 29
     invoke-virtual {p1}, Landroid/content/ContentProviderClient;->close()V
 
     goto :goto_0
 
+    .line 32
     :cond_0
     invoke-virtual {p1}, Landroid/content/ContentProviderClient;->release()Z
 
     goto :goto_0
 
+    .line 37
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -86,6 +95,7 @@
 
     const/4 v1, -0x1
 
+    .line 39
     invoke-virtual {v0, p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p1
@@ -94,6 +104,7 @@
 
     const-string p1, "id"
 
+    .line 41
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -105,6 +116,7 @@
     :catch_0
     move-exception p1
 
+    .line 44
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1

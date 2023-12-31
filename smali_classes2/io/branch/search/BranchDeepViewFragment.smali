@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchDeepViewFragment;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

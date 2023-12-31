@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;
 .super Ljava/lang/Object;
+.source "SettingsData.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/settings/model/Settings;
@@ -23,18 +24,25 @@
 .method public constructor <init>(JLcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;Lcom/google/firebase/crashlytics/internal/settings/model/SessionSettingsData;Lcom/google/firebase/crashlytics/internal/settings/model/FeaturesSettingsData;II)V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     iput-wide p1, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->expiresAtMillis:J
 
+    .line 34
     iput-object p3, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->appData:Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;
 
+    .line 35
     iput-object p4, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->sessionData:Lcom/google/firebase/crashlytics/internal/settings/model/SessionSettingsData;
 
+    .line 36
     iput-object p5, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->featuresData:Lcom/google/firebase/crashlytics/internal/settings/model/FeaturesSettingsData;
 
+    .line 37
     iput p6, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->settingsVersion:I
 
+    .line 38
     iput p7, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->cacheDuration:I
 
     return-void
@@ -45,6 +53,7 @@
 .method public getAppSettingsData()Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;
     .locals 0
 
+    .line 42
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->appData:Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;
 
     return-object p0
@@ -53,6 +62,7 @@
 .method public getExpiresAtMillis()J
     .locals 2
 
+    .line 62
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->expiresAtMillis:J
 
     return-wide v0
@@ -61,6 +71,7 @@
 .method public getFeaturesData()Lcom/google/firebase/crashlytics/internal/settings/model/FeaturesSettingsData;
     .locals 0
 
+    .line 57
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->featuresData:Lcom/google/firebase/crashlytics/internal/settings/model/FeaturesSettingsData;
 
     return-object p0
@@ -69,6 +80,7 @@
 .method public getSessionData()Lcom/google/firebase/crashlytics/internal/settings/model/SessionSettingsData;
     .locals 0
 
+    .line 52
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->sessionData:Lcom/google/firebase/crashlytics/internal/settings/model/SessionSettingsData;
 
     return-object p0
@@ -77,6 +89,7 @@
 .method public isExpired(J)Z
     .locals 2
 
+    .line 47
     iget-wide v0, p0, Lcom/google/firebase/crashlytics/internal/settings/model/SettingsData;->expiresAtMillis:J
 
     cmp-long p0, v0, p1

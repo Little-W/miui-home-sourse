@@ -32,6 +32,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 20
     const-class v0, Lcom/xiaomi/onetrack/util/o;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -42,6 +43,7 @@
 
     const/4 v0, 0x0
 
+    .line 26
     sput-object v0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
     return-void
@@ -50,24 +52,29 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 34
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/util/o;->k:Z
 
+    .line 48
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/util/o;->h:Landroid/content/Context;
 
+    .line 49
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/util/o;->i:Landroid/content/Context;
 
+    .line 50
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
 
     move-result-object p0
@@ -80,25 +87,30 @@
 .method public static a()Lcom/xiaomi/onetrack/util/o;
     .locals 2
 
+    .line 37
     sget-object v0, Lcom/xiaomi/onetrack/util/o;->f:Lcom/xiaomi/onetrack/util/o;
 
     if-nez v0, :cond_1
 
+    .line 38
     const-class v0, Lcom/xiaomi/onetrack/util/o;
 
     monitor-enter v0
 
+    .line 39
     :try_start_0
     sget-object v1, Lcom/xiaomi/onetrack/util/o;->f:Lcom/xiaomi/onetrack/util/o;
 
     if-nez v1, :cond_0
 
+    .line 40
     new-instance v1, Lcom/xiaomi/onetrack/util/o;
 
     invoke-direct {v1}, Lcom/xiaomi/onetrack/util/o;-><init>()V
 
     sput-object v1, Lcom/xiaomi/onetrack/util/o;->f:Lcom/xiaomi/onetrack/util/o;
 
+    .line 42
     :cond_0
     monitor-exit v0
 
@@ -113,6 +125,7 @@
 
     throw v1
 
+    .line 44
     :cond_1
     :goto_0
     sget-object v0, Lcom/xiaomi/onetrack/util/o;->f:Lcom/xiaomi/onetrack/util/o;
@@ -123,6 +136,7 @@
 .method private b(Ljava/lang/String;)V
     .locals 3
 
+    .line 133
     :try_start_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -135,18 +149,22 @@
     :cond_0
     const-string v0, "content://com.miui.analytics.OneTrackProvider/insId"
 
+    .line 136
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
+    .line 137
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
+    .line 138
     sget-object v2, Lcom/xiaomi/onetrack/util/o;->j:Ljava/lang/String;
 
     invoke-virtual {v1, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 139
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/o;->i:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -162,8 +180,10 @@
     :catch_0
     move-exception p0
 
+    .line 142
     invoke-static {p1}, Lcom/xiaomi/onetrack/util/aa;->e(Ljava/lang/String;)V
 
+    .line 143
     sget-object p1, Lcom/xiaomi/onetrack/util/o;->a:Ljava/lang/String;
 
     const-string v0, "setRemoteCacheInstanceId e"
@@ -182,6 +202,7 @@
     :try_start_0
     const-string v1, "content://com.miui.analytics.OneTrackProvider/insId"
 
+    .line 114
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -192,12 +213,14 @@
 
     const-string v2, "pkg"
 
+    .line 115
     sget-object v3, Lcom/xiaomi/onetrack/util/o;->j:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     const-string v2, "sign"
 
+    .line 116
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -220,12 +243,14 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 117
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/o;->i:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
+    .line 118
     invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v3
@@ -244,6 +269,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 120
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -253,12 +279,14 @@
 
     const/4 v1, 0x0
 
+    .line 121
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 123
     :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_0
@@ -269,6 +297,7 @@
     :catch_0
     move-exception p0
 
+    .line 126
     sget-object v1, Lcom/xiaomi/onetrack/util/o;->a:Ljava/lang/String;
 
     const-string v2, "getRemoteCacheInstanceId e"
@@ -283,24 +312,28 @@
 .method private d()Ljava/lang/String;
     .locals 1
 
+    .line 148
     iget-object p0, p0, Lcom/xiaomi/onetrack/util/o;->h:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/aa;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 149
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 150
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->m()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 153
     :cond_0
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/aa;->e(Ljava/lang/String;)V
 
@@ -312,6 +345,7 @@
 .method public a(Ljava/lang/Boolean;)V
     .locals 0
 
+    .line 58
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -324,6 +358,7 @@
 .method public a(Ljava/lang/String;)V
     .locals 1
 
+    .line 66
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -332,17 +367,21 @@
 
     return-void
 
+    .line 69
     :cond_0
     sput-object p1, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
+    .line 70
     iget-boolean p1, p0, Lcom/xiaomi/onetrack/util/o;->k:Z
 
     if-eqz p1, :cond_1
 
+    .line 71
     sget-object p1, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/util/o;->b(Ljava/lang/String;)V
 
+    .line 73
     :cond_1
     sget-object p0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
@@ -354,6 +393,7 @@
 .method public b()Ljava/lang/String;
     .locals 3
 
+    .line 77
     sget-object v0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -362,23 +402,28 @@
 
     if-nez v0, :cond_0
 
+    .line 78
     sget-object p0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
     return-object p0
 
+    .line 82
     :cond_0
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/util/o;->k:Z
 
     if-eqz v0, :cond_2
 
+    .line 83
     invoke-direct {p0}, Lcom/xiaomi/onetrack/util/o;->c()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 84
     invoke-direct {p0}, Lcom/xiaomi/onetrack/util/o;->d()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 85
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -391,12 +436,14 @@
 
     if-nez v2, :cond_1
 
+    .line 88
     invoke-direct {p0, v1}, Lcom/xiaomi/onetrack/util/o;->b(Ljava/lang/String;)V
 
     move-object v0, v1
 
     goto :goto_0
 
+    .line 89
     :cond_1
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -410,15 +457,18 @@
 
     if-eqz v1, :cond_3
 
+    .line 91
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/aa;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 94
     :cond_2
     invoke-direct {p0}, Lcom/xiaomi/onetrack/util/o;->d()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 97
     :cond_3
     :goto_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -427,6 +477,7 @@
 
     if-eqz v1, :cond_5
 
+    .line 98
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
@@ -437,14 +488,17 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
+    .line 99
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/util/o;->k:Z
 
     if-eqz v0, :cond_4
 
+    .line 101
     sget-object v0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/xiaomi/onetrack/util/o;->b(Ljava/lang/String;)V
 
+    .line 104
     :cond_4
     sget-object p0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
@@ -452,9 +506,11 @@
 
     goto :goto_1
 
+    .line 106
     :cond_5
     sput-object v0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 
+    .line 108
     :goto_1
     sget-object p0, Lcom/xiaomi/onetrack/util/o;->g:Ljava/lang/String;
 

@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/utils/Bool3;
 .super Ljava/lang/Object;
+.source "Vector.kt"
 
 
 # instance fields
@@ -38,6 +39,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 942
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool2;->getX()Z
 
     move-result v0
@@ -60,6 +62,7 @@
 
     const/4 p2, 0x0
 
+    .line 942
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/google/android/filament/utils/Bool3;-><init>(Lcom/google/android/filament/utils/Bool2;Z)V
 
@@ -73,6 +76,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 943
     iget-boolean v0, p1, Lcom/google/android/filament/utils/Bool3;->x:Z
 
     iget-boolean v1, p1, Lcom/google/android/filament/utils/Bool3;->y:Z
@@ -87,6 +91,7 @@
 .method public constructor <init>(ZZZ)V
     .locals 0
 
+    .line 941
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-boolean p1, p0, Lcom/google/android/filament/utils/Bool3;->x:Z
@@ -123,6 +128,7 @@
 
     move p3, v0
 
+    .line 941
     :cond_2
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/filament/utils/Bool3;-><init>(ZZZ)V
 
@@ -242,6 +248,7 @@
 .method public final get(II)Lcom/google/android/filament/utils/Bool2;
     .locals 1
 
+    .line 1040
     new-instance v0, Lcom/google/android/filament/utils/Bool2;
 
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->get(I)Z
@@ -268,6 +275,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1026
     new-instance v0, Lcom/google/android/filament/utils/Bool2;
 
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->get(Lcom/google/android/filament/utils/VectorComponent;)Z
@@ -286,6 +294,7 @@
 .method public final get(III)Lcom/google/android/filament/utils/Bool3;
     .locals 1
 
+    .line 1042
     new-instance v0, Lcom/google/android/filament/utils/Bool3;
 
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->get(I)Z
@@ -320,6 +329,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1030
     new-instance v0, Lcom/google/android/filament/utils/Bool3;
 
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->get(Lcom/google/android/filament/utils/VectorComponent;)Z
@@ -352,10 +362,12 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1036
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->z:Z
 
     goto :goto_0
 
+    .line 1037
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -367,11 +379,13 @@
 
     throw p0
 
+    .line 1035
     :cond_1
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->y:Z
 
     goto :goto_0
 
+    .line 1034
     :cond_2
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->x:Z
 
@@ -386,6 +400,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1018
     sget-object v0, Lcom/google/android/filament/utils/Bool3$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/VectorComponent;->ordinal()I
@@ -396,6 +411,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 1022
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "index must be X, Y, Z, R, G, B, S, T or P"
@@ -406,16 +422,19 @@
 
     throw p0
 
+    .line 1021
     :pswitch_0
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->z:Z
 
     goto :goto_0
 
+    .line 1020
     :pswitch_1
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->y:Z
 
     goto :goto_0
 
+    .line 1019
     :pswitch_2
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->x:Z
 
@@ -441,6 +460,7 @@
 .method public final getB()Z
     .locals 0
 
+    .line 956
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getZ()Z
 
     move-result p0
@@ -451,6 +471,7 @@
 .method public final getG()Z
     .locals 0
 
+    .line 951
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getY()Z
 
     move-result p0
@@ -461,6 +482,7 @@
 .method public final getP()Z
     .locals 0
 
+    .line 972
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getZ()Z
 
     move-result p0
@@ -471,6 +493,7 @@
 .method public final getR()Z
     .locals 0
 
+    .line 946
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getX()Z
 
     move-result p0
@@ -481,6 +504,7 @@
 .method public final getRg()Lcom/google/android/filament/utils/Bool2;
     .locals 2
 
+    .line 984
     new-instance v0, Lcom/google/android/filament/utils/Bool2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getX()Z
@@ -499,6 +523,7 @@
 .method public final getRgb()Lcom/google/android/filament/utils/Bool3;
     .locals 3
 
+    .line 997
     new-instance v0, Lcom/google/android/filament/utils/Bool3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getX()Z
@@ -521,6 +546,7 @@
 .method public final getS()Z
     .locals 0
 
+    .line 962
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getX()Z
 
     move-result p0
@@ -531,6 +557,7 @@
 .method public final getSt()Lcom/google/android/filament/utils/Bool2;
     .locals 2
 
+    .line 990
     new-instance v0, Lcom/google/android/filament/utils/Bool2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getX()Z
@@ -549,6 +576,7 @@
 .method public final getStp()Lcom/google/android/filament/utils/Bool3;
     .locals 3
 
+    .line 1011
     new-instance v0, Lcom/google/android/filament/utils/Bool3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getX()Z
@@ -571,6 +599,7 @@
 .method public final getT()Z
     .locals 0
 
+    .line 967
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getY()Z
 
     move-result p0
@@ -581,6 +610,7 @@
 .method public final getX()Z
     .locals 0
 
+    .line 941
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->x:Z
 
     return p0
@@ -589,6 +619,7 @@
 .method public final getXy()Lcom/google/android/filament/utils/Bool2;
     .locals 2
 
+    .line 978
     new-instance v0, Lcom/google/android/filament/utils/Bool2;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getX()Z
@@ -607,6 +638,7 @@
 .method public final getXyz()Lcom/google/android/filament/utils/Bool3;
     .locals 3
 
+    .line 1004
     new-instance v0, Lcom/google/android/filament/utils/Bool3;
 
     invoke-virtual {p0}, Lcom/google/android/filament/utils/Bool3;->getX()Z
@@ -629,6 +661,7 @@
 .method public final getY()Z
     .locals 0
 
+    .line 941
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->y:Z
 
     return p0
@@ -637,6 +670,7 @@
 .method public final getZ()Z
     .locals 0
 
+    .line 941
     iget-boolean p0, p0, Lcom/google/android/filament/utils/Bool3;->z:Z
 
     return p0
@@ -684,6 +718,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
+    .line 1045
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->get(I)Z
 
     move-result p0
@@ -694,10 +729,13 @@
 .method public final set(IIIZ)V
     .locals 0
 
+    .line 1060
     invoke-virtual {p0, p1, p4}, Lcom/google/android/filament/utils/Bool3;->set(IZ)V
 
+    .line 1061
     invoke-virtual {p0, p2, p4}, Lcom/google/android/filament/utils/Bool3;->set(IZ)V
 
+    .line 1062
     invoke-virtual {p0, p3, p4}, Lcom/google/android/filament/utils/Bool3;->set(IZ)V
 
     return-void
@@ -706,8 +744,10 @@
 .method public final set(IIZ)V
     .locals 0
 
+    .line 1055
     invoke-virtual {p0, p1, p3}, Lcom/google/android/filament/utils/Bool3;->set(IZ)V
 
+    .line 1056
     invoke-virtual {p0, p2, p3}, Lcom/google/android/filament/utils/Bool3;->set(IZ)V
 
     return-void
@@ -726,10 +766,12 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1050
     iput-boolean p2, p0, Lcom/google/android/filament/utils/Bool3;->z:Z
 
     goto :goto_0
 
+    .line 1051
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -741,11 +783,13 @@
 
     throw p0
 
+    .line 1049
     :cond_1
     iput-boolean p2, p0, Lcom/google/android/filament/utils/Bool3;->y:Z
 
     goto :goto_0
 
+    .line 1048
     :cond_2
     iput-boolean p2, p0, Lcom/google/android/filament/utils/Bool3;->x:Z
 
@@ -768,10 +812,13 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1082
     invoke-virtual {p0, p1, p4}, Lcom/google/android/filament/utils/Bool3;->set(Lcom/google/android/filament/utils/VectorComponent;Z)V
 
+    .line 1083
     invoke-virtual {p0, p2, p4}, Lcom/google/android/filament/utils/Bool3;->set(Lcom/google/android/filament/utils/VectorComponent;Z)V
 
+    .line 1084
     invoke-virtual {p0, p3, p4}, Lcom/google/android/filament/utils/Bool3;->set(Lcom/google/android/filament/utils/VectorComponent;Z)V
 
     return-void
@@ -788,8 +835,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1073
     invoke-virtual {p0, p1, p3}, Lcom/google/android/filament/utils/Bool3;->set(Lcom/google/android/filament/utils/VectorComponent;Z)V
 
+    .line 1074
     invoke-virtual {p0, p2, p3}, Lcom/google/android/filament/utils/Bool3;->set(Lcom/google/android/filament/utils/VectorComponent;Z)V
 
     return-void
@@ -802,6 +851,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1065
     sget-object v0, Lcom/google/android/filament/utils/Bool3$WhenMappings;->$EnumSwitchMapping$1:[I
 
     invoke-virtual {p1}, Lcom/google/android/filament/utils/VectorComponent;->ordinal()I
@@ -812,6 +862,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 1069
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "index must be X, Y, Z, R, G, B, S, T or P"
@@ -822,16 +873,19 @@
 
     throw p0
 
+    .line 1068
     :pswitch_0
     iput-boolean p2, p0, Lcom/google/android/filament/utils/Bool3;->z:Z
 
     goto :goto_0
 
+    .line 1067
     :pswitch_1
     iput-boolean p2, p0, Lcom/google/android/filament/utils/Bool3;->y:Z
 
     goto :goto_0
 
+    .line 1066
     :pswitch_2
     iput-boolean p2, p0, Lcom/google/android/filament/utils/Bool3;->x:Z
 
@@ -857,6 +911,7 @@
 .method public final setB(Z)V
     .locals 0
 
+    .line 958
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->setZ(Z)V
 
     return-void
@@ -865,6 +920,7 @@
 .method public final setG(Z)V
     .locals 0
 
+    .line 953
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->setY(Z)V
 
     return-void
@@ -873,6 +929,7 @@
 .method public final setP(Z)V
     .locals 0
 
+    .line 974
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->setZ(Z)V
 
     return-void
@@ -881,6 +938,7 @@
 .method public final setR(Z)V
     .locals 0
 
+    .line 948
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->setX(Z)V
 
     return-void
@@ -893,12 +951,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 986
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool2;->getX()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setX(Z)V
 
+    .line 987
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool2;->getY()Z
 
     move-result p1
@@ -915,18 +975,21 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 999
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getX()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setX(Z)V
 
+    .line 1000
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getY()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setY(Z)V
 
+    .line 1001
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getZ()Z
 
     move-result p1
@@ -939,6 +1002,7 @@
 .method public final setS(Z)V
     .locals 0
 
+    .line 964
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->setX(Z)V
 
     return-void
@@ -951,12 +1015,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 992
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool2;->getX()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setX(Z)V
 
+    .line 993
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool2;->getY()Z
 
     move-result p1
@@ -973,18 +1039,21 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1013
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getX()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setX(Z)V
 
+    .line 1014
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getY()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setY(Z)V
 
+    .line 1015
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getZ()Z
 
     move-result p1
@@ -997,6 +1066,7 @@
 .method public final setT(Z)V
     .locals 0
 
+    .line 969
     invoke-virtual {p0, p1}, Lcom/google/android/filament/utils/Bool3;->setY(Z)V
 
     return-void
@@ -1005,6 +1075,7 @@
 .method public final setX(Z)V
     .locals 0
 
+    .line 941
     iput-boolean p1, p0, Lcom/google/android/filament/utils/Bool3;->x:Z
 
     return-void
@@ -1017,12 +1088,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 980
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool2;->getX()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setX(Z)V
 
+    .line 981
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool2;->getY()Z
 
     move-result p1
@@ -1039,18 +1112,21 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1006
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getX()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setX(Z)V
 
+    .line 1007
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getY()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/filament/utils/Bool3;->setY(Z)V
 
+    .line 1008
     invoke-virtual {p1}, Lcom/google/android/filament/utils/Bool3;->getZ()Z
 
     move-result p1
@@ -1063,6 +1139,7 @@
 .method public final setY(Z)V
     .locals 0
 
+    .line 941
     iput-boolean p1, p0, Lcom/google/android/filament/utils/Bool3;->y:Z
 
     return-void
@@ -1071,6 +1148,7 @@
 .method public final setZ(Z)V
     .locals 0
 
+    .line 941
     iput-boolean p1, p0, Lcom/google/android/filament/utils/Bool3;->z:Z
 
     return-void

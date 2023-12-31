@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/descriptors/PolymorphicKind;
 .super Lkotlinx/serialization/descriptors/SerialKind;
+.source "SerialKinds.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 
     const/4 v0, 0x0
 
+    .line 242
     invoke-direct {p0, v0}, Lkotlinx/serialization/descriptors/SerialKind;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
@@ -25,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 242
     invoke-direct {p0}, Lkotlinx/serialization/descriptors/PolymorphicKind;-><init>()V
 
     return-void

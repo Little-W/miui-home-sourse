@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/ByteBufferFileLoader$Factory;
 .super Ljava/lang/Object;
+.source "ByteBufferFileLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoaderFactory;
@@ -30,6 +31,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,6 +53,7 @@
         }
     .end annotation
 
+    .line 41
     new-instance p0, Lcom/bumptech/glide/load/model/ByteBufferFileLoader;
 
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/ByteBufferFileLoader;-><init>()V

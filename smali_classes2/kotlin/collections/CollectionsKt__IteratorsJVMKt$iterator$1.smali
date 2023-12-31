@@ -1,5 +1,6 @@
 .class public final Lkotlin/collections/CollectionsKt__IteratorsJVMKt$iterator$1;
 .super Ljava/lang/Object;
+.source "IteratorsJVM.kt"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -39,6 +40,7 @@
         }
     .end annotation
 
+    .line 15
     iput-object p1, p0, Lkotlin/collections/CollectionsKt__IteratorsJVMKt$iterator$1;->$this_iterator:Ljava/util/Enumeration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +53,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 16
     iget-object p0, p0, Lkotlin/collections/CollectionsKt__IteratorsJVMKt$iterator$1;->$this_iterator:Ljava/util/Enumeration;
 
     invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -68,6 +71,7 @@
         }
     .end annotation
 
+    .line 18
     iget-object p0, p0, Lkotlin/collections/CollectionsKt__IteratorsJVMKt$iterator$1;->$this_iterator:Ljava/util/Enumeration;
 
     invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;

@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$1;
 .super Ljava/lang/Object;
+.source "SyncRtSurfaceTransactionApplierCompat.java"
 
 # interfaces
 .implements Landroid/os/Handler$Callback;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)V
     .locals 0
 
+    .line 97
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$1;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +38,12 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 1
 
+    .line 100
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_0
 
+    .line 101
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$1;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     iget p1, p1, Landroid/os/Message;->arg1:I

@@ -1,5 +1,6 @@
 .class final Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionUserEncoder;
 .super Ljava/lang/Object;
+.source "AutoCrashlyticsReportEncoder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/ObjectEncoder;
@@ -35,6 +36,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 182
     new-instance v0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionUserEncoder;
 
     invoke-direct {v0}, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionUserEncoder;-><init>()V
@@ -43,6 +45,7 @@
 
     const-string v0, "identifier"
 
+    .line 184
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -55,6 +58,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 181
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,6 +74,7 @@
         }
     .end annotation
 
+    .line 189
     sget-object p0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionUserEncoder;->IDENTIFIER_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User;->getIdentifier()Ljava/lang/String;
@@ -89,6 +94,7 @@
         }
     .end annotation
 
+    .line 181
     check-cast p1, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$User;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;

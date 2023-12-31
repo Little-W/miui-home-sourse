@@ -1,5 +1,6 @@
 .class Landroidx/lifecycle/LifecycleDispatcher$DispatcherActivityCallback;
 .super Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;
+.source "LifecycleDispatcher.java"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 49
     invoke-direct {p0}, Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;-><init>()V
 
     return-void
@@ -27,6 +29,7 @@
 .method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 53
     invoke-static {p1}, Landroidx/lifecycle/ReportFragment;->injectIfNeededIn(Landroid/app/Activity;)V
 
     return-void

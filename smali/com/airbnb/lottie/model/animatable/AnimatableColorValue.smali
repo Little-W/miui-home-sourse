@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 .super Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;
+.source "AnimatableColorValue.java"
 
 
 # annotations
@@ -26,6 +27,7 @@
         }
     .end annotation
 
+    .line 11
     invoke-direct {p0, p1}, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;-><init>(Ljava/util/List;)V
 
     return-void
@@ -45,6 +47,7 @@
         }
     .end annotation
 
+    .line 15
     new-instance v0, Lcom/airbnb/lottie/animation/keyframe/ColorKeyframeAnimation;
 
     iget-object p0, p0, Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;->keyframes:Ljava/util/List;
@@ -57,6 +60,7 @@
 .method public bridge synthetic getKeyframes()Ljava/util/List;
     .locals 0
 
+    .line 9
     invoke-super {p0}, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->getKeyframes()Ljava/util/List;
 
     move-result-object p0
@@ -67,6 +71,7 @@
 .method public bridge synthetic isStatic()Z
     .locals 0
 
+    .line 9
     invoke-super {p0}, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->isStatic()Z
 
     move-result p0
@@ -77,6 +82,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 9
     invoke-super {p0}, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->toString()Ljava/lang/String;
 
     move-result-object p0

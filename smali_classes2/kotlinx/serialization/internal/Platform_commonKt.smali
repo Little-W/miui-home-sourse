@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/Platform_commonKt;
 .super Ljava/lang/Object;
+.source "Platform.common.kt"
 
 
 # annotations
@@ -20,6 +21,7 @@
 
     new-array v0, v0, [Lkotlinx/serialization/descriptors/SerialDescriptor;
 
+    .line 69
     sput-object v0, Lkotlinx/serialization/internal/Platform_commonKt;->EMPTY_DESCRIPTOR_ARRAY:[Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-void
@@ -42,6 +44,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 60
     instance-of v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
 
     if-eqz v0, :cond_0
@@ -54,6 +57,7 @@
 
     return-object p0
 
+    .line 61
     :cond_0
     new-instance v0, Ljava/util/HashSet;
 
@@ -65,6 +69,7 @@
 
     const/4 v1, 0x0
 
+    .line 62
     invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementsCount()I
 
     move-result v2
@@ -72,6 +77,7 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
+    .line 63
     move-object v3, v0
 
     check-cast v3, Ljava/util/Collection;
@@ -86,6 +92,7 @@
 
     goto :goto_0
 
+    .line 65
     :cond_1
     check-cast v0, Ljava/util/Set;
 
@@ -105,6 +112,7 @@
         }
     .end annotation
 
+    .line 76
     move-object v0, p0
 
     check-cast v0, Ljava/util/Collection;
@@ -145,6 +153,7 @@
 
     new-array v0, v1, [Lkotlinx/serialization/descriptors/SerialDescriptor;
 
+    .line 146
     invoke-interface {p0, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -166,6 +175,7 @@
 
     throw p0
 
+    .line 76
     :cond_4
     sget-object p0, Lkotlinx/serialization/internal/Platform_commonKt;->EMPTY_DESCRIPTOR_ARRAY:[Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -190,10 +200,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 100
     invoke-interface {p0}, Lkotlin/reflect/KType;->getClassifier()Lkotlin/reflect/KClassifier;
 
     move-result-object p0
 
+    .line 101
     instance-of v0, p0, Lkotlin/reflect/KClass;
 
     if-eqz v0, :cond_0
@@ -202,6 +214,7 @@
 
     return-object p0
 
+    .line 102
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -245,8 +258,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 91
     new-instance v0, Lkotlinx/serialization/SerializationException;
 
+    .line 92
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -273,6 +288,7 @@
 
     move-result-object p0
 
+    .line 91
     invoke-direct {v0, p0}, Lkotlinx/serialization/SerializationException;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Throwable;

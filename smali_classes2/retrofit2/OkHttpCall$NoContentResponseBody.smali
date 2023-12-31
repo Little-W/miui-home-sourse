@@ -1,5 +1,6 @@
 .class final Lretrofit2/OkHttpCall$NoContentResponseBody;
 .super Lokhttp3/ResponseBody;
+.source "OkHttpCall.java"
 
 
 # annotations
@@ -23,10 +24,13 @@
 .method constructor <init>(Lokhttp3/MediaType;J)V
     .locals 0
 
+    .line 252
     invoke-direct {p0}, Lokhttp3/ResponseBody;-><init>()V
 
+    .line 253
     iput-object p1, p0, Lretrofit2/OkHttpCall$NoContentResponseBody;->contentType:Lokhttp3/MediaType;
 
+    .line 254
     iput-wide p2, p0, Lretrofit2/OkHttpCall$NoContentResponseBody;->contentLength:J
 
     return-void
@@ -37,6 +41,7 @@
 .method public contentLength()J
     .locals 2
 
+    .line 262
     iget-wide v0, p0, Lretrofit2/OkHttpCall$NoContentResponseBody;->contentLength:J
 
     return-wide v0
@@ -45,6 +50,7 @@
 .method public contentType()Lokhttp3/MediaType;
     .locals 0
 
+    .line 258
     iget-object p0, p0, Lretrofit2/OkHttpCall$NoContentResponseBody;->contentType:Lokhttp3/MediaType;
 
     return-object p0
@@ -53,6 +59,7 @@
 .method public source()Lokio/BufferedSource;
     .locals 1
 
+    .line 266
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Cannot read raw response body of a converted body."

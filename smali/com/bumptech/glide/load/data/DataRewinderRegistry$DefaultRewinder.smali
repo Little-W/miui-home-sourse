@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;
 .super Ljava/lang/Object;
+.source "DataRewinderRegistry.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataRewinder;
@@ -33,8 +34,10 @@
 .method constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 57
     iput-object p1, p0, Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;->data:Ljava/lang/Object;
 
     return-void
@@ -51,6 +54,7 @@
 .method public rewindAndGet()Ljava/lang/Object;
     .locals 0
 
+    .line 63
     iget-object p0, p0, Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;->data:Ljava/lang/Object;
 
     return-object p0

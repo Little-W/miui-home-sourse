@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/homeguide/ViewConfig;
 .super Ljava/lang/Object;
+.source "ViewConfig.java"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -43,16 +44,19 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
     new-array v1, v0, [I
 
+    .line 23
     iput-object v1, p0, Lcom/market/sdk/homeguide/ViewConfig;->titleLocation:[I
 
     new-array v0, v0, [I
 
+    .line 33
     iput-object v0, p0, Lcom/market/sdk/homeguide/ViewConfig;->iconLocation:[I
 
     return-void
@@ -63,6 +67,7 @@
 .method public isValid()Z
     .locals 1
 
+    .line 40
     iget-object v0, p0, Lcom/market/sdk/homeguide/ViewConfig;->iconLocation:[I
 
     if-eqz v0, :cond_0

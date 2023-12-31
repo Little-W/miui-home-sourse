@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics$Builder;
 .super Ljava/lang/Object;
+.source "LogSourceMetrics.java"
 
 
 # annotations
@@ -31,12 +32,15 @@
 .method constructor <init>()V
     .locals 1
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
+    .line 52
     iput-object v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics$Builder;->log_source_:Ljava/lang/String;
 
+    .line 53
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,6 +55,7 @@
 .method public build()Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics;
     .locals 2
 
+    .line 57
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics;
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics$Builder;->log_source_:Ljava/lang/String;
@@ -78,6 +83,7 @@
         }
     .end annotation
 
+    .line 71
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics$Builder;->log_event_dropped_:Ljava/util/List;
 
     return-object p0
@@ -86,6 +92,7 @@
 .method public setLogSource(Ljava/lang/String;)Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics$Builder;
     .locals 0
 
+    .line 61
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics$Builder;->log_source_:Ljava/lang/String;
 
     return-object p0

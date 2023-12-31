@@ -1,5 +1,6 @@
 .class public abstract Lkotlin/sequences/SequenceScope;
 .super Ljava/lang/Object;
+.source "SequenceBuilder.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,6 +54,7 @@
         }
     .end annotation
 
+    .line 88
     instance-of v0, p1, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
@@ -70,6 +73,7 @@
 
     return-object p0
 
+    .line 89
     :cond_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 

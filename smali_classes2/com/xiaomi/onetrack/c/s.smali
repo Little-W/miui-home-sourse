@@ -32,8 +32,10 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     invoke-direct {p0}, Lcom/xiaomi/onetrack/c/s;->b()V
 
     return-void
@@ -42,6 +44,7 @@
 .method synthetic constructor <init>(Lcom/xiaomi/onetrack/c/t;)V
     .locals 0
 
+    .line 22
     invoke-direct {p0}, Lcom/xiaomi/onetrack/c/s;-><init>()V
 
     return-void
@@ -50,6 +53,7 @@
 .method public static a()Lcom/xiaomi/onetrack/c/s;
     .locals 1
 
+    .line 40
     invoke-static {}, Lcom/xiaomi/onetrack/c/s$a;->a()Lcom/xiaomi/onetrack/c/s;
 
     move-result-object v0
@@ -64,6 +68,7 @@
 
     const/4 v1, 0x0
 
+    .line 104
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/x;->a()Lcom/xiaomi/onetrack/util/x;
 
@@ -73,10 +78,12 @@
 
     move-result-object v2
 
+    .line 105
     invoke-virtual {p1}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 106
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,6 +100,7 @@
 
     invoke-static {v0, v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 108
     invoke-static {p1}, Lcom/xiaomi/onetrack/c/s;->a(Ljava/lang/String;)[B
 
     move-result-object v3
@@ -101,6 +109,7 @@
 
     move-result-object v3
 
+    .line 110
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,10 +138,12 @@
 
     invoke-static {v0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 113
     invoke-static {v2, v3}, Lcom/xiaomi/onetrack/g/b;->a(Ljava/lang/String;[B)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 115
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,6 +160,7 @@
 
     invoke-static {v0, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 117
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -157,6 +169,7 @@
 
     goto :goto_0
 
+    .line 120
     :cond_0
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/c/s;->b(Ljava/lang/String;)Z
 
@@ -173,6 +186,7 @@
 
     const-string p1, "Exception while uploading "
 
+    .line 123
     invoke-static {v0, p1, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -186,6 +200,7 @@
 
     const/4 v1, 0x0
 
+    .line 141
     :try_start_0
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
@@ -200,6 +215,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 142
     :try_start_1
     new-instance v3, Ljava/util/zip/GZIPOutputStream;
 
@@ -208,6 +224,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 143
     :try_start_2
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
@@ -215,8 +232,10 @@
 
     invoke-virtual {v3, p0}, Ljava/util/zip/GZIPOutputStream;->write([B)V
 
+    .line 144
     invoke-virtual {v3}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
+    .line 145
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
@@ -265,6 +284,7 @@
     :try_start_3
     const-string v0, "UploaderEngine"
 
+    .line 147
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,9 +307,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 149
     :goto_1
     invoke-static {v2}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/OutputStream;)V
 
+    .line 150
     invoke-static {v3}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/OutputStream;)V
 
     return-object v1
@@ -297,11 +319,14 @@
     :catchall_2
     move-exception p0
 
+    .line 149
     :goto_2
     invoke-static {v2}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/OutputStream;)V
 
+    .line 150
     invoke-static {v3}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/OutputStream;)V
 
+    .line 151
     throw p0
 .end method
 
@@ -314,12 +339,14 @@
 
     const-string p1, "content is null"
 
+    .line 158
     invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 162
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/d/f;->a()Lcom/xiaomi/onetrack/d/f;
 
@@ -333,10 +360,12 @@
 
     aget-object p0, p0, v0
 
+    .line 163
     invoke-static {p0}, Lcom/xiaomi/onetrack/d/c;->a(Ljava/lang/String;)[B
 
     move-result-object p0
 
+    .line 164
     invoke-static {p1, p0}, Lcom/xiaomi/onetrack/d/a;->a([B[B)[B
 
     move-result-object p0
@@ -347,14 +376,17 @@
 .method private b()V
     .locals 2
 
+    .line 131
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "onetrack_uploader_worker"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
+    .line 132
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
+    .line 133
     new-instance v1, Lcom/xiaomi/onetrack/c/p;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -375,6 +407,7 @@
 
     const/4 v0, 0x0
 
+    .line 170
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -382,6 +415,7 @@
 
     const-string p1, "code"
 
+    .line 171
     invoke-virtual {v1, p1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result p1
@@ -390,10 +424,12 @@
 
     const-string p1, "\u6210\u529f\u53d1\u9001\u6570\u636e\u5230\u670d\u52a1\u7aef"
 
+    .line 174
     invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
+    .line 178
     invoke-static {}, Lcom/xiaomi/onetrack/b/a;->a()Lcom/xiaomi/onetrack/b/a;
 
     move-result-object v2
@@ -411,8 +447,10 @@
 
     const-string p1, "signature expired, will update"
 
+    .line 180
     invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 181
     invoke-static {}, Lcom/xiaomi/onetrack/d/f;->a()Lcom/xiaomi/onetrack/d/f;
 
     move-result-object p1
@@ -421,6 +459,7 @@
 
     goto :goto_0
 
+    .line 184
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -447,6 +486,7 @@
 
     const-string v1, "parseUploadingResult exception "
 
+    .line 189
     invoke-static {p0, v1, p1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -460,11 +500,13 @@
 
     monitor-enter p0
 
+    .line 44
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/s;->g:Lcom/xiaomi/onetrack/c/p;
 
     if-eqz v0, :cond_0
 
+    .line 45
     iget-object v0, p0, Lcom/xiaomi/onetrack/c/s;->g:Lcom/xiaomi/onetrack/c/p;
 
     invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/c/p;->a(IZ)V
@@ -476,10 +518,12 @@
 
     const-string p2, "*** impossible, upload timer should not be null"
 
+    .line 47
     invoke-static {p1, p2}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 49
     :goto_0
     monitor-exit p0
 
@@ -496,10 +540,12 @@
 .method public a(Z)V
     .locals 0
 
+    .line 52
     iget-object p0, p0, Lcom/xiaomi/onetrack/c/s;->g:Lcom/xiaomi/onetrack/c/p;
 
     if-eqz p0, :cond_0
 
+    .line 53
     invoke-virtual {p0, p1}, Lcom/xiaomi/onetrack/c/p;->a(Z)V
 
     goto :goto_0
@@ -509,6 +555,7 @@
 
     const-string p1, "*** impossible, upload timer should not be null"
 
+    .line 55
     invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
@@ -522,8 +569,10 @@
 
     const-string v1, "\u5373\u5c06\u8bfb\u53d6\u6570\u636e\u5e93\u5e76\u4e0a\u4f20\u6570\u636e"
 
+    .line 65
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 68
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/c/c;->a()Lcom/xiaomi/onetrack/c/c;
 
@@ -537,6 +586,7 @@
 
     if-nez v1, :cond_1
 
+    .line 71
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -555,15 +605,19 @@
 
     return v2
 
+    .line 75
     :cond_1
     iget-object v3, v1, Lcom/xiaomi/onetrack/c/h;->c:Ljava/util/ArrayList;
 
+    .line 76
     iget-object v4, v1, Lcom/xiaomi/onetrack/c/h;->a:Lorg/json/JSONArray;
 
+    .line 78
     invoke-direct {p0, v4}, Lcom/xiaomi/onetrack/c/s;->a(Lorg/json/JSONArray;)Z
 
     move-result v4
 
+    .line 79
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -586,6 +640,7 @@
 
     return p0
 
+    .line 84
     :cond_2
     invoke-static {}, Lcom/xiaomi/onetrack/c/c;->a()Lcom/xiaomi/onetrack/c/c;
 
@@ -597,6 +652,7 @@
 
     if-nez v3, :cond_3
 
+    .line 86
     new-instance p0, Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
@@ -607,11 +663,13 @@
 
     goto :goto_0
 
+    .line 91
     :cond_3
     iget-boolean v1, v1, Lcom/xiaomi/onetrack/c/h;->d:Z
 
     if-eqz v1, :cond_0
 
+    .line 93
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

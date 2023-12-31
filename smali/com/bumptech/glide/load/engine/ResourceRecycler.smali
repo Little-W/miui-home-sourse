@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/ResourceRecycler;
 .super Ljava/lang/Object;
+.source "ResourceRecycler.java"
 
 
 # annotations
@@ -20,10 +21,13 @@
 .method constructor <init>()V
     .locals 3
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
     new-instance v0, Landroid/os/Handler;
 
+    .line 14
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -53,6 +57,7 @@
 
     monitor-enter p0
 
+    .line 17
     :try_start_0
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/ResourceRecycler;->isRecycling:Z
 
@@ -60,6 +65,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 21
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceRecycler;->handler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -70,17 +76,21 @@
 
     goto :goto_0
 
+    .line 23
     :cond_0
     iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/ResourceRecycler;->isRecycling:Z
 
+    .line 24
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
 
     const/4 p1, 0x0
 
+    .line 25
     iput-boolean p1, p0, Lcom/bumptech/glide/load/engine/ResourceRecycler;->isRecycling:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 27
     :goto_0
     monitor-exit p0
 

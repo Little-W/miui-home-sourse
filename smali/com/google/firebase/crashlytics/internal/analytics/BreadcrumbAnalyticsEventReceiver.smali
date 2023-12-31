@@ -1,5 +1,6 @@
 .class public Lcom/google/firebase/crashlytics/internal/analytics/BreadcrumbAnalyticsEventReceiver;
 .super Ljava/lang/Object;
+.source "BreadcrumbAnalyticsEventReceiver.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/analytics/AnalyticsEventReceiver;
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,14 +29,17 @@
         }
     .end annotation
 
+    .line 61
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
+    .line 62
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
+    .line 64
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -56,6 +61,7 @@
 
     check-cast v3, Ljava/lang/String;
 
+    .line 65
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -67,12 +73,15 @@
     :cond_0
     const-string p1, "name"
 
+    .line 68
     invoke-virtual {v0, p1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p0, "parameters"
 
+    .line 69
     invoke-virtual {v0, p0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
+    .line 71
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -85,10 +94,12 @@
 .method public onEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
 
+    .line 40
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/analytics/BreadcrumbAnalyticsEventReceiver;->breadcrumbHandler:Lcom/google/firebase/crashlytics/internal/breadcrumbs/BreadcrumbHandler;
 
     if-eqz p0, :cond_0
 
+    .line 43
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -108,12 +119,14 @@
 
     move-result-object p1
 
+    .line 44
     invoke-interface {p0, p1}, Lcom/google/firebase/crashlytics/internal/breadcrumbs/BreadcrumbHandler;->handleBreadcrumb(Ljava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    .line 46
     :catch_0
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
@@ -131,8 +144,10 @@
 .method public registerBreadcrumbHandler(Lcom/google/firebase/crashlytics/internal/breadcrumbs/BreadcrumbHandler;)V
     .locals 0
 
+    .line 53
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/analytics/BreadcrumbAnalyticsEventReceiver;->breadcrumbHandler:Lcom/google/firebase/crashlytics/internal/breadcrumbs/BreadcrumbHandler;
 
+    .line 54
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p0

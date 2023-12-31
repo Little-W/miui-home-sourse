@@ -1,5 +1,6 @@
 .class public final Landroidx/preference/PreferenceScreen;
 .super Landroidx/preference/PreferenceGroup;
+.source "PreferenceScreen.java"
 
 
 # instance fields
@@ -10,6 +11,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
+    .line 53
     sget v0, Landroidx/preference/R$attr;->preferenceScreenStyle:I
 
     const v1, 0x101008b
@@ -22,6 +24,7 @@
 
     const/4 p1, 0x1
 
+    .line 42
     iput-boolean p1, p0, Landroidx/preference/PreferenceScreen;->mShouldUseGeneratedIds:Z
 
     return-void
@@ -40,6 +43,7 @@
 .method protected onClick()V
     .locals 1
 
+    .line 59
     invoke-virtual {p0}, Landroidx/preference/PreferenceScreen;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -60,6 +64,7 @@
 
     goto :goto_0
 
+    .line 63
     :cond_0
     invoke-virtual {p0}, Landroidx/preference/PreferenceScreen;->getPreferenceManager()Landroidx/preference/PreferenceManager;
 
@@ -71,6 +76,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 65
     invoke-interface {v0, p0}, Landroidx/preference/PreferenceManager$OnNavigateToScreenListener;->onNavigateToScreen(Landroidx/preference/PreferenceScreen;)V
 
     :cond_1
@@ -81,6 +87,7 @@
 .method public shouldUseGeneratedIds()Z
     .locals 0
 
+    .line 81
     iget-boolean p0, p0, Landroidx/preference/PreferenceScreen;->mShouldUseGeneratedIds:Z
 
     return p0

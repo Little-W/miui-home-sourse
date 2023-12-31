@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader$Factory;
 .super Ljava/lang/Object;
+.source "HttpGlideUrlLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoaderFactory;
@@ -43,8 +44,10 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 67
     new-instance v0, Lcom/bumptech/glide/load/model/ModelCache;
 
     const-wide/16 v1, 0x1f4
@@ -72,6 +75,7 @@
         }
     .end annotation
 
+    .line 72
     new-instance p1, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader$Factory;->modelCache:Lcom/bumptech/glide/load/model/ModelCache;

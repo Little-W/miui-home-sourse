@@ -1,5 +1,6 @@
 .class public final Lcom/bumptech/glide/Registry$NoImageHeaderParserException;
 .super Lcom/bumptech/glide/Registry$MissingComponentException;
+.source "Registry.java"
 
 
 # annotations
@@ -19,6 +20,7 @@
 
     const-string v0, "Failed to find image header parser."
 
+    .line 662
     invoke-direct {p0, v0}, Lcom/bumptech/glide/Registry$MissingComponentException;-><init>(Ljava/lang/String;)V
 
     return-void

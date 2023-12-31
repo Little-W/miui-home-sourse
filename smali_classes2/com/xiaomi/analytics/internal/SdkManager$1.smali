@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/analytics/internal/SdkManager$1;
 .super Ljava/lang/Object;
+.source "SdkManager.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/xiaomi/analytics/internal/SdkManager;)V
     .locals 0
 
+    .line 154
     iput-object p1, p0, Lcom/xiaomi/analytics/internal/SdkManager$1;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 2
 
+    .line 158
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/analytics/internal/SdkManager$1;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
@@ -61,6 +64,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 159
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -72,6 +76,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 160
     iget-object p0, p0, Lcom/xiaomi/analytics/internal/SdkManager$1;->this$0:Lcom/xiaomi/analytics/internal/SdkManager;
 
     invoke-static {p0}, Lcom/xiaomi/analytics/internal/SdkManager;->access$100(Lcom/xiaomi/analytics/internal/SdkManager;)Landroid/content/Context;
@@ -97,6 +102,7 @@
 
     const-string v0, "SdkManager"
 
+    .line 163
     invoke-static {v0}, Lcom/xiaomi/analytics/internal/util/ALog;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

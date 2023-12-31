@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$1;
 .super Lcom/google/android/material/internal/TextWatcherAdapter;
+.source "PasswordToggleEndIconDelegate.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;)V
     .locals 0
 
+    .line 37
     iput-object p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$1;->this$0:Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;
 
     invoke-direct {p0}, Lcom/google/android/material/internal/TextWatcherAdapter;-><init>()V
@@ -33,6 +35,7 @@
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
+    .line 42
     iget-object p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$1;->this$0:Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;
 
     iget-object p1, p1, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;

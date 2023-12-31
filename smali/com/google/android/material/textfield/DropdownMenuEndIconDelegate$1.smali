@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1;
 .super Lcom/google/android/material/internal/TextWatcherAdapter;
+.source "DropdownMenuEndIconDelegate.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
     .locals 0
 
+    .line 76
     iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-direct {p0}, Lcom/google/android/material/internal/TextWatcherAdapter;-><init>()V
@@ -33,10 +35,12 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 1
 
+    .line 80
     iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     iget-object p1, p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
 
+    .line 81
     invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
     move-result-object p1
@@ -45,6 +49,7 @@
 
     move-result-object p1
 
+    .line 83
     iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-static {v0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->access$100(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Landroid/view/accessibility/AccessibilityManager;
@@ -57,6 +62,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 84
     invoke-static {p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->access$200(Landroid/widget/EditText;)Z
 
     move-result v0
@@ -67,14 +73,17 @@
 
     iget-object v0, v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
 
+    .line 85
     invoke-virtual {v0}, Lcom/google/android/material/internal/CheckableImageButton;->hasFocus()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 86
     invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->dismissDropDown()V
 
+    .line 88
     :cond_0
     new-instance v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1$1;
 

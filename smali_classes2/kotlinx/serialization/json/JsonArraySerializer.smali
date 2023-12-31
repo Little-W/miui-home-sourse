@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/JsonArraySerializer;
 .super Ljava/lang/Object;
+.source "JsonElementSerializers.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;
@@ -32,12 +33,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 172
     new-instance v0, Lkotlinx/serialization/json/JsonArraySerializer;
 
     invoke-direct {v0}, Lkotlinx/serialization/json/JsonArraySerializer;-><init>()V
 
     sput-object v0, Lkotlinx/serialization/json/JsonArraySerializer;->INSTANCE:Lkotlinx/serialization/json/JsonArraySerializer;
 
+    .line 179
     sget-object v0, Lkotlinx/serialization/json/JsonArraySerializer$JsonArrayDescriptor;->INSTANCE:Lkotlinx/serialization/json/JsonArraySerializer$JsonArrayDescriptor;
 
     check-cast v0, Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -50,6 +53,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,6 +64,7 @@
 .method public bridge synthetic deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
     .locals 0
 
+    .line 172
     invoke-virtual {p0, p1}, Lkotlinx/serialization/json/JsonArraySerializer;->deserialize(Lkotlinx/serialization/encoding/Decoder;)Lkotlinx/serialization/json/JsonArray;
 
     move-result-object p0
@@ -74,8 +79,10 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 187
     invoke-static {p1}, Lkotlinx/serialization/json/JsonElementSerializersKt;->access$verify(Lkotlinx/serialization/encoding/Decoder;)V
 
+    .line 188
     new-instance p0, Lkotlinx/serialization/json/JsonArray;
 
     sget-object v0, Lkotlinx/serialization/json/JsonElementSerializer;->INSTANCE:Lkotlinx/serialization/json/JsonElementSerializer;
@@ -100,6 +107,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 179
     sget-object p0, Lkotlinx/serialization/json/JsonArraySerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -108,6 +116,7 @@
 .method public bridge synthetic serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
     .locals 0
 
+    .line 172
     check-cast p2, Lkotlinx/serialization/json/JsonArray;
 
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/json/JsonArraySerializer;->serialize(Lkotlinx/serialization/encoding/Encoder;Lkotlinx/serialization/json/JsonArray;)V
@@ -126,8 +135,10 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 182
     invoke-static {p1}, Lkotlinx/serialization/json/JsonElementSerializersKt;->access$verify(Lkotlinx/serialization/encoding/Encoder;)V
 
+    .line 183
     sget-object p0, Lkotlinx/serialization/json/JsonElementSerializer;->INSTANCE:Lkotlinx/serialization/json/JsonElementSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;

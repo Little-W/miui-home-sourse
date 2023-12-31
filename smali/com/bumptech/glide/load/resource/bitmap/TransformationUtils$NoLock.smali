@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils$NoLock;
 .super Ljava/lang/Object;
+.source "TransformationUtils.java"
 
 # interfaces
 .implements Ljava/util/concurrent/locks/Lock;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 568
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +49,7 @@
 .method public newCondition()Ljava/util/concurrent/locks/Condition;
     .locals 1
 
+    .line 598
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Should not be called"

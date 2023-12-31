@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/utils/Utils$1;
 .super Lcom/market/sdk/Singleton;
+.source "Utils.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 30
     invoke-direct {p0}, Lcom/market/sdk/Singleton;-><init>()V
 
     return-void
@@ -35,6 +37,7 @@
 .method protected bridge synthetic create()Ljava/lang/Object;
     .locals 0
 
+    .line 30
     invoke-virtual {p0}, Lcom/market/sdk/utils/Utils$1;->create()Ljava/lang/String;
 
     move-result-object p0
@@ -45,6 +48,7 @@
 .method protected create()Ljava/lang/String;
     .locals 1
 
+    .line 34
     invoke-static {}, Lcom/market/sdk/utils/Client;->isMiui()Z
 
     move-result p0
@@ -53,6 +57,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 35
     invoke-static {}, Lcom/market/sdk/utils/Client;->isInternationalMiui()Z
 
     move-result p0

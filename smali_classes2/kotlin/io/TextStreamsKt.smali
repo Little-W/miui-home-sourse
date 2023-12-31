@@ -1,5 +1,6 @@
 .class public final Lkotlin/io/TextStreamsKt;
 .super Ljava/lang/Object;
+.source "ReadWrite.kt"
 
 
 # annotations
@@ -20,8 +21,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 122
     new-array p2, p2, [C
 
+    .line 123
     invoke-virtual {p0, p2}, Ljava/io/Reader;->read([C)I
 
     move-result v0
@@ -33,12 +36,14 @@
 
     const/4 v3, 0x0
 
+    .line 125
     invoke-virtual {p1, p2, v3, v0}, Ljava/io/Writer;->write([CII)V
 
     int-to-long v3, v0
 
     add-long/2addr v1, v3
 
+    .line 127
     invoke-virtual {p0, p2}, Ljava/io/Reader;->read([C)I
 
     move-result v0
@@ -58,6 +63,7 @@
 
     const/16 p2, 0x2000
 
+    .line 120
     :cond_0
     invoke-static {p0, p1, p2}, Lkotlin/io/TextStreamsKt;->copyTo(Ljava/io/Reader;Ljava/io/Writer;I)J
 
@@ -73,10 +79,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 106
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
+    .line 107
     move-object v1, v0
 
     check-cast v1, Ljava/io/Writer;
@@ -89,6 +97,7 @@
 
     invoke-static {p0, v1, v2, v3, v4}, Lkotlin/io/TextStreamsKt;->copyTo$default(Ljava/io/Reader;Ljava/io/Writer;IILjava/lang/Object;)J
 
+    .line 108
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p0

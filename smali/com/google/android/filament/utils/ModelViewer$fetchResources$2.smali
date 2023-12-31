@@ -1,5 +1,6 @@
 .class final Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "ModelViewer.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -132,6 +133,7 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
+    .line 311
     iget v0, p0, Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;->label:I
 
     if-nez v0, :cond_1
@@ -140,6 +142,7 @@
 
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;->p$:Lkotlinx/coroutines/CoroutineScope;
 
+    .line 312
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;->$items:Ljava/util/HashMap;
 
     check-cast p1, Ljava/util/Map;
@@ -177,6 +180,7 @@
 
     check-cast v0, Ljava/nio/Buffer;
 
+    .line 313
     iget-object v2, p0, Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     invoke-static {v2}, Lcom/google/android/filament/utils/ModelViewer;->access$getResourceLoader$p(Lcom/google/android/filament/utils/ModelViewer;)Lcom/google/android/filament/gltfio/ResourceLoader;
@@ -187,6 +191,7 @@
 
     goto :goto_0
 
+    .line 315
     :cond_0
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
@@ -198,6 +203,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/filament/gltfio/ResourceLoader;->asyncBeginLoad(Lcom/google/android/filament/gltfio/FilamentAsset;)Z
 
+    .line 316
     iget-object p1, p0, Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;->this$0:Lcom/google/android/filament/utils/ModelViewer;
 
     iget-object v0, p0, Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;->$asset:Lcom/google/android/filament/gltfio/FilamentAsset;
@@ -208,10 +214,12 @@
 
     invoke-static {p1, v0}, Lcom/google/android/filament/utils/ModelViewer;->access$setAnimator$p(Lcom/google/android/filament/utils/ModelViewer;Lcom/google/android/filament/gltfio/Animator;)V
 
+    .line 317
     iget-object p0, p0, Lcom/google/android/filament/utils/ModelViewer$fetchResources$2;->$asset:Lcom/google/android/filament/gltfio/FilamentAsset;
 
     invoke-virtual {p0}, Lcom/google/android/filament/gltfio/FilamentAsset;->releaseSourceData()V
 
+    .line 318
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0

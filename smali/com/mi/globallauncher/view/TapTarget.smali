@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/view/TapTarget;
 .super Ljava/lang/Object;
+.source "TapTarget.java"
 
 
 # instance fields
@@ -74,14 +75,17 @@
 .method protected constructor <init>(Landroid/graphics/Rect;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 226
     invoke-direct {p0, p2, p3}, Lcom/mi/globallauncher/view/TapTarget;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
     if-eqz p1, :cond_0
 
+    .line 231
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTarget;->bounds:Landroid/graphics/Rect;
 
     return-void
 
+    .line 228
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -95,90 +99,121 @@
 .method protected constructor <init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
     .locals 4
 
+    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x3f75c28f    # 0.96f
 
+    .line 53
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCircleAlpha:F
 
     const/16 v0, 0x2c
 
+    .line 54
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->targetRadius:I
 
     const/4 v0, -0x1
 
+    .line 61
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCircleColorRes:I
 
+    .line 63
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->targetCircleColorRes:I
 
+    .line 65
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->dimColorRes:I
 
+    .line 67
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextColorRes:I
 
+    .line 69
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextColorRes:I
 
     const/4 v1, 0x0
 
+    .line 72
     iput-object v1, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCircleColor:Ljava/lang/Integer;
 
+    .line 73
     iput-object v1, p0, Lcom/mi/globallauncher/view/TapTarget;->targetCircleColor:Ljava/lang/Integer;
 
+    .line 74
     iput-object v1, p0, Lcom/mi/globallauncher/view/TapTarget;->dimColor:Ljava/lang/Integer;
 
+    .line 75
     iput-object v1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextColor:Ljava/lang/Integer;
 
+    .line 76
     iput-object v1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextColor:Ljava/lang/Integer;
 
+    .line 78
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextDimen:I
 
+    .line 80
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextDimen:I
 
     const/16 v1, 0x14
 
+    .line 83
     iput v1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextSize:I
 
     const/16 v1, 0x12
 
+    .line 84
     iput v1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextSize:I
 
+    .line 85
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->id:I
 
     const/4 v1, 0x0
 
+    .line 87
     iput-boolean v1, p0, Lcom/mi/globallauncher/view/TapTarget;->drawShadow:Z
 
     const/4 v2, 0x1
 
+    .line 88
     iput-boolean v2, p0, Lcom/mi/globallauncher/view/TapTarget;->cancelable:Z
 
+    .line 89
     iput-boolean v2, p0, Lcom/mi/globallauncher/view/TapTarget;->tintTarget:Z
 
+    .line 90
     iput-boolean v1, p0, Lcom/mi/globallauncher/view/TapTarget;->transparentTarget:Z
 
     const v3, 0x3f0a3d71    # 0.54f
 
+    .line 91
     iput v3, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextAlpha:F
 
+    .line 97
     iput-boolean v2, p0, Lcom/mi/globallauncher/view/TapTarget;->autoCalculateOuterCircleCenterPoint:Z
 
+    .line 107
     iput v1, p0, Lcom/mi/globallauncher/view/TapTarget;->textGravity:I
 
+    .line 112
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->textPadding:I
 
+    .line 117
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCirclePadding:I
 
     const/high16 v0, -0x40800000    # -1.0f
 
+    .line 122
     iput v0, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextSpacingMult:F
 
     if-eqz p1, :cond_0
 
+    .line 239
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTarget;->title:Ljava/lang/CharSequence;
 
+    .line 240
     iput-object p2, p0, Lcom/mi/globallauncher/view/TapTarget;->description:Ljava/lang/CharSequence;
 
     return-void
 
+    .line 236
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -196,6 +231,7 @@
 
     if-eq p3, p0, :cond_0
 
+    .line 551
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p0
@@ -217,6 +253,7 @@
 
     if-eq p3, p0, :cond_0
 
+    .line 559
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -227,6 +264,7 @@
 
     return p0
 
+    .line 562
     :cond_0
     invoke-static {p1, p2}, Lcom/mi/globallauncher/view/UiUtil;->sp(Landroid/content/Context;I)I
 
@@ -240,6 +278,7 @@
 
     const/4 v0, 0x0
 
+    .line 217
     invoke-static {p0, p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->forBounds(Landroid/graphics/Rect;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -250,6 +289,7 @@
 .method public static forBounds(Landroid/graphics/Rect;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
     .locals 1
 
+    .line 222
     new-instance v0, Lcom/mi/globallauncher/view/TapTarget;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/mi/globallauncher/view/TapTarget;-><init>(Landroid/graphics/Rect;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
@@ -262,6 +302,7 @@
 
     const/4 v0, 0x0
 
+    .line 196
     invoke-static {p0, p1, p2, v0}, Lcom/mi/globallauncher/view/TapTarget;->forToolbarMenuItem(Landroid/widget/Toolbar;ILjava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -272,6 +313,7 @@
 .method public static forToolbarMenuItem(Landroid/widget/Toolbar;ILjava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
     .locals 1
 
+    .line 202
     new-instance v0, Lcom/mi/globallauncher/view/ToolbarTapTarget;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/mi/globallauncher/view/ToolbarTapTarget;-><init>(Landroid/widget/Toolbar;ILjava/lang/CharSequence;Ljava/lang/CharSequence;)V
@@ -284,6 +326,7 @@
 
     const/4 v0, 0x0
 
+    .line 184
     invoke-static {p0, p1, p2, v0}, Lcom/mi/globallauncher/view/TapTarget;->forToolbarMenuItem(Landroidx/appcompat/widget/Toolbar;ILjava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -294,6 +337,7 @@
 .method public static forToolbarMenuItem(Landroidx/appcompat/widget/Toolbar;ILjava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
     .locals 1
 
+    .line 190
     new-instance v0, Lcom/mi/globallauncher/view/ToolbarTapTarget;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/mi/globallauncher/view/ToolbarTapTarget;-><init>(Landroidx/appcompat/widget/Toolbar;ILjava/lang/CharSequence;Ljava/lang/CharSequence;)V
@@ -306,6 +350,7 @@
 
     const/4 v0, 0x0
 
+    .line 172
     invoke-static {p0, p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->forToolbarNavigationIcon(Landroid/widget/Toolbar;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -316,6 +361,7 @@
 .method public static forToolbarNavigationIcon(Landroid/widget/Toolbar;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
     .locals 2
 
+    .line 178
     new-instance v0, Lcom/mi/globallauncher/view/ToolbarTapTarget;
 
     const/4 v1, 0x1
@@ -330,6 +376,7 @@
 
     const/4 v0, 0x0
 
+    .line 161
     invoke-static {p0, p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->forToolbarNavigationIcon(Landroidx/appcompat/widget/Toolbar;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -340,6 +387,7 @@
 .method public static forToolbarNavigationIcon(Landroidx/appcompat/widget/Toolbar;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
     .locals 2
 
+    .line 167
     new-instance v0, Lcom/mi/globallauncher/view/ToolbarTapTarget;
 
     const/4 v1, 0x1
@@ -354,6 +402,7 @@
 
     const/4 v0, 0x0
 
+    .line 147
     invoke-static {p0, p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->forToolbarOverflow(Landroid/widget/Toolbar;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -364,6 +413,7 @@
 .method public static forToolbarOverflow(Landroid/widget/Toolbar;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
     .locals 2
 
+    .line 156
     new-instance v0, Lcom/mi/globallauncher/view/ToolbarTapTarget;
 
     const/4 v1, 0x0
@@ -378,6 +428,7 @@
 
     const/4 v0, 0x0
 
+    .line 130
     invoke-static {p0, p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->forToolbarOverflow(Landroidx/appcompat/widget/Toolbar;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -388,6 +439,7 @@
 .method public static forToolbarOverflow(Landroidx/appcompat/widget/Toolbar;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
     .locals 2
 
+    .line 139
     new-instance v0, Lcom/mi/globallauncher/view/ToolbarTapTarget;
 
     const/4 v1, 0x0
@@ -402,6 +454,7 @@
 
     const/4 v0, 0x0
 
+    .line 207
     invoke-static {p0, p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->forView(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -412,6 +465,7 @@
 .method public static forView(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/mi/globallauncher/view/TapTarget;
     .locals 1
 
+    .line 212
     new-instance v0, Lcom/mi/globallauncher/view/ViewTapTarget;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/mi/globallauncher/view/ViewTapTarget;-><init>(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
@@ -424,6 +478,7 @@
 .method public autoCalculateOuterCircleCenterPoint(Z)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 465
     iput-boolean p1, p0, Lcom/mi/globallauncher/view/TapTarget;->autoCalculateOuterCircleCenterPoint:Z
 
     return-object p0
@@ -432,12 +487,14 @@
 .method public bounds()Landroid/graphics/Rect;
     .locals 1
 
+    .line 509
     iget-object p0, p0, Lcom/mi/globallauncher/view/TapTarget;->bounds:Landroid/graphics/Rect;
 
     if-eqz p0, :cond_0
 
     return-object p0
 
+    .line 510
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -451,6 +508,7 @@
 .method public cancelable(Z)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 419
     iput-boolean p1, p0, Lcom/mi/globallauncher/view/TapTarget;->cancelable:Z
 
     return-object p0
@@ -471,10 +529,12 @@
 
     if-gtz v0, :cond_0
 
+    .line 376
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextAlpha:F
 
     return-object p0
 
+    .line 374
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -500,6 +560,7 @@
 .method public descriptionTextColor(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 314
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextColorRes:I
 
     return-object p0
@@ -508,6 +569,7 @@
 .method public descriptionTextColorInt(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 321
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -520,6 +582,7 @@
 .method descriptionTextColorInt(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 2
 
+    .line 537
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextColor:Ljava/lang/Integer;
 
     iget v1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextColorRes:I
@@ -534,6 +597,7 @@
 .method public descriptionTextDimen(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 386
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextDimen:I
 
     return-object p0
@@ -544,10 +608,12 @@
 
     if-ltz p1, :cond_0
 
+    .line 357
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextSize:I
 
     return-object p0
 
+    .line 356
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -561,6 +627,7 @@
 .method descriptionTextSizePx(Landroid/content/Context;)I
     .locals 2
 
+    .line 545
     iget v0, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextSize:I
 
     iget v1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextDimen:I
@@ -577,10 +644,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 343
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTypeface:Landroid/graphics/Typeface;
 
     return-object p0
 
+    .line 342
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -594,6 +663,7 @@
 .method public dimColor(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 396
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->dimColorRes:I
 
     return-object p0
@@ -602,6 +672,7 @@
 .method public dimColorInt(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 407
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -614,6 +685,7 @@
 .method dimColorInt(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 2
 
+    .line 527
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTarget;->dimColor:Ljava/lang/Integer;
 
     iget v1, p0, Lcom/mi/globallauncher/view/TapTarget;->dimColorRes:I
@@ -628,6 +700,7 @@
 .method public drawShadow(Z)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 413
     iput-boolean p1, p0, Lcom/mi/globallauncher/view/TapTarget;->drawShadow:Z
 
     return-object p0
@@ -638,6 +711,7 @@
 
     const/4 v0, 0x0
 
+    .line 431
     invoke-virtual {p0, p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->icon(Landroid/graphics/drawable/Drawable;Z)Lcom/mi/globallauncher/view/TapTarget;
 
     move-result-object p0
@@ -650,10 +724,12 @@
 
     if-eqz p1, :cond_1
 
+    .line 443
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTarget;->icon:Landroid/graphics/drawable/Drawable;
 
     if-nez p2, :cond_0
 
+    .line 446
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTarget;->icon:Landroid/graphics/drawable/Drawable;
 
     new-instance p2, Landroid/graphics/Rect;
@@ -677,6 +753,7 @@
     :cond_0
     return-object p0
 
+    .line 442
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -690,6 +767,7 @@
 .method public id()I
     .locals 0
 
+    .line 491
     iget p0, p0, Lcom/mi/globallauncher/view/TapTarget;->id:I
 
     return p0
@@ -698,6 +776,7 @@
 .method public id(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 454
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->id:I
 
     return-object p0
@@ -706,6 +785,7 @@
 .method public onReady(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 499
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void
@@ -726,10 +806,12 @@
 
     if-gtz v0, :cond_0
 
+    .line 267
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCircleAlpha:F
 
     return-object p0
 
+    .line 265
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -755,6 +837,7 @@
 .method public outerCircleColor(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 251
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCircleColorRes:I
 
     return-object p0
@@ -763,6 +846,7 @@
 .method public outerCircleColorInt(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 258
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -775,6 +859,7 @@
 .method outerCircleColorInt(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 2
 
+    .line 517
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCircleColor:Ljava/lang/Integer;
 
     iget v1, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCircleColorRes:I
@@ -789,6 +874,7 @@
 .method public outerCirclePadding(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 480
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->outerCirclePadding:I
 
     return-object p0
@@ -797,6 +883,7 @@
 .method public targetCircleColor(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 273
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->targetCircleColorRes:I
 
     return-object p0
@@ -805,6 +892,7 @@
 .method public targetCircleColorInt(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 280
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -817,6 +905,7 @@
 .method targetCircleColorInt(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 2
 
+    .line 522
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTarget;->targetCircleColor:Ljava/lang/Integer;
 
     iget v1, p0, Lcom/mi/globallauncher/view/TapTarget;->targetCircleColorRes:I
@@ -831,6 +920,7 @@
 .method public targetRadius(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 460
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->targetRadius:I
 
     return-object p0
@@ -839,8 +929,10 @@
 .method public textColor(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 286
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextColorRes:I
 
+    .line 287
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTextColorRes:I
 
     return-object p0
@@ -849,12 +941,14 @@
 .method public textColorInt(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 1
 
+    .line 294
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextColor:Ljava/lang/Integer;
 
+    .line 295
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -867,6 +961,7 @@
 .method public textGravity(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 470
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->textGravity:I
 
     return-object p0
@@ -875,6 +970,7 @@
 .method public textPadding(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 475
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->textPadding:I
 
     return-object p0
@@ -885,12 +981,15 @@
 
     if-eqz p1, :cond_0
 
+    .line 328
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTypeface:Landroid/graphics/Typeface;
 
+    .line 329
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTarget;->descriptionTypeface:Landroid/graphics/Typeface;
 
     return-object p0
 
+    .line 327
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -904,6 +1003,7 @@
 .method public tintTarget(Z)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 425
     iput-boolean p1, p0, Lcom/mi/globallauncher/view/TapTarget;->tintTarget:Z
 
     return-object p0
@@ -912,6 +1012,7 @@
 .method public titleTextColor(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 301
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextColorRes:I
 
     return-object p0
@@ -920,6 +1021,7 @@
 .method public titleTextColorInt(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 308
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -932,6 +1034,7 @@
 .method titleTextColorInt(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 2
 
+    .line 532
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextColor:Ljava/lang/Integer;
 
     iget v1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextColorRes:I
@@ -946,6 +1049,7 @@
 .method public titleTextDimen(I)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 367
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextDimen:I
 
     return-object p0
@@ -956,10 +1060,12 @@
 
     if-ltz p1, :cond_0
 
+    .line 350
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextSize:I
 
     return-object p0
 
+    .line 349
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -973,6 +1079,7 @@
 .method titleTextSizePx(Landroid/content/Context;)I
     .locals 2
 
+    .line 541
     iget v0, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextSize:I
 
     iget v1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextDimen:I
@@ -987,6 +1094,7 @@
 .method public titleTextSpacingMult(F)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 485
     iput p1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTextSpacingMult:F
 
     return-object p0
@@ -997,10 +1105,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 336
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTarget;->titleTypeface:Landroid/graphics/Typeface;
 
     return-object p0
 
+    .line 335
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1014,6 +1124,7 @@
 .method public transparentTarget(Z)Lcom/mi/globallauncher/view/TapTarget;
     .locals 0
 
+    .line 245
     iput-boolean p1, p0, Lcom/mi/globallauncher/view/TapTarget;->transparentTarget:Z
 
     return-object p0

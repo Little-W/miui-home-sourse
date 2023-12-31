@@ -1,5 +1,6 @@
 .class public abstract Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;
 .super Landroid/os/Binder;
+.source "IOverviewProxy.java"
 
 # interfaces
 .implements Lcom/android/systemui/shared/recents/IOverviewProxy;
@@ -58,10 +59,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 99
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.android.systemui.shared.recents.IOverviewProxy"
 
+    .line 100
     invoke-virtual {p0, p0, v0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -79,20 +82,24 @@
     :cond_0
     const-string v0, "com.android.systemui.shared.recents.IOverviewProxy"
 
+    .line 111
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 112
     instance-of v1, v0, Lcom/android/systemui/shared/recents/IOverviewProxy;
 
     if-eqz v1, :cond_1
 
+    .line 113
     check-cast v0, Lcom/android/systemui/shared/recents/IOverviewProxy;
 
     return-object v0
 
+    .line 115
     :cond_1
     new-instance v0, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub$Proxy;
 
@@ -104,6 +111,7 @@
 .method public static getDefaultImpl()Lcom/android/systemui/shared/recents/IOverviewProxy;
     .locals 1
 
+    .line 610
     sget-object v0, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub$Proxy;->sDefaultImpl:Lcom/android/systemui/shared/recents/IOverviewProxy;
 
     return-object v0
@@ -112,12 +120,14 @@
 .method public static setDefaultImpl(Lcom/android/systemui/shared/recents/IOverviewProxy;)Z
     .locals 1
 
+    .line 600
     sget-object v0, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub$Proxy;->sDefaultImpl:Lcom/android/systemui/shared/recents/IOverviewProxy;
 
     if-nez v0, :cond_1
 
     if-eqz p0, :cond_0
 
+    .line 604
     sput-object p0, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub$Proxy;->sDefaultImpl:Lcom/android/systemui/shared/recents/IOverviewProxy;
 
     const/4 p0, 0x1
@@ -129,6 +139,7 @@
 
     return p0
 
+    .line 601
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -187,32 +198,39 @@
 
     packed-switch p1, :pswitch_data_1
 
+    .line 273
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 261
     :pswitch_0
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 262
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onFocusNotifClicked()V
 
     return v1
 
+    .line 239
     :pswitch_1
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 241
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 243
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
     if-eqz p3, :cond_0
 
+    .line 244
     sget-object p3, Landroid/graphics/drawable/Icon;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -226,6 +244,7 @@
     :cond_0
     move-object p3, v0
 
+    .line 250
     :goto_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -233,6 +252,7 @@
 
     if-eqz p4, :cond_1
 
+    .line 251
     sget-object p4, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -243,32 +263,40 @@
 
     check-cast v0, Landroid/graphics/Rect;
 
+    .line 256
     :cond_1
     invoke-virtual {p0, p1, p3, v0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onFocusedNotifUpdate(Ljava/lang/String;Landroid/graphics/drawable/Icon;Landroid/graphics/Rect;)V
 
     return v1
 
+    .line 233
     :pswitch_2
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 234
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onFocusNotifyAnimFinish()V
 
     return v1
 
+    .line 225
     :pswitch_3
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 227
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 228
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onSystemUiStateChanged(I)V
 
     return v1
 
+    .line 209
     :pswitch_4
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 211
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -282,15 +310,18 @@
     :cond_2
     move v5, v3
 
+    .line 213
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
+    .line 215
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
+    .line 217
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -304,6 +335,7 @@
     :cond_3
     move v8, v3
 
+    .line 219
     :goto_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -321,24 +353,30 @@
     :goto_3
     move-object v4, p0
 
+    .line 220
     invoke-virtual/range {v4 .. v9}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onBackAction(ZIIZZ)V
 
     return v1
 
+    .line 201
     :pswitch_5
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 203
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result p1
 
+    .line 204
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onAssistantVisibilityChanged(F)V
 
     return v1
 
+    .line 193
     :pswitch_6
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 195
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -347,20 +385,24 @@
 
     move v3, v1
 
+    .line 196
     :cond_5
     invoke-virtual {p0, v3}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onAssistantAvailable(Z)V
 
     return v1
 
+    .line 146
     :pswitch_7
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 148
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_6
 
+    .line 149
     sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -371,20 +413,24 @@
 
     check-cast v0, Landroid/os/Bundle;
 
+    .line 154
     :cond_6
     invoke-virtual {p0, v0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onInitialize(Landroid/os/Bundle;)V
 
     return v1
 
+    .line 133
     :pswitch_8
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 135
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
     if-eqz p1, :cond_7
 
+    .line 136
     sget-object p1, Landroid/graphics/Region;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -395,41 +441,51 @@
 
     check-cast v0, Landroid/graphics/Region;
 
+    .line 141
     :cond_7
     invoke-virtual {p0, v0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onActiveNavBarRegionChanges(Landroid/graphics/Region;)V
 
     return v1
 
+    .line 183
     :pswitch_9
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 185
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 187
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
+    .line 188
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onTip(II)V
 
     return v1
 
+    .line 128
     :cond_8
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
+    .line 267
     :cond_9
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 268
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onStatusBarLaunchAnimFinish()V
 
     return v1
 
+    .line 173
     :cond_a
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 175
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -443,6 +499,7 @@
     :cond_b
     move p1, v3
 
+    .line 177
     :goto_4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -452,14 +509,17 @@
 
     move v3, v1
 
+    .line 178
     :cond_c
     invoke-virtual {p0, p1, v3}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onOverviewHidden(ZZ)V
 
     return v1
 
+    .line 165
     :cond_d
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 167
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -468,14 +528,17 @@
 
     move v3, v1
 
+    .line 168
     :cond_e
     invoke-virtual {p0, v3}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onOverviewShown(Z)V
 
     return v1
 
+    .line 159
     :cond_f
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 160
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;->onOverviewToggle()V
 
     return v1

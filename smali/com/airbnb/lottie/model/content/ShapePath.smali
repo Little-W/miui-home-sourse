@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/content/ShapePath;
 .super Ljava/lang/Object;
+.source "ShapePath.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/model/content/ContentModel;
@@ -19,14 +20,19 @@
 .method public constructor <init>(Ljava/lang/String;ILcom/airbnb/lottie/model/animatable/AnimatableShapeValue;Z)V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 16
     iput-object p1, p0, Lcom/airbnb/lottie/model/content/ShapePath;->name:Ljava/lang/String;
 
+    .line 17
     iput p2, p0, Lcom/airbnb/lottie/model/content/ShapePath;->index:I
 
+    .line 18
     iput-object p3, p0, Lcom/airbnb/lottie/model/content/ShapePath;->shapePath:Lcom/airbnb/lottie/model/animatable/AnimatableShapeValue;
 
+    .line 19
     iput-boolean p4, p0, Lcom/airbnb/lottie/model/content/ShapePath;->hidden:Z
 
     return-void
@@ -37,6 +43,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 23
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/ShapePath;->name:Ljava/lang/String;
 
     return-object p0
@@ -45,6 +52,7 @@
 .method public getShapePath()Lcom/airbnb/lottie/model/animatable/AnimatableShapeValue;
     .locals 0
 
+    .line 27
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/ShapePath;->shapePath:Lcom/airbnb/lottie/model/animatable/AnimatableShapeValue;
 
     return-object p0
@@ -53,6 +61,7 @@
 .method public isHidden()Z
     .locals 0
 
+    .line 35
     iget-boolean p0, p0, Lcom/airbnb/lottie/model/content/ShapePath;->hidden:Z
 
     return p0
@@ -61,6 +70,7 @@
 .method public toContent(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;)Lcom/airbnb/lottie/animation/content/Content;
     .locals 1
 
+    .line 31
     new-instance v0, Lcom/airbnb/lottie/animation/content/ShapeContent;
 
     invoke-direct {v0, p1, p2, p0}, Lcom/airbnb/lottie/animation/content/ShapeContent;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/ShapePath;)V
@@ -71,6 +81,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

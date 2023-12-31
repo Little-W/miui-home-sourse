@@ -1,5 +1,6 @@
 .class public final Lkotlin/random/Random$Default;
 .super Lkotlin/random/Random;
+.source "Random.kt"
 
 
 # annotations
@@ -17,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 270
     invoke-direct {p0}, Lkotlin/random/Random;-><init>()V
 
     return-void
@@ -25,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 270
     invoke-direct {p0}, Lkotlin/random/Random$Default;-><init>()V
 
     return-void
@@ -35,6 +38,7 @@
 .method public nextBits(I)I
     .locals 0
 
+    .line 274
     invoke-static {}, Lkotlin/random/Random;->access$getDefaultRandom$cp()Lkotlin/random/Random;
 
     move-result-object p0
@@ -49,6 +53,7 @@
 .method public nextInt()I
     .locals 0
 
+    .line 275
     invoke-static {}, Lkotlin/random/Random;->access$getDefaultRandom$cp()Lkotlin/random/Random;
 
     move-result-object p0
@@ -63,6 +68,7 @@
 .method public nextInt(I)I
     .locals 0
 
+    .line 276
     invoke-static {}, Lkotlin/random/Random;->access$getDefaultRandom$cp()Lkotlin/random/Random;
 
     move-result-object p0
@@ -77,6 +83,7 @@
 .method public nextInt(II)I
     .locals 0
 
+    .line 277
     invoke-static {}, Lkotlin/random/Random;->access$getDefaultRandom$cp()Lkotlin/random/Random;
 
     move-result-object p0

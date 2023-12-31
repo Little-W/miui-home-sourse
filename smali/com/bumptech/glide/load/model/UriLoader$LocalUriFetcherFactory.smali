@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/load/model/UriLoader$LocalUriFetcherFactory;
 .super Ljava/lang/Object;
+.source "UriLoader.java"
 
 
 # annotations

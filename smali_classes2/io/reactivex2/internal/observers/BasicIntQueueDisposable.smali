@@ -1,5 +1,6 @@
 .class public abstract Lio/reactivex2/internal/observers/BasicIntQueueDisposable;
 .super Ljava/util/concurrent/atomic/AtomicInteger;
+.source "BasicIntQueueDisposable.java"
 
 # interfaces
 .implements Lio/reactivex2/internal/fuseable/QueueDisposable;
@@ -26,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 25
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     return-void
@@ -41,6 +43,7 @@
         }
     .end annotation
 
+    .line 33
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Should not be called"
@@ -58,6 +61,7 @@
         }
     .end annotation
 
+    .line 38
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Should not be called"

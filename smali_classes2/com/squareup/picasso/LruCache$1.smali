@@ -1,5 +1,6 @@
 .class Lcom/squareup/picasso/LruCache$1;
 .super Landroid/util/LruCache;
+.source "LruCache.java"
 
 
 # annotations
@@ -30,6 +31,7 @@
 .method constructor <init>(Lcom/squareup/picasso/LruCache;I)V
     .locals 0
 
+    .line 36
     iput-object p1, p0, Lcom/squareup/picasso/LruCache$1;->this$0:Lcom/squareup/picasso/LruCache;
 
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
@@ -42,6 +44,7 @@
 .method protected bridge synthetic sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 36
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Lcom/squareup/picasso/LruCache$BitmapAndSize;
@@ -56,6 +59,7 @@
 .method protected sizeOf(Ljava/lang/String;Lcom/squareup/picasso/LruCache$BitmapAndSize;)I
     .locals 0
 
+    .line 38
     iget p0, p2, Lcom/squareup/picasso/LruCache$BitmapAndSize;->byteCount:I
 
     return p0

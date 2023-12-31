@@ -76,6 +76,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -88,6 +89,7 @@
 
     const-string v1, ""
 
+    .line 336
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -102,6 +104,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 340
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -116,6 +119,7 @@
 
     const-string v1, ""
 
+    .line 366
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -126,22 +130,26 @@
 .method private static D()V
     .locals 4
 
+    .line 57
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->d:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 60
     :cond_0
     const-class v0, Lcom/xiaomi/onetrack/util/aa;
 
     monitor-enter v0
 
+    .line 61
     :try_start_0
     sget-object v1, Lcom/xiaomi/onetrack/util/aa;->d:Landroid/content/SharedPreferences$Editor;
 
     if-nez v1, :cond_1
 
+    .line 62
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
 
     move-result-object v1
@@ -150,12 +158,14 @@
 
     const/4 v3, 0x0
 
+    .line 63
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
     sput-object v1, Lcom/xiaomi/onetrack/util/aa;->c:Landroid/content/SharedPreferences;
 
+    .line 64
     sget-object v1, Lcom/xiaomi/onetrack/util/aa;->c:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -164,6 +174,7 @@
 
     sput-object v1, Lcom/xiaomi/onetrack/util/aa;->d:Landroid/content/SharedPreferences$Editor;
 
+    .line 66
     :cond_1
     monitor-exit v0
 
@@ -186,6 +197,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 115
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -196,8 +208,10 @@
 .method private static a(Ljava/lang/String;J)J
     .locals 1
 
+    .line 80
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 81
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->c:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
@@ -214,6 +228,7 @@
 
     const-string v0, ""
 
+    .line 315
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -224,8 +239,10 @@
 .method private static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 70
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 71
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->c:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p0, p1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -240,6 +257,7 @@
 
     const-string v0, "last_upload_active_time"
 
+    .line 119
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -250,6 +268,7 @@
 
     const-string p0, "custom_id"
 
+    .line 311
     invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -260,6 +279,7 @@
 
     const-string v0, "secret_key_data"
 
+    .line 171
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -268,8 +288,10 @@
 .method private static a(Ljava/lang/String;F)V
     .locals 1
 
+    .line 100
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 101
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->d:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0, p0, p1}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
@@ -284,6 +306,7 @@
 .method public static a(Ljava/lang/String;Z)V
     .locals 2
 
+    .line 355
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -292,6 +315,7 @@
 
     return-void
 
+    .line 358
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -317,6 +341,7 @@
 
     const-string v0, "network_access_enabled"
 
+    .line 258
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->c(Ljava/lang/String;Z)V
 
     return-void
@@ -325,8 +350,10 @@
 .method private static b(Ljava/lang/String;F)F
     .locals 1
 
+    .line 105
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 106
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->c:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p0, p1}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
@@ -343,6 +370,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 131
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -355,6 +383,7 @@
 
     const-string v0, "last_upload_usage_time"
 
+    .line 123
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide p0
@@ -367,6 +396,7 @@
 
     const-string v0, "region_rul"
 
+    .line 180
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -375,8 +405,10 @@
 .method private static b(Ljava/lang/String;J)V
     .locals 1
 
+    .line 85
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 86
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->d:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
@@ -391,8 +423,10 @@
 .method private static b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 75
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 76
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->d:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0, p0, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -409,6 +443,7 @@
 
     const-string v0, "anonymous_enabled"
 
+    .line 267
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->c(Ljava/lang/String;Z)V
 
     return-void
@@ -417,8 +452,10 @@
 .method private static b(Ljava/lang/String;Z)Z
     .locals 1
 
+    .line 90
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 91
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->c:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p0, p1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -435,6 +472,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 139
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -447,6 +485,7 @@
 
     const-string v0, "last_collect_crash_time"
 
+    .line 127
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -457,6 +496,7 @@
 
     const-string v0, "common_config_hash"
 
+    .line 205
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -465,8 +505,10 @@
 .method private static c(Ljava/lang/String;Z)V
     .locals 1
 
+    .line 95
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 96
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->d:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0, p0, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -483,6 +525,7 @@
 
     const-string v0, "onetrack_first_open"
 
+    .line 271
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->c(Ljava/lang/String;Z)V
 
     return-void
@@ -495,6 +538,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 147
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -507,6 +551,7 @@
 
     const-string v0, "report_crash_ticket"
 
+    .line 135
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -517,6 +562,7 @@
 
     const-string v0, "common_cloud_data"
 
+    .line 213
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -529,6 +575,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 155
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -541,6 +588,7 @@
 
     const-string v0, "last_upload_usage_time"
 
+    .line 143
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -551,8 +599,10 @@
 
     const-string v0, "pref_instance_id"
 
+    .line 225
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 226
     invoke-static {}, Lcom/xiaomi/onetrack/util/ac;->a()J
 
     move-result-wide v0
@@ -569,6 +619,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 163
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -581,6 +632,7 @@
 
     const-string v0, "s_t"
 
+    .line 151
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -591,6 +643,7 @@
 
     const-string v0, "last_usage_resume_component"
 
+    .line 242
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -603,6 +656,7 @@
 
     const-string v1, ""
 
+    .line 176
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -615,6 +669,7 @@
 
     const-string v0, "l_t"
 
+    .line 159
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -625,6 +680,7 @@
 
     const-string v0, "onetrack_user_id"
 
+    .line 287
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -637,6 +693,7 @@
 
     const-string v1, ""
 
+    .line 184
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -649,6 +706,7 @@
 
     const-string v0, "e_t"
 
+    .line 167
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -659,6 +717,7 @@
 
     const-string v0, "onetrack_user_type"
 
+    .line 299
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -671,6 +730,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 193
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -683,6 +743,7 @@
 
     const-string v0, "last_secret_key_time"
 
+    .line 189
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -693,6 +754,7 @@
 
     const-string v0, "page_end"
 
+    .line 328
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -705,6 +767,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 201
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -717,6 +780,7 @@
 
     const-string v0, "next_update_common_conf_time"
 
+    .line 197
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -727,6 +791,7 @@
 
     const-string v0, "last_app_version"
 
+    .line 332
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -739,6 +804,7 @@
 
     const-string v1, ""
 
+    .line 209
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -751,6 +817,7 @@
 
     const-string v0, "pref_instance_id_last_use_time"
 
+    .line 234
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -759,6 +826,7 @@
 .method public static k(Ljava/lang/String;)Z
     .locals 3
 
+    .line 348
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -769,6 +837,7 @@
 
     return v1
 
+    .line 351
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -798,6 +867,7 @@
 
     const-string v1, ""
 
+    .line 217
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -810,6 +880,7 @@
 
     const-string v0, "last_usage_resume_time"
 
+    .line 250
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -820,6 +891,7 @@
 
     const-string v0, "app_config_region"
 
+    .line 362
     invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -832,6 +904,7 @@
 
     const-string v1, ""
 
+    .line 221
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -844,6 +917,7 @@
 
     const-string v0, "dau_last_time"
 
+    .line 283
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -852,8 +926,10 @@
 .method private static m(Ljava/lang/String;)V
     .locals 1
 
+    .line 110
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->D()V
 
+    .line 111
     sget-object v0, Lcom/xiaomi/onetrack/util/aa;->d:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0, p0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -872,6 +948,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 230
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -884,6 +961,7 @@
 
     const-string v0, "first_launch_time"
 
+    .line 344
     invoke-static {v0, p0, p1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;J)V
 
     return-void
@@ -896,6 +974,7 @@
 
     const-string v1, ""
 
+    .line 238
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -910,6 +989,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 246
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -924,6 +1004,7 @@
 
     const/4 v1, 0x1
 
+    .line 254
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -938,6 +1019,7 @@
 
     const/4 v1, 0x0
 
+    .line 263
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -952,6 +1034,7 @@
 
     const/4 v1, 0x1
 
+    .line 275
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->b(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -966,6 +1049,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 279
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -980,6 +1064,7 @@
 
     const-string v1, ""
 
+    .line 291
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -992,6 +1077,7 @@
 
     const-string v0, "onetrack_user_id"
 
+    .line 295
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/aa;->m(Ljava/lang/String;)V
 
     return-void
@@ -1004,6 +1090,7 @@
 
     const-string v1, ""
 
+    .line 303
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1016,6 +1103,7 @@
 
     const-string v0, "onetrack_user_type"
 
+    .line 307
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/aa;->m(Ljava/lang/String;)V
 
     return-void
@@ -1028,6 +1116,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 319
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -1042,6 +1131,7 @@
 
     const-string v1, ""
 
+    .line 323
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

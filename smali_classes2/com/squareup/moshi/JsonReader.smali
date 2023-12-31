@@ -1,5 +1,6 @@
 .class public abstract Lcom/squareup/moshi/JsonReader;
 .super Ljava/lang/Object;
+.source "JsonReader.java"
 
 # interfaces
 .implements Ljava/io/Closeable;
@@ -32,24 +33,29 @@
 .method constructor <init>()V
     .locals 2
 
+    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 181
     iput v0, p0, Lcom/squareup/moshi/JsonReader;->stackSize:I
 
     const/16 v0, 0x20
 
     new-array v1, v0, [I
 
+    .line 182
     iput-object v1, p0, Lcom/squareup/moshi/JsonReader;->scopes:[I
 
     new-array v1, v0, [Ljava/lang/String;
 
+    .line 183
     iput-object v1, p0, Lcom/squareup/moshi/JsonReader;->pathNames:[Ljava/lang/String;
 
     new-array v0, v0, [I
 
+    .line 184
     iput-object v0, p0, Lcom/squareup/moshi/JsonReader;->pathIndices:[I
 
     return-void
@@ -58,6 +64,7 @@
 .method public static of(Lokio/BufferedSource;)Lcom/squareup/moshi/JsonReader;
     .locals 1
 
+    .line 194
     new-instance v0, Lcom/squareup/moshi/JsonUtf8Reader;
 
     invoke-direct {v0, p0}, Lcom/squareup/moshi/JsonUtf8Reader;-><init>(Lokio/BufferedSource;)V
@@ -102,6 +109,7 @@
 .method public final getPath()Ljava/lang/String;
     .locals 3
 
+    .line 453
     iget v0, p0, Lcom/squareup/moshi/JsonReader;->stackSize:I
 
     iget-object v1, p0, Lcom/squareup/moshi/JsonReader;->scopes:[I
@@ -128,6 +136,7 @@
 .method public final isLenient()Z
     .locals 0
 
+    .line 259
     iget-boolean p0, p0, Lcom/squareup/moshi/JsonReader;->lenient:Z
 
     return p0
@@ -219,6 +228,7 @@
 .method final pushScope(I)V
     .locals 3
 
+    .line 202
     iget v0, p0, Lcom/squareup/moshi/JsonReader;->stackSize:I
 
     iget-object v1, p0, Lcom/squareup/moshi/JsonReader;->scopes:[I
@@ -229,12 +239,14 @@
 
     add-int/lit8 v2, v0, 0x1
 
+    .line 205
     iput v2, p0, Lcom/squareup/moshi/JsonReader;->stackSize:I
 
     aput p1, v1, v0
 
     return-void
 
+    .line 203
     :cond_0
     new-instance p1, Lcom/squareup/moshi/JsonDataException;
 
@@ -272,6 +284,7 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
+    .line 405
     sget-object v0, Lcom/squareup/moshi/JsonReader$1;->$SwitchMap$com$squareup$moshi$JsonReader$Token:[I
 
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->peek()Lcom/squareup/moshi/JsonReader$Token;
@@ -286,6 +299,7 @@
 
     packed-switch v0, :pswitch_data_0
 
+    .line 443
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -296,6 +310,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 444
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->peek()Lcom/squareup/moshi/JsonReader$Token;
 
     move-result-object v2
@@ -320,6 +335,7 @@
 
     throw v0
 
+    .line 440
     :pswitch_0
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->nextNull()Ljava/lang/Object;
 
@@ -327,6 +343,7 @@
 
     return-object p0
 
+    .line 437
     :pswitch_1
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->nextBoolean()Z
 
@@ -338,6 +355,7 @@
 
     return-object p0
 
+    .line 434
     :pswitch_2
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->nextDouble()D
 
@@ -349,6 +367,7 @@
 
     return-object p0
 
+    .line 431
     :pswitch_3
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -356,13 +375,16 @@
 
     return-object p0
 
+    .line 416
     :pswitch_4
     new-instance v0, Lcom/squareup/moshi/LinkedHashTreeMap;
 
     invoke-direct {v0}, Lcom/squareup/moshi/LinkedHashTreeMap;-><init>()V
 
+    .line 417
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->beginObject()V
 
+    .line 418
     :goto_0
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->hasNext()Z
 
@@ -370,14 +392,17 @@
 
     if-eqz v1, :cond_1
 
+    .line 419
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 420
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->readJsonValue()Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 421
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -386,6 +411,7 @@
 
     goto :goto_0
 
+    .line 423
     :cond_0
     new-instance v0, Lcom/squareup/moshi/JsonDataException;
 
@@ -403,6 +429,7 @@
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 424
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -429,18 +456,22 @@
 
     throw v0
 
+    .line 427
     :cond_1
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->endObject()V
 
     return-object v0
 
+    .line 407
     :pswitch_5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 408
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->beginArray()V
 
+    .line 409
     :goto_1
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->hasNext()Z
 
@@ -448,6 +479,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 410
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->readJsonValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -456,6 +488,7 @@
 
     goto :goto_1
 
+    .line 412
     :cond_2
     invoke-virtual {p0}, Lcom/squareup/moshi/JsonReader;->endArray()V
 
@@ -504,6 +537,7 @@
         }
     .end annotation
 
+    .line 213
     new-instance v0, Lcom/squareup/moshi/JsonEncodingException;
 
     new-instance v1, Ljava/lang/StringBuilder;

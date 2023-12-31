@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;
 .super Ljava/lang/Object;
+.source "EngineJob.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,10 +27,12 @@
 .method constructor <init>(Lcom/bumptech/glide/load/engine/EngineJob;Lcom/bumptech/glide/request/ResourceCallback;)V
     .locals 0
 
+    .line 388
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->this$0:Lcom/bumptech/glide/load/engine/EngineJob;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 389
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->cb:Lcom/bumptech/glide/request/ResourceCallback;
 
     return-void
@@ -40,10 +43,12 @@
 .method public run()V
     .locals 3
 
+    .line 394
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->this$0:Lcom/bumptech/glide/load/engine/EngineJob;
 
     monitor-enter v0
 
+    .line 395
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->this$0:Lcom/bumptech/glide/load/engine/EngineJob;
 
@@ -57,29 +62,34 @@
 
     if-eqz v1, :cond_0
 
+    .line 397
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->this$0:Lcom/bumptech/glide/load/engine/EngineJob;
 
     iget-object v1, v1, Lcom/bumptech/glide/load/engine/EngineJob;->engineResource:Lcom/bumptech/glide/load/engine/EngineResource;
 
     invoke-virtual {v1}, Lcom/bumptech/glide/load/engine/EngineResource;->acquire()V
 
+    .line 398
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->this$0:Lcom/bumptech/glide/load/engine/EngineJob;
 
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->cb:Lcom/bumptech/glide/request/ResourceCallback;
 
     invoke-virtual {v1, v2}, Lcom/bumptech/glide/load/engine/EngineJob;->callCallbackOnResourceReady(Lcom/bumptech/glide/request/ResourceCallback;)V
 
+    .line 399
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->this$0:Lcom/bumptech/glide/load/engine/EngineJob;
 
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->cb:Lcom/bumptech/glide/request/ResourceCallback;
 
     invoke-virtual {v1, v2}, Lcom/bumptech/glide/load/engine/EngineJob;->removeCallback(Lcom/bumptech/glide/request/ResourceCallback;)V
 
+    .line 401
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob$CallResourceReady;->this$0:Lcom/bumptech/glide/load/engine/EngineJob;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/EngineJob;->decrementPendingCallbacks()V
 
+    .line 402
     monitor-exit v0
 
     return-void

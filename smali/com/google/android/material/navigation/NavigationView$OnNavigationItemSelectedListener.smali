@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/material/navigation/NavigationView$OnNavigationItemSelectedListener;
 .super Ljava/lang/Object;
+.source "NavigationView.java"
 
 
 # annotations

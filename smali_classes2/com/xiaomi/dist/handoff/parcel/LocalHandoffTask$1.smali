@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask$1;
 .super Ljava/lang/Object;
+.source "LocalHandoffTask.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
     .locals 0
 
+    .line 117
     new-instance p0, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     invoke-direct {p0, p1}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;-><init>(Landroid/os/Parcel;)V
@@ -49,6 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 114
     invoke-virtual {p0, p1}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask$1;->createFromParcel(Landroid/os/Parcel;)Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     move-result-object p0
@@ -59,6 +63,7 @@
 .method public newArray(I)[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
     .locals 0
 
+    .line 122
     new-array p0, p1, [Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     return-object p0
@@ -67,6 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 114
     invoke-virtual {p0, p1}, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask$1;->newArray(I)[Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
     move-result-object p0

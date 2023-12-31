@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/components/ComponentFactory;
 .super Ljava/lang/Object;
+.source "ComponentFactory.java"
 
 
 # annotations

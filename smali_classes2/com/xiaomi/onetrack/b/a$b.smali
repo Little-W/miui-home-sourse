@@ -17,6 +17,7 @@
 .method private constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
+    .line 505
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,6 +26,7 @@
 .method synthetic constructor <init>(Landroid/os/Looper;Lcom/xiaomi/onetrack/b/b;)V
     .locals 0
 
+    .line 502
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/b/a$b;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -35,6 +37,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
+    .line 510
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,17 +58,21 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 512
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_1
 
+    .line 513
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_0
 
+    .line 516
     :try_start_0
     check-cast p1, Ljava/lang/String;
 
+    .line 517
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,6 +89,7 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 518
     new-instance v0, Lcom/xiaomi/onetrack/b/d;
 
     invoke-direct {v0, p0, p1}, Lcom/xiaomi/onetrack/b/d;-><init>(Lcom/xiaomi/onetrack/b/a$b;Ljava/lang/String;)V
@@ -95,6 +103,7 @@
     :catch_0
     move-exception p0
 
+    .line 526
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,6 +129,7 @@
     :cond_0
     const-string p0, "ScheduleCloudHandler.handleMessage, msg.obj is null"
 
+    .line 529
     invoke-static {v1, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1

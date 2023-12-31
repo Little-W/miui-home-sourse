@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/NonDisposableHandle;
 .super Ljava/lang/Object;
+.source "Job.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/ChildHandle;
@@ -14,6 +15,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 662
     new-instance v0, Lkotlinx/coroutines/NonDisposableHandle;
 
     invoke-direct {v0}, Lkotlinx/coroutines/NonDisposableHandle;-><init>()V
@@ -26,6 +28,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 662
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

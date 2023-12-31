@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/UndispatchedCoroutine;
 .super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.source "Builders.common.kt"
 
 
 # annotations
@@ -30,6 +31,7 @@
         }
     .end annotation
 
+    .line 209
     invoke-direct {p0, p1, p2}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Lkotlin/coroutines/Continuation;)V
 
     return-void
@@ -40,12 +42,14 @@
 .method protected afterResume(Ljava/lang/Object;)V
     .locals 2
 
+    .line 212
     iget-object v0, p0, Lkotlinx/coroutines/UndispatchedCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
     invoke-static {p1, v0}, Lkotlinx/coroutines/CompletionStateKt;->recoverResult(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 213
     iget-object v0, p0, Lkotlinx/coroutines/UndispatchedCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
     invoke-interface {v0}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
@@ -54,19 +58,23 @@
 
     const/4 v1, 0x0
 
+    .line 274
     invoke-static {v0, v1}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 214
     :try_start_0
     iget-object p0, p0, Lkotlinx/coroutines/UndispatchedCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
     invoke-interface {p0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
+    .line 215
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 278
     invoke-static {v0, v1}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Object;)V
 
     return-void

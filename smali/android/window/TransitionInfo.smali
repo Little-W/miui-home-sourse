@@ -1,5 +1,6 @@
 .class public final Landroid/window/TransitionInfo;
 .super Ljava/lang/Object;
+.source "TransitionInfo.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -31,6 +32,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 169
     new-instance v0, Landroid/window/TransitionInfo$1;
 
     invoke-direct {v0}, Landroid/window/TransitionInfo$1;-><init>()V
@@ -45,6 +47,7 @@
 .method public describeContents()I
     .locals 1
 
+    .line 185
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -57,6 +60,7 @@
 .method public getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
     .locals 1
 
+    .line 247
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -77,6 +81,7 @@
         }
     .end annotation
 
+    .line 255
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -89,6 +94,7 @@
 .method public getRootCount()I
     .locals 1
 
+    .line 216
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -103,6 +109,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 243
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -115,6 +122,7 @@
 .method public getType()I
     .locals 1
 
+    .line 204
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string v0, "no implementation"
@@ -127,6 +135,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 166
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"

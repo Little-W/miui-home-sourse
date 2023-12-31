@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/-$$Lambda$BranchClientImplement$BD1kS6TKGFJbYCyPfOkU7BjhP4k;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagClickListener;

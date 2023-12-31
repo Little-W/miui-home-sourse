@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/NetworkRequestHandler$ResponseException;
 .super Ljava/io/IOException;
+.source "NetworkRequestHandler.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(II)V
     .locals 2
 
+    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -39,8 +41,10 @@
 
     invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
+    .line 118
     iput p1, p0, Lcom/squareup/picasso/NetworkRequestHandler$ResponseException;->code:I
 
+    .line 119
     iput p2, p0, Lcom/squareup/picasso/NetworkRequestHandler$ResponseException;->networkPolicy:I
 
     return-void

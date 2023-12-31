@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zziz;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 # interfaces
 .implements Lcom/google/android/gms/internal/measurement/zzjg;
@@ -9,6 +10,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +44,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "This should never be called."

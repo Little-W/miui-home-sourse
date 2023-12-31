@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/ThreadPoolDispatcher$executor$1;
 .super Ljava/lang/Object;
+.source "ThreadPoolDispatcher.kt"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -36,6 +37,7 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 4
 
+    .line 85
     new-instance v0, Lkotlinx/coroutines/PoolThread;
 
     iget-object v1, p0, Lkotlinx/coroutines/ThreadPoolDispatcher$executor$1;->this$0:Lkotlinx/coroutines/ThreadPoolDispatcher;

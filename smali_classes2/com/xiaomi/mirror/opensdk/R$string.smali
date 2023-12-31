@@ -1,5 +1,6 @@
 .class public final Lcom/xiaomi/mirror/opensdk/R$string;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/components/CycleDetector$Dep;
 .super Ljava/lang/Object;
+.source "CycleDetector.java"
 
 
 # annotations
@@ -37,10 +38,13 @@
         }
     .end annotation
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     iput-object p1, p0, Lcom/google/firebase/components/CycleDetector$Dep;->anInterface:Ljava/lang/Class;
 
+    .line 32
     iput-boolean p2, p0, Lcom/google/firebase/components/CycleDetector$Dep;->set:Z
 
     return-void
@@ -49,6 +53,7 @@
 .method synthetic constructor <init>(Ljava/lang/Class;ZLcom/google/firebase/components/CycleDetector$1;)V
     .locals 0
 
+    .line 26
     invoke-direct {p0, p1, p2}, Lcom/google/firebase/components/CycleDetector$Dep;-><init>(Ljava/lang/Class;Z)V
 
     return-void
@@ -57,6 +62,7 @@
 .method static synthetic access$100(Lcom/google/firebase/components/CycleDetector$Dep;)Z
     .locals 0
 
+    .line 26
     iget-boolean p0, p0, Lcom/google/firebase/components/CycleDetector$Dep;->set:Z
 
     return p0
@@ -67,14 +73,17 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 37
     instance-of v0, p1, Lcom/google/firebase/components/CycleDetector$Dep;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 38
     check-cast p1, Lcom/google/firebase/components/CycleDetector$Dep;
 
+    .line 39
     iget-object v0, p1, Lcom/google/firebase/components/CycleDetector$Dep;->anInterface:Ljava/lang/Class;
 
     iget-object v2, p0, Lcom/google/firebase/components/CycleDetector$Dep;->anInterface:Ljava/lang/Class;
@@ -100,6 +109,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 47
     iget-object v0, p0, Lcom/google/firebase/components/CycleDetector$Dep;->anInterface:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -112,6 +122,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 49
     iget-boolean p0, p0, Lcom/google/firebase/components/CycleDetector$Dep;->set:Z
 
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

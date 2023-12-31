@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/FloatService$7;
 .super Ljava/lang/Object;
+.source "FloatService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/market/sdk/FloatService;Ljava/lang/String;I)V
     .locals 0
 
+    .line 149
     iput-object p1, p0, Lcom/market/sdk/FloatService$7;->this$0:Lcom/market/sdk/FloatService;
 
     iput-object p2, p0, Lcom/market/sdk/FloatService$7;->val$activity:Ljava/lang/String;
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 154
     iget-object v0, p0, Lcom/market/sdk/FloatService$7;->this$0:Lcom/market/sdk/FloatService;
 
     invoke-static {v0}, Lcom/market/sdk/FloatService;->access$000(Lcom/market/sdk/FloatService;)Lcom/xiaomi/market/IAppDownloadManager;
@@ -57,6 +60,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 155
     iget-object v0, p0, Lcom/market/sdk/FloatService$7;->this$0:Lcom/market/sdk/FloatService;
 
     invoke-static {v0}, Lcom/market/sdk/FloatService;->access$000(Lcom/market/sdk/FloatService;)Lcom/xiaomi/market/IAppDownloadManager;
@@ -76,6 +80,7 @@
 
     const-string v0, "IAppDownloadManager is null"
 
+    .line 157
     invoke-static {p0, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0

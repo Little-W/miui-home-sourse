@@ -1,5 +1,6 @@
 .class public Lcom/mi/encrypt/okhttp/HeaderUtils;
 .super Ljava/lang/Object;
+.source "HeaderUtils.java"
 
 
 # direct methods
@@ -20,22 +21,26 @@
         }
     .end annotation
 
+    .line 14
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     if-eqz p1, :cond_1
 
+    .line 16
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
     if-eqz p0, :cond_1
 
+    .line 18
     invoke-virtual {p0}, Lokhttp3/Headers;->names()Ljava/util/Set;
 
     move-result-object v1
 
+    .line 19
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -54,16 +59,19 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 20
     invoke-interface {p1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 21
     invoke-virtual {p0, v2}, Lokhttp3/Headers;->values(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v3
 
+    .line 23
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V

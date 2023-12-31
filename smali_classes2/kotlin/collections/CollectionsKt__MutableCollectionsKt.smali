@@ -1,5 +1,6 @@
 .class Lkotlin/collections/CollectionsKt__MutableCollectionsKt;
 .super Lkotlin/collections/CollectionsKt__MutableCollectionsJVMKt;
+.source "MutableCollections.kt"
 
 
 # direct methods
@@ -25,6 +26,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 116
     instance-of v0, p1, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
@@ -40,6 +42,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 119
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -56,6 +59,7 @@
 
     move-result-object v1
 
+    .line 120
     invoke-interface {p0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     move-result v1
@@ -86,12 +90,14 @@
         }
     .end annotation
 
+    .line 217
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
+    .line 218
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -100,6 +106,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 219
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -116,6 +123,7 @@
 
     if-ne v1, p2, :cond_0
 
+    .line 220
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     const/4 v0, 0x1
@@ -152,6 +160,7 @@
 
     const/4 v0, 0x1
 
+    .line 206
     invoke-static {p0, p1, v0}, Lkotlin/collections/CollectionsKt__MutableCollectionsKt;->filterInPlace$CollectionsKt__MutableCollectionsKt(Ljava/lang/Iterable;Lkotlin/jvm/functions/Function1;Z)Z
 
     move-result p0
@@ -185,6 +194,7 @@
 
     const/4 v0, 0x0
 
+    .line 213
     invoke-static {p0, p1, v0}, Lkotlin/collections/CollectionsKt__MutableCollectionsKt;->filterInPlace$CollectionsKt__MutableCollectionsKt(Ljava/lang/Iterable;Lkotlin/jvm/functions/Function1;Z)Z
 
     move-result p0

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/load/model/Headers;
 .super Ljava/lang/Object;
+.source "Headers.java"
 
 
 # static fields
@@ -15,12 +16,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 19
     new-instance v0, Lcom/bumptech/glide/load/model/Headers$1;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/model/Headers$1;-><init>()V
 
     sput-object v0, Lcom/bumptech/glide/load/model/Headers;->NONE:Lcom/bumptech/glide/load/model/Headers;
 
+    .line 30
     new-instance v0, Lcom/bumptech/glide/load/model/LazyHeaders$Builder;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/model/LazyHeaders$Builder;-><init>()V

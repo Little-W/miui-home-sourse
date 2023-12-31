@@ -1,5 +1,6 @@
 .class final Lorg/greenrobot/eventbus/BackgroundPoster;
 .super Ljava/lang/Object;
+.source "BackgroundPoster.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -18,10 +19,13 @@
 .method constructor <init>(Lorg/greenrobot/eventbus/EventBus;)V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     iput-object p1, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->eventBus:Lorg/greenrobot/eventbus/EventBus;
 
+    .line 34
     new-instance p1, Lorg/greenrobot/eventbus/PendingPostQueue;
 
     invoke-direct {p1}, Lorg/greenrobot/eventbus/PendingPostQueue;-><init>()V
@@ -36,25 +40,31 @@
 .method public enqueue(Lorg/greenrobot/eventbus/Subscription;Ljava/lang/Object;)V
     .locals 0
 
+    .line 38
     invoke-static {p1, p2}, Lorg/greenrobot/eventbus/PendingPost;->obtainPendingPost(Lorg/greenrobot/eventbus/Subscription;Ljava/lang/Object;)Lorg/greenrobot/eventbus/PendingPost;
 
     move-result-object p1
 
+    .line 39
     monitor-enter p0
 
+    .line 40
     :try_start_0
     iget-object p2, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->queue:Lorg/greenrobot/eventbus/PendingPostQueue;
 
     invoke-virtual {p2, p1}, Lorg/greenrobot/eventbus/PendingPostQueue;->enqueue(Lorg/greenrobot/eventbus/PendingPost;)V
 
+    .line 41
     iget-boolean p1, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->executorRunning:Z
 
     if-nez p1, :cond_0
 
     const/4 p1, 0x1
 
+    .line 42
     iput-boolean p1, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->executorRunning:Z
 
+    .line 43
     iget-object p1, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->eventBus:Lorg/greenrobot/eventbus/EventBus;
 
     invoke-virtual {p1}, Lorg/greenrobot/eventbus/EventBus;->getExecutorService()Ljava/util/concurrent/ExecutorService;
@@ -63,6 +73,7 @@
 
     invoke-interface {p1, p0}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
+    .line 45
     :cond_0
     monitor-exit p0
 
@@ -84,6 +95,7 @@
     :goto_0
     const/4 v0, 0x0
 
+    .line 53
     :try_start_0
     iget-object v1, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->queue:Lorg/greenrobot/eventbus/PendingPostQueue;
 
@@ -95,11 +107,13 @@
 
     if-nez v1, :cond_1
 
+    .line 55
     monitor-enter p0
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 57
     :try_start_1
     iget-object v1, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->queue:Lorg/greenrobot/eventbus/PendingPostQueue;
 
@@ -109,16 +123,20 @@
 
     if-nez v1, :cond_0
 
+    .line 59
     iput-boolean v0, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->executorRunning:Z
 
+    .line 60
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 70
     iput-boolean v0, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->executorRunning:Z
 
     return-void
 
+    .line 62
     :cond_0
     :try_start_2
     monitor-exit p0
@@ -135,6 +153,7 @@
     :try_start_3
     throw v1
 
+    .line 64
     :cond_1
     :goto_1
     iget-object v2, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->eventBus:Lorg/greenrobot/eventbus/EventBus;
@@ -154,6 +173,7 @@
     :catch_0
     move-exception v1
 
+    .line 67
     :try_start_4
     iget-object v2, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->eventBus:Lorg/greenrobot/eventbus/EventBus;
 
@@ -189,6 +209,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 70
     iput-boolean v0, p0, Lorg/greenrobot/eventbus/BackgroundPoster;->executorRunning:Z
 
     return-void

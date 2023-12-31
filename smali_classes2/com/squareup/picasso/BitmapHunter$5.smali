@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/BitmapHunter$5;
 .super Ljava/lang/Object;
+.source "BitmapHunter.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/squareup/picasso/Transformation;)V
     .locals 0
 
+    .line 475
     iput-object p1, p0, Lcom/squareup/picasso/BitmapHunter$5;->val$transformation:Lcom/squareup/picasso/Transformation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public run()V
     .locals 3
 
+    .line 477
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -48,6 +51,7 @@
 
     iget-object p0, p0, Lcom/squareup/picasso/BitmapHunter$5;->val$transformation:Lcom/squareup/picasso/Transformation;
 
+    .line 478
     invoke-interface {p0}, Lcom/squareup/picasso/Transformation;->key()Ljava/lang/String;
 
     move-result-object p0

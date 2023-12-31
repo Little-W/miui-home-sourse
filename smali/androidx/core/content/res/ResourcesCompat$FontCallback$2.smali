@@ -1,5 +1,6 @@
 .class Landroidx/core/content/res/ResourcesCompat$FontCallback$2;
 .super Ljava/lang/Object;
+.source "ResourcesCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroidx/core/content/res/ResourcesCompat$FontCallback;I)V
     .locals 0
 
+    .line 454
     iput-object p1, p0, Landroidx/core/content/res/ResourcesCompat$FontCallback$2;->this$0:Landroidx/core/content/res/ResourcesCompat$FontCallback;
 
     iput p2, p0, Landroidx/core/content/res/ResourcesCompat$FontCallback$2;->val$reason:I
@@ -40,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 457
     iget-object v0, p0, Landroidx/core/content/res/ResourcesCompat$FontCallback$2;->this$0:Landroidx/core/content/res/ResourcesCompat$FontCallback;
 
     iget p0, p0, Landroidx/core/content/res/ResourcesCompat$FontCallback$2;->val$reason:I

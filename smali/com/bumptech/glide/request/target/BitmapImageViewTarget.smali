@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/request/target/BitmapImageViewTarget;
 .super Lcom/bumptech/glide/request/target/ImageViewTarget;
+.source "BitmapImageViewTarget.java"
 
 
 # annotations
@@ -16,6 +17,7 @@
 .method public constructor <init>(Landroid/widget/ImageView;)V
     .locals 0
 
+    .line 14
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/ImageViewTarget;-><init>(Landroid/widget/ImageView;)V
 
     return-void
@@ -26,6 +28,7 @@
 .method protected setResource(Landroid/graphics/Bitmap;)V
     .locals 0
 
+    .line 35
     iget-object p0, p0, Lcom/bumptech/glide/request/target/BitmapImageViewTarget;->view:Landroid/view/View;
 
     check-cast p0, Landroid/widget/ImageView;
@@ -38,6 +41,7 @@
 .method protected bridge synthetic setResource(Ljava/lang/Object;)V
     .locals 0
 
+    .line 10
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/BitmapImageViewTarget;->setResource(Landroid/graphics/Bitmap;)V

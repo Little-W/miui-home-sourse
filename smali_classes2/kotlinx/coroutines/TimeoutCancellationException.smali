@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/TimeoutCancellationException;
 .super Ljava/util/concurrent/CancellationException;
+.source "Timeout.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/CopyableThrowable;
@@ -30,6 +31,7 @@
 
     const/4 v0, 0x0
 
+    .line 175
     invoke-direct {p0, p1, v0}, Lkotlinx/coroutines/TimeoutCancellationException;-><init>(Ljava/lang/String;Lkotlinx/coroutines/Job;)V
 
     return-void
@@ -38,6 +40,7 @@
 .method public constructor <init>(Ljava/lang/String;Lkotlinx/coroutines/Job;)V
     .locals 0
 
+    .line 169
     invoke-direct {p0, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
     iput-object p2, p0, Lkotlinx/coroutines/TimeoutCancellationException;->coroutine:Lkotlinx/coroutines/Job;
@@ -50,6 +53,7 @@
 .method public bridge synthetic createCopy()Ljava/lang/Throwable;
     .locals 0
 
+    .line 166
     invoke-virtual {p0}, Lkotlinx/coroutines/TimeoutCancellationException;->createCopy()Lkotlinx/coroutines/TimeoutCancellationException;
 
     move-result-object p0
@@ -62,6 +66,7 @@
 .method public createCopy()Lkotlinx/coroutines/TimeoutCancellationException;
     .locals 3
 
+    .line 179
     new-instance v0, Lkotlinx/coroutines/TimeoutCancellationException;
 
     invoke-virtual {p0}, Lkotlinx/coroutines/TimeoutCancellationException;->getMessage()Ljava/lang/String;

@@ -1,5 +1,6 @@
 .class Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition$1;
 .super Ljava/lang/Object;
+.source "TransitionInfo.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 807
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;
     .locals 0
 
+    .line 810
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"
@@ -51,6 +54,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 807
     invoke-virtual {p0, p1}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition$1;->createFromParcel(Landroid/os/Parcel;)Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;
 
     move-result-object p0
@@ -61,6 +65,7 @@
 .method public newArray(I)[Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;
     .locals 0
 
+    .line 815
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "no implementation"
@@ -73,6 +78,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 807
     invoke-virtual {p0, p1}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition$1;->newArray(I)[Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public final Landroidx/recyclerview/R$styleable;
 .super Ljava/lang/Object;
+.source "R.java"
 
 
 # annotations
@@ -131,6 +132,7 @@
 
     new-array v0, v0, [I
 
+    .line 201
     fill-array-data v0, :array_0
 
     sput-object v0, Landroidx/recyclerview/R$styleable;->ColorStateListItem:[I
@@ -139,6 +141,7 @@
 
     new-array v0, v0, [I
 
+    .line 207
     fill-array-data v0, :array_1
 
     sput-object v0, Landroidx/recyclerview/R$styleable;->FontFamily:[I
@@ -147,6 +150,7 @@
 
     new-array v0, v0, [I
 
+    .line 215
     fill-array-data v0, :array_2
 
     sput-object v0, Landroidx/recyclerview/R$styleable;->FontFamilyFont:[I
@@ -155,6 +159,7 @@
 
     new-array v1, v0, [I
 
+    .line 226
     fill-array-data v1, :array_3
 
     sput-object v1, Landroidx/recyclerview/R$styleable;->GradientColor:[I
@@ -163,12 +168,14 @@
 
     new-array v1, v1, [I
 
+    .line 239
     fill-array-data v1, :array_4
 
     sput-object v1, Landroidx/recyclerview/R$styleable;->GradientColorItem:[I
 
     new-array v0, v0, [I
 
+    .line 242
     fill-array-data v0, :array_5
 
     sput-object v0, Landroidx/recyclerview/R$styleable;->RecyclerView:[I

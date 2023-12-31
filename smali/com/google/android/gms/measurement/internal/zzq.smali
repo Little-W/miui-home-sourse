@@ -1,5 +1,6 @@
 .class final synthetic Lcom/google/android/gms/measurement/internal/zzq;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement@@18.0.0"
 
 
 # static fields
@@ -12,6 +13,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzbv$zzd$zza;->values()[Lcom/google/android/gms/internal/measurement/zzbv$zzd$zza;
 
     move-result-object v0
@@ -85,6 +87,7 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
+    .line 2
     :catch_3
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzbv$zzf$zzb;->values()[Lcom/google/android/gms/internal/measurement/zzbv$zzf$zzb;
 

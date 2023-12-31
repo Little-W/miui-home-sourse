@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/config/CommercialConfigContent;
 .super Ljava/lang/Object;
+.source "CommercialConfigContent.java"
 
 
 # instance fields
@@ -26,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +38,7 @@
 .method public getGameSwitch()Ljava/lang/String;
     .locals 0
 
+    .line 19
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigContent;->gameSwitch:Ljava/lang/String;
 
     return-object p0
@@ -44,6 +47,7 @@
 .method public getTime()Ljava/lang/Integer;
     .locals 0
 
+    .line 27
     iget-object p0, p0, Lcom/mi/globallauncher/config/CommercialConfigContent;->time:Ljava/lang/Integer;
 
     return-object p0
@@ -52,6 +56,7 @@
 .method public setGameSwitch(Ljava/lang/String;)V
     .locals 0
 
+    .line 23
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigContent;->gameSwitch:Ljava/lang/String;
 
     return-void
@@ -60,6 +65,7 @@
 .method public setTime(Ljava/lang/Integer;)V
     .locals 0
 
+    .line 31
     iput-object p1, p0, Lcom/mi/globallauncher/config/CommercialConfigContent;->time:Ljava/lang/Integer;
 
     return-void
@@ -68,6 +74,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

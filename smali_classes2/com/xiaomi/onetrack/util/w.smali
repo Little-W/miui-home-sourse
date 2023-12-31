@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,6 +19,7 @@
 .method public static a()Z
     .locals 2
 
+    .line 27
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0

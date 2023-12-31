@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzgc;
 .super Ljava/lang/ref/WeakReference;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # annotations
@@ -29,10 +30,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p1
@@ -41,6 +44,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -60,6 +64,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -79,9 +84,11 @@
 
     return v1
 
+    .line 11
     :cond_1
     check-cast p1, Lcom/google/android/gms/internal/measurement/zzgc;
 
+    .line 12
     iget v2, p0, Lcom/google/android/gms/internal/measurement/zzgc;->zza:I
 
     iget v3, p1, Lcom/google/android/gms/internal/measurement/zzgc;->zza:I
@@ -108,6 +115,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 6
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzgc;->zza:I
 
     return p0

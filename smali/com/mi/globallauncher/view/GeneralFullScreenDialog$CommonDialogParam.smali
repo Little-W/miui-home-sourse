@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;
 .super Ljava/lang/Object;
+.source "GeneralFullScreenDialog.java"
 
 
 # annotations
@@ -51,24 +52,32 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 267
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x50
 
+    .line 270
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->gravity:I
 
     const/4 v0, -0x1
 
+    .line 271
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->positiveButtonText:I
 
+    .line 274
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->negativeButtonText:I
 
+    .line 278
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->positiveButtonTextColor:I
 
+    .line 281
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->negativeButtonTextColor:I
 
+    .line 284
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->title:I
 
+    .line 289
     iput v0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->customView:I
 
     return-void
@@ -77,6 +86,7 @@
 .method synthetic constructor <init>(Lcom/mi/globallauncher/view/GeneralFullScreenDialog$1;)V
     .locals 0
 
+    .line 267
     invoke-direct {p0}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;-><init>()V
 
     return-void
@@ -87,6 +97,7 @@
 .method public hasAnimation()Z
     .locals 1
 
+    .line 311
     iget p0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->animation:I
 
     const/4 v0, -0x1
@@ -107,6 +118,7 @@
 .method hasNegativeButton()Z
     .locals 1
 
+    .line 303
     iget p0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->negativeButtonText:I
 
     const/4 v0, -0x1
@@ -127,6 +139,7 @@
 .method hasPositiveButton()Z
     .locals 1
 
+    .line 299
     iget p0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->positiveButtonText:I
 
     const/4 v0, -0x1
@@ -147,6 +160,7 @@
 .method public isCustomView()Z
     .locals 1
 
+    .line 307
     iget p0, p0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$CommonDialogParam;->customView:I
 
     const/4 v0, -0x1

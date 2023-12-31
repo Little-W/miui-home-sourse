@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;
 .super Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;
+.source "AutoValue_BackendRequest.java"
 
 
 # annotations
@@ -31,6 +32,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 68
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;-><init>()V
 
     return-void
@@ -41,12 +43,14 @@
 .method public build()Lcom/google/android/datatransport/runtime/backends/BackendRequest;
     .locals 3
 
+    .line 86
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;->events:Ljava/lang/Iterable;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,6 +65,7 @@
 
     move-result-object v1
 
+    .line 89
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -68,6 +73,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 92
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest;
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;->events:Ljava/lang/Iterable;
@@ -80,6 +86,7 @@
 
     return-object v0
 
+    .line 90
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -116,10 +123,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 75
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;->events:Ljava/lang/Iterable;
 
     return-object p0
 
+    .line 73
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -133,6 +142,7 @@
 .method public setExtras([B)Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;
     .locals 0
 
+    .line 80
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;->extras:[B
 
     return-object p0

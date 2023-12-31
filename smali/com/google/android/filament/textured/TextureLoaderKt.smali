@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/filament/textured/TextureLoaderKt;
 .super Ljava/lang/Object;
+.source "TextureLoader.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method private static final format(Landroid/graphics/Bitmap;)Lcom/google/android/filament/Texture$Format;
     .locals 1
 
+    .line 83
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object p0
@@ -29,6 +31,7 @@
     :sswitch_0
     const-string v0, "RGB_565"
 
+    .line 85
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -42,6 +45,7 @@
     :sswitch_1
     const-string v0, "RGBA_F16"
 
+    .line 87
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -55,6 +59,7 @@
     :sswitch_2
     const-string v0, "ARGB_8888"
 
+    .line 86
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -68,6 +73,7 @@
     :sswitch_3
     const-string v0, "ALPHA_8"
 
+    .line 84
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -79,6 +85,7 @@
     :goto_0
     return-object p0
 
+    .line 88
     :cond_0
     :goto_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -103,6 +110,7 @@
 .method private static final internalFormat(Lcom/google/android/filament/textured/TextureType;)Lcom/google/android/filament/Texture$InternalFormat;
     .locals 1
 
+    .line 75
     sget-object v0, Lcom/google/android/filament/textured/TextureLoaderKt$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p0}, Lcom/google/android/filament/textured/TextureType;->ordinal()I
@@ -123,6 +131,7 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 78
     sget-object p0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA8:Lcom/google/android/filament/Texture$InternalFormat;
 
     goto :goto_0
@@ -134,11 +143,13 @@
 
     throw p0
 
+    .line 77
     :cond_1
     sget-object p0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA8:Lcom/google/android/filament/Texture$InternalFormat;
 
     goto :goto_0
 
+    .line 76
     :cond_2
     sget-object p0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_A8:Lcom/google/android/filament/Texture$InternalFormat;
 
@@ -161,10 +172,12 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 37
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
+    .line 40
     sget-object v1, Lcom/google/android/filament/textured/TextureType;->COLOR:Lcom/google/android/filament/textured/TextureType;
 
     const/4 v2, 0x0
@@ -181,16 +194,19 @@
     :goto_0
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inPremultiplied:Z
 
+    .line 42
     invoke-static {p1, p2, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
+    .line 44
     new-instance p2, Lcom/google/android/filament/Texture$Builder;
 
     invoke-direct {p2}, Lcom/google/android/filament/Texture$Builder;-><init>()V
 
     const-string v0, "bitmap"
 
+    .line 45
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -201,6 +217,7 @@
 
     move-result-object p2
 
+    .line 46
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
@@ -209,12 +226,14 @@
 
     move-result-object p2
 
+    .line 47
     sget-object v0, Lcom/google/android/filament/Texture$Sampler;->SAMPLER_2D:Lcom/google/android/filament/Texture$Sampler;
 
     invoke-virtual {p2, v0}, Lcom/google/android/filament/Texture$Builder;->sampler(Lcom/google/android/filament/Texture$Sampler;)Lcom/google/android/filament/Texture$Builder;
 
     move-result-object p2
 
+    .line 48
     invoke-static {p3}, Lcom/google/android/filament/textured/TextureLoaderKt;->internalFormat(Lcom/google/android/filament/textured/TextureType;)Lcom/google/android/filament/Texture$InternalFormat;
 
     move-result-object p3
@@ -225,10 +244,12 @@
 
     const/16 p3, 0xff
 
+    .line 50
     invoke-virtual {p2, p3}, Lcom/google/android/filament/Texture$Builder;->levels(I)Lcom/google/android/filament/Texture$Builder;
 
     move-result-object p2
 
+    .line 51
     invoke-virtual {p2, p0}, Lcom/google/android/filament/Texture$Builder;->build(Lcom/google/android/filament/Engine;)Lcom/google/android/filament/Texture;
 
     move-result-object p2
@@ -237,8 +258,10 @@
 
     invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 55
     invoke-static {p0, p2, v2, p1}, Lcom/google/android/filament/android/TextureHelper;->setBitmap(Lcom/google/android/filament/Engine;Lcom/google/android/filament/Texture;ILandroid/graphics/Bitmap;)V
 
+    .line 70
     invoke-virtual {p2, p0}, Lcom/google/android/filament/Texture;->generateMipmaps(Lcom/google/android/filament/Engine;)V
 
     return-object p2
@@ -247,6 +270,7 @@
 .method private static final type(Landroid/graphics/Bitmap;)Lcom/google/android/filament/Texture$Type;
     .locals 1
 
+    .line 92
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object p0
@@ -266,6 +290,7 @@
     :sswitch_0
     const-string v0, "RGB_565"
 
+    .line 94
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -279,6 +304,7 @@
     :sswitch_1
     const-string v0, "RGBA_F16"
 
+    .line 96
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -292,6 +318,7 @@
     :sswitch_2
     const-string v0, "ARGB_8888"
 
+    .line 95
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -305,6 +332,7 @@
     :sswitch_3
     const-string v0, "ALPHA_8"
 
+    .line 93
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -316,6 +344,7 @@
     :goto_0
     return-object p0
 
+    .line 97
     :cond_0
     :goto_1
     new-instance p0, Ljava/lang/IllegalArgumentException;

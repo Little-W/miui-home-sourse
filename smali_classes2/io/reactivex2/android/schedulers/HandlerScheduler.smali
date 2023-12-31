@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/android/schedulers/HandlerScheduler;
 .super Lio/reactivex2/Scheduler;
+.source "HandlerScheduler.java"
 
 
 # annotations
@@ -21,10 +22,13 @@
 .method constructor <init>(Landroid/os/Handler;Z)V
     .locals 0
 
+    .line 29
     invoke-direct {p0}, Lio/reactivex2/Scheduler;-><init>()V
 
+    .line 30
     iput-object p1, p0, Lio/reactivex2/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
+    .line 31
     iput-boolean p2, p0, Lio/reactivex2/android/schedulers/HandlerScheduler;->async:Z
 
     return-void
@@ -35,6 +39,7 @@
 .method public createWorker()Lio/reactivex2/Scheduler$Worker;
     .locals 2
 
+    .line 52
     new-instance v0, Lio/reactivex2/android/schedulers/HandlerScheduler$HandlerWorker;
 
     iget-object v1, p0, Lio/reactivex2/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
@@ -53,30 +58,36 @@
 
     if-eqz p4, :cond_1
 
+    .line 40
     invoke-static {p1}, Lio/reactivex2/plugins/RxJavaPlugins;->onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
+    .line 41
     new-instance v0, Lio/reactivex2/android/schedulers/HandlerScheduler$ScheduledRunnable;
 
     iget-object v1, p0, Lio/reactivex2/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
     invoke-direct {v0, v1, p1}, Lio/reactivex2/android/schedulers/HandlerScheduler$ScheduledRunnable;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
+    .line 42
     iget-object p1, p0, Lio/reactivex2/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
     invoke-static {p1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 
     move-result-object p1
 
+    .line 43
     iget-boolean v1, p0, Lio/reactivex2/android/schedulers/HandlerScheduler;->async:Z
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x1
 
+    .line 44
     invoke-virtual {p1, v1}, Landroid/os/Message;->setAsynchronous(Z)V
 
+    .line 46
     :cond_0
     iget-object p0, p0, Lio/reactivex2/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
@@ -88,6 +99,7 @@
 
     return-object v0
 
+    .line 38
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -97,6 +109,7 @@
 
     throw p0
 
+    .line 37
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 

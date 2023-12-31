@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/runtime/EventInternal;
 .super Ljava/lang/Object;
+.source "EventInternal.java"
 
 
 # annotations
@@ -14,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +24,7 @@
 .method public static builder()Lcom/google/android/datatransport/runtime/EventInternal$Builder;
     .locals 2
 
+    .line 78
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;-><init>()V
@@ -42,6 +45,7 @@
 .method public final get(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 63
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object p0
@@ -84,6 +88,7 @@
 .method public final getInteger(Ljava/lang/String;)I
     .locals 0
 
+    .line 53
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object p0
@@ -100,6 +105,7 @@
 
     goto :goto_0
 
+    .line 54
     :cond_0
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -116,6 +122,7 @@
 .method public final getLong(Ljava/lang/String;)J
     .locals 0
 
+    .line 58
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object p0
@@ -132,6 +139,7 @@
 
     goto :goto_0
 
+    .line 59
     :cond_0
     invoke-static {p0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -157,6 +165,7 @@
         }
     .end annotation
 
+    .line 44
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object p0
@@ -177,10 +186,12 @@
 .method public toBuilder()Lcom/google/android/datatransport/runtime/EventInternal$Builder;
     .locals 3
 
+    .line 68
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal$Builder;-><init>()V
 
+    .line 69
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
 
     move-result-object v1
@@ -189,6 +200,7 @@
 
     move-result-object v0
 
+    .line 70
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getCode()Ljava/lang/Integer;
 
     move-result-object v1
@@ -197,6 +209,7 @@
 
     move-result-object v0
 
+    .line 71
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getEncodedPayload()Lcom/google/android/datatransport/runtime/EncodedPayload;
 
     move-result-object v1
@@ -205,6 +218,7 @@
 
     move-result-object v0
 
+    .line 72
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getEventMillis()J
 
     move-result-wide v1
@@ -213,6 +227,7 @@
 
     move-result-object v0
 
+    .line 73
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getUptimeMillis()J
 
     move-result-wide v1
@@ -223,6 +238,7 @@
 
     new-instance v1, Ljava/util/HashMap;
 
+    .line 74
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/EventInternal;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object p0

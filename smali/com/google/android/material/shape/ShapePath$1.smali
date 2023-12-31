@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/shape/ShapePath$1;
 .super Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;
+.source "ShapePath.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>(Lcom/google/android/material/shape/ShapePath;Ljava/util/List;Landroid/graphics/Matrix;)V
     .locals 0
 
+    .line 258
     iput-object p1, p0, Lcom/google/android/material/shape/ShapePath$1;->this$0:Lcom/google/android/material/shape/ShapePath;
 
     iput-object p2, p0, Lcom/google/android/material/shape/ShapePath$1;->val$operations:Ljava/util/List;
@@ -41,6 +43,7 @@
 .method public draw(Landroid/graphics/Matrix;Lcom/google/android/material/shadow/ShadowRenderer;ILandroid/graphics/Canvas;)V
     .locals 2
 
+    .line 262
     iget-object p1, p0, Lcom/google/android/material/shape/ShapePath$1;->val$operations:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -60,6 +63,7 @@
 
     check-cast v0, Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;
 
+    .line 263
     iget-object v1, p0, Lcom/google/android/material/shape/ShapePath$1;->val$transformCopy:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v1, p2, p3, p4}, Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;->draw(Landroid/graphics/Matrix;Lcom/google/android/material/shadow/ShadowRenderer;ILandroid/graphics/Canvas;)V

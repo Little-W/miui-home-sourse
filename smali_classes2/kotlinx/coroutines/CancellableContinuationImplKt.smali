@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/CancellableContinuationImplKt;
 .super Ljava/lang/Object;
+.source "CancellableContinuationImpl.kt"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 20
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "RESUME_TOKEN"

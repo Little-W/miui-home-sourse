@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/content/RectangleShape;
 .super Ljava/lang/Object;
+.source "RectangleShape.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/model/content/ContentModel;
@@ -55,16 +56,22 @@
         }
     .end annotation
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 21
     iput-object p1, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->name:Ljava/lang/String;
 
+    .line 22
     iput-object p2, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->position:Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
+    .line 23
     iput-object p3, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->size:Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
+    .line 24
     iput-object p4, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->cornerRadius:Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
+    .line 25
     iput-boolean p5, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->hidden:Z
 
     return-void
@@ -75,6 +82,7 @@
 .method public getCornerRadius()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
     .locals 0
 
+    .line 33
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->cornerRadius:Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     return-object p0
@@ -83,6 +91,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 29
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->name:Ljava/lang/String;
 
     return-object p0
@@ -100,6 +109,7 @@
         }
     .end annotation
 
+    .line 41
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->position:Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
     return-object p0
@@ -117,6 +127,7 @@
         }
     .end annotation
 
+    .line 37
     iget-object p0, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->size:Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
     return-object p0
@@ -125,6 +136,7 @@
 .method public isHidden()Z
     .locals 0
 
+    .line 45
     iget-boolean p0, p0, Lcom/airbnb/lottie/model/content/RectangleShape;->hidden:Z
 
     return p0
@@ -133,6 +145,7 @@
 .method public toContent(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;)Lcom/airbnb/lottie/animation/content/Content;
     .locals 1
 
+    .line 49
     new-instance v0, Lcom/airbnb/lottie/animation/content/RectangleContent;
 
     invoke-direct {v0, p1, p2, p0}, Lcom/airbnb/lottie/animation/content/RectangleContent;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/RectangleShape;)V
@@ -143,6 +156,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

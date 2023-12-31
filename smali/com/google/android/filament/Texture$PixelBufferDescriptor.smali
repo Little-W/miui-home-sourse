@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/Texture$PixelBufferDescriptor;
 .super Ljava/lang/Object;
+.source "Texture.java"
 
 
 # annotations
@@ -61,6 +62,7 @@
 
     move-object v3, p3
 
+    .line 405
     invoke-direct/range {v0 .. v9}, Lcom/google/android/filament/Texture$PixelBufferDescriptor;-><init>(Ljava/nio/Buffer;Lcom/google/android/filament/Texture$Format;Lcom/google/android/filament/Texture$Type;IIIILjava/lang/Object;Ljava/lang/Runnable;)V
 
     return-void
@@ -89,6 +91,7 @@
 
     move v4, p4
 
+    .line 421
     invoke-direct/range {v0 .. v9}, Lcom/google/android/filament/Texture$PixelBufferDescriptor;-><init>(Ljava/nio/Buffer;Lcom/google/android/filament/Texture$Format;Lcom/google/android/filament/Texture$Type;IIIILjava/lang/Object;Ljava/lang/Runnable;)V
 
     return-void
@@ -117,6 +120,7 @@
 
     move/from16 v6, p6
 
+    .line 440
     invoke-direct/range {v0 .. v9}, Lcom/google/android/filament/Texture$PixelBufferDescriptor;-><init>(Ljava/nio/Buffer;Lcom/google/android/filament/Texture$Format;Lcom/google/android/filament/Texture$Type;IIIILjava/lang/Object;Ljava/lang/Runnable;)V
 
     return-void
@@ -125,36 +129,50 @@
 .method public constructor <init>(Ljava/nio/Buffer;Lcom/google/android/filament/Texture$Format;Lcom/google/android/filament/Texture$Type;IIIILjava/lang/Object;Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 382
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 331
     iput v0, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->alignment:I
 
     const/4 v0, 0x0
 
+    .line 332
     iput v0, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->left:I
 
+    .line 333
     iput v0, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->top:I
 
+    .line 336
     iput v0, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->stride:I
 
+    .line 383
     iput-object p1, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
+    .line 384
     iput p5, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->left:I
 
+    .line 385
     iput p6, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->top:I
 
+    .line 386
     iput-object p3, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
+    .line 387
     iput p4, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->alignment:I
 
+    .line 388
     iput p7, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->stride:I
 
+    .line 389
     iput-object p2, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->format:Lcom/google/android/filament/Texture$Format;
 
+    .line 390
     iput-object p8, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->handler:Ljava/lang/Object;
 
+    .line 391
     iput-object p9, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->callback:Ljava/lang/Runnable;
 
     return-void
@@ -163,30 +181,40 @@
 .method public constructor <init>(Ljava/nio/ByteBuffer;Lcom/google/android/filament/Texture$CompressedFormat;I)V
     .locals 2
 
+    .line 453
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 331
     iput v0, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->alignment:I
 
     const/4 v1, 0x0
 
+    .line 332
     iput v1, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->left:I
 
+    .line 333
     iput v1, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->top:I
 
+    .line 336
     iput v1, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->stride:I
 
+    .line 454
     iput-object p1, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
+    .line 455
     sget-object p1, Lcom/google/android/filament/Texture$Type;->COMPRESSED:Lcom/google/android/filament/Texture$Type;
 
     iput-object p1, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
+    .line 456
     iput v0, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->alignment:I
 
+    .line 457
     iput-object p2, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->compressedFormat:Lcom/google/android/filament/Texture$CompressedFormat;
 
+    .line 458
     iput p3, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->compressedSizeInBytes:I
 
     return-void
@@ -195,6 +223,7 @@
 .method static computeDataSize(Lcom/google/android/filament/Texture$Format;Lcom/google/android/filament/Texture$Type;III)I
     .locals 2
 
+    .line 484
     sget-object v0, Lcom/google/android/filament/Texture$Type;->COMPRESSED:Lcom/google/android/filament/Texture$Type;
 
     const/4 v1, 0x0
@@ -203,6 +232,7 @@
 
     return v1
 
+    .line 489
     :cond_0
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
@@ -236,6 +266,7 @@
     :pswitch_3
     const/4 v1, 0x1
 
+    .line 513
     :goto_0
     sget-object p0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
 
@@ -316,8 +347,10 @@
 .method public setCallback(Ljava/lang/Object;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 468
     iput-object p1, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->handler:Ljava/lang/Object;
 
+    .line 469
     iput-object p2, p0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->callback:Ljava/lang/Runnable;
 
     return-void

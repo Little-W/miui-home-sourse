@@ -19,6 +19,7 @@
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 14
     iput-object p1, p0, Lcom/xiaomi/onetrack/f/e;->a:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/f/e;->b:Ljava/lang/String;
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 3
 
+    .line 17
     iget-object v0, p0, Lcom/xiaomi/onetrack/f/e;->a:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/xiaomi/onetrack/f/e;->b:Ljava/lang/String;
@@ -49,6 +51,7 @@
 
     move-result-object p0
 
+    .line 18
     invoke-static {}, Lcom/xiaomi/onetrack/c/c;->a()Lcom/xiaomi/onetrack/c/c;
 
     move-result-object v0

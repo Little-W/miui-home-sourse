@@ -1,5 +1,6 @@
 .class Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager$1;
 .super Landroid/window/IWindowContainerTransactionCallback$Stub;
+.source "RemoteAnimationFinishCallbackManager.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;)V
     .locals 0
 
+    .line 640
     iput-object p1, p0, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager$1;->this$0:Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;
 
     invoke-direct {p0}, Landroid/window/IWindowContainerTransactionCallback$Stub;-><init>()V
@@ -42,8 +44,10 @@
 
     const-string p2, "Transitions all anim call WindowOrganizer.finishTransition end"
 
+    .line 643
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 644
     iget-object p1, p0, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager$1;->this$0:Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;->access$100(Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;)Landroid/os/Handler;
@@ -58,6 +62,7 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    .line 645
     iget-object p0, p0, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager$1;->this$0:Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;
 
     invoke-static {p0}, Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;->access$200(Lcom/android/systemui/shared/recents/utilities/RemoteAnimationFinishCallbackManager;)V

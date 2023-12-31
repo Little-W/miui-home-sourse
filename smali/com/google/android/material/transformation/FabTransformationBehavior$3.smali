@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/transformation/FabTransformationBehavior$3;
 .super Landroid/animation/AnimatorListenerAdapter;
+.source "FabTransformationBehavior.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Lcom/google/android/material/circularreveal/CircularRevealWidget;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 353
     iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$3;->this$0:Lcom/google/android/material/transformation/FabTransformationBehavior;
 
     iput-object p2, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$3;->val$circularRevealChild:Lcom/google/android/material/circularreveal/CircularRevealWidget;
@@ -41,6 +43,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
+    .line 362
     iget-object p0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$3;->val$circularRevealChild:Lcom/google/android/material/circularreveal/CircularRevealWidget;
 
     const/4 p1, 0x0
@@ -53,6 +56,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
+    .line 357
     iget-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$3;->val$circularRevealChild:Lcom/google/android/material/circularreveal/CircularRevealWidget;
 
     iget-object p0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$3;->val$icon:Landroid/graphics/drawable/Drawable;

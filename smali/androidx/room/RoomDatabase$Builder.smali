@@ -1,5 +1,6 @@
 .class public Landroidx/room/RoomDatabase$Builder;
 .super Ljava/lang/Object;
+.source "RoomDatabase.java"
 
 
 # annotations
@@ -93,22 +94,29 @@
         }
     .end annotation
 
+    .line 439
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 440
     iput-object p1, p0, Landroidx/room/RoomDatabase$Builder;->mContext:Landroid/content/Context;
 
+    .line 441
     iput-object p2, p0, Landroidx/room/RoomDatabase$Builder;->mDatabaseClass:Ljava/lang/Class;
 
+    .line 442
     iput-object p3, p0, Landroidx/room/RoomDatabase$Builder;->mName:Ljava/lang/String;
 
+    .line 443
     sget-object p1, Landroidx/room/RoomDatabase$JournalMode;->AUTOMATIC:Landroidx/room/RoomDatabase$JournalMode;
 
     iput-object p1, p0, Landroidx/room/RoomDatabase$Builder;->mJournalMode:Landroidx/room/RoomDatabase$JournalMode;
 
     const/4 p1, 0x1
 
+    .line 444
     iput-boolean p1, p0, Landroidx/room/RoomDatabase$Builder;->mRequireMigration:Z
 
+    .line 445
     new-instance p1, Landroidx/room/RoomDatabase$MigrationContainer;
 
     invoke-direct {p1}, Landroidx/room/RoomDatabase$MigrationContainer;-><init>()V
@@ -128,24 +136,29 @@
         }
     .end annotation
 
+    .line 632
     iget-object v0, p0, Landroidx/room/RoomDatabase$Builder;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_5
 
+    .line 636
     iget-object v0, p0, Landroidx/room/RoomDatabase$Builder;->mDatabaseClass:Ljava/lang/Class;
 
     if-eqz v0, :cond_4
 
+    .line 640
     iget-object v0, p0, Landroidx/room/RoomDatabase$Builder;->mQueryExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_0
 
+    .line 641
     invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getIOThreadExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/room/RoomDatabase$Builder;->mQueryExecutor:Ljava/util/concurrent/Executor;
 
+    .line 644
     :cond_0
     iget-object v0, p0, Landroidx/room/RoomDatabase$Builder;->mMigrationStartAndEndVersions:Ljava/util/Set;
 
@@ -155,6 +168,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 645
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -172,6 +186,7 @@
 
     check-cast v1, Ljava/lang/Integer;
 
+    .line 646
     iget-object v2, p0, Landroidx/room/RoomDatabase$Builder;->mMigrationsNotRequiredFrom:Ljava/util/Set;
 
     invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -182,6 +197,7 @@
 
     goto :goto_0
 
+    .line 647
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -203,17 +219,20 @@
 
     throw p0
 
+    .line 658
     :cond_2
     iget-object v0, p0, Landroidx/room/RoomDatabase$Builder;->mFactory:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;
 
     if-nez v0, :cond_3
 
+    .line 659
     new-instance v0, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelperFactory;
 
     invoke-direct {v0}, Landroidx/sqlite/db/framework/FrameworkSQLiteOpenHelperFactory;-><init>()V
 
     iput-object v0, p0, Landroidx/room/RoomDatabase$Builder;->mFactory:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;
 
+    .line 661
     :cond_3
     new-instance v0, Landroidx/room/DatabaseConfiguration;
 
@@ -231,6 +250,7 @@
 
     iget-object v1, p0, Landroidx/room/RoomDatabase$Builder;->mJournalMode:Landroidx/room/RoomDatabase$JournalMode;
 
+    .line 664
     invoke-virtual {v1, v2}, Landroidx/room/RoomDatabase$JournalMode;->resolve(Landroid/content/Context;)Landroidx/room/RoomDatabase$JournalMode;
 
     move-result-object v8
@@ -245,6 +265,7 @@
 
     invoke-direct/range {v1 .. v11}, Landroidx/room/DatabaseConfiguration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;ZLjava/util/Set;)V
 
+    .line 667
     iget-object p0, p0, Landroidx/room/RoomDatabase$Builder;->mDatabaseClass:Ljava/lang/Class;
 
     const-string v1, "_Impl"
@@ -255,10 +276,12 @@
 
     check-cast p0, Landroidx/room/RoomDatabase;
 
+    .line 668
     invoke-virtual {p0, v0}, Landroidx/room/RoomDatabase;->init(Landroidx/room/DatabaseConfiguration;)V
 
     return-object p0
 
+    .line 637
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -268,6 +291,7 @@
 
     throw p0
 
+    .line 633
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -290,6 +314,7 @@
 
     const/4 v0, 0x0
 
+    .line 570
     iput-boolean v0, p0, Landroidx/room/RoomDatabase$Builder;->mRequireMigration:Z
 
     return-object p0

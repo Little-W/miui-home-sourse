@@ -1,11 +1,13 @@
 .class public Lcom/google/android/material/internal/ManufacturerUtils;
 .super Ljava/lang/Object;
+.source "ManufacturerUtils.java"
 
 
 # direct methods
 .method public static isDateInputKeyboardMissingSeparatorCharacters()Z
     .locals 1
 
+    .line 53
     invoke-static {}, Lcom/google/android/material/internal/ManufacturerUtils;->isLGEDevice()Z
 
     move-result v0
@@ -36,6 +38,7 @@
 .method public static isLGEDevice()Z
     .locals 2
 
+    .line 41
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -56,6 +59,7 @@
 .method public static isMeizuDevice()Z
     .locals 2
 
+    .line 36
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -76,6 +80,7 @@
 .method public static isSamsungDevice()Z
     .locals 2
 
+    .line 46
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;

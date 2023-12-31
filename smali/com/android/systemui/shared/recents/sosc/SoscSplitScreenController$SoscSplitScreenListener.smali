@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/sosc/SoscSplitScreenController$SoscSplitScreenListener;
 .super Ljava/lang/Object;
+.source "SoscSplitScreenController.java"
 
 
 # annotations

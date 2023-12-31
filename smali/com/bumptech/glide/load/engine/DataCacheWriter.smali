@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/engine/DataCacheWriter;
 .super Ljava/lang/Object;
+.source "DataCacheWriter.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/cache/DiskCache$Writer;
@@ -51,12 +52,16 @@
         }
     .end annotation
 
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 24
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->encoder:Lcom/bumptech/glide/load/Encoder;
 
+    .line 25
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->data:Ljava/lang/Object;
 
+    .line 26
     iput-object p3, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->options:Lcom/bumptech/glide/load/Options;
 
     return-void
@@ -67,6 +72,7 @@
 .method public write(Ljava/io/File;)Z
     .locals 2
 
+    .line 31
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->encoder:Lcom/bumptech/glide/load/Encoder;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->data:Ljava/lang/Object;

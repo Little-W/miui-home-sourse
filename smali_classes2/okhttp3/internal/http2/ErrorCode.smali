@@ -1,5 +1,6 @@
 .class public final enum Lokhttp3/internal/http2/ErrorCode;
 .super Ljava/lang/Enum;
+.source "ErrorCode.java"
 
 
 # annotations
@@ -46,6 +47,7 @@
 .method static constructor <clinit>()V
     .locals 15
 
+    .line 21
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/4 v1, 0x0
@@ -56,6 +58,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->NO_ERROR:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 23
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/4 v2, 0x1
@@ -66,6 +69,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->PROTOCOL_ERROR:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 25
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/4 v3, 0x2
@@ -76,6 +80,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->INTERNAL_ERROR:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 27
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/4 v4, 0x3
@@ -86,6 +91,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->FLOW_CONTROL_ERROR:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 29
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/4 v5, 0x4
@@ -98,6 +104,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->REFUSED_STREAM:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 31
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/4 v7, 0x5
@@ -110,6 +117,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->CANCEL:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 33
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/4 v9, 0x6
@@ -122,6 +130,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->COMPRESSION_ERROR:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 35
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/16 v11, 0xa
@@ -132,6 +141,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->CONNECT_ERROR:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 37
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const/16 v12, 0xb
@@ -142,6 +152,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->ENHANCE_YOUR_CALM:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 39
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const-string v13, "INADEQUATE_SECURITY"
@@ -152,6 +163,7 @@
 
     sput-object v0, Lokhttp3/internal/http2/ErrorCode;->INADEQUATE_SECURITY:Lokhttp3/internal/http2/ErrorCode;
 
+    .line 41
     new-instance v0, Lokhttp3/internal/http2/ErrorCode;
 
     const-string v13, "HTTP_1_1_REQUIRED"
@@ -164,6 +176,7 @@
 
     new-array v0, v12, [Lokhttp3/internal/http2/ErrorCode;
 
+    .line 19
     sget-object v12, Lokhttp3/internal/http2/ErrorCode;->NO_ERROR:Lokhttp3/internal/http2/ErrorCode;
 
     aput-object v12, v0, v1
@@ -221,8 +234,10 @@
         }
     .end annotation
 
+    .line 45
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 46
     iput p3, p0, Lokhttp3/internal/http2/ErrorCode;->httpCode:I
 
     return-void
@@ -231,6 +246,7 @@
 .method public static fromHttp2(I)Lokhttp3/internal/http2/ErrorCode;
     .locals 5
 
+    .line 50
     invoke-static {}, Lokhttp3/internal/http2/ErrorCode;->values()[Lokhttp3/internal/http2/ErrorCode;
 
     move-result-object v0
@@ -244,6 +260,7 @@
 
     aget-object v3, v0, v2
 
+    .line 51
     iget v4, v3, Lokhttp3/internal/http2/ErrorCode;->httpCode:I
 
     if-ne v4, p0, :cond_0
@@ -264,6 +281,7 @@
 .method public static valueOf(Ljava/lang/String;)Lokhttp3/internal/http2/ErrorCode;
     .locals 1
 
+    .line 19
     const-class v0, Lokhttp3/internal/http2/ErrorCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -278,6 +296,7 @@
 .method public static values()[Lokhttp3/internal/http2/ErrorCode;
     .locals 1
 
+    .line 19
     sget-object v0, Lokhttp3/internal/http2/ErrorCode;->$VALUES:[Lokhttp3/internal/http2/ErrorCode;
 
     invoke-virtual {v0}, [Lokhttp3/internal/http2/ErrorCode;->clone()Ljava/lang/Object;

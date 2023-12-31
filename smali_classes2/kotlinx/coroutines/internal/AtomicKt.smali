@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/AtomicKt;
 .super Ljava/lang/Object;
+.source "Atomic.kt"
 
 
 # static fields
@@ -12,6 +13,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 43
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "NO_DECISION"
@@ -20,6 +22,7 @@
 
     sput-object v0, Lkotlinx/coroutines/internal/AtomicKt;->NO_DECISION:Ljava/lang/Object;
 
+    .line 121
     new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
     const-string v1, "RETRY_ATOMIC"

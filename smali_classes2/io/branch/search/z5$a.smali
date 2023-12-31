@@ -1,5 +1,6 @@
 .class public Lio/branch/search/z5$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lio/branch/search/z5;

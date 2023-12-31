@@ -1,5 +1,6 @@
 .class synthetic Lcom/mi/globallauncher/view/GeneralDialog$1;
 .super Ljava/lang/Object;
+.source "GeneralDialog.java"
 
 
 # annotations

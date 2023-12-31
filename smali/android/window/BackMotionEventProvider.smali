@@ -1,5 +1,6 @@
 .class public Landroid/window/BackMotionEventProvider;
 .super Ljava/lang/Object;
+.source "BackMotionEventProvider.java"
 
 
 # static fields
@@ -19,6 +20,7 @@
 
     const-string v0, "android.window.BackMotionEvent"
 
+    .line 12
     invoke-static {v0}, Lcom/miui/launcher/utils/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -31,6 +33,7 @@
 .method public static getBackMotionEventClass()Ljava/lang/Class;
     .locals 1
 
+    .line 16
     sget-object v0, Landroid/window/BackMotionEventProvider;->sBackMotionEventClass:Ljava/lang/Class;
 
     return-object v0
@@ -39,6 +42,7 @@
 .method public static getInstance(FFFFFILjava/lang/Object;)Ljava/lang/Object;
     .locals 11
 
+    .line 27
     sget-object v0, Landroid/window/BackMotionEventProvider;->sBackMotionEventClass:Ljava/lang/Class;
 
     const/4 v1, 0x7
@@ -89,6 +93,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    .line 29
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
@@ -127,6 +132,7 @@
 
     aput-object p6, v1, v10
 
+    .line 27
     invoke-static {v0, v2, v1}, Lcom/miui/launcher/utils/ReflectUtils;->createNewInstance(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0

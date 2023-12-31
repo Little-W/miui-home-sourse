@@ -6,6 +6,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -14,6 +15,7 @@
 .method public static getNetWorkType(Landroid/content/Context;)Lcom/xiaomi/onetrack/OneTrack$NetType;
     .locals 0
 
+    .line 10
     invoke-static {p0}, Lcom/xiaomi/onetrack/g/c;->a(Landroid/content/Context;)Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     move-result-object p0

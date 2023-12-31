@@ -1,5 +1,6 @@
 .class abstract Lcom/google/android/gms/internal/measurement/zzit;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
 
 # static fields
@@ -12,6 +13,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 5
     new-instance v0, Lcom/google/android/gms/internal/measurement/zziv;
 
     const/4 v1, 0x0
@@ -20,6 +22,7 @@
 
     sput-object v0, Lcom/google/android/gms/internal/measurement/zzit;->zza:Lcom/google/android/gms/internal/measurement/zzit;
 
+    .line 6
     new-instance v0, Lcom/google/android/gms/internal/measurement/zziu;
 
     invoke-direct {v0, v1}, Lcom/google/android/gms/internal/measurement/zziu;-><init>(Lcom/google/android/gms/internal/measurement/zzis;)V
@@ -32,6 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +44,7 @@
 .method synthetic constructor <init>(Lcom/google/android/gms/internal/measurement/zzis;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzit;-><init>()V
 
     return-void
@@ -48,6 +53,7 @@
 .method static zza()Lcom/google/android/gms/internal/measurement/zzit;
     .locals 1
 
+    .line 2
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzit;->zza:Lcom/google/android/gms/internal/measurement/zzit;
 
     return-object v0
@@ -56,6 +62,7 @@
 .method static zzb()Lcom/google/android/gms/internal/measurement/zzit;
     .locals 1
 
+    .line 3
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzit;->zzb:Lcom/google/android/gms/internal/measurement/zzit;
 
     return-object v0

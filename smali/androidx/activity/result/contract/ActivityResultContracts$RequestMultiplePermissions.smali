@@ -1,5 +1,6 @@
 .class public final Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;
 .super Landroidx/activity/result/contract/ActivityResultContract;
+.source "ActivityResultContracts.java"
 
 
 # annotations
@@ -29,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 158
     invoke-direct {p0}, Landroidx/activity/result/contract/ActivityResultContract;-><init>()V
 
     return-void
@@ -37,6 +39,7 @@
 .method static createIntent([Ljava/lang/String;)Landroid/content/Intent;
     .locals 2
 
+    .line 244
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "androidx.activity.result.contract.action.REQUEST_PERMISSIONS"
@@ -57,6 +60,7 @@
 .method public bridge synthetic createIntent(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
     .locals 0
 
+    .line 158
     check-cast p2, [Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;->createIntent(Landroid/content/Context;[Ljava/lang/String;)Landroid/content/Intent;
@@ -69,6 +73,7 @@
 .method public createIntent(Landroid/content/Context;[Ljava/lang/String;)Landroid/content/Intent;
     .locals 0
 
+    .line 198
     invoke-static {p2}, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;->createIntent([Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p0
@@ -79,6 +84,7 @@
 .method public bridge synthetic getSynchronousResult(Landroid/content/Context;Ljava/lang/Object;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
     .locals 0
 
+    .line 158
     check-cast p2, [Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;->getSynchronousResult(Landroid/content/Context;[Ljava/lang/String;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
@@ -107,17 +113,20 @@
 
     if-eqz p2, :cond_5
 
+    .line 205
     array-length p0, p2
 
     if-nez p0, :cond_0
 
     goto :goto_2
 
+    .line 209
     :cond_0
     new-instance p0, Landroidx/collection/ArrayMap;
 
     invoke-direct {p0}, Landroidx/collection/ArrayMap;-><init>()V
 
+    .line 211
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -133,6 +142,7 @@
 
     aget-object v5, p2, v3
 
+    .line 212
     invoke-static {p1, v5}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v6
@@ -146,6 +156,7 @@
     :cond_1
     move v6, v1
 
+    .line 214
     :goto_1
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -165,6 +176,7 @@
     :cond_3
     if-eqz v4, :cond_4
 
+    .line 219
     new-instance p1, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
 
     invoke-direct {p1, p0}, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;-><init>(Ljava/lang/Object;)V
@@ -176,6 +188,7 @@
 
     return-object p0
 
+    .line 206
     :cond_5
     :goto_2
     new-instance p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
@@ -192,6 +205,7 @@
 .method public bridge synthetic parseResult(ILandroid/content/Intent;)Ljava/lang/Object;
     .locals 0
 
+    .line 158
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;->parseResult(ILandroid/content/Intent;)Ljava/util/Map;
 
     move-result-object p0
@@ -217,6 +231,7 @@
 
     if-eq p1, p0, :cond_0
 
+    .line 228
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
@@ -226,6 +241,7 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 229
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
@@ -235,12 +251,14 @@
     :cond_1
     const-string p0, "androidx.activity.result.contract.extra.PERMISSIONS"
 
+    .line 231
     invoke-virtual {p2, p0}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS"
 
+    .line 232
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getIntArrayExtra(Ljava/lang/String;)[I
 
     move-result-object p1
@@ -251,11 +269,13 @@
 
     goto :goto_2
 
+    .line 235
     :cond_2
     new-instance p2, Ljava/util/HashMap;
 
     invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
+    .line 236
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -265,6 +285,7 @@
     :goto_0
     if-ge v2, v0, :cond_4
 
+    .line 237
     aget-object v3, p0, v2
 
     aget v4, p1, v2
@@ -292,6 +313,7 @@
     :cond_4
     return-object p2
 
+    .line 233
     :cond_5
     :goto_2
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;

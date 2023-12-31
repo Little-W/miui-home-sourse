@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/squareup/picasso/Cache;
 .super Ljava/lang/Object;
+.source "Cache.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 47
     new-instance v0, Lcom/squareup/picasso/Cache$1;
 
     invoke-direct {v0}, Lcom/squareup/picasso/Cache$1;-><init>()V

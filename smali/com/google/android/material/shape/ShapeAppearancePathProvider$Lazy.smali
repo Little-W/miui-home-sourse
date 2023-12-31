@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/shape/ShapeAppearancePathProvider$Lazy;
 .super Ljava/lang/Object;
+.source "ShapeAppearancePathProvider.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 39
     new-instance v0, Lcom/google/android/material/shape/ShapeAppearancePathProvider;
 
     invoke-direct {v0}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;-><init>()V

@@ -1,5 +1,6 @@
 .class Lkotlin/collections/SetsKt__SetsKt;
 .super Lkotlin/collections/SetsKt__SetsJVMKt;
+.source "Sets.kt"
 
 
 # direct methods
@@ -15,6 +16,7 @@
         }
     .end annotation
 
+    .line 36
     sget-object v0, Lkotlin/collections/EmptySet;->INSTANCE:Lkotlin/collections/EmptySet;
 
     check-cast v0, Ljava/util/Set;
@@ -40,6 +42,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 171
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
     move-result v0
@@ -52,6 +55,7 @@
 
     goto :goto_0
 
+    .line 173
     :cond_0
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -67,6 +71,7 @@
 
     goto :goto_0
 
+    .line 172
     :cond_1
     invoke-static {}, Lkotlin/collections/SetsKt;->emptySet()Ljava/util/Set;
 

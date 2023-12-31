@@ -1,5 +1,6 @@
 .class public abstract Lio/reactivex2/Scheduler$Worker;
 .super Ljava/lang/Object;
+.source "Scheduler.java"
 
 # interfaces
 .implements Lio/reactivex2/disposables/Disposable;
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 359
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public now(Ljava/util/concurrent/TimeUnit;)J
     .locals 2
 
+    .line 451
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -46,6 +49,7 @@
 .method public schedule(Ljava/lang/Runnable;)Lio/reactivex2/disposables/Disposable;
     .locals 3
 
+    .line 371
     sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x0

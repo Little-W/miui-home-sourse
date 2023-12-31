@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/channels/AbstractSendChannel;
 .super Ljava/lang/Object;
+.source "AbstractChannel.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/channels/SendChannel;
@@ -80,10 +81,12 @@
         }
     .end annotation
 
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->onUndeliveredElement:Lkotlin/jvm/functions/Function1;
 
+    .line 23
     new-instance p1, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     invoke-direct {p1}, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;-><init>()V
@@ -92,6 +95,7 @@
 
     const/4 p1, 0x0
 
+    .line 41
     iput-object p1, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->onCloseHandler:Ljava/lang/Object;
 
     return-void
@@ -100,6 +104,7 @@
 .method public static final synthetic access$helpCloseAndResumeWithSendException(Lkotlinx/coroutines/channels/AbstractSendChannel;Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lkotlinx/coroutines/channels/Closed;)V
     .locals 0
 
+    .line 19
     invoke-direct {p0, p1, p2, p3}, Lkotlinx/coroutines/channels/AbstractSendChannel;->helpCloseAndResumeWithSendException(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lkotlinx/coroutines/channels/Closed;)V
 
     return-void
@@ -108,8 +113,10 @@
 .method private final countQueueSize()I
     .locals 3
 
+    .line 435
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
+    .line 1194
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;->getNext()Ljava/lang/Object;
 
     move-result-object v0
@@ -120,6 +127,7 @@
 
     const/4 v1, 0x0
 
+    .line 1195
     :goto_0
     invoke-static {v0, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -129,12 +137,14 @@
 
     if-eqz v2, :cond_1
 
+    .line 1196
     instance-of v2, v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     if-eqz v2, :cond_0
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 1197
     :cond_0
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getNextNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
@@ -145,6 +155,7 @@
     :cond_1
     return v1
 
+    .line 1194
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -158,12 +169,14 @@
 .method private final getQueueDebugStateString()Ljava/lang/String;
     .locals 3
 
+    .line 417
     iget-object v0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;->getNextNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     move-result-object v0
 
+    .line 418
     iget-object v1, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     if-ne v0, v1, :cond_0
@@ -172,6 +185,7 @@
 
     return-object p0
 
+    .line 420
     :cond_0
     instance-of v1, v0, Lkotlinx/coroutines/channels/Closed;
 
@@ -183,6 +197,7 @@
 
     goto :goto_0
 
+    .line 421
     :cond_1
     instance-of v1, v0, Lkotlinx/coroutines/channels/Receive;
 
@@ -192,6 +207,7 @@
 
     goto :goto_0
 
+    .line 422
     :cond_2
     instance-of v1, v0, Lkotlinx/coroutines/channels/Send;
 
@@ -201,6 +217,7 @@
 
     goto :goto_0
 
+    .line 423
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -216,6 +233,7 @@
 
     move-result-object v1
 
+    .line 425
     :goto_0
     iget-object v2, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
@@ -225,6 +243,7 @@
 
     if-eq v2, v0, :cond_4
 
+    .line 427
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,6 +264,7 @@
 
     move-result-object v1
 
+    .line 428
     instance-of p0, v2, Lkotlinx/coroutines/channels/Closed;
 
     if-eqz p0, :cond_4
@@ -283,10 +303,12 @@
 
     const/4 v1, 0x0
 
+    .line 304
     invoke-static {v1, v0, v1}, Lkotlinx/coroutines/internal/InlineList;->constructor-impl$default(Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 308
     :goto_0
     invoke-virtual {p1}, Lkotlinx/coroutines/channels/Closed;->getPrevNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
@@ -303,16 +325,19 @@
 
     if-eqz v3, :cond_2
 
+    .line 309
     invoke-virtual {v3}, Lkotlinx/coroutines/channels/Receive;->remove()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
+    .line 312
     invoke-virtual {v3}, Lkotlinx/coroutines/channels/Receive;->helpRemove()V
 
     goto :goto_0
 
+    .line 316
     :cond_1
     invoke-static {v2, v3}, Lkotlinx/coroutines/internal/InlineList;->plus-UZ7vuAc(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -325,6 +350,7 @@
 
     goto :goto_2
 
+    .line 1173
     :cond_3
     instance-of v1, v2, Ljava/util/ArrayList;
 
@@ -332,6 +358,7 @@
 
     check-cast v2, Lkotlinx/coroutines/channels/Receive;
 
+    .line 322
     invoke-virtual {v2, p1}, Lkotlinx/coroutines/channels/Receive;->resumeReceiveClosed(Lkotlinx/coroutines/channels/Closed;)V
 
     goto :goto_2
@@ -339,8 +366,10 @@
     :cond_4
     if-eqz v2, :cond_6
 
+    .line 1175
     check-cast v2, Ljava/util/ArrayList;
 
+    .line 1176
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -350,18 +379,21 @@
     :goto_1
     if-ltz v1, :cond_5
 
+    .line 1177
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lkotlinx/coroutines/channels/Receive;
 
+    .line 322
     invoke-virtual {v0, p1}, Lkotlinx/coroutines/channels/Receive;->resumeReceiveClosed(Lkotlinx/coroutines/channels/Closed;)V
 
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
+    .line 324
     :cond_5
     :goto_2
     check-cast p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -370,6 +402,7 @@
 
     return-void
 
+    .line 1175
     :cond_6
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -392,12 +425,15 @@
         }
     .end annotation
 
+    .line 209
     invoke-direct {p0, p3}, Lkotlinx/coroutines/channels/AbstractSendChannel;->helpClose(Lkotlinx/coroutines/channels/Closed;)V
 
+    .line 210
     invoke-virtual {p3}, Lkotlinx/coroutines/channels/Closed;->getSendException()Ljava/lang/Throwable;
 
     move-result-object p3
 
+    .line 211
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->onUndeliveredElement:Lkotlin/jvm/functions/Function1;
 
     if-eqz p0, :cond_0
@@ -412,10 +448,12 @@
 
     if-eqz p0, :cond_0
 
+    .line 212
     check-cast p0, Ljava/lang/Throwable;
 
     invoke-static {p0, p3}, Lkotlin/ExceptionsKt;->addSuppressed(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
+    .line 213
     sget-object p2, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
     invoke-static {p0}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
@@ -430,6 +468,7 @@
 
     return-void
 
+    .line 216
     :cond_0
     sget-object p0, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
@@ -449,10 +488,12 @@
 .method private final invokeOnCloseHandler(Ljava/lang/Throwable;)V
     .locals 3
 
+    .line 257
     iget-object v0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->onCloseHandler:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 259
     sget-object v1, Lkotlinx/coroutines/channels/AbstractChannelKt;->HANDLER_INVOKED:Lkotlinx/coroutines/internal/Symbol;
 
     if-eq v0, v1, :cond_0
@@ -469,6 +510,7 @@
 
     const/4 p0, 0x1
 
+    .line 262
     invoke-static {v0, p0}, Lkotlin/jvm/internal/TypeIntrinsics;->beforeCheckcastToFunctionOfArity(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -486,19 +528,23 @@
 .method public close(Ljava/lang/Throwable;)Z
     .locals 5
 
+    .line 242
     new-instance v0, Lkotlinx/coroutines/channels/Closed;
 
     invoke-direct {v0, p1}, Lkotlinx/coroutines/channels/Closed;-><init>(Ljava/lang/Throwable;)V
 
+    .line 249
     iget-object v1, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     check-cast v1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
+    .line 1168
     :cond_0
     invoke-virtual {v1}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getPrevNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     move-result-object v2
 
+    .line 249
     instance-of v3, v2, Lkotlinx/coroutines/channels/Closed;
 
     const/4 v4, 0x1
@@ -511,6 +557,7 @@
 
     goto :goto_0
 
+    .line 1170
     :cond_1
     move-object v3, v0
 
@@ -527,6 +574,7 @@
 
     goto :goto_1
 
+    .line 250
     :cond_2
     iget-object v0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
@@ -538,16 +586,19 @@
 
     check-cast v0, Lkotlinx/coroutines/channels/Closed;
 
+    .line 251
     :goto_1
     invoke-direct {p0, v0}, Lkotlinx/coroutines/channels/AbstractSendChannel;->helpClose(Lkotlinx/coroutines/channels/Closed;)V
 
     if-eqz v4, :cond_3
 
+    .line 252
     invoke-direct {p0, p1}, Lkotlinx/coroutines/channels/AbstractSendChannel;->invokeOnCloseHandler(Ljava/lang/Throwable;)V
 
     :cond_3
     return v4
 
+    .line 250
     :cond_4
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -561,29 +612,34 @@
 .method protected enqueueSend(Lkotlinx/coroutines/channels/Send;)Ljava/lang/Object;
     .locals 3
 
+    .line 226
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/AbstractSendChannel;->isBufferAlwaysFull()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 227
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     move-object v0, p0
 
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
+    .line 1154
     :cond_0
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getPrevNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     move-result-object p0
 
+    .line 228
     instance-of v1, p0, Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
     if-eqz v1, :cond_1
 
     return-object p0
 
+    .line 1156
     :cond_1
     move-object v1, p1
 
@@ -597,11 +653,13 @@
 
     goto :goto_1
 
+    .line 232
     :cond_2
     iget-object v0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
+    .line 1158
     new-instance v1, Lkotlinx/coroutines/channels/AbstractSendChannel$enqueueSend$$inlined$addLastIfPrevAndIf$1;
 
     check-cast p1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -610,17 +668,20 @@
 
     check-cast v1, Lkotlinx/coroutines/internal/LockFreeLinkedListNode$CondAddOp;
 
+    .line 1162
     :goto_0
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getPrevNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     move-result-object p0
 
+    .line 233
     instance-of v2, p0, Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
     if-eqz v2, :cond_3
 
     return-object p0
 
+    .line 1164
     :cond_3
     invoke-virtual {p0, p1, v0, v1}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->tryCondAddNext(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/LockFreeLinkedListNode$CondAddOp;)I
 
@@ -642,6 +703,7 @@
     :cond_5
     if-nez v2, :cond_6
 
+    .line 236
     sget-object p0, Lkotlinx/coroutines/channels/AbstractChannelKt;->ENQUEUE_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
     return-object p0
@@ -671,6 +733,7 @@
         }
     .end annotation
 
+    .line 83
     iget-object v0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;->getPrevNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -704,6 +767,7 @@
 .method protected final getQueue()Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
     .locals 0
 
+    .line 23
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     return-object p0
@@ -718,6 +782,7 @@
 .method protected final isFullImpl()Z
     .locals 1
 
+    .line 131
     iget-object v0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListHead;->getNextNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -754,6 +819,7 @@
         }
     .end annotation
 
+    .line 52
     :cond_0
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/AbstractSendChannel;->takeFirstReceiveOrPeekClosed()Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
@@ -763,12 +829,14 @@
 
     const/4 v1, 0x0
 
+    .line 53
     invoke-interface {v0, p1, v1}, Lkotlinx/coroutines/channels/ReceiveOrClosed;->tryResumeReceive(Ljava/lang/Object;Lkotlinx/coroutines/internal/LockFreeLinkedListNode$PrepareOp;)Lkotlinx/coroutines/internal/Symbol;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 55
     invoke-static {}, Lkotlinx/coroutines/DebugKt;->getASSERTIONS_ENABLED()Z
 
     move-result p0
@@ -800,16 +868,19 @@
 
     throw p0
 
+    .line 56
     :cond_3
     :goto_1
     invoke-interface {v0, p1}, Lkotlinx/coroutines/channels/ReceiveOrClosed;->completeResumeReceive(Ljava/lang/Object;)V
 
+    .line 57
     invoke-interface {v0}, Lkotlinx/coroutines/channels/ReceiveOrClosed;->getOfferResult()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 52
     :cond_4
     sget-object p0, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
@@ -835,6 +906,7 @@
         }
     .end annotation
 
+    .line 135
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/channels/AbstractSendChannel;->offerInternal(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -847,6 +919,7 @@
 
     return-object p0
 
+    .line 137
     :cond_0
     invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/channels/AbstractSendChannel;->sendSuspend(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
@@ -876,6 +949,7 @@
         }
     .end annotation
 
+    .line 104
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
@@ -886,11 +960,13 @@
 
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
+    .line 1145
     :cond_0
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getPrevNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     move-result-object p1
 
+    .line 105
     instance-of v1, p1, Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
     if-eqz v1, :cond_1
@@ -899,6 +975,7 @@
 
     return-object p1
 
+    .line 1147
     :cond_1
     invoke-virtual {p1, v0, p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->addNext(Lkotlinx/coroutines/internal/LockFreeLinkedListNode;Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)Z
 
@@ -924,6 +1001,7 @@
         }
     .end annotation
 
+    .line 1149
     invoke-static {p2}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->intercepted(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object v0
@@ -932,10 +1010,12 @@
 
     move-result-object v0
 
+    .line 1150
     move-object v1, v0
 
     check-cast v1, Lkotlinx/coroutines/CancellableContinuation;
 
+    .line 172
     :goto_0
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/AbstractSendChannel;->isFullImpl()Z
 
@@ -943,16 +1023,19 @@
 
     if-eqz v2, :cond_5
 
+    .line 173
     iget-object v2, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->onUndeliveredElement:Lkotlin/jvm/functions/Function1;
 
     if-nez v2, :cond_0
 
+    .line 174
     new-instance v2, Lkotlinx/coroutines/channels/SendElement;
 
     invoke-direct {v2, p1, v1}, Lkotlinx/coroutines/channels/SendElement;-><init>(Ljava/lang/Object;Lkotlinx/coroutines/CancellableContinuation;)V
 
     goto :goto_1
 
+    .line 175
     :cond_0
     new-instance v3, Lkotlinx/coroutines/channels/SendElementWithUndeliveredHandler;
 
@@ -962,6 +1045,7 @@
 
     check-cast v2, Lkotlinx/coroutines/channels/SendElement;
 
+    .line 176
     :goto_1
     move-object v3, v2
 
@@ -973,17 +1057,20 @@
 
     if-nez v3, :cond_1
 
+    .line 179
     check-cast v2, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     invoke-static {v1, v2}, Lkotlinx/coroutines/CancellableContinuationKt;->removeOnCancellation(Lkotlinx/coroutines/CancellableContinuation;Lkotlinx/coroutines/internal/LockFreeLinkedListNode;)V
 
     goto :goto_3
 
+    .line 182
     :cond_1
     instance-of v2, v3, Lkotlinx/coroutines/channels/Closed;
 
     if-eqz v2, :cond_2
 
+    .line 183
     check-cast v1, Lkotlin/coroutines/Continuation;
 
     check-cast v3, Lkotlinx/coroutines/channels/Closed;
@@ -992,6 +1079,7 @@
 
     goto :goto_3
 
+    .line 186
     :cond_2
     sget-object v2, Lkotlinx/coroutines/channels/AbstractChannelKt;->ENQUEUE_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
@@ -999,6 +1087,7 @@
 
     goto :goto_2
 
+    .line 187
     :cond_3
     instance-of v2, v3, Lkotlinx/coroutines/channels/Receive;
 
@@ -1006,6 +1095,7 @@
 
     goto :goto_2
 
+    .line 188
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1033,16 +1123,19 @@
 
     throw p1
 
+    .line 192
     :cond_5
     :goto_2
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/channels/AbstractSendChannel;->offerInternal(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 194
     sget-object v3, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_SUCCESS:Lkotlinx/coroutines/internal/Symbol;
 
     if-ne v2, v3, :cond_6
 
+    .line 195
     check-cast v1, Lkotlin/coroutines/Continuation;
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -1057,6 +1150,7 @@
 
     goto :goto_3
 
+    .line 198
     :cond_6
     sget-object v3, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_FAILED:Lkotlinx/coroutines/internal/Symbol;
 
@@ -1064,22 +1158,26 @@
 
     goto :goto_0
 
+    .line 199
     :cond_7
     instance-of v3, v2, Lkotlinx/coroutines/channels/Closed;
 
     if-eqz v3, :cond_9
 
+    .line 200
     check-cast v1, Lkotlin/coroutines/Continuation;
 
     check-cast v2, Lkotlinx/coroutines/channels/Closed;
 
     invoke-static {p0, v1, p1, v2}, Lkotlinx/coroutines/channels/AbstractSendChannel;->access$helpCloseAndResumeWithSendException(Lkotlinx/coroutines/channels/AbstractSendChannel;Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lkotlinx/coroutines/channels/Closed;)V
 
+    .line 1151
     :goto_3
     invoke-virtual {v0}, Lkotlinx/coroutines/CancellableContinuationImpl;->getResult()Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 1148
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     move-result-object p1
@@ -1091,6 +1189,7 @@
     :cond_8
     return-object p0
 
+    .line 203
     :cond_9
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1129,10 +1228,12 @@
         }
     .end annotation
 
+    .line 338
     iget-object p0, p0, Lkotlinx/coroutines/channels/AbstractSendChannel;->queue:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
     check-cast p0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
+    .line 1183
     :goto_0
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getNext()Ljava/lang/Object;
 
@@ -1148,6 +1249,7 @@
 
     goto :goto_2
 
+    .line 1185
     :cond_0
     instance-of v2, v0, Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
@@ -1155,15 +1257,18 @@
 
     goto :goto_2
 
+    .line 1186
     :cond_1
     move-object v1, v0
 
     check-cast v1, Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
+    .line 338
     instance-of v1, v1, Lkotlinx/coroutines/channels/Closed;
 
     if-eqz v1, :cond_2
 
+    .line 1188
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->isRemoved()Z
 
     move-result v1
@@ -1172,6 +1277,7 @@
 
     goto :goto_1
 
+    .line 1190
     :cond_2
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->removeOrNext()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
@@ -1182,16 +1288,19 @@
     :goto_1
     move-object v1, v0
 
+    .line 1182
     :goto_2
     check-cast v1, Lkotlinx/coroutines/channels/ReceiveOrClosed;
 
     return-object v1
 
+    .line 1193
     :cond_3
     invoke-virtual {v1}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->helpRemovePrev()V
 
     goto :goto_0
 
+    .line 1183
     :cond_4
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -1205,6 +1314,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 413
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

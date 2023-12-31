@@ -1,5 +1,6 @@
 .class final Lretrofit2/BuiltInConverters$VoidResponseBodyConverter;
 .super Ljava/lang/Object;
+.source "BuiltInConverters.java"
 
 # interfaces
 .implements Lretrofit2/Converter;
@@ -34,6 +35,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 50
     new-instance v0, Lretrofit2/BuiltInConverters$VoidResponseBodyConverter;
 
     invoke-direct {v0}, Lretrofit2/BuiltInConverters$VoidResponseBodyConverter;-><init>()V
@@ -46,6 +48,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,6 +64,7 @@
         }
     .end annotation
 
+    .line 49
     check-cast p1, Lokhttp3/ResponseBody;
 
     invoke-virtual {p0, p1}, Lretrofit2/BuiltInConverters$VoidResponseBodyConverter;->convert(Lokhttp3/ResponseBody;)Ljava/lang/Void;
@@ -73,6 +77,7 @@
 .method public convert(Lokhttp3/ResponseBody;)Ljava/lang/Void;
     .locals 0
 
+    .line 53
     invoke-virtual {p1}, Lokhttp3/ResponseBody;->close()V
 
     const/4 p0, 0x0

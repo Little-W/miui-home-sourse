@@ -1,5 +1,6 @@
 .class public Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
 .super Ljava/lang/Object;
+.source "GroupedRecentTaskInfo.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -25,6 +26,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 22
     new-instance v0, Lcom/android/wm/shell/util/GroupedRecentTaskInfo$1;
 
     invoke-direct {v0}, Lcom/android/wm/shell/util/GroupedRecentTaskInfo$1;-><init>()V
@@ -37,6 +39,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,6 +48,7 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,6 +67,7 @@
 .method public getSplitBounds()Lcom/android/wm/shell/util/StagedSplitBounds;
     .locals 0
 
+    .line 52
     iget-object p0, p0, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;->mSplitBounds:Lcom/android/wm/shell/util/StagedSplitBounds;
 
     return-object p0

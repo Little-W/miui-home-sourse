@@ -1,5 +1,6 @@
 .class final Lretrofit2/adapter/rxjava2/BodyObservable;
 .super Lio/reactivex/Observable;
+.source "BodyObservable.java"
 
 
 # annotations
@@ -44,8 +45,10 @@
         }
     .end annotation
 
+    .line 29
     invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
+    .line 30
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/BodyObservable;->upstream:Lio/reactivex/Observable;
 
     return-void
@@ -63,6 +66,7 @@
         }
     .end annotation
 
+    .line 34
     iget-object p0, p0, Lretrofit2/adapter/rxjava2/BodyObservable;->upstream:Lio/reactivex/Observable;
 
     new-instance v0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;

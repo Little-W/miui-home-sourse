@@ -1,5 +1,6 @@
 .class public final enum Lcom/google/android/filament/Texture$Type;
 .super Ljava/lang/Enum;
+.source "Texture.java"
 
 
 # annotations
@@ -51,6 +52,7 @@
 .method static constructor <clinit>()V
     .locals 13
 
+    .line 281
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/4 v1, 0x0
@@ -61,6 +63,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->UBYTE:Lcom/google/android/filament/Texture$Type;
 
+    .line 283
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/4 v2, 0x1
@@ -71,6 +74,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->BYTE:Lcom/google/android/filament/Texture$Type;
 
+    .line 285
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/4 v3, 0x2
@@ -81,6 +85,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->USHORT:Lcom/google/android/filament/Texture$Type;
 
+    .line 287
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/4 v4, 0x3
@@ -91,6 +96,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->SHORT:Lcom/google/android/filament/Texture$Type;
 
+    .line 289
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/4 v5, 0x4
@@ -101,6 +107,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->UINT:Lcom/google/android/filament/Texture$Type;
 
+    .line 291
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/4 v6, 0x5
@@ -111,6 +118,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->INT:Lcom/google/android/filament/Texture$Type;
 
+    .line 293
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/4 v7, 0x6
@@ -121,6 +129,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->HALF:Lcom/google/android/filament/Texture$Type;
 
+    .line 295
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/4 v8, 0x7
@@ -131,6 +140,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->FLOAT:Lcom/google/android/filament/Texture$Type;
 
+    .line 297
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/16 v9, 0x8
@@ -141,6 +151,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->COMPRESSED:Lcom/google/android/filament/Texture$Type;
 
+    .line 299
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/16 v10, 0x9
@@ -151,6 +162,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->UINT_10F_11F_11F_REV:Lcom/google/android/filament/Texture$Type;
 
+    .line 301
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const/16 v11, 0xa
@@ -165,6 +177,7 @@
 
     new-array v0, v0, [Lcom/google/android/filament/Texture$Type;
 
+    .line 279
     sget-object v12, Lcom/google/android/filament/Texture$Type;->UBYTE:Lcom/google/android/filament/Texture$Type;
 
     aput-object v12, v0, v1
@@ -222,6 +235,7 @@
         }
     .end annotation
 
+    .line 279
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -230,6 +244,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Texture$Type;
     .locals 1
 
+    .line 279
     const-class v0, Lcom/google/android/filament/Texture$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -244,6 +259,7 @@
 .method public static values()[Lcom/google/android/filament/Texture$Type;
     .locals 1
 
+    .line 279
     sget-object v0, Lcom/google/android/filament/Texture$Type;->$VALUES:[Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Texture$Type;->clone()Ljava/lang/Object;

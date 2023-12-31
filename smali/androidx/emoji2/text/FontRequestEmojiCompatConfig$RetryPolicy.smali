@@ -1,5 +1,6 @@
 .class public abstract Landroidx/emoji2/text/FontRequestEmojiCompatConfig$RetryPolicy;
 .super Ljava/lang/Object;
+.source "FontRequestEmojiCompatConfig.java"
 
 
 # annotations

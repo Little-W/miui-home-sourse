@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;
 .super Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+.source "BranchLocalSearchGridAdapter.java"
 
 
 # annotations
@@ -31,12 +32,16 @@
 .method public constructor <init>(Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;Landroid/view/View;)V
     .locals 0
 
+    .line 77
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
+    .line 78
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
+    .line 79
     iput-object p2, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->itemView:Landroid/view/View;
 
+    .line 80
     sget p1, Lcom/mi/globallauncher/R$id;->item_container:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -47,6 +52,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->container:Landroid/widget/RelativeLayout;
 
+    .line 81
     sget p1, Lcom/mi/globallauncher/R$id;->item_icon:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -57,6 +63,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->imageView:Lcom/mi/globallauncher/view/CircleImageView;
 
+    .line 82
     sget p1, Lcom/mi/globallauncher/R$id;->item_name:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -67,6 +74,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->textView:Landroid/widget/TextView;
 
+    .line 83
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -83,8 +91,10 @@
 
     const/4 p2, 0x5
 
+    .line 100
     invoke-static {p2}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchResultClick(I)V
 
+    .line 101
     iget-object p2, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
     invoke-static {p2}, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;->access$100(Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;)Z
@@ -95,8 +105,10 @@
 
     const/4 p2, 0x3
 
+    .line 102
     invoke-static {p2}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackLocalAppsClick(I)V
 
+    .line 104
     :cond_0
     iget-object p0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->context:Landroid/content/Context;
 
@@ -108,6 +120,7 @@
 .method public updateView(Lio/branch/search/BranchLocalLinkResult;)V
     .locals 3
 
+    .line 87
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;->access$000(Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;)Ljava/util/List;
@@ -130,6 +143,7 @@
 
     goto :goto_1
 
+    .line 90
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->context:Landroid/content/Context;
 
@@ -139,6 +153,7 @@
 
     if-nez v0, :cond_2
 
+    .line 91
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->imageView:Lcom/mi/globallauncher/view/CircleImageView;
 
     iget-object v1, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
@@ -149,10 +164,12 @@
 
     invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/CircleImageView;->isInstalled(Z)V
 
+    .line 92
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->imageView:Lcom/mi/globallauncher/view/CircleImageView;
 
     invoke-virtual {p1, v0}, Lio/branch/search/BranchLocalLinkResult;->loadImageDrawable(Landroid/widget/ImageView;)V
 
+    .line 93
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Lio/branch/search/BranchLocalLinkResult;->getName()Ljava/lang/String;
@@ -161,6 +178,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 94
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->this$0:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;->access$200(Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;)Z
@@ -169,6 +187,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 95
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -185,6 +204,7 @@
 
     goto :goto_0
 
+    .line 97
     :cond_1
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->textView:Landroid/widget/TextView;
 
@@ -200,6 +220,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 99
     :goto_0
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter$BranchGridViewHolder;->container:Landroid/widget/RelativeLayout;
 

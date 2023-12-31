@@ -1,5 +1,6 @@
 .class Landroidx/core/provider/FontProvider;
 .super Ljava/lang/Object;
+.source "FontProvider.java"
 
 
 # static fields
@@ -17,6 +18,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 196
     new-instance v0, Landroidx/core/provider/FontProvider$1;
 
     invoke-direct {v0}, Landroidx/core/provider/FontProvider$1;-><init>()V
@@ -38,17 +40,20 @@
         }
     .end annotation
 
+    .line 225
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 226
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 227
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Landroid/content/pm/Signature;->toByteArray()[B
@@ -77,6 +82,7 @@
         }
     .end annotation
 
+    .line 213
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -94,6 +100,7 @@
     :cond_0
     move v0, v2
 
+    .line 216
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -101,6 +108,7 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 217
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -146,23 +154,27 @@
         }
     .end annotation
 
+    .line 189
     invoke-virtual {p0}, Landroidx/core/provider/FontRequest;->getCertificates()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 190
     invoke-virtual {p0}, Landroidx/core/provider/FontRequest;->getCertificates()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
+    .line 192
     :cond_0
     invoke-virtual {p0}, Landroidx/core/provider/FontRequest;->getCertificatesArrayResId()I
 
     move-result p0
 
+    .line 193
     invoke-static {p1, p0}, Landroidx/core/content/res/FontResourcesParserCompat;->readCerts(Landroid/content/res/Resources;I)Ljava/util/List;
 
     move-result-object p0
@@ -178,6 +190,7 @@
         }
     .end annotation
 
+    .line 54
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -186,6 +199,7 @@
 
     move-result-object v1
 
+    .line 53
     invoke-static {v0, p1, v1}, Landroidx/core/provider/FontProvider;->getProvider(Landroid/content/pm/PackageManager;Landroidx/core/provider/FontRequest;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
@@ -196,12 +210,14 @@
 
     const/4 p1, 0x0
 
+    .line 56
     invoke-static {p0, p1}, Landroidx/core/provider/FontsContractCompat$FontFamilyResult;->create(I[Landroidx/core/provider/FontsContractCompat$FontInfo;)Landroidx/core/provider/FontsContractCompat$FontFamilyResult;
 
     move-result-object p0
 
     return-object p0
 
+    .line 59
     :cond_0
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
@@ -211,6 +227,7 @@
 
     const/4 p1, 0x0
 
+    .line 61
     invoke-static {p1, p0}, Landroidx/core/provider/FontsContractCompat$FontFamilyResult;->create(I[Landroidx/core/provider/FontsContractCompat$FontInfo;)Landroidx/core/provider/FontsContractCompat$FontFamilyResult;
 
     move-result-object p0
@@ -226,18 +243,21 @@
         }
     .end annotation
 
+    .line 76
     invoke-virtual {p1}, Landroidx/core/provider/FontRequest;->getProviderAuthority()Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 77
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
+    .line 83
     iget-object v3, v2, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroidx/core/provider/FontRequest;->getProviderPackage()Ljava/lang/String;
@@ -250,6 +270,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 92
     iget-object v0, v2, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
     const/16 v3, 0x40
@@ -258,20 +279,24 @@
 
     move-result-object p0
 
+    .line 94
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     invoke-static {p0}, Landroidx/core/provider/FontProvider;->convertToByteArrayList([Landroid/content/pm/Signature;)Ljava/util/List;
 
     move-result-object p0
 
+    .line 95
     sget-object v0, Landroidx/core/provider/FontProvider;->sByteArrayComparator:Ljava/util/Comparator;
 
     invoke-static {p0, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 96
     invoke-static {p1, p2}, Landroidx/core/provider/FontProvider;->getCertificates(Landroidx/core/provider/FontRequest;Landroid/content/res/Resources;)Ljava/util/List;
 
     move-result-object p1
 
+    .line 97
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -279,6 +304,7 @@
 
     if-ge v1, p2, :cond_1
 
+    .line 99
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -289,10 +315,12 @@
 
     invoke-direct {p2, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 100
     sget-object v0, Landroidx/core/provider/FontProvider;->sByteArrayComparator:Ljava/util/Comparator;
 
     invoke-static {p2, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 101
     invoke-static {p0, p2}, Landroidx/core/provider/FontProvider;->equalsByteArrayList(Ljava/util/List;Ljava/util/List;)Z
 
     move-result p2
@@ -311,6 +339,7 @@
 
     return-object p0
 
+    .line 84
     :cond_2
     new-instance p0, Landroid/content/pm/PackageManager$NameNotFoundException;
 
@@ -328,6 +357,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 86
     invoke-virtual {p1}, Landroidx/core/provider/FontRequest;->getProviderPackage()Ljava/lang/String;
 
     move-result-object p1
@@ -342,6 +372,7 @@
 
     throw p0
 
+    .line 79
     :cond_3
     new-instance p0, Landroid/content/pm/PackageManager$NameNotFoundException;
 
@@ -369,10 +400,12 @@
 
     move-object/from16 v0, p2
 
+    .line 120
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 121
     new-instance v2, Landroid/net/Uri$Builder;
 
     invoke-direct {v2}, Landroid/net/Uri$Builder;-><init>()V
@@ -383,14 +416,17 @@
 
     move-result-object v2
 
+    .line 122
     invoke-virtual {v2, v0}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v2
 
+    .line 123
     invoke-virtual {v2}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v2
 
+    .line 124
     new-instance v4, Landroid/net/Uri$Builder;
 
     invoke-direct {v4}, Landroid/net/Uri$Builder;-><init>()V
@@ -399,16 +435,19 @@
 
     move-result-object v3
 
+    .line 125
     invoke-virtual {v3, v0}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
     const-string v3, "file"
 
+    .line 126
     invoke-virtual {v0, v3}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
+    .line 127
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v0
@@ -430,10 +469,12 @@
 
     const-string v10, "result_code"
 
+    .line 130
     filled-new-array/range {v4 .. v10}, [Ljava/lang/String;
 
     move-result-object v6
 
+    .line 137
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x10
@@ -444,6 +485,7 @@
 
     if-le v4, v5, :cond_0
 
+    .line 138
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -452,6 +494,7 @@
 
     new-array v8, v11, [Ljava/lang/String;
 
+    .line 139
     invoke-virtual/range {p1 .. p1}, Landroidx/core/provider/FontRequest;->getQuery()Ljava/lang/String;
 
     move-result-object v5
@@ -464,12 +507,14 @@
 
     move-object/from16 v10, p3
 
+    .line 138
     invoke-virtual/range {v4 .. v10}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object v3
 
     goto :goto_0
 
+    .line 142
     :cond_0
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -479,6 +524,7 @@
 
     new-array v8, v11, [Ljava/lang/String;
 
+    .line 143
     invoke-virtual/range {p1 .. p1}, Landroidx/core/provider/FontRequest;->getQuery()Ljava/lang/String;
 
     move-result-object v5
@@ -489,6 +535,7 @@
 
     move-object v5, v2
 
+    .line 142
     invoke-virtual/range {v4 .. v9}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v3
@@ -496,6 +543,7 @@
     :goto_0
     if-eqz v3, :cond_7
 
+    .line 146
     invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
 
     move-result v4
@@ -504,44 +552,52 @@
 
     const-string v1, "result_code"
 
+    .line 147
     invoke-interface {v3, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
+    .line 149
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     const-string v5, "_id"
 
+    .line 150
     invoke-interface {v3, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v5
 
     const-string v6, "file_id"
 
+    .line 151
     invoke-interface {v3, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v6
 
     const-string v7, "font_ttc_index"
 
+    .line 153
     invoke-interface {v3, v7}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v7
 
     const-string v8, "font_weight"
 
+    .line 155
     invoke-interface {v3, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v8
 
     const-string v9, "font_italic"
 
+    .line 157
     invoke-interface {v3, v9}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v9
 
+    .line 159
     :goto_1
     invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -553,6 +609,7 @@
 
     if-eq v1, v10, :cond_1
 
+    .line 161
     invoke-interface {v3, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v13
@@ -565,6 +622,7 @@
     :goto_2
     if-eq v7, v10, :cond_2
 
+    .line 164
     invoke-interface {v3, v7}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v14
@@ -579,10 +637,12 @@
 
     move/from16 p0, v13
 
+    .line 167
     invoke-interface {v3, v5}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v12
 
+    .line 168
     invoke-static {v2, v12, v13}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v12
@@ -592,10 +652,12 @@
     :cond_3
     move/from16 p0, v13
 
+    .line 170
     invoke-interface {v3, v6}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v12
 
+    .line 171
     invoke-static {v0, v12, v13}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v12
@@ -603,6 +665,7 @@
     :goto_4
     if-eq v8, v10, :cond_4
 
+    .line 174
     invoke-interface {v3, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v13
@@ -615,6 +678,7 @@
     :goto_5
     if-eq v9, v10, :cond_5
 
+    .line 175
     invoke-interface {v3, v9}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v10
@@ -632,6 +696,7 @@
 
     move/from16 v10, p0
 
+    .line 177
     :goto_6
     invoke-static {v12, v14, v13, v15, v10}, Landroidx/core/provider/FontsContractCompat$FontInfo;->create(Landroid/net/Uri;IIZI)Landroidx/core/provider/FontsContractCompat$FontInfo;
 
@@ -651,6 +716,7 @@
     :cond_7
     if-eqz v3, :cond_8
 
+    .line 182
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
     :cond_8
@@ -658,6 +724,7 @@
 
     new-array v0, v0, [Landroidx/core/provider/FontsContractCompat$FontInfo;
 
+    .line 185
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -671,8 +738,10 @@
 
     if-eqz v3, :cond_9
 
+    .line 182
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
+    .line 184
     :cond_9
     throw v0
 .end method

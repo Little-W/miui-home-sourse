@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/filament/Platform$1;
 .super Ljava/lang/Object;
+.source "Platform.java"
 
 
 # annotations

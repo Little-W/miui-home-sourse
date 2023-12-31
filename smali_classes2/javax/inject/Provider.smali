@@ -1,5 +1,6 @@
 .class public interface abstract Ljavax/inject/Provider;
 .super Ljava/lang/Object;
+.source "Provider.java"
 
 
 # annotations

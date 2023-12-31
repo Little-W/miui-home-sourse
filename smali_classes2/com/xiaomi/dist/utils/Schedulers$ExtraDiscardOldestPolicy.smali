@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/dist/utils/Schedulers$ExtraDiscardOldestPolicy;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 # interfaces
 .implements Ljava/util/concurrent/RejectedExecutionHandler;
@@ -20,6 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +30,7 @@
 .method synthetic constructor <init>(Lcom/xiaomi/dist/utils/Schedulers$1;)V
     .locals 0
 
+    .line 134
     invoke-direct {p0}, Lcom/xiaomi/dist/utils/Schedulers$ExtraDiscardOldestPolicy;-><init>()V
 
     return-void
@@ -40,12 +43,14 @@
 
     const-string p0, "Schedulers"
 
+    .line 138
     invoke-virtual {p2}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 140
     :try_start_0
     invoke-virtual {p2}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
 
@@ -57,10 +62,12 @@
 
     check-cast v0, Ljava/lang/Runnable;
 
+    .line 141
     instance-of v1, v0, Ljava/util/concurrent/RejectedExecutionHandler;
 
     if-eqz v1, :cond_0
 
+    .line 142
     check-cast v0, Ljava/util/concurrent/RejectedExecutionHandler;
 
     invoke-interface {v0, p1, p2}, Ljava/util/concurrent/RejectedExecutionHandler;->rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
@@ -82,6 +89,7 @@
 
     aput-object p2, v1, v2
 
+    .line 144
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -104,10 +112,12 @@
     :try_start_1
     const-string v1, "rejectedExecution oldest task fail"
 
+    .line 147
     invoke-static {p0, v1, v0}, Lcom/xiaomi/dist/utils/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 149
     :goto_0
     invoke-virtual {p2, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -116,6 +126,7 @@
     :goto_1
     invoke-virtual {p2, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
+    .line 150
     throw p0
 
     :cond_1

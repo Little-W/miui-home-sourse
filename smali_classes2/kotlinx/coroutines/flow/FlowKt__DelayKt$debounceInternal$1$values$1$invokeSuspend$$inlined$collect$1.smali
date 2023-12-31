@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/flow/FlowKt__DelayKt$debounceInternal$1$values$1$invokeSuspend$$inlined$collect$1;
 .super Ljava/lang/Object;
+.source "Collect.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -38,6 +39,7 @@
 
     iput-object p1, p0, Lkotlinx/coroutines/flow/FlowKt__DelayKt$debounceInternal$1$values$1$invokeSuspend$$inlined$collect$1;->$this_produce$inlined:Lkotlinx/coroutines/channels/ProducerScope;
 
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +50,7 @@
 .method public emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 0
 
+    .line 133
     iget-object p0, p0, Lkotlinx/coroutines/flow/FlowKt__DelayKt$debounceInternal$1$values$1$invokeSuspend$$inlined$collect$1;->$this_produce$inlined:Lkotlinx/coroutines/channels/ProducerScope;
 
     if-eqz p1, :cond_0

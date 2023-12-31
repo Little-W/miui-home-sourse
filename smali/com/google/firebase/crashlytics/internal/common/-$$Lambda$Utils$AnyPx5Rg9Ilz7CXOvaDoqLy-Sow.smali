@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/google/firebase/crashlytics/internal/common/-$$Lambda$Utils$AnyPx5Rg9Ilz7CXOvaDoqLy-Sow;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/Continuation;

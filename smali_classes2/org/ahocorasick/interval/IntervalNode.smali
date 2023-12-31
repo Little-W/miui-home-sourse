@@ -1,5 +1,6 @@
 .class public Lorg/ahocorasick/interval/IntervalNode;
 .super Ljava/lang/Object;
+.source "IntervalNode.java"
 
 
 # annotations
@@ -40,34 +41,42 @@
         }
     .end annotation
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 11
     iput-object v0, p0, Lorg/ahocorasick/interval/IntervalNode;->left:Lorg/ahocorasick/interval/IntervalNode;
 
+    .line 12
     iput-object v0, p0, Lorg/ahocorasick/interval/IntervalNode;->right:Lorg/ahocorasick/interval/IntervalNode;
 
+    .line 14
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/ahocorasick/interval/IntervalNode;->intervals:Ljava/util/List;
 
+    .line 17
     invoke-virtual {p0, p1}, Lorg/ahocorasick/interval/IntervalNode;->determineMedian(Ljava/util/List;)I
 
     move-result v0
 
     iput v0, p0, Lorg/ahocorasick/interval/IntervalNode;->point:I
 
+    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 20
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 22
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -85,6 +94,7 @@
 
     check-cast v2, Lorg/ahocorasick/interval/Intervalable;
 
+    .line 23
     invoke-interface {v2}, Lorg/ahocorasick/interval/Intervalable;->getEnd()I
 
     move-result v3
@@ -93,10 +103,12 @@
 
     if-ge v3, v4, :cond_0
 
+    .line 24
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 25
     :cond_0
     invoke-interface {v2}, Lorg/ahocorasick/interval/Intervalable;->getStart()I
 
@@ -106,10 +118,12 @@
 
     if-le v3, v4, :cond_1
 
+    .line 26
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 28
     :cond_1
     iget-object v3, p0, Lorg/ahocorasick/interval/IntervalNode;->intervals:Ljava/util/List;
 
@@ -117,6 +131,7 @@
 
     goto :goto_0
 
+    .line 32
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -124,12 +139,14 @@
 
     if-lez p1, :cond_3
 
+    .line 33
     new-instance p1, Lorg/ahocorasick/interval/IntervalNode;
 
     invoke-direct {p1, v0}, Lorg/ahocorasick/interval/IntervalNode;-><init>(Ljava/util/List;)V
 
     iput-object p1, p0, Lorg/ahocorasick/interval/IntervalNode;->left:Lorg/ahocorasick/interval/IntervalNode;
 
+    .line 35
     :cond_3
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -137,6 +154,7 @@
 
     if-lez p1, :cond_4
 
+    .line 36
     new-instance p1, Lorg/ahocorasick/interval/IntervalNode;
 
     invoke-direct {p1, v1}, Lorg/ahocorasick/interval/IntervalNode;-><init>(Ljava/util/List;)V
@@ -164,6 +182,7 @@
         }
     .end annotation
 
+    .line 76
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -182,12 +201,14 @@
 
     check-cast p3, Lorg/ahocorasick/interval/Intervalable;
 
+    .line 77
     invoke-virtual {p3, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 78
     invoke-interface {p2, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -210,10 +231,12 @@
         }
     .end annotation
 
+    .line 93
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 94
     iget-object p0, p0, Lorg/ahocorasick/interval/IntervalNode;->intervals:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -234,6 +257,7 @@
 
     check-cast v1, Lorg/ahocorasick/interval/Intervalable;
 
+    .line 95
     sget-object v2, Lorg/ahocorasick/interval/IntervalNode$1;->$SwitchMap$org$ahocorasick$interval$IntervalNode$Direction:[I
 
     invoke-virtual {p2}, Lorg/ahocorasick/interval/IntervalNode$Direction;->ordinal()I
@@ -252,6 +276,7 @@
 
     goto :goto_0
 
+    .line 102
     :cond_1
     invoke-interface {v1}, Lorg/ahocorasick/interval/Intervalable;->getEnd()I
 
@@ -263,10 +288,12 @@
 
     if-lt v2, v3, :cond_0
 
+    .line 103
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 97
     :cond_2
     invoke-interface {v1}, Lorg/ahocorasick/interval/Intervalable;->getStart()I
 
@@ -278,6 +305,7 @@
 
     if-gt v2, v3, :cond_0
 
+    .line 98
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -299,6 +327,7 @@
         }
     .end annotation
 
+    .line 84
     sget-object v0, Lorg/ahocorasick/interval/IntervalNode$Direction;->LEFT:Lorg/ahocorasick/interval/IntervalNode$Direction;
 
     invoke-virtual {p0, p1, v0}, Lorg/ahocorasick/interval/IntervalNode;->checkForOverlaps(Lorg/ahocorasick/interval/Intervalable;Lorg/ahocorasick/interval/IntervalNode$Direction;)Ljava/util/List;
@@ -321,6 +350,7 @@
         }
     .end annotation
 
+    .line 88
     sget-object v0, Lorg/ahocorasick/interval/IntervalNode$Direction;->RIGHT:Lorg/ahocorasick/interval/IntervalNode$Direction;
 
     invoke-virtual {p0, p1, v0}, Lorg/ahocorasick/interval/IntervalNode;->checkForOverlaps(Lorg/ahocorasick/interval/Intervalable;Lorg/ahocorasick/interval/IntervalNode$Direction;)Ljava/util/List;
@@ -341,6 +371,7 @@
         }
     .end annotation
 
+    .line 43
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -365,10 +396,12 @@
 
     check-cast v2, Lorg/ahocorasick/interval/Intervalable;
 
+    .line 44
     invoke-interface {v2}, Lorg/ahocorasick/interval/Intervalable;->getStart()I
 
     move-result v3
 
+    .line 45
     invoke-interface {v2}, Lorg/ahocorasick/interval/Intervalable;->getEnd()I
 
     move-result v2
@@ -393,6 +426,7 @@
     :cond_4
     add-int/2addr v0, v1
 
+    .line 53
     div-int/lit8 v0, v0, 0x2
 
     return v0
@@ -414,12 +448,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 114
     invoke-virtual {p1, p2}, Lorg/ahocorasick/interval/IntervalNode;->findOverlaps(Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
+    .line 116
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -441,10 +477,12 @@
         }
     .end annotation
 
+    .line 58
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 60
     iget v1, p0, Lorg/ahocorasick/interval/IntervalNode;->point:I
 
     invoke-interface {p1}, Lorg/ahocorasick/interval/Intervalable;->getStart()I
@@ -453,6 +491,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 61
     iget-object v1, p0, Lorg/ahocorasick/interval/IntervalNode;->right:Lorg/ahocorasick/interval/IntervalNode;
 
     invoke-virtual {p0, v1, p1}, Lorg/ahocorasick/interval/IntervalNode;->findOverlappingRanges(Lorg/ahocorasick/interval/IntervalNode;Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;
@@ -461,6 +500,7 @@
 
     invoke-virtual {p0, p1, v0, v1}, Lorg/ahocorasick/interval/IntervalNode;->addToOverlaps(Lorg/ahocorasick/interval/Intervalable;Ljava/util/List;Ljava/util/List;)V
 
+    .line 62
     invoke-virtual {p0, p1}, Lorg/ahocorasick/interval/IntervalNode;->checkForOverlapsToTheRight(Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;
 
     move-result-object v1
@@ -469,6 +509,7 @@
 
     goto :goto_0
 
+    .line 63
     :cond_0
     iget v1, p0, Lorg/ahocorasick/interval/IntervalNode;->point:I
 
@@ -478,6 +519,7 @@
 
     if-le v1, v2, :cond_1
 
+    .line 64
     iget-object v1, p0, Lorg/ahocorasick/interval/IntervalNode;->left:Lorg/ahocorasick/interval/IntervalNode;
 
     invoke-virtual {p0, v1, p1}, Lorg/ahocorasick/interval/IntervalNode;->findOverlappingRanges(Lorg/ahocorasick/interval/IntervalNode;Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;
@@ -486,6 +528,7 @@
 
     invoke-virtual {p0, p1, v0, v1}, Lorg/ahocorasick/interval/IntervalNode;->addToOverlaps(Lorg/ahocorasick/interval/Intervalable;Ljava/util/List;Ljava/util/List;)V
 
+    .line 65
     invoke-virtual {p0, p1}, Lorg/ahocorasick/interval/IntervalNode;->checkForOverlapsToTheLeft(Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;
 
     move-result-object v1
@@ -494,11 +537,13 @@
 
     goto :goto_0
 
+    .line 67
     :cond_1
     iget-object v1, p0, Lorg/ahocorasick/interval/IntervalNode;->intervals:Ljava/util/List;
 
     invoke-virtual {p0, p1, v0, v1}, Lorg/ahocorasick/interval/IntervalNode;->addToOverlaps(Lorg/ahocorasick/interval/Intervalable;Ljava/util/List;Ljava/util/List;)V
 
+    .line 68
     iget-object v1, p0, Lorg/ahocorasick/interval/IntervalNode;->left:Lorg/ahocorasick/interval/IntervalNode;
 
     invoke-virtual {p0, v1, p1}, Lorg/ahocorasick/interval/IntervalNode;->findOverlappingRanges(Lorg/ahocorasick/interval/IntervalNode;Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;
@@ -507,6 +552,7 @@
 
     invoke-virtual {p0, p1, v0, v1}, Lorg/ahocorasick/interval/IntervalNode;->addToOverlaps(Lorg/ahocorasick/interval/Intervalable;Ljava/util/List;Ljava/util/List;)V
 
+    .line 69
     iget-object v1, p0, Lorg/ahocorasick/interval/IntervalNode;->right:Lorg/ahocorasick/interval/IntervalNode;
 
     invoke-virtual {p0, v1, p1}, Lorg/ahocorasick/interval/IntervalNode;->findOverlappingRanges(Lorg/ahocorasick/interval/IntervalNode;Lorg/ahocorasick/interval/Intervalable;)Ljava/util/List;

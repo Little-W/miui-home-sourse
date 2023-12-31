@@ -1,5 +1,6 @@
 .class interface abstract Landroidx/transition/AnimatorUtils$AnimatorPauseListenerCompat;
 .super Ljava/lang/Object;
+.source "AnimatorUtils.java"
 
 
 # annotations

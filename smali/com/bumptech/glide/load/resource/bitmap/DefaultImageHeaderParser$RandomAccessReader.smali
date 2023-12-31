@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;
 .super Ljava/lang/Object;
+.source "DefaultImageHeaderParser.java"
 
 
 # annotations
@@ -21,18 +22,22 @@
 .method constructor <init>([BI)V
     .locals 1
 
+    .line 353
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 354
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
+    .line 355
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
+    .line 356
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
     move-result-object p1
@@ -47,6 +52,7 @@
 .method private isAvailable(II)Z
     .locals 0
 
+    .line 376
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->data:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
@@ -75,6 +81,7 @@
 
     const/4 v0, 0x2
 
+    .line 372
     invoke-direct {p0, p1, v0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->isAvailable(II)Z
 
     move-result v0
@@ -101,6 +108,7 @@
 
     const/4 v0, 0x4
 
+    .line 368
     invoke-direct {p0, p1, v0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->isAvailable(II)Z
 
     move-result v0
@@ -125,6 +133,7 @@
 .method length()I
     .locals 0
 
+    .line 364
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->data:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
@@ -137,6 +146,7 @@
 .method order(Ljava/nio/ByteOrder;)V
     .locals 0
 
+    .line 360
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$RandomAccessReader;->data:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;

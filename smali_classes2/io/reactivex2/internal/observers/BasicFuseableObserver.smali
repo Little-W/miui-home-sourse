@@ -1,5 +1,6 @@
 .class public abstract Lio/reactivex2/internal/observers/BasicFuseableObserver;
 .super Ljava/lang/Object;
+.source "BasicFuseableObserver.java"
 
 # interfaces
 .implements Lio/reactivex2/Observer;
@@ -60,8 +61,10 @@
         }
     .end annotation
 
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 50
     iput-object p1, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->downstream:Lio/reactivex2/Observer;
 
     return-void
@@ -86,6 +89,7 @@
 .method public clear()V
     .locals 0
 
+    .line 167
     iget-object p0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->qd:Lio/reactivex2/internal/fuseable/QueueDisposable;
 
     invoke-interface {p0}, Lio/reactivex2/internal/fuseable/QueueDisposable;->clear()V
@@ -96,6 +100,7 @@
 .method public dispose()V
     .locals 0
 
+    .line 152
     iget-object p0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->upstream:Lio/reactivex2/disposables/Disposable;
 
     invoke-interface {p0}, Lio/reactivex2/disposables/Disposable;->dispose()V
@@ -106,12 +111,15 @@
 .method protected final fail(Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 108
     invoke-static {p1}, Lio/reactivex2/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
+    .line 109
     iget-object v0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->upstream:Lio/reactivex2/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex2/disposables/Disposable;->dispose()V
 
+    .line 110
     invoke-virtual {p0, p1}, Lio/reactivex2/internal/observers/BasicFuseableObserver;->onError(Ljava/lang/Throwable;)V
 
     return-void
@@ -120,6 +128,7 @@
 .method public isDisposed()Z
     .locals 0
 
+    .line 157
     iget-object p0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->upstream:Lio/reactivex2/disposables/Disposable;
 
     invoke-interface {p0}, Lio/reactivex2/disposables/Disposable;->isDisposed()Z
@@ -132,6 +141,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 162
     iget-object p0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->qd:Lio/reactivex2/internal/fuseable/QueueDisposable;
 
     invoke-interface {p0}, Lio/reactivex2/internal/fuseable/QueueDisposable;->isEmpty()Z
@@ -149,6 +159,7 @@
         }
     .end annotation
 
+    .line 176
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Should not be called!"
@@ -161,6 +172,7 @@
 .method public onComplete()V
     .locals 1
 
+    .line 115
     iget-boolean v0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->done:Z
 
     if-eqz v0, :cond_0
@@ -170,8 +182,10 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 118
     iput-boolean v0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->done:Z
 
+    .line 119
     iget-object p0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->downstream:Lio/reactivex2/Observer;
 
     invoke-interface {p0}, Lio/reactivex2/Observer;->onComplete()V
@@ -182,10 +196,12 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 95
     iget-boolean v0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->done:Z
 
     if-eqz v0, :cond_0
 
+    .line 96
     invoke-static {p1}, Lio/reactivex2/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
     return-void
@@ -193,8 +209,10 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 99
     iput-boolean v0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->done:Z
 
+    .line 100
     iget-object p0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->downstream:Lio/reactivex2/Observer;
 
     invoke-interface {p0, p1}, Lio/reactivex2/Observer;->onError(Ljava/lang/Throwable;)V
@@ -205,6 +223,7 @@
 .method public final onSubscribe(Lio/reactivex2/disposables/Disposable;)V
     .locals 1
 
+    .line 57
     iget-object v0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->upstream:Lio/reactivex2/disposables/Disposable;
 
     invoke-static {v0, p1}, Lio/reactivex2/internal/disposables/DisposableHelper;->validate(Lio/reactivex2/disposables/Disposable;Lio/reactivex2/disposables/Disposable;)Z
@@ -213,16 +232,20 @@
 
     if-eqz v0, :cond_1
 
+    .line 59
     iput-object p1, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->upstream:Lio/reactivex2/disposables/Disposable;
 
+    .line 60
     instance-of v0, p1, Lio/reactivex2/internal/fuseable/QueueDisposable;
 
     if-eqz v0, :cond_0
 
+    .line 61
     check-cast p1, Lio/reactivex2/internal/fuseable/QueueDisposable;
 
     iput-object p1, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->qd:Lio/reactivex2/internal/fuseable/QueueDisposable;
 
+    .line 64
     :cond_0
     invoke-virtual {p0}, Lio/reactivex2/internal/observers/BasicFuseableObserver;->beforeDownstream()Z
 
@@ -230,10 +253,12 @@
 
     if-eqz p1, :cond_1
 
+    .line 66
     iget-object p1, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->downstream:Lio/reactivex2/Observer;
 
     invoke-interface {p1, p0}, Lio/reactivex2/Observer;->onSubscribe(Lio/reactivex2/disposables/Disposable;)V
 
+    .line 68
     invoke-virtual {p0}, Lio/reactivex2/internal/observers/BasicFuseableObserver;->afterDownstream()V
 
     :cond_1
@@ -243,6 +268,7 @@
 .method protected final transitiveBoundaryFusion(I)I
     .locals 2
 
+    .line 133
     iget-object v0, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->qd:Lio/reactivex2/internal/fuseable/QueueDisposable;
 
     if-eqz v0, :cond_1
@@ -251,12 +277,14 @@
 
     if-nez v1, :cond_1
 
+    .line 136
     invoke-interface {v0, p1}, Lio/reactivex2/internal/fuseable/QueueDisposable;->requestFusion(I)I
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 138
     iput p1, p0, Lio/reactivex2/internal/observers/BasicFuseableObserver;->sourceMode:I
 
     :cond_0

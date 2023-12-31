@@ -1,5 +1,6 @@
 .class interface abstract Lcom/airbnb/lottie/parser/ValueParser;
 .super Ljava/lang/Object;
+.source "ValueParser.java"
 
 
 # annotations

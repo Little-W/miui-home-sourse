@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/datepicker/MaterialCalendar$2;
 .super Lcom/google/android/material/datepicker/SmoothCalendarLayoutManager;
+.source "MaterialCalendar.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Landroid/content/Context;IZI)V
     .locals 0
 
+    .line 171
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$2;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     iput p5, p0, Lcom/google/android/material/datepicker/MaterialCalendar$2;->val$orientation:I
@@ -37,6 +39,7 @@
 .method protected calculateExtraLayoutSpace(Landroidx/recyclerview/widget/RecyclerView$State;[I)V
     .locals 2
 
+    .line 174
     iget p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$2;->val$orientation:I
 
     const/4 v0, 0x1
@@ -45,6 +48,7 @@
 
     if-nez p1, :cond_0
 
+    .line 175
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$2;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-static {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroidx/recyclerview/widget/RecyclerView;
@@ -57,6 +61,7 @@
 
     aput p1, p2, v1
 
+    .line 176
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$2;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-static {p0}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroidx/recyclerview/widget/RecyclerView;
@@ -71,6 +76,7 @@
 
     goto :goto_0
 
+    .line 178
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$2;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
@@ -84,6 +90,7 @@
 
     aput p1, p2, v1
 
+    .line 179
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar$2;->this$0:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-static {p0}, Lcom/google/android/material/datepicker/MaterialCalendar;->access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroidx/recyclerview/widget/RecyclerView;

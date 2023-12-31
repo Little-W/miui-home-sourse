@@ -1,5 +1,6 @@
 .class final Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;
 .super Ljava/lang/Object;
+.source "DaggerTransportRuntimeComponent.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;
@@ -24,6 +25,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +34,7 @@
 .method synthetic constructor <init>(Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$1;)V
     .locals 0
 
+    .line 103
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;-><init>()V
 
     return-void
@@ -42,12 +45,14 @@
 .method public build()Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
     .locals 2
 
+    .line 114
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;->setApplicationContext:Landroid/content/Context;
 
     const-class v1, Landroid/content/Context;
 
     invoke-static {v0, v1}, Lcom/google/android/datatransport/runtime/dagger/internal/Preconditions;->checkBuilderRequirement(Ljava/lang/Object;Ljava/lang/Class;)V
 
+    .line 115
     new-instance v0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;->setApplicationContext:Landroid/content/Context;
@@ -62,6 +67,7 @@
 .method public setApplicationContext(Landroid/content/Context;)Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;
     .locals 0
 
+    .line 108
     invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -76,6 +82,7 @@
 .method public bridge synthetic setApplicationContext(Landroid/content/Context;)Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;
     .locals 0
 
+    .line 103
     invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;->setApplicationContext(Landroid/content/Context;)Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;
 
     move-result-object p0

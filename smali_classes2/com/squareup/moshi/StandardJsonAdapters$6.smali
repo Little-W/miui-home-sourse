@@ -1,5 +1,6 @@
 .class final Lcom/squareup/moshi/StandardJsonAdapters$6;
 .super Lcom/squareup/moshi/JsonAdapter;
+.source "StandardJsonAdapters.java"
 
 
 # annotations
@@ -25,6 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 135
     invoke-direct {p0}, Lcom/squareup/moshi/JsonAdapter;-><init>()V
 
     return-void
@@ -40,12 +42,14 @@
         }
     .end annotation
 
+    .line 137
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->nextDouble()D
 
     move-result-wide v0
 
     double-to-float p0, v0
 
+    .line 139
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->isLenient()Z
 
     move-result v0
@@ -60,6 +64,7 @@
 
     goto :goto_0
 
+    .line 140
     :cond_0
     new-instance v0, Lcom/squareup/moshi/JsonDataException;
 
@@ -77,6 +82,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 141
     invoke-virtual {p1}, Lcom/squareup/moshi/JsonReader;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -91,6 +97,7 @@
 
     throw v0
 
+    .line 143
     :cond_1
     :goto_0
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -108,6 +115,7 @@
         }
     .end annotation
 
+    .line 135
     invoke-virtual {p0, p1}, Lcom/squareup/moshi/StandardJsonAdapters$6;->fromJson(Lcom/squareup/moshi/JsonReader;)Ljava/lang/Float;
 
     move-result-object p0

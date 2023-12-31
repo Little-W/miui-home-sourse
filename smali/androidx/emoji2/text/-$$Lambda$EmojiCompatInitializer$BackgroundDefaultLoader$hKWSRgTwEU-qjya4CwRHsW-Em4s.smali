@@ -1,5 +1,6 @@
 .class public final synthetic Landroidx/emoji2/text/-$$Lambda$EmojiCompatInitializer$BackgroundDefaultLoader$hKWSRgTwEU-qjya4CwRHsW-Em4s;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

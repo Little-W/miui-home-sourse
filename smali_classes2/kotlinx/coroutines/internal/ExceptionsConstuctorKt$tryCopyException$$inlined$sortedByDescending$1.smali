@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/internal/ExceptionsConstuctorKt$tryCopyException$$inlined$sortedByDescending$1;
 .super Ljava/lang/Object;
+.source "Comparisons.kt"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -50,8 +51,10 @@
         }
     .end annotation
 
+    .line 121
     check-cast p2, Ljava/lang/reflect/Constructor;
 
+    .line 320
     invoke-virtual {p2}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object p0

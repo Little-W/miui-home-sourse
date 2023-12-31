@@ -1,5 +1,6 @@
 .class final Lkotlinx/serialization/internal/TaggedDecoder$decodeNullableSerializableElement$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "Tagged.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -59,6 +60,7 @@
         }
     .end annotation
 
+    .line 265
     iget-object v0, p0, Lkotlinx/serialization/internal/TaggedDecoder$decodeNullableSerializableElement$1;->this$0:Lkotlinx/serialization/internal/TaggedDecoder;
 
     invoke-virtual {v0}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeNotNullMark()Z
@@ -69,16 +71,20 @@
 
     iget-object v0, p0, Lkotlinx/serialization/internal/TaggedDecoder$decodeNullableSerializableElement$1;->this$0:Lkotlinx/serialization/internal/TaggedDecoder;
 
+    .line 266
     iget-object v1, p0, Lkotlinx/serialization/internal/TaggedDecoder$decodeNullableSerializableElement$1;->$deserializer:Lkotlinx/serialization/DeserializationStrategy;
 
+    .line 267
     iget-object p0, p0, Lkotlinx/serialization/internal/TaggedDecoder$decodeNullableSerializableElement$1;->$previousValue:Ljava/lang/Object;
 
+    .line 265
     invoke-virtual {v0, v1, p0}, Lkotlinx/serialization/internal/TaggedDecoder;->decodeSerializableValue(Lkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 268
     :cond_0
     iget-object p0, p0, Lkotlinx/serialization/internal/TaggedDecoder$decodeNullableSerializableElement$1;->this$0:Lkotlinx/serialization/internal/TaggedDecoder;
 

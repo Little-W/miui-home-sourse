@@ -1,5 +1,6 @@
 .class Lokhttp3/CookieJar$1;
 .super Ljava/lang/Object;
+.source "CookieJar.java"
 
 # interfaces
 .implements Lokhttp3/CookieJar;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +42,7 @@
         }
     .end annotation
 
+    .line 41
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;
 .super Ljava/lang/Object;
+.source "BottomSheetBehavior.java"
 
 
 # annotations
@@ -27,10 +28,12 @@
 .method private constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)V
     .locals 0
 
+    .line 1852
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1856
     new-instance p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker$1;
 
     invoke-direct {p1, p0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker$1;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;)V
@@ -43,6 +46,7 @@
 .method synthetic constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;Lcom/google/android/material/bottomsheet/BottomSheetBehavior$1;)V
     .locals 0
 
+    .line 1852
     invoke-direct {p0, p1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)V
 
     return-void
@@ -51,6 +55,7 @@
 .method static synthetic access$1502(Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;Z)Z
     .locals 0
 
+    .line 1852
     iput-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->isContinueSettlingRunnablePosted:Z
 
     return p1
@@ -59,6 +64,7 @@
 .method static synthetic access$1600(Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;)I
     .locals 0
 
+    .line 1852
     iget p0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->targetState:I
 
     return p0
@@ -69,6 +75,7 @@
 .method continueSettlingToState(I)V
     .locals 1
 
+    .line 1871
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->viewRef:Ljava/lang/ref/WeakReference;
@@ -87,13 +94,16 @@
 
     goto :goto_0
 
+    .line 1874
     :cond_0
     iput p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->targetState:I
 
+    .line 1875
     iget-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->isContinueSettlingRunnablePosted:Z
 
     if-nez p1, :cond_1
 
+    .line 1876
     iget-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     iget-object p1, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->viewRef:Ljava/lang/ref/WeakReference;
@@ -110,6 +120,7 @@
 
     const/4 p1, 0x1
 
+    .line 1877
     iput-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$StateSettlingTracker;->isContinueSettlingRunnablePosted:Z
 
     :cond_1

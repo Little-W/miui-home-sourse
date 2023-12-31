@@ -1,5 +1,6 @@
 .class final Lkotlin/io/FileTreeWalk$FileTreeWalkIterator$SingleFileState;
 .super Lkotlin/io/FileTreeWalk$WalkState;
+.source "FileTreeWalk.kt"
 
 
 # annotations
@@ -38,14 +39,17 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 196
     iput-object p1, p0, Lkotlin/io/FileTreeWalk$FileTreeWalkIterator$SingleFileState;->this$0:Lkotlin/io/FileTreeWalk$FileTreeWalkIterator;
 
     invoke-direct {p0, p2}, Lkotlin/io/FileTreeWalk$WalkState;-><init>(Ljava/io/File;)V
 
+    .line 200
     sget-boolean p0, Lkotlin/_Assertions;->ENABLED:Z
 
     if-eqz p0, :cond_1
 
+    .line 201
     invoke-virtual {p2}, Ljava/io/File;->isFile()Z
 
     move-result p0
@@ -79,6 +83,7 @@
 .method public step()Ljava/io/File;
     .locals 1
 
+    .line 205
     iget-boolean v0, p0, Lkotlin/io/FileTreeWalk$FileTreeWalkIterator$SingleFileState;->visited:Z
 
     if-eqz v0, :cond_0
@@ -90,8 +95,10 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 206
     iput-boolean v0, p0, Lkotlin/io/FileTreeWalk$FileTreeWalkIterator$SingleFileState;->visited:Z
 
+    .line 207
     invoke-virtual {p0}, Lkotlin/io/FileTreeWalk$FileTreeWalkIterator$SingleFileState;->getRoot()Ljava/io/File;
 
     move-result-object p0

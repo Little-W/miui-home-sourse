@@ -1,5 +1,6 @@
 .class final Lkotlinx/coroutines/DispatchedCoroutine;
 .super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.source "Builders.common.kt"
 
 
 # annotations
@@ -54,10 +55,12 @@
         }
     .end annotation
 
+    .line 227
     invoke-direct {p0, p1, p2}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lkotlin/coroutines/CoroutineContext;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x0
 
+    .line 230
     iput p1, p0, Lkotlinx/coroutines/DispatchedCoroutine;->_decision:I
 
     return-void
@@ -66,6 +69,7 @@
 .method private final tryResume()Z
     .locals 4
 
+    .line 277
     :cond_0
     iget v0, p0, Lkotlinx/coroutines/DispatchedCoroutine;->_decision:I
 
@@ -79,6 +83,7 @@
 
     return v1
 
+    .line 247
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -94,6 +99,7 @@
 
     throw p0
 
+    .line 245
     :cond_2
     sget-object v0, Lkotlinx/coroutines/DispatchedCoroutine;->_decision$FU:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
@@ -111,6 +117,7 @@
 .method private final trySuspend()Z
     .locals 3
 
+    .line 275
     :cond_0
     iget v0, p0, Lkotlinx/coroutines/DispatchedCoroutine;->_decision:I
 
@@ -124,6 +131,7 @@
 
     return v1
 
+    .line 237
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -139,6 +147,7 @@
 
     throw p0
 
+    .line 235
     :cond_2
     sget-object v0, Lkotlinx/coroutines/DispatchedCoroutine;->_decision$FU:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
@@ -158,6 +167,7 @@
 .method protected afterCompletion(Ljava/lang/Object;)V
     .locals 0
 
+    .line 255
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/DispatchedCoroutine;->afterResume(Ljava/lang/Object;)V
 
     return-void
@@ -166,6 +176,7 @@
 .method protected afterResume(Ljava/lang/Object;)V
     .locals 2
 
+    .line 259
     invoke-direct {p0}, Lkotlinx/coroutines/DispatchedCoroutine;->tryResume()Z
 
     move-result v0
@@ -174,6 +185,7 @@
 
     return-void
 
+    .line 261
     :cond_0
     iget-object v0, p0, Lkotlinx/coroutines/DispatchedCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
@@ -199,6 +211,7 @@
 .method public final getResult()Ljava/lang/Object;
     .locals 1
 
+    .line 265
     invoke-direct {p0}, Lkotlinx/coroutines/DispatchedCoroutine;->trySuspend()Z
 
     move-result v0
@@ -211,6 +224,7 @@
 
     return-object p0
 
+    .line 267
     :cond_0
     invoke-virtual {p0}, Lkotlinx/coroutines/DispatchedCoroutine;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
@@ -220,6 +234,7 @@
 
     move-result-object p0
 
+    .line 268
     instance-of v0, p0, Lkotlinx/coroutines/CompletedExceptionally;
 
     if-nez v0, :cond_1

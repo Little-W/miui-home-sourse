@@ -1,5 +1,6 @@
 .class Landroidx/fragment/app/FragmentLayoutInflaterFactory$1;
 .super Ljava/lang/Object;
+.source "FragmentLayoutInflaterFactory.java"
 
 # interfaces
 .implements Landroid/view/View$OnAttachStateChangeListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Landroidx/fragment/app/FragmentLayoutInflaterFactory;Landroidx/fragment/app/FragmentStateManager;)V
     .locals 0
 
+    .line 158
     iput-object p1, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory$1;->this$0:Landroidx/fragment/app/FragmentLayoutInflaterFactory;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory$1;->val$fragmentStateManager:Landroidx/fragment/app/FragmentStateManager;
@@ -40,18 +42,22 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 1
 
+    .line 161
     iget-object p1, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory$1;->val$fragmentStateManager:Landroidx/fragment/app/FragmentStateManager;
 
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentStateManager;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object p1
 
+    .line 162
     iget-object v0, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory$1;->val$fragmentStateManager:Landroidx/fragment/app/FragmentStateManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentStateManager;->moveToExpectedState()V
 
+    .line 163
     iget-object p1, p1, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
+    .line 164
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
@@ -66,6 +72,7 @@
 
     move-result-object p0
 
+    .line 166
     invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController;->forceCompleteAllOperations()V
 
     return-void

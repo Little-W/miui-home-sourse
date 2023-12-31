@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/ui/ContainerResolver$AppContainerResolver;
 .super Lio/branch/search/internal/ui/ContainerResolver;
+.source "SourceFile"
 
 
 # annotations

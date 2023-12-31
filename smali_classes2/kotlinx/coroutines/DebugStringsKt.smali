@@ -1,5 +1,6 @@
 .class public final Lkotlinx/coroutines/DebugStringsKt;
 .super Ljava/lang/Object;
+.source "DebugStrings.kt"
 
 
 # annotations
@@ -12,6 +13,7 @@
 .method public static final getClassSimpleName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
+    .line 21
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -26,6 +28,7 @@
 .method public static final getHexAddress(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
+    .line 13
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0
@@ -48,6 +51,7 @@
         }
     .end annotation
 
+    .line 16
     instance-of v0, p0, Lkotlinx/coroutines/internal/DispatchedContinuation;
 
     if-eqz v0, :cond_0
@@ -61,6 +65,7 @@
     :cond_0
     const/16 v0, 0x40
 
+    .line 18
     :try_start_0
     sget-object v1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 

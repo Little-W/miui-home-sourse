@@ -1,11 +1,13 @@
 .class public abstract Lokhttp3/internal/tls/CertificateChainCleaner;
 .super Ljava/lang/Object;
+.source "CertificateChainCleaner.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -14,6 +16,7 @@
 .method public static get(Ljavax/net/ssl/X509TrustManager;)Lokhttp3/internal/tls/CertificateChainCleaner;
     .locals 1
 
+    .line 41
     invoke-static {}, Lokhttp3/internal/platform/Platform;->get()Lokhttp3/internal/platform/Platform;
 
     move-result-object v0

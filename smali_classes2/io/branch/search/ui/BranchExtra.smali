@@ -1,5 +1,6 @@
 .class public abstract Lio/branch/search/ui/BranchExtra;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;

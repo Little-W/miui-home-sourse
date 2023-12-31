@@ -1,5 +1,6 @@
 .class public abstract Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;
 .super Ljava/lang/Object;
+.source "GroupedRecentTaskInfoCompat.java"
 
 
 # instance fields
@@ -20,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +32,7 @@
 .method public getMainPackageName()Ljava/lang/String;
     .locals 1
 
+    .line 92
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mMainTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz v0, :cond_0
@@ -42,12 +45,14 @@
 
     iget-object v0, v0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
+    .line 93
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 94
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mMainTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     iget-object p0, p0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
@@ -71,6 +76,7 @@
 .method public getMainTaskId()I
     .locals 0
 
+    .line 64
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mMainTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz p0, :cond_0
@@ -89,6 +95,7 @@
 .method public getMainTaskInfo()Landroid/app/ActivityManager$RecentTaskInfo;
     .locals 0
 
+    .line 29
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mMainTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     return-object p0
@@ -97,6 +104,7 @@
 .method public getMainUserId()I
     .locals 0
 
+    .line 76
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mMainTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz p0, :cond_0
@@ -115,6 +123,7 @@
 .method public getPrimaryBounds()Landroid/graphics/Rect;
     .locals 0
 
+    .line 52
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryBounds:Landroid/graphics/Rect;
 
     return-object p0
@@ -123,6 +132,7 @@
 .method public getPrimaryPackageName()Ljava/lang/String;
     .locals 1
 
+    .line 100
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz v0, :cond_0
@@ -135,12 +145,14 @@
 
     iget-object v0, v0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
+    .line 101
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 102
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     iget-object p0, p0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
@@ -164,6 +176,7 @@
 .method public getPrimaryTaskId()I
     .locals 0
 
+    .line 68
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz p0, :cond_0
@@ -182,6 +195,7 @@
 .method public getPrimaryTaskInfo()Landroid/app/ActivityManager$RecentTaskInfo;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     return-object p0
@@ -190,6 +204,7 @@
 .method public getPrimaryUserId()I
     .locals 0
 
+    .line 80
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz p0, :cond_0
@@ -208,6 +223,7 @@
 .method public getSecondBounds()Landroid/graphics/Rect;
     .locals 0
 
+    .line 60
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondBounds:Landroid/graphics/Rect;
 
     return-object p0
@@ -216,6 +232,7 @@
 .method public getSecondPackageName()Ljava/lang/String;
     .locals 1
 
+    .line 108
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz v0, :cond_0
@@ -228,12 +245,14 @@
 
     iget-object v0, v0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
+    .line 109
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 110
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     iget-object p0, p0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
@@ -257,6 +276,7 @@
 .method public getSecondTaskId()I
     .locals 0
 
+    .line 72
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz p0, :cond_0
@@ -275,6 +295,7 @@
 .method public getSecondTaskInfo()Landroid/app/ActivityManager$RecentTaskInfo;
     .locals 0
 
+    .line 45
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     return-object p0
@@ -283,6 +304,7 @@
 .method public getSecondUserId()I
     .locals 0
 
+    .line 84
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz p0, :cond_0
@@ -301,6 +323,7 @@
 .method public getSplitBoundsConfig()Lcom/android/wm/shell/util/StagedSplitBounds;
     .locals 0
 
+    .line 116
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSplitBoundsConfig:Lcom/android/wm/shell/util/StagedSplitBounds;
 
     return-object p0
@@ -309,6 +332,7 @@
 .method public hasMultipleTasks()Z
     .locals 0
 
+    .line 21
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     if-eqz p0, :cond_0
@@ -327,6 +351,7 @@
 .method public isExcludedFromRecents()Z
     .locals 5
 
+    .line 121
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mMainTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     const/4 v1, 0x1
@@ -341,6 +366,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 122
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mMainTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     iget-object v0, v0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
@@ -368,6 +394,7 @@
     :cond_1
     move v0, v2
 
+    .line 124
     :goto_1
     iget-object v4, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
@@ -377,6 +404,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 125
     iget-object v4, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     iget-object v4, v4, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
@@ -399,6 +427,7 @@
     :goto_2
     or-int/2addr v0, v4
 
+    .line 127
     :cond_3
     iget-object v4, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
@@ -408,6 +437,7 @@
 
     if-eqz v4, :cond_5
 
+    .line 128
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     iget-object p0, p0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
@@ -435,6 +465,7 @@
 .method public setMainTaskInfo(Landroid/app/ActivityManager$RecentTaskInfo;)V
     .locals 0
 
+    .line 25
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mMainTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     return-void
@@ -443,6 +474,7 @@
 .method public setPrimaryBounds(Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 49
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryBounds:Landroid/graphics/Rect;
 
     return-void
@@ -451,6 +483,7 @@
 .method public setPrimaryTaskInfo(Landroid/app/ActivityManager$RecentTaskInfo;)V
     .locals 0
 
+    .line 33
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mPrimaryTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     return-void
@@ -459,6 +492,7 @@
 .method public setSecondBounds(Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 56
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondBounds:Landroid/graphics/Rect;
 
     return-void
@@ -467,6 +501,7 @@
 .method public setSecondTaskInfo(Landroid/app/ActivityManager$RecentTaskInfo;)V
     .locals 0
 
+    .line 41
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSecondTaskInfo:Landroid/app/ActivityManager$RecentTaskInfo;
 
     return-void
@@ -475,6 +510,7 @@
 .method public setSplitBoundsConfig(Lcom/android/wm/shell/util/StagedSplitBounds;)V
     .locals 0
 
+    .line 88
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/GroupedRecentTaskInfoCompat;->mSplitBoundsConfig:Lcom/android/wm/shell/util/StagedSplitBounds;
 
     return-void

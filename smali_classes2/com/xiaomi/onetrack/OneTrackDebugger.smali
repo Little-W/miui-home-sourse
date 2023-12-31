@@ -31,8 +31,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 18
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -45,25 +47,30 @@
 .method public static getInstance()Lcom/xiaomi/onetrack/OneTrackDebugger;
     .locals 2
 
+    .line 21
     sget-object v0, Lcom/xiaomi/onetrack/OneTrackDebugger;->a:Lcom/xiaomi/onetrack/OneTrackDebugger;
 
     if-nez v0, :cond_1
 
+    .line 22
     const-class v0, Lcom/xiaomi/onetrack/OneTrackDebugger;
 
     monitor-enter v0
 
+    .line 23
     :try_start_0
     sget-object v1, Lcom/xiaomi/onetrack/OneTrackDebugger;->a:Lcom/xiaomi/onetrack/OneTrackDebugger;
 
     if-nez v1, :cond_0
 
+    .line 24
     new-instance v1, Lcom/xiaomi/onetrack/OneTrackDebugger;
 
     invoke-direct {v1}, Lcom/xiaomi/onetrack/OneTrackDebugger;-><init>()V
 
     sput-object v1, Lcom/xiaomi/onetrack/OneTrackDebugger;->a:Lcom/xiaomi/onetrack/OneTrackDebugger;
 
+    .line 26
     :cond_0
     monitor-exit v0
 
@@ -78,6 +85,7 @@
 
     throw v1
 
+    .line 28
     :cond_1
     :goto_0
     sget-object v0, Lcom/xiaomi/onetrack/OneTrackDebugger;->a:Lcom/xiaomi/onetrack/OneTrackDebugger;
@@ -90,6 +98,7 @@
 .method public getInstanceId()Ljava/lang/String;
     .locals 0
 
+    .line 56
     invoke-static {}, Lcom/xiaomi/onetrack/util/o;->a()Lcom/xiaomi/onetrack/util/o;
 
     move-result-object p0
@@ -104,6 +113,7 @@
 .method public getOaid(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
+    .line 52
     invoke-static {}, Lcom/xiaomi/onetrack/util/oaid/a;->a()Lcom/xiaomi/onetrack/util/oaid/a;
 
     move-result-object p0
@@ -131,6 +141,7 @@
         }
     .end annotation
 
+    .line 34
     iget-object p0, p0, Lcom/xiaomi/onetrack/OneTrackDebugger;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -139,6 +150,7 @@
 .method public setSdkConfig(Lcom/xiaomi/onetrack/Configuration;)V
     .locals 2
 
+    .line 38
     iget-object p0, p0, Lcom/xiaomi/onetrack/OneTrackDebugger;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -157,6 +169,7 @@
 .method public startDebugger()V
     .locals 3
 
+    .line 43
     :try_start_0
     sget-object p0, Lcom/xiaomi/onetrack/OneTrackDebugger;->b:Ljava/lang/String;
 
@@ -164,6 +177,7 @@
 
     move-result-object p0
 
+    .line 44
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v0
@@ -185,6 +199,7 @@
     :catchall_0
     move-exception p0
 
+    .line 46
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p0

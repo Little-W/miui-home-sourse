@@ -1,5 +1,6 @@
 .class public abstract Lcom/android/systemui/shared/recents/system/ActivityOptionsCompat;
 .super Ljava/lang/Object;
+.source "ActivityOptionsCompat.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,10 +28,12 @@
 
     const/4 v0, 0x0
 
+    .line 75
     invoke-static {p0, v0, v0}, Landroid/app/ActivityOptions;->makeCustomAnimation(Landroid/content/Context;II)Landroid/app/ActivityOptions;
 
     move-result-object p0
 
+    .line 76
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
@@ -38,6 +42,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 78
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -55,6 +60,7 @@
 
     const/4 v1, 0x1
 
+    .line 80
     invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -64,6 +70,7 @@
     :catch_0
     move-exception v0
 
+    .line 83
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -79,6 +86,7 @@
     :try_start_0
     const-string v0, "android.util.MiuiMultiWindowUtils"
 
+    .line 116
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -121,6 +129,7 @@
 
     aput-object p1, v5, v8
 
+    .line 119
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -135,6 +144,7 @@
 
     move-object v1, v6
 
+    .line 115
     invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -152,6 +162,7 @@
 
     const-string v1, "MiuiMultiWindowUtils getActivityOptions error"
 
+    .line 121
     invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-object p1, v6
@@ -159,10 +170,12 @@
     :goto_0
     if-nez p1, :cond_0
 
+    .line 124
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object p1
 
+    .line 125
     invoke-static {p1}, Lmiui/app/ActivityOptionsExpose;->box(Ljava/lang/Object;)Lmiui/app/ActivityOptionsExpose;
 
     move-result-object v0
@@ -171,6 +184,7 @@
 
     invoke-virtual {v0, v1}, Lmiui/app/ActivityOptionsExpose;->setLaunchWindowingMode(I)V
 
+    .line 126
     invoke-static {p0}, Landroid/util/MiuiMultiWindowUtils;->getFreeformRect(Landroid/content/Context;)Landroid/graphics/Rect;
 
     move-result-object p0
@@ -184,6 +198,7 @@
 .method public static makeRemoteAnimation(Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;)Landroid/app/ActivityOptions;
     .locals 0
 
+    .line 59
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->getWrapped()Landroid/view/RemoteAnimationAdapter;
 
     move-result-object p0
@@ -198,6 +213,7 @@
 .method public static makeRemoteAnimation(Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;Lcom/android/systemui/shared/system/RemoteTransitionCompat;)Landroid/app/ActivityOptions;
     .locals 8
 
+    .line 68
     const-class v0, Landroid/app/ActivityOptions;
 
     const-class v3, Landroid/app/ActivityOptions;
@@ -220,12 +236,14 @@
 
     new-array v7, v1, [Ljava/lang/Object;
 
+    .line 70
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;->getWrapped()Landroid/view/RemoteAnimationAdapter;
 
     move-result-object p0
 
     aput-object p0, v7, v5
 
+    .line 71
     invoke-virtual {p1}, Lcom/android/systemui/shared/system/RemoteTransitionCompat;->getWrapped()Landroid/window/RemoteTransition;
 
     move-result-object p0
@@ -238,6 +256,7 @@
 
     move-object v5, v7
 
+    .line 68
     invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -250,10 +269,12 @@
 .method public static makeSplitScreenOptions(Z)Landroid/app/ActivityOptions;
     .locals 3
 
+    .line 49
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object v0
 
+    .line 50
     invoke-static {v0}, Lmiui/app/ActivityOptionsExpose;->box(Ljava/lang/Object;)Lmiui/app/ActivityOptionsExpose;
 
     move-result-object v1
@@ -264,6 +285,7 @@
 
     xor-int/lit8 p0, p0, 0x1
 
+    .line 51
     invoke-virtual {v0, p0}, Landroid/app/ActivityOptions;->setSplitScreenCreateMode(I)V
 
     return-object v0
@@ -272,6 +294,7 @@
 .method public static setFreezeRecentTasksReordering(Landroid/app/ActivityOptions;)V
     .locals 4
 
+    .line 135
     :try_start_0
     sget-object v0, Lcom/android/systemui/shared/recents/system/ActivityOptionsCompat;->sSetFreezeRecentTasksReorderingMethod:Ljava/lang/reflect/Method;
 
@@ -281,6 +304,7 @@
 
     const-string v0, "android.app.ActivityOptions"
 
+    .line 136
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -289,12 +313,14 @@
 
     new-array v3, v1, [Ljava/lang/Class;
 
+    .line 137
     invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/systemui/shared/recents/system/ActivityOptionsCompat;->sSetFreezeRecentTasksReorderingMethod:Ljava/lang/reflect/Method;
 
+    .line 139
     :cond_0
     sget-object v0, Lcom/android/systemui/shared/recents/system/ActivityOptionsCompat;->sSetFreezeRecentTasksReorderingMethod:Ljava/lang/reflect/Method;
 
@@ -309,6 +335,7 @@
     :catch_0
     move-exception p0
 
+    .line 141
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -318,6 +345,7 @@
 .method public static setSmallWindowRemberLaunch(Landroid/app/ActivityOptions;)V
     .locals 7
 
+    .line 90
     const-class v0, Landroid/app/ActivityOptions;
 
     sget-object v3, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
@@ -336,6 +364,7 @@
 
     const/4 v1, 0x4
 
+    .line 91
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -348,6 +377,7 @@
 
     move-object v5, v6
 
+    .line 90
     invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -356,6 +386,7 @@
 .method public static setSourceInfo(Landroid/app/ActivityOptions;IJ)V
     .locals 8
 
+    .line 103
     const-class v0, Landroid/app/ActivityOptions;
 
     sget-object v3, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
@@ -378,12 +409,14 @@
 
     new-array v7, v1, [Ljava/lang/Object;
 
+    .line 108
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     aput-object p1, v7, v5
 
+    .line 109
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -396,6 +429,7 @@
 
     move-object v5, v7
 
+    .line 103
     invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -404,6 +438,7 @@
 .method public static setTransientLaunch(Landroid/app/ActivityOptions;)Landroid/app/ActivityOptions;
     .locals 6
 
+    .line 95
     const-class v0, Landroid/app/ActivityOptions;
 
     const-class v3, Landroid/app/ActivityOptions;

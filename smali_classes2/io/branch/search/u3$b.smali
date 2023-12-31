@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/u3$b;
 .super Landroidx/room/InvalidationTracker$Observer;
+.source "SourceFile"
 
 
 # annotations

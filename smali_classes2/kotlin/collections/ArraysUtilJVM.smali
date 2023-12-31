@@ -1,5 +1,6 @@
 .class Lkotlin/collections/ArraysUtilJVM;
 .super Ljava/lang/Object;
+.source "ArraysUtilJVM.java"
 
 
 # direct methods
@@ -15,6 +16,7 @@
         }
     .end annotation
 
+    .line 13
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0

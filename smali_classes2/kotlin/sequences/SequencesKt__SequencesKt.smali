@@ -1,5 +1,6 @@
 .class Lkotlin/sequences/SequencesKt__SequencesKt;
 .super Lkotlin/sequences/SequencesKt__SequencesJVMKt;
+.source "Sequences.kt"
 
 
 # direct methods
@@ -21,6 +22,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 30
     new-instance v0, Lkotlin/sequences/SequencesKt__SequencesKt$asSequence$$inlined$Sequence$1;
 
     invoke-direct {v0, p0}, Lkotlin/sequences/SequencesKt__SequencesKt$asSequence$$inlined$Sequence$1;-><init>(Ljava/util/Iterator;)V
@@ -52,6 +54,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 626
     instance-of v0, p0, Lkotlin/sequences/ConstrainedOnceSequence;
 
     if-eqz v0, :cond_0
@@ -95,6 +98,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 678
     new-instance v0, Lkotlin/sequences/GeneratorSequence;
 
     invoke-direct {v0, p0, p1}, Lkotlin/sequences/GeneratorSequence;-><init>(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V

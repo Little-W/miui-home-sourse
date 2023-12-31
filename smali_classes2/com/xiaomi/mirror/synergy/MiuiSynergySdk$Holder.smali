@@ -1,5 +1,6 @@
 .class final Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$Holder;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # annotations

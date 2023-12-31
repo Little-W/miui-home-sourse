@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchDeepViewFragment$PercentScrollView;
 .super Landroid/widget/ScrollView;
+.source "SourceFile"
 
 
 # annotations

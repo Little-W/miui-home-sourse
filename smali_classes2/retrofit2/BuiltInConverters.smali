@@ -1,5 +1,6 @@
 .class final Lretrofit2/BuiltInConverters;
 .super Lretrofit2/Converter$Factory;
+.source "BuiltInConverters.java"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 25
     invoke-direct {p0}, Lretrofit2/Converter$Factory;-><init>()V
 
     return-void
@@ -44,6 +46,7 @@
         }
     .end annotation
 
+    .line 43
     const-class p0, Lokhttp3/RequestBody;
 
     invoke-static {p1}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
@@ -56,6 +59,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 44
     sget-object p0, Lretrofit2/BuiltInConverters$RequestBodyConverter;->INSTANCE:Lretrofit2/BuiltInConverters$RequestBodyConverter;
 
     return-object p0
@@ -82,10 +86,12 @@
         }
     .end annotation
 
+    .line 29
     const-class p0, Lokhttp3/ResponseBody;
 
     if-ne p1, p0, :cond_1
 
+    .line 30
     const-class p0, Lretrofit2/http/Streaming;
 
     invoke-static {p2, p0}, Lretrofit2/Utils;->isAnnotationPresent([Ljava/lang/annotation/Annotation;Ljava/lang/Class;)Z
@@ -94,21 +100,25 @@
 
     if-eqz p0, :cond_0
 
+    .line 31
     sget-object p0, Lretrofit2/BuiltInConverters$StreamingResponseBodyConverter;->INSTANCE:Lretrofit2/BuiltInConverters$StreamingResponseBodyConverter;
 
     goto :goto_0
 
+    .line 32
     :cond_0
     sget-object p0, Lretrofit2/BuiltInConverters$BufferingResponseBodyConverter;->INSTANCE:Lretrofit2/BuiltInConverters$BufferingResponseBodyConverter;
 
     :goto_0
     return-object p0
 
+    .line 34
     :cond_1
     const-class p0, Ljava/lang/Void;
 
     if-ne p1, p0, :cond_2
 
+    .line 35
     sget-object p0, Lretrofit2/BuiltInConverters$VoidResponseBodyConverter;->INSTANCE:Lretrofit2/BuiltInConverters$VoidResponseBodyConverter;
 
     return-object p0

@@ -1,5 +1,6 @@
 .class public Lcom/xiaomi/mirror/widget/ImmersionAdapter;
 .super Landroid/widget/BaseAdapter;
+.source "SourceFile"
 
 
 # annotations

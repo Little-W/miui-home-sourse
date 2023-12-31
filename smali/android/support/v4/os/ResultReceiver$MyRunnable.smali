@@ -1,5 +1,6 @@
 .class Landroid/support/v4/os/ResultReceiver$MyRunnable;
 .super Ljava/lang/Object;
+.source "ResultReceiver.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -28,12 +29,15 @@
 .method constructor <init>(Landroid/support/v4/os/ResultReceiver;ILandroid/os/Bundle;)V
     .locals 0
 
+    .line 56
     iput-object p1, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->this$0:Landroid/support/v4/os/ResultReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 57
     iput p2, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->mResultCode:I
 
+    .line 58
     iput-object p3, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->mResultData:Landroid/os/Bundle;
 
     return-void
@@ -44,6 +48,7 @@
 .method public run()V
     .locals 2
 
+    .line 63
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->this$0:Landroid/support/v4/os/ResultReceiver;
 
     iget v1, p0, Landroid/support/v4/os/ResultReceiver$MyRunnable;->mResultCode:I

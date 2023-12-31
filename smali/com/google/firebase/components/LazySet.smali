@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/components/LazySet;
 .super Ljava/lang/Object;
+.source "LazySet.java"
 
 # interfaces
 .implements Lcom/google/firebase/inject/Provider;
@@ -52,12 +53,15 @@
         }
     .end annotation
 
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 34
     iput-object v0, p0, Lcom/google/firebase/components/LazySet;->actualSet:Ljava/util/Set;
 
+    .line 37
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -68,6 +72,7 @@
 
     iput-object v0, p0, Lcom/google/firebase/components/LazySet;->providers:Ljava/util/Set;
 
+    .line 38
     iget-object p0, p0, Lcom/google/firebase/components/LazySet;->providers:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
@@ -88,8 +93,10 @@
         }
     .end annotation
 
+    .line 43
     check-cast p0, Ljava/util/Set;
 
+    .line 44
     new-instance v0, Lcom/google/firebase/components/LazySet;
 
     invoke-direct {v0, p0}, Lcom/google/firebase/components/LazySet;-><init>(Ljava/util/Collection;)V
@@ -102,6 +109,7 @@
 
     monitor-enter p0
 
+    .line 69
     :try_start_0
     iget-object v0, p0, Lcom/google/firebase/components/LazySet;->providers:Ljava/util/Set;
 
@@ -122,6 +130,7 @@
 
     check-cast v1, Lcom/google/firebase/inject/Provider;
 
+    .line 70
     iget-object v2, p0, Lcom/google/firebase/components/LazySet;->actualSet:Ljava/util/Set;
 
     invoke-interface {v1}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
@@ -135,10 +144,12 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 72
     iput-object v0, p0, Lcom/google/firebase/components/LazySet;->providers:Ljava/util/Set;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 73
     monitor-exit p0
 
     return-void
@@ -165,17 +176,20 @@
 
     monitor-enter p0
 
+    .line 61
     :try_start_0
     iget-object v0, p0, Lcom/google/firebase/components/LazySet;->actualSet:Ljava/util/Set;
 
     if-nez v0, :cond_0
 
+    .line 62
     iget-object v0, p0, Lcom/google/firebase/components/LazySet;->providers:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 64
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/components/LazySet;->actualSet:Ljava/util/Set;
 
@@ -187,6 +201,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 66
     :goto_0
     monitor-exit p0
 
@@ -203,6 +218,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 31
     invoke-virtual {p0}, Lcom/google/firebase/components/LazySet;->get()Ljava/util/Set;
 
     move-result-object p0
@@ -220,17 +236,21 @@
         }
     .end annotation
 
+    .line 49
     iget-object v0, p0, Lcom/google/firebase/components/LazySet;->actualSet:Ljava/util/Set;
 
     if-nez v0, :cond_1
 
+    .line 50
     monitor-enter p0
 
+    .line 51
     :try_start_0
     iget-object v0, p0, Lcom/google/firebase/components/LazySet;->actualSet:Ljava/util/Set;
 
     if-nez v0, :cond_0
 
+    .line 52
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -241,8 +261,10 @@
 
     iput-object v0, p0, Lcom/google/firebase/components/LazySet;->actualSet:Ljava/util/Set;
 
+    .line 53
     invoke-direct {p0}, Lcom/google/firebase/components/LazySet;->updateSet()V
 
+    .line 55
     :cond_0
     monitor-exit p0
 
@@ -257,6 +279,7 @@
 
     throw v0
 
+    .line 57
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/google/firebase/components/LazySet;->actualSet:Ljava/util/Set;

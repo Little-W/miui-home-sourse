@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/widget/ImmersionListPopupWindow$1;
 .super Landroid/database/DataSetObserver;
+.source "SourceFile"
 
 
 # annotations

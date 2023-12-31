@@ -1,5 +1,6 @@
 .class public abstract Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub;
 .super Landroid/os/Binder;
+.source "IActiveLocalHandoffTaskListener.java"
 
 # interfaces
 .implements Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
@@ -26,10 +27,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 24
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.xiaomi.dist.handoff.IActiveLocalHandoffTaskListener"
 
+    .line 25
     invoke-virtual {p0, p0, v0}, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -47,20 +50,24 @@
     :cond_0
     const-string v0, "com.xiaomi.dist.handoff.IActiveLocalHandoffTaskListener"
 
+    .line 36
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 37
     instance-of v1, v0, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
 
     if-eqz v1, :cond_1
 
+    .line 38
     check-cast v0, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
 
     return-object v0
 
+    .line 40
     :cond_1
     new-instance v0, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub$Proxy;
 
@@ -72,6 +79,7 @@
 .method public static getDefaultImpl()Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
     .locals 1
 
+    .line 122
     sget-object v0, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub$Proxy;->sDefaultImpl:Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener;
 
     return-object v0
@@ -103,20 +111,24 @@
 
     if-eq p1, v2, :cond_0
 
+    .line 67
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 53
     :cond_0
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v0
 
+    .line 58
     :cond_1
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 60
     sget-object p1, Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p2, p1}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -125,8 +137,10 @@
 
     check-cast p1, [Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;
 
+    .line 61
     invoke-virtual {p0, p1}, Lcom/xiaomi/dist/handoff/IActiveLocalHandoffTaskListener$Stub;->onLocalHandoffTaskUpdate([Lcom/xiaomi/dist/handoff/parcel/LocalHandoffTask;)V
 
+    .line 62
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v0

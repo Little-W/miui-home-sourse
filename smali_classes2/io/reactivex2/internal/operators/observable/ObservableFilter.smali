@@ -1,5 +1,6 @@
 .class public final Lio/reactivex2/internal/operators/observable/ObservableFilter;
 .super Lio/reactivex2/internal/operators/observable/AbstractObservableWithUpstream;
+.source "ObservableFilter.java"
 
 
 # annotations
@@ -44,8 +45,10 @@
         }
     .end annotation
 
+    .line 24
     invoke-direct {p0, p1}, Lio/reactivex2/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex2/ObservableSource;)V
 
+    .line 25
     iput-object p2, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter;->predicate:Lio/reactivex2/functions/Predicate;
 
     return-void
@@ -63,6 +66,7 @@
         }
     .end annotation
 
+    .line 30
     iget-object v0, p0, Lio/reactivex2/internal/operators/observable/ObservableFilter;->source:Lio/reactivex2/ObservableSource;
 
     new-instance v1, Lio/reactivex2/internal/operators/observable/ObservableFilter$FilterObserver;

@@ -1,5 +1,6 @@
 .class final Lcom/bumptech/glide/load/engine/ResourceCacheKey;
 .super Ljava/lang/Object;
+.source "ResourceCacheKey.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/Key;
@@ -53,6 +54,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
+    .line 17
     new-instance v0, Lcom/bumptech/glide/util/LruCache;
 
     const-wide/16 v1, 0x32
@@ -82,22 +84,31 @@
         }
     .end annotation
 
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 36
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
+    .line 37
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->sourceKey:Lcom/bumptech/glide/load/Key;
 
+    .line 38
     iput-object p3, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->signature:Lcom/bumptech/glide/load/Key;
 
+    .line 39
     iput p4, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->width:I
 
+    .line 40
     iput p5, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->height:I
 
+    .line 41
     iput-object p6, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->transformation:Lcom/bumptech/glide/load/Transformation;
 
+    .line 42
     iput-object p7, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->decodedResourceClass:Ljava/lang/Class;
 
+    .line 43
     iput-object p8, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->options:Lcom/bumptech/glide/load/Options;
 
     return-void
@@ -106,6 +117,7 @@
 .method private getResourceClassBytes()[B
     .locals 2
 
+    .line 91
     sget-object v0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->RESOURCE_CLASS_BYTES:Lcom/bumptech/glide/util/LruCache;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->decodedResourceClass:Ljava/lang/Class;
@@ -118,6 +130,7 @@
 
     if-nez v0, :cond_0
 
+    .line 93
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->decodedResourceClass:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -130,6 +143,7 @@
 
     move-result-object v0
 
+    .line 94
     sget-object v1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->RESOURCE_CLASS_BYTES:Lcom/bumptech/glide/util/LruCache;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->decodedResourceClass:Ljava/lang/Class;
@@ -145,14 +159,17 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 48
     instance-of v0, p1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 49
     check-cast p1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;
 
+    .line 50
     iget v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->height:I
 
     iget v2, p1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->height:I
@@ -169,6 +186,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->transformation:Lcom/bumptech/glide/load/Transformation;
 
+    .line 51
     invoke-static {v0, v2}, Lcom/bumptech/glide/util/Util;->bothNullOrEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -179,6 +197,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->decodedResourceClass:Ljava/lang/Class;
 
+    .line 52
     invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -189,6 +208,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->sourceKey:Lcom/bumptech/glide/load/Key;
 
+    .line 53
     invoke-interface {v0, v2}, Lcom/bumptech/glide/load/Key;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -199,6 +219,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->signature:Lcom/bumptech/glide/load/Key;
 
+    .line 54
     invoke-interface {v0, v2}, Lcom/bumptech/glide/load/Key;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -209,6 +230,7 @@
 
     iget-object p1, p1, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->options:Lcom/bumptech/glide/load/Options;
 
+    .line 55
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/Options;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -224,6 +246,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 62
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->sourceKey:Lcom/bumptech/glide/load/Key;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/Key;->hashCode()I
@@ -232,6 +255,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 63
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->signature:Lcom/bumptech/glide/load/Key;
 
     invoke-interface {v1}, Lcom/bumptech/glide/load/Key;->hashCode()I
@@ -242,22 +266,26 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 64
     iget v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->width:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 65
     iget v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->height:I
 
     add-int/2addr v0, v1
 
+    .line 66
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->transformation:Lcom/bumptech/glide/load/Transformation;
 
     if-eqz v1, :cond_0
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 67
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
@@ -267,6 +295,7 @@
     :cond_0
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 69
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->decodedResourceClass:Ljava/lang/Class;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
@@ -277,6 +306,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 70
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->options:Lcom/bumptech/glide/load/Options;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/load/Options;->hashCode()I
@@ -291,6 +321,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 101
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -369,6 +400,7 @@
 .method public updateDiskCacheKey(Ljava/security/MessageDigest;)V
     .locals 3
 
+    .line 77
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     const-class v1, [B
@@ -381,6 +413,7 @@
 
     check-cast v0, [B
 
+    .line 78
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -399,33 +432,41 @@
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
 
+    .line 79
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->signature:Lcom/bumptech/glide/load/Key;
 
     invoke-interface {v1, p1}, Lcom/bumptech/glide/load/Key;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
+    .line 80
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->sourceKey:Lcom/bumptech/glide/load/Key;
 
     invoke-interface {v1, p1}, Lcom/bumptech/glide/load/Key;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
+    .line 81
     invoke-virtual {p1, v0}, Ljava/security/MessageDigest;->update([B)V
 
+    .line 82
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->transformation:Lcom/bumptech/glide/load/Transformation;
 
     if-eqz v1, :cond_0
 
+    .line 83
     invoke-interface {v1, p1}, Lcom/bumptech/glide/load/Transformation;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
+    .line 85
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->options:Lcom/bumptech/glide/load/Options;
 
     invoke-virtual {v1, p1}, Lcom/bumptech/glide/load/Options;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
+    .line 86
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->getResourceClassBytes()[B
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/security/MessageDigest;->update([B)V
 
+    .line 87
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/ResourceCacheKey;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     invoke-interface {p0, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;->put(Ljava/lang/Object;)V

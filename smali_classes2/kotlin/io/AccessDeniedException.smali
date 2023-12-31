@@ -1,5 +1,6 @@
 .class public final Lkotlin/io/AccessDeniedException;
 .super Lkotlin/io/FileSystemException;
+.source "Exceptions.kt"
 
 
 # direct methods
@@ -10,6 +11,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 50
     invoke-direct {p0, p1, p2, p3}, Lkotlin/io/FileSystemException;-><init>(Ljava/io/File;Ljava/io/File;Ljava/lang/String;)V
 
     return-void
@@ -24,6 +26,7 @@
 
     if-eqz p5, :cond_0
 
+    .line 48
     move-object p2, v0
 
     check-cast p2, Ljava/io/File;
@@ -33,6 +36,7 @@
 
     if-eqz p4, :cond_1
 
+    .line 49
     move-object p3, v0
 
     check-cast p3, Ljava/lang/String;

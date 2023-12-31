@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/filament/utils/Manipulator$1;
 .super Ljava/lang/Object;
+.source "Manipulator.java"
 
 
 # annotations

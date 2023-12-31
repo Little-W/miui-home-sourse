@@ -1,5 +1,6 @@
 .class public final Lokhttp3/internal/cache/DiskLruCache$Editor;
 .super Ljava/lang/Object;
+.source "DiskLruCache.java"
 
 
 # annotations
@@ -27,12 +28,15 @@
 .method constructor <init>(Lokhttp3/internal/cache/DiskLruCache;Lokhttp3/internal/cache/DiskLruCache$Entry;)V
     .locals 0
 
+    .line 837
     iput-object p1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 838
     iput-object p2, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->entry:Lokhttp3/internal/cache/DiskLruCache$Entry;
 
+    .line 839
     iget-boolean p2, p2, Lokhttp3/internal/cache/DiskLruCache$Entry;->readable:Z
 
     if-eqz p2, :cond_0
@@ -62,21 +66,25 @@
         }
     .end annotation
 
+    .line 935
     iget-object v0, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     monitor-enter v0
 
+    .line 936
     :try_start_0
     iget-boolean v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->done:Z
 
     if-nez v1, :cond_1
 
+    .line 939
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->entry:Lokhttp3/internal/cache/DiskLruCache$Entry;
 
     iget-object v1, v1, Lokhttp3/internal/cache/DiskLruCache$Entry;->currentEditor:Lokhttp3/internal/cache/DiskLruCache$Editor;
 
     if-ne v1, p0, :cond_0
 
+    .line 940
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     const/4 v2, 0x0
@@ -86,12 +94,15 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 942
     iput-boolean v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->done:Z
 
+    .line 943
     monitor-exit v0
 
     return-void
 
+    .line 937
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -102,6 +113,7 @@
     :catchall_0
     move-exception p0
 
+    .line 943
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -117,15 +129,18 @@
         }
     .end annotation
 
+    .line 919
     iget-object v0, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     monitor-enter v0
 
+    .line 920
     :try_start_0
     iget-boolean v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->done:Z
 
     if-nez v1, :cond_1
 
+    .line 923
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->entry:Lokhttp3/internal/cache/DiskLruCache$Entry;
 
     iget-object v1, v1, Lokhttp3/internal/cache/DiskLruCache$Entry;->currentEditor:Lokhttp3/internal/cache/DiskLruCache$Editor;
@@ -134,17 +149,21 @@
 
     if-ne v1, p0, :cond_0
 
+    .line 924
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     invoke-virtual {v1, p0, v2}, Lokhttp3/internal/cache/DiskLruCache;->completeEdit(Lokhttp3/internal/cache/DiskLruCache$Editor;Z)V
 
+    .line 926
     :cond_0
     iput-boolean v2, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->done:Z
 
+    .line 927
     monitor-exit v0
 
     return-void
 
+    .line 921
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -155,6 +174,7 @@
     :catchall_0
     move-exception p0
 
+    .line 927
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -165,6 +185,7 @@
 .method detach()V
     .locals 3
 
+    .line 849
     iget-object v0, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->entry:Lokhttp3/internal/cache/DiskLruCache$Entry;
 
     iget-object v0, v0, Lokhttp3/internal/cache/DiskLruCache$Entry;->currentEditor:Lokhttp3/internal/cache/DiskLruCache$Editor;
@@ -173,6 +194,7 @@
 
     const/4 v0, 0x0
 
+    .line 850
     :goto_0
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
@@ -180,6 +202,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 852
     :try_start_0
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
@@ -200,6 +223,7 @@
 
     goto :goto_0
 
+    .line 857
     :cond_0
     iget-object p0, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->entry:Lokhttp3/internal/cache/DiskLruCache$Entry;
 
@@ -214,21 +238,25 @@
 .method public newSink(I)Lokio/Sink;
     .locals 3
 
+    .line 887
     iget-object v0, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     monitor-enter v0
 
+    .line 888
     :try_start_0
     iget-boolean v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->done:Z
 
     if-nez v1, :cond_2
 
+    .line 891
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->entry:Lokhttp3/internal/cache/DiskLruCache$Entry;
 
     iget-object v1, v1, Lokhttp3/internal/cache/DiskLruCache$Entry;->currentEditor:Lokhttp3/internal/cache/DiskLruCache$Editor;
 
     if-eq v1, p0, :cond_0
 
+    .line 892
     invoke-static {}, Lokio/Okio;->blackhole()Lokio/Sink;
 
     move-result-object p0
@@ -237,6 +265,7 @@
 
     return-object p0
 
+    .line 894
     :cond_0
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->entry:Lokhttp3/internal/cache/DiskLruCache$Entry;
 
@@ -244,12 +273,14 @@
 
     if-nez v1, :cond_1
 
+    .line 895
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->written:[Z
 
     const/4 v2, 0x1
 
     aput-boolean v2, v1, p1
 
+    .line 897
     :cond_1
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->entry:Lokhttp3/internal/cache/DiskLruCache$Entry;
 
@@ -259,6 +290,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 900
     :try_start_1
     iget-object v1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
@@ -271,6 +303,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 904
     :try_start_2
     new-instance v1, Lokhttp3/internal/cache/DiskLruCache$Editor$1;
 
@@ -280,6 +313,7 @@
 
     return-object v1
 
+    .line 902
     :catch_0
     invoke-static {}, Lokio/Okio;->blackhole()Lokio/Sink;
 
@@ -289,6 +323,7 @@
 
     return-object p0
 
+    .line 889
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -299,6 +334,7 @@
     :catchall_0
     move-exception p0
 
+    .line 911
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

@@ -21,8 +21,10 @@
 .method private constructor <init>(Lcom/xiaomi/onetrack/api/c;Landroid/os/Looper;)V
     .locals 0
 
+    .line 138
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/c$a;->a:Lcom/xiaomi/onetrack/api/c;
 
+    .line 139
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -31,6 +33,7 @@
 .method synthetic constructor <init>(Lcom/xiaomi/onetrack/api/c;Landroid/os/Looper;Lcom/xiaomi/onetrack/api/d;)V
     .locals 0
 
+    .line 136
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/onetrack/api/c$a;-><init>(Lcom/xiaomi/onetrack/api/c;Landroid/os/Looper;)V
 
     return-void
@@ -45,6 +48,7 @@
 
     return-void
 
+    .line 147
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -60,6 +64,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 149
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/c$a;->a:Lcom/xiaomi/onetrack/api/c;
@@ -77,8 +82,10 @@
 
     const-string v1, "screenReceiver exception: "
 
+    .line 151
     invoke-static {v2, v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 155
     :cond_2
     :goto_0
     iget v0, p1, Landroid/os/Message;->what:I
@@ -87,6 +94,7 @@
 
     if-ne v0, v1, :cond_9
 
+    .line 156
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/c$a;->a:Lcom/xiaomi/onetrack/api/c;
 
     invoke-static {v0}, Lcom/xiaomi/onetrack/api/c;->b(Lcom/xiaomi/onetrack/api/c;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -101,17 +109,20 @@
 
     if-eqz v0, :cond_8
 
+    .line 158
     :try_start_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/content/Intent;
 
+    .line 160
     invoke-static {}, Lcom/xiaomi/onetrack/OneTrack;->isRestrictGetNetworkInfo()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
+    .line 161
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x16
@@ -122,6 +133,7 @@
 
     const-string v0, "networkInfo"
 
+    .line 162
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -130,6 +142,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 163
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result p1
@@ -138,11 +151,13 @@
 
     move v4, v1
 
+    .line 164
     :cond_3
     invoke-static {v4}, Lcom/xiaomi/onetrack/b/n;->b(Z)V
 
     goto :goto_1
 
+    .line 166
     :cond_4
     invoke-static {}, Lcom/xiaomi/onetrack/b/n;->c()Z
 
@@ -152,6 +167,7 @@
 
     move v4, v1
 
+    .line 167
     :cond_5
     invoke-static {v4}, Lcom/xiaomi/onetrack/b/n;->b(Z)V
 
@@ -159,13 +175,16 @@
 
     goto :goto_1
 
+    .line 170
     :cond_6
     invoke-static {}, Lcom/xiaomi/onetrack/g/c;->a()Z
 
     move-result v4
 
+    .line 171
     invoke-static {v4}, Lcom/xiaomi/onetrack/b/n;->b(Z)V
 
+    .line 173
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -199,6 +218,7 @@
 
     if-eqz v4, :cond_8
 
+    .line 175
     iget-object p1, p0, Lcom/xiaomi/onetrack/api/c$a;->a:Lcom/xiaomi/onetrack/api/c;
 
     invoke-static {p1}, Lcom/xiaomi/onetrack/api/c;->c(Lcom/xiaomi/onetrack/api/c;)Z
@@ -207,6 +227,7 @@
 
     if-eqz p1, :cond_7
 
+    .line 176
     invoke-static {}, Lcom/xiaomi/onetrack/a/c/b;->a()Lcom/xiaomi/onetrack/a/c/b;
 
     move-result-object p1
@@ -217,6 +238,7 @@
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/onetrack/a/c/b;->a(Z)V
 
+    .line 178
     :cond_7
     iget-object p1, p0, Lcom/xiaomi/onetrack/api/c$a;->a:Lcom/xiaomi/onetrack/api/c;
 
@@ -226,6 +248,7 @@
 
     if-eqz p1, :cond_8
 
+    .line 179
     invoke-static {}, Lcom/xiaomi/onetrack/c/s;->a()Lcom/xiaomi/onetrack/c/s;
 
     move-result-object p1
@@ -243,6 +266,7 @@
     :catchall_0
     move-exception p1
 
+    .line 183
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,6 +287,7 @@
 
     invoke-static {v2, p1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 186
     :cond_8
     :goto_2
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/c$a;->a:Lcom/xiaomi/onetrack/api/c;

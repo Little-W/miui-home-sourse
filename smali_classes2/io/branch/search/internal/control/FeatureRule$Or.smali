@@ -1,5 +1,6 @@
 .class public final Lio/branch/search/internal/control/FeatureRule$Or;
 .super Lio/branch/search/internal/control/FeatureRule;
+.source "SourceFile"
 
 
 # annotations

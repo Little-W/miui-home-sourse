@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/TapTargetView$11;
 .super Ljava/lang/Object;
+.source "TapTargetView.java"
 
 # interfaces
 .implements Landroid/view/View$OnLongClickListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/TapTargetView;)V
     .locals 0
 
+    .line 618
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$11;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onLongClick(Landroid/view/View;)Z
     .locals 3
 
+    .line 621
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$11;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->listener:Lcom/mi/globallauncher/view/TapTargetView$Listener;
@@ -46,6 +49,7 @@
 
     return v0
 
+    .line 623
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$11;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
@@ -69,6 +73,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 624
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$11;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->listener:Lcom/mi/globallauncher/view/TapTargetView$Listener;

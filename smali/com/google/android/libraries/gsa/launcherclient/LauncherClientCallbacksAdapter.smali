@@ -1,5 +1,6 @@
 .class public Lcom/google/android/libraries/gsa/launcherclient/LauncherClientCallbacksAdapter;
 .super Ljava/lang/Object;
+.source "LauncherClientCallbacksAdapter.java"
 
 # interfaces
 .implements Lcom/google/android/libraries/gsa/launcherclient/LauncherClientCallbacks;

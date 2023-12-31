@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;
 .super Ljava/lang/Object;
+.source "TaskSnapshotCompatVS.java"
 
 # interfaces
 .implements Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
@@ -34,6 +35,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 26
     new-instance v0, Landroid/util/LruCache;
 
     const/4 v1, 0x1
@@ -42,6 +44,7 @@
 
     sput-object v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sLruCache:Landroid/util/LruCache;
 
+    .line 27
     sput-boolean v1, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sIsStartCache:Z
 
     return-void
@@ -50,10 +53,13 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 6
 
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 48
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshot:Ljava/lang/Object;
 
+    .line 49
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshot:Ljava/lang/Object;
 
     if-nez p1, :cond_0
@@ -63,18 +69,21 @@
     :cond_0
     const-string p1, "android.window.TaskSnapshot"
 
+    .line 53
     invoke-static {p1}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
+    .line 54
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
     if-nez v0, :cond_1
 
     return-void
 
+    .line 58
     :cond_1
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshot:Ljava/lang/Object;
 
@@ -102,6 +111,7 @@
 .method public static create(I)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
     .locals 1
 
+    .line 30
     new-instance v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;
 
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->getTaskSnapshotInstance(I)Ljava/lang/Object;
@@ -118,6 +128,7 @@
 
     const-string v0, "android.window.TaskSnapshot"
 
+    .line 34
     invoke-static {v0}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
@@ -128,6 +139,7 @@
 
     return-object v0
 
+    .line 40
     :cond_0
     :try_start_0
     const-class v1, Landroid/app/IActivityTaskManager;
@@ -160,6 +172,7 @@
 
     new-array v7, v5, [Ljava/lang/Object;
 
+    .line 41
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -176,6 +189,7 @@
 
     move-object v6, v7
 
+    .line 40
     invoke-static/range {v1 .. v6}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -193,6 +207,7 @@
 
     const/4 v0, 0x1
 
+    .line 91
     sput-boolean v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sIsStartCache:Z
 
     return-void
@@ -201,16 +216,19 @@
 .method public static stopCache()V
     .locals 2
 
+    .line 95
     sget-object v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sLruCache:Landroid/util/LruCache;
 
     invoke-virtual {v0}, Landroid/util/LruCache;->evictAll()V
 
     const-wide/16 v0, -0x1
 
+    .line 96
     sput-wide v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sCurrentId:J
 
     const/4 v0, 0x0
 
+    .line 97
     sput-boolean v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sIsStartCache:Z
 
     return-void
@@ -221,6 +239,7 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .locals 13
 
+    .line 64
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mHardwareBuffer:Landroid/hardware/HardwareBuffer;
 
     const/4 v1, 0x0
@@ -229,6 +248,7 @@
 
     return-object v1
 
+    .line 68
     :cond_0
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
@@ -254,6 +274,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 70
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v5
@@ -263,6 +284,7 @@
     :cond_1
     move-wide v5, v3
 
+    .line 72
     :goto_0
     sget-boolean v2, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sIsStartCache:Z
 
@@ -272,16 +294,19 @@
 
     if-eqz v3, :cond_2
 
+    .line 73
     sget-wide v3, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sCurrentId:J
 
     cmp-long v3, v5, v3
 
     if-nez v3, :cond_2
 
+    .line 74
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mHardwareBuffer:Landroid/hardware/HardwareBuffer;
 
     invoke-virtual {p0}, Landroid/hardware/HardwareBuffer;->close()V
 
+    .line 75
     sget-object p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sLruCache:Landroid/util/LruCache;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -296,6 +321,7 @@
 
     return-object p0
 
+    .line 77
     :cond_2
     iget-object v7, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
@@ -315,11 +341,13 @@
 
     check-cast v3, Landroid/graphics/ColorSpace;
 
+    .line 78
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mHardwareBuffer:Landroid/hardware/HardwareBuffer;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 79
     :try_start_1
     invoke-static {p0, v3}, Landroid/graphics/Bitmap;->wrapHardwareBuffer(Landroid/hardware/HardwareBuffer;Landroid/graphics/ColorSpace;)Landroid/graphics/Bitmap;
 
@@ -327,8 +355,10 @@
 
     if-eqz v2, :cond_3
 
+    .line 81
     sput-wide v5, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sCurrentId:J
 
+    .line 82
     sget-object v2, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->sLruCache:Landroid/util/LruCache;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -342,6 +372,7 @@
     :cond_3
     if-eqz p0, :cond_4
 
+    .line 85
     :try_start_2
     invoke-virtual {p0}, Landroid/hardware/HardwareBuffer;->close()V
     :try_end_2
@@ -355,6 +386,7 @@
 
     if-eqz p0, :cond_5
 
+    .line 78
     :try_start_3
     invoke-virtual {p0}, Landroid/hardware/HardwareBuffer;->close()V
     :try_end_3
@@ -381,6 +413,7 @@
 .method public getTaskThumbnailInfo()Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
     .locals 11
 
+    .line 102
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshot:Ljava/lang/Object;
 
     if-eqz v0, :cond_2
@@ -397,11 +430,13 @@
 
     goto/16 :goto_0
 
+    .line 105
     :cond_0
     new-instance v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     invoke-direct {v0}, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;-><init>()V
 
+    .line 106
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mHardwareBuffer:Landroid/hardware/HardwareBuffer;
 
     invoke-virtual {v1}, Landroid/hardware/HardwareBuffer;->getWidth()I
@@ -410,6 +445,7 @@
 
     iput v1, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->taskWidth:I
 
+    .line 107
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mHardwareBuffer:Landroid/hardware/HardwareBuffer;
 
     invoke-virtual {v1}, Landroid/hardware/HardwareBuffer;->getHeight()I
@@ -418,6 +454,7 @@
 
     iput v1, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->taskHeight:I
 
+    .line 108
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
     iget-object v3, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshot:Ljava/lang/Object;
@@ -426,6 +463,7 @@
 
     const/4 v1, 0x0
 
+    .line 109
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -436,6 +474,7 @@
 
     const-string v4, "getOrientation"
 
+    .line 108
     invoke-static/range {v2 .. v8}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -448,6 +487,7 @@
 
     iput v2, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->screenOrientation:I
 
+    .line 110
     iget-object v3, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
     iget-object v4, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshot:Ljava/lang/Object;
@@ -468,12 +508,14 @@
 
     iput-object v2, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->insets:Landroid/graphics/Rect;
 
+    .line 112
     iget-object v3, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
     iget-object v4, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshot:Ljava/lang/Object;
 
     sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
+    .line 113
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -484,6 +526,7 @@
 
     const-string v5, "getAppearance"
 
+    .line 112
     invoke-static/range {v3 .. v9}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -496,6 +539,7 @@
 
     iput v2, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->appearance:I
 
+    .line 115
     iget-object v3, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
     iget-object v4, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshot:Ljava/lang/Object;
@@ -516,10 +560,12 @@
 
     if-eqz v2, :cond_1
 
+    .line 117
     iget v3, v2, Landroid/graphics/Point;->y:I
 
     if-eqz v3, :cond_1
 
+    .line 118
     iget v3, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->taskHeight:I
 
     int-to-float v3, v3
@@ -532,6 +578,7 @@
 
     iput v3, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->scale:F
 
+    .line 120
     :cond_1
     iget-object v4, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->mTaskSnapshotClazz:Ljava/lang/Class;
 
@@ -539,6 +586,7 @@
 
     sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
+    .line 121
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -549,6 +597,7 @@
 
     const-string v6, "getWindowingMode"
 
+    .line 120
     invoke-static/range {v4 .. v10}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

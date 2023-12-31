@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 .super Ljava/lang/Object;
+.source "QueueFile.java"
 
 # interfaces
 .implements Ljava/io/Closeable;
@@ -37,6 +38,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 61
     const-class v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -60,22 +62,27 @@
         }
     .end annotation
 
+    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [B
 
+    .line 109
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
+    .line 116
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 117
     invoke-static {p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->initialize(Ljava/io/File;)V
 
+    .line 119
     :cond_0
     invoke-static {p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->open(Ljava/io/File;)Ljava/io/RandomAccessFile;
 
@@ -83,6 +90,7 @@
 
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
+    .line 120
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->readHeader()V
 
     return-void
@@ -91,6 +99,7 @@
 .method static synthetic access$100(Lcom/google/firebase/crashlytics/internal/log/QueueFile;I)I
     .locals 0
 
+    .line 60
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->wrapPosition(I)I
 
     move-result p0
@@ -101,6 +110,7 @@
 .method static synthetic access$200(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
 
+    .line 60
     invoke-static {p0, p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->nonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -116,6 +126,7 @@
         }
     .end annotation
 
+    .line 60
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->ringRead(I[BII)V
 
     return-void
@@ -124,6 +135,7 @@
 .method static synthetic access$400(Lcom/google/firebase/crashlytics/internal/log/QueueFile;)Ljava/io/RandomAccessFile;
     .locals 0
 
+    .line 60
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     return-object p0
@@ -139,6 +151,7 @@
 
     add-int/lit8 p1, p1, 0x4
 
+    .line 366
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->remainingBytes()I
 
     move-result v0
@@ -147,6 +160,7 @@
 
     return-void
 
+    .line 372
     :cond_0
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
@@ -157,8 +171,10 @@
 
     if-lt v0, p1, :cond_1
 
+    .line 381
     invoke-direct {p0, v1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->setLength(I)V
 
+    .line 384
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     iget p1, p1, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
@@ -175,18 +191,21 @@
 
     move-result p1
 
+    .line 387
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->first:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     iget v0, v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
 
     if-ge p1, v0, :cond_3
 
+    .line 388
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v7
 
+    .line 389
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     int-to-long v2, v0
@@ -203,6 +222,7 @@
 
     move-wide v5, v8
 
+    .line 391
     invoke-virtual/range {v2 .. v7}, Ljava/nio/channels/FileChannel;->transferTo(JJLjava/nio/channels/WritableByteChannel;)J
 
     move-result-wide v2
@@ -213,6 +233,7 @@
 
     goto :goto_0
 
+    .line 392
     :cond_2
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -222,6 +243,7 @@
 
     throw p0
 
+    .line 397
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
@@ -234,6 +256,7 @@
 
     if-ge p1, v0, :cond_4
 
+    .line 398
     iget p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
@@ -244,6 +267,7 @@
 
     add-int/lit8 p1, p1, -0x10
 
+    .line 399
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->first:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
@@ -252,6 +276,7 @@
 
     invoke-direct {p0, v1, v0, v2, p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeHeader(IIII)V
 
+    .line 400
     new-instance v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
@@ -264,6 +289,7 @@
 
     goto :goto_1
 
+    .line 402
     :cond_4
     iget p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
@@ -277,6 +303,7 @@
 
     invoke-direct {p0, v1, p1, v0, v2}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeHeader(IIII)V
 
+    .line 405
     :goto_1
     iput v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
@@ -291,6 +318,7 @@
         }
     .end annotation
 
+    .line 201
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -313,17 +341,20 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 202
     invoke-static {v0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->open(Ljava/io/File;)Ljava/io/RandomAccessFile;
 
     move-result-object v1
 
     const-wide/16 v2, 0x1000
 
+    .line 204
     :try_start_0
     invoke-virtual {v1, v2, v3}, Ljava/io/RandomAccessFile;->setLength(J)V
 
     const-wide/16 v2, 0x0
 
+    .line 205
     invoke-virtual {v1, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
     const/16 v2, 0x10
@@ -352,14 +383,18 @@
 
     aput v5, v3, v4
 
+    .line 207
     invoke-static {v2, v3}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeInts([B[I)V
 
+    .line 208
     invoke-virtual {v1, v2}, Ljava/io/RandomAccessFile;->write([B)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 210
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
 
+    .line 214
     invoke-virtual {v0, p0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result p0
@@ -368,6 +403,7 @@
 
     return-void
 
+    .line 215
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -380,8 +416,10 @@
     :catchall_0
     move-exception p0
 
+    .line 210
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
 
+    .line 211
     throw p0
 .end method
 
@@ -401,6 +439,7 @@
 
     return-object p0
 
+    .line 453
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -417,6 +456,7 @@
         }
     .end annotation
 
+    .line 221
     new-instance v0, Ljava/io/RandomAccessFile;
 
     const-string v1, "rwd"
@@ -436,10 +476,12 @@
 
     if-nez p1, :cond_0
 
+    .line 192
     sget-object p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->NULL:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     return-object p0
 
+    .line 194
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
@@ -447,6 +489,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 195
     new-instance v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
@@ -468,18 +511,21 @@
         }
     .end annotation
 
+    .line 162
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     const-wide/16 v1, 0x0
 
     invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 163
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     invoke-virtual {v0, v1}, Ljava/io/RandomAccessFile;->readFully([B)V
 
+    .line 164
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     const/4 v1, 0x0
@@ -490,6 +536,7 @@
 
     iput v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
+    .line 165
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     int-to-long v0, v0
@@ -504,6 +551,7 @@
 
     if-gtz v0, :cond_0
 
+    .line 169
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     const/4 v1, 0x4
@@ -514,6 +562,7 @@
 
     iput v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
+    .line 170
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     const/16 v1, 0x8
@@ -522,6 +571,7 @@
 
     move-result v0
 
+    .line 171
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     const/16 v2, 0xc
@@ -530,12 +580,14 @@
 
     move-result v1
 
+    .line 172
     invoke-direct {p0, v0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->readElement(I)Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->first:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
+    .line 173
     invoke-direct {p0, v1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->readElement(I)Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     move-result-object v0
@@ -544,6 +596,7 @@
 
     return-void
 
+    .line 166
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
@@ -565,6 +618,7 @@
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
+    .line 167
     invoke-virtual {p0}, Ljava/io/RandomAccessFile;->length()J
 
     move-result-wide v2
@@ -583,6 +637,7 @@
 .method private static readInt([BI)I
     .locals 2
 
+    .line 154
     aget-byte v0, p0, p1
 
     and-int/lit16 v0, v0, 0xff
@@ -623,6 +678,7 @@
 .method private remainingBytes()I
     .locals 1
 
+    .line 351
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->usedBytes()I
@@ -642,22 +698,26 @@
         }
     .end annotation
 
+    .line 261
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->wrapPosition(I)I
 
     move-result p1
 
     add-int v0, p1, p4
 
+    .line 262
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     if-gt v0, v1, :cond_0
 
+    .line 263
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     int-to-long v1, p1
 
     invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 264
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p0, p2, p3, p4}, Ljava/io/RandomAccessFile;->readFully([BII)V
@@ -667,22 +727,26 @@
     :cond_0
     sub-int/2addr v1, p1
 
+    .line 269
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     int-to-long v2, p1
 
     invoke-virtual {v0, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 270
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p1, p2, p3, v1}, Ljava/io/RandomAccessFile;->readFully([BII)V
 
+    .line 271
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     const-wide/16 v2, 0x10
 
     invoke-virtual {p1, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 272
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     add-int/2addr p3, v1
@@ -703,22 +767,26 @@
         }
     .end annotation
 
+    .line 238
     invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->wrapPosition(I)I
 
     move-result p1
 
     add-int v0, p1, p4
 
+    .line 239
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     if-gt v0, v1, :cond_0
 
+    .line 240
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     int-to-long v1, p1
 
     invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 241
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p0, p2, p3, p4}, Ljava/io/RandomAccessFile;->write([BII)V
@@ -728,22 +796,26 @@
     :cond_0
     sub-int/2addr v1, p1
 
+    .line 246
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     int-to-long v2, p1
 
     invoke-virtual {v0, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 247
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p1, p2, p3, v1}, Ljava/io/RandomAccessFile;->write([BII)V
 
+    .line 248
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     const-wide/16 v2, 0x10
 
     invoke-virtual {p1, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 249
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     add-int/2addr p3, v1
@@ -764,12 +836,14 @@
         }
     .end annotation
 
+    .line 411
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     int-to-long v1, p1
 
     invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->setLength(J)V
 
+    .line 412
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p0}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
@@ -786,6 +860,7 @@
 .method private wrapPosition(I)I
     .locals 0
 
+    .line 226
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     if-ge p1, p0, :cond_0
@@ -809,6 +884,7 @@
         }
     .end annotation
 
+    .line 184
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     const/4 v1, 0x4
@@ -833,12 +909,14 @@
 
     invoke-static {v0, v1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeInts([B[I)V
 
+    .line 185
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     const-wide/16 p2, 0x0
 
     invoke-virtual {p1, p2, p3}, Ljava/io/RandomAccessFile;->seek(J)V
 
+    .line 186
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
@@ -855,6 +933,7 @@
 
     int-to-byte v0, v0
 
+    .line 134
     aput-byte v0, p0, p1
 
     add-int/lit8 v0, p1, 0x1
@@ -863,6 +942,7 @@
 
     int-to-byte v1, v1
 
+    .line 135
     aput-byte v1, p0, v0
 
     add-int/lit8 v0, p1, 0x2
@@ -871,12 +951,14 @@
 
     int-to-byte v1, v1
 
+    .line 136
     aput-byte v1, p0, v0
 
     add-int/lit8 p1, p1, 0x3
 
     int-to-byte p2, p2
 
+    .line 137
     aput-byte p2, p0, p1
 
     return-void
@@ -885,6 +967,7 @@
 .method private static varargs writeInts([B[I)V
     .locals 4
 
+    .line 146
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -896,6 +979,7 @@
 
     aget v3, p1, v1
 
+    .line 147
     invoke-static {p0, v2, v3}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeInt([BII)V
 
     add-int/lit8 v2, v2, 0x4
@@ -918,6 +1002,7 @@
         }
     .end annotation
 
+    .line 282
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -940,20 +1025,24 @@
     :try_start_0
     const-string v0, "buffer"
 
+    .line 295
     invoke-static {p1, v0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->nonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     or-int v0, p2, p3
 
     if-ltz v0, :cond_3
 
+    .line 296
     array-length v0, p1
 
     sub-int/2addr v0, p2
 
     if-gt p3, v0, :cond_3
 
+    .line 300
     invoke-direct {p0, p3}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->expandIfNecessary(I)V
 
+    .line 303
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->isEmpty()Z
 
     move-result v0
@@ -966,6 +1055,7 @@
 
     goto :goto_0
 
+    .line 307
     :cond_0
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
@@ -983,23 +1073,27 @@
 
     move-result v2
 
+    .line 308
     :goto_0
     new-instance v3, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     invoke-direct {v3, v2, p3}, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;-><init>(II)V
 
+    .line 311
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     const/4 v4, 0x0
 
     invoke-static {v2, v4, p3}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeInt([BII)V
 
+    .line 312
     iget v2, v3, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
 
     iget-object v5, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     invoke-direct {p0, v2, v5, v4, v1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->ringWrite(I[BII)V
 
+    .line 315
     iget v2, v3, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
 
     add-int/2addr v2, v1
@@ -1008,6 +1102,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 318
     iget p1, v3, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
 
     goto :goto_1
@@ -1017,6 +1112,7 @@
 
     iget p1, p1, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
 
+    .line 319
     :goto_1
     iget p2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
@@ -1028,8 +1124,10 @@
 
     invoke-direct {p0, p2, p3, p1, v1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeHeader(IIII)V
 
+    .line 320
     iput-object v3, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
+    .line 321
     iget p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -1038,17 +1136,20 @@
 
     if-eqz v0, :cond_2
 
+    .line 323
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->first:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 325
     :cond_2
     monitor-exit p0
 
     return-void
 
+    .line 297
     :cond_3
     :try_start_1
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
@@ -1081,30 +1182,37 @@
 
     const/16 v1, 0x1000
 
+    .line 529
     :try_start_0
     invoke-direct {p0, v1, v0, v0, v0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeHeader(IIII)V
 
+    .line 530
     iput v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
+    .line 531
     sget-object v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->NULL:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->first:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
+    .line 532
     sget-object v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->NULL:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
+    .line 533
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     if-le v0, v1, :cond_0
 
     invoke-direct {p0, v1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->setLength(I)V
 
+    .line 534
     :cond_0
     iput v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 535
     monitor-exit p0
 
     return-void
@@ -1127,6 +1235,7 @@
 
     monitor-enter p0
 
+    .line 539
     :try_start_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->raf:Ljava/io/RandomAccessFile;
 
@@ -1134,6 +1243,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 540
     monitor-exit p0
 
     return-void
@@ -1156,6 +1266,7 @@
 
     monitor-enter p0
 
+    .line 438
     :try_start_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->first:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
@@ -1163,15 +1274,18 @@
 
     const/4 v1, 0x0
 
+    .line 439
     :goto_0
     iget v2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
     if-ge v1, v2, :cond_0
 
+    .line 440
     invoke-direct {p0, v0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->readElement(I)Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     move-result-object v0
 
+    .line 441
     new-instance v2, Lcom/google/firebase/crashlytics/internal/log/QueueFile$ElementInputStream;
 
     const/4 v3, 0x0
@@ -1182,6 +1296,7 @@
 
     invoke-interface {p1, v2, v3}, Lcom/google/firebase/crashlytics/internal/log/QueueFile$ElementReader;->read(Ljava/io/InputStream;I)V
 
+    .line 442
     iget v2, v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
 
     add-int/lit8 v2, v2, 0x4
@@ -1200,6 +1315,7 @@
 
     goto :goto_0
 
+    .line 444
     :cond_0
     monitor-exit p0
 
@@ -1218,6 +1334,7 @@
 
     monitor-enter p0
 
+    .line 356
     :try_start_0
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
     :try_end_0
@@ -1255,6 +1372,7 @@
 
     monitor-enter p0
 
+    .line 511
     :try_start_0
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->isEmpty()Z
 
@@ -1262,16 +1380,19 @@
 
     if-nez v0, :cond_1
 
+    .line 514
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 515
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->clear()V
 
     goto :goto_0
 
+    .line 518
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->first:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
@@ -1291,18 +1412,21 @@
 
     move-result v0
 
+    .line 519
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     const/4 v4, 0x0
 
     invoke-direct {p0, v0, v3, v4, v2}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->ringRead(I[BII)V
 
+    .line 520
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->buffer:[B
 
     invoke-static {v2, v4}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->readInt([BI)I
 
     move-result v2
 
+    .line 521
     iget v3, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
 
     iget v4, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
@@ -1315,12 +1439,14 @@
 
     invoke-direct {p0, v3, v4, v0, v5}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeHeader(IIII)V
 
+    .line 522
     iget v3, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
     sub-int/2addr v3, v1
 
     iput v3, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
+    .line 523
     new-instance v1, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     invoke-direct {v1, v0, v2}, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;-><init>(II)V
@@ -1329,11 +1455,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 525
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 512
     :cond_1
     :try_start_1
     new-instance v0, Ljava/util/NoSuchElementException;
@@ -1355,10 +1483,12 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 552
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 553
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -1375,6 +1505,7 @@
 
     const-string v1, "fileLength="
 
+    .line 554
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->fileLength:I
@@ -1383,6 +1514,7 @@
 
     const-string v1, ", size="
 
+    .line 555
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
@@ -1391,6 +1523,7 @@
 
     const-string v1, ", first="
 
+    .line 556
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->first:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
@@ -1399,6 +1532,7 @@
 
     const-string v1, ", last="
 
+    .line 557
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
@@ -1407,8 +1541,10 @@
 
     const-string v1, ", element lengths=["
 
+    .line 558
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 560
     :try_start_0
     new-instance v1, Lcom/google/firebase/crashlytics/internal/log/QueueFile$1;
 
@@ -1423,6 +1559,7 @@
     :catch_0
     move-exception p0
 
+    .line 575
     sget-object v1, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->LOGGER:Ljava/util/logging/Logger;
 
     sget-object v2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
@@ -1434,8 +1571,10 @@
     :goto_0
     const-string p0, "]]"
 
+    .line 577
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 578
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1446,6 +1585,7 @@
 .method public usedBytes()I
     .locals 3
 
+    .line 329
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->elementCount:I
 
     const/16 v1, 0x10
@@ -1454,6 +1594,7 @@
 
     return v1
 
+    .line 333
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
@@ -1465,6 +1606,7 @@
 
     if-lt v0, v2, :cond_1
 
+    .line 335
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 
     iget v0, v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;->position:I
@@ -1487,6 +1629,7 @@
 
     return v0
 
+    .line 341
     :cond_1
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->last:Lcom/google/firebase/crashlytics/internal/log/QueueFile$Element;
 

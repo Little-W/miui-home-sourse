@@ -1,5 +1,6 @@
 .class final Lkotlin/coroutines/jvm/internal/ModuleNameRetriever;
 .super Ljava/lang/Object;
+.source "DebugMetadata.kt"
 
 
 # annotations
@@ -26,12 +27,14 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 51
     new-instance v0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever;
 
     invoke-direct {v0}, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever;-><init>()V
 
     sput-object v0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever;->INSTANCE:Lkotlin/coroutines/jvm/internal/ModuleNameRetriever;
 
+    .line 61
     new-instance v0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;
 
     const/4 v1, 0x0
@@ -46,6 +49,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,6 +58,7 @@
 .method private final buildCache(Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;)Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;
     .locals 4
 
+    .line 78
     :try_start_0
     const-class p0, Ljava/lang/Class;
 
@@ -67,6 +72,7 @@
 
     move-result-object p0
 
+    .line 79
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -85,10 +91,12 @@
 
     new-array v3, v1, [Ljava/lang/Class;
 
+    .line 80
     invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
+    .line 81
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -107,10 +115,12 @@
 
     new-array v1, v1, [Ljava/lang/Class;
 
+    .line 82
     invoke-virtual {p1, v2, v1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
 
+    .line 83
     new-instance v1, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;
 
     invoke-direct {v1, p0, v0, p1}, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;-><init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
@@ -121,6 +131,7 @@
 
     return-object v1
 
+    .line 85
     :catch_0
     sget-object p0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever;->notOnJava9:Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;
 
@@ -138,6 +149,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 67
     sget-object v0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever;->cache:Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;
 
     if-eqz v0, :cond_0
@@ -149,6 +161,7 @@
 
     move-result-object v0
 
+    .line 68
     :goto_0
     sget-object p0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever;->notOnJava9:Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;
 
@@ -158,6 +171,7 @@
 
     return-object v1
 
+    .line 71
     :cond_1
     iget-object p0, v0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;->getModuleMethod:Ljava/lang/reflect/Method;
 
@@ -177,6 +191,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 72
     iget-object p1, v0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;->getDescriptorMethod:Ljava/lang/reflect/Method;
 
     if-eqz p1, :cond_4
@@ -189,6 +204,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 73
     iget-object p1, v0, Lkotlin/coroutines/jvm/internal/ModuleNameRetriever$Cache;->nameMethod:Ljava/lang/reflect/Method;
 
     if-eqz p1, :cond_2

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzft;
 .super Lcom/google/android/gms/internal/measurement/zzfb;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # annotations
@@ -24,12 +25,16 @@
 .method constructor <init>([Ljava/lang/Object;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/measurement/zzfb;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzft;->zza:[Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Lcom/google/android/gms/internal/measurement/zzft;->zzb:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/gms/internal/measurement/zzft;->zzc:I
 
     return-void
@@ -40,10 +45,12 @@
 .method public final get(I)Ljava/lang/Object;
     .locals 1
 
+    .line 6
     iget v0, p0, Lcom/google/android/gms/internal/measurement/zzft;->zzc:I
 
     invoke-static {p1, v0}, Lcom/google/android/gms/internal/measurement/zzeb;->zza(II)I
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzft;->zza:[Ljava/lang/Object;
 
     mul-int/lit8 p1, p1, 0x2
@@ -60,6 +67,7 @@
 .method public final size()I
     .locals 0
 
+    .line 9
     iget p0, p0, Lcom/google/android/gms/internal/measurement/zzft;->zzc:I
 
     return p0

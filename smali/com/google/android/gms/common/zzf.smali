@@ -14,12 +14,14 @@
 
     const/16 v1, 0x19
 
+    .line 1
     invoke-static {p1, v0, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/google/android/gms/common/zze;-><init>([B)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/common/zzf;->zzu:[B
 
     return-void
@@ -30,6 +32,7 @@
 .method final getBytes()[B
     .locals 0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/common/zzf;->zzu:[B
 
     return-object p0

@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;
 .super Ljava/lang/Object;
+.source "EventStoreModule_PackageNameFactory.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
@@ -40,8 +41,10 @@
         }
     .end annotation
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 17
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;->contextProvider:Ljavax/inject/Provider;
 
     return-void
@@ -59,6 +62,7 @@
         }
     .end annotation
 
+    .line 26
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;
 
     invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;-><init>(Ljavax/inject/Provider;)V
@@ -69,6 +73,7 @@
 .method public static packageName(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
+    .line 30
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule;->packageName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -89,6 +94,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 9
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;->get()Ljava/lang/String;
 
     move-result-object p0
@@ -99,6 +105,7 @@
 .method public get()Ljava/lang/String;
     .locals 0
 
+    .line 22
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;->contextProvider:Ljavax/inject/Provider;
 
     invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;

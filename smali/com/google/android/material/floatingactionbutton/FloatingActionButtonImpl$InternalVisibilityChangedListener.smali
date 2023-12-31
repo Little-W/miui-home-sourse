@@ -1,5 +1,6 @@
 .class interface abstract Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$InternalVisibilityChangedListener;
 .super Ljava/lang/Object;
+.source "FloatingActionButtonImpl.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/-$$Lambda$BranchClientImplement$1$xTfXkH2EkxXjjnn5wXO_6TzAN1Q;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Ljava/lang/Runnable;

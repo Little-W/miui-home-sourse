@@ -1,5 +1,6 @@
 .class Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;
 .super Ljava/lang/Object;
+.source "EncryptInterceptor.java"
 
 
 # annotations
@@ -23,14 +24,17 @@
 .method private constructor <init>([Ljava/security/cert/Certificate;Ljava/security/interfaces/RSAPublicKey;)V
     .locals 0
 
+    .line 379
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 380
     invoke-static {p1}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->dumpCertificatePathInfo([Ljava/security/cert/Certificate;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->certificatePathInfo:Ljava/lang/String;
 
+    .line 381
     iput-object p2, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->rsaPublicKey:Ljava/security/interfaces/RSAPublicKey;
 
     return-void
@@ -39,6 +43,7 @@
 .method synthetic constructor <init>([Ljava/security/cert/Certificate;Ljava/security/interfaces/RSAPublicKey;Lcom/mi/encrypt/okhttp/EncryptInterceptor$1;)V
     .locals 0
 
+    .line 375
     invoke-direct {p0, p1, p2}, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;-><init>([Ljava/security/cert/Certificate;Ljava/security/interfaces/RSAPublicKey;)V
 
     return-void
@@ -47,6 +52,7 @@
 .method static synthetic access$300(Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)Ljava/security/interfaces/RSAPublicKey;
     .locals 0
 
+    .line 375
     iget-object p0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->rsaPublicKey:Ljava/security/interfaces/RSAPublicKey;
 
     return-object p0
@@ -55,6 +61,7 @@
 .method static synthetic access$400(Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;)Ljava/lang/String;
     .locals 0
 
+    .line 375
     iget-object p0, p0, Lcom/mi/encrypt/okhttp/EncryptInterceptor$RSAPublicKeyInfo;->certificatePathInfo:Ljava/lang/String;
 
     return-object p0
@@ -63,6 +70,7 @@
 .method private static dumpCertificatePathInfo([Ljava/security/cert/Certificate;)Ljava/lang/String;
     .locals 6
 
+    .line 385
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,15 +79,18 @@
 
     const/4 v1, 0x0
 
+    .line 387
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
+    .line 388
     aget-object v2, p0, v1
 
     const-string v3, "---Certs["
 
+    .line 389
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -92,16 +103,19 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 390
     instance-of v3, v2, Ljava/security/cert/X509Certificate;
 
     const-string v4, "\n"
 
     if-eqz v3, :cond_0
 
+    .line 391
     move-object v3, v2
 
     check-cast v3, Ljava/security/cert/X509Certificate;
 
+    .line 392
     invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
 
     move-result-object v5
@@ -112,8 +126,10 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 393
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 394
     invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
 
     move-result-object v3
@@ -124,8 +140,10 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 395
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 397
     :cond_0
     invoke-virtual {v2}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
 
@@ -137,12 +155,14 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 398
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 401
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

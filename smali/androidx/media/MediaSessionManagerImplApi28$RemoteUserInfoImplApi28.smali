@@ -1,5 +1,6 @@
 .class final Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
 .super Ljava/lang/Object;
+.source "MediaSessionManagerImplApi28.java"
 
 # interfaces
 .implements Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;
@@ -24,8 +25,10 @@
 .method constructor <init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
     .locals 0
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     iput-object p1, p0, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;->mObject:Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
     return-void
@@ -34,8 +37,10 @@
 .method constructor <init>(Ljava/lang/String;II)V
     .locals 1
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 46
     new-instance v0, Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;-><init>(Ljava/lang/String;II)V
@@ -56,6 +61,7 @@
 
     return p0
 
+    .line 80
     :cond_0
     instance-of v0, p1, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
 
@@ -65,9 +71,11 @@
 
     return p0
 
+    .line 83
     :cond_1
     check-cast p1, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
 
+    .line 84
     iget-object p0, p0, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;->mObject:Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
     iget-object p1, p1, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;->mObject:Landroid/media/session/MediaSessionManager$RemoteUserInfo;
@@ -86,6 +94,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 72
     iget-object p0, p0, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;->mObject:Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
     const/4 v1, 0x0

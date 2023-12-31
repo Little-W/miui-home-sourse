@@ -1,5 +1,6 @@
 .class public Lio/branch/search/IBranchDeepViewHandler$a;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lio/branch/search/IBranchDeepViewHandler;

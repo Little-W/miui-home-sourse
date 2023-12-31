@@ -1,5 +1,6 @@
 .class Landroidx/emoji2/text/EmojiCompat$CompatInternal;
 .super Ljava/lang/Object;
+.source "EmojiCompat.java"
 
 
 # annotations
@@ -21,8 +22,10 @@
 .method constructor <init>(Landroidx/emoji2/text/EmojiCompat;)V
     .locals 0
 
+    .line 1417
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1418
     iput-object p1, p0, Landroidx/emoji2/text/EmojiCompat$CompatInternal;->mEmojiCompat:Landroidx/emoji2/text/EmojiCompat;
 
     return-void
@@ -33,6 +36,7 @@
 .method loadMetadata()V
     .locals 0
 
+    .line 1423
     iget-object p0, p0, Landroidx/emoji2/text/EmojiCompat$CompatInternal;->mEmojiCompat:Landroidx/emoji2/text/EmojiCompat;
 
     invoke-virtual {p0}, Landroidx/emoji2/text/EmojiCompat;->onMetadataLoadSuccess()V

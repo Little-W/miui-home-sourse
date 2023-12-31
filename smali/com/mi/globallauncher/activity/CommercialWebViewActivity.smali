@@ -1,5 +1,6 @@
 .class public Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 .super Landroid/app/Activity;
+.source "CommercialWebViewActivity.java"
 
 
 # static fields
@@ -32,24 +33,30 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 30
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 40
     iput-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mUrl:Ljava/lang/String;
 
+    .line 41
     iput-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mTitle:Ljava/lang/String;
 
     const/4 v0, 0x1
 
+    .line 42
     iput-boolean v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mIsLightMode:Z
 
+    .line 148
     new-instance v0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$1;
 
     invoke-direct {v0, p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$1;-><init>(Lcom/mi/globallauncher/activity/CommercialWebViewActivity;)V
 
     iput-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebViewClient:Landroid/webkit/WebViewClient;
 
+    .line 194
     new-instance v0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$2;
 
     invoke-direct {v0, p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity$2;-><init>(Lcom/mi/globallauncher/activity/CommercialWebViewActivity;)V
@@ -62,6 +69,7 @@
 .method static synthetic access$000(Lcom/mi/globallauncher/activity/CommercialWebViewActivity;Ljava/lang/String;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->composeEmail(Ljava/lang/String;)V
 
     return-void
@@ -70,6 +78,7 @@
 .method static synthetic access$100(Lcom/mi/globallauncher/activity/CommercialWebViewActivity;)Ljava/lang/String;
     .locals 0
 
+    .line 30
     iget-object p0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mTitle:Ljava/lang/String;
 
     return-object p0
@@ -78,6 +87,7 @@
 .method static synthetic access$200(Lcom/mi/globallauncher/activity/CommercialWebViewActivity;)Landroid/widget/ProgressBar;
     .locals 0
 
+    .line 30
     iget-object p0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mProgressBar:Landroid/widget/ProgressBar;
 
     return-object p0
@@ -86,6 +96,7 @@
 .method private composeEmail(Ljava/lang/String;)V
     .locals 3
 
+    .line 186
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SENDTO"
@@ -94,6 +105,7 @@
 
     const-string v1, "mailto:"
 
+    .line 187
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -110,14 +122,17 @@
 
     const-string p1, "android.intent.extra.EMAIL"
 
+    .line 189
     invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, ""
 
     const-string v1, "android.intent.extra.TEXT"
 
+    .line 190
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 191
     invoke-static {v0, p1}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
     move-result-object p1
@@ -130,12 +145,14 @@
 .method private loadData()V
     .locals 3
 
+    .line 134
     iget-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mProgressBar:Landroid/widget/ProgressBar;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
+    .line 136
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -148,6 +165,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mUrl:Ljava/lang/String;
 
+    .line 138
     iget-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mUrl:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -160,12 +178,15 @@
 
     const-string v0, "start url is null"
 
+    .line 139
     invoke-static {v1, v0}, Lcom/mi/globallauncher/util/CommercialLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 140
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->finish()V
 
     return-void
 
+    .line 144
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebView:Landroid/webkit/WebView;
 
@@ -173,6 +194,7 @@
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
+    .line 145
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -199,6 +221,7 @@
 .method public synthetic lambda$onCreate$0$CommercialWebViewActivity(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 0
 
+    .line 94
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
@@ -211,12 +234,14 @@
 
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebView:Landroid/webkit/WebView;
 
+    .line 96
     invoke-virtual {p1}, Landroid/webkit/WebView;->canGoBack()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 97
     iget-object p0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->goBack()V
@@ -234,6 +259,7 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
 
+    .line 46
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -248,6 +274,7 @@
 
     iput-boolean v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mIsLightMode:Z
 
+    .line 47
     iget-boolean v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mIsLightMode:Z
 
     if-eqz v0, :cond_0
@@ -262,12 +289,15 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->setTheme(I)V
 
+    .line 49
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    .line 50
     sget p1, Lcom/mi/globallauncher/R$layout;->webview_activity:I
 
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->setContentView(I)V
 
+    .line 52
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1a
@@ -276,10 +306,12 @@
 
     if-lt p1, v0, :cond_2
 
+    .line 53
     iget-boolean p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mIsLightMode:Z
 
     if-eqz p1, :cond_1
 
+    .line 54
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -294,6 +326,7 @@
 
     goto :goto_1
 
+    .line 58
     :cond_1
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getWindow()Landroid/view/Window;
 
@@ -307,11 +340,13 @@
 
     goto :goto_1
 
+    .line 61
     :cond_2
     iget-boolean p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mIsLightMode:Z
 
     if-eqz p1, :cond_3
 
+    .line 62
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -326,6 +361,7 @@
 
     goto :goto_1
 
+    .line 65
     :cond_3
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getWindow()Landroid/view/Window;
 
@@ -337,11 +373,13 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    .line 68
     :goto_1
     iget-boolean p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mIsLightMode:Z
 
     if-eqz p1, :cond_4
 
+    .line 69
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -356,6 +394,7 @@
 
     goto :goto_2
 
+    .line 71
     :cond_4
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getWindow()Landroid/view/Window;
 
@@ -369,6 +408,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
+    .line 73
     :goto_2
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getActionBar()Landroid/app/ActionBar;
 
@@ -376,22 +416,28 @@
 
     if-eqz p1, :cond_6
 
+    .line 74
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object p1
 
+    .line 75
     invoke-virtual {p1, v1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
+    .line 76
     invoke-virtual {p1, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
     const/high16 v0, 0x40000000    # 2.0f
 
+    .line 77
     invoke-virtual {p1, v0}, Landroid/app/ActionBar;->setElevation(F)V
 
+    .line 78
     iget-boolean v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mIsLightMode:Z
 
     if-eqz v0, :cond_5
 
+    .line 79
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     sget v2, Lcom/mi/globallauncher/R$color;->white:I
@@ -406,6 +452,7 @@
 
     goto :goto_3
 
+    .line 81
     :cond_5
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
@@ -419,6 +466,7 @@
 
     invoke-virtual {p1, v0}, Landroid/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 85
     :cond_6
     :goto_3
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->getIntent()Landroid/content/Intent;
@@ -433,6 +481,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mTitle:Ljava/lang/String;
 
+    .line 86
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mTitle:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -445,6 +494,7 @@
 
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 88
     :cond_7
     sget p1, Lcom/mi/globallauncher/R$id;->branch_web:I
 
@@ -456,6 +506,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebView:Landroid/webkit/WebView;
 
+    .line 89
     sget p1, Lcom/mi/globallauncher/R$id;->progress_bar_load:I
 
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->findViewById(I)Landroid/view/View;
@@ -466,18 +517,21 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mProgressBar:Landroid/widget/ProgressBar;
 
+    .line 91
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     iget-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebViewClient:Landroid/webkit/WebViewClient;
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
+    .line 92
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     iget-object v0, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebChromeClient:Landroid/webkit/WebChromeClient;
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
+    .line 93
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     new-instance v0, Lcom/mi/globallauncher/activity/-$$Lambda$CommercialWebViewActivity$iju5DyY0sDwtnEKqOr_kqU_nuSE;
@@ -486,20 +540,26 @@
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
+    .line 102
     iget-object p1, p0, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {p1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object p1
 
+    .line 103
     invoke-virtual {p1, v1}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
 
+    .line 104
     invoke-virtual {p1, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
+    .line 105
     invoke-virtual {p1, v1}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
 
+    .line 106
     invoke-virtual {p1, v1}, Landroid/webkit/WebSettings;->setGeolocationEnabled(Z)V
 
+    .line 108
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -508,8 +568,10 @@
 
     const/4 v0, 0x0
 
+    .line 109
     invoke-virtual {p1, v0}, Landroid/webkit/WebSettings;->setMixedContentMode(I)V
 
+    .line 112
     :cond_8
     invoke-direct {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->loadData()V
 
@@ -519,6 +581,7 @@
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
 
+    .line 125
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -527,12 +590,14 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 130
     invoke-super {p0, p1}, Landroid/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result p0
 
     return p0
 
+    .line 127
     :cond_0
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->finish()V
 
@@ -544,14 +609,17 @@
 .method protected onStop()V
     .locals 1
 
+    .line 117
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
+    .line 118
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 119
     invoke-virtual {p0}, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;->finish()V
 
     :cond_0

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;
 .super Ljava/lang/Object;
+.source "DropdownMenuEndIconDelegate.java"
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -26,6 +27,7 @@
 .method constructor <init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/widget/AutoCompleteTextView;)V
     .locals 0
 
+    .line 430
     iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     iput-object p2, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;->val$editText:Landroid/widget/AutoCompleteTextView;
@@ -40,6 +42,7 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
+    .line 433
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -50,6 +53,7 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 434
     iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-static {p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->access$1400(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Z
@@ -58,10 +62,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 435
     iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-static {p1, p2}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->access$402(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Z)Z
 
+    .line 437
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
@@ -69,6 +75,7 @@
 
     invoke-static {p1, v0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->access$500(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/widget/AutoCompleteTextView;)V
 
+    .line 438
     iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;->this$0:Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;
 
     invoke-static {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->access$600(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V

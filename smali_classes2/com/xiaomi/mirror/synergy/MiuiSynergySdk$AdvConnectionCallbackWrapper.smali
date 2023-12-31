@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$AdvConnectionCallbackWrapper;
 .super Lcom/xiaomi/mirror/IMirrorAdvConnectionCallback$Stub;
+.source "SourceFile"
 
 
 # annotations

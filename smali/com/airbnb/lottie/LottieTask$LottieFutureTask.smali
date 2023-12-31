@@ -1,5 +1,6 @@
 .class Lcom/airbnb/lottie/LottieTask$LottieFutureTask;
 .super Ljava/util/concurrent/FutureTask;
+.source "LottieTask.java"
 
 
 # annotations
@@ -37,8 +38,10 @@
         }
     .end annotation
 
+    .line 167
     iput-object p1, p0, Lcom/airbnb/lottie/LottieTask$LottieFutureTask;->this$0:Lcom/airbnb/lottie/LottieTask;
 
+    .line 168
     invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
     return-void
@@ -49,6 +52,7 @@
 .method protected done()V
     .locals 2
 
+    .line 173
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieTask$LottieFutureTask;->isCancelled()Z
 
     move-result v0
@@ -57,6 +61,7 @@
 
     return-void
 
+    .line 179
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/airbnb/lottie/LottieTask$LottieFutureTask;->this$0:Lcom/airbnb/lottie/LottieTask;
@@ -77,6 +82,7 @@
     :catch_0
     move-exception v0
 
+    .line 181
     iget-object p0, p0, Lcom/airbnb/lottie/LottieTask$LottieFutureTask;->this$0:Lcom/airbnb/lottie/LottieTask;
 
     new-instance v1, Lcom/airbnb/lottie/LottieResult;

@@ -1,5 +1,6 @@
 .class public interface abstract Lio/branch/search/IBranchShortcutHandler;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields

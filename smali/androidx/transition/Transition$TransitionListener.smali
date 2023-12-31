@@ -1,5 +1,6 @@
 .class public interface abstract Landroidx/transition/Transition$TransitionListener;
 .super Ljava/lang/Object;
+.source "Transition.java"
 
 
 # annotations

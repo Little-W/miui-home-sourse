@@ -1,5 +1,6 @@
 .class interface abstract Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$KeyframesWrapper;
 .super Ljava/lang/Object;
+.source "BaseKeyframeAnimation.java"
 
 
 # annotations

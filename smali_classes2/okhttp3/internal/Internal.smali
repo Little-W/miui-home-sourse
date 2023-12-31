@@ -1,5 +1,6 @@
 .class public abstract Lokhttp3/internal/Internal;
 .super Ljava/lang/Object;
+.source "Internal.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

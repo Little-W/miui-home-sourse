@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/internal/measurement/zzfz;
 .super Lcom/google/android/gms/internal/measurement/zzfy;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # direct methods
@@ -24,6 +25,7 @@
     :goto_0
     if-eqz v2, :cond_1
 
+    .line 4
     invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p0
@@ -34,6 +36,7 @@
 
     return p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

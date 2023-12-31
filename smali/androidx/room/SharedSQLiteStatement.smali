@@ -1,5 +1,6 @@
 .class public abstract Landroidx/room/SharedSQLiteStatement;
 .super Ljava/lang/Object;
+.source "SharedSQLiteStatement.java"
 
 
 # instance fields
@@ -14,8 +15,10 @@
 .method public constructor <init>(Landroidx/room/RoomDatabase;)V
     .locals 2
 
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -24,6 +27,7 @@
 
     iput-object v0, p0, Landroidx/room/SharedSQLiteStatement;->mLock:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 49
     iput-object p1, p0, Landroidx/room/SharedSQLiteStatement;->mDatabase:Landroidx/room/RoomDatabase;
 
     return-void
@@ -32,10 +36,12 @@
 .method private createNewStatement()Landroidx/sqlite/db/SupportSQLiteStatement;
     .locals 1
 
+    .line 64
     invoke-virtual {p0}, Landroidx/room/SharedSQLiteStatement;->createQuery()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 65
     iget-object p0, p0, Landroidx/room/SharedSQLiteStatement;->mDatabase:Landroidx/room/RoomDatabase;
 
     invoke-virtual {p0, v0}, Landroidx/room/RoomDatabase;->compileStatement(Ljava/lang/String;)Landroidx/sqlite/db/SupportSQLiteStatement;
@@ -50,21 +56,25 @@
 
     if-eqz p1, :cond_1
 
+    .line 71
     iget-object p1, p0, Landroidx/room/SharedSQLiteStatement;->mStmt:Landroidx/sqlite/db/SupportSQLiteStatement;
 
     if-nez p1, :cond_0
 
+    .line 72
     invoke-direct {p0}, Landroidx/room/SharedSQLiteStatement;->createNewStatement()Landroidx/sqlite/db/SupportSQLiteStatement;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/room/SharedSQLiteStatement;->mStmt:Landroidx/sqlite/db/SupportSQLiteStatement;
 
+    .line 74
     :cond_0
     iget-object p0, p0, Landroidx/room/SharedSQLiteStatement;->mStmt:Landroidx/sqlite/db/SupportSQLiteStatement;
 
     goto :goto_0
 
+    .line 77
     :cond_1
     invoke-direct {p0}, Landroidx/room/SharedSQLiteStatement;->createNewStatement()Landroidx/sqlite/db/SupportSQLiteStatement;
 
@@ -79,8 +89,10 @@
 .method public acquire()Landroidx/sqlite/db/SupportSQLiteStatement;
     .locals 3
 
+    .line 86
     invoke-virtual {p0}, Landroidx/room/SharedSQLiteStatement;->assertNotMainThread()V
 
+    .line 87
     iget-object v0, p0, Landroidx/room/SharedSQLiteStatement;->mLock:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -101,6 +113,7 @@
 .method protected assertNotMainThread()V
     .locals 0
 
+    .line 60
     iget-object p0, p0, Landroidx/room/SharedSQLiteStatement;->mDatabase:Landroidx/room/RoomDatabase;
 
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->assertNotMainThread()V
@@ -114,10 +127,12 @@
 .method public release(Landroidx/sqlite/db/SupportSQLiteStatement;)V
     .locals 1
 
+    .line 96
     iget-object v0, p0, Landroidx/room/SharedSQLiteStatement;->mStmt:Landroidx/sqlite/db/SupportSQLiteStatement;
 
     if-ne p1, v0, :cond_0
 
+    .line 97
     iget-object p0, p0, Landroidx/room/SharedSQLiteStatement;->mLock:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 p1, 0x0

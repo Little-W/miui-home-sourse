@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/internal/LinkedHashMapSerializer;
 .super Lkotlinx/serialization/internal/MapLikeSerializer;
+.source "CollectionSerializers.kt"
 
 
 # annotations
@@ -47,8 +48,10 @@
 
     const/4 v0, 0x0
 
+    .line 254
     invoke-direct {p0, p1, p2, v0}, Lkotlinx/serialization/internal/MapLikeSerializer;-><init>(Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
+    .line 256
     new-instance v0, Lkotlinx/serialization/internal/LinkedHashMapClassDesc;
 
     invoke-interface {p1}, Lkotlinx/serialization/KSerializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -73,6 +76,7 @@
 .method public bridge synthetic builder()Ljava/lang/Object;
     .locals 0
 
+    .line 252
     invoke-virtual {p0}, Lkotlinx/serialization/internal/LinkedHashMapSerializer;->builder()Ljava/util/LinkedHashMap;
 
     move-result-object p0
@@ -90,6 +94,7 @@
         }
     .end annotation
 
+    .line 259
     new-instance p0, Ljava/util/LinkedHashMap;
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -100,6 +105,7 @@
 .method public bridge synthetic builderSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 252
     check-cast p1, Ljava/util/LinkedHashMap;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/LinkedHashMapSerializer;->builderSize(Ljava/util/LinkedHashMap;)I
@@ -123,6 +129,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 260
     invoke-virtual {p1}, Ljava/util/LinkedHashMap;->size()I
 
     move-result p0
@@ -133,6 +140,7 @@
 .method public bridge synthetic checkCapacity(Ljava/lang/Object;I)V
     .locals 0
 
+    .line 252
     check-cast p1, Ljava/util/LinkedHashMap;
 
     invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/LinkedHashMapSerializer;->checkCapacity(Ljava/util/LinkedHashMap;I)V
@@ -160,6 +168,7 @@
 .method public bridge synthetic collectionIterator(Ljava/lang/Object;)Ljava/util/Iterator;
     .locals 0
 
+    .line 252
     check-cast p1, Ljava/util/Map;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/LinkedHashMapSerializer;->collectionIterator(Ljava/util/Map;)Ljava/util/Iterator;
@@ -186,6 +195,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 258
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -200,6 +210,7 @@
 .method public bridge synthetic collectionSize(Ljava/lang/Object;)I
     .locals 0
 
+    .line 252
     check-cast p1, Ljava/util/Map;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/LinkedHashMapSerializer;->collectionSize(Ljava/util/Map;)I
@@ -223,6 +234,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 257
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result p0
@@ -233,6 +245,7 @@
 .method public getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 256
     iget-object p0, p0, Lkotlinx/serialization/internal/LinkedHashMapSerializer;->descriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
@@ -241,6 +254,7 @@
 .method public bridge synthetic toBuilder(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 252
     check-cast p1, Ljava/util/Map;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/LinkedHashMapSerializer;->toBuilder(Ljava/util/Map;)Ljava/util/LinkedHashMap;
@@ -266,6 +280,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 262
     instance-of p0, p1, Ljava/util/LinkedHashMap;
 
     if-nez p0, :cond_0
@@ -296,6 +311,7 @@
 .method public bridge synthetic toResult(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 252
     check-cast p1, Ljava/util/LinkedHashMap;
 
     invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/LinkedHashMapSerializer;->toResult(Ljava/util/LinkedHashMap;)Ljava/util/Map;
@@ -321,6 +337,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 261
     check-cast p1, Ljava/util/Map;
 
     return-object p1

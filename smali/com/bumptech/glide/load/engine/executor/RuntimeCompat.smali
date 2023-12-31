@@ -1,11 +1,13 @@
 .class final Lcom/bumptech/glide/load/engine/executor/RuntimeCompat;
 .super Ljava/lang/Object;
+.source "RuntimeCompat.java"
 
 
 # direct methods
 .method static availableProcessors()I
     .locals 3
 
+    .line 27
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -14,12 +16,14 @@
 
     move-result v0
 
+    .line 28
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x11
 
     if-ge v1, v2, :cond_0
 
+    .line 29
     invoke-static {}, Lcom/bumptech/glide/load/engine/executor/RuntimeCompat;->getCoreCountPre17()I
 
     move-result v1
@@ -37,10 +41,12 @@
 
     const-string v0, "GlideRuntimeCompat"
 
+    .line 49
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v1
 
+    .line 51
     :try_start_0
     new-instance v2, Ljava/io/File;
 
@@ -50,10 +56,12 @@
 
     const-string v3, "cpu[0-9]+"
 
+    .line 52
     invoke-static {v3}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v3
 
+    .line 53
     new-instance v4, Lcom/bumptech/glide/load/engine/executor/RuntimeCompat$1;
 
     invoke-direct {v4, v3}, Lcom/bumptech/glide/load/engine/executor/RuntimeCompat$1;-><init>(Ljava/util/regex/Pattern;)V
@@ -64,6 +72,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 64
     invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     goto :goto_0
@@ -73,6 +82,7 @@
 
     const/4 v3, 0x6
 
+    .line 60
     :try_start_1
     invoke-static {v0, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
@@ -82,10 +92,12 @@
 
     const-string v3, "Failed to calculate accurate cpu count"
 
+    .line 61
     invoke-static {v0, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 64
     :cond_0
     invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
@@ -96,6 +108,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 66
     array-length v0, v0
 
     goto :goto_1
@@ -113,6 +126,7 @@
     :catchall_1
     move-exception v0
 
+    .line 64
     invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     throw v0

@@ -1,5 +1,6 @@
 .class Lcom/xiaomi/mirror/MirrorManagerImpl$1;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/xiaomi/mirror/IMirrorManager$OnMirrorMenuClickListener;

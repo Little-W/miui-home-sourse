@@ -1,5 +1,6 @@
 .class Landroidx/preference/SwitchPreference$Listener;
 .super Ljava/lang/Object;
+.source "SwitchPreference.java"
 
 # interfaces
 .implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Landroidx/preference/SwitchPreference;)V
     .locals 0
 
+    .line 230
     iput-object p1, p0, Landroidx/preference/SwitchPreference$Listener;->this$0:Landroidx/preference/SwitchPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 2
 
+    .line 234
     iget-object v0, p0, Landroidx/preference/SwitchPreference$Listener;->this$0:Landroidx/preference/SwitchPreference;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -50,10 +53,12 @@
 
     xor-int/lit8 p0, p2, 0x1
 
+    .line 237
     invoke-virtual {p1, p0}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     return-void
 
+    .line 241
     :cond_0
     iget-object p0, p0, Landroidx/preference/SwitchPreference$Listener;->this$0:Landroidx/preference/SwitchPreference;
 

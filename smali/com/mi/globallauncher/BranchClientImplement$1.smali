@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/BranchClientImplement$1;
 .super Ljava/lang/Object;
+.source "BranchClientImplement.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/BranchClientImplement;)V
     .locals 0
 
+    .line 176
     iput-object p1, p0, Lcom/mi/globallauncher/BranchClientImplement$1;->this$0:Lcom/mi/globallauncher/BranchClientImplement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,12 +36,14 @@
 .method static synthetic lambda$onConfigSucceed$0()V
     .locals 2
 
+    .line 185
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 186
     invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
 
     move-result-object v0
@@ -59,6 +63,7 @@
 .method public isDrawerMode()Z
     .locals 0
 
+    .line 179
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isDrawerMode()Z
 
     move-result p0
@@ -69,12 +74,14 @@
 .method public onConfigFailed()V
     .locals 1
 
+    .line 193
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 194
     invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
 
     move-result-object p0
@@ -92,6 +99,7 @@
 .method public onConfigSucceed()V
     .locals 2
 
+    .line 184
     sget-object p0, Lcom/mi/globallauncher/-$$Lambda$BranchClientImplement$1$xTfXkH2EkxXjjnn5wXO_6TzAN1Q;->INSTANCE:Lcom/mi/globallauncher/-$$Lambda$BranchClientImplement$1$xTfXkH2EkxXjjnn5wXO_6TzAN1Q;
 
     const-wide/16 v0, 0x1388

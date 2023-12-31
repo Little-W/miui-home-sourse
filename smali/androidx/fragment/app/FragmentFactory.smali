@@ -1,5 +1,6 @@
 .class public Landroidx/fragment/app/FragmentFactory;
 .super Ljava/lang/Object;
+.source "FragmentFactory.java"
 
 
 # static fields
@@ -21,6 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 33
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
@@ -33,6 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,11 +44,13 @@
 .method static isFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Z
     .locals 0
 
+    .line 70
     :try_start_0
     invoke-static {p0, p1}, Landroidx/fragment/app/FragmentFactory;->loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 71
     const-class p1, Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p1, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -81,6 +86,7 @@
         }
     .end annotation
 
+    .line 45
     sget-object v0, Landroidx/fragment/app/FragmentFactory;->sClassCacheMap:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, p0}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -91,14 +97,17 @@
 
     if-nez v0, :cond_0
 
+    .line 47
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
+    .line 48
     sget-object v1, Landroidx/fragment/app/FragmentFactory;->sClassCacheMap:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v1, p0, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 50
     :cond_0
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -110,10 +119,12 @@
 
     const/4 v1, 0x0
 
+    .line 53
     invoke-static {p1, v1, p0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object v1
 
+    .line 54
     invoke-virtual {v0, p1, v1}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
@@ -137,6 +148,7 @@
 
     const-string v0, "Unable to instantiate fragment "
 
+    .line 94
     :try_start_0
     invoke-static {p0, p1}, Landroidx/fragment/app/FragmentFactory;->loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
@@ -150,6 +162,7 @@
     :catch_0
     move-exception p0
 
+    .line 100
     new-instance v1, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -175,6 +188,7 @@
     :catch_1
     move-exception p0
 
+    .line 97
     new-instance v1, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -207,6 +221,7 @@
 
     const-string v0, "Unable to instantiate fragment "
 
+    .line 120
     :try_start_0
     invoke-static {p1, p2}, Landroidx/fragment/app/FragmentFactory;->loadFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
@@ -216,6 +231,7 @@
 
     new-array v2, v1, [Ljava/lang/Class;
 
+    .line 121
     invoke-virtual {p1, v2}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -238,6 +254,7 @@
     :catch_0
     move-exception p0
 
+    .line 134
     new-instance p1, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -263,6 +280,7 @@
     :catch_1
     move-exception p0
 
+    .line 131
     new-instance p1, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -288,6 +306,7 @@
     :catch_2
     move-exception p1
 
+    .line 127
     new-instance v1, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -311,6 +330,7 @@
     :catch_3
     move-exception p1
 
+    .line 123
     new-instance v1, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;

@@ -1,5 +1,6 @@
 .class final Lio/reactivex2/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;
 .super Ljava/util/concurrent/atomic/AtomicReference;
+.source "SingleSubscribeOn.java"
 
 # interfaces
 .implements Lio/reactivex2/SingleObserver;
@@ -72,12 +73,16 @@
         }
     .end annotation
 
+    .line 55
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
+    .line 56
     iput-object p1, p0, Lio/reactivex2/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex2/SingleObserver;
 
+    .line 57
     iput-object p2, p0, Lio/reactivex2/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->source:Lio/reactivex2/SingleSource;
 
+    .line 58
     new-instance p1, Lio/reactivex2/internal/disposables/SequentialDisposable;
 
     invoke-direct {p1}, Lio/reactivex2/internal/disposables/SequentialDisposable;-><init>()V
@@ -92,8 +97,10 @@
 .method public dispose()V
     .locals 0
 
+    .line 78
     invoke-static {p0}, Lio/reactivex2/internal/disposables/DisposableHelper;->dispose(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
+    .line 79
     iget-object p0, p0, Lio/reactivex2/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->task:Lio/reactivex2/internal/disposables/SequentialDisposable;
 
     invoke-virtual {p0}, Lio/reactivex2/internal/disposables/SequentialDisposable;->dispose()V
@@ -104,6 +111,7 @@
 .method public isDisposed()Z
     .locals 0
 
+    .line 84
     invoke-virtual {p0}, Lio/reactivex2/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -120,6 +128,7 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 73
     iget-object p0, p0, Lio/reactivex2/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex2/SingleObserver;
 
     invoke-interface {p0, p1}, Lio/reactivex2/SingleObserver;->onError(Ljava/lang/Throwable;)V
@@ -130,6 +139,7 @@
 .method public onSubscribe(Lio/reactivex2/disposables/Disposable;)V
     .locals 0
 
+    .line 63
     invoke-static {p0, p1}, Lio/reactivex2/internal/disposables/DisposableHelper;->setOnce(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex2/disposables/Disposable;)Z
 
     return-void
@@ -143,6 +153,7 @@
         }
     .end annotation
 
+    .line 68
     iget-object p0, p0, Lio/reactivex2/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex2/SingleObserver;
 
     invoke-interface {p0, p1}, Lio/reactivex2/SingleObserver;->onSuccess(Ljava/lang/Object;)V
@@ -153,6 +164,7 @@
 .method public run()V
     .locals 1
 
+    .line 89
     iget-object v0, p0, Lio/reactivex2/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->source:Lio/reactivex2/SingleSource;
 
     invoke-interface {v0, p0}, Lio/reactivex2/SingleSource;->subscribe(Lio/reactivex2/SingleObserver;)V

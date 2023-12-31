@@ -1,5 +1,6 @@
 .class final Lcom/squareup/picasso/Cache$1;
 .super Ljava/lang/Object;
+.source "Cache.java"
 
 # interfaces
 .implements Lcom/squareup/picasso/Cache;
@@ -20,6 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

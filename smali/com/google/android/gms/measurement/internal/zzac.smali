@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/measurement/internal/zzac;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # static fields
@@ -16,6 +17,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 90
     new-instance v0, Lcom/google/android/gms/measurement/internal/zzac;
 
     const/4 v1, 0x0
@@ -30,10 +32,13 @@
 .method public constructor <init>(Ljava/lang/Boolean;Ljava/lang/Boolean;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
     return-void
@@ -48,6 +53,7 @@
 
     return p0
 
+    .line 13
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -72,6 +78,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 43
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -82,6 +89,7 @@
 
     const/4 v1, 0x2
 
+    .line 44
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -95,6 +103,7 @@
     :cond_0
     move-object v1, v0
 
+    .line 45
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -104,6 +113,7 @@
 
     if-lt v3, v4, :cond_2
 
+    .line 46
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -117,6 +127,7 @@
     :cond_1
     move-object v1, v0
 
+    .line 47
     :cond_2
     :goto_1
     new-instance p0, Lcom/google/android/gms/measurement/internal/zzac;
@@ -145,11 +156,13 @@
 
     return-object v1
 
+    .line 58
     :cond_0
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
 
+    .line 57
     :cond_1
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
@@ -171,6 +184,7 @@
 
     return-object p0
 
+    .line 80
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -204,12 +218,14 @@
 
     const-string v0, "ad_storage"
 
+    .line 27
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 28
     invoke-static {v0}, Lcom/google/android/gms/measurement/internal/zzac;->zzb(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -221,12 +237,14 @@
     :cond_0
     const-string v0, "analytics_storage"
 
+    .line 30
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 31
     invoke-static {p0}, Lcom/google/android/gms/measurement/internal/zzac;->zzb(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -265,6 +283,7 @@
 
     return p0
 
+    .line 62
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -287,15 +306,18 @@
 
     if-nez p0, :cond_0
 
+    .line 35
     sget-object p0, Lcom/google/android/gms/measurement/internal/zzac;->zza:Lcom/google/android/gms/measurement/internal/zzac;
 
     return-object p0
 
+    .line 36
     :cond_0
     new-instance v0, Lcom/google/android/gms/measurement/internal/zzac;
 
     const-string v1, "ad_storage"
 
+    .line 37
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -306,6 +328,7 @@
 
     const-string v2, "analytics_storage"
 
+    .line 38
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -331,12 +354,14 @@
     :cond_0
     const-string v1, "granted"
 
+    .line 50
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 51
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
@@ -344,12 +369,14 @@
     :cond_1
     const-string v1, "denied"
 
+    .line 52
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
+    .line 53
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
@@ -363,6 +390,7 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 5
     instance-of v0, p1, Lcom/google/android/gms/measurement/internal/zzac;
 
     const/4 v1, 0x0
@@ -371,9 +399,11 @@
 
     return v1
 
+    .line 7
     :cond_0
     check-cast p1, Lcom/google/android/gms/measurement/internal/zzac;
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
     invoke-static {v0}, Lcom/google/android/gms/measurement/internal/zzac;->zza(Ljava/lang/Boolean;)I
@@ -390,6 +420,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
+    .line 9
     invoke-static {p0}, Lcom/google/android/gms/measurement/internal/zzac;->zza(Ljava/lang/Boolean;)I
 
     move-result p0
@@ -413,6 +444,7 @@
 .method public final hashCode()I
     .locals 1
 
+    .line 14
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
     invoke-static {v0}, Lcom/google/android/gms/measurement/internal/zzac;->zza(Ljava/lang/Boolean;)I
@@ -423,6 +455,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 15
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
     invoke-static {p0}, Lcom/google/android/gms/measurement/internal/zzac;->zza(Ljava/lang/Boolean;)I
@@ -437,6 +470,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
+    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ConsentSettings: "
@@ -445,8 +479,10 @@
 
     const-string v1, "adStorage="
 
+    .line 18
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 19
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
     const-string v2, "granted"
@@ -457,10 +493,12 @@
 
     if-nez v1, :cond_0
 
+    .line 20
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
+    .line 21
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -481,16 +519,20 @@
     :goto_1
     const-string v1, ", analyticsStorage="
 
+    .line 22
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 23
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
     if-nez p0, :cond_2
 
+    .line 24
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
 
+    .line 25
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -506,6 +548,7 @@
     :goto_2
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 26
     :goto_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -517,28 +560,34 @@
 .method public final zza()Ljava/lang/String;
     .locals 2
 
+    .line 63
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "G1"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 65
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
+    .line 66
     invoke-static {v1}, Lcom/google/android/gms/measurement/internal/zzac;->zzb(Ljava/lang/Boolean;)C
 
     move-result v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 68
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
+    .line 69
     invoke-static {p0}, Lcom/google/android/gms/measurement/internal/zzac;->zzb(Ljava/lang/Boolean;)C
 
     move-result p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 70
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -549,6 +598,7 @@
 .method public final zza(Lcom/google/android/gms/measurement/internal/zzac;)Z
     .locals 2
 
+    .line 75
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -588,12 +638,14 @@
 .method public final zzb(Lcom/google/android/gms/measurement/internal/zzac;)Lcom/google/android/gms/measurement/internal/zzac;
     .locals 3
 
+    .line 81
     new-instance v0, Lcom/google/android/gms/measurement/internal/zzac;
 
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
     iget-object v2, p1, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
+    .line 82
     invoke-static {v1, v2}, Lcom/google/android/gms/measurement/internal/zzac;->zza(Ljava/lang/Boolean;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -602,6 +654,7 @@
 
     iget-object p1, p1, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
+    .line 83
     invoke-static {p0, p1}, Lcom/google/android/gms/measurement/internal/zzac;->zza(Ljava/lang/Boolean;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -614,6 +667,7 @@
 .method public final zzb()Ljava/lang/Boolean;
     .locals 0
 
+    .line 71
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
     return-object p0
@@ -622,14 +676,17 @@
 .method public final zzc(Lcom/google/android/gms/measurement/internal/zzac;)Lcom/google/android/gms/measurement/internal/zzac;
     .locals 2
 
+    .line 85
     new-instance v0, Lcom/google/android/gms/measurement/internal/zzac;
 
+    .line 86
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
     if-nez v1, :cond_0
 
     iget-object v1, p1, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
+    .line 87
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
@@ -646,6 +703,7 @@
 .method public final zzc()Z
     .locals 0
 
+    .line 72
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzb:Ljava/lang/Boolean;
 
     if-eqz p0, :cond_1
@@ -673,6 +731,7 @@
 .method public final zzd()Ljava/lang/Boolean;
     .locals 0
 
+    .line 73
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
     return-object p0
@@ -681,6 +740,7 @@
 .method public final zze()Z
     .locals 0
 
+    .line 74
     iget-object p0, p0, Lcom/google/android/gms/measurement/internal/zzac;->zzc:Ljava/lang/Boolean;
 
     if-eqz p0, :cond_1

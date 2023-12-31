@@ -1,5 +1,6 @@
 .class Landroidx/appcompat/app/ToolbarActionBar;
 .super Landroidx/appcompat/app/ActionBar;
+.source "ToolbarActionBar.java"
 
 
 # annotations
@@ -37,10 +38,12 @@
 .method private getMenu()Landroid/view/Menu;
     .locals 3
 
+    .line 545
     iget-boolean v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mMenuCallbackSet:Z
 
     if-nez v0, :cond_0
 
+    .line 546
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     new-instance v1, Landroidx/appcompat/app/ToolbarActionBar$ActionMenuPresenterCallback;
@@ -55,8 +58,10 @@
 
     const/4 v0, 0x1
 
+    .line 548
     iput-boolean v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mMenuCallbackSet:Z
 
+    .line 550
     :cond_0
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
@@ -72,6 +77,7 @@
 .method public closeOptionsMenu()Z
     .locals 0
 
+    .line 431
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {p0}, Landroidx/appcompat/widget/DecorToolbar;->hideOverflowMenu()Z
@@ -84,6 +90,7 @@
 .method public collapseActionView()Z
     .locals 1
 
+    .line 443
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {v0}, Landroidx/appcompat/widget/DecorToolbar;->hasExpandedActionView()Z
@@ -92,6 +99,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 444
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {p0}, Landroidx/appcompat/widget/DecorToolbar;->collapseActionView()V
@@ -109,15 +117,18 @@
 .method public dispatchMenuVisibilityChanged(Z)V
     .locals 3
 
+    .line 507
     iget-boolean v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mLastMenuVisibility:Z
 
     if-ne p1, v0, :cond_0
 
     return-void
 
+    .line 510
     :cond_0
     iput-boolean p1, p0, Landroidx/appcompat/app/ToolbarActionBar;->mLastMenuVisibility:Z
 
+    .line 512
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mMenuVisibilityListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -129,6 +140,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 514
     iget-object v2, p0, Landroidx/appcompat/app/ToolbarActionBar;->mMenuVisibilityListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -150,6 +162,7 @@
 .method public getDisplayOptions()I
     .locals 0
 
+    .line 326
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {p0}, Landroidx/appcompat/widget/DecorToolbar;->getDisplayOptions()I
@@ -162,6 +175,7 @@
 .method public getThemedContext()Landroid/content/Context;
     .locals 0
 
+    .line 149
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {p0}, Landroidx/appcompat/widget/DecorToolbar;->getContext()Landroid/content/Context;
@@ -174,6 +188,7 @@
 .method public invalidateOptionsMenu()Z
     .locals 2
 
+    .line 436
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {v0}, Landroidx/appcompat/widget/DecorToolbar;->getViewGroup()Landroid/view/ViewGroup;
@@ -184,6 +199,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 437
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {v0}, Landroidx/appcompat/widget/DecorToolbar;->getViewGroup()Landroid/view/ViewGroup;
@@ -202,6 +218,7 @@
 .method public isShowing()Z
     .locals 0
 
+    .line 421
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {p0}, Landroidx/appcompat/widget/DecorToolbar;->getVisibility()I
@@ -224,6 +241,7 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
+    .line 189
     invoke-super {p0, p1}, Landroidx/appcompat/app/ActionBar;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
@@ -232,6 +250,7 @@
 .method onDestroy()V
     .locals 1
 
+    .line 492
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {v0}, Landroidx/appcompat/widget/DecorToolbar;->getViewGroup()Landroid/view/ViewGroup;
@@ -248,6 +267,7 @@
 .method public onKeyShortcut(ILandroid/view/KeyEvent;)Z
     .locals 3
 
+    .line 479
     invoke-direct {p0}, Landroidx/appcompat/app/ToolbarActionBar;->getMenu()Landroid/view/Menu;
 
     move-result-object p0
@@ -258,6 +278,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 482
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getDeviceId()I
 
     move-result v1
@@ -267,11 +288,13 @@
     :cond_0
     const/4 v1, -0x1
 
+    .line 481
     :goto_0
     invoke-static {v1}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
 
     move-result-object v1
 
+    .line 483
     invoke-virtual {v1}, Landroid/view/KeyCharacterMap;->getKeyboardType()I
 
     move-result v1
@@ -288,6 +311,7 @@
     :goto_1
     invoke-interface {p0, v2}, Landroid/view/Menu;->setQwertyMode(Z)V
 
+    .line 484
     invoke-interface {p0, p1, p2, v0}, Landroid/view/Menu;->performShortcut(ILandroid/view/KeyEvent;I)Z
 
     move-result p0
@@ -301,6 +325,7 @@
 .method public onMenuKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 1
 
+    .line 471
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
@@ -309,6 +334,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 472
     invoke-virtual {p0}, Landroidx/appcompat/app/ToolbarActionBar;->openOptionsMenu()Z
 
     :cond_0
@@ -318,6 +344,7 @@
 .method public openOptionsMenu()Z
     .locals 0
 
+    .line 426
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {p0}, Landroidx/appcompat/widget/DecorToolbar;->showOverflowMenu()Z
@@ -347,6 +374,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 278
     :goto_0
     invoke-virtual {p0, p1, v0}, Landroidx/appcompat/app/ToolbarActionBar;->setDisplayOptions(II)V
 
@@ -356,12 +384,14 @@
 .method public setDisplayOptions(II)V
     .locals 1
 
+    .line 262
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {v0}, Landroidx/appcompat/widget/DecorToolbar;->getDisplayOptions()I
 
     move-result v0
 
+    .line 263
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     and-int/2addr p1, p2
@@ -380,6 +410,7 @@
 .method public setElevation(F)V
     .locals 0
 
+    .line 139
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {p0}, Landroidx/appcompat/widget/DecorToolbar;->getViewGroup()Landroid/view/ViewGroup;
@@ -406,6 +437,7 @@
 .method public setWindowTitle(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 231
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
 
     invoke-interface {p0, p1}, Landroidx/appcompat/widget/DecorToolbar;->setWindowTitle(Ljava/lang/CharSequence;)V

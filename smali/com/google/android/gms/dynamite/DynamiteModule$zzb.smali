@@ -26,12 +26,15 @@
 .method public constructor <init>(II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/gms/dynamite/DynamiteModule$zzb;->zzip:I
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/google/android/gms/dynamite/DynamiteModule$zzb;->zziq:I
 
     return-void
@@ -42,6 +45,7 @@
 .method public final getLocalVersion(Landroid/content/Context;Ljava/lang/String;)I
     .locals 0
 
+    .line 6
     iget p0, p0, Lcom/google/android/gms/dynamite/DynamiteModule$zzb;->zzip:I
 
     return p0

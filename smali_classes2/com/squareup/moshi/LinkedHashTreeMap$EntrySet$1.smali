@@ -1,5 +1,6 @@
 .class Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet$1;
 .super Lcom/squareup/moshi/LinkedHashTreeMap$LinkedTreeMapIterator;
+.source "LinkedHashTreeMap.java"
 
 
 # annotations
@@ -31,6 +32,7 @@
 .method constructor <init>(Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;)V
     .locals 0
 
+    .line 797
     iput-object p1, p0, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet$1;->this$1:Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;
 
     iget-object p1, p1, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet;->this$0:Lcom/squareup/moshi/LinkedHashTreeMap;
@@ -45,6 +47,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 797
     invoke-virtual {p0}, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet$1;->next()Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -62,6 +65,7 @@
         }
     .end annotation
 
+    .line 799
     invoke-virtual {p0}, Lcom/squareup/moshi/LinkedHashTreeMap$EntrySet$1;->nextNode()Lcom/squareup/moshi/LinkedHashTreeMap$Node;
 
     move-result-object p0

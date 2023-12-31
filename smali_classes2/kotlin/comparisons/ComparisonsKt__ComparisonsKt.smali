@@ -1,5 +1,6 @@
 .class Lkotlin/comparisons/ComparisonsKt__ComparisonsKt;
 .super Ljava/lang/Object;
+.source "Comparisons.kt"
 
 
 # direct methods
@@ -33,6 +34,7 @@
 
     return p0
 
+    .line 78
     :cond_2
     invoke-interface {p0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 

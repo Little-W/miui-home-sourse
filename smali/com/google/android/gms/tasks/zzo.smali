@@ -63,12 +63,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/tasks/zzo;->zzd:Ljava/util/concurrent/Executor;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/gms/tasks/zzo;->zzr:Lcom/google/android/gms/tasks/SuccessContinuation;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/gms/tasks/zzo;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     return-void
@@ -77,6 +81,7 @@
 .method static synthetic zza(Lcom/google/android/gms/tasks/zzo;)Lcom/google/android/gms/tasks/SuccessContinuation;
     .locals 0
 
+    .line 15
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzo;->zzr:Lcom/google/android/gms/tasks/SuccessContinuation;
 
     return-object p0
@@ -87,6 +92,7 @@
 .method public final onCanceled()V
     .locals 0
 
+    .line 13
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzo;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/zzu;->zza()Z
@@ -104,6 +110,7 @@
         }
     .end annotation
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzo;->zzd:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/gms/tasks/zzp;
@@ -118,6 +125,7 @@
 .method public final onFailure(Ljava/lang/Exception;)V
     .locals 0
 
+    .line 11
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzo;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzu;->setException(Ljava/lang/Exception;)V
@@ -133,6 +141,7 @@
         }
     .end annotation
 
+    .line 9
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzo;->zzf:Lcom/google/android/gms/tasks/zzu;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzu;->setResult(Ljava/lang/Object;)V

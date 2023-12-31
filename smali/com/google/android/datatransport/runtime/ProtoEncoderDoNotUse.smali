@@ -1,5 +1,6 @@
 .class public abstract Lcom/google/android/datatransport/runtime/ProtoEncoderDoNotUse;
 .super Ljava/lang/Object;
+.source "ProtoEncoderDoNotUse.java"
 
 
 # static fields
@@ -10,6 +11,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 12
     invoke-static {}, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->builder()Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
 
     move-result-object v0
@@ -32,6 +34,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +43,7 @@
 .method public static encode(Ljava/lang/Object;)[B
     .locals 1
 
+    .line 18
     sget-object v0, Lcom/google/android/datatransport/runtime/ProtoEncoderDoNotUse;->ENCODER:Lcom/google/firebase/encoders/proto/ProtobufEncoder;
 
     invoke-virtual {v0, p0}, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->encode(Ljava/lang/Object;)[B

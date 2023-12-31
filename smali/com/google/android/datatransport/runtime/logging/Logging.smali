@@ -1,11 +1,13 @@
 .class public final Lcom/google/android/datatransport/runtime/logging/Logging;
 .super Ljava/lang/Object;
+.source "Logging.java"
 
 
 # direct methods
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
 
+    .line 31
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/logging/Logging;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -30,6 +32,7 @@
 .method public static varargs d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 0
 
+    .line 39
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/logging/Logging;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -46,6 +49,7 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 47
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/logging/Logging;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -58,6 +62,7 @@
 .method private static getTag(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,6 +83,7 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 43
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/logging/Logging;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -90,6 +96,7 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
 
+    .line 51
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/logging/Logging;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

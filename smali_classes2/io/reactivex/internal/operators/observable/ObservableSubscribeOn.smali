@@ -1,5 +1,6 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableSubscribeOn;
 .super Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
+.source "ObservableSubscribeOn.java"
 
 
 # annotations
@@ -38,8 +39,10 @@
         }
     .end annotation
 
+    .line 26
     invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex/ObservableSource;)V
 
+    .line 27
     iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableSubscribeOn;->scheduler:Lio/reactivex/Scheduler;
 
     return-void
@@ -57,12 +60,15 @@
         }
     .end annotation
 
+    .line 32
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservableSubscribeOn$SubscribeOnObserver;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/operators/observable/ObservableSubscribeOn$SubscribeOnObserver;-><init>(Lio/reactivex/Observer;)V
 
+    .line 34
     invoke-interface {p1, v0}, Lio/reactivex/Observer;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
+    .line 36
     iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSubscribeOn;->scheduler:Lio/reactivex/Scheduler;
 
     new-instance v1, Lio/reactivex/internal/operators/observable/ObservableSubscribeOn$SubscribeTask;

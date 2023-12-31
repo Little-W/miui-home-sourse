@@ -1,5 +1,6 @@
 .class public Lcom/bumptech/glide/load/model/AssetUriLoader;
 .super Ljava/lang/Object;
+.source "AssetUriLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/ModelLoader;
@@ -62,10 +63,13 @@
         }
     .end annotation
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     iput-object p1, p0, Lcom/bumptech/glide/load/model/AssetUriLoader;->assetManager:Landroid/content/res/AssetManager;
 
+    .line 33
     iput-object p2, p0, Lcom/bumptech/glide/load/model/AssetUriLoader;->factory:Lcom/bumptech/glide/load/model/AssetUriLoader$AssetFetcherFactory;
 
     return-void
@@ -87,6 +91,7 @@
         }
     .end annotation
 
+    .line 39
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -97,6 +102,7 @@
 
     move-result-object p2
 
+    .line 40
     new-instance p3, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     new-instance p4, Lcom/bumptech/glide/signature/ObjectKey;
@@ -119,6 +125,7 @@
 .method public bridge synthetic buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
     .locals 0
 
+    .line 20
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/model/AssetUriLoader;->buildLoadData(Landroid/net/Uri;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
@@ -131,6 +138,7 @@
 .method public handles(Landroid/net/Uri;)Z
     .locals 1
 
+    .line 45
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object p0
@@ -149,6 +157,7 @@
 
     move-result-object p0
 
+    .line 46
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -180,6 +189,7 @@
 .method public bridge synthetic handles(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 20
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/AssetUriLoader;->handles(Landroid/net/Uri;)Z

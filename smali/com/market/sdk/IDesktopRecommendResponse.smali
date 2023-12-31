@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/market/sdk/IDesktopRecommendResponse;
 .super Ljava/lang/Object;
+.source "IDesktopRecommendResponse.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

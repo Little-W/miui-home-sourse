@@ -1,5 +1,6 @@
 .class public final Lkotlin/InitializedLazyImpl;
 .super Ljava/lang/Object;
+.source "Lazy.kt"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -39,6 +40,7 @@
         }
     .end annotation
 
+    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlin/InitializedLazyImpl;->value:Ljava/lang/Object;
@@ -56,6 +58,7 @@
         }
     .end annotation
 
+    .line 95
     iget-object p0, p0, Lkotlin/InitializedLazyImpl;->value:Ljava/lang/Object;
 
     return-object p0
@@ -72,6 +75,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 99
     invoke-virtual {p0}, Lkotlin/InitializedLazyImpl;->getValue()Ljava/lang/Object;
 
     move-result-object p0

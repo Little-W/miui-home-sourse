@@ -1,5 +1,6 @@
 .class public interface abstract Lio/reactivex2/internal/fuseable/QueueFuseable;
 .super Ljava/lang/Object;
+.source "QueueFuseable.java"
 
 # interfaces
 .implements Lio/reactivex2/internal/fuseable/SimpleQueue;

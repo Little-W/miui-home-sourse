@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/TapTargetView$4;
 .super Ljava/lang/Object;
+.source "TapTargetView.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$UpdateListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/TapTargetView;)V
     .locals 0
 
+    .line 296
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$4;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onUpdate(F)V
     .locals 5
 
+    .line 299
     iget-object v0, p0, Lcom/mi/globallauncher/view/TapTargetView$4;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -44,6 +47,7 @@
 
     move-result v0
 
+    .line 300
     iget-object v1, p0, Lcom/mi/globallauncher/view/TapTargetView$4;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -58,6 +62,7 @@
 
     iput v3, v1, Lcom/mi/globallauncher/view/TapTargetView;->targetCirclePulseRadius:F
 
+    .line 301
     iget-object v1, p0, Lcom/mi/globallauncher/view/TapTargetView$4;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     sub-float/2addr v2, v0
@@ -70,6 +75,7 @@
 
     iput v0, v1, Lcom/mi/globallauncher/view/TapTargetView;->targetCirclePulseAlpha:I
 
+    .line 302
     iget v0, v1, Lcom/mi/globallauncher/view/TapTargetView;->TARGET_RADIUS:I
 
     int-to-float v0, v0
@@ -92,6 +98,7 @@
 
     iput v0, v1, Lcom/mi/globallauncher/view/TapTargetView;->targetCircleRadius:F
 
+    .line 304
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$4;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget p1, p1, Lcom/mi/globallauncher/view/TapTargetView;->outerCircleRadius:F
@@ -106,6 +113,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 305
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$4;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget v0, p1, Lcom/mi/globallauncher/view/TapTargetView;->calculatedOuterCircleRadius:I
@@ -114,11 +122,13 @@
 
     iput v0, p1, Lcom/mi/globallauncher/view/TapTargetView;->outerCircleRadius:F
 
+    .line 308
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$4;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-virtual {p1}, Lcom/mi/globallauncher/view/TapTargetView;->calculateDrawingBounds()V
 
+    .line 309
     iget-object p0, p0, Lcom/mi/globallauncher/view/TapTargetView$4;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     iget-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView;->drawingBounds:Landroid/graphics/Rect;

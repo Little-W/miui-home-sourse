@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/coroutines/channels/Receive;
 .super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
+.source "AbstractChannel.kt"
 
 # interfaces
 .implements Lkotlinx/coroutines/channels/ReceiveOrClosed;
@@ -22,6 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1118
     invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
     return-void
@@ -32,6 +34,7 @@
 .method public bridge synthetic getOfferResult()Ljava/lang/Object;
     .locals 0
 
+    .line 1118
     invoke-virtual {p0}, Lkotlinx/coroutines/channels/Receive;->getOfferResult()Lkotlinx/coroutines/internal/Symbol;
 
     move-result-object p0
@@ -42,6 +45,7 @@
 .method public getOfferResult()Lkotlinx/coroutines/internal/Symbol;
     .locals 0
 
+    .line 1119
     sget-object p0, Lkotlinx/coroutines/channels/AbstractChannelKt;->OFFER_SUCCESS:Lkotlinx/coroutines/internal/Symbol;
 
     return-object p0

@@ -1,5 +1,6 @@
 .class Lcom/google/android/material/bottomappbar/BottomAppBar$5$1;
 .super Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;
+.source "BottomAppBar.java"
 
 
 # annotations
@@ -21,6 +22,7 @@
 .method constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar$5;)V
     .locals 0
 
+    .line 704
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5$1;->this$1:Lcom/google/android/material/bottomappbar/BottomAppBar$5;
 
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;-><init>()V
@@ -33,6 +35,7 @@
 .method public onShown(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
     .locals 0
 
+    .line 707
     iget-object p0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5$1;->this$1:Lcom/google/android/material/bottomappbar/BottomAppBar$5;
 
     iget-object p0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;

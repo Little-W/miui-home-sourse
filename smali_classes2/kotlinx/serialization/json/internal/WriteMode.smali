@@ -1,5 +1,6 @@
 .class public final enum Lkotlinx/serialization/json/internal/WriteMode;
 .super Ljava/lang/Enum;
+.source "WriteMode.kt"
 
 
 # annotations
@@ -52,6 +53,7 @@
 
     const-string v5, "OBJ"
 
+    .line 14
     invoke-direct {v1, v5, v4, v3, v2}, Lkotlinx/serialization/json/internal/WriteMode;-><init>(Ljava/lang/String;ICC)V
 
     sput-object v1, Lkotlinx/serialization/json/internal/WriteMode;->OBJ:Lkotlinx/serialization/json/internal/WriteMode;
@@ -68,6 +70,7 @@
 
     const-string v7, "LIST"
 
+    .line 15
     invoke-direct {v1, v7, v6, v5, v4}, Lkotlinx/serialization/json/internal/WriteMode;-><init>(Ljava/lang/String;ICC)V
 
     sput-object v1, Lkotlinx/serialization/json/internal/WriteMode;->LIST:Lkotlinx/serialization/json/internal/WriteMode;
@@ -80,6 +83,7 @@
 
     const-string v7, "MAP"
 
+    .line 16
     invoke-direct {v1, v7, v6, v3, v2}, Lkotlinx/serialization/json/internal/WriteMode;-><init>(Ljava/lang/String;ICC)V
 
     sput-object v1, Lkotlinx/serialization/json/internal/WriteMode;->MAP:Lkotlinx/serialization/json/internal/WriteMode;
@@ -92,6 +96,7 @@
 
     const-string v3, "POLY_OBJ"
 
+    .line 17
     invoke-direct {v1, v3, v2, v5, v4}, Lkotlinx/serialization/json/internal/WriteMode;-><init>(Ljava/lang/String;ICC)V
 
     sput-object v1, Lkotlinx/serialization/json/internal/WriteMode;->POLY_OBJ:Lkotlinx/serialization/json/internal/WriteMode;
@@ -111,12 +116,14 @@
         }
     .end annotation
 
+    .line 13
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput-char p3, p0, Lkotlinx/serialization/json/internal/WriteMode;->begin:C
 
     iput-char p4, p0, Lkotlinx/serialization/json/internal/WriteMode;->end:C
 
+    .line 20
     iget-char p1, p0, Lkotlinx/serialization/json/internal/WriteMode;->begin:C
 
     invoke-static {p1}, Lkotlinx/serialization/json/internal/JsonReaderKt;->charToTokenClass(C)B
@@ -125,6 +132,7 @@
 
     iput-byte p1, p0, Lkotlinx/serialization/json/internal/WriteMode;->beginTc:B
 
+    .line 22
     iget-char p1, p0, Lkotlinx/serialization/json/internal/WriteMode;->end:C
 
     invoke-static {p1}, Lkotlinx/serialization/json/internal/JsonReaderKt;->charToTokenClass(C)B

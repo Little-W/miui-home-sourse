@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;
 .super Ljava/lang/Object;
+.source "TransportRuntime_Factory.java"
 
 # interfaces
 .implements Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
@@ -92,16 +93,22 @@
         }
     .end annotation
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->eventClockProvider:Ljavax/inject/Provider;
 
+    .line 30
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uptimeClockProvider:Ljavax/inject/Provider;
 
+    .line 31
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->schedulerProvider:Ljavax/inject/Provider;
 
+    .line 32
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uploaderProvider:Ljavax/inject/Provider;
 
+    .line 33
     iput-object p5, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->initializerProvider:Ljavax/inject/Provider;
 
     return-void
@@ -131,6 +138,7 @@
         }
     .end annotation
 
+    .line 44
     new-instance v6, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;
 
     move-object v0, v6
@@ -153,6 +161,7 @@
 .method public static newInstance(Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/scheduling/Scheduler;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;)Lcom/google/android/datatransport/runtime/TransportRuntime;
     .locals 7
 
+    .line 49
     new-instance v6, Lcom/google/android/datatransport/runtime/TransportRuntime;
 
     move-object v0, v6
@@ -177,6 +186,7 @@
 .method public get()Lcom/google/android/datatransport/runtime/TransportRuntime;
     .locals 4
 
+    .line 38
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->eventClockProvider:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -227,6 +237,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 11
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->get()Lcom/google/android/datatransport/runtime/TransportRuntime;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/firebase/inject/Deferred;
 .super Ljava/lang/Object;
+.source "Deferred.java"
 
 
 # annotations

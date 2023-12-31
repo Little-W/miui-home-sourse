@@ -1,5 +1,6 @@
 .class public Lio/branch/search/BranchConfiguration$b;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Lio/branch/search/BranchConfiguration$d;

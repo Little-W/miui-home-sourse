@@ -1,5 +1,6 @@
 .class Lcom/market/sdk/RemoteMethodInvoker$2;
 .super Ljava/lang/Object;
+.source "RemoteMethodInvoker.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/market/sdk/RemoteMethodInvoker;)V
     .locals 0
 
+    .line 72
     iput-object p1, p0, Lcom/market/sdk/RemoteMethodInvoker$2;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +38,12 @@
 .method public run()V
     .locals 4
 
+    .line 75
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
+    .line 76
     new-instance v1, Landroid/content/ComponentName;
 
     sget-object v2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
@@ -50,6 +54,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
+    .line 77
     iget-object v1, p0, Lcom/market/sdk/RemoteMethodInvoker$2;->this$0:Lcom/market/sdk/RemoteMethodInvoker;
 
     invoke-static {v1}, Lcom/market/sdk/RemoteMethodInvoker;->access$100(Lcom/market/sdk/RemoteMethodInvoker;)Landroid/content/Context;

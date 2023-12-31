@@ -1,5 +1,6 @@
 .class public final Lcom/xiaomi/dist/utils/SignatureUtils;
 .super Ljava/lang/Object;
+.source "SignatureUtils.java"
 
 
 # static fields
@@ -42,6 +43,7 @@
 
     const-string v15, "F"
 
+    .line 20
     filled-new-array/range {v0 .. v15}, [Ljava/lang/String;
 
     move-result-object v0
@@ -54,18 +56,21 @@
 .method public static getSignature(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
+    .line 42
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/String;
 
+    .line 43
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
+    .line 46
     :try_start_0
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -73,12 +78,14 @@
 
     if-lt v1, v2, :cond_0
 
+    .line 47
     invoke-static {p1, p0}, Lcom/xiaomi/dist/utils/SignatureUtils;->getSignatureAndroidP(Ljava/lang/String;Landroid/content/pm/PackageManager;)[Landroid/content/pm/Signature;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 49
     :cond_0
     invoke-static {p1, p0}, Lcom/xiaomi/dist/utils/SignatureUtils;->getSignatureDefault(Ljava/lang/String;Landroid/content/pm/PackageManager;)[Landroid/content/pm/Signature;
 
@@ -87,6 +94,7 @@
     :goto_0
     if-eqz p0, :cond_2
 
+    .line 51
     array-length p1, p0
 
     const/4 v1, 0x1
@@ -98,6 +106,7 @@
     :cond_1
     const/4 p1, 0x0
 
+    .line 54
     aget-object p0, p0, p1
 
     invoke-virtual {p0}, Landroid/content/pm/Signature;->toByteArray()[B
@@ -128,10 +137,12 @@
 
     const/high16 v0, 0x8000000
 
+    .line 79
     invoke-virtual {p1, p0, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
+    .line 81
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     invoke-virtual {p0}, Landroid/content/pm/SigningInfo;->getApkContentsSigners()[Landroid/content/pm/Signature;
@@ -151,10 +162,12 @@
 
     const/16 v0, 0x40
 
+    .line 72
     invoke-virtual {p1, p0, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
+    .line 73
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     return-object p0
@@ -167,6 +180,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 85
     array-length v1, p0
 
     if-nez v1, :cond_0
@@ -177,10 +191,12 @@
     :try_start_0
     const-string v1, "SHA-1"
 
+    .line 90
     invoke-static {v1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v1
 
+    .line 91
     invoke-virtual {v1, p0}, Ljava/security/MessageDigest;->digest([B)[B
 
     move-result-object p0
@@ -206,11 +222,14 @@
 
     add-int/lit16 p0, p0, 0x100
 
+    .line 65
     :cond_0
     div-int/lit8 v0, p0, 0x10
 
+    .line 66
     rem-int/lit8 p0, p0, 0x10
 
+    .line 67
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -237,12 +256,15 @@
 .method public static toHexString([B)Ljava/lang/String;
     .locals 4
 
+    .line 29
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 30
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 31
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -252,6 +274,7 @@
 
     aget-byte v3, p0, v2
 
+    .line 32
     invoke-static {v3}, Lcom/xiaomi/dist/utils/SignatureUtils;->toHexString(B)Ljava/lang/String;
 
     move-result-object v3
@@ -262,6 +285,7 @@
 
     goto :goto_0
 
+    .line 34
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

@@ -1,5 +1,6 @@
 .class public final Lcom/google/firebase/encoders/proto/AtProtobuf;
 .super Ljava/lang/Object;
+.source "AtProtobuf.java"
 
 
 # annotations
@@ -20,8 +21,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 12
     sget-object v0, Lcom/google/firebase/encoders/proto/Protobuf$IntEncoding;->DEFAULT:Lcom/google/firebase/encoders/proto/Protobuf$IntEncoding;
 
     iput-object v0, p0, Lcom/google/firebase/encoders/proto/AtProtobuf;->intEncoding:Lcom/google/firebase/encoders/proto/Protobuf$IntEncoding;
@@ -32,6 +35,7 @@
 .method public static builder()Lcom/google/firebase/encoders/proto/AtProtobuf;
     .locals 1
 
+    .line 25
     new-instance v0, Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     invoke-direct {v0}, Lcom/google/firebase/encoders/proto/AtProtobuf;-><init>()V
@@ -44,6 +48,7 @@
 .method public build()Lcom/google/firebase/encoders/proto/Protobuf;
     .locals 2
 
+    .line 29
     new-instance v0, Lcom/google/firebase/encoders/proto/AtProtobuf$ProtobufImpl;
 
     iget v1, p0, Lcom/google/firebase/encoders/proto/AtProtobuf;->tag:I
@@ -58,6 +63,7 @@
 .method public tag(I)Lcom/google/firebase/encoders/proto/AtProtobuf;
     .locals 0
 
+    .line 15
     iput p1, p0, Lcom/google/firebase/encoders/proto/AtProtobuf;->tag:I
 
     return-object p0

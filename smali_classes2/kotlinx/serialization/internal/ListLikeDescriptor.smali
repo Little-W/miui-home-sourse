@@ -1,5 +1,6 @@
 .class public abstract Lkotlinx/serialization/internal/ListLikeDescriptor;
 .super Ljava/lang/Object;
+.source "CollectionDescriptors.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -21,12 +22,14 @@
 .method private constructor <init>(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
     .locals 0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lkotlinx/serialization/internal/ListLikeDescriptor;->elementDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     const/4 p1, 0x1
 
+    .line 14
     iput p1, p0, Lkotlinx/serialization/internal/ListLikeDescriptor;->elementsCount:I
 
     return-void
@@ -35,6 +38,7 @@
 .method public synthetic constructor <init>(Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
+    .line 12
     invoke-direct {p0, p1}, Lkotlinx/serialization/internal/ListLikeDescriptor;-><init>(Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 
     return-void
@@ -45,6 +49,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
+    .line 36
     move-object v0, p0
 
     check-cast v0, Lkotlinx/serialization/internal/ListLikeDescriptor;
@@ -55,6 +60,7 @@
 
     return v1
 
+    .line 37
     :cond_0
     instance-of v0, p1, Lkotlinx/serialization/internal/ListLikeDescriptor;
 
@@ -64,6 +70,7 @@
 
     return v2
 
+    .line 38
     :cond_1
     iget-object v0, p0, Lkotlinx/serialization/internal/ListLikeDescriptor;->elementDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
@@ -112,10 +119,12 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 32
     iget-object p0, p0, Lkotlinx/serialization/internal/ListLikeDescriptor;->elementDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     return-object p0
 
+    .line 31
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -165,6 +174,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 18
     invoke-static {p1}, Lkotlin/text/StringsKt;->toIntOrNull(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -204,6 +214,7 @@
 .method public getElementName(I)Ljava/lang/String;
     .locals 0
 
+    .line 16
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -214,6 +225,7 @@
 .method public getElementsCount()I
     .locals 0
 
+    .line 14
     iget p0, p0, Lkotlinx/serialization/internal/ListLikeDescriptor;->elementsCount:I
 
     return p0
@@ -222,6 +234,7 @@
 .method public getKind()Lkotlinx/serialization/descriptors/SerialKind;
     .locals 0
 
+    .line 13
     sget-object p0, Lkotlinx/serialization/descriptors/StructureKind$LIST;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$LIST;
 
     check-cast p0, Lkotlinx/serialization/descriptors/SerialKind;
@@ -232,6 +245,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 43
     iget-object v0, p0, Lkotlinx/serialization/internal/ListLikeDescriptor;->elementDescriptor:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -256,6 +270,7 @@
 .method public isNullable()Z
     .locals 0
 
+    .line 12
     invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor$DefaultImpls;->isNullable(Lkotlinx/serialization/descriptors/SerialDescriptor;)Z
 
     move-result p0
@@ -266,6 +281,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 46
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

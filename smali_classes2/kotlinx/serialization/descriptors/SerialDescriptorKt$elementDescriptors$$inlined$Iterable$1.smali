@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;
 .super Ljava/lang/Object;
+.source "Iterables.kt"
 
 # interfaces
 .implements Ljava/lang/Iterable;
@@ -39,6 +40,7 @@
 
     iput-object p1, p0, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;->$this_elementDescriptors$inlined:Lkotlinx/serialization/descriptors/SerialDescriptor;
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,6 +59,7 @@
         }
     .end annotation
 
+    .line 94
     new-instance v0, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1$lambda$1;
 
     invoke-direct {v0, p0}, Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1$lambda$1;-><init>(Lkotlinx/serialization/descriptors/SerialDescriptorKt$elementDescriptors$$inlined$Iterable$1;)V

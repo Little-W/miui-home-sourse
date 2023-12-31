@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/measurement/internal/zzij;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # instance fields
@@ -32,6 +33,7 @@
 
     move-wide v3, p3
 
+    .line 1
     invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/measurement/internal/zzij;-><init>(Ljava/lang/String;Ljava/lang/String;JZJ)V
 
     return-void
@@ -40,20 +42,27 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JZJ)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzij;->zza:Ljava/lang/String;
 
+    .line 5
     iput-object p2, p0, Lcom/google/android/gms/measurement/internal/zzij;->zzb:Ljava/lang/String;
 
+    .line 6
     iput-wide p3, p0, Lcom/google/android/gms/measurement/internal/zzij;->zzc:J
 
     const/4 p1, 0x0
 
+    .line 7
     iput-boolean p1, p0, Lcom/google/android/gms/measurement/internal/zzij;->zzd:Z
 
+    .line 8
     iput-boolean p5, p0, Lcom/google/android/gms/measurement/internal/zzij;->zze:Z
 
+    .line 9
     iput-wide p6, p0, Lcom/google/android/gms/measurement/internal/zzij;->zzf:J
 
     return-void

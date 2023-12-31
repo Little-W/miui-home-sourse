@@ -1,5 +1,6 @@
 .class public Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 .super Ljava/lang/Object;
+.source "BackgroundExecutor.java"
 
 
 # static fields
@@ -14,6 +15,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    .line 31
     new-instance v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     invoke-direct {v0}, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;-><init>()V
@@ -26,8 +28,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     new-instance v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor$1;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/system/BackgroundExecutor$1;-><init>(Lcom/android/systemui/shared/recents/system/BackgroundExecutor;)V
@@ -46,6 +50,7 @@
 .method public static get()Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
     .locals 1
 
+    .line 45
     sget-object v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->sInstance:Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     return-object v0
@@ -65,6 +70,7 @@
         }
     .end annotation
 
+    .line 59
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
@@ -88,6 +94,7 @@
         }
     .end annotation
 
+    .line 67
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
@@ -111,6 +118,7 @@
         }
     .end annotation
 
+    .line 52
     iget-object p0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;

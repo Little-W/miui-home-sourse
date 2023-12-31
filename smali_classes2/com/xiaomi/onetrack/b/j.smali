@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/b/h;Ljava/lang/String;)V
     .locals 0
 
+    .line 105
     iput-object p1, p0, Lcom/xiaomi/onetrack/b/j;->b:Lcom/xiaomi/onetrack/b/h;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/b/j;->a:Ljava/lang/String;
@@ -29,6 +30,7 @@
 .method public run()V
     .locals 5
 
+    .line 109
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/b/j;->b:Lcom/xiaomi/onetrack/b/h;
 
@@ -50,6 +52,7 @@
 
     const/4 v4, 0x0
 
+    .line 111
     iget-object p0, p0, Lcom/xiaomi/onetrack/b/j;->a:Ljava/lang/String;
 
     aput-object p0, v3, v4
@@ -63,6 +66,7 @@
     :catch_0
     move-exception p0
 
+    .line 113
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

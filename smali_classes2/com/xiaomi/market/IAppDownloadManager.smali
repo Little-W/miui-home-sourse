@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/market/IAppDownloadManager;
 .super Ljava/lang/Object;
+.source "IAppDownloadManager.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

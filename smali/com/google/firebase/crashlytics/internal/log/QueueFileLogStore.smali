@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;
 .super Ljava/lang/Object;
+.source "QueueFileLogStore.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/log/FileLogStore;
@@ -31,6 +32,7 @@
 
     const-string v0, "UTF-8"
 
+    .line 28
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -43,10 +45,13 @@
 .method constructor <init>(Ljava/io/File;I)V
     .locals 0
 
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 46
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->workingFile:Ljava/io/File;
 
+    .line 47
     iput p2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->maxLogSize:I
 
     return-void
@@ -57,6 +62,7 @@
 
     const-string v0, " "
 
+    .line 136
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     if-nez v1, :cond_0
@@ -68,18 +74,21 @@
 
     const-string p3, "null"
 
+    .line 160
     :cond_1
     :try_start_0
     iget v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->maxLogSize:I
 
     div-int/lit8 v1, v1, 0x4
 
+    .line 162
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-le v2, v1, :cond_2
 
+    .line 163
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,16 +116,19 @@
     :cond_2
     const-string v1, "\r"
 
+    .line 166
     invoke-virtual {p3, v1, v0}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
     const-string v1, "\n"
 
+    .line 167
     invoke-virtual {p3, v1, v0}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
+    .line 169
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v1, "%d %s%n"
@@ -147,10 +159,12 @@
 
     move-result-object p1
 
+    .line 171
     iget-object p2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     invoke-virtual {p2, p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->add([B)V
 
+    .line 174
     :goto_0
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
@@ -170,6 +184,7 @@
 
     if-le p1, p2, :cond_3
 
+    .line 175
     iget-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->remove()V
@@ -181,6 +196,7 @@
     :catch_0
     move-exception p0
 
+    .line 178
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object p1
@@ -196,6 +212,7 @@
 .method private getLogBytes()Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$LogBytes;
     .locals 5
 
+    .line 74
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->workingFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -208,9 +225,11 @@
 
     return-object v1
 
+    .line 79
     :cond_0
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->openLogFile()V
 
+    .line 81
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     if-nez v0, :cond_1
@@ -226,12 +245,14 @@
 
     aput v2, v1, v2
 
+    .line 91
     invoke-virtual {v0}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->usedBytes()I
 
     move-result v0
 
     new-array v0, v0, [B
 
+    .line 94
     :try_start_0
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
@@ -248,6 +269,7 @@
     :catch_0
     move-exception p0
 
+    .line 107
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v3
@@ -256,6 +278,7 @@
 
     invoke-virtual {v3, v4, p0}, Lcom/google/firebase/crashlytics/internal/Logger;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 110
     :goto_0
     new-instance p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$LogBytes;
 
@@ -269,10 +292,12 @@
 .method private openLogFile()V
     .locals 4
 
+    .line 126
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     if-nez v0, :cond_0
 
+    .line 128
     :try_start_0
     new-instance v0, Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
@@ -289,6 +314,7 @@
     :catch_0
     move-exception v0
 
+    .line 130
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
 
     move-result-object v1
@@ -321,6 +347,7 @@
 .method public closeLogFile()V
     .locals 2
 
+    .line 115
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     const-string v1, "There was a problem closing the Crashlytics log file."
@@ -329,6 +356,7 @@
 
     const/4 v0, 0x0
 
+    .line 116
     iput-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->logFile:Lcom/google/firebase/crashlytics/internal/log/QueueFile;
 
     return-void
@@ -337,8 +365,10 @@
 .method public deleteLogFile()V
     .locals 0
 
+    .line 121
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->closeLogFile()V
 
+    .line 122
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->workingFile:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
@@ -349,6 +379,7 @@
 .method public getLogAsBytes()[B
     .locals 3
 
+    .line 58
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->getLogBytes()Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$LogBytes;
 
     move-result-object p0
@@ -359,11 +390,13 @@
 
     return-object p0
 
+    .line 62
     :cond_0
     iget v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$LogBytes;->offset:I
 
     new-array v0, v0, [B
 
+    .line 63
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$LogBytes;->bytes:[B
 
     iget p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$LogBytes;->offset:I
@@ -378,12 +411,14 @@
 .method public getLogAsString()Ljava/lang/String;
     .locals 2
 
+    .line 69
     invoke-virtual {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->getLogAsBytes()[B
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 70
     new-instance v0, Ljava/lang/String;
 
     sget-object v1, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->UTF_8:Ljava/nio/charset/Charset;
@@ -402,8 +437,10 @@
 .method public writeToLog(JLjava/lang/String;)V
     .locals 0
 
+    .line 52
     invoke-direct {p0}, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->openLogFile()V
 
+    .line 53
     invoke-direct {p0, p1, p2, p3}, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;->doWriteToLog(JLjava/lang/String;)V
 
     return-void

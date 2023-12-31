@@ -1,5 +1,6 @@
 .class synthetic Lcom/google/android/filament/EntityManager$1;
 .super Ljava/lang/Object;
+.source "EntityManager.java"
 
 
 # annotations

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/filament/gltfio/AssetLoader;
 .super Ljava/lang/Object;
+.source "AssetLoader.java"
 
 
 # instance fields
@@ -12,26 +13,32 @@
 .method public constructor <init>(Lcom/google/android/filament/Engine;Lcom/google/android/filament/gltfio/MaterialProvider;Lcom/google/android/filament/EntityManager;)V
     .locals 6
 
+    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 93
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
 
+    .line 94
     invoke-virtual {p2}, Lcom/google/android/filament/gltfio/MaterialProvider;->getNativeObject()J
 
     move-result-wide v2
 
+    .line 95
     invoke-virtual {p3}, Lcom/google/android/filament/EntityManager;->getNativeObject()J
 
     move-result-wide v4
 
+    .line 96
     invoke-static/range {v0 .. v5}, Lcom/google/android/filament/gltfio/AssetLoader;->nCreateAssetLoader(JJJ)J
 
     move-result-wide p2
 
     iput-wide p2, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
+    .line 98
     iget-wide p2, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
     const-wide/16 v0, 0x0
@@ -40,10 +47,12 @@
 
     if-eqz p2, :cond_0
 
+    .line 102
     iput-object p1, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mEngine:Lcom/google/android/filament/Engine;
 
     return-void
 
+    .line 99
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -80,6 +89,7 @@
 .method public createAssetFromBinary(Ljava/nio/Buffer;)Lcom/google/android/filament/gltfio/FilamentAsset;
     .locals 4
 
+    .line 118
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
@@ -96,6 +106,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 119
     new-instance p1, Lcom/google/android/filament/gltfio/FilamentAsset;
 
     iget-object p0, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mEngine:Lcom/google/android/filament/Engine;
@@ -114,6 +125,7 @@
 .method public createAssetFromJson(Ljava/nio/Buffer;)Lcom/google/android/filament/gltfio/FilamentAsset;
     .locals 4
 
+    .line 127
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
@@ -130,6 +142,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 128
     new-instance p1, Lcom/google/android/filament/gltfio/FilamentAsset;
 
     iget-object p0, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mEngine:Lcom/google/android/filament/Engine;
@@ -148,10 +161,12 @@
 .method public createInstancedAsset(Ljava/nio/Buffer;[Lcom/google/android/filament/gltfio/FilamentInstance;)Lcom/google/android/filament/gltfio/FilamentAsset;
     .locals 6
 
+    .line 143
     array-length v0, p2
 
     new-array v0, v0, [J
 
+    .line 144
     iget-wide v1, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
@@ -175,11 +190,13 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 149
     :goto_0
     array-length v3, v0
 
     if-ge p1, v3, :cond_1
 
+    .line 150
     new-instance v3, Lcom/google/android/filament/gltfio/FilamentInstance;
 
     aget-wide v4, v0, p1
@@ -192,6 +209,7 @@
 
     goto :goto_0
 
+    .line 152
     :cond_1
     new-instance p1, Lcom/google/android/filament/gltfio/FilamentAsset;
 
@@ -205,12 +223,14 @@
 .method public destroy()V
     .locals 2
 
+    .line 109
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
     invoke-static {v0, v1}, Lcom/google/android/filament/gltfio/AssetLoader;->nDestroyAssetLoader(J)V
 
     const-wide/16 v0, 0x0
 
+    .line 110
     iput-wide v0, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
     return-void
@@ -219,6 +239,7 @@
 .method public destroyAsset(Lcom/google/android/filament/gltfio/FilamentAsset;)V
     .locals 4
 
+    .line 167
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->getNativeObject()J
@@ -227,6 +248,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/gltfio/AssetLoader;->nDestroyAsset(JJ)V
 
+    .line 168
     invoke-virtual {p1}, Lcom/google/android/filament/gltfio/FilamentAsset;->clearNativeObject()V
 
     return-void
@@ -235,6 +257,7 @@
 .method public enableDiagnostics(Z)V
     .locals 2
 
+    .line 160
     iget-wide v0, p0, Lcom/google/android/filament/gltfio/AssetLoader;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/gltfio/AssetLoader;->nEnableDiagnostics(JZ)V

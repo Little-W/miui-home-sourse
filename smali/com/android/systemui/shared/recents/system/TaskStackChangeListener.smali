@@ -1,11 +1,13 @@
 .class public Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;
 .super Ljava/lang/Object;
+.source "TaskStackChangeListener.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,12 +18,14 @@
 .method protected final checkCurrentUserId(Landroid/content/Context;Z)Z
     .locals 0
 
+    .line 35
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result p0
 
     const-string p2, "activity"
 
+    .line 36
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -36,6 +40,7 @@
 
     goto :goto_0
 
+    .line 38
     :cond_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 

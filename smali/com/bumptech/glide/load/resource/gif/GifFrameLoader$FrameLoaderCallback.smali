@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;
 .super Ljava/lang/Object;
+.source "GifFrameLoader.java"
 
 # interfaces
 .implements Landroid/os/Handler$Callback;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;)V
     .locals 0
 
+    .line 292
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;->this$0:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,22 +38,26 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 2
 
+    .line 296
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 297
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;
 
+    .line 298
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;->this$0:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;->onFrameReady(Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;)V
 
     return v1
 
+    .line 300
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -59,10 +65,12 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 301
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;
 
+    .line 302
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;->this$0:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;->requestManager:Lcom/bumptech/glide/RequestManager;

@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/google/firebase/encoders/proto/Protobuf;
 .super Ljava/lang/Object;
+.source "Protobuf.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

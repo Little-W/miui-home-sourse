@@ -1,11 +1,13 @@
 .class public final Lkotlinx/serialization/json/JsonElementSerializersKt;
 .super Ljava/lang/Object;
+.source "JsonElementSerializers.kt"
 
 
 # direct methods
 .method public static final synthetic access$defer(Lkotlin/jvm/functions/Function0;)Lkotlinx/serialization/descriptors/SerialDescriptor;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt;->defer(Lkotlin/jvm/functions/Function0;)Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -16,6 +18,7 @@
 .method public static final synthetic access$verify(Lkotlinx/serialization/encoding/Decoder;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt;->verify(Lkotlinx/serialization/encoding/Decoder;)V
 
     return-void
@@ -24,6 +27,7 @@
 .method public static final synthetic access$verify(Lkotlinx/serialization/encoding/Encoder;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt;->verify(Lkotlinx/serialization/encoding/Encoder;)V
 
     return-void
@@ -36,6 +40,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 200
     instance-of v0, p0, Lkotlinx/serialization/json/JsonDecoder;
 
     if-nez v0, :cond_0
@@ -54,9 +59,11 @@
 
     return-object v0
 
+    .line 201
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
+    .line 202
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,6 +76,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 203
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -83,6 +91,7 @@
 
     move-result-object p0
 
+    .line 201
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Throwable;
@@ -97,6 +106,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 206
     instance-of v0, p0, Lkotlinx/serialization/json/JsonEncoder;
 
     if-nez v0, :cond_0
@@ -115,9 +125,11 @@
 
     return-object v0
 
+    .line 207
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
+    .line 208
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,6 +142,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 209
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -144,6 +157,7 @@
 
     move-result-object p0
 
+    .line 207
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Throwable;
@@ -164,6 +178,7 @@
         }
     .end annotation
 
+    .line 218
     new-instance v0, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;
 
     invoke-direct {v0, p0}, Lkotlinx/serialization/json/JsonElementSerializersKt$defer$1;-><init>(Lkotlin/jvm/functions/Function0;)V
@@ -176,6 +191,7 @@
 .method private static final verify(Lkotlinx/serialization/encoding/Decoder;)V
     .locals 0
 
+    .line 197
     invoke-static {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt;->asJsonDecoder(Lkotlinx/serialization/encoding/Decoder;)Lkotlinx/serialization/json/JsonDecoder;
 
     return-void
@@ -184,6 +200,7 @@
 .method private static final verify(Lkotlinx/serialization/encoding/Encoder;)V
     .locals 0
 
+    .line 193
     invoke-static {p0}, Lkotlinx/serialization/json/JsonElementSerializersKt;->asJsonEncoder(Lkotlinx/serialization/encoding/Encoder;)Lkotlinx/serialization/json/JsonEncoder;
 
     return-void

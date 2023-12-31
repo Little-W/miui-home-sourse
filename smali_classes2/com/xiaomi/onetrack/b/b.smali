@@ -15,6 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/b/a;Ljava/lang/String;)V
     .locals 0
 
+    .line 102
     iput-object p1, p0, Lcom/xiaomi/onetrack/b/b;->b:Lcom/xiaomi/onetrack/b/a;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/b/b;->a:Ljava/lang/String;
@@ -29,6 +30,7 @@
 .method public run()V
     .locals 1
 
+    .line 105
     iget-object v0, p0, Lcom/xiaomi/onetrack/b/b;->a:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -39,6 +41,7 @@
 
     return-void
 
+    .line 108
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/b/b;->b:Lcom/xiaomi/onetrack/b/a;
 

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/bumptech/glide/request/target/Target;
 .super Ljava/lang/Object;
+.source "Target.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/manager/LifecycleListener;

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/IMiuiSystemUiProxy;
 .super Ljava/lang/Object;
+.source "IMiuiSystemUiProxy.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

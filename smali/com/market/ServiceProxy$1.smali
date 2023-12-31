@@ -1,5 +1,6 @@
 .class Lcom/market/ServiceProxy$1;
 .super Ljava/lang/Object;
+.source "ServiceProxy.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/market/ServiceProxy;)V
     .locals 0
 
+    .line 191
     iput-object p1, p0, Lcom/market/ServiceProxy$1;->this$0:Lcom/market/ServiceProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/measurement/internal/zzfs;
 .super Ljava/util/concurrent/FutureTask;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -34,8 +35,10 @@
 .method constructor <init>(Lcom/google/android/gms/measurement/internal/zzfr;Ljava/lang/Runnable;ZLjava/lang/String;)V
     .locals 2
 
+    .line 10
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzd:Lcom/google/android/gms/measurement/internal/zzfr;
 
+    .line 11
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzm;->zza()Lcom/google/android/gms/internal/measurement/zzn;
 
     move-result-object v0
@@ -48,8 +51,10 @@
 
     invoke-direct {p0, p2, v0}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
 
+    .line 12
     invoke-static {p4}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 13
     invoke-static {}, Lcom/google/android/gms/measurement/internal/zzfr;->zzg()Ljava/util/concurrent/atomic/AtomicLong;
 
     move-result-object p2
@@ -60,10 +65,13 @@
 
     iput-wide v0, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzb:J
 
+    .line 14
     iput-object p4, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzc:Ljava/lang/String;
 
+    .line 15
     iput-boolean p3, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zza:Z
 
+    .line 16
     iget-wide p2, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzb:J
 
     const-wide v0, 0x7fffffffffffffffL
@@ -72,6 +80,7 @@
 
     if-nez p0, :cond_0
 
+    .line 17
     invoke-virtual {p1}, Lcom/google/android/gms/measurement/internal/zzgr;->zzq()Lcom/google/android/gms/measurement/internal/zzeq;
 
     move-result-object p0
@@ -100,8 +109,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzd:Lcom/google/android/gms/measurement/internal/zzfr;
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzm;->zza()Lcom/google/android/gms/internal/measurement/zzn;
 
     move-result-object v0
@@ -112,8 +123,10 @@
 
     invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
+    .line 3
     invoke-static {p4}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {}, Lcom/google/android/gms/measurement/internal/zzfr;->zzg()Ljava/util/concurrent/atomic/AtomicLong;
 
     move-result-object p2
@@ -124,10 +137,13 @@
 
     iput-wide v0, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzb:J
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzc:Ljava/lang/String;
 
+    .line 6
     iput-boolean p3, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zza:Z
 
+    .line 7
     iget-wide p2, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzb:J
 
     const-wide v0, 0x7fffffffffffffffL
@@ -136,6 +152,7 @@
 
     if-nez p0, :cond_0
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/gms/measurement/internal/zzgr;->zzq()Lcom/google/android/gms/measurement/internal/zzeq;
 
     move-result-object p0
@@ -157,8 +174,10 @@
 .method public final synthetic compareTo(Ljava/lang/Object;)I
     .locals 6
 
+    .line 25
     check-cast p1, Lcom/google/android/gms/measurement/internal/zzfs;
 
+    .line 26
     iget-boolean v0, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zza:Z
 
     iget-boolean v1, p1, Lcom/google/android/gms/measurement/internal/zzfs;->zza:Z
@@ -176,6 +195,7 @@
     :cond_0
     return v2
 
+    .line 28
     :cond_1
     iget-wide v0, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzb:J
 
@@ -194,6 +214,7 @@
 
     return v2
 
+    .line 32
     :cond_3
     iget-object p1, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzd:Lcom/google/android/gms/measurement/internal/zzfr;
 
@@ -223,6 +244,7 @@
 .method protected final setException(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 19
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfs;->zzd:Lcom/google/android/gms/measurement/internal/zzfr;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzq()Lcom/google/android/gms/measurement/internal/zzeq;
@@ -237,20 +259,24 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/google/android/gms/measurement/internal/zzes;->zza(Ljava/lang/String;Ljava/lang/Object;)V
 
+    .line 20
     instance-of v0, p1, Lcom/google/android/gms/measurement/internal/zzfq;
 
     if-eqz v0, :cond_0
 
+    .line 21
     invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
     move-result-object v0
 
+    .line 22
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
     invoke-interface {v0, v1, p1}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
+    .line 23
     :cond_0
     invoke-super {p0, p1}, Ljava/util/concurrent/FutureTask;->setException(Ljava/lang/Throwable;)V
 

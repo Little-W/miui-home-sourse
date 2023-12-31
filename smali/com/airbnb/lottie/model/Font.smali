@@ -1,5 +1,6 @@
 .class public Lcom/airbnb/lottie/model/Font;
 .super Ljava/lang/Object;
+.source "Font.java"
 
 
 # instance fields
@@ -18,14 +19,19 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;F)V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
     iput-object p1, p0, Lcom/airbnb/lottie/model/Font;->family:Ljava/lang/String;
 
+    .line 23
     iput-object p2, p0, Lcom/airbnb/lottie/model/Font;->name:Ljava/lang/String;
 
+    .line 24
     iput-object p3, p0, Lcom/airbnb/lottie/model/Font;->style:Ljava/lang/String;
 
+    .line 25
     iput p4, p0, Lcom/airbnb/lottie/model/Font;->ascent:F
 
     return-void
@@ -36,6 +42,7 @@
 .method public getFamily()Ljava/lang/String;
     .locals 0
 
+    .line 29
     iget-object p0, p0, Lcom/airbnb/lottie/model/Font;->family:Ljava/lang/String;
 
     return-object p0
@@ -44,6 +51,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 33
     iget-object p0, p0, Lcom/airbnb/lottie/model/Font;->name:Ljava/lang/String;
 
     return-object p0
@@ -52,6 +60,7 @@
 .method public getStyle()Ljava/lang/String;
     .locals 0
 
+    .line 37
     iget-object p0, p0, Lcom/airbnb/lottie/model/Font;->style:Ljava/lang/String;
 
     return-object p0
@@ -60,6 +69,7 @@
 .method public getTypeface()Landroid/graphics/Typeface;
     .locals 0
 
+    .line 46
     iget-object p0, p0, Lcom/airbnb/lottie/model/Font;->typeface:Landroid/graphics/Typeface;
 
     return-object p0

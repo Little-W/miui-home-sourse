@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/ViewTapTarget;
 .super Lcom/mi/globallauncher/view/TapTarget;
+.source "ViewTapTarget.java"
 
 
 # instance fields
@@ -10,14 +11,17 @@
 .method constructor <init>(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 30
     invoke-direct {p0, p2, p3}, Lcom/mi/globallauncher/view/TapTarget;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
     if-eqz p1, :cond_0
 
+    .line 34
     iput-object p1, p0, Lcom/mi/globallauncher/view/ViewTapTarget;->view:Landroid/view/View;
 
     return-void
 
+    .line 32
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -33,6 +37,7 @@
 .method public onReady(Ljava/lang/Runnable;)V
     .locals 2
 
+    .line 39
     iget-object v0, p0, Lcom/mi/globallauncher/view/ViewTapTarget;->view:Landroid/view/View;
 
     new-instance v1, Lcom/mi/globallauncher/view/ViewTapTarget$1;

@@ -1,5 +1,6 @@
 .class final Lcom/google/android/gms/internal/measurement/zzfa;
 .super Lcom/google/android/gms/internal/measurement/zzej;
+.source "com.google.android.gms:play-services-measurement-impl@@18.0.0"
 
 
 # annotations
@@ -36,12 +37,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/internal/measurement/zzfb;->size()I
 
     move-result v0
 
     invoke-direct {p0, v0, p2}, Lcom/google/android/gms/internal/measurement/zzej;-><init>(II)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzfa;->zza:Lcom/google/android/gms/internal/measurement/zzfb;
 
     return-void
@@ -57,6 +60,7 @@
         }
     .end annotation
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzfa;->zza:Lcom/google/android/gms/internal/measurement/zzfb;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzfb;->get(I)Ljava/lang/Object;

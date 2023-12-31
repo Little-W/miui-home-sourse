@@ -1,5 +1,6 @@
 .class public interface abstract Lorg/greenrobot/eventbus/Logger;
 .super Ljava/lang/Object;
+.source "Logger.java"
 
 
 # annotations

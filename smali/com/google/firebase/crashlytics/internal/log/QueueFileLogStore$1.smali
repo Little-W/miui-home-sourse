@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$1;
 .super Ljava/lang/Object;
+.source "QueueFileLogStore.java"
 
 # interfaces
 .implements Lcom/google/firebase/crashlytics/internal/log/QueueFile$ElementReader;
@@ -28,6 +29,7 @@
 .method constructor <init>(Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;[B[I)V
     .locals 0
 
+    .line 95
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$1;->this$0:Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore;
 
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$1;->val$logBytes:[B
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 99
     :try_start_0
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$1;->val$logBytes:[B
 
@@ -60,6 +63,7 @@
 
     invoke-virtual {p1, v0, v1, p2}, Ljava/io/InputStream;->read([BII)I
 
+    .line 100
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/log/QueueFileLogStore$1;->val$offsetHolder:[I
 
     aget v0, p0, v2
@@ -70,6 +74,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 102
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
     return-void
@@ -79,5 +84,6 @@
 
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
+    .line 103
     throw p0
 .end method

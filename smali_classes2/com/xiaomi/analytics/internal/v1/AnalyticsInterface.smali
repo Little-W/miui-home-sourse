@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/xiaomi/analytics/internal/v1/AnalyticsInterface;
 .super Ljava/lang/Object;
+.source "AnalyticsInterface.java"
 
 
 # virtual methods

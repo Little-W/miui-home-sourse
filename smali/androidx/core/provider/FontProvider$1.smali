@@ -1,5 +1,6 @@
 .class Landroidx/core/provider/FontProvider$1;
 .super Ljava/lang/Object;
+.source "FontProvider.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -28,6 +29,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 196
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,6 +40,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 196
     check-cast p1, [B
 
     check-cast p2, [B
@@ -52,12 +55,14 @@
 .method public compare([B[B)I
     .locals 3
 
+    .line 199
     array-length p0, p1
 
     array-length v0, p2
 
     if-eq p0, v0, :cond_0
 
+    .line 200
     array-length p0, p1
 
     array-length p1, p2
@@ -72,17 +77,20 @@
 
     move v0, p0
 
+    .line 202
     :goto_1
     array-length v1, p1
 
     if-ge v0, v1, :cond_2
 
+    .line 203
     aget-byte v1, p1, v0
 
     aget-byte v2, p2, v0
 
     if-eq v1, v2, :cond_1
 
+    .line 204
     aget-byte p0, p1, v0
 
     aget-byte p1, p2, v0

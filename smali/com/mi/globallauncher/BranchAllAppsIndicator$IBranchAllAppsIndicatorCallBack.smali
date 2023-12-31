@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 .super Ljava/lang/Object;
+.source "BranchAllAppsIndicator.java"
 
 
 # annotations

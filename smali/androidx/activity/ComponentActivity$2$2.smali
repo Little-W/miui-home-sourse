@@ -1,5 +1,6 @@
 .class Landroidx/activity/ComponentActivity$2$2;
 .super Ljava/lang/Object;
+.source "ComponentActivity.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -28,6 +29,7 @@
 .method constructor <init>(Landroidx/activity/ComponentActivity$2;ILandroid/content/IntentSender$SendIntentException;)V
     .locals 0
 
+    .line 199
     iput-object p1, p0, Landroidx/activity/ComponentActivity$2$2;->this$1:Landroidx/activity/ComponentActivity$2;
 
     iput p2, p0, Landroidx/activity/ComponentActivity$2$2;->val$requestCode:I
@@ -44,6 +46,7 @@
 .method public run()V
     .locals 4
 
+    .line 202
     iget-object v0, p0, Landroidx/activity/ComponentActivity$2$2;->this$1:Landroidx/activity/ComponentActivity$2;
 
     iget v1, p0, Landroidx/activity/ComponentActivity$2$2;->val$requestCode:I
@@ -54,6 +57,7 @@
 
     const-string v3, "androidx.activity.result.contract.action.INTENT_SENDER_REQUEST"
 
+    .line 203
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v2
@@ -62,12 +66,14 @@
 
     const-string v3, "androidx.activity.result.contract.extra.SEND_INTENT_EXCEPTION"
 
+    .line 204
     invoke-virtual {v2, v3, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     move-result-object p0
 
     const/4 v2, 0x0
 
+    .line 202
     invoke-virtual {v0, v1, v2, p0}, Landroidx/activity/ComponentActivity$2;->dispatchResult(IILandroid/content/Intent;)Z
 
     return-void

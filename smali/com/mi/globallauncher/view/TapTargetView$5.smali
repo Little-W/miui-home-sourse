@@ -1,5 +1,6 @@
 .class Lcom/mi/globallauncher/view/TapTargetView$5;
 .super Ljava/lang/Object;
+.source "TapTargetView.java"
 
 # interfaces
 .implements Lcom/mi/globallauncher/view/FloatValueAnimatorBuilder$EndListener;
@@ -24,6 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/view/TapTargetView;)V
     .locals 0
 
+    .line 323
     iput-object p1, p0, Lcom/mi/globallauncher/view/TapTargetView$5;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +38,7 @@
 .method public onEnd()V
     .locals 1
 
+    .line 326
     iget-object p0, p0, Lcom/mi/globallauncher/view/TapTargetView$5;->this$0:Lcom/mi/globallauncher/view/TapTargetView;
 
     const/4 v0, 0x1

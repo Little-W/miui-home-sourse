@@ -1,5 +1,6 @@
 .class public final synthetic Lcom/mi/globallauncher/config/-$$Lambda$CommercialRemoteConfig$0gCIDPFjn51qS6C7Q3lAz7KCXzg;
 .super Ljava/lang/Object;
+.source "lambda"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/OnSuccessListener;

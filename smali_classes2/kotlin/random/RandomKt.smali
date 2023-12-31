@@ -1,5 +1,6 @@
 .class public final Lkotlin/random/RandomKt;
 .super Ljava/lang/Object;
+.source "Random.kt"
 
 
 # annotations
@@ -12,6 +13,7 @@
 .method public static final Random(J)Lkotlin/random/Random;
     .locals 3
 
+    .line 325
     new-instance v0, Lkotlin/random/XorWowRandom;
 
     long-to-int v1, p0
@@ -40,6 +42,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 376
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,6 +87,7 @@
 
     return-void
 
+    .line 372
     :cond_1
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -113,6 +117,7 @@
 .method public static final fastLog2(I)I
     .locals 0
 
+    .line 366
     invoke-static {p0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
 
     move-result p0

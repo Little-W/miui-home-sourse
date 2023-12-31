@@ -1,5 +1,6 @@
 .class final Lkotlin/text/StringsKt___StringsKt$windowed$1;
 .super Lkotlin/jvm/internal/Lambda;
+.source "_Strings.kt"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -74,6 +75,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2214
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0

@@ -1,5 +1,6 @@
 .class Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;
 .super Ljava/lang/Object;
+.source "MetaDataStore.java"
 
 
 # static fields
@@ -16,6 +17,7 @@
 
     const-string v0, "UTF-8"
 
+    .line 41
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -28,8 +30,10 @@
 .method public constructor <init>(Lcom/google/firebase/crashlytics/internal/persistence/FileStore;)V
     .locals 0
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
     return-void
@@ -55,18 +59,22 @@
         }
     .end annotation
 
+    .line 162
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
+    .line 163
     new-instance p0, Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
+    .line 164
     invoke-virtual {v0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v1
 
+    .line 165
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -74,12 +82,14 @@
 
     if-eqz v2, :cond_0
 
+    .line 166
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 167
     invoke-static {v0, v2}, Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;->valueOrNull(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -95,6 +105,7 @@
 .method private static valueOrNull(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 177
     invoke-virtual {p0, p1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v0
@@ -116,6 +127,7 @@
 .method public getInternalKeysFileForSession(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 143
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
     const-string v0, "internal-keys"
@@ -130,6 +142,7 @@
 .method public getKeysFileForSession(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 138
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
     const-string v0, "keys"
@@ -144,6 +157,7 @@
 .method public getUserDataFileForSession(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
+    .line 133
     iget-object p0, p0, Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
     const-string/jumbo v0, "user-data"
@@ -171,6 +185,7 @@
 
     const/4 v0, 0x0
 
+    .line 109
     invoke-virtual {p0, p1, v0}, Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;->readKeyData(Ljava/lang/String;Z)Ljava/util/Map;
 
     move-result-object p0
@@ -196,6 +211,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 114
     invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;->getInternalKeysFileForSession(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
@@ -207,6 +223,7 @@
 
     move-result-object p0
 
+    .line 115
     :goto_0
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -214,6 +231,7 @@
 
     if-nez p1, :cond_1
 
+    .line 116
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
@@ -223,6 +241,7 @@
     :cond_1
     const/4 p1, 0x0
 
+    .line 121
     :try_start_0
     new-instance p2, Ljava/io/FileInputStream;
 
@@ -231,6 +250,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 122
     :try_start_1
     invoke-static {p2}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->streamToString(Ljava/io/InputStream;)Ljava/lang/String;
 
@@ -243,6 +263,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 126
     invoke-static {p2, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
     return-object p0
@@ -269,6 +290,7 @@
     :catch_1
     move-exception p0
 
+    .line 124
     :goto_1
     :try_start_2
     invoke-static {}, Lcom/google/firebase/crashlytics/internal/Logger;->getLogger()Lcom/google/firebase/crashlytics/internal/Logger;
@@ -281,16 +303,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 126
     invoke-static {p1, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
+    .line 128
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 
+    .line 126
     :goto_2
     invoke-static {p1, v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->closeOrLog(Ljava/io/Closeable;Ljava/lang/String;)V
 
+    .line 127
     throw p0
 .end method

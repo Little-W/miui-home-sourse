@@ -1,5 +1,6 @@
 .class public Lorg/ahocorasick/trie/handler/DefaultEmitHandler;
 .super Ljava/lang/Object;
+.source "DefaultEmitHandler.java"
 
 # interfaces
 .implements Lorg/ahocorasick/trie/handler/EmitHandler;
@@ -21,8 +22,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 10
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -37,6 +40,7 @@
 .method public emit(Lorg/ahocorasick/trie/Emit;)V
     .locals 0
 
+    .line 14
     iget-object p0, p0, Lorg/ahocorasick/trie/handler/DefaultEmitHandler;->emits:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -55,6 +59,7 @@
         }
     .end annotation
 
+    .line 18
     iget-object p0, p0, Lorg/ahocorasick/trie/handler/DefaultEmitHandler;->emits:Ljava/util/List;
 
     return-object p0

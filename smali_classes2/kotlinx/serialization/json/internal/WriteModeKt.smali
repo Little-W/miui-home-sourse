@@ -1,5 +1,6 @@
 .class public final Lkotlinx/serialization/json/internal/WriteModeKt;
 .super Ljava/lang/Object;
+.source "WriteMode.kt"
 
 
 # annotations
@@ -20,10 +21,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 27
     invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
     move-result-object v0
 
+    .line 28
     instance-of v1, v0, Lkotlinx/serialization/descriptors/PolymorphicKind;
 
     if-eqz v1, :cond_0
@@ -32,6 +35,7 @@
 
     goto :goto_1
 
+    .line 29
     :cond_0
     sget-object v1, Lkotlinx/serialization/descriptors/StructureKind$LIST;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$LIST;
 
@@ -45,6 +49,7 @@
 
     goto :goto_1
 
+    .line 30
     :cond_1
     sget-object v1, Lkotlinx/serialization/descriptors/StructureKind$MAP;->INSTANCE:Lkotlinx/serialization/descriptors/StructureKind$MAP;
 
@@ -56,14 +61,17 @@
 
     const/4 v0, 0x0
 
+    .line 51
     invoke-interface {p1, v0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getElementDescriptor(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p1
 
+    .line 52
     invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/SerialKind;
 
     move-result-object v0
 
+    .line 53
     instance-of v1, v0, Lkotlinx/serialization/descriptors/PrimitiveKind;
 
     if-nez v1, :cond_4
@@ -78,6 +86,7 @@
 
     goto :goto_0
 
+    .line 55
     :cond_2
     invoke-virtual {p0}, Lkotlinx/serialization/json/Json;->getConfiguration$kotlinx_serialization_json()Lkotlinx/serialization/json/internal/JsonConf;
 
@@ -87,10 +96,12 @@
 
     if-eqz p0, :cond_3
 
+    .line 30
     sget-object p0, Lkotlinx/serialization/json/internal/WriteMode;->LIST:Lkotlinx/serialization/json/internal/WriteMode;
 
     goto :goto_1
 
+    .line 58
     :cond_3
     invoke-static {p1}, Lkotlinx/serialization/json/internal/JsonExceptionsKt;->InvalidKeyKindException(Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/json/internal/JsonEncodingException;
 
@@ -100,12 +111,14 @@
 
     throw p0
 
+    .line 30
     :cond_4
     :goto_0
     sget-object p0, Lkotlinx/serialization/json/internal/WriteMode;->MAP:Lkotlinx/serialization/json/internal/WriteMode;
 
     goto :goto_1
 
+    .line 31
     :cond_5
     sget-object p0, Lkotlinx/serialization/json/internal/WriteMode;->OBJ:Lkotlinx/serialization/json/internal/WriteMode;
 

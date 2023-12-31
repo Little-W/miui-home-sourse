@@ -1,5 +1,6 @@
 .class Lcom/bumptech/glide/load/data/DataRewinderRegistry$1;
 .super Ljava/lang/Object;
+.source "DataRewinderRegistry.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/data/DataRewinder$Factory;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,6 +51,7 @@
         }
     .end annotation
 
+    .line 19
     new-instance p0, Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;
 
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;-><init>(Ljava/lang/Object;)V
@@ -67,6 +70,7 @@
         }
     .end annotation
 
+    .line 25
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Not implemented"

@@ -1,5 +1,6 @@
 .class public interface abstract Lkotlinx/serialization/internal/GeneratedSerializer;
 .super Ljava/lang/Object;
+.source "PluginHelperInterfaces.kt"
 
 # interfaces
 .implements Lkotlinx/serialization/KSerializer;

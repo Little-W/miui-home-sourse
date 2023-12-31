@@ -1,5 +1,6 @@
 .class public final Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 .super Ljava/lang/Object;
+.source "JsonDataEncoderBuilder.java"
 
 # interfaces
 .implements Lcom/google/firebase/encoders/config/EncoderConfig;
@@ -98,18 +99,22 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 38
     sget-object v0, Lcom/google/firebase/encoders/json/-$$Lambda$JsonDataEncoderBuilder$nyKpx2sMm_XGQOwwVrJE0nbmA_4;->INSTANCE:Lcom/google/firebase/encoders/json/-$$Lambda$JsonDataEncoderBuilder$nyKpx2sMm_XGQOwwVrJE0nbmA_4;
 
     sput-object v0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->DEFAULT_FALLBACK_ENCODER:Lcom/google/firebase/encoders/ObjectEncoder;
 
+    .line 63
     sget-object v0, Lcom/google/firebase/encoders/json/-$$Lambda$JsonDataEncoderBuilder$2Ag7wGKl6ZAWZofWT2Atuis-PdQ;->INSTANCE:Lcom/google/firebase/encoders/json/-$$Lambda$JsonDataEncoderBuilder$2Ag7wGKl6ZAWZofWT2Atuis-PdQ;
 
     sput-object v0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->STRING_ENCODER:Lcom/google/firebase/encoders/ValueEncoder;
 
+    .line 64
     sget-object v0, Lcom/google/firebase/encoders/json/-$$Lambda$JsonDataEncoderBuilder$qsuhyVxU2dugEaZ-Uhp79euedYA;->INSTANCE:Lcom/google/firebase/encoders/json/-$$Lambda$JsonDataEncoderBuilder$qsuhyVxU2dugEaZ-Uhp79euedYA;
 
     sput-object v0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->BOOLEAN_ENCODER:Lcom/google/firebase/encoders/ValueEncoder;
 
+    .line 65
     new-instance v0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder$TimestampEncoder;
 
     const/4 v1, 0x0
@@ -124,40 +129,48 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 44
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->objectEncoders:Ljava/util/Map;
 
+    .line 45
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->valueEncoders:Ljava/util/Map;
 
+    .line 46
     sget-object v0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->DEFAULT_FALLBACK_ENCODER:Lcom/google/firebase/encoders/ObjectEncoder;
 
     iput-object v0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->fallbackEncoder:Lcom/google/firebase/encoders/ObjectEncoder;
 
     const/4 v0, 0x0
 
+    .line 47
     iput-boolean v0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->ignoreNullValues:Z
 
+    .line 68
     const-class v0, Ljava/lang/String;
 
     sget-object v1, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->STRING_ENCODER:Lcom/google/firebase/encoders/ValueEncoder;
 
     invoke-virtual {p0, v0, v1}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->registerEncoder(Ljava/lang/Class;Lcom/google/firebase/encoders/ValueEncoder;)Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 
+    .line 69
     const-class v0, Ljava/lang/Boolean;
 
     sget-object v1, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->BOOLEAN_ENCODER:Lcom/google/firebase/encoders/ValueEncoder;
 
     invoke-virtual {p0, v0, v1}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->registerEncoder(Ljava/lang/Class;Lcom/google/firebase/encoders/ValueEncoder;)Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 
+    .line 70
     const-class v0, Ljava/util/Date;
 
     sget-object v1, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->TIMESTAMP_ENCODER:Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder$TimestampEncoder;
@@ -170,6 +183,7 @@
 .method static synthetic access$100(Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;)Ljava/util/Map;
     .locals 0
 
+    .line 36
     iget-object p0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->objectEncoders:Ljava/util/Map;
 
     return-object p0
@@ -178,6 +192,7 @@
 .method static synthetic access$200(Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;)Ljava/util/Map;
     .locals 0
 
+    .line 36
     iget-object p0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->valueEncoders:Ljava/util/Map;
 
     return-object p0
@@ -186,6 +201,7 @@
 .method static synthetic access$300(Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;)Lcom/google/firebase/encoders/ObjectEncoder;
     .locals 0
 
+    .line 36
     iget-object p0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->fallbackEncoder:Lcom/google/firebase/encoders/ObjectEncoder;
 
     return-object p0
@@ -194,6 +210,7 @@
 .method static synthetic access$400(Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;)Z
     .locals 0
 
+    .line 36
     iget-boolean p0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->ignoreNullValues:Z
 
     return p0
@@ -207,6 +224,7 @@
         }
     .end annotation
 
+    .line 40
     new-instance p1, Lcom/google/firebase/encoders/EncodingException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -217,6 +235,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 41
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -244,6 +263,7 @@
         }
     .end annotation
 
+    .line 63
     invoke-interface {p1, p0}, Lcom/google/firebase/encoders/ValueEncoderContext;->add(Ljava/lang/String;)Lcom/google/firebase/encoders/ValueEncoderContext;
 
     return-void
@@ -257,6 +277,7 @@
         }
     .end annotation
 
+    .line 64
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -271,6 +292,7 @@
 .method public build()Lcom/google/firebase/encoders/DataEncoder;
     .locals 1
 
+    .line 115
     new-instance v0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder$1;
 
     invoke-direct {v0, p0}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder$1;-><init>(Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;)V
@@ -281,6 +303,7 @@
 .method public configureWith(Lcom/google/firebase/encoders/config/Configurator;)Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
     .locals 0
 
+    .line 103
     invoke-interface {p1, p0}, Lcom/google/firebase/encoders/config/Configurator;->configure(Lcom/google/firebase/encoders/config/EncoderConfig;)V
 
     return-object p0
@@ -289,6 +312,7 @@
 .method public ignoreNullValues(Z)Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
     .locals 0
 
+    .line 109
     iput-boolean p1, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->ignoreNullValues:Z
 
     return-object p0
@@ -297,6 +321,7 @@
 .method public bridge synthetic registerEncoder(Ljava/lang/Class;Lcom/google/firebase/encoders/ObjectEncoder;)Lcom/google/firebase/encoders/config/EncoderConfig;
     .locals 0
 
+    .line 36
     invoke-virtual {p0, p1, p2}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->registerEncoder(Ljava/lang/Class;Lcom/google/firebase/encoders/ObjectEncoder;)Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 
     move-result-object p0
@@ -319,10 +344,12 @@
         }
     .end annotation
 
+    .line 77
     iget-object v0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->objectEncoders:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 79
     iget-object p2, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->valueEncoders:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -345,10 +372,12 @@
         }
     .end annotation
 
+    .line 87
     iget-object v0, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->valueEncoders:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 89
     iget-object p2, p0, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;->objectEncoders:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;

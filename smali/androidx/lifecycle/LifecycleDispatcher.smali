@@ -1,5 +1,6 @@
 .class Landroidx/lifecycle/LifecycleDispatcher;
 .super Ljava/lang/Object;
+.source "LifecycleDispatcher.java"
 
 
 # annotations
@@ -18,6 +19,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
+    .line 37
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -32,6 +34,7 @@
 .method static init(Landroid/content/Context;)V
     .locals 2
 
+    .line 40
     sget-object v0, Landroidx/lifecycle/LifecycleDispatcher;->sInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -44,6 +47,7 @@
 
     return-void
 
+    .line 43
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -55,6 +59,7 @@
 
     invoke-direct {v0}, Landroidx/lifecycle/LifecycleDispatcher$DispatcherActivityCallback;-><init>()V
 
+    .line 44
     invoke-virtual {p0, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     return-void

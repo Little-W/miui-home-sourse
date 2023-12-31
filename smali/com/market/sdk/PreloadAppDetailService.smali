@@ -1,5 +1,6 @@
 .class public Lcom/market/sdk/PreloadAppDetailService;
 .super Lcom/market/ServiceProxy;
+.source "PreloadAppDetailService.java"
 
 # interfaces
 .implements Lcom/xiaomi/market/IPreloadAppDetailService;
@@ -19,6 +20,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
+    .line 20
     invoke-direct {p0, p1, p2}, Lcom/market/ServiceProxy;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -27,6 +29,7 @@
 .method static synthetic access$000(Lcom/market/sdk/PreloadAppDetailService;)Lcom/xiaomi/market/IPreloadAppDetailService;
     .locals 0
 
+    .line 13
     iget-object p0, p0, Lcom/market/sdk/PreloadAppDetailService;->mAidl:Lcom/xiaomi/market/IPreloadAppDetailService;
 
     return-object p0
@@ -35,6 +38,7 @@
 .method public static openService()Lcom/xiaomi/market/IPreloadAppDetailService;
     .locals 3
 
+    .line 24
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.xiaomi.market.PRELOAD_APP_DETAIL"
@@ -43,8 +47,10 @@
 
     const-string v1, "com.xiaomi.market"
 
+    .line 25
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 26
     new-instance v1, Lcom/market/sdk/PreloadAppDetailService;
 
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
@@ -69,6 +75,7 @@
 .method public onConnected(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 50
     invoke-static {p1}, Lcom/xiaomi/market/IPreloadAppDetailService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/xiaomi/market/IPreloadAppDetailService;
 
     move-result-object p1
@@ -92,6 +99,7 @@
         }
     .end annotation
 
+    .line 36
     new-instance v0, Lcom/market/sdk/PreloadAppDetailService$1;
 
     invoke-direct {v0, p0, p1}, Lcom/market/sdk/PreloadAppDetailService$1;-><init>(Lcom/market/sdk/PreloadAppDetailService;Ljava/lang/String;)V

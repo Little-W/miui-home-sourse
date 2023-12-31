@@ -1,5 +1,6 @@
 .class Lkotlin/collections/ArraysKt___ArraysJvmKt;
 .super Lkotlin/collections/ArraysKt__ArraysKt;
+.source "_ArraysJvm.kt"
 
 
 # direct methods
@@ -19,6 +20,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 133
     invoke-static {p0}, Lkotlin/collections/ArraysUtilJVM;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -50,6 +52,7 @@
 
     sub-int/2addr p4, p3
 
+    .line 1247
     invoke-static {p0, p3, p1, p2, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object p1
@@ -78,6 +81,7 @@
 
     if-eqz p5, :cond_2
 
+    .line 1246
     array-length p4, p0
 
     :cond_2
@@ -102,6 +106,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1914
     invoke-static {p0, p2, p3, p1}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
 
     return-void
@@ -121,6 +126,7 @@
 
     if-eqz p4, :cond_1
 
+    .line 1913
     array-length p3, p0
 
     :cond_1
@@ -149,6 +155,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2557
     array-length v0, p0
 
     const/4 v1, 0x1

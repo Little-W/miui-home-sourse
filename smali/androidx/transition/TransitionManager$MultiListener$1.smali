@@ -1,5 +1,6 @@
 .class Landroidx/transition/TransitionManager$MultiListener$1;
 .super Landroidx/transition/TransitionListenerAdapter;
+.source "TransitionManager.java"
 
 
 # annotations
@@ -23,6 +24,7 @@
 .method constructor <init>(Landroidx/transition/TransitionManager$MultiListener;Landroidx/collection/ArrayMap;)V
     .locals 0
 
+    .line 287
     iput-object p1, p0, Landroidx/transition/TransitionManager$MultiListener$1;->this$0:Landroidx/transition/TransitionManager$MultiListener;
 
     iput-object p2, p0, Landroidx/transition/TransitionManager$MultiListener$1;->val$runningTransitions:Landroidx/collection/ArrayMap;
@@ -37,6 +39,7 @@
 .method public onTransitionEnd(Landroidx/transition/Transition;)V
     .locals 2
 
+    .line 290
     iget-object v0, p0, Landroidx/transition/TransitionManager$MultiListener$1;->val$runningTransitions:Landroidx/collection/ArrayMap;
 
     iget-object v1, p0, Landroidx/transition/TransitionManager$MultiListener$1;->this$0:Landroidx/transition/TransitionManager$MultiListener;
@@ -49,8 +52,10 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
+    .line 291
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 292
     invoke-virtual {p1, p0}, Landroidx/transition/Transition;->removeListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
 
     return-void

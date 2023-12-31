@@ -1,11 +1,13 @@
 .class public abstract Lkotlinx/coroutines/channels/Send;
 .super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
+.source "AbstractChannel.kt"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1037
     invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
     return-void

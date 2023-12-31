@@ -1,5 +1,6 @@
 .class final Lio/reactivex/schedulers/Schedulers$IOTask;
 .super Ljava/lang/Object;
+.source "Schedulers.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -29,6 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
+    .line 370
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +46,7 @@
         }
     .end annotation
 
+    .line 373
     sget-object p0, Lio/reactivex/schedulers/Schedulers$IoHolder;->DEFAULT:Lio/reactivex/Scheduler;
 
     return-object p0
@@ -57,6 +60,7 @@
         }
     .end annotation
 
+    .line 370
     invoke-virtual {p0}, Lio/reactivex/schedulers/Schedulers$IOTask;->call()Lio/reactivex/Scheduler;
 
     move-result-object p0
