@@ -661,7 +661,7 @@
     <string name="recents_forbid_dock_when_screening_toast_text">小窗投屏时无法使用分屏模式</string>
     <string name="recents_incompatible_app_message">该应用不支持分屏</string>
     <string name="recents_layout_style">最近任务样式</string>
-    <string name="recents_layout_style_horizontal">横向排布</string>
+    <string name="recents_layout_style_horizontal">仿iOS堆叠</string>
     <string name="recents_layout_style_vertical">纵向排布</string>
     <string name="recents_smallwindow_drag_text">拖到此处悬挂</string>
     <string name="recents_smallwindow_text">松手悬挂</string>

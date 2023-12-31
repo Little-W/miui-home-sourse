@@ -349,7 +349,7 @@
     <dimen name="editing_entry_thumbnail_view_margin_left_right">0.0dip</dimen>
     <dimen name="editing_panel_height">120.0dip</dimen>
     <dimen name="elderlyMan_additional_icon_title_margin_top">4.0dip</dimen>
-    <dimen name="enforced_rounded_corner_max_radius">20.0dip</dimen>
+    <dimen name="enforced_rounded_corner_max_radius">110.0dip</dimen>
     <item type="dimen" name="exit_recent_overscroll_threshold">0.2</item>
     <dimen name="fake_landscape_screen_minor_size">0.0dip</dimen>
     <dimen name="fastscroll_default_popup_top_margin">0.0dip</dimen>
@@ -1518,7 +1518,7 @@
     <dimen name="quick_call_icon_bg_margin_vertical">3.0dip</dimen>
     <dimen name="quick_call_icon_bg_radius">10.199982dip</dimen>
     <dimen name="quick_call_icon_icon_padding_top">8.0dip</dimen>
-    <dimen name="recent_menu_bg_size">55.0dip</dimen>
+    <dimen name="recent_menu_bg_size">45.0dip</dimen>
     <dimen name="recent_menu_bg_size_small">50.0dip</dimen>
     <dimen name="recent_small_window_margin_top">40.0dip</dimen>
     <dimen name="recent_small_window_margin_top_horizontal_not_fixed_rotation">5.0dip</dimen>
@@ -1551,8 +1551,8 @@
     <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
     <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
     <item type="dimen" name="recents_task_view_padding_ratio">0.0</item>
-    <dimen name="recents_task_view_rounded_corners_radius_max">25.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">7.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_max">110.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">30.0dip</dimen>
     <dimen name="recents_task_view_sub_header_app_info_spacing">3.0dip</dimen>
     <dimen name="recents_tv_small_window_text_size">13.099976sp</dimen>
     <dimen name="recents_view_configuration_touch_slop">5.0dip</dimen>
@@ -1833,4 +1833,5 @@
     <dimen name="worldcirculate_smallwindow_crop_item_width">177.0dip</dimen>
     <dimen name="worldcirculate_smallwindow_crop_width">-1.0px</dimen>
     <dimen name="wrap_content">-2.0px</dimen>
+    <dimen name="large_icon_1x2_or_2x1_item_corner_1">16.0dip</dimen>
 </resources>

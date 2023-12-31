@@ -2,7 +2,7 @@
 <resources>
     <dimen name="recents_task_view_bar_padding_bottom">5.0dip</dimen>
     <dimen name="recents_task_view_header_height">41.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">12.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">30.0dip</dimen>
     <dimen name="recents_task_view_sub_header_app_info_spacing">6.0dip</dimen>
     <dimen name="worldcirculate_smallwindow_crop_height_padding_horizontal">24.0dip</dimen>
 </resources>
