@@ -526,4 +526,28 @@
         <item>home_edit_box_area_4_3</item>
         <item>home_edit_box_area_4_4</item>
     </string-array>
+    <string-array name="folder_col_entries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="folder_col_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="sb_clock_entries">
+        <item>默认</item>
+        <item>总是隐藏</item>
+        <item>总是显示</item>
+    </string-array>
+    <string-array name="sb_clock_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>

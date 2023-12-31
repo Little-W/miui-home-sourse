@@ -3,9 +3,13 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.miui.home.recents.settings.TaskStackViewLayoutStyleContainerPreference android:key="task_stack_view_layout_style_container_preference" />
     <PreferenceCategory android:key="recents_config">
+        <MyXCheckBoxPreference android:title="iOS风格" android:key="ios_recent" android:defaultValue="false" intent="my.intent.REBOOT_MIUIHOME" />
         <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/show_mem_info_title" android:key="show_mem_info_pref" android:defaultValue="false" />
         <PreferenceScreen android:title="@string/privacy_thumbnail_blur_title" android:key="privacy_thumbnail_blur_pref" android:summary="@string/new_privacy_thumbnail_blur_summary">
             <intent android:action="com.miui.securitycenter.action.PRIVACY_THUMBNAIL_BLUR_SETTING" />
         </PreferenceScreen>
     </PreferenceCategory>
+    <XMiuiCheckBoxPreference android:persistent="false" android:title="最近任务模糊" android:key="complete_blur" android:defaultValue="false" />
+    <XMiuiSeekBarPreference android:title="控制卡片下边距" android:key="task_bottom_margin" android:summary="%s" android:defaultValue="4" max="7" min="1" />
+    <XMiuiSeekBarPreference android:title="卡片圆角大小" android:key="task_corner_radius" android:summary="%s" android:defaultValue="40" max="120" min="10" />
 </PreferenceScreen>
